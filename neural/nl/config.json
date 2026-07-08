@@ -3,5 +3,6 @@
   "n_head": 2,
   "n_embd": 64,
   "block_size": 64,
-  "vocab_size": 93
+  "vocab_size": 93,
+  "tokenizer": "char"
 }
