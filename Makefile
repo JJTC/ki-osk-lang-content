@@ -18,15 +18,25 @@
 # Moving `toolbox` here would also make this repo depend on `osk-core`
 # while ki-osk carries this repo as a submodule — a cycle.
 #
-# So these targets shell out to a ki-osk checkout. It defaults to a
-# sibling directory, which is the normal layout:
+# So these targets shell out to a ki-osk checkout, found automatically in
+# either of the two places this repository is normally sitting:
 #
-#   Projects/wlosk/ki-osk
-#   Projects/wlosk/ki-osk-lang-content     <- you are here
+#   Projects/wlosk/ki-osk                          <- ../ki-osk
+#   Projects/wlosk/ki-osk-lang-content
 #
-# Override with `make KI_OSK=/path/to/ki-osk <target>`.
+#   ki-osk/crates/osk-core/assets/lang             <- ../../../..
+#     (the submodule checkout, which is where ki-osk's README sends you)
+#
+# Both matter: a plain `../ki-osk` default is wrong from inside the
+# submodule, which is exactly the path the documentation recommends.
+# Detection requires a [workspace] Cargo.toml so it cannot latch onto
+# some unrelated crate. Override with `make KI_OSK=/path/to/ki-osk`.
 
-KI_OSK ?= ../ki-osk
+KI_OSK ?= $(shell for d in ../../../.. ../ki-osk .. ; do \
+              if [ -f "$$d/Cargo.toml" ] && grep -q '^\[workspace\]' "$$d/Cargo.toml" 2>/dev/null; then \
+                  echo "$$d"; break; \
+              fi; \
+          done)
 CARGO  ?= cargo
 
 # Run a toolbox binary out of the ki-osk checkout.
@@ -60,8 +70,8 @@ help:
 # manifest that is not there.
 .PHONY: require-ki-osk
 require-ki-osk:
-	@test -f $(KI_OSK)/Cargo.toml || { \
-	  echo "no ki-osk checkout at $(KI_OSK)"; \
+	@test -n "$(KI_OSK)" && test -f $(KI_OSK)/Cargo.toml || { \
+	  echo "no ki-osk checkout found (looked at ../../../.. and ../ki-osk)"; \
 	  echo "these targets need it for the encoder (crates/toolbox)."; \
 	  echo "pass one: make KI_OSK=/path/to/ki-osk <target>"; exit 1; }
 
