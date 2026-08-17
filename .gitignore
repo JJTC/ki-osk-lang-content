@@ -1,3 +1,7 @@
 # Corpora are fetched on demand by ki-osk scripts/fetch-corpora.sh.
 # The legacy en/de/... corpora predate that and stay tracked.
-corpora/*.txt
+#
+# NOTE the leading path: a pattern containing a slash is anchored to this
+# file, so a bare `corpora/*.txt` would match only at the repo root and
+# silently ignore nothing.
+predict/corpora/*.txt
