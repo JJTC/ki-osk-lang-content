@@ -25,8 +25,8 @@ files, or anything built from them, those terms apply to you.
 |---|---|---|
 | `predict/<lang>.fst` | Prefix-completion lexicon | `toolbox build-predict` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores | `toolbox build-predict` |
-| `predict/corpora/<lang>.txt` | Training text (Tatoeba) | `scripts/fetch-corpora.sh` |
-| `neural/<lang>/` | Optional char-LM bundles | `scripts/hf-to-kiosk.py` |
+| `predict/corpora/<lang>.txt` | Training text (Tatoeba) | `make fetch-corpora` |
+| `neural/<lang>/` | Optional char-LM bundles | `make neural-assets`, or `scripts/hf-to-kiosk.py` |
 | `pinyin/cedict.bin` | Pinyin → Hanzi | `toolbox build-pinyin` |
 | `zhuyin/cedict.bin` | Bopomofo → Traditional | `toolbox build-zhuyin` |
 | `jyutping/cedict.bin` | Jyutping → Traditional | `toolbox build-jyutping` |
@@ -49,6 +49,41 @@ unable to compile on its own. They are a few tens of kilobytes.
 Keyboard **layouts** also stayed. They are language content by subject
 but code by structure — schema-versioned JSON compiled in via
 `include_str!` behind the `langs-*` features, and validated by tests.
+
+## Regenerating
+
+`make help` lists the recipes. They live here, with the data they
+produce; the **encoder** does not:
+
+| | owns |
+|---|---|
+| this repo | the recipe — which corpora, which languages, which upstream URLs, which caps |
+| ki-osk | the encoder — `crates/toolbox`, which writes these files via `osk_core::asset_codec` |
+
+`toolbox` deliberately stayed in ki-osk. It writes a format `osk-core`
+decodes, and the two must agree: a decoder that disagrees with its
+encoder does not crash — the loader returns `None` and the daemon
+silently degrades to seed dictionaries with quietly worse prediction.
+Keeping both sides in one repository is what makes
+`asset_codec::tests::every_committed_asset_decodes` a real guard.
+Moving it here would also make this repo depend on `osk-core` while
+ki-osk carries this repo as a submodule — a cycle.
+
+So the targets shell out to a ki-osk checkout, defaulting to the sibling
+`../ki-osk`. Override with `make KI_OSK=/path/to/ki-osk <target>`; a
+missing one fails with that message rather than a cargo manifest error.
+
+```sh
+make fetch-corpora                    # Tatoeba -> predict/corpora/
+make predict-assets                   # corpora -> .fst + .ngram.bin
+make cjk-assets                       # upstream -> pinyin/zhuyin/kana
+make neural-assets                    # corpora -> neural/<lang>/
+```
+
+`make cjk-assets-seed` is the offline fallback and is **destructive** —
+it overwrites the full bundles with ki-osk's tiny curated seeds
+(`mozc-kanji.bin` drops from 4.4 MB to 4 KB). That is its purpose, but
+check `git diff --stat` before committing after it.
 
 ## Use
 
