@@ -59,7 +59,7 @@ help:
 	@echo "  fetch-corpora    download Tatoeba corpora into predict/corpora/"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
 	@echo "  cjk-assets       rebuild the CJK dicts from the upstream datasets"
-	@echo "  cjk-assets-seed  rebuild from ki-osk's in-tree seeds (offline, DOWNGRADES)"
+	@echo "  cjk-assets-seed  rebuild from seeds (offline; DOWNGRADES, needs CONFIRM=yes)"
 	@echo "  neural-assets    (re)train the per-language char-LMs"
 	@echo "  validate-neural  validate a bundle: make validate-neural BUNDLE=<dir>"
 	@echo ""
@@ -140,8 +140,26 @@ cjk-assets: require-ki-osk
 # --stat` before committing after this.
 .PHONY: cjk-assets-seed
 cjk-assets-seed: require-ki-osk
+	@test "$(CONFIRM)" = "yes" || { \
+	  echo "cjk-assets-seed REPLACES the committed dictionaries with tiny seeds:"; \
+	  echo ""; \
+	  echo "    pinyin/cedict.bin     86 400 keys     ->  ~150"; \
+	  echo "    kana/mozc-kanji.bin   80 000 readings ->   191"; \
+	  echo ""; \
+	  echo "It exists so a machine with no network can still produce a working"; \
+	  echo "dictionary. If that is genuinely what you want:"; \
+	  echo ""; \
+	  echo "    make cjk-assets-seed CONFIRM=yes"; \
+	  echo ""; \
+	  echo "Otherwise you probably want 'make cjk-assets' (full, needs network)."; \
+	  exit 1; }
 	$(TOOLBOX) --quiet --bin build-pinyin -- --seed --out $(CURDIR)/pinyin/
 	$(TOOLBOX) --quiet --bin build-kana  -- --seed --out $(CURDIR)/kana/
+	@echo ""
+	@echo "NOTE: the full bundles are now seeds. ki-osk's"
+	@echo "      crates/osk-core/tests/bundled_dicts.rs will fail until you"
+	@echo "      restore them (git checkout) or rebuild with 'make cjk-assets'."
+
 
 # Train the per-language char-LMs. Released packages that want neural
 # rescoring install these to /usr/share/ki-osk/models/<lang>/. The
