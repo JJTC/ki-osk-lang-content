@@ -123,6 +123,30 @@ impl NgramModel {
         self.trigram.len()
     }
 
+    /// The id the tables know `word` by.
+    #[must_use]
+    pub fn word_id(&self, word: &str) -> Option<u32> {
+        self.vocab.get(word).copied()
+    }
+
+    /// Every word in the vocabulary with its id, in no particular order.
+    pub fn words(&self) -> impl Iterator<Item = (&str, u32)> + '_ {
+        self.vocab.iter().map(|(w, &id)| (w.as_str(), id))
+    }
+
+    /// Every bigram as `((previous, word), log-probability)` by word id, in
+    /// no particular order: what a reader needs to list the words that can
+    /// follow a context, which [`Self::score`] alone cannot.
+    pub fn bigrams(&self) -> impl Iterator<Item = ((u32, u32), f32)> + '_ {
+        self.bigram.iter().map(|(&k, &lp)| (k, lp))
+    }
+
+    /// Every trigram as `((second previous, previous, word), log-probability)`
+    /// by word id, in no particular order.
+    pub fn trigrams(&self) -> impl Iterator<Item = ((u32, u32, u32), f32)> + '_ {
+        self.trigram.iter().map(|(&k, &lp)| (k, lp))
+    }
+
     /// Serialize to a compact byte buffer suitable for bundling as an
     /// asset. Framing is [`crate::codec`]'s — see there before
     /// changing it.
@@ -148,6 +172,27 @@ impl NgramModel {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn the_tables_can_be_read_back_entry_by_entry() {
+        let mut m = NgramModel::empty();
+        m.add_bigram("of", "the", -0.5);
+        m.add_trigram("one", "of", "the", -0.2);
+        let (of, the, one) = (
+            m.word_id("of").unwrap(),
+            m.word_id("the").unwrap(),
+            m.word_id("one").unwrap(),
+        );
+        assert_eq!(m.word_id("nope"), None);
+        let mut words: Vec<(&str, u32)> = m.words().collect();
+        words.sort_unstable();
+        assert_eq!(words, vec![("of", of), ("one", one), ("the", the)]);
+        assert_eq!(m.bigrams().collect::<Vec<_>>(), vec![((of, the), -0.5)]);
+        assert_eq!(
+            m.trigrams().collect::<Vec<_>>(),
+            vec![((one, of, the), -0.2)]
+        );
+    }
 
     #[test]
     fn trigram_beats_bigram_when_present() {

@@ -122,8 +122,3 @@ It asks for `CONFIRM=yes`.
   it checks ki-osk out.
 - **`release.yml`** publishes the version on the default branch when it
   has no release yet: a merged refresh's draft, or a new release.
-
-Setup, under *Settings*: let Actions create pull requests (*Actions →
-General → Workflow permissions*); set the variable `KI_OSK_REPO` if ki-osk
-is not `<owner>/ki-osk`, and the secret `KI_OSK_TOKEN` (read access to
-ki-osk) while ki-osk is private.
