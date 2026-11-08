@@ -23,9 +23,9 @@ name: refresh language content
 # Building needs only this repository: the builders and the format crate
 # live here. ki-osk is checked out by one job, `verify`, to run its
 # osk-core tests against the NEW content: the two repositories sit side
-# by side, and ki-osk's submodule path is linked to this checkout, which
-# is where its `include_bytes!`, its tests and its osk-data dependency
-# all look.
+# by side, ki-osk's data directory is linked to this checkout (where its
+# `include_bytes!` and its tests look), and its osk-data dependency is
+# patched from the git tag it pins to this checkout's crate.
 #
 # PRs opened with GITHUB_TOKEN do not trigger other workflows. That is
 # why every gate runs here, before the PR exists, rather than on it.
@@ -161,10 +161,10 @@ jobs:
           token: ${{ secrets.KI_OSK_TOKEN || github.token }}
           path: ki-osk
           persist-credentials: false
-      # ki-osk's submodule path becomes a link to this checkout: its
-      # include_bytes!, its tests and its osk-data dependency read the
-      # new content from there.
-      - name: Link ki-osk's submodule path to this checkout
+      # ki-osk's data directory (fetched, so absent from its checkout)
+      # becomes a link to this checkout: its include_bytes! and its tests
+      # read the new data from there.
+      - name: Link ki-osk's data directory to this checkout
         id: ki
         working-directory: ki-osk
         run: |
@@ -196,12 +196,20 @@ jobs:
         run: make lock-verify
 
       # The reader's half of the contract: ki-osk's asset tests, bundled
-      # dictionary floors and IME ranking tests, over this content. Not
-      # --locked: ki-osk's lockfile records the osk-data version it pins,
-      # and this checkout may be newer — that is the point of the test.
+      # dictionary floors and IME ranking tests, over this content, with
+      # osk-data patched from the tag ki-osk pins to this checkout's crate
+      # so the new crate is tested too. Not --locked: the patch moves the
+      # lockfile's osk-data entry, which is the point of the test.
       - name: ki-osk tests over the new content
         working-directory: ki-osk
-        run: cargo test -p osk-core
+        run: |
+          set -euo pipefail
+          patch='patch."https://github.com/jjtc/ki-osk-lang-content".osk-data.path="../ki-osk-lang-content/crates/osk-data"'
+          # ki-osk's lockfile pins the tagged crate, and cargo keeps a
+          # locked version over a patch ("patch ... was not used"), so the
+          # lock entry moves onto the patch first.
+          cargo update -p osk-data --config "$patch"
+          cargo test -p osk-core --config "$patch"
 
       - name: Anything to propose?
         id: diff
