@@ -88,9 +88,11 @@ built from
 per-language sentence subsets — the first 120 000 sentences in id order,
 or all available where fewer — of the **Tatoeba** per-language exports
 (<https://downloads.tatoeba.org/exports/per_language/>), filtered to the
-matching ISO-639-3 code. (The nine oldest — en de fr es it nl pt sv pl —
-were built from a 100 000-sentence snapshot taken 2026-04-26; they move
-to the 120 000 cap at their first refresh.)
+matching ISO-639-3 code. Held out of every subset are each 20th sentence
+by id and any sentence with the same text as one of those; the first
+1 500 held out per language are committed as `eval/<lang>.txt`, the text
+ki-osk's `toolbox eval-predict` measures prediction on. All 54 were built
+from the exports of 2026-11-08.
 
 | ki-osk | code | ki-osk | code | ki-osk | code | ki-osk | code |
 |--|--|--|--|--|--|--|--|
@@ -118,11 +120,12 @@ other 18 keep 20 000 and 60 000.
 holds the id→code map above) downloads them on demand; `sources.lock`
 records the sha256 of the corpus every committed model was built from;
 and every release made by the refresh workflow attaches those exact
-corpora (`ki-osk-lang-corpora-<tag>.tar.xz`).
+corpora (`ki-osk-lang-corpora-<version>.tar.xz`).
 
-**Tatoeba sentences are CC BY 2.0 FR.** The subsets, derived n-gram
-tables and lexicons inherit those terms; attribution to
-the Tatoeba project must travel with any redistribution.
+**Tatoeba sentences are CC BY 2.0 FR.** The subsets, the held-out text
+in `eval/`, and the derived n-gram tables and lexicons inherit those
+terms; attribution to the Tatoeba project must travel with any
+redistribution.
 
 To enlarge coverage, append from any of the following into
 `predict/corpora/<lang>.txt` and re-run `make predict-assets`:
