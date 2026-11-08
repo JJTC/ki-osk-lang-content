@@ -9,31 +9,26 @@
 //! 中國 中国 [Zhong1 guo2] /China/
 //! ```
 //!
-//! Output: `<out>/cedict.bin`, an `asset_codec`-encoded `BTreeMap<String,
-//! Vec<String>>` mapping tone-stripped lowercased Pinyin (no spaces)
-//! to an ordered list of simplified-Hanzi candidates. The runtime
-//! `CedictPinyinDict` mmap-friendly? Not really — we just load the
-//! whole blob into a `BTreeMap` at startup; CC-CEDICT is only ~120 k
-//! entries and a few MB serialised.
+//! Output: `<out>/cedict.bin`, an `osk_data::codec`-encoded
+//! `BTreeMap<String, Vec<String>>` mapping tone-stripped lowercased Pinyin
+//! (no spaces) to an ordered list of simplified-Hanzi candidates. ki-osk
+//! loads the whole table at startup: CC-CEDICT is ~120 k entries, a few
+//! MB encoded.
 //!
-//! Candidate ordering:
-//!   1. **By corpus frequency, descending** (`--freq`), which is the
-//!      half of CLAUDE.md §4.10.1 — "Pinyin → Hanzi *with frequency*" —
-//!      that was specified and never built. Without it the order was
-//!      "shortest first, ties by input order", and CC-CEDICT's input
-//!      order is essentially Unicode codepoint order, so the archaic
-//!      variants sort ahead of the characters people actually type:
-//!      `ni` gave 伱 伲 伲 (你 fourth), `hao` gave 嗥 嗥 嚆 (好 sixth),
-//!      and `de` did not reach 的 — the single most common character in
-//!      the language — inside the top eight. The panel shows THREE
-//!      candidates, so those keys were simply unusable.
+//! Candidate ordering ([`osk_data_tools::order_candidates`]):
+//!   1. **By corpus frequency, descending** (`--freq`). CC-CEDICT's own
+//!      order is essentially Unicode codepoint order, which puts archaic
+//!      variants ahead of the characters people type: `ni` would offer
+//!      伱 and 伲 before 你, and `de` would not reach 的, the most common
+//!      character in the language, within the top eight — with a
+//!      candidate bar three wide.
 //!   2. Then shorter hanzi sequences first, then input order, as
 //!      tie-breaks for everything the frequency list has never seen.
-//!   3. Duplicate surfaces are dropped — CC-CEDICT lists a form once per
-//!      sense, and repeats were consuming the visible slots (好 twice,
-//!      中 three times).
-//!   4. Cap at `--cap` candidates per Pinyin key (default 9, matching
-//!      CLAUDE.md §4.10.1's candidate bar).
+//!   3. Duplicate surfaces are dropped: CC-CEDICT lists a form once per
+//!      sense, and repeats would spend the visible slots (好 twice, 中
+//!      three times).
+//!   4. Cap at `--cap` candidates per Pinyin key (default 9, the length
+//!      of ki-osk's candidate bar).
 //!
 //! Usage:
 //!   # real dataset
@@ -71,9 +66,8 @@ struct Args {
     cap: usize,
     /// Word-frequency list used to rank candidates: `<word> <count>`
     /// per line, descending. Optional — without it the ordering falls
-    /// back to length-then-input-order, which is what shipped before
-    /// and is bad enough to make single-syllable input unusable (see
-    /// the module docs).
+    /// back to length, then input order, which leaves single-syllable
+    /// input close to unusable (see the module docs).
     #[arg(long)]
     freq: Option<PathBuf>,
 }

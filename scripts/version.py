@@ -14,9 +14,10 @@ spells it out again, because other workspaces build that crate and must
 not inherit this one's keys, and Cargo.lock records both packages. `bump`
 changes all three and refuses if they disagree beforehand.
 
-PART is `patch` when only the data changed (what the monthly refresh
-does), `minor` for anything else -- the format, the crate's API, the set
-of packs -- and `major` once the format is stable. A release is tagged
+PART is `patch` when the format and the crate's API stay as they are (new
+data, as the monthly refresh brings; fixes; documentation), `minor` when
+either changes or the set of packs does, and `major` once the format is
+stable. A release is tagged
 v<version> (release.yml), and a released version never names other
 content (ci.yml).
 """
@@ -124,7 +125,8 @@ def check() -> None:
         print(diff, end="")
         fail(
             f"{tag} is released, and this changes what it contains. Bump the version: "
-            "`make bump-version` (PART=patch when only data changed, minor otherwise)"
+            "`make bump-version` (PART=patch unless the format, the crate's API or the "
+            "set of packs changed)"
         )
     print(f"{tag} is released, and nothing here changes what it contains")
 

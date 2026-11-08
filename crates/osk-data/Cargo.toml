@@ -5,7 +5,7 @@ description  = "The ki-osk language-data format: the KIOS asset codec, the seria
 # this crate as a dependency from inside its own tree, where cargo
 # resolves inherited keys against ki-osk's workspace, not this one.
 # Keep `version` equal to [workspace.package] in the root Cargo.toml.
-version      = "0.1.0"
+version      = "0.1.1"
 edition      = "2024"
 rust-version = "1.95"
 license      = "MIT"

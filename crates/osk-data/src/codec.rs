@@ -1,68 +1,36 @@
-//! The one place the binary-asset encoding is decided.
+//! The binary encoding of every `.bin` in the language data.
 //!
-//! Every `.bin` in the language data — the per-language n-gram tables,
-//! the CC-CEDICT Pinyin and Jyutping tables, the Zhuyin table, the
-//! mozc-derived kanji dictionary and its POS-bigram connection matrix —
-//! is written and read through [`encode`] and [`decode`] here.
+//! The n-gram tables, the Pinyin, Zhuyin and Jyutping tables, the kanji
+//! dictionary and its connection matrix are all written and read through
+//! [`encode`] and [`decode`]: this repository's builders write them,
+//! ki-osk's `osk-core` reads them, and this module is all that stands
+//! between. A decoder that disagreed with its encoder would not crash —
+//! the loader would return `None` and the keyboard would quietly fall back
+//! to its seed dictionaries — so the encoding is decided here, once.
 //!
-//! That is not tidiness. The writers are this repository's builders and
-//! the readers are ki-osk's `osk-core`, and **a decoder that disagrees
-//! with its encoder does not crash**: the loader returns `None`, the
-//! daemon logs a degrade, falls back to the seed dictionaries, and
-//! prediction quietly gets worse. One shared crate plus the header below
-//! is what turns that from silent into loud.
-//!
-//! # Why postcard
-//!
-//! The assets were `bincode` until 2026-07-28. **bincode is
-//! unmaintained**: development ceased after a doxxing and harassment
-//! incident, the repository was archived in August 2025, and `3.0.0` is a
-//! tombstone release whose `lib.rs` contains nothing but a
-//! `compile_error!` announcing the fact. Its own README points readers at
-//! `wincode`, `postcard` and `rkyv`.
-//!
-//! `postcard` was chosen from that list because it is a mature 1.x, is
-//! actively maintained, is `MIT OR Apache-2.0` like the rest of the tree,
-//! and speaks plain `serde` — so the swap is confined to this file rather
-//! than spreading schema traits through every asset type. `wincode` would
-//! have kept the old bytes valid, but it is pre-1.0 and its compatibility
-//! is conditional on hand-written schemas matching, which is the same
-//! silent-mismatch risk this module exists to remove. `rkyv`'s zero-copy
-//! model is attractive for the read-mostly 6.9 MB kanji dictionary, but
-//! startup decode is already well inside budget and it would mean
-//! reworking the loaders.
-//!
-//! postcard's varint lengths also make the assets smaller than bincode's
-//! fixed-width framing did.
+//! The body is [postcard](https://docs.rs/postcard): plain `serde`, varint
+//! framing, `MIT OR Apache-2.0`.
 //!
 //! # The header
 //!
-//! Every asset starts with [`MAGIC`] and a `u16` [`VERSION`]. Neither the
-//! old bincode assets nor a future format change can be mistaken for the
-//! current one: [`decode`] rejects anything whose header does not match
-//! and says which version it found. That matters because the failure it
-//! guards is invisible without it — a wrong-format asset decodes to
-//! plausible garbage or an empty table just as easily as it errors.
-//!
-//! There is deliberately **no compatibility path for the bincode-era
-//! files**: none was ever published, and carrying a reader for them would
-//! mean keeping the unmaintained dependency that prompted the change.
+//! Every asset starts with [`MAGIC`] and a little-endian `u16`
+//! [`VERSION`], and [`decode`] refuses anything whose header does not
+//! match. Without it, a file in another format could decode to plausible
+//! garbage or an empty table as easily as it failed.
 
 /// The error every decode and encode returns.
 pub use postcard::Error;
 use serde::Serialize;
 use serde::de::DeserializeOwned;
 
-/// Leading bytes of every asset. `KIOS` + a version, so a file that is
-/// not one of ours — or is one of ours from a different era — is
-/// rejected by inspection rather than by a decode that happens to fail.
+/// Leading bytes of every asset. `KIOS` and a version, so a file that is
+/// not one of ours, or is in another version of the format, is refused on
+/// sight rather than by a decode that happens to fail.
 pub const MAGIC: [u8; 4] = *b"KIOS";
 
-/// Asset format version. **Bump this whenever the encoding or any asset
+/// Asset format version. **Bump it whenever the encoding or any asset
 /// type's layout changes**, so a stale file fails loudly instead of
 /// decoding to something plausible.
-///
-/// 1 = postcard, replacing the unversioned bincode assets.
 pub const VERSION: u16 = 1;
 
 /// Length of the header [`encode`] writes and [`decode`] expects.

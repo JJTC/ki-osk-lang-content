@@ -44,9 +44,9 @@ table for each of the 54 prediction languages, and `zh-Hans` (Pinyin),
 `zh-Hant` (Zhuyin), `yue` (Jyutping) and `ja` (kana–kanji).
 
 A release is `vX.Y.Z`, the version in `Cargo.toml`, one number for the
-format crate and its data: **patch** for new data in the same format,
-**minor** for anything else — the format, the crate's API, the set of
-packs. Each release carries:
+format crate and its data: **patch** when the format and the crate's API
+stay as they are (new data, fixes, documentation), **minor** when either
+changes or the set of packs does. Each release carries:
 
 | Asset | What |
 |---|---|

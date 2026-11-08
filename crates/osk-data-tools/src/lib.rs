@@ -41,18 +41,17 @@ pub fn load_freq_list<P: AsRef<Path>>(
 /// Order the candidate surfaces for one reading, and cap the list.
 ///
 /// THE ordering rule for every CC-CEDICT-derived IME bundle
-/// (`build-pinyin`, `build-zhuyin`, `build-jyutping`). It lives here
-/// because all three had their own copy of `sort_by(len).then(order)`
-/// and all three were therefore wrong in the same way — the defect
-/// shape this project keeps meeting.
+/// (`build-pinyin`, `build-zhuyin`, `build-jyutping`). It lives here,
+/// once, so the three builders cannot drift apart.
 ///
 /// `entries` are `(char_count, input_order, surface)`. The rule:
 ///
 /// 1. **Corpus frequency, descending.** CC-CEDICT carries no frequency
 ///    data and its own order is essentially Unicode codepoint order, so
 ///    without this the archaic variants sort ahead of the characters
-///    people type — `de` reached 㝵 㥁 嘚 before 的, in a panel with
-///    three slots. See ki-osk's `crates/osk-core/tests/pinyin_ranking.rs`.
+///    people type — `de` would offer 㝵 㥁 嘚 before 的, in a bar three
+///    wide. ki-osk's `crates/osk-core/tests/pinyin_ranking.rs` holds the
+///    shipped tables to this.
 /// 2. Shorter surfaces first, then input order — tie-breaks for
 ///    everything the frequency list has never seen.
 /// 3. Duplicate surfaces dropped: CC-CEDICT lists a form once per
@@ -90,8 +89,8 @@ mod rank_tests {
 
     #[test]
     fn frequency_beats_input_order() {
-        // The shipped bug in miniature: 的 is last in CC-CEDICT order and
-        // must come first once frequencies are known.
+        // In miniature: 的 is last in CC-CEDICT order and must come first
+        // once frequencies are known.
         let mut f = HashMap::new();
         f.insert("的".to_string(), 3_957_141u64);
         let got = order_candidates(vec![e(1, 0, "㝵"), e(1, 1, "嘚"), e(1, 2, "的")], &f, 3);

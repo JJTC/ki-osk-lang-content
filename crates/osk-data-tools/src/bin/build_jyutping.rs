@@ -9,7 +9,7 @@
 //! exactly what the Latin keyboard emits — which is why the runtime reuses
 //! the Pinyin composer unchanged.
 //!
-//! Output: `<out>/cedict.bin`, an `asset_codec` `BTreeMap<String, Vec<String>>`,
+//! Output: `<out>/cedict.bin`, an `osk_data::codec` `BTreeMap<String, Vec<String>>`,
 //! same format the runtime `CedictPinyinDict` decodes.
 //!
 //! Usage:

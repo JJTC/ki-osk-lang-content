@@ -9,7 +9,7 @@
 //!      [`syllable_to_zhuyin`]) and concatenating — so `ni3 hao3` →
 //!      `ㄋㄧㄏㄠ`, matching what the Zhuyin keyboard's keys emit.
 //!
-//! Output: `<out>/cedict.bin`, an `asset_codec` `BTreeMap<String, Vec<String>>`
+//! Output: `<out>/cedict.bin`, an `osk_data::codec` `BTreeMap<String, Vec<String>>`
 //! keyed by toneless Zhuyin, same format the runtime `CedictPinyinDict`
 //! decodes (the map is script-agnostic).
 //!

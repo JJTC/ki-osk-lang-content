@@ -256,9 +256,9 @@ packs:
 
 # The release version: one number for the format crate and the data,
 # tagged v$(VERSION) when it reaches the default branch (release.yml).
-# PART=patch when only the data changed -- the monthly refresh's bump --
-# and minor for anything else: the format, the crate's API, the set of
-# packs. See scripts/version.py.
+# PART=patch when the format and the crate's API stay as they are -- new
+# data, the monthly refresh's bump; fixes; documentation -- and minor when
+# either changes or the set of packs does. See scripts/version.py.
 VERSION = $(shell python3 scripts/version.py get)
 PART   ?= patch
 .PHONY: version bump-version

@@ -14,10 +14,10 @@ use serde::{Deserialize, Serialize, Serializer};
 
 /// Stored n-gram model. Built by `build-predict` (osk-data-tools).
 ///
-/// The maps are written in key order (see [`sorted`]), so a model always
+/// The maps are written in key order (see `sorted`), so a model always
 /// encodes to the same bytes. Lookups stay `HashMap`s; only the encoding
-/// is ordered, and the wire format is the same postcard map either way,
-/// so files written before the change still decode.
+/// is ordered, and the wire format is a plain postcard map, so the order
+/// is the writer's choice rather than part of the format.
 #[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub struct NgramModel {
     #[serde(serialize_with = "sorted")]
@@ -31,10 +31,9 @@ pub struct NgramModel {
 }
 
 /// Serialize a `HashMap` in key order. Its own iteration order is seeded
-/// per map instance, so serializing it directly gave every
-/// `build-predict` run different bytes for the same model — which made
-/// the committed `.ngram.bin` files impossible to reproduce or to tell
-/// apart from a real change.
+/// per map instance, so serializing it directly would give every build
+/// different bytes for the same model, and a rebuilt table could not be
+/// told apart from a changed one.
 fn sorted<K, V, S>(map: &HashMap<K, V>, s: S) -> Result<S::Ok, S::Error>
 where
     K: Ord + Serialize,
@@ -135,7 +134,7 @@ impl NgramModel {
         crate::codec::encode(self)
     }
 
-    /// Deserialize from a byte buffer produced by [`to_bytes`]. Typically
+    /// Deserialize from a byte buffer produced by [`Self::to_bytes`]. Typically
     /// called on an `include_bytes!`'d asset at startup.
     ///
     /// # Errors
@@ -166,7 +165,7 @@ mod tests {
     }
 
     #[test]
-    fn roundtrip_through_the_asset_codec_preserves_scores() {
+    fn roundtrip_through_the_codec_preserves_scores() {
         let mut m = NgramModel::empty();
         m.add_bigram("is", "good", -2.0);
         m.add_trigram("all", "is", "good", -0.5);
@@ -183,9 +182,8 @@ mod tests {
     fn the_same_model_always_encodes_to_the_same_bytes() {
         // Two models built separately from the same entries hold
         // HashMaps with different random seeds, so they iterate in
-        // different orders. Before the maps were serialized in key
-        // order this failed, and no two `build-predict` runs over the
-        // same corpus produced the same file.
+        // different orders; serializing in key order is what makes
+        // their bytes equal.
         let build = || {
             let mut m = NgramModel::empty();
             for i in 0u16..300 {

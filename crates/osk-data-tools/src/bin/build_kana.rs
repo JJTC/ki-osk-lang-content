@@ -20,7 +20,7 @@
 //!    defaults to insertion order). Lets us ship a usable dict
 //!    without a licensed mozc dump.
 //!
-//! Output: `<out>/mozc-kanji.bin`, an `asset_codec`-encoded
+//! Output: `<out>/mozc-kanji.bin`, an `osk_data::codec`-encoded
 //! `BTreeMap<String, Vec<String>>` keyed by reading.
 
 use std::collections::BTreeMap;

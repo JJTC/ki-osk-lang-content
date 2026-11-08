@@ -3,7 +3,7 @@
 //!
 //! Output (in `--out <dir>`):
 //!   - `<lang>.fst`       — unigram frequencies as an `fst::Map`
-//!   - `<lang>.ngram.bin` — `asset_codec`-encoded [`NgramModel`] with
+//!   - `<lang>.ngram.bin` — `osk_data::codec`-encoded [`NgramModel`] with
 //!     bigram + trigram log-probabilities (only emitted when the
 //!     corpus is big enough to yield any n-grams)
 //!
@@ -37,8 +37,8 @@ struct Args {
     /// whitespace-split is up to the caller.
     #[arg(long)]
     corpus: PathBuf,
-    /// Output directory. Files written as <out>/<lang>.fst and
-    /// <out>/<lang>.ngram.bin.
+    /// Output directory. Files written as `<out>/<lang>.fst` and
+    /// `<out>/<lang>.ngram.bin`.
     #[arg(long)]
     out: PathBuf,
     /// Cap on vocabulary size (keep the top-N most frequent words).
@@ -187,11 +187,9 @@ fn main() -> anyhow::Result<()> {
     }
     // Derive `unk_log_prob` from observed data: anchor it just below
     // the rarest kept n-gram so unknown bigrams always lose to known
-    // ones. The default `-6.0` floor was fine for the original
-    // 150-line seed corpora (where every bigram was rare), but for
-    // any real corpus it ends up ABOVE common-but-not-frequent
-    // bigrams and silently flips the suggestion ranking. The
-    // 1-nat margin keeps even the rarest known bigram beating unk
+    // ones. A fixed floor (the `-6.0` default) can sit ABOVE a real
+    // corpus's common-but-not-frequent bigrams and silently flip the
+    // suggestion ranking. The 1-nat margin keeps even the rarest known bigram beating unk
     // without blowing up arithmetic.
     if min_lp.is_finite() {
         model.unk_log_prob = min_lp - 1.0;
