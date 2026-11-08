@@ -1,0 +1,15 @@
+# Corpora are fetched on demand by ./scripts/fetch-corpora.sh (`make
+# fetch-corpora`) and are not committed: sources.lock records the sha256
+# of the one each model was built from, and every refresh release
+# attaches them. (Until 2026-11-08 the nine oldest — en de fr es it nl pt
+# sv pl — were tracked; they are in history up to that point.)
+#
+# NOTE the leading path: a pattern containing a slash is anchored to this
+# file, so a bare `corpora/*.txt` would match only at the repo root and
+# silently ignore nothing.
+predict/corpora/*.txt
+predict/corpora/*.part
+
+# Cargo build output, and the pack manifests `make packs` writes.
+/target/
+/dist/

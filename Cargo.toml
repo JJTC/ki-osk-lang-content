@@ -1,0 +1,38 @@
+[workspace]
+resolver = "3"
+members = [
+  "crates/osk-data",
+  "crates/osk-data-tools",
+]
+
+[workspace.package]
+version      = "0.1.0"
+edition      = "2024"
+# The toolchain rust-toolchain.toml pins, as in ki-osk, whose osk-core
+# compiles osk-data too.
+rust-version = "1.95"
+license      = "MIT"
+repository   = "https://github.com/jjtc/ki-osk-lang-content"
+authors      = ["JJTC"]
+publish      = false
+
+# Versions and features match ki-osk's workspace, which builds osk-data as
+# a dependency: a mismatch would compile two copies of each.
+[workspace.dependencies]
+osk-data   = { path = "crates/osk-data" }
+serde      = { version = "1", features = ["derive"] }
+serde_json = "1"
+postcard   = { version = "1", features = ["use-std"] }
+sha2       = "0.10"
+fst        = "0.4"
+flate2     = "1"
+anyhow     = "1"
+clap       = { version = "4", features = ["derive"] }
+log        = "0.4"
+env_logger = "0.11"
+toml       = "0.9"
+
+[profile.release]
+# The builders crunch whole corpora; a fast build of them is worth more
+# than a fast build of the builders.
+opt-level = 3

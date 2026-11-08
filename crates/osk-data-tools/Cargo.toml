@@ -1,0 +1,55 @@
+[package]
+name         = "osk-data-tools"
+description  = "Builds the ki-osk language data: prediction lexicons and n-grams, the Chinese and Japanese input tables, and the language-pack manifests."
+version.workspace      = true
+edition.workspace      = true
+rust-version.workspace = true
+license.workspace      = true
+repository.workspace   = true
+authors.workspace      = true
+publish.workspace      = true
+
+# Hyphenated names, as the Makefile and the docs call them.
+[[bin]]
+name = "build-predict"
+path = "src/bin/build_predict.rs"
+
+[[bin]]
+name = "build-pinyin"
+path = "src/bin/build_pinyin.rs"
+
+[[bin]]
+name = "build-zhuyin"
+path = "src/bin/build_zhuyin.rs"
+
+[[bin]]
+name = "build-jyutping"
+path = "src/bin/build_jyutping.rs"
+
+[[bin]]
+name = "build-kana"
+path = "src/bin/build_kana.rs"
+
+[[bin]]
+name = "build-connection"
+path = "src/bin/build_connection.rs"
+
+[[bin]]
+name = "make-packs"
+path = "src/bin/make_packs.rs"
+
+[[bin]]
+name = "pack-changes"
+path = "src/bin/pack_changes.rs"
+
+[dependencies]
+osk-data   = { workspace = true, features = ["install"] }
+anyhow     = { workspace = true }
+clap       = { workspace = true }
+serde      = { workspace = true }
+serde_json = { workspace = true }
+fst        = { workspace = true }
+flate2     = { workspace = true }
+log        = { workspace = true }
+env_logger = { workspace = true }
+toml       = { workspace = true }

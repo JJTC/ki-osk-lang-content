@@ -1,0 +1,154 @@
+//! `build-jyutping` — ingest CC-Canto (CC BY-SA 4.0) into a runtime
+//! Jyutping → **Traditional** Hanzi dictionary bundle for the Cantonese IME.
+//!
+//! Cantonese Jyutping is a Latin romanisation, so this is the closest twin
+//! of `build-pinyin`: the only differences are the source file (CC-Canto's
+//! Cantonese readings, where the reading sits in `{...}` braces rather than
+//! `[...]`) and the Traditional column. The lookup key is the toneless
+//! Jyutping (tone digits + spaces dropped), so `nei5 hou2` → `neihou`,
+//! exactly what the Latin keyboard emits — which is why the runtime reuses
+//! the Pinyin composer unchanged.
+//!
+//! Output: `<out>/cedict.bin`, an `asset_codec` `BTreeMap<String, Vec<String>>`,
+//! same format the runtime `CedictPinyinDict` decodes.
+//!
+//! Usage:
+//!   build-jyutping --canto cccedict-canto-readings.txt --out jyutping/
+//!   build-jyutping --seed --out jyutping/
+
+use std::collections::BTreeMap;
+use std::fs;
+use std::io::{BufRead, BufReader};
+use std::path::PathBuf;
+
+use anyhow::Context as _;
+use clap::Parser;
+
+#[derive(Parser)]
+#[command(name = "build-jyutping")]
+struct Args {
+    /// CC-Canto Cantonese-readings source file. Ignored when `--seed` is set.
+    #[arg(long)]
+    canto: Option<PathBuf>,
+    /// Use the bundled curated seed list instead of an external file.
+    #[arg(long, default_value_t = false)]
+    seed: bool,
+    /// Output directory. File written as `<out>/cedict.bin`.
+    #[arg(long)]
+    out: PathBuf,
+    /// Word-frequency list (`<word> <count>` per line) used to rank
+    /// candidates. Optional; without it the order is length-then-input,
+    /// which puts archaic variants first — see `osk_data_tools::order_candidates`.
+    #[arg(long)]
+    freq: Option<PathBuf>,
+    /// Max candidates kept per Jyutping key.
+    #[arg(long, default_value_t = 9)]
+    cap: usize,
+}
+
+fn main() -> anyhow::Result<()> {
+    env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();
+    let args = Args::parse();
+
+    let lines: Vec<String> = if args.seed {
+        log::info!("build-jyutping: using the bundled curated seed");
+        SEED_CANTO.lines().map(str::to_string).collect()
+    } else {
+        let Some(path) = &args.canto else {
+            anyhow::bail!("need --canto <path> or --seed");
+        };
+        let f = fs::File::open(path).with_context(|| format!("opening {}", path.display()))?;
+        BufReader::new(f).lines().collect::<Result<_, _>>()?
+    };
+
+    let freq = match &args.freq {
+        Some(p) => osk_data_tools::load_freq_list(p)?,
+        None => std::collections::HashMap::new(),
+    };
+
+    // (jyutping_key, hanzi_char_count, insertion_order) → traditional hanzi
+    let mut accum: BTreeMap<String, Vec<(usize, usize, String)>> = BTreeMap::new();
+    let mut order = 0usize;
+    for line in &lines {
+        let Some((trad, jyut)) = parse_canto_line(line) else {
+            continue;
+        };
+        let key = normalize_jyutping(jyut);
+        if key.is_empty() {
+            continue;
+        }
+        let char_count = trad.chars().count();
+        accum
+            .entry(key)
+            .or_default()
+            .push((char_count, order, trad.to_string()));
+        order += 1;
+    }
+
+    let mut table: BTreeMap<String, Vec<String>> = BTreeMap::new();
+    for (key, entries) in accum {
+        table.insert(
+            key,
+            osk_data_tools::order_candidates(entries, &freq, args.cap),
+        );
+    }
+
+    log::info!("build-jyutping: jyutping keys = {}", table.len());
+    fs::create_dir_all(&args.out).with_context(|| format!("mkdir -p {}", args.out.display()))?;
+    let out_path = args.out.join("cedict.bin");
+    let bytes = osk_data::codec::encode(&table).context("encode cedict")?;
+    fs::write(&out_path, &bytes).with_context(|| format!("writing {}", out_path.display()))?;
+    log::info!("wrote {} ({} bytes)", out_path.display(), bytes.len());
+    Ok(())
+}
+
+/// Parse one CC-Canto readings line → `(traditional_hanzi, jyutping_raw)`.
+/// Format: `Trad Simp [pinyin] {jyut1 ping2} /optional def/`. Returns
+/// `None` for comments / blank / lines without a `{...}` reading.
+fn parse_canto_line(line: &str) -> Option<(&str, &str)> {
+    let trimmed = line.trim();
+    if trimmed.is_empty() || trimmed.starts_with('#') {
+        return None;
+    }
+    let trad = trimmed.split_whitespace().next()?;
+    let open = trimmed.find('{')?;
+    let close = trimmed[open..].find('}')? + open;
+    Some((trad, &trimmed[open + 1..close]))
+}
+
+/// Toneless lookup key: lowercase, drop tone digits and spaces. Jyutping
+/// is ASCII letters + tone digits, so keeping the letters suffices.
+fn normalize_jyutping(raw: &str) -> String {
+    raw.chars()
+        .filter(char::is_ascii_alphabetic)
+        .flat_map(char::to_lowercase)
+        .collect()
+}
+
+/// Curated seed (offline fallback / reproducible tests). Generated by
+/// filtering CC-Canto to the shared HSK-common headwords.
+static SEED_CANTO: &str = include_str!("../../../../seeds/jyutping/seed.canto.txt");
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn parses_reading_line() {
+        let (trad, jyut) = parse_canto_line("你好 你好 [ni3 hao3] {nei5 hou2}").unwrap();
+        assert_eq!(trad, "你好");
+        assert_eq!(jyut, "nei5 hou2");
+    }
+
+    #[test]
+    fn normalizes_tones_and_spaces() {
+        assert_eq!(normalize_jyutping("nei5 hou2"), "neihou");
+        assert_eq!(normalize_jyutping("gwong2 dung1 waa2"), "gwongdungwaa");
+    }
+
+    #[test]
+    fn skips_comments_and_readingless() {
+        assert!(parse_canto_line("# CC-Canto").is_none());
+        assert!(parse_canto_line("你好 你好 [ni3 hao3]").is_none()); // no {...}
+    }
+}

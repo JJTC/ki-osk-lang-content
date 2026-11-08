@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+# fetch-corpora.sh — download per-language sentence corpora from Tatoeba
+# for the prediction models, mapping ki-osk model codes to ISO 639-3.
+#
+# Tatoeba sentence data is CC BY 2.0 FR (attribution in NOTICES.md). Each
+# export is `<iso3>_sentences.tsv.bz2` with columns id / lang / text; we
+# keep column 3, cap at $CAP sentences (the first $CAP in id order), and
+# write a headerless `predict/corpora/<id>.txt` that `build-predict` (see
+# `make predict-assets`) turns into `<id>.fst` + `<id>.ngram.bin`.
+#
+# The corpora are not committed. `sources.lock` records the sha256 of the
+# corpus each committed model was built from, and every release attaches
+# the exact corpora as an asset, so a model can always be traced back to
+# the text it was trained on.
+#
+#   scripts/fetch-corpora.sh [id ...]     # default: the whole map below
+#
+# Env: CAP=120000  CACHE=/tmp/ki-osk-tatoeba  OUT=predict/corpora
+#
+# Failure is loud. Every language is attempted; any that fails is named at
+# the end and the script exits 1. A download is only trusted after
+# `curl -f` succeeded AND `bzip2 -t` passed, and an empty corpus is an
+# error — before 2026-11-08 a 404 was cached as the .bz2, reused forever,
+# and silently turned into an empty corpus while the script said "0 lines"
+# and exited 0.
+set -eu
+
+CAP=${CAP:-120000}
+CACHE=${CACHE:-/tmp/ki-osk-tatoeba}
+OUT=${OUT:-predict/corpora}
+BASE=https://downloads.tatoeba.org/exports/per_language
+
+# ki-osk model code (= a layout's `prediction_lang`, usually the same
+# 2-letter code as the layout id) → Tatoeba ISO 639-3 code. The two differ
+# only where a layout id is an ISO-3166 country code: `da` is the Danish
+# (`dk`) layout, `cs` the Czech (`cz`) one. Latin/Cyrillic/Greek/Arabic/
+# Hebrew/Devanagari/Bengali/Armenian/Georgian are all space-delimited, so
+# build-predict's whitespace tokenizer handles them. `ku` uses kmr
+# (Kurmanji, Latin) to match the Latin layout; `sr` uses srp (mixed
+# script — Cyrillic input prefix-matches the Cyrillic entries).
+#
+# Keep this in step with PREDICT_LANGS in the Makefile: a language there
+# without an entry here cannot be refreshed.
+MAP="
+en:eng de:deu fr:fra es:spa it:ita nl:nld pt:por sv:swe pl:pol
+tr:tur ru:rus hu:hun eo:epo he:heb uk:ukr lt:lit fi:fin cs:ces fil:tgl
+mk:mkd ar:ara da:dan sr:srp hy:hye el:ell ro:ron vi:vie sk:slk fa:pes
+id:ind bg:bul no:nob hi:hin bn:ben be:bel az:aze is:isl ca:cat ug:uig
+lv:lvs ku:kmr ka:kat hr:hrv et:est kab:kab
+oc:oci gl:glg br:bre eu:eus
+tt:tat mr:mar as:asm ms:zsm os:oss
+"
+
+iso_for() { for p in $MAP; do [ "${p%%:*}" = "$1" ] && { echo "${p##*:}"; return; }; done; }
+
+# Download $1 to $2, keeping a valid cached copy when the server says it is
+# unchanged. Returns non-zero unless $2 ends up a valid bzip2 file.
+fetch() {
+	local url=$1 dest=$2 part=$2.part
+	rm -f "$part"
+	# A cached file that is not valid bzip2 (an HTML error page, a
+	# truncated transfer) is discarded rather than trusted.
+	if [ -s "$dest" ] && ! bzip2 -t "$dest" 2>/dev/null; then
+		echo "   discarding invalid cached $dest" >&2
+		rm -f "$dest"
+	fi
+	if [ -s "$dest" ]; then
+		# -z: only transfer if the server copy is newer than ours (-R
+		# keeps the server's mtime on what we save, so this compares
+		# like with like).
+		curl -fsSL -R --retry 5 --retry-all-errors --max-time 600 \
+			-z "$dest" -o "$part" "$url" || { rm -f "$part"; return 1; }
+	else
+		curl -fsSL -R --retry 5 --retry-all-errors --max-time 600 \
+			-o "$part" "$url" || { rm -f "$part"; return 1; }
+	fi
+	if [ -s "$part" ]; then
+		bzip2 -t "$part" 2>/dev/null || {
+			echo "   $url: response is not a valid bzip2 stream" >&2
+			rm -f "$part"; return 1; }
+		mv -f "$part" "$dest"
+	fi
+	rm -f "$part"
+	[ -s "$dest" ]
+}
+
+mkdir -p "$CACHE" "$OUT"
+ids=${*:-$(for p in $MAP; do echo "${p%%:*}"; done)}
+failed=""
+for id in $ids; do
+	iso=$(iso_for "$id")
+	if [ -z "$iso" ]; then
+		echo "!! $id: no ISO-639-3 mapping in fetch-corpora.sh" >&2
+		failed="$failed $id"; continue
+	fi
+	bz="$CACHE/$iso.bz2"
+	if ! fetch "$BASE/$iso/${iso}_sentences.tsv.bz2" "$bz"; then
+		echo "!! $id: download of $iso failed" >&2
+		failed="$failed $id"; continue
+	fi
+	# No pipefail here on purpose: `head` closing the pipe early SIGPIPEs
+	# bzcat, which is expected. The archive was verified above, and the
+	# line count below catches an empty result.
+	tmp="$OUT/$id.txt.part"
+	bzcat "$bz" | cut -f3 | grep -v '^$' | head -n "$CAP" > "$tmp" || true
+	n=$(wc -l < "$tmp")
+	if [ "$n" -eq 0 ]; then
+		echo "!! $id: $iso export produced an empty corpus" >&2
+		rm -f "$tmp"; failed="$failed $id"; continue
+	fi
+	mv -f "$tmp" "$OUT/$id.txt"
+	printf '%-5s %s  %d lines\n' "$id" "$iso" "$n"
+done
+
+if [ -n "$failed" ]; then
+	echo "fetch-corpora: FAILED for:$failed" >&2
+	exit 1
+fi

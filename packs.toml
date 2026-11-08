@@ -1,0 +1,125 @@
+# Language packs: what a device installs. `make packs` turns this file into
+# one manifest per pack (see crates/osk-data/src/pack.rs) under dist/packs/.
+#
+# Every predict/<id>.fst + predict/<id>.ngram.bin pair is a pack of its own,
+# with the [prediction] licence and source below, so it needs only a name.
+# The input-method packs are listed in full further down.
+#
+# make-packs refuses a committed data file that no pack claims, and a
+# language with files but no name here, so nothing ships unlisted.
+
+[prediction]
+license = { name = "CC BY 2.0 FR", url = "https://creativecommons.org/licenses/by/2.0/fr/", share_alike = false }
+source  = { name = "Tatoeba", url = "https://tatoeba.org/" }
+
+[prediction.names]
+ar  = "Arabic"
+as  = "Assamese"
+az  = "Azerbaijani"
+be  = "Belarusian"
+bg  = "Bulgarian"
+bn  = "Bengali"
+br  = "Breton"
+ca  = "Catalan"
+cs  = "Czech"
+da  = "Danish"
+de  = "German"
+el  = "Greek"
+en  = "English"
+eo  = "Esperanto"
+es  = "Spanish"
+et  = "Estonian"
+eu  = "Basque"
+fa  = "Persian"
+fi  = "Finnish"
+fil = "Filipino"
+fr  = "French"
+gl  = "Galician"
+he  = "Hebrew"
+hi  = "Hindi"
+hr  = "Croatian"
+hu  = "Hungarian"
+hy  = "Armenian"
+id  = "Indonesian"
+is  = "Icelandic"
+it  = "Italian"
+ka  = "Georgian"
+kab = "Kabyle"
+ku  = "Kurdish (Kurmanji)"
+lt  = "Lithuanian"
+lv  = "Latvian"
+mk  = "Macedonian"
+mr  = "Marathi"
+ms  = "Malay"
+nl  = "Dutch"
+no  = "Norwegian (Bokmål)"
+oc  = "Occitan"
+os  = "Ossetian"
+pl  = "Polish"
+pt  = "Portuguese"
+ro  = "Romanian"
+ru  = "Russian"
+sk  = "Slovak"
+sr  = "Serbian"
+sv  = "Swedish"
+tr  = "Turkish"
+tt  = "Tatar"
+ug  = "Uyghur"
+uk  = "Ukrainian"
+vi  = "Vietnamese"
+
+# `lock`/`input` name the sources.lock entry and input whose recorded
+# sha256 the manifest carries, so a pack names the exact upstream file it
+# was built from.
+
+[[pack]]
+id   = "zh-Hans"
+name = "Chinese (Simplified), Pinyin input"
+components = [{ kind = "pinyin", path = "pinyin/cedict.bin" }]
+licenses = [
+  { name = "CC BY-SA 4.0", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true },
+]
+sources = [
+  { name = "CC-CEDICT", url = "https://www.mdbg.net/chinese/dictionary?page=cc-cedict", lock = "pinyin", input = "cedict.txt" },
+  { name = "FrequencyWords zh_cn (candidate order only)", url = "https://github.com/hermitdave/FrequencyWords", lock = "pinyin", input = "zh_cn_50k.txt" },
+]
+
+[[pack]]
+id   = "zh-Hant"
+name = "Chinese (Traditional), Zhuyin input"
+components = [{ kind = "zhuyin", path = "zhuyin/cedict.bin" }]
+licenses = [
+  { name = "CC BY-SA 4.0", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true },
+]
+sources = [
+  { name = "CC-CEDICT", url = "https://www.mdbg.net/chinese/dictionary?page=cc-cedict", lock = "zhuyin", input = "cedict.txt" },
+  { name = "FrequencyWords zh_cn (candidate order only)", url = "https://github.com/hermitdave/FrequencyWords", lock = "zhuyin", input = "zh_cn_50k.txt" },
+]
+
+[[pack]]
+id   = "yue"
+name = "Cantonese, Jyutping input"
+components = [{ kind = "jyutping", path = "jyutping/cedict.bin" }]
+licenses = [
+  { name = "CC BY-SA 3.0 (CC-Canto readings, © 2015 Pleco Software)", url = "https://creativecommons.org/licenses/by-sa/3.0/", share_alike = true },
+  { name = "CC BY-SA 4.0 (CC-CEDICT portions)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true },
+]
+sources = [
+  { name = "CC-Canto Cantonese readings for CC-CEDICT", url = "https://cantonese.org/download.html", lock = "jyutping", input = "cccedict-canto-readings.txt" },
+  { name = "FrequencyWords zh_cn (candidate order only)", url = "https://github.com/hermitdave/FrequencyWords", lock = "jyutping", input = "zh_cn_50k.txt" },
+]
+
+[[pack]]
+id   = "ja"
+name = "Japanese, kana-kanji conversion"
+components = [
+  { kind = "kanji", path = "kana/mozc-kanji.bin" },
+  { kind = "connection", path = "kana/mozc-connection.bin" },
+]
+licenses = [
+  { name = "BSD-3-Clause", url = "https://github.com/google/mozc/blob/master/LICENSE", share_alike = false },
+]
+sources = [
+  { name = "mozc OSS system dictionary", url = "https://github.com/google/mozc", lock = "kana/mozc-kanji", input = "mozc-dict.tsv" },
+  { name = "mozc connection matrix", url = "https://github.com/google/mozc", lock = "kana/mozc-connection", input = "mozc-connection.txt" },
+]

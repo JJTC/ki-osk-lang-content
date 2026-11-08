@@ -1,0 +1,82 @@
+name: CI
+
+# Gates every change to this repository: the format crate and the
+# builders build cleanly, every committed data file decodes as its reader
+# expects (crates/osk-data/tests/committed_assets.rs), every output still
+# matches sources.lock, every data file belongs to a language pack, a
+# release builds and reads back, a released version is not changed under
+# its own number, and the workflows lint.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: "0"
+
+jobs:
+  rust:
+    name: format crate + builders
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/rust
+        with:
+          cache-key: ci
+      - run: cargo fmt --all --check
+      - run: cargo clippy --locked --workspace --all-targets --all-features -- -D warnings
+      - name: cargo test (includes every committed file decoding)
+        run: cargo test --locked --workspace --all-features
+
+  data:
+    name: lock + packs
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/rust
+        with:
+          cache-key: data
+      - name: Every output matches sources.lock
+        run: make lock-verify
+      - name: Every data file belongs to a pack, and a release builds and reads back
+        run: make release
+
+  version:
+    name: a released version names one content
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # the release tags
+          persist-credentials: false
+      - name: The version is unreleased, or this is what it released
+        run: python3 scripts/version.py check
+
+  workflows:
+    name: actionlint
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: docker://rhysd/actionlint:1.7.7
+        with:
+          args: -color

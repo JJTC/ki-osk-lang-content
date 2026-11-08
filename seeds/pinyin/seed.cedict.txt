@@ -1,0 +1,202 @@
+# Curated CC-CEDICT-format seed for the ki-osk Pinyin IME.
+#
+# Provides ~200 of the most-typed HSK-1/HSK-2 entries so the OSK ships
+# a usable Pinyin dictionary even without a full CC-CEDICT copy. Format
+# matches upstream CC-CEDICT so `build-pinyin` can consume it unchanged
+# (and real CC-CEDICT files slot in via --cedict when available).
+#
+# Attribution: derived from public HSK word lists and the CC-CEDICT
+# project (CC BY-SA 4.0). See NOTICES.md.
+#
+# Lines:
+#   Traditional Simplified [pin1 yin1] /gloss/
+
+# --- pronouns ---
+我 我 [wo3] /I/me/
+你 你 [ni3] /you/
+您 您 [nin2] /you (polite)/
+他 他 [ta1] /he/him/
+她 她 [ta1] /she/her/
+它 它 [ta1] /it/
+我們 我们 [wo3 men5] /we/us/
+你們 你们 [ni3 men5] /you (plural)/
+他們 他们 [ta1 men5] /they/them/
+她們 她们 [ta1 men5] /they (female)/
+
+# --- greetings / common phrases ---
+你好 你好 [ni3 hao3] /hello/hi/
+您好 您好 [nin2 hao3] /hello (polite)/
+再見 再见 [zai4 jian4] /goodbye/
+謝謝 谢谢 [xie4 xie5] /thank you/
+不客氣 不客气 [bu4 ke4 qi5] /you're welcome/
+對不起 对不起 [dui4 bu4 qi3] /sorry/
+沒關係 没关系 [mei2 guan1 xi5] /it's all right/
+請 请 [qing3] /please/
+是 是 [shi4] /is/yes/
+不是 不是 [bu4 shi4] /is not/no/
+有 有 [you3] /have/there is/
+沒有 没有 [mei2 you3] /don't have/there isn't/
+要 要 [yao4] /want/to need/
+想 想 [xiang3] /to think/to want/
+
+# --- questions ---
+什麼 什么 [shen2 me5] /what/
+誰 谁 [shei2] /who/
+哪裡 哪里 [na3 li3] /where/
+哪兒 哪儿 [na3 r5] /where/
+什麼時候 什么时候 [shen2 me5 shi2 hou5] /when/
+為什麼 为什么 [wei4 shen2 me5] /why/
+怎麼 怎么 [zen3 me5] /how/
+多少 多少 [duo1 shao3] /how many/how much/
+
+# --- people / family ---
+人 人 [ren2] /person/
+朋友 朋友 [peng2 you3] /friend/
+家 家 [jia1] /home/family/
+爸爸 爸爸 [ba4 ba5] /father/
+媽媽 妈妈 [ma1 ma5] /mother/
+哥哥 哥哥 [ge1 ge5] /elder brother/
+弟弟 弟弟 [di4 di5] /younger brother/
+姐姐 姐姐 [jie3 jie5] /elder sister/
+妹妹 妹妹 [mei4 mei5] /younger sister/
+兒子 儿子 [er2 zi5] /son/
+女兒 女儿 [nu:3 er2] /daughter/
+老師 老师 [lao3 shi1] /teacher/
+學生 学生 [xue2 sheng5] /student/
+同學 同学 [tong2 xue2] /classmate/
+
+# --- places / countries ---
+中國 中国 [Zhong1 guo2] /China/
+美國 美国 [Mei3 guo2] /America/
+日本 日本 [Ri4 ben3] /Japan/
+法國 法国 [Fa3 guo2] /France/
+德國 德国 [De2 guo2] /Germany/
+英國 英国 [Ying1 guo2] /Britain/
+學校 学校 [xue2 xiao4] /school/
+大學 大学 [da4 xue2] /university/
+北京 北京 [Bei3 jing1] /Beijing/
+上海 上海 [Shang4 hai3] /Shanghai/
+商店 商店 [shang1 dian4] /shop/
+餐廳 餐厅 [can1 ting1] /restaurant/
+飯店 饭店 [fan4 dian4] /restaurant/hotel/
+醫院 医院 [yi1 yuan4] /hospital/
+機場 机场 [ji1 chang3] /airport/
+
+# --- time / dates ---
+今天 今天 [jin1 tian1] /today/
+明天 明天 [ming2 tian1] /tomorrow/
+昨天 昨天 [zuo2 tian1] /yesterday/
+現在 现在 [xian4 zai4] /now/
+早上 早上 [zao3 shang5] /morning/
+晚上 晚上 [wan3 shang5] /evening/
+中午 中午 [zhong1 wu3] /noon/
+星期 星期 [xing1 qi1] /week/
+月 月 [yue4] /month/moon/
+年 年 [nian2] /year/
+小時 小时 [xiao3 shi2] /hour/
+分鐘 分钟 [fen1 zhong1] /minute/
+時間 时间 [shi2 jian1] /time/
+
+# --- numbers ---
+一 一 [yi1] /one/
+二 二 [er4] /two/
+三 三 [san1] /three/
+四 四 [si4] /four/
+五 五 [wu3] /five/
+六 六 [liu4] /six/
+七 七 [qi1] /seven/
+八 八 [ba1] /eight/
+九 九 [jiu3] /nine/
+十 十 [shi2] /ten/
+百 百 [bai3] /hundred/
+千 千 [qian1] /thousand/
+萬 万 [wan4] /ten thousand/
+零 零 [ling2] /zero/
+
+# --- daily verbs ---
+吃 吃 [chi1] /to eat/
+喝 喝 [he1] /to drink/
+看 看 [kan4] /to look/to see/
+聽 听 [ting1] /to listen/
+說 说 [shuo1] /to speak/
+讀 读 [du2] /to read/
+寫 写 [xie3] /to write/
+學 学 [xue2] /to study/
+做 做 [zuo4] /to do/
+去 去 [qu4] /to go/
+來 来 [lai2] /to come/
+回 回 [hui2] /to return/
+買 买 [mai3] /to buy/
+賣 卖 [mai4] /to sell/
+工作 工作 [gong1 zuo4] /work/
+睡覺 睡觉 [shui4 jiao4] /to sleep/
+起床 起床 [qi3 chuang2] /to get up/
+吃飯 吃饭 [chi1 fan4] /to eat a meal/
+喜歡 喜欢 [xi3 huan5] /to like/
+愛 爱 [ai4] /to love/
+認識 认识 [ren4 shi5] /to recognize/to know/
+知道 知道 [zhi1 dao5] /to know/
+
+# --- food / drink ---
+茶 茶 [cha2] /tea/
+咖啡 咖啡 [ka1 fei1] /coffee/
+水 水 [shui3] /water/
+牛奶 牛奶 [niu2 nai3] /milk/
+米飯 米饭 [mi3 fan4] /cooked rice/
+麵條 面条 [mian4 tiao2] /noodles/
+麵包 面包 [mian4 bao1] /bread/
+蘋果 苹果 [ping2 guo3] /apple/
+雞蛋 鸡蛋 [ji1 dan4] /egg/
+魚 鱼 [yu2] /fish/
+肉 肉 [rou4] /meat/
+
+# --- objects ---
+書 书 [shu1] /book/
+筆 笔 [bi3] /pen/
+紙 纸 [zhi3] /paper/
+桌子 桌子 [zhuo1 zi5] /table/
+椅子 椅子 [yi3 zi5] /chair/
+房間 房间 [fang2 jian1] /room/
+電腦 电脑 [dian4 nao3] /computer/
+手機 手机 [shou3 ji1] /mobile phone/
+電話 电话 [dian4 hua4] /telephone/
+
+# --- adjectives ---
+好 好 [hao3] /good/well/
+大 大 [da4] /big/
+小 小 [xiao3] /small/
+多 多 [duo1] /many/much/
+少 少 [shao3] /few/
+高 高 [gao1] /tall/high/
+低 低 [di1] /low/
+新 新 [xin1] /new/
+舊 旧 [jiu4] /old/used/
+漂亮 漂亮 [piao4 liang5] /pretty/
+忙 忙 [mang2] /busy/
+累 累 [lei4] /tired/
+快 快 [kuai4] /fast/
+慢 慢 [man4] /slow/
+冷 冷 [leng3] /cold/
+熱 热 [re4] /hot/
+
+# --- connectors / common words ---
+的 的 [de5] /possessive particle/
+了 了 [le5] /modal particle/
+在 在 [zai4] /at/
+和 和 [he2] /and/with/
+也 也 [ye3] /also/
+都 都 [dou1] /both/all/
+很 很 [hen3] /very/
+不 不 [bu4] /not/
+沒 没 [mei2] /not have/
+就 就 [jiu4] /then/
+還 还 [hai2] /still/also/
+
+# --- language ---
+漢語 汉语 [Han4 yu3] /Chinese language/
+中文 中文 [Zhong1 wen2] /Chinese/
+英文 英文 [Ying1 wen2] /English/
+日語 日语 [Ri4 yu3] /Japanese language/
+說話 说话 [shuo1 hua4] /to speak/
+字 字 [zi4] /character/
+詞 词 [ci2] /word/

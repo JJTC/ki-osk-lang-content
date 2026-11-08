@@ -1,0 +1,120 @@
+# ki-osk language content
+
+Dictionaries, prediction models and input-method tables for
+[ki-osk](https://github.com/jjtc/ki-osk), an on-screen keyboard, as
+language packs: one per language, 58 in all. Beside the data are the
+builders that produce it (`crates/osk-data-tools`) and the format crate
+both they and ki-osk use (`crates/osk-data`), so a reader and the writer
+of the same file cannot disagree.
+
+## Licences
+
+`LICENSE` (MIT) covers the code and tooling only. The data keeps the
+licences of the datasets it was built from, listed in `NOTICES.md`, and
+**several are share-alike** (CC BY-SA): the Chinese and Cantonese
+dictionaries. Whoever redistributes those files, or anything built from
+them, takes on those terms.
+
+## Layout
+
+| Path | What | Built by |
+|---|---|---|
+| `predict/<lang>.fst` | Prefix-completion lexicon (54 languages) | `make predict-assets` |
+| `predict/<lang>.ngram.bin` | Bigram/trigram scores | `make predict-assets` |
+| `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
+| `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |
+| `zhuyin/cedict.bin` | Bopomofo → Traditional | `make zhuyin-assets` |
+| `jyutping/cedict.bin` | Jyutping → Traditional | `make jyutping-assets` |
+| `kana/mozc-kanji.bin` | Kana → kanji | `make kana-assets` |
+| `kana/mozc-connection.bin` | mozc POS-bigram matrix | `make kana-assets` |
+| `sources.lock` | What each output was built from | every build target |
+| `seeds/` | Tiny Pinyin, Jyutping and kana seeds (offline fallback) | by hand |
+| `packs.toml` | Which files make up each pack, with licences and sources | by hand |
+| `crates/osk-data/` | The format: the KIOS codec, the serialized types, packs | — |
+| `crates/osk-data-tools/` | The builders (`build-predict`, `build-pinyin`, …, `make-packs`) | — |
+
+Every `.bin` carries a `KIOS` magic and version header and is written
+through `osk_data::codec`, so a stale or foreign file is rejected on
+sight rather than mis-decoded.
+
+## Packs and releases
+
+A pack is one language's files: an `.fst` lexicon and an `.ngram.bin`
+table for each of the 54 prediction languages, and `zh-Hans` (Pinyin),
+`zh-Hant` (Zhuyin), `yue` (Jyutping) and `ja` (kana–kanji).
+
+A release is `vX.Y.Z`, the version in `Cargo.toml`, one number for the
+format crate and its data: **patch** for new data in the same format,
+**minor** for anything else — the format, the crate's API, the set of
+packs. Each release carries:
+
+| Asset | What |
+|---|---|
+| `packs.json` | The index: every pack's manifest — its files with size and sha256, its licences, its upstream sources — and how each file is served |
+| `<path>.gz` | Each file, gzipped: `predict.en.fst.gz` is `predict/en.fst` |
+| `NOTICES.md` | The licence notices, which go with any pack |
+| `ki-osk-lang-X.Y.Z.tar.xz` | Every pack, installed into one tree |
+| `ki-osk-lang-corpora-X.Y.Z.tar.xz` | The text the prediction models were trained on (data releases) |
+| `SHA256SUMS` | |
+
+Every pack at once:
+
+```sh
+tar -xJf ki-osk-lang-X.Y.Z.tar.xz -C /usr/share/ki-osk
+```
+
+Some packs: read `packs.json`, download their files, and check each one
+twice, the download against the index before decompressing it and the
+result against the pack's manifest after (`osk_data::pack` does both,
+with the `install` feature). An install tree holds each file at its
+path, each pack's manifest at `packs/<id>.json` and the notices at
+`NOTICES.md`. Since `packs.json` holds every checksum, keeping it pins a
+release byte for byte; ki-osk keeps one as `lang.lock`.
+
+## Building
+
+The builders need only this repository and its pinned toolchain.
+`make help` lists everything.
+
+```sh
+make fetch-corpora     # Tatoeba -> predict/corpora/
+make predict-assets    # corpora -> predict/*.fst + *.ngram.bin
+make cjk-assets        # upstream -> pinyin, zhuyin, jyutping, kana
+make refresh           # all three, rebuilding only what changed, then check
+make check             # refuse a tree that lost, broke or shrank a file
+make release           # every asset of the release -> dist/release/
+make bump-version      # PART=patch | minor | major
+```
+
+`sources.lock` records, for every output, the sha256 of each input, the
+recipe and the output itself. With `ONLY_STALE=1`, as `make refresh`
+runs, only outputs whose inputs, recipe or file changed are rebuilt, and
+`make lock-verify` checks the tree against the lock. The `.fst` files and
+the Jyutping and kana tables rebuild byte for byte from their inputs.
+The committed `.ngram.bin` tables predate deterministic builds and will
+change on their next rebuild. `pinyin` and `zhuyin` come from CC-CEDICT,
+which changes daily. A release builds byte for byte from its commit.
+
+`make cjk-assets-seed` builds the CJK tables from `seeds/` instead:
+offline, and **destructive**, since it replaces the full dictionaries.
+It asks for `CONFIRM=yes`.
+
+## Workflows
+
+- **`ci.yml`**, on every push and pull request: fmt, clippy and the tests
+  (every committed file decodes as its reader expects), the lock, a
+  release built and read back, the version, and the workflows. The version
+  check (`make check-version`) refuses a change to what a released version
+  contains, and a version below the latest release.
+- **`refresh.yml`** re-fetches every source, rebuilds what changed, runs
+  the checks and ki-osk's tests over the result, and opens a pull request
+  that bumps the patch version, with a draft release holding the corpora.
+  It is monthly, but its schedule is off until ki-osk is on GitHub, since
+  it checks ki-osk out.
+- **`release.yml`** publishes the version on the default branch when it
+  has no release yet: a merged refresh's draft, or a new release.
+
+Setup, under *Settings*: let Actions create pull requests (*Actions →
+General → Workflow permissions*); set the variable `KI_OSK_REPO` if ki-osk
+is not `<owner>/ki-osk`, and the secret `KI_OSK_TOKEN` (read access to
+ki-osk) while ki-osk is private.

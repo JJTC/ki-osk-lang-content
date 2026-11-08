@@ -1,0 +1,38 @@
+name: rust toolchain + cache
+description: >
+  Install the toolchain a workspace's rust-toolchain.toml pins and restore
+  that workspace's cargo cache. Used for this repository (the format crate
+  and the builders) and, in the refresh workflow, for the ki-osk checkout
+  whose tests run against new data.
+
+inputs:
+  workspace:
+    description: Directory holding the workspace's Cargo.toml, Cargo.lock and rust-toolchain.toml.
+    default: "."
+  cache-key:
+    description: Distinguishes this job's cache (builds differ by features and profile).
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Install the pinned toolchain
+      shell: bash
+      working-directory: ${{ inputs.workspace }}
+      run: |
+        set -euo pipefail
+        chan=$(sed -n 's/^channel *= *"\([^"]*\)".*/\1/p' rust-toolchain.toml)
+        test -n "$chan" || { echo "no channel in rust-toolchain.toml"; exit 1; }
+        rustup toolchain install "$chan" --profile minimal --component rustfmt,clippy --no-self-update
+        cargo --version
+
+    - uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cargo/registry/index
+          ~/.cargo/registry/cache
+          ~/.cargo/git/db
+          ${{ inputs.workspace }}/target
+        key: cargo-${{ runner.os }}-${{ inputs.cache-key }}-${{ hashFiles(format('{0}/Cargo.lock', inputs.workspace), format('{0}/rust-toolchain.toml', inputs.workspace)) }}
+        restore-keys: |
+          cargo-${{ runner.os }}-${{ inputs.cache-key }}-

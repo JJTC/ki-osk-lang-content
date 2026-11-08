@@ -1,0 +1,37 @@
+[package]
+name         = "osk-data"
+description  = "The ki-osk language-data format: the KIOS asset codec, the serialized dictionary and n-gram types, and the language-pack manifest."
+# Self-contained on purpose — no workspace inheritance. ki-osk compiles
+# this crate as a dependency from inside its own tree, where cargo
+# resolves inherited keys against ki-osk's workspace, not this one.
+# Keep `version` equal to [workspace.package] in the root Cargo.toml.
+version      = "0.1.0"
+edition      = "2024"
+rust-version = "1.95"
+license      = "MIT"
+repository   = "https://github.com/jjtc/ki-osk-lang-content"
+authors      = ["JJTC"]
+publish      = false
+
+[features]
+default = []
+# Checksum verification of a pack's files against its manifest. Off by
+# default so a reader that only decodes does not compile a hash.
+verify = ["dep:sha2"]
+# Opening a release's downloads (gzip) and writing them into an install
+# tree — what a client that fetches packs needs.
+install = ["verify", "dep:flate2"]
+
+# Versions and features match ki-osk's workspace, so ki-osk builds one
+# copy of each.
+[dependencies]
+serde      = { version = "1", features = ["derive"] }
+serde_json = "1"
+postcard   = { version = "1", features = ["use-std"] }
+sha2       = { version = "0.10", optional = true }
+flate2     = { version = "1", optional = true }
+
+[dev-dependencies]
+# The committed-assets test opens every lexicon as well as decoding
+# every `.bin`.
+fst = "0.4"

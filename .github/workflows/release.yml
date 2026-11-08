@@ -1,0 +1,143 @@
+name: release language content
+
+# Publishes release v<version> — the version Cargo.toml gives the format
+# crate and the data alike — when that version reaches the default branch
+# unreleased. Normally that is a merged refresh PR: it bumped the patch
+# version and left a DRAFT release v<version> holding the exact corpora it
+# trained on, which this publishes. A change made by hand bumps the
+# version itself (`make bump-version`), and ci.yml refuses one that would
+# change what a released version contains. A version with a release is
+# never released again, so most pushes stop at the first step.
+#
+# Assets (`make release`, then the corpora):
+#   packs.json, <path>.gz, NOTICES.md   the packs: the index, each file
+#                                       gzipped, the licence notices
+#   ki-osk-lang-<version>.tar.xz        every pack as one install tree
+#                                       (`tar -xJf … -C /usr/share/ki-osk`)
+#   ki-osk-lang-corpora-<version>.tar.xz  the training text (refreshes)
+#   SHA256SUMS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Which release
+        id: v
+        run: |
+          set -euo pipefail
+          version=$(python3 scripts/version.py get); tag=v$version
+          state=$(gh release view "$tag" --json isDraft --jq .isDraft 2>/dev/null || echo none)
+          case "$state" in
+            false) mode=released; echo "$tag is released; nothing to do" ;;
+            true) mode=draft; echo "publishing the refresh's draft $tag" ;;
+            *) mode=new; echo "releasing $tag" ;;
+          esac
+          prev=$(gh release list --exclude-drafts --limit 1 --json tagName --jq '.[0].tagName // empty')
+          {
+            echo "version=$version"; echo "tag=$tag"; echo "mode=$mode"; echo "prev=$prev"
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: ./.github/actions/rust
+        if: steps.v.outputs.mode != 'released'
+        with:
+          cache-key: release
+
+      # A file that no longer matches its lock entry was rebuilt outside
+      # the recipe; releasing it would publish provenance that is false.
+      - name: The tree matches sources.lock
+        if: steps.v.outputs.mode != 'released'
+        run: python3 scripts/lock.py verify
+
+      - name: Build the release
+        if: steps.v.outputs.mode != 'released'
+        run: make release
+
+      - name: Add the refresh's corpora
+        if: steps.v.outputs.mode == 'draft'
+        env:
+          TAG: ${{ steps.v.outputs.tag }}
+          VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          set -euo pipefail
+          asset=ki-osk-lang-corpora-$VERSION.tar.xz; x=$RUNNER_TEMP/corpora
+          gh release download "$TAG" --pattern "$asset" --dir "$RUNNER_TEMP"
+          mkdir -p "$x"
+          tar -xJf "$RUNNER_TEMP/$asset" -C "$x"
+          # The corpora must be the text the merged lock says every model
+          # was built from — not, say, a later refresh's.
+          python3 scripts/lock.py verify --inputs "corpora/=$x"
+          cp "$RUNNER_TEMP/$asset" dist/release/
+          make -s release-sums
+
+      - name: Notes
+        if: steps.v.outputs.mode != 'released'
+        env:
+          TAG: ${{ steps.v.outputs.tag }}
+          VERSION: ${{ steps.v.outputs.version }}
+          PREV: ${{ steps.v.outputs.prev }}
+        run: |
+          set -euo pipefail
+          old=()
+          if [ -n "$PREV" ] && gh release download "$PREV" --pattern packs.json --dir "$RUNNER_TEMP/prev"; then
+            old=(--old "$RUNNER_TEMP/prev/packs.json")
+          fi
+          {
+            echo "Language content **$TAG**, at \`${GITHUB_SHA::12}\`: the format crate"
+            echo "\`osk-data $VERSION\` and the data released with it."
+            echo
+            cargo run --release --quiet -p osk-data-tools --bin pack-changes -- "${old[@]}" dist/release/packs.json
+            echo
+            echo "**Every pack:** \`tar -xJf ki-osk-lang-$VERSION.tar.xz -C /usr/share/ki-osk\`."
+            echo "**Some packs:** \`packs.json\` lists each pack's files and their \`.gz\` assets;"
+            echo "check each download against it, then the result against the pack's manifest."
+            echo "ki-osk does this with \`toolbox lang install\`, against a pinned \`packs.json\`."
+            echo
+            echo "Licences travel with these files: the Chinese and Cantonese dictionaries"
+            echo "(\`zh-Hans\`, \`zh-Hant\`, \`yue\`) are share-alike, the prediction packs carry"
+            echo "Tatoeba's CC BY 2.0 FR, and \`ja\` mozc's BSD licence. \`NOTICES.md\` is an asset"
+            echo "and inside the tarball."
+          } > "$RUNNER_TEMP/notes.md"
+          cat "$RUNNER_TEMP/notes.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish the refresh's draft
+        if: steps.v.outputs.mode == 'draft'
+        env:
+          TAG: ${{ steps.v.outputs.tag }}
+        run: |
+          set -euo pipefail
+          gh release upload "$TAG" dist/release/* --clobber
+          gh release edit "$TAG" --target "$GITHUB_SHA" --draft=false --latest \
+            --title "Language content $TAG" --notes-file "$RUNNER_TEMP/notes.md"
+
+      - name: Create the release
+        if: steps.v.outputs.mode == 'new'
+        env:
+          TAG: ${{ steps.v.outputs.tag }}
+        run: |
+          set -euo pipefail
+          gh release create "$TAG" --target "$GITHUB_SHA" --latest \
+            --title "Language content $TAG" --notes-file "$RUNNER_TEMP/notes.md" \
+            dist/release/*

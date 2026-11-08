@@ -1,0 +1,302 @@
+# Recipes for pulling and regenerating this repository's contents.
+#
+# Everything needed lives here: the recipe (which corpora, which
+# languages, which upstream URLs, which caps), the builders
+# (crates/osk-data-tools) and the format they write through
+# (crates/osk-data), which ki-osk's osk-core reads with. An encoder and a
+# decoder that share one crate cannot disagree about the format, and
+# building the data needs no ki-osk checkout.
+#
+# The builders run on this repository's pinned toolchain
+# (rust-toolchain.toml), which cargo picks up because the recipes run
+# here.
+
+CARGO  ?= cargo
+PYTHON ?= python3
+
+# Run one of the builders.
+TOOLS = $(CARGO) run --release --quiet -p osk-data-tools --bin
+
+# Which revision of this repository's builders wrote a file. Recorded in
+# sources.lock for provenance only; it does not make anything stale.
+ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
+
+# Every language with a committed prediction model. Each needs an entry
+# in scripts/fetch-corpora.sh's MAP too. The last nine were missing until
+# 2026-11-08, so `make predict-assets` silently skipped models that were
+# already committed.
+PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
+                 oc gl br eu tt mr as ms os
+
+PREDICT_CORPORA_DIR = predict/corpora
+PREDICT_OUT_DIR = predict
+
+# Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
+# Only the .bins built from them are committed.
+SRC_DIR ?= $(or $(TMPDIR),/tmp)/ki-osk-sources
+
+# sources.lock records, for every committed output, the sha256 of each
+# input and the recipe values it was built with (scripts/lock.py). With
+# ONLY_STALE=1 the build targets skip every output whose inputs, recipe
+# and file still match the lock — what `make refresh` and the scheduled
+# workflow run. Without it they rebuild everything. Either way, each
+# successful build updates its lock entry.
+LOCK ?= sources.lock
+ONLY_STALE ?=
+LOCKTOOL = $(PYTHON) scripts/lock.py --lock $(LOCK)
+# Shell prelude for the locked targets: `stale NAME ARGS...` is true when
+# NAME must be built; `record NAME ARGS...` writes its lock entry.
+LOCKED = stale() { [ -z "$(ONLY_STALE)" ] || ! $(LOCKTOOL) fresh "$$@"; }; \
+         record() { $(LOCKTOOL) record "$$@" --encoder "$(ENCODER)"; }
+
+# Caps tuned for the Tatoeba corpora (≤120 000 sentences per language;
+# Swedish has ~56.5 k). Larger corpora lift these; the only constraint is
+# repo size. Override at the make-CLI level.
+PREDICT_VOCAB ?= 20000
+PREDICT_NGRAM ?= 60000
+# The COMPACT tier: the 35 languages added in f73b244 ("Tier 4") plus
+# kab were built with these smaller caps, by hand — this Makefile never
+# said so. Established on 2026-11-08 by rebuilding: with these caps every
+# one of their .fst files is byte-identical to the committed one (and
+# each .ngram.bin within 0.35% of its size; those are not byte-stable,
+# see scripts/lock.py), with the caps above none of the large ones are.
+# Recording the tier keeps a refresh from silently growing 36 n-gram
+# tables by up to 2x. Moving a language to the full tier is a size
+# decision: take it out of this list.
+PREDICT_COMPACT_LANGS ?= no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be \
+                         id fil az ku ug hi bn hy ka lt lv kab
+PREDICT_COMPACT_VOCAB ?= 18000
+PREDICT_COMPACT_NGRAM ?= 30000
+
+.PHONY: help
+help:
+	@echo "targets:"
+	@echo "  refresh          fetch everything, rebuild only what changed, check"
+	@echo "                   (what the scheduled GitHub workflow runs)"
+	@echo "  fetch-corpora    download Tatoeba corpora into predict/corpora/"
+	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
+	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
+	@echo "  cjk-assets       rebuild all five CJK dicts from the upstream datasets"
+	@echo "                   (pinyin-assets zhuyin-assets jyutping-assets kana-assets)"
+	@echo "  cjk-assets-seed  rebuild from seeds (offline; DOWNGRADES, needs CONFIRM=yes)"
+	@echo "  check            compare the tree against HEAD: missing, shrunk or"
+	@echo "                   broken outputs fail (scripts/check-assets.py)"
+	@echo "  lock-verify      check every output still matches sources.lock"
+	@echo "  packs            build the language packs of a release in dist/packs/"
+	@echo "  release          every asset of the release, in dist/release/"
+	@echo "  version          print the release version (Cargo.toml)"
+	@echo "  bump-version     PART=patch (data) | minor (format, API, packs) | major"
+	@echo "  check-version    the version is not released, or the tree is its content"
+	@echo ""
+	@echo "  ONLY_STALE=1     build only outputs whose inputs/recipe changed"
+
+# Everything, incrementally: what the monthly workflow does before it
+# runs ki-osk's tests and opens a PR. Safe to run locally — it builds
+# only what the lock says is out of date, then refuses a result that
+# lost a file or shrank one.
+.PHONY: refresh
+refresh: fetch-corpora
+	$(MAKE) predict-assets cjk-assets ONLY_STALE=1
+	$(MAKE) check
+
+.PHONY: fetch-corpora
+fetch-corpora:
+	./scripts/fetch-corpora.sh
+
+# Rebuild every language's prefix lexicon and n-gram table. Drop a
+# bigger corpus at predict/corpora/<lang>.txt and rerun to refresh one
+# language without touching anything else.
+.PHONY: predict-assets
+predict-assets:
+	@$(LOCKED); for lang in $(PREDICT_LANGS); do \
+		case " $(PREDICT_COMPACT_LANGS) " in \
+			*" $$lang "*) vocab=$(PREDICT_COMPACT_VOCAB); ngram=$(PREDICT_COMPACT_NGRAM) ;; \
+			*)            vocab=$(PREDICT_VOCAB);         ngram=$(PREDICT_NGRAM) ;; \
+		esac; \
+		set -- predict/$$lang \
+			--input corpora/$$lang.txt=$(PREDICT_CORPORA_DIR)/$$lang.txt \
+			--recipe vocab_size=$$vocab --recipe ngram_keep=$$ngram \
+			--output $(PREDICT_OUT_DIR)/$$lang.fst --output $(PREDICT_OUT_DIR)/$$lang.ngram.bin; \
+		stale "$$@" || continue; \
+		echo "build-predict $$lang (vocab $$vocab, n-grams $$ngram)"; \
+		$(TOOLS) build-predict -- \
+			--lang $$lang \
+			--corpus $(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt \
+			--out $(CURDIR)/$(PREDICT_OUT_DIR) \
+			--vocab-size $$vocab \
+			--ngram-keep $$ngram \
+			|| exit 1; \
+		record "$$@" || exit 1; \
+	done
+
+# Regenerate the CJK dictionaries from the full upstream datasets — what
+# the committed .bins are built from. See NOTICES.md for provenance and
+# licences; several are share-alike. The kana filters keep the bundle on
+# its size budget (mozc's full dump is ~750 k readings).
+.PHONY: cjk-sources
+cjk-sources:
+	OUT=$(SRC_DIR) ./scripts/fetch-cjk-sources.sh
+
+# Lock arguments per dictionary: inputs by stable name, recipe, outputs.
+ZHFREQ_IN  = --input zh_cn_50k.txt=$(SRC_DIR)/zh_cn_50k.txt
+CEDICT_IN  = --input cedict.txt=$(SRC_DIR)/cedict.txt
+PINYIN_LOCK   = pinyin $(CEDICT_IN) $(ZHFREQ_IN) --output pinyin/cedict.bin
+ZHUYIN_LOCK   = zhuyin $(CEDICT_IN) $(ZHFREQ_IN) --output zhuyin/cedict.bin
+JYUTPING_LOCK = jyutping --input cccedict-canto-readings.txt=$(SRC_DIR)/cccedict-canto-readings.txt \
+                $(ZHFREQ_IN) --output jyutping/cedict.bin
+KANA_MAX_COST     ?= 7000
+KANA_MAX_READINGS ?= 80000
+KANJI_LOCK   = kana/mozc-kanji --input mozc-dict.tsv=$(SRC_DIR)/mozc-dict.tsv \
+               --recipe max_cost=$(KANA_MAX_COST) --recipe max_readings=$(KANA_MAX_READINGS) \
+               --output kana/mozc-kanji.bin
+CONNECT_LOCK = kana/mozc-connection --input mozc-connection.txt=$(SRC_DIR)/mozc-connection.txt \
+               --output kana/mozc-connection.bin
+
+.PHONY: cjk-assets pinyin-assets zhuyin-assets jyutping-assets kana-assets
+cjk-assets: pinyin-assets zhuyin-assets jyutping-assets kana-assets
+
+pinyin-assets: cjk-sources
+	@$(LOCKED); set -- $(PINYIN_LOCK); stale "$$@" || exit 0; \
+	$(TOOLS) build-pinyin -- \
+		--cedict $(SRC_DIR)/cedict.txt --freq $(SRC_DIR)/zh_cn_50k.txt \
+		--out $(CURDIR)/pinyin/ \
+	&& record "$$@"
+
+# The Traditional twin of pinyin: same CC-CEDICT source, Traditional
+# column, keyed by toneless Bopomofo.
+zhuyin-assets: cjk-sources
+	@$(LOCKED); set -- $(ZHUYIN_LOCK); stale "$$@" || exit 0; \
+	$(TOOLS) build-zhuyin -- \
+		--cedict $(SRC_DIR)/cedict.txt --freq $(SRC_DIR)/zh_cn_50k.txt \
+		--out $(CURDIR)/zhuyin/ \
+	&& record "$$@"
+
+# Same story as zhuyin. Verified: this recipe rebuilds the committed
+# jyutping/cedict.bin from f664e39 byte-for-byte.
+jyutping-assets: cjk-sources
+	@$(LOCKED); set -- $(JYUTPING_LOCK); stale "$$@" || exit 0; \
+	$(TOOLS) build-jyutping -- \
+		--canto $(SRC_DIR)/cccedict-canto-readings.txt --freq $(SRC_DIR)/zh_cn_50k.txt \
+		--out $(CURDIR)/jyutping/ \
+	&& record "$$@"
+
+kana-assets: cjk-sources
+	@$(LOCKED); set -- $(KANJI_LOCK); stale "$$@" || exit 0; \
+	$(TOOLS) build-kana -- \
+		--mozc $(SRC_DIR)/mozc-dict.tsv \
+		--max-cost $(KANA_MAX_COST) --max-readings $(KANA_MAX_READINGS) \
+		--out $(CURDIR)/kana/ \
+	&& record "$$@"
+	@$(LOCKED); set -- $(CONNECT_LOCK); stale "$$@" || exit 0; \
+	$(TOOLS) build-connection -- \
+		--matrix $(SRC_DIR)/mozc-connection.txt --out $(CURDIR)/kana/ \
+	&& record "$$@"
+
+# Offline fallback: rebuild both dictionaries from the tiny curated
+# seeds in seeds/, which the builders embed.
+#
+# DESTRUCTIVE: this OVERWRITES the committed full bundles with the seeds.
+# mozc-kanji.bin goes from 4.4 MB / 80 000 readings to 4 KB / 191. That
+# is the point of the target — it exists so a machine with no network can
+# still produce a working dictionary — but running it by accident and
+# committing the result would quietly gut CJK input. Check `git diff
+# --stat` before committing after this.
+#
+# It does not touch the lock, so `make lock-verify` flags both files and
+# the next `make refresh` rebuilds them from the real sources.
+.PHONY: cjk-assets-seed
+cjk-assets-seed:
+	@test "$(CONFIRM)" = "yes" || { \
+	  echo "cjk-assets-seed REPLACES the committed dictionaries with tiny seeds:"; \
+	  echo ""; \
+	  echo "    pinyin/cedict.bin     86 400 keys     ->  ~150"; \
+	  echo "    kana/mozc-kanji.bin   80 000 readings ->   191"; \
+	  echo ""; \
+	  echo "It exists so a machine with no network can still produce a working"; \
+	  echo "dictionary. If that is genuinely what you want:"; \
+	  echo ""; \
+	  echo "    make cjk-assets-seed CONFIRM=yes"; \
+	  echo ""; \
+	  echo "Otherwise you probably want 'make cjk-assets' (full, needs network)."; \
+	  exit 1; }
+	$(TOOLS) build-pinyin -- --seed --out $(CURDIR)/pinyin/
+	$(TOOLS) build-kana -- --seed --out $(CURDIR)/kana/
+	@echo ""
+	@echo "NOTE: the full bundles are now seeds. ki-osk's"
+	@echo "      crates/osk-core/tests/bundled_dicts.rs will fail until you"
+	@echo "      restore them (git checkout) or rebuild with 'make cjk-assets'."
+
+
+# Gate a rebuilt tree before it is committed: every output still there,
+# with a valid header, none shrunk by more than CHECK_MAX_SHRINK.
+# CHECK_BASE is the git revision to compare against.
+CHECK_BASE         ?= HEAD
+CHECK_MAX_SHRINK   ?= 0.10
+CHECK_REPORT       ?=
+.PHONY: check
+check:
+	$(PYTHON) scripts/check-assets.py --base $(CHECK_BASE) \
+		--max-shrink $(CHECK_MAX_SHRINK) \
+		$(if $(CHECK_REPORT),--report $(CHECK_REPORT))
+
+.PHONY: lock-verify
+lock-verify:
+	$(LOCKTOOL) verify
+
+# One release of language packs (packs.toml) in dist/packs/, every file a
+# release asset: packs.json (each pack's manifest — paths, sizes, sha256,
+# licences, upstream inputs from sources.lock — and how each file is
+# served), each file gzipped, and NOTICES.md. Named after the crates'
+# version. Refuses a data file that no pack claims, then reads the
+# release back as a client would.
+PACKS_OUT ?= dist/packs
+.PHONY: packs
+packs:
+	$(TOOLS) make-packs -- --out $(PACKS_OUT)
+
+# The release version: one number for the format crate and the data,
+# tagged v$(VERSION) when it reaches the default branch (release.yml).
+# PART=patch when only the data changed -- the monthly refresh's bump --
+# and minor for anything else: the format, the crate's API, the set of
+# packs. See scripts/version.py.
+VERSION = $(shell python3 scripts/version.py get)
+PART   ?= patch
+.PHONY: version bump-version
+version:
+	@python3 scripts/version.py get
+bump-version:
+	python3 scripts/version.py bump $(PART)
+
+# A released version names one content: refuse a tree that changes what
+# v$(VERSION) contains while that release exists (ci.yml runs this).
+.PHONY: check-version
+check-version:
+	python3 scripts/version.py check
+
+# Every asset of release v$(VERSION), in dist/release/: the packs
+# (packs.json, each file gzipped, NOTICES.md), the all-languages bundle
+# ki-osk-lang-$(VERSION).tar.xz and SHA256SUMS. The bundle is every pack
+# installed from those assets as a client installs them:
+# `tar -xJf ki-osk-lang-$(VERSION).tar.xz -C /usr/share/ki-osk`. The same
+# commit gives the same bytes; the bundle's entries carry its time.
+RELEASE_OUT       ?= dist/release
+SOURCE_DATE_EPOCH ?= $(shell git log -1 --format=%ct 2>/dev/null || echo 0)
+.PHONY: release
+release:
+	$(TOOLS) make-packs -- --out $(RELEASE_OUT) --bundle --mtime $(SOURCE_DATE_EPOCH)
+	xz -9 -T1 -f $(RELEASE_OUT)/ki-osk-lang-$(VERSION).tar
+	@$(MAKE) -s release-sums
+	@echo "release v$(VERSION): $$(ls $(RELEASE_OUT) | wc -l) assets in $(RELEASE_OUT)"
+
+# SHA256SUMS over every other asset in $(RELEASE_OUT), in C-locale name
+# order so it does not depend on whose machine wrote it. Run again after
+# adding an asset (release.yml adds a refresh's corpora).
+.PHONY: release-sums
+release-sums:
+	cd $(RELEASE_OUT) && find . -maxdepth 1 -type f ! -name 'SHA256SUMS*' -printf '%P\0' \
+	  | LC_ALL=C sort -z | xargs -0 sha256sum -- > SHA256SUMS.tmp && mv SHA256SUMS.tmp SHA256SUMS
+
+# `make -s print-PREDICT_LANGS` — lets the workflows read a variable
+# instead of keeping a second copy of it.
+print-%:
+	@echo $($*)

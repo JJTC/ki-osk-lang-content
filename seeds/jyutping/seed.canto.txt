@@ -1,0 +1,173 @@
+# Curated CC-Canto-format seed for the ki-osk Cantonese (Jyutping) IME.
+#
+# The same ~180 HSK-common headwords as the Pinyin seed, carrying their
+# Cantonese Jyutping readings (in {..} braces) so the OSK ships a usable
+# Cantonese dict without the full CC-Canto download. `build-jyutping`
+# consumes this unchanged (real CC-Canto slots in via --canto).
+#
+# Attribution: CC-Canto / CC-CEDICT Cantonese readings (CC BY-SA 4.0).
+# See NOTICES.md. Format: Trad Simp [pinyin] {jyut ping}
+
+我 我 [wo3] {ngo5}
+你 你 [ni3] {nei5}
+您 您 [nin2] {nei5}
+他 他 [ta1] {taa1}
+她 她 [ta1] {taa1}
+它 它 [ta1] {taa1}
+我們 我们 [wo3 men5] {ngo5 mun4}
+你們 你们 [ni3 men5] {nei5 mun4}
+他們 他们 [ta1 men5] {taa1 mun4}
+她們 她们 [ta1 men5] {taa1 mun4}
+你好 你好 [ni3 hao3] {nei5 hou2}
+您好 您好 [nin2 hao3] {nei5 hou2}
+再見 再见 [zai4 jian4] {zoi3 gin3}
+謝謝 谢谢 [xie4 xie5] {ze6 ze6}
+不客氣 不客气 [bu4 ke4 qi5] {bat1 haak3 hei3}
+對不起 对不起 [dui4 bu5 qi3] {deoi3 bat1 hei2}
+沒關係 没关系 [mei2 guan1 xi5] {mut6 gwaan1 hai6}
+請 请 [qing3] {cing2}
+是 是 [shi4] {si6}
+不是 不是 [bu2 shi5] {bat1 si6}
+有 有 [you3] {jau5}
+沒有 没有 [mei2 you3] {mut6 jau5}
+要 要 [yao1] {jiu3}
+想 想 [xiang3] {soeng2}
+什麼 什么 [shen2 me5] {sam6 mo1}
+誰 谁 [shei2] {seoi4}
+哪裡 哪里 [na3 li3] {naa5 leoi5}
+哪兒 哪儿 [na3 r5] {naa5 ji4}
+什麼時候 什么时候 [shen2me5shi2hou5] {sam6 mo1 si4 hau6}
+為什麼 为什么 [wei4 shen2 me5] {wai6 sam6 mo1}
+怎麼 怎么 [zen3 me5] {zam2 mo1}
+多少 多少 [duo1 shao3] {do1 siu2}
+人 人 [ren2] {jan4}
+朋友 朋友 [peng2 you5] {pang4 jau5}
+家 家 [Jia1] {gaa1}
+爸爸 爸爸 [ba4 ba5] {baa1 baa1}
+媽媽 妈妈 [ma1 ma5] {maa1 maa1}
+哥哥 哥哥 [ge1 ge5] {go1 go1}
+弟弟 弟弟 [di4 di5] {dai6 dai6}
+姐姐 姐姐 [jie3 jie5] {ze2 ze2}
+妹妹 妹妹 [mei4 mei5] {mui6 mui6}
+兒子 儿子 [er2 zi5] {ji4 zi2}
+女兒 女儿 [nv3 er2] {neoi5 ji4}
+老師 老师 [lao3 shi1] {lou5 si1}
+學生 学生 [xue2 sheng5] {hok6 saang1}
+同學 同学 [tong2 xue2] {tung4 hok6}
+中國 中国 [Zhong1 guo2] {zung1 gwok3}
+美國 美国 [Mei3 guo2] {mei5 gwok3}
+日本 日本 [Ri4 ben3] {jat6 bun2}
+法國 法国 [Fa3 guo2] {faat3 gwok3}
+德國 德国 [De2 guo2] {dak1 gwok3}
+英國 英国 [Ying1 guo2] {jing1 gwok3}
+學校 学校 [xue2 xiao4] {hok6 haau6}
+大學 大学 [Da4 xue2] {daai6 hok6}
+北京 北京 [Bei3 jing1] {bak1 ging1}
+上海 上海 [Shang4 hai3] {soeng6 hoi2}
+商店 商店 [shang1 dian4] {soeng1 dim3}
+餐廳 餐厅 [can1 ting1] {caan1 teng1}
+飯店 饭店 [fan4 dian4] {faan6 dim3}
+醫院 医院 [yi1 yuan4] {ji1 jyun2}
+機場 机场 [ji1 chang3] {gei1 coeng4}
+今天 今天 [jin1 tian1] {gam1 tin1}
+明天 明天 [ming2 tian1] {ming4 tin1}
+昨天 昨天 [zuo2 tian1] {zok6 tin1}
+現在 现在 [xian4 zai4] {jin6 zoi6}
+早上 早上 [zao3 shang5] {zou2 soeng6}
+晚上 晚上 [wan3 shang5] {maan5 soeng6}
+中午 中午 [zhong1 wu3] {zung1 ng5}
+星期 星期 [xing1 qi1] {sing1 kei4}
+月 月 [yue4] {jyut6}
+年 年 [Nian2] {nin4}
+小時 小时 [xiao3 shi2] {siu2 si4}
+分鐘 分钟 [fen1 zhong1] {fan1 zung1}
+時間 时间 [shi2 jian1] {si4 gaan3}
+一 一 [yi1] {jat1}
+二 二 [er4] {ji6}
+三 三 [San1] {saam1}
+四 四 [si4] {sei3}
+五 五 [wu3] {ng5}
+六 六 [liu4] {luk6}
+七 七 [qi1] {cat1}
+八 八 [ba1] {baat3}
+九 九 [jiu3] {gau2}
+十 十 [shi2] {sap6}
+百 百 [Bai3] {baak3}
+千 千 [qian1] {cin1}
+萬 万 [Wan4] {maan6}
+零 零 [ling2] {ling4}
+吃 吃 [chi1] {hek3}
+喝 喝 [he1] {hot3}
+看 看 [kan1] {hon3}
+聽 听 [ting1] {teng1}
+說 说 [shui4] {seoi3}
+讀 读 [dou4] {duk6}
+寫 写 [xie3] {se2}
+學 学 [xue2] {hok6}
+做 做 [zuo4] {zou6}
+去 去 [qu4] {heoi3}
+來 来 [lai2] {loi4}
+回 回 [hui2] {wui4}
+買 买 [mai3] {maai5}
+賣 卖 [mai4] {maai6}
+工作 工作 [gong1 zuo4] {gung1 zok3}
+睡覺 睡觉 [shui4 jiao4] {seoi6 gaau3}
+起床 起床 [qi3 chuang2] {hei2 cong4}
+吃飯 吃饭 [chi1 fan4] {hek3 faan6}
+喜歡 喜欢 [xi3 huan5] {hei2 fun1}
+愛 爱 [ai4] {oi3}
+認識 认识 [ren4 shi5] {jing6 sik1}
+知道 知道 [zhi1 dao4] {zi1 dou3}
+茶 茶 [cha2] {caa4}
+咖啡 咖啡 [ka1 fei1] {gaa3 fe1}
+水 水 [Shui3] {seoi2}
+牛奶 牛奶 [niu2 nai3] {ngau4 naai5}
+米飯 米饭 [mi3 fan4] {mai5 faan6}
+麵條 面条 [mian4 tiao2] {min6 tiu5}
+麵包 面包 [mian4 bao1] {min6 baau1}
+蘋果 苹果 [ping2 guo3] {ping4 gwo2}
+雞蛋 鸡蛋 [ji1 dan4] {gai1 daan2}
+魚 鱼 [Yu2] {jyu2}
+肉 肉 [rou4] {juk6}
+書 书 [Shu1] {syu1}
+筆 笔 [bi3] {bat1}
+紙 纸 [zhi3] {zi2}
+桌子 桌子 [zhuo1 zi5] {coek3 zi2}
+椅子 椅子 [yi3 zi5] {ji2 zi2}
+房間 房间 [fang2 jian1] {fong4 gaan1}
+電腦 电脑 [dian4 nao3] {din6 nou5}
+手機 手机 [shou3 ji1] {sau2 gei1}
+電話 电话 [dian4 hua4] {din6 waa2}
+好 好 [hao3] {hou2}
+大 大 [da4] {daai6}
+小 小 [xiao3] {siu2}
+多 多 [duo1] {do1}
+少 少 [shao3] {siu3}
+高 高 [Gao1] {gou1}
+低 低 [di1] {dai1}
+新 新 [Xin1] {san1}
+舊 旧 [jiu4] {gau6}
+漂亮 漂亮 [piao4 liang5] {piu3 loeng6}
+忙 忙 [mang2] {mong4}
+累 累 [lei3] {leoi6}
+快 快 [kuai4] {faai3}
+慢 慢 [man4] {maan6}
+冷 冷 [Leng3] {laang5}
+熱 热 [re4] {jit6}
+的 的 [de5] {dik1}
+了 了 [le5] {liu5}
+在 在 [zai4] {zoi6}
+和 和 [He2] {wo4}
+也 也 [Ye3] {jaa5}
+都 都 [Du1] {dou1}
+很 很 [hen3] {han2}
+不 不 [bu4] {bat1}
+沒 没 [mei2] {mut6}
+就 就 [jiu4] {zau6}
+還 还 [Huan2] {waan4}
+漢語 汉语 [Han4 yu3] {hon3 jyu5}
+中文 中文 [Zhong1 wen2] {zung1 man4}
+英文 英文 [Ying1 wen2] {jing1 man4}
+日語 日语 [Ri4 yu3] {jat6 jyu5}
+說話 说话 [shuo1 hua4] {syut3 waa6}
+字 字 [zi4] {zi6}

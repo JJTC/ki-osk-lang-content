@@ -1,0 +1,334 @@
+name: refresh language content
+
+# Monthly (once its schedule is on; see `on:`): re-fetch every upstream
+# source, rebuild ONLY the outputs whose
+# inputs changed (sources.lock decides), gate the result, run ki-osk's
+# tests over it, and open — or update — a pull request that also bumps the
+# patch version (new data, same format), plus a DRAFT release v<version>
+# holding the exact corpora used. Merging the PR publishes that release
+# (release.yml). Nothing reaches the default branch unreviewed.
+#
+# Why "only what changed": the committed n-gram tables predate
+# deterministic builds, so rebuilding unchanged inputs would rewrite them
+# every month for nothing. See scripts/lock.py.
+#
+# Repository setup this needs (Settings):
+#   - Actions → General → Workflow permissions: tick "Allow GitHub
+#     Actions to create and approve pull requests" (the `propose` job).
+#   - Variable KI_OSK_REPO if ki-osk is not <owner>/ki-osk; optionally
+#     KI_OSK_REF (default: ki-osk's default branch).
+#   - Secret KI_OSK_TOKEN only while ki-osk is private: a fine-grained
+#     token with read access to its contents.
+#
+# Building needs only this repository: the builders and the format crate
+# live here. ki-osk is checked out by one job, `verify`, to run its
+# osk-core tests against the NEW content: the two repositories sit side
+# by side, and ki-osk's submodule path is linked to this checkout, which
+# is where its `include_bytes!`, its tests and its osk-data dependency
+# all look.
+#
+# PRs opened with GITHUB_TOKEN do not trigger other workflows. That is
+# why every gate runs here, before the PR exists, rather than on it.
+
+on:
+  # Monthly once ki-osk is on GitHub: the verify job checks it out to run
+  # its tests over the new content, and fails without it. Until then the
+  # schedule is off; to turn it on, restore these two lines:
+  # schedule:
+  #   - cron: "23 4 2 * *"   # 04:23 UTC on the 2nd of every month
+  workflow_dispatch:
+    inputs:
+      rebuild:
+        description: Rebuild every output, not only those whose inputs changed
+        type: boolean
+        default: false
+      ki_osk_ref:
+        description: ki-osk branch, tag or commit to test against (default its default branch)
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+env:
+  KI_OSK_REPO: ${{ vars.KI_OSK_REPO || format('{0}/ki-osk', github.repository_owner) }}
+  # Read by make: on unless a manual run asked for a full rebuild.
+  ONLY_STALE: ${{ !inputs.rebuild && '1' || '' }}
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: "0"
+
+jobs:
+  prepare:
+    name: fetch corpora, pick the version
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      tag: ${{ steps.plan.outputs.tag }}
+      version: ${{ steps.plan.outputs.version }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Fetch the Tatoeba corpora
+        run: make fetch-corpora
+
+      # A refresh is the next patch release: the data changes, the format
+      # does not. A refresh that never merged is superseded by this one,
+      # with the same number.
+      - name: Pick the version
+        id: plan
+        run: |
+          set -euo pipefail
+          version=$(python3 scripts/version.py next patch)
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tag=v$version" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: corpora
+          path: predict/corpora/*.txt
+          if-no-files-found: error
+          retention-days: 14
+
+  dicts:
+    name: predict + CJK dictionaries
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: ./.github/actions/rust
+        with:
+          cache-key: dicts
+      - uses: actions/download-artifact@v4
+        with:
+          name: corpora
+          path: predict/corpora
+
+      - name: Prediction models
+        run: make predict-assets
+      - name: CJK dictionaries (fetches the upstream datasets)
+        run: make cjk-assets SRC_DIR="$RUNNER_TEMP/sources"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dicts
+          path: |
+            predict/*.fst
+            predict/*.ngram.bin
+            pinyin/
+            zhuyin/
+            jyutping/
+            kana/
+            sources.lock
+          if-no-files-found: error
+          retention-days: 14
+
+  verify:
+    name: check, ki-osk tests
+    needs: [prepare, dicts]
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+      ki_osk_sha: ${{ steps.ki.outputs.sha }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: ki-osk-lang-content
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: ki-osk-lang-content
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ env.KI_OSK_REPO }}
+          ref: ${{ inputs.ki_osk_ref || vars.KI_OSK_REF || '' }}
+          token: ${{ secrets.KI_OSK_TOKEN || github.token }}
+          path: ki-osk
+          persist-credentials: false
+      # ki-osk's submodule path becomes a link to this checkout: its
+      # include_bytes!, its tests and its osk-data dependency read the
+      # new content from there.
+      - name: Link ki-osk's submodule path to this checkout
+        id: ki
+        working-directory: ki-osk
+        run: |
+          set -euo pipefail
+          rm -rf crates/osk-core/assets/lang
+          ln -s ../../../../ki-osk-lang-content crates/osk-core/assets/lang
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: ./ki-osk-lang-content/.github/actions/rust
+        with:
+          workspace: ki-osk
+          cache-key: verify
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: dicts
+          path: ki-osk-lang-content
+      - uses: actions/download-artifact@v4
+        with:
+          name: corpora
+          path: ki-osk-lang-content/predict/corpora
+
+      - name: Gate against ${{ github.ref_name }}
+        run: make check CHECK_REPORT="$RUNNER_TEMP/report.md"
+      - name: Report
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/report.md" ]; then cat "$RUNNER_TEMP/report.md" >> "$GITHUB_STEP_SUMMARY"; fi
+      - name: Every output matches sources.lock
+        run: make lock-verify
+
+      # The reader's half of the contract: ki-osk's asset tests, bundled
+      # dictionary floors and IME ranking tests, over this content. Not
+      # --locked: ki-osk's lockfile records the osk-data version it pins,
+      # and this checkout may be newer — that is the point of the test.
+      - name: ki-osk tests over the new content
+        working-directory: ki-osk
+        run: cargo test -p osk-core
+
+      - name: Anything to propose?
+        id: diff
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain -- predict pinyin zhuyin jyutping kana sources.lock)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git status --short -- predict pinyin zhuyin jyutping kana sources.lock
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "nothing changed upstream; no PR this month" | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Package the result
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          TAG: ${{ needs.prepare.outputs.tag }}
+          VERSION: ${{ needs.prepare.outputs.version }}
+        run: |
+          set -euo pipefail
+          python3 scripts/lock.py stamp --tag "$TAG" \
+            --run "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          out=$RUNNER_TEMP/result
+          mkdir -p "$out/tree"
+          cp -r predict pinyin zhuyin jyutping kana sources.lock "$out/tree/"
+          rm -rf "$out/tree/predict/corpora"
+          cp "$RUNNER_TEMP/report.md" "$out/report.md"
+          # The exact text every model in this refresh was trained on.
+          tar --sort=name --owner=0 --group=0 --numeric-owner --mtime=@0 \
+            -C predict/corpora -cf - . | xz -9 -T1 > "$out/ki-osk-lang-corpora-$VERSION.tar.xz"
+      - uses: actions/upload-artifact@v4
+        if: steps.diff.outputs.changed == 'true'
+        with:
+          name: result
+          path: ${{ runner.temp }}/result/
+          if-no-files-found: error
+          retention-days: 30
+
+  propose:
+    name: open the PR + draft release
+    needs: [prepare, verify]
+    if: needs.verify.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TAG: ${{ needs.prepare.outputs.tag }}
+      VERSION: ${{ needs.prepare.outputs.version }}
+      KI_OSK_SHA: ${{ needs.verify.outputs.ki_osk_sha }}
+      BRANCH: data-refresh
+      BASE: ${{ github.event.repository.default_branch }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: result
+          path: ${{ runner.temp }}/result
+
+      - name: Write the PR body
+        run: |
+          set -euo pipefail
+          run="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          {
+            echo "Monthly language-content refresh → **$TAG**: new data in the same format,"
+            echo "so the patch version moves."
+            echo
+            echo "Every check already passed in [the run that built this]($run): the size"
+            echo "gate, \`sources.lock\` against the tree, and ki-osk's \`osk-core\` tests over"
+            echo "this content (\`$KI_OSK_REPO@$KI_OSK_SHA\`)."
+            echo "**Merging publishes the draft release \`$TAG\`**, which already holds the"
+            echo "exact corpora these models were trained on; the release adds the packs and"
+            echo "the all-languages bundle."
+            echo
+            cat "$RUNNER_TEMP/result/report.md"
+            echo
+            echo "---"
+            echo "Licences travel with these files: CC-CEDICT- and CC-Canto-derived dictionaries"
+            echo "(pinyin, zhuyin, jyutping) are share-alike; the prediction models carry"
+            echo "Tatoeba's CC BY 2.0 FR. See NOTICES.md."
+          } > "$RUNNER_TEMP/body.md"
+
+      - name: Commit to ${{ env.BRANCH }}
+        run: |
+          set -euo pipefail
+          git switch -C "$BRANCH"
+          cp -r "$RUNNER_TEMP/result/tree/." .
+          python3 scripts/version.py bump patch
+          test "$(python3 scripts/version.py get)" = "$VERSION"
+          git add -A -- predict pinyin zhuyin jyutping kana sources.lock \
+            Cargo.toml crates/osk-data/Cargo.toml Cargo.lock
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -q -m "data: refresh, $TAG" \
+              -m "Built by $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID; tested against $KI_OSK_REPO@$KI_OSK_SHA."
+          # The branch is the workflow's own; last month's unmerged
+          # refresh is superseded, not stacked on.
+          git push --force origin "$BRANCH"
+
+      - name: Open or update the PR
+        run: |
+          set -euo pipefail
+          if [ "$(gh pr view "$BRANCH" --json state -q .state 2>/dev/null)" = OPEN ]; then
+            gh pr edit "$BRANCH" --title "data: refresh, $TAG" --body-file "$RUNNER_TEMP/body.md"
+          else
+            gh pr create --base "$BASE" --head "$BRANCH" \
+              --title "data: refresh, $TAG" --body-file "$RUNNER_TEMP/body.md"
+          fi
+
+      - name: Create or update the draft release
+        run: |
+          set -euo pipefail
+          corpora="$RUNNER_TEMP/result/ki-osk-lang-corpora-$VERSION.tar.xz"
+          # Drafts left by earlier refreshes whose PRs never merged are
+          # superseded by this one.
+          gh release list --limit 100 --json tagName,isDraft \
+              --jq '.[] | select(.isDraft and (.tagName | startswith("v"))) | .tagName' |
+            while read -r old; do
+              [ "$old" = "$TAG" ] || gh release delete "$old" --yes
+            done
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$corpora" --clobber
+            gh release edit "$TAG" --notes-file "$RUNNER_TEMP/body.md"
+          else
+            gh release create "$TAG" --draft --target "$BASE" \
+              --title "Language content $TAG" --notes-file "$RUNNER_TEMP/body.md" "$corpora"
+          fi
