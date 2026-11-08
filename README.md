@@ -22,6 +22,7 @@ them, takes on those terms.
 | `predict/<lang>.fst` | Prefix-completion lexicon (54 languages) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores | `make predict-assets` |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
+| `eval/<lang>.txt` | Held-out Tatoeba text no model is trained on: what keystroke savings are measured on | `make fetch-corpora` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |
 | `zhuyin/cedict.bin` | Bopomofo → Traditional | `make zhuyin-assets` |
 | `jyutping/cedict.bin` | Jyutping → Traditional | `make jyutping-assets` |
@@ -77,7 +78,7 @@ The builders need only this repository and its pinned toolchain.
 `make help` lists everything.
 
 ```sh
-make fetch-corpora     # Tatoeba -> predict/corpora/
+make fetch-corpora     # Tatoeba -> predict/corpora/ and eval/
 make predict-assets    # corpora -> predict/*.fst + *.ngram.bin
 make cjk-assets        # upstream -> pinyin, zhuyin, jyutping, kana
 make refresh           # all three, rebuilding only what changed, then check
@@ -85,6 +86,12 @@ make check             # refuse a tree that lost, broke or shrank a file
 make release           # every asset of the release -> dist/release/
 make bump-version      # PART=patch | minor | major
 ```
+
+Every 20th Tatoeba sentence by id, and any sentence with the same text,
+is held out of training. The first 1 500 per language are `eval/<lang>.txt`,
+where ki-osk's `toolbox eval-predict` measures keystroke savings through
+its real suggestion engine. Since no model saw that text, the number is
+honest, and it is what the monthly refresh is held to.
 
 `sources.lock` records, for every output, the sha256 of each input, the
 recipe and the output itself. With `ONLY_STALE=1`, as `make refresh`
@@ -109,6 +116,8 @@ It asks for `CONFIRM=yes`.
 - **`refresh.yml`** re-fetches every source, rebuilds what changed, runs
   the checks and ki-osk's tests over the result, and opens a pull request
   that bumps the patch version, with a draft release holding the corpora.
+  It refuses a result in which any language's keystroke savings on
+  `eval/` fell by more than a point.
   It is monthly, but its schedule is off until ki-osk is on GitHub, since
   it checks ki-osk out.
 - **`release.yml`** publishes the version on the default branch when it

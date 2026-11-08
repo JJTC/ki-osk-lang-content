@@ -1,11 +1,13 @@
 name: refresh language content
 
 # Monthly (once its schedule is on; see `on:`): re-fetch every upstream
-# source, rebuild ONLY the outputs whose
-# inputs changed (sources.lock decides), gate the result, run ki-osk's
-# tests over it, and open — or update — a pull request that also bumps the
-# patch version (new data, same format), plus a DRAFT release v<version>
-# holding the exact corpora used. Merging the PR publishes that release
+# source, rebuild ONLY the outputs whose inputs changed (sources.lock
+# decides), and gate the result: no file lost, broken or shrunk, and no
+# language's keystroke savings fallen, measured by ki-osk's own prediction
+# on held-out text before and after. Then run ki-osk's tests over it, and
+# open — or update — a pull request that also bumps the patch version
+# (new data, same format), plus a DRAFT release v<version> holding the
+# exact corpora used. Merging the PR publishes that release
 # (release.yml). Nothing reaches the default branch unreviewed.
 #
 # Why "only what changed": the committed n-gram tables predate
@@ -97,6 +99,14 @@ jobs:
           path: predict/corpora/*.txt
           if-no-files-found: error
           retention-days: 14
+      # The held-out text fetch-corpora set aside: what keystroke savings
+      # are measured on, before and after.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eval
+          path: eval/*.txt
+          if-no-files-found: error
+          retention-days: 14
 
   dicts:
     name: predict + CJK dictionaries
@@ -138,7 +148,7 @@ jobs:
           retention-days: 14
 
   verify:
-    name: check, ki-osk tests
+    name: check, keystroke savings, ki-osk tests
     needs: [prepare, dicts]
     runs-on: ubuntu-latest
     timeout-minutes: 90
@@ -176,18 +186,71 @@ jobs:
         with:
           workspace: ki-osk
           cache-key: verify
+      # Every ki-osk build below reads osk-data from this checkout rather
+      # than the tag ki-osk pins, so the new crate is what is tested. Not
+      # --locked from here on: ki-osk's lockfile pins the tagged crate,
+      # and cargo keeps a locked version over a patch ("patch ... was not
+      # used"), so the lock entry moves onto the patch first.
+      - name: Patch ki-osk's osk-data to this checkout
+        working-directory: ki-osk
+        run: |
+          set -euo pipefail
+          mkdir -p .cargo
+          {
+            echo '[patch."https://github.com/jjtc/ki-osk-lang-content"]'
+            echo 'osk-data = { path = "../ki-osk-lang-content/crates/osk-data" }'
+          } >> .cargo/config.toml
+          cargo update -p osk-data
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: corpora
+          path: ki-osk-lang-content/predict/corpora
+      - uses: actions/download-artifact@v4
+        with:
+          name: eval
+          path: ki-osk-lang-content/eval
+
+      # Keystroke savings of the data the default branch holds now,
+      # measured on the held-out text this refresh fetched — before the
+      # new data is unpacked over it.
+      - name: Keystroke savings before
+        working-directory: ki-osk
+        run: >-
+          cargo run --release --quiet -p toolbox --bin eval-predict -- measure
+          --data ../ki-osk-lang-content --eval ../ki-osk-lang-content/eval
+          --json "$RUNNER_TEMP/ksr-before.json"
 
       - uses: actions/download-artifact@v4
         with:
           name: dicts
           path: ki-osk-lang-content
-      - uses: actions/download-artifact@v4
-        with:
-          name: corpora
-          path: ki-osk-lang-content/predict/corpora
 
       - name: Gate against ${{ github.ref_name }}
         run: make check CHECK_REPORT="$RUNNER_TEMP/report.md"
+      - name: Keystroke savings after
+        working-directory: ki-osk
+        run: >-
+          cargo run --release --quiet -p toolbox --bin eval-predict -- measure
+          --data ../ki-osk-lang-content --eval ../ki-osk-lang-content/eval
+          --json "$RUNNER_TEMP/ksr-after.json"
+      # The point of the refresh is better data, so it may not make
+      # prediction worse: a language whose keystroke savings fall by more
+      # than a point, on the same text, stops it here.
+      - name: Keystroke savings held
+        working-directory: ki-osk
+        run: |
+          set -euo pipefail
+          {
+            echo
+            echo "### Keystroke savings"
+            echo
+            echo "ki-osk's prediction on held-out text (\`eval/\`), before and after this refresh:"
+            echo
+          } >> "$RUNNER_TEMP/report.md"
+          cargo run --release --quiet -p toolbox --bin eval-predict -- compare \
+            "$RUNNER_TEMP/ksr-before.json" "$RUNNER_TEMP/ksr-after.json" \
+            | tee -a "$RUNNER_TEMP/report.md"
       - name: Report
         if: always()
         run: |
@@ -196,20 +259,11 @@ jobs:
         run: make lock-verify
 
       # The reader's half of the contract: ki-osk's asset tests, bundled
-      # dictionary floors and IME ranking tests, over this content, with
-      # osk-data patched from the tag ki-osk pins to this checkout's crate
-      # so the new crate is tested too. Not --locked: the patch moves the
-      # lockfile's osk-data entry, which is the point of the test.
+      # dictionary floors and IME ranking tests, over this content and
+      # this checkout's crate.
       - name: ki-osk tests over the new content
         working-directory: ki-osk
-        run: |
-          set -euo pipefail
-          patch='patch."https://github.com/jjtc/ki-osk-lang-content".osk-data.path="../ki-osk-lang-content/crates/osk-data"'
-          # ki-osk's lockfile pins the tagged crate, and cargo keeps a
-          # locked version over a patch ("patch ... was not used"), so the
-          # lock entry moves onto the patch first.
-          cargo update -p osk-data --config "$patch"
-          cargo test -p osk-core --config "$patch"
+        run: cargo test -p osk-core
 
       - name: Anything to propose?
         id: diff
@@ -234,7 +288,7 @@ jobs:
             --run "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           out=$RUNNER_TEMP/result
           mkdir -p "$out/tree"
-          cp -r predict pinyin zhuyin jyutping kana sources.lock "$out/tree/"
+          cp -r predict pinyin zhuyin jyutping kana eval sources.lock "$out/tree/"
           rm -rf "$out/tree/predict/corpora"
           cp "$RUNNER_TEMP/report.md" "$out/report.md"
           # The exact text every model in this refresh was trained on.
@@ -281,8 +335,9 @@ jobs:
             echo "so the patch version moves."
             echo
             echo "Every check already passed in [the run that built this]($run): the size"
-            echo "gate, \`sources.lock\` against the tree, and ki-osk's \`osk-core\` tests over"
-            echo "this content (\`$KI_OSK_REPO@$KI_OSK_SHA\`)."
+            echo "gate, no language's keystroke savings fallen on held-out text, \`sources.lock\`"
+            echo "against the tree, and ki-osk's \`osk-core\` tests over this content"
+            echo "(\`$KI_OSK_REPO@$KI_OSK_SHA\`)."
             echo "**Merging publishes the draft release \`$TAG\`**, which already holds the"
             echo "exact corpora these models were trained on; the release adds the packs and"
             echo "the all-languages bundle."
@@ -302,7 +357,7 @@ jobs:
           cp -r "$RUNNER_TEMP/result/tree/." .
           python3 scripts/version.py bump patch
           test "$(python3 scripts/version.py get)" = "$VERSION"
-          git add -A -- predict pinyin zhuyin jyutping kana sources.lock \
+          git add -A -- predict pinyin zhuyin jyutping kana eval sources.lock \
             Cargo.toml crates/osk-data/Cargo.toml Cargo.lock
           git -c user.name='github-actions[bot]' \
               -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \

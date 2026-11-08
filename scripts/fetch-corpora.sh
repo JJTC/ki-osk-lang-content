@@ -8,6 +8,11 @@
 # write a headerless `predict/corpora/<id>.txt` that `build-predict` (see
 # `make predict-assets`) turns into `<id>.fst` + `<id>.ngram.bin`.
 #
+# Every $HOLDOUT-th sentence by id is held out of training, and so is any
+# sentence with the same text as one of them; the first $EVAL_CAP held out
+# are written to `eval/<id>.txt` (committed), the text ki-osk's
+# `toolbox eval-predict` measures keystroke savings on.
+#
 # The corpora are not committed. `sources.lock` records the sha256 of the
 # corpus each committed model was built from, and every release attaches
 # the exact corpora as an asset, so a model can always be traced back to
@@ -16,6 +21,7 @@
 #   scripts/fetch-corpora.sh [id ...]     # default: the whole map below
 #
 # Env: CAP=120000  CACHE=/tmp/ki-osk-tatoeba  OUT=predict/corpora
+#      HOLDOUT=20  EVAL_CAP=1500  EVAL_OUT=eval
 #
 # Failure is loud. Every language is attempted; any that fails is named at
 # the end and the script exits 1. A download is only trusted after
@@ -28,6 +34,9 @@ set -eu
 CAP=${CAP:-120000}
 CACHE=${CACHE:-/tmp/ki-osk-tatoeba}
 OUT=${OUT:-predict/corpora}
+HOLDOUT=${HOLDOUT:-20}
+EVAL_CAP=${EVAL_CAP:-1500}
+EVAL_OUT=${EVAL_OUT:-eval}
 BASE=https://downloads.tatoeba.org/exports/per_language
 
 # ki-osk model code (= a layout's `prediction_lang`, usually the same
@@ -84,7 +93,7 @@ fetch() {
 	[ -s "$dest" ]
 }
 
-mkdir -p "$CACHE" "$OUT"
+mkdir -p "$CACHE" "$OUT" "$EVAL_OUT"
 ids=${*:-$(for p in $MAP; do echo "${p%%:*}"; done)}
 failed=""
 for id in $ids; do
@@ -98,18 +107,33 @@ for id in $ids; do
 		echo "!! $id: download of $iso failed" >&2
 		failed="$failed $id"; continue
 	fi
-	# No pipefail here on purpose: `head` closing the pipe early SIGPIPEs
-	# bzcat, which is expected. The archive was verified above, and the
-	# line count below catches an empty result.
+	# No pipefail here on purpose: awk exiting at its cap SIGPIPEs bzcat,
+	# which is expected. The archive was verified above, and the line
+	# count below catches an empty result.
+	#
+	# Held out first: every $HOLDOUT-th sentence by Tatoeba id, the first
+	# $EVAL_CAP of them, for eval-predict. The ids never change, so the
+	# set is stable as Tatoeba grows.
+	etmp="$EVAL_OUT/$id.txt.part"
+	bzcat "$bz" | awk -F'\t' -v k="$HOLDOUT" -v cap="$EVAL_CAP" \
+		'$3 != "" && $1 % k == 0 { print $3; if (++n == cap) exit }' > "$etmp" || true
+	# Then the training text, which skips those ids AND any sentence with
+	# the same text as a held-out one: Tatoeba repeats short sentences
+	# under different ids, and evaluating on a sentence the model was
+	# trained on would flatter it.
 	tmp="$OUT/$id.txt.part"
-	bzcat "$bz" | cut -f3 | grep -v '^$' | head -n "$CAP" > "$tmp" || true
+	bzcat "$bz" | awk -F'\t' -v k="$HOLDOUT" -v cap="$CAP" -v held_out="$etmp" \
+		'FILENAME == held_out { held[$0] = 1; next }
+		 $3 != "" && $1 % k != 0 && !($3 in held) { print $3; if (++n == cap) exit }' \
+		"$etmp" - > "$tmp" || true
 	n=$(wc -l < "$tmp")
 	if [ "$n" -eq 0 ]; then
 		echo "!! $id: $iso export produced an empty corpus" >&2
-		rm -f "$tmp"; failed="$failed $id"; continue
+		rm -f "$tmp" "$etmp"; failed="$failed $id"; continue
 	fi
 	mv -f "$tmp" "$OUT/$id.txt"
-	printf '%-5s %s  %d lines\n' "$id" "$iso" "$n"
+	mv -f "$etmp" "$EVAL_OUT/$id.txt"
+	printf '%-5s %s  %d lines, %d held out\n' "$id" "$iso" "$n" "$(wc -l < "$EVAL_OUT/$id.txt")"
 done
 
 if [ -n "$failed" ]; then
