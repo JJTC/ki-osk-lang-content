@@ -26,6 +26,7 @@ from pathlib import Path
 GLOBS = [
     "predict/*.fst",
     "predict/*.ngram.bin",
+    "predict/*.dialects.bin",
     "pinyin/*.bin",
     "zhuyin/*.bin",
     "jyutping/*.bin",

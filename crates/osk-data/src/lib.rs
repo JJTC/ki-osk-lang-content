@@ -11,6 +11,8 @@
 //!   `predict/<lang>.fst` lexicons are plain `fst::Map`s of word → count.
 //! - [`words`] — how prediction splits text into words: the one rule
 //!   the trainer, the keyboard and the measure share.
+//! - [`dialects`] — dialect flags (`predict/<lang>.dialects.bin`): which
+//!   varieties of a language use a word, and its spellings across them.
 //! - [`rules`] — the text rules (`rules/*.weir`): what typing a key does
 //!   to the text before the caret beyond typing it, and where autocorrect
 //!   acts besides space; the keyboard and the measure read the same.
@@ -35,6 +37,7 @@ pub const RELEASE_VERSION: &str = env!("CARGO_PKG_VERSION");
 
 pub mod cedict;
 pub mod codec;
+pub mod dialects;
 pub mod kana;
 pub mod ngram;
 pub mod pack;

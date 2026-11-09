@@ -92,6 +92,8 @@ help:
 	@echo "  fetch-corpora    download Tatoeba corpora into predict/corpora/"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
+	@echo "  dialect-assets   rebuild predict/<lang>.dialects.bin (dialect flags)"
+	@echo "                   from ESDB and Harper (English)"
 	@echo "  own-corpus       TAG=<lang> CORPUS=<file> OUT=<dir>: one language's"
 	@echo "                   prediction files from a corpus of your own (README)"
 	@echo "  cjk-assets       rebuild all five CJK dicts from the upstream datasets"
@@ -114,7 +116,7 @@ help:
 # lost a file or shrank one.
 .PHONY: refresh
 refresh: fetch-corpora
-	$(MAKE) predict-assets cjk-assets ONLY_STALE=1
+	$(MAKE) predict-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) check
 
 .PHONY: fetch-corpora
@@ -151,6 +153,38 @@ predict-assets:
 			--vocab-size $$vocab \
 			--ngram-keep $$ngram \
 			--start-keep $(PREDICT_START) \
+			|| exit 1; \
+		record "$$@" || exit 1; \
+	done
+
+# The dialect flags: which varieties of a language use a word, and its
+# spellings across them (osk_data::dialects), for the languages with a
+# source. English's come from the English Speller Database (SCOWLv2) and
+# Harper's dictionary (its Indian English words). A table keeps what the
+# language's lexicon can use, so the lexicon is one of its inputs.
+DIALECT_LANGS ?= en
+
+.PHONY: dialect-sources dialect-assets
+dialect-sources:
+	OUT=$(SRC_DIR) ./scripts/fetch-dialect-sources.sh
+
+dialect-assets: dialect-sources
+	@$(LOCKED); for lang in $(DIALECT_LANGS); do \
+		test -n "$(WORDS_GENERATION)" || { echo "no GENERATION in crates/osk-data/src/words.rs"; exit 1; }; \
+		case $$lang in \
+			en) inputs="--input esdb-scowl-pre.txt=$(SRC_DIR)/esdb-scowl-pre.txt \
+			            --input harper-dictionary.dict=$(SRC_DIR)/harper-dictionary.dict"; \
+			    flags="--esdb $(SRC_DIR)/esdb-scowl-pre.txt --harper $(SRC_DIR)/harper-dictionary.dict" ;; \
+			*)  echo "no dialect source for $$lang"; exit 1 ;; \
+		esac; \
+		set -- dialects/$$lang $$inputs --input lexicon=$(PREDICT_OUT_DIR)/$$lang.fst \
+			--recipe words=$(WORDS_GENERATION) \
+			--output $(PREDICT_OUT_DIR)/$$lang.dialects.bin; \
+		stale "$$@" || continue; \
+		echo "build-dialects $$lang"; \
+		$(TOOLS) build-dialects -- --lang $$lang $$flags \
+			--lexicon $(CURDIR)/$(PREDICT_OUT_DIR)/$$lang.fst \
+			--out $(CURDIR)/$(PREDICT_OUT_DIR)/$$lang.dialects.bin \
 			|| exit 1; \
 		record "$$@" || exit 1; \
 	done

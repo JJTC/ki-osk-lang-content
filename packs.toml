@@ -68,6 +68,20 @@ ug  = "Uyghur"
 uk  = "Ukrainian"
 vi  = "Vietnamese"
 
+# The dialect flags (predict/<lang>.dialects.bin: which varieties of a
+# language use a word, and its spellings across them) of the languages
+# that have them, with the licences and sources they add to those
+# languages' packs. make-packs refuses a table with no entry here.
+[prediction.dialects.en]
+licenses = [
+  { name = "ESDB permission notice (Kevin Atkinson)", url = "https://github.com/en-wl/wordlist/blob/v2/Copyright", share_alike = false },
+  { name = "Apache-2.0 (Harper's dictionary)", url = "https://www.apache.org/licenses/LICENSE-2.0", share_alike = false },
+]
+sources = [
+  { name = "English Speller Database (SCOWLv2)", url = "https://github.com/en-wl/wordlist", lock = "dialects/en", input = "esdb-scowl-pre.txt" },
+  { name = "Harper's English dictionary (harper-core 3.0.0)", url = "https://github.com/automattic/harper", lock = "dialects/en", input = "harper-dictionary.dict" },
+]
+
 # `lock`/`input` name the sources.lock entry and input whose recorded
 # sha256 the manifest carries, so a pack names the exact upstream file it
 # was built from.

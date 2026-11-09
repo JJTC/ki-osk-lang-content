@@ -15,6 +15,10 @@ name = "build-predict"
 path = "src/bin/build_predict.rs"
 
 [[bin]]
+name = "build-dialects"
+path = "src/bin/build_dialects.rs"
+
+[[bin]]
 name = "build-pinyin"
 path = "src/bin/build_pinyin.rs"
 

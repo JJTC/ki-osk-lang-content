@@ -87,6 +87,27 @@ fn every_prediction_pair_decodes() {
 }
 
 #[test]
+fn every_dialect_table_decodes_and_is_sound() {
+    let tables = files("predict", ".dialects.bin");
+    assert!(!tables.is_empty(), "no dialect table is committed");
+    for p in &tables {
+        let file = p.file_name().unwrap().to_string_lossy().to_string();
+        let lang = file.trim_end_matches(".dialects.bin").to_string();
+        let lexicon = root().join(format!("predict/{lang}.fst"));
+        assert!(lexicon.is_file(), "{}: no lexicon beside it", name(p));
+        let d = osk_data::dialects::Dialects::from_bytes(&std::fs::read(p).unwrap())
+            .unwrap_or_else(|e| panic!("{}: {e}", name(p)));
+        let problems = d.problems(&lang);
+        assert!(problems.is_empty(), "{}: {problems:?}", name(p));
+        assert!(
+            !d.groups.is_empty(),
+            "{}: no spellings across varieties",
+            name(p)
+        );
+    }
+}
+
+#[test]
 fn every_input_method_table_decodes() {
     for dir in ["pinyin", "zhuyin", "jyutping"] {
         let p = root().join(dir).join("cedict.bin");

@@ -141,3 +141,31 @@ Adding share-alike sources (Wikipedia in particular) downgrades the
 redistributable license of the resulting binaries to the strongest
 copyleft in the mix. A hand-enlarged corpus is also overwritten by the
 next `make fetch-corpora`.
+
+## Dialect flags
+
+`predict/en.dialects.bin` (which varieties of English write a word, and
+its spellings across them) is built by `build-dialects` from two sources,
+fetched by `scripts/fetch-dialect-sources.sh` and recorded by sha256 in
+`sources.lock`:
+
+- **English Speller Database (ESDB, formerly SCOWLv2)** by Kevin
+  Atkinson, <https://github.com/en-wl/wordlist>, `data/scowl-pre.txt` at
+  commit `c107d90`: its spelling codes and variant levels. Its notice,
+  which goes with the file:
+
+  > Copyright 2000-2026 by Kevin Atkinson
+  >
+  > Permission to use, copy, modify, distribute, and sell any part of the
+  > English Speller Database (ESDB, previously known as SCOWLv2), or word
+  > lists created from it, is hereby granted without fee, provided that
+  > the above copyright notice appears in all copies and that both the
+  > above copyright notice and this notice appear in supporting
+  > documentation. Kevin Atkinson makes no representations about the
+  > suitability of this database for any purpose. It is provided "as is"
+  > without express or implied warranty.
+
+- **Harper's English dictionary** (`dictionary.dict` of the `harper-core`
+  3.0.0 crate, <https://github.com/automattic/harper>), Apache License
+  2.0 (<https://www.apache.org/licenses/LICENSE-2.0>): the words it marks
+  as Indian English alone.

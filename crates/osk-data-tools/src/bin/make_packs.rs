@@ -87,6 +87,16 @@ struct Prediction {
     license: License,
     source: SourceDef,
     names: BTreeMap<String, String>,
+    /// The languages with dialect flags, and the licences and sources
+    /// those add to their packs.
+    #[serde(default)]
+    dialects: BTreeMap<String, DialectsDef>,
+}
+
+#[derive(Deserialize)]
+struct DialectsDef {
+    licenses: Vec<License>,
+    sources: Vec<SourceDef>,
 }
 
 #[derive(Deserialize)]
@@ -149,33 +159,70 @@ fn main() -> anyhow::Result<()> {
     if let Some(l) = named.difference(&found).next() {
         bail!("packs.toml names `{l}` but predict/{l}.fst is not in the tree");
     }
+    for lang in defs.prediction.dialects.keys() {
+        if !langs.contains(lang) {
+            bail!(
+                "packs.toml gives `{lang}` dialect flags but predict/{lang}.fst is not in the tree"
+            );
+        }
+    }
     for lang in &langs {
         let p = &defs.prediction;
+        let dialects_path = format!("predict/{lang}.dialects.bin");
+        let dialects = match (
+            args.root.join(&dialects_path).is_file(),
+            p.dialects.get(lang),
+        ) {
+            (true, Some(def)) => Some(def),
+            (true, None) => bail!(
+                "{dialects_path} is committed but packs.toml gives no [prediction.dialects.{lang}]"
+            ),
+            (false, Some(_)) => bail!(
+                "packs.toml gives [prediction.dialects.{lang}] but {dialects_path} is not in the tree"
+            ),
+            (false, None) => None,
+        };
+        let mut components = vec![
+            component(&args.root, kind::LEXICON, &format!("predict/{lang}.fst"))?,
+            component(
+                &args.root,
+                kind::NGRAM,
+                &format!("predict/{lang}.ngram.bin"),
+            )?,
+            component(
+                &args.root,
+                kind::FORMS,
+                &format!("predict/{lang}.forms.fst"),
+            )?,
+        ];
+        let mut licenses = vec![p.license.clone()];
+        let mut sources = vec![Source {
+            name: p.source.name.clone(),
+            url: p.source.url.clone(),
+            sha256: recorded(&format!("predict/{lang}"), &format!("corpora/{lang}.txt")),
+        }];
+        // Dialect flags carry their own sources' licences into the pack.
+        if let Some(def) = dialects {
+            components.push(component(&args.root, kind::DIALECTS, &dialects_path)?);
+            licenses.extend(def.licenses.iter().cloned());
+            sources.extend(def.sources.iter().map(|s| Source {
+                name: s.name.clone(),
+                url: s.url.clone(),
+                sha256: match (&s.lock, &s.input) {
+                    (Some(entry), Some(input)) => recorded(entry, input),
+                    _ => None,
+                },
+            }));
+        }
         manifests.push(Manifest {
             schema: SCHEMA,
             id: lang.clone(),
             name: p.names[lang].clone(),
             version: RELEASE_VERSION.to_string(),
             format: osk_data::codec::VERSION,
-            components: vec![
-                component(&args.root, kind::LEXICON, &format!("predict/{lang}.fst"))?,
-                component(
-                    &args.root,
-                    kind::NGRAM,
-                    &format!("predict/{lang}.ngram.bin"),
-                )?,
-                component(
-                    &args.root,
-                    kind::FORMS,
-                    &format!("predict/{lang}.forms.fst"),
-                )?,
-            ],
-            licenses: vec![p.license.clone()],
-            sources: vec![Source {
-                name: p.source.name.clone(),
-                url: p.source.url.clone(),
-                sha256: recorded(&format!("predict/{lang}"), &format!("corpora/{lang}.txt")),
-            }],
+            components,
+            licenses,
+            sources,
         });
     }
 

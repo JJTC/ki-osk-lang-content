@@ -1,5 +1,19 @@
 {
   "outputs": {
+    "dialects/en": {
+      "encoder": "1391a8a99a48-dirty",
+      "inputs": {
+        "esdb-scowl-pre.txt": "a5fe3f11682a6ab9d31f2ea2a185833b1a01be7af83409c671bd0756a870f6c7",
+        "harper-dictionary.dict": "1313b2d972a8c92ba7a6c8cd2f5045323f6181a3919cc9cb780dfdf98bf2afeb",
+        "lexicon": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68"
+      },
+      "outputs": {
+        "predict/en.dialects.bin": "cb72ec8ba99ceb4f3a2220e9c58f75fd63cd6108ca3bf3c7f4648c14cd2cec77"
+      },
+      "recipe": {
+        "words": "2"
+      }
+    },
     "jyutping": {
       "encoder": "v0.3.0-20-g5f356ac298b1",
       "inputs": {
