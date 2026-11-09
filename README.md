@@ -93,6 +93,7 @@ make refresh           # all three, rebuilding only what changed, then check
 make check             # refuse a tree that lost, broke or shrank a file
 make release           # every asset of the release -> dist/release/
 make bump-version      # PART=patch | minor | major
+make own-corpus        # TAG=<lang> CORPUS=<file> OUT=<dir>: your own corpus
 ```
 
 Every 20th Tatoeba sentence by id, and any sentence with the same text,
@@ -121,6 +122,49 @@ which changes daily. A release builds byte for byte from its commit.
 `make cjk-assets-seed` builds the CJK tables from `seeds/` instead:
 offline, and **destructive**, since it replaces the full dictionaries.
 It asks for `CONFIRM=yes`.
+
+## Your own corpus
+
+A language's predictions can be fitted to your own text: a product's
+names and jargon, a domain's words, or a bigger corpus than Tatoeba's.
+
+1. **The text**: plain UTF-8, a sentence or a paragraph per line. The
+   splitter reads a line's end as a sentence's end, so unwrap wrapped
+   text first. Keep a tenth of it out, as `<dir>/<lang>.txt`, to
+   measure on.
+2. **The corpus**: to add your text to the general one rather than
+   replace it, append it to Tatoeba's (`make fetch-corpora` fetches that
+   into `predict/corpora/`), a few times over to weight it up:
+
+   ```sh
+   cat predict/corpora/en.txt mine.txt mine.txt mine.txt > corpus.txt
+   ```
+
+3. **Build**: `make own-corpus TAG=en CORPUS=corpus.txt OUT=my-data`
+   writes `my-data/predict/en.fst`, `en.ngram.bin` and `en.forms.fst`,
+   built as the release builds that language (its caps, and the sentence
+   start's), with the text rules in `my-data/rules/`. `TAG` names the
+   language; nothing in this tree changes.
+4. **Measure** with ki-osk's `toolbox eval-predict`, on your held-out
+   text and on `eval/`, so as to see that general typing did not get
+   worse, against this tree's data (`--data` this repository) for the
+   release's:
+
+   ```sh
+   cargo run --release -p toolbox --features eval-layouts --bin eval-predict -- \
+     measure --data my-data --eval <dir> --langs en
+   ```
+
+   With a novel (*Alice's Adventures in Wonderland*, a tenth of its
+   sentences held out) appended three times to Tatoeba's English,
+   keystroke savings on its held-out sentences rose from 42.4% to 49.7%,
+   and on Tatoeba's held-out English went from 52.0% to 51.7%.
+5. **Install** the three files under `/usr/share/ki-osk/predict/` (or
+   `$KI_OSK_DATA_DIR/predict/`): the keyboard reads them at its next
+   layout switch.
+
+Models built from your text carry its licence, and Tatoeba's (CC BY 2.0
+FR, `NOTICES.md`) when it went into them.
 
 ## Workflows
 

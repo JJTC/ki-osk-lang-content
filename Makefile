@@ -92,6 +92,8 @@ help:
 	@echo "  fetch-corpora    download Tatoeba corpora into predict/corpora/"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
+	@echo "  own-corpus       TAG=<lang> CORPUS=<file> OUT=<dir>: one language's"
+	@echo "                   prediction files from a corpus of your own (README)"
 	@echo "  cjk-assets       rebuild all five CJK dicts from the upstream datasets"
 	@echo "                   (pinyin-assets zhuyin-assets jyutping-assets kana-assets)"
 	@echo "  cjk-assets-seed  rebuild from seeds (offline; DOWNGRADES, needs CONFIRM=yes)"
@@ -152,6 +154,33 @@ predict-assets:
 			|| exit 1; \
 		record "$$@" || exit 1; \
 	done
+
+# Bring your own corpus: one language's prediction files from a corpus of
+# your own, built as the release builds that language (its tier's caps,
+# the sentence start's), into $(OUT)/predict/, with the text rules beside
+# them in $(OUT)/rules/: a data tree ki-osk's eval-predict measures, and
+# whose predict/ the keyboard reads. Not recorded in sources.lock, and
+# nothing in this tree changes. TAG names the language, as LANG would but
+# for being the locale's. See README, "Your own corpus".
+.PHONY: own-corpus
+own-corpus:
+	@test -n "$(TAG)" && test -n "$(CORPUS)" && test -n "$(OUT)" || \
+		{ echo "usage: make own-corpus TAG=<lang> CORPUS=<text file> OUT=<dir>"; exit 2; }
+	@test -f "$(CORPUS)" || { echo "own-corpus: no file $(CORPUS)"; exit 2; }
+	@lang=$(TAG); \
+	case " $(PREDICT_COMPACT_LANGS) " in \
+		*" $$lang "*) vocab=$(PREDICT_COMPACT_VOCAB); ngram=$(PREDICT_COMPACT_NGRAM) ;; \
+		*)            vocab=$(PREDICT_VOCAB);         ngram=$(PREDICT_NGRAM) ;; \
+	esac; \
+	case " $(PREDICT_LARGE_LANGS) " in \
+		*" $$lang "*) vocab=$(PREDICT_LARGE_VOCAB); ngram=$(PREDICT_LARGE_NGRAM) ;; \
+	esac; \
+	mkdir -p "$(OUT)/predict" "$(OUT)/rules" && \
+	echo "build-predict $$lang from $(CORPUS) (vocab $$vocab, n-grams $$ngram) -> $(OUT)/predict" && \
+	$(TOOLS) build-predict -- --lang $$lang --corpus "$(abspath $(CORPUS))" \
+		--out "$(abspath $(OUT))/predict" --vocab-size $$vocab --ngram-keep $$ngram \
+		--start-keep $(PREDICT_START) && \
+	cp rules/*.weir "$(OUT)/rules/"
 
 # Regenerate the CJK dictionaries from the full upstream datasets — what
 # the committed .bins are built from. See NOTICES.md for provenance and
