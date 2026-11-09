@@ -19,7 +19,10 @@
 //!
 //! The n-gram counter keeps only the top `--ngram-keep` bigrams and
 //! trigrams by count to bound disk size: a full-corpus dump of trigram
-//! frequencies is easily hundreds of megabytes.
+//! frequencies is easily hundreds of megabytes. Those that start a
+//! sentence (after `osk_data::words::SENTENCE_START`) are kept apart, the
+//! top `--start-keep` of each, so that they neither crowd out the others
+//! nor are crowded out by them.
 
 use std::collections::HashMap;
 use std::fs;
@@ -29,7 +32,7 @@ use std::path::PathBuf;
 use anyhow::Context as _;
 use clap::Parser;
 use osk_data::ngram::NgramModel;
-use osk_data::words::{Splitter, Start};
+use osk_data::words::{SENTENCE_START, Splitter, Start};
 
 #[derive(Parser)]
 #[command(name = "build-predict")]
@@ -51,6 +54,10 @@ struct Args {
     /// Cap on bigram + trigram table size (keep top-N by count each).
     #[arg(long, default_value_t = 200_000)]
     ngram_keep: usize,
+    /// Cap on the bigrams and trigrams that start a sentence, apart from
+    /// `--ngram-keep` (keep top-N by count each).
+    #[arg(long, default_value_t = 20_000)]
+    start_keep: usize,
     /// Skip n-gram emission (FST-only build).
     #[arg(long, default_value_t = false)]
     no_ngrams: bool,
@@ -70,10 +77,11 @@ fn main() -> anyhow::Result<()> {
     // A single sweep over the words the keyboard would read (the same
     // splitter, so a word kept whole here is one the keyboard offers
     // whole), tracking the preceding two words so bigram and trigram
-    // counts fall out of the same pass. The chain breaks where the
-    // keyboard clears its context: a sentence end, a line end, a token
-    // with no word in it (a number, a dash); n-grams across one would
-    // never be asked for.
+    // counts fall out of the same pass. The chain starts again where the
+    // keyboard's context does: after SENTENCE_START at a sentence's start
+    // (a line's, or after a sentence end), from nothing after a token with
+    // no word in it (a number, a dash); n-grams across one would never be
+    // asked for.
     let splitter = Splitter::new(&args.lang);
     let mut freq: HashMap<String, u64> = HashMap::new();
     let mut bigrams: HashMap<(String, String), u64> = HashMap::new();
@@ -87,11 +95,20 @@ fn main() -> anyhow::Result<()> {
         .lines()
         .flat_map(|line| splitter.words(line).into_iter().map(move |w| (line, w)))
     {
-        if word.start != Start::Follows {
-            prev2 = None;
-            prev1 = None;
-        } else if let Some(mask) = splitter.case_mask(&line[word.range.clone()]) {
-            *cases.entry((word.text.clone(), mask)).or_default() += 1;
+        match word.start {
+            Start::Sentence => {
+                prev2 = None;
+                prev1 = Some(SENTENCE_START.to_string());
+            }
+            Start::Break => {
+                prev2 = None;
+                prev1 = None;
+            }
+            Start::Follows => {
+                if let Some(mask) = splitter.case_mask(&line[word.range.clone()]) {
+                    *cases.entry((word.text.clone(), mask)).or_default() += 1;
+                }
+            }
         }
         let w = word.text;
         *freq.entry(w.clone()).or_default() += 1;
@@ -197,13 +214,21 @@ fn main() -> anyhow::Result<()> {
     // subset each time, and two builds of the same corpus never matched.
     // The insertion order below assigns the model's vocabulary ids, so it
     // has to be stable too.
-    let mut big_vec: Vec<((String, String), u64)> = bigrams.into_iter().collect();
-    big_vec.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(&b.0)));
-    big_vec.truncate(args.ngram_keep);
-
-    let mut tri_vec: Vec<((String, String, String), u64)> = trigrams.into_iter().collect();
-    tri_vec.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(&b.0)));
-    tri_vec.truncate(args.ngram_keep);
+    //
+    // Those that start a sentence are kept apart, within `--start-keep`.
+    let starts = |w: &String| w == SENTENCE_START;
+    let (big_start, big_rest): (Vec<_>, Vec<_>) =
+        bigrams.into_iter().partition(|((p, _), _)| starts(p));
+    let (tri_start, tri_rest): (Vec<_>, Vec<_>) =
+        trigrams.into_iter().partition(|((p2, _, _), _)| starts(p2));
+    let big_vec = top(big_rest, args.ngram_keep)
+        .into_iter()
+        .chain(top(big_start, args.start_keep))
+        .collect::<Vec<_>>();
+    let tri_vec = top(tri_rest, args.ngram_keep)
+        .into_iter()
+        .chain(top(tri_start, args.start_keep))
+        .collect::<Vec<_>>();
 
     let mut model = NgramModel::empty();
     let mut min_lp = f32::INFINITY;
@@ -247,11 +272,21 @@ fn main() -> anyhow::Result<()> {
     fs::rename(&tmp_ngram, &out_ngram)
         .with_context(|| format!("rename {} → {}", tmp_ngram.display(), out_ngram.display()))?;
     log::info!(
-        "wrote {} ({} bigrams, {} trigrams, {} bytes)",
+        "wrote {} ({} bigrams, {} trigrams, {} of them starting sentences, {} bytes)",
         out_ngram.display(),
         big_vec.len(),
         tri_vec.len(),
+        big_vec.iter().filter(|((p, _), _)| starts(p)).count()
+            + tri_vec.iter().filter(|((p2, _, _), _)| starts(p2)).count(),
         bytes.len(),
     );
     Ok(())
+}
+
+/// The `keep` most frequent of `counts`, most frequent first, ties broken
+/// by the n-gram itself so that a build is the same every time.
+fn top<K: Ord>(mut counts: Vec<(K, u64)>, keep: usize) -> Vec<(K, u64)> {
+    counts.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(&b.0)));
+    counts.truncate(keep);
+    counts
 }

@@ -73,6 +73,11 @@ PREDICT_COMPACT_NGRAM ?= 30000
 PREDICT_LARGE_LANGS ?= mr
 PREDICT_LARGE_VOCAB ?= 30000
 PREDICT_LARGE_NGRAM ?= 90000
+# The bigrams and trigrams that start a sentence, kept apart from the
+# tiers' n-gram caps (each kept to this many). Measured on en fr de es ru
+# ar hi tr: 5 000 gains 1.30 points of keystroke savings over none, for
+# n-gram tables 8-19% larger; 20 000 gains 0.07 more, for up to 67%.
+PREDICT_START ?= 5000
 # The generation of the word splitter the models are trained with
 # (`osk_data::words::GENERATION`). A model built by another generation
 # reads its words differently, so it is part of every predict output's
@@ -131,6 +136,7 @@ predict-assets:
 		set -- predict/$$lang \
 			--input corpora/$$lang.txt=$(PREDICT_CORPORA_DIR)/$$lang.txt \
 			--recipe vocab_size=$$vocab --recipe ngram_keep=$$ngram \
+			--recipe start_keep=$(PREDICT_START) \
 			--recipe words=$(WORDS_GENERATION) \
 			--output $(PREDICT_OUT_DIR)/$$lang.fst --output $(PREDICT_OUT_DIR)/$$lang.ngram.bin \
 			--output $(PREDICT_OUT_DIR)/$$lang.forms.fst; \
@@ -142,6 +148,7 @@ predict-assets:
 			--out $(CURDIR)/$(PREDICT_OUT_DIR) \
 			--vocab-size $$vocab \
 			--ngram-keep $$ngram \
+			--start-keep $(PREDICT_START) \
 			|| exit 1; \
 		record "$$@" || exit 1; \
 	done

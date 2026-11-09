@@ -22,7 +22,7 @@ terms.
 | Path | What | Built by |
 |---|---|---|
 | `predict/<lang>.fst` | Prefix-completion lexicon (54 languages) | `make predict-assets` |
-| `predict/<lang>.ngram.bin` | Bigram/trigram scores | `make predict-assets` |
+| `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `rules/all.weir`, `rules/<lang>.weir` | Text rules: what typing a key does to the text before the caret beyond typing it (the space after a strip word giving way to punctuation, French spacing), and where autocorrect acts besides space, Weir-style, with their tests | by hand |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |

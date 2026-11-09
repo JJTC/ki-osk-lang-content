@@ -46,7 +46,14 @@ use unicode_normalization::char::is_combining_mark;
 /// The splitter's rules, numbered. What a lexicon's words are depends on
 /// them, so a change to them is a new generation, and every model the old
 /// one built is out of date: the data repository's lock records it.
-pub const GENERATION: u32 = 1;
+/// Generation 2 gave a sentence's first word [`SENTENCE_START`] for
+/// context, so the models count what starts sentences.
+pub const GENERATION: u32 = 2;
+
+/// The context of a sentence's first word, as if a word: the n-gram tables
+/// count the words that start sentences after it, and the keyboard offers
+/// them where a sentence starts. No lexicon holds it.
+pub const SENTENCE_START: &str = "<s>";
 
 /// How one language joins characters into words, and ends sentences.
 #[derive(Debug, Clone, Copy)]
@@ -272,6 +279,20 @@ struct Context {
 }
 
 impl Context {
+    /// Start again where a word starts as `start` says: after
+    /// [`SENTENCE_START`] at a sentence's start, from nothing after a
+    /// break; as it was when the word follows.
+    fn restart(&mut self, start: Option<Start>) {
+        match start {
+            Some(Start::Sentence) => {
+                self.words.clear();
+                self.words.push(SENTENCE_START.to_string());
+            }
+            Some(Start::Break) => self.words.clear(),
+            Some(Start::Follows) | None => {}
+        }
+    }
+
     fn push(&mut self, w: String) {
         self.words.push(w);
         if self.words.len() > self.n {
@@ -613,8 +634,15 @@ impl Splitter {
 
     /// Feed `each` the words of `text`; what is left for what comes after.
     fn scan(&self, text: &str, each: &mut dyn FnMut(TextWord)) -> After {
+        self.scan_from(text, Start::Sentence, each)
+    }
+
+    /// [`Self::scan`] a text whose first word starts as `start` says: a
+    /// sentence, at a text's start, or a break, in a text cut from a
+    /// longer one.
+    fn scan_from(&self, text: &str, start: Start, each: &mut dyn FnMut(TextWord)) -> After {
         let mut after = After {
-            start: Start::Sentence,
+            start,
             quote: false,
         };
         let mut token_start: Option<usize> = None;
@@ -693,8 +721,21 @@ impl Splitter {
     /// would join the last word (`don'`, `что-`), the caret is in it; where
     /// one would start a word glued on (`l'`), a word starts at the caret;
     /// where neither (`end.`), the caret is past the token's word.
+    ///
+    /// A sentence's first word has [`SENTENCE_START`] for context; the
+    /// text's start is a sentence's ([`Self::typing_after`] when it is not
+    /// known to be).
     #[must_use]
     pub fn typing(&self, before_caret: &str, n: usize) -> Typing {
+        self.typing_after(before_caret, n, Start::Sentence)
+    }
+
+    /// [`Self::typing`] a text before the caret whose start is not the
+    /// text's, when `start` says so: [`Start::Break`] for a text whose
+    /// start is not known (cut from a longer one, or read after the
+    /// keyboard lost track), where no context is assumed.
+    #[must_use]
+    pub fn typing_after(&self, before_caret: &str, n: usize, start: Start) -> Typing {
         let cut = before_caret
             .char_indices()
             .rev()
@@ -705,17 +746,14 @@ impl Splitter {
             words: Vec::new(),
             n,
         };
-        let after = self.scan(done, &mut |w| {
-            if w.start != Start::Follows {
-                context.words.clear();
-            }
+        let after = self.scan_from(done, start, &mut |w| {
+            context.restart(Some(w.start));
             context.push(w.text);
         });
-        let mut fresh = after.start != Start::Follows;
+        // How the token's first word starts, unless a sentence ends in it.
+        let mut fresh = (after.start != Start::Follows).then_some(after.start);
         if token.is_empty() {
-            if fresh {
-                context.words.clear();
-            }
+            context.restart(fresh);
             return Typing {
                 context: context.words,
                 word: String::new(),
@@ -757,19 +795,22 @@ impl Splitter {
                 _ => (&pieces[..], None, Caret::AfterWord),
             };
         let mut gap_start = 0;
-        for p in finished {
-            if fresh || self.any_end(&token[gap_start..p.range.start]) {
-                context.words.clear();
+        let sentence_or = |gap: &str, fresh: Option<Start>| {
+            if self.any_end(gap) {
+                Some(Start::Sentence)
+            } else {
+                fresh
             }
-            fresh = false;
+        };
+        for p in finished {
+            context.restart(sentence_or(&token[gap_start..p.range.start], fresh));
+            fresh = None;
             context.push(self.normalize(&token[p.range.clone()]));
             gap_start = p.range.end;
         }
         let rest_end = word.as_ref().map_or(token.len(), |w| w.start);
         let rest = &token[gap_start.min(rest_end)..rest_end];
-        if fresh || self.any_end(rest) {
-            context.words.clear();
-        }
+        context.restart(sentence_or(rest, fresh));
         Typing {
             context: context.words,
             word: word.map(|r| token[r].to_string()).unwrap_or_default(),
@@ -1091,7 +1132,7 @@ mod tests {
     #[test]
     fn the_caret_is_read_as_if_a_letter_came_next() {
         use Caret::{AfterWord, BeforeWord, InWord, WordStart};
-        assert_eq!(typing("en", ""), (ws(&[]), String::new(), WordStart));
+        assert_eq!(typing("en", ""), (ws(&["<s>"]), String::new(), WordStart));
         assert_eq!(
             typing("en", "I saw hel"),
             (ws(&["i", "saw"]), "hel".into(), InWord)
@@ -1101,14 +1142,17 @@ mod tests {
             (ws(&["i", "saw"]), String::new(), WordStart)
         );
         // A character that joins once a letter follows is in the word.
-        assert_eq!(typing("en", "I don'"), (ws(&["i"]), "don'".into(), InWord));
+        assert_eq!(
+            typing("en", "I don'"),
+            (ws(&["<s>", "i"]), "don'".into(), InWord)
+        );
         assert_eq!(
             typing("ru", "это что-"),
-            (ws(&["это"]), "что-".into(), InWord)
+            (ws(&["<s>", "это"]), "что-".into(), InWord)
         );
         assert_eq!(
             typing("fa", "او می\u{200C}"),
-            (ws(&["او"]), "می\u{200C}".into(), InWord)
+            (ws(&["<s>", "او"]), "می\u{200C}".into(), InWord)
         );
         // An elided word is finished, and a word starts glued after it.
         assert_eq!(
@@ -1121,14 +1165,17 @@ mod tests {
         );
         assert_eq!(
             typing("it", "Quest'"),
-            (ws(&["quest'"]), String::new(), WordStart)
+            (ws(&["<s>", "quest'"]), String::new(), WordStart)
         );
         assert_eq!(
             typing("kab", "fell-"),
-            (ws(&["fell-"]), String::new(), WordStart)
+            (ws(&["<s>", "fell-"]), String::new(), WordStart)
         );
         // An apocope is not: the word goes on.
-        assert_eq!(typing("it", "un po'"), (ws(&["un"]), "po'".into(), InWord));
+        assert_eq!(
+            typing("it", "un po'"),
+            (ws(&["<s>", "un"]), "po'".into(), InWord)
+        );
         // Past the word, or before any.
         assert_eq!(
             typing("en", "I saw it,"),
@@ -1136,25 +1183,48 @@ mod tests {
         );
         assert_eq!(
             typing("en", "I saw it."),
-            (ws(&[]), String::new(), AfterWord)
+            (ws(&["<s>"]), String::new(), AfterWord)
         );
         assert_eq!(
             typing("en", "I saw («"),
             (ws(&["i", "saw"]), String::new(), BeforeWord)
         );
-        assert_eq!(typing("en", "end.Th"), (ws(&[]), "Th".into(), InWord));
-        assert_eq!(typing("en", "I saw\n"), (ws(&[]), String::new(), WordStart));
+        assert_eq!(typing("en", "end.Th"), (ws(&["<s>"]), "Th".into(), InWord));
+        assert_eq!(
+            typing("en", "I saw\n"),
+            (ws(&["<s>"]), String::new(), WordStart)
+        );
         // A quote closed after a word is not part of it.
         assert_eq!(
             typing("en", "'yes'"),
-            (ws(&["yes"]), String::new(), AfterWord)
+            (ws(&["<s>", "yes"]), String::new(), AfterWord)
         );
         // A Dutch quote is not a clipped word.
         assert_eq!(
             typing("nl", "Hij zei '"),
             (ws(&["hij", "zei"]), String::new(), BeforeWord)
         );
-        assert_eq!(typing("nl", "'"), (ws(&[]), String::new(), BeforeWord));
-        assert_eq!(typing("br", "'"), (ws(&[]), "'".into(), InWord));
+        assert_eq!(typing("nl", "'"), (ws(&["<s>"]), String::new(), BeforeWord));
+        assert_eq!(typing("br", "'"), (ws(&["<s>"]), "'".into(), InWord));
+    }
+
+    #[test]
+    fn a_sentence_starts_after_sentence_start_and_a_break_after_nothing() {
+        // A sentence's first word, and the words after it.
+        assert_eq!(typing("en", "Go. I").0, ws(&["<s>"]));
+        assert_eq!(typing("en", "Go. I s").0, ws(&["<s>", "i"]));
+        // A number breaks the context but starts no sentence.
+        assert_eq!(typing("en", "I have 42 do").0, ws(&[]));
+        // A text whose start is not known starts with no context.
+        let s = Splitter::new("en");
+        assert!(s.typing_after("", 2, Start::Break).context.is_empty());
+        assert_eq!(
+            s.typing_after("so we", 2, Start::Break).context,
+            ws(&["so"])
+        );
+        assert_eq!(
+            s.typing_after("so. we", 2, Start::Break).context,
+            ws(&["<s>"])
+        );
     }
 }
