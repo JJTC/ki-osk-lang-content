@@ -26,6 +26,7 @@ use std::path::PathBuf;
 use anyhow::Context as _;
 use clap::Parser;
 use osk_data::ngram::NgramModel;
+use osk_data::words::{Splitter, Start};
 
 #[derive(Parser)]
 #[command(name = "build-predict")]
@@ -33,8 +34,8 @@ struct Args {
     /// BCP-47 tag used for the output file name.
     #[arg(long)]
     lang: String,
-    /// Corpus path. Plain UTF-8 text; any tokenisation beyond
-    /// whitespace-split is up to the caller.
+    /// Corpus path: plain UTF-8 text, a sentence or a paragraph per line.
+    /// Words are found as the keyboard reads them (`osk_data::words`).
     #[arg(long)]
     corpus: PathBuf,
     /// Output directory. Files written as `<out>/<lang>.fst` and
@@ -61,32 +62,27 @@ fn main() -> anyhow::Result<()> {
     let mut text = String::new();
     f.read_to_string(&mut text)?;
 
-    // --- unigram + n-gram tokenization ---
+    // --- unigram + n-gram counts ---
     //
-    // A single sweep: normalize each whitespace-separated token into a
-    // lowercase alphabetic word, track unigram counts and the preceding
-    // two-word sliding window so bigram/trigram counts fall out of the
-    // same pass.
+    // A single sweep over the words the keyboard would read (the same
+    // splitter, so a word kept whole here is one the keyboard offers
+    // whole), tracking the preceding two words so bigram and trigram
+    // counts fall out of the same pass. The chain breaks where the
+    // keyboard clears its context: a sentence end, a line end, a token
+    // with no word in it (a number, a dash); n-grams across one would
+    // never be asked for.
+    let splitter = Splitter::new(&args.lang);
     let mut freq: HashMap<String, u64> = HashMap::new();
     let mut bigrams: HashMap<(String, String), u64> = HashMap::new();
     let mut trigrams: HashMap<(String, String, String), u64> = HashMap::new();
     let mut prev2: Option<String> = None;
     let mut prev1: Option<String> = None;
-    for tok in text.split_whitespace() {
-        let w: String = tok
-            .chars()
-            .skip_while(|c| !c.is_alphabetic())
-            .take_while(|c| c.is_alphabetic())
-            .flat_map(|c| c.to_lowercase())
-            .collect();
-        if w.is_empty() {
-            // Break any cross-sentence n-gram that would have bridged
-            // this throwaway token. Treat punctuation / numerals as a
-            // soft sentence boundary.
+    for word in text.lines().flat_map(|line| splitter.words(line)) {
+        if word.start != Start::Follows {
             prev2 = None;
             prev1 = None;
-            continue;
         }
+        let w = word.text;
         *freq.entry(w.clone()).or_default() += 1;
         if let Some(p1) = &prev1 {
             *bigrams.entry((p1.clone(), w.clone())).or_default() += 1;

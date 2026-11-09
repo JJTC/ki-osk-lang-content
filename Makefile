@@ -64,9 +64,20 @@ PREDICT_NGRAM ?= 60000
 # tables by up to 2x. Moving a language to the full tier is a size
 # decision: take it out of this list.
 PREDICT_COMPACT_LANGS ?= no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be \
-                         id fil az ku ug hi bn hy ka lt lv kab
+                         id fil az ku ug hi hy ka lt lv kab
 PREDICT_COMPACT_VOCAB ?= 18000
 PREDICT_COMPACT_NGRAM ?= 30000
+# The LARGE tier: languages whose words, kept whole (osk_data::words), are
+# too many for the full tier's caps. Marathi has 25 k word types in its
+# corpus once viramas no longer cut them.
+PREDICT_LARGE_LANGS ?= mr
+PREDICT_LARGE_VOCAB ?= 30000
+PREDICT_LARGE_NGRAM ?= 90000
+# The generation of the word splitter the models are trained with
+# (`osk_data::words::GENERATION`). A model built by another generation
+# reads its words differently, so it is part of every predict output's
+# recipe, and a new generation makes every one of them stale.
+WORDS_GENERATION = $(shell sed -n 's/^pub const GENERATION: u32 = \([0-9]*\);/\1/p' crates/osk-data/src/words.rs)
 
 .PHONY: help
 help:
@@ -113,9 +124,14 @@ predict-assets:
 			*" $$lang "*) vocab=$(PREDICT_COMPACT_VOCAB); ngram=$(PREDICT_COMPACT_NGRAM) ;; \
 			*)            vocab=$(PREDICT_VOCAB);         ngram=$(PREDICT_NGRAM) ;; \
 		esac; \
+		case " $(PREDICT_LARGE_LANGS) " in \
+			*" $$lang "*) vocab=$(PREDICT_LARGE_VOCAB); ngram=$(PREDICT_LARGE_NGRAM) ;; \
+		esac; \
+		test -n "$(WORDS_GENERATION)" || { echo "no GENERATION in crates/osk-data/src/words.rs"; exit 1; }; \
 		set -- predict/$$lang \
 			--input corpora/$$lang.txt=$(PREDICT_CORPORA_DIR)/$$lang.txt \
 			--recipe vocab_size=$$vocab --recipe ngram_keep=$$ngram \
+			--recipe words=$(WORDS_GENERATION) \
 			--output $(PREDICT_OUT_DIR)/$$lang.fst --output $(PREDICT_OUT_DIR)/$$lang.ngram.bin; \
 		stale "$$@" || continue; \
 		echo "build-predict $$lang (vocab $$vocab, n-grams $$ngram)"; \

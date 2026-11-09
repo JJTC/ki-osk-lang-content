@@ -31,7 +31,7 @@ them, takes on those terms.
 | `sources.lock` | What each output was built from | every build target |
 | `seeds/` | Tiny Pinyin, Jyutping and kana seeds (offline fallback) | by hand |
 | `packs.toml` | Which files make up each pack, with licences and sources | by hand |
-| `crates/osk-data/` | The format: the KIOS codec, the serialized types, packs | — |
+| `crates/osk-data/` | The format: the KIOS codec, the serialized types, packs; and the word splitter the models are trained with | — |
 | `crates/osk-data-tools/` | The builders (`build-predict`, `build-pinyin`, …, `make-packs`) | — |
 
 Every `.bin` carries a `KIOS` magic and version header and is written
@@ -92,6 +92,14 @@ is held out of training. The first 1 500 per language are `eval/<lang>.txt`,
 where ki-osk's `toolbox eval-predict` measures keystroke savings through
 its real suggestion engine. Since no model saw that text, the number is
 honest, and it is what the monthly refresh is held to.
+
+`build-predict` finds words with `osk_data::words`, the splitter ki-osk
+reads the text before the caret with and `eval-predict` types held-out
+text with, so the words the models know are the words the keyboard
+reads: whole, with their apostrophes, hyphens and marks (`don't`,
+`что-то`, `क्या`), and an elided article apart from its word (`l'`,
+`homme`). Its generation is part of every model's recipe, so a change to
+its rules rebuilds them all.
 
 `sources.lock` records, for every output, the sha256 of each input, the
 recipe and the output itself. With `ONLY_STALE=1`, as `make refresh`

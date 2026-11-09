@@ -1,0 +1,1088 @@
+//! How prediction splits text into words.
+//!
+//! One splitter for the three places that must agree on what a word is:
+//! the trainer (`build-predict` counts the words it finds in a corpus),
+//! the keyboard (ki-osk reads the text before the caret through
+//! [`Splitter::typing`]) and the measure (`eval-predict` types held-out
+//! text word by word). A word the trainer kept whole and the keyboard cut,
+//! or the reverse, is a word the keyboard never offers.
+//!
+//! A word is a run of word characters inside one whitespace-separated
+//! token: letters, and the marks, joiners, apostrophes and hyphens that
+//! sit inside words. Everything else (punctuation, digits, symbols)
+//! separates words, and a token with no word in it breaks the chain of
+//! context, as does the end of a sentence or a line.
+//!
+//! - Letters are Unicode's Alphabetic characters, which include Indic vowel
+//!   signs and U+02BC MODIFIER LETTER APOSTROPHE.
+//! - A combining mark after a word character belongs to the word: viramas
+//!   and nuktas (`क्या`, `ज़्यादा`), stress accents (`бо́льшую`).
+//! - ZWNJ and ZWJ between word characters belong to it: the Persian
+//!   half-space (`می‌شوند`), Indic conjunct forms (`वाहणार्‍या`).
+//! - An apostrophe between letters belongs to it (`don't`, `п'ять`,
+//!   `c'hoazh`, `Tom'un`), and so does one that ends a word (`students'`,
+//!   Greek `απ'`, Italian `po'`) unless a single quote is open on the line;
+//!   a hyphen between letters does too (`что-то`, `anak-anak`, `est-ce`).
+//!   So a word is offered and learned whole. French, Italian, Catalan and
+//!   Occitan instead split after an elided word: `l'homme` is `l'` and
+//!   `homme`, the second glued to the first, with no space between; and
+//!   Kabyle after a hyphen, before its clitics (`fell-` and `i`).
+//! - Per language: Catalan's middle dot (`col·legi`), Armenian's question,
+//!   emphasis and exclamation marks, written on a word's stressed vowel
+//!   (`Ի՞նչ`), Hebrew's gershayim in acronyms (`לחו"ל`), a leading
+//!   apostrophe in Breton (`'zo`) and in Dutch's `'s`, `'t`, `'n`, `'k` and
+//!   `'m`.
+//!
+//! A word's identity, what lexicons and n-gram tables are keyed on, is
+//! [`Splitter::normalize`]: NFC, lower case, one apostrophe (U+0027), one
+//! hyphen (U+002D), and per language one spelling of a letter the texts
+//! and the keyboards write two ways.
+
+use std::ops::Range;
+
+use unicode_normalization::UnicodeNormalization;
+use unicode_normalization::char::is_combining_mark;
+
+/// The splitter's rules, numbered. What a lexicon's words are depends on
+/// them, so a change to them is a new generation, and every model the old
+/// one built is out of date: the data repository's lock records it.
+pub const GENERATION: u32 = 1;
+
+/// How one language joins characters into words, and ends sentences.
+#[derive(Debug, Clone, Copy)]
+#[allow(clippy::struct_excessive_bools)]
+pub struct Splitter {
+    elide: Elide,
+    lead: Lead,
+    fold: Fold,
+    /// A hyphen between letters ends a word, which keeps it, and glues the
+    /// next one on (Kabyle `fell-i`).
+    hyphen_glues: bool,
+    /// U+00B7 between letters (Catalan `l·l`).
+    middle_dot: bool,
+    /// Armenian: marks written on a word's vowel, and `:` written for the
+    /// full stop `։`.
+    armenian: bool,
+    /// Hebrew gershayim between letters.
+    hebrew: bool,
+    /// `;` is a question mark (Greek), so it ends a sentence.
+    greek: bool,
+    /// Dotted and dotless i (Turkish, Azerbaijani): `I` lower-cases to
+    /// `ı`, `İ` to `i`, and `i` upper-cases to `İ`.
+    turkic: bool,
+}
+
+/// Where an apostrophe inside a word ends it.
+#[derive(Debug, Clone, Copy)]
+enum Elide {
+    /// Never: the apostrophe is part of the word.
+    Never,
+    /// After one of these words (lower case, without the apostrophe).
+    After(&'static [&'static str]),
+    /// After any word but these, whose apostrophe ends them (Italian `po'`).
+    AllBut(&'static [&'static str]),
+}
+
+/// Whether a leading apostrophe before a letter begins a word.
+#[derive(Debug, Clone, Copy)]
+enum Lead {
+    /// Never: it is a quote.
+    Never,
+    /// When the letters after it are one of these words.
+    Words(&'static [&'static str]),
+    /// Always.
+    Always,
+}
+
+/// One language's spellings of one letter two ways, made one.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum Fold {
+    None,
+    /// The texts write Latin æ, the keyboard types Cyrillic ӕ.
+    Ossetian,
+    /// Arabic ي ى ك for Persian ی ک; the short-vowel marks and the tatweel
+    /// dropped.
+    Persian,
+    /// Arabic and Uyghur: the short-vowel marks and the tatweel dropped.
+    Arabic,
+    /// The question, emphasis and exclamation marks dropped, `և` as `եվ`.
+    Armenian,
+    /// Greek γ ε for Latin ɣ ɛ.
+    Kabyle,
+    /// The eyelash ra and the candra a as the keyboard types them.
+    Marathi,
+    /// Latin as Cyrillic: the texts write both, the keyboard types Cyrillic.
+    Serbian,
+}
+
+/// The elided words French writes with an apostrophe before a vowel.
+/// Others stay whole: `aujourd'hui`, `quelqu'un`, `presqu'île`.
+const FRENCH_ELISIONS: &[&str] = &[
+    "l", "d", "j", "m", "t", "s", "n", "c", "ç", "qu", "lorsqu", "puisqu", "jusqu", "quoiqu",
+];
+/// Catalan's proclitic elisions; enclitics stay whole (`veure'l`).
+const CATALAN_ELISIONS: &[&str] = &["l", "d", "m", "t", "s", "n"];
+/// Occitan's.
+const OCCITAN_ELISIONS: &[&str] = &["l", "d", "qu", "m", "t", "s", "n"];
+/// Italian's apocopes: words cut short, written with an apostrophe and a
+/// space after (`un po' di`), not elided.
+const ITALIAN_APOCOPES: &[&str] = &[
+    "po", "di", "fa", "va", "sta", "da", "be", "mo", "to", "ve", "ca", "pie",
+];
+/// Dutch's clipped words (`'s avonds`, `'t is`, `'n huis`).
+const DUTCH_CLIPPED: &[&str] = &["s", "t", "n", "k", "m"];
+
+/// Apostrophes: ASCII, the typographic right single quote, and the Hebrew
+/// geresh. U+02BC is a letter already.
+fn is_apostrophe(c: char) -> bool {
+    matches!(c, '\'' | '\u{2019}' | '\u{05F3}')
+}
+
+/// Characters that open or close a single quote when they belong to no
+/// word.
+fn is_single_quote(c: char) -> bool {
+    matches!(c, '\'' | '\u{2018}' | '\u{2019}' | '\u{201A}' | '\u{201B}')
+}
+
+/// Hyphens: ASCII, U+2010, the non-breaking U+2011, the Armenian hyphen and
+/// the Hebrew maqaf.
+fn is_hyphen(c: char) -> bool {
+    matches!(c, '-' | '\u{2010}' | '\u{2011}' | '\u{058A}' | '\u{05BE}')
+}
+
+fn is_joiner(c: char) -> bool {
+    matches!(c, '\u{200C}' | '\u{200D}')
+}
+
+/// The Arabic short-vowel marks (fathatan to sukun), the superscript alef
+/// and the tatweel.
+fn is_harakah(c: char) -> bool {
+    matches!(c, '\u{064B}'..='\u{0652}' | '\u{0670}' | '\u{0640}')
+}
+
+/// Whether `c` ends a sentence for prediction: `.`, `!` and `?`, the
+/// Devanagari and Bengali danda and double danda, the Armenian full stop,
+/// the Arabic question mark and full stop, the Greek question mark, and a
+/// new line or a tab, which leave the line or the field. Context does not
+/// carry across one.
+#[must_use]
+pub fn ends_sentence(c: char) -> bool {
+    matches!(
+        c,
+        '.' | '!'
+            | '?'
+            | '\u{964}'
+            | '\u{965}'
+            | '\u{589}'
+            | '\u{61F}'
+            | '\u{6D4}'
+            | '\u{37E}'
+            | '\n'
+            | '\t'
+    )
+}
+
+/// Whether `c`, right after the caret, may carry on the word before it: a
+/// letter, a mark, a joiner, an apostrophe or a hyphen. A word that goes on
+/// past the caret is none to complete.
+#[must_use]
+pub fn continues_word(c: char) -> bool {
+    c.is_alphabetic() || is_combining_mark(c) || is_joiner(c) || is_apostrophe(c) || is_hyphen(c)
+}
+
+/// A word in a token: its bytes in the token, and whether it is glued to
+/// the word before it (`homme` after `l'`).
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Piece {
+    /// Its bytes in the token.
+    pub range: Range<usize>,
+    /// It follows an elided word with no space between.
+    pub glued: bool,
+}
+
+/// How a word follows the words before it.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Start {
+    /// It follows them: they are its context.
+    Follows,
+    /// It starts a sentence: at the text's start, after a sentence end or a
+    /// line end.
+    Sentence,
+    /// It follows a token with no word in it (a number, a dash): the
+    /// context breaks, though the sentence goes on.
+    Break,
+}
+
+/// A word of a text, as prediction reads it.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct TextWord {
+    /// Its bytes in the text.
+    pub range: Range<usize>,
+    /// Its identity: [`Splitter::normalize`]d.
+    pub text: String,
+    /// It follows an elided word with no space between (`homme` in
+    /// `l'homme`).
+    pub glued: bool,
+    /// Other characters come before it in its token (`(see`, `«Oui`,
+    /// `a,b`): no word starts there by itself, so none is offered before
+    /// its first letter.
+    pub after_other: bool,
+    /// How it follows the words before it.
+    pub start: Start,
+    /// It is its token's last word: whitespace or the text's end follows,
+    /// perhaps after other characters (`word,`).
+    pub last_in_token: bool,
+}
+
+/// Where the caret is, for prediction.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum Caret {
+    /// After whitespace, at the start, or right after an elided word
+    /// (`l'`): a word starts here, and the strip may offer the next one.
+    #[default]
+    WordStart,
+    /// In a token, before its first letter (after an opening quote or a
+    /// digit): a letter starts a word, but no next word is offered, since
+    /// a tap would glue it on.
+    BeforeWord,
+    /// In a word: the word in progress.
+    InWord,
+    /// Past the token's last word (`end.`, `word,`), or in a word that
+    /// goes on after the caret: no word until whitespace.
+    AfterWord,
+}
+
+/// What prediction reads from the text before the caret.
+#[derive(Debug, Clone, PartialEq, Eq, Default)]
+pub struct Typing {
+    /// The last words before the word at the caret, in its sentence,
+    /// oldest first, normalised.
+    pub context: Vec<String>,
+    /// The word in progress, as typed: the word the caret is in, with a
+    /// character that joins words once a letter follows (`don'`, `что-`).
+    pub word: String,
+    /// Where the caret is.
+    pub caret: Caret,
+}
+
+/// The words a context keeps, at most `n`, the newest last.
+struct Context {
+    words: Vec<String>,
+    n: usize,
+}
+
+impl Context {
+    fn push(&mut self, w: String) {
+        self.words.push(w);
+        if self.words.len() > self.n {
+            self.words.remove(0);
+        }
+    }
+}
+
+/// What reading a text leaves for what comes after it.
+#[derive(Clone, Copy)]
+struct After {
+    /// How the next word follows.
+    start: Start,
+    /// A single quote is open on the line.
+    quote: bool,
+}
+
+impl Splitter {
+    /// The splitter for `lang`, a BCP-47 tag (`fr`, `pt-BR`); unknown
+    /// languages get the defaults.
+    #[must_use]
+    pub fn new(lang: &str) -> Self {
+        let primary = lang.split(['-', '_']).next().unwrap_or(lang);
+        let mut s = Self {
+            elide: Elide::Never,
+            lead: Lead::Never,
+            fold: Fold::None,
+            hyphen_glues: false,
+            middle_dot: false,
+            armenian: false,
+            hebrew: false,
+            greek: false,
+            turkic: false,
+        };
+        match primary {
+            "fr" => s.elide = Elide::After(FRENCH_ELISIONS),
+            "it" => s.elide = Elide::AllBut(ITALIAN_APOCOPES),
+            "ca" => {
+                s.elide = Elide::After(CATALAN_ELISIONS);
+                s.middle_dot = true;
+            }
+            "oc" => s.elide = Elide::After(OCCITAN_ELISIONS),
+            "br" => s.lead = Lead::Always,
+            "nl" => s.lead = Lead::Words(DUTCH_CLIPPED),
+            "hy" => {
+                s.armenian = true;
+                s.fold = Fold::Armenian;
+            }
+            "he" => s.hebrew = true,
+            "el" => s.greek = true,
+            "tr" | "az" => s.turkic = true,
+            "kab" => {
+                s.hyphen_glues = true;
+                s.fold = Fold::Kabyle;
+            }
+            "os" => s.fold = Fold::Ossetian,
+            "fa" => s.fold = Fold::Persian,
+            "ar" | "ug" => s.fold = Fold::Arabic,
+            "mr" => s.fold = Fold::Marathi,
+            "sr" => s.fold = Fold::Serbian,
+            _ => {}
+        }
+        s
+    }
+
+    /// Whether `c` ends a sentence in this language: [`ends_sentence`];
+    /// in Greek `;`, its question mark (what the Greek keymap types for it,
+    /// and what U+037E normalises to); in Armenian `:`, written for its full
+    /// stop `։`.
+    #[must_use]
+    pub fn ends_sentence(&self, c: char) -> bool {
+        ends_sentence(c) || (self.greek && c == ';') || (self.armenian && c == ':')
+    }
+
+    /// A word's identity: NFC; lower case (Turkish and Azerbaijani with
+    /// their dotted and dotless i, Greek with its final sigma); apostrophes
+    /// as U+0027 and hyphens as U+002D; and the language's letters written
+    /// two ways written one way.
+    #[must_use]
+    pub fn normalize(&self, word: &str) -> String {
+        let mut mapped = String::with_capacity(word.len());
+        for c in word.nfc() {
+            match c {
+                c if is_apostrophe(c) || c == '\u{02BC}' => mapped.push('\''),
+                c if is_hyphen(c) => mapped.push('-'),
+                '\u{05F4}' => mapped.push('"'),
+                'I' if self.turkic => mapped.push('ı'),
+                '\u{130}' if self.turkic => mapped.push('i'),
+                c => self.fold_char(c, &mut mapped),
+            }
+        }
+        // Lower-cased whole, not character by character: a final sigma
+        // depends on what follows it.
+        let lower = mapped.to_lowercase();
+        match self.fold {
+            Fold::Marathi => lower
+                .replace("\u{930}\u{94D}\u{200D}", "\u{931}\u{94D}")
+                .replace("\u{905}\u{200D}\u{945}", "\u{972}")
+                .replace("\u{905}\u{945}", "\u{972}"),
+            Fold::Serbian => cyrillic(&lower),
+            _ => lower,
+        }
+    }
+
+    /// Push `c` as this language writes it one way.
+    fn fold_char(&self, c: char, out: &mut String) {
+        match (self.fold, c) {
+            (Fold::Ossetian, 'æ') => out.push('ӕ'),
+            (Fold::Ossetian, 'Æ') => out.push('Ӕ'),
+            (Fold::Persian, '\u{064A}' | '\u{0649}') => out.push('\u{06CC}'),
+            (Fold::Persian, '\u{0643}') => out.push('\u{06A9}'),
+            (Fold::Persian | Fold::Arabic, c) if is_harakah(c) => {}
+            (Fold::Armenian, '\u{055E}' | '\u{055B}' | '\u{055C}') => {}
+            (Fold::Armenian, '\u{0587}') => out.push_str("եվ"),
+            (Fold::Kabyle, 'γ') => out.push('ɣ'),
+            (Fold::Kabyle, 'Γ') => out.push('Ɣ'),
+            (Fold::Kabyle, 'ε') => out.push('ɛ'),
+            (Fold::Kabyle, 'Ε') => out.push('Ɛ'),
+            (_, c) => out.push(c),
+        }
+    }
+
+    /// `c` in upper case, as this language writes it (`i` is `İ` in
+    /// Turkish).
+    #[must_use]
+    pub fn upper(&self, c: char) -> String {
+        match c {
+            'i' if self.turkic => "\u{130}".to_string(),
+            c => c.to_uppercase().collect(),
+        }
+    }
+
+    /// How much of `suggestion` `typed` already is: the bytes of the
+    /// shortest start of it that is the same word ([`Self::normalize`]d),
+    /// or `None` when no start of it is. A keyboard completing what was
+    /// typed keeps it as typed and types only the rest.
+    #[must_use]
+    pub fn covered(&self, typed: &str, suggestion: &str) -> Option<usize> {
+        let want = self.normalize(typed);
+        if want.is_empty() {
+            return Some(0);
+        }
+        suggestion
+            .char_indices()
+            .map(|(i, c)| i + c.len_utf8())
+            .find(|&end| self.normalize(&suggestion[..end]) == want)
+    }
+
+    /// Whether a leading apostrophe at `cs[i]` begins a word.
+    fn leads(&self, cs: &[(usize, char)], i: usize) -> bool {
+        match self.lead {
+            Lead::Never => false,
+            Lead::Always => true,
+            Lead::Words(set) => {
+                let word: String = cs[i + 1..]
+                    .iter()
+                    .map(|&(_, c)| c)
+                    .take_while(|c| c.is_alphabetic())
+                    .flat_map(char::to_lowercase)
+                    .collect();
+                set.contains(&word.as_str())
+            }
+        }
+    }
+
+    /// The words of `token`, a run of text with no whitespace in it, read
+    /// with no single quote open before it.
+    #[must_use]
+    pub fn pieces(&self, token: &str) -> Vec<Piece> {
+        self.pieces_quoted(token, false).0
+    }
+
+    /// The words of `token`, and whether a single quote is open after it,
+    /// given whether one is before it.
+    fn pieces_quoted(&self, token: &str, mut quote: bool) -> (Vec<Piece>, bool) {
+        let cs: Vec<(usize, char)> = token.char_indices().collect();
+        let letter_at = |i: usize| cs.get(i).is_some_and(|&(_, c)| c.is_alphabetic());
+        let mut out: Vec<Piece> = Vec::new();
+        // The piece being read: where it starts, and whether glued.
+        let mut open: Option<(usize, bool)> = None;
+        // Whether the character before belongs to a word.
+        let mut prev_in = false;
+        for (i, &(at, c)) in cs.iter().enumerate() {
+            let next_letter = letter_at(i + 1);
+            let in_word = if c.is_alphabetic() {
+                true
+            } else if is_combining_mark(c) {
+                prev_in
+            } else if is_joiner(c) {
+                prev_in
+                    && cs
+                        .get(i + 1)
+                        .is_some_and(|&(_, n)| n.is_alphabetic() || is_combining_mark(n))
+            } else if is_apostrophe(c) {
+                if next_letter {
+                    prev_in || self.leads(&cs, i)
+                } else {
+                    // At a word's end: part of it (`students'`, `απ'`,
+                    // `po'`), unless it closes a quote.
+                    prev_in
+                        && !quote
+                        && open.is_some_and(|(start, _)| !opens_with_quote(&cs, start))
+                }
+            } else if is_hyphen(c) {
+                prev_in && next_letter
+            } else if c == '\u{00B7}' {
+                self.middle_dot && prev_in && next_letter
+            } else if matches!(c, '\u{055E}' | '\u{055B}' | '\u{055C}') {
+                self.armenian && prev_in
+            } else if matches!(c, '"' | '\u{05F4}') {
+                self.hebrew && prev_in && next_letter
+            } else {
+                false
+            };
+            if !in_word {
+                if let Some((start, glued)) = open.take() {
+                    out.push(Piece {
+                        range: start..at,
+                        glued,
+                    });
+                }
+                if is_single_quote(c) {
+                    quote = !quote;
+                }
+                prev_in = false;
+                continue;
+            }
+            // An elided word ends at its apostrophe, a Kabyle word before
+            // its clitics at the hyphen; the next is glued on.
+            if (is_apostrophe(c) || (self.hyphen_glues && is_hyphen(c)))
+                && prev_in
+                && next_letter
+                && let Some((start, glued)) = open
+                && (is_hyphen(c) || self.elides(&token[start..at]))
+            {
+                let end = at + c.len_utf8();
+                out.push(Piece {
+                    range: start..end,
+                    glued,
+                });
+                open = Some((end, true));
+                continue;
+            }
+            if open.is_none() {
+                open = Some((at, false));
+            }
+            prev_in = true;
+        }
+        if let Some((start, glued)) = open {
+            out.push(Piece {
+                range: start..token.len(),
+                glued,
+            });
+        }
+        (out, quote)
+    }
+
+    /// Whether the next word follows `word` with no space between: it is
+    /// elided (`l'`, `dell'`, Kabyle `fell-`), so a keyboard that types it
+    /// types no space after it.
+    #[must_use]
+    pub fn glues_on(&self, word: &str) -> bool {
+        self.pieces(&format!("{word}a"))
+            .last()
+            .is_some_and(|p| p.glued && p.range.start == word.len())
+    }
+
+    /// Whether `word`, before an apostrophe, is one this language elides.
+    fn elides(&self, word: &str) -> bool {
+        match self.elide {
+            Elide::Never => false,
+            Elide::After(set) => set.contains(&self.normalize(word).as_str()),
+            Elide::AllBut(set) => !set.contains(&self.normalize(word).as_str()),
+        }
+    }
+
+    /// The words of `text`, in order, with what prediction needs to know
+    /// about each: its identity, whether it is glued to the one before,
+    /// whether other characters precede it in its token, how it follows
+    /// the words before it, and whether it ends its token.
+    #[must_use]
+    pub fn words(&self, text: &str) -> Vec<TextWord> {
+        let mut out = Vec::new();
+        self.scan(text, &mut |w| out.push(w));
+        out
+    }
+
+    /// Feed `each` the words of `text`; what is left for what comes after.
+    fn scan(&self, text: &str, each: &mut dyn FnMut(TextWord)) -> After {
+        let mut after = After {
+            start: Start::Sentence,
+            quote: false,
+        };
+        let mut token_start: Option<usize> = None;
+        for (at, c) in text.char_indices() {
+            if c.is_whitespace() {
+                if let Some(start) = token_start.take() {
+                    self.token_words(text, start..at, &mut after, each);
+                }
+                if self.ends_sentence(c) {
+                    after.start = Start::Sentence;
+                }
+                if c == '\n' {
+                    after.quote = false;
+                }
+            } else if token_start.is_none() {
+                token_start = Some(at);
+            }
+        }
+        if let Some(start) = token_start {
+            self.token_words(text, start..text.len(), &mut after, each);
+        }
+        after
+    }
+
+    /// Feed `each` the words of the token `range` of `text`, updating what
+    /// is left for the word after the token.
+    fn token_words(
+        &self,
+        text: &str,
+        range: Range<usize>,
+        after: &mut After,
+        each: &mut dyn FnMut(TextWord),
+    ) {
+        let token = &text[range.clone()];
+        let (pieces, quote) = self.pieces_quoted(token, after.quote);
+        after.quote = quote;
+        if pieces.is_empty() {
+            if after.start == Start::Follows {
+                after.start = Start::Break;
+            }
+            if self.any_end(token) {
+                after.start = Start::Sentence;
+            }
+            return;
+        }
+        let mut gap_start = 0;
+        let last = pieces.len() - 1;
+        for (i, p) in pieces.iter().enumerate() {
+            if self.any_end(&token[gap_start..p.range.start]) {
+                after.start = Start::Sentence;
+            }
+            each(TextWord {
+                range: range.start + p.range.start..range.start + p.range.end,
+                text: self.normalize(&token[p.range.clone()]),
+                glued: p.glued,
+                after_other: p.range.start > 0 && !p.glued,
+                start: after.start,
+                last_in_token: i == last,
+            });
+            after.start = Start::Follows;
+            gap_start = p.range.end;
+        }
+        if self.any_end(&token[gap_start..]) {
+            after.start = Start::Sentence;
+        }
+    }
+
+    fn any_end(&self, s: &str) -> bool {
+        s.chars().any(|c| self.ends_sentence(c))
+    }
+
+    /// Read the text before the caret: the context, the word in progress
+    /// and where the caret is. `n` bounds the context.
+    ///
+    /// The token at the caret is read as if a letter came next: where one
+    /// would join the last word (`don'`, `что-`), the caret is in it; where
+    /// one would start a word glued on (`l'`), a word starts at the caret;
+    /// where neither (`end.`), the caret is past the token's word.
+    #[must_use]
+    pub fn typing(&self, before_caret: &str, n: usize) -> Typing {
+        let cut = before_caret
+            .char_indices()
+            .rev()
+            .find(|&(_, c)| c.is_whitespace())
+            .map_or(0, |(i, c)| i + c.len_utf8());
+        let (done, token) = before_caret.split_at(cut);
+        let mut context = Context {
+            words: Vec::new(),
+            n,
+        };
+        let after = self.scan(done, &mut |w| {
+            if w.start != Start::Follows {
+                context.words.clear();
+            }
+            context.push(w.text);
+        });
+        let mut fresh = after.start != Start::Follows;
+        if token.is_empty() {
+            if fresh {
+                context.words.clear();
+            }
+            return Typing {
+                context: context.words,
+                word: String::new(),
+                caret: Caret::WordStart,
+            };
+        }
+        let (pieces, _) = self.pieces_quoted(token, after.quote);
+        let probe = format!("{token}a");
+        let (probed, _) = self.pieces_quoted(&probe, after.quote);
+        // An apostrophe right after the last word that reading the token
+        // as it is left out closes a quote: a letter after it would not
+        // make it part of the word.
+        let closes_quote = pieces.last().is_some_and(|l| {
+            token[l.range.end..]
+                .chars()
+                .next()
+                .is_some_and(is_apostrophe)
+        });
+        // The token's finished words, and the caret after them.
+        let (finished, word, caret): (&[Piece], Option<Range<usize>>, Caret) =
+            match (pieces.last(), probed.last()) {
+                (_, Some(p)) if p.glued && p.range.start == token.len() => {
+                    (&probed[..probed.len() - 1], None, Caret::WordStart)
+                }
+                (Some(last), _) if last.range.end == token.len() => (
+                    &pieces[..pieces.len() - 1],
+                    Some(last.range.clone()),
+                    Caret::InWord,
+                ),
+                (_, Some(p)) if p.range.start < token.len() && !closes_quote => {
+                    let before = probed.len() - 1;
+                    (
+                        &probed[..before],
+                        Some(p.range.start..token.len()),
+                        Caret::InWord,
+                    )
+                }
+                (None, _) => (&[], None, Caret::BeforeWord),
+                _ => (&pieces[..], None, Caret::AfterWord),
+            };
+        let mut gap_start = 0;
+        for p in finished {
+            if fresh || self.any_end(&token[gap_start..p.range.start]) {
+                context.words.clear();
+            }
+            fresh = false;
+            context.push(self.normalize(&token[p.range.clone()]));
+            gap_start = p.range.end;
+        }
+        let rest_end = word.as_ref().map_or(token.len(), |w| w.start);
+        let rest = &token[gap_start.min(rest_end)..rest_end];
+        if fresh || self.any_end(rest) {
+            context.words.clear();
+        }
+        Typing {
+            context: context.words,
+            word: word.map(|r| token[r].to_string()).unwrap_or_default(),
+            caret,
+        }
+    }
+}
+
+/// Whether the word starting at byte `start` follows a single quote that
+/// opens it.
+fn opens_with_quote(cs: &[(usize, char)], start: usize) -> bool {
+    cs.iter()
+        .position(|&(at, _)| at == start)
+        .is_some_and(|i| i > 0 && is_single_quote(cs[i - 1].1))
+}
+
+/// Serbian Latin, lower case, as Cyrillic: the digraphs first, then letter
+/// for letter. A word with q, w, x or y is a foreign one, left as it is.
+fn cyrillic(word: &str) -> String {
+    if !word
+        .chars()
+        .any(|c| matches!(c, 'a'..='z' | 'č' | 'ć' | 'đ' | 'š' | 'ž'))
+        || word.contains(['q', 'w', 'x', 'y'])
+    {
+        return word.to_string();
+    }
+    let mut out = String::with_capacity(word.len() * 2);
+    let mut cs = word.chars().peekable();
+    while let Some(c) = cs.next() {
+        let next = cs.peek().copied();
+        let two = match (c, next) {
+            ('l', Some('j')) => Some('љ'),
+            ('n', Some('j')) => Some('њ'),
+            ('d', Some('ž')) => Some('џ'),
+            _ => None,
+        };
+        if let Some(t) = two {
+            out.push(t);
+            cs.next();
+            continue;
+        }
+        out.push(match c {
+            'a' => 'а',
+            'b' => 'б',
+            'c' => 'ц',
+            'č' => 'ч',
+            'ć' => 'ћ',
+            'd' => 'д',
+            'đ' => 'ђ',
+            'e' => 'е',
+            'f' => 'ф',
+            'g' => 'г',
+            'h' => 'х',
+            'i' => 'и',
+            'j' => 'ј',
+            'k' => 'к',
+            'l' => 'л',
+            'm' => 'м',
+            'n' => 'н',
+            'o' => 'о',
+            'p' => 'п',
+            'r' => 'р',
+            's' => 'с',
+            'š' => 'ш',
+            't' => 'т',
+            'u' => 'у',
+            'v' => 'в',
+            'z' => 'з',
+            'ž' => 'ж',
+            c => c,
+        });
+    }
+    out
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn split(lang: &str, token: &str) -> Vec<String> {
+        let s = Splitter::new(lang);
+        s.pieces(token)
+            .into_iter()
+            .map(|p| {
+                let w = &token[p.range];
+                if p.glued {
+                    format!("+{w}")
+                } else {
+                    w.to_string()
+                }
+            })
+            .collect()
+    }
+
+    #[test]
+    fn indic_marks_and_joiners_stay_in_the_word() {
+        assert_eq!(split("hi", "क्या"), ["क्या"]);
+        assert_eq!(split("hi", "ज़्यादा"), ["ज़्यादा"]);
+        assert_eq!(split("bn", "গুরুত্বপূর্ণ।"), ["গুরুত্বপূর্ণ"]);
+        assert_eq!(
+            split("mr", "वाहणार\u{94D}\u{200D}या"),
+            ["वाहणार\u{94D}\u{200D}या"]
+        );
+        assert_eq!(split("fa", "می\u{200C}شوند."), ["می\u{200C}شوند"]);
+        // A joiner with no word after it is not part of one.
+        assert_eq!(split("fa", "می\u{200C}"), ["می"]);
+    }
+
+    #[test]
+    fn apostrophes_and_hyphens_stay_in_the_word() {
+        assert_eq!(split("en", "don't"), ["don't"]);
+        assert_eq!(split("en", "Let's,"), ["Let's"]);
+        assert_eq!(split("uk", "п'ять"), ["п'ять"]);
+        assert_eq!(split("br", "c'hoazh"), ["c'hoazh"]);
+        assert_eq!(split("tr", "Tom'un"), ["Tom'un"]);
+        assert_eq!(split("ru", "что-то"), ["что-то"]);
+        assert_eq!(split("id", "anak-anak."), ["anak-anak"]);
+        // One that ends a word is part of it, unless it closes a quote.
+        assert_eq!(split("en", "students'"), ["students'"]);
+        assert_eq!(split("el", "απ'"), ["απ'"]);
+        assert_eq!(split("en", "'hello'"), ["hello"]);
+        assert_eq!(split("en", "'hello',"), ["hello"]);
+        // Not between letters: punctuation.
+        assert_eq!(split("ru", "что-"), ["что"]);
+        assert_eq!(split("en", "2-3"), Vec::<String>::new());
+    }
+
+    #[test]
+    fn a_quote_opened_earlier_on_the_line_is_closed_after_a_word() {
+        let w = |text: &str| -> Vec<String> {
+            Splitter::new("en")
+                .words(text)
+                .into_iter()
+                .map(|w| w.text)
+                .collect()
+        };
+        assert_eq!(
+            w("'I know them' said she"),
+            ["i", "know", "them", "said", "she"]
+        );
+        assert_eq!(w("the students' books"), ["the", "students'", "books"]);
+        // A new line closes it.
+        assert_eq!(w("'open\nthe dogs'"), ["open", "the", "dogs'"]);
+    }
+
+    #[test]
+    fn romance_elisions_and_kabyle_clitics_split_and_glue() {
+        assert_eq!(split("fr", "l'homme"), ["l'", "+homme"]);
+        assert_eq!(split("fr", "Qu'est-ce"), ["Qu'", "+est-ce"]);
+        assert_eq!(split("fr", "C\u{2019}est"), ["C\u{2019}", "+est"]);
+        assert_eq!(split("fr", "aujourd'hui"), ["aujourd'hui"]);
+        assert_eq!(split("fr", "quelqu'un"), ["quelqu'un"]);
+        assert_eq!(split("fr", "qu'aujourd'hui"), ["qu'", "+aujourd'hui"]);
+        assert_eq!(split("fr", "chef-d'œuvre"), ["chef-d'œuvre"]);
+        assert_eq!(split("it", "dell'anno"), ["dell'", "+anno"]);
+        assert_eq!(split("it", "c'è"), ["c'", "+è"]);
+        assert_eq!(split("it", "po'"), ["po'"]);
+        assert_eq!(split("it", "'menù'"), ["menù"]);
+        assert_eq!(split("ca", "l'escola"), ["l'", "+escola"]);
+        assert_eq!(split("ca", "veure'l"), ["veure'l"]);
+        assert_eq!(split("ca", "col·legi"), ["col·legi"]);
+        assert_eq!(split("oc", "qu'es"), ["qu'", "+es"]);
+        assert_eq!(split("kab", "fell-i"), ["fell-", "+i"]);
+        assert_eq!(
+            split("kab", "ad-as-d-iniɣ"),
+            ["ad-", "+as-", "+d-", "+iniɣ"]
+        );
+        // English never elides this way, nor Russian at a hyphen.
+        assert_eq!(split("en", "o'clock"), ["o'clock"]);
+        assert_eq!(split("ru", "кто-нибудь"), ["кто-нибудь"]);
+    }
+
+    #[test]
+    fn an_elided_word_glues_the_next_one_on() {
+        let fr = Splitter::new("fr");
+        assert!(fr.glues_on("l'") && fr.glues_on("qu\u{2019}") && fr.glues_on("L'"));
+        assert!(!fr.glues_on("aujourd'") && !fr.glues_on("le") && !fr.glues_on("l"));
+        let it = Splitter::new("it");
+        assert!(it.glues_on("dell'") && !it.glues_on("po'"));
+        assert!(Splitter::new("kab").glues_on("fell-"));
+        assert!(!Splitter::new("en").glues_on("don'"));
+    }
+
+    #[test]
+    fn per_language_marks() {
+        assert_eq!(split("hy", "Ի՞նչ"), ["Ի՞նչ"]);
+        assert_eq!(split("he", "לחו\"ל."), ["לחו\"ל"]);
+        assert_eq!(split("en", "say\"hi"), ["say", "hi"]);
+        assert_eq!(split("nl", "'s"), ["'s"]);
+        assert_eq!(split("nl", "'Hallo'"), ["Hallo"]);
+        assert_eq!(split("br", "'zo"), ["'zo"]);
+        assert_eq!(split("fr", "'maison'"), ["maison"]);
+    }
+
+    #[test]
+    fn identity_is_normalised() {
+        let tr = Splitter::new("tr");
+        assert_eq!(tr.normalize("Işık"), "ışık");
+        assert_eq!(tr.normalize("İstanbul"), "istanbul");
+        assert_eq!(tr.upper('i'), "\u{130}");
+        let en = Splitter::new("en");
+        assert_eq!(en.normalize("Don\u{2019}t"), "don't");
+        assert_eq!(en.normalize("I"), "i");
+        assert_eq!(Splitter::new("uk").normalize("П\u{2BC}ять"), "п'ять");
+        assert_eq!(Splitter::new("ru").normalize("Что\u{2011}то"), "что-то");
+        assert_eq!(Splitter::new("el").normalize("ΟΔΟΣ"), "οδος");
+        // NFC: a decomposed é is one character.
+        assert_eq!(en.normalize("cafe\u{301}"), "café");
+    }
+
+    #[test]
+    fn letters_written_two_ways_are_one() {
+        assert_eq!(Splitter::new("os").normalize("Æз"), "ӕз");
+        assert_eq!(Splitter::new("fa").normalize("كتابي"), "کتابی");
+        assert_eq!(Splitter::new("ar").normalize("جداً"), "جدا");
+        assert_eq!(Splitter::new("hy").normalize("Ի՞նչ"), "ինչ");
+        assert_eq!(Splitter::new("hy").normalize("Երևան"), "երեվան");
+        assert_eq!(Splitter::new("kab").normalize("γur"), "ɣur");
+        assert_eq!(
+            Splitter::new("mr").normalize("दुसर\u{94D}\u{200D}या"),
+            "दुस\u{931}\u{94D}या"
+        );
+        let sr = Splitter::new("sr");
+        assert_eq!(sr.normalize("Ljubav"), "љубав");
+        assert_eq!(sr.normalize("džep"), "џеп");
+        assert_eq!(sr.normalize("кућа"), "кућа");
+        assert_eq!(sr.normalize("kuća"), "кућа");
+        assert_eq!(sr.normalize("wifi"), "wifi");
+        // Elsewhere nothing folds.
+        assert_eq!(Splitter::new("da").normalize("Æble"), "æble");
+    }
+
+    #[test]
+    fn a_suggestion_covers_what_was_typed_as_typed() {
+        let hy = Splitter::new("hy");
+        // The typed mark stays: only the rest is typed.
+        assert_eq!(hy.covered("Ի՞ն", "ինչ"), Some("ին".len()));
+        let en = Splitter::new("en");
+        assert_eq!(en.covered("Don\u{2019}", "don't"), Some(4));
+        assert_eq!(en.covered("cat", "dog"), None);
+        assert_eq!(en.covered("", "dog"), Some(0));
+        let bn = Splitter::new("bn");
+        // Typed precomposed, the lexicon's word decomposed (NFC).
+        assert_eq!(bn.covered("\u{9DF}", "\u{9AF}\u{9BC}া"), Some(6));
+    }
+
+    fn read(lang: &str, text: &str) -> Vec<String> {
+        Splitter::new(lang)
+            .words(text)
+            .into_iter()
+            .map(|w| {
+                let mut s = String::new();
+                match w.start {
+                    Start::Sentence => s.push('|'),
+                    Start::Break => s.push('#'),
+                    Start::Follows => {}
+                }
+                if w.glued {
+                    s.push('+');
+                }
+                if w.after_other {
+                    s.push('~');
+                }
+                s.push_str(&w.text);
+                if !w.last_in_token {
+                    s.push('_');
+                }
+                s
+            })
+            .collect()
+    }
+
+    #[test]
+    fn context_breaks_where_sentences_and_lines_end() {
+        assert_eq!(
+            read("fr", "Je pense que l'homme est là. C'est vrai\nOui, 3 fois"),
+            [
+                "|je", "pense", "que", "l'_", "+homme", "est", "là", "|c'_", "+est", "vrai",
+                "|oui", "#fois"
+            ]
+        );
+        assert_eq!(read("el", "Τι; Ναι"), ["|τι", "|ναι"]);
+        assert_eq!(read("hy", "Այո: Ոչ"), ["|այո", "|ոչ"]);
+        assert_eq!(read("en", "(see «this»,a)"), ["|~see", "~this_", "~a"]);
+        assert_eq!(read("en", "end.The"), ["|end_", "|~the"]);
+        // A sentence start survives a token with no word.
+        assert_eq!(read("en", "Go. 42 times"), ["|go", "|times"]);
+    }
+
+    fn typing(lang: &str, text: &str) -> (Vec<String>, String, Caret) {
+        let t = Splitter::new(lang).typing(text, 2);
+        (t.context, t.word, t.caret)
+    }
+
+    fn ws(w: &[&str]) -> Vec<String> {
+        w.iter().map(ToString::to_string).collect()
+    }
+
+    #[test]
+    fn the_caret_is_read_as_if_a_letter_came_next() {
+        use Caret::{AfterWord, BeforeWord, InWord, WordStart};
+        assert_eq!(typing("en", ""), (ws(&[]), String::new(), WordStart));
+        assert_eq!(
+            typing("en", "I saw hel"),
+            (ws(&["i", "saw"]), "hel".into(), InWord)
+        );
+        assert_eq!(
+            typing("en", "I saw "),
+            (ws(&["i", "saw"]), String::new(), WordStart)
+        );
+        // A character that joins once a letter follows is in the word.
+        assert_eq!(typing("en", "I don'"), (ws(&["i"]), "don'".into(), InWord));
+        assert_eq!(
+            typing("ru", "это что-"),
+            (ws(&["это"]), "что-".into(), InWord)
+        );
+        assert_eq!(
+            typing("fa", "او می\u{200C}"),
+            (ws(&["او"]), "می\u{200C}".into(), InWord)
+        );
+        // An elided word is finished, and a word starts glued after it.
+        assert_eq!(
+            typing("fr", "Je vois l'"),
+            (ws(&["vois", "l'"]), String::new(), WordStart)
+        );
+        assert_eq!(
+            typing("fr", "Je vois l'h"),
+            (ws(&["vois", "l'"]), "h".into(), InWord)
+        );
+        assert_eq!(
+            typing("it", "Quest'"),
+            (ws(&["quest'"]), String::new(), WordStart)
+        );
+        assert_eq!(
+            typing("kab", "fell-"),
+            (ws(&["fell-"]), String::new(), WordStart)
+        );
+        // An apocope is not: the word goes on.
+        assert_eq!(typing("it", "un po'"), (ws(&["un"]), "po'".into(), InWord));
+        // Past the word, or before any.
+        assert_eq!(
+            typing("en", "I saw it,"),
+            (ws(&["saw", "it"]), String::new(), AfterWord)
+        );
+        assert_eq!(
+            typing("en", "I saw it."),
+            (ws(&[]), String::new(), AfterWord)
+        );
+        assert_eq!(
+            typing("en", "I saw («"),
+            (ws(&["i", "saw"]), String::new(), BeforeWord)
+        );
+        assert_eq!(typing("en", "end.Th"), (ws(&[]), "Th".into(), InWord));
+        assert_eq!(typing("en", "I saw\n"), (ws(&[]), String::new(), WordStart));
+        // A quote closed after a word is not part of it.
+        assert_eq!(
+            typing("en", "'yes'"),
+            (ws(&["yes"]), String::new(), AfterWord)
+        );
+        // A Dutch quote is not a clipped word.
+        assert_eq!(
+            typing("nl", "Hij zei '"),
+            (ws(&["hij", "zei"]), String::new(), BeforeWord)
+        );
+        assert_eq!(typing("nl", "'"), (ws(&[]), String::new(), BeforeWord));
+        assert_eq!(typing("br", "'"), (ws(&[]), "'".into(), InWord));
+    }
+}
