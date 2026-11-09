@@ -169,3 +169,19 @@ fetched by `scripts/fetch-dialect-sources.sh` and recorded by sha256 in
   3.0.0 crate, <https://github.com/automattic/harper>), Apache License
   2.0 (<https://www.apache.org/licenses/LICENSE-2.0>): the words it marks
   as Indian English alone.
+
+`predict/pt.dialects.bin` and `predict/es.dialects.bin` (Brazil's and
+Portugal's, Spain's and Latin America's spellings and words) are built
+by `build-dialects` from **Wiktionary**'s Portuguese and Spanish entries
+(its English edition, <https://en.wiktionary.org/>), by the Wiktionary
+contributors, as **kaikki.org** extracts them with wiktextract
+(<https://kaikki.org/dictionary/Portuguese/>,
+<https://kaikki.org/dictionary/Spanish/>; Tatu Ylonen, "Wiktextract:
+Wiktionary as Machine-Readable Structured Data", LREC 2022). Wiktionary's
+text is under the Creative Commons Attribution-ShareAlike 4.0 licence
+(<https://creativecommons.org/licenses/by-sa/4.0/>), and so are these two
+tables, which are adaptations of it: **share-alike**. They are fetched by
+`scripts/fetch-dialect-sources.sh`, and `sources.lock` records the sha256
+of the extract each was built from. Hunspell's Portuguese and Spanish
+dictionaries were used to check them, not as a source; nothing of them
+is in the tables.

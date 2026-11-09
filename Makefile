@@ -93,7 +93,7 @@ help:
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
 	@echo "  dialect-assets   rebuild predict/<lang>.dialects.bin (dialect flags)"
-	@echo "                   from ESDB and Harper (English)"
+	@echo "                   from ESDB and Harper (English), Wiktionary (pt, es)"
 	@echo "  own-corpus       TAG=<lang> CORPUS=<file> OUT=<dir>: one language's"
 	@echo "                   prediction files from a corpus of your own (README)"
 	@echo "  cjk-assets       rebuild all five CJK dicts from the upstream datasets"
@@ -160,9 +160,13 @@ predict-assets:
 # The dialect flags: which varieties of a language use a word, and its
 # spellings across them (osk_data::dialects), for the languages with a
 # source. English's come from the English Speller Database (SCOWLv2) and
-# Harper's dictionary (its Indian English words). A table keeps what the
-# language's lexicon can use, so the lexicon is one of its inputs.
-DIALECT_LANGS ?= en
+# Harper's dictionary (its Indian English words); Portuguese and Spanish
+# from Wiktionary, as kaikki.org extracts it, read with the language's
+# usual forms so that a name (`Tony`) is not taken for a regional word. A
+# table keeps what the language's lexicon can use, so the lexicon is one
+# of its inputs. French is left out: Wiktionary marks no French spelling
+# as regional, and too few words for a table worth its share-alike terms.
+DIALECT_LANGS ?= en pt es
 
 .PHONY: dialect-sources dialect-assets
 dialect-sources:
@@ -175,6 +179,10 @@ dialect-assets: dialect-sources
 			en) inputs="--input esdb-scowl-pre.txt=$(SRC_DIR)/esdb-scowl-pre.txt \
 			            --input harper-dictionary.dict=$(SRC_DIR)/harper-dictionary.dict"; \
 			    flags="--esdb $(SRC_DIR)/esdb-scowl-pre.txt --harper $(SRC_DIR)/harper-dictionary.dict" ;; \
+			pt|es) inputs="--input kaikki-$$lang.jsonl.gz=$(SRC_DIR)/kaikki-$$lang.jsonl.gz \
+			               --input forms=$(PREDICT_OUT_DIR)/$$lang.forms.fst"; \
+			    flags="--kaikki $(SRC_DIR)/kaikki-$$lang.jsonl.gz \
+			           --forms $(CURDIR)/$(PREDICT_OUT_DIR)/$$lang.forms.fst" ;; \
 			*)  echo "no dialect source for $$lang"; exit 1 ;; \
 		esac; \
 		set -- dialects/$$lang $$inputs --input lexicon=$(PREDICT_OUT_DIR)/$$lang.fst \

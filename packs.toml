@@ -82,6 +82,22 @@ sources = [
   { name = "Harper's English dictionary (harper-core 3.0.0)", url = "https://github.com/automattic/harper", lock = "dialects/en", input = "harper-dictionary.dict" },
 ]
 
+[prediction.dialects.pt]
+licenses = [
+  { name = "CC BY-SA 4.0 (Wiktionary)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true },
+]
+sources = [
+  { name = "Wiktionary's Portuguese entries, as extracted by kaikki.org", url = "https://kaikki.org/dictionary/Portuguese/", lock = "dialects/pt", input = "kaikki-pt.jsonl.gz" },
+]
+
+[prediction.dialects.es]
+licenses = [
+  { name = "CC BY-SA 4.0 (Wiktionary)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true },
+]
+sources = [
+  { name = "Wiktionary's Spanish entries, as extracted by kaikki.org", url = "https://kaikki.org/dictionary/Spanish/", lock = "dialects/es", input = "kaikki-es.jsonl.gz" },
+]
+
 # `lock`/`input` name the sources.lock entry and input whose recorded
 # sha256 the manifest carries, so a pack names the exact upstream file it
 # was built from.

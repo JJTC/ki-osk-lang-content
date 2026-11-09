@@ -9,6 +9,12 @@
 //! spelling, and Harper's dictionary adds the words it marks as Indian
 //! alone (`crore`, `lakh`).
 //!
+//! Portuguese and Spanish come from Wiktionary, through kaikki.org's
+//! extracts ([`kaikki`]): Brazil's and Portugal's spellings (`fato` and
+//! `facto`, `econômico` and `económico`), Spain's and Latin America's
+//! (`vídeo` and `video`), and the words of one of them alone (`autocarro`,
+//! `computadora`).
+//!
 //! The table keeps what a keyboard can use with the language's lexicon:
 //! the words of the lexicon whose use differs between the varieties,
 //! every spelling of a word the lexicon holds a spelling of, and the
@@ -19,6 +25,11 @@
 //!   build-dialects --lang en --esdb esdb-scowl-pre.txt \
 //!     --harper harper-dictionary.dict --lexicon predict/en.fst \
 //!     --out predict/en.dialects.bin
+//!   build-dialects --lang pt --kaikki kaikki-pt.jsonl.gz \
+//!     --lexicon predict/pt.fst --forms predict/pt.forms.fst \
+//!     --out predict/pt.dialects.bin
+
+mod kaikki;
 
 use std::collections::{BTreeMap, BTreeSet, HashMap};
 use std::fs;
@@ -41,9 +52,18 @@ struct Args {
     /// Harper's `dictionary.dict` (English): its Indian words.
     #[arg(long)]
     harper: Option<PathBuf>,
+    /// kaikki.org's extract of the language's Wiktionary entries
+    /// (Portuguese, Spanish, French), gzipped JSON lines.
+    #[arg(long)]
+    kaikki: Option<PathBuf>,
     /// The language's lexicon, `predict/<lang>.fst`.
     #[arg(long)]
     lexicon: PathBuf,
+    /// The language's usual forms, `predict/<lang>.forms.fst`: a word the
+    /// lexicon holds as a name (`Tony`) is not taken for the word of one
+    /// variety it spells (Chile's `tony`, a clown).
+    #[arg(long)]
+    forms: Option<PathBuf>,
     /// Where to write the table.
     #[arg(long)]
     out: PathBuf,
@@ -96,6 +116,13 @@ fn main() -> anyhow::Result<()> {
                 }
             }
         }
+        "pt" | "es" | "fr" => {
+            let path = args
+                .kaikki
+                .as_ref()
+                .context("this language needs --kaikki")?;
+            kaikki::read(&args.lang, path, &splitter, &mut found)?;
+        }
         other => bail!("no dialect source for `{other}` yet"),
     }
 
@@ -103,7 +130,21 @@ fn main() -> anyhow::Result<()> {
         fs::read(&args.lexicon).with_context(|| format!("reading {}", args.lexicon.display()))?,
     )
     .with_context(|| format!("{} is not a lexicon", args.lexicon.display()))?;
-    let table = assemble(names, &found, &lone, &|w| lexicon.contains_key(w));
+    let forms = match &args.forms {
+        Some(path) => Some(
+            fst::Map::new(fs::read(path).with_context(|| format!("reading {}", path.display()))?)
+                .with_context(|| format!("{} is not a forms table", path.display()))?,
+        ),
+        None => None,
+    };
+    // Capitalised as a rule, where not at a sentence's start.
+    let is_name = |w: &str| {
+        forms
+            .as_ref()
+            .and_then(|f| f.get(w))
+            .is_some_and(|m| m & 1 != 0)
+    };
+    let table = assemble(names, &found, &lone, &|w| lexicon.contains_key(w), &is_name);
     let problems = table.problems(&args.lang);
     ensure!(problems.is_empty(), "the table is unsound: {problems:?}");
     let bytes = table.to_bytes()?;
@@ -134,13 +175,15 @@ fn main() -> anyhow::Result<()> {
 }
 
 /// The table: of what was `found`, the groups of spellings the lexicon
-/// holds one of, the lexicon's words whose use differs, and the `lone`
-/// words of some varieties alone that the lexicon lacks.
+/// holds one of, the lexicon's words whose use differs, but for those it
+/// holds as names, and the `lone` words of some varieties alone that the
+/// lexicon lacks.
 fn assemble(
     names: &[&str],
     found: &Found,
     lone: &BTreeMap<String, u32>,
     in_lexicon: &dyn Fn(&str) -> bool,
+    is_name: &dyn Fn(&str) -> bool,
 ) -> Dialects {
     let all = (1u32 << names.len()) - 1;
     // Spellings of one word, merged where they share one.
@@ -184,7 +227,7 @@ fn assemble(
         }
     }
     for (w, &(u, a)) in &found.masks {
-        if (u, a) != (all, all) && in_lexicon(w) && !words.contains_key(w) {
+        if (u, a) != (all, all) && in_lexicon(w) && !is_name(w) && !words.contains_key(w) {
             words.insert(w.clone(), (u, a, None));
         }
     }
@@ -510,7 +553,13 @@ mod tests {
         assert_eq!(found.masks["fulfilled"].0, ALL_EN);
         let lexicon = ["color", "realize", "fulfill"];
         let lone = BTreeMap::from([("lakh".to_string(), IN)]);
-        let d = assemble(varieties("en"), &found, &lone, &|w| lexicon.contains(&w));
+        let d = assemble(
+            varieties("en"),
+            &found,
+            &lone,
+            &|w| lexicon.contains(&w),
+            &|_| false,
+        );
         assert!(d.problems("en").is_empty(), "{:?}", d.problems("en"));
         let gb = d.variety("GB").unwrap();
         assert_eq!(d.spelling_in("color", gb), Some("colour"));
@@ -538,9 +587,13 @@ mod tests {
         assert_eq!(found.masks["dreamed"].0, ALL_EN);
         assert_eq!(found.masks["dreamt"].0 & (GB | CA), GB | CA);
         let lexicon = ["among", "dreamed"];
-        let d = assemble(varieties("en"), &found, &BTreeMap::new(), &|w| {
-            lexicon.contains(&w)
-        });
+        let d = assemble(
+            varieties("en"),
+            &found,
+            &BTreeMap::new(),
+            &|w| lexicon.contains(&w),
+            &|_| false,
+        );
         let gb = d.variety("GB").unwrap();
         assert_eq!(d.usual_spelling("among", gb), None);
         assert_eq!(d.usual_spelling("dreamed", d.variety("CA").unwrap()), None);

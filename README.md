@@ -24,7 +24,7 @@ terms.
 | `predict/<lang>.fst` | Prefix-completion lexicon (54 languages) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
-| `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English): which varieties use a word, and its spellings across them (`color`, `colour`) | `make dialect-assets` |
+| `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
 | `rules/all.weir`, `rules/<lang>.weir` | Text rules: what typing a key does to the text before the caret beyond typing it (the space after a strip word giving way to punctuation, French spacing), and where autocorrect acts besides space, Weir-style, with their tests | by hand |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `eval/<lang>.txt` | Held-out Tatoeba text no model is trained on: what keystroke savings are measured on | `make fetch-corpora` |
@@ -94,7 +94,7 @@ make refresh           # all three, rebuilding only what changed, then check
 make check             # refuse a tree that lost, broke or shrank a file
 make release           # every asset of the release -> dist/release/
 make bump-version      # PART=patch | minor | major
-make dialect-assets    # ESDB + Harper -> predict/en.dialects.bin
+make dialect-assets    # ESDB + Harper, Wiktionary -> predict/{en,pt,es}.dialects.bin
 make own-corpus        # TAG=<lang> CORPUS=<file> OUT=<dir>: your own corpus
 ```
 

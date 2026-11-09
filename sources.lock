@@ -1,7 +1,7 @@
 {
   "outputs": {
     "dialects/en": {
-      "encoder": "1391a8a99a48-dirty",
+      "encoder": "fbcd29a365bf-dirty",
       "inputs": {
         "esdb-scowl-pre.txt": "a5fe3f11682a6ab9d31f2ea2a185833b1a01be7af83409c671bd0756a870f6c7",
         "harper-dictionary.dict": "1313b2d972a8c92ba7a6c8cd2f5045323f6181a3919cc9cb780dfdf98bf2afeb",
@@ -9,6 +9,34 @@
       },
       "outputs": {
         "predict/en.dialects.bin": "cb72ec8ba99ceb4f3a2220e9c58f75fd63cd6108ca3bf3c7f4648c14cd2cec77"
+      },
+      "recipe": {
+        "words": "2"
+      }
+    },
+    "dialects/es": {
+      "encoder": "fbcd29a365bf-dirty",
+      "inputs": {
+        "forms": "b9cccdbc5ae7395f21f9fd50fc0bfa326d081e20f994e5b6634d5fb902ba7bb5",
+        "kaikki-es.jsonl.gz": "b25cd18584e510c516e4c9afac42a87e5acfd6bc1a13ea96a94057899521a427",
+        "lexicon": "8c58e475ed7c6887a24badc6407bbe012865fd8e0064c6644c3ea780eb04e527"
+      },
+      "outputs": {
+        "predict/es.dialects.bin": "861f81cc2b7505592327e1f359f95be4e46b08091e91b9dcebddf17bd07b45db"
+      },
+      "recipe": {
+        "words": "2"
+      }
+    },
+    "dialects/pt": {
+      "encoder": "fbcd29a365bf-dirty",
+      "inputs": {
+        "forms": "097b5a4233c77b1dec96de913ba8d380962ae51d664146c303bbd0204d37f4ed",
+        "kaikki-pt.jsonl.gz": "0db87ddd508032c4e986fe818826801c9b167b2ee4f8315763166f0fa4014480",
+        "lexicon": "4a9f9bbb084d9562f16db5143f0fe1e98425f929ab5220c90c6bd348a5c3626b"
+      },
+      "outputs": {
+        "predict/pt.dialects.bin": "26e671734bf6b5b083c1d48b52f96629443ccc49c8dedadbb475d20d37cdd820"
       },
       "recipe": {
         "words": "2"
