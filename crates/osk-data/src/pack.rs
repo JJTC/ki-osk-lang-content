@@ -60,6 +60,10 @@ pub mod kind {
     pub const LEXICON: &str = "lexicon";
     /// A [`crate::ngram::NgramModel`] (`predict/<lang>.ngram.bin`).
     pub const NGRAM: &str = "ngram";
+    /// Each word whose usual form is not lower case, an `fst::Map` from
+    /// its identity to its capitals ([`crate::words::Splitter::case_mask`];
+    /// `predict/<lang>.forms.fst`).
+    pub const FORMS: &str = "forms";
     /// A [`crate::cedict::CedictTable`] keyed by toneless Pinyin.
     pub const PINYIN: &str = "pinyin";
     /// A [`crate::cedict::CedictTable`] keyed by toneless Bopomofo.

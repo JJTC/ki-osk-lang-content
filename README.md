@@ -21,6 +21,7 @@ them, takes on those terms.
 |---|---|---|
 | `predict/<lang>.fst` | Prefix-completion lexicon (54 languages) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores | `make predict-assets` |
+| `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `eval/<lang>.txt` | Held-out Tatoeba text no model is trained on: what keystroke savings are measured on | `make fetch-corpora` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |

@@ -132,7 +132,8 @@ predict-assets:
 			--input corpora/$$lang.txt=$(PREDICT_CORPORA_DIR)/$$lang.txt \
 			--recipe vocab_size=$$vocab --recipe ngram_keep=$$ngram \
 			--recipe words=$(WORDS_GENERATION) \
-			--output $(PREDICT_OUT_DIR)/$$lang.fst --output $(PREDICT_OUT_DIR)/$$lang.ngram.bin; \
+			--output $(PREDICT_OUT_DIR)/$$lang.fst --output $(PREDICT_OUT_DIR)/$$lang.ngram.bin \
+			--output $(PREDICT_OUT_DIR)/$$lang.forms.fst; \
 		stale "$$@" || continue; \
 		echo "build-predict $$lang (vocab $$vocab, n-grams $$ngram)"; \
 		$(TOOLS) build-predict -- \

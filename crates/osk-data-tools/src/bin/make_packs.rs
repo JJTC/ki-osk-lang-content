@@ -164,6 +164,11 @@ fn main() -> anyhow::Result<()> {
                     kind::NGRAM,
                     &format!("predict/{lang}.ngram.bin"),
                 )?,
+                component(
+                    &args.root,
+                    kind::FORMS,
+                    &format!("predict/{lang}.forms.fst"),
+                )?,
             ],
             licenses: vec![p.license.clone()],
             sources: vec![Source {
@@ -437,7 +442,10 @@ fn prediction_langs(root: &Path) -> anyhow::Result<Vec<String>> {
         .flatten()
         .filter_map(|e| {
             let n = e.file_name().to_string_lossy().to_string();
-            n.strip_suffix(".fst").map(str::to_string)
+            // `<lang>.fst`, not `<lang>.forms.fst`.
+            n.strip_suffix(".fst")
+                .filter(|l| !l.contains('.'))
+                .map(str::to_string)
         })
         .collect();
     out.sort();

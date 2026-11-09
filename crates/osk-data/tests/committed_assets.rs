@@ -34,7 +34,9 @@ fn name(p: &Path) -> String {
 
 #[test]
 fn every_prediction_pair_decodes() {
-    let lexicons = files("predict", ".fst");
+    let (forms, lexicons): (Vec<PathBuf>, Vec<PathBuf>) = files("predict", ".fst")
+        .into_iter()
+        .partition(|p| p.to_string_lossy().ends_with(".forms.fst"));
     let tables = files("predict", ".ngram.bin");
     let langs = |v: &[PathBuf], suffix: &str| -> BTreeSet<String> {
         v.iter()
@@ -52,6 +54,11 @@ fn every_prediction_pair_decodes() {
         langs(&tables, ".ngram.bin"),
         "every language needs both its lexicon and its n-gram table"
     );
+    assert_eq!(
+        langs(&lexicons, ".fst"),
+        langs(&forms, ".forms.fst"),
+        "every language needs its usual forms, empty where its script has no case"
+    );
     assert!(
         lexicons.len() >= 54,
         "expected the full set, found {}",
@@ -62,6 +69,9 @@ fn every_prediction_pair_decodes() {
         let bytes = std::fs::read(p).unwrap();
         let map = fst::Map::new(bytes).unwrap_or_else(|e| panic!("{}: {e}", name(p)));
         assert!(map.len() > 1000, "{}: only {} words", name(p), map.len());
+    }
+    for p in &forms {
+        fst::Map::new(std::fs::read(p).unwrap()).unwrap_or_else(|e| panic!("{}: {e}", name(p)));
     }
     for p in &tables {
         let m = NgramModel::from_bytes(&std::fs::read(p).unwrap())

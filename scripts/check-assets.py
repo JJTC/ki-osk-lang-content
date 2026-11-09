@@ -75,7 +75,9 @@ def header_problem(path: str) -> str | None:
         if head[:4] != b"KIOS":
             return "no KIOS header"
     elif path.endswith(".fst"):
-        if p.stat().st_size < 64:
+        # A lexicon this small is a broken build; a word-forms table is
+        # empty where the script has no case.
+        if p.stat().st_size < 64 and not p.name.endswith(".forms.fst"):
             return "implausibly small FST"
     return None
 

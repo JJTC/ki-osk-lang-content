@@ -352,20 +352,17 @@ impl Splitter {
     /// two ways written one way.
     #[must_use]
     pub fn normalize(&self, word: &str) -> String {
-        let mut mapped = String::with_capacity(word.len());
-        for c in word.nfc() {
-            match c {
-                c if is_apostrophe(c) || c == '\u{02BC}' => mapped.push('\''),
-                c if is_hyphen(c) => mapped.push('-'),
-                '\u{05F4}' => mapped.push('"'),
-                'I' if self.turkic => mapped.push('ı'),
-                '\u{130}' if self.turkic => mapped.push('i'),
-                c => self.fold_char(c, &mut mapped),
-            }
-        }
+        let folded = self.fold(word);
         // Lower-cased whole, not character by character: a final sigma
         // depends on what follows it.
-        let lower = mapped.to_lowercase();
+        let lower = if self.turkic {
+            folded
+                .replace('I', "ı")
+                .replace('\u{130}', "i")
+                .to_lowercase()
+        } else {
+            folded.to_lowercase()
+        };
         match self.fold {
             Fold::Marathi => lower
                 .replace("\u{930}\u{94D}\u{200D}", "\u{931}\u{94D}")
@@ -374,6 +371,61 @@ impl Splitter {
             Fold::Serbian => cyrillic(&lower),
             _ => lower,
         }
+    }
+
+    /// `word` in NFC, its apostrophes and hyphens one each, and the
+    /// language's letters written two ways written one way: its identity,
+    /// but with its case as written.
+    fn fold(&self, word: &str) -> String {
+        let mut mapped = String::with_capacity(word.len());
+        for c in word.nfc() {
+            match c {
+                c if is_apostrophe(c) || c == '\u{02BC}' => mapped.push('\''),
+                c if is_hyphen(c) => mapped.push('-'),
+                '\u{05F4}' => mapped.push('"'),
+                c => self.fold_char(c, &mut mapped),
+            }
+        }
+        mapped
+    }
+
+    /// The capitals of `word` as written, over the characters of its
+    /// identity: bit `i` is set when the `i`th is a capital (`Haus` 1,
+    /// `E-Mail` 5, `USA` 7, `İstanbul` in Turkish 1). `Some(0)` for a word
+    /// written in lower case; `None` when the capitals cannot be placed on
+    /// its identity (another number of characters, or more than 64).
+    #[must_use]
+    pub fn case_mask(&self, word: &str) -> Option<u64> {
+        let cased = self.fold(word);
+        let identity = self.normalize(word);
+        let n = identity.chars().count();
+        if n == 0 || n > 64 || cased.chars().count() != n {
+            return None;
+        }
+        Some(
+            cased
+                .chars()
+                .enumerate()
+                .filter(|(_, c)| c.is_uppercase())
+                .fold(0u64, |m, (i, _)| m | (1 << i)),
+        )
+    }
+
+    /// `identity` with the capitals of `mask` ([`Self::case_mask`]), as this
+    /// language writes them (`i` is `İ` in Turkish).
+    #[must_use]
+    pub fn display(&self, identity: &str, mask: u64) -> String {
+        identity
+            .chars()
+            .enumerate()
+            .map(|(i, c)| {
+                if i < 64 && mask & (1 << i) != 0 {
+                    self.upper(c)
+                } else {
+                    c.to_string()
+                }
+            })
+            .collect()
     }
 
     /// Push `c` as this language writes it one way.
@@ -948,6 +1000,26 @@ mod tests {
         assert_eq!(sr.normalize("wifi"), "wifi");
         // Elsewhere nothing folds.
         assert_eq!(Splitter::new("da").normalize("Æble"), "æble");
+    }
+
+    #[test]
+    fn a_word_keeps_its_capitals_over_its_identity() {
+        let de = Splitter::new("de");
+        assert_eq!(de.case_mask("Haus"), Some(1));
+        assert_eq!(de.case_mask("E-Mail"), Some(0b101));
+        assert_eq!(de.display("e-mail", 0b101), "E-Mail");
+        assert_eq!(de.case_mask("haus"), Some(0));
+        let en = Splitter::new("en");
+        assert_eq!(en.case_mask("USA"), Some(0b111));
+        assert_eq!(en.case_mask("I\u{2019}m"), Some(1));
+        assert_eq!(en.display("i'm", 1), "I'm");
+        let tr = Splitter::new("tr");
+        assert_eq!(tr.case_mask("İstanbul"), Some(1));
+        assert_eq!(tr.display("istanbul", 1), "İstanbul");
+        assert_eq!(tr.display("ışık", 1), "Işık");
+        // Elsewhere İ lower-cases to two characters: no place for it.
+        assert_eq!(en.case_mask("İstanbul"), None);
+        assert_eq!(Splitter::new("hi").case_mask("क्या"), Some(0));
     }
 
     #[test]

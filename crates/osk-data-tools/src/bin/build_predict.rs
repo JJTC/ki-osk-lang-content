@@ -3,6 +3,9 @@
 //!
 //! Output (in `--out <dir>`):
 //!   - `<lang>.fst`       — unigram frequencies as an `fst::Map`
+//!   - `<lang>.forms.fst` — each word whose usual form is not lower case,
+//!     an `fst::Map` from its identity to its capitals
+//!     (`osk_data::words::Splitter::case_mask`): `haus` → 1 (`Haus`)
 //!   - `<lang>.ngram.bin` — `osk_data::codec`-encoded [`NgramModel`] with
 //!     bigram + trigram log-probabilities (only emitted when the
 //!     corpus is big enough to yield any n-grams)
@@ -77,10 +80,18 @@ fn main() -> anyhow::Result<()> {
     let mut trigrams: HashMap<(String, String, String), u64> = HashMap::new();
     let mut prev2: Option<String> = None;
     let mut prev1: Option<String> = None;
-    for word in text.lines().flat_map(|line| splitter.words(line)) {
+    // How each word is written where nothing but its usage capitalises
+    // it: after another word in its sentence.
+    let mut cases: HashMap<(String, u64), u64> = HashMap::new();
+    for (line, word) in text
+        .lines()
+        .flat_map(|line| splitter.words(line).into_iter().map(move |w| (line, w)))
+    {
         if word.start != Start::Follows {
             prev2 = None;
             prev1 = None;
+        } else if let Some(mask) = splitter.case_mask(&line[word.range.clone()]) {
+            *cases.entry((word.text.clone(), mask)).or_default() += 1;
         }
         let w = word.text;
         *freq.entry(w.clone()).or_default() += 1;
@@ -125,6 +136,43 @@ fn main() -> anyhow::Result<()> {
     fs::rename(&tmp_fst, &out_fst)
         .with_context(|| format!("rename {} → {}", tmp_fst.display(), out_fst.display()))?;
     log::info!("wrote {}", out_fst.display());
+
+    // --- usual forms ---
+    // A word's usual form is the capitals it is written with in more than
+    // half of its uses after another word, and at least twice, when that
+    // is not plain lower case. Every language gets the file, empty where
+    // its script has no case.
+    let mut by_word: HashMap<&str, (u64, u64, u64)> = HashMap::new(); // (uses, best mask, its uses)
+    for ((w, mask), n) in &cases {
+        let e = by_word.entry(w.as_str()).or_insert((0, 0, 0));
+        e.0 += n;
+        if *n > e.2 || (*n == e.2 && *mask < e.1) {
+            e.1 = *mask;
+            e.2 = *n;
+        }
+    }
+    let out_forms = args.out.join(format!("{}.forms.fst", args.lang));
+    let tmp_forms = out_forms.with_extension("fst.tmp");
+    let buffered = std::io::BufWriter::new(
+        fs::File::create(&tmp_forms)
+            .with_context(|| format!("creating {}", tmp_forms.display()))?,
+    );
+    let mut build = fst::MapBuilder::new(buffered).context("building fst::MapBuilder")?;
+    let mut forms = 0usize;
+    for (word, _) in &vocab {
+        if let Some(&(uses, mask, n)) = by_word.get(word.as_str())
+            && mask != 0
+            && n >= 2
+            && 2 * n > uses
+        {
+            build.insert(word.as_bytes(), mask)?;
+            forms += 1;
+        }
+    }
+    build.finish()?;
+    fs::rename(&tmp_forms, &out_forms)
+        .with_context(|| format!("rename {} → {}", tmp_forms.display(), out_forms.display()))?;
+    log::info!("wrote {} ({forms} usual forms)", out_forms.display());
 
     // --- n-gram .bin ---
     if args.no_ngrams || (bigrams.is_empty() && trigrams.is_empty()) {
