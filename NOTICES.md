@@ -9,7 +9,8 @@ installed system has them under `/usr/share/ki-osk/`.
 files carries their terms.
 
 The code here — the Makefile, the Cargo workspace and `crates/`, the
-scripts, the workflows and `packs.toml` — is MIT licensed (`LICENSE`).
+scripts, the workflows and `packs.toml` — is MIT licensed (`LICENSE`), as
+are the text rules in `rules/`, which were written here.
 The data keeps its original licence, below. That includes the seeds in
 `seeds/`, which are excerpts of the datasets they are listed under. Add an entry here whenever a
 new dataset is pulled in.

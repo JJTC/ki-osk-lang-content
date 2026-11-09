@@ -1,0 +1,48 @@
+# Text rules for every language: what typing a key does to the text before
+# the caret beyond typing it, and where autocorrect acts besides space. A
+# language's own file, rules/<lang>.weir, comes first, so its rule for a
+# key is the one that acts. The format is Weir-style, after the rule
+# language of the Harper grammar checker; crates/osk-data/src/rules.rs
+# describes it in full.
+#
+# In a test, ⎵ is the automatic space: the one a strip word or a glide
+# typed after itself, which the next key may move.
+
+# Punctuation that closes what comes before it, with no space between: the
+# full stop, comma, colon, semicolon, question and exclamation marks and
+# the ellipsis; closing brackets, guillemets and the closing double quote;
+# the Arabic comma, semicolon and question mark, the Urdu full stop, the
+# dandas of Devanagari and Bengali, and the Armenian full stop and comma.
+# Not the apostrophes and straight quotes, which open as often as they
+# close, nor the middle dot, which joins Catalan letters.
+expr closing [".", ",", ":", ";", "?", "!", "…", ")", "]", "}", "»", "›", "”", "\u{60C}", "\u{61B}", "\u{61F}", "\u{6D4}", "\u{964}", "\u{965}", "\u{589}", "\u{55D}"]
+
+rule SpaceGivesWay
+let message "The space a strip word or a glide typed after itself gives way to the closing punctuation typed next, and comes after it."
+expr main (AUTOSPACE @closing)
+let becomes "$2⎵"
+test "word⎵," "word,⎵"
+test "word⎵." "word.⎵"
+test "end.⎵”" "end.”⎵"
+test "word⎵)" "word)⎵"
+test "كتاب⎵؟" "كتاب؟⎵"
+test "शब्द⎵।" "शब्द।⎵"
+allows "word ,"
+allows "word⎵("
+allows "word⎵\""
+allows "word⎵'"
+allows "word⎵-"
+allows "word⎵¿"
+
+rule CorrectsOnPunctuation
+let message "Autocorrect acts on a word typed right before closing punctuation as it does on space: `teh,` is `the,`."
+let kind "Corrects"
+expr main (WORD @closing)
+corrects "teh,"
+corrects "teh."
+corrects "teh?"
+corrects "teh)"
+allows "teh'"
+allows "teh-"
+allows "teh\""
+allows "teh ,"

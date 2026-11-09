@@ -1,0 +1,56 @@
+# French: a narrow no-break space before ; : ! ? and a no-break space
+# inside guillemets, as French typography writes them, and as the French
+# text the models learned from does: 142 of the 151 question marks held
+# out to measure them follow a narrow no-break space, the other nine a
+# space.
+
+rule NarrowSpaceStaysBeforeHighPunctuation
+let message "The space a strip word or a glide typed stays before ; : ! ?, as a narrow no-break space, and another comes after the mark."
+expr main (WORD AUTOSPACE [";", ":", "!", "?"])
+let becomes "$1\u{202F}$3⎵"
+test "Bonjour⎵?" "Bonjour\u{202F}?⎵"
+test "Attention⎵:" "Attention\u{202F}:⎵"
+test "Quoi\u{202F}?⎵!" "Quoi\u{202F}?!⎵"
+test "Bonjour⎵," "Bonjour,⎵"
+allows "Bonjour?"
+
+rule NarrowSpaceForTheSpaceTyped
+let message "A space typed before ; : ! ? is a narrow no-break space."
+expr main (WORD SPACE [";", ":", "!", "?"])
+let becomes "$1\u{202F}$3"
+test "Bonjour ?" "Bonjour\u{202F}?"
+test "Bonjour\u{A0}!" "Bonjour\u{202F}!"
+allows "Bonjour\u{202F}?"
+
+rule NoBreakSpaceBeforeAClosingGuillemet
+let message "» after the space a strip word or a glide typed: a no-break space before it, and the space after it."
+expr main (AUTOSPACE "»")
+let becomes "\u{A0}»⎵"
+test "dit oui⎵»" "dit oui\u{A0}»⎵"
+test "Quoi\u{202F}?⎵»" "Quoi\u{202F}?\u{A0}»⎵"
+
+rule NoBreakSpaceForTheSpaceTypedBeforeAGuillemet
+let message "A space typed before » is a no-break space."
+expr main (SPACE "»")
+let becomes "\u{A0}»"
+test "oui »" "oui\u{A0}»"
+allows "oui\u{A0}»"
+
+rule NoBreakSpaceBetweenAWordAndAGuillemet
+let message "» right after a word is written after a no-break space."
+expr main (WORD "»")
+let becomes "$1\u{A0}»"
+test "oui»" "oui\u{A0}»"
+
+rule NoBreakSpaceAfterAnOpeningGuillemet
+let message "« is followed by a no-break space."
+expr main "«"
+let becomes "«\u{A0}"
+test "Il dit «" "Il dit «\u{A0}"
+test "dit⎵«" "dit «\u{A0}"
+
+rule TheSpaceAfterAGuillemetIsTypedOnce
+let message "A space typed after « and its no-break space types nothing."
+expr main ("«" "\u{A0}" SPACE)
+let becomes "«\u{A0}"
+test "Il dit «\u{A0} " "Il dit «\u{A0}"

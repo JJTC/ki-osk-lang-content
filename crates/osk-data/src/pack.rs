@@ -64,6 +64,9 @@ pub mod kind {
     /// its identity to its capitals ([`crate::words::Splitter::case_mask`];
     /// `predict/<lang>.forms.fst`).
     pub const FORMS: &str = "forms";
+    /// Text rules, Weir-style ([`crate::rules`]): `rules/all.weir` for
+    /// every language, `rules/<lang>.weir` for one.
+    pub const RULES: &str = "rules";
     /// A [`crate::cedict::CedictTable`] keyed by toneless Pinyin.
     pub const PINYIN: &str = "pinyin";
     /// A [`crate::cedict::CedictTable`] keyed by toneless Bopomofo.

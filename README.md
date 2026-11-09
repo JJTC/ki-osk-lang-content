@@ -2,18 +2,20 @@
 
 Dictionaries, prediction models and input-method tables for
 [ki-osk](https://github.com/jjtc/ki-osk), an on-screen keyboard, as
-language packs: one per language, 58 in all. Beside the data are the
-builders that produce it (`crates/osk-data-tools`) and the format crate
-both they and ki-osk use (`crates/osk-data`), so a reader and the writer
-of the same file cannot disagree.
+language packs: one per language, 58 in all, and one of the text rules
+of every language. Beside the data are the builders that produce it
+(`crates/osk-data-tools`) and the format crate both they and ki-osk use
+(`crates/osk-data`), so a reader and the writer of the same file cannot
+disagree.
 
 ## Licences
 
-`LICENSE` (MIT) covers the code and tooling only. The data keeps the
-licences of the datasets it was built from, listed in `NOTICES.md`, and
-**several are share-alike** (CC BY-SA): the Chinese and Cantonese
-dictionaries. Whoever redistributes those files, or anything built from
-them, takes on those terms.
+`LICENSE` (MIT) covers the code and tooling only, and the text rules,
+which were written here. The data keeps the licences of the datasets it
+was built from, listed in `NOTICES.md`, and **several are share-alike**
+(CC BY-SA): the Chinese and Cantonese dictionaries. Whoever
+redistributes those files, or anything built from them, takes on those
+terms.
 
 ## Layout
 
@@ -22,6 +24,7 @@ them, takes on those terms.
 | `predict/<lang>.fst` | Prefix-completion lexicon (54 languages) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
+| `rules/all.weir`, `rules/<lang>.weir` | Text rules: what typing a key does to the text before the caret beyond typing it (the space after a strip word giving way to punctuation, French spacing), and where autocorrect acts besides space, Weir-style, with their tests | by hand |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `eval/<lang>.txt` | Held-out Tatoeba text no model is trained on: what keystroke savings are measured on | `make fetch-corpora` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |
@@ -43,7 +46,11 @@ sight rather than mis-decoded.
 
 A pack is one language's files: an `.fst` lexicon and an `.ngram.bin`
 table for each of the 54 prediction languages, and `zh-Hans` (Pinyin),
-`zh-Hant` (Zhuyin), `yue` (Jyutping) and `ja` (kana–kanji).
+`zh-Hant` (Zhuyin), `yue` (Jyutping) and `ja` (kana–kanji); and `rules`,
+the text rules of every language, which are written by hand, Weir-style
+(after the rule language of the Harper grammar checker): each rule a
+pattern over the end of the text before the caret, what it becomes, and
+its tests, in the same file. `cargo test` runs them.
 
 A release is `vX.Y.Z`, the version in `Cargo.toml`, one number for the
 format crate and its data: **patch** when the format and the crate's API

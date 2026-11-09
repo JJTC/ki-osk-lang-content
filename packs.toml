@@ -72,6 +72,33 @@ vi  = "Vietnamese"
 # sha256 the manifest carries, so a pack names the exact upstream file it
 # was built from.
 
+# The text rules, written here: what typing a key does to the text before
+# the caret beyond typing it, for every language and for the languages
+# with rules of their own (crates/osk-data/src/rules.rs). MIT, as the code.
+[[pack]]
+id   = "rules"
+name = "Text rules, every language"
+components = [
+  { kind = "rules", path = "rules/all.weir" },
+  { kind = "rules", path = "rules/cs.weir" },
+  { kind = "rules", path = "rules/da.weir" },
+  { kind = "rules", path = "rules/de.weir" },
+  { kind = "rules", path = "rules/fi.weir" },
+  { kind = "rules", path = "rules/fr.weir" },
+  { kind = "rules", path = "rules/is.weir" },
+  { kind = "rules", path = "rules/lt.weir" },
+  { kind = "rules", path = "rules/mk.weir" },
+  { kind = "rules", path = "rules/oc.weir" },
+  { kind = "rules", path = "rules/sk.weir" },
+  { kind = "rules", path = "rules/sv.weir" },
+]
+licenses = [
+  { name = "MIT", url = "https://opensource.org/license/mit", share_alike = false },
+]
+sources = [
+  { name = "ki-osk-lang-content", url = "https://github.com/jjtc/ki-osk-lang-content" },
+]
+
 [[pack]]
 id   = "zh-Hans"
 name = "Chinese (Simplified), Pinyin input"

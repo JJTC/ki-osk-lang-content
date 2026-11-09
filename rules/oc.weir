@@ -1,0 +1,11 @@
+# Occitan keeps a space before ! and ? as French does, a plain one in the
+# text the models learned from: 134 of the 145 question marks and 59 of the
+# 62 exclamation marks held out to measure them follow a space.
+
+rule SpaceStaysBeforeExclamationAndQuestion
+let message "The space a strip word or a glide typed stays before ! and ?, and another comes after the mark."
+expr main (WORD AUTOSPACE ["!", "?"])
+let becomes "$1 $3⎵"
+test "Qué fas⎵?" "Qué fas ?⎵"
+test "Adieu⎵!" "Adieu !⎵"
+test "Adieu⎵," "Adieu,⎵"

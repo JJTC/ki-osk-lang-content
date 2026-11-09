@@ -11,6 +11,9 @@
 //!   `predict/<lang>.fst` lexicons are plain `fst::Map`s of word → count.
 //! - [`words`] — how prediction splits text into words: the one rule
 //!   the trainer, the keyboard and the measure share.
+//! - [`rules`] — the text rules (`rules/*.weir`): what typing a key does
+//!   to the text before the caret beyond typing it, and where autocorrect
+//!   acts besides space; the keyboard and the measure read the same.
 //! - [`pack`] — the manifest describing one language pack, the unit a
 //!   device installs, and the index a release offers packs through.
 //!   With the `install` feature it also opens downloads and writes them
@@ -35,4 +38,5 @@ pub mod codec;
 pub mod kana;
 pub mod ngram;
 pub mod pack;
+pub mod rules;
 pub mod words;

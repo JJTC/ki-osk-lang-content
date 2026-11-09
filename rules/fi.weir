@@ -1,0 +1,9 @@
+# Finnish quotes ”niin”: the same mark opens a quotation and closes it (3
+# of the 6 held out to measure the models open one), so the space a strip
+# word or a glide typed stays before it.
+
+rule TheSpaceStaysBeforeTheQuote
+let message "” opens as often as it closes: the space a strip word or a glide typed before it stays."
+expr main (AUTOSPACE "”")
+let becomes "$1$2"
+allows "sanoi⎵”"

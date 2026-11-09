@@ -1,0 +1,20 @@
+# Danish quotes »so«: » opens a quotation and « closes it, the other way
+# round from French.
+
+rule TheSpaceStaysBeforeAnOpeningGuillemet
+let message "» opens a quotation: the space a strip word or a glide typed before it stays."
+expr main (AUTOSPACE "»")
+let becomes "$1$2"
+allows "sagde⎵»"
+
+rule SpaceGivesWayToTheClosingGuillemet
+let message "The space a strip word or a glide typed gives way to «, which closes a quotation, and comes after it."
+expr main (AUTOSPACE "«")
+let becomes "«⎵"
+test "»Ja⎵«" "»Ja«⎵"
+
+rule CorrectsBeforeTheClosingGuillemet
+let message "Autocorrect acts on a word typed right before « as it does on space."
+let kind "Corrects"
+expr main (WORD "«")
+corrects "»Jaa«"

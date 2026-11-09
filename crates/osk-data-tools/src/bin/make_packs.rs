@@ -115,7 +115,7 @@ struct SourceDef {
 }
 
 /// The directories whose files must all belong to a pack.
-const DATA_DIRS: [&str; 5] = ["predict", "pinyin", "zhuyin", "jyutping", "kana"];
+const DATA_DIRS: [&str; 6] = ["predict", "pinyin", "zhuyin", "jyutping", "kana", "rules"];
 
 fn main() -> anyhow::Result<()> {
     env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();

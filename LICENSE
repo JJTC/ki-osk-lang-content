@@ -1,6 +1,7 @@
 SCOPE: this MIT licence covers only the repository's own code and
 tooling — the Makefile, the Cargo workspace and crates/, scripts/,
-.github/, packs.toml and the documentation. It does NOT cover the data.
+.github/, packs.toml, the text rules in rules/ and the documentation. It
+does NOT cover the data.
 The dictionaries, prediction models, seeds and corpora keep the
 licences of the datasets they were built from, several of them
 share-alike (CC BY-SA). See NOTICES.md.

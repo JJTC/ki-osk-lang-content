@@ -1,0 +1,16 @@
+# Lithuanian closes a quotation with “ („…“), which in English opens one; here
+# it gives way and corrects as the other closing marks do. The text the
+# models learned from writes it so.
+
+rule SpaceGivesWayToTheClosingQuote
+let message "The space a strip word or a glide typed gives way to “, which closes a quotation, and comes after it."
+expr main (AUTOSPACE "“")
+let becomes "“⎵"
+test "„Taip⎵“" "„Taip“⎵"
+allows "„So “"
+
+rule CorrectsBeforeTheClosingQuote
+let message "Autocorrect acts on a word typed right before “ as it does on space."
+let kind "Corrects"
+expr main (WORD "“")
+corrects "„Tiap“"

@@ -1,0 +1,9 @@
+# Swedish quotes ”så”: the same mark opens a quotation and closes it (5
+# of the 10 held out to measure the models open one), so the space a strip
+# word or a glide typed stays before it.
+
+rule TheSpaceStaysBeforeTheQuote
+let message "” opens as often as it closes: the space a strip word or a glide typed before it stays."
+expr main (AUTOSPACE "”")
+let becomes "$1$2"
+allows "sa⎵”"
