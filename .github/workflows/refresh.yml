@@ -213,11 +213,13 @@ jobs:
 
       # Keystroke savings of the data the default branch holds now,
       # measured on the held-out text this refresh fetched — before the
-      # new data is unpacked over it.
+      # new data is unpacked over it. eval-predict types each language on
+      # its own layout to measure correction, so it is built with every
+      # layout (`eval-layouts`), which ki-osk's default build leaves out.
       - name: Keystroke savings before
         working-directory: ki-osk
         run: >-
-          cargo run --release --quiet -p toolbox --bin eval-predict -- measure
+          cargo run --release --quiet -p toolbox --features eval-layouts --bin eval-predict -- measure
           --data ../ki-osk-lang-content --eval ../ki-osk-lang-content/eval
           --json "$RUNNER_TEMP/ksr-before.json"
 
@@ -231,7 +233,7 @@ jobs:
       - name: Keystroke savings after
         working-directory: ki-osk
         run: >-
-          cargo run --release --quiet -p toolbox --bin eval-predict -- measure
+          cargo run --release --quiet -p toolbox --features eval-layouts --bin eval-predict -- measure
           --data ../ki-osk-lang-content --eval ../ki-osk-lang-content/eval
           --json "$RUNNER_TEMP/ksr-after.json"
       # The point of the refresh is better data, so it may not make
@@ -248,7 +250,7 @@ jobs:
             echo "ki-osk's prediction on held-out text (\`eval/\`), before and after this refresh:"
             echo
           } >> "$RUNNER_TEMP/report.md"
-          cargo run --release --quiet -p toolbox --bin eval-predict -- compare \
+          cargo run --release --quiet -p toolbox --features eval-layouts --bin eval-predict -- compare \
             "$RUNNER_TEMP/ksr-before.json" "$RUNNER_TEMP/ksr-after.json" \
             | tee -a "$RUNNER_TEMP/report.md"
       - name: Report
