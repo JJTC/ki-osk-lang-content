@@ -192,7 +192,9 @@ but no model to match the glide against · `—` off
    written without spaces between words: its text is cut into words with
    ICU's Thai word list (`wordbreak/th.txt`, in its pack), the same in
    the trainer, the keyboard and `eval-predict`, and a word from the
-   strip is typed with no space after it. The very-small-corpus languages
+   strip is typed with no space after it. Its layout has every key of the
+   Kedmanee keymap, the letters and vowel signs of the number row on a
+   row above the others. The very-small-corpus languages
    (see below) remain layout-only — they type fine, but their suggestion
    bar is empty until a model is bundled.
 

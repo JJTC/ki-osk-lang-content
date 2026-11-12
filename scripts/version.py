@@ -39,6 +39,7 @@ PARTS = ("patch", "minor", "major")
 # the format crate's source. Changing any of it needs a new version.
 RELEASED = (
     "predict", "wordbreak", "pinyin", "zhuyin", "jyutping", "kana", "rules",
+    "layouts", "emoji", "offensive",
     "packs.toml", "NOTICES.md", "crates/osk-data",
 )
 

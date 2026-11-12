@@ -106,6 +106,10 @@ LANGS = [
     ("or", "ଓଡ଼ିଆ", "in", "ori", "oriya"),
     ("si", "සිංහල", "lk", "sin_phonetic", "sinhala"),
     ("km", "ខ្មែរ", "kh", "", "khmer"),
+    # Thai Kedmanee: ten letters and signs on the number row (ๅ ภ ถ ุ ึ ค
+    # ต จ ข ช, and on Shift ู ฿), lifted to a top row with the vowel signs
+    # among them (NUMBER_ROW_MARKS).
+    ("th", "ไทย", "th", "", "thai"),
     ("lo", "ລາວ", "la", "", "lao"),
     ("my", "မြန်မာ", "mm", "", "myanmar"),
     # --- Central-Asian / Baltic: extra letters on the NUMBER ROW ---
@@ -404,6 +408,16 @@ def _spacer(width):
     return {"width_units": width, "label": "", "output": {"kind": "none"}}
 
 
+# Scripts whose national keymap puts vowel signs on the number row, which
+# `.isalpha()` does not take for letters: Thai's ุ and ึ (and ู on Shift).
+NUMBER_ROW_MARKS = {"thai"}
+
+
+def is_mark(g):
+    """Whether `g` is a combining mark (M*): a vowel sign, a tone mark."""
+    return bool(g) and unicodedata.category(g[0])[0] == "M"
+
+
 def kept_codes(base_codes, extra_codes, chars, script):
     """Keycodes to emit for a row, given this view's character map.
 
@@ -447,13 +461,13 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
         layout.pop("xkb_variant", None)
     layout["direction"] = "rtl" if script in ("arabic", "syriac", "thaana") else "ltr"
     # Prediction is data-gated: enable it iff a committed n-gram model for
-    # this id exists (`assets/lang/predict/<id>.fst`, built by `make
+    # this id exists (`predict/<id>.fst` beside `layouts/`, built by `make
     # predict-assets` from a permissively-licensed corpus). Self-healing —
     # a regen re-derives the flag, so model-backed layouts keep prediction
     # and the rest stay layout-only. (Country-code core layouts whose
     # prediction_lang differs from the id — us→en, se→sv — are hand-authored,
     # not generated here.)
-    fst = os.path.join(base_dir, "..", "..", "..", "assets", "predict", f"{lid}.fst")
+    fst = os.path.join(base_dir, "..", "predict", f"{lid}.fst")
     if os.path.exists(fst):
         layout["prediction_enabled"] = True
         layout["prediction_lang"] = lid
@@ -475,7 +489,12 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
     grid_letters = set()
     for br, er in zip(BASE_ROWS, EXTRA_ROWS):
         grid_letters.update(base[c] for c in kept_codes(br, er, base, script))
-    extra_top = [c for c in NUM_ROW if base[c].isalpha() and base[c] not in grid_letters]
+    extra_top = [
+        c
+        for c in NUM_ROW
+        if (base[c].isalpha() or (script in NUMBER_ROW_MARKS and is_mark(base[c])))
+        and base[c] not in grid_letters
+    ]
 
     keep_lp = script == "latin"
     for view in layout["views"]:

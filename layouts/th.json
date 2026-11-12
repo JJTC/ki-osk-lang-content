@@ -1,16 +1,114 @@
 {
   "id": "th",
-  "name": "Thai",
+  "name": "ไทย",
   "xkb_layout": "th",
   "direction": "ltr",
   "swipe_enabled": false,
   "prediction_enabled": true,
   "prediction_lang": "th",
-  "font_script": "thai",
   "views": [
     {
       "id": "base",
       "rows": [
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1.0,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ๅ",
+              "output": {
+                "kind": "keycode",
+                "code": 2
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ภ",
+              "output": {
+                "kind": "keycode",
+                "code": 5
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ถ",
+              "output": {
+                "kind": "keycode",
+                "code": 6
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ุ",
+              "output": {
+                "kind": "keycode",
+                "code": 7
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ึ",
+              "output": {
+                "kind": "keycode",
+                "code": 8
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ค",
+              "output": {
+                "kind": "keycode",
+                "code": 9
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ต",
+              "output": {
+                "kind": "keycode",
+                "code": 10
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "จ",
+              "output": {
+                "kind": "keycode",
+                "code": 11
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ข",
+              "output": {
+                "kind": "keycode",
+                "code": 12
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ช",
+              "output": {
+                "kind": "keycode",
+                "code": 13
+              }
+            },
+            {
+              "width_units": 1.0,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            }
+          ]
+        },
         {
           "height_units": 1.0,
           "keys": [
@@ -92,6 +190,22 @@
               "output": {
                 "kind": "keycode",
                 "code": 25
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "บ",
+              "output": {
+                "kind": "keycode",
+                "code": 26
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ล",
+              "output": {
+                "kind": "keycode",
+                "code": 27
               }
             }
           ]
@@ -179,6 +293,30 @@
               }
             },
             {
+              "width_units": 1,
+              "label": "ว",
+              "output": {
+                "kind": "keycode",
+                "code": 39
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ง",
+              "output": {
+                "kind": "keycode",
+                "code": 40
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ฃ",
+              "output": {
+                "kind": "keycode",
+                "code": 43
+              }
+            },
+            {
               "width_units": 0.5,
               "label": "",
               "output": {
@@ -252,6 +390,30 @@
               "output": {
                 "kind": "keycode",
                 "code": 50
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ม",
+              "output": {
+                "kind": "keycode",
+                "code": 51
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ใ",
+              "output": {
+                "kind": "keycode",
+                "code": 52
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ฝ",
+              "output": {
+                "kind": "keycode",
+                "code": 53
               }
             },
             {
@@ -339,20 +501,89 @@
           "keys": [
             {
               "width_units": 1,
-              "label": "๐",
+              "label": "+",
               "output": {
                 "kind": "keycode",
-                "code": 16
+                "code": 2
               }
             },
             {
               "width_units": 1,
-              "label": "\"",
+              "label": "๓",
               "output": {
                 "kind": "keycode",
-                "code": 17
+                "code": 5
               }
             },
+            {
+              "width_units": 1,
+              "label": "๔",
+              "output": {
+                "kind": "keycode",
+                "code": 6
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ู",
+              "output": {
+                "kind": "keycode",
+                "code": 7
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "฿",
+              "output": {
+                "kind": "keycode",
+                "code": 8
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "๕",
+              "output": {
+                "kind": "keycode",
+                "code": 9
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "๖",
+              "output": {
+                "kind": "keycode",
+                "code": 10
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "๗",
+              "output": {
+                "kind": "keycode",
+                "code": 11
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "๘",
+              "output": {
+                "kind": "keycode",
+                "code": 12
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "๙",
+              "output": {
+                "kind": "keycode",
+                "code": 13
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
             {
               "width_units": 1,
               "label": "ฎ",
@@ -415,6 +646,14 @@
               "output": {
                 "kind": "keycode",
                 "code": 25
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ฐ",
+              "output": {
+                "kind": "keycode",
+                "code": 26
               }
             }
           ]
@@ -502,6 +741,22 @@
               }
             },
             {
+              "width_units": 1,
+              "label": "ซ",
+              "output": {
+                "kind": "keycode",
+                "code": 39
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ฅ",
+              "output": {
+                "kind": "keycode",
+                "code": 43
+              }
+            },
+            {
               "width_units": 0.5,
               "label": "",
               "output": {
@@ -520,22 +775,6 @@
                 "kind": "none"
               },
               "action": "shift"
-            },
-            {
-              "width_units": 1,
-              "label": "(",
-              "output": {
-                "kind": "keycode",
-                "code": 44
-              }
-            },
-            {
-              "width_units": 1,
-              "label": ")",
-              "output": {
-                "kind": "keycode",
-                "code": 45
-              }
             },
             {
               "width_units": 1,
@@ -571,10 +810,26 @@
             },
             {
               "width_units": 1,
-              "label": "?",
+              "label": "ฒ",
               "output": {
                 "kind": "keycode",
-                "code": 50
+                "code": 51
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ฬ",
+              "output": {
+                "kind": "keycode",
+                "code": 52
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ฦ",
+              "output": {
+                "kind": "keycode",
+                "code": 53
               }
             },
             {
@@ -1292,5 +1547,6 @@
         }
       ]
     }
-  ]
+  ],
+  "font_script": "thai"
 }

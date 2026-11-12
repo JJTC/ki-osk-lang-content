@@ -21,12 +21,13 @@ import json
 import sys
 
 # (layout id, xkb layout, xkb variant). ru/he are already localized by
-# the older hand-transcribed relabel-layout.py; these are the five that
-# still showed Latin caps.
+# the older hand-transcribed relabel-layout.py; these are the ones that
+# still showed Latin caps. Thai was one, until build-layout.py made it
+# with every key of its keymap: the 26 US letter keys this relabels held
+# only 47 of its 74 characters.
 TARGETS = [
     ("el", "gr", ""),
     ("ar", "ara", ""),
-    ("th", "th", ""),
     ("fa", "ir", ""),
     ("uk", "ua", ""),
 ]
