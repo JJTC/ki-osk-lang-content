@@ -135,6 +135,10 @@ jobs:
         run: make fetch-dakshina SRC_DIR="$RUNNER_TEMP/sources"
       - name: Prediction models
         run: make predict-assets SRC_DIR="$RUNNER_TEMP/sources"
+      # Hinglish: Hindi's corpora (Tatoeba's, from the prepare job, and
+      # Dakshina's) respelled in Latin letters.
+      - name: Hinglish
+        run: make hinglish-assets SRC_DIR="$RUNNER_TEMP/sources"
       - name: CJK dictionaries (fetches the upstream datasets)
         run: make cjk-assets SRC_DIR="$RUNNER_TEMP/sources"
 

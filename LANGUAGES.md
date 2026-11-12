@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**168 layouts**: 146 keyboard layouts (RTL: ar he fa + Urdu, Pashto, Sindhi,
-Uyghur, Syriac, Dhivehi) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) · 13
-transliteration layouts (Latin letters → the language's script, `-abc`) ·
-emoji + numeric. All render native keycaps. 167 are here; the numeric
-keypad is built into ki-osk. The table below is the complete list;
-**64 languages** carry a prediction
+**169 layouts**: 147 keyboard layouts (RTL: ar he fa + Urdu, Pashto, Sindhi,
+Uyghur, Syriac, Dhivehi; Hinglish) · 7 IMEs (5 CJK + Amharic/Tigrinya
+Ge'ez) · 13 transliteration layouts (Latin letters → the language's
+script, `-abc`) · emoji + numeric. All render native keycaps. 168 are
+here; the numeric keypad is built into ki-osk. The table below is the
+complete list; **65 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -90,6 +90,7 @@ but no model to match the glide against · `—` off
 | `ka` | `ka` | Georgian | ge | LTR | **Full** (ka) | — | — |
 | `hy` | `hy` | Armenian | am | LTR | **Full** (hy) | — | — |
 | `hi` | `hi` | Hindi | in | LTR | **Full** (hi)³ | — | — |
+| `hi-latn` | `hi-Latn` | Hinglish (Hindi in Latin letters) | us | LTR | **Full** (hi-Latn)⁵ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -235,11 +236,19 @@ but no model to match the glide against · `—` off
    Tamil 66.4% (67.9%), Malayalam 53.0% (55.3%); of the words the lexicon
    has, 76–90% (`make eval-translit`). Greek, Armenian and Persian have no
    such measure yet; their tests read everyday words.
+5. Hinglish is Hindi typed in Latin letters and left in them: the US
+   keys, suggestions and glide from a model of Hindi's corpora respelled
+   in the spellings people use, as often as each is used (the Dakshina
+   dataset's romanization lexicons; `scripts/build-hinglish.py`).
+   Keystroke savings 31.1% on 500 of Dakshina's romanized test sentences,
+   as their writers spelled them, 16.2% of whose words the lexicon lacks:
+   no two writers spell alike. For the same reason autocorrect changes
+   2.3% of right words, more than elsewhere.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **64 languages**. The original nine (en,
+  `<lang>.ngram.bin`, **65 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,

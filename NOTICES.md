@@ -141,10 +141,18 @@ nine, the first 500 lines of its held-out text
 measure the transliteration tables (`make eval-translit`); none of them
 is shipped.
 
+Hinglish (`predict/hi-Latn.*`, the `hi-Latn` pack) is Hindi's corpora —
+Tatoeba's sentences and Dakshina's text — respelled in Latin letters
+(`scripts/build-hinglish.py`): each word in one of the spellings
+Dakshina's romanization lexicons attest, as often as each was typed, any
+other by rule. `eval/hi-Latn.txt` is the first 500 of Dakshina's romanized
+Hindi test sentences, as people typed them, which the Wikipedia text it
+learns from leaves out.
+
 **The Dakshina dataset is CC BY-SA 4.0**, share-alike: the packs of
 those twelve languages, their models and the held-out text in `eval/`
 carry those terms, with attribution, besides Tatoeba's where they use
-it. Its authors ask that it be cited: Brian Roark, Lawrence
+it, and so do Hinglish's pack and its held-out text. Its authors ask that it be cited: Brian Roark, Lawrence
 Wolf-Sonkin, Christo Kirov, Sabrina J. Mielke, Cibu Johny, Işın
 Demirşahin and Keith Hall, "Processing South Asian Languages Written in
 the Latin Script: the Dakshina Dataset", LREC 2020.

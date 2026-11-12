@@ -260,19 +260,20 @@ fn main() -> anyhow::Result<()> {
                 &format!("predict/{lang}.forms.fst"),
             )?,
         ];
-        // The corpora the model was built from, as the lock records them.
+        // The corpora the model was built from, as the lock records them:
+        // the language's own, or, for a model built from another's text
+        // (Hinglish, hi-Latn, from Hindi's), its primary subtag's.
         let entry = format!("predict/{lang}");
+        let primary = lang.split('-').next().unwrap_or(lang);
         let mut licenses = Vec::new();
         let mut sources = Vec::new();
-        for (input, license, source) in [
-            (format!("corpora/{lang}.txt"), &p.license, &p.source),
-            (
-                format!("dakshina/{lang}.txt"),
-                &p.dakshina.license,
-                &p.dakshina.source,
-            ),
+        for (dir, license, source) in [
+            ("corpora", &p.license, &p.source),
+            ("dakshina", &p.dakshina.license, &p.dakshina.source),
         ] {
-            if let Some(sha256) = recorded(&entry, &input) {
+            let sha = recorded(&entry, &format!("{dir}/{lang}.txt"))
+                .or_else(|| recorded(&entry, &format!("{dir}/{primary}.txt")));
+            if let Some(sha256) = sha {
                 licenses.push(license.clone());
                 sources.push(Source {
                     name: source.name.clone(),
@@ -283,7 +284,7 @@ fn main() -> anyhow::Result<()> {
         }
         ensure!(
             !sources.is_empty(),
-            "sources.lock records no corpus of {entry} (corpora/{lang}.txt or dakshina/{lang}.txt)"
+            "sources.lock records no corpus of {entry} (corpora/ or dakshina/, {lang}.txt or {primary}.txt)"
         );
         // Dialect flags and word lists carry their own sources' licences
         // into the pack.

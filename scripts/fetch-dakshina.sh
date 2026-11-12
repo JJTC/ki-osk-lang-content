@@ -18,6 +18,9 @@
 #                        $EVAL_CAP lines of the held-out Wikipedia text
 #                        (wiki-filt.valid), what eval-predict measures
 #                        their models on (committed)
+#   eval/hi-Latn.txt     the first $EVAL_CAP of Hindi's romanized test
+#                        sentences, as people typed them in Latin: what
+#                        the Hinglish model is measured on (committed)
 #
 # The archive is not kept unless KEEP=<path> names where; a kept or given
 # archive (TAR=<path>) is read instead of downloading.
@@ -86,6 +89,10 @@ for l in $langs; do
 	rm -rf "${OUT:?}/$l"
 	mkdir -p "$OUT/$l"
 	mv "$d/lexicons" "$d/romanized" "$OUT/$l/"
+	if [ "$l" = hi ]; then
+		head -n "$EVAL_CAP" "$OUT/hi/romanized/hi.romanized.rejoined.test.roman.txt" > "$EVAL_OUT/hi-Latn.txt.part"
+		mv -f "$EVAL_OUT/hi-Latn.txt.part" "$EVAL_OUT/hi-Latn.txt"
+	fi
 	case " $TATOEBA " in
 		*" $l "*) held="(Tatoeba's held-out text kept)" ;;
 		*)

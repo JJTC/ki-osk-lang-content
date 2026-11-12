@@ -41,6 +41,7 @@ gl  = "Galician"
 gu  = "Gujarati"
 he  = "Hebrew"
 hi  = "Hindi"
+hi-Latn = "Hinglish (Hindi in Latin letters)"
 hr  = "Croatian"
 hu  = "Hungarian"
 hy  = "Armenian"
@@ -128,9 +129,11 @@ sources = [
 # Wikipedia text of twelve South Asian languages, as the Dakshina dataset
 # gives it (scripts/fetch-dakshina.sh): the whole corpus of Gujarati,
 # Kannada, Malayalam, Punjabi, Sindhi, Sinhala, Tamil, Telugu and Urdu,
-# and half of Hindi's, Bengali's and Marathi's beside Tatoeba's. A pack
-# names the corpora sources.lock records its model was built from, with
-# their licences: Tatoeba's ([prediction]), this, or both.
+# and half of Hindi's, Bengali's and Marathi's beside Tatoeba's; with its
+# romanization lexicons, Hinglish's (hi-Latn: Hindi's corpora respelled in
+# Latin letters, scripts/build-hinglish.py). A pack names the corpora
+# sources.lock records its model was built from, with their licences:
+# Tatoeba's ([prediction]), this, or both.
 [prediction.dakshina]
 license = { name = "CC BY-SA 4.0 (the Dakshina dataset)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
 source  = { name = "The Dakshina dataset v1.0 (Google Research): Wikipedia text", url = "https://github.com/google-research-datasets/dakshina" }
@@ -208,6 +211,7 @@ ha      = ["ha"]
 haw     = ["haw"]
 he      = ["he"]
 hi      = ["hi", "hi-abc"]
+hi-Latn = ["hi-latn"]
 hr      = ["hr"]
 ht      = ["ht"]
 hu      = ["hu"]

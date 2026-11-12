@@ -16,6 +16,11 @@ strip's words in that layout's font.
 Writes layouts/<lang>-abc.json for every table in translit/ (a table
 without a layout of its own language names its name below); --check
 fails if a written file would differ, as a test of the tree.
+
+It writes Hinglish's layout too, hi-latn: Hindi typed in Latin letters
+and left in them, so no composer, but the US layout as it is (its keys,
+its accent menus, glide typing) suggesting from the hi-Latn model, Hindi's
+text respelled as people type it (scripts/build-hinglish.py).
 """
 import json
 import pathlib
@@ -65,14 +70,22 @@ def build(lang, us):
     return json.dumps(out, ensure_ascii=False, indent=2) + "\n"
 
 
+def hinglish(us):
+    out = dict(us)
+    out["id"] = "hi-latn"
+    out["name"] = "Hinglish"
+    out["prediction_lang"] = "hi-Latn"
+    return json.dumps(out, ensure_ascii=False, indent=2) + "\n"
+
+
 def main():
     check = "--check" in sys.argv[1:]
     us = json.loads((ROOT / "layouts" / "us.json").read_text(encoding="utf-8"))
     stale = []
-    for table in sorted((ROOT / "translit").glob("*.txt")):
-        lang = table.stem
-        text = build(lang, us)
-        path = ROOT / "layouts" / f"{lang}-abc.json"
+    outputs = [(f"{t.stem}-abc", build(t.stem, us)) for t in sorted((ROOT / "translit").glob("*.txt"))]
+    outputs.append(("hi-latn", hinglish(us)))
+    for name, text in outputs:
+        path = ROOT / "layouts" / f"{name}.json"
         if check:
             if not path.exists() or path.read_text(encoding="utf-8") != text:
                 stale.append(path.name)

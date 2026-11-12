@@ -505,6 +505,30 @@
         "words": "2"
       }
     },
+    "predict/hi-Latn": {
+      "encoder": "f260fe9fa1f8-dirty",
+      "inputs": {
+        "corpora/hi.txt": "abf409231e7920f8a8269e9917c615eec9cd59fca5103d3df7375c23b0a98352",
+        "dakshina/hi.romanized.rejoined.test.native.txt": "507ad672e15f0d01e44245c89980e3a8370c1c581497d15f3302a1904c20110a",
+        "dakshina/hi.translit.sampled.dev.tsv": "62019ba0e046ceffd7211a2797daf2d2970da77586ee056dcecaa34c38392bce",
+        "dakshina/hi.translit.sampled.test.tsv": "37dccdd2ca18a520267588b472f293ce805a1444a5ca2a99169417da17d9bafd",
+        "dakshina/hi.translit.sampled.train.tsv": "4b3f872d3363a91f949dfb640acab6a968ed7d2d65829a22af662c3e99ef7803",
+        "dakshina/hi.txt": "2a4505d6cbec755e040d96e1f6687f3c91a83a1259a94ae3e1aea2da1b34d834",
+        "scripts/build-hinglish.py": "8dcd92089fd61bd15a54380f6a6fe49bdf5761980499174a64c44b023e106fec"
+      },
+      "outputs": {
+        "predict/hi-Latn.forms.fst": "8b2575ec64ec9d5a43637cbeab6875601bdc21cd73d7b231e2ebc0d286383d84",
+        "predict/hi-Latn.fst": "513e142a176bb321037bab21bd5dbd20297bfef51d62ed292409b16d947f337d",
+        "predict/hi-Latn.ngram.bin": "9aea0ef1dc8ed787285aaea0771e3fe3de964ba6de28b8ea3cb90082de240d51"
+      },
+      "recipe": {
+        "ngram_keep": "60000",
+        "start_keep": "5000",
+        "tatoeba_weight": "10",
+        "vocab_size": "30000",
+        "words": "2"
+      }
+    },
     "predict/hr": {
       "encoder": "d7a0b8cec89d-dirty",
       "inputs": {

@@ -2,7 +2,7 @@
 
 Keyboard layouts, dictionaries, prediction models and input-method tables
 for [ki-osk](https://github.com/jjtc/ki-osk), an on-screen keyboard, as
-language packs: one per language, 149 in all, and three every language
+language packs: one per language, 150 in all, and three every language
 shares: the text rules, the emoji picker and the offensive-word lists.
 Everything ki-osk knows about a language is here; ki-osk itself is code.
 Beside the data are the builders that produce it
@@ -27,7 +27,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 | Path | What | Built by |
 |---|---|---|
-| `predict/<lang>.fst` | Prefix-completion lexicon (64 languages) | `make predict-assets` |
+| `predict/<lang>.fst` | Prefix-completion lexicon (65 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
@@ -45,7 +45,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `sources.lock` | What each output was built from | every build target |
 | `pinyin/syllables.txt` | The 413 Mandarin syllables in toneless Pinyin | by hand |
 | `pinyin/double-pinyin.json` | The six double-Pinyin schemes: which key carries which initial and finals | by hand |
-| `layouts/<id>.json` | Keyboard layouts (167): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps, the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make translit-layouts` |
+| `layouts/<id>.json` | Keyboard layouts (168): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps, the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make translit-layouts` |
 | `emoji/catalogue.json` | Every fully-qualified emoji with its CLDR name and keywords: the emoji search | `scripts/build-emoji.py` |
 | `offensive/<lang>.txt` | Words a keyboard can keep off its strip (LDNOOBW, AOSP) | by hand |
 | `seeds/` | Tiny Pinyin, Jyutping and kana seeds (offline fallback) | by hand |
@@ -60,8 +60,8 @@ sight rather than mis-decoded.
 ## Packs and releases
 
 A pack is one language's files: its keyboard layouts, and an `.fst`
-lexicon and an `.ngram.bin` table for each of the 64 prediction
-languages (Thai's with its word list, thirteen with a transliteration
+lexicon and an `.ngram.bin` table for each of the 65 prediction
+languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's with its word list, thirteen with a transliteration
 table and the layout that types through it); `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
 (kana–kanji) and `ko` (Hangul) with their layouts; and a pack of its
 layouts alone for each of the 80 other languages with a layout and no
@@ -111,6 +111,7 @@ The builders need only this repository and its pinned toolchain.
 make fetch-corpora     # Tatoeba -> predict/corpora/ and eval/
 make fetch-dakshina    # Dakshina's Wikipedia text and romanizations -> SRC_DIR
 make predict-assets    # corpora -> predict/*.fst + *.ngram.bin
+make hinglish-assets   # Hindi's corpora respelled in Latin -> predict/hi-Latn.*
 make eval-translit     # how often the transliteration tables are right
 make cjk-assets        # upstream -> pinyin, zhuyin, jyutping, kana
 make refresh           # all three, rebuilding only what changed, then check

@@ -130,6 +130,8 @@ help:
 	@echo "  eval-translit    how often each transliteration table puts the word"
 	@echo "                   meant first (after fetch-dakshina)"
 	@echo "  translit-layouts write layouts/<lang>-abc.json for translit/<lang>.txt"
+	@echo "  hinglish-assets  rebuild predict/hi-Latn.* (Hindi typed in Latin letters)"
+	@echo "                   from Hindi's corpora respelled (after fetch-dakshina)"
 	@echo "  check            compare the tree against HEAD: missing, shrunk or"
 	@echo "                   broken outputs fail (scripts/check-assets.py)"
 	@echo "  lock-verify      check every output still matches sources.lock"
@@ -147,7 +149,7 @@ help:
 # lost a file or shrank one.
 .PHONY: refresh
 refresh: fetch-corpora fetch-dakshina
-	$(MAKE) predict-assets cjk-assets dialect-assets ONLY_STALE=1
+	$(MAKE) predict-assets hinglish-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) check
 
 .PHONY: fetch-corpora
@@ -403,6 +405,45 @@ cjk-assets-seed:
 CHECK_BASE         ?= HEAD
 CHECK_MAX_SHRINK   ?= 0.10
 CHECK_REPORT       ?=
+# Hinglish: Hindi as it is typed in Latin letters, the hi-Latn model.
+# scripts/build-hinglish.py respells Hindi's corpora word by word in the
+# spellings Dakshina's romanization lexicons attest, as often as each was
+# typed (the rest by rule), leaving out the romanized test sentences whose
+# Latin side is eval/hi-Latn.txt; build-predict then counts them as Hindi's
+# are counted (Tatoeba's ten times). Its inputs are the corpora, the
+# lexicons and the script. After fetch-corpora and fetch-dakshina.
+HINGLISH_DIR = $(DAKSHINA_DIR)/hinglish
+.PHONY: hinglish-assets
+hinglish-assets:
+	@$(LOCKED); d=$(DAKSHINA_DIR)/hi; \
+	test -d $$d || { echo "no $$d: run make fetch-dakshina"; exit 1; }; \
+	set -- predict/hi-Latn \
+		--input corpora/hi.txt=$(PREDICT_CORPORA_DIR)/hi.txt \
+		--input dakshina/hi.txt=$(DAKSHINA_DIR)/hi.txt \
+		--input dakshina/hi.translit.sampled.train.tsv=$$d/lexicons/hi.translit.sampled.train.tsv \
+		--input dakshina/hi.translit.sampled.dev.tsv=$$d/lexicons/hi.translit.sampled.dev.tsv \
+		--input dakshina/hi.translit.sampled.test.tsv=$$d/lexicons/hi.translit.sampled.test.tsv \
+		--input dakshina/hi.romanized.rejoined.test.native.txt=$$d/romanized/hi.romanized.rejoined.test.native.txt \
+		--input scripts/build-hinglish.py=scripts/build-hinglish.py \
+		--recipe tatoeba_weight=$(TATOEBA_WEIGHT) \
+		--recipe vocab_size=$(PREDICT_WIKI_VOCAB) --recipe ngram_keep=$(PREDICT_WIKI_NGRAM) \
+		--recipe start_keep=$(PREDICT_START) --recipe words=$(WORDS_GENERATION) \
+		--output $(PREDICT_OUT_DIR)/hi-Latn.fst --output $(PREDICT_OUT_DIR)/hi-Latn.ngram.bin \
+		--output $(PREDICT_OUT_DIR)/hi-Latn.forms.fst; \
+	stale "$$@" || exit 0; \
+	mkdir -p $(HINGLISH_DIR) && \
+	$(PYTHON) scripts/build-hinglish.py --lexicons $$d/lexicons \
+		$(PREDICT_CORPORA_DIR)/hi.txt $(HINGLISH_DIR)/tatoeba.txt && \
+	$(PYTHON) scripts/build-hinglish.py --lexicons $$d/lexicons \
+		--drop $$d/romanized/hi.romanized.rejoined.test.native.txt \
+		$(DAKSHINA_DIR)/hi.txt $(HINGLISH_DIR)/wikipedia.txt && \
+	echo "build-predict hi-Latn (vocab $(PREDICT_WIKI_VOCAB), n-grams $(PREDICT_WIKI_NGRAM))" && \
+	$(TOOLS) build-predict -- --lang hi-Latn \
+		--corpus $(TATOEBA_WEIGHT):$(HINGLISH_DIR)/tatoeba.txt --corpus $(HINGLISH_DIR)/wikipedia.txt \
+		--out $(CURDIR)/$(PREDICT_OUT_DIR) --vocab-size $(PREDICT_WIKI_VOCAB) \
+		--ngram-keep $(PREDICT_WIKI_NGRAM) --start-keep $(PREDICT_START) && \
+	record "$$@"
+
 # How often each transliteration table (translit/<lang>.txt), with its
 # language's lexicon, puts the word meant first, as the composer's strip
 # offers them: on Dakshina's romanized Wikipedia sentences (every word
