@@ -174,16 +174,20 @@ names and jargon, a domain's words, or a bigger corpus than Tatoeba's.
 3. **Build**: `make own-corpus TAG=en CORPUS=corpus.txt OUT=my-data`
    writes `my-data/predict/en.fst`, `en.ngram.bin` and `en.forms.fst`,
    built as the release builds that language (its caps, and the sentence
-   start's), with the text rules in `my-data/rules/`. `TAG` names the
-   language; nothing in this tree changes.
+   start's), with the text rules in `my-data/rules/` (and Thai's word
+   list in `my-data/wordbreak/`). `TAG` names the language; nothing in
+   this tree changes.
 4. **Measure** with ki-osk's `toolbox eval-predict`, on your held-out
    text and on `eval/`, so as to see that general typing did not get
    worse, against this tree's data (`--data` this repository) for the
-   release's:
+   release's. It reads the layouts too, which are in the packs: measure
+   yours on a copy of ki-osk's `lang/` (the release's packs, `make
+   fetch-lang` there) with them copied over it. In ki-osk:
 
    ```sh
-   cargo run --release -p toolbox --features eval-layouts --bin eval-predict -- \
-     measure --data my-data --eval <dir> --langs en
+   cp -r lang mine && cp -r ../ki-osk-lang-content/my-data/* mine/
+   cargo run --release -p toolbox --bin eval-predict -- \
+     measure --data mine --eval <dir> --langs en
    ```
 
    With a novel (*Alice's Adventures in Wonderland*, a tenth of its
@@ -192,7 +196,9 @@ names and jargon, a domain's words, or a bigger corpus than Tatoeba's.
    and on Tatoeba's held-out English went from 52.0% to 51.7%.
 5. **Install** the three files under `/usr/share/ki-osk/predict/` (or
    `$KI_OSK_DATA_DIR/predict/`): the keyboard reads them at its next
-   layout switch.
+   layout switch. On Android, the settings' screen of language packs
+   takes them ("Add your own": the files, or a zip of `my-data`), and
+   they come before the language's own.
 
 Models built from your text carry its licence, and Tatoeba's (CC BY 2.0
 FR, `NOTICES.md`) when it went into them.
