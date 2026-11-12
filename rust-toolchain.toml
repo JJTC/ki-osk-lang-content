@@ -1,4 +1,4 @@
 [toolchain]
 # Same channel as ki-osk, which compiles osk-data inside its own build.
-channel = "1.95.0"
+channel = "1.99.1"
 components = ["rustfmt", "clippy"]

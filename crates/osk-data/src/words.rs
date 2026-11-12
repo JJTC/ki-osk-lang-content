@@ -1217,7 +1217,7 @@ mod tests {
         assert_eq!(typing("en", "I have 42 do").0, ws(&[]));
         // A text whose start is not known starts with no context.
         let s = Splitter::new("en");
-        assert!(s.typing_after("", 2, Start::Break).context.is_empty());
+        assert_eq!(s.typing_after("", 2, Start::Break).context, ws(&[]));
         assert_eq!(
             s.typing_after("so we", 2, Start::Break).context,
             ws(&["so"])

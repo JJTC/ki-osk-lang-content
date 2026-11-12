@@ -231,12 +231,21 @@ mod tests {
     fn a_table_round_trips_and_is_checked() {
         let d = sample();
         assert_eq!(Dialects::from_bytes(&d.to_bytes().unwrap()).unwrap(), d);
-        assert!(!d.problems("pt").is_empty());
+        assert!(
+            !d.problems("pt").is_empty(),
+            "an English table passes as Portuguese"
+        );
         let mut bad = d.clone();
         bad.words.swap(0, 1);
-        assert!(!bad.problems("en").is_empty());
+        assert!(
+            !bad.problems("en").is_empty(),
+            "a table with two words out of order passes"
+        );
         let mut bad = d;
         bad.groups[0].push(2);
-        assert!(!bad.problems("en").is_empty());
+        assert!(
+            !bad.problems("en").is_empty(),
+            "a group holding a word not in it passes"
+        );
     }
 }

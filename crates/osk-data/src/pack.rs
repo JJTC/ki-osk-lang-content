@@ -830,7 +830,10 @@ mod tests {
             "\"schema\": 1, \"channel\": \"stable\",",
             1,
         );
-        assert!(Index::parse(&json).unwrap().problems().is_empty());
+        assert_eq!(
+            Index::parse(&json).unwrap().problems(),
+            Vec::<IndexProblem>::new()
+        );
     }
 
     #[test]
