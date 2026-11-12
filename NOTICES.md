@@ -1,9 +1,9 @@
 # Notices — ki-osk language content
 
 Attributions and licences for the datasets in this repository and the
-files built from them. Paths are relative to this repository; inside
-ki-osk the same files sit under `crates/osk-core/assets/lang/`, and an
-installed system has them under `/usr/share/ki-osk/`.
+files built from them. Paths are relative to this repository; ki-osk
+fetches the release it pins into its `lang/`, and an installed system has
+the same files under `/usr/share/ki-osk/`.
 
 **Several of these are share-alike.** Redistributing the derived `.bin`
 files carries their terms.
@@ -18,10 +18,11 @@ new dataset is pulled in.
 Exactly which upstream file each committed output was built from is
 recorded, by sha256, in `sources.lock`.
 
-Fonts, emoji data, the offensive-word lists, the Mandarin syllable
-inventory and the Double-Pinyin scheme tables stayed in the ki-osk
-repository with the code that embeds them; ki-osk's own `NOTICES.md`
-covers those.
+The keyboard layouts, the emoji data, the offensive-word lists, the
+Mandarin syllable inventory and the Double-Pinyin scheme tables came here
+from the ki-osk repository (ki-osk 54672eb), which holds only its MIT
+code since. The fonts the Wayland keyboard draws with are in
+ki-osk-wayland's `NOTICES.md`.
 
 ## Dictionaries
 
@@ -185,3 +186,317 @@ tables, which are adaptations of it: **share-alike**. They are fetched by
 of the extract each was built from. Hunspell's Portuguese and Spanish
 dictionaries were used to check them, not as a source; nothing of them
 is in the tables.
+
+## Keyboard layouts
+
+`layouts/<id>.json`: which keys a layout has and what each types. The
+national layouts were generated from **xkeyboard-config**'s keymaps,
+read through libxkbcommon (`scripts/build-layout.py`,
+`build-national-grid.py`, `relabel-layout.py`, `relabel-national.py`):
+each key's letters are the ones the keymap a layout names in
+`xkb_layout` produces. The layout structure around them — rows, widths,
+symbol pages, the control row — was written for ki-osk, under MIT.
+xkeyboard-config's copyright and permission notices, which go with every
+copy (its `COPYING`, as xkeyboard-config 2.48 ships it):
+
+```text
+Copyright 1996 by Joseph Moss
+Copyright (C) 2002-2007 Free Software Foundation, Inc.
+Copyright (C) Dmitry Golubev <lastguru@mail.ru>, 2003-2004
+Copyright (C) 2004, Gregory Mokhin <mokhin@bog.msu.ru>
+Copyright (C) 2006 Erdal Ronahî
+
+Permission to use, copy, modify, distribute, and sell this software and its
+documentation for any purpose is hereby granted without fee, provided that
+the above copyright notice appear in all copies and that both that
+copyright notice and this permission notice appear in supporting
+documentation, and that the name of the copyright holder(s) not be used in
+advertising or publicity pertaining to distribution of the software without
+specific, written prior permission.  The copyright holder(s) makes no
+representations about the suitability of this software for any purpose.  It
+is provided "as is" without express or implied warranty.
+
+THE COPYRIGHT HOLDER(S) DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+EVENT SHALL THE COPYRIGHT HOLDER(S) BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+
+
+Copyright (c) 1996  Digital Equipment Corporation
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL DIGITAL EQUIPMENT CORPORATION BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR
+THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of the Digital Equipment
+Corporation shall not be used in advertising or otherwise to promote
+the sale, use or other dealings in this Software without prior written
+authorization from Digital Equipment Corporation.
+
+
+Copyright 1996, 1998  The Open Group
+
+Permission to use, copy, modify, distribute, and sell this software and its
+documentation for any purpose is hereby granted without fee, provided that
+the above copyright notice appear in all copies and that both that
+copyright notice and this permission notice appear in supporting
+documentation.
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE OPEN GROUP BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of The Open Group shall
+not be used in advertising or otherwise to promote the sale, use or
+other dealings in this Software without prior written authorization
+from The Open Group.
+
+
+Copyright 2004-2005 Sun Microsystems, Inc.  All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice (including the next
+paragraph) shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+
+Copyright (c) 1996 by Silicon Graphics Computer Systems, Inc.
+
+Permission to use, copy, modify, and distribute this
+software and its documentation for any purpose and without
+fee is hereby granted, provided that the above copyright
+notice appear in all copies and that both that copyright
+notice and this permission notice appear in supporting
+documentation, and that the name of Silicon Graphics not be
+used in advertising or publicity pertaining to distribution
+of the software without specific prior written permission.
+Silicon Graphics makes no representation about the suitability
+of this software for any purpose. It is provided "as is"
+without any express or implied warranty.
+
+SILICON GRAPHICS DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
+SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL SILICON
+GRAPHICS BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL
+DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION  WITH
+THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+
+Copyright (c) 1996  X Consortium
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of the X Consortium shall
+not be used in advertising or otherwise to promote the sale, use or
+other dealings in this Software without prior written authorization
+from the X Consortium.
+
+
+Copyright (C) 2004, 2006 Ævar Arnfjörð Bjarmason <avarab@gmail.com>
+
+Permission to use, copy, modify, distribute, and sell this software and its
+documentation for any purpose is hereby granted without fee, provided that
+the above copyright notice appear in all copies and that both that
+copyright notice and this permission notice appear in supporting
+documentation.
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE OPEN GROUP BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall
+not be used in advertising or otherwise to promote the sale, use or
+other dealings in this Software without prior written authorization of
+the copyright holder.
+
+
+Copyright (C) 1999, 2000, 2007, 2009 by Anton Zinoviev <anton@lml.bas.bg>
+
+This software may be used, modified, copied, distributed, and sold,
+both in source and binary form provided that the above copyright
+notice and these terms are retained. The name of the author may not
+be used to endorse or promote products derived from this software
+without prior permission. THIS SOFTWARE IS PROVIDED "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED. IN NO EVENT
+SHALL THE AUTHOR BE LIABLE FOR ANY DAMAGES ARISING IN ANY WAY OUT
+OF THE USE OF THIS SOFTWARE.
+
+
+Copyright (C) 2002-2004 Soós Péter <sp@osb.hu>
+Copyright (C) 2010 Andras Timar <timar@fsf.hu>
+
+Permission is granted to anyone to use, distribute and modify
+this file in any way, provided that the above copyright notice
+is left intact and the author of the modification summarizes
+the changes in this header.
+
+This file is distributed without any expressed or implied warranty.
+```
+
+Source: https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
+
+## Emoji
+
+`emoji/catalogue.json` (the search catalogue: every fully-qualified emoji
+with its CLDR short name, keywords, category and skin-tone variants) and
+`layouts/emoji.json` (the picker's grid, a curated subset) are built by
+`scripts/build-emoji.py` and `scripts/gen-emoji-layout.py` from the
+**Unicode emoji data** (`emoji-test.txt`, Emoji 16.0) and the **CLDR**
+English annotations (`annotations/en.xml`, `annotationsDerived/en.xml`),
+both under the Unicode License v3:
+
+```text
+UNICODE LICENSE V3
+
+COPYRIGHT AND PERMISSION NOTICE
+
+Copyright © 1991-2023 Unicode, Inc.
+
+NOTICE TO USER: Carefully read the following legal agreement. BY
+DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
+SOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of data files and any associated documentation (the "Data Files") or
+software and any associated documentation (the "Software") to deal in the
+Data Files or Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, and/or sell
+copies of the Data Files or Software, and to permit persons to whom the
+Data Files or Software are furnished to do so, provided that either (a)
+this copyright and permission notice appear with all copies of the Data
+Files or Software, or (b) this copyright and permission notice appear in
+associated Documentation.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+THIRD PARTY RIGHTS.
+
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE
+BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,
+OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA
+FILES OR SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder shall
+not be used in advertising or otherwise to promote the sale, use or other
+dealings in these Data Files or Software without prior written
+authorization of the copyright holder.
+```
+
+Sources: https://unicode.org/Public/emoji/16.0/emoji-test.txt,
+https://github.com/unicode-org/cldr
+
+## Offensive-word lists
+
+`offensive/<lang>.txt`, 26 lists, used ONLY to keep words off a
+suggestion strip (ki-osk's `--filter-offensive`, off by default); they
+never restrict what can be typed.
+
+- **LDNOOBW** ("List of Dirty, Naughty, Obscene and Otherwise Bad
+  Words"), © 2012–2020 Shutterstock, Inc. — Creative Commons
+  Attribution 4.0 International
+  (https://creativecommons.org/licenses/by/4.0/). The 26 lists are its
+  lists for those languages; `en.txt` adds the words below. Source:
+  https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words
+- **AOSP LatinIME wordlist** (English `flags=offensive` entries only) —
+  Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0),
+  © 2008 The Android Open Source Project. 190 words merged into
+  `offensive/en.txt`. Taken from the FUTO Keyboard checkout, whose own
+  code is under the non-free FUTO Source First License — but its `NOTICE`
+  scopes that license to changes AFTER commit
+  `d847619a2b48945465f840b8d81644fa455cc115`, and every commit touching
+  `dictionaries/` is an ancestor of it, authored by AOSP engineers. Only
+  the Apache-2.0 AOSP portion is used here; no FUTO-licensed material is
+  included. Source:
+  https://android.googlesource.com/platform/packages/inputmethods/LatinIME/
+
+## Pinyin tables
+
+Written here, and MIT licensed with the code; listed for transparency
+about where they came from.
+
+- **Mandarin syllable inventory** (`pinyin/syllables.txt`) — derived
+  from CC-CEDICT (see Dictionaries): the 413 toneless Pinyin syllables
+  obtained by taking each CC-CEDICT entry's bracketed reading, dropping
+  tone digits, and keeping what splits cleanly into a standard initial +
+  final. The result is the phonological inventory of the language — a
+  set of facts, not an excerpt — and carries no dictionary content: no
+  headword, gloss or Hanzi from CC-CEDICT is reproduced by it.
+- **Double-Pinyin scheme tables** (`pinyin/double-pinyin.json`) — the
+  published key mappings of 小鹤双拼, 微软双拼, 自然码, 智能ABC, 紫光拼音 and
+  拼音加加. These are layout definitions in the same category as an xkb
+  symbols file: which key carries which initial or final, as specified by
+  each scheme's own authors. Transcribed from the schemes' published
+  definitions as tabulated by libpinyin (GPL) and then **independently
+  verified** by an exhaustive encode/decode round trip over the syllable
+  inventory above (`crates/osk-data/tests/pinyin.rs`) — no libpinyin
+  code, structure or generated file is copied or linked.

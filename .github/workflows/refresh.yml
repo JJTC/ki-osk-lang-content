@@ -25,9 +25,9 @@ name: refresh language content
 # Building needs only this repository: the builders and the format crate
 # live here. ki-osk is checked out by one job, `verify`, to run its
 # osk-core tests against the NEW content: the two repositories sit side
-# by side, ki-osk's data directory is linked to this checkout (where its
-# `include_bytes!` and its tests look), and its osk-data dependency is
-# patched from the git tag it pins to this checkout's crate.
+# by side, ki-osk's data directory (`lang/`) is linked to this checkout
+# (where its tests look), and its osk-data dependency is patched from the
+# git tag it pins to this checkout's crate.
 #
 # PRs opened with GITHUB_TOKEN do not trigger other workflows. That is
 # why every gate runs here, before the PR exists, rather than on it.
@@ -172,15 +172,15 @@ jobs:
           path: ki-osk
           persist-credentials: false
       # ki-osk's data directory (fetched, so absent from its checkout)
-      # becomes a link to this checkout: its include_bytes! and its tests
-      # read the new data from there.
+      # becomes a link to this checkout: its tests read the new data
+      # there, layouts included.
       - name: Link ki-osk's data directory to this checkout
         id: ki
         working-directory: ki-osk
         run: |
           set -euo pipefail
-          rm -rf crates/osk-core/assets/lang
-          ln -s ../../../../ki-osk-lang-content crates/osk-core/assets/lang
+          rm -rf lang
+          ln -s ../ki-osk-lang-content lang
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
       - uses: ./ki-osk-lang-content/.github/actions/rust
         with:
@@ -214,12 +214,12 @@ jobs:
       # Keystroke savings of the data the default branch holds now,
       # measured on the held-out text this refresh fetched — before the
       # new data is unpacked over it. eval-predict types each language on
-      # its own layout to measure correction, so it is built with every
-      # layout (`eval-layouts`), which ki-osk's default build leaves out.
+      # its own layout, read from this checkout's layouts/, to measure
+      # correction.
       - name: Keystroke savings before
         working-directory: ki-osk
         run: >-
-          cargo run --release --quiet -p toolbox --features eval-layouts --bin eval-predict -- measure
+          cargo run --release --quiet -p toolbox --bin eval-predict -- measure
           --data ../ki-osk-lang-content --eval ../ki-osk-lang-content/eval
           --json "$RUNNER_TEMP/ksr-before.json"
 
@@ -233,7 +233,7 @@ jobs:
       - name: Keystroke savings after
         working-directory: ki-osk
         run: >-
-          cargo run --release --quiet -p toolbox --features eval-layouts --bin eval-predict -- measure
+          cargo run --release --quiet -p toolbox --bin eval-predict -- measure
           --data ../ki-osk-lang-content --eval ../ki-osk-lang-content/eval
           --json "$RUNNER_TEMP/ksr-after.json"
       # The point of the refresh is better data, so it may not make
@@ -250,7 +250,7 @@ jobs:
             echo "ki-osk's prediction on held-out text (\`eval/\`), before and after this refresh:"
             echo
           } >> "$RUNNER_TEMP/report.md"
-          cargo run --release --quiet -p toolbox --features eval-layouts --bin eval-predict -- compare \
+          cargo run --release --quiet -p toolbox --bin eval-predict -- compare \
             "$RUNNER_TEMP/ksr-before.json" "$RUNNER_TEMP/ksr-after.json" \
             | tee -a "$RUNNER_TEMP/report.md"
       - name: Report

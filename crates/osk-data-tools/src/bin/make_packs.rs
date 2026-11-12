@@ -13,10 +13,16 @@
 //! The release version is the crates' (`osk_data::RELEASE_VERSION`), so
 //! the format crate and the data it was released with share one number.
 //!
+//! A language's keyboard layouts (`layouts/<id>.json`) join its pack, as
+//! `packs.toml`'s `[layouts.packs]` says; a language with layouts and no
+//! model gets a pack of its layouts alone, named in `[layouts.names]`.
+//!
 //! It refuses rather than guesses:
 //! - a committed data file that no pack claims, or that two packs claim;
 //! - a prediction language with files but no name in `packs.toml`, or a
 //!   name with no files;
+//! - layouts given to a pack that does not exist and has no name, or a
+//!   name for a pack that has no layouts or exists already;
 //! - a component that is missing or whose path climbs out of the tree;
 //! - an output directory holding files it did not write.
 //!
@@ -78,8 +84,21 @@ const INDEX: &str = "packs.json";
 #[derive(Deserialize)]
 struct Packs {
     prediction: Prediction,
+    layouts: Layouts,
     #[serde(default)]
     pack: Vec<PackDef>,
+}
+
+/// The keyboard layouts: the licence and source every pack with one takes,
+/// which pack each language's layouts join, and the names of the packs of
+/// layouts alone.
+#[derive(Deserialize)]
+struct Layouts {
+    license: License,
+    source: SourceDef,
+    packs: BTreeMap<String, Vec<String>>,
+    #[serde(default)]
+    names: BTreeMap<String, String>,
 }
 
 #[derive(Deserialize)]
@@ -125,7 +144,17 @@ struct SourceDef {
 }
 
 /// The directories whose files must all belong to a pack.
-const DATA_DIRS: [&str; 6] = ["predict", "pinyin", "zhuyin", "jyutping", "kana", "rules"];
+const DATA_DIRS: [&str; 9] = [
+    "predict",
+    "pinyin",
+    "zhuyin",
+    "jyutping",
+    "kana",
+    "rules",
+    "layouts",
+    "emoji",
+    "offensive",
+];
 
 fn main() -> anyhow::Result<()> {
     env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();
@@ -256,6 +285,7 @@ fn main() -> anyhow::Result<()> {
         });
     }
 
+    add_layouts(&args.root, &defs.layouts, &mut manifests)?;
     check_coverage(&args.root, &manifests)?;
 
     prepare_out(&args.out)?;
@@ -511,6 +541,58 @@ fn component(root: &Path, kind: &str, path: &str) -> anyhow::Result<Component> {
     c.size = bytes.len() as u64;
     c.sha256 = sha256_hex(&bytes);
     Ok(c)
+}
+
+/// Each language's layouts into its pack, with the layouts' licence and
+/// source, or into a pack of their own where the language has none.
+fn add_layouts(root: &Path, l: &Layouts, manifests: &mut Vec<Manifest>) -> anyhow::Result<()> {
+    for id in l.names.keys() {
+        if manifests.iter().any(|m| &m.id == id) {
+            bail!("[layouts.names] names `{id}`, which is a pack already");
+        }
+        if !l.packs.contains_key(id) {
+            bail!("[layouts.names] names `{id}`, but [layouts.packs] gives it no layouts");
+        }
+    }
+    for (pack, ids) in &l.packs {
+        ensure!(!ids.is_empty(), "[layouts.packs] gives `{pack}` no layouts");
+        let mut components = Vec::new();
+        for id in ids {
+            components.push(component(
+                root,
+                kind::LAYOUT,
+                &format!("layouts/{id}.json"),
+            )?);
+        }
+        let source = Source {
+            name: l.source.name.clone(),
+            url: l.source.url.clone(),
+            sha256: None,
+        };
+        if let Some(m) = manifests.iter_mut().find(|m| &m.id == pack) {
+            m.components.extend(components);
+            m.licenses.push(l.license.clone());
+            m.sources.push(source);
+        } else {
+            let name = l.names.get(pack).with_context(|| {
+                format!(
+                    "[layouts.packs] gives `{pack}` layouts, but no pack has that id \
+                     and [layouts.names] gives it no name"
+                )
+            })?;
+            manifests.push(Manifest {
+                schema: SCHEMA,
+                id: pack.clone(),
+                name: name.clone(),
+                version: RELEASE_VERSION.to_string(),
+                format: osk_data::codec::VERSION,
+                components,
+                licenses: vec![l.license.clone()],
+                sources: vec![source],
+            });
+        }
+    }
+    Ok(())
 }
 
 /// Every data file belongs to exactly one pack.

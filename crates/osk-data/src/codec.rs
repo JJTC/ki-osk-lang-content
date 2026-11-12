@@ -5,8 +5,8 @@
 //! [`encode`] and [`decode`]: this repository's builders write them,
 //! ki-osk's `osk-core` reads them, and this module is all that stands
 //! between. A decoder that disagreed with its encoder would not crash —
-//! the loader would return `None` and the keyboard would quietly fall back
-//! to its seed dictionaries — so the encoding is decided here, once.
+//! the loader would return `None` and the language would quietly have no
+//! suggestions — so the encoding is decided here, once.
 //!
 //! The body is [postcard](https://docs.rs/postcard): plain `serde`, varint
 //! framing, `MIT OR Apache-2.0`.

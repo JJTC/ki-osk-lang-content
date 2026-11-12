@@ -1,8 +1,8 @@
 //! Every data file this repository commits decodes as its reader expects.
 //!
 //! The format guard: a decoder that disagrees with its encoder does not
-//! crash — a loader returns `None` and the keyboard quietly falls back to
-//! its seed dictionaries. This walks the committed tree, not a sample, and
+//! crash — a loader returns `None` and the language quietly has no
+//! suggestions. This walks the committed tree, not a sample, and
 //! an unrecognised `.bin` fails rather than going unchecked.
 
 use std::collections::BTreeSet;
@@ -160,6 +160,28 @@ fn no_bin_goes_unchecked() {
         assert!(
             !has_bin || known.contains(&dir.as_str()),
             "{dir}/ holds .bin files this test does not decode"
+        );
+    }
+}
+
+#[test]
+fn the_emoji_catalogue_parses() {
+    let p = root().join("emoji/catalogue.json");
+    let json = std::fs::read_to_string(&p).unwrap_or_else(|e| panic!("{}: {e}", name(&p)));
+    let entries = osk_data::emoji::parse(&json).unwrap_or_else(|e| panic!("{e}"));
+    assert!(entries.len() >= 2000, "only {} emoji", entries.len());
+}
+
+#[test]
+fn every_offensive_list_has_words() {
+    let lists = files("offensive", ".txt");
+    assert!(lists.len() >= 26, "only {} lists", lists.len());
+    for p in lists {
+        let text = std::fs::read_to_string(&p).unwrap_or_else(|e| panic!("{}: {e}", name(&p)));
+        assert!(
+            osk_data::offensive::words(&text).next().is_some(),
+            "{}: no words",
+            name(&p)
         );
     }
 }

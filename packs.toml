@@ -3,7 +3,10 @@
 #
 # Every predict/<id>.fst + predict/<id>.ngram.bin pair is a pack of its own,
 # with the [prediction] licence and source below, so it needs only a name.
-# The input-method packs are listed in full further down.
+# A language's keyboard layouts join its pack ([layouts]); a language with
+# layouts and no model yet is a pack of its layouts alone. The input-method
+# packs, the text rules, the emoji picker and the offensive-word lists are
+# listed in full further down.
 #
 # make-packs refuses a committed data file that no pack claims, and a
 # language with files but no name here, so nothing ships unlisted.
@@ -98,6 +101,265 @@ sources = [
   { name = "Wiktionary's Spanish entries, as extracted by kaikki.org", url = "https://kaikki.org/dictionary/Spanish/", lock = "dialects/es", input = "kaikki-es.jsonl.gz" },
 ]
 
+# Keyboard layouts (layouts/<id>.json): the keys of each, and what each
+# types. The national ones are read from xkeyboard-config's keymaps
+# through libxkbcommon (scripts/build-layout.py, build-national-grid.py,
+# relabel-layout.py, relabel-national.py); the keyboard uploads the same
+# keymap, named in a layout's `xkb_layout`. A language's layouts join its
+# pack, which then carries this licence and source besides its own; the
+# emoji picker's layout is the emoji pack's, from Unicode's data.
+[layouts]
+license = { name = "MIT/X11-style notices (xkeyboard-config)", url = "https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/blob/master/COPYING", share_alike = false }
+source  = { name = "xkeyboard-config, read through libxkbcommon", url = "https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config" }
+
+# Which pack each language's layouts join: its prediction pack, an input
+# method's pack listed below, or a pack of its layouts alone, named in
+# [layouts.names]. make-packs refuses a layout no pack takes.
+[layouts.packs]
+af      = ["af"]
+ak      = ["ak"]
+am      = ["am"]
+ar      = ["ar"]
+as      = ["as"]
+ay      = ["ay"]
+az      = ["az"]
+ba      = ["ba"]
+be      = ["be"]
+ber     = ["ber"]
+bg      = ["bg"]
+bm      = ["bm"]
+bn      = ["bn"]
+bo      = ["bo"]
+br      = ["br"]
+bs      = ["bs"]
+ca      = ["ca"]
+ceb     = ["ceb"]
+chr     = ["chr"]
+co      = ["co"]
+cs      = ["cz"]
+cy      = ["cy"]
+da      = ["dk"]
+de      = ["de"]
+dv      = ["dv"]
+dz      = ["dz"]
+ee      = ["ee"]
+el      = ["el"]
+en      = ["gb", "us-intl", "us"]
+eo      = ["eo"]
+es      = ["es"]
+et      = ["et"]
+eu      = ["eu"]
+fa      = ["fa"]
+ff      = ["ff"]
+fi      = ["fi"]
+fil     = ["fil"]
+fj      = ["fj"]
+fo      = ["fo"]
+fr      = ["fr-azerty"]
+fy      = ["fy"]
+ga      = ["ga"]
+gd      = ["gd"]
+gl      = ["gl"]
+gn      = ["gn"]
+gu      = ["gu"]
+ha      = ["ha"]
+haw     = ["haw"]
+he      = ["he"]
+hi      = ["hi"]
+hr      = ["hr"]
+ht      = ["ht"]
+hu      = ["hu"]
+hy      = ["hy"]
+id      = ["id"]
+ig      = ["ig"]
+is      = ["is"]
+it      = ["it"]
+iu      = ["iu"]
+ja      = ["jp-romaji"]
+jv      = ["jv"]
+ka      = ["ka"]
+kab     = ["kab"]
+kk      = ["kk"]
+kl      = ["kl"]
+km      = ["km"]
+kn      = ["kn"]
+ko      = ["kr-2set"]
+ku      = ["ku"]
+ky      = ["ky"]
+lb      = ["lb"]
+lg      = ["lg"]
+ln      = ["ln"]
+lo      = ["lo"]
+lt      = ["lt"]
+lv      = ["lv"]
+mg      = ["mg"]
+mi      = ["mi"]
+mk      = ["mk"]
+ml      = ["ml"]
+mn      = ["mn"]
+mni     = ["mni"]
+mr      = ["mr"]
+ms      = ["ms"]
+mt      = ["mt"]
+my      = ["my"]
+nah     = ["nah"]
+ne      = ["ne"]
+nl      = ["nl"]
+no      = ["no"]
+nr      = ["nr"]
+nso     = ["nso"]
+ny      = ["ny"]
+oc      = ["oc"]
+om      = ["om"]
+or      = ["or"]
+os      = ["os"]
+pa      = ["pa"]
+pl      = ["pl"]
+ps      = ["ps"]
+pt      = ["pt-br", "pt"]
+qu      = ["qu"]
+rm      = ["rm"]
+rn      = ["rn"]
+ro      = ["ro"]
+ru      = ["ru"]
+rw      = ["rw"]
+sat     = ["sat"]
+sd      = ["sd"]
+si      = ["si"]
+sk      = ["sk"]
+sl      = ["sl"]
+sm      = ["sm"]
+sn      = ["sn"]
+so      = ["so"]
+sq      = ["sq"]
+sr      = ["sr-latn", "sr"]
+ss      = ["ss"]
+st      = ["st"]
+su      = ["su"]
+sv      = ["se"]
+sw      = ["sw"]
+syr     = ["syr"]
+ta      = ["ta"]
+te      = ["te"]
+tg      = ["tg"]
+th      = ["th"]
+ti      = ["ti"]
+tk      = ["tk"]
+tn      = ["tn"]
+to      = ["to"]
+tr      = ["tr"]
+ts      = ["ts"]
+tt      = ["tt"]
+ty      = ["ty"]
+udm     = ["udm"]
+ug      = ["ug"]
+uk      = ["uk"]
+ur      = ["ur"]
+uz      = ["uz"]
+ve      = ["ve"]
+vi      = ["vi"]
+wo      = ["wo"]
+xh      = ["xh"]
+yo      = ["yo"]
+yue     = ["yue-jyutping"]
+zh-Hans = ["cn-pinyin"]
+zh-Hant = ["tw-zhuyin"]
+zu      = ["zu"]
+
+# The languages with layouts and no model yet: each a pack of its layouts.
+[layouts.names]
+af  = "Afrikaans"
+ak  = "Akan"
+am  = "Amharic"
+ay  = "Aymara"
+ba  = "Bashkir"
+ber = "Tamazight (Tifinagh)"
+bm  = "Bambara"
+bo  = "Tibetan"
+bs  = "Bosnian"
+ceb = "Cebuano"
+chr = "Cherokee"
+co  = "Corsican"
+cy  = "Welsh"
+dv  = "Dhivehi"
+dz  = "Dzongkha"
+ee  = "Ewe"
+ff  = "Fula"
+fj  = "Fijian"
+fo  = "Faroese"
+fy  = "West Frisian"
+ga  = "Irish"
+gd  = "Scottish Gaelic"
+gn  = "Guarani"
+gu  = "Gujarati"
+ha  = "Hausa"
+haw = "Hawaiian"
+ht  = "Haitian Creole"
+ig  = "Igbo"
+iu  = "Inuktitut"
+jv  = "Javanese"
+kk  = "Kazakh"
+kl  = "Greenlandic"
+km  = "Khmer"
+kn  = "Kannada"
+ko  = "Korean, Hangul input"
+ky  = "Kyrgyz"
+lb  = "Luxembourgish"
+lg  = "Luganda"
+ln  = "Lingala"
+lo  = "Lao"
+mg  = "Malagasy"
+mi  = "Māori"
+ml  = "Malayalam"
+mn  = "Mongolian"
+mni = "Meitei"
+mt  = "Maltese"
+my  = "Burmese"
+nah = "Nahuatl"
+ne  = "Nepali"
+nr  = "Southern Ndebele"
+nso = "Northern Sotho"
+ny  = "Chichewa"
+om  = "Oromo"
+or  = "Odia"
+pa  = "Punjabi"
+ps  = "Pashto"
+qu  = "Quechua"
+rm  = "Romansh"
+rn  = "Kirundi"
+rw  = "Kinyarwanda"
+sat = "Santali"
+sd  = "Sindhi"
+si  = "Sinhala"
+sl  = "Slovenian"
+sm  = "Samoan"
+sn  = "Shona"
+so  = "Somali"
+sq  = "Albanian"
+ss  = "Swati"
+st  = "Southern Sotho"
+su  = "Sundanese"
+sw  = "Swahili"
+syr = "Syriac"
+ta  = "Tamil"
+te  = "Telugu"
+tg  = "Tajik"
+th  = "Thai"
+ti  = "Tigrinya"
+tk  = "Turkmen"
+tn  = "Tswana"
+to  = "Tongan"
+ts  = "Tsonga"
+ty  = "Tahitian"
+udm = "Udmurt"
+ur  = "Urdu"
+uz  = "Uzbek"
+ve  = "Venda"
+wo  = "Wolof"
+xh  = "Xhosa"
+yo  = "Yoruba"
+zu  = "Zulu"
+
 # `lock`/`input` name the sources.lock entry and input whose recorded
 # sha256 the manifest carries, so a pack names the exact upstream file it
 # was built from.
@@ -129,16 +391,25 @@ sources = [
   { name = "ki-osk-lang-content", url = "https://github.com/jjtc/ki-osk-lang-content" },
 ]
 
+# The Pinyin syllable inventory (from CC-CEDICT's readings) and the
+# double-Pinyin schemes (the schemes' published key mappings) are tables
+# of facts, written here; see NOTICES.md.
 [[pack]]
 id   = "zh-Hans"
 name = "Chinese (Simplified), Pinyin input"
-components = [{ kind = "pinyin", path = "pinyin/cedict.bin" }]
+components = [
+  { kind = "pinyin", path = "pinyin/cedict.bin" },
+  { kind = "syllables", path = "pinyin/syllables.txt" },
+  { kind = "double-pinyin", path = "pinyin/double-pinyin.json" },
+]
 licenses = [
   { name = "CC BY-SA 4.0", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true },
+  { name = "MIT (the syllable inventory and the double-Pinyin tables)", url = "https://opensource.org/license/mit", share_alike = false },
 ]
 sources = [
   { name = "CC-CEDICT", url = "https://www.mdbg.net/chinese/dictionary?page=cc-cedict", lock = "pinyin", input = "cedict.txt" },
   { name = "FrequencyWords zh_cn (candidate order only)", url = "https://github.com/hermitdave/FrequencyWords", lock = "pinyin", input = "zh_cn_50k.txt" },
+  { name = "The double-Pinyin schemes' published key mappings (小鹤, 微软, 自然码, 智能ABC, 紫光, 拼音加加)", url = "https://zh.wikipedia.org/wiki/%E5%8F%8C%E6%8B%BC" },
 ]
 
 [[pack]]
@@ -179,4 +450,65 @@ licenses = [
 sources = [
   { name = "mozc OSS system dictionary", url = "https://github.com/google/mozc", lock = "kana/mozc-kanji", input = "mozc-dict.tsv" },
   { name = "mozc connection matrix", url = "https://github.com/google/mozc", lock = "kana/mozc-connection", input = "mozc-connection.txt" },
+]
+
+# The emoji picker: its layout (a curated grid, scripts/gen-emoji-layout.py)
+# and its search catalogue (every fully-qualified emoji with its CLDR name
+# and keywords, scripts/build-emoji.py), both from Unicode's data.
+[[pack]]
+id   = "emoji"
+name = "Emoji picker and search"
+components = [
+  { kind = "layout", path = "layouts/emoji.json" },
+  { kind = "emoji", path = "emoji/catalogue.json" },
+]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "Unicode emoji data (emoji-test.txt, Emoji 16.0)", url = "https://unicode.org/Public/emoji/16.0/emoji-test.txt" },
+  { name = "CLDR annotations, English (annotations and annotationsDerived, taken 2026-07-17)", url = "https://github.com/unicode-org/cldr/tree/main/common/annotations" },
+]
+
+# Words a keyboard can keep off its suggestion strip (ki-osk's
+# --filter-offensive, off by default); they never restrict what can be
+# typed. Only that option needs this pack.
+[[pack]]
+id   = "offensive"
+name = "Offensive-word lists, for keeping words off the strip"
+components = [
+  { kind = "offensive", path = "offensive/ar.txt" },
+  { kind = "offensive", path = "offensive/cs.txt" },
+  { kind = "offensive", path = "offensive/da.txt" },
+  { kind = "offensive", path = "offensive/de.txt" },
+  { kind = "offensive", path = "offensive/en.txt" },
+  { kind = "offensive", path = "offensive/eo.txt" },
+  { kind = "offensive", path = "offensive/es.txt" },
+  { kind = "offensive", path = "offensive/fa.txt" },
+  { kind = "offensive", path = "offensive/fi.txt" },
+  { kind = "offensive", path = "offensive/fil.txt" },
+  { kind = "offensive", path = "offensive/fr.txt" },
+  { kind = "offensive", path = "offensive/hi.txt" },
+  { kind = "offensive", path = "offensive/hu.txt" },
+  { kind = "offensive", path = "offensive/it.txt" },
+  { kind = "offensive", path = "offensive/ja.txt" },
+  { kind = "offensive", path = "offensive/kab.txt" },
+  { kind = "offensive", path = "offensive/ko.txt" },
+  { kind = "offensive", path = "offensive/nl.txt" },
+  { kind = "offensive", path = "offensive/no.txt" },
+  { kind = "offensive", path = "offensive/pl.txt" },
+  { kind = "offensive", path = "offensive/pt.txt" },
+  { kind = "offensive", path = "offensive/ru.txt" },
+  { kind = "offensive", path = "offensive/sv.txt" },
+  { kind = "offensive", path = "offensive/th.txt" },
+  { kind = "offensive", path = "offensive/tr.txt" },
+  { kind = "offensive", path = "offensive/zh.txt" },
+]
+licenses = [
+  { name = "CC BY 4.0 (LDNOOBW)", url = "https://creativecommons.org/licenses/by/4.0/", share_alike = false },
+  { name = "Apache-2.0 (AOSP LatinIME's English offensive entries)", url = "https://www.apache.org/licenses/LICENSE-2.0", share_alike = false },
+]
+sources = [
+  { name = "List of Dirty, Naughty, Obscene and Otherwise Bad Words", url = "https://github.com/LDNOOBW/List-of-Dirty-Naughty-Obscene-and-Otherwise-Bad-Words" },
+  { name = "AOSP LatinIME wordlist (its flags=offensive entries)", url = "https://android.googlesource.com/platform/packages/inputmethods/LatinIME/" },
 ]

@@ -1,21 +1,25 @@
 # ki-osk language content
 
-Dictionaries, prediction models and input-method tables for
-[ki-osk](https://github.com/jjtc/ki-osk), an on-screen keyboard, as
-language packs: one per language, 58 in all, and one of the text rules
-of every language. Beside the data are the builders that produce it
+Keyboard layouts, dictionaries, prediction models and input-method tables
+for [ki-osk](https://github.com/jjtc/ki-osk), an on-screen keyboard, as
+language packs: one per language, 149 in all, and three every language
+shares: the text rules, the emoji picker and the offensive-word lists.
+Everything ki-osk knows about a language is here; ki-osk itself is code.
+Beside the data are the builders that produce it
 (`crates/osk-data-tools`) and the format crate both they and ki-osk use
 (`crates/osk-data`), so a reader and the writer of the same file cannot
-disagree.
+disagree. `LANGUAGES.md` lists every layout, the pack it is in and what
+it can do.
 
 ## Licences
 
 `LICENSE` (MIT) covers the code and tooling only, and the text rules,
 which were written here. The data keeps the licences of the datasets it
 was built from, listed in `NOTICES.md`, and **several are share-alike**
-(CC BY-SA): the Chinese and Cantonese dictionaries. Whoever
-redistributes those files, or anything built from them, takes on those
-terms.
+(CC BY-SA): the Chinese and Cantonese dictionaries, and the Portuguese
+and Spanish dialect flags. Whoever redistributes those files, or anything
+built from them, takes on those terms. The layouts carry
+xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 ## Layout
 
@@ -34,6 +38,11 @@ terms.
 | `kana/mozc-kanji.bin` | Kana → kanji | `make kana-assets` |
 | `kana/mozc-connection.bin` | mozc POS-bigram matrix | `make kana-assets` |
 | `sources.lock` | What each output was built from | every build target |
+| `pinyin/syllables.txt` | The 413 Mandarin syllables in toneless Pinyin | by hand |
+| `pinyin/double-pinyin.json` | The six double-Pinyin schemes: which key carries which initial and finals | by hand |
+| `layouts/<id>.json` | Keyboard layouts (154): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps | `scripts/build-layout.py` and the relabel scripts |
+| `emoji/catalogue.json` | Every fully-qualified emoji with its CLDR name and keywords: the emoji search | `scripts/build-emoji.py` |
+| `offensive/<lang>.txt` | Words a keyboard can keep off its strip (LDNOOBW, AOSP) | by hand |
 | `seeds/` | Tiny Pinyin, Jyutping and kana seeds (offline fallback) | by hand |
 | `packs.toml` | Which files make up each pack, with licences and sources | by hand |
 | `crates/osk-data/` | The format: the KIOS codec, the serialized types, packs; and the word splitter the models are trained with | — |
@@ -45,13 +54,19 @@ sight rather than mis-decoded.
 
 ## Packs and releases
 
-A pack is one language's files: an `.fst` lexicon and an `.ngram.bin`
-table for each of the 54 prediction languages, and `zh-Hans` (Pinyin),
-`zh-Hant` (Zhuyin), `yue` (Jyutping) and `ja` (kana–kanji); and `rules`,
-the text rules of every language, which are written by hand, Weir-style
-(after the rule language of the Harper grammar checker): each rule a
-pattern over the end of the text before the caret, what it becomes, and
-its tests, in the same file. `cargo test` runs them.
+A pack is one language's files: its keyboard layouts, and an `.fst`
+lexicon and an `.ngram.bin` table for each of the 54 prediction
+languages; `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
+(kana–kanji) and `ko` (Hangul) with their layouts; and a pack of its
+layouts alone for each of the 90 other languages with a layout and no
+model yet. Three packs every language shares: `rules`, the text rules,
+which are written by hand, Weir-style (after the rule language of the
+Harper grammar checker): each rule a pattern over the end of the text
+before the caret, what it becomes, and its tests, in the same file
+(`cargo test` runs them); `emoji`, the picker's layout and its search
+catalogue; and `offensive`, the lists only a keyboard keeping words off
+its strip needs. `packs.toml` says which file is in which pack, and
+`make-packs` refuses a file in none.
 
 A release is `vX.Y.Z`, the version in `Cargo.toml`, one number for the
 format crate and its data: **patch** when the format and the crate's API
@@ -124,6 +139,19 @@ which changes daily. A release builds byte for byte from its commit.
 `make cjk-assets-seed` builds the CJK tables from `seeds/` instead:
 offline, and **destructive**, since it replaces the full dictionaries.
 It asks for `CONFIRM=yes`.
+
+The layouts and the emoji data are rebuilt rarely, by their scripts:
+
+```sh
+python3 scripts/build-layout.py layouts kk,ky   # national layouts, from this host's
+                                                # xkeyboard-config (libxkbcommon)
+python3 scripts/build-emoji.py emoji-test.txt en.xml enDerived.xml emoji/catalogue.json
+python3 scripts/gen-emoji-layout.py emoji-test.txt layouts/emoji.json
+```
+
+`cargo test` checks every layout with the parser ki-osk reads them with
+(`osk_data::layout`), and the Pinyin tables exhaustively: every syllable
+encoded and decoded back in every double-Pinyin scheme.
 
 ## Your own corpus
 

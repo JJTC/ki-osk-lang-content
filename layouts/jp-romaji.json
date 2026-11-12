@@ -1,0 +1,308 @@
+{
+  "id": "jp-romaji",
+  "name": "日本語 (ローマ字)",
+  "ime": "kana",
+  "swipe_enabled": false,
+  "prediction_enabled": false,
+  "views": [
+    {
+      "id": "base",
+      "rows": [
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "q",
+              "output": {
+                "kind": "text",
+                "text": "q"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "w",
+              "output": {
+                "kind": "text",
+                "text": "w"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "e",
+              "output": {
+                "kind": "text",
+                "text": "e"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "r",
+              "output": {
+                "kind": "text",
+                "text": "r"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "t",
+              "output": {
+                "kind": "text",
+                "text": "t"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "y",
+              "output": {
+                "kind": "text",
+                "text": "y"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "u",
+              "output": {
+                "kind": "text",
+                "text": "u"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "i",
+              "output": {
+                "kind": "text",
+                "text": "i"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "o",
+              "output": {
+                "kind": "text",
+                "text": "o"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "p",
+              "output": {
+                "kind": "text",
+                "text": "p"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "a",
+              "output": {
+                "kind": "text",
+                "text": "a"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "s",
+              "output": {
+                "kind": "text",
+                "text": "s"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "d",
+              "output": {
+                "kind": "text",
+                "text": "d"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "f",
+              "output": {
+                "kind": "text",
+                "text": "f"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "g",
+              "output": {
+                "kind": "text",
+                "text": "g"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "h",
+              "output": {
+                "kind": "text",
+                "text": "h"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "j",
+              "output": {
+                "kind": "text",
+                "text": "j"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "k",
+              "output": {
+                "kind": "text",
+                "text": "k"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "l",
+              "output": {
+                "kind": "text",
+                "text": "l"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "n",
+              "output": {
+                "kind": "text",
+                "text": "n"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "z",
+              "output": {
+                "kind": "text",
+                "text": "z"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "x",
+              "output": {
+                "kind": "text",
+                "text": "x"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "c",
+              "output": {
+                "kind": "text",
+                "text": "c"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "v",
+              "output": {
+                "kind": "text",
+                "text": "v"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "b",
+              "output": {
+                "kind": "text",
+                "text": "b"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "m",
+              "output": {
+                "kind": "text",
+                "text": "m"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "-",
+              "output": {
+                "kind": "text",
+                "text": "-"
+              }
+            },
+            {
+              "width_units": 1.5,
+              "label": "⌫",
+              "output": {
+                "kind": "none"
+              },
+              "action": "backspace"
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": ",",
+              "output": {
+                "kind": "text",
+                "text": ","
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "⌨",
+              "output": {
+                "kind": "none"
+              },
+              "action": "globe"
+            },
+            {
+              "width_units": 4,
+              "label": "空白",
+              "output": {
+                "kind": "keycode",
+                "code": 57
+              },
+              "action": "space"
+            },
+            {
+              "width_units": 1,
+              "label": "☺",
+              "output": {
+                "kind": "none"
+              },
+              "action": "emoji"
+            },
+            {
+              "width_units": 1,
+              "label": ".",
+              "output": {
+                "kind": "text",
+                "text": "."
+              }
+            },
+            {
+              "width_units": 1.5,
+              "label": "⏎",
+              "output": {
+                "kind": "keycode",
+                "code": 28
+              },
+              "action": "enter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

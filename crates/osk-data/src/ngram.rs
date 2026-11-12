@@ -159,7 +159,7 @@ impl NgramModel {
     }
 
     /// Deserialize from a byte buffer produced by [`Self::to_bytes`]. Typically
-    /// called on an `include_bytes!`'d asset at startup.
+    /// called on an installed `.ngram.bin`'s bytes at startup.
     ///
     /// # Errors
     /// Returns [`crate::codec::Error`] if the bytes are not a valid encoding

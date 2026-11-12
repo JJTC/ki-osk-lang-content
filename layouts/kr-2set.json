@@ -1,0 +1,300 @@
+{
+  "id": "kr-2set",
+  "name": "한국어 (두벌식)",
+  "ime": "hangul",
+  "swipe_enabled": false,
+  "prediction_enabled": false,
+  "views": [
+    {
+      "id": "base",
+      "rows": [
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "ㅂ",
+              "output": {
+                "kind": "text",
+                "text": "ㅂ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅈ",
+              "output": {
+                "kind": "text",
+                "text": "ㅈ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄷ",
+              "output": {
+                "kind": "text",
+                "text": "ㄷ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄱ",
+              "output": {
+                "kind": "text",
+                "text": "ㄱ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅅ",
+              "output": {
+                "kind": "text",
+                "text": "ㅅ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅛ",
+              "output": {
+                "kind": "text",
+                "text": "ㅛ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅕ",
+              "output": {
+                "kind": "text",
+                "text": "ㅕ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅑ",
+              "output": {
+                "kind": "text",
+                "text": "ㅑ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅐ",
+              "output": {
+                "kind": "text",
+                "text": "ㅐ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅔ",
+              "output": {
+                "kind": "text",
+                "text": "ㅔ"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "ㅁ",
+              "output": {
+                "kind": "text",
+                "text": "ㅁ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄴ",
+              "output": {
+                "kind": "text",
+                "text": "ㄴ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅇ",
+              "output": {
+                "kind": "text",
+                "text": "ㅇ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄹ",
+              "output": {
+                "kind": "text",
+                "text": "ㄹ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅎ",
+              "output": {
+                "kind": "text",
+                "text": "ㅎ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅗ",
+              "output": {
+                "kind": "text",
+                "text": "ㅗ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅓ",
+              "output": {
+                "kind": "text",
+                "text": "ㅓ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅏ",
+              "output": {
+                "kind": "text",
+                "text": "ㅏ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅣ",
+              "output": {
+                "kind": "text",
+                "text": "ㅣ"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "ㅋ",
+              "output": {
+                "kind": "text",
+                "text": "ㅋ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅌ",
+              "output": {
+                "kind": "text",
+                "text": "ㅌ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅊ",
+              "output": {
+                "kind": "text",
+                "text": "ㅊ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅍ",
+              "output": {
+                "kind": "text",
+                "text": "ㅍ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅠ",
+              "output": {
+                "kind": "text",
+                "text": "ㅠ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅜ",
+              "output": {
+                "kind": "text",
+                "text": "ㅜ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㅡ",
+              "output": {
+                "kind": "text",
+                "text": "ㅡ"
+              }
+            },
+            {
+              "width_units": 1.5,
+              "label": "⌫",
+              "output": {
+                "kind": "none"
+              },
+              "action": "backspace"
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": ",",
+              "output": {
+                "kind": "text",
+                "text": ","
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "⌨",
+              "output": {
+                "kind": "none"
+              },
+              "action": "globe"
+            },
+            {
+              "width_units": 4,
+              "label": "스페이스",
+              "output": {
+                "kind": "keycode",
+                "code": 57
+              },
+              "action": "space"
+            },
+            {
+              "width_units": 1,
+              "label": "☺",
+              "output": {
+                "kind": "none"
+              },
+              "action": "emoji"
+            },
+            {
+              "width_units": 1,
+              "label": ".",
+              "output": {
+                "kind": "text",
+                "text": "."
+              }
+            },
+            {
+              "width_units": 1.5,
+              "label": "⏎",
+              "output": {
+                "kind": "keycode",
+                "code": 28
+              },
+              "action": "enter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

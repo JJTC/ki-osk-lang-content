@@ -139,8 +139,7 @@ fn main() -> anyhow::Result<()> {
     // Atomic write: build into a sibling .tmp file then rename. A
     // Ctrl-C / OOM mid-build leaves a half-finished `.fst.tmp` (which
     // the runtime loader ignores) instead of a corrupt `<lang>.fst`
-    // that ships through `make predict-assets` and into the binary
-    // via include_bytes!.
+    // that ships through `make predict-assets` and into a release.
     let tmp_fst = out_fst.with_extension("fst.tmp");
     let buffered = std::io::BufWriter::new(
         fs::File::create(&tmp_fst).with_context(|| format!("creating {}", tmp_fst.display()))?,

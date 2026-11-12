@@ -81,6 +81,21 @@ pub mod kind {
     pub const KANJI: &str = "kanji";
     /// A [`crate::kana::ConnectionBlob`].
     pub const CONNECTION: &str = "connection";
+    /// A keyboard layout, a [`crate::layout::LayoutDef`]
+    /// (`layouts/<id>.json`).
+    pub const LAYOUT: &str = "layout";
+    /// The emoji search catalogue ([`crate::emoji`],
+    /// `emoji/catalogue.json`).
+    pub const EMOJI: &str = "emoji";
+    /// An offensive-word list ([`crate::offensive`],
+    /// `offensive/<lang>.txt`).
+    pub const OFFENSIVE: &str = "offensive";
+    /// The Pinyin syllable inventory, [`crate::pinyin::Syllables`]
+    /// (`pinyin/syllables.txt`).
+    pub const SYLLABLES: &str = "syllables";
+    /// The double-Pinyin schemes, [`crate::pinyin::double::Schemes`]
+    /// (`pinyin/double-pinyin.json`).
+    pub const DOUBLE_PINYIN: &str = "double-pinyin";
 }
 
 /// How a release asset carries its file.

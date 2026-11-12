@@ -1,0 +1,425 @@
+{
+  "id": "tw-zhuyin",
+  "name": "中文 (注音)",
+  "ime": "zhuyin",
+  "swipe_enabled": false,
+  "prediction_enabled": false,
+  "views": [
+    {
+      "id": "base",
+      "rows": [
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "ㄅ",
+              "output": {
+                "kind": "text",
+                "text": "ㄅ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄆ",
+              "output": {
+                "kind": "text",
+                "text": "ㄆ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄇ",
+              "output": {
+                "kind": "text",
+                "text": "ㄇ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄈ",
+              "output": {
+                "kind": "text",
+                "text": "ㄈ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄉ",
+              "output": {
+                "kind": "text",
+                "text": "ㄉ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄊ",
+              "output": {
+                "kind": "text",
+                "text": "ㄊ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄋ",
+              "output": {
+                "kind": "text",
+                "text": "ㄋ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄌ",
+              "output": {
+                "kind": "text",
+                "text": "ㄌ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄍ",
+              "output": {
+                "kind": "text",
+                "text": "ㄍ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄎ",
+              "output": {
+                "kind": "text",
+                "text": "ㄎ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄏ",
+              "output": {
+                "kind": "text",
+                "text": "ㄏ"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "ㄐ",
+              "output": {
+                "kind": "text",
+                "text": "ㄐ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄑ",
+              "output": {
+                "kind": "text",
+                "text": "ㄑ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄒ",
+              "output": {
+                "kind": "text",
+                "text": "ㄒ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄓ",
+              "output": {
+                "kind": "text",
+                "text": "ㄓ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄔ",
+              "output": {
+                "kind": "text",
+                "text": "ㄔ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄕ",
+              "output": {
+                "kind": "text",
+                "text": "ㄕ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄖ",
+              "output": {
+                "kind": "text",
+                "text": "ㄖ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄗ",
+              "output": {
+                "kind": "text",
+                "text": "ㄗ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄘ",
+              "output": {
+                "kind": "text",
+                "text": "ㄘ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄙ",
+              "output": {
+                "kind": "text",
+                "text": "ㄙ"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "ㄧ",
+              "output": {
+                "kind": "text",
+                "text": "ㄧ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄨ",
+              "output": {
+                "kind": "text",
+                "text": "ㄨ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄩ",
+              "output": {
+                "kind": "text",
+                "text": "ㄩ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄚ",
+              "output": {
+                "kind": "text",
+                "text": "ㄚ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄛ",
+              "output": {
+                "kind": "text",
+                "text": "ㄛ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄜ",
+              "output": {
+                "kind": "text",
+                "text": "ㄜ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄝ",
+              "output": {
+                "kind": "text",
+                "text": "ㄝ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄞ",
+              "output": {
+                "kind": "text",
+                "text": "ㄞ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄟ",
+              "output": {
+                "kind": "text",
+                "text": "ㄟ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄠ",
+              "output": {
+                "kind": "text",
+                "text": "ㄠ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄡ",
+              "output": {
+                "kind": "text",
+                "text": "ㄡ"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "ㄢ",
+              "output": {
+                "kind": "text",
+                "text": "ㄢ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄣ",
+              "output": {
+                "kind": "text",
+                "text": "ㄣ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄤ",
+              "output": {
+                "kind": "text",
+                "text": "ㄤ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄥ",
+              "output": {
+                "kind": "text",
+                "text": "ㄥ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ㄦ",
+              "output": {
+                "kind": "text",
+                "text": "ㄦ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ˊ",
+              "output": {
+                "kind": "text",
+                "text": "ˊ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ˇ",
+              "output": {
+                "kind": "text",
+                "text": "ˇ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ˋ",
+              "output": {
+                "kind": "text",
+                "text": "ˋ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "˙",
+              "output": {
+                "kind": "text",
+                "text": "˙"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "⌫",
+              "output": {
+                "kind": "none"
+              },
+              "action": "backspace"
+            }
+          ]
+        },
+        {
+          "height_units": 1,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": ",",
+              "output": {
+                "kind": "text",
+                "text": ","
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "⌨",
+              "output": {
+                "kind": "none"
+              },
+              "action": "globe"
+            },
+            {
+              "width_units": 4,
+              "label": "空格",
+              "output": {
+                "kind": "keycode",
+                "code": 57
+              },
+              "action": "space"
+            },
+            {
+              "width_units": 1,
+              "label": "☺",
+              "output": {
+                "kind": "none"
+              },
+              "action": "emoji"
+            },
+            {
+              "width_units": 1,
+              "label": ".",
+              "output": {
+                "kind": "text",
+                "text": "."
+              }
+            },
+            {
+              "width_units": 1.5,
+              "label": "⏎",
+              "output": {
+                "kind": "keycode",
+                "code": 28
+              },
+              "action": "enter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
