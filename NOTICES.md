@@ -10,7 +10,8 @@ files carries their terms.
 
 The code here — the Makefile, the Cargo workspace and `crates/`, the
 scripts, the workflows and `packs.toml` — is MIT licensed (`LICENSE`), as
-are the text rules in `rules/`, which were written here.
+are the text rules in `rules/` and the transliteration tables in
+`translit/`, which were written here.
 The data keeps its original licence, below. That includes the seeds in
 `seeds/`, which are excerpts of the datasets they are listed under. Add an entry here whenever a
 new dataset is pulled in.
@@ -116,9 +117,37 @@ with its word list (see [Word lists](#word-lists)).
 | tt | tat | mr | mar | as | asm | ms | zsm |
 | os | oss | th | tha | — | — | — | — |
 
-Two size tiers are in use, both recorded in the Makefile: 36 languages
-(`PREDICT_COMPACT_LANGS`) keep 18 000 words and 30 000 n-grams, the
-other 19 keep 20 000 and 60 000.
+Size tiers are recorded in the Makefile: 34 languages
+(`PREDICT_COMPACT_LANGS`) keep 18 000 words and 30 000 n-grams, those
+whose lexicons Wikipedia text widens (below) 30 000 and 60 000, or 40 000
+and 90 000 (`PREDICT_LARGE_LANGS`: Marathi and the Dravidian languages),
+the others 20 000 and 60 000.
+
+### Wikipedia text (the Dakshina dataset)
+
+Twelve South Asian languages' models are built from Wikipedia text too,
+as the **Dakshina dataset** v1.0 (Google Research,
+<https://github.com/google-research-datasets/dakshina>) gives it: the
+first 300 000 lines (all, where fewer) of its filtered Wikipedia text
+(`<lang>.wiki-filt.train.text.shuf.txt.gz`). It is the whole corpus of
+Gujarati, Kannada, Malayalam, Punjabi, Sindhi, Sinhala, Tamil, Telugu and
+Urdu, of which Tatoeba has too few sentences, and is added to Tatoeba's
+for Hindi, Bengali and Marathi, Tatoeba's counted ten times. For those
+nine, the first 500 lines of its held-out text
+(`<lang>.wiki-filt.valid.text.shuf.txt.gz`) are `eval/<lang>.txt`.
+`scripts/fetch-dakshina.sh` reads the archive, pinned by its sha256;
+`sources.lock` records the sha256 of each language's text as
+`dakshina/<lang>.txt`. Its romanization lexicons and romanized sentences
+measure the transliteration tables (`make eval-translit`); none of them
+is shipped.
+
+**The Dakshina dataset is CC BY-SA 4.0**, share-alike: the packs of
+those twelve languages, their models and the held-out text in `eval/`
+carry those terms, with attribution, besides Tatoeba's where they use
+it. Its authors ask that it be cited: Brian Roark, Lawrence
+Wolf-Sonkin, Christo Kirov, Sabrina J. Mielke, Cibu Johny, Işın
+Demirşahin and Keith Hall, "Processing South Asian Languages Written in
+the Latin Script: the Dakshina Dataset", LREC 2020.
 
 **The corpora are not committed.** `scripts/fetch-corpora.sh` (which
 holds the id→code map above) downloads them on demand; `sources.lock`
@@ -144,6 +173,17 @@ Adding share-alike sources (Wikipedia in particular) downgrades the
 redistributable license of the resulting binaries to the strongest
 copyleft in the mix. A hand-enlarged corpus is also overwritten by the
 next `make fetch-corpora`.
+
+## Transliteration tables
+
+`translit/<lang>.txt` say how the Latin letters typed for a language
+become its script (`osk_data::translit`): Bengali, Greek, Gujarati,
+Hindi, Armenian, Kannada, Malayalam, Marathi, Punjabi, Persian, Tamil,
+Telugu and Urdu. They were written here, MIT licensed, each joining its
+language's pack; what they choose among, the language's lexicon chooses.
+Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
+(`scripts/build-translit-layouts.py`), under the keyboard layouts'
+notices below.
 
 ## Word lists
 

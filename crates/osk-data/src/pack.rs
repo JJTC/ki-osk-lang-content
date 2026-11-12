@@ -99,6 +99,9 @@ pub mod kind {
     /// The word list of a language written without spaces between words,
     /// [`crate::wordbreak::WordList`] (`wordbreak/<lang>.txt`).
     pub const WORDBREAK: &str = "wordbreak";
+    /// A transliteration table, [`crate::translit::Scheme`]
+    /// (`translit/<lang>.txt`).
+    pub const TRANSLIT: &str = "translit";
 }
 
 /// How a release asset carries its file.

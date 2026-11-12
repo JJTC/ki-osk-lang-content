@@ -1,0 +1,91 @@
+# Malayalam (Malayalam script) from Latin letters, as Malayalam is typed
+# in Latin. Malayalam writes every vowel it speaks, so two consonants
+# typed together are joined by the chandrakkala; a word's last n, l, r
+# and ḷ are chillus (avan: അവൻ), its last m the nasal sign, any other last
+# consonant takes the chandrakkala, and a last u is often only that
+# (aanu: ആണ്). nt is ന്റ (ente: എന്റെ).
+
+script abugida
+virama ്
+cluster 0
+schwa 3
+final 2
+final-virama 0.8
+
+[consonants]
+k    ക
+kk   ക്ക
+kh   ഖ
+q    ക
+g    ഗ
+gh   ഘ
+ng   ങ്ങ  ങ:1  ംഗ:1.5
+ch   ച  ച്ച:0.7  ഛ:2
+chh  ച്ഛ  ഛ:1
+c    ച  ക:1.5
+j    ജ  ഝ:2.5
+jh   ഝ
+nj   ഞ  ഞ്ഞ:0.5  ഞ്ച:0.8
+z    സ:1  ശ:1.5
+zh   ഴ
+t    ട  ത:0.5  റ്റ:1.2
+tt   ട്ട  റ്റ:0.5  ത്ത:0.7
+th   ത  ത്ത:0.5  ഥ:1.5
+d    ട  ദ:0.5  ഡ:1
+dd   ദ്ദ  ഡ്ഡ:0.5  ട്ട:1
+dh   ദ്ദ:0.3  ധ:0.5  ഥ:0.8  ദ:1  ഢ:2
+n    ന  ണ:1
+nn   ന്ന  ണ്ണ:0.5
+nt   ന്റ  ന്ത:0.5  ണ്ട:0.8
+nd   ണ്ട  ന്ദ:1
+nk   ങ്ക:0.3  ന്ക:1
+p    പ
+ph   ഫ
+f    ഫ
+b    ബ
+bh   ഭ
+m    മ
+y    യ
+r    ര  റ:0.8
+rr   റ്റ  ർര:2
+l    ല  ള:0.8
+v    വ
+w    വ
+sh   ശ  ഷ:0.8
+s    സ  ശ:1
+h    ഹ
+x    ക്സ  ക്ഷ:1
+ksh  ക്ഷ
+
+[vowels]
+a     അ/-  ആ/ാ:1.2
+^a    അ/-  ആ/ാ:1
+^ye   എ/െ:0.3  ഏ/േ:0.8
+^yee  ഏ/േ:0.5  ഈ/ീ:1
+a$    അ/-  ആ/ാ:0.6
+aa    ആ/ാ
+i     ഇ/ി  ഈ/ീ:1.2
+ee    ഈ/ീ  ഏ/േ:0.7
+ii    ഈ/ീ
+u     ഉ/ു  ഊ/ൂ:1.2
+u$    ഉ/്  ഉ/ു
+oo    ഊ/ൂ  ഓ/ോ:0.6
+uu    ഊ/ൂ
+e     എ/െ  ഏ/േ:0.6
+^e    എ/െ  ഇ/ി:0.8  ഏ/േ:0.8
+ae    ഏ/േ
+ai    ഐ/ൈ  അയ്/യ്:1
+ei    ഐ/ൈ:0.5  ഏ/േ:1
+o     ഒ/ൊ  ഓ/ോ:0.6
+au    ഔ/ൗ
+ou    ഔ/ൗ
+
+[other]
+n$    ൻ  ൺ:1.2
+l$    ൽ  ൾ:1
+r$    ർ
+m$    ം
+r>c   ർ:0.3
+l>c   ൽ:0.5  ൾ:1.5
+n>c   ൻ:1  ം:1.5
+m>c   ം:1

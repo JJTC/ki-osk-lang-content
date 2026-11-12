@@ -16,11 +16,19 @@
 //! A language's keyboard layouts (`layouts/<id>.json`) join its pack, as
 //! `packs.toml`'s `[layouts.packs]` says; a language with layouts and no
 //! model gets a pack of its layouts alone, named in `[layouts.names]`.
+//! A language's transliteration table (`translit/<lang>.txt`) joins the
+//! pack of the same id, with `[translit]`'s licence and source.
+//!
+//! A prediction pack names the corpora its model was built from as
+//! `sources.lock` records them: Tatoeba's (`corpora/<lang>.txt`), the
+//! Dakshina dataset's Wikipedia text (`dakshina/<lang>.txt`), or both,
+//! with their licences.
 //!
 //! It refuses rather than guesses:
 //! - a committed data file that no pack claims, or that two packs claim;
 //! - a prediction language with files but no name in `packs.toml`, or a
-//!   name with no files;
+//!   name with no files, or a model `sources.lock` records no corpus of;
+//! - a transliteration table no pack of its language takes;
 //! - layouts given to a pack that does not exist and has no name, or a
 //!   name for a pack that has no layouts or exists already;
 //! - a component that is missing or whose path climbs out of the tree;
@@ -85,8 +93,16 @@ const INDEX: &str = "packs.json";
 struct Packs {
     prediction: Prediction,
     layouts: Layouts,
+    translit: Added,
     #[serde(default)]
     pack: Vec<PackDef>,
+}
+
+/// A licence and a source that a kind of file adds to the pack it joins.
+#[derive(Deserialize)]
+struct Added {
+    license: License,
+    source: SourceDef,
 }
 
 /// The keyboard layouts: the licence and source every pack with one takes,
@@ -115,6 +131,9 @@ struct Prediction {
     /// and sources it adds.
     #[serde(default)]
     wordbreak: BTreeMap<String, AddedDef>,
+    /// The Dakshina dataset's Wikipedia text: the licence and source of
+    /// the models built from it.
+    dakshina: Added,
 }
 
 /// What a file beside a language's model adds to its pack.
@@ -150,9 +169,10 @@ struct SourceDef {
 }
 
 /// The directories whose files must all belong to a pack.
-const DATA_DIRS: [&str; 10] = [
+const DATA_DIRS: [&str; 11] = [
     "predict",
     "wordbreak",
+    "translit",
     "pinyin",
     "zhuyin",
     "jyutping",
@@ -240,12 +260,31 @@ fn main() -> anyhow::Result<()> {
                 &format!("predict/{lang}.forms.fst"),
             )?,
         ];
-        let mut licenses = vec![p.license.clone()];
-        let mut sources = vec![Source {
-            name: p.source.name.clone(),
-            url: p.source.url.clone(),
-            sha256: recorded(&format!("predict/{lang}"), &format!("corpora/{lang}.txt")),
-        }];
+        // The corpora the model was built from, as the lock records them.
+        let entry = format!("predict/{lang}");
+        let mut licenses = Vec::new();
+        let mut sources = Vec::new();
+        for (input, license, source) in [
+            (format!("corpora/{lang}.txt"), &p.license, &p.source),
+            (
+                format!("dakshina/{lang}.txt"),
+                &p.dakshina.license,
+                &p.dakshina.source,
+            ),
+        ] {
+            if let Some(sha256) = recorded(&entry, &input) {
+                licenses.push(license.clone());
+                sources.push(Source {
+                    name: source.name.clone(),
+                    url: source.url.clone(),
+                    sha256: Some(sha256),
+                });
+            }
+        }
+        ensure!(
+            !sources.is_empty(),
+            "sources.lock records no corpus of {entry} (corpora/{lang}.txt or dakshina/{lang}.txt)"
+        );
         // Dialect flags and word lists carry their own sources' licences
         // into the pack.
         for (def, kind, path) in [
@@ -307,6 +346,7 @@ fn main() -> anyhow::Result<()> {
     }
 
     add_layouts(&args.root, &defs.layouts, &mut manifests)?;
+    add_translit(&args.root, &defs.translit, &mut manifests)?;
     check_coverage(&args.root, &manifests)?;
 
     prepare_out(&args.out)?;
@@ -633,6 +673,41 @@ fn add_layouts(root: &Path, l: &Layouts, manifests: &mut Vec<Manifest>) -> anyho
                 sources: vec![source],
             });
         }
+    }
+    Ok(())
+}
+
+/// Each transliteration table joins the pack of its language, which carries
+/// the tables' licence and source besides its own.
+fn add_translit(root: &Path, t: &Added, manifests: &mut [Manifest]) -> anyhow::Result<()> {
+    let mut tables: Vec<String> = fs::read_dir(root.join("translit"))
+        .context("reading translit/")?
+        .flatten()
+        .filter(|e| e.path().is_file())
+        .map(|e| e.file_name().to_string_lossy().into_owned())
+        .collect();
+    tables.sort();
+    for name in tables {
+        let lang = name
+            .strip_suffix(".txt")
+            .with_context(|| format!("translit/{name} is no .txt table"))?;
+        let m = manifests
+            .iter_mut()
+            .find(|m| m.id == lang)
+            .with_context(|| format!("translit/{name}: no pack `{lang}` to take it"))?;
+        m.components.push(component(
+            root,
+            kind::TRANSLIT,
+            &format!("translit/{name}"),
+        )?);
+        if !m.licenses.contains(&t.license) {
+            m.licenses.push(t.license.clone());
+        }
+        m.sources.push(Source {
+            name: t.source.name.clone(),
+            url: t.source.url.clone(),
+            sha256: None,
+        });
     }
     Ok(())
 }

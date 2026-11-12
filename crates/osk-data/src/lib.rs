@@ -14,6 +14,9 @@
 //! - [`wordbreak`] — the word lists (`wordbreak/<lang>.txt`) that cut the
 //!   text of a language written without spaces between words (Thai) into
 //!   its words.
+//! - [`translit`] — the transliteration tables (`translit/<lang>.txt`):
+//!   how the Latin letters typed for a language become its own script,
+//!   the readings a lexicon then chooses among.
 //! - [`dialects`] — dialect flags (`predict/<lang>.dialects.bin`): which
 //!   varieties of a language use a word, and its spellings across them.
 //! - [`rules`] — the text rules (`rules/*.weir`): what typing a key does
@@ -58,5 +61,6 @@ pub mod offensive;
 pub mod pack;
 pub mod pinyin;
 pub mod rules;
+pub mod translit;
 pub mod wordbreak;
 pub mod words;

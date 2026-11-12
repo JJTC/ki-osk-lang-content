@@ -38,6 +38,7 @@ fi  = "Finnish"
 fil = "Filipino"
 fr  = "French"
 gl  = "Galician"
+gu  = "Gujarati"
 he  = "Hebrew"
 hi  = "Hindi"
 hr  = "Croatian"
@@ -48,28 +49,36 @@ is  = "Icelandic"
 it  = "Italian"
 ka  = "Georgian"
 kab = "Kabyle"
+kn  = "Kannada"
 ku  = "Kurdish (Kurmanji)"
 lt  = "Lithuanian"
 lv  = "Latvian"
 mk  = "Macedonian"
+ml  = "Malayalam"
 mr  = "Marathi"
 ms  = "Malay"
 nl  = "Dutch"
 no  = "Norwegian (Bokmål)"
 oc  = "Occitan"
 os  = "Ossetian"
+pa  = "Punjabi"
 pl  = "Polish"
 pt  = "Portuguese"
 ro  = "Romanian"
 ru  = "Russian"
+sd  = "Sindhi"
+si  = "Sinhala"
 sk  = "Slovak"
 sr  = "Serbian"
 sv  = "Swedish"
+ta  = "Tamil"
+te  = "Telugu"
 th  = "Thai"
 tr  = "Turkish"
 tt  = "Tatar"
 ug  = "Uyghur"
 uk  = "Ukrainian"
+ur  = "Urdu"
 vi  = "Vietnamese"
 
 # The dialect flags (predict/<lang>.dialects.bin: which varieties of a
@@ -116,6 +125,24 @@ sources = [
   { name = "ICU's Thai word-break dictionary (thaidict.txt, ICU 79.1)", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/thaidict.txt", lock = "predict/th", input = "wordbreak/th.txt" },
 ]
 
+# Wikipedia text of twelve South Asian languages, as the Dakshina dataset
+# gives it (scripts/fetch-dakshina.sh): the whole corpus of Gujarati,
+# Kannada, Malayalam, Punjabi, Sindhi, Sinhala, Tamil, Telugu and Urdu,
+# and half of Hindi's, Bengali's and Marathi's beside Tatoeba's. A pack
+# names the corpora sources.lock records its model was built from, with
+# their licences: Tatoeba's ([prediction]), this, or both.
+[prediction.dakshina]
+license = { name = "CC BY-SA 4.0 (the Dakshina dataset)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
+source  = { name = "The Dakshina dataset v1.0 (Google Research): Wikipedia text", url = "https://github.com/google-research-datasets/dakshina" }
+
+# Transliteration tables (translit/<lang>.txt, osk_data::translit): how the
+# Latin letters typed for a language become its script, written for this
+# repository. Each joins the pack of its language, beside the layout that
+# types through it (layouts/<lang>-abc.json, [layouts.packs]).
+[translit]
+license = { name = "MIT (the transliteration tables)", url = "https://opensource.org/license/mit", share_alike = false }
+source  = { name = "ki-osk-lang-content's transliteration tables", url = "https://github.com/jjtc/ki-osk-lang-content/tree/main/translit" }
+
 # Keyboard layouts (layouts/<id>.json): the keys of each, and what each
 # types. The national ones are read from xkeyboard-config's keymaps
 # through libxkbcommon (scripts/build-layout.py, build-national-grid.py,
@@ -143,7 +170,7 @@ be      = ["be"]
 ber     = ["ber"]
 bg      = ["bg"]
 bm      = ["bm"]
-bn      = ["bn"]
+bn      = ["bn", "bn-abc"]
 bo      = ["bo"]
 br      = ["br"]
 bs      = ["bs"]
@@ -158,13 +185,13 @@ de      = ["de"]
 dv      = ["dv"]
 dz      = ["dz"]
 ee      = ["ee"]
-el      = ["el"]
+el      = ["el", "el-abc"]
 en      = ["gb", "us-intl", "us"]
 eo      = ["eo"]
 es      = ["es"]
 et      = ["et"]
 eu      = ["eu"]
-fa      = ["fa"]
+fa      = ["fa", "fa-abc"]
 ff      = ["ff"]
 fi      = ["fi"]
 fil     = ["fil"]
@@ -176,15 +203,15 @@ ga      = ["ga"]
 gd      = ["gd"]
 gl      = ["gl"]
 gn      = ["gn"]
-gu      = ["gu"]
+gu      = ["gu", "gu-abc"]
 ha      = ["ha"]
 haw     = ["haw"]
 he      = ["he"]
-hi      = ["hi"]
+hi      = ["hi", "hi-abc"]
 hr      = ["hr"]
 ht      = ["ht"]
 hu      = ["hu"]
-hy      = ["hy"]
+hy      = ["hy", "hy-abc"]
 id      = ["id"]
 ig      = ["ig"]
 is      = ["is"]
@@ -197,7 +224,7 @@ kab     = ["kab"]
 kk      = ["kk"]
 kl      = ["kl"]
 km      = ["km"]
-kn      = ["kn"]
+kn      = ["kn", "kn-abc"]
 ko      = ["kr-2set"]
 ku      = ["ku"]
 ky      = ["ky"]
@@ -210,10 +237,10 @@ lv      = ["lv"]
 mg      = ["mg"]
 mi      = ["mi"]
 mk      = ["mk"]
-ml      = ["ml"]
+ml      = ["ml", "ml-abc"]
 mn      = ["mn"]
 mni     = ["mni"]
-mr      = ["mr"]
+mr      = ["mr", "mr-abc"]
 ms      = ["ms"]
 mt      = ["mt"]
 my      = ["my"]
@@ -228,7 +255,7 @@ oc      = ["oc"]
 om      = ["om"]
 or      = ["or"]
 os      = ["os"]
-pa      = ["pa"]
+pa      = ["pa", "pa-abc"]
 pl      = ["pl"]
 ps      = ["ps"]
 pt      = ["pt-br", "pt"]
@@ -254,8 +281,8 @@ su      = ["su"]
 sv      = ["se"]
 sw      = ["sw"]
 syr     = ["syr"]
-ta      = ["ta"]
-te      = ["te"]
+ta      = ["ta", "ta-abc"]
+te      = ["te", "te-abc"]
 tg      = ["tg"]
 th      = ["th"]
 ti      = ["ti"]
@@ -269,7 +296,7 @@ ty      = ["ty"]
 udm     = ["udm"]
 ug      = ["ug"]
 uk      = ["uk"]
-ur      = ["ur"]
+ur      = ["ur", "ur-abc"]
 uz      = ["uz"]
 ve      = ["ve"]
 vi      = ["vi"]
@@ -306,7 +333,6 @@ fy  = "West Frisian"
 ga  = "Irish"
 gd  = "Scottish Gaelic"
 gn  = "Guarani"
-gu  = "Gujarati"
 ha  = "Hausa"
 haw = "Hawaiian"
 ht  = "Haitian Creole"
@@ -316,7 +342,6 @@ jv  = "Javanese"
 kk  = "Kazakh"
 kl  = "Greenlandic"
 km  = "Khmer"
-kn  = "Kannada"
 ko  = "Korean, Hangul input"
 ky  = "Kyrgyz"
 lb  = "Luxembourgish"
@@ -325,7 +350,6 @@ ln  = "Lingala"
 lo  = "Lao"
 mg  = "Malagasy"
 mi  = "Māori"
-ml  = "Malayalam"
 mn  = "Mongolian"
 mni = "Meitei"
 mt  = "Maltese"
@@ -337,15 +361,12 @@ nso = "Northern Sotho"
 ny  = "Chichewa"
 om  = "Oromo"
 or  = "Odia"
-pa  = "Punjabi"
 ps  = "Pashto"
 qu  = "Quechua"
 rm  = "Romansh"
 rn  = "Kirundi"
 rw  = "Kinyarwanda"
 sat = "Santali"
-sd  = "Sindhi"
-si  = "Sinhala"
 sl  = "Slovenian"
 sm  = "Samoan"
 sn  = "Shona"
@@ -356,8 +377,6 @@ st  = "Southern Sotho"
 su  = "Sundanese"
 sw  = "Swahili"
 syr = "Syriac"
-ta  = "Tamil"
-te  = "Telugu"
 tg  = "Tajik"
 ti  = "Tigrinya"
 tk  = "Turkmen"
@@ -366,7 +385,6 @@ to  = "Tongan"
 ts  = "Tsonga"
 ty  = "Tahitian"
 udm = "Udmurt"
-ur  = "Urdu"
 uz  = "Uzbek"
 ve  = "Venda"
 wo  = "Wolof"

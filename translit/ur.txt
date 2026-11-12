@@ -1,0 +1,94 @@
+# Urdu (Perso-Arabic script) from Latin letters, as Urdu is typed in
+# Latin. The script leaves short vowels unwritten inside a word: a, i and
+# u there are mostly nothing, a word's first vowel rides an alif, its last
+# a is ا or ہ and its last e ے; several letters share a sound (s: س ص ث, z:
+# ز ذ ض ظ, t: ت ط), and h after a consonant is the ھ of its aspirate (bh:
+# بھ). The lexicon chooses among them.
+
+script abjad
+
+[consonants]
+b    ب
+bb   ب  بب:1
+bh   بھ
+p    پ
+ph   پھ  ف:1
+t    ت  ٹ:0.8  ط:1.5
+tt   ت:0.5  ٹ:0.5  تت:1
+th   تھ  ٹھ:1  ث:2
+s    س  ص:1.5  ث:2.5
+ss   س:0.3  سس:1
+j    ج
+jh   جھ
+ch   چ
+chh  چھ
+c    چ  ک:1.5
+h    ہ  ح:1  ھ:2
+kh   خ  کھ:0.3
+d    د  ڈ:0.8  ڑ:1
+dd   د:0.3  ڈ:0.5  دد:1
+dh   دھ  ڈھ:1
+z    ز  ذ:2  ض:2  ظ:2
+r    ر  ڑ:1.5
+rr   ر:0.5  ڑ:1  رر:1
+rh   ڑھ  رہ:0.5
+zh   ژ
+sh   ش
+gh   غ  گھ:0.3
+f    ف
+q    ق  ک:1
+k    ک  ق:1.5
+kk   ک:0.5  کک:1
+g    گ
+l    ل
+ll   ل:0.3  لل:1
+m    م
+mm   م:0.3  مم:1
+n    ن
+nn   ن:0.3  نن:1
+v    و
+w    و
+y    ی
+x    کس  خ:1
+
+[vowels]
+^a    ا  آ:1  ع:1.5
+a     -  ا:0.8  ع:2  ہ:3
+a$    ا  ہ:0.5  ی:2  -:2
+^aa   آ  ا:1  عا:2
+aa    ا  ع:2
+^i    ا  ای:1  ع:2
+i     -  ی:0.5
+i$    ی  ے:2  ہ:1.5  یں:1
+^ee   ای
+ee    ی
+^u    ا  او:0.7  ع:2
+u     -  و:0.5
+u$    و
+^oo   او
+oo    و
+^o    او  ا:1
+o     و  -:1.5
+o$    و  ہ:2
+^e    ا  ای:0.7  اے:1
+e     ی  ے:1  -:2
+e$    ے  ی:1  ہ:1
+^ai   اے  ای:1  ع:2
+ai    ی  ے:1  ا:2
+ai$   ے  ی:1
+^au   او
+au    و
+ou    و
+ei    ی  ے:1
+aye   ئے:0.3  ائے:1
+ayi   ئی:0.3
+ai$   ئی:1
+ui    وئی:0.3
+uye   وئے:0.3
+uwe   وئے:0.5
+oi    وئی:0.3
+oye   وئے:0.5
+ey$   ے  ی:1
+
+[other]
+n$    ں:0.3

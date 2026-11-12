@@ -13,6 +13,12 @@
 //! Usage:
 //!   build-predict --lang en --corpus en.txt --out predict/
 //!   build-predict --lang th --corpus th.txt --word-list wordbreak/th.txt --out predict/
+//!   build-predict --lang hi --corpus 10:hi.txt --corpus hi-wikipedia.txt --out predict/
+//!
+//! Several corpora are counted together, each `N:`-prefixed one N times
+//! over: a small corpus of everyday sentences (Tatoeba's) weighted against
+//! a large one of another kind (Wikipedia's), whose words the lexicon
+//! gains without their counts drowning the everyday ones.
 //!
 //! A language written without spaces between words (Thai) needs its word
 //! list, which cuts its text into words (`osk_data::wordbreak`) as the
@@ -49,8 +55,9 @@ struct Args {
     lang: String,
     /// Corpus path: plain UTF-8 text, a sentence or a paragraph per line.
     /// Words are found as the keyboard reads them (`osk_data::words`).
-    #[arg(long)]
-    corpus: PathBuf,
+    /// Repeat for several; `N:path` counts one N times.
+    #[arg(long, required = true)]
+    corpus: Vec<String>,
     /// Output directory. Files written as `<out>/<lang>.fst` and
     /// `<out>/<lang>.ngram.bin`.
     #[arg(long)]
@@ -78,10 +85,23 @@ fn main() -> anyhow::Result<()> {
     env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();
     let args = Args::parse();
 
-    let mut f = fs::File::open(&args.corpus)
-        .with_context(|| format!("opening {}", args.corpus.display()))?;
-    let mut text = String::new();
-    f.read_to_string(&mut text)?;
+    let mut corpora: Vec<(u64, String)> = Vec::new();
+    for spec in &args.corpus {
+        let (weight, path) = match spec.split_once(':') {
+            Some((n, path)) if !n.is_empty() && n.bytes().all(|b| b.is_ascii_digit()) => {
+                let n: u64 = n.parse().with_context(|| format!("weight of {spec}"))?;
+                if n == 0 {
+                    bail!("{spec}: a weight of 0 counts nothing");
+                }
+                (n, path)
+            }
+            _ => (1, spec.as_str()),
+        };
+        let mut f = fs::File::open(path).with_context(|| format!("opening {path}"))?;
+        let mut text = String::new();
+        f.read_to_string(&mut text)?;
+        corpora.push((weight, text));
+    }
 
     // --- unigram + n-gram counts ---
     //
@@ -126,10 +146,11 @@ fn main() -> anyhow::Result<()> {
     // How each word is written where nothing but its usage capitalises
     // it: after another word in its sentence.
     let mut cases: HashMap<(String, u64), u64> = HashMap::new();
-    for (line, word) in text
-        .lines()
-        .flat_map(|line| splitter.words(line).into_iter().map(move |w| (line, w)))
-    {
+    for (n, line, word) in corpora.iter().flat_map(|(n, text)| {
+        let splitter = &splitter;
+        text.lines()
+            .flat_map(move |line| splitter.words(line).into_iter().map(move |w| (*n, line, w)))
+    }) {
         match word.start {
             Start::Sentence => {
                 prev2 = None;
@@ -141,18 +162,18 @@ fn main() -> anyhow::Result<()> {
             }
             Start::Follows => {
                 if let Some(mask) = splitter.case_mask(&line[word.range.clone()]) {
-                    *cases.entry((word.text.clone(), mask)).or_default() += 1;
+                    *cases.entry((word.text.clone(), mask)).or_default() += n;
                 }
             }
         }
         let w = word.text;
-        *freq.entry(w.clone()).or_default() += 1;
+        *freq.entry(w.clone()).or_default() += n;
         if let Some(p1) = &prev1 {
-            *bigrams.entry((p1.clone(), w.clone())).or_default() += 1;
+            *bigrams.entry((p1.clone(), w.clone())).or_default() += n;
             if let Some(p2) = &prev2 {
                 *trigrams
                     .entry((p2.clone(), p1.clone(), w.clone()))
-                    .or_default() += 1;
+                    .or_default() += n;
             }
         }
         prev2 = prev1.take();

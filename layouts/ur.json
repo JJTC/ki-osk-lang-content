@@ -4,7 +4,8 @@
   "xkb_layout": "pk",
   "direction": "rtl",
   "swipe_enabled": false,
-  "prediction_enabled": false,
+  "prediction_enabled": true,
+  "prediction_lang": "ur",
   "views": [
     {
       "id": "base",

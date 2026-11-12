@@ -22,14 +22,30 @@ TOOLS = $(CARGO) run --release --quiet -p osk-data-tools --bin
 ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 
 # Every language with a committed prediction model. Each needs an entry
-# in scripts/fetch-corpora.sh's MAP too. The last nine were missing until
-# 2026-11-08, so `make predict-assets` silently skipped models that were
-# already committed.
+# in scripts/fetch-corpora.sh's MAP too, but for the last nine, which learn
+# from Wikipedia text alone (DAKSHINA_ONLY_LANGS, below). Nine (kab to
+# th) were missing until 2026-11-08, so `make predict-assets` silently
+# skipped models that were already committed.
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
-                 oc gl br eu tt mr as ms os th
+                 oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
+
+# Wikipedia text of twelve South Asian languages, from the Dakshina
+# dataset (scripts/fetch-dakshina.sh, the archive pinned by its sha256;
+# CC BY-SA 4.0). It is the whole corpus of the nine Tatoeba has too few
+# sentences of (DAKSHINA_ONLY_LANGS, the last nine of PREDICT_LANGS), and
+# joins Tatoeba's for Hindi, Bengali and Marathi, whose lexicons it widens:
+# their transliteration tables (translit/) then find far more of the
+# words typed. Tatoeba's sentences count TATOEBA_WEIGHT times, so that
+# everyday text still leads the strip: keystroke savings on Tatoeba's
+# held-out text moved by -0.5 (hi), -0.1 (bn) and -0.3 (mr) points, words
+# the lexicon lacks fell from 4.0% to 1.6% (hi).
+DAKSHINA_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
+DAKSHINA_ONLY_LANGS ?= gu kn ml pa sd si ta te ur
+DAKSHINA_DIR = $(SRC_DIR)/dakshina
+TATOEBA_WEIGHT ?= 10
 
 # Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
 # Only the .bins built from them are committed.
@@ -62,17 +78,26 @@ PREDICT_NGRAM ?= 60000
 # see scripts/lock.py), with the caps above none of the large ones are.
 # Recording the tier keeps a refresh from silently growing 36 n-gram
 # tables by up to 2x. Moving a language to the full tier is a size
-# decision: take it out of this list.
+# decision: take it out of this list. Hindi left it for the WIKI tier
+# (below) when Wikipedia text joined its corpus.
 PREDICT_COMPACT_LANGS ?= no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be \
-                         id fil az ku ug hi hy ka lt lv kab
+                         id fil az ku ug hy ka lt lv kab
 PREDICT_COMPACT_VOCAB ?= 18000
 PREDICT_COMPACT_NGRAM ?= 30000
 # The LARGE tier: languages whose words, kept whole (osk_data::words), are
 # too many for the full tier's caps. Marathi has 25 k word types in its
-# corpus once viramas no longer cut them.
-PREDICT_LARGE_LANGS ?= mr
-PREDICT_LARGE_VOCAB ?= 30000
+# corpus once viramas no longer cut them; it and the Dravidian languages,
+# whose words take their endings with them, learn their lexicons from
+# Wikipedia text (DAKSHINA_LANGS), where 40 000 words still leave a quarter
+# of Tamil's held-out words unknown.
+PREDICT_LARGE_LANGS ?= mr kn ml ta te
+PREDICT_LARGE_VOCAB ?= 40000
 PREDICT_LARGE_NGRAM ?= 90000
+# The WIKI tier: the other languages whose lexicons come from Wikipedia
+# text too (DAKSHINA_LANGS).
+PREDICT_WIKI_LANGS ?= hi bn gu pa sd si ur
+PREDICT_WIKI_VOCAB ?= 30000
+PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
 # tiers' n-gram caps (each kept to this many). Measured on en fr de es ru
 # ar hi tr: 5 000 gains 1.30 points of keystroke savings over none, for
@@ -90,6 +115,8 @@ help:
 	@echo "  refresh          fetch everything, rebuild only what changed, check"
 	@echo "                   (what the scheduled GitHub workflow runs)"
 	@echo "  fetch-corpora    download Tatoeba corpora into predict/corpora/"
+	@echo "  fetch-dakshina   Wikipedia text and romanizations of 12 South Asian"
+	@echo "                   languages (the Dakshina dataset) into SRC_DIR"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
@@ -100,6 +127,9 @@ help:
 	@echo "  cjk-assets       rebuild all five CJK dicts from the upstream datasets"
 	@echo "                   (pinyin-assets zhuyin-assets jyutping-assets kana-assets)"
 	@echo "  cjk-assets-seed  rebuild from seeds (offline; DOWNGRADES, needs CONFIRM=yes)"
+	@echo "  eval-translit    how often each transliteration table puts the word"
+	@echo "                   meant first (after fetch-dakshina)"
+	@echo "  translit-layouts write layouts/<lang>-abc.json for translit/<lang>.txt"
 	@echo "  check            compare the tree against HEAD: missing, shrunk or"
 	@echo "                   broken outputs fail (scripts/check-assets.py)"
 	@echo "  lock-verify      check every output still matches sources.lock"
@@ -116,13 +146,17 @@ help:
 # only what the lock says is out of date, then refuses a result that
 # lost a file or shrank one.
 .PHONY: refresh
-refresh: fetch-corpora
+refresh: fetch-corpora fetch-dakshina
 	$(MAKE) predict-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) check
 
 .PHONY: fetch-corpora
 fetch-corpora:
 	./scripts/fetch-corpora.sh
+
+.PHONY: fetch-dakshina
+fetch-dakshina:
+	OUT=$(DAKSHINA_DIR) ./scripts/fetch-dakshina.sh
 
 # The word lists of the languages written without spaces between words
 # (wordbreak/<lang>.txt, committed): ICU's word-break dictionaries, pinned
@@ -146,6 +180,23 @@ predict-assets:
 		case " $(PREDICT_LARGE_LANGS) " in \
 			*" $$lang "*) vocab=$(PREDICT_LARGE_VOCAB); ngram=$(PREDICT_LARGE_NGRAM) ;; \
 		esac; \
+		case " $(PREDICT_WIKI_LANGS) " in \
+			*" $$lang "*) vocab=$(PREDICT_WIKI_VOCAB); ngram=$(PREDICT_WIKI_NGRAM) ;; \
+		esac; \
+		corpus=; corpus_in=; weight=; \
+		case " $(DAKSHINA_ONLY_LANGS) " in \
+			*" $$lang "*) ;; \
+			*) case " $(DAKSHINA_LANGS) " in \
+				*" $$lang "*) corpus="--corpus $(TATOEBA_WEIGHT):$(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt"; \
+				              weight="--recipe tatoeba_weight=$(TATOEBA_WEIGHT)" ;; \
+				*) corpus="--corpus $(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt" ;; \
+			   esac; \
+			   corpus_in="--input corpora/$$lang.txt=$(PREDICT_CORPORA_DIR)/$$lang.txt" ;; \
+		esac; \
+		case " $(DAKSHINA_LANGS) " in \
+			*" $$lang "*) corpus="$$corpus --corpus $(DAKSHINA_DIR)/$$lang.txt"; \
+			              corpus_in="$$corpus_in --input dakshina/$$lang.txt=$(DAKSHINA_DIR)/$$lang.txt" ;; \
+		esac; \
 		words=; words_in=; \
 		if [ -f wordbreak/$$lang.txt ]; then \
 			words="--word-list $(CURDIR)/wordbreak/$$lang.txt"; \
@@ -153,7 +204,7 @@ predict-assets:
 		fi; \
 		test -n "$(WORDS_GENERATION)" || { echo "no GENERATION in crates/osk-data/src/words.rs"; exit 1; }; \
 		set -- predict/$$lang \
-			--input corpora/$$lang.txt=$(PREDICT_CORPORA_DIR)/$$lang.txt $$words_in \
+			$$corpus_in $$words_in $$weight \
 			--recipe vocab_size=$$vocab --recipe ngram_keep=$$ngram \
 			--recipe start_keep=$(PREDICT_START) \
 			--recipe words=$(WORDS_GENERATION) \
@@ -163,7 +214,7 @@ predict-assets:
 		echo "build-predict $$lang (vocab $$vocab, n-grams $$ngram)"; \
 		$(TOOLS) build-predict -- \
 			--lang $$lang \
-			--corpus $(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt \
+			$$corpus \
 			--out $(CURDIR)/$(PREDICT_OUT_DIR) \
 			--vocab-size $$vocab \
 			--ngram-keep $$ngram \
@@ -232,6 +283,9 @@ own-corpus:
 	esac; \
 	case " $(PREDICT_LARGE_LANGS) " in \
 		*" $$lang "*) vocab=$(PREDICT_LARGE_VOCAB); ngram=$(PREDICT_LARGE_NGRAM) ;; \
+	esac; \
+	case " $(PREDICT_WIKI_LANGS) " in \
+		*" $$lang "*) vocab=$(PREDICT_WIKI_VOCAB); ngram=$(PREDICT_WIKI_NGRAM) ;; \
 	esac; \
 	words=; \
 	if [ -f wordbreak/$$lang.txt ]; then \
@@ -349,8 +403,34 @@ cjk-assets-seed:
 CHECK_BASE         ?= HEAD
 CHECK_MAX_SHRINK   ?= 0.10
 CHECK_REPORT       ?=
+# How often each transliteration table (translit/<lang>.txt), with its
+# language's lexicon, puts the word meant first, as the composer's strip
+# offers them: on Dakshina's romanized Wikipedia sentences (every word
+# once) and on its romanization lexicon's test words (each romanization as
+# often as it was typed). After `make fetch-dakshina`.
+TRANSLIT_EVAL_LANGS ?= bn gu hi kn ml mr pa ta te ur
+.PHONY: eval-translit
+eval-translit:
+	@for lang in $(TRANSLIT_EVAL_LANGS); do \
+		d=$(DAKSHINA_DIR)/$$lang; \
+		test -d $$d || { echo "no $$d: run make fetch-dakshina"; exit 1; }; \
+		echo "$$lang, romanized sentences:"; \
+		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+			--pairs $$d/romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.tsv | tail -n 1 || exit 1; \
+		echo "$$lang, romanization lexicon (test):"; \
+		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+			--pairs $$d/lexicons/$$lang.translit.sampled.test.tsv | tail -n 1 || exit 1; \
+	done
+
+# The transliteration layouts (layouts/<lang>-abc.json), one for each
+# table in translit/: the US keys typing into the language's composer.
+.PHONY: translit-layouts
+translit-layouts:
+	$(PYTHON) scripts/build-translit-layouts.py
+
 .PHONY: check
 check:
+	$(PYTHON) scripts/build-translit-layouts.py --check
 	$(PYTHON) scripts/check-assets.py --base $(CHECK_BASE) \
 		--max-shrink $(CHECK_MAX_SHRINK) \
 		$(if $(CHECK_REPORT),--report $(CHECK_REPORT))

@@ -128,8 +128,13 @@ jobs:
           name: corpora
           path: predict/corpora
 
+      # Twelve South Asian languages learn from Wikipedia text too, the
+      # Dakshina dataset's: one 2 GB archive, pinned by its sha256, of
+      # which the script keeps only the text the models use.
+      - name: Dakshina's Wikipedia text
+        run: make fetch-dakshina SRC_DIR="$RUNNER_TEMP/sources"
       - name: Prediction models
-        run: make predict-assets
+        run: make predict-assets SRC_DIR="$RUNNER_TEMP/sources"
       - name: CJK dictionaries (fetches the upstream datasets)
         run: make cjk-assets SRC_DIR="$RUNNER_TEMP/sources"
 

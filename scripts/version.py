@@ -38,8 +38,8 @@ PARTS = ("patch", "minor", "major")
 # What a release contains: the data, the pack definitions, the notices and
 # the format crate's source. Changing any of it needs a new version.
 RELEASED = (
-    "predict", "wordbreak", "pinyin", "zhuyin", "jyutping", "kana", "rules",
-    "layouts", "emoji", "offensive",
+    "predict", "wordbreak", "translit", "pinyin", "zhuyin", "jyutping", "kana",
+    "rules", "layouts", "emoji", "offensive",
     "packs.toml", "NOTICES.md", "crates/osk-data",
 )
 

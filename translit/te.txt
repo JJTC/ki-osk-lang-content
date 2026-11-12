@@ -1,0 +1,79 @@
+# Telugu (Telugu script) from Latin letters, as Telugu is typed in Latin.
+# Telugu writes every vowel it speaks, so two consonants typed together
+# are joined by the virama; a word's last m (and n) is the nasal sign
+# (kalam: కలం), any other last consonant takes the virama.
+
+script abugida
+virama ్
+cluster 0
+schwa 3
+final 1.5
+final-virama 0.8
+
+[consonants]
+k    క
+kh   ఖ
+q    క
+g    గ
+gh   ఘ
+ch   చ  ఛ:1
+chh  ఛ
+c    చ  క:1.5
+j    జ  ఝ:2.5
+jh   ఝ
+z    జ
+t    త  ట:0.6
+tt   ట్ట:0.3  త్త:0.5  ట:1
+th   థ  ఠ:1  త:1  త్త:0.6
+d    ద  డ:0.6
+dd   డ్డ:0.3  ద్ద:0.5  డ:1
+dh   ధ  ఢ:1  ద:1
+n    న  ణ:1.5
+p    ప
+ph   ఫ
+f    ఫ
+b    బ
+bh   భ
+m    మ
+y    య
+r    ర  ఱ:2.5
+l    ల  ళ:1
+ll   ల్ల  ళ్ళ:0.3
+jn   జ్ఞ:0.3
+v    వ
+w    వ
+sh   శ  ష:0.8  స:2
+s    స  శ:0.7  ష:2
+h    హ
+x    క్స  క్ష:1
+ksh  క్ష
+
+[vowels]
+a     అ/-  ఆ/ా:1.2
+^a    అ/-  ఆ/ా:1
+^vu   ఉ/ు:0.3  ఊ/ూ:1
+^vo   ఒ/ొ:0.5  ఓ/ో:0.8
+^ye   ఏ/ే:0.3  ఎ/ె:0.5
+a$    అ/-  ఆ/ా:0.5
+aa    ఆ/ా
+i     ఇ/ి  ఈ/ీ:1.2
+ee    ఈ/ీ  ఏ/ే:0.7
+ii    ఈ/ీ
+u     ఉ/ు  ఊ/ూ:1.2
+oo    ఊ/ూ  ఓ/ో:0.7
+uu    ఊ/ూ
+e     ఎ/ె  ఏ/ే:0.6
+ae    ఏ/ే
+ai    ఐ/ై
+ei    ఐ/ై:0.5  ఏ/ే:1
+o     ఒ/ొ  ఓ/ో:0.6
+au    ఔ/ౌ
+ou    ఔ/ౌ
+ru    ఋ/ృ:1.5
+ri    ఋ/ృ:1.8
+
+[other]
+n>c   ం:0.5
+m>c   ం:1
+m$    ం:0.3
+n$    ం:1.5

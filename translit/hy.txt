@@ -1,0 +1,50 @@
+# Armenian from Latin letters, as Armenian is typed in Latin. Several
+# Armenian letters share a Latin one (t: տ թ, k: կ ք, p: պ փ, ch: չ ճ,
+# ts: ց ծ, r: ր ռ, e: ե է, o: ո օ), and u is ու. The lexicon chooses
+# among them. ev is եվ, as the keyboard reads the ligature և
+# (osk_data::words), and as Armenian's lexicon has it.
+
+script alphabet
+
+[consonants]
+b    բ  պ:1.5
+g    գ  կ:1.5
+d    դ  տ:1.5
+z    զ
+t    տ  թ:0.5  դ:1.5
+th   թ
+zh   ժ
+l    լ
+x    խ
+kh   խ  ք:1
+ts   ց  ծ:0.5
+c    ց  ծ:0.7
+k    կ  ք:0.5  գ:1.5
+q    ք
+h    հ
+dz   ձ
+gh   ղ
+ch   չ  ճ:0.5  ջ:1.5
+m    մ
+y    յ
+n    ն
+sh   շ
+p    պ  փ:0.5  բ:1.5
+ph   փ
+j    ջ  ճ:1.5
+r    ր  ռ:0.8
+rr   ռ
+s    ս
+v    վ  ւ:2
+w    ւ:1  վ:0.5
+f    ֆ
+
+[vowels]
+a    ա
+e    ե  է:0.5
+^e   ե:0.5  է
+y    ը
+i    ի
+o    ո  օ:0.5
+^o   ո:0.3  օ
+u    ու

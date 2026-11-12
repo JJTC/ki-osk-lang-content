@@ -253,3 +253,116 @@ fn thai_is_cut_as_written() {
         .collect();
     assert_eq!(words, ["ผม", "ต้อง", "ไป", "ธนาคาร", "ฉัน", "ไป", "โรงเรียน"]);
 }
+
+/// A language's lexicon, read as the keyboard reads it, for a table's
+/// readings.
+struct FstLexicon {
+    map: fst::Map<Vec<u8>>,
+    log_total: f32,
+    unknown: f32,
+}
+
+impl FstLexicon {
+    fn open(path: &Path) -> Self {
+        let map = fst::Map::new(std::fs::read(path).unwrap()).unwrap();
+        let mut stream = map.stream();
+        let (mut total, mut rarest) = (0u64, u64::MAX);
+        while let Some((_, v)) = fst::Streamer::next(&mut stream) {
+            total += v;
+            rarest = rarest.min(v.max(1));
+        }
+        #[allow(clippy::cast_precision_loss)]
+        let log_total = (total.max(1) as f32).ln();
+        #[allow(clippy::cast_precision_loss)]
+        let unknown = (rarest as f32).ln() - log_total - osk_data::translit::UNKNOWN_BELOW_RAREST;
+        Self {
+            map,
+            log_total,
+            unknown,
+        }
+    }
+}
+
+impl osk_data::translit::Lexicon for FstLexicon {
+    fn has_prefix(&self, prefix: &str) -> bool {
+        use fst::{IntoStreamer, Streamer, automaton::Str};
+        let aut = fst::Automaton::starts_with(Str::new(prefix));
+        self.map.search(aut).into_stream().next().is_some()
+    }
+    fn log_prob(&self, word: &str) -> Option<f32> {
+        #[allow(clippy::cast_precision_loss)]
+        self.map
+            .get(word)
+            .map(|c| (c.max(1) as f32).ln() - self.log_total)
+    }
+    fn unknown_log_prob(&self) -> f32 {
+        self.unknown
+    }
+}
+
+/// Each transliteration table parses, has the layout that types through it,
+/// and reads everyday words of its language first with its lexicon.
+#[test]
+fn every_translit_table_reads_its_language() {
+    use osk_data::layout::{ImeKind, LayoutDef};
+    use osk_data::translit::Scheme;
+
+    let words: &[(&str, &[(&str, &str)])] = &[
+        ("bn", &[("ami", "আমি"), ("tumi", "তুমি"), ("bhalo", "ভালো")]),
+        (
+            "el",
+            &[
+                ("kalimera", "καλημέρα"),
+                ("nai", "ναι"),
+                ("Ellada", "Ελλάδα"),
+            ],
+        ),
+        ("fa", &[("salam", "سلام"), ("man", "من"), ("iran", "ایران")]),
+        ("gu", &[("che", "છે"), ("gujarat", "ગુજરાત")]),
+        (
+            "hi",
+            &[
+                ("namaste", "नमस्ते"),
+                ("kya", "क्या"),
+                ("hai", "है"),
+                ("bharat", "भारत"),
+            ],
+        ),
+        ("hy", &[("barev", "բարեվ"), ("hayastan", "հայաստան")]),
+        ("kn", &[("kannada", "ಕನ್ನಡ"), ("naanu", "ನಾನು")]),
+        ("ml", &[("malayalam", "മലയാളം"), ("ente", "എന്റെ")]),
+        ("mr", &[("aahe", "आहे"), ("maharashtra", "महाराष्ट्र")]),
+        ("pa", &[("punjab", "ਪੰਜਾਬ"), ("vich", "ਵਿੱਚ")]),
+        ("ta", &[("tamil", "தமிழ்"), ("enna", "என்ன")]),
+        ("te", &[("telugu", "తెలుగు"), ("nenu", "నేను")]),
+        ("ur", &[("kya", "کیا"), ("pakistan", "پاکستان")]),
+    ];
+    let tables = files("translit", ".txt");
+    assert_eq!(
+        tables.len(),
+        words.len(),
+        "a table without words to read here"
+    );
+    for p in tables {
+        let lang = p.file_stem().unwrap().to_string_lossy().to_string();
+        let text = std::fs::read_to_string(&p).unwrap();
+        let scheme = Scheme::parse(&text).unwrap_or_else(|e| panic!("{}: {e}", name(&p)));
+        let layout: LayoutDef = serde_json::from_str(
+            &std::fs::read_to_string(root().join(format!("layouts/{lang}-abc.json"))).unwrap(),
+        )
+        .unwrap();
+        assert_eq!(layout.ime, Some(ImeKind::Translit), "{lang}-abc");
+        assert_eq!(layout.prediction_lang.as_deref(), Some(lang.as_str()));
+        let lexicon = FstLexicon::open(&root().join(format!("predict/{lang}.fst")));
+        let (_, expected) = words.iter().find(|(l, _)| *l == lang).expect("words");
+        for (latin, word) in *expected {
+            let got = scheme.candidates(latin, &lexicon, 3);
+            assert_eq!(
+                got.first().map(|c| c.text.as_str()),
+                Some(*word),
+                "{lang}: {latin} offers {:?}",
+                got.iter().map(|c| &c.text).collect::<Vec<_>>()
+            );
+        }
+    }
+}

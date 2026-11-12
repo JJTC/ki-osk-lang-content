@@ -124,6 +124,10 @@ pub enum ImeKind {
     Zhuyin,
     /// Cantonese Jyutping (Latin romanisation) → Traditional Hanzi.
     Jyutping,
+    /// Latin letters → the script of the layout's `prediction_lang`, by its
+    /// transliteration table ([`crate::translit`]) and its lexicon: Hindi,
+    /// Tamil, Urdu, Greek typed in Latin.
+    Translit,
 }
 
 /// Text direction for RTL layouts.

@@ -1,0 +1,62 @@
+# Persian (Perso-Arabic script) from Latin letters, as Persian is typed in
+# Latin ("Finglish"). The script leaves short vowels unwritten inside a
+# word: a, e and o there are mostly nothing, but a also stands for the
+# long ا; a word's first vowel rides an alef, its last e is ه, and several
+# letters share a sound (s: س ص ث, z: ز ذ ض ظ, t: ت ط, h: ه ح, gh: غ ق).
+# The lexicon chooses among them.
+
+script abjad
+
+[consonants]
+b    ب
+p    پ
+t    ت  ط:1
+s    س  ص:1  ث:1.5
+j    ج
+ch   چ
+h    ه  ح:0.7
+kh   خ  خو:1.5
+x    خ  کس:1
+d    د
+z    ز  ذ:1.5  ض:1.5  ظ:1.5
+r    ر
+zh   ژ
+sh   ش
+gh   غ  ق:0.3
+q    ق  غ:0.5
+f    ف
+k    ک
+g    گ
+l    ل
+m    م
+n    ن
+v    و
+w    و
+y    ی
+'    ع  ئ:1  ء:1.5
+
+[vowels]
+^a    ا  آ:0.5  ع:1.5
+a     -  ا:0.3  ع:2
+a$    ا  ه:0.5
+^aa   آ  ا:1
+aa    ا
+^e    ا  ع:1.5
+e     -  ی:1.5
+e$    ه  ی:1  -:2
+^i    ای  ا:1
+i     ی  -:1.5
+ii    ی
+ee    ی
+^o    ا  او:0.7
+o     -  و:0.3
+o$    و  ه:1.5
+^u    او  ا:1
+u     و
+^oo   او
+oo    و
+ei    ی
+ey    ی
+ay    ی  ای:0.5
+ou    و
+ow    و

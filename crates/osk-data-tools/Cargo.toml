@@ -39,6 +39,10 @@ name = "build-connection"
 path = "src/bin/build_connection.rs"
 
 [[bin]]
+name = "eval-translit"
+path = "src/bin/eval_translit.rs"
+
+[[bin]]
 name = "make-packs"
 path = "src/bin/make_packs.rs"
 
@@ -57,3 +61,4 @@ flate2     = { workspace = true }
 log        = { workspace = true }
 env_logger = { workspace = true }
 toml       = { workspace = true }
+unicode-normalization = { workspace = true }

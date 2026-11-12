@@ -1,0 +1,79 @@
+# Gujarati (Gujarati script) from Latin letters, as Gujarati is typed in
+# Latin: long vowels often written short, t and d for ટ and ડ as well,
+# che for છે, z for ઝ, l for ળ as well, and the vowel between two
+# consonants left out where it is not spoken.
+
+script abugida
+virama ્
+cluster 0
+schwa 1.2
+final 0
+final-virama 4
+
+[consonants]
+k    ક
+kh   ખ
+q    ક
+g    ગ
+gh   ઘ
+ch   ચ  છ:0.7
+chh  છ  ચ્છ:0.8
+c    ચ  ક:1.5
+j    જ  ઝ:2
+jh   ઝ
+z    ઝ  જ:0.7
+t    ત  ટ:0.6
+tt   ટ:0.5  ત્ત:0.3  ટ્ટ:1
+th   થ  ઠ:0.8  ત:1.5
+d    દ  ડ:0.6
+dd   ડ:0.5  દ્દ:0.3  ડ્ડ:1
+dh   ધ  ઢ:1  દ:2  દ્ધ:1.2
+n    ન  ણ:1.2
+p    પ
+ph   ફ
+f    ફ
+b    બ
+bh   ભ
+m    મ
+y    ય
+r    ર
+l    લ  ળ:0.8
+v    વ
+w    વ
+sh   શ  ષ:1  સ:2.5
+s    સ  શ:1.5  ષ:3
+h    હ
+x    ક્સ  ક્ષ:1
+ksh  ક્ષ
+gn   જ્ઞ:1.5
+gy   જ્ઞ:1.5
+
+[vowels]
+a     અ/-  આ/ા:1.2
+^a    અ/-  આ/ા:0.8
+a$    આ/ા  અ/-:1  આં/ાં:0.5
+aa    આ/ા
+^aa   આ/ા  અ/-:2
+i     ઇ/િ  ઈ/ી:1
+i$    ઈ/ી  ઇ/િ:0.8
+ee    ઈ/ી  ઇ/િ:2
+ii    ઈ/ી
+u     ઉ/ુ  ઊ/ૂ:1
+u$    ઉ/ુ  ઉં/ું:0.3  ઊ/ૂ:0.5
+oo    ઊ/ૂ  ઓ/ો:2
+uu    ઊ/ૂ
+e     એ/ે  ઐ/ૈ:1.5
+e$    એ/ે  ઐ/ૈ:1.2  એં/ેં:1.5
+ai    ઐ/ૈ  એ/ે:1.5  આઈ/ાઈ:1.2
+ae    ઐ/ૈ:0.5  એ/ે:1
+ei    એ/ે:0.5  ઈ/ી:0.8  ઐ/ૈ:1.2
+o     ઓ/ો  ઔ/ૌ:1.5
+au    ઔ/ૌ  ઓ/ો:2
+ou    ઔ/ૌ  ઓ/ો:1.5
+ri    ઋ/ૃ:2
+ru    ઋ/ૃ:2.5
+
+[other]
+n>c   ં:0.6
+m>c   ં:1.2
+n$    ં:1

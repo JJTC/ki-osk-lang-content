@@ -1,15 +1,18 @@
 # Supported languages & layouts
 
 What the language packs hold per language: the keyboard layouts, text
-direction, predictive-text tier, swipe typing, and CJK IME/composer. Each
+direction, predictive-text tier, swipe typing, and composer (CJK,
+Ge'ez, transliteration). Each
 layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**155 layouts**: 146 keyboard layouts (RTL: ar he fa + Urdu, Pashto, Sindhi,
-Uyghur, Syriac, Dhivehi) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) · emoji + numeric. All render
-native keycaps. 154 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **55 languages** carry a prediction
+**168 layouts**: 146 keyboard layouts (RTL: ar he fa + Urdu, Pashto, Sindhi,
+Uyghur, Syriac, Dhivehi) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) · 13
+transliteration layouts (Latin letters → the language's script, `-abc`) ·
+emoji + numeric. All render native keycaps. 167 are here; the numeric
+keypad is built into ki-osk. The table below is the complete list;
+**64 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -74,9 +77,9 @@ but no model to match the glide against · `—` off
 | `fil` | `fil` | Filipino | ph | LTR | **Full** (fil) | ✓ | — |
 | `az` | `az` | Azerbaijani | az | LTR | **Full** (az) | ✓ | — |
 | `ku` | `ku` | Kurdish (Kurmanji) | iq · ku | LTR | **Full** (ku) | ✓ | — |
-| `ur` | `ur` | Urdu | pk | **RTL** | — | — | — |
+| `ur` | `ur` | Urdu | pk | **RTL** | **Full** (ur)³ | — | — |
 | `ps` | `ps` | Pashto | af · ps | **RTL** | — | — | — |
-| `sd` | `sd` | Sindhi | pk · snd | **RTL** | — | — | — |
+| `sd` | `sd` | Sindhi | pk · snd | **RTL** | **Full** (sd)³ | — | — |
 | `ug` | `ug` | Uyghur | cn · ug | **RTL** | **Full** (ug) | — | — |
 | `kk` | `kk` | Kazakh | kz | LTR | — | — | — |
 | `ky` | `ky` | Kyrgyz | kg | LTR | — | — | — |
@@ -86,16 +89,16 @@ but no model to match the glide against · `—` off
 | `lv` | `lv` | Latvian | lv | LTR | **Full** (lv) | ✓ | — |
 | `ka` | `ka` | Georgian | ge | LTR | **Full** (ka) | — | — |
 | `hy` | `hy` | Armenian | am | LTR | **Full** (hy) | — | — |
-| `hi` | `hi` | Hindi | in | LTR | **Full** (hi) | — | — |
-| `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn) | — | — |
-| `ta` | `ta` | Tamil | in · tam | LTR | — | — | — |
-| `te` | `te` | Telugu | in · tel | LTR | — | — | — |
-| `kn` | `kn` | Kannada | in · kan | LTR | — | — | — |
-| `ml` | `ml` | Malayalam | in · mal | LTR | — | — | — |
-| `gu` | `gu` | Gujarati | in · guj | LTR | — | — | — |
-| `pa` | `pa` | Punjabi | in · guru | LTR | — | — | — |
+| `hi` | `hi` | Hindi | in | LTR | **Full** (hi)³ | — | — |
+| `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
+| `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
+| `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
+| `kn` | `kn` | Kannada | in · kan | LTR | **Full** (kn)³ | — | — |
+| `ml` | `ml` | Malayalam | in · mal | LTR | **Full** (ml)³ | — | — |
+| `gu` | `gu` | Gujarati | in · guj | LTR | **Full** (gu)³ | — | — |
+| `pa` | `pa` | Punjabi | in · guru | LTR | **Full** (pa)³ | — | — |
 | `or` | `or` | Odia | in · ori | LTR | — | — | — |
-| `si` | `si` | Sinhala | lk · sin_phonetic | LTR | — | — | — |
+| `si` | `si` | Sinhala | lk · sin_phonetic | LTR | **Full** (si)³ | — | — |
 | `km` | `km` | Khmer | kh | LTR | — | — | — |
 | `lo` | `lo` | Lao | la | LTR | — | — | — |
 | `my` | `my` | Burmese | mm | LTR | — | — | — |
@@ -120,7 +123,7 @@ but no model to match the glide against · `—` off
 | `ig` | `ig` | Igbo | us + long-press ị ọ ụ ṅ | LTR | — | ~ | — |
 | `uz` | `uz` | Uzbek | us + long-press oʻ gʻ | LTR | — | ~ | — |
 | `tk` | `tk` | Turkmen | us + long-press ä ç ž ň ö ş ü ý | LTR | — | ~ | — |
-| `mr` | `mr` | Marathi | in · marathi | LTR | **Full** (mr) | — | — |
+| `mr` | `mr` | Marathi | in · marathi | LTR | **Full** (mr)³ | — | — |
 | `ne` | `ne` | Nepali | np | LTR | — | — | — |
 | `as` | `as` | Assamese | in · ben (+ ৰ ৱ long-press) | LTR | **Full** (as) | — | — |
 | `bo` | `bo` | Tibetan བོད་ཡིག | cn · tib | LTR | — | — | — |
@@ -179,6 +182,19 @@ but no model to match the glide against · `—` off
 | `kr-2set` | `ko` | Korean 한국어 (두벌식) | — | LTR | IME | — | **Hangul** (algorithmic) |
 | `am` | `am` | Amharic አማርኛ | — | LTR | IME | — | **Ge'ez** (phonetic Latin→fidel + homophone candidate bar) |
 | `ti` | `ti` | Tigrinya ትግርኛ | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
+| `hi-abc` | `hi` | Hindi हिन्दी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hi lexicon choosing |
+| `bn-abc` | `bn` | Bengali বাংলা (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali, the bn lexicon choosing |
+| `mr-abc` | `mr` | Marathi मराठी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the mr lexicon choosing |
+| `gu-abc` | `gu` | Gujarati ગુજરાતી (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Gujarati, the gu lexicon choosing |
+| `pa-abc` | `pa` | Punjabi ਪੰਜਾਬੀ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Gurmukhi, the pa lexicon choosing |
+| `ta-abc` | `ta` | Tamil தமிழ் (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Tamil, the ta lexicon choosing |
+| `te-abc` | `te` | Telugu తెలుగు (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Telugu, the te lexicon choosing |
+| `kn-abc` | `kn` | Kannada ಕನ್ನಡ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Kannada, the kn lexicon choosing |
+| `ml-abc` | `ml` | Malayalam മലയാളം (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Malayalam, the ml lexicon choosing |
+| `ur-abc` | `ur` | Urdu اردو (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the ur lexicon choosing |
+| `fa-abc` | `fa` | Persian فارسی (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the fa lexicon choosing |
+| `el-abc` | `el` | Greek Ελληνικά (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Greek, the el lexicon choosing |
+| `hy-abc` | `hy` | Armenian Հայերեն (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Armenian, the hy lexicon choosing |
 | `emoji` | `emoji` | Emoji picker | — | — | — | — | Unicode 16 — categories, search, skin-tone, recents |
 | `numeric` | — (ki-osk) | Numeric keypad | — | — | — | — | — |
 
@@ -197,11 +213,33 @@ but no model to match the glide against · `—` off
    row above the others. The very-small-corpus languages
    (see below) remain layout-only — they type fine, but their suggestion
    bar is empty until a model is bundled.
+3. These twelve models learn from Wikipedia text, the Dakshina dataset's
+   (CC BY-SA 4.0, share-alike; `scripts/fetch-dakshina.sh`): all of it
+   for the nine Tatoeba has too few sentences of, beside Tatoeba's (counted
+   ten times) for Hindi, Bengali and Marathi, whose keystroke savings on
+   Tatoeba's held-out text stay within half a point (46.1%, 40.6%, 42.3%)
+   while their lexicons widen. Keystroke savings of the nine on held-out
+   Wikipedia text: Punjabi 41.8%, Urdu 41.8%, Sindhi 40.4%, Sinhala 36.1%,
+   Gujarati 33.6%, Tamil 31.2%, Telugu 29.5%, Kannada 27.0%, Malayalam
+   26.7% (the Dravidian languages' words take their endings with them:
+   40 000 words leave a quarter to a third of the running words unknown).
+4. A transliteration layout types the US keys' Latin letters into its
+   language's composer: its table (`translit/<lang>.txt`) says every way
+   each letter or group may be written, at a cost, and its lexicon picks
+   the readings that are words, the likeliest first; the strip shows two
+   and the letters as typed, and Space takes the first. How often the
+   word meant comes first (and among the strip's three), on Dakshina's
+   romanized Wikipedia sentences: Hindi 81.8% (86.7%), Urdu 78.5% (84.1%),
+   Gujarati 78.1% (81.2%), Punjabi 76.4% (81.3%), Marathi 71.6% (74.3%),
+   Kannada 69.6% (71.0%), Bengali 69.0% (72.4%), Telugu 67.5% (69.2%),
+   Tamil 66.4% (67.9%), Malayalam 53.0% (55.3%); of the words the lexicon
+   has, 76–90% (`make eval-translit`). Greek, Armenian and Persian have no
+   such measure yet; their tests read everyday words.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **55 languages**. The original nine (en,
+  `<lang>.ngram.bin`, **64 languages**. The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -209,13 +247,13 @@ but no model to match the glide against · `—` off
   Marathi 86k, Assamese 15k, Malay 8k, Ossetian 7k — layout-only languages
   that turned out to have large Tatoeba corpora) · **th** (Thai, 6.5k,
   cut into words with ICU's word list, as it has no spaces between
-  them). Built by
+  them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
+  dataset's, which hi bn mr also learn from; note 3). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet, because Tatoeba has too few
   sentences (< ~6k): the smaller Indic / SE-Asian / minor
-  languages (ta te kn ml gu pa or si km lo my mt fo bs sl ga sq ur ps sd
-  tg kk ky mn ne, sr-latn) plus syr (Syriac), ber (Tamazight),
+  languages (or km lo my mt fo bs sl ga sq ps tg kk ky mn ne, sr-latn) plus syr (Syriac), ber (Tamazight),
   qu, gn, ay, and most of Tiers E–H (European minority, African, Pacific /
   Americas, and the new-script layouts) — **except `oc gl br eu` and the
   corpus-audit batch `tt mr as ms os`, which cleared the bar** (see above).

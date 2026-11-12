@@ -1,0 +1,81 @@
+# Tamil (Tamil script) from Latin letters, as Tamil is typed in Latin.
+# Tamil writes every vowel it speaks, so two consonants typed together
+# are joined by the puḷḷi, as is a word's last consonant (avan: அவன்).
+# One letter stands for voiced and voiceless alike (k and g: க), n is ந
+# at a word's start and ன after, and l, n, r and t each have several
+# letters the lexicon chooses among (ல ள ழ, ன ந ண, ர ற, ட த).
+
+script abugida
+virama ்
+cluster 0
+schwa 3
+final 2
+final-virama 0
+
+[consonants]
+k    க
+g    க
+kh   க:0.5
+gh   க:0.5
+h    ஹ  க:2
+ng   ங்க  ங:0.5
+ch   ச  ச்ச:0.8
+c    ச  க:2
+s    ச  ஸ:0.4  ஷ:2
+sh   ஷ  ச:1.5
+j    ஜ  ச:1
+nj   ஞ  ஞ்ச:0.5
+ny   ஞ
+t    ட  த:0.3  ற:2
+tt   ட்ட  ற்ற:0.8  த்த:0.5
+ttr  ற்ற
+tr   ற்ற:0.8  ட்ர:1
+th   த  த்த:0.5  ட:1.5
+d    ட  த:0.5
+dh   த
+n    ன  ந:0.6  ண:1
+^n   ந  ன:3
+nd   ந்த:0.3  ண்ட:0.5
+nth  ந்த
+nt   ந்த:0.5  ண்ட:0.5  ன்ற:0.8
+nr   ன்ற
+ndr  ன்ற
+nn   ன்ன  ண்ண:0.8  ந்ந:2
+p    ப
+b    ப
+f    ஃப:1  ப:0.5
+m    ம
+y    ய
+r    ர  ற:0.8
+rr   ற்ற  ர்ர:2
+l    ல  ள:0.8  ழ:1.5
+ll   ல்ல  ள்ள:0.5
+zh   ழ
+z    ழ:0.5  ஸ:1.5
+v    வ
+w    வ
+x    க்ஸ்
+ksh  க்ஷ
+
+[vowels]
+a     அ/-  ஆ/ா:1.2
+^a    அ/-  ஆ/ா:1
+^ye   எ/ெ:0.3  ஏ/ே:0.8
+^yee  ஏ/ே:0.3  ஈ/ீ:1
+a$    அ/-  ஆ/ா:0.6
+aa    ஆ/ா
+i     இ/ி  ஈ/ீ:1.2
+ee    ஈ/ீ  ஏ/ே:0.7
+ii    ஈ/ீ
+u     உ/ு  ஊ/ூ:1.2
+oo    ஊ/ூ  ஓ/ோ:0.6
+uu    ஊ/ூ
+e     எ/ெ  ஏ/ே:0.6
+ae    ஏ/ே
+ai    ஐ/ை  அய்/ய்:1
+aai   ஆய்/ாய்:0.5  ஆஐ/ாஐ:2
+ei    எய்/ெய்:0.5  ஐ/ை:0.5  ஏ/ே:1
+ey    எய்/ெய்:0.3
+o     ஒ/ொ  ஓ/ோ:0.6
+au    ஔ/ௌ  அவு/வு:1.5
+ou    ஔ/ௌ

@@ -1,0 +1,56 @@
+# Greek from Latin letters, as Greek is typed in Latin ("Greeklish").
+# Several Greek letters share a Latin one (i: ι η υ ει οι, o: ο ω, e: ε
+# αι), the accent is not typed, and a word's last s is ς. The lexicon
+# chooses among them, accent included.
+
+script alphabet
+
+[consonants]
+b    β  μπ:1
+v    β
+g    γ  γκ:1.5  γγ:2
+gh   γ
+d    δ  ντ:1.5
+dh   δ
+z    ζ
+th   θ
+k    κ
+c    κ  σ:1.5
+l    λ
+m    μ
+n    ν
+x    ξ  χ:0.5
+ks   ξ  κσ:1
+p    π
+r    ρ
+s    σ
+s$   ς
+t    τ
+f    φ
+ph   φ
+ch   χ
+kh   χ
+h    χ:0.5
+ps   ψ
+j    τζ:1  ζ:1.5
+q    κ:1
+
+[vowels]
+a    α  ά:0.4
+ai   αι  αί:0.4  ε:1  έ:1.4
+e    ε  έ:0.4  αι:1.2  αί:1.6
+ei   ει  εί:0.4  ι:1.5  ί:1.9  η:1.5
+i    ι  ί:0.4  η:0.4  ή:0.8  υ:1  ύ:1.4  ει:1.2  εί:1.6  οι:1.2  οί:1.6
+h    η:0.3  ή:0.7
+o    ο  ό:0.4  ω:0.6  ώ:1
+w    ω  ώ:0.4
+y    υ  ύ:0.4  ι:1  ί:1.4
+u    ου  ού:0.4  υ:1  ύ:1.4
+ou   ου  ού:0.4
+oi   οι  οί:0.4
+au   αυ  αύ:0.4
+av   αυ:1.2  αύ:1.6
+af   αυ:1.2  αύ:1.6
+eu   ευ  εύ:0.4
+ev   ευ:1.2  εύ:1.6
+ef   ευ:1.2  εύ:1.6

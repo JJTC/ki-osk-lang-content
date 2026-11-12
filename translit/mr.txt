@@ -1,0 +1,83 @@
+# Marathi (Devanagari) from Latin letters, as Marathi is typed in Latin:
+# long vowels often written short, t and d for ट and ड as well, z for झ
+# (zala: झाला), l for ळ as well, and the vowel between two consonants
+# left out where it is not spoken (tumhi: तुम्ही).
+
+script abugida
+virama ्
+cluster 0
+schwa 1.2
+final 0
+final-virama 4
+
+[consonants]
+k    क
+kh   ख
+q    क
+g    ग
+gh   घ
+ch   च  छ:1
+chh  छ  च्छ:0.8
+cch  च्छ
+c    च  क:1.5
+j    ज  झ:2
+jh   झ
+z    झ  ज:0.7  ज़:2
+t    त  ट:0.6
+tt   ट:0.5  त्त:0.3  ट्ट:1
+th   थ  ठ:0.8  त:1.5
+d    द  ड:0.6
+dd   ड:0.5  द्द:0.3  ड्ड:1
+dh   ध  ढ:1  द:2  द्ध:1.2
+n    न  ण:1.2
+p    प
+ph   फ
+f    फ  फ़:1.5
+b    ब
+bh   भ
+m    म
+y    य
+r    र
+l    ल  ळ:0.8
+v    व
+w    व
+sh   श  ष:1  स:2.5
+s    स  श:1.5  ष:3
+h    ह
+x    क्स  क्ष:1
+ksh  क्ष
+dny  ज्ञ:0.5
+gy   ज्ञ:1.5
+
+[vowels]
+a     अ/-  आ/ा:1.2
+^a    अ/-  आ/ा:0.8
+a$    आ/ा  अ/-:1
+aa    आ/ा
+^aa   आ/ा  अ/-:2
+aa$   आ/ा  आं/ां:1.5
+i     इ/ि  ई/ी:1
+i$    ई/ी  इ/ि:0.8
+ee    ई/ी  इ/ि:2
+ii    ई/ी
+u     उ/ु  ऊ/ू:1
+u$    उ/ु  ऊ/ू:0.5
+oo    ऊ/ू  ओ/ो:2
+uu    ऊ/ू
+e     ए/े  ऐ/ै:1.5
+e$    ए/े  ऐ/ै:1.2  एं/ें:1.5
+ai    ऐ/ै  ए/े:1.5  आई/ाई:1.2
+ae    ऐ/ै:0.5  ए/े:1
+ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
+ye    ए/े:0.3
+o     ओ/ो  औ/ौ:1.5
+au    औ/ौ  ओ/ो:2
+ou    औ/ौ  ओ/ो:1.5
+ri    ऋ/ृ:2
+ru    ऋ/ृ:2.5
+
+[other]
+n>c   ं:0.5
+m>c   ं:1.2
+n$    ं:1
+m$    ं:0.8
