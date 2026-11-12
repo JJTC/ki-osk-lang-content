@@ -9,7 +9,7 @@ prediction and composer data.
 **155 layouts**: 146 keyboard layouts (RTL: ar he fa + Urdu, Pashto, Sindhi,
 Uyghur, Syriac, Dhivehi) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) · emoji + numeric. All render
 native keycaps. 154 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **54 languages** carry a prediction
+table below is the complete list; **55 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -46,7 +46,7 @@ but no model to match the glide against · `—` off
 | `el` | `el` | Greek | gr | LTR | **Full** (el) | — | — |
 | `ru` | `ru` | Russian | ru | LTR | **Full** (ru) | — | — |
 | `uk` | `uk` | Ukrainian | ua | LTR | **Full** (uk) | — | — |
-| `th` | `th` | Thai | th | LTR | —² | — | — |
+| `th` | `th` | Thai | th | LTR | **Full** (th)² | — | — |
 | `ar` | `ar` | Arabic | ara | **RTL** | **Full** (ar) | — | — |
 | `he` | `he` | Hebrew | il | **RTL** | **Full** (he) | — | — |
 | `fa` | `fa` | Persian (Farsi) | ir | **RTL** | **Full** (fa) | — | — |
@@ -188,24 +188,30 @@ but no model to match the glide against · `—` off
    dictionary**, so their quality tracks the model. Latin `Full`-model
    layouts get real dictionary-backed swipe; non-Latin models feed the
    suggestion bar only (no swipe on non-Latin scripts).
-2. A layout marked `Full` loads its bundled FST + n-gram model. `th` and
-   the very-small-corpus languages (see below) remain layout-only — they
-   type fine, but their suggestion bar is empty until a model is bundled.
+2. A layout marked `Full` loads its bundled FST + n-gram model. Thai is
+   written without spaces between words: its text is cut into words with
+   ICU's Thai word list (`wordbreak/th.txt`, in its pack), the same in
+   the trainer, the keyboard and `eval-predict`, and a word from the
+   strip is typed with no space after it. The very-small-corpus languages
+   (see below) remain layout-only — they type fine, but their suggestion
+   bar is empty until a model is bundled.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **54 languages**. The original nine (en,
+  `<lang>.ngram.bin`, **55 languages**. The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
   Galician, Breton, Basque) · **corpus audit: tt mr as ms os** (Tatar 92k,
   Marathi 86k, Assamese 15k, Malay 8k, Ossetian 7k — layout-only languages
-  that turned out to have large Tatoeba corpora). Built by
+  that turned out to have large Tatoeba corpora) · **th** (Thai, 6.5k,
+  cut into words with ICU's word list, as it has no spaces between
+  them). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet, because Tatoeba has too few
-  sentences (< ~6k): `th` and the smaller Indic / SE-Asian / minor
+  sentences (< ~6k): the smaller Indic / SE-Asian / minor
   languages (ta te kn ml gu pa or si km lo my mt fo bs sl ga sq ur ps sd
   tg kk ky mn ne, sr-latn) plus syr (Syriac), ber (Tamazight),
   qu, gn, ay, and most of Tiers E–H (European minority, African, Pacific /

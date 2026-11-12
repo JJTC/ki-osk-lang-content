@@ -65,6 +65,7 @@ ru  = "Russian"
 sk  = "Slovak"
 sr  = "Serbian"
 sv  = "Swedish"
+th  = "Thai"
 tr  = "Turkish"
 tt  = "Tatar"
 ug  = "Uyghur"
@@ -99,6 +100,20 @@ licenses = [
 ]
 sources = [
   { name = "Wiktionary's Spanish entries, as extracted by kaikki.org", url = "https://kaikki.org/dictionary/Spanish/", lock = "dialects/es", input = "kaikki-es.jsonl.gz" },
+]
+
+# The word lists of the languages written without spaces between words
+# (wordbreak/<lang>.txt, scripts/fetch-word-lists.sh), which cut their
+# text into words in the trainer, the keyboard and the measure, with the
+# licences and sources they add to those languages' packs. make-packs
+# refuses a list with no entry here.
+[prediction.wordbreak.th]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+  { name = "ICU License (ICU 1.8.1 to 57.1)", url = "https://github.com/unicode-org/icu/blob/release-79.1/LICENSE", share_alike = false },
+]
+sources = [
+  { name = "ICU's Thai word-break dictionary (thaidict.txt, ICU 79.1)", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/thaidict.txt", lock = "predict/th", input = "wordbreak/th.txt" },
 ]
 
 # Keyboard layouts (layouts/<id>.json): the keys of each, and what each
@@ -344,7 +359,6 @@ syr = "Syriac"
 ta  = "Tamil"
 te  = "Telugu"
 tg  = "Tajik"
-th  = "Thai"
 ti  = "Tigrinya"
 tk  = "Turkmen"
 tn  = "Tswana"

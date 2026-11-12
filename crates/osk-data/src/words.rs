@@ -32,6 +32,12 @@
 //!   (`Ի՞նչ`), Hebrew's gershayim in acronyms (`לחו"ל`), a leading
 //!   apostrophe in Breton (`'zo`) and in Dutch's `'s`, `'t`, `'n`, `'k` and
 //!   `'m`.
+//! - Thai is written without spaces between words: a run of Thai letters is
+//!   cut into the words of the language's word list
+//!   ([`crate::wordbreak`], given with [`Splitter::with_word_list`]), each
+//!   after the first glued to the one before, as `homme` is to `l'`; so a
+//!   keyboard types no space after a Thai word. Without a list, a run is
+//!   one word.
 //!
 //! A word's identity, what lexicons and n-gram tables are keyed on, is
 //! [`Splitter::normalize`]: NFC, lower case, one apostrophe (U+0027), one
@@ -39,15 +45,20 @@
 //! and the keyboards write two ways.
 
 use std::ops::Range;
+use std::sync::Arc;
 
 use unicode_normalization::UnicodeNormalization;
 use unicode_normalization::char::is_combining_mark;
+
+use crate::wordbreak::{Script, WordList};
 
 /// The splitter's rules, numbered. What a lexicon's words are depends on
 /// them, so a change to them is a new generation, and every model the old
 /// one built is out of date: the data repository's lock records it.
 /// Generation 2 gave a sentence's first word [`SENTENCE_START`] for
-/// context, so the models count what starts sentences.
+/// context, so the models count what starts sentences. Cutting Thai with
+/// its word list came after, with Thai's first model, and changed no other
+/// language's words; the list is among that model's inputs.
 pub const GENERATION: u32 = 2;
 
 /// The context of a sentence's first word, as if a word: the n-gram tables
@@ -56,7 +67,7 @@ pub const GENERATION: u32 = 2;
 pub const SENTENCE_START: &str = "<s>";
 
 /// How one language joins characters into words, and ends sentences.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone)]
 #[allow(clippy::struct_excessive_bools)]
 pub struct Splitter {
     elide: Elide,
@@ -77,6 +88,10 @@ pub struct Splitter {
     /// Dotted and dotless i (Turkish, Azerbaijani): `I` lower-cases to
     /// `ı`, `İ` to `i`, and `i` upper-cases to `İ`.
     turkic: bool,
+    /// The script the language writes without spaces between words (Thai).
+    script: Option<Script>,
+    /// The words its runs are cut into.
+    word_list: Option<Arc<WordList>>,
 }
 
 /// Where an apostrophe inside a word ends it.
@@ -326,6 +341,8 @@ impl Splitter {
             hebrew: false,
             greek: false,
             turkic: false,
+            script: Script::of_lang(primary),
+            word_list: None,
         };
         match primary {
             "fr" => s.elide = Elide::After(FRENCH_ELISIONS),
@@ -356,6 +373,25 @@ impl Splitter {
             _ => {}
         }
         s
+    }
+
+    /// Whether the language is written without spaces between words, so
+    /// that its words are found with a word list ([`Self::with_word_list`]):
+    /// Thai.
+    #[must_use]
+    pub fn wants_word_list(&self) -> bool {
+        self.script.is_some()
+    }
+
+    /// This splitter, cutting the runs of letters of a language written
+    /// without spaces between words into the words of `list`. A language
+    /// written with spaces ignores it.
+    #[must_use]
+    pub fn with_word_list(mut self, list: Arc<WordList>) -> Self {
+        if self.script.is_some() {
+            self.word_list = Some(list);
+        }
+        self
     }
 
     /// Whether `c` ends a sentence in this language: [`ends_sentence`];
@@ -514,12 +550,15 @@ impl Splitter {
     /// with no single quote open before it.
     #[must_use]
     pub fn pieces(&self, token: &str) -> Vec<Piece> {
-        self.pieces_quoted(token, false).0
+        self.pieces_quoted(token, false, false).0
     }
 
     /// The words of `token`, and whether a single quote is open after it,
     /// given whether one is before it.
-    fn pieces_quoted(&self, token: &str, mut quote: bool) -> (Vec<Piece>, bool) {
+    ///
+    /// `at_caret`: the token ends at the caret, so a run cut with the word
+    /// list ends in the word being typed, which may be the start of one.
+    fn pieces_quoted(&self, token: &str, mut quote: bool, at_caret: bool) -> (Vec<Piece>, bool) {
         let cs: Vec<(usize, char)> = token.char_indices().collect();
         let letter_at = |i: usize| cs.get(i).is_some_and(|&(_, c)| c.is_alphabetic());
         let mut out: Vec<Piece> = Vec::new();
@@ -599,14 +638,76 @@ impl Splitter {
                 glued,
             });
         }
-        (out, quote)
+        (self.cut_runs(token, out, at_caret), quote)
+    }
+
+    /// `pieces`, with each run of the script written without spaces cut
+    /// into the words of the word list: those after the first glued on.
+    /// What comes after a run in its piece belongs to its last word, so a
+    /// letter typed after it (the probe of [`Self::typing_after`]) carries
+    /// that word on; what comes before the first is a word of its own.
+    /// `at_caret`: the token ends at the caret ([`Self::pieces_quoted`]).
+    fn cut_runs(&self, token: &str, pieces: Vec<Piece>, at_caret: bool) -> Vec<Piece> {
+        let (Some(script), Some(list)) = (self.script, self.word_list.as_deref()) else {
+            return pieces;
+        };
+        let mut out = Vec::with_capacity(pieces.len());
+        for p in pieces {
+            let text = &token[p.range.clone()];
+            let mut runs: Vec<Range<usize>> = Vec::new();
+            for (at, c) in text.char_indices() {
+                if !script.holds(c) {
+                    continue;
+                }
+                match runs.last_mut() {
+                    Some(r) if r.end == at => r.end = at + c.len_utf8(),
+                    _ => runs.push(at..at + c.len_utf8()),
+                }
+            }
+            let Some(first) = runs.first() else {
+                out.push(p);
+                continue;
+            };
+            let base = p.range.start;
+            let mut glued = p.glued;
+            if first.start > 0 {
+                out.push(Piece {
+                    range: base..base + first.start,
+                    glued,
+                });
+                glued = true;
+            }
+            let open = at_caret && p.range.end == token.len();
+            for (i, run) in runs.iter().enumerate() {
+                let last_run = i + 1 == runs.len();
+                let tail = runs.get(i + 1).map_or(text.len(), |r| r.start);
+                let words = list.cut(script, &text[run.clone()], open && last_run);
+                let n = words.len();
+                for (j, w) in words.into_iter().enumerate() {
+                    let end = if j + 1 == n { tail } else { run.start + w.end };
+                    out.push(Piece {
+                        range: base + run.start + w.start..base + end,
+                        glued,
+                    });
+                    glued = true;
+                }
+            }
+        }
+        out
     }
 
     /// Whether the next word follows `word` with no space between: it is
-    /// elided (`l'`, `dell'`, Kabyle `fell-`), so a keyboard that types it
+    /// elided (`l'`, `dell'`, Kabyle `fell-`), or ends in a script written
+    /// without spaces between words (Thai), so a keyboard that types it
     /// types no space after it.
     #[must_use]
     pub fn glues_on(&self, word: &str) -> bool {
+        if self
+            .script
+            .is_some_and(|s| word.chars().next_back().is_some_and(|c| s.holds(c)))
+        {
+            return true;
+        }
         self.pieces(&format!("{word}a"))
             .last()
             .is_some_and(|p| p.glued && p.range.start == word.len())
@@ -677,7 +778,7 @@ impl Splitter {
         each: &mut dyn FnMut(TextWord),
     ) {
         let token = &text[range.clone()];
-        let (pieces, quote) = self.pieces_quoted(token, after.quote);
+        let (pieces, quote) = self.pieces_quoted(token, after.quote, false);
         after.quote = quote;
         if pieces.is_empty() {
             if after.start == Start::Follows {
@@ -730,6 +831,26 @@ impl Splitter {
         self.typing_after(before_caret, n, Start::Sentence)
     }
 
+    /// [`Self::typing_after`] where the keyboard knows a word ends at byte
+    /// `word_end` of the text before the caret: it typed one there from the
+    /// strip, with no space after it, as Thai is written. No word runs
+    /// across it, as though a space were there, though none is: right
+    /// after it, a word starts.
+    #[must_use]
+    pub fn typing_after_word(
+        &self,
+        before_caret: &str,
+        word_end: usize,
+        n: usize,
+        start: Start,
+    ) -> Typing {
+        if word_end == 0 || !before_caret.is_char_boundary(word_end) {
+            return self.typing_after(before_caret, n, start);
+        }
+        let (done, rest) = before_caret.split_at(word_end);
+        self.typing_after(&format!("{done} {rest}"), n, start)
+    }
+
     /// [`Self::typing`] a text before the caret whose start is not the
     /// text's, when `start` says so: [`Start::Break`] for a text whose
     /// start is not known (cut from a longer one, or read after the
@@ -760,9 +881,9 @@ impl Splitter {
                 caret: Caret::WordStart,
             };
         }
-        let (pieces, _) = self.pieces_quoted(token, after.quote);
+        let (pieces, _) = self.pieces_quoted(token, after.quote, true);
         let probe = format!("{token}a");
-        let (probed, _) = self.pieces_quoted(&probe, after.quote);
+        let (probed, _) = self.pieces_quoted(&probe, after.quote, true);
         // An apostrophe right after the last word that reading the token
         // as it is left out closes a quote: a letter after it would not
         // make it part of the word.
@@ -1078,7 +1199,11 @@ mod tests {
     }
 
     fn read(lang: &str, text: &str) -> Vec<String> {
-        Splitter::new(lang)
+        read_with(&Splitter::new(lang), text)
+    }
+
+    fn read_with(splitter: &Splitter, text: &str) -> Vec<String> {
+        splitter
             .words(text)
             .into_iter()
             .map(|w| {
@@ -1225,6 +1350,73 @@ mod tests {
         assert_eq!(
             s.typing_after("so. we", 2, Start::Break).context,
             ws(&["<s>"])
+        );
+    }
+
+    fn thai() -> Splitter {
+        Splitter::new("th").with_word_list(Arc::new(WordList::from_words([
+            "ฉัน",
+            "รัก",
+            "รักษา",
+            "ภาษา",
+            "ไทย",
+            "ภาษาไทย",
+            "เป็น",
+            "กิน",
+            "ข้าว",
+        ])))
+    }
+
+    #[test]
+    fn thai_is_cut_into_words_glued_on() {
+        assert_eq!(
+            read_with(&thai(), "ฉันรักภาษาไทย กินข้าว"),
+            ["|ฉัน_", "+รัก_", "+ภาษาไทย", "กิน_", "+ข้าว"]
+        );
+        // Before a run, letters of another script are a word of their own.
+        assert_eq!(read_with(&thai(), "iPhoneรัก"), ["|iphone_", "+รัก"]);
+        // Without its word list, a run is one word; other languages are
+        // not cut at all.
+        assert_eq!(read("th", "ฉันรักภาษาไทย"), ["|ฉันรักภาษาไทย"]);
+        let en = Splitter::new("en").with_word_list(thai().word_list.unwrap());
+        assert_eq!(read_with(&en, "ฉันรักภาษาไทย"), ["|ฉันรักภาษาไทย"]);
+        assert!(thai().wants_word_list());
+        assert!(!en.wants_word_list());
+    }
+
+    #[test]
+    fn a_thai_word_glues_the_next_on() {
+        assert!(thai().glues_on("รัก"));
+        assert!(Splitter::new("th").glues_on("รัก"));
+        assert!(!thai().glues_on("ok"));
+        assert!(!Splitter::new("en").glues_on("รัก"));
+    }
+
+    #[test]
+    fn typing_thai_the_word_at_the_caret_is_the_run_s_last() {
+        let s = thai();
+        let t = s.typing("ฉันรักษ", 2);
+        assert_eq!(
+            (t.context, t.word, t.caret),
+            (ws(&["<s>", "ฉัน"]), "รักษ".into(), Caret::InWord)
+        );
+        // A whole word at the caret may still grow (`รัก`, `รักษา`).
+        let t = s.typing("ฉันรัก", 2);
+        assert_eq!(
+            (t.context, t.word, t.caret),
+            (ws(&["<s>", "ฉัน"]), "รัก".into(), Caret::InWord)
+        );
+        // Where the keyboard typed a word from the strip, the next starts.
+        let end = "ฉันรัก".len();
+        let t = s.typing_after_word("ฉันรัก", end, 2, Start::Sentence);
+        assert_eq!(
+            (t.context, t.word, t.caret),
+            (ws(&["ฉัน", "รัก"]), String::new(), Caret::WordStart)
+        );
+        let t = s.typing_after_word("ฉันรักษ", end, 2, Start::Sentence);
+        assert_eq!(
+            (t.context, t.word, t.caret),
+            (ws(&["ฉัน", "รัก"]), "ษ".into(), Caret::InWord)
         );
     }
 }

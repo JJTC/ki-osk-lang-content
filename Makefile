@@ -26,7 +26,7 @@ ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 # 2026-11-08, so `make predict-assets` silently skipped models that were
 # already committed.
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
-                 oc gl br eu tt mr as ms os
+                 oc gl br eu tt mr as ms os th
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -90,6 +90,7 @@ help:
 	@echo "  refresh          fetch everything, rebuild only what changed, check"
 	@echo "                   (what the scheduled GitHub workflow runs)"
 	@echo "  fetch-corpora    download Tatoeba corpora into predict/corpora/"
+	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
 	@echo "  dialect-assets   rebuild predict/<lang>.dialects.bin (dialect flags)"
@@ -123,9 +124,18 @@ refresh: fetch-corpora
 fetch-corpora:
 	./scripts/fetch-corpora.sh
 
+# The word lists of the languages written without spaces between words
+# (wordbreak/<lang>.txt, committed): ICU's word-break dictionaries, pinned
+# by release and sha256 in the script. build-predict cuts their text into
+# words with them, and so do the keyboard and eval-predict.
+.PHONY: word-lists
+word-lists:
+	./scripts/fetch-word-lists.sh
+
 # Rebuild every language's prefix lexicon and n-gram table. Drop a
 # bigger corpus at predict/corpora/<lang>.txt and rerun to refresh one
-# language without touching anything else.
+# language without touching anything else. A language with a word list
+# (wordbreak/<lang>.txt) is cut with it, and the list is an input.
 .PHONY: predict-assets
 predict-assets:
 	@$(LOCKED); for lang in $(PREDICT_LANGS); do \
@@ -136,9 +146,14 @@ predict-assets:
 		case " $(PREDICT_LARGE_LANGS) " in \
 			*" $$lang "*) vocab=$(PREDICT_LARGE_VOCAB); ngram=$(PREDICT_LARGE_NGRAM) ;; \
 		esac; \
+		words=; words_in=; \
+		if [ -f wordbreak/$$lang.txt ]; then \
+			words="--word-list $(CURDIR)/wordbreak/$$lang.txt"; \
+			words_in="--input wordbreak/$$lang.txt=wordbreak/$$lang.txt"; \
+		fi; \
 		test -n "$(WORDS_GENERATION)" || { echo "no GENERATION in crates/osk-data/src/words.rs"; exit 1; }; \
 		set -- predict/$$lang \
-			--input corpora/$$lang.txt=$(PREDICT_CORPORA_DIR)/$$lang.txt \
+			--input corpora/$$lang.txt=$(PREDICT_CORPORA_DIR)/$$lang.txt $$words_in \
 			--recipe vocab_size=$$vocab --recipe ngram_keep=$$ngram \
 			--recipe start_keep=$(PREDICT_START) \
 			--recipe words=$(WORDS_GENERATION) \
@@ -153,6 +168,7 @@ predict-assets:
 			--vocab-size $$vocab \
 			--ngram-keep $$ngram \
 			--start-keep $(PREDICT_START) \
+			$$words \
 			|| exit 1; \
 		record "$$@" || exit 1; \
 	done
@@ -217,11 +233,16 @@ own-corpus:
 	case " $(PREDICT_LARGE_LANGS) " in \
 		*" $$lang "*) vocab=$(PREDICT_LARGE_VOCAB); ngram=$(PREDICT_LARGE_NGRAM) ;; \
 	esac; \
+	words=; \
+	if [ -f wordbreak/$$lang.txt ]; then \
+		words="--word-list $(CURDIR)/wordbreak/$$lang.txt"; \
+		mkdir -p "$(OUT)/wordbreak" && cp wordbreak/$$lang.txt "$(OUT)/wordbreak/" || exit 1; \
+	fi; \
 	mkdir -p "$(OUT)/predict" "$(OUT)/rules" && \
 	echo "build-predict $$lang from $(CORPUS) (vocab $$vocab, n-grams $$ngram) -> $(OUT)/predict" && \
 	$(TOOLS) build-predict -- --lang $$lang --corpus "$(abspath $(CORPUS))" \
 		--out "$(abspath $(OUT))/predict" --vocab-size $$vocab --ngram-keep $$ngram \
-		--start-keep $(PREDICT_START) && \
+		--start-keep $(PREDICT_START) $$words && \
 	cp rules/*.weir "$(OUT)/rules/"
 
 # Regenerate the CJK dictionaries from the full upstream datasets — what

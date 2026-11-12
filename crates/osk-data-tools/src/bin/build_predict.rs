@@ -12,6 +12,11 @@
 //!
 //! Usage:
 //!   build-predict --lang en --corpus en.txt --out predict/
+//!   build-predict --lang th --corpus th.txt --word-list wordbreak/th.txt --out predict/
+//!
+//! A language written without spaces between words (Thai) needs its word
+//! list, which cuts its text into words (`osk_data::wordbreak`) as the
+//! keyboard and the measure cut it.
 //!
 //! The readers live in ki-osk's `osk-core`: its FST and n-gram loaders
 //! feed a `SuggestionEngine`, which re-ranks FST-prefix hits by the
@@ -28,10 +33,12 @@ use std::collections::HashMap;
 use std::fs;
 use std::io::Read;
 use std::path::PathBuf;
+use std::sync::Arc;
 
-use anyhow::Context as _;
+use anyhow::{Context as _, bail};
 use clap::Parser;
 use osk_data::ngram::NgramModel;
+use osk_data::wordbreak::WordList;
 use osk_data::words::{SENTENCE_START, Splitter, Start};
 
 #[derive(Parser)]
@@ -61,6 +68,10 @@ struct Args {
     /// Skip n-gram emission (FST-only build).
     #[arg(long, default_value_t = false)]
     no_ngrams: bool,
+    /// The word list of a language written without spaces between words
+    /// (`wordbreak/<lang>.txt`), which it needs, and others ignore.
+    #[arg(long)]
+    word_list: Option<PathBuf>,
 }
 
 fn main() -> anyhow::Result<()> {
@@ -82,7 +93,31 @@ fn main() -> anyhow::Result<()> {
     // (a line's, or after a sentence end), from nothing after a token with
     // no word in it (a number, a dash); n-grams across one would never be
     // asked for.
-    let splitter = Splitter::new(&args.lang);
+    let mut splitter = Splitter::new(&args.lang);
+    match (&args.word_list, splitter.wants_word_list()) {
+        (Some(path), true) => {
+            let list =
+                fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+            let list =
+                WordList::parse(&list).with_context(|| format!("parsing {}", path.display()))?;
+            log::info!(
+                "{}: {} words to cut the text with",
+                path.display(),
+                list.len()
+            );
+            splitter = splitter.with_word_list(Arc::new(list));
+        }
+        (None, true) => bail!(
+            "{} is written without spaces between words: give its word list (--word-list)",
+            args.lang
+        ),
+        (Some(path), false) => bail!(
+            "{} is written with spaces between words: it needs no word list ({})",
+            args.lang,
+            path.display()
+        ),
+        (None, false) => {}
+    }
     let mut freq: HashMap<String, u64> = HashMap::new();
     let mut bigrams: HashMap<(String, String), u64> = HashMap::new();
     let mut trigrams: HashMap<(String, String, String), u64> = HashMap::new();

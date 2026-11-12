@@ -185,3 +185,71 @@ fn every_offensive_list_has_words() {
         );
     }
 }
+
+/// Each word list parses, belongs to a language written without spaces
+/// between words, and cuts its held-out text into words of the list.
+#[test]
+fn every_word_list_cuts_its_language() {
+    use std::sync::Arc;
+
+    use osk_data::wordbreak::WordList;
+    use osk_data::words::Splitter;
+
+    let lists = files("wordbreak", ".txt");
+    assert!(!lists.is_empty(), "no word list in wordbreak/");
+    for p in lists {
+        let lang = p.file_stem().unwrap().to_string_lossy().to_string();
+        let text = std::fs::read_to_string(&p).unwrap_or_else(|e| panic!("{}: {e}", name(&p)));
+        let list = Arc::new(WordList::parse(&text).unwrap_or_else(|e| panic!("{}: {e}", name(&p))));
+        assert!(
+            list.len() >= 10_000,
+            "{}: only {} words",
+            name(&p),
+            list.len()
+        );
+        let splitter = Splitter::new(&lang);
+        assert!(
+            splitter.wants_word_list(),
+            "{}: {lang} is written with spaces",
+            name(&p)
+        );
+        assert!(
+            root().join(format!("predict/{lang}.fst")).is_file(),
+            "{}: no model for {lang}",
+            name(&p)
+        );
+        let splitter = splitter.with_word_list(list.clone());
+        let eval = std::fs::read_to_string(root().join(format!("eval/{lang}.txt")))
+            .unwrap_or_else(|e| panic!("eval/{lang}.txt: {e}"));
+        let (mut words, mut known) = (0usize, 0usize);
+        for line in eval.lines() {
+            for w in splitter.words(line) {
+                words += 1;
+                known += usize::from(list.contains(&w.text));
+            }
+        }
+        // Names and loanwords are in no list; most words are.
+        assert!(
+            known * 10 >= words * 9,
+            "{lang}: {known} of {words} words of eval/{lang}.txt in the list"
+        );
+    }
+}
+
+#[test]
+fn thai_is_cut_as_written() {
+    use std::sync::Arc;
+
+    use osk_data::wordbreak::WordList;
+    use osk_data::words::Splitter;
+
+    let text = std::fs::read_to_string(root().join("wordbreak/th.txt")).unwrap();
+    let list = WordList::parse(&text).unwrap();
+    let splitter = Splitter::new("th").with_word_list(Arc::new(list));
+    let words: Vec<String> = splitter
+        .words("ผมต้องไปธนาคาร ฉันไปโรงเรียน")
+        .into_iter()
+        .map(|w| w.text)
+        .collect();
+    assert_eq!(words, ["ผม", "ต้อง", "ไป", "ธนาคาร", "ฉัน", "ไป", "โรงเรียน"]);
+}

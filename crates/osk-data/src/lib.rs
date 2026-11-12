@@ -11,6 +11,9 @@
 //!   `predict/<lang>.fst` lexicons are plain `fst::Map`s of word → count.
 //! - [`words`] — how prediction splits text into words: the one rule
 //!   the trainer, the keyboard and the measure share.
+//! - [`wordbreak`] — the word lists (`wordbreak/<lang>.txt`) that cut the
+//!   text of a language written without spaces between words (Thai) into
+//!   its words.
 //! - [`dialects`] — dialect flags (`predict/<lang>.dialects.bin`): which
 //!   varieties of a language use a word, and its spellings across them.
 //! - [`rules`] — the text rules (`rules/*.weir`): what typing a key does
@@ -55,4 +58,5 @@ pub mod offensive;
 pub mod pack;
 pub mod pinyin;
 pub mod rules;
+pub mod wordbreak;
 pub mod words;

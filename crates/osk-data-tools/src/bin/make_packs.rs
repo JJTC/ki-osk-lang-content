@@ -109,11 +109,17 @@ struct Prediction {
     /// The languages with dialect flags, and the licences and sources
     /// those add to their packs.
     #[serde(default)]
-    dialects: BTreeMap<String, DialectsDef>,
+    dialects: BTreeMap<String, AddedDef>,
+    /// The languages written without spaces between words, whose packs
+    /// carry their word list (`wordbreak/<lang>.txt`), and the licences
+    /// and sources it adds.
+    #[serde(default)]
+    wordbreak: BTreeMap<String, AddedDef>,
 }
 
+/// What a file beside a language's model adds to its pack.
 #[derive(Deserialize)]
-struct DialectsDef {
+struct AddedDef {
     licenses: Vec<License>,
     sources: Vec<SourceDef>,
 }
@@ -144,8 +150,9 @@ struct SourceDef {
 }
 
 /// The directories whose files must all belong to a pack.
-const DATA_DIRS: [&str; 9] = [
+const DATA_DIRS: [&str; 10] = [
     "predict",
+    "wordbreak",
     "pinyin",
     "zhuyin",
     "jyutping",
@@ -195,22 +202,31 @@ fn main() -> anyhow::Result<()> {
             );
         }
     }
+    for lang in defs.prediction.wordbreak.keys() {
+        if !langs.contains(lang) {
+            bail!(
+                "packs.toml gives `{lang}` a word list but predict/{lang}.fst is not in the tree"
+            );
+        }
+    }
     for lang in &langs {
         let p = &defs.prediction;
         let dialects_path = format!("predict/{lang}.dialects.bin");
-        let dialects = match (
-            args.root.join(&dialects_path).is_file(),
+        let dialects = added(
+            &args.root,
+            &dialects_path,
             p.dialects.get(lang),
-        ) {
-            (true, Some(def)) => Some(def),
-            (true, None) => bail!(
-                "{dialects_path} is committed but packs.toml gives no [prediction.dialects.{lang}]"
-            ),
-            (false, Some(_)) => bail!(
-                "packs.toml gives [prediction.dialects.{lang}] but {dialects_path} is not in the tree"
-            ),
-            (false, None) => None,
-        };
+            "dialects",
+            lang,
+        )?;
+        let wordbreak_path = format!("wordbreak/{lang}.txt");
+        let wordbreak = added(
+            &args.root,
+            &wordbreak_path,
+            p.wordbreak.get(lang),
+            "wordbreak",
+            lang,
+        )?;
         let mut components = vec![
             component(&args.root, kind::LEXICON, &format!("predict/{lang}.fst"))?,
             component(
@@ -230,9 +246,14 @@ fn main() -> anyhow::Result<()> {
             url: p.source.url.clone(),
             sha256: recorded(&format!("predict/{lang}"), &format!("corpora/{lang}.txt")),
         }];
-        // Dialect flags carry their own sources' licences into the pack.
-        if let Some(def) = dialects {
-            components.push(component(&args.root, kind::DIALECTS, &dialects_path)?);
+        // Dialect flags and word lists carry their own sources' licences
+        // into the pack.
+        for (def, kind, path) in [
+            (dialects, kind::DIALECTS, &dialects_path),
+            (wordbreak, kind::WORDBREAK, &wordbreak_path),
+        ] {
+            let Some(def) = def else { continue };
+            components.push(component(&args.root, kind, path)?);
             licenses.extend(def.licenses.iter().cloned());
             sources.extend(def.sources.iter().map(|s| Source {
                 name: s.name.clone(),
@@ -527,6 +548,27 @@ fn prediction_langs(root: &Path) -> anyhow::Result<Vec<String>> {
         .collect();
     out.sort();
     Ok(out)
+}
+
+/// The packs.toml entry of `path`, a file beside a language's model
+/// (`[prediction.<table>.<lang>]`): both or neither.
+fn added<'a>(
+    root: &Path,
+    path: &str,
+    def: Option<&'a AddedDef>,
+    table: &str,
+    lang: &str,
+) -> anyhow::Result<Option<&'a AddedDef>> {
+    match (root.join(path).is_file(), def) {
+        (true, Some(def)) => Ok(Some(def)),
+        (true, None) => {
+            bail!("{path} is committed but packs.toml gives no [prediction.{table}.{lang}]")
+        }
+        (false, Some(_)) => {
+            bail!("packs.toml gives [prediction.{table}.{lang}] but {path} is not in the tree")
+        }
+        (false, None) => Ok(None),
+    }
 }
 
 fn component(root: &Path, kind: &str, path: &str) -> anyhow::Result<Component> {

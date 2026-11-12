@@ -44,7 +44,9 @@ BASE=https://downloads.tatoeba.org/exports/per_language
 # only where a layout id is an ISO-3166 country code: `da` is the Danish
 # (`dk`) layout, `cs` the Czech (`cz`) one. Latin/Cyrillic/Greek/Arabic/
 # Hebrew/Devanagari/Bengali/Armenian/Georgian are all space-delimited, so
-# build-predict's whitespace tokenizer handles them. `ku` uses kmr
+# build-predict's whitespace tokenizer handles them. Thai is not: its
+# sentences are cut into words with its word list (wordbreak/th.txt,
+# scripts/fetch-word-lists.sh). `ku` uses kmr
 # (Kurmanji, Latin) to match the Latin layout; `sr` uses srp (mixed
 # script — Cyrillic input prefix-matches the Cyrillic entries).
 #
@@ -58,6 +60,7 @@ id:ind bg:bul no:nob hi:hin bn:ben be:bel az:aze is:isl ca:cat ug:uig
 lv:lvs ku:kmr ka:kat hr:hrv et:est kab:kab
 oc:oci gl:glg br:bre eu:eus
 tt:tat mr:mar as:asm ms:zsm os:oss
+th:tha
 "
 
 iso_for() { for p in $MAP; do [ "${p%%:*}" = "$1" ] && { echo "${p##*:}"; return; }; done; }

@@ -96,6 +96,9 @@ pub mod kind {
     /// The double-Pinyin schemes, [`crate::pinyin::double::Schemes`]
     /// (`pinyin/double-pinyin.json`).
     pub const DOUBLE_PINYIN: &str = "double-pinyin";
+    /// The word list of a language written without spaces between words,
+    /// [`crate::wordbreak::WordList`] (`wordbreak/<lang>.txt`).
+    pub const WORDBREAK: &str = "wordbreak";
 }
 
 /// How a release asset carries its file.
