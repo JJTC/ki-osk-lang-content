@@ -1,0 +1,74 @@
+# Bodo (Devanagari) from Latin letters, as Bodo is typed in Latin. Bodo's
+# own conventions: w is its vowel ɯ, written ो (mwnse: मोनसे), wo and wi
+# ौ and ै (khwo: खौ, lananwi: लानानै); its p, t and k are written with
+# the aspirated letters फ थ ख (thakhai: थाखाय); the vowel a consonant
+# carries is typed o (bor: बर), so a typed a is mostly ा; ai and ao are
+# ाय and ाव (thanai: थानाय, gejerao: गेजेराव); and ng before a consonant
+# or at a word's end is ं (jadwng: जादों). The lexicon chooses.
+
+script abugida
+virama ्
+cluster 0
+schwa 1.5
+final 0
+final-virama 3
+
+[consonants]
+k    ख  क:0.8
+kh   ख
+q    क
+g    ग
+gh   घ
+ch   च  छ:0.8
+c    च  क:1.5
+j    ज  झ:2
+jh   झ
+z    ज
+t    थ  त:0.8  ट:1.5
+th   थ
+d    द  ड:0.8
+dh   ध  द:1
+n    न
+p    फ  प:0.8
+ph   फ
+f    फ
+b    ब
+bh   भ
+m    म
+y    य
+r    र
+l    ल
+w>v  व
+v    भ:0.5  व:0.5
+sh   श  स:0.5
+s    स  श:1.5
+h    ह
+x    क्स
+
+[vowels]
+a     आ/ा  अ/-:0.8
+^a    आ/ा  अ/-:0.5
+aa    आ/ा
+o     अ/-  ओ/ो:0.8
+^o    अ/-  ओ/ो:0.8
+oo    ऊ/ू  ओ/ो:1
+i     इ/ि  ई/ी:0.8
+ee    ई/ी  इ/ि:1
+u     उ/ु  ऊ/ू:0.8
+e     ए/े  ऐ/ै:1.5
+w     ओ/ो
+wo    औ/ौ  ओ/ो:1
+wi    ऐ/ै:0.3  ओइ/ोइ:1
+ai    आय/ाय  ऐ/ै:1  आइ/ाइ:0.8
+ao    आव/ाव  औ/ौ:1
+au    औ/ौ  आउ/ाउ:0.8
+ou    औ/ौ
+ow    औ/ौ:0.3
+ia    इया/िया:0.3  इआ/िआ:0.8
+
+[other]
+ng$   ं
+ng>c  ं
+ng>v  ं:0.5
+n>c   ं:0.8
+m>c   ं:1

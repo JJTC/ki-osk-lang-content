@@ -29,7 +29,8 @@ ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 # skipped models that were already committed.
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
                  oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
-                 bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy
+                 bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
+                 brx doi hne mag brh
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -58,11 +59,23 @@ TATOEBA_WEIGHT ?= 10
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 
+# FineWeb-2's web text, the whole corpus of languages with no Wikipedia of
+# their own: Bodo, Dogri, Chhattisgarhi, Magahi and Brahui
+# (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
+# pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
+# scripts/fineweb-text.py keeps the documents that read as their language;
+# the held-out text is FineWeb-2's test split, in $(FINEWEB_DIR)/eval, and
+# like the corpus it is not committed. Reading parquet needs pyarrow:
+# FINEWEB_PYTHON names a Python that has it.
+FINEWEB_LANGS ?= brx doi hne mag brh
+FINEWEB_DIR = $(SRC_DIR)/fineweb
+FINEWEB_PYTHON ?= python3
+
 # Words romanized by hand, from the test split of AI4Bharat's Aksharantar
 # dataset (scripts/fetch-aksharantar.sh, each zip pinned by sha256): what
 # eval-translit measures the tables Dakshina has nothing for on. Never
 # committed or shipped.
-AKSHARANTAR_LANGS ?= as mai ne or sa kok ks mni
+AKSHARANTAR_LANGS ?= as mai ne or sa kok ks mni brx
 AKSHARANTAR_DIR = $(SRC_DIR)/aksharantar
 
 # Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
@@ -124,7 +137,8 @@ PREDICT_WIDE_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
-PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy
+PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
+                      brx doi hne mag brh
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
@@ -148,6 +162,8 @@ help:
 	@echo "                   languages (the Dakshina dataset) into SRC_DIR"
 	@echo "  fetch-wikipedia  the wikis' own text, for WIKIPEDIA_LANGS, into SRC_DIR"
 	@echo "  fetch-aksharantar  romanized words for eval-translit, into SRC_DIR"
+	@echo "  fetch-fineweb    FineWeb-2's web text, for FINEWEB_LANGS, into SRC_DIR"
+	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
@@ -180,7 +196,7 @@ help:
 # only what the lock says is out of date, then refuses a result that
 # lost a file or shrank one.
 .PHONY: refresh
-refresh: fetch-corpora fetch-dakshina fetch-wikipedia
+refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb
 	$(MAKE) predict-assets hinglish-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) check
 
@@ -199,6 +215,10 @@ fetch-wikipedia:
 .PHONY: fetch-aksharantar
 fetch-aksharantar:
 	OUT=$(AKSHARANTAR_DIR) ./scripts/fetch-aksharantar.sh $(AKSHARANTAR_LANGS)
+
+.PHONY: fetch-fineweb
+fetch-fineweb:
+	OUT=$(FINEWEB_DIR) PYTHON=$(FINEWEB_PYTHON) ./scripts/fetch-fineweb.sh $(FINEWEB_LANGS)
 
 # The word lists of the languages written without spaces between words
 # (wordbreak/<lang>.txt, committed): ICU's word-break dictionaries, pinned
@@ -229,7 +249,7 @@ predict-assets:
 			*" $$lang "*) vocab=$(PREDICT_WIDE_VOCAB); ngram=$(PREDICT_WIDE_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
-		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) " in \
+		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) " in \
 			*" $$lang "*) ;; \
 			*) case " $(DAKSHINA_LANGS) " in \
 				*" $$lang "*) corpus="--corpus $(TATOEBA_WEIGHT):$(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt"; \
@@ -245,6 +265,10 @@ predict-assets:
 		case " $(WIKIPEDIA_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(WIKIPEDIA_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input wikipedia/$$lang.txt=$(WIKIPEDIA_DIR)/$$lang.txt" ;; \
+		esac; \
+		case " $(FINEWEB_LANGS) " in \
+			*" $$lang "*) corpus="$$corpus --corpus $(FINEWEB_DIR)/$$lang.txt"; \
+			              corpus_in="$$corpus_in --input fineweb/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt" ;; \
 		esac; \
 		words=; words_in=; \
 		if [ -f wordbreak/$$lang.txt ]; then \

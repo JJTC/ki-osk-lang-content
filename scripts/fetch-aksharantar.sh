@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # fetch-aksharantar.sh — romanizations people typed, word by word, for
 # the transliteration tables Dakshina has none for: Assamese, Maithili,
-# Nepali, Odia, Sanskrit, Konkani, Kashmiri and Meitei (the Makefile's
+# Nepali, Odia, Sanskrit, Konkani, Kashmiri, Meitei and Bodo (the Makefile's
 # AKSHARANTAR_LANGS). Only `make eval-translit` reads them: nothing of
 # them is committed or shipped.
 #
@@ -38,6 +38,7 @@ sa   san  8cdc6e500743194116f9d40938c72f8995bd2e9073a7183bee9da3d3cb655168
 kok  kok  c08a2896ef3b85f44937c6fcfa75fefdc0736ffb3deceaf0cf9cf64227cc85e9
 ks   kas  e2488d3972b440bf75ce16db5b43333a83362c9b2c633c914e50dfb6e07d255b
 mni  mni  55d59376fcf08b376dd3db87735869d7d6dd49c78b237582dfcad9f956ed31ad
+brx  brx  4117f9dab514ca613174fd0af6c79fcd74233c6f2a1916e8cc73de0f8ffc0d1b
 "
 
 # A test split's JSON lines to word<TAB>romanization<TAB>1, the word in

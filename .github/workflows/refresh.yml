@@ -133,10 +133,18 @@ jobs:
       # which the script keeps only the text the models use.
       - name: Dakshina's Wikipedia text
         run: make fetch-dakshina SRC_DIR="$RUNNER_TEMP/sources"
-      # Seven languages learn from their wikis' own text: the dumps of one
+      # Sixteen languages learn from their wikis' own text: the dumps of one
       # date, pinned by sha256.
       - name: Wikipedia's text
         run: make fetch-wikipedia SRC_DIR="$RUNNER_TEMP/sources"
+      # Five with no wiki of their own learn from FineWeb-2's web text:
+      # its parquet files at one revision, pinned by sha256, read with
+      # pyarrow.
+      - name: FineWeb-2's text
+        run: |
+          python3 -m venv "$RUNNER_TEMP/pyenv"
+          "$RUNNER_TEMP/pyenv/bin/pip" install --quiet pyarrow
+          make fetch-fineweb SRC_DIR="$RUNNER_TEMP/sources" FINEWEB_PYTHON="$RUNNER_TEMP/pyenv/bin/python"
       - name: Prediction models
         run: make predict-assets SRC_DIR="$RUNNER_TEMP/sources"
       # Hinglish: Hindi's corpora (Tatoeba's, from the prepare job, and

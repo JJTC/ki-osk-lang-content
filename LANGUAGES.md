@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**198 layouts**: 157 keyboard layouts (RTL: ar he fa + Urdu, Western
-Punjabi, Saraiki, Kashmiri, Pashto, Sindhi, Uyghur, Syriac, Dhivehi,
-Yiddish; Hinglish) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) · 32
-transliteration layouts (Latin letters → the language's script, `-abc`)
-· emoji + numeric. All render native keycaps. 197 are here; the numeric
-keypad is built into ki-osk. The table below is the complete list;
-**81 languages** carry a prediction
+**208 layouts**: 162 keyboard layouts (RTL: ar he fa + Urdu, Western
+Punjabi, Saraiki, Kashmiri, Brahui, Pashto, Sindhi, Uyghur, Syriac,
+Dhivehi, Yiddish; Hinglish) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) ·
+37 transliteration layouts (Latin letters → the language's script,
+`-abc`) · emoji + numeric. All render native keycaps. 207 are here; the
+numeric keypad is built into ki-osk. The table below is the complete
+list; **86 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -80,6 +80,7 @@ but no model to match the glide against · `—` off
 | `az` | `az` | Azerbaijani | az | LTR | **Full** (az) | ✓ | — |
 | `ku` | `ku` | Kurdish (Kurmanji) | iq · ku | LTR | **Full** (ku) | ✓ | — |
 | `ur` | `ur` | Urdu | pk | **RTL** | **Full** (ur)³ | — | — |
+| `brh` | `brh` | Brahui براہوئی | pk + long-press ۺ | **RTL** | **Full** (brh)⁷ | — | — |
 | `pnb` | `pnb` | Western Punjabi پنجابی | pk + long-press ݨ | **RTL** | **Full** (pnb)⁶ | — | — |
 | `skr` | `skr` | Saraiki سرائیکی | pk + long-press ٻ ڄ ݙ ڳ ݨ | **RTL** | **Full** (skr)⁶ | — | — |
 | `ks` | `ks` | Kashmiri کٲشُر | pk + long-press ٲ ۄ ۆ ؠ ۍ and the vowel marks ٕ ٟ ٖ ٗ ٚ ٛ | **RTL** | **Full** (ks)⁶ | — | — |
@@ -95,6 +96,10 @@ but no model to match the glide against · `—` off
 | `ka` | `ka` | Georgian | ge | LTR | **Full** (ka) | — | — |
 | `hy` | `hy` | Armenian | am | LTR | **Full** (hy) | — | — |
 | `hi` | `hi` | Hindi | in | LTR | **Full** (hi)³ | — | — |
+| `brx` | `brx` | Bodo बड़ो | in | LTR | **Full** (brx)⁷ | — | — |
+| `doi` | `doi` | Dogri डोगरी | in | LTR | **Full** (doi)⁷ | — | — |
+| `hne` | `hne` | Chhattisgarhi छत्तीसगढ़ी | in | LTR | **Full** (hne)⁷ | — | — |
+| `mag` | `mag` | Magahi मगही | in | LTR | **Full** (mag)⁷ | — | — |
 | `hi-latn` | `hi-Latn` | Hinglish (Hindi in Latin letters) | us | LTR | **Full** (hi-Latn)⁵ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
@@ -226,6 +231,11 @@ but no model to match the glide against · `—` off
 | `skr-abc` | `skr` | Saraiki سرائیکی (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic (Shahmukhi), the skr lexicon choosing |
 | `ks-abc` | `ks` | Kashmiri کٲشُر (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the ks lexicon choosing |
 | `mni-abc` | `mni` | Meitei ꯃꯤꯇꯩ ꯂꯣꯟ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Meetei Mayek, the mni lexicon choosing |
+| `brx-abc` | `brx` | Bodo बड़ो (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the brx lexicon choosing |
+| `doi-abc` | `doi` | Dogri डोगरी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the doi lexicon choosing |
+| `hne-abc` | `hne` | Chhattisgarhi छत्तीसगढ़ी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hne lexicon choosing |
+| `mag-abc` | `mag` | Magahi मगही (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the mag lexicon choosing |
+| `brh-abc` | `brh` | Brahui براہوئی (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the brh lexicon choosing |
 | `emoji` | `emoji` | Emoji picker | — | — | — | — | Unicode 16 — categories, search, skin-tone, recents |
 | `numeric` | — (ki-osk) | Numeric keypad | — | — | — | — | — |
 
@@ -278,16 +288,18 @@ but no model to match the glide against · `—` off
    have, the word comes first for Assamese 86.0% (88.6% among the strip's
    two), Sanskrit 85.6% (91.2%), Maithili 82.8% (89.0%), Konkani 79.1%
    (84.6%), Nepali 77.1% (82.9%), Odia 76.7% (82.5%), Meitei 75.2%
-   (80.9%) and Kashmiri 44.5% (58.2%), the tables reading what those
+   (80.9%), Bodo 67.6% (74.5%) and Kashmiri 44.5% (58.2%), the tables
+   reading what those
    romanizations do: the visarga said again after its vowel (ramaha:
    रामः), Assamese's khy for ক্ষ, Nepali's and Maithili's ँ, Odia's ଙ୍କ
-   and ର୍ତ୍ତ, Konkani's dh for ड and ie for ई, Meitei's e for a first ꯏ.
+   and ର୍ତ୍ତ, Konkani's dh for ड and ie for ई, Meitei's e for a first ꯏ,
+   Bodo's w for its vowel ो and its p, t and k for फ थ ख.
    Kashmiri's spelling marks its vowels as each writer chooses, and its
    lexicon has many words both with marks and without (مقبول, مقبوٗل): a
    third of its misses are the word with other marks. Greek, Armenian,
    Persian, Pashto, Mongolian, Bhojpuri, Western Punjabi, Santali,
-   Yiddish, Awadhi, Saraiki and Tulu have no such measure; their tests
-   read everyday words. Of the 51 checked in the seven tables
+   Yiddish, Awadhi, Saraiki, Tulu, Dogri, Chhattisgarhi, Magahi and Brahui
+   have no such measure; their tests read everyday words. Of the 51 checked in the seven tables
    new with Wikipedia's text, 48 come first and 49 are on the strip;
    Kathmandu's and Lahore's English spellings are not, and Pashto's da
    comes after ده. Sanskrit's, Santali's and Yiddish's tables put first
@@ -299,7 +311,9 @@ but no model to match the glide against · `—` off
    Yiddish's YIVO's romanization, and the words from Hebrew that keep
    Hebrew's spelling (sholem: שלום). Of 54 everyday words of Awadhi,
    Saraiki and Tulu, 53 come first (Tulu's undu is ಉಂದು, "this", before
-   ಉಂಡು, "is"). Hindi's, Marathi's and Malayalam's tables also read
+   ಉಂಡು, "is"), and of 74 of Dogri, Chhattisgarhi, Magahi and Brahui, 70,
+   the others being two words typed alike, the other first (Chhattisgarhi's
+   la: ला before ल). Hindi's, Marathi's and Malayalam's tables also read
    English spellings, for the English words those languages write in
    their script (school: स्कूल).
 5. Hinglish is Hindi typed in Latin letters and left in them: the US
@@ -337,11 +351,28 @@ but no model to match the glide against · `—` off
    pointed letters and ligatures (`scripts/build-derived-layouts.py`).
    Bishnupriya Manipuri's wiki is not used: nearly all of it is town
    stubs a bot wrote (98% of its sentences fit 2 000 templates).
+7. These five models learn from web text, FineWeb-2's (ODC-By 1.0,
+   subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
+   the dataset's files at one revision pinned by sha256): Bodo, Dogri,
+   Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of their own.
+   Its language classifier mistakes close languages, so a document is
+   kept only when it reads as its language (`scripts/fineweb-text.py`):
+   none heavy with Hindi's or Urdu's own function words, none that is a
+   scanned book's garbled text, and for Dogri none whose words are more
+   Punjabi's than Dogri's (half of FineWeb-2's Dogri is Punjabi poetry
+   and Himachali). Its Angika (Hindi news), Malvi and Devanagari Kashmiri
+   are not used, nor its Garo, all one Bible. Keystroke savings on
+   FineWeb-2's held-out test text, which is not committed, the text
+   being the web's: Bodo 48.1%, Brahui 46.4%, Magahi 31.4%,
+   Chhattisgarhi 30.1%, Dogri 30.1% (its test text only 33 sentences).
+   Bodo, Dogri, Chhattisgarhi and Magahi are typed on Hindi's keys,
+   Brahui on Urdu's with ۺ. Bodo's apostrophe, which marks a vowel inside
+   a word and at its end (बर'), is in the lexicon inside a word only.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **81 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **86 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -351,7 +382,8 @@ but no model to match the glide against · `—` off
   cut into words with ICU's word list, as it has no spaces between
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
-  text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy** (note 6). Built by
+  text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy** (note 6) ·
+  **web text: brx doi hne mag brh** (FineWeb-2's; note 7). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet, because Tatoeba has too few

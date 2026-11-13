@@ -129,9 +129,9 @@ jobs:
             echo "Licences travel with these files: the Chinese and Cantonese dictionaries"
             echo "(\`zh-Hans\`, \`zh-Hant\`, \`yue\`) and the packs whose models learn from"
             echo "Wikipedia text (the Dakshina dataset's or the wikis' own) are share-alike, the"
-            echo "other prediction packs carry Tatoeba's CC BY 2.0 FR, and \`ja\` mozc's BSD"
-            echo "licence. Each pack's manifest names its licences; \`NOTICES.md\` is an asset and"
-            echo "inside the tarball."
+            echo "other prediction packs carry Tatoeba's CC BY 2.0 FR or FineWeb-2's ODC-By 1.0,"
+            echo "and \`ja\` mozc's BSD licence. Each pack's manifest names its licences;"
+            echo "\`NOTICES.md\` is an asset and inside the tarball."
           } > "$RUNNER_TEMP/notes.md"
           cat "$RUNNER_TEMP/notes.md" >> "$GITHUB_STEP_SUMMARY"
 

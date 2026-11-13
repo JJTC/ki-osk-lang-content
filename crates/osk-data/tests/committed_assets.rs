@@ -442,6 +442,14 @@ fn every_translit_table_reads_its_language() {
             "tcy",
             &[("bokka", "ಬೊಕ್ಕ"), ("onji", "ಒಂಜಿ"), ("tulu", "ತುಳು")],
         ),
+        (
+            "brx",
+            &[("aro", "आरो"), ("mwnse", "मोनसे"), ("thakhai", "थाखाय")],
+        ),
+        ("doi", &[("kanne", "कन्नै"), ("gi", "गी"), ("eh", "एह्")]),
+        ("hne", &[("havay", "हवय"), ("au", "अउ"), ("rahis", "रहिस")]),
+        ("mag", &[("aau", "आउ"), ("halai", "हलइ"), ("ego", "एगो")]),
+        ("brh", &[("na", "نا"), ("kanning", "کننگ"), ("e", "ءِ")]),
     ];
     let tables = files("translit", ".txt");
     assert_eq!(

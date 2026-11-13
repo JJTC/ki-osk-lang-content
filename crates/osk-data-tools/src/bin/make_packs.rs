@@ -22,7 +22,8 @@
 //! A prediction pack names the corpora its model was built from as
 //! `sources.lock` records them: Tatoeba's (`corpora/<lang>.txt`), the
 //! Dakshina dataset's Wikipedia text (`dakshina/<lang>.txt`), the wikis'
-//! own (`wikipedia/<lang>.txt`), with their licences.
+//! own (`wikipedia/<lang>.txt`), FineWeb-2's web text (`fineweb/<lang>.txt`),
+//! with their licences.
 //!
 //! It refuses rather than guesses:
 //! - a committed data file that no pack claims, or that two packs claim;
@@ -137,6 +138,9 @@ struct Prediction {
     /// The wikis' own text (their CirrusSearch dumps): the licence and
     /// source of the models built from it.
     wikipedia: Added,
+    /// FineWeb-2's web text: the licence and source of the models built
+    /// from it.
+    fineweb: Added,
 }
 
 /// What a file beside a language's model adds to its pack.
@@ -274,6 +278,7 @@ fn main() -> anyhow::Result<()> {
             ("corpora", &p.license, &p.source),
             ("dakshina", &p.dakshina.license, &p.dakshina.source),
             ("wikipedia", &p.wikipedia.license, &p.wikipedia.source),
+            ("fineweb", &p.fineweb.license, &p.fineweb.source),
         ] {
             let sha = recorded(&entry, &format!("{dir}/{lang}.txt"))
                 .or_else(|| recorded(&entry, &format!("{dir}/{primary}.txt")));
@@ -288,7 +293,7 @@ fn main() -> anyhow::Result<()> {
         }
         ensure!(
             !sources.is_empty(),
-            "sources.lock records no corpus of {entry} (corpora/, dakshina/ or wikipedia/, {lang}.txt or {primary}.txt)"
+            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/ or fineweb/, {lang}.txt or {primary}.txt)"
         );
         // Dialect flags and word lists carry their own sources' licences
         // into the pack.

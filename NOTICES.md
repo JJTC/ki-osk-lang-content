@@ -164,6 +164,26 @@ share-alike: the packs of those sixteen languages, their models and that
 held-out text carry those terms, with attribution to Wikipedia's
 contributors (each article's history, at its wiki, names them).
 
+### FineWeb-2 (web text)
+
+Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
+which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
+
+Five languages' models learn from FineWeb-2's web text alone: Bodo,
+Dogri, Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of
+their own. FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
+Pipeline to Scale Them All", arXiv 2506.20920) is text from Common
+Crawl's crawls, sorted by language; **it is ODC-By 1.0, and its use is
+subject to [Common Crawl's Terms of Use](https://commoncrawl.org/terms-of-use)**.
+Its parquet files, at one revision of the dataset, are pinned by sha256
+in `scripts/fetch-fineweb.sh`; `scripts/fineweb-text.py` keeps the
+documents that read as their language. The models made from it (word
+lists and the counts of words and word pairs and triples) are what this
+repository and its packs hold; the text itself is not, neither the
+corpus nor the held-out text: it is the web's, whose pages keep their
+own rights. Each pack with such a model names FineWeb-2 among its
+sources, with this licence, as ODC-By asks of what is made from it.
+
 **The Dakshina dataset is CC BY-SA 4.0**, share-alike: the packs of
 those twelve languages, their models and the held-out text in `eval/`
 carry those terms, with attribution, besides Tatoeba's where they use
@@ -204,11 +224,11 @@ become its script (`osk_data::translit`): Assamese, Bengali, Bhojpuri,
 Greek, Gujarati, Hindi, Armenian, Kannada, Maithili, Malayalam, Marathi,
 Mongolian, Nepali, Odia, Punjabi (Gurmukhi and Shahmukhi), Persian,
 Pashto, Sanskrit, Santali, Sindhi, Sinhala, Tamil, Telugu, Urdu,
-Yiddish, Awadhi, Kashmiri, Konkani, Meitei, Saraiki and Tulu. They were
-written here, MIT licensed, each joining its language's pack; what they
-choose among, the language's lexicon chooses. They are measured on
-romanizations nothing here ships: the Dakshina dataset's, and for eight
-of them the test words of AI4Bharat's Aksharantar dataset (manually
+Yiddish, Awadhi, Kashmiri, Konkani, Meitei, Saraiki, Tulu, Bodo, Dogri,
+Chhattisgarhi, Magahi and Brahui. They were written here, MIT licensed,
+each joining its language's pack; what they choose among, the
+language's lexicon chooses. They are measured on romanizations nothing
+here ships: the Dakshina dataset's, and for nine of them the test words of AI4Bharat's Aksharantar dataset (manually
 collected data CC BY, mined data CC0; "Aksharantar: Towards Building
 Open Transliteration Tools for the Next Billion Users", arXiv
 2205.03018), which `scripts/fetch-aksharantar.sh` downloads to measure.

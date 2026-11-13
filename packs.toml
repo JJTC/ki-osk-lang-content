@@ -25,10 +25,13 @@ bg  = "Bulgarian"
 bho = "Bhojpuri"
 bn  = "Bengali"
 br  = "Breton"
+brh = "Brahui"
+brx = "Bodo"
 ca  = "Catalan"
 cs  = "Czech"
 da  = "Danish"
 de  = "German"
+doi = "Dogri"
 el  = "Greek"
 en  = "English"
 eo  = "Esperanto"
@@ -44,6 +47,7 @@ gu  = "Gujarati"
 he  = "Hebrew"
 hi  = "Hindi"
 hi-Latn = "Hinglish (Hindi in Latin letters)"
+hne = "Chhattisgarhi"
 hr  = "Croatian"
 hu  = "Hungarian"
 hy  = "Armenian"
@@ -58,6 +62,7 @@ ks  = "Kashmiri"
 ku  = "Kurdish (Kurmanji)"
 lt  = "Lithuanian"
 lv  = "Latvian"
+mag = "Magahi"
 mai = "Maithili"
 mk  = "Macedonian"
 ml  = "Malayalam"
@@ -155,11 +160,20 @@ license = { name = "CC BY-SA 4.0 (the Dakshina dataset)", url = "https://creativ
 source  = { name = "The Dakshina dataset v1.0 (Google Research): Wikipedia text", url = "https://github.com/google-research-datasets/dakshina" }
 
 # The wikis' own text (scripts/fetch-wikipedia.sh: their CirrusSearch
-# dumps, plain text, pinned by sha256): the whole corpus of Bhojpuri,
-# Maithili, Mongolian, Nepali, Odia, Western Punjabi and Pashto.
+# dumps, plain text, pinned by sha256): the whole corpus of the languages
+# that script names.
 [prediction.wikipedia]
 license = { name = "CC BY-SA 4.0 (Wikipedia)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
 source  = { name = "Wikipedia, the wikis' CirrusSearch dumps of 2026-11-08", url = "https://dumps.wikimedia.org/other/cirrus_search_index/20261108/" }
+
+# FineWeb-2's web text (scripts/fetch-fineweb.sh: its parquet files at one
+# revision, pinned by sha256; scripts/fineweb-text.py keeps the documents
+# that read as their language): the whole corpus of the languages with no
+# Wikipedia of their own that script names. ODC-By asks that what is made
+# from it say so: each such pack names it, and NOTICES.md.
+[prediction.fineweb]
+license = { name = "ODC-By 1.0 (FineWeb-2)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false }
+source  = { name = "FineWeb-2 (Hugging Face): web text from Common Crawl, revision af9c133", url = "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2" }
 
 # Transliteration tables (translit/<lang>.txt, osk_data::translit): how the
 # Latin letters typed for a language become its script, written for this
@@ -201,6 +215,8 @@ bm      = ["bm"]
 bn      = ["bn", "bn-abc"]
 bo      = ["bo"]
 br      = ["br"]
+brh     = ["brh", "brh-abc"]
+brx     = ["brx", "brx-abc"]
 bs      = ["bs"]
 ca      = ["ca"]
 ceb     = ["ceb"]
@@ -210,6 +226,7 @@ cs      = ["cz"]
 cy      = ["cy"]
 da      = ["dk"]
 de      = ["de"]
+doi     = ["doi", "doi-abc"]
 dv      = ["dv"]
 dz      = ["dz"]
 ee      = ["ee"]
@@ -237,6 +254,7 @@ haw     = ["haw"]
 he      = ["he"]
 hi      = ["hi", "hi-abc"]
 hi-Latn = ["hi-latn"]
+hne     = ["hne", "hne-abc"]
 hr      = ["hr"]
 ht      = ["ht"]
 hu      = ["hu"]
@@ -265,6 +283,7 @@ ln      = ["ln"]
 lo      = ["lo"]
 lt      = ["lt"]
 lv      = ["lv"]
+mag     = ["mag", "mag-abc"]
 mai     = ["mai", "mai-abc"]
 mg      = ["mg"]
 mi      = ["mi"]

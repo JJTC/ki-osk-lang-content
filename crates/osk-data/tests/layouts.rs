@@ -141,6 +141,7 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("sa", "ऽॐ"),
         ("skr", "ٻڄݙڳݨ"),
         ("ks", "ٲۄۆؠۍ"),
+        ("brh", "ۺ"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {
