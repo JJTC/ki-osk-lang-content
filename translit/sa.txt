@@ -7,11 +7,15 @@
 # Unlike Hindi, Sanskrit speaks every inherent vowel: a word's last a is
 # mostly that (rama: राम), and its last consonant keeps its virama nearly
 # as often as its vowel (asmin: अस्मिन्; bharat: भारत); h at a word's end is
-# the visarga (ramah: रामः), m there the anusvara as often as म् (ayam:
-# अयं, aham: अहम्), and a nasal before a consonant of its row is the
-# conjunct (shanti: शान्ति, pancha: पञ्च, anga: अङ्ग), seldom ं.
-# ' is the avagraha (so'ham: सोऽहम्), om alone is ॐ. The lexicon chooses
-# among them.
+# the visarga (ramah: रामः), as is the h and the vowel before it said
+# again, as Sanskrit is recited (ramaha, guruhu, harehe: रामः, गुरुः,
+# हरेः), m there the anusvara as often as म् (ayam: अयं, aham: अहम्),
+# and a nasal before a consonant of its row is the conjunct (shanti:
+# शान्ति, pancha: पञ्च, anga: अङ्ग), seldom ं. ' is the avagraha
+# (so'ham: सोऽहम्), which may be left out (sopi: सोऽपि), om alone is ॐ.
+# Names from English are typed as English spells them (city: सिटी): c,
+# ck, a last y and er have English ways too, at a cost. The lexicon
+# chooses among them.
 
 script abugida
 virama ्
@@ -27,7 +31,10 @@ g    ग
 gh   घ
 ch   च  छ:0.6
 chh  छ
+cch  च्छ
 c    च
+c>v  च  स:2  क:1.5
+ck   क:0.5
 j    ज  झ:3
 jh   झ
 z    ज  ज़:2
@@ -43,6 +50,7 @@ dh   ध  ढ:1.2  द्ध:1.5
 Dh   ढ  ध:1.5
 n    न  ण:1
 N    ण  न:1.5
+nd   ण्ड:0.8
 nc   ञ्च:0.3
 nch  ञ्च:0.3
 nj   ञ्ज:0.3
@@ -67,7 +75,7 @@ shh  ष
 S    ष  स:1.5
 s    स  श:1.5  ष:2
 h    ह
-x    क्ष  क्स:1.5
+x    क्ष  क्स:0.8
 ksh  क्ष
 kS   क्ष
 q    क
@@ -89,17 +97,27 @@ u     उ/ु  ऊ/ू:0.8
 U     ऊ/ू  उ/ु:1.5
 uu    ऊ/ू
 oo    ऊ/ू  ओ/ो:2
-e     ए/े  ऐ/ै:2.5
-ai    ऐ/ै  ए/े:2
-o     ओ/ो  औ/ौ:2.5
+e     ए/े  ऐ/ै:2.5  एऽ/ेऽ:2.5
+e$    ए/े  ऐ/ै:2.5
+ey$   ए/े:1
+ai    ऐ/ै  ए/े:2  अय/य:1.5
+o     ओ/ो  औ/ौ:2.5  ओऽ/ोऽ:2
+o$    ओ/ो  औ/ौ:2.5
 au    औ/ौ  ओ/ो:2
+ou    औ/ौ  ओ/ो:1.5
+ow    औ/ौ:1
 ri    ऋ/ृ:0.5
-ru    ऋ/ृ:2
+ru    ऋ/ृ:1
 R     ऋ/ृ
 RRi   ऋ/ृ
 
 [other]
 h$    ः
+ha$   ः:1
+hi$   ः:0.5
+hu$   ः:0.5
+he$   ः:0.5
+ho$   ः:0.5
 H     ः
 h>c   ः:2
 m$    ं:0.2
@@ -108,4 +126,6 @@ m>c   ं:0.5
 n>c   ं:1.2
 n$    ं:2
 '     ऽ:0.3
+er$   र:1.5
+y$    ी:2
 ^om$  ॐ:0.5

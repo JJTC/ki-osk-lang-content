@@ -1,10 +1,14 @@
 # Nepali (Devanagari) from Latin letters, as Nepali is typed in Latin:
 # Hindi's ways, with Nepali's own: cha for छ as often as for च (ramro
 # cha: राम्रो छ), few nuktas (z, f and q are ज, फ and क first), a word's
-# last consonant often with its virama (garchhan: गर्छन्). Long vowels are
+# last consonant often with its virama (garchhan: गर्छन्), n before a
+# consonant as often ँ as ं (aansu: आँसु, bataunchha: बताउँछ), au as often
+# आउ as औ, ng and nk as ङ (darjeeling: दार्जिलिङ, ganga: गङ्गा) and nch
+# and nj as ञ (panchayat: पञ्चायत), b sometimes for व. Long vowels are
 # often written short, the retroflex consonants as the dental ones, and
 # the lexicon chooses. English words written in Nepali's script are typed
-# as English spells them, as Hindi's table reads them.
+# as English spells them, as Hindi's table reads them, and a and i have
+# their English ways too (plate: प्लेट, side: साइड).
 
 script abugida
 virama ्
@@ -36,10 +40,16 @@ d    द  ड:0.6  ड़:1.5
 dd   ड:0.5  द्द:0.3  ड्ड:1
 dh   ध  ढ:1  ढ़:1.5  द:2  द्ध:1.2
 n    न  ण:2
+ng   ङ्ग:0.6  ङ:1
+ng$  ङ:0.3  ङ्ग:1
+ng>c ङ:0.3
+nk   ङ्क:0.6
+nch  ञ्च:0.6
+nj   ञ्ज:0.6
 p    प
 ph   फ  फ़:0.7
 f    फ  फ़:1.5
-b    ब
+b    ब  व:1.2
 bh   भ
 m    म
 y    य
@@ -56,32 +66,32 @@ ksh  क्ष
 gy   ज्ञ:1.5
 
 [vowels]
-a     अ/-  आ/ा:1.2
+a     अ/-  आ/ा:1.2  ए/े:2.5
 ^a    अ/-  आ/ा:0.8
 a$    आ/ा  अ/-:1.5  आँ/ाँ:2
 aa    आ/ा
 ^aa   आ/ा  अ/-:2
 aa$   आ/ा  आँ/ाँ:1.5  आं/ां:2
-i     इ/ि  ई/ी:1
+i     इ/ि  ई/ी:1  आइ/ाइ:2.5
 i$    ई/ी  इ/ि:0.8  ईं/ीं:1.5
 ee    ई/ी  इ/ि:2
 ee$   ई/ी  ईं/ीं:1.5
 ii    ई/ी
 u     उ/ु  ऊ/ू:1  अ/-:2  यू/्यू:2  ओ/ो:2.5
 u$    उ/ु  ऊ/ू:0.5  ऊँ/ूँ:1.5
-oo    ऊ/ू  ओ/ो:2
+oo    ऊ/ू  उ/ु:0.8  ओ/ो:2
 uu    ऊ/ू
 e     ए/े  ऐ/ै:1.5  अ/-:2  इ/ि:3
 e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:2.5
-ai    ऐ/ै  ए/े:1.5  आई/ाई:1.2
-ai$   ऐ/ै  ऐं/ैं:0.6  ए/े:1.5  आई/ाई:1.2  अय/य:1.8
-ae    ऐ/ै:0.5  ए/े:1
+ai    ऐ/ै  ए/े:1.5  आई/ाई:1.2  आइ/ाइ:1.2
+ai$   ऐ/ै  आई/ाई:0.3  आइ/ाइ:0.6  ऐं/ैं:0.6  ए/े:1.5  अय/य:1.8
+ae    ऐ/ै:0.5  ए/े:1  आए/ाए:0.6
 ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
 ye    ए/े:0.3
 yi    ई/ी:0.5
 o     ओ/ो  ओं/ों:1.2  ऑ/ॉ:1.5  औ/ौ:1.5  अ/-:2.5
 o$    ओ/ो  ओं/ों:1.5  औ/ौ:2
-au    औ/ौ  ओ/ो:2
+au    औ/ौ  आउ/ाउ:0.5  ओ/ो:2
 ou    औ/ौ  ओ/ो:1.5  ऊ/ू:2
 ri    ऋ/ृ:2
 ru    ऋ/ृ:2.5
@@ -92,7 +102,7 @@ or$   र:2
 le$   ल:2
 y$    ी:2
 tion  शन:1  ्शन:1
-n>c   ं:0.7
+n>c   ं:0.7  ँ:0.6
 m>c   ं:1.5
 n$    ं:0.8  ँ:1.5
 m$    ं:0.8

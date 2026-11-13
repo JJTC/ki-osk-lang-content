@@ -57,6 +57,13 @@ TATOEBA_WEIGHT ?= 10
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 
+# Words romanized by hand, from the test split of AI4Bharat's Aksharantar
+# dataset (scripts/fetch-aksharantar.sh, each zip pinned by sha256): what
+# eval-translit measures the tables Dakshina has nothing for on. Never
+# committed or shipped.
+AKSHARANTAR_LANGS ?= as mai ne or sa
+AKSHARANTAR_DIR = $(SRC_DIR)/aksharantar
+
 # Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
 # Only the .bins built from them are committed.
 SRC_DIR ?= $(or $(TMPDIR),/tmp)/ki-osk-sources
@@ -139,6 +146,7 @@ help:
 	@echo "  fetch-dakshina   Wikipedia text and romanizations of 12 South Asian"
 	@echo "                   languages (the Dakshina dataset) into SRC_DIR"
 	@echo "  fetch-wikipedia  the wikis' own text, for WIKIPEDIA_LANGS, into SRC_DIR"
+	@echo "  fetch-aksharantar  romanized words for eval-translit, into SRC_DIR"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
@@ -150,8 +158,9 @@ help:
 	@echo "                   (pinyin-assets zhuyin-assets jyutping-assets kana-assets)"
 	@echo "  cjk-assets-seed  rebuild from seeds (offline; DOWNGRADES, needs CONFIRM=yes)"
 	@echo "  eval-translit    how often each transliteration table puts the word"
-	@echo "                   meant first (after fetch-dakshina)"
+	@echo "                   meant first (after fetch-dakshina, fetch-aksharantar)"
 	@echo "  translit-layouts write layouts/<lang>-abc.json for translit/<lang>.txt"
+	@echo "  derived-layouts  write the layouts made from another language's keys"
 	@echo "  hinglish-assets  rebuild predict/hi-Latn.* (Hindi typed in Latin letters)"
 	@echo "                   from Hindi's corpora respelled (after fetch-dakshina)"
 	@echo "  check            compare the tree against HEAD: missing, shrunk or"
@@ -185,6 +194,10 @@ fetch-dakshina:
 .PHONY: fetch-wikipedia
 fetch-wikipedia:
 	OUT=$(WIKIPEDIA_DIR) ./scripts/fetch-wikipedia.sh $(WIKIPEDIA_LANGS)
+
+.PHONY: fetch-aksharantar
+fetch-aksharantar:
+	OUT=$(AKSHARANTAR_DIR) ./scripts/fetch-aksharantar.sh $(AKSHARANTAR_LANGS)
 
 # The word lists of the languages written without spaces between words
 # (wordbreak/<lang>.txt, committed): ICU's word-break dictionaries, pinned
@@ -490,7 +503,9 @@ hinglish-assets:
 # once) and on its romanization lexicon's test words (each romanization as
 # often as it was typed); and the keystrokes the strip saves, typing the
 # sentences' first 20 000 words a letter at a time. After `make
-# fetch-dakshina`.
+# fetch-dakshina`. Then the tables Dakshina has nothing for, on
+# Aksharantar's words romanized by hand (mostly rare words and names, so
+# what the lexicon has is the measure): after `make fetch-aksharantar`.
 TRANSLIT_EVAL_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 .PHONY: eval-translit
 eval-translit:
@@ -508,6 +523,13 @@ eval-translit:
 			--pairs $$d/romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.tsv \
 			--keystrokes --limit 20000 | tail -n 1 || exit 1; \
 	done
+	@for lang in $(AKSHARANTAR_LANGS); do \
+		p=$(AKSHARANTAR_DIR)/$$lang.tsv; \
+		test -f $$p || { echo "no $$p: run make fetch-aksharantar"; exit 1; }; \
+		echo "$$lang, Aksharantar's words:"; \
+		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+			--pairs $$p | tail -n 1 || exit 1; \
+	done
 
 # The transliteration layouts (layouts/<lang>-abc.json), one for each
 # table in translit/: the US keys typing into the language's composer.
@@ -516,7 +538,8 @@ translit-layouts:
 	$(PYTHON) scripts/build-translit-layouts.py
 
 # The layouts that are another language's keys under its own name
-# (layouts/bho.json and mai.json are Hindi's, pnb.json Urdu's and ݨ).
+# (layouts/bho.json, mai.json and sa.json are Hindi's, pnb.json Urdu's
+# and ݨ, yi.json Hebrew's and Yiddish's pointed letters).
 .PHONY: derived-layouts
 derived-layouts:
 	$(PYTHON) scripts/build-derived-layouts.py

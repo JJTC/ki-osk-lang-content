@@ -3,7 +3,11 @@
 # ো, t and d for ট and ড as well, and the vowel between two consonants
 # left out where it is not spoken; but r is ৰ and w ৱ, Assamese's own
 # letters, and x stands for স, শ and ষ, as Assamese speaks them (axom:
-# অসম), which s writes too, as it writes চ and ছ.
+# অসম), which s writes too, as both write চ and ছ (xohor: চহৰ). As
+# Assamese speaks them too: khy is ক্ষ (khyomota: ক্ষমতা), tt ত্ব, t
+# before s or another consonant ৎ (utxah: উৎসাহ), nch ঞ্চ; ua and ia
+# take the glide Assamese writes (bonua: বনোৱা, xuburia: চুবুৰীয়া); and a
+# vowel may be nasal with nothing typed for it (korisilu: কৰিছিলোঁ).
 
 script abugida
 virama ্
@@ -15,6 +19,8 @@ final-virama 4
 [consonants]
 k    ক
 kh   খ  ক্ষ:2
+khy  ক্ষ:0.2
+gy   জ্ঞ:0.5
 g    গ
 gh   ঘ
 ng   ঙ:1.5  ঙ্গ:1
@@ -25,7 +31,9 @@ j    জ  য:0.5  ঝ:2.5
 jh   ঝ
 z    জ  য:0.8
 t    ত  ট:0.6
-tt   ট:0.5  ত্ত:0.3  ট্ট:1  ত্য:0.8
+tt   ট:0.5  ত্ত:0.3  ট্ট:1  ত্য:0.8  ত্ব:0.5
+tx   ৎস:0.3
+ts   ৎস:0.5
 th   থ  ঠ:0.8  ত:1.5
 d    দ  ড:0.6  ড়:1.2
 dd   ড:0.5  দ্দ:0.3  ড্ড:1
@@ -33,10 +41,13 @@ dh   ধ  ঢ:1  ঢ়:1.5  দ:2
 ddh  দ্ধ:0.3  ধ্য:0.3
 n    ন  ণ:1.5
 nn   ন্ন  ন্য:0.5
+nc   ঞ্চ:0.3
+nch  ঞ্চ:0.3
+nj   ঞ্জ:0.3
 p    প
 ph   ফ
 f    ফ
-b    ব
+b    ব  ৱ:1.2
 bh   ভ
 w    ৱ  ওৱ:0.5  ব:1  ও:1
 v    ৱ:0.5  ভ:0.5  ব:1
@@ -48,7 +59,7 @@ l    ল
 ll   ল্ল  ল্য:0.5
 sh   শ  ষ:0.8  স:1.5
 s    স  চ:0.8  ছ:1  শ:1  ষ:2
-x    স  শ:0.5  ষ:1  ক্ষ:1
+x    স  শ:0.5  ষ:1  ক্ষ:1  চ:0.8  ছ:1.2
 h    হ
 ksh  ক্ষ
 kkh  ক্ষ:0.5
@@ -58,17 +69,22 @@ a     আ/া  অ/-:0.8  আঁ/াঁ:1.5
 ^a    আ/া  অ/-:0.6  এ/ে:1
 a$    আ/া  অ/-:1
 aa    আ/া  আঁ/াঁ:1
-o     অ/-:0.3  ও/ো:0.3
+o     অ/-:0.3  ও/ো:0.3  অঁ/ঁ:1.5  ওঁ/োঁ:1.5
 o$    ও/ো  অ/-:0.8
 oo    উ/ু  ও/ো:0.7  ঊ/ূ:1.5
-i     ই/ি  ঈ/ী:1
+i     ই/ি  ঈ/ী:1  ইঁ/িঁ:2
 ee    ঈ/ী  ই/ি:0.7
 ii    ঈ/ী
-u     উ/ু  ঊ/ূ:1  ও/ো:0.8
+u     উ/ু  ঊ/ূ:1  ও/ো:0.8  উঁ/ুঁ:1.5  ওঁ/োঁ:1.5
+u$    উ/ু  ওঁ/োঁ:0.8  ও/ো:1  ঊ/ূ:1
 uu    ঊ/ূ
-e     এ/ে  অ্যা/্যা:2.5
+e     এ/ে  অ্যা/্যা:2.5  এঁ/েঁ:2
+ua    উৱা/ুৱা:0.5  ওৱা/োৱা:0.8
+oa    ওৱা/োৱা:0.5
+ia    ইয়া/িয়া:0.5  ঈয়া/ীয়া:0.8
+ie    ইয়ে/িয়ে:0.5  ঈয়ে/ীয়ে:0.8
 ai    ঐ/ৈ  আই/াই:0.7  এই/েই:0.8
-oi    ঐ/ৈ:0.5  অই/ই:1
+oi    ঐ/ৈ:0.2  অই/ই:1
 ou    ঔ/ৌ  ও/ো:1  অউ/উ:1
 au    ঔ/ৌ  আউ/াউ:0.7
 ri    ঋ/ৃ:2
@@ -78,3 +94,4 @@ n>c   ং:0.8
 ng    ং:0.3
 n$    ং:2  ঁ:2
 t$    ৎ:1
+t>c   ৎ:1

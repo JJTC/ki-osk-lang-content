@@ -258,10 +258,19 @@ but no model to match the glide against · `—` off
    Sinhala 74.2% (77.8%; 20.2%), Kannada 73.6% (75.0%; 19.8%), Telugu
    71.6% (73.2%; 19.4%), Bengali 70.8% (74.1%; 19.6%), Tamil 70.0% (71.7%;
    17.0%), Sindhi 65.0% (71.7%; 15.2%), Malayalam 58.2% (60.8%; 13.8%); of the
-   words the lexicon has, 74–91% (`make eval-translit`). Greek, Armenian,
-   Persian, Assamese, Nepali, Odia, Pashto, Mongolian, Bhojpuri, Maithili,
-   Western Punjabi, Sanskrit, Santali and Yiddish have no such measure;
-   their tests read everyday words. Of the 51 checked in the seven tables
+   words the lexicon has, 74–91% (`make eval-translit`). Assamese,
+   Maithili, Nepali, Odia and Sanskrit are measured on the words people
+   romanized for AI4Bharat's Aksharantar dataset (its test split, 4 100
+   to 5 500 words each, mostly rare words and names; fetched to measure,
+   never shipped): of those their lexicons have, the word comes first for
+   Assamese 86.0% (88.6% among the strip's two), Sanskrit 85.6% (91.4%),
+   Maithili 82.8% (88.9%), Nepali 76.9% (82.9%) and Odia 76.0% (82.2%),
+   up from 69.8–81.7% once the tables read what those romanizations do:
+   the visarga said again after its vowel (ramaha: रामः), Assamese's khy
+   for ক্ষ, Nepali's and Maithili's ँ, Odia's ଙ୍କ and ର୍ତ୍ତ. Greek,
+   Armenian, Persian, Pashto, Mongolian, Bhojpuri, Western Punjabi,
+   Santali and Yiddish have no such measure; their tests read everyday
+   words. Of the 51 checked in the seven tables
    new with Wikipedia's text, 48 come first and 49 are on the strip;
    Kathmandu's and Lahore's English spellings are not, and Pashto's da
    comes after ده. Sanskrit's, Santali's and Yiddish's tables put first

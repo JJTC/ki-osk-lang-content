@@ -205,6 +205,12 @@ Mongolian, Nepali, Odia, Punjabi (Gurmukhi and Shahmukhi), Persian,
 Pashto, Sanskrit, Santali, Sindhi, Sinhala, Tamil, Telugu, Urdu and
 Yiddish. They were written here, MIT licensed, each joining its
 language's pack; what they choose among, the language's lexicon chooses.
+They are measured on romanizations nothing here ships: the Dakshina
+dataset's, and for five of them the test words of AI4Bharat's
+Aksharantar dataset (manually collected data CC BY, mined data CC0;
+"Aksharantar: Towards Building Open Transliteration Tools for the Next
+Billion Users", arXiv 2205.03018), which `scripts/fetch-aksharantar.sh`
+downloads to measure.
 Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'
 notices below.

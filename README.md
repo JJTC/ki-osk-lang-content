@@ -37,6 +37,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `$SRC_DIR/dakshina/` | Wikipedia text and romanizations of 12 South Asian languages (the Dakshina dataset) — **not committed** | `make fetch-dakshina` |
 | `$SRC_DIR/wikipedia/` | The text of ten wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
+| `$SRC_DIR/aksharantar/` | Words people romanized, from the test split of AI4Bharat's Aksharantar dataset (Assamese, Maithili, Nepali, Odia, Sanskrit): what `make eval-translit` measures those tables on — **not committed** | `make fetch-aksharantar` |
 | `eval/<lang>.txt` | Held-out text no model is trained on (Tatoeba's, or the Wikipedia text of the languages that learn from it alone, Dakshina's or the wikis' own): what keystroke savings are measured on | `make fetch-corpora`, `make fetch-dakshina`, `make fetch-wikipedia` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |
 | `zhuyin/cedict.bin` | Bopomofo → Traditional | `make zhuyin-assets` |

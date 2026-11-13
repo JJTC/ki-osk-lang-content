@@ -2,7 +2,12 @@
 # Hindi's ways, which Maithili's writers follow (long vowels often written
 # short, the retroflex consonants as the dental ones, a word's last a
 # usually long, the vowel between two consonants left out where it is not
-# spoken), and English words as English spells them. The lexicon chooses.
+# spoken), and English words as English spells them. Maithili's own: ँ
+# where Hindi writes ं, before a consonant and at a word's end (paanch:
+# पाँच, hamarasan: हमरासँ, also typed sean), ae as two vowels (sakae:
+# सकए), a last ai often ाइ (jaai: जाइ), d and dh for ड़ (khidhaki:
+# खिड़की), and h at a word's end the visarga (prayah: प्रायः). The lexicon
+# chooses.
 
 script abugida
 virama ्
@@ -30,9 +35,9 @@ z    ज़  ज:0.3
 t    त  ट:0.6
 tt   ट:0.5  त्त:0.3  ट्ट:1
 th   थ  ठ:0.8  त:1.5
-d    द  ड:0.6  ड़:1.5
+d    द  ड:0.6  ड़:1
 dd   ड:0.5  द्द:0.3  ड्ड:1
-dh   ध  ढ:1  ढ़:1.5  द:2  द्ध:1.2
+dh   ध  ढ:1  ढ़:1  ड़:1.2  द:2  द्ध:1.2
 n    न  ण:2
 p    प
 ph   फ  फ़:0.7
@@ -72,8 +77,9 @@ uu    ऊ/ू
 e     ए/े  ऐ/ै:1.5  अ/-:2  इ/ि:3
 e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:2.5
 ai    ऐ/ै  ए/े:1.5  आई/ाई:1.2
-ai$   ऐ/ै  ऐं/ैं:0.6  ए/े:1.5  आई/ाई:1.2  अय/य:1.8
-ae    ऐ/ै:0.5  ए/े:1
+ai$   ऐ/ै  आइ/ाइ:0.5  ऐं/ैं:0.6  ए/े:1.5  आई/ाई:1.2  अय/य:1.8
+ae    ऐ/ै:0.5  अए/ए:0.3  ए/े:1
+ean$  अँ/ँ:0.5  एँ/ेँ:0.8
 ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
 ye    ए/े:0.3
 yi    ई/ी:0.5
@@ -90,8 +96,9 @@ or$   र:2
 le$   ल:2
 y$    ी:2
 tion  शन:1  ्शन:1
-n>c   ं:0.7
+n>c   ं:0.7  ँ:0.6
 m>c   ं:1.5
-n$    ं:0.8  ँ:1.5
+n$    ं:0.8  ँ:0.6
+h$    ः:0.8
 m$    ं:0.8
 ngh   ंह:0.5
