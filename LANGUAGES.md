@@ -7,10 +7,10 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**169 layouts**: 147 keyboard layouts (RTL: ar he fa + Urdu, Pashto, Sindhi,
+**172 layouts**: 147 keyboard layouts (RTL: ar he fa + Urdu, Pashto, Sindhi,
 Uyghur, Syriac, Dhivehi; Hinglish) · 7 IMEs (5 CJK + Amharic/Tigrinya
-Ge'ez) · 13 transliteration layouts (Latin letters → the language's
-script, `-abc`) · emoji + numeric. All render native keycaps. 168 are
+Ge'ez) · 16 transliteration layouts (Latin letters → the language's
+script, `-abc`) · emoji + numeric. All render native keycaps. 171 are
 here; the numeric keypad is built into ki-osk. The table below is the
 complete list; **65 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
@@ -196,6 +196,9 @@ but no model to match the glide against · `—` off
 | `fa-abc` | `fa` | Persian فارسی (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the fa lexicon choosing |
 | `el-abc` | `el` | Greek Ελληνικά (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Greek, the el lexicon choosing |
 | `hy-abc` | `hy` | Armenian Հայերեն (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Armenian, the hy lexicon choosing |
+| `as-abc` | `as` | Assamese অসমীয়া (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the as lexicon choosing |
+| `sd-abc` | `sd` | Sindhi سنڌي (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the sd lexicon choosing |
+| `si-abc` | `si` | Sinhala සිංහල (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Sinhala, the si lexicon choosing |
 | `emoji` | `emoji` | Emoji picker | — | — | — | — | Unicode 16 — categories, search, skin-tone, recents |
 | `numeric` | — (ki-osk) | Numeric keypad | — | — | — | — | — |
 
@@ -217,33 +220,42 @@ but no model to match the glide against · `—` off
 3. These twelve models learn from Wikipedia text, the Dakshina dataset's
    (CC BY-SA 4.0, share-alike; `scripts/fetch-dakshina.sh`): all of it
    for the nine Tatoeba has too few sentences of, beside Tatoeba's (counted
-   ten times) for Hindi, Bengali and Marathi, whose keystroke savings on
-   Tatoeba's held-out text stay within half a point (46.1%, 40.6%, 42.3%)
-   while their lexicons widen. Keystroke savings of the nine on held-out
-   Wikipedia text: Punjabi 41.8%, Urdu 41.8%, Sindhi 40.4%, Sinhala 36.1%,
-   Gujarati 33.6%, Tamil 31.2%, Telugu 29.5%, Kannada 27.0%, Malayalam
-   26.7% (the Dravidian languages' words take their endings with them:
-   40 000 words leave a quarter to a third of the running words unknown).
+   ten times) for Hindi, Bengali and Marathi, whose lexicons widen
+   (Bengali's and Marathi's to 80 000 words) while their keystroke savings
+   on Tatoeba's held-out text hold or rise (Hindi 46.1%, from 46.6%;
+   Bengali 42.5%, from 40.7%; Marathi 42.8%, from 42.6%). Keystroke
+   savings of the nine on held-out Wikipedia text: Punjabi 41.8%, Urdu
+   41.8%, Sindhi 40.4%, Sinhala 36.1%, Gujarati 33.6%, Tamil 33.9%, Telugu
+   32.2%, Kannada 29.8%, Malayalam 29.7%. The Dravidian languages' words
+   take their endings with them: their lexicons keep 120 000 words, and
+   still lack a sixth to a quarter of the running words.
 4. A transliteration layout types the US keys' Latin letters into its
    language's composer: its table (`translit/<lang>.txt`) says every way
    each letter or group may be written, at a cost, and its lexicon picks
-   the readings that are words, the likeliest first; the strip shows two
-   and the letters as typed, and Space takes the first. How often the
-   word meant comes first (and among the strip's three), on Dakshina's
-   romanized Wikipedia sentences: Hindi 81.8% (86.7%), Urdu 78.5% (84.1%),
-   Gujarati 78.1% (81.2%), Punjabi 76.4% (81.3%), Marathi 71.6% (74.3%),
-   Kannada 69.6% (71.0%), Bengali 69.0% (72.4%), Telugu 67.5% (69.2%),
-   Tamil 66.4% (67.9%), Malayalam 53.0% (55.3%); of the words the lexicon
-   has, 76–90% (`make eval-translit`). Greek, Armenian and Persian have no
-   such measure yet; their tests read everyday words.
+   the readings that are words, the likeliest first, and offers the words
+   the likeliest readings begin from the first letter (`namas`: नमस्ते);
+   the strip shows two and the letters as typed, and Space takes the
+   reading of the letters typed. How often the word meant comes first
+   (and among the strip's two), on Dakshina's romanized Wikipedia
+   sentences, and the keystrokes the strip saves typing them: Hindi 82.1%
+   (86.7%; 19.8%), Urdu 78.5% (82.0%; 18.1%), Gujarati 78.1% (81.5%;
+   23.2%), Punjabi 76.4% (81.1%; 21.9%), Marathi 75.5% (78.1%; 16.4%),
+   Sinhala 74.2% (77.8%; 20.2%), Kannada 73.6% (75.0%; 19.8%), Telugu
+   71.6% (73.2%; 19.4%), Bengali 70.8% (74.1%; 19.6%), Tamil 70.0% (71.7%;
+   17.0%), Sindhi 65.0% (71.7%; 15.2%), Malayalam 58.2% (60.8%; 13.8%); of the
+   words the lexicon has, 74–91% (`make eval-translit`). Greek, Armenian,
+   Persian and Assamese have no such measure; their tests read everyday
+   words. Hindi's, Marathi's and Malayalam's tables also read English
+   spellings, for the English words those languages write in their script
+   (school: स्कूल).
 5. Hinglish is Hindi typed in Latin letters and left in them: the US
    keys, suggestions and glide from a model of Hindi's corpora respelled
    in the spellings people use, as often as each is used (the Dakshina
    dataset's romanization lexicons; `scripts/build-hinglish.py`).
-   Keystroke savings 31.1% on 500 of Dakshina's romanized test sentences,
-   as their writers spelled them, 16.2% of whose words the lexicon lacks:
-   no two writers spell alike. For the same reason autocorrect changes
-   2.3% of right words, more than elsewhere.
+   Keystroke savings 31.9% on 500 of Dakshina's romanized test sentences,
+   as their writers spelled them, 13.4% of whose words the lexicon (60 000
+   words) lacks: no two writers spell alike. For the same reason
+   autocorrect changes 2.2% of right words, more than elsewhere.
 
 ## Prediction model tiers
 

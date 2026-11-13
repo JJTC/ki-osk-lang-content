@@ -1,0 +1,81 @@
+# Sinhala from Latin letters, as Sinhala is typed in Latin ("Singlish").
+# Sinhala writes the vowel it speaks between consonants, so two consonants
+# typed together are joined by the al-lakuna, as is a word's last
+# consonant (wadan: වදන්); r and y after one join as its rakaransaya and
+# yansaya, which Sinhala text writes with a zero-width joiner after the
+# al-lakuna: the second way of `r` and `y` below begins with one (U+200D),
+# invisible here, and reads only after a consonant. v and w are both ව, t
+# and d both the dental and the retroflex letter, e mostly the æ of ඇ, and
+# the lexicon chooses.
+
+script abugida
+virama ්
+cluster 0
+schwa 3
+final 1.5
+final-virama 0
+
+[consonants]
+k    ක
+kh   ඛ  ක:1
+g    ග  ඟ:1
+gh   ඝ  ග:1
+ch   ච
+chh  ඡ  ච:1
+j    ජ
+jh   ඣ  ජ:1
+gn   ඥ  ග්න:1
+ny   ඤ
+t    ට  ත:0.4
+tt   ට්ට  ත්ත:0.5
+th   ත  ථ:1.5  ට:1.5
+d    ඩ  ද:0.3
+dd   ඩ්ඩ  ද්ද:0.5
+dh   ද  ධ:1  ඪ:2
+n    න  ණ:1
+nd   ඳ  න්ද:0.8  ණ්ඩ:1.5
+nn   න්න  ණ්ණ:1
+ng   ඟ:0.5  න්ග:1.5
+p    ප
+ph   ඵ  ෆ:0.5
+f    ෆ
+b    බ
+bh   භ  බ:1
+mb   ඹ  ම්බ:0.8
+m    ම
+y    ය  ‍ය
+r    ර  ‍ර
+l    ල  ළ:0.3
+ll   ල්ල  ළ්ළ:1
+v    ව
+w    ව
+sh   ශ  ෂ:0.5
+s    ස  ශ:1.5
+h    හ
+x    ක්ෂ
+
+[vowels]
+a     අ/-  ආ/ා:1.2  ඇ/ැ:1.5
+^a    අ/-  ආ/ා:1  ඇ/ැ:0.6
+a$    අ/-  ආ/ා:0.8
+aa    ආ/ා  ඈ/ෑ:2
+ae    ඇ/ැ
+aae   ඈ/ෑ
+i     ඉ/ි  ඊ/ී:1.2
+ee    ඊ/ී  ඒ/ේ:0.5
+ii    ඊ/ී
+u     උ/ු  ඌ/ූ:1.2
+oo    ඌ/ූ  ඕ/ෝ:0.5
+uu    ඌ/ූ
+e     එ/ෙ  ඇ/ැ:0.2  ඒ/ේ:0.6  ඈ/ෑ:1.2
+ei    එයි/ෙයි:0.3  ඒ/ේ:1
+ai    ඓ/ෛ  අයි/යි:1
+o     ඔ/ො  ඕ/ෝ:0.6
+au    ඖ/ෞ  අවු/වු:1
+ru    ඍ/ෘ:1.5
+
+[other]
+n>c   ං:0.8
+m>c   ං:1
+ng$   ං
+n$    ං:2

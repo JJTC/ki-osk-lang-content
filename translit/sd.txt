@@ -1,0 +1,93 @@
+# Sindhi (Perso-Arabic script) from Latin letters, as Sindhi is typed in
+# Latin. The script leaves short vowels unwritten: a, i and u inside a
+# word are mostly nothing, and at its end often too (para: پر, hiku: هڪ),
+# its first vowel rides an alif, its last o is و, and its last a ا. Sindhi has letters of its own for its sounds:
+# the implosives ٻ ڄ ڏ ڳ (typed b, j, d, g as the others are), the
+# retroflexes ٽ ڊ ڙ ڻ, the aspirates ڀ ٿ ٺ ڦ ڇ ڌ ڍ ک, k as ڪ, and two
+# words written as signs: ۾ (men, in) and ۽ (ain, and). The lexicon
+# chooses among them.
+
+script abjad
+
+[consonants]
+b    ب  ٻ:0.8
+bh   ڀ  ٻ:2
+p    پ
+ph   ڦ  ف:1
+t    ت  ٽ:0.6  ط:1.5
+tt   ٽ:0.5  ت:0.5
+th   ٿ  ٺ:0.6  ث:2
+s    س  ص:1.5  ث:2.5
+j    ج  ڄ:0.8  ڃ:1.5
+jh   جھ  ڄ:1.5
+ny   ڃ
+ch   چ  ڇ:1
+chh  ڇ
+c    چ  ڪ:1.5
+h    ه  ح:1  ھ:2
+h$   ه  هه:0.8  ح:1
+kh   ک  خ:0.5
+d    د  ڏ:0.6  ڊ:0.8
+dd   ڏ:0.5  ڊ:0.5  د:0.8
+dh   ڌ  ڍ:0.8
+z    ز  ذ:2  ض:2  ظ:2
+r    ر  ڙ:0.8
+rr   ڙ:0.5  ر:0.5
+sh   ش
+gh   غ  گھ:0.5
+f    ف  ڦ:1
+q    ق  ڪ:1
+k    ڪ  ک:1  ق:1.5
+g    گ  ڳ:0.8
+gg   ڳ:0.3  گ:0.8
+ng   ڱ:0.8  نگ:0.5
+l    ل
+m    م
+mm   م  مم:1
+n    ن  ڻ:0.6
+nn   ڻ:0.5  ن:0.5
+v    و
+w    و
+y    ي
+
+[vowels]
+^a    ا  آ:1  ع:1.5
+a     -  ا:0.8  ع:2  ه:3
+a$    ا  -:0.5  ه:0.8  ي:3
+^aa   آ  ا:1  عا:2
+aa    ا  ع:2
+^i    ا  اي:1  ع:2
+i     -  ي:0.5
+i$    ي  -:0.8  ءِ:1  ه:2
+^ee   اي
+ee    ي
+^u    ا  او:0.7  ع:2
+u     -  و:0.5
+u$    -:0.3  و
+^oo   او
+oo    و
+^o    او  ا:1
+o     و  -:1.5
+o$    و  ه:2
+^e    ا  اي:0.7
+e     ي  -:2
+e$    ي  ا:1  ه:1
+^ai   اي  ع:2
+ai    ي  ئي:1  ا:2
+ai$   ي  ئي:0.5  ءِ:1.5
+ui    ئي:0.3  وئي:0.5
+ae$   اءِ:0.5  ائي:0.8
+aai$  ائي:0.5  اءِ:0.5
+oi$   وءِ:0.5  وئي:0.8
+^au   او
+au    و
+ou    و
+ei    ي
+
+[other]
+^men$   ۾:0.3
+^mein$  ۾:0.3
+^main$  ۾:0.5
+^ain$   ۽:0.3
+^aen$   ۽:0.5
+^en$    ۽:0.5

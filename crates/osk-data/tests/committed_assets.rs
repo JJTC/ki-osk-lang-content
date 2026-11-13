@@ -308,6 +308,7 @@ fn every_translit_table_reads_its_language() {
     use osk_data::translit::Scheme;
 
     let words: &[(&str, &[(&str, &str)])] = &[
+        ("as", &[("moi", "মই"), ("tumi", "তুমি"), ("axom", "অসম")]),
         ("bn", &[("ami", "আমি"), ("tumi", "তুমি"), ("bhalo", "ভালো")]),
         (
             "el",
@@ -333,6 +334,18 @@ fn every_translit_table_reads_its_language() {
         ("ml", &[("malayalam", "മലയാളം"), ("ente", "എന്റെ")]),
         ("mr", &[("aahe", "आहे"), ("maharashtra", "महाराष्ट्र")]),
         ("pa", &[("punjab", "ਪੰਜਾਬ"), ("vich", "ਵਿੱਚ")]),
+        (
+            "sd",
+            &[
+                ("sindh", "سنڌ"),
+                ("pakistan", "پاڪستان"),
+                ("karachi", "ڪراچي"),
+            ],
+        ),
+        (
+            "si",
+            &[("mama", "මම"), ("sinhala", "සිංහල"), ("lankawa", "ලංකාව")],
+        ),
         ("ta", &[("tamil", "தமிழ்"), ("enna", "என்ன")]),
         ("te", &[("telugu", "తెలుగు"), ("nenu", "నేను")]),
         ("ur", &[("kya", "کیا"), ("pakistan", "پاکستان")]),

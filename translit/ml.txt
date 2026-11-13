@@ -3,7 +3,10 @@
 # typed together are joined by the chandrakkala; a word's last n, l, r
 # and ḷ are chillus (avan: അവൻ), its last m the nasal sign, any other last
 # consonant takes the chandrakkala, and a last u is often only that
-# (aanu: ആണ്). nt is ന്റ (ente: എന്റെ).
+# (aanu: ആണ്). nt is ന്റ (ente: എന്റെ). English words, which Malayalam
+# writes in its own script, are typed as English spells them (meter:
+# മീറ്റർ, school: സ്കൂൾ, india: ഇന്ത്യ): c, sch, a t as റ്റ, nd, ia and tion
+# have English ways too, at a cost.
 
 script abugida
 virama ്
@@ -14,6 +17,7 @@ final-virama 0.8
 
 [consonants]
 k    ക
+k$   ക്ക:1
 kk   ക്ക
 kh   ഖ
 q    ക
@@ -23,21 +27,26 @@ ng   ങ്ങ  ങ:1  ംഗ:1.5
 ch   ച  ച്ച:0.7  ഛ:2
 chh  ച്ഛ  ഛ:1
 c    ച  ക:1.5
+c>v  ച  സ:1.5  ക:1.5
+ck   ക്ക:0.5
+sch  സ്ക:0.5
+tio  ഷ:1
+ss   സ്സ  ഷ:1
 j    ജ  ഝ:2.5
 jh   ഝ
 nj   ഞ  ഞ്ഞ:0.5  ഞ്ച:0.8
 z    സ:1  ശ:1.5
 zh   ഴ
-t    ട  ത:0.5  റ്റ:1.2
+t    ട  ത:0.5  റ്റ:0.8
 tt   ട്ട  റ്റ:0.5  ത്ത:0.7
 th   ത  ത്ത:0.5  ഥ:1.5
 d    ട  ദ:0.5  ഡ:1
 dd   ദ്ദ  ഡ്ഡ:0.5  ട്ട:1
-dh   ദ്ദ:0.3  ധ:0.5  ഥ:0.8  ദ:1  ഢ:2
+dh   ദ്ദ:0.3  ധ:0.5  ദ്ധ:0.5  ഥ:0.8  ദ:1  ഢ:2
 n    ന  ണ:1
 nn   ന്ന  ണ്ണ:0.5
 nt   ന്റ  ന്ത:0.5  ണ്ട:0.8
-nd   ണ്ട  ന്ദ:1
+nd   ണ്ട  ന്ത:0.8  ന്ദ:1
 nk   ങ്ക:0.3  ന്ക:1
 p    പ
 ph   ഫ
@@ -75,12 +84,14 @@ e     എ/െ  ഏ/േ:0.6
 ^e    എ/െ  ഇ/ി:0.8  ഏ/േ:0.8
 ae    ഏ/േ
 ai    ഐ/ൈ  അയ്/യ്:1
+ia    ഇയ/ിയ  ഇയ/്യ:1
 ei    ഐ/ൈ:0.5  ഏ/േ:1
 o     ഒ/ൊ  ഓ/ോ:0.6
 au    ഔ/ൗ
 ou    ഔ/ൗ
 
 [other]
+tion$  ഷൻ:1
 n$    ൻ  ൺ:1.2
 l$    ൽ  ൾ:1
 r$    ർ

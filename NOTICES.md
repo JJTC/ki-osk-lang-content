@@ -185,9 +185,9 @@ next `make fetch-corpora`.
 ## Transliteration tables
 
 `translit/<lang>.txt` say how the Latin letters typed for a language
-become its script (`osk_data::translit`): Bengali, Greek, Gujarati,
-Hindi, Armenian, Kannada, Malayalam, Marathi, Punjabi, Persian, Tamil,
-Telugu and Urdu. They were written here, MIT licensed, each joining its
+become its script (`osk_data::translit`): Assamese, Bengali, Greek,
+Gujarati, Hindi, Armenian, Kannada, Malayalam, Marathi, Punjabi, Persian,
+Sindhi, Sinhala, Tamil, Telugu and Urdu. They were written here, MIT licensed, each joining its
 language's pack; what they choose among, the language's lexicon chooses.
 Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'

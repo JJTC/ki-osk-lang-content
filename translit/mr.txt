@@ -2,6 +2,9 @@
 # long vowels often written short, t and d for ट and ड as well, z for झ
 # (zala: झाला), l for ळ as well, and the vowel between two consonants
 # left out where it is not spoken (tumhi: तुम्ही).
+# English words written in Marathi's script are typed as English spells
+# them (school: स्कूल, doctor: डॉक्टर): c, ck, sch, o as ॉ, u as अ or यू, a
+# silent last e, er, or, le, y and tion have English ways too, at a cost.
 
 script abugida
 virama ्
@@ -20,6 +23,9 @@ ch   च  छ:1
 chh  छ  च्छ:0.8
 cch  च्छ
 c    च  क:1.5
+c>v  च  स:2  क:1.5
+ck   क:0.5  च्क:1
+sch  स्क:0.5  श:1.5
 j    ज  झ:2
 jh   झ
 z    झ  ज:0.7  ज़:2
@@ -60,23 +66,28 @@ i     इ/ि  ई/ी:1
 i$    ई/ी  इ/ि:0.8
 ee    ई/ी  इ/ि:2
 ii    ई/ी
-u     उ/ु  ऊ/ू:1
+u     उ/ु  ऊ/ू:1  अ/-:2  यू/्यू:2
 u$    उ/ु  ऊ/ू:0.5
 oo    ऊ/ू  ओ/ो:2
 uu    ऊ/ू
 e     ए/े  ऐ/ै:1.5
-e$    ए/े  ऐ/ै:1.2  एं/ें:1.5
+e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:2.5
 ai    ऐ/ै  ए/े:1.5  आई/ाई:1.2
 ae    ऐ/ै:0.5  ए/े:1
 ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
 ye    ए/े:0.3
-o     ओ/ो  औ/ौ:1.5
+o     ओ/ो  ऑ/ॉ:1.5  औ/ौ:1.5
 au    औ/ौ  ओ/ो:2
 ou    औ/ौ  ओ/ो:1.5
 ri    ऋ/ृ:2
 ru    ऋ/ृ:2.5
 
 [other]
+er$   र:1.5
+or$   र:2
+le$   ल:2
+y$    ी:2
+tion  शन:1  ्शन:1
 n>c   ं:0.5
 m>c   ं:1.2
 n$    ं:1

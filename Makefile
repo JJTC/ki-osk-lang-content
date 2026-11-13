@@ -86,16 +86,27 @@ PREDICT_COMPACT_VOCAB ?= 18000
 PREDICT_COMPACT_NGRAM ?= 30000
 # The LARGE tier: languages whose words, kept whole (osk_data::words), are
 # too many for the full tier's caps. Marathi has 25 k word types in its
-# corpus once viramas no longer cut them; it and the Dravidian languages,
-# whose words take their endings with them, learn their lexicons from
-# Wikipedia text (DAKSHINA_LANGS), where 40 000 words still leave a quarter
-# of Tamil's held-out words unknown.
-PREDICT_LARGE_LANGS ?= mr kn ml ta te
-PREDICT_LARGE_VOCAB ?= 40000
+# Tatoeba corpus once viramas no longer cut them; with Wikipedia text
+# (DAKSHINA_LANGS) its and Bengali's lexicons keep growing: from 40 000
+# words (Marathi) and 30 000 (Bengali) to 80 000, transliteration's first
+# reading is right 3.8 and 2.0 points more often, and keystroke savings on
+# Tatoeba's held-out text rise 0.5 and 1.9 points.
+PREDICT_LARGE_LANGS ?= bn mr
+PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
+# The WIDE tier: the Dravidian languages, whose words take their endings
+# with them. From 40 000 words to 120 000, the share of Tamil's held-out
+# words its lexicon lacks falls from 25.6% to 17.0% (Malayalam's from
+# 33.2% to 25.4%), keystroke savings rise 2.7 points (3.0), and
+# transliteration's first reading is right 3.4 points more often (4.4),
+# for lexicons of 1.4 to 1.7 MB.
+PREDICT_WIDE_LANGS ?= kn ml ta te
+PREDICT_WIDE_VOCAB ?= 120000
+PREDICT_WIDE_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
-# text too (DAKSHINA_LANGS).
-PREDICT_WIKI_LANGS ?= hi bn gu pa sd si ur
+# text too (DAKSHINA_LANGS); twice as many words gain Hindi's
+# transliteration under a point.
+PREDICT_WIKI_LANGS ?= hi gu pa sd si ur
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
@@ -184,6 +195,9 @@ predict-assets:
 		esac; \
 		case " $(PREDICT_WIKI_LANGS) " in \
 			*" $$lang "*) vocab=$(PREDICT_WIKI_VOCAB); ngram=$(PREDICT_WIKI_NGRAM) ;; \
+		esac; \
+		case " $(PREDICT_WIDE_LANGS) " in \
+			*" $$lang "*) vocab=$(PREDICT_WIDE_VOCAB); ngram=$(PREDICT_WIDE_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
 		case " $(DAKSHINA_ONLY_LANGS) " in \
@@ -288,6 +302,9 @@ own-corpus:
 	esac; \
 	case " $(PREDICT_WIKI_LANGS) " in \
 		*" $$lang "*) vocab=$(PREDICT_WIKI_VOCAB); ngram=$(PREDICT_WIKI_NGRAM) ;; \
+	esac; \
+	case " $(PREDICT_WIDE_LANGS) " in \
+		*" $$lang "*) vocab=$(PREDICT_WIDE_VOCAB); ngram=$(PREDICT_WIDE_NGRAM) ;; \
 	esac; \
 	words=; \
 	if [ -f wordbreak/$$lang.txt ]; then \
@@ -413,6 +430,10 @@ CHECK_REPORT       ?=
 # are counted (Tatoeba's ten times). Its inputs are the corpora, the
 # lexicons and the script. After fetch-corpora and fetch-dakshina.
 HINGLISH_DIR = $(DAKSHINA_DIR)/hinglish
+# Spelled many ways, Hinglish's words are many: from 30 000 to 60 000, the
+# share of the held-out words its lexicon lacks falls from 16.2% to 13.4%.
+HINGLISH_VOCAB ?= 60000
+HINGLISH_NGRAM ?= 60000
 .PHONY: hinglish-assets
 hinglish-assets:
 	@$(LOCKED); d=$(DAKSHINA_DIR)/hi; \
@@ -426,7 +447,7 @@ hinglish-assets:
 		--input dakshina/hi.romanized.rejoined.test.native.txt=$$d/romanized/hi.romanized.rejoined.test.native.txt \
 		--input scripts/build-hinglish.py=scripts/build-hinglish.py \
 		--recipe tatoeba_weight=$(TATOEBA_WEIGHT) \
-		--recipe vocab_size=$(PREDICT_WIKI_VOCAB) --recipe ngram_keep=$(PREDICT_WIKI_NGRAM) \
+		--recipe vocab_size=$(HINGLISH_VOCAB) --recipe ngram_keep=$(HINGLISH_NGRAM) \
 		--recipe start_keep=$(PREDICT_START) --recipe words=$(WORDS_GENERATION) \
 		--output $(PREDICT_OUT_DIR)/hi-Latn.fst --output $(PREDICT_OUT_DIR)/hi-Latn.ngram.bin \
 		--output $(PREDICT_OUT_DIR)/hi-Latn.forms.fst; \
@@ -437,19 +458,21 @@ hinglish-assets:
 	$(PYTHON) scripts/build-hinglish.py --lexicons $$d/lexicons \
 		--drop $$d/romanized/hi.romanized.rejoined.test.native.txt \
 		$(DAKSHINA_DIR)/hi.txt $(HINGLISH_DIR)/wikipedia.txt && \
-	echo "build-predict hi-Latn (vocab $(PREDICT_WIKI_VOCAB), n-grams $(PREDICT_WIKI_NGRAM))" && \
+	echo "build-predict hi-Latn (vocab $(HINGLISH_VOCAB), n-grams $(HINGLISH_NGRAM))" && \
 	$(TOOLS) build-predict -- --lang hi-Latn \
 		--corpus $(TATOEBA_WEIGHT):$(HINGLISH_DIR)/tatoeba.txt --corpus $(HINGLISH_DIR)/wikipedia.txt \
-		--out $(CURDIR)/$(PREDICT_OUT_DIR) --vocab-size $(PREDICT_WIKI_VOCAB) \
-		--ngram-keep $(PREDICT_WIKI_NGRAM) --start-keep $(PREDICT_START) && \
+		--out $(CURDIR)/$(PREDICT_OUT_DIR) --vocab-size $(HINGLISH_VOCAB) \
+		--ngram-keep $(HINGLISH_NGRAM) --start-keep $(PREDICT_START) && \
 	record "$$@"
 
 # How often each transliteration table (translit/<lang>.txt), with its
 # language's lexicon, puts the word meant first, as the composer's strip
 # offers them: on Dakshina's romanized Wikipedia sentences (every word
 # once) and on its romanization lexicon's test words (each romanization as
-# often as it was typed). After `make fetch-dakshina`.
-TRANSLIT_EVAL_LANGS ?= bn gu hi kn ml mr pa ta te ur
+# often as it was typed); and the keystrokes the strip saves, typing the
+# sentences' first 20 000 words a letter at a time. After `make
+# fetch-dakshina`.
+TRANSLIT_EVAL_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 .PHONY: eval-translit
 eval-translit:
 	@for lang in $(TRANSLIT_EVAL_LANGS); do \
@@ -461,6 +484,10 @@ eval-translit:
 		echo "$$lang, romanization lexicon (test):"; \
 		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
 			--pairs $$d/lexicons/$$lang.translit.sampled.test.tsv | tail -n 1 || exit 1; \
+		echo "$$lang, typed a letter at a time:"; \
+		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+			--pairs $$d/romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.tsv \
+			--keystrokes --limit 20000 | tail -n 1 || exit 1; \
 	done
 
 # The transliteration layouts (layouts/<lang>-abc.json), one for each
