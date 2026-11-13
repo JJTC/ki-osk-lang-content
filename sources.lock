@@ -768,19 +768,19 @@
       }
     },
     "predict/kn": {
-      "encoder": "2949f73cc2d3-dirty",
+      "encoder": "f59c9698c04c-dirty",
       "inputs": {
         "dakshina/kn.txt": "4862c78c287a46b8eecb1497352f90a7d295f7046f0b93e5c2282d74269a8b5e"
       },
       "outputs": {
-        "predict/kn.forms.fst": "5c245ba4bcbf09349d7d5ba3d86234520e9ee6ffb700fdd4c60a1b9ac02b0314",
-        "predict/kn.fst": "1e48d4b84cd6f19e10d051d902e63c6b31fb09a91545d77a28790e9c54802e0e",
-        "predict/kn.ngram.bin": "1e5b0175d8128018ebe184be0103c779e4223bf2bbf25a2a5f070750bff0cacd"
+        "predict/kn.forms.fst": "1b4d1fb9e162455321cde9ba040f23d1be0ee876de6c5d7434f73686e2ebec89",
+        "predict/kn.fst": "e45b516b8d60419b0df6a0621a7507d592dfcfeae4e80424f56b234d7f142207",
+        "predict/kn.ngram.bin": "829fe0510e58b6b0a6ffe6b5a52af966b622e2c5113cc92ac5a00313e6239135"
       },
       "recipe": {
         "ngram_keep": "90000",
         "start_keep": "5000",
-        "vocab_size": "120000",
+        "vocab_size": "200000",
         "words": "2"
       }
     },
@@ -1417,19 +1417,19 @@
       }
     },
     "predict/ta": {
-      "encoder": "2949f73cc2d3-dirty",
+      "encoder": "f59c9698c04c-dirty",
       "inputs": {
         "dakshina/ta.txt": "e8565506a609b41d17147fbd46927385944a0caab3065f8658cda8b7179baed5"
       },
       "outputs": {
-        "predict/ta.forms.fst": "d85a78178f0ec42df3965414fd2355aeec4c0e5aa9a8d9690f1c1d96b2440d33",
-        "predict/ta.fst": "0ca53aa84bc632f294cfe4249312971d42c286c697bb4cf8f0161cac2f1e88af",
-        "predict/ta.ngram.bin": "39ada3a7d8a9a193ae10df5bf60edb8a15c324017d6e726220fa65683577b72f"
+        "predict/ta.forms.fst": "79c9af14e2908a2ffe67c29269fd01c06a179f72ebf0aec46ccd56d392071ca7",
+        "predict/ta.fst": "2c969505374b71648ce59e85ec8eff124711a755789d4e497e6841221de2d87b",
+        "predict/ta.ngram.bin": "e14dc002559a085474a01947b7a631a9a6c2ddb31e4dab791e3aec6426e9f201"
       },
       "recipe": {
         "ngram_keep": "90000",
         "start_keep": "5000",
-        "vocab_size": "120000",
+        "vocab_size": "200000",
         "words": "2"
       }
     },
@@ -1451,19 +1451,19 @@
       }
     },
     "predict/te": {
-      "encoder": "2949f73cc2d3-dirty",
+      "encoder": "f59c9698c04c-dirty",
       "inputs": {
         "dakshina/te.txt": "60b1b4bf65641eae81c2d5c150b097d1c98f0976a7225009d194dad121f293f1"
       },
       "outputs": {
-        "predict/te.forms.fst": "e30cc7a5c786eb1422ead6e836c997d0fed0f8b99cde3ba0a08feec58076c847",
-        "predict/te.fst": "d22de2bf3fce7fc5b60120b5305a6e7f4b20b8f12c7acfc7a7113166ca78942f",
-        "predict/te.ngram.bin": "e12053b7461db37bf450f3fb8b6c173e0e2cc59edf4f06a12417478a520ae15a"
+        "predict/te.forms.fst": "7f09bb329aaf2d62e45c2c114f4f4ad1c1c53f9f4d3634137c67964f5b76c756",
+        "predict/te.fst": "0995a5016ed7075333356d4bab536992be79a9ae7424432da2e2f3b3af0a4af8",
+        "predict/te.ngram.bin": "7ed1a6d6d69b4f25837f1f9b175b1766b5f6bc499c35dc9e1b2d5a32cb126b2e"
       },
       "recipe": {
         "ngram_keep": "90000",
         "start_keep": "5000",
-        "vocab_size": "120000",
+        "vocab_size": "200000",
         "words": "2"
       }
     },

@@ -98,3 +98,33 @@ aaa   ஆ/ா:0.3
 er$   ர்:1.5
 y$    ி:2
 tion  ஷன்:1
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (bbc: பிபிசி), as the language's Wikipedia writes them.
+[letters]
+a  ஏ
+b  பி
+c  சி
+d  டி
+e  இ
+f  எஃப்
+g  ஜி
+h  ஹெச்
+i  ஐ
+j  ஜே
+k  கே
+l  எல்
+m  எம்
+n  என்
+o  ஓ
+p  பி
+q  க்யூ
+r  ஆர்
+s  எஸ்
+t  டி
+u  யூ
+v  வி
+w  டபிள்யூ
+x  எக்ஸ்
+y  ஒய்
+z  இசட்

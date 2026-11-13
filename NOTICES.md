@@ -11,8 +11,8 @@ files carries their terms.
 The code here — the Makefile, the Cargo workspace and `crates/`, the
 scripts, the workflows and `packs.toml` — is MIT licensed (`LICENSE`), as
 are the text rules in `rules/` and the transliteration tables in
-`translit/`, which were written here (twelve tables' costs then fitted
-to the Dakshina dataset's romanizations, below).
+`translit/`, which were written here (seventeen tables' costs then
+fitted to the Dakshina and Aksharantar datasets' romanizations, below).
 The data keeps its original licence, below. That includes the seeds in
 `seeds/`, which are excerpts of the datasets they are listed under. Add an entry here whenever a
 new dataset is pulled in.
@@ -120,9 +120,10 @@ with its word list (see [Word lists](#word-lists)).
 
 Size tiers are recorded in the Makefile: 34 languages
 (`PREDICT_COMPACT_LANGS`) keep 18 000 words and 30 000 n-grams, those
-whose lexicons Wikipedia text widens (below) 30 000 and 60 000, or 40 000
-and 90 000 (`PREDICT_LARGE_LANGS`: Marathi and the Dravidian languages),
-the others 20 000 and 60 000.
+whose lexicons Wikipedia or web text widens (below) 30 000 and 60 000,
+Bengali and Marathi 80 000 and 90 000 (`PREDICT_LARGE_LANGS`), the
+Dravidian languages 200 000 and 90 000 (`PREDICT_WIDER_LANGS`), the
+others 20 000 and 60 000.
 
 ### Wikipedia text (the Dakshina dataset)
 
@@ -241,13 +242,20 @@ people romanized its lexicons' training words (`make fit-translit`,
 colons moved, each held to the one written here, and nothing of the
 dataset's words in the tables. Ten moved (Gujarati's and Kannada's did
 no better so, and stayed as written); their packs name the dataset for
-it, beside the Wikipedia text their models learn from (`packs.toml`'s
-`[translit.fitted]`; CC BY-SA 4.0). They are measured on romanizations nothing
-here ships: the Dakshina dataset's, and for ten of them the test words of AI4Bharat's Aksharantar dataset (manually
-collected data CC BY, mined data CC0; "Aksharantar: Towards Building
-Open Transliteration Tools for the Next Billion Users", arXiv
-2205.03018), which `scripts/fetch-aksharantar.sh` downloads to measure,
-and for Greek AUEB's real-world Greeklish (Toumazatos, Pavlopoulos,
+it, beside the Wikipedia text their models learn from (CC BY-SA 4.0).
+The costs of the ten AI4Bharat's Aksharantar dataset measures (below)
+were fitted the same way, to four fifths of the words its train and
+valid splits romanized by hand and of the names it took from Wikidata,
+chosen by the other fifth, its test words left out; seven moved
+(Assamese's, Nepali's and Odia's stayed as written), and their packs
+name it (its card: the manually collected data CC BY, the mined and
+existing data CC0; `packs.toml`'s `[[translit.fitted]]`). The tables
+are measured on romanizations nothing here ships: the Dakshina
+dataset's test sentences and words, and for those ten Aksharantar's
+test words ("Aksharantar: Towards Building Open Transliteration Tools
+for the Next Billion Users", arXiv 2205.03018), which
+`scripts/fetch-aksharantar.sh` downloads to measure and fit, and for
+Greek AUEB's real-world Greeklish (Toumazatos, Pavlopoulos,
 Androutsopoulos and Vassos, "Still All Greeklish to Me: Greeklish to
 Greek Transliteration", LREC-COLING 2024; github.com/nlpaueb/greeklish,
 Apache-2.0), which `scripts/fetch-greeklish.sh` downloads to measure.

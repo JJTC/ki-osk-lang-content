@@ -84,3 +84,33 @@ n>c   ಂ:0.5
 m>c   ಂ:1
 m$    ಂ:0.3
 n$    ಂ:1.5
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: ಟಿವಿ), as the language's Wikipedia writes them.
+[letters]
+a  ಎ
+b  ಬಿ
+c  ಸಿ
+d  ಡಿ
+e  ಇ
+f  ಎಫ್
+g  ಜಿ
+h  ಎಚ್
+i  ಐ
+j  ಜೆ
+k  ಕೆ
+l  ಎಲ್
+m  ಎಂ
+n  ಎನ್
+o  ಒ
+p  ಪಿ
+q  ಕ್ಯೂ
+r  ಆರ್
+s  ಎಸ್
+t  ಟಿ
+u  ಯು
+v  ವಿ
+w  ಡಬ್ಲ್ಯೂ
+x  ಎಕ್ಸ್
+y  ವೈ
+z  ಝಡ್

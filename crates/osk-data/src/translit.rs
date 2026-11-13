@@ -62,6 +62,14 @@
 //! after a consonant, and `[other]` (a nasal sign, a mark) follows a
 //! consonant as it is.
 //!
+//! A last section, `[letters]`, may name the Latin letters as the script
+//! writes them, a letter and its name a line (`v वी`), for the
+//! abbreviations people type letter by letter (`tv`: टीवी). Two to five
+//! letters typed are also read as their names run together, at the
+//! setting `acronym`'s cost (1 without it), where that is a word of the
+//! lexicon; and where it is none, the letters hold no vowel and their
+//! cheapest reading is no word either, in that reading's place.
+//!
 //! A tool fitting a table's costs to romanizations people typed reads
 //! every cost each reading was charged ([`Scheme::readings`]) and tries
 //! others ([`Scheme::costs`], [`Scheme::set_costs`]).
@@ -217,6 +225,18 @@ pub struct Scheme {
     /// How many ways the rules give, all told: where the settings' places
     /// in [`Scheme::costs`] start.
     ways: u32,
+    /// The Latin letters' names (`[letters]`), each by its letter in
+    /// lower case, and what reading letters as them costs.
+    letters: HashMap<char, String>,
+    acronym: f32,
+}
+
+/// The part of a table a line is in.
+#[derive(Clone, Copy)]
+enum Part {
+    Settings,
+    Rules(Class),
+    Letters,
 }
 
 /// The settings' places in [`Scheme::costs`], after the ways'.
@@ -224,7 +244,15 @@ const CLUSTER: u32 = 0;
 const SCHWA: u32 = 1;
 const FINAL: u32 = 2;
 const FINAL_VIRAMA: u32 = 3;
-const SETTINGS: usize = 4;
+const ACRONYM: u32 = 4;
+const SETTINGS: usize = 5;
+
+/// What reading letters typed as the Latin letters' names costs, where
+/// the table does not say (`acronym`).
+pub const ACRONYM_COST: f32 = 1.0;
+
+/// The most letters read as an abbreviation's.
+const MAX_ACRONYM: usize = 5;
 
 /// One reading of the letters typed.
 #[derive(Debug, Clone, PartialEq)]
@@ -433,9 +461,11 @@ impl Scheme {
         let mut schwa = 2.0;
         let mut final_bare = 0.0;
         let mut final_virama = 3.0;
+        let mut acronym = ACRONYM_COST;
         let mut vowels: Vec<char> = "aeiou".chars().collect();
-        let mut section: Option<Class> = None;
+        let mut part = Part::Settings;
         let mut rules: Vec<Rule> = Vec::new();
+        let mut letters: HashMap<char, String> = HashMap::new();
         for (i, raw) in text.trim_start_matches('\u{feff}').lines().enumerate() {
             let line_no = i + 1;
             let err = |why: String| TranslitError::Line { line: line_no, why };
@@ -444,18 +474,33 @@ impl Scheme {
                 continue;
             }
             if let Some(name) = line.strip_prefix('[').and_then(|l| l.strip_suffix(']')) {
-                section = Some(match name.trim() {
-                    "consonants" => Class::Consonant,
-                    "vowels" => Class::Vowel,
-                    "other" => Class::Other,
+                part = match name.trim() {
+                    "consonants" => Part::Rules(Class::Consonant),
+                    "vowels" => Part::Rules(Class::Vowel),
+                    "other" => Part::Rules(Class::Other),
+                    "letters" => Part::Letters,
                     other => return Err(err(format!("no section [{other}]"))),
-                });
+                };
                 continue;
             }
             let mut fields = line.split_whitespace();
             let head = fields.next().unwrap_or_default();
             let rest: Vec<&str> = fields.collect();
-            let Some(class) = section else {
+            if let Part::Letters = part {
+                let mut chars = head.chars();
+                let letter = match (chars.next(), chars.next()) {
+                    (Some(c), None) if c.is_ascii_lowercase() => c,
+                    _ => return Err(err(format!("`{head}` is no Latin letter in lower case"))),
+                };
+                let [name] = rest[..] else {
+                    return Err(err(format!("`{head}` takes one name")));
+                };
+                if letters.insert(letter, name.nfc().collect()).is_some() {
+                    return Err(err(format!("`{head}` is named twice")));
+                }
+                continue;
+            }
+            let Part::Rules(class) = part else {
                 let one = |rest: &[&str]| -> Result<String, TranslitError> {
                     match rest {
                         [v] => Ok((*v).to_string()),
@@ -483,6 +528,7 @@ impl Scheme {
                     "schwa" => schwa = cost(&rest)?,
                     "final" => final_bare = cost(&rest)?,
                     "final-virama" => final_virama = cost(&rest)?,
+                    "acronym" => acronym = cost(&rest)?,
                     "vowels" => {
                         vowels = one(&rest)?.chars().collect();
                     }
@@ -547,13 +593,16 @@ impl Scheme {
             reads,
             cased,
             ways,
+            letters,
+            acronym,
         })
     }
 
     /// The costs the table sets, each at its place: every rule's ways, the
     /// rules in the table's order and a rule's ways in its line's, then
     /// `cluster`, `schwa`, `final` and `final-virama` (which only an
-    /// abugida charges).
+    /// abugida charges) and `acronym` (which only a table that names its
+    /// letters does).
     #[must_use]
     pub fn costs(&self) -> Vec<f32> {
         let mut costs: Vec<f32> = self
@@ -561,7 +610,13 @@ impl Scheme {
             .iter()
             .flat_map(|r| r.ways.iter().map(|w| w.cost))
             .collect();
-        costs.extend([self.cluster, self.schwa, self.final_bare, self.final_virama]);
+        costs.extend([
+            self.cluster,
+            self.schwa,
+            self.final_bare,
+            self.final_virama,
+            self.acronym,
+        ]);
         costs
     }
 
@@ -591,17 +646,24 @@ impl Scheme {
         self.schwa = at(SCHWA);
         self.final_bare = at(FINAL);
         self.final_virama = at(FINAL_VIRAMA);
+        self.acronym = at(ACRONYM);
         Ok(())
     }
 
-    /// The cheapest reading of `latin`, a word or not, and its way of
-    /// reading it ([`Scheme::literal`]): what the keyboard offers among
-    /// the words, for a tool fitting the table's costs. Its likelihood is
-    /// not looked up.
+    /// The reading of `latin` the keyboard offers among its readings that
+    /// are words of `lexicon`, a word or not: its cheapest
+    /// ([`Scheme::literal`]), or the names of the letters of an
+    /// abbreviation in its place (the module's docs say where); and its
+    /// way of reading it, for a tool fitting the table's costs. Its
+    /// likelihood is not looked up.
     #[must_use]
-    pub fn cheapest_reading(&self, latin: &str) -> Reading {
+    pub fn cheapest_reading(&self, latin: &str, lexicon: &dyn Lexicon) -> Reading {
         let (input, capital) = self.prepare(latin);
-        let cheapest: State<Paths> = self.cheapest(&input);
+        let cheapest: State<Paths> = self
+            .offered(&input, lexicon)
+            .into_iter()
+            .next()
+            .unwrap_or_else(|| self.cheapest(&input));
         Reading {
             paths: cheapest
                 .trace
@@ -648,14 +710,15 @@ impl Scheme {
                 log_prob: c.log_prob,
             })
             .collect();
-        let literal: State<Paths> = self.cheapest(&input);
-        if !readings.iter().any(|r| r.text == literal.text) {
-            readings.push(Reading {
-                log_prob: lexicon.log_prob(&literal.text),
-                paths: paths(literal.cost, literal.trace),
-                text: literal.text,
-                cost: literal.cost,
-            });
+        for extra in self.offered::<Paths>(&input, lexicon) {
+            if !readings.iter().any(|r| r.text == extra.text) {
+                readings.push(Reading {
+                    log_prob: lexicon.log_prob(&extra.text),
+                    paths: paths(extra.cost, extra.trace),
+                    text: extra.text,
+                    cost: extra.cost,
+                });
+            }
         }
         readings.sort_by(|a, b| a.text.cmp(&b.text));
         for r in &mut readings {
@@ -704,14 +767,15 @@ impl Scheme {
             .into_iter()
             .map(|(c, ())| c)
             .collect();
-        let literal: State = self.cheapest(&input);
-        if !readings.iter().any(|c| c.text == literal.text) {
-            readings.push(Candidate {
-                log_prob: lexicon.log_prob(&literal.text),
-                text: literal.text,
-                cost: literal.cost,
-                completes: false,
-            });
+        for extra in self.offered::<()>(&input, lexicon) {
+            if !readings.iter().any(|c| c.text == extra.text) {
+                readings.push(Candidate {
+                    log_prob: lexicon.log_prob(&extra.text),
+                    text: extra.text,
+                    cost: extra.cost,
+                    completes: false,
+                });
+            }
         }
         let unknown = lexicon.unknown_log_prob();
         let likelier = |a: &Candidate, b: &Candidate| {
@@ -735,6 +799,46 @@ impl Scheme {
             c.text = Self::cap(std::mem::take(&mut c.text), capital);
         }
         readings
+    }
+
+    /// The names of the Latin letters `input` spells, run together, when
+    /// the table names them and `input` is two to [`MAX_ACRONYM`] of them:
+    /// how the script writes an abbreviation typed letter by letter.
+    fn acronym(&self, input: &[char]) -> Option<String> {
+        if self.letters.is_empty() || !(2..=MAX_ACRONYM).contains(&input.len()) {
+            return None;
+        }
+        input
+            .iter()
+            .map(|&c| self.letters.get(&lower(c)).map(String::as_str))
+            .collect::<Option<Vec<&str>>>()
+            .map(|names| names.concat())
+    }
+
+    /// What `input` is offered besides the words it reads as: its cheapest
+    /// reading of all, a word or not; but where that is no word, `input`
+    /// holds no vowel and spells an abbreviation, the names of its letters
+    /// in its place, and where those names are a word, they too.
+    fn offered<T: Trace>(&self, input: &[char], lexicon: &dyn Lexicon) -> Vec<State<T>> {
+        let literal: State<T> = self.cheapest(input);
+        let Some(names) = self.acronym(input) else {
+            return vec![literal];
+        };
+        let acronym = State {
+            text: names,
+            prev: Class::Other,
+            cost: self.acronym,
+            trace: T::default().and(self.ways + ACRONYM),
+        };
+        if lexicon.log_prob(&acronym.text).is_some() {
+            vec![literal, acronym]
+        } else if lexicon.log_prob(&literal.text).is_none()
+            && !input.iter().any(|&c| self.vowels.contains(&lower(c)))
+        {
+            vec![acronym]
+        } else {
+            vec![literal]
+        }
     }
 
     /// The words the cheapest readings that end the letters typed begin,
@@ -1465,12 +1569,93 @@ mod tests {
     #[test]
     fn the_cheapest_reading_is_the_literal() {
         let s = hindi();
+        let lexicon = Words::of(&[("कमल", 1)]);
         for latin in ["tak", "namaste", "kamal", "kya"] {
-            let r = s.cheapest_reading(latin);
+            let r = s.cheapest_reading(latin, &lexicon);
             assert_eq!(r.text, s.literal(latin));
             assert_eq!(r.paths.len(), 1);
             assert_eq!(r.cost, r.paths[0].cost);
             assert!(r.log_prob.is_none());
+        }
+    }
+
+    /// Hindi's table above, naming some Latin letters.
+    fn hindi_with_letters() -> Scheme {
+        Scheme::parse(&format!(
+            "{HINDI}\n[letters]\nb  बी\nc  सी\nt  टी\nv  वी\ns  एस\nm  एम\na  ए\n"
+        ))
+        .expect("table")
+    }
+
+    #[test]
+    fn letters_typed_are_read_as_an_abbreviation() {
+        let s = hindi_with_letters();
+        let lexicon = Words::of(&[("टीवी", 50), ("बीबीसी", 10), ("तब", 100)]);
+        // Where the names run together are a word, they are offered.
+        assert_eq!(s.candidates("tv", &lexicon, 2)[0].text, "टीवी");
+        assert_eq!(s.candidates("bbc", &lexicon, 2)[0].text, "बीबीसी");
+        // No word, no vowel: the names in the cheapest reading's place.
+        let got = s.candidates("sms", &lexicon, 3);
+        assert!(got.iter().any(|c| c.text == "एसएमएस"), "{got:?}");
+        assert!(!got.iter().any(|c| c.text == s.literal("sms")), "{got:?}");
+        // A word read the usual way still comes first, and the names run
+        // together take the place of a cheapest reading that is no word.
+        let got = s.candidates("tm", &Words::of(&[("तम", 100)]), 3);
+        assert_eq!(got[0].text, "तम");
+        assert!(got.iter().any(|c| c.text == "टीएम"), "{got:?}");
+        // With a vowel typed, names that are no word are not offered; nor
+        // are one letter's, or more than five.
+        let got = s.candidates("ta", &lexicon, 3);
+        assert!(!got.iter().any(|c| c.text == "टीए"), "{got:?}");
+        assert!(
+            !s.candidates("t", &lexicon, 3)
+                .iter()
+                .any(|c| c.text == "टी")
+        );
+        assert!(
+            !s.candidates("tvtvtv", &lexicon, 3)
+                .iter()
+                .any(|c| c.text.starts_with("टीवीटीवी"))
+        );
+        // A table that names no letters reads none so.
+        assert!(
+            !hindi()
+                .candidates("tv", &lexicon, 3)
+                .iter()
+                .any(|c| c.text == "टीवी")
+        );
+    }
+
+    #[test]
+    fn an_abbreviation_is_charged_its_setting() {
+        let s = hindi_with_letters();
+        let lexicon = Words::of(&[("टीवी", 50)]);
+        let costs = s.costs();
+        let acronym = u32::try_from(costs.len() - SETTINGS).unwrap() + ACRONYM;
+        let readings = s.readings("tv", &lexicon);
+        let word = readings.iter().find(|r| r.text == "टीवी").expect("टीवी");
+        assert_eq!(word.paths[0].charges, [acronym]);
+        assert_eq!(word.cost, ACRONYM_COST);
+        // Where the names take the cheapest reading's place, so for a
+        // tool fitting the costs.
+        let none = Words::of(&[("तब", 1)]);
+        assert_eq!(s.cheapest_reading("sms", &none).text, "एसएमएस");
+        assert_eq!(s.cheapest_reading("tak", &none).text, s.literal("tak"));
+        // The setting is read, and set.
+        let s = Scheme::parse(&format!(
+            "{}\n[letters]\nt टी\nv वी\n",
+            HINDI.replace("schwa 1.5", "schwa 1.5\n        acronym 0.4")
+        ))
+        .expect("table");
+        assert_eq!(s.costs()[s.costs().len() - 1], 0.4);
+    }
+
+    #[test]
+    fn bad_letters_are_refused() {
+        for bad in ["ab  अब", "B  बी", "b", "b  बी  बि", "b  बी\nb  बि", "1  वन"]
+        {
+            let table = format!("{HINDI}\n[letters]\n{bad}\n");
+            assert!(Scheme::parse(&table).is_err(), "{bad}");
         }
     }
 
@@ -1502,8 +1687,12 @@ mod tests {
         let mut costs = s.costs();
         // k, kh, then t's two ways, त and ट:0.5.
         assert_eq!(costs[2..4], [0.0, 0.5]);
-        // The settings last: cluster, schwa 1.5, final, final-virama 4.
-        assert_eq!(costs[costs.len() - SETTINGS..], [0.0, 1.5, 0.0, 4.0]);
+        // The settings last: cluster, schwa 1.5, final, final-virama 4,
+        // acronym.
+        assert_eq!(
+            costs[costs.len() - SETTINGS..],
+            [0.0, 1.5, 0.0, 4.0, ACRONYM_COST]
+        );
         assert_eq!(s.literal("tak"), "तक");
         costs[2] = 1.0;
         costs[3] = 0.0;

@@ -200,12 +200,19 @@ license = { name = "MIT (the transliteration tables)", url = "https://opensource
 source  = { name = "ki-osk-lang-content's transliteration tables", url = "https://github.com/jjtc/ki-osk-lang-content/tree/main/translit" }
 
 # The tables whose costs `make fit-translit` fitted to how people
-# romanized the Dakshina dataset's training words (Gujarati's and
-# Kannada's stayed as written): their packs name it for that too.
-[translit.fitted]
+# romanized a dataset's words, and that dataset: their packs name it for
+# that too. Dakshina's training words (Gujarati's and Kannada's tables
+# stayed as written); Aksharantar's words romanized by hand and
+# Wikidata's names (Assamese's, Nepali's and Odia's stayed as written).
+[[translit.fitted]]
 license = { name = "CC BY-SA 4.0 (the Dakshina dataset)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
 source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons, the transliteration table's costs fitted to them", url = "https://github.com/google-research-datasets/dakshina" }
 langs   = ["bn", "hi", "ml", "mr", "pa", "sd", "si", "ta", "te", "ur"]
+
+[[translit.fitted]]
+license = { name = "CC BY (Aksharantar's manually collected data)", url = "https://huggingface.co/datasets/ai4bharat/Aksharantar#licensing-information", share_alike = false }
+source  = { name = "The Aksharantar dataset (AI4Bharat): words romanized by hand and Wikidata's names, the transliteration table's costs fitted to them", url = "https://huggingface.co/datasets/ai4bharat/Aksharantar" }
+langs   = ["brx", "doi", "kok", "ks", "mai", "mni", "sa"]
 
 # Keyboard layouts (layouts/<id>.json): the keys of each, and what each
 # types. The national ones are read from xkeyboard-config's keymaps

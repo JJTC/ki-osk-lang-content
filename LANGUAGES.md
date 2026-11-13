@@ -266,11 +266,13 @@ but no model to match the glide against · `—` off
    on Tatoeba's held-out text hold or rise (Hindi 46.1%, from 46.6%;
    Bengali 42.5%, from 40.7%; Marathi 42.8%, from 42.6%). Keystroke
    savings of the nine on held-out Wikipedia text: Punjabi 41.8%, Urdu
-   41.8%, Sindhi 40.4%, Sinhala 36.1%, Gujarati 33.6%, Tamil 33.9%, Telugu
-   32.2%, Malayalam 30.7%, Kannada 29.8%. The Dravidian languages' words
-   take their endings with them: their lexicons keep 120 000 words,
-   Malayalam's 200 000 (3.0 MB), and still lack a sixth to a fifth of the
-   running words (Malayalam's at 120 000 a quarter, and savings 29.7%).
+   41.8%, Sindhi 40.4%, Sinhala 36.1%, Tamil 34.5%, Gujarati 33.6%, Telugu
+   32.8%, Malayalam 30.7%, Kannada 30.3%. The Dravidian languages' words
+   take their endings with them: their lexicons keep 200 000 words (2.4
+   to 3.0 MB) and still lack 15% (Tamil, Telugu) to 23% (Malayalam) of
+   the running words; at 120 000 Tamil's and Telugu's lacked 17%,
+   Kannada's 20%, Malayalam's a quarter, and they saved 0.5 to 1 point
+   fewer keystrokes.
 4. A transliteration layout types the US keys' Latin letters into its
    language's composer: its table (`translit/<lang>.txt`) says every way
    each letter or group may be written, at a cost, and its lexicon picks
@@ -280,11 +282,11 @@ but no model to match the glide against · `—` off
    reading of the letters typed. How often the word meant comes first
    (and among the strip's two), on the test half of Dakshina's romanized
    Wikipedia sentences (some 5 000 a language), and the keystrokes the
-   strip saves typing them: Hindi 82.5% (86.5%; 20.4%), Urdu 79.7% (83.1%;
-   19.0%), Gujarati 78.3% (81.6%; 23.4%), Punjabi 77.1% (81.5%; 21.7%),
-   Marathi 76.6% (78.7%; 16.7%), Sinhala 74.6% (78.1%; 20.1%), Kannada
-   73.8% (75.2%; 19.7%), Telugu 72.5% (74.0%; 19.3%), Tamil 72.2% (74.1%;
-   17.2%), Bengali 72.2% (75.1%; 19.4%), Sindhi 69.1% (74.4%; 16.5%),
+   strip saves typing them: Hindi 82.5% (86.6%; 20.4%), Urdu 79.7% (83.1%;
+   19.0%), Gujarati 78.3% (81.7%; 23.4%), Punjabi 77.2% (81.5%; 21.7%),
+   Marathi 76.6% (78.7%; 16.7%), Kannada 75.2% (76.6%; 20.1%), Sinhala
+   74.7% (78.1%; 20.1%), Telugu 74.1% (75.7%; 19.6%), Tamil 73.1% (75.0%;
+   17.4%), Bengali 72.4% (75.3%; 19.4%), Sindhi 69.1% (74.4%; 16.5%),
    Malayalam 63.3% (66.2%; 15.2%); of the words the lexicon has, 78–91%
    (`make eval-translit`, a word being the same word as its lexicon keys
    it: Sindhi's two h letters one). These twelve tables were written by
@@ -295,9 +297,15 @@ but no model to match the glide against · `—` off
    words first; nothing measured above was fitted on or chosen by. On the
    test sentences Sindhi rose 2.1 points so (from 67.0%), Urdu 1.0,
    Marathi 0.8, Punjabi 0.6, Hindi and Sinhala 0.5, Bengali and Telugu
-   0.4, Malayalam 0.3 and Tamil 0.1, their keystroke savings with them
-   (Telugu's 0.1 down); Gujarati's and Kannada's stayed as written, no
-   fit doing better on their dev words. Malayalam's and Tamil's tables
+   0.4, Malayalam 0.3 and Tamil 0.1, their keystroke savings with them;
+   Gujarati's and Kannada's stayed as written, no fit doing better on
+   their dev words. Lexicons of 200 000 words (from 120 000) then added
+   Kannada 1.2 points, Telugu 0.9 (and its table, fitted again to it,
+   0.7) and Tamil 0.8. Ten of the tables name the Latin letters as their
+   language's Wikipedia writes them (`[letters]`), for abbreviations
+   typed letter by letter (tv: टीवी, bbc: பிபிசி, phd: পিএইচডি): rare in
+   running text, they add at most 0.2 points there, Hindi's test words
+   0.6. Malayalam's and Tamil's tables
    read a doubled consonant typed single (palakad: പാലക്കാട്, thaakuthal:
    தாக்குதல்), which their typists often do, and Malayalam's ri as ൃ, mb
    as മ്പ and nch as ഞ്ച, with its lexicon's 200 000 words. Bengali's
@@ -308,13 +316,19 @@ but no model to match the glide against · `—` off
    Maithili, Nepali, Odia, Sanskrit, Konkani, Meitei, Kashmiri, Bodo and
    Dogri are measured on the words people romanized for AI4Bharat's
    Aksharantar dataset (its test split, 2 000 to 6 900 words each, mostly
-   rare words and names; fetched to measure, never shipped): of those
-   their lexicons have, the word comes first for Assamese 86.0% (88.6%
-   among the strip's two), Sanskrit 85.6% (91.2%), Maithili 82.8% (89.0%), Konkani 79.1%
-   (84.6%), Nepali 77.1% (82.9%), Odia 76.7% (82.5%), Meitei 75.2%
-   (80.9%), Bodo 67.6% (74.5%), Dogri 55.6% (61.5%) and Kashmiri 44.5%
-   (58.2%), the tables
-   reading what those
+   rare words and names; fetched to measure and fit, never shipped): of
+   those their lexicons have, the word comes first for Assamese 86.0%
+   (88.6% among the strip's two), Sanskrit 85.7% (91.6%), Maithili 83.6%
+   (89.2%), Konkani 79.5% (84.9%), Meitei 77.8% (81.9%), Nepali 77.1%
+   (82.9%), Odia 76.7% (82.5%), Bodo 67.6% (74.5%), Dogri 56.8% (62.4%)
+   and Kashmiri 47.1% (61.2%). Seven of these tables' costs were fitted
+   as Dakshina's were, to four fifths of the words Aksharantar's train
+   and valid splits romanized by hand and of its Wikidata names, the
+   other fifth to choose by: Kashmiri and Meitei rose 2.6 points so,
+   Dogri 1.2, Maithili 0.8, Konkani 0.4, Sanskrit 0.1 and Bodo none, and
+   of all their test words, names too, Konkani 4.1, Dogri 2.6, Meitei 2.2,
+   Bodo 2.0, Sanskrit 1.8, Kashmiri 0.8 and Maithili 0.6; Assamese's,
+   Nepali's and Odia's stayed as written. The tables read what those
    romanizations do: the visarga said again after its vowel (ramaha:
    रामः), Assamese's khy for ক্ষ, Nepali's and Maithili's ँ, Odia's ଙ୍କ
    and ର୍ତ୍ତ, Konkani's dh for ड and ie for ई, Meitei's e for a first ꯏ,

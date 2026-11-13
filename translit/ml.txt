@@ -113,3 +113,33 @@ r>c   ർ:0.1
 l>c   ൽ:0.5  ൾ:1.5
 n>c   ൻ:0.9  ം:1.5  ൺ:1.5
 m>c   ം:0.9
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: ടിവി), as the language's Wikipedia writes them.
+[letters]
+a  എ
+b  ബി
+c  സി
+d  ഡി
+e  ഇ
+f  എഫ്
+g  ജി
+h  എച്ച്
+i  ഐ
+j  ജെ
+k  കെ
+l  എൽ
+m  എം
+n  എൻ
+o  ഒ
+p  പി
+q  ക്യു
+r  ആർ
+s  എസ്
+t  ടി
+u  യു
+v  വി
+w  ഡബ്ല്യു
+x  എക്സ്
+y  വൈ
+z  സെഡ്

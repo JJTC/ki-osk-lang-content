@@ -92,3 +92,33 @@ n>c   ං:0.8
 m>c   ං:0.8
 ng$   ං
 n$    ං:2
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: ටීවී), as the language's Wikipedia writes them.
+[letters]
+a  ඒ
+b  බී
+c  සී
+d  ඩී
+e  ඊ
+f  එෆ්
+g  ජී
+h  එච්
+i  අයි
+j  ජේ
+k  කේ
+l  එල්
+m  එම්
+n  එන්
+o  ඕ
+p  පී
+q  කිව්
+r  ආර්
+s  එස්
+t  ටී
+u  යූ
+v  වී
+w  ඩබ්ලිව්
+x  එක්ස්
+y  වයි
+z  ඉසෙඩ්

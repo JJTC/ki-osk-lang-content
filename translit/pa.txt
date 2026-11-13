@@ -111,3 +111,33 @@ tion  ਸ਼ਨ:1
 n>c   ੰ:0.6  ਂ:0.8
 m>c   ੰ:1.1
 n$    ਂ:0.7  ੰ:1.2
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: ਟੀਵੀ), as the language's Wikipedia writes them.
+[letters]
+a  ਏ
+b  ਬੀ
+c  ਸੀ
+d  ਡੀ
+e  ਈ
+f  ਐਫ
+g  ਜੀ
+h  ਐਚ
+i  ਆਈ
+j  ਜੇ
+k  ਕੇ
+l  ਐਲ
+m  ਐਮ
+n  ਐਨ
+o  ਓ
+p  ਪੀ
+q  ਕਿਊ
+r  ਆਰ
+s  ਐਸ
+t  ਟੀ
+u  ਯੂ
+v  ਵੀ
+w  ਡਬਲਯੂ
+x  ਐਕਸ
+y  ਵਾਈ
+z  ਜ਼ੈਡ

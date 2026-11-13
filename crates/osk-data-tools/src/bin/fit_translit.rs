@@ -44,7 +44,7 @@ use std::path::PathBuf;
 
 use anyhow::{Context, bail};
 use clap::Parser;
-use osk_data::translit::{Lexicon, Scheme, UNKNOWN_BELOW_RAREST};
+use osk_data::translit::{ACRONYM_COST, Lexicon, Scheme, UNKNOWN_BELOW_RAREST};
 use osk_data::words::Splitter;
 use osk_data_tools::lexicon::FstLexicon;
 
@@ -266,7 +266,7 @@ fn read_cheapest(
 ) {
     for (k, &at) in r.pair.iter().enumerate() {
         let p = &pairs[at];
-        let c = scheme.cheapest_reading(&p.latin);
+        let c = scheme.cheapest_reading(&p.latin, lexicon);
         r.cheapest[k] =
             if lexicon.log_prob(&c.text).is_some() || splitter.normalize(&c.text) == p.word {
                 // A word, which is among the words already; or the word meant,
@@ -449,13 +449,13 @@ fn rounded(costs: &[f32], grain: f32) -> Vec<f32> {
 struct Places {
     ways: Vec<(usize, std::ops::Range<usize>)>,
     labels: Vec<String>,
-    settings: [Option<(usize, std::ops::Range<usize>)>; 4],
+    settings: [Option<(usize, std::ops::Range<usize>)>; SETTING_NAMES.len()],
     /// The last line of the settings, where one the table lacks goes.
     last_setting: usize,
 }
 
-const SETTING_NAMES: [&str; 4] = ["cluster", "schwa", "final", "final-virama"];
-const SETTING_DEFAULTS: [f32; 4] = [0.0, 2.0, 0.0, 3.0];
+const SETTING_NAMES: [&str; 5] = ["cluster", "schwa", "final", "final-virama", "acronym"];
+const SETTING_DEFAULTS: [f32; 5] = [0.0, 2.0, 0.0, 3.0, ACRONYM_COST];
 
 /// The whitespace-separated tokens of `code`, with their byte ranges.
 fn tokens(code: &str) -> Vec<(std::ops::Range<usize>, &str)> {
@@ -489,10 +489,13 @@ fn places(table: &str) -> Places {
     let mut p = Places {
         ways: Vec::new(),
         labels: Vec::new(),
-        settings: [None, None, None, None],
+        settings: Default::default(),
         last_setting: 0,
     };
+    // Before any section, settings; in [letters], names, which cost
+    // nothing; in the others, rules.
     let mut in_rules = false;
+    let mut in_letters = false;
     for (n, raw) in table.lines().enumerate() {
         let code = raw.split('#').next().unwrap_or("");
         let trimmed = code.trim().trim_start_matches('\u{feff}');
@@ -501,6 +504,10 @@ fn places(table: &str) -> Places {
         }
         if trimmed.starts_with('[') && trimmed.ends_with(']') {
             in_rules = true;
+            in_letters = trimmed[1..trimmed.len() - 1].trim() == "letters";
+            continue;
+        }
+        if in_letters {
             continue;
         }
         let toks = tokens(code);
@@ -629,12 +636,12 @@ fn main() -> anyhow::Result<()> {
     }
     let own = scheme.costs();
     let p = places(&table);
-    if p.ways.len() + 4 != own.len() {
+    if p.ways.len() + SETTING_NAMES.len() != own.len() {
         bail!(
             "{}: {} ways found to write, the table sets {}",
             args.table.display(),
             p.ways.len(),
-            own.len() - 4
+            own.len() - SETTING_NAMES.len()
         );
     }
     let (f1, f2) = measure(&scheme, &lexicon, &splitter, &dev);
@@ -718,24 +725,26 @@ fn main() -> anyhow::Result<()> {
 mod tests {
     use super::*;
 
-    const TABLE: &str = "# a table\nscript abugida\nvirama ्\nschwa 1.5\n\n[consonants]\nt    त  ट:0.5   # two\nk    क\n\n[vowels]\na    अ/-  आ/ा:1\n";
+    const TABLE: &str = "# a table\nscript abugida\nvirama ्\nschwa 1.5\n\n[consonants]\nt    त  ट:0.5   # two\nk    क\n\n[vowels]\na    अ/-  आ/ा:1\n\n[letters]\nt  टी\nk  के\n";
 
     #[test]
     fn costs_are_written_in_their_places() {
         let scheme = Scheme::parse(TABLE).unwrap();
         let mut costs = scheme.costs();
-        // t: त ट, k: क, a: अ आ; then cluster, schwa, final, final-virama.
-        assert_eq!(costs.len(), 5 + 4);
+        // t: त ट, k: क, a: अ आ; then cluster, schwa, final, final-virama,
+        // acronym; the letters' names cost nothing of their own.
+        assert_eq!(costs.len(), 5 + 5);
         costs[0] = 0.3;
         costs[1] = 0.0;
         costs[3] = 0.25;
         costs[4] = 1.4;
         costs[6] = 2.0;
         costs[8] = 3.5;
+        costs[9] = 0.5;
         let text = rewrite(TABLE, &costs);
         assert_eq!(
             text,
-            "# a table\nscript abugida\nvirama ्\nschwa 2\nfinal-virama 3.5\n\n[consonants]\nt    त:0.3  ट       # two\nk    क\n\n[vowels]\na    अ/-:0.25  आ/ा:1.4\n"
+            "# a table\nscript abugida\nvirama ्\nschwa 2\nfinal-virama 3.5\nacronym 0.5\n\n[consonants]\nt    त:0.3  ट       # two\nk    क\n\n[vowels]\na    अ/-:0.25  आ/ा:1.4\n\n[letters]\nt  टी\nk  के\n"
         );
         assert_eq!(Scheme::parse(&text).unwrap().costs(), costs);
     }

@@ -6,7 +6,7 @@ members = [
 ]
 
 [workspace.package]
-version      = "0.16.0"
+version      = "0.17.0"
 edition      = "2024"
 # The toolchain rust-toolchain.toml pins, as in ki-osk, whose osk-core
 # compiles osk-data too.

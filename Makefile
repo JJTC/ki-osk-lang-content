@@ -140,17 +140,18 @@ PREDICT_LARGE_NGRAM ?= 90000
 # words its lexicon lacks falls from 25.6% to 17.0% (Malayalam's from
 # 33.2% to 25.4%), keystroke savings rise 2.7 points (3.0), and
 # transliteration's first reading is right 3.4 points more often (4.4),
-# for lexicons of 1.4 to 1.7 MB.
-PREDICT_WIDE_LANGS ?= kn ta te
+# for lexicons of 1.4 to 1.7 MB. None is left in it: all four are WIDER.
+PREDICT_WIDE_LANGS ?=
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
-# The WIDER tier: Malayalam, whose lexicon still lacks a quarter of the
-# words typed at 120 000. At 200 000 (3.0 MB, from 1.7) it lacks 22.8%
-# of its held-out words (from 25.4%), keystroke savings rise a point
-# (30.7%), and transliteration's first reading is right 1.4 points more
-# often. Tamil, Telugu and Kannada would gain 0.8-1.1 points of
-# transliteration for a megabyte each, so they stay WIDE.
-PREDICT_WIDER_LANGS ?= ml
+# The WIDER tier: the Dravidian languages, whose lexicons still lack a
+# sixth to a quarter of the words typed at 120 000. At 200 000 Malayalam's
+# (3.0 MB, from 1.7) lacks 22.8% of its held-out words (from 25.4%), its
+# keystroke savings rise a point (30.7%), and transliteration's first
+# reading is right 1.4 points more often; Tamil's, Telugu's and
+# Kannada's first readings 0.8-1.1 points, for a megabyte more each
+# (packs fetched as a language is wanted, none in the Android app).
+PREDICT_WIDER_LANGS ?= kn ml ta te
 PREDICT_WIDER_VOCAB ?= 200000
 PREDICT_WIDER_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
@@ -202,8 +203,9 @@ help:
 	@echo "  eval-translit    how often each transliteration table puts the word"
 	@echo "                   meant first (after fetch-dakshina, fetch-aksharantar,"
 	@echo "                   fetch-greeklish)"
-	@echo "  fit-translit     fit the Dakshina languages' tables' costs to its"
-	@echo "                   training romanizations (after fetch-dakshina)"
+	@echo "  fit-translit     fit the Dakshina and Aksharantar languages' tables'"
+	@echo "                   costs to their training romanizations (after"
+	@echo "                   fetch-dakshina, fetch-aksharantar)"
 	@echo "  translit-layouts write layouts/<lang>-abc.json for translit/<lang>.txt"
 	@echo "  derived-layouts  write the layouts made from another language's keys"
 	@echo "  hinglish-assets  rebuild predict/hi-Latn.* (Hindi typed in Latin letters)"
@@ -609,9 +611,14 @@ eval-translit:
 # table's own (crates/osk-data-tools/src/bin/fit_translit.rs); of the
 # rounds (the table's own costs the first), the one that puts the most
 # of its dev words and dev sentences' words first is written into
-# translit/<lang>.txt. eval-translit's test sentences and words are left
-# out. After `make fetch-dakshina`.
+# translit/<lang>.txt. Then the Aksharantar languages' tables, fitted to
+# four fifths of the words its train and valid splits romanized by hand
+# and of Wikidata's names, chosen by the other fifth. eval-translit's
+# test sentences and words are left out. After `make fetch-dakshina` and
+# `make fetch-aksharantar`. A table fitted before starts from its fitted
+# costs.
 FIT_TRANSLIT_LANGS ?= $(DAKSHINA_LANGS)
+FIT_AKSHARANTAR_LANGS ?= $(AKSHARANTAR_LANGS)
 DAKSHINA_DEV = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.dev.tsv
 .PHONY: fit-translit
 fit-translit:
@@ -623,6 +630,12 @@ fit-translit:
 			--train $$d/lexicons/$$lang.translit.sampled.train.tsv \
 			--dev $$d/lexicons/$$lang.translit.sampled.dev.tsv --dev $$d/$(DAKSHINA_DEV) \
 			--write || exit 1; \
+	done
+	@for lang in $(FIT_AKSHARANTAR_LANGS); do \
+		p=$(AKSHARANTAR_DIR)/$$lang; \
+		test -f $$p.fit.tsv || { echo "no $$p.fit.tsv: run make fetch-aksharantar"; exit 1; }; \
+		$(TOOLS) fit-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+			--train $$p.fit.tsv --dev $$p.choose.tsv --write || exit 1; \
 	done
 
 # The transliteration layouts (layouts/<lang>-abc.json), one for each

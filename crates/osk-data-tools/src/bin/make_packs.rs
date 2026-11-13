@@ -17,9 +17,9 @@
 //! `packs.toml`'s `[layouts.packs]` says; a language with layouts and no
 //! model gets a pack of its layouts alone, named in `[layouts.names]`.
 //! A language's transliteration table (`translit/<lang>.txt`) joins the
-//! pack of the same id, with `[translit]`'s licence and source, and
-//! `[translit.fitted]`'s too where its costs were fitted to a dataset's
-//! romanizations (`make fit-translit`).
+//! pack of the same id, with `[translit]`'s licence and source, and those
+//! of each `[[translit.fitted]]` naming it, whose dataset's romanizations
+//! its costs were fitted to (`make fit-translit`).
 //!
 //! A prediction pack names the corpora its model was built from as
 //! `sources.lock` records them: Tatoeba's (`corpora/<lang>.txt`), the
@@ -103,16 +103,16 @@ struct Packs {
 }
 
 /// The transliteration tables: the licence and source each adds to its
-/// pack, and those the dataset their costs were fitted to adds.
+/// pack, and those each dataset their costs were fitted to adds.
 #[derive(Deserialize)]
 struct Translit {
     license: License,
     source: SourceDef,
     #[serde(default)]
-    fitted: Option<Fitted>,
+    fitted: Vec<Fitted>,
 }
 
-/// The tables whose costs were fitted to a dataset's romanizations.
+/// The tables whose costs were fitted to one dataset's romanizations.
 #[derive(Deserialize)]
 struct Fitted {
     license: License,
@@ -734,7 +734,7 @@ fn add_translit(root: &Path, t: &Translit, manifests: &mut [Manifest]) -> anyhow
         )?);
         let fitted = t
             .fitted
-            .as_ref()
+            .iter()
             .filter(|f| f.langs.iter().any(|l| l == lang));
         let added =
             std::iter::once((&t.license, &t.source)).chain(fitted.map(|f| (&f.license, &f.source)));
@@ -749,13 +749,13 @@ fn add_translit(root: &Path, t: &Translit, manifests: &mut [Manifest]) -> anyhow
             });
         }
     }
-    if let Some(f) = &t.fitted
-        && let Some(lang) = f
-            .langs
-            .iter()
-            .find(|l| !root.join(format!("translit/{l}.txt")).is_file())
+    if let Some(lang) = t
+        .fitted
+        .iter()
+        .flat_map(|f| &f.langs)
+        .find(|l| !root.join(format!("translit/{l}.txt")).is_file())
     {
-        bail!("packs.toml: [translit.fitted] names {lang}, which has no table");
+        bail!("packs.toml: [[translit.fitted]] names {lang}, which has no table");
     }
     Ok(())
 }

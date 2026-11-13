@@ -2,8 +2,8 @@
 # fetch-aksharantar.sh — romanizations people typed, word by word, for
 # the transliteration tables Dakshina has none for: Assamese, Maithili,
 # Nepali, Odia, Sanskrit, Konkani, Kashmiri, Meitei, Bodo and Dogri (the
-# Makefile's AKSHARANTAR_LANGS). Only `make eval-translit` reads them:
-# nothing of them is committed or shipped.
+# Makefile's AKSHARANTAR_LANGS). Only `make eval-translit` and `make
+# fit-translit` read them: nothing of them is committed or shipped.
 #
 # They are the test split of AI4Bharat's Aksharantar dataset
 # ("Aksharantar: Towards Building Open Transliteration Tools for the Next
@@ -17,6 +17,17 @@
 #
 #   $OUT/<lang>.tsv    the word, its romanization and 1, tab-separated,
 #                      a pair a line: what eval-translit --pairs reads
+#
+# and the words of its train and valid splits that people romanized by
+# hand (the sources AK-Freq and AK-Uni) and the names Wikidata gives in
+# both scripts (the source Wikidata; the test split is two fifths names),
+# not the pairs mined from text, whose romanizations a model wrote, nor
+# the "Existing" ones; any word the test split has left out,
+#
+#   $OUT/<lang>.fit.tsv     four fifths of them, by a hash of the word:
+#                           what fit-translit fits the table's costs to
+#   $OUT/<lang>.choose.tsv  the other fifth: what it chooses among its
+#                           rounds by
 #
 # The zips are kept in $OUT/raw, and a kept one whose sha256 is right is
 # not downloaded again.
@@ -56,6 +67,37 @@ for line in sys.stdin:
         print(f"{word}\t{latin}\t1")
 '
 
+# The hand-romanized pairs and Wikidata's names of the zip's train and
+# valid splits, as CONVERT writes them, but the test's words, a word's
+# every romanization on one side: fit and choose.
+HAND='
+import json, sys, unicodedata, zipfile, zlib
+zpath, test_path, prefix, *members = sys.argv[1:]
+with open(test_path, encoding="utf-8") as f:
+    test = {line.split("\t", 1)[0] for line in f}
+sides = {"fit": [], "choose": []}
+with zipfile.ZipFile(zpath) as z:
+    for member in members:
+        with z.open(member) as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                row = json.loads(line)
+                source = str(row.get("source", "")).lower()
+                if not (source.startswith("ak-") or source == "wikidata"):
+                    continue
+                word = unicodedata.normalize("NFC", row["native word"].strip())
+                latin = row["english word"].strip()
+                if not word or not latin or " " in word or " " in latin or word in test:
+                    continue
+                side = "choose" if zlib.crc32(word.encode()) % 5 == 0 else "fit"
+                sides[side].append(f"{word}\t{latin}\t1\n")
+for side, rows in sides.items():
+    with open(f"{prefix}.{side}.tsv.part", "w", encoding="utf-8") as f:
+        f.writelines(rows)
+print(len(sides["fit"]), len(sides["choose"]))
+'
+
 OUT=${OUT:-${TMPDIR:-/tmp}/ki-osk-sources/aksharantar}
 langs=${*:-$(echo "$ZIPS" | awk 'NF {print $1}')}
 
@@ -78,5 +120,9 @@ for lang in $langs; do
 	test=$(unzip -Z1 "$zip" | grep -E "(^|/)${code}_test\.json\$")
 	unzip -p "$zip" "$test" | python3 -I -c "$CONVERT" > "$OUT/$lang.tsv.part"
 	mv -f "$OUT/$lang.tsv.part" "$OUT/$lang.tsv"
-	echo "$OUT/$lang.tsv: $(wc -l < "$OUT/$lang.tsv") pairs"
+	mapfile -t hand < <(unzip -Z1 "$zip" | grep -E "(^|/)${code}_(train|valid)\.json\$")
+	read -r fit choose < <(python3 -I -c "$HAND" "$zip" "$OUT/$lang.tsv" "$OUT/$lang" "${hand[@]}")
+	mv -f "$OUT/$lang.fit.tsv.part" "$OUT/$lang.fit.tsv"
+	mv -f "$OUT/$lang.choose.tsv.part" "$OUT/$lang.choose.tsv"
+	echo "$OUT/$lang.tsv: $(wc -l < "$OUT/$lang.tsv") pairs; to fit to: $fit, to choose by: $choose"
 done

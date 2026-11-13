@@ -91,3 +91,33 @@ ng    ং:0.3
 n$    ং:2  ঁ:2
 t$    ৎ:1
 t>c   ৎ:0.5
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: টিভি), as the language's Wikipedia writes them.
+[letters]
+a  এ
+b  বি
+c  সি
+d  ডি
+e  ই
+f  এফ
+g  জি
+h  এইচ
+i  আই
+j  জে
+k  কে
+l  এল
+m  এম
+n  এন
+o  ও
+p  পি
+q  কিউ
+r  আর
+s  এস
+t  টি
+u  ইউ
+v  ভি
+w  ডব্লিউ
+x  এক্স
+y  ওয়াই
+z  জেড

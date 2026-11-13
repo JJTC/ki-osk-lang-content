@@ -77,3 +77,33 @@ ru    ઋ/ૃ:2.5
 n>c   ં:0.6
 m>c   ં:1.2
 n$    ં:1
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: ટીવી), as the language's Wikipedia writes them.
+[letters]
+a  એ
+b  બી
+c  સી
+d  ડી
+e  ઈ
+f  એફ
+g  જી
+h  એચ
+i  આઈ
+j  જે
+k  કે
+l  એલ
+m  એમ
+n  એન
+o  ઓ
+p  પી
+q  ક્યૂ
+r  આર
+s  એસ
+t  ટી
+u  યુ
+v  વી
+w  ડબલ્યૂ
+x  એક્સ
+y  વાય
+z  ઝેડ
