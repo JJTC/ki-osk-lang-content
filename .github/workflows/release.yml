@@ -10,11 +10,12 @@ name: release language content
 # never released again, so most pushes stop at the first step.
 #
 # A release is built as a draft and published once every asset is on it.
-# GitHub refuses content requests past about 500 an hour, and each asset
-# is one: scripts/release-upload.sh uploads only what the draft lacks,
-# waits out a refusal and carries on, and a run that still ran out of
-# time leaves its draft, which the next run (a re-run, or the next push)
-# finishes. A draft without the corpora is such a draft, not a refresh's.
+# GitHub limits how fast content is created, and each asset is a request:
+# scripts/release-upload.sh uploads one a second, only what the draft
+# lacks, waits out a refusal and carries on, and a run that still ran out
+# of time leaves its draft, which the next run (a re-run, or the next
+# push) finishes. A draft without the corpora is such a draft, not a
+# refresh's.
 #
 # Assets (`make release`, then the corpora):
 #   packs.json, <path>.gz, NOTICES.md   the packs: the index, each file
