@@ -253,8 +253,9 @@ but no model to match the glide against · `—` off
    words the lexicon has, 74–91% (`make eval-translit`). Greek, Armenian,
    Persian, Assamese, Nepali, Odia, Pashto, Mongolian, Bhojpuri, Maithili
    and Western Punjabi have no such measure; their tests read everyday
-   words (all of 41 such words but Kathmandu's, Lahore's and Pashto's da
-   first). Hindi's, Marathi's and Malayalam's tables also read English
+   words. Of the 51 checked in the seven tables new with Wikipedia's text,
+   48 come first and 49 are on the strip; Kathmandu's and Lahore's
+   English spellings are not, and Pashto's da comes after ده. Hindi's, Marathi's and Malayalam's tables also read English
    spellings, for the English words those languages write in their script
    (school: स्कूल).
 5. Hinglish is Hindi typed in Latin letters and left in them: the US
