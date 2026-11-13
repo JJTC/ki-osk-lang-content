@@ -13,7 +13,11 @@
 #                        predict-assets`), which sources.lock records
 #   $OUT/<lang>/         its romanization lexicons and romanized sentences
 #                        (lexicons/, romanized/), what `make eval-translit`
-#                        measures the transliteration tables on
+#                        measures the transliteration tables on (the test
+#                        sentences and words) and `make fit-translit` fits
+#                        their costs to (the training words); its aligned
+#                        sentences cut into their dev and test halves
+#                        (scripts/dakshina-halves.py)
 #   eval/<lang>.txt      for the nine with no Tatoeba corpus, the first
 #                        $EVAL_CAP lines of the held-out Wikipedia text
 #                        (wiki-filt.valid), what eval-predict measures
@@ -89,6 +93,7 @@ for l in $langs; do
 	rm -rf "${OUT:?}/$l"
 	mkdir -p "$OUT/$l"
 	mv "$d/lexicons" "$d/romanized" "$OUT/$l/"
+	"${PYTHON:-python3}" -I "$(dirname "$0")/dakshina-halves.py" "$OUT" "$l" > /dev/null
 	if [ "$l" = hi ]; then
 		head -n "$EVAL_CAP" "$OUT/hi/romanized/hi.romanized.rejoined.test.roman.txt" > "$EVAL_OUT/hi-Latn.txt.part"
 		mv -f "$EVAL_OUT/hi-Latn.txt.part" "$EVAL_OUT/hi-Latn.txt"

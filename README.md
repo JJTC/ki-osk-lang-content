@@ -14,7 +14,8 @@ it can do.
 ## Licences
 
 `LICENSE` (MIT) covers the code and tooling only, and the text rules and
-transliteration tables, which were written here. The data keeps the
+transliteration tables, which were written here (twelve tables' costs
+then fitted to the Dakshina dataset's romanizations: `NOTICES.md`). The data keeps the
 licences of the datasets it was built from, listed in `NOTICES.md`, and
 **several are share-alike** (CC BY-SA): the Chinese and Cantonese
 dictionaries, the Portuguese and Spanish dialect flags, and the models of
@@ -33,7 +34,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
 | `wordbreak/<lang>.txt` | The word list of a language written without spaces between words (Thai, Lao), which cuts its text into words in the trainer, the keyboard and `eval-predict`: ICU's word-break dictionary, as ICU has it | `make word-lists` |
 | `rules/all.weir`, `rules/<lang>.weir` | Text rules: what typing a key does to the text before the caret beyond typing it (the space after a strip word giving way to punctuation, French spacing), and where autocorrect acts besides space, Weir-style, with their tests | by hand |
-| `translit/<lang>.txt` | Transliteration tables (39: Sindhi's and Meitei's for both their scripts): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand; `make eval-translit` measures them |
+| `translit/<lang>.txt` | Transliteration tables (39: Sindhi's and Meitei's for both their scripts): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand, the costs of the twelve Dakshina languages' then fitted to its romanizations (`make fit-translit`); `make eval-translit` measures them |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `$SRC_DIR/dakshina/` | Wikipedia text and romanizations of 12 South Asian languages (the Dakshina dataset) — **not committed** | `make fetch-dakshina` |
 | `$SRC_DIR/wikipedia/` | The text of sixteen wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki, Tulu), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
@@ -114,9 +115,10 @@ The builders need only this repository and its pinned toolchain.
 ```sh
 make fetch-corpora     # Tatoeba -> predict/corpora/ and eval/
 make fetch-dakshina    # Dakshina's Wikipedia text and romanizations -> SRC_DIR
-make fetch-wikipedia   # seven wikis' own text -> SRC_DIR
+make fetch-wikipedia   # sixteen wikis' own text -> SRC_DIR
 make predict-assets    # corpora -> predict/*.fst + *.ngram.bin
 make hinglish-assets   # Hindi's corpora respelled in Latin -> predict/hi-Latn.*
+make fit-translit      # the Dakshina languages' tables' costs, fitted to its romanizations
 make eval-translit     # how often the transliteration tables are right
 make cjk-assets        # upstream -> pinyin, zhuyin, jyutping, kana
 make refresh           # all three, rebuilding only what changed, then check

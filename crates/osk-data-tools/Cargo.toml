@@ -43,6 +43,10 @@ name = "eval-translit"
 path = "src/bin/eval_translit.rs"
 
 [[bin]]
+name = "fit-translit"
+path = "src/bin/fit_translit.rs"
+
+[[bin]]
 name = "make-packs"
 path = "src/bin/make_packs.rs"
 

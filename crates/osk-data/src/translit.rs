@@ -61,9 +61,16 @@
 //! are joined as `cluster` and `schwa` say, its vowels take their sign
 //! after a consonant, and `[other]` (a nasal sign, a mark) follows a
 //! consonant as it is.
+//!
+//! A tool fitting a table's costs to romanizations people typed reads
+//! every cost each reading was charged ([`Scheme::readings`]) and tries
+//! others ([`Scheme::costs`], [`Scheme::set_costs`]).
 
+use std::cmp::Ordering;
+use std::collections::hash_map::Entry;
 use std::collections::{HashMap, HashSet};
 use std::fmt;
+use std::hash::Hash;
 
 use unicode_normalization::UnicodeNormalization;
 
@@ -88,9 +95,9 @@ const MAX_INPUT: usize = 40;
 /// reading of those letters: it is taken to be this many nats less likely
 /// to be meant than as common a word they spell out. Offered from the
 /// first letter, such words save 20% of Hindi's keystrokes on Dakshina's
-/// romanized sentences, 18% of Urdu's, 16% of Tamil's (`eval-translit
-/// --keystrokes`), the reading Space takes unchanged; between 0.5 and 4
-/// nats, savings move by under a point.
+/// romanized test sentences, 19% of Urdu's, 17% of Tamil's
+/// (`eval-translit --keystrokes`), the reading Space takes unchanged;
+/// between 0.5 and 4 nats, savings move by under a point.
 pub const COMPLETION_COST: f32 = 2.0;
 
 /// How many of the cheapest readings of the letters typed are completed,
@@ -142,7 +149,7 @@ pub enum Script {
 }
 
 /// What a rule reads: which matters to an abugida's joining.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
 enum Class {
     /// Nothing yet: the word's start.
     Start,
@@ -166,6 +173,8 @@ struct Way {
     /// An abugida's vowel's sign, written after a consonant.
     sign: Option<String>,
     cost: f32,
+    /// Its place in [`Scheme::costs`].
+    index: u32,
 }
 
 #[derive(Debug, Clone, PartialEq)]
@@ -205,7 +214,17 @@ pub struct Scheme {
     /// Whether the script has capitals (Greek, Armenian), which a capital
     /// typed first then gives the word.
     cased: bool,
+    /// How many ways the rules give, all told: where the settings' places
+    /// in [`Scheme::costs`] start.
+    ways: u32,
 }
+
+/// The settings' places in [`Scheme::costs`], after the ways'.
+const CLUSTER: u32 = 0;
+const SCHWA: u32 = 1;
+const FINAL: u32 = 2;
+const FINAL_VIRAMA: u32 = 3;
+const SETTINGS: usize = 4;
 
 /// One reading of the letters typed.
 #[derive(Debug, Clone, PartialEq)]
@@ -227,6 +246,36 @@ impl Candidate {
     pub fn score(&self, unknown: f32) -> f32 {
         self.log_prob.unwrap_or(unknown) - self.cost
     }
+}
+
+/// A reading of the letters typed and the ways it was read
+/// ([`Scheme::readings`]): what a tool fitting a table's costs weighs.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Reading {
+    /// The word, in the language's script.
+    pub text: String,
+    /// What reading it cost: its cheapest way's.
+    pub cost: f32,
+    /// Its likelihood as a word, when the lexicon knows it.
+    pub log_prob: Option<f32>,
+    /// The cheapest ways it was read, at most [`PATHS`], the cheapest
+    /// first: other costs would read it another way.
+    pub paths: Vec<Path>,
+}
+
+/// How many of the cheapest ways a reading was read [`Scheme::readings`]
+/// gives.
+pub const PATHS: usize = 8;
+
+/// One way a reading was read ([`Reading::paths`]).
+#[derive(Debug, Clone, PartialEq)]
+pub struct Path {
+    /// What reading it this way cost, in nats.
+    pub cost: f32,
+    /// Each cost it was charged, by its place in [`Scheme::costs`], as
+    /// often as it was. The rest of `cost` no table sets: a small step
+    /// for each rule read, and a letter no rule reads written as typed.
+    pub charges: Vec<u32>,
 }
 
 /// Why a table could not be read.
@@ -254,12 +303,118 @@ impl fmt::Display for TranslitError {
 
 impl std::error::Error for TranslitError {}
 
-/// A reading part way through the letters typed.
+/// A reading part way through the letters typed, and what it keeps of how
+/// it was read.
 #[derive(Debug, Clone)]
-struct State {
+struct State<T = ()> {
     text: String,
     prev: Class,
     cost: f32,
+    trace: T,
+}
+
+/// What a reading keeps of how it was read: nothing, as the keyboard
+/// reads (`()`), or its cheapest ways ([`Paths`], for
+/// [`Scheme::readings`]).
+trait Trace: Clone + Default {
+    /// This trace, then the cost at `index` charged.
+    #[must_use]
+    fn and(&self, index: u32) -> Self;
+
+    /// Whether, of two readings that cost the same, this one's is kept:
+    /// the same one every time.
+    fn before(&self, other: &Self) -> bool;
+
+    /// The reading kept, at `cost`, and another of the same text, at
+    /// `other_cost`, as one: the cheaper's cost, and what the trace keeps
+    /// of both.
+    fn merge(cost: &mut f32, kept: &mut Self, other_cost: f32, other: Self);
+}
+
+impl Trace for () {
+    fn and(&self, _: u32) -> Self {}
+
+    fn before(&self, (): &Self) -> bool {
+        false
+    }
+
+    fn merge(cost: &mut f32, (): &mut Self, other_cost: f32, (): Self) {
+        *cost = cost.min(other_cost);
+    }
+}
+
+/// A reading's cheapest ways, at most [`PATHS`]: each what it costs above
+/// the cheapest and its charges, the cheapest first.
+#[derive(Debug, Clone)]
+struct Paths(Vec<(f32, Vec<u32>)>);
+
+impl Default for Paths {
+    fn default() -> Self {
+        Self(vec![(0.0, Vec::new())])
+    }
+}
+
+impl Trace for Paths {
+    fn and(&self, index: u32) -> Self {
+        Self(
+            self.0
+                .iter()
+                .map(|(above, charges)| {
+                    let mut charged = Vec::with_capacity(charges.len() + 1);
+                    charged.extend_from_slice(charges);
+                    charged.push(index);
+                    (*above, charged)
+                })
+                .collect(),
+        )
+    }
+
+    fn before(&self, other: &Self) -> bool {
+        self.0.first().map(|p| &p.1) < other.0.first().map(|p| &p.1)
+    }
+
+    fn merge(cost: &mut f32, kept: &mut Self, other_cost: f32, other: Self) {
+        let mut all: Vec<(f32, Vec<u32>)> = kept
+            .0
+            .drain(..)
+            .map(|(above, c)| (*cost + above, c))
+            .chain(
+                other
+                    .0
+                    .into_iter()
+                    .map(|(above, c)| (other_cost + above, c)),
+            )
+            .collect();
+        all.sort_by(|a, b| a.0.total_cmp(&b.0).then_with(|| a.1.cmp(&b.1)));
+        // A way read twice (the same charges in another order) is one.
+        let mut seen: Vec<Vec<u32>> = Vec::with_capacity(all.len());
+        all.retain(|(_, c)| {
+            let mut sorted = c.clone();
+            sorted.sort_unstable();
+            let new = !seen.contains(&sorted);
+            if new {
+                seen.push(sorted);
+            }
+            new
+        });
+        all.truncate(PATHS);
+        let cheapest = all.first().map_or(*cost, |p| p.0);
+        *cost = cheapest;
+        kept.0 = all.into_iter().map(|(c, ch)| (c - cheapest, ch)).collect();
+    }
+}
+
+/// Keep, of the reading of `key` kept and this one, what the trace keeps.
+fn keep<K: Hash + Eq, T: Trace>(kept: &mut HashMap<K, (f32, T)>, key: K, cost: f32, trace: T) {
+    match kept.entry(key) {
+        Entry::Occupied(mut o) => {
+            let (was, kept_trace) = o.get_mut();
+            T::merge(was, kept_trace, cost, trace);
+        }
+        Entry::Vacant(v) => {
+            v.insert((cost, trace));
+        }
+    }
 }
 
 impl Scheme {
@@ -356,10 +511,15 @@ impl Scheme {
             return Err(TranslitError::Table("no rules".into()));
         }
         let mut groups: HashMap<(Vec<char>, Class), usize> = HashMap::new();
+        let mut ways = 0u32;
         for r in &mut rules {
             let key = (r.latin.iter().map(|&c| lower(c)).collect(), r.class);
             let next = groups.len();
             r.group = *groups.entry(key).or_insert(next);
+            for w in &mut r.ways {
+                w.index = ways;
+                ways += 1;
+            }
         }
         let mut by_first: HashMap<char, Vec<usize>> = HashMap::new();
         let mut reads = HashSet::new();
@@ -386,7 +546,122 @@ impl Scheme {
             by_first,
             reads,
             cased,
+            ways,
         })
+    }
+
+    /// The costs the table sets, each at its place: every rule's ways, the
+    /// rules in the table's order and a rule's ways in its line's, then
+    /// `cluster`, `schwa`, `final` and `final-virama` (which only an
+    /// abugida charges).
+    #[must_use]
+    pub fn costs(&self) -> Vec<f32> {
+        let mut costs: Vec<f32> = self
+            .rules
+            .iter()
+            .flat_map(|r| r.ways.iter().map(|w| w.cost))
+            .collect();
+        costs.extend([self.cluster, self.schwa, self.final_bare, self.final_virama]);
+        costs
+    }
+
+    /// Set the costs [`Scheme::costs`] gives, each at its place: for a
+    /// tool fitting them.
+    ///
+    /// # Errors
+    ///
+    /// When `costs` are not as many as the table sets, or one is no cost
+    /// (below 0, or no number).
+    pub fn set_costs(&mut self, costs: &[f32]) -> Result<(), TranslitError> {
+        let want = self.ways as usize + SETTINGS;
+        if costs.len() != want {
+            return Err(TranslitError::Table(format!(
+                "{} costs for a table that sets {want}",
+                costs.len()
+            )));
+        }
+        if let Some(bad) = costs.iter().find(|c| !c.is_finite() || **c < 0.0) {
+            return Err(TranslitError::Table(format!("`{bad}` is no cost")));
+        }
+        for w in self.rules.iter_mut().flat_map(|r| r.ways.iter_mut()) {
+            w.cost = costs[w.index as usize];
+        }
+        let at = |which: u32| costs[(self.ways + which) as usize];
+        self.cluster = at(CLUSTER);
+        self.schwa = at(SCHWA);
+        self.final_bare = at(FINAL);
+        self.final_virama = at(FINAL_VIRAMA);
+        Ok(())
+    }
+
+    /// The cheapest reading of `latin`, a word or not, and its way of
+    /// reading it ([`Scheme::literal`]): what the keyboard offers among
+    /// the words, for a tool fitting the table's costs. Its likelihood is
+    /// not looked up.
+    #[must_use]
+    pub fn cheapest_reading(&self, latin: &str) -> Reading {
+        let (input, capital) = self.prepare(latin);
+        let cheapest: State<Paths> = self.cheapest(&input);
+        Reading {
+            paths: cheapest
+                .trace
+                .0
+                .into_iter()
+                .map(|(above, charges)| Path {
+                    cost: cheapest.cost + above,
+                    charges,
+                })
+                .collect(),
+            text: Self::cap(cheapest.text, capital),
+            cost: cheapest.cost,
+            log_prob: None,
+        }
+    }
+
+    /// `latin`'s readings that are words of `lexicon`, and its cheapest
+    /// reading of all, each with its cheapest ways of reading it: what
+    /// [`Scheme::candidates`] ranks, but for the words they begin,
+    /// unranked.
+    #[must_use]
+    pub fn readings(&self, latin: &str, lexicon: &dyn Lexicon) -> Vec<Reading> {
+        let (input, capital) = self.prepare(latin);
+        let ends: Vec<State<Paths>> = if input.len() <= MAX_INPUT {
+            self.search(&input, lexicon)
+        } else {
+            Vec::new()
+        };
+        let paths = |cost: f32, p: Paths| -> Vec<Path> {
+            p.0.into_iter()
+                .map(|(above, charges)| Path {
+                    cost: cost + above,
+                    charges,
+                })
+                .collect()
+        };
+        let mut readings: Vec<Reading> = self
+            .words(&ends, lexicon)
+            .into_iter()
+            .map(|(c, p)| Reading {
+                paths: paths(c.cost, p),
+                text: c.text,
+                cost: c.cost,
+                log_prob: c.log_prob,
+            })
+            .collect();
+        let literal: State<Paths> = self.cheapest(&input);
+        if !readings.iter().any(|r| r.text == literal.text) {
+            readings.push(Reading {
+                log_prob: lexicon.log_prob(&literal.text),
+                paths: paths(literal.cost, literal.trace),
+                text: literal.text,
+                cost: literal.cost,
+            });
+        }
+        readings.sort_by(|a, b| a.text.cmp(&b.text));
+        for r in &mut readings {
+            r.text = Self::cap(std::mem::take(&mut r.text), capital);
+        }
+        readings
     }
 
     /// How the script writes.
@@ -407,8 +682,8 @@ impl Scheme {
     #[must_use]
     pub fn literal(&self, latin: &str) -> String {
         let (input, capital) = self.prepare(latin);
-        let text = self.cheapest(&input).text;
-        Self::cap(text, capital)
+        let cheapest: State = self.cheapest(&input);
+        Self::cap(cheapest.text, capital)
     }
 
     /// What `latin` may be, at most `limit`: first its likeliest reading
@@ -419,13 +694,17 @@ impl Scheme {
     #[must_use]
     pub fn candidates(&self, latin: &str, lexicon: &dyn Lexicon, limit: usize) -> Vec<Candidate> {
         let (input, capital) = self.prepare(latin);
-        let ends = if input.len() <= MAX_INPUT {
+        let ends: Vec<State> = if input.len() <= MAX_INPUT {
             self.search(&input, lexicon)
         } else {
             Vec::new()
         };
-        let mut readings = self.words(&ends, lexicon);
-        let literal = self.cheapest(&input);
+        let mut readings: Vec<Candidate> = self
+            .words(&ends, lexicon)
+            .into_iter()
+            .map(|(c, ())| c)
+            .collect();
+        let literal: State = self.cheapest(&input);
         if !readings.iter().any(|c| c.text == literal.text) {
             readings.push(Candidate {
                 log_prob: lexicon.log_prob(&literal.text),
@@ -517,54 +796,60 @@ impl Scheme {
 
     /// The readings of all of `input` that start a word of `lexicon`, each
     /// at its cheapest, its letters kept only while they start one.
-    fn search(&self, input: &[char], lexicon: &dyn Lexicon) -> Vec<State> {
+    fn search<T: Trace>(&self, input: &[char], lexicon: &dyn Lexicon) -> Vec<State<T>> {
         let n = input.len();
-        let mut at: Vec<HashMap<(String, Class), f32>> = vec![HashMap::new(); n + 1];
-        at[0].insert((String::new(), Class::Start), 0.0);
+        let mut at: Vec<HashMap<(String, Class), (f32, T)>> = vec![HashMap::new(); n + 1];
+        at[0].insert((String::new(), Class::Start), (0.0, T::default()));
+        let state = |((text, prev), (cost, trace)): ((String, Class), (f32, T))| State {
+            text,
+            prev,
+            cost,
+            trace,
+        };
         for pos in 0..n {
-            let mut states: Vec<State> = std::mem::take(&mut at[pos])
+            let mut states: Vec<State<T>> = std::mem::take(&mut at[pos])
                 .into_iter()
-                .map(|((text, prev), cost)| State { text, prev, cost })
+                .map(state)
                 .collect();
-            states.sort_by(|a, b| a.cost.total_cmp(&b.cost));
+            states.sort_by(|a, b| {
+                a.cost
+                    .total_cmp(&b.cost)
+                    .then_with(|| a.text.cmp(&b.text))
+                    .then_with(|| a.prev.cmp(&b.prev))
+            });
             states.truncate(BEAM);
             for s in &states {
-                self.expand(input, pos, s, &mut |next, state| {
-                    if !lexicon.has_prefix(&state.text) {
-                        return;
+                self.expand(input, pos, s, &mut |next, s| {
+                    if lexicon.has_prefix(&s.text) {
+                        keep(&mut at[next], (s.text, s.prev), s.cost, s.trace);
                     }
-                    let slot = at[next]
-                        .entry((state.text, state.prev))
-                        .or_insert(f32::INFINITY);
-                    *slot = slot.min(state.cost);
                 });
             }
         }
-        std::mem::take(&mut at[n])
-            .into_iter()
-            .map(|((text, prev), cost)| State { text, prev, cost })
-            .collect()
+        std::mem::take(&mut at[n]).into_iter().map(state).collect()
     }
 
     /// The readings of `ends` (as [`Scheme::search`] leaves them) that are
     /// words of `lexicon`, each at its cheapest.
-    fn words(&self, ends: &[State], lexicon: &dyn Lexicon) -> Vec<Candidate> {
-        let mut best: HashMap<String, f32> = HashMap::new();
+    fn words<T: Trace>(&self, ends: &[State<T>], lexicon: &dyn Lexicon) -> Vec<(Candidate, T)> {
+        let mut best: HashMap<String, (f32, T)> = HashMap::new();
         for s in ends {
-            for (word, cost) in self.finish(s.clone()) {
-                let slot = best.entry(word).or_insert(f32::INFINITY);
-                *slot = slot.min(cost);
+            for f in self.finish(s.clone()) {
+                keep(&mut best, f.text, f.cost, f.trace);
             }
         }
         best.into_iter()
-            .filter_map(|(text, cost)| {
+            .filter_map(|(text, (cost, trace))| {
                 let log_prob = lexicon.log_prob(&text)?;
-                Some(Candidate {
-                    text,
-                    cost,
-                    log_prob: Some(log_prob),
-                    completes: false,
-                })
+                Some((
+                    Candidate {
+                        text,
+                        cost,
+                        log_prob: Some(log_prob),
+                        completes: false,
+                    },
+                    trace,
+                ))
             })
             .collect()
     }
@@ -572,61 +857,57 @@ impl Scheme {
     /// The cheapest reading of `input`: what follows a letter depends only
     /// on what kind of rule read it, so the cheapest reading of each kind
     /// up to each letter is all there is to carry on.
-    fn cheapest(&self, input: &[char]) -> State {
+    fn cheapest<T: Trace>(&self, input: &[char]) -> State<T> {
         let n = input.len();
-        let mut at: Vec<HashMap<Class, State>> = vec![HashMap::new(); n + 1];
-        at[0].insert(
-            Class::Start,
-            State {
-                text: String::new(),
-                prev: Class::Start,
-                cost: 0.0,
-            },
-        );
+        let mut at: Vec<HashMap<Class, State<T>>> = vec![HashMap::new(); n + 1];
+        let start = State {
+            text: String::new(),
+            prev: Class::Start,
+            cost: 0.0,
+            trace: T::default(),
+        };
+        at[0].insert(Class::Start, start.clone());
         for pos in 0..n {
-            let states: Vec<State> = std::mem::take(&mut at[pos]).into_values().collect();
+            let states: Vec<State<T>> = std::mem::take(&mut at[pos]).into_values().collect();
             for s in &states {
-                self.expand(input, pos, s, &mut |next, state| {
-                    let slot = at[next].entry(state.prev);
-                    match slot {
-                        std::collections::hash_map::Entry::Occupied(mut o) => {
-                            if cheaper(&state.text, state.cost, &o.get().text, o.get().cost) {
+                self.expand(
+                    input,
+                    pos,
+                    s,
+                    &mut |next, state| match at[next].entry(state.prev) {
+                        Entry::Occupied(mut o) => {
+                            if cheaper(&state, o.get()) {
                                 o.insert(state);
                             }
                         }
-                        std::collections::hash_map::Entry::Vacant(v) => {
+                        Entry::Vacant(v) => {
                             v.insert(state);
                         }
-                    }
-                });
+                    },
+                );
             }
         }
-        let mut best = State {
-            text: String::new(),
-            prev: Class::Start,
-            cost: f32::INFINITY,
-        };
+        let mut best: Option<State<T>> = None;
         for s in std::mem::take(&mut at[n]).into_values() {
-            for (text, cost) in self.finish(s) {
-                if cheaper(&text, cost, &best.text, best.cost) {
-                    best = State {
-                        text,
-                        prev: Class::Other,
-                        cost,
-                    };
+            for f in self.finish(s) {
+                if best.as_ref().is_none_or(|b| cheaper(&f, b)) {
+                    best = Some(f);
                 }
             }
         }
-        if best.cost.is_infinite() {
-            best.cost = 0.0;
-        }
-        best
+        best.unwrap_or(start)
     }
 
     /// Every way the rules read on from `s` at `pos`, each handed to `put`
     /// with the position it reaches; a character no rule reads is written
     /// as it is.
-    fn expand(&self, input: &[char], pos: usize, s: &State, put: &mut dyn FnMut(usize, State)) {
+    fn expand<T: Trace>(
+        &self,
+        input: &[char],
+        pos: usize,
+        s: &State<T>,
+        put: &mut dyn FnMut(usize, State<T>),
+    ) {
         let first = lower(input[pos]);
         let read: Vec<(&Rule, usize)> = self
             .by_first
@@ -647,6 +928,7 @@ impl Scheme {
             }
             for w in &r.ways {
                 let cost = s.cost + w.cost + STEP;
+                let trace = s.trace.and(w.index);
                 let abugida = self.script == Script::Abugida;
                 match r.class {
                     Class::Consonant if abugida && s.prev == Class::Consonant => {
@@ -656,6 +938,7 @@ impl Scheme {
                                 text: format!("{}{}{}", s.text, self.virama, w.letter),
                                 prev: Class::Consonant,
                                 cost: cost + self.cluster,
+                                trace: trace.and(self.ways + CLUSTER),
                             },
                         );
                         put(
@@ -664,6 +947,7 @@ impl Scheme {
                                 text: format!("{}{}", s.text, w.letter),
                                 prev: Class::Consonant,
                                 cost: cost + self.schwa,
+                                trace: trace.and(self.ways + SCHWA),
                             },
                         );
                     }
@@ -675,6 +959,7 @@ impl Scheme {
                                 text: format!("{}{sign}", s.text),
                                 prev: Class::Vowel,
                                 cost,
+                                trace,
                             },
                         );
                     }
@@ -684,6 +969,7 @@ impl Scheme {
                             text: format!("{}{}", s.text, w.letter),
                             prev: class,
                             cost,
+                            trace,
                         },
                     ),
                 }
@@ -696,6 +982,7 @@ impl Scheme {
                     text: format!("{}{}", s.text, input[pos]),
                     prev: Class::Other,
                     cost: s.cost + UNREAD,
+                    trace: s.trace.clone(),
                 },
             );
         }
@@ -730,15 +1017,22 @@ impl Scheme {
 
     /// A reading at the word's end: an abugida's last consonant as it is,
     /// and with the virama.
-    fn finish(&self, s: State) -> Vec<(String, f32)> {
+    fn finish<T: Trace>(&self, s: State<T>) -> Vec<State<T>> {
         if self.script == Script::Abugida && s.prev == Class::Consonant {
-            let with = format!("{}{}", s.text, self.virama);
-            vec![
-                (s.text, s.cost + self.final_bare),
-                (with, s.cost + self.final_virama),
-            ]
+            let with = State {
+                text: format!("{}{}", s.text, self.virama),
+                prev: s.prev,
+                cost: s.cost + self.final_virama,
+                trace: s.trace.and(self.ways + FINAL_VIRAMA),
+            };
+            let bare = State {
+                cost: s.cost + self.final_bare,
+                trace: s.trace.and(self.ways + FINAL),
+                ..s
+            };
+            vec![bare, with]
         } else {
-            vec![(s.text, s.cost)]
+            vec![s]
         }
     }
 }
@@ -825,21 +1119,27 @@ fn parse_way(way: &str, vowel_sign: bool) -> Result<Way, String> {
             letter: text(letter),
             sign: Some(text(sign)),
             cost,
+            index: 0,
         })
     } else {
         Ok(Way {
             letter: text(body),
             sign: None,
             cost,
+            index: 0,
         })
     }
 }
 
-/// Whether a reading of `cost` beats one of `other_cost`, the earlier
-/// text first where they cost the same, so that a table reads the same
-/// way every time.
-fn cheaper(text: &str, cost: f32, other: &str, other_cost: f32) -> bool {
-    cost.total_cmp(&other_cost).then_with(|| text.cmp(other)) == std::cmp::Ordering::Less
+/// Whether reading `a` beats `b`: the cheaper, or of two that cost the
+/// same the earlier text (then trace), so that a table reads the same way
+/// every time.
+fn cheaper<T: Trace>(a: &State<T>, b: &State<T>) -> bool {
+    match a.cost.total_cmp(&b.cost).then_with(|| a.text.cmp(&b.text)) {
+        Ordering::Less => true,
+        Ordering::Equal => a.trace.before(&b.trace),
+        Ordering::Greater => false,
+    }
 }
 
 fn lower(c: char) -> char {
@@ -1124,5 +1424,97 @@ mod tests {
             bad("script alphabet\n[consonants]\nk κ:-1"),
             TranslitError::Line { line: 3, .. }
         ));
+    }
+
+    #[test]
+    fn a_reading_says_what_it_was_charged() {
+        let s = hindi();
+        let lexicon = Words::of(&[("नमस्ते", 10), ("नमस", 1), ("कमल", 5)]);
+        let costs = s.costs();
+        let ways = costs.len() - SETTINGS;
+        let readings = s.readings("namaste", &lexicon);
+        // The word, and the cheapest reading, which is the word too.
+        assert_eq!(readings.len(), 1);
+        let word = &readings[0];
+        assert_eq!(word.text, "नमस्ते");
+        assert_eq!(word.log_prob, lexicon.log_prob("नमस्ते"));
+        // n a m a s t e, a way each, and s and t joined; the one way.
+        assert_eq!(word.paths.len(), 1);
+        let first = &word.paths[0].charges;
+        assert_eq!(first.len(), 8);
+        let cluster = u32::try_from(ways).unwrap() + CLUSTER;
+        assert_eq!(first.iter().filter(|&&c| c == cluster).count(), 1);
+        // A way costs what it was charged and a step for each rule read.
+        let kamal = s.readings("kamal", &lexicon);
+        for r in kamal.iter().chain(&readings) {
+            assert_eq!(r.cost, r.paths[0].cost);
+            for p in &r.paths {
+                let read = p.charges.iter().filter(|&&c| (c as usize) < ways).count();
+                let charged: f32 = p.charges.iter().map(|&c| costs[c as usize]).sum();
+                #[allow(clippy::cast_precision_loss)]
+                let steps = STEP * read as f32;
+                assert!((p.cost - charged - steps).abs() < 1e-4, "{r:?}");
+            }
+        }
+        // A word's last consonant as it is: `final`, charged.
+        let word = kamal.iter().find(|r| r.text == "कमल").expect("कमल");
+        let bare = u32::try_from(ways).unwrap() + FINAL;
+        assert!(word.paths[0].charges.contains(&bare));
+    }
+
+    #[test]
+    fn the_cheapest_reading_is_the_literal() {
+        let s = hindi();
+        for latin in ["tak", "namaste", "kamal", "kya"] {
+            let r = s.cheapest_reading(latin);
+            assert_eq!(r.text, s.literal(latin));
+            assert_eq!(r.paths.len(), 1);
+            assert_eq!(r.cost, r.paths[0].cost);
+            assert!(r.log_prob.is_none());
+        }
+    }
+
+    #[test]
+    fn a_reading_read_two_ways_keeps_both() {
+        // kk as one rule (κ:0.5), and as k twice, one of them written as
+        // nothing (-:1), first or second: one way, the same charges.
+        let s =
+            Scheme::parse("script alphabet\n[consonants]\nk  κ  -:1\nkk  κ:0.5\n").expect("table");
+        let lexicon = Words::of(&[("κ", 1)]);
+        let readings = s.readings("kk", &lexicon);
+        let word = readings.iter().find(|r| r.text == "κ").expect("κ");
+        let ways: Vec<(f32, &[u32])> = word
+            .paths
+            .iter()
+            .map(|p| (p.cost, p.charges.as_slice()))
+            .collect();
+        assert_eq!(ways.len(), 2, "{word:?}");
+        assert!((ways[0].0 - 0.55).abs() < 1e-4 && ways[0].1 == [2]);
+        assert!((ways[1].0 - 1.1).abs() < 1e-4);
+        let mut second = ways[1].1.to_vec();
+        second.sort_unstable();
+        assert_eq!(second, [0, 1]);
+    }
+
+    #[test]
+    fn costs_set_anew_read_anew() {
+        let mut s = hindi();
+        let mut costs = s.costs();
+        // k, kh, then t's two ways, त and ट:0.5.
+        assert_eq!(costs[2..4], [0.0, 0.5]);
+        // The settings last: cluster, schwa 1.5, final, final-virama 4.
+        assert_eq!(costs[costs.len() - SETTINGS..], [0.0, 1.5, 0.0, 4.0]);
+        assert_eq!(s.literal("tak"), "तक");
+        costs[2] = 1.0;
+        costs[3] = 0.0;
+        s.set_costs(&costs)
+            .expect("as many costs as the table sets");
+        assert_eq!(s.literal("tak"), "टक");
+        assert_eq!(s.costs(), costs);
+        assert!(s.set_costs(&costs[1..]).is_err());
+        costs[0] = -1.0;
+        assert!(s.set_costs(&costs).is_err());
+        costs[0] = f32::NAN;
+        assert!(s.set_costs(&costs).is_err());
     }
 }

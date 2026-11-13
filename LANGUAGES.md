@@ -278,25 +278,33 @@ but no model to match the glide against · `—` off
    the likeliest readings begin from the first letter (`namas`: नमस्ते);
    the strip shows two and the letters as typed, and Space takes the
    reading of the letters typed. How often the word meant comes first
-   (and among the strip's two), on Dakshina's romanized Wikipedia
-   sentences, and the keystrokes the strip saves typing them: Hindi 82.1%
-   (86.7%; 19.8%), Urdu 78.8% (82.4%; 18.1%), Gujarati 78.1% (81.5%;
-   23.2%), Punjabi 76.6% (81.4%; 21.9%), Marathi 75.5% (78.1%; 16.4%),
-   Sinhala 74.4% (78.0%; 20.2%), Kannada 73.9% (75.3%; 19.9%), Tamil 72.2%
-   (74.1%; 17.5%), Telugu 72.0% (73.6%; 19.5%), Bengali 71.7% (75.1%;
-   19.7%), Sindhi 67.0% (73.0%; 16.1%), Malayalam 62.9% (65.8%; 14.9%); of
-   the words the lexicon has, 75–91% (`make eval-translit`, a word being
-   the same word as its lexicon keys it: Sindhi's two h letters one).
-   Malayalam's
-   and Tamil's tables read a doubled consonant typed single (palakad:
-   പാലക്കാട്, thaakuthal: தாக்குதல்), which their typists often do, and
-   Malayalam's ri as ൃ, mb as മ്പ and nch as ഞ്ച; from 58.2% and 70.0%,
-   Malayalam's with its lexicon's 200 000 words (1.4 points of it).
-   Bengali's reads ৎ before a consonant too (utsob: উৎসব). Sindhi's texts
-   write its h as ه and as ھ, and its lexicon kept a word both ways, a
-   tenth of its misses; the splitter now reads the two as one letter for
-   Sindhi alone (`osk_data::words`, its generation 3), its table writes
-   ه, and it rose from 65.0%. Assamese,
+   (and among the strip's two), on the test half of Dakshina's romanized
+   Wikipedia sentences (some 5 000 a language), and the keystrokes the
+   strip saves typing them: Hindi 82.5% (86.5%; 20.4%), Urdu 79.7% (83.1%;
+   19.0%), Gujarati 78.3% (81.6%; 23.4%), Punjabi 77.1% (81.5%; 21.7%),
+   Marathi 76.6% (78.7%; 16.7%), Sinhala 74.6% (78.1%; 20.1%), Kannada
+   73.8% (75.2%; 19.7%), Telugu 72.5% (74.0%; 19.3%), Tamil 72.2% (74.1%;
+   17.2%), Bengali 72.2% (75.1%; 19.4%), Sindhi 69.1% (74.4%; 16.5%),
+   Malayalam 63.3% (66.2%; 15.2%); of the words the lexicon has, 78–91%
+   (`make eval-translit`, a word being the same word as its lexicon keys
+   it: Sindhi's two h letters one). These twelve tables were written by
+   hand, then their costs fitted to how people romanized Dakshina's
+   training words (`make fit-translit`: each word meant made as likely
+   among its readings as the costs allow, each cost held to the one
+   written), kept where that put more of its dev words and dev sentences'
+   words first; nothing measured above was fitted on or chosen by. On the
+   test sentences Sindhi rose 2.1 points so (from 67.0%), Urdu 1.0,
+   Marathi 0.8, Punjabi 0.6, Hindi and Sinhala 0.5, Bengali and Telugu
+   0.4, Malayalam 0.3 and Tamil 0.1, their keystroke savings with them
+   (Telugu's 0.1 down); Gujarati's and Kannada's stayed as written, no
+   fit doing better on their dev words. Malayalam's and Tamil's tables
+   read a doubled consonant typed single (palakad: പാലക്കാട്, thaakuthal:
+   தாக்குதல்), which their typists often do, and Malayalam's ri as ൃ, mb
+   as മ്പ and nch as ഞ്ച, with its lexicon's 200 000 words. Bengali's
+   reads ৎ before a consonant too (utsob: উৎসব). Sindhi's texts write its
+   h as ه and as ھ, and its lexicon kept a word both ways, a tenth of its
+   misses; the splitter reads the two as one letter for Sindhi alone
+   (`osk_data::words`, its generation 3), and its table writes ه. Assamese,
    Maithili, Nepali, Odia, Sanskrit, Konkani, Meitei, Kashmiri, Bodo and
    Dogri are measured on the words people romanized for AI4Bharat's
    Aksharantar dataset (its test split, 2 000 to 6 900 words each, mostly

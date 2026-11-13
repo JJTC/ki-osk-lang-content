@@ -199,6 +199,14 @@ source  = { name = "FineWeb-2 (Hugging Face): web text from Common Crawl, revisi
 license = { name = "MIT (the transliteration tables)", url = "https://opensource.org/license/mit", share_alike = false }
 source  = { name = "ki-osk-lang-content's transliteration tables", url = "https://github.com/jjtc/ki-osk-lang-content/tree/main/translit" }
 
+# The tables whose costs `make fit-translit` fitted to how people
+# romanized the Dakshina dataset's training words (Gujarati's and
+# Kannada's stayed as written): their packs name it for that too.
+[translit.fitted]
+license = { name = "CC BY-SA 4.0 (the Dakshina dataset)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
+source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons, the transliteration table's costs fitted to them", url = "https://github.com/google-research-datasets/dakshina" }
+langs   = ["bn", "hi", "ml", "mr", "pa", "sd", "si", "ta", "te", "ur"]
+
 # Keyboard layouts (layouts/<id>.json): the keys of each, and what each
 # types. The national ones are read from xkeyboard-config's keymaps
 # through libxkbcommon (scripts/build-layout.py, build-national-grid.py,

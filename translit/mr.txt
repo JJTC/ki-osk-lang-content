@@ -5,11 +5,14 @@
 # English words written in Marathi's script are typed as English spells
 # them (school: स्कूल, doctor: डॉक्टर): c, ck, sch, o as ॉ, u as अ or यू, a
 # silent last e, er, or, le, y and tion have English ways too, at a cost.
+# Its costs are fitted to how people romanized the Dakshina dataset's
+# training words (CC BY-SA 4.0; make fit-translit, NOTICES.md), each
+# held to the one first written here.
 
 script abugida
 virama ्
-cluster 0
-schwa 1.2
+cluster 0.2
+schwa 1
 final 0
 final-virama 4
 
@@ -23,7 +26,7 @@ ch   च  छ:1
 chh  छ  च्छ:0.8
 cch  च्छ
 c    च  क:1.5
-c>v  च  स:2  क:1.5
+c>v  च:0.1  स:2  क:1.4
 ck   क:0.5  च्क:1
 sch  स्क:0.5  श:1.5
 j    ज  झ:2
@@ -31,11 +34,11 @@ jh   झ
 z    झ  ज:0.7  ज़:2
 t    त  ट:0.6
 tt   ट:0.5  त्त:0.3  ट्ट:1
-th   थ  ठ:0.8  त:1.5
+th   थ:0.1  ठ:0.6  त:1.6
 d    द  ड:0.6
 dd   ड:0.5  द्द:0.3  ड्ड:1
-dh   ध  ढ:1  द:2  द्ध:1.2
-n    न  ण:1.2
+dh   ध  ढ:0.9  द:2.1  द्ध:1.2
+n    न:0.4  ण:0.7
 p    प
 ph   फ
 f    फ  फ़:1.5
@@ -43,12 +46,12 @@ b    ब
 bh   भ
 m    म
 y    य
-r    र
-l    ल  ळ:0.8
+r    र:0.1
+l    ल:0.2  ळ:0.5
 v    व
 w    व
-sh   श  ष:1  स:2.5
-s    स  श:1.5  ष:3
+sh   श:0.1  ष:0.9  स:2.6
+s    स  श:1.6  ष:3
 h    ह
 x    क्स  क्ष:1
 ksh  क्ष
@@ -56,39 +59,39 @@ dny  ज्ञ:0.5
 gy   ज्ञ:1.5
 
 [vowels]
-a     अ/-  आ/ा:1.2
-^a    अ/-  आ/ा:0.8
-a$    आ/ा  अ/-:1
+a     अ/-:0.5  आ/ा:0.6
+^a    अ/-  आ/ा:0.9
+a$    आ/ा  अ/-:1.7
 aa    आ/ा
 ^aa   आ/ा  अ/-:2
 aa$   आ/ा  आं/ां:1.5
-i     इ/ि  ई/ी:1
-i$    ई/ी  इ/ि:0.8
-ee    ई/ी  इ/ि:2
+i     इ/ि:0.4  ई/ी:0.6
+i$    ई/ी  इ/ि:0.7
+ee    ई/ी  इ/ि:1.9
 ii    ई/ी
-u     उ/ु  ऊ/ू:1  अ/-:2  यू/्यू:2
+u     उ/ु  ऊ/ू:0.8  अ/-:2.3  यू/्यू:2
 u$    उ/ु  ऊ/ू:0.5
 oo    ऊ/ू  ओ/ो:2
 uu    ऊ/ू
-e     ए/े  ऐ/ै:1.5
-e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:2.5
-ai    ऐ/ै  ए/े:1.5  आई/ाई:1.2
+e     ए/े:0.1  ऐ/ै:1.5
+e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:3.1
+ai    ऐ/ै  ए/े:1.6  आई/ाई:1.2
 ae    ऐ/ै:0.5  ए/े:1
 ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
 ye    ए/े:0.3
-o     ओ/ो  ऑ/ॉ:1.5  औ/ौ:1.5
+o     ओ/ो  ऑ/ॉ:1.4  औ/ौ:1.5
 au    औ/ौ  ओ/ो:2
 ou    औ/ौ  ओ/ो:1.5
 ri    ऋ/ृ:2
-ru    ऋ/ृ:2.5
+ru    ऋ/ृ:2.4
 
 [other]
 er$   र:1.5
 or$   र:2
-le$   ल:2
+le$   ल:2.1
 y$    ी:2
 tion  शन:1  ्शन:1
-n>c   ं:0.5
+n>c   ं:0.4
 m>c   ं:1.2
-n$    ं:1
+n$    ं:1.1
 m$    ं:0.8

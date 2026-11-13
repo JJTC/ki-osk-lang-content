@@ -9,12 +9,15 @@
 # English words, which the language writes in its script too, are typed
 # as English spells them: c, ck, sch, o, er, y and tion have English
 # ways too, at a cost.
+# Its costs are fitted to how people romanized the Dakshina dataset's
+# training words (CC BY-SA 4.0; make fit-translit, NOTICES.md), each
+# held to the one first written here.
 
 script abugida
 virama ்
 cluster 0
-schwa 3
-final 2
+schwa 3.1
+final 2.2
 final-virama 0
 
 [consonants]
@@ -22,28 +25,28 @@ k    க  க்க:1
 g    க
 kh   க:0.5
 gh   க:0.5
-h    ஹ  க:2
-ng   ங்க  ங:0.5
+h    ஹ:0.1  க:2
+ng   ங்க:0.1  ங:0.4
 ch   ச  ச்ச:0.8
 c    ச  க:2
 c>v  ச  ஸ:1.5  க:1.5
 ck   க்க:0.5
 sch  ஸ்க:0.5
-s    ச  ஸ:0.4  ஷ:2
+s    ச:0.1  ஸ:0.3  ஷ:2
 sh   ஷ  ச:1.5
-j    ஜ  ச:1
+j    ஜ  ச:1.1
 nj   ஞ  ஞ்ச:0.5
 ny   ஞ
 t    ட  த:0.3  ற:2  ட்ட:1  த்த:1.2
-tt   ட்ட  ற்ற:0.8  த்த:0.5
+tt   ட்ட  ற்ற:0.9  த்த:0.5
 ttr  ற்ற
 tr   ற்ற:0.8  ட்ர:1
-th   த  த்த:0.5  ட:1.5
-d    ட  த:0.5
+th   த  த்த:0.5  ட:1.7
+d    ட  த:0.7
 dh   த
-n    ன  ந:0.6  ண:1
+n    ன:0.3  ந:0.5  ண:0.8
 ^n   ந  ன:3
-nd   ந்த:0.3  ண்ட:0.5
+nd   ந்த:0.4  ண்ட:0.5
 nth  ந்த
 nt   ந்த:0.5  ண்ட:0.5  ன்ற:0.8
 nr   ன்ற
@@ -54,10 +57,10 @@ b    ப
 f    ஃப:1  ப:0.5
 m    ம  ம்ம:1.5
 y    ய  ய்ய:1.2
-r    ர  ற:0.8
+r    ர:0.4  ற:0.5
 rr   ற்ற  ர்ர:2
-l    ல  ள:0.8  ழ:1.5  ல்ல:1.5  ள்ள:1.5
-ll   ல்ல  ள்ள:0.5
+l    ல:0.2  ள:0.6  ழ:1.4  ல்ல:1.5  ள்ள:1.5
+ll   ல்ல:0.1  ள்ள:0.4
 zh   ழ
 z    ழ:0.5  ஸ:1.5
 v    வ  வ்வ:1.5
@@ -66,25 +69,25 @@ x    க்ஸ்
 ksh  க்ஷ
 
 [vowels]
-a     அ/-  ஆ/ா:1.2
+a     அ/-  ஆ/ா:1.1
 ^a    அ/-  ஆ/ா:1
 ^ye   எ/ெ:0.3  ஏ/ே:0.8
 ^yee  ஏ/ே:0.3  ஈ/ீ:1
-a$    அ/-  ஆ/ா:0.6
+a$    அ/-:0.1  ஆ/ா:0.5
 aa    ஆ/ா
-i     இ/ி  ஈ/ீ:1.2
-ee    ஈ/ீ  ஏ/ே:0.7
+i     இ/ி  ஈ/ீ:1.3
+ee    ஈ/ீ  ஏ/ே:0.8
 ii    ஈ/ீ
 u     உ/ு  ஊ/ூ:1.2
-oo    ஊ/ூ  ஓ/ோ:0.6
+oo    ஊ/ூ:0.1  ஓ/ோ:0.5
 uu    ஊ/ூ
-e     எ/ெ  ஏ/ே:0.6
+e     எ/ெ:0.1  ஏ/ே:0.5
 ae    ஏ/ே
 ai    ஐ/ை  அய்/ய்:1
 aai   ஆய்/ாய்:0.5  ஆஐ/ாஐ:2
 ei    எய்/ெய்:0.5  ஐ/ை:0.5  ஏ/ே:1
 ey    எய்/ெய்:0.3
-o     ஒ/ொ  ஓ/ோ:0.6  ஆ/ா:2
+o     ஒ/ொ:0.1  ஓ/ோ:0.5  ஆ/ா:2
 au    ஔ/ௌ  அவு/வு:1.5
 ou    ஔ/ௌ
 oa    ஓ/ோ:0.3

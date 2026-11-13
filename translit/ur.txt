@@ -7,46 +7,49 @@
 # English words, which the language writes in its script too, are typed
 # as English spells them: c, ck, sch, o, er, y and tion have English
 # ways too, at a cost.
+# Its costs are fitted to how people romanized the Dakshina dataset's
+# training words (CC BY-SA 4.0; make fit-translit, NOTICES.md), each
+# held to the one first written here.
 
 script abjad
 
 [consonants]
-b    ب
+b    ب:0.1
 bb   ب  بب:1
 bh   بھ
 p    پ
 ph   پھ  ف:1
-t    ت  ٹ:0.8  ط:1.5
-tt   ت:0.5  ٹ:0.5  تت:1
-th   تھ  ٹھ:1  ث:2
-s    س  ص:1.5  ث:2.5
+t    ت:0.7  ٹ:0.4  ط:1.3
+tt   ت:0.6  ٹ:0.5  تت:1
+th   تھ:0.1  ٹھ:0.9  ث:2
+s    س:0.5  ص:1.2  ث:2.3
 ss   س:0.3  سس:1
 j    ج
 jh   جھ
 ch   چ
 chh  چھ
-c    چ  ک:1.5
-c>v  چ  س:2  ک:1.5
+c    چ:0.1  ک:1.5
+c>v  چ:0.3  س:2  ک:1.2
 ck   ک:0.5
 sch  سک:0.5  اسک:0.8
-h    ہ  ح:1  ھ:2
-kh   خ  کھ:0.3
-d    د  ڈ:0.8  ڑ:1
-dd   د:0.3  ڈ:0.5  دد:1
-dh   دھ  ڈھ:1
-z    ز  ذ:2  ض:2  ظ:2
-r    ر  ڑ:1.5
+h    ہ:0.9  ح:0.8  ھ:1.6
+kh   خ:0.1  کھ:0.2
+d    د:0.5  ڈ:0.4  ڑ:0.8
+dd   د:0.4  ڈ:0.4  دد:1
+dh   دھ:0.1  ڈھ:1
+z    ز:0.4  ذ:1.8  ض:1.8  ظ:1.9
+r    ر:0.1  ڑ:1.5
 rr   ر:0.5  ڑ:1  رر:1
 rh   ڑھ  رہ:0.5
 zh   ژ
 sh   ش
-gh   غ  گھ:0.3
+gh   غ:0.1  گھ:0.2
 f    ف
-q    ق  ک:1
-k    ک  ق:1.5
+q    ق  ک:1.3
+k    ک  ق:1.7
 kk   ک:0.5  کک:1
 g    گ
-l    ل
+l    ل:0.1
 ll   ل:0.3  لل:1
 m    م
 mm   م:0.3  مم:1
@@ -58,46 +61,46 @@ y    ی
 x    کس  خ:1
 
 [vowels]
-^a    ا  آ:1  ع:1.5
-a     -  ا:0.8  ع:2  ہ:3
-a$    ا  ہ:0.5  ی:2  -:2
-^aa   آ  ا:1  عا:2
-aa    ا  ع:2
-^i    ا  ای:1  ع:2
-i     -  ی:0.5
-i$    ی  ے:2  ہ:1.5  یں:1
+^a    ا:0.1  آ:1.1  ع:1.4
+a     -:1.4  ا:1.7  ع:1.6  ہ:3.3
+a$    ا  ہ:0.2  ی:2.7  -:3.7
+^aa   آ  ا:1.2  عا:1.9
+aa    ا  ع:1.9
+^i    ا:0.1  ای:1  ع:2
+i     -:0.5  ی:0.3
+i$    ی  ے:2.5  ہ:2    یں:1.2
 ^ee   ای
 ee    ی
 ^u    ا  او:0.7  ع:2
-u     -  و:0.5
+u     -:0.3  و:0.3
 u$    و
 ^oo   او
 oo    و
 ^o    او  ا:1
-o     و  -:1.5  ا:2
-o$    و  ہ:2
-^e    ا  ای:0.7  اے:1
-e     ی  ے:1  -:2
-e$    ے  ی:1  ہ:1
+o     و  -:2.5  ا:2.3
+o$    و  ہ:2.2
+^e    ا:0.1  ای:0.6  اے:1
+e     ی:0.2  ے:1  -:2.4
+e$    ے  ی:1.3  ہ:1.5
 ^ai   اے  ای:1  ع:2
-ai    ی  ے:1  ا:2
-ai$   ے  ی:1
+ai    ی  ے:1  ا:2.1
+ai$   ے  ی:1.1
 ^au   او
 au    و
 ou    و
 ei    ی  ے:1
-aye   ئے:0.3  ائے:1
+aye   ئے:0.4  ائے:0.9
 ayi   ئی:0.3
-ai$   ئی:1
+ai$   ئی:0.9
 ui    وئی:0.3
 uye   وئے:0.3
 uwe   وئے:0.5
 oi    وئی:0.3
 oye   وئے:0.5
-ey$   ے  ی:1
+ey$   ے  ی:1.2
 
 [other]
-er$   ر:1.5
+er$   ر:1.4
 y$    ی:2
 tion  شن:1
 n$    ں:0.3

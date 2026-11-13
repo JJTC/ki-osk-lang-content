@@ -202,6 +202,8 @@ help:
 	@echo "  eval-translit    how often each transliteration table puts the word"
 	@echo "                   meant first (after fetch-dakshina, fetch-aksharantar,"
 	@echo "                   fetch-greeklish)"
+	@echo "  fit-translit     fit the Dakshina languages' tables' costs to its"
+	@echo "                   training romanizations (after fetch-dakshina)"
 	@echo "  translit-layouts write layouts/<lang>-abc.json for translit/<lang>.txt"
 	@echo "  derived-layouts  write the layouts made from another language's keys"
 	@echo "  hinglish-assets  rebuild predict/hi-Latn.* (Hindi typed in Latin letters)"
@@ -560,30 +562,33 @@ hinglish-assets:
 
 # How often each transliteration table (translit/<lang>.txt), with its
 # language's lexicon, puts the word meant first, as the composer's strip
-# offers them: on Dakshina's romanized Wikipedia sentences (every word
-# once) and on its romanization lexicon's test words (each romanization as
-# often as it was typed); and the keystrokes the strip saves, typing the
+# offers them: on the test half of Dakshina's romanized Wikipedia
+# sentences (every word once; scripts/dakshina-halves.py cuts the halves)
+# and on its romanization lexicon's test words (each romanization as often
+# as it was typed); and the keystrokes the strip saves, typing the test
 # sentences' first 20 000 words a letter at a time. After `make
-# fetch-dakshina`. Then the tables Dakshina has nothing for, on
+# fetch-dakshina`; the tables' costs are fitted on what these leave out
+# (fit-translit, below). Then the tables Dakshina has nothing for, on
 # Aksharantar's words romanized by hand (mostly rare words and names, so
 # what the lexicon has is the measure): after `make fetch-aksharantar`.
 # And Greek's, on people's Greeklish: after `make fetch-greeklish`.
 TRANSLIT_EVAL_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
+DAKSHINA_TEST = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.test.tsv
 .PHONY: eval-translit
 eval-translit:
 	@for lang in $(TRANSLIT_EVAL_LANGS); do \
 		d=$(DAKSHINA_DIR)/$$lang; \
 		test -d $$d || { echo "no $$d: run make fetch-dakshina"; exit 1; }; \
-		echo "$$lang, romanized sentences:"; \
+		test -f $$d/$(DAKSHINA_TEST) || $(PYTHON) scripts/dakshina-halves.py $(DAKSHINA_DIR) $$lang || exit 1; \
+		echo "$$lang, romanized sentences (test):"; \
 		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
-			--pairs $$d/romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.tsv | tail -n 1 || exit 1; \
+			--pairs $$d/$(DAKSHINA_TEST) | tail -n 1 || exit 1; \
 		echo "$$lang, romanization lexicon (test):"; \
 		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
 			--pairs $$d/lexicons/$$lang.translit.sampled.test.tsv | tail -n 1 || exit 1; \
 		echo "$$lang, typed a letter at a time:"; \
 		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
-			--pairs $$d/romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.tsv \
-			--keystrokes --limit 20000 | tail -n 1 || exit 1; \
+			--pairs $$d/$(DAKSHINA_TEST) --keystrokes --limit 20000 | tail -n 1 || exit 1; \
 	done
 	@for lang in $(AKSHARANTAR_LANGS); do \
 		p=$(AKSHARANTAR_DIR)/$$lang.tsv; \
@@ -597,6 +602,28 @@ eval-translit:
 	echo "el, AUEB's Greeklish:"; \
 	$(TOOLS) eval-translit -- --table translit/el.txt --lexicon predict/el.fst \
 		--pairs $$p | tail -n 1
+
+# The costs of the Dakshina languages' tables (each way's after its
+# colon, and an abugida's cluster, schwa, final and final-virama), fitted
+# to the romanizations of its lexicons' training words, each held to the
+# table's own (crates/osk-data-tools/src/bin/fit_translit.rs); of the
+# rounds (the table's own costs the first), the one that puts the most
+# of its dev words and dev sentences' words first is written into
+# translit/<lang>.txt. eval-translit's test sentences and words are left
+# out. After `make fetch-dakshina`.
+FIT_TRANSLIT_LANGS ?= $(DAKSHINA_LANGS)
+DAKSHINA_DEV = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.dev.tsv
+.PHONY: fit-translit
+fit-translit:
+	@for lang in $(FIT_TRANSLIT_LANGS); do \
+		d=$(DAKSHINA_DIR)/$$lang; \
+		test -d $$d || { echo "no $$d: run make fetch-dakshina"; exit 1; }; \
+		test -f $$d/$(DAKSHINA_DEV) || $(PYTHON) scripts/dakshina-halves.py $(DAKSHINA_DIR) $$lang || exit 1; \
+		$(TOOLS) fit-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+			--train $$d/lexicons/$$lang.translit.sampled.train.tsv \
+			--dev $$d/lexicons/$$lang.translit.sampled.dev.tsv --dev $$d/$(DAKSHINA_DEV) \
+			--write || exit 1; \
+	done
 
 # The transliteration layouts (layouts/<lang>-abc.json), one for each
 # table in translit/: the US keys typing into the language's composer.

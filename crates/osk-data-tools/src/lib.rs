@@ -1,5 +1,6 @@
 //! Shared helpers for the data builders (`build-predict`, `build-pinyin`,
-//! `build-zhuyin`, `build-jyutping`, `build-kana`, `build-connection`).
+//! `build-zhuyin`, `build-jyutping`, `build-kana`, `build-connection`)
+//! and the transliteration tools (`eval-translit`, `fit-translit`).
 //! Each builder writes one kind of file in this repository through the
 //! `osk-data` types; nothing here runs on a device.
 
@@ -10,6 +11,8 @@
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 use std::path::Path;
+
+pub mod lexicon;
 
 /// Load a `<word> <count>` frequency list into a lookup table.
 ///

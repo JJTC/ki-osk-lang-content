@@ -17,7 +17,9 @@
 //! `packs.toml`'s `[layouts.packs]` says; a language with layouts and no
 //! model gets a pack of its layouts alone, named in `[layouts.names]`.
 //! A language's transliteration table (`translit/<lang>.txt`) joins the
-//! pack of the same id, with `[translit]`'s licence and source.
+//! pack of the same id, with `[translit]`'s licence and source, and
+//! `[translit.fitted]`'s too where its costs were fitted to a dataset's
+//! romanizations (`make fit-translit`).
 //!
 //! A prediction pack names the corpora its model was built from as
 //! `sources.lock` records them: Tatoeba's (`corpora/<lang>.txt`), the
@@ -29,7 +31,8 @@
 //! - a committed data file that no pack claims, or that two packs claim;
 //! - a prediction language with files but no name in `packs.toml`, or a
 //!   name with no files, or a model `sources.lock` records no corpus of;
-//! - a transliteration table no pack of its language takes;
+//! - a transliteration table no pack of its language takes, or a fitted
+//!   one that is not there;
 //! - layouts given to a pack that does not exist and has no name, or a
 //!   name for a pack that has no layouts or exists already;
 //! - a component that is missing or whose path climbs out of the tree;
@@ -94,9 +97,27 @@ const INDEX: &str = "packs.json";
 struct Packs {
     prediction: Prediction,
     layouts: Layouts,
-    translit: Added,
+    translit: Translit,
     #[serde(default)]
     pack: Vec<PackDef>,
+}
+
+/// The transliteration tables: the licence and source each adds to its
+/// pack, and those the dataset their costs were fitted to adds.
+#[derive(Deserialize)]
+struct Translit {
+    license: License,
+    source: SourceDef,
+    #[serde(default)]
+    fitted: Option<Fitted>,
+}
+
+/// The tables whose costs were fitted to a dataset's romanizations.
+#[derive(Deserialize)]
+struct Fitted {
+    license: License,
+    source: SourceDef,
+    langs: Vec<String>,
 }
 
 /// A licence and a source that a kind of file adds to the pack it joins.
@@ -688,8 +709,9 @@ fn add_layouts(root: &Path, l: &Layouts, manifests: &mut Vec<Manifest>) -> anyho
 }
 
 /// Each transliteration table joins the pack of its language, which carries
-/// the tables' licence and source besides its own.
-fn add_translit(root: &Path, t: &Added, manifests: &mut [Manifest]) -> anyhow::Result<()> {
+/// the tables' licence and source besides its own, and the fitted tables'
+/// dataset's.
+fn add_translit(root: &Path, t: &Translit, manifests: &mut [Manifest]) -> anyhow::Result<()> {
     let mut tables: Vec<String> = fs::read_dir(root.join("translit"))
         .context("reading translit/")?
         .flatten()
@@ -710,14 +732,30 @@ fn add_translit(root: &Path, t: &Added, manifests: &mut [Manifest]) -> anyhow::R
             kind::TRANSLIT,
             &format!("translit/{name}"),
         )?);
-        if !m.licenses.contains(&t.license) {
-            m.licenses.push(t.license.clone());
+        let fitted = t
+            .fitted
+            .as_ref()
+            .filter(|f| f.langs.iter().any(|l| l == lang));
+        let added =
+            std::iter::once((&t.license, &t.source)).chain(fitted.map(|f| (&f.license, &f.source)));
+        for (license, source) in added {
+            if !m.licenses.contains(license) {
+                m.licenses.push(license.clone());
+            }
+            m.sources.push(Source {
+                name: source.name.clone(),
+                url: source.url.clone(),
+                sha256: None,
+            });
         }
-        m.sources.push(Source {
-            name: t.source.name.clone(),
-            url: t.source.url.clone(),
-            sha256: None,
-        });
+    }
+    if let Some(f) = &t.fitted
+        && let Some(lang) = f
+            .langs
+            .iter()
+            .find(|l| !root.join(format!("translit/{l}.txt")).is_file())
+    {
+        bail!("packs.toml: [translit.fitted] names {lang}, which has no table");
     }
     Ok(())
 }

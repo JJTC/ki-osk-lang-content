@@ -10,12 +10,15 @@
 # English words, which the language writes in its script too, are typed
 # as English spells them: c, ck, sch, o, er, y and tion have English
 # ways too, at a cost.
+# Its costs are fitted to how people romanized the Dakshina dataset's
+# training words (CC BY-SA 4.0; make fit-translit, NOTICES.md), each
+# held to the one first written here.
 
 script abugida
 virama ්
-cluster 0
-schwa 3
-final 1.5
+cluster 0.4
+schwa 3.1
+final 2.4
 final-virama 0
 
 [consonants]
@@ -32,52 +35,52 @@ chh  ඡ  ච:1
 j    ජ
 jh   ඣ  ජ:1
 gn   ඥ  ග්න:1
-ny   ඤ
-t    ට  ත:0.4
+ny   ඤ:0.1
+t    ට:0.2  ත:0.4
 tt   ට්ට  ත්ත:0.5
-th   ත  ථ:1.5  ට:1.5
-d    ඩ  ද:0.3
+th   ත  ථ:1    ට:1.7
+d    ඩ:0.5  ද
 dd   ඩ්ඩ  ද්ද:0.5
-dh   ද  ධ:1  ඪ:2
-n    න  ණ:1
-nd   ඳ  න්ද:0.8  ණ්ඩ:1.5
+dh   ද:0.4  ධ:0.4  ඪ:2
+n    න:0.4  ණ:0.5
+nd   ඳ:0.2  න්ද:0.5  ණ්ඩ:1.5
 nn   න්න  ණ්ණ:1
-ng   ඟ:0.5  න්ග:1.5
+ng   ඟ:0.7  න්ග:1.5
 p    ප
 ph   ඵ  ෆ:0.5
 f    ෆ
 b    බ
-bh   භ  බ:1
+bh   භ  බ:1.1
 mb   ඹ  ම්බ:0.8
-m    ම
-y    ය  ‍ය
-r    ර  ‍ර
-l    ල  ළ:0.3
+m    ම:0.1
+y    ය:0.1  ‍ය:0.4
+r    ර  ‍ර:0.4
+l    ල  ළ:0.6
 ll   ල්ල  ළ්ළ:1
 v    ව
 w    ව
-sh   ශ  ෂ:0.5
-s    ස  ශ:1.5
-h    හ
+sh   ශ:0.2  ෂ:0.3
+s    ස:0.3  ශ:1.2
+h    හ:0.7
 x    ක්ෂ
 
 [vowels]
-a     අ/-  ආ/ා:1.2  ඇ/ැ:1.5
-^a    අ/-  ආ/ා:1  ඇ/ැ:0.6
-a$    අ/-  ආ/ා:0.8
+a     අ/-:0.2  ආ/ා:0.8  ඇ/ැ:1.7
+^a    අ/-:0.1  ආ/ා:0.8  ඇ/ැ:0.7
+a$    අ/-:0.3  ආ/ා:0.6
 aa    ආ/ා  ඈ/ෑ:2
 ae    ඇ/ැ
 aae   ඈ/ෑ
-i     ඉ/ි  ඊ/ී:1.2
+i     ඉ/ි:0.6  ඊ/ී:0.6
 ee    ඊ/ී  ඒ/ේ:0.5
 ii    ඊ/ී
-u     උ/ු  ඌ/ූ:1.2
+u     උ/ු:0.4  ඌ/ූ:0.9
 oo    ඌ/ූ  ඕ/ෝ:0.5
 uu    ඌ/ූ
-e     එ/ෙ  ඇ/ැ:0.2  ඒ/ේ:0.6  ඈ/ෑ:1.2
+e     එ/ෙ:0.1  ඇ/ැ:0.5  ඒ/ේ:0.3  ඈ/ෑ:1.2
 ei    එයි/ෙයි:0.3  ඒ/ේ:1
-ai    ඓ/ෛ  අයි/යි:1
-o     ඔ/ො  ඕ/ෝ:0.6  ආ/ා:2
+ai    ඓ/ෛ:0.1  අයි/යි:0.9
+o     ඔ/ො  ඕ/ෝ:0.3  ආ/ා:2.3
 au    ඖ/ෞ  අවු/වු:1
 ru    ඍ/ෘ:1.5
 
@@ -86,6 +89,6 @@ er$   ර්:1.5
 y$    ි:2
 tion  ෂන්:1
 n>c   ං:0.8
-m>c   ං:1
+m>c   ං:0.8
 ng$   ං
 n$    ං:2

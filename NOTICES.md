@@ -11,7 +11,8 @@ files carries their terms.
 The code here — the Makefile, the Cargo workspace and `crates/`, the
 scripts, the workflows and `packs.toml` — is MIT licensed (`LICENSE`), as
 are the text rules in `rules/` and the transliteration tables in
-`translit/`, which were written here.
+`translit/`, which were written here (twelve tables' costs then fitted
+to the Dakshina dataset's romanizations, below).
 The data keeps its original licence, below. That includes the seeds in
 `seeds/`, which are excerpts of the datasets they are listed under. Add an entry here whenever a
 new dataset is pulled in.
@@ -137,9 +138,10 @@ nine, the first 500 lines of its held-out text
 (`<lang>.wiki-filt.valid.text.shuf.txt.gz`) are `eval/<lang>.txt`.
 `scripts/fetch-dakshina.sh` reads the archive, pinned by its sha256;
 `sources.lock` records the sha256 of each language's text as
-`dakshina/<lang>.txt`. Its romanization lexicons and romanized sentences
-measure the transliteration tables (`make eval-translit`); none of them
-is shipped.
+`dakshina/<lang>.txt`. Its romanization lexicons' training words fit the
+costs of twelve transliteration tables (`make fit-translit`, below), and
+its test words and the test half of its romanized sentences measure them
+(`make eval-translit`); none of them is shipped.
 
 Hinglish (`predict/hi-Latn.*`, the `hi-Latn` pack) is Hindi's corpora —
 Tatoeba's sentences and Dakshina's text — respelled in Latin letters
@@ -231,7 +233,16 @@ Sinhala, Tamil, Telugu, Urdu, Yiddish, Awadhi, Kashmiri, Konkani, Meitei
 (Meetei Mayek and the Bengali script), Saraiki, Tulu, Bodo, Dogri,
 Chhattisgarhi, Magahi and Brahui. They were written here, MIT licensed,
 each joining its language's pack; what they choose among, the
-language's lexicon chooses. They are measured on romanizations nothing
+language's lexicon chooses. The costs of the twelve the Dakshina dataset
+romanizes (Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi,
+Punjabi, Sindhi, Sinhala, Tamil, Telugu and Urdu) were then fitted to how
+people romanized its lexicons' training words (`make fit-translit`,
+`crates/osk-data-tools/src/bin/fit_translit.rs`): the numbers after the
+colons moved, each held to the one written here, and nothing of the
+dataset's words in the tables. Ten moved (Gujarati's and Kannada's did
+no better so, and stayed as written); their packs name the dataset for
+it, beside the Wikipedia text their models learn from (`packs.toml`'s
+`[translit.fitted]`; CC BY-SA 4.0). They are measured on romanizations nothing
 here ships: the Dakshina dataset's, and for ten of them the test words of AI4Bharat's Aksharantar dataset (manually
 collected data CC BY, mined data CC0; "Aksharantar: Towards Building
 Open Transliteration Tools for the Next Billion Users", arXiv
