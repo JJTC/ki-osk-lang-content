@@ -132,9 +132,18 @@ PREDICT_LARGE_NGRAM ?= 90000
 # 33.2% to 25.4%), keystroke savings rise 2.7 points (3.0), and
 # transliteration's first reading is right 3.4 points more often (4.4),
 # for lexicons of 1.4 to 1.7 MB.
-PREDICT_WIDE_LANGS ?= kn ml ta te
+PREDICT_WIDE_LANGS ?= kn ta te
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
+# The WIDER tier: Malayalam, whose lexicon still lacks a quarter of the
+# words typed at 120 000. At 200 000 (3.0 MB, from 1.7) it lacks 22.8%
+# of its held-out words (from 25.4%), keystroke savings rise a point
+# (30.7%), and transliteration's first reading is right 1.4 points more
+# often. Tamil, Telugu and Kannada would gain 0.8-1.1 points of
+# transliteration for a megabyte each, so they stay WIDE.
+PREDICT_WIDER_LANGS ?= ml
+PREDICT_WIDER_VOCAB ?= 200000
+PREDICT_WIDER_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
@@ -248,6 +257,9 @@ predict-assets:
 		esac; \
 		case " $(PREDICT_WIDE_LANGS) " in \
 			*" $$lang "*) vocab=$(PREDICT_WIDE_VOCAB); ngram=$(PREDICT_WIDE_NGRAM) ;; \
+		esac; \
+		case " $(PREDICT_WIDER_LANGS) " in \
+			*" $$lang "*) vocab=$(PREDICT_WIDER_VOCAB); ngram=$(PREDICT_WIDER_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
 		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) " in \
@@ -363,6 +375,9 @@ own-corpus:
 	esac; \
 	case " $(PREDICT_WIDE_LANGS) " in \
 		*" $$lang "*) vocab=$(PREDICT_WIDE_VOCAB); ngram=$(PREDICT_WIDE_NGRAM) ;; \
+	esac; \
+	case " $(PREDICT_WIDER_LANGS) " in \
+		*" $$lang "*) vocab=$(PREDICT_WIDER_VOCAB); ngram=$(PREDICT_WIDER_NGRAM) ;; \
 	esac; \
 	words=; \
 	if [ -f wordbreak/$$lang.txt ]; then \

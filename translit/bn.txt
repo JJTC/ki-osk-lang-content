@@ -2,9 +2,10 @@
 # Latin: a for আ (ami: আমি), o for the vowel a consonant carries (kotha:
 # কথা) or for ো (bhalo: ভালো), t and d for ট and ড as well, s for শ, and
 # the vowel between two consonants left out where it is not spoken.
-# English words, which the language writes in its script too, are typed
-# as English spells them: c, ck, sch, o, er, y and tion have English
-# ways too, at a cost.
+# ৎ before a consonant as at a word's end (utsob: উৎসব), tty ত্য
+# (ottyachar: অত্যাচার). English words, which the language writes in its
+# script too, are typed as English spells them: c, ck, sch, o, er, y and
+# tion have English ways too, at a cost.
 
 script abugida
 virama ্
@@ -30,6 +31,7 @@ jh   ঝ
 z    জ  য:0.8
 t    ত  ট:0.6
 tt   ট:0.5  ত্ত:0.3  ট্ট:1  ত্য:0.8
+tty  ত্য:0.3  ত্ত্য:1
 th   থ  ঠ:0.8  ত:1.5
 d    দ  ড:0.6  ড়:1.2
 dd   ড:0.5  দ্দ:0.3  ড্ড:1
@@ -85,3 +87,4 @@ n>c   ং:0.8
 ng    ং:0.3
 n$    ং:2  ঁ:2
 t$    ৎ:1
+t>c   ৎ:0.5

@@ -267,9 +267,10 @@ but no model to match the glide against · `—` off
    Bengali 42.5%, from 40.7%; Marathi 42.8%, from 42.6%). Keystroke
    savings of the nine on held-out Wikipedia text: Punjabi 41.8%, Urdu
    41.8%, Sindhi 40.4%, Sinhala 36.1%, Gujarati 33.6%, Tamil 33.9%, Telugu
-   32.2%, Kannada 29.8%, Malayalam 29.7%. The Dravidian languages' words
-   take their endings with them: their lexicons keep 120 000 words, and
-   still lack a sixth to a quarter of the running words.
+   32.2%, Malayalam 30.7%, Kannada 29.8%. The Dravidian languages' words
+   take their endings with them: their lexicons keep 120 000 words,
+   Malayalam's 200 000 (3.0 MB), and still lack a sixth to a fifth of the
+   running words (Malayalam's at 120 000 a quarter, and savings 29.7%).
 4. A transliteration layout types the US keys' Latin letters into its
    language's composer: its table (`translit/<lang>.txt`) says every way
    each letter or group may be written, at a cost, and its lexicon picks
@@ -281,10 +282,17 @@ but no model to match the glide against · `—` off
    sentences, and the keystrokes the strip saves typing them: Hindi 82.1%
    (86.7%; 19.8%), Urdu 78.5% (82.0%; 18.1%), Gujarati 78.1% (81.5%;
    23.2%), Punjabi 76.4% (81.1%; 21.9%), Marathi 75.5% (78.1%; 16.4%),
-   Sinhala 74.2% (77.8%; 20.2%), Kannada 73.6% (75.0%; 19.8%), Telugu
-   71.6% (73.2%; 19.4%), Bengali 70.8% (74.1%; 19.6%), Tamil 70.0% (71.7%;
-   17.0%), Sindhi 65.0% (71.7%; 15.2%), Malayalam 58.2% (60.8%; 13.8%); of the
-   words the lexicon has, 74–91% (`make eval-translit`). Assamese,
+   Sinhala 74.2% (77.8%; 20.2%), Kannada 73.6% (75.0%; 19.8%), Tamil 72.2%
+   (74.1%; 17.5%), Bengali 71.7% (75.1%; 19.7%), Telugu 71.6% (73.2%;
+   19.4%), Sindhi 65.0% (71.7%; 15.2%), Malayalam 62.9% (65.8%; 14.9%); of
+   the words the lexicon has, 74–91% (`make eval-translit`). Malayalam's
+   and Tamil's tables read a doubled consonant typed single (palakad:
+   പാലക്കാട്, thaakuthal: தாக்குதல்), which their typists often do, and
+   Malayalam's ri as ൃ, mb as മ്പ and nch as ഞ്ച; from 58.2% and 70.0%,
+   Malayalam's with its lexicon's 200 000 words (1.4 points of it).
+   Bengali's reads ৎ before a consonant too (utsob: উৎসব). A tenth of
+   Sindhi's misses are its word spelled with the other of its two h
+   letters, ه and ھ, which its lexicon keeps apart. Assamese,
    Maithili, Nepali, Odia, Sanskrit, Konkani, Meitei, Kashmiri, Bodo and
    Dogri are measured on the words people romanized for AI4Bharat's
    Aksharantar dataset (its test split, 2 000 to 6 900 words each, mostly

@@ -939,19 +939,19 @@
       }
     },
     "predict/ml": {
-      "encoder": "2949f73cc2d3-dirty",
+      "encoder": "3239061ac352-dirty",
       "inputs": {
         "dakshina/ml.txt": "6cd276792985bdb434e075ee6b88b0b806b09e2e9eb48cfca05fc8b9b6ad7e8f"
       },
       "outputs": {
         "predict/ml.forms.fst": "1ac2257eb67a1379897b284251280fb6d33855ca8395dd69f36aa83a0cd9f30d",
-        "predict/ml.fst": "bc2add585b022da50b1a1b8818ba7df63f6f318255fca0dee2d05857ded93d6b",
-        "predict/ml.ngram.bin": "6dedbafbe0c507e2009df695d01803b7648a02da4afc935d11a4556327d5e0de"
+        "predict/ml.fst": "ad7fad513b5295af96a8a533c9d43376f7fc3e93bffd87fcc02dead169e1a985",
+        "predict/ml.ngram.bin": "2a3c7a5f6150d4b195365c708f43ae5dcc7fb5443313181c862fc7a9d4509bbc"
       },
       "recipe": {
         "ngram_keep": "90000",
         "start_keep": "5000",
-        "vocab_size": "120000",
+        "vocab_size": "200000",
         "words": "2"
       }
     },

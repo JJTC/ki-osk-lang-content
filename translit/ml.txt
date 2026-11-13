@@ -3,10 +3,14 @@
 # typed together are joined by the chandrakkala; a word's last n, l, r
 # and ḷ are chillus (avan: അവൻ), its last m the nasal sign, any other last
 # consonant takes the chandrakkala, and a last u is often only that
-# (aanu: ആണ്). nt is ന്റ (ente: എന്റെ). English words, which Malayalam
-# writes in its own script, are typed as English spells them (meter:
-# മീറ്റർ, school: സ്കൂൾ, india: ഇന്ത്യ): c, sch, a t as റ്റ, nd, ia and tion
-# have English ways too, at a cost.
+# (aanu: ആണ്). nt is ന്റ (ente: എന്റെ), mb and nch മ്പ and ഞ്ച (pattambi:
+# പട്ടാമ്പി, panchayath: പഞ്ചായത്ത്), ri the vowel ൃ (krishnan: കൃഷ്ണൻ). Its
+# doubled consonants are as often typed single (layipichu: ലയിപ്പിച്ചു,
+# palakad: പാലക്കാട്), its long a as a, a last am as om (thadakom: തടാകം)
+# and ആയി as aye (nannaye: നന്നായി). English words, which Malayalam writes
+# in its own script, are typed as English spells them (meter: മീറ്റർ,
+# school: സ്കൂൾ, india: ഇന്ത്യ): c, sch, a t as റ്റ, nd, ia and tion have
+# English ways too, at a cost.
 
 script abugida
 virama ്
@@ -16,7 +20,7 @@ final 2
 final-virama 0.8
 
 [consonants]
-k    ക
+k    ക  ക്ക:1.2
 k$   ക്ക:1
 kk   ക്ക
 kh   ഖ
@@ -35,44 +39,47 @@ ss   സ്സ  ഷ:1
 j    ജ  ഝ:2.5
 jh   ഝ
 nj   ഞ  ഞ്ഞ:0.5  ഞ്ച:0.8
+nch  ഞ്ച:0.3  ന്ച:1
 z    സ:1  ശ:1.5
 zh   ഴ
-t    ട  ത:0.5  റ്റ:0.8
+t    ട  ത:0.5  റ്റ:0.8  ട്ട:1.2  ത്ത:1.2
 tt   ട്ട  റ്റ:0.5  ത്ത:0.7
 th   ത  ത്ത:0.5  ഥ:1.5
 d    ട  ദ:0.5  ഡ:1
 dd   ദ്ദ  ഡ്ഡ:0.5  ട്ട:1
 dh   ദ്ദ:0.3  ധ:0.5  ദ്ധ:0.5  ഥ:0.8  ദ:1  ഢ:2
-n    ന  ണ:1
+n    ന  ണ:1  ന്ന:1.5  ണ്ണ:1.8
 nn   ന്ന  ണ്ണ:0.5
 nt   ന്റ  ന്ത:0.5  ണ്ട:0.8
 nd   ണ്ട  ന്ത:0.8  ന്ദ:1
 nk   ങ്ക:0.3  ന്ക:1
-p    പ
+p    പ  പ്പ:1
 ph   ഫ
 f    ഫ
 b    ബ
+mb   മ്പ:0.3  മ്ബ:1
 bh   ഭ
-m    മ
-y    യ
+m    മ  മ്മ:1.5
+y    യ  യ്യ:1.2
 r    ര  റ:0.8
 rr   റ്റ  ർര:2
-l    ല  ള:0.8
-v    വ
+l    ല  ള:0.8  ല്ല:1.5  ള്ള:1.5
+v    വ  വ്വ:1.2
 w    വ
 sh   ശ  ഷ:0.8
-s    സ  ശ:1
+s    സ  ശ:1  സ്സ:1.5
 h    ഹ
 x    ക്സ  ക്ഷ:1
 ksh  ക്ഷ
 
 [vowels]
-a     അ/-  ആ/ാ:1.2
+a     അ/-  ആ/ാ:0.9
 ^a    അ/-  ആ/ാ:1
 ^ye   എ/െ:0.3  ഏ/േ:0.8
 ^yee  ഏ/േ:0.5  ഈ/ീ:1
 a$    അ/-  ആ/ാ:0.6
 aa    ആ/ാ
+aye$  ആയി/ായി:0.5
 i     ഇ/ി  ഈ/ീ:1.2
 ee    ഈ/ീ  ഏ/േ:0.7
 ii    ഈ/ീ
@@ -88,6 +95,8 @@ ia    ഇയ/ിയ  ഇയ/്യ:1
 ei    ഐ/ൈ:0.5  ഏ/േ:1
 o     ഒ/ൊ  ഓ/ോ:0.6
 au    ഔ/ൗ
+ri    ഋ/ൃ:1
+ru    ഋ/ൃ:1.5
 ou    ഔ/ൗ
 
 [other]
@@ -96,7 +105,8 @@ n$    ൻ  ൺ:1.2
 l$    ൽ  ൾ:1
 r$    ർ
 m$    ം
+om$   ം:0.5
 r>c   ർ:0.3
 l>c   ൽ:0.5  ൾ:1.5
-n>c   ൻ:1  ം:1.5
+n>c   ൻ:1  ം:1.5  ൺ:1.5
 m>c   ം:1

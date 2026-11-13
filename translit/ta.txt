@@ -3,7 +3,9 @@
 # are joined by the puḷḷi, as is a word's last consonant (avan: அவன்).
 # One letter stands for voiced and voiceless alike (k and g: க), n is ந
 # at a word's start and ன after, and l, n, r and t each have several
-# letters the lexicon chooses among (ல ள ழ, ன ந ண, ர ற, ட த).
+# letters the lexicon chooses among (ல ள ழ, ன ந ண, ர ற, ட த). Its
+# doubled consonants are as often typed single (thaakuthal: தாக்குதல்,
+# mathipeedu: மதிப்பீடு), its ோ as oa or oe (poattigal: போட்டிகள்).
 # English words, which the language writes in its script too, are typed
 # as English spells them: c, ck, sch, o, er, y and tion have English
 # ways too, at a cost.
@@ -16,7 +18,7 @@ final 2
 final-virama 0
 
 [consonants]
-k    க
+k    க  க்க:1
 g    க
 kh   க:0.5
 gh   க:0.5
@@ -32,7 +34,7 @@ sh   ஷ  ச:1.5
 j    ஜ  ச:1
 nj   ஞ  ஞ்ச:0.5
 ny   ஞ
-t    ட  த:0.3  ற:2
+t    ட  த:0.3  ற:2  ட்ட:1  த்த:1.2
 tt   ட்ட  ற்ற:0.8  த்த:0.5
 ttr  ற்ற
 tr   ற்ற:0.8  ட்ர:1
@@ -47,18 +49,18 @@ nt   ந்த:0.5  ண்ட:0.5  ன்ற:0.8
 nr   ன்ற
 ndr  ன்ற
 nn   ன்ன  ண்ண:0.8  ந்ந:2
-p    ப
+p    ப  ப்ப:1
 b    ப
 f    ஃப:1  ப:0.5
-m    ம
-y    ய
+m    ம  ம்ம:1.5
+y    ய  ய்ய:1.2
 r    ர  ற:0.8
 rr   ற்ற  ர்ர:2
-l    ல  ள:0.8  ழ:1.5
+l    ல  ள:0.8  ழ:1.5  ல்ல:1.5  ள்ள:1.5
 ll   ல்ல  ள்ள:0.5
 zh   ழ
 z    ழ:0.5  ஸ:1.5
-v    வ
+v    வ  வ்வ:1.5
 w    வ
 x    க்ஸ்
 ksh  க்ஷ
@@ -85,6 +87,9 @@ ey    எய்/ெய்:0.3
 o     ஒ/ொ  ஓ/ோ:0.6  ஆ/ா:2
 au    ஔ/ௌ  அவு/வு:1.5
 ou    ஔ/ௌ
+oa    ஓ/ோ:0.3
+oe    ஓ/ோ:0.5
+aaa   ஆ/ா:0.3
 
 [other]
 er$   ர்:1.5
