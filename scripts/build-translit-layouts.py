@@ -13,9 +13,10 @@ strip's words in that layout's font.
 
   scripts/build-translit-layouts.py [--check]
 
-Writes layouts/<lang>-abc.json for every table in translit/ (a table
-without a layout of its own language names its name below); --check
-fails if a written file would differ, as a test of the tree.
+Writes layouts/<lang>-abc.json for every table in translit/, each
+language having a layout of its own (scripts/build-derived-layouts.py
+makes those of the languages typed on another's keys); --check fails if a
+written file would differ, as a test of the tree.
 
 It writes Hinglish's layout too, hi-latn: Hindi typed in Latin letters
 and left in them, so no composer, but the US layout as it is (its keys,
@@ -35,25 +36,12 @@ NAMES = {
     "fa": "فارسی",
 }
 
-# The languages with no layout of their own, whose transliteration layout
-# is their one layout: their names, and the fonts their scripts need.
-ALONE = {
-    "bho": ("भोजपुरी", "devanagari"),
-    "mai": ("मैथिली", "devanagari"),
-    "pnb": ("پنجابی", "arabic"),
-}
-
-
 def letter(label):
     return len(label) == 1 and label.isascii() and label.isalpha()
 
 
 def build(lang, us):
-    if lang in ALONE:
-        name, font = ALONE[lang]
-        own = {"name": name, "font_script": font}
-    else:
-        own = json.loads((ROOT / "layouts" / f"{lang}.json").read_text(encoding="utf-8"))
+    own = json.loads((ROOT / "layouts" / f"{lang}.json").read_text(encoding="utf-8"))
     name = NAMES.get(lang, own["name"])
     out = {
         "id": f"{lang}-abc",

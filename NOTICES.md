@@ -151,17 +151,17 @@ learns from leaves out.
 
 ### Wikipedia text (the wikis' own)
 
-Seven languages' models learn from their own Wikipedia alone: Bhojpuri,
-Maithili, Mongolian, Nepali, Odia, Western Punjabi and Pashto. The text
-is each wiki's CirrusSearch dump of 2026-11-08 (Wikimedia's
-`cirrus_search_index`, an article's plain text a JSON field), pinned by
-sha256 in `scripts/fetch-wikipedia.sh`, cut into sentences by
-`scripts/wikipedia-text.py`: at most 400 000 a language. Every 20th
-article is held out of it, and the first 500 sentences of those are
-`eval/<lang>.txt`. **Wikipedia's text is CC BY-SA 4.0**, share-alike:
-the packs of those seven languages, their models and that held-out text
-carry those terms, with attribution to Wikipedia's contributors (each
-article's history, at its wiki, names them).
+Ten languages' models learn from their own Wikipedia alone: Bhojpuri,
+Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit,
+Santali and Yiddish. The text is each wiki's CirrusSearch dump of
+2026-11-08 (Wikimedia's `cirrus_search_index`, an article's plain text a
+JSON field), pinned by sha256 in `scripts/fetch-wikipedia.sh`, cut into
+sentences by `scripts/wikipedia-text.py`: at most 400 000 a language.
+Every 20th article is held out of it, and the first 500 sentences of
+those are `eval/<lang>.txt`. **Wikipedia's text is CC BY-SA 4.0**,
+share-alike: the packs of those ten languages, their models and that
+held-out text carry those terms, with attribution to Wikipedia's
+contributors (each article's history, at its wiki, names them).
 
 **The Dakshina dataset is CC BY-SA 4.0**, share-alike: the packs of
 those twelve languages, their models and the held-out text in `eval/`
@@ -202,7 +202,8 @@ next `make fetch-corpora`.
 become its script (`osk_data::translit`): Assamese, Bengali, Bhojpuri,
 Greek, Gujarati, Hindi, Armenian, Kannada, Maithili, Malayalam, Marathi,
 Mongolian, Nepali, Odia, Punjabi (Gurmukhi and Shahmukhi), Persian,
-Pashto, Sindhi, Sinhala, Tamil, Telugu and Urdu. They were written here, MIT licensed, each joining its
+Pashto, Sanskrit, Santali, Sindhi, Sinhala, Tamil, Telugu, Urdu and
+Yiddish. They were written here, MIT licensed, each joining its
 language's pack; what they choose among, the language's lexicon chooses.
 Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'
@@ -359,7 +360,10 @@ read through libxkbcommon (`scripts/build-layout.py`,
 `build-national-grid.py`, `relabel-layout.py`, `relabel-national.py`):
 each key's letters are the ones the keymap a layout names in
 `xkb_layout` produces. The layout structure around them — rows, widths,
-symbol pages, the control row — was written for ki-osk, under MIT.
+symbol pages, the control row — was written for ki-osk, under MIT. The
+layouts of Bhojpuri, Maithili and Sanskrit are Hindi's, Western
+Punjabi's Urdu's and Yiddish's Hebrew's, renamed, with the letters each
+language adds on long presses (`scripts/build-derived-layouts.py`).
 xkeyboard-config's copyright and permission notices, which go with every
 copy (its `COPYING`, as xkeyboard-config 2.48 ships it):
 

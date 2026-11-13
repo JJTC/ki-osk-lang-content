@@ -49,9 +49,7 @@ Makeeva, Nadezhda; Kuznetsova, Natalia (2022-11).
 "Phonological and acoustic properties of ATR in the vowel system of Akebu (Kwa)".
 Phonology (in ଇଂରାଜୀ).
 39 (4): 641–678.
-{{cite journal}}: Check date values in: |date= (help) "ଆର୍କାଇଭ୍ କପି" (PDF).
 Archived from the original (PDF) on 2024-07-24.
-{{cite web}}: Cite has empty unknown parameter: |1= (help)
 ଆୟିଜୋ ହେଉଛି ଏକ ଜିବି ଭାଷା ଯାହା ପ୍ରାୟ ୪୦୦,୦୦୦ ଲୋକ (୨୦୦୦ ଦଶକ) ମୁଖ୍ୟତ ଦକ୍ଷିଣ ବେନିନ୍ରେ ମୋନୋ ଡିପାର୍ଟମେଣ୍ଟ ଏବଂ ଏହାର ନିକଟବର୍ତ୍ତୀ ଅଞ୍ଚଳରେ ଯେପରିକି ଆଲାଡା, ଆବୋମି-କାଲାଭି, ଏବଂ ଟୋରୀ-ବୋସିଟୋ ଦ୍ୱାରା କଥିତ | ଏହା ନାଇଜର-କଙ୍ଗୋ ପରିବାରର କ୍ୱା ଶାଖା ମଧ୍ୟରେ ଥିବା ଗ୍ବେ ଭାଷା କଣ୍ଟିନ୍ୟୁମର ଫ୍ଲା-ଫେରା ଉପଗୋଷ୍ଠୀର ଅନ୍ତର୍ଭୁକ୍ତ, କୋଟାଫୋନ (୯୪% ଶବ୍ଦଗତ ସମାନତା) ପରି ପଡ଼ୋଶୀ ପ୍ରକାର ସହିତ ଘନିଷ୍ଠ ଶବ୍ଦଗତ ଏବଂ ବ୍ୟାକରଣଗତ ସମ୍ପର୍କ ବାଣ୍ଟିଥାଏ ଏବଂ ଏହାର ଆଞ୍ଚଳିକ ରୂପଗୁଡ଼ିକରେ ଉଚ୍ଚ ପାରସ୍ପରିକ ବୋଧଗମ୍ୟତା ପ୍ରଦର୍ଶନ କରିଥାଏ।
 ଏକ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଆଦିବାସୀ ଭାଷା ଭାବରେ, ଆୟିଜୋ ଦୈନନ୍ଦିନ ଜୀବନର ସମସ୍ତ କ୍ଷେତ୍ରରେ ବ୍ୟବହୃତ ହୁଏ, ଯେପରିକି ଘର, ସମ୍ପ୍ରଦାୟ ଏବଂ କିଛି ଧାର୍ମିକ ପ୍ରସଙ୍ଗ, ଫନ୍ କିମ୍ବା ଫରାସୀ ଭଳି ପ୍ରଭାବଶାଳୀ ଭାଷା ପ୍ରତି କୌଣସି ପରିବର୍ତ୍ତନ ପରିଲକ୍ଷିତ ହୁଏ ନାହିଁ।
 ଆୟିଜୋ ଉପଭାଷାର କଣ୍ଟିନ୍ୟୁମ୍ ଆୟିଜୋ-କୋଗବେ (ଆଲ୍ଲାଦାର ଉତ୍ତର-ପଶ୍ଚିମରେ କଥିତ, କୋଟାଫୋନ୍ ଅଞ୍ଚଳଗୁଡ଼ିକର ନିକଟତମ), ଆୟିଜୋ-ସେଟୋ (ଆବୋମି-କାଲାଭି ନିକଟରେ), ଏବଂ ଆୟିଜୋ-ଟୋରି (ଟୋରି-ବୋସିଟୋ ନିକଟରେ) ଭଳି ଭିନ୍ନ ଭିନ୍ନତାକୁ ଧାରଣ କରେ, ଯାହା ପୃଥକ ସୀମା ବଦଳରେ ଶବ୍ଦକୋଷ, ଉଚ୍ଚାରଣ ଏବଂ ସ୍ୱରର କ୍ରମିକ ପାର୍ଥକ୍ୟରେ ଏକ ଶୃଙ୍ଖଳ ଗଠନ କରେ।
@@ -261,7 +259,6 @@ www.bbc.com (in ବ୍ରିଟିଶ୍‌ ଇଂରାଜୀ).
 Desk, News (2026-04-11).
 "Dar urges US, Iran to uphold commitment to ceasefire as talks conclude without deal".
 Dawn (in ଇଂରାଜୀ).
-{{cite web}}: |first= has generic name (help) hejazi (2026-04-11).
 "What the Size and Structure of the Iran–U.S.
 WANA (in ଆମେରିକୀୟ ଇଂରାଜୀ).
 "US military says blockade of Iran's ports to begin Monday, after Iran says it will not 'surrender'".
@@ -487,14 +484,17 @@ Retrieved 29 June 2026.
 ସିନ୍ଧୁ ସାଇନା ନେହୱାଲ ଲକ୍ଷ୍ୟ ସେନ ଭାରତରେ ବ୍ୟାଡମିଣ୍ଟନ "Player Profile – Tanvi Sharma".
 Badminton World Federation.
 Retrieved ୬ ଅଗଷ୍ଟ ୨୦୨୬.
-{{cite web}}: Check date values in: |access-date= (help) "Tanvi Sharma".
 Retrieved ୬ ଅଗଷ୍ଟ ୨୦୨୬.
-{{cite web}}: Check date values in: |access-date= (help) "Badminton Asia Team Championships: India clinch historic gold".
 The Times of India.
 ୧୯ ଫେବୃଆରୀ ୨୦୨୪.
-{{cite news}}: Check date values in: |date= (help) "Tanvi Sharma enters final of BWF World Junior Championships; assured of historic medal".
 The Times of India.
 ୧୮ ଅକ୍ଟୋବର ୨୦୨୫.
-{{cite news}}: Check date values in: |date= (help) Sharma, Nitin (୧୭ ନଭେମ୍ବର ୨୦୨୩).
 "With family support, Tanvi Sharma finds blend between volleyball and badminton".
 The Indian Express.
+Retrieved ୬ ଅଗଷ୍ଟ ୨୦୨୬.
+୪ ଏପ୍ରିଲ ୨୦୨୪.
+ଇଂରାଜୀ ଲିଙ୍କ https://or.wikipedia.org/wiki/Love_Tuition ଲଭ୍ ଟିଉସନ୍ ୨୦୨୪ ମସିହାରେ ମୁକ୍ତିଲାଭ କରିଥିବା ଏକ ଓଡ଼ିଆ କଥାଚିତ୍ର ।
+ଏହି କଥାଚିତ୍ରଟିର ପ୍ରଯୋଜନା କରିଥିଲେ ସୀତାରାମ ଅଗ୍ରୱାଲ ଓ ନମିତା ଅଗ୍ରୱାଲ ।
+ଅଶୋକ ପତି ଏହି କଥାଚିତ୍ରଟିର ନିର୍ଦ୍ଦେଶନା ଦେଇଥିଲେ ।
+ସଙ୍ଗୀତକାର ଅଭିଜିତ ମଜୁମଦାର ଏହି କଥାଚିତ୍ରଟିର ସ୍ୱର ସଂଯୋଜନା କରିଥିଲେ ।
+ଏହି କଥାଚିତ୍ରଟିର ମୁଖ୍ୟ ଭୂମିକାରେ ଅଭିନୟ କରିଥିଲେ ଭୂମିକା ଦାଶ ଓ ରାଜ ରାଜେଶ ପଣ୍ଡା ।

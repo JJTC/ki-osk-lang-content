@@ -1,0 +1,90 @@
+# Santali (Ol Chiki) from Latin letters, as Santali is typed in Latin. A
+# letter for each sound, but several share a Latin letter (o: ᱚ and ᱳ,
+# a: ᱟ and ᱟᱹ, t: ᱛ and ᱴ, d: ᱫ and ᱰ, r: ᱨ and ᱲ, w: ᱣ and ᱶ), and h after a
+# consonant is its aspirate (kh: ᱠᱷ). A word's last k, c, t and p are
+# checked, and written ᱜ ᱡ ᱫ ᱵ (menak: ᱢᱮᱱᱟᱜ, mit: ᱢᱤᱫ), with ᱼ before a
+# vowel that follows (menaka: ᱢᱮᱱᱟᱜᱼᱟ); an apostrophe marks one as
+# Santali's Latin spelling does (mit'). A last g, j, d or b that is no
+# checked consonant takes the ahad (ᱜᱽ ᱡᱽ ᱫᱽ ᱵᱽ). n after a vowel at a
+# word's end may be its nasalization ᱸ (tahen: ᱛᱟᱦᱮᱸ). T D N R are the
+# retroflex letters, for those who type them so. The lexicon chooses
+# among them.
+
+script alphabet
+
+[consonants]
+k     ᱠ
+k$    ᱜ:0.3  ᱠ:0.5
+k>v   ᱠ  ᱜᱼ:1.5
+k'    ᱜ
+k'>v  ᱜᱼ
+kh    ᱠᱷ
+g     ᱜ
+g$    ᱜ  ᱜᱽ:0.5
+gh    ᱜᱷ
+ng    ᱝ
+c     ᱪ
+c$    ᱡ:0.3  ᱪ:0.5
+c'    ᱡ
+c'>v  ᱡᱼ
+ch    ᱪ  ᱪᱷ:0.6
+chh   ᱪᱷ
+j     ᱡ
+j$    ᱡ  ᱡᱽ:0.5
+jh    ᱡᱷ
+ny    ᱧ
+t     ᱛ  ᱴ:0.7
+t$    ᱫ:0.3  ᱛ:0.3  ᱴ:1
+t>v   ᱛ  ᱴ:0.7  ᱫᱼ:1.5
+t'    ᱫ
+t'>v  ᱫᱼ
+T     ᱴ  ᱛ:1.5
+tt    ᱴ:0.3
+th    ᱛᱷ  ᱴᱷ:0.7
+Th    ᱴᱷ  ᱛᱷ:1.5
+d     ᱫ  ᱰ:0.7
+d$    ᱫ  ᱫᱽ:0.4  ᱰ:1
+D     ᱰ  ᱫ:1.5
+dd    ᱰ:0.3
+dh    ᱫᱷ  ᱰᱷ:0.7
+Dh    ᱰᱷ  ᱫᱷ:1.5
+n     ᱱ  ᱬ:2.5
+N     ᱬ  ᱱ:1.5
+p     ᱯ
+p$    ᱵ:0.3  ᱯ:0.5
+p'    ᱵ
+p'>v  ᱵᱼ
+ph    ᱯᱷ
+f     ᱯᱷ
+b     ᱵ
+b$    ᱵ  ᱵᱽ:0.5
+bh    ᱵᱷ
+m     ᱢ
+y     ᱭ
+r     ᱨ  ᱲ:0.8
+rh    ᱲ:0.3
+R     ᱲ  ᱨ:1.5
+rr    ᱲ:0.5
+l     ᱞ
+w     ᱣ  ᱶ:0.5
+v     ᱣ:0.3  ᱶ:0.3
+s     ᱥ
+sh    ᱥ
+h     ᱦ
+z     ᱡ:1
+x     ᱠᱥ
+q     ᱠ
+
+[vowels]
+a     ᱟ  ᱟᱹ:0.7  ᱚ:2
+e     ᱮ
+i     ᱤ
+ee    ᱤ:0.8
+o     ᱚ  ᱳ:1
+oo    ᱩ:0.8  ᱳ:1
+u     ᱩ
+
+[other]
+n$    ᱸ:0.8
+n>c   ᱸ:1.5
+'     ᱼ:1

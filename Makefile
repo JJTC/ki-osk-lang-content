@@ -29,7 +29,7 @@ ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 # skipped models that were already committed.
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
                  oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
-                 bho mai mn ne or pnb ps
+                 bho mai mn ne or pnb ps sa sat yi
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -51,10 +51,10 @@ TATOEBA_WEIGHT ?= 10
 
 # Wikipedia's own text, the whole corpus of languages Tatoeba and Dakshina
 # have too little of: Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
-# Punjabi and Pashto (scripts/fetch-wikipedia.sh, the wikis' CirrusSearch
-# dumps pinned by sha256, CC BY-SA 4.0), every 20th article held out for
-# eval/<lang>.txt.
-WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps
+# Punjabi, Pashto, Sanskrit, Santali and Yiddish (scripts/fetch-wikipedia.sh,
+# the wikis' CirrusSearch dumps pinned by sha256, CC BY-SA 4.0), every 20th
+# article held out for eval/<lang>.txt.
+WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 
 # Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
@@ -116,7 +116,7 @@ PREDICT_WIDE_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
-PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps
+PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
@@ -515,9 +515,16 @@ eval-translit:
 translit-layouts:
 	$(PYTHON) scripts/build-translit-layouts.py
 
+# The layouts that are another language's keys under its own name
+# (layouts/bho.json and mai.json are Hindi's, pnb.json Urdu's and ݨ).
+.PHONY: derived-layouts
+derived-layouts:
+	$(PYTHON) scripts/build-derived-layouts.py
+
 .PHONY: check
 check:
 	$(PYTHON) scripts/build-translit-layouts.py --check
+	$(PYTHON) scripts/build-derived-layouts.py --check
 	$(PYTHON) scripts/check-assets.py --base $(CHECK_BASE) \
 		--max-shrink $(CHECK_MAX_SHRINK) \
 		$(if $(CHECK_REPORT),--report $(CHECK_REPORT))

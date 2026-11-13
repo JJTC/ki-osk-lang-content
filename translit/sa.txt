@@ -1,0 +1,111 @@
+# Sanskrit (Devanagari) from Latin letters, as Sanskrit is typed in Latin:
+# loosely, as Hindi is (a long vowel often as a short one, ri for ऋ, sh for
+# both श and ष), or with the capitals of Harvard-Kyoto and ITRANS for the
+# letters plain Latin lacks (A I U long, T D N retroflex, Sh and S ष, M ं,
+# H ः, R ऋ), each of which reads the plain letter too, for a capital that
+# only starts a sentence.
+# Unlike Hindi, Sanskrit speaks every inherent vowel: a word's last a is
+# mostly that (rama: राम), and its last consonant keeps its virama nearly
+# as often as its vowel (asmin: अस्मिन्; bharat: भारत); h at a word's end is
+# the visarga (ramah: रामः), m there the anusvara as often as म् (ayam:
+# अयं, aham: अहम्), and a nasal before a consonant of its row is the
+# conjunct (shanti: शान्ति, pancha: पञ्च, anga: अङ्ग), seldom ं.
+# ' is the avagraha (so'ham: सोऽहम्), om alone is ॐ. The lexicon chooses
+# among them.
+
+script abugida
+virama ्
+cluster 0
+schwa 1.5
+final 0
+final-virama 0.3
+
+[consonants]
+k    क
+kh   ख
+g    ग
+gh   घ
+ch   च  छ:0.6
+chh  छ
+c    च
+j    ज  झ:3
+jh   झ
+z    ज  ज़:2
+t    त  ट:0.8
+T    ट  त:1.5
+tt   त्त:0.3  ट:0.5  ट्ट:1
+th   थ  ठ:1
+Th   ठ  थ:1.5
+d    द  ड:0.8
+D    ड  द:1.5
+dd   द्द:0.3  ड:0.5
+dh   ध  ढ:1.2  द्ध:1.5
+Dh   ढ  ध:1.5
+n    न  ण:1
+N    ण  न:1.5
+nc   ञ्च:0.3
+nch  ञ्च:0.3
+nj   ञ्ज:0.3
+nk   ङ्क:0.3
+nkh  ङ्ख:0.3
+ng   ङ्ग:0.3  ङ:2
+ngh  ङ्घ:0.3
+p    प
+ph   फ
+f    फ
+b    ब
+bh   भ
+m    म
+y    य
+r    र
+l    ल
+v    व
+w    व
+sh   श  ष:0.5
+Sh   ष  श:1
+shh  ष
+S    ष  स:1.5
+s    स  श:1.5  ष:2
+h    ह
+x    क्ष  क्स:1.5
+ksh  क्ष
+kS   क्ष
+q    क
+jn   ज्ञ:0.3
+gy   ज्ञ:0.8
+dny  ज्ञ:1
+
+[vowels]
+a     अ/-  आ/ा:1
+^a    अ/-  आ/ा:0.8
+a$    अ/-  आ/ा:0.5
+A     आ/ा  अ/-:1.5
+aa    आ/ा
+i     इ/ि  ई/ी:0.8
+I     ई/ी  इ/ि:1.5
+ii    ई/ी
+ee    ई/ी  इ/ि:2
+u     उ/ु  ऊ/ू:0.8
+U     ऊ/ू  उ/ु:1.5
+uu    ऊ/ू
+oo    ऊ/ू  ओ/ो:2
+e     ए/े  ऐ/ै:2.5
+ai    ऐ/ै  ए/े:2
+o     ओ/ो  औ/ौ:2.5
+au    औ/ौ  ओ/ो:2
+ri    ऋ/ृ:0.5
+ru    ऋ/ृ:2
+R     ऋ/ृ
+RRi   ऋ/ृ
+
+[other]
+h$    ः
+H     ः
+h>c   ः:2
+m$    ं:0.2
+M     ं
+m>c   ं:0.5
+n>c   ं:1.2
+n$    ं:2
+'     ऽ:0.3
+^om$  ॐ:0.5

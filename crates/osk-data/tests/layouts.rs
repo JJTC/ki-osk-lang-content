@@ -137,6 +137,10 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("el", "άέήίϊόύώ"),
         ("vi", "àáảãạđ"),
         ("as", "ৰৱ"),
+        ("pnb", "ݨ"),
+        ("sa", "ऽॐ"),
+        // The ligatures, and patah, qamats, dagesh and rafe.
+        ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {
         let def = load(id);
         let (tap, held) = reach(&def);

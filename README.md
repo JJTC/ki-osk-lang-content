@@ -2,7 +2,7 @@
 
 Keyboard layouts, dictionaries, prediction models and input-method tables
 for [ki-osk](https://github.com/jjtc/ki-osk), an on-screen keyboard, as
-language packs: one per language, 153 in all, and three every language
+language packs: one per language, 155 in all, and three every language
 shares: the text rules, the emoji picker and the offensive-word lists.
 Everything ki-osk knows about a language is here; ki-osk itself is code.
 Beside the data are the builders that produce it
@@ -27,16 +27,16 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 | Path | What | Built by |
 |---|---|---|
-| `predict/<lang>.fst` | Prefix-completion lexicon (72 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
+| `predict/<lang>.fst` | Prefix-completion lexicon (75 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
 | `wordbreak/<lang>.txt` | The word list of a language written without spaces between words (Thai), which cuts its text into words in the trainer, the keyboard and `eval-predict`: ICU's word-break dictionary, as ICU has it | `make word-lists` |
 | `rules/all.weir`, `rules/<lang>.weir` | Text rules: what typing a key does to the text before the caret beyond typing it (the space after a strip word giving way to punctuation, French spacing), and where autocorrect acts besides space, Weir-style, with their tests | by hand |
-| `translit/<lang>.txt` | Transliteration tables (23 languages): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand; `make eval-translit` measures them |
+| `translit/<lang>.txt` | Transliteration tables (26 languages): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand; `make eval-translit` measures them |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `$SRC_DIR/dakshina/` | Wikipedia text and romanizations of 12 South Asian languages (the Dakshina dataset) — **not committed** | `make fetch-dakshina` |
-| `$SRC_DIR/wikipedia/` | The text of seven wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
+| `$SRC_DIR/wikipedia/` | The text of ten wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
 | `eval/<lang>.txt` | Held-out text no model is trained on (Tatoeba's, or the Wikipedia text of the languages that learn from it alone, Dakshina's or the wikis' own): what keystroke savings are measured on | `make fetch-corpora`, `make fetch-dakshina`, `make fetch-wikipedia` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |
 | `zhuyin/cedict.bin` | Bopomofo → Traditional | `make zhuyin-assets` |
@@ -46,7 +46,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `sources.lock` | What each output was built from | every build target |
 | `pinyin/syllables.txt` | The 413 Mandarin syllables in toneless Pinyin | by hand |
 | `pinyin/double-pinyin.json` | The six double-Pinyin schemes: which key carries which initial and finals | by hand |
-| `layouts/<id>.json` | Keyboard layouts (178): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps, the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make translit-layouts` |
+| `layouts/<id>.json` | Keyboard layouts (186): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps (those of Bhojpuri, Maithili, Sanskrit, Western Punjabi and Yiddish another language's, renamed), the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make derived-layouts`; `make translit-layouts` |
 | `emoji/catalogue.json` | Every fully-qualified emoji with its CLDR name and keywords: the emoji search | `scripts/build-emoji.py` |
 | `offensive/<lang>.txt` | Words a keyboard can keep off its strip (LDNOOBW, AOSP) | by hand |
 | `seeds/` | Tiny Pinyin, Jyutping and kana seeds (offline fallback) | by hand |
@@ -61,11 +61,11 @@ sight rather than mis-decoded.
 ## Packs and releases
 
 A pack is one language's files: its keyboard layouts, and an `.fst`
-lexicon and an `.ngram.bin` table for each of the 72 prediction
-languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's with its word list, twenty-three with a transliteration
+lexicon and an `.ngram.bin` table for each of the 75 prediction
+languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's with its word list, twenty-six with a transliteration
 table and the layout that types through it); `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
 (kana–kanji) and `ko` (Hangul) with their layouts; and a pack of its
-layouts alone for each of the 76 other languages with a layout and no
+layouts alone for each of the 75 other languages with a layout and no
 model yet. Three packs every language shares: `rules`, the text rules,
 which are written by hand, Weir-style (after the rule language of the
 Harper grammar checker): each rule a pattern over the end of the text

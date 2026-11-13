@@ -2,13 +2,14 @@
 # fetch-wikipedia.sh — the text of a language's Wikipedia, for the
 # languages whose models learn from it alone (the Makefile's
 # WIKIPEDIA_LANGS): Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
-# Punjabi and Pashto.
+# Punjabi, Pashto, Sanskrit, Santali and Yiddish.
 #
 # The text comes from each wiki's CirrusSearch dump (Wikimedia's
 # cirrus_search_index, an article a JSON document whose "text" is its
 # plain text, no markup), of one date, each file pinned by its sha256
 # below; Wikipedia's text is CC BY-SA 4.0. scripts/wikipedia-text.py cuts
-# the articles into sentences and writes
+# the articles into sentences, keeping where a script is named only those
+# at least half of whose letters are of it, and writes
 #
 #   $OUT/<lang>.txt     its sentences, at most CAP: the corpus
 #                       build-predict learns the language's model from
@@ -29,15 +30,19 @@ set -euo pipefail
 
 DATE=20261108
 BASE=https://dumps.wikimedia.org/other/cirrus_search_index/$DATE
-# language  wiki  dump file  sha256
+# language  wiki  dump file  sha256  script (its Unicode name, _ for a
+# space; - keeps every sentence)
 DUMPS="
-bho  bh   bhwiki_content-20261108-00000.json.bz2   e1becbc89778d7994831288afa94b9c1cce69d1b6b65a485d3500b34a5e822cc
-mai  mai  maiwiki_content-20261108-00000.json.bz2  1119ae395e8ca315a20422db6d09d5280e01e7d2530d301ebfb486212fcb5f4c
-mn   mn   mnwiki_content-20261108-00000.json.bz2   7712756bc38a38469c054fa6ea3239bf2d7bb593c4038f0208bcf48256b8f355
-ne   ne   newiki_content-20261108-00000.json.bz2   4e1254afeb877796bdc2caf1408a4400ab0ba6f5d1341fcf4be0f298addd0d5c
-or   or   orwiki_content-20261108-00000.json.bz2   26367cdc4341073a1d43ce6f79267b7832d65d6ccfc0939d24e7d2d9d1cec913
-pnb  pnb  pnbwiki_content-20261108-00000.json.bz2  ce4acfa4f564706f8643bd4cc2e39b82576a1aa6720571fefdfa6ea8fd7117b6
-ps   ps   pswiki_content-20261108-00000.json.bz2   7f4e3cb5f365405c45ac34851f6edf68c26d457da265d44492d835726a436451
+bho  bh   bhwiki_content-20261108-00000.json.bz2   e1becbc89778d7994831288afa94b9c1cce69d1b6b65a485d3500b34a5e822cc  -
+mai  mai  maiwiki_content-20261108-00000.json.bz2  1119ae395e8ca315a20422db6d09d5280e01e7d2530d301ebfb486212fcb5f4c  -
+mn   mn   mnwiki_content-20261108-00000.json.bz2   7712756bc38a38469c054fa6ea3239bf2d7bb593c4038f0208bcf48256b8f355  -
+ne   ne   newiki_content-20261108-00000.json.bz2   4e1254afeb877796bdc2caf1408a4400ab0ba6f5d1341fcf4be0f298addd0d5c  -
+or   or   orwiki_content-20261108-00000.json.bz2   26367cdc4341073a1d43ce6f79267b7832d65d6ccfc0939d24e7d2d9d1cec913  -
+pnb  pnb  pnbwiki_content-20261108-00000.json.bz2  ce4acfa4f564706f8643bd4cc2e39b82576a1aa6720571fefdfa6ea8fd7117b6  -
+ps   ps   pswiki_content-20261108-00000.json.bz2   7f4e3cb5f365405c45ac34851f6edf68c26d457da265d44492d835726a436451  -
+sa   sa   sawiki_content-20261108-00000.json.bz2   2bd0f5c4d0afe46270fb88f474fd5663c50458babbd9f18f632f5d4d60d3871c  DEVANAGARI
+sat  sat  satwiki_content-20261108-00000.json.bz2  bf8da87ab8e60974ab304b2486cdf55941c57900bc09cb9b64dea05974d7500c  OL_CHIKI
+yi   yi   yiwiki_content-20261108-00000.json.bz2   1beb539d0d40d423894bed9891b614c964f349056d6a88cfc65b13b133faae3c  HEBREW
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)
@@ -51,7 +56,7 @@ mkdir -p "$OUT/raw" "$EVAL_OUT"
 for lang in $langs; do
 	row=$(echo "$DUMPS" | awk -v l="$lang" '$1 == l')
 	[ -n "$row" ] || { echo "fetch-wikipedia: no dump for $lang" >&2; exit 2; }
-	read -r _ wiki file sha <<<"$row"
+	read -r _ wiki file sha script <<<"$row"
 	dump="$OUT/raw/$file"
 	if [ ! -f "$dump" ] || [ "$(sha256sum "$dump" | cut -d' ' -f1)" != "$sha" ]; then
 		curl -fsSL --retry 5 --retry-all-errors -o "$dump.part" \
@@ -64,6 +69,8 @@ for lang in $langs; do
 		fi
 		mv -f "$dump.part" "$dump"
 	fi
-	python3 -I "$HERE/wikipedia-text.py" --cap "$CAP" --eval "$EVAL_CAP" \
+	keep=()
+	[ "$script" = - ] || keep=(--script "${script//_/ }")
+	python3 -I "$HERE/wikipedia-text.py" --cap "$CAP" --eval "$EVAL_CAP" "${keep[@]}" \
 		"$OUT/$lang.txt" "$EVAL_OUT/$lang.txt" "$dump"
 done

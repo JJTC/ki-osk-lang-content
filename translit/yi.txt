@@ -1,0 +1,77 @@
+# Yiddish (Hebrew script) from Latin letters, as Yiddish is typed in Latin:
+# YIVO's romanization, loosely (kh, sh, ts, zh, tsh; ey, ay, oy), or as
+# English or German spell its sounds (ch, sch, tz, j, w). Yiddish writes
+# its vowels: a and o are both א, as the wiki mostly spells them (the
+# pointed אַ and אָ cost a little more), e is ע, i י, u ו, ey and ay יי, oy
+# וי, and a word's first i, u, ey, ay or oy rides an alef (in: אין, oyf:
+# אויף). Its words from Hebrew keep Hebrew's spelling, leaving vowels out,
+# writing ח ת ש for kh, s and t (emes: אמת, khaver: חבר), and ו where
+# Yiddish says e for Hebrew's o (sholem: שלום): ways at a cost, for the
+# lexicon to find. m, n, kh, f and ts take their final forms at a word's
+# end (fun: פון).
+
+script alphabet
+
+[consonants]
+b     ב
+v     וו  ב:1  װ:1.5  ו:1.5
+w     וו  ו:1
+g     ג
+d     ד
+h     ה
+z     ז
+zh    זש
+dzh   דזש
+j     י:0.5  דזש:0.5
+y     י
+t     ט  ת:0.8
+ts    צ
+ts$   ץ
+tz    צ:0.3
+tz$   ץ:0.3
+tsh   טש
+ch    כ:0.5  ח:0.5  טש:0.5
+ch$   ך:0.5  ח:0.8
+k     ק  כ:0.8
+kh    כ  ח:0.5
+kh$   ך  ח:0.6
+l     ל
+m     מ
+m$    ם
+n     נ
+n$    ן
+s     ס  ת:1.5  ש:1.5
+sh    ש
+sch   ש:0.5
+p     פ  פּ:1.5
+f     פ  פֿ:1.5
+f$    ף
+r     ר
+c     ק:0.5  צ:1  ס:1
+x     קס
+q     ק
+
+[vowels]
+a     א  אַ:1  -:1.5
+^a    א  אַ:1  ע:2
+a$    א  ה:0.8  אַ:1  ע:1.5
+o     א  ו:0.8  אָ:1  -:2
+^o    א  אָ:1  או:1.5
+e     ע  -:1.5  א:2  ו:2.5
+^e    ע  א:0.8  אי:1.5
+e$    ע  ה:0.8  י:1.5
+i     י  -:1.5  יִ:2
+^i    אי  י:1.5
+u     ו  וּ:2
+^u    או  אוּ:2
+ey    יי  ײ:1  י:1.2
+^ey   איי  אײ:1  ע:2
+ay    יי  ײַ:1  ײ:1  י:1.5
+^ay   איי  אײַ:1
+oy    וי  ױ:1.5  ו:1.2  -:2
+^oy   אוי  אױ:1.5
+ei    יי:0.5
+ai    יי:0.5  ײַ:1
+
+[other]
+vu    וואו  ווּ:1

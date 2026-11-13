@@ -387,6 +387,33 @@ fn every_translit_table_reads_its_language() {
                 ("pashto", "پښتو"),
             ],
         ),
+        (
+            "sa",
+            &[
+                ("samskritam", "संस्कृतम्"),
+                ("asti", "अस्ति"),
+                ("ramah", "रामः"),
+                ("kritva", "कृत्वा"),
+            ],
+        ),
+        (
+            "sat",
+            &[
+                ("santari", "ᱥᱟᱱᱛᱟᱲᱤ"),
+                ("menaka", "ᱢᱮᱱᱟᱜᱼᱟ"),
+                ("tahen", "ᱛᱟᱦᱮᱸ"),
+                ("lagit", "ᱞᱟᱹᱜᱤᱫ"),
+            ],
+        ),
+        (
+            "yi",
+            &[
+                ("yidish", "יידיש"),
+                ("oyf", "אויף"),
+                ("vos", "וואס"),
+                ("sholem", "שלום"),
+            ],
+        ),
     ];
     let tables = files("translit", ".txt");
     assert_eq!(

@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**179 layouts**: 147 keyboard layouts (RTL: ar he fa + Urdu, Pashto, Sindhi,
-Uyghur, Syriac, Dhivehi; Hinglish) · 7 IMEs (5 CJK + Amharic/Tigrinya
-Ge'ez) · 23 transliteration layouts (Latin letters → the language's
-script, `-abc`) · emoji + numeric. All render native keycaps. 178 are
-here; the numeric keypad is built into ki-osk. The table below is the
-complete list; **72 languages** carry a prediction
+**187 layouts**: 152 keyboard layouts (RTL: ar he fa + Urdu, Western
+Punjabi, Pashto, Sindhi, Uyghur, Syriac, Dhivehi, Yiddish; Hinglish) · 7
+IMEs (5 CJK + Amharic/Tigrinya Ge'ez) · 26 transliteration layouts (Latin
+letters → the language's script, `-abc`) · emoji + numeric. All render
+native keycaps. 186 are here; the numeric keypad is built into ki-osk.
+The table below is the complete list; **75 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -52,6 +52,7 @@ but no model to match the glide against · `—` off
 | `th` | `th` | Thai | th | LTR | **Full** (th)² | — | — |
 | `ar` | `ar` | Arabic | ara | **RTL** | **Full** (ar) | — | — |
 | `he` | `he` | Hebrew | il | **RTL** | **Full** (he) | — | — |
+| `yi` | `yi` | Yiddish ייִדיש | il + long-press אַ אָ בֿ וּ װ ױ יִ ײ ײַ כּ פּ פֿ שׂ תּ | **RTL** | **Full** (yi)⁶ | — | — |
 | `fa` | `fa` | Persian (Farsi) | ir | **RTL** | **Full** (fa) | — | — |
 | `pt` | `pt` | Portuguese (PT) | pt | LTR | **Full** (pt) | ✓ | — |
 | `ro` | `ro` | Romanian | ro · std | LTR | **Full** (ro) | ✓ | — |
@@ -78,6 +79,7 @@ but no model to match the glide against · `—` off
 | `az` | `az` | Azerbaijani | az | LTR | **Full** (az) | ✓ | — |
 | `ku` | `ku` | Kurdish (Kurmanji) | iq · ku | LTR | **Full** (ku) | ✓ | — |
 | `ur` | `ur` | Urdu | pk | **RTL** | **Full** (ur)³ | — | — |
+| `pnb` | `pnb` | Western Punjabi پنجابی | pk + long-press ݨ | **RTL** | **Full** (pnb)⁶ | — | — |
 | `ps` | `ps` | Pashto | af · ps | **RTL** | **Full** (ps)⁶ | — | — |
 | `sd` | `sd` | Sindhi | pk · snd | **RTL** | **Full** (sd)³ | — | — |
 | `ug` | `ug` | Uyghur | cn · ug | **RTL** | **Full** (ug) | — | — |
@@ -126,10 +128,13 @@ but no model to match the glide against · `—` off
 | `tk` | `tk` | Turkmen | us + long-press ä ç ž ň ö ş ü ý | LTR | — | ~ | — |
 | `mr` | `mr` | Marathi | in · marathi | LTR | **Full** (mr)³ | — | — |
 | `ne` | `ne` | Nepali | np | LTR | **Full** (ne)⁶ | — | — |
+| `bho` | `bho` | Bhojpuri भोजपुरी | in | LTR | **Full** (bho)⁶ | — | — |
+| `mai` | `mai` | Maithili मैथिली | in | LTR | **Full** (mai)⁶ | — | — |
+| `sa` | `sa` | Sanskrit संस्कृतम् | in + long-press ऽ ॐ | LTR | **Full** (sa)⁶ | — | — |
 | `as` | `as` | Assamese | in · ben (+ ৰ ৱ long-press) | LTR | **Full** (as) | — | — |
 | `bo` | `bo` | Tibetan བོད་ཡིག | cn · tib | LTR | — | — | — |
 | `dv` | `dv` | Dhivehi ދިވެހި | mv | RTL | — | — | — |
-| `sat` | `sat` | Santali ᱥᱟᱱᱛᱟᱲᱤ | in · sat | LTR | — | — | — |
+| `sat` | `sat` | Santali ᱥᱟᱱᱛᱟᱲᱤ | in · sat | LTR | **Full** (sat)⁶ | — | — |
 | `cy` | `cy` | Welsh Cymraeg | us + long-press ŵ ŷ â ê î ô û | LTR | — | ~ | — |
 | `gd` | `gd` | Scottish Gaelic Gàidhlig | us | LTR | — | ~ | — |
 | `eu` | `eu` | Basque Euskara | es | LTR | **Full** (eu) | ✓ | — |
@@ -203,9 +208,12 @@ but no model to match the glide against · `—` off
 | `or-abc` | `or` | Odia ଓଡ଼ିଆ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Odia, the or lexicon choosing |
 | `ps-abc` | `ps` | Pashto پښتو (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the ps lexicon choosing |
 | `mn-abc` | `mn` | Mongolian Монгол (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Cyrillic, the mn lexicon choosing |
-| `bho-abc` | `bho` | Bhojpuri भोजपुरी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the bho lexicon choosing; its one layout |
-| `mai-abc` | `mai` | Maithili मैथिली (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the mai lexicon choosing; its one layout |
-| `pnb-abc` | `pnb` | Western Punjabi پنجابی (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic (Shahmukhi), the pnb lexicon choosing; its one layout |
+| `bho-abc` | `bho` | Bhojpuri भोजपुरी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the bho lexicon choosing |
+| `mai-abc` | `mai` | Maithili मैथिली (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the mai lexicon choosing |
+| `pnb-abc` | `pnb` | Western Punjabi پنجابی (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic (Shahmukhi), the pnb lexicon choosing |
+| `sa-abc` | `sa` | Sanskrit संस्कृतम् (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the sa lexicon choosing |
+| `sat-abc` | `sat` | Santali ᱥᱟᱱᱛᱟᱲᱤ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Ol Chiki, the sat lexicon choosing |
+| `yi-abc` | `yi` | Yiddish ייִדיש (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Hebrew script, the yi lexicon choosing |
 | `emoji` | `emoji` | Emoji picker | — | — | — | — | Unicode 16 — categories, search, skin-tone, recents |
 | `numeric` | — (ki-osk) | Numeric keypad | — | — | — | — | — |
 
@@ -251,13 +259,21 @@ but no model to match the glide against · `—` off
    71.6% (73.2%; 19.4%), Bengali 70.8% (74.1%; 19.6%), Tamil 70.0% (71.7%;
    17.0%), Sindhi 65.0% (71.7%; 15.2%), Malayalam 58.2% (60.8%; 13.8%); of the
    words the lexicon has, 74–91% (`make eval-translit`). Greek, Armenian,
-   Persian, Assamese, Nepali, Odia, Pashto, Mongolian, Bhojpuri, Maithili
-   and Western Punjabi have no such measure; their tests read everyday
-   words. Of the 51 checked in the seven tables new with Wikipedia's text,
-   48 come first and 49 are on the strip; Kathmandu's and Lahore's
-   English spellings are not, and Pashto's da comes after ده. Hindi's, Marathi's and Malayalam's tables also read English
-   spellings, for the English words those languages write in their script
-   (school: स्कूल).
+   Persian, Assamese, Nepali, Odia, Pashto, Mongolian, Bhojpuri, Maithili,
+   Western Punjabi, Sanskrit, Santali and Yiddish have no such measure;
+   their tests read everyday words. Of the 51 checked in the seven tables
+   new with Wikipedia's text, 48 come first and 49 are on the strip;
+   Kathmandu's and Lahore's English spellings are not, and Pashto's da
+   comes after ده. Sanskrit's, Santali's and Yiddish's tables put first
+   all of 127 of their wikis' commonest words, typed as their Latin
+   spellings have them; the tables were written with those words in view,
+   so this says they read them, not how they do on what people type.
+   Sanskrit's reads Harvard-Kyoto's and ITRANS's capitals too (A: आ, T:
+   ट, Sh: ष), Santali's a word's checked consonants (mit: ᱢᱤᱫ), and
+   Yiddish's YIVO's romanization, and the words from Hebrew that keep
+   Hebrew's spelling (sholem: שלום). Hindi's, Marathi's and Malayalam's
+   tables also read English spellings, for the English words those
+   languages write in their script (school: स्कूल).
 5. Hinglish is Hindi typed in Latin letters and left in them: the US
    keys, suggestions and glide from a model of Hindi's corpora respelled
    in the spellings people use, as often as each is used (the Dakshina
@@ -266,18 +282,28 @@ but no model to match the glide against · `—` off
    as their writers spelled them, 13.4% of whose words the lexicon (60 000
    words) lacks: no two writers spell alike. For the same reason
    autocorrect changes 2.2% of right words, more than elsewhere.
-6. These seven models learn from their own Wikipedia (CC BY-SA 4.0,
+6. These ten models learn from their own Wikipedia (CC BY-SA 4.0,
    share-alike; `scripts/fetch-wikipedia.sh`, the wikis' CirrusSearch
    dumps of 2026-11-08): Bhojpuri, Maithili, Mongolian, Nepali, Odia,
-   Western Punjabi and Pashto. Keystroke savings on held-out articles:
-   Mongolian 42.3%, Nepali 40.8%, Pashto 39.0%, Odia 34.9%. Bhojpuri,
-   Maithili and Western Punjabi have no layout of their own yet (their
-   keymaps are item 13's): their transliteration layouts are theirs.
+   Western Punjabi, Pashto, Sanskrit, Santali and Yiddish. Keystroke
+   savings on held-out articles: Maithili 50.4%, Santali 50.0%, Yiddish
+   43.6%, Bhojpuri 42.5%, Mongolian 42.0%, Nepali 40.8%, Pashto 39.1%,
+   Western Punjabi 38.5%, Odia 34.8%, Sanskrit 28.0%. A quarter of
+   Sanskrit's running words are not among the 30 000 its lexicon keeps:
+   compounds and sandhi make most of its words rare, and 120 000 would
+   save 31.4%, at nearly twice the size. The text leaves out the wiki
+   markup of templates that failed (9 000 of Sanskrit's sentences) and,
+   in Santali's, sentences mostly in another script (whole articles are
+   in English). Bhojpuri, Maithili and Sanskrit are typed on Hindi's
+   keys, Western Punjabi on Urdu's with ݨ, Yiddish on Hebrew's with its
+   pointed letters and ligatures (`scripts/build-derived-layouts.py`).
+   Bishnupriya Manipuri's wiki is not used: nearly all of it is town
+   stubs a bot wrote (98% of its sentences fit 2 000 templates).
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **72 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **75 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -287,7 +313,7 @@ but no model to match the glide against · `—` off
   cut into words with ICU's word list, as it has no spaces between
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
-  text: bho mai mn ne or pnb ps** (note 6). Built by
+  text: bho mai mn ne or pnb ps sa sat yi** (note 6). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet, because Tatoeba has too few
@@ -388,7 +414,8 @@ record how each group was added and what it needs at runtime:
   `bo` (`cn`/`tib`; subjoined stacks compose via shaping), Dhivehi `dv`
   (`mv`, the Thaana script, **RTL**), and Santali `sat` (`in`/`sat`, the
   Ol Chiki alphabet). Each loads its own Noto Sans face on demand;
-  layout-only pending corpora. Verified headless: Dhivehi renders
+  Santali predicts since its wiki's text gave it a model (note 6), the
+  others are layout-only pending corpora. Verified headless: Dhivehi renders
   RTL-mirrored, Santali in Ol Chiki, and Tibetan now renders too — proven
   on the NUC via `dz` Dzongkha (Tier H), which shares the `bo` face.
 - **Tier E — European minority / regional**: 14 more,
