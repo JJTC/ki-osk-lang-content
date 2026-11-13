@@ -1,0 +1,105 @@
+# Konkani (Devanagari) from Latin letters, as Konkani is typed in Latin:
+# Marathi's ways (long vowels often written short, t and d for ट and ड as
+# well, l for ळ as well, the vowel between two consonants left out where
+# it is not spoken), with Konkani's own: z for ज, which Konkani says z
+# (zata: जाता), x for श as Konkani's Roman spelling writes it (xala:
+# शाळा), ण as often as न, a word's last vowel nasal (ं) where a last m
+# or n is typed for it (hem: हें, tanne: ताणें, lagim: लागीं), and as
+# Konkani's typists also write: dh for ड (vadhli: वाडली), lh for ळ
+# (palhe: पळे), ie for ई and ien for ईं (ghalien: घालीं), ey for a last ए.
+# English words written in Konkani's script are typed as English spells
+# them (school: स्कूल): c, ck, sch, o as ॉ, u as अ or यू, a silent last e,
+# er, or, le, y and tion have English ways too, at a cost.
+
+script abugida
+virama ्
+cluster 0
+schwa 1.2
+final 0
+final-virama 4
+
+[consonants]
+k    क
+kh   ख
+q    क
+g    ग
+gh   घ
+ch   च  छ:1
+chh  छ  च्छ:0.8
+cch  च्छ
+c    च  क:0.8
+c>v  च  स:2  क:1.2
+ck   क:0.5  च्क:1
+sch  स्क:0.5  श:1.5
+j    ज  झ:2
+jh   झ
+z    ज  झ:0.8  ज़:2
+t    त  ट:0.6
+tt   ट:0.5  त्त:0.3  ट्ट:1
+th   थ  ठ:0.8  त:1.5
+d    द  ड:0.6
+dd   ड:0.5  द्द:0.3  ड्ड:1
+dh   ध  ड:0.3  ढ:1  द:2  द्ध:1.2
+n    न  ण:0.8
+nn   न्न  ण:0.5  ण्ण:0.8
+p    प
+ph   फ
+f    फ  फ़:1.5
+fh   फ:0.3
+b    ब
+bh   भ
+m    म
+y    य
+r    र
+l    ल  ळ:0.6
+lh   ळ:0.3  ल्ह:0.5
+v    व
+w    व
+sh   श  ष:1  स:2.5
+s    स  श:1.5  ष:3
+h    ह
+x    श:0.5  क्ष:0.6  क्स:1
+ksh  क्ष
+dny  ज्ञ:0.5
+gy   ज्ञ:1.5
+
+[vowels]
+a     अ/-  आ/ा:1.2
+^a    अ/-  आ/ा:0.8
+a$    आ/ा  अ/-:1
+aa    आ/ा
+^aa   आ/ा  अ/-:2
+aa$   आ/ा  आं/ां:1.5
+i     इ/ि  ई/ी:1
+i$    ई/ी  इ/ि:0.8
+ee    ई/ी  इ/ि:2
+ii    ई/ी
+u     उ/ु  ऊ/ू:1  अ/-:2  यू/्यू:2
+u$    उ/ु  ऊ/ू:0.5
+oo    ऊ/ू  ओ/ो:2
+uu    ऊ/ू
+e     ए/े  ऐ/ै:1.5
+e$    ए/े  एं/ें:0.8  ऐ/ै:1.2  -/-:2.5
+ai    ऐ/ै  ए/े:1.5  आई/ाई:1.2
+ae    ऐ/ै:0.5  ए/े:1
+ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
+ye    ए/े:0.3
+ie    ई/ी:0.2  इए/िए:1
+ien$  ईं/ीं:0.3  ईन/ीन:0.8
+ey$   ए/े:0.2  एं/ें:0.8
+o     ओ/ो  ऑ/ॉ:1.5  औ/ौ:1.5
+au    औ/ौ  ओ/ो:2
+ou    औ/ौ  ओ/ो:1.5
+ri    ऋ/ृ:2
+ru    ऋ/ृ:2.5
+
+[other]
+er$   र:1.5
+or$   र:2
+le$   ल:2
+y$    ी:2
+tion  शन:1  ्शन:1
+n>c   ं:0.5
+m>c   ं:1.2
+n$    ं:0.5
+m$    ं:0.2

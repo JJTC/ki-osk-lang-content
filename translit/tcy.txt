@@ -1,0 +1,88 @@
+# Tulu (Kannada script) from Latin letters, as Tulu is typed in Latin:
+# Kannada's ways, whose script Tulu is written in. Tulu writes every vowel
+# it speaks, so two consonants typed together are joined by the virama;
+# a word's last m is the nasal sign, and any other last consonant takes
+# the virama, as Tulu's many words that end in one do (malter: ಮಲ್ತೆರ್,
+# mast: ಮಸ್ತ್).
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
+
+script abugida
+virama ್
+cluster 0
+schwa 3
+final 1.5
+final-virama 0.8
+
+[consonants]
+k    ಕ
+kh   ಖ
+q    ಕ
+g    ಗ
+gh   ಘ
+ch   ಚ  ಛ:1
+chh  ಛ
+c    ಚ  ಕ:1.5
+c>v  ಚ  ಸ:1.5  ಕ:1.5
+ck   ಕ್ಕ:0.5
+sch  ಸ್ಕ:0.5
+j    ಜ  ಝ:2.5
+jh   ಝ
+z    ಜ
+t    ತ  ಟ:0.6
+tt   ಟ್ಟ:0.3  ತ್ತ:0.5  ಟ:1
+th   ಥ  ಠ:1  ತ:0.8  ತ್ತ:0.5
+d    ದ  ಡ:0.6
+dd   ಡ್ಡ:0.3  ದ್ದ:0.5  ಡ:1
+dh   ಧ  ಢ:1  ದ:1
+n    ನ  ಣ:1.5
+p    ಪ
+ph   ಫ
+f    ಫ
+b    ಬ
+bh   ಭ
+m    ಮ
+y    ಯ
+r    ರ
+l    ಲ  ಳ:1
+ll   ಲ್ಲ  ಳ್ಳ:0.3
+jn   ಜ್ಞ:0.3
+v    ವ
+w    ವ
+sh   ಶ  ಷ:0.8  ಸ:2
+s    ಸ  ಶ:1  ಷ:2
+h    ಹ
+x    ಕ್ಸ  ಕ್ಷ:1
+ksh  ಕ್ಷ
+
+[vowels]
+a     ಅ/-  ಆ/ಾ:1.2
+^a    ಅ/-  ಆ/ಾ:1
+^ye   ಏ/ೇ:0.3  ಎ/ೆ:0.5
+a$    ಅ/-  ಆ/ಾ:0.5
+aa    ಆ/ಾ
+i     ಇ/ಿ  ಈ/ೀ:1.2
+ee    ಈ/ೀ  ಏ/ೇ:0.7
+ii    ಈ/ೀ
+u     ಉ/ು  ಊ/ೂ:1.2
+oo    ಊ/ೂ  ಓ/ೋ:0.7
+uu    ಊ/ೂ
+e     ಎ/ೆ  ಏ/ೇ:0.6
+ae    ಏ/ೇ
+ai    ಐ/ೈ
+ei    ಐ/ೈ:0.5  ಏ/ೇ:1
+o     ಒ/ೊ  ಓ/ೋ:0.6  ಆ/ಾ:2
+au    ಔ/ೌ
+ou    ಔ/ೌ
+ru    ಋ/ೃ:1.5
+ri    ಋ/ೃ:1.8
+
+[other]
+er$   ರ್:1.5
+y$    ೀ:2
+tion  ಷನ್:1
+n>c   ಂ:0.5
+m>c   ಂ:1
+m$    ಂ:0.3
+n$    ಂ:1.5

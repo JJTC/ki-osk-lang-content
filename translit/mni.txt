@@ -1,0 +1,90 @@
+# Meitei (Meetei Mayek) from Latin letters, as Meitei is typed in Latin.
+# A consonant carries the vowel a; a typed a may be that or ꯥ, the long
+# one (mahak: ꯃꯍꯥꯛ), and the lexicon chooses. A syllable's last k, l, m,
+# p, n, t or ng, before another consonant or at a word's end, is its
+# lonsum letter (ꯛ ꯜ ꯝ ꯞ ꯟ ꯠ ꯡ: masing: ꯃꯁꯤꯡ, henna: ꯍꯦꯟꯅ); other
+# consonants typed together join with the apun iyek, as loanwords do
+# (Indra: ꯏꯟꯗ꯭ꯔ). A word's first i and u are the letters ꯏ and ꯎ, its
+# first e may be ꯏ too, as names are spelled (Ema: ꯏꯃꯥ), ai and oi end
+# in ꯏ (or ꯢ), ao is ꯥꯎ (chaaoba: ꯆꯥꯎꯕ), ei and ou are ꯩ and ꯧ; a
+# syllable's last ng may be ꯪ, and before a vowel too ꯡ (laangon:
+# ꯂꯥꯡꯑꯣꯟ).
+
+script abugida
+virama ꯭
+cluster 0.8
+schwa 2
+final 1.5
+final-virama 3
+
+[consonants]
+k    ꯀ
+kh   ꯈ
+q    ꯀ
+g    ꯒ
+gh   ꯘ
+ng   ꯉ  ꯡꯒ:0.8
+ch   ꯆ
+c    ꯆ  ꯀ:1
+j    ꯖ
+jh   ꯓ
+z    ꯖ
+t    ꯇ
+th   ꯊ
+d    ꯗ
+dh   ꯙ
+n    ꯅ
+p    ꯄ
+ph   ꯐ
+f    ꯐ
+b    ꯕ
+bh   ꯚ
+m    ꯃ
+y    ꯌ
+r    ꯔ
+l    ꯂ
+w    ꯋ
+v    ꯋ  ꯚ:1
+s    ꯁ
+sh   ꯁ
+h    ꯍ
+x    ꯛꯁ
+
+[vowels]
+a     ꯑ/-  ꯑꯥ/ꯥ:0.8
+a$    ꯑ/-  ꯑꯥ/ꯥ:1
+aa    ꯑꯥ/ꯥ  ꯑ/-:1.5
+i     ꯏ/ꯤ
+ee    ꯏ/ꯤ
+u     ꯎ/ꯨ
+oo    ꯎ/ꯨ  ꯑꯣ/ꯣ:1
+e     ꯑꯦ/ꯦ  ꯑꯩ/ꯩ:1.5
+^e    ꯑꯦ/ꯦ  ꯏ/ꯤ:0.3
+ei    ꯑꯩ/ꯩ
+ey    ꯑꯩ/ꯩ:0.5
+o     ꯑꯣ/ꯣ  ꯑꯧ/ꯧ:1.5
+ou    ꯑꯧ/ꯧ
+ow    ꯑꯧ/ꯧ:0.5
+au    ꯑꯧ/ꯧ:0.8  ꯑꯥꯎ/ꯥꯎ:0.5
+ao    ꯑꯥꯎ/ꯥꯎ  ꯑꯧ/ꯧ:1
+ai    ꯑꯥꯏ/ꯥꯏ  ꯑꯥꯢ/ꯥꯢ:0.8  ꯑꯩ/ꯩ:1.2
+oi    ꯑꯣꯏ/ꯣꯏ  ꯑꯣꯢ/ꯣꯢ:1
+ui    ꯑꯨꯏ/ꯨꯏ  ꯑꯨꯢ/ꯨꯢ:1
+
+[other]
+k$    ꯛ
+k>c   ꯛ
+k>v   ꯛ:1.5
+l$    ꯜ
+l>c   ꯜ
+m$    ꯝ
+m>c   ꯝ
+p$    ꯞ
+p>c   ꯞ
+n$    ꯟ
+n>c   ꯟ
+t$    ꯠ
+t>c   ꯠ
+ng$   ꯡ  ꯪ:0.8
+ng>c  ꯡ  ꯪ:0.8
+ng>v  ꯡ:0.8

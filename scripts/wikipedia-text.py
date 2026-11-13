@@ -4,21 +4,27 @@ what a language's model learns from.
 
 The input is the wiki's CirrusSearch dump (`<wiki>_content-*.json.bz2`:
 Elasticsearch bulk lines, for each article an index line and a document
-line whose "text" is the article's plain text, no markup). Each article's
-text is cut into sentences after a full stop, danda, question or
-exclamation mark (Latin, Devanagari, Arabic, Ol Chiki); a sentence of
-fewer than three words, a run of more than 1 000 characters (a list, a
-table), or one with wiki markup in it ([[ ]] {{ }}, where a template
-failed: 9 000 of the Sanskrit wiki's sentences) is left out, and with
---script, one of whose letters fewer than half are of that script
-(Unicode's name for it, as "OL CHIKI"): the Santali wiki has whole
-articles in English. The marks that only steer the direction of text (U+200E and
-U+200F, the embeddings and isolates) and byte-order marks are dropped:
-Western Punjabi's articles put right-to-left marks inside words (830 000
-of them), which would make one word many. The zero-width joiners stay,
-which spelling uses. Every HOLDOUT-th article is held out of the corpus, and the
-first EVAL sentences of the held-out articles are written apart: the text
-eval-predict measures the model on, which it never learned from.
+line whose "text" is the article's plain text, no markup). Each
+article's text is cut into sentences after a full stop, danda, question
+or exclamation mark (Latin, Devanagari, Arabic, Ol Chiki, Meetei Mayek);
+a sentence of fewer than three words, a run of more than 1 000
+characters (a list, a table), or one with wiki markup in it
+([[ ]] {{ }}, where a template failed: 9 000 of the Sanskrit wiki's
+sentences) is left out, and with --script, one of whose letters fewer
+than half are of that script (Unicode's name for it, as "OL CHIKI"): the
+Santali wiki has whole articles in English. The marks that only steer
+the direction of text (U+200E and U+200F, the embeddings and isolates)
+and byte-order marks are dropped: Western Punjabi's articles put
+right-to-left marks inside words (830 000 of them), which would make one
+word many. The zero-width joiners stay, which spelling uses. A sentence
+the corpus already has is not written again: wikis that grew from
+templates repeat theirs (a quarter of the Meitei wiki's sentences, a
+fifth of Konkani's, an eighth of Maithili's are such copies). Every
+HOLDOUT-th article is held out of the corpus, and the first EVAL
+sentences of the held-out articles are written apart, each once and none
+the corpus has: the text eval-predict measures the model on, which it
+never learned from (a template's sentence it learned would measure
+nothing).
 
     wikipedia-text.py [--cap N] [--eval N] [--holdout K] [--script NAME]
                       OUT EVAL DUMP...
@@ -34,7 +40,7 @@ import re
 import sys
 import unicodedata
 
-END = re.compile(r"(?<=[.!?।॥۔؟᱾᱿])\s+")
+END = re.compile(r"(?<=[.!?।॥۔؟᱾᱿꯫])\s+")
 STEERING = re.compile("[\u200e\u200f\u202a-\u202e\u2066-\u2069\ufeff]")
 MARKUP = re.compile(r"\[\[|\]\]|\{\{|\}\}")
 
@@ -67,8 +73,14 @@ def main():
     ap.add_argument("eval_out")
     ap.add_argument("dumps", nargs="+")
     opts = ap.parse_args()
-    corpus = held = articles = 0
-    with open(opts.out, "w", encoding="utf-8") as out, open(opts.eval_out, "w", encoding="utf-8") as ev:
+    seen = set()  # the corpus's sentences
+    held = {}  # the held-out articles' sentences, in order, each once
+    corpus = articles = 0
+
+    def unlearned():
+        return [s for s in held if s not in seen]
+
+    with open(opts.out, "w", encoding="utf-8") as out:
         for path in opts.dumps:
             with bz2.open(path, "rt", encoding="utf-8") as dump:
                 for line in dump:
@@ -79,19 +91,22 @@ def main():
                     articles += 1
                     if articles % opts.holdout == 0:
                         for s in sentences(text, opts.script):
-                            if held < opts.eval:
-                                ev.write(s + "\n")
-                                held += 1
+                            held.setdefault(s, None)
                         continue
                     for s in sentences(text, opts.script):
-                        if corpus < opts.cap:
+                        if corpus < opts.cap and s not in seen:
+                            seen.add(s)
                             out.write(s + "\n")
                             corpus += 1
-                    if corpus >= opts.cap and held >= opts.eval:
+                    if corpus >= opts.cap and len(unlearned()) >= opts.eval:
                         break
-    if corpus == 0 or held == 0:
+    kept = unlearned()[: opts.eval]
+    with open(opts.eval_out, "w", encoding="utf-8") as ev:
+        for s in kept:
+            ev.write(s + "\n")
+    if corpus == 0 or not kept:
         sys.exit(f"wikipedia-text: {opts.dumps}: no text")
-    print(f"{opts.out}: {corpus} sentences from {articles} articles, {held} held out")
+    print(f"{opts.out}: {corpus} sentences from {articles} articles, {len(kept)} held out")
 
 
 if __name__ == "__main__":

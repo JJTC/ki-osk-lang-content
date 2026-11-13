@@ -2,7 +2,8 @@
 # fetch-wikipedia.sh — the text of a language's Wikipedia, for the
 # languages whose models learn from it alone (the Makefile's
 # WIKIPEDIA_LANGS): Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
-# Punjabi, Pashto, Sanskrit, Santali and Yiddish.
+# Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the Goan wiki's
+# Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki and Tulu.
 #
 # The text comes from each wiki's CirrusSearch dump (Wikimedia's
 # cirrus_search_index, an article a JSON document whose "text" is its
@@ -43,6 +44,12 @@ ps   ps   pswiki_content-20261108-00000.json.bz2   7f4e3cb5f365405c45ac34851f6ed
 sa   sa   sawiki_content-20261108-00000.json.bz2   2bd0f5c4d0afe46270fb88f474fd5663c50458babbd9f18f632f5d4d60d3871c  DEVANAGARI
 sat  sat  satwiki_content-20261108-00000.json.bz2  bf8da87ab8e60974ab304b2486cdf55941c57900bc09cb9b64dea05974d7500c  OL_CHIKI
 yi   yi   yiwiki_content-20261108-00000.json.bz2   1beb539d0d40d423894bed9891b614c964f349056d6a88cfc65b13b133faae3c  HEBREW
+kok  gom  gomwiki_content-20261108-00000.json.bz2  0a60c2753284ff11a8d4871ee64dcd72bcf753f7380b622cf152a04f3d93337c  DEVANAGARI
+ks   ks   kswiki_content-20261108-00000.json.bz2   0be241d83fa3e8f7dd6fabb6a9a97152e0cffd6450f02b8f2f8fbe5b4f94efb4  ARABIC
+mni  mni  mniwiki_content-20261108-00000.json.bz2  99c8a4cf0de0a86b641d8c396755f5a1b838d46b73e4432b90d76c7ab3992d7f  MEETEI
+awa  awa  awawiki_content-20261108-00000.json.bz2  b9b119cc5dcb3b2f7c0e9c08d72384780ce21cd23db06474c5081a89008f0de5  DEVANAGARI
+skr  skr  skrwiki_content-20261108-00000.json.bz2  879bbf4d040968cda18a2476c43777f0ff84ba6dc229696be2172c06e863140b  ARABIC
+tcy  tcy  tcywiki_content-20261108-00000.json.bz2  985c3225bcfab543d358122f3ced04060446c1a2a5ddc1d7c16784e3801020e5  KANNADA
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

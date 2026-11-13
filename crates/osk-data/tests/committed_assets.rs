@@ -414,6 +414,34 @@ fn every_translit_table_reads_its_language() {
                 ("sholem", "שלום"),
             ],
         ),
+        ("awa", &[("aur", "अउर"), ("kay", "कय"), ("ekthu", "एक्ठु")]),
+        (
+            "kok",
+            &[
+                ("ani", "आनी"),
+                ("asa", "आसा"),
+                ("hem", "हें"),
+                ("konkani", "कोंकणी"),
+            ],
+        ),
+        ("ks", &[("manz", "مَنٛز"), ("teh", "تہٕ"), ("chhu", "چھُ")]),
+        (
+            "mni",
+            &[
+                ("amasung", "ꯑꯃꯁꯨꯡ"),
+                ("masing", "ꯃꯁꯤꯡ"),
+                ("henna", "ꯍꯦꯟꯅ"),
+                ("manipur", "ꯃꯅꯤꯄꯨꯔ"),
+            ],
+        ),
+        (
+            "skr",
+            &[("hik", "ہک"), ("saraiki", "سرائیکی"), ("ditta", "ݙتا")],
+        ),
+        (
+            "tcy",
+            &[("bokka", "ಬೊಕ್ಕ"), ("onji", "ಒಂಜಿ"), ("tulu", "ತುಳು")],
+        ),
     ];
     let tables = files("translit", ".txt");
     assert_eq!(

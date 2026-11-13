@@ -151,15 +151,16 @@ learns from leaves out.
 
 ### Wikipedia text (the wikis' own)
 
-Ten languages' models learn from their own Wikipedia alone: Bhojpuri,
-Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit,
-Santali and Yiddish. The text is each wiki's CirrusSearch dump of
-2026-11-08 (Wikimedia's `cirrus_search_index`, an article's plain text a
-JSON field), pinned by sha256 in `scripts/fetch-wikipedia.sh`, cut into
+Sixteen languages' models learn from their own Wikipedia alone:
+Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto,
+Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki
+and Tulu. The text is each wiki's CirrusSearch dump of 2026-11-08
+(Wikimedia's `cirrus_search_index`, an article's plain text a JSON
+field), pinned by sha256 in `scripts/fetch-wikipedia.sh`, cut into
 sentences by `scripts/wikipedia-text.py`: at most 400 000 a language.
 Every 20th article is held out of it, and the first 500 sentences of
 those are `eval/<lang>.txt`. **Wikipedia's text is CC BY-SA 4.0**,
-share-alike: the packs of those ten languages, their models and that
+share-alike: the packs of those sixteen languages, their models and that
 held-out text carry those terms, with attribution to Wikipedia's
 contributors (each article's history, at its wiki, names them).
 
@@ -202,15 +203,15 @@ next `make fetch-corpora`.
 become its script (`osk_data::translit`): Assamese, Bengali, Bhojpuri,
 Greek, Gujarati, Hindi, Armenian, Kannada, Maithili, Malayalam, Marathi,
 Mongolian, Nepali, Odia, Punjabi (Gurmukhi and Shahmukhi), Persian,
-Pashto, Sanskrit, Santali, Sindhi, Sinhala, Tamil, Telugu, Urdu and
-Yiddish. They were written here, MIT licensed, each joining its
-language's pack; what they choose among, the language's lexicon chooses.
-They are measured on romanizations nothing here ships: the Dakshina
-dataset's, and for five of them the test words of AI4Bharat's
-Aksharantar dataset (manually collected data CC BY, mined data CC0;
-"Aksharantar: Towards Building Open Transliteration Tools for the Next
-Billion Users", arXiv 2205.03018), which `scripts/fetch-aksharantar.sh`
-downloads to measure.
+Pashto, Sanskrit, Santali, Sindhi, Sinhala, Tamil, Telugu, Urdu,
+Yiddish, Awadhi, Kashmiri, Konkani, Meitei, Saraiki and Tulu. They were
+written here, MIT licensed, each joining its language's pack; what they
+choose among, the language's lexicon chooses. They are measured on
+romanizations nothing here ships: the Dakshina dataset's, and for eight
+of them the test words of AI4Bharat's Aksharantar dataset (manually
+collected data CC BY, mined data CC0; "Aksharantar: Towards Building
+Open Transliteration Tools for the Next Billion Users", arXiv
+2205.03018), which `scripts/fetch-aksharantar.sh` downloads to measure.
 Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'
 notices below.
@@ -367,8 +368,9 @@ read through libxkbcommon (`scripts/build-layout.py`,
 each key's letters are the ones the keymap a layout names in
 `xkb_layout` produces. The layout structure around them — rows, widths,
 symbol pages, the control row — was written for ki-osk, under MIT. The
-layouts of Bhojpuri, Maithili and Sanskrit are Hindi's, Western
-Punjabi's Urdu's and Yiddish's Hebrew's, renamed, with the letters each
+layouts of Bhojpuri, Maithili, Sanskrit and Awadhi are Hindi's,
+Konkani's Marathi's, Tulu's Kannada's, Western Punjabi's, Saraiki's and
+Kashmiri's Urdu's and Yiddish's Hebrew's, renamed, with the letters each
 language adds on long presses (`scripts/build-derived-layouts.py`).
 xkeyboard-config's copyright and permission notices, which go with every
 copy (its `COPYING`, as xkeyboard-config 2.48 ships it):
