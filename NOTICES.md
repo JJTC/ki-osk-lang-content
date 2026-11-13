@@ -235,7 +235,11 @@ language's lexicon chooses. They are measured on romanizations nothing
 here ships: the Dakshina dataset's, and for ten of them the test words of AI4Bharat's Aksharantar dataset (manually
 collected data CC BY, mined data CC0; "Aksharantar: Towards Building
 Open Transliteration Tools for the Next Billion Users", arXiv
-2205.03018), which `scripts/fetch-aksharantar.sh` downloads to measure.
+2205.03018), which `scripts/fetch-aksharantar.sh` downloads to measure,
+and for Greek AUEB's real-world Greeklish (Toumazatos, Pavlopoulos,
+Androutsopoulos and Vassos, "Still All Greeklish to Me: Greeklish to
+Greek Transliteration", LREC-COLING 2024; github.com/nlpaueb/greeklish,
+Apache-2.0), which `scripts/fetch-greeklish.sh` downloads to measure.
 Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'
 notices below.

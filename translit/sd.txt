@@ -5,7 +5,8 @@
 # the implosives ٻ ڄ ڏ ڳ (typed b, j, d, g as the others are), the
 # retroflexes ٽ ڊ ڙ ڻ, the aspirates ڀ ٿ ٺ ڦ ڇ ڌ ڍ ک, k as ڪ, and two
 # words written as signs: ۾ (men, in) and ۽ (ain, and). The lexicon
-# chooses among them.
+# chooses among them. Its h is ه: the texts write ھ for it too, and the
+# lexicon reads the two as one letter (osk_data::words, generation 3).
 # English words, which the language writes in its script too, are typed
 # as English spells them: c, ck, sch, o, er, y and tion have English
 # ways too, at a cost.
@@ -22,7 +23,7 @@ tt   ٽ:0.5  ت:0.5
 th   ٿ  ٺ:0.6  ث:2
 s    س  ص:1.5  ث:2.5
 j    ج  ڄ:0.8  ڃ:1.5
-jh   جھ  ڄ:1.5
+jh   جه  ڄ:1.5
 ny   ڃ
 ch   چ  ڇ:1
 chh  ڇ
@@ -30,7 +31,7 @@ c    چ  ڪ:1.5
 c>v  چ  س:2  ڪ:1.5
 ck   ڪ:0.5
 sch  سڪ:0.5  اسڪ:0.8
-h    ه  ح:1  ھ:2
+h    ه  ح:1
 h$   ه  هه:0.8  ح:1
 kh   ک  خ:0.5
 d    د  ڏ:0.6  ڊ:0.8
@@ -40,7 +41,7 @@ z    ز  ذ:2  ض:2  ظ:2
 r    ر  ڙ:0.8
 rr   ڙ:0.5  ر:0.5
 sh   ش
-gh   غ  گھ:0.5
+gh   غ  گه:0.5
 f    ف  ڦ:1
 q    ق  ڪ:1
 k    ڪ  ک:1  ق:1.5

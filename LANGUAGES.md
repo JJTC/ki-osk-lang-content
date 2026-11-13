@@ -280,19 +280,23 @@ but no model to match the glide against · `—` off
    reading of the letters typed. How often the word meant comes first
    (and among the strip's two), on Dakshina's romanized Wikipedia
    sentences, and the keystrokes the strip saves typing them: Hindi 82.1%
-   (86.7%; 19.8%), Urdu 78.5% (82.0%; 18.1%), Gujarati 78.1% (81.5%;
-   23.2%), Punjabi 76.4% (81.1%; 21.9%), Marathi 75.5% (78.1%; 16.4%),
-   Sinhala 74.2% (77.8%; 20.2%), Kannada 73.6% (75.0%; 19.8%), Tamil 72.2%
-   (74.1%; 17.5%), Bengali 71.7% (75.1%; 19.7%), Telugu 71.6% (73.2%;
-   19.4%), Sindhi 65.0% (71.7%; 15.2%), Malayalam 62.9% (65.8%; 14.9%); of
-   the words the lexicon has, 74–91% (`make eval-translit`). Malayalam's
+   (86.7%; 19.8%), Urdu 78.8% (82.4%; 18.1%), Gujarati 78.1% (81.5%;
+   23.2%), Punjabi 76.6% (81.4%; 21.9%), Marathi 75.5% (78.1%; 16.4%),
+   Sinhala 74.4% (78.0%; 20.2%), Kannada 73.9% (75.3%; 19.9%), Tamil 72.2%
+   (74.1%; 17.5%), Telugu 72.0% (73.6%; 19.5%), Bengali 71.7% (75.1%;
+   19.7%), Sindhi 67.0% (73.0%; 16.1%), Malayalam 62.9% (65.8%; 14.9%); of
+   the words the lexicon has, 75–91% (`make eval-translit`, a word being
+   the same word as its lexicon keys it: Sindhi's two h letters one).
+   Malayalam's
    and Tamil's tables read a doubled consonant typed single (palakad:
    പാലക്കാട്, thaakuthal: தாக்குதல்), which their typists often do, and
    Malayalam's ri as ൃ, mb as മ്പ and nch as ഞ്ച; from 58.2% and 70.0%,
    Malayalam's with its lexicon's 200 000 words (1.4 points of it).
-   Bengali's reads ৎ before a consonant too (utsob: উৎসব). A tenth of
-   Sindhi's misses are its word spelled with the other of its two h
-   letters, ه and ھ, which its lexicon keeps apart. Assamese,
+   Bengali's reads ৎ before a consonant too (utsob: উৎসব). Sindhi's texts
+   write its h as ه and as ھ, and its lexicon kept a word both ways, a
+   tenth of its misses; the splitter now reads the two as one letter for
+   Sindhi alone (`osk_data::words`, its generation 3), its table writes
+   ه, and it rose from 65.0%. Assamese,
    Maithili, Nepali, Odia, Sanskrit, Konkani, Meitei, Kashmiri, Bodo and
    Dogri are measured on the words people romanized for AI4Bharat's
    Aksharantar dataset (its test split, 2 000 to 6 900 words each, mostly
@@ -311,8 +315,17 @@ but no model to match the glide against · `—` off
    pairs are misaligned (deya: पतयाने), which caps its figure.
    Kashmiri's spelling marks its vowels as each writer chooses, and its
    lexicon has many words both with marks and without (مقبول, مقبوٗل): a
-   third of its misses are the word with other marks. Greek, Armenian,
-   Persian, Pashto, Mongolian, Bhojpuri, Western Punjabi, Santali,
+   third of its misses are the word with other marks. Greek is measured
+   on AUEB's real-world Greeklish (Toumazatos et al., LREC-COLING 2024;
+   Apache-2.0; fetched to measure, never shipped): forum comments and chat
+   messages, each written out in Greek by four or six people, 2 275 words
+   weighed by how many wrote each so: 77.2% first (80.3% among the
+   strip's two), 90.5% of those its lexicon has (from 75.6% and 88.5%),
+   its table reading Greeklish's digits for letters (8a: θα, pai3ei:
+   παίζει), v for ν and ω (vomizo: νομίζω, mporv: μπορώ) and k for και;
+   many of the rest are a writer's spelling without its accent (ΠΟΛΥ).
+   Armenian, Persian, Pashto, Mongolian, Bhojpuri, Western Punjabi,
+   Santali,
    Yiddish, Awadhi, Saraiki, Tulu, Chhattisgarhi, Magahi, Brahui and the
    second scripts of Sindhi and Meitei have no such measure; their tests
    read everyday words. Of the 51 checked in the seven tables
@@ -405,8 +418,9 @@ but no model to match the glide against · `—` off
    is typed (`osk_data::wordbreak::lao_fold`). Keystroke savings 44.0%
    on 9 593 held-out words. Its keyboard now has the vowel signs
    xkeyboard-config keeps on the number row (ຸ ູ ໍ, and ໌ ຼ on Shift),
-   which the layout's generator had left out. Bodo's apostrophe, which marks a vowel inside
-   a word and at its end (बर'), is in the lexicon inside a word only.
+   which the layout's generator had left out. Bodo's apostrophe, which
+   marks a vowel inside a word and at its end (बर'), stays in the word
+   (बर' is among its lexicon's commonest).
 
 ## Prediction model tiers
 

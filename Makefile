@@ -79,6 +79,12 @@ FINEWEB_PYTHON ?= python3
 AKSHARANTAR_LANGS ?= as mai ne or sa kok ks mni brx doi
 AKSHARANTAR_DIR = $(SRC_DIR)/aksharantar
 
+# Greek typed in Latin letters ("Greeklish"), word by word: AUEB's
+# real-world test set (scripts/fetch-greeklish.sh, its files pinned by
+# sha256; Apache-2.0), what eval-translit measures Greek's table on. Never
+# committed or shipped.
+GREEKLISH_DIR = $(SRC_DIR)/greeklish
+
 # Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
 # Only the .bins built from them are committed.
 SRC_DIR ?= $(or $(TMPDIR),/tmp)/ki-osk-sources
@@ -93,9 +99,12 @@ LOCK ?= sources.lock
 ONLY_STALE ?=
 LOCKTOOL = $(PYTHON) scripts/lock.py --lock $(LOCK)
 # Shell prelude for the locked targets: `stale NAME ARGS...` is true when
-# NAME must be built; `record NAME ARGS...` writes its lock entry.
+# NAME must be built; `record NAME ARGS...` writes its lock entry;
+# `words_gen LANG` prints the splitter generation LANG's words are read by.
 LOCKED = stale() { [ -z "$(ONLY_STALE)" ] || ! $(LOCKTOOL) fresh "$$@"; }; \
-         record() { $(LOCKTOOL) record "$$@" --encoder "$(ENCODER)"; }
+         record() { $(LOCKTOOL) record "$$@" --encoder "$(ENCODER)"; }; \
+         words_gen() { g=$(WORDS_GENERATION); for p in $(WORDS_LATER); do \
+           if [ "$${p%%=*}" = "$${1%%-*}" ]; then g=$$(echo $$p | cut -d= -f2); fi; done; echo $$g; }
 
 # Caps tuned for the Tatoeba corpora (≤120 000 sentences per language;
 # Swedish has ~56.5 k). Larger corpora lift these; the only constraint is
@@ -159,8 +168,13 @@ PREDICT_START ?= 5000
 # The generation of the word splitter the models are trained with
 # (`osk_data::words::GENERATION`). A model built by another generation
 # reads its words differently, so it is part of every predict output's
-# recipe, and a new generation makes every one of them stale.
+# recipe, and a new generation makes every one of them stale. A language
+# whose words a later generation changed alone has that one
+# (`LATER_GENERATIONS`, read here as lang=generation, `words_gen` in
+# LOCKED), and only its models go stale.
 WORDS_GENERATION = $(shell sed -n 's/^pub const GENERATION: u32 = \([0-9]*\);/\1/p' crates/osk-data/src/words.rs)
+WORDS_LATER = $(shell sed -n '/^pub const LATER_GENERATIONS/,/];/p' crates/osk-data/src/words.rs \
+	| grep -o '("[a-zA-Z-]*", [0-9]*)' | tr -d '("),' | tr ' ' '=')
 
 .PHONY: help
 help:
@@ -172,6 +186,7 @@ help:
 	@echo "                   languages (the Dakshina dataset) into SRC_DIR"
 	@echo "  fetch-wikipedia  the wikis' own text, for WIKIPEDIA_LANGS, into SRC_DIR"
 	@echo "  fetch-aksharantar  romanized words for eval-translit, into SRC_DIR"
+	@echo "  fetch-greeklish  Greek typed in Latin letters, for eval-translit"
 	@echo "  fetch-fineweb    FineWeb-2's web text, for FINEWEB_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
@@ -185,7 +200,8 @@ help:
 	@echo "                   (pinyin-assets zhuyin-assets jyutping-assets kana-assets)"
 	@echo "  cjk-assets-seed  rebuild from seeds (offline; DOWNGRADES, needs CONFIRM=yes)"
 	@echo "  eval-translit    how often each transliteration table puts the word"
-	@echo "                   meant first (after fetch-dakshina, fetch-aksharantar)"
+	@echo "                   meant first (after fetch-dakshina, fetch-aksharantar,"
+	@echo "                   fetch-greeklish)"
 	@echo "  translit-layouts write layouts/<lang>-abc.json for translit/<lang>.txt"
 	@echo "  derived-layouts  write the layouts made from another language's keys"
 	@echo "  hinglish-assets  rebuild predict/hi-Latn.* (Hindi typed in Latin letters)"
@@ -225,6 +241,10 @@ fetch-wikipedia:
 .PHONY: fetch-aksharantar
 fetch-aksharantar:
 	OUT=$(AKSHARANTAR_DIR) ./scripts/fetch-aksharantar.sh $(AKSHARANTAR_LANGS)
+
+.PHONY: fetch-greeklish
+fetch-greeklish:
+	OUT=$(GREEKLISH_DIR) ./scripts/fetch-greeklish.sh
 
 .PHONY: fetch-fineweb
 fetch-fineweb:
@@ -293,7 +313,7 @@ predict-assets:
 			$$corpus_in $$words_in $$weight \
 			--recipe vocab_size=$$vocab --recipe ngram_keep=$$ngram \
 			--recipe start_keep=$(PREDICT_START) \
-			--recipe words=$(WORDS_GENERATION) \
+			--recipe words=$$(words_gen $$lang) \
 			--output $(PREDICT_OUT_DIR)/$$lang.fst --output $(PREDICT_OUT_DIR)/$$lang.ngram.bin \
 			--output $(PREDICT_OUT_DIR)/$$lang.forms.fst; \
 		stale "$$@" || continue; \
@@ -339,7 +359,7 @@ dialect-assets: dialect-sources
 			*)  echo "no dialect source for $$lang"; exit 1 ;; \
 		esac; \
 		set -- dialects/$$lang $$inputs --input lexicon=$(PREDICT_OUT_DIR)/$$lang.fst \
-			--recipe words=$(WORDS_GENERATION) \
+			--recipe words=$$(words_gen $$lang) \
 			--output $(PREDICT_OUT_DIR)/$$lang.dialects.bin; \
 		stale "$$@" || continue; \
 		echo "build-dialects $$lang"; \
@@ -521,7 +541,7 @@ hinglish-assets:
 		--input scripts/build-hinglish.py=scripts/build-hinglish.py \
 		--recipe tatoeba_weight=$(TATOEBA_WEIGHT) \
 		--recipe vocab_size=$(HINGLISH_VOCAB) --recipe ngram_keep=$(HINGLISH_NGRAM) \
-		--recipe start_keep=$(PREDICT_START) --recipe words=$(WORDS_GENERATION) \
+		--recipe start_keep=$(PREDICT_START) --recipe words=$$(words_gen hi-Latn) \
 		--output $(PREDICT_OUT_DIR)/hi-Latn.fst --output $(PREDICT_OUT_DIR)/hi-Latn.ngram.bin \
 		--output $(PREDICT_OUT_DIR)/hi-Latn.forms.fst; \
 	stale "$$@" || exit 0; \
@@ -547,6 +567,7 @@ hinglish-assets:
 # fetch-dakshina`. Then the tables Dakshina has nothing for, on
 # Aksharantar's words romanized by hand (mostly rare words and names, so
 # what the lexicon has is the measure): after `make fetch-aksharantar`.
+# And Greek's, on people's Greeklish: after `make fetch-greeklish`.
 TRANSLIT_EVAL_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 .PHONY: eval-translit
 eval-translit:
@@ -571,6 +592,11 @@ eval-translit:
 		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
 			--pairs $$p | tail -n 1 || exit 1; \
 	done
+	@p=$(GREEKLISH_DIR)/el.tsv; \
+	test -f $$p || { echo "no $$p: run make fetch-greeklish"; exit 1; }; \
+	echo "el, AUEB's Greeklish:"; \
+	$(TOOLS) eval-translit -- --table translit/el.txt --lexicon predict/el.fst \
+		--pairs $$p | tail -n 1
 
 # The transliteration layouts (layouts/<lang>-abc.json), one for each
 # table in translit/: the US keys typing into the language's composer.

@@ -27,6 +27,11 @@
 //! readings, then the letters as typed), over all pairs and over those the
 //! lexicon has, and the share the cheapest reading alone writes right (the
 //! table without a lexicon).
+//!
+//! A word is the same word as the lexicon keys it: its identity
+//! (`osk_data::words::Splitter::normalize`, of the table's language, by
+//! its file name or `--lang`), so Sindhi's ھ and ه, which its texts write
+//! for one h, are one, as are Marathi's two ways of writing an eyelash ra.
 
 use std::fs;
 use std::path::PathBuf;
@@ -35,7 +40,7 @@ use anyhow::{Context, bail};
 use clap::Parser;
 use fst::raw::Fst;
 use osk_data::translit::{Lexicon, Scheme, UNKNOWN_BELOW_RAREST};
-use unicode_normalization::UnicodeNormalization;
+use osk_data::words::Splitter;
 
 #[derive(Parser)]
 #[command(about = "Measure a transliteration table against romanizations people typed")]
@@ -66,6 +71,10 @@ struct Args {
     /// Offer no word the letters only begin: to compare.
     #[arg(long)]
     no_completions: bool,
+    /// The language whose words' identities are compared; the table's file
+    /// name (`hi` of `translit/hi.txt`) by default.
+    #[arg(long)]
+    lang: Option<String>,
 }
 
 /// A lexicon that gives no completions.
@@ -204,6 +213,16 @@ fn main() -> anyhow::Result<()> {
     } else {
         lexicon.as_ref()
     };
+    let lang = match &args.lang {
+        Some(lang) => lang.clone(),
+        None => args
+            .table
+            .file_stem()
+            .map(|s| s.to_string_lossy().into_owned())
+            .with_context(|| format!("{}: no language in its name", args.table.display()))?,
+    };
+    let splitter = Splitter::new(&lang);
+    let same = |text: &str, word: &str| splitter.normalize(text) == word;
     let pairs = fs::read_to_string(&args.pairs)
         .with_context(|| format!("reading {}", args.pairs.display()))?;
     let mut t = Tally::default();
@@ -225,11 +244,11 @@ fn main() -> anyhow::Result<()> {
         if word == "</s>" || word == latin || latin.is_empty() {
             continue;
         }
-        let word: String = word.nfc().collect();
+        let word = splitter.normalize(word);
         let got = scheme.candidates(latin, lexicon, 2);
         let known = lexicon.log_prob(&word).is_some();
-        let first = got.first().is_some_and(|c| c.text == word);
-        let three = got.iter().any(|c| c.text == word);
+        let first = got.first().is_some_and(|c| same(&c.text, &word));
+        let three = got.iter().any(|c| same(&c.text, &word));
         t.pairs += n;
         if known {
             t.known += n;
@@ -246,7 +265,7 @@ fn main() -> anyhow::Result<()> {
                 t.known_top3 += n;
             }
         }
-        if scheme.literal(latin) == word {
+        if same(&scheme.literal(latin), &word) {
             t.literal += n;
         }
         if args.keystrokes {
@@ -257,7 +276,7 @@ fn main() -> anyhow::Result<()> {
             for (k, _) in letters.iter().enumerate() {
                 let end = letters.get(k + 1).map_or(latin.len(), |(at, _)| *at);
                 let strip = scheme.candidates(&latin[..end], lexicon, 2);
-                if strip.iter().any(|c| c.text == word) {
+                if strip.iter().any(|c| same(&c.text, &word)) {
                     #[allow(clippy::cast_precision_loss)]
                     {
                         cost = (k + 2) as f64;

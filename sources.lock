@@ -1298,24 +1298,24 @@
       }
     },
     "predict/sd": {
-      "encoder": "296582c9b061-dirty",
+      "encoder": "1f06c9dc6994-dirty",
       "inputs": {
         "dakshina/sd.txt": "e380b9e5800a2ff689cdb3f6d44849850992308434761544503e8a48fec08d0e"
       },
       "outputs": {
         "predict/sd.forms.fst": "feace35a75c16989ddb0d66ca115902398c027d0cdd7ca38f399dc643724fb38",
-        "predict/sd.fst": "d0c5dcaa45cd11fc8ebfaa8fb07488fb32c9b84fca0165d68eb92a8238dc7f16",
-        "predict/sd.ngram.bin": "e0e40943cff77e3850a7466aa3b2f1b7a1e180552c0cc7b60db08cd0c75a77dc"
+        "predict/sd.fst": "f4c3c8c1cb80c9afdeaeaa59cbaf8736acf77acd2838181c5fd87497162bcd21",
+        "predict/sd.ngram.bin": "621e95d446e003ed2c2cee8a578834cdb4dad0d78076fe2d5f9f16f4e9d0cdec"
       },
       "recipe": {
         "ngram_keep": "60000",
         "start_keep": "5000",
         "vocab_size": "30000",
-        "words": "2"
+        "words": "3"
       }
     },
     "predict/sd-Deva": {
-      "encoder": "bd658435540d-dirty",
+      "encoder": "1f06c9dc6994-dirty",
       "inputs": {
         "fineweb/sd-Deva.txt": "9cb346cd734db1cb38be7cbc09cdfe43d04d41b2482ab09a91d0400d15061793"
       },
@@ -1328,7 +1328,7 @@
         "ngram_keep": "60000",
         "start_keep": "5000",
         "vocab_size": "30000",
-        "words": "2"
+        "words": "3"
       }
     },
     "predict/si": {

@@ -356,6 +356,8 @@ fn every_translit_table_reads_its_language() {
                 ("kalimera", "καλημέρα"),
                 ("nai", "ναι"),
                 ("Ellada", "Ελλάδα"),
+                ("8elw", "θέλω"),
+                ("k", "και"),
             ],
         ),
         ("fa", &[("salam", "سلام"), ("man", "من"), ("iran", "ایران")]),

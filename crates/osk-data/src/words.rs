@@ -58,8 +58,28 @@ use crate::wordbreak::{Script, WordList};
 /// Generation 2 gave a sentence's first word [`SENTENCE_START`] for
 /// context, so the models count what starts sentences. Cutting Thai with
 /// its word list came after, with Thai's first model, and changed no other
-/// language's words; the list is among that model's inputs.
+/// language's words; the list is among that model's inputs. A change to
+/// one language's words alone gives that language a later generation
+/// ([`LATER_GENERATIONS`], [`generation`]), and leaves the others' models
+/// as they are.
 pub const GENERATION: u32 = 2;
+
+/// The languages (primary subtags) whose words a later generation changed,
+/// and changed alone, with that generation. Generation 3 made Sindhi's two
+/// h letters one: its texts write ه (U+0647) and ھ (U+06BE) for the same
+/// h, six to one, and its lexicon kept the same word twice.
+pub const LATER_GENERATIONS: &[(&str, u32)] = &[("sd", 3)];
+
+/// The generation of the rules `lang`'s words are read by: [`GENERATION`],
+/// or its primary subtag's later one ([`LATER_GENERATIONS`]).
+#[must_use]
+pub fn generation(lang: &str) -> u32 {
+    let primary = lang.split(['-', '_']).next().unwrap_or(lang);
+    LATER_GENERATIONS
+        .iter()
+        .find(|(l, _)| *l == primary)
+        .map_or(GENERATION, |&(_, g)| g)
+}
 
 /// The context of a sentence's first word, as if a word: the n-gram tables
 /// count the words that start sentences after it, and the keyboard offers
@@ -136,6 +156,9 @@ enum Fold {
     Marathi,
     /// Latin as Cyrillic: the texts write both, the keyboard types Cyrillic.
     Serbian,
+    /// Sindhi's ھ as ه, its usual h: its texts write both for the same
+    /// letter (generation 3).
+    Sindhi,
     /// Lao's ໍາ, ຫນ, ຫມ and ຫລ as the keyboard types them: ຳ ໜ ໝ ຫຼ
     /// ([`crate::wordbreak::lao_fold`]).
     Lao,
@@ -375,6 +398,7 @@ impl Splitter {
             "mr" => s.fold = Fold::Marathi,
             "sr" => s.fold = Fold::Serbian,
             "lo" => s.fold = Fold::Lao,
+            "sd" => s.fold = Fold::Sindhi,
             _ => {}
         }
         s
@@ -505,6 +529,7 @@ impl Splitter {
             (Fold::Kabyle, 'Γ') => out.push('Ɣ'),
             (Fold::Kabyle, 'ε') => out.push('ɛ'),
             (Fold::Kabyle, 'Ε') => out.push('Ɛ'),
+            (Fold::Sindhi, '\u{06BE}') => out.push('\u{0647}'),
             (_, c) => out.push(c),
         }
     }
@@ -1044,6 +1069,19 @@ mod tests {
         assert_eq!(split("fa", "می\u{200C}شوند."), ["می\u{200C}شوند"]);
         // A joiner with no word after it is not part of one.
         assert_eq!(split("fa", "می\u{200C}"), ["می"]);
+    }
+
+    #[test]
+    fn sindhi_s_two_h_letters_are_one() {
+        let sd = Splitter::new("sd");
+        assert_eq!(sd.normalize("ھن"), sd.normalize("هن"));
+        assert_eq!(sd.normalize("آھن"), "آهن");
+        // Urdu and Western Punjabi write their aspirates with ھ, apart.
+        assert_eq!(Splitter::new("ur").normalize("بھی"), "بھی");
+        assert_eq!(Splitter::new("pnb").normalize("ھن"), "ھن");
+        assert_eq!(generation("sd"), 3);
+        assert_eq!(generation("sd-Deva"), 3);
+        assert_eq!(generation("hi"), GENERATION);
     }
 
     #[test]
