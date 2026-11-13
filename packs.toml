@@ -68,6 +68,7 @@ mk  = "Macedonian"
 ml  = "Malayalam"
 mn  = "Mongolian"
 mni = "Meitei"
+mni-Beng = "Meitei (Bengali script)"
 mr  = "Marathi"
 ms  = "Malay"
 ne  = "Nepali"
@@ -86,6 +87,7 @@ ru  = "Russian"
 sa  = "Sanskrit"
 sat = "Santali"
 sd  = "Sindhi"
+sd-Deva = "Sindhi (Devanagari)"
 si  = "Sinhala"
 sk  = "Slovak"
 skr = "Saraiki"
@@ -168,9 +170,10 @@ source  = { name = "Wikipedia, the wikis' CirrusSearch dumps of 2026-11-08", url
 
 # FineWeb-2's web text (scripts/fetch-fineweb.sh: its parquet files at one
 # revision, pinned by sha256; scripts/fineweb-text.py keeps the documents
-# that read as their language): the whole corpus of the languages with no
-# Wikipedia of their own that script names. ODC-By asks that what is made
-# from it say so: each such pack names it, and NOTICES.md.
+# that read as their language): the whole corpus of the languages, and
+# the second scripts of languages, with no Wikipedia of their own that
+# script names. ODC-By asks that what is made from it say so: each such
+# pack names it, and NOTICES.md.
 [prediction.fineweb]
 license = { name = "ODC-By 1.0 (FineWeb-2)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false }
 source  = { name = "FineWeb-2 (Hugging Face): web text from Common Crawl, revision af9c133", url = "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2" }
@@ -291,6 +294,7 @@ mk      = ["mk"]
 ml      = ["ml", "ml-abc"]
 mn      = ["mn", "mn-abc"]
 mni     = ["mni", "mni-abc"]
+mni-Beng = ["mni-beng", "mni-beng-abc"]
 mr      = ["mr", "mr-abc"]
 ms      = ["ms"]
 mt      = ["mt"]
@@ -320,6 +324,7 @@ rw      = ["rw"]
 sa      = ["sa", "sa-abc"]
 sat     = ["sat", "sat-abc"]
 sd      = ["sd", "sd-abc"]
+sd-Deva = ["sd-deva", "sd-deva-abc"]
 si      = ["si", "si-abc"]
 sk      = ["sk"]
 skr     = ["skr", "skr-abc"]

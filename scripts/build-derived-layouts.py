@@ -15,8 +15,12 @@ and Saraiki's ݨ on ن, Saraiki's implosives ٻ ڄ ݙ ڳ on ب ج د گ, Brahui'
 ۺ on ش, Kashmiri's vowel letters ٲ ۄ ۆ ؠ ۍ on ا و ی and its vowel marks
 ٕ ٟ ٖ ٗ ٚ ٛ on Urdu's. Yiddish is typed on Hebrew's keys (`il`), its
 pointed letters (אַ אָ פּ פֿ וּ יִ …) and the ligatures װ ױ ײ on the
-long presses of the letters they are made from. A letter only a long
-press types turns the gesture on for the layout (`long_press_letters`).
+long presses of the letters they are made from. Sindhi in Devanagari
+(sd-Deva) is typed on Hindi's keys, its implosives ॻ ॼ ॾ ॿ on the long
+presses of ग ज ड ब, and Meitei in the Bengali script (mni-Beng) on
+Bengali's, with ৱ on ব's. A letter only a long press types turns the
+gesture on for the layout (`long_press_letters`). A layout's id is its
+language's tag in lower case (sd-deva), its prediction language the tag.
 
     scripts/build-derived-layouts.py [--check]
 
@@ -58,6 +62,8 @@ DERIVED = [
             "َ": ["ٚ", "ٛ"],
         },
     ),
+    ("sd-Deva", "hi", "सिंधी", {"ग": ["ॻ"], "ज": ["ॼ"], "ड": ["ॾ"], "ब": ["ॿ"]}),
+    ("mni-Beng", "bn", "মণিপুরী", {"ব": ["ৱ"]}),
     (
         "yi",
         "he",
@@ -84,7 +90,7 @@ def build(lang, base, name, extra):
             # A letter only a long press types: the gesture is on for it.
             out["long_press_letters"] = True
         out[k] = v
-    out["id"] = lang
+    out["id"] = lang.lower()
     out["name"] = name
     out["prediction_lang"] = lang
     added = set()
@@ -108,7 +114,7 @@ def main():
     stale = []
     for lang, base, name, extra in DERIVED:
         text = build(lang, base, name, extra)
-        path = ROOT / "layouts" / f"{lang}.json"
+        path = ROOT / "layouts" / f"{lang.lower()}.json"
         if check:
             if not path.exists() or path.read_text(encoding="utf-8") != text:
                 stale.append(path.name)

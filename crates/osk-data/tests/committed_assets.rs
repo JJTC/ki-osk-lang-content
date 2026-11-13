@@ -450,6 +450,19 @@ fn every_translit_table_reads_its_language() {
         ("hne", &[("havay", "हवय"), ("au", "अउ"), ("rahis", "रहिस")]),
         ("mag", &[("aau", "आउ"), ("halai", "हलइ"), ("ego", "एगो")]),
         ("brh", &[("na", "نا"), ("kanning", "کننگ"), ("e", "ءِ")]),
+        (
+            "sd-Deva",
+            &[("aahe", "आहे"), ("sindhi", "सिंधी"), ("galhi", "ॻाल्हि")],
+        ),
+        (
+            "mni-Beng",
+            &[
+                ("amasung", "অমসুং"),
+                ("leibak", "লৈবাক"),
+                ("numit", "নুমিৎ"),
+                ("waphom", "ৱাফম"),
+            ],
+        ),
     ];
     let tables = files("translit", ".txt");
     assert_eq!(
@@ -462,7 +475,10 @@ fn every_translit_table_reads_its_language() {
         let text = std::fs::read_to_string(&p).unwrap();
         let scheme = Scheme::parse(&text).unwrap_or_else(|e| panic!("{}: {e}", name(&p)));
         let layout: LayoutDef = serde_json::from_str(
-            &std::fs::read_to_string(root().join(format!("layouts/{lang}-abc.json"))).unwrap(),
+            &std::fs::read_to_string(
+                root().join(format!("layouts/{}-abc.json", lang.to_lowercase())),
+            )
+            .unwrap(),
         )
         .unwrap();
         assert_eq!(layout.ime, Some(ImeKind::Translit), "{lang}-abc");

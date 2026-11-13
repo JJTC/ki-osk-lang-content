@@ -169,9 +169,11 @@ contributors (each article's history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Five languages' models learn from FineWeb-2's web text alone: Bodo,
+Seven models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of
-their own. FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
+their own, and of Sindhi in Devanagari (`sd-Deva`) and Meitei in the
+Bengali script (`mni-Beng`), whose wikis are in their other scripts.
+FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
 Pipeline to Scale Them All", arXiv 2506.20920) is text from Common
 Crawl's crawls, sorted by language; **it is ODC-By 1.0, and its use is
 subject to [Common Crawl's Terms of Use](https://commoncrawl.org/terms-of-use)**.
@@ -223,12 +225,13 @@ next `make fetch-corpora`.
 become its script (`osk_data::translit`): Assamese, Bengali, Bhojpuri,
 Greek, Gujarati, Hindi, Armenian, Kannada, Maithili, Malayalam, Marathi,
 Mongolian, Nepali, Odia, Punjabi (Gurmukhi and Shahmukhi), Persian,
-Pashto, Sanskrit, Santali, Sindhi, Sinhala, Tamil, Telugu, Urdu,
-Yiddish, Awadhi, Kashmiri, Konkani, Meitei, Saraiki, Tulu, Bodo, Dogri,
+Pashto, Sanskrit, Santali, Sindhi (Perso-Arabic and Devanagari),
+Sinhala, Tamil, Telugu, Urdu, Yiddish, Awadhi, Kashmiri, Konkani, Meitei
+(Meetei Mayek and the Bengali script), Saraiki, Tulu, Bodo, Dogri,
 Chhattisgarhi, Magahi and Brahui. They were written here, MIT licensed,
 each joining its language's pack; what they choose among, the
 language's lexicon chooses. They are measured on romanizations nothing
-here ships: the Dakshina dataset's, and for nine of them the test words of AI4Bharat's Aksharantar dataset (manually
+here ships: the Dakshina dataset's, and for ten of them the test words of AI4Bharat's Aksharantar dataset (manually
 collected data CC BY, mined data CC0; "Aksharantar: Towards Building
 Open Transliteration Tools for the Next Billion Users", arXiv
 2205.03018), which `scripts/fetch-aksharantar.sh` downloads to measure.
@@ -388,10 +391,12 @@ read through libxkbcommon (`scripts/build-layout.py`,
 each key's letters are the ones the keymap a layout names in
 `xkb_layout` produces. The layout structure around them — rows, widths,
 symbol pages, the control row — was written for ki-osk, under MIT. The
-layouts of Bhojpuri, Maithili, Sanskrit and Awadhi are Hindi's,
-Konkani's Marathi's, Tulu's Kannada's, Western Punjabi's, Saraiki's and
-Kashmiri's Urdu's and Yiddish's Hebrew's, renamed, with the letters each
-language adds on long presses (`scripts/build-derived-layouts.py`).
+layouts of Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri,
+Chhattisgarhi, Magahi and Sindhi in Devanagari are Hindi's, Konkani's
+Marathi's, Tulu's Kannada's, Meitei's in the Bengali script Bengali's,
+Western Punjabi's, Saraiki's, Kashmiri's and Brahui's Urdu's and
+Yiddish's Hebrew's, renamed, with the letters each language adds on long
+presses (`scripts/build-derived-layouts.py`).
 xkeyboard-config's copyright and permission notices, which go with every
 copy (its `COPYING`, as xkeyboard-config 2.48 ships it):
 

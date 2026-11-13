@@ -1,0 +1,76 @@
+# Meitei (Manipuri) in the Bengali script from Latin letters, as Meitei
+# is typed in Latin: as for its Meetei Mayek table (mni), a consonant
+# carries the vowel a, and a typed a may be that or া, the long one
+# (mahak: মহাক); ei is ৈ (leibak: লৈবাক), ou ৌ (thoudang: থৌদাং), oi ওই
+# or ওয় (oina: ওইনা, eikhoi: ঐখোয়), w ৱ (waphom: ৱাফম). A syllable's
+# last ng is ং (amasung: অমসুং), its last t ৎ (numit: নুমিৎ), and its
+# other last consonants are written bare (thabak: থবক) or joined to the
+# next with the hasanta (mahakna: মহাক্না). The lexicon chooses.
+
+script abugida
+virama ্
+cluster 0
+schwa 0.8
+final 0
+final-virama 3
+
+[consonants]
+k    ক
+kh   খ  ক্ষ:2
+q    ক
+g    গ
+gh   ঘ
+ng   ঙ  ঙ্গ:1
+ch   চ  ছ:1
+c    চ  ক:1
+j    জ  য:1.5  ঝ:2
+jh   ঝ
+z    জ
+t    ত  ট:1.5
+th   থ  ঠ:1.5
+d    দ  ড:1.5
+dh   ধ  ঢ:2
+n    ন  ণ:1.5
+p    প
+ph   ফ
+f    ফ
+b    ব
+bh   ভ
+v    ভ:0.5  ৱ:0.5  ব:1
+w    ৱ  ব:1
+m    ম
+y    য়  য:1
+r    র
+l    ল
+s    স  শ:0.5  ষ:2
+sh   শ  স:0.8  ষ:1
+h    হ
+x    ক্স
+
+[vowels]
+a     অ/-  আ/া:0.8
+a$    অ/-  আ/া:1
+aa    আ/া  অ/-:1.5
+i     ই/ি  ঈ/ী:0.6
+ee    ঈ/ী  ই/ি:1
+u     উ/ু  ঊ/ূ:1
+oo    উ/ু  ঊ/ূ:1  ও/ো:1
+e     এ/ে  ঐ/ৈ:1.5
+ei    ঐ/ৈ  এই/েই:1.5
+ey    ঐ/ৈ:0.5
+o     ও/ো  অ/-:1.5  ঔ/ৌ:1.5
+ou    ঔ/ৌ
+ow    ঔ/ৌ:0.5
+au    ঔ/ৌ:0.8  আউ/াউ:0.5
+ao    আও/াও  ঔ/ৌ:1
+ai    আই/াই  আয়/ায়:0.5  ঐ/ৈ:1.2
+oi    ওই/োই  ওয়/োয়:0.3
+ui    উই/ুই  উয়/ুয়:0.5
+ri    ঋ/ৃ:2
+
+[other]
+ng$   ং
+ng>c  ং  ঙ্:1.5
+n>c   ং:1.2
+t$    ৎ
+t>c   ৎ

@@ -2,7 +2,7 @@
 
 Keyboard layouts, dictionaries, prediction models and input-method tables
 for [ki-osk](https://github.com/jjtc/ki-osk), an on-screen keyboard, as
-language packs: one per language, 165 in all, and three every language
+language packs: one per language, 167 in all, and three every language
 shares: the text rules, the emoji picker and the offensive-word lists.
 Everything ki-osk knows about a language is here; ki-osk itself is code.
 Beside the data are the builders that produce it
@@ -27,18 +27,18 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 | Path | What | Built by |
 |---|---|---|
-| `predict/<lang>.fst` | Prefix-completion lexicon (86 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
+| `predict/<lang>.fst` | Prefix-completion lexicon (88 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
 | `wordbreak/<lang>.txt` | The word list of a language written without spaces between words (Thai), which cuts its text into words in the trainer, the keyboard and `eval-predict`: ICU's word-break dictionary, as ICU has it | `make word-lists` |
 | `rules/all.weir`, `rules/<lang>.weir` | Text rules: what typing a key does to the text before the caret beyond typing it (the space after a strip word giving way to punctuation, French spacing), and where autocorrect acts besides space, Weir-style, with their tests | by hand |
-| `translit/<lang>.txt` | Transliteration tables (37 languages): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand; `make eval-translit` measures them |
+| `translit/<lang>.txt` | Transliteration tables (39: Sindhi's and Meitei's for both their scripts): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand; `make eval-translit` measures them |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `$SRC_DIR/dakshina/` | Wikipedia text and romanizations of 12 South Asian languages (the Dakshina dataset) — **not committed** | `make fetch-dakshina` |
 | `$SRC_DIR/wikipedia/` | The text of sixteen wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki, Tulu), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
 | `$SRC_DIR/aksharantar/` | Words people romanized, from the test split of AI4Bharat's Aksharantar dataset (Assamese, Maithili, Nepali, Odia, Sanskrit, Konkani, Kashmiri, Meitei, Bodo): what `make eval-translit` measures those tables on — **not committed** | `make fetch-aksharantar` |
-| `$SRC_DIR/fineweb/` | FineWeb-2's web text of five languages with no Wikipedia of their own (Bodo, Dogri, Chhattisgarhi, Magahi, Brahui), the documents that read as their language, and its held-out test text — **not committed**: the text is the web's | `make fetch-fineweb` (needs pyarrow: `FINEWEB_PYTHON`) |
+| `$SRC_DIR/fineweb/` | FineWeb-2's web text of five languages with no Wikipedia of their own (Bodo, Dogri, Chhattisgarhi, Magahi, Brahui) and of Sindhi in Devanagari and Meitei in the Bengali script, the documents that read as their language, and its held-out test text — **not committed**: the text is the web's | `make fetch-fineweb` (needs pyarrow: `FINEWEB_PYTHON`) |
 | `eval/<lang>.txt` | Held-out text no model is trained on (Tatoeba's, or the Wikipedia text of the languages that learn from it alone, Dakshina's or the wikis' own): what keystroke savings are measured on | `make fetch-corpora`, `make fetch-dakshina`, `make fetch-wikipedia` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |
 | `zhuyin/cedict.bin` | Bopomofo → Traditional | `make zhuyin-assets` |
@@ -48,7 +48,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `sources.lock` | What each output was built from | every build target |
 | `pinyin/syllables.txt` | The 413 Mandarin syllables in toneless Pinyin | by hand |
 | `pinyin/double-pinyin.json` | The six double-Pinyin schemes: which key carries which initial and finals | by hand |
-| `layouts/<id>.json` | Keyboard layouts (207): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps (those of Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi, Magahi, Konkani, Tulu, Western Punjabi, Saraiki, Kashmiri, Brahui and Yiddish another language's, renamed), the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make derived-layouts`; `make translit-layouts` |
+| `layouts/<id>.json` | Keyboard layouts (211): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps (those of Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi, Magahi, Sindhi in Devanagari, Konkani, Tulu, Meitei in the Bengali script, Western Punjabi, Saraiki, Kashmiri, Brahui and Yiddish another language's, renamed), the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make derived-layouts`; `make translit-layouts` |
 | `emoji/catalogue.json` | Every fully-qualified emoji with its CLDR name and keywords: the emoji search | `scripts/build-emoji.py` |
 | `offensive/<lang>.txt` | Words a keyboard can keep off its strip (LDNOOBW, AOSP) | by hand |
 | `seeds/` | Tiny Pinyin, Jyutping and kana seeds (offline fallback) | by hand |
@@ -63,8 +63,8 @@ sight rather than mis-decoded.
 ## Packs and releases
 
 A pack is one language's files: its keyboard layouts, and an `.fst`
-lexicon and an `.ngram.bin` table for each of the 86 prediction
-languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's with its word list, thirty-seven with a transliteration
+lexicon and an `.ngram.bin` table for each of the 88 prediction
+languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's with its word list, thirty-nine with a transliteration
 table and the layout that types through it); `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
 (kana–kanji) and `ko` (Hangul) with their layouts; and a pack of its
 layouts alone for each of the 74 other languages with a layout and no

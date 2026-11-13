@@ -15,8 +15,10 @@ strip's words in that layout's font.
 
 Writes layouts/<lang>-abc.json for every table in translit/, each
 language having a layout of its own (scripts/build-derived-layouts.py
-makes those of the languages typed on another's keys); --check fails if a
-written file would differ, as a test of the tree.
+makes those of the languages typed on another's keys); a table of a
+language in a second script (translit/sd-Deva.txt) is its tag's, and its
+layouts' ids are the tag in lower case (sd-deva, sd-deva-abc). --check
+fails if a written file would differ, as a test of the tree.
 
 It writes Hinglish's layout too, hi-latn: Hindi typed in Latin letters
 and left in them, so no composer, but the US layout as it is (its keys,
@@ -41,10 +43,10 @@ def letter(label):
 
 
 def build(lang, us):
-    own = json.loads((ROOT / "layouts" / f"{lang}.json").read_text(encoding="utf-8"))
+    own = json.loads((ROOT / "layouts" / f"{lang.lower()}.json").read_text(encoding="utf-8"))
     name = NAMES.get(lang, own["name"])
     out = {
-        "id": f"{lang}-abc",
+        "id": f"{lang.lower()}-abc",
         "name": f"{name} (abc)",
         "ime": "translit",
     }
@@ -82,7 +84,7 @@ def main():
     check = "--check" in sys.argv[1:]
     us = json.loads((ROOT / "layouts" / "us.json").read_text(encoding="utf-8"))
     stale = []
-    outputs = [(f"{t.stem}-abc", build(t.stem, us)) for t in sorted((ROOT / "translit").glob("*.txt"))]
+    outputs = [(f"{t.stem.lower()}-abc", build(t.stem, us)) for t in sorted((ROOT / "translit").glob("*.txt"))]
     outputs.append(("hi-latn", hinglish(us)))
     for name, text in outputs:
         path = ROOT / "layouts" / f"{name}.json"

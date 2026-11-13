@@ -20,6 +20,13 @@ when it reads as its language:
   together, or are under 1% of its words (Dogri's ऐ गी कन्नै नेई against
   Punjabi's नूं तों विच नाल).
 
+Sindhi in Devanagari (sd-Deva) shares में and का with Hindi, so Hindi's
+other words mark a document as Hindi; and its implosives, written with
+the letters Unicode has for them (ॻ ॼ ॾ ॿ) or, more often on the web,
+as ग ज ड द ब with the underline ॒ (U+0952, after any vowel sign), are
+read as those letters, which the keyboard types. Meitei in the Bengali
+script (mni-Beng) has Bengali's function words (এবং করে হয়…) against it.
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -51,16 +58,31 @@ HINDI = set("है हैं था थी थे का की में क�
 URDU = set("ہے ہیں تھا تھی تھے کا کی میں کو نے نہیں یہ وہ اور لیے کے سے".split())
 PUNJABI = set("नूं तों विच नाल वी सी लई हुण".split())
 DOGRI = set("ऐ गी कन्नै कन्ने नेई बी लेई एह् ओह् च".split())
+BENGALI = set("এবং করে হয় এই যে থেকে জন্য করা তার আমি আমাদের হয়েছে একটি সঙ্গে করেন হবে".split())
+
+# Sindhi's implosives: the letter, or (on the web) its plain consonant
+# with the underline after any vowel signs.
+IMPLOSIVE = {"ग": "ॻ", "ज": "ॼ", "ड": "ॾ", "द": "ॾ", "ब": "ॿ"}
+UNDERLINED = re.compile("([गजडदब])([\u0900-\u0903\u093a-\u094c\u094e\u094f\u0955-\u0957\u0962\u0963]*)\u0952")
+
+
+def sindhi(text):
+    text = UNDERLINED.sub(lambda m: IMPLOSIVE[m.group(1)] + m.group(2), text)
+    return text.replace("\u0952", "")
+
 
 # Each language: its script (Unicode's name for it), the neighbour whose
-# function words mark a document as not its own, and for a language that
-# a rival is mistaken for, its own words and the rival's.
+# function words mark a document as not its own, for a language that a
+# rival is mistaken for, its own words and the rival's, and how its text
+# is read where the web spells it two ways.
 LANGS = {
     "brx": {"script": "DEVANAGARI", "neighbour": HINDI},
     "doi": {"script": "DEVANAGARI", "neighbour": HINDI, "own": DOGRI, "rival": PUNJABI},
     "hne": {"script": "DEVANAGARI", "neighbour": HINDI},
     "mag": {"script": "DEVANAGARI", "neighbour": HINDI},
     "brh": {"script": "ARABIC", "neighbour": URDU},
+    "sd-Deva": {"script": "DEVANAGARI", "neighbour": HINDI - {"में", "का"}, "normalize": sindhi},
+    "mni-Beng": {"script": "BENGALI", "neighbour": BENGALI},
 }
 
 
@@ -104,8 +126,12 @@ def in_script(s, script):
     return 2 * own >= len(letters)
 
 
-def sentences(text, script):
-    for s in END.split(STEERING.sub("", text)):
+def sentences(text, conf):
+    script = conf["script"]
+    text = STEERING.sub("", text)
+    if "normalize" in conf:
+        text = conf["normalize"](text)
+    for s in END.split(text):
         s = " ".join(s.split())
         if len(s) <= 1000 and len(s.split()) >= 3 and not MARKUP.search(s) and in_script(s, script):
             yield s
@@ -136,14 +162,14 @@ def main():
             if not kept(text, conf):
                 dropped += 1
                 continue
-            for s in sentences(text, conf["script"]):
+            for s in sentences(text, conf):
                 if s not in seen:
                     seen.add(s)
                     out.write(s + "\n")
     held = {}
     for text in documents(test):
         if kept(text, conf):
-            for s in sentences(text, conf["script"]):
+            for s in sentences(text, conf):
                 if s not in seen:
                     held.setdefault(s, None)
     held = list(held)[: opts.eval]

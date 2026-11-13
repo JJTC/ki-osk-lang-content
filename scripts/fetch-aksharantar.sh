@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # fetch-aksharantar.sh — romanizations people typed, word by word, for
 # the transliteration tables Dakshina has none for: Assamese, Maithili,
-# Nepali, Odia, Sanskrit, Konkani, Kashmiri, Meitei and Bodo (the Makefile's
-# AKSHARANTAR_LANGS). Only `make eval-translit` reads them: nothing of
-# them is committed or shipped.
+# Nepali, Odia, Sanskrit, Konkani, Kashmiri, Meitei, Bodo and Dogri (the
+# Makefile's AKSHARANTAR_LANGS). Only `make eval-translit` reads them:
+# nothing of them is committed or shipped.
 #
 # They are the test split of AI4Bharat's Aksharantar dataset
 # ("Aksharantar: Towards Building Open Transliteration Tools for the Next
@@ -12,8 +12,8 @@
 # Indian and foreign names. Its manually collected data is CC BY, its
 # mined data CC0. Each language is a zip at Hugging Face
 # (ai4bharat/Aksharantar), pinned by sha256 below; the test split
-# (<code>_test.json, a JSON object a line: "native word", "english
-# word", "source") becomes
+# (<code>_test.json, in a folder in some zips; a JSON object a line:
+# "native word", "english word", "source") becomes
 #
 #   $OUT/<lang>.tsv    the word, its romanization and 1, tab-separated,
 #                      a pair a line: what eval-translit --pairs reads
@@ -39,6 +39,7 @@ kok  kok  c08a2896ef3b85f44937c6fcfa75fefdc0736ffb3deceaf0cf9cf64227cc85e9
 ks   kas  e2488d3972b440bf75ce16db5b43333a83362c9b2c633c914e50dfb6e07d255b
 mni  mni  55d59376fcf08b376dd3db87735869d7d6dd49c78b237582dfcad9f956ed31ad
 brx  brx  4117f9dab514ca613174fd0af6c79fcd74233c6f2a1916e8cc73de0f8ffc0d1b
+doi  doi  a5f79317baa51be6815d89b1e10fd86c5456fb2877b26bdfb5b979b102b33885
 "
 
 # A test split's JSON lines to word<TAB>romanization<TAB>1, the word in
@@ -74,7 +75,8 @@ for lang in $langs; do
 		fi
 		mv -f "$zip.part" "$zip"
 	fi
-	unzip -p "$zip" "${code}_test.json" | python3 -I -c "$CONVERT" > "$OUT/$lang.tsv.part"
+	test=$(unzip -Z1 "$zip" | grep -E "(^|/)${code}_test\.json\$")
+	unzip -p "$zip" "$test" | python3 -I -c "$CONVERT" > "$OUT/$lang.tsv.part"
 	mv -f "$OUT/$lang.tsv.part" "$OUT/$lang.tsv"
 	echo "$OUT/$lang.tsv: $(wc -l < "$OUT/$lang.tsv") pairs"
 done

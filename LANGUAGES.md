@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**208 layouts**: 162 keyboard layouts (RTL: ar he fa + Urdu, Western
+**212 layouts**: 164 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Pashto, Sindhi, Uyghur, Syriac,
 Dhivehi, Yiddish; Hinglish) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) ·
-37 transliteration layouts (Latin letters → the language's script,
-`-abc`) · emoji + numeric. All render native keycaps. 207 are here; the
+39 transliteration layouts (Latin letters → the language's script,
+`-abc`) · emoji + numeric. All render native keycaps. 211 are here; the
 numeric keypad is built into ki-osk. The table below is the complete
-list; **86 languages** carry a prediction
+list; **88 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -86,6 +86,7 @@ but no model to match the glide against · `—` off
 | `ks` | `ks` | Kashmiri کٲشُر | pk + long-press ٲ ۄ ۆ ؠ ۍ and the vowel marks ٕ ٟ ٖ ٗ ٚ ٛ | **RTL** | **Full** (ks)⁶ | — | — |
 | `ps` | `ps` | Pashto | af · ps | **RTL** | **Full** (ps)⁶ | — | — |
 | `sd` | `sd` | Sindhi | pk · snd | **RTL** | **Full** (sd)³ | — | — |
+| `sd-deva` | `sd-Deva` | Sindhi सिंधी (Devanagari) | in + long-press ॻ ॼ ॾ ॿ | LTR | **Full** (sd-Deva)⁷ | — | — |
 | `ug` | `ug` | Uyghur | cn · ug | **RTL** | **Full** (ug) | — | — |
 | `kk` | `kk` | Kazakh | kz | LTR | — | — | — |
 | `ky` | `ky` | Kyrgyz | kg | LTR | — | — | — |
@@ -191,6 +192,7 @@ but no model to match the glide against · `—` off
 | `chr` | `chr` | Cherokee ᏣᎳᎩ | us · chr | LTR | — | — | — |
 | `iu` | `iu` | Inuktitut ᐃᓄᒃᑎᑐᑦ | ca · ike | LTR | — | — | — |
 | `mni` | `mni` | Meitei ꯃꯤꯇꯩ ꯂꯣꯟ | in · mni | LTR | **Full** (mni)⁶ | — | — |
+| `mni-beng` | `mni-Beng` | Meitei মণিপুরী (Bengali script) | in · ben + long-press ৱ | LTR | **Full** (mni-Beng)⁷ | — | — |
 | `dz` | `dz` | Dzongkha རྫོང་ཁ | bt | LTR | — | — | — |
 | `cn-pinyin` | `zh-Hans` | Chinese 中文 (拼音) | — | LTR | IME | — | **Pinyin** (CC-CEDICT) |
 | `tw-zhuyin` | `zh-Hant` | Chinese 中文 (注音) | — | LTR | IME | — | **Zhuyin** Bopomofo → Traditional (CC-CEDICT) |
@@ -214,6 +216,7 @@ but no model to match the glide against · `—` off
 | `hy-abc` | `hy` | Armenian Հայերեն (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Armenian, the hy lexicon choosing |
 | `as-abc` | `as` | Assamese অসমীয়া (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the as lexicon choosing |
 | `sd-abc` | `sd` | Sindhi سنڌي (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the sd lexicon choosing |
+| `sd-deva-abc` | `sd-Deva` | Sindhi सिंधी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the sd-Deva lexicon choosing |
 | `si-abc` | `si` | Sinhala සිංහල (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Sinhala, the si lexicon choosing |
 | `ne-abc` | `ne` | Nepali नेपाली (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the ne lexicon choosing |
 | `or-abc` | `or` | Odia ଓଡ଼ିଆ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Odia, the or lexicon choosing |
@@ -231,6 +234,7 @@ but no model to match the glide against · `—` off
 | `skr-abc` | `skr` | Saraiki سرائیکی (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic (Shahmukhi), the skr lexicon choosing |
 | `ks-abc` | `ks` | Kashmiri کٲشُر (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the ks lexicon choosing |
 | `mni-abc` | `mni` | Meitei ꯃꯤꯇꯩ ꯂꯣꯟ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Meetei Mayek, the mni lexicon choosing |
+| `mni-beng-abc` | `mni-Beng` | Meitei মণিপুরী (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the mni-Beng lexicon choosing |
 | `brx-abc` | `brx` | Bodo बड़ो (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the brx lexicon choosing |
 | `doi-abc` | `doi` | Dogri डोगरी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the doi lexicon choosing |
 | `hne-abc` | `hne` | Chhattisgarhi छत्तीसगढ़ी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hne lexicon choosing |
@@ -281,25 +285,29 @@ but no model to match the glide against · `—` off
    71.6% (73.2%; 19.4%), Bengali 70.8% (74.1%; 19.6%), Tamil 70.0% (71.7%;
    17.0%), Sindhi 65.0% (71.7%; 15.2%), Malayalam 58.2% (60.8%; 13.8%); of the
    words the lexicon has, 74–91% (`make eval-translit`). Assamese,
-   Maithili, Nepali, Odia, Sanskrit, Konkani, Meitei and Kashmiri are
-   measured on the words people romanized for AI4Bharat's Aksharantar
-   dataset (its test split, 4 100 to 6 900 words each, mostly rare words
-   and names; fetched to measure, never shipped): of those their lexicons
-   have, the word comes first for Assamese 86.0% (88.6% among the strip's
-   two), Sanskrit 85.6% (91.2%), Maithili 82.8% (89.0%), Konkani 79.1%
+   Maithili, Nepali, Odia, Sanskrit, Konkani, Meitei, Kashmiri, Bodo and
+   Dogri are measured on the words people romanized for AI4Bharat's
+   Aksharantar dataset (its test split, 2 000 to 6 900 words each, mostly
+   rare words and names; fetched to measure, never shipped): of those
+   their lexicons have, the word comes first for Assamese 86.0% (88.6%
+   among the strip's two), Sanskrit 85.6% (91.2%), Maithili 82.8% (89.0%), Konkani 79.1%
    (84.6%), Nepali 77.1% (82.9%), Odia 76.7% (82.5%), Meitei 75.2%
-   (80.9%), Bodo 67.6% (74.5%) and Kashmiri 44.5% (58.2%), the tables
+   (80.9%), Bodo 67.6% (74.5%), Dogri 55.6% (61.5%) and Kashmiri 44.5%
+   (58.2%), the tables
    reading what those
    romanizations do: the visarga said again after its vowel (ramaha:
    रामः), Assamese's khy for ক্ষ, Nepali's and Maithili's ँ, Odia's ଙ୍କ
    and ର୍ତ୍ତ, Konkani's dh for ड and ie for ई, Meitei's e for a first ꯏ,
-   Bodo's w for its vowel ो and its p, t and k for फ थ ख.
+   Bodo's w for its vowel ो and its p, t and k for फ थ ख, Dogri's h after
+   a vowel for the tone of a lost aspirate (kahr: घर). Many of Dogri's
+   pairs are misaligned (deya: पतयाने), which caps its figure.
    Kashmiri's spelling marks its vowels as each writer chooses, and its
    lexicon has many words both with marks and without (مقبول, مقبوٗل): a
    third of its misses are the word with other marks. Greek, Armenian,
    Persian, Pashto, Mongolian, Bhojpuri, Western Punjabi, Santali,
-   Yiddish, Awadhi, Saraiki, Tulu, Dogri, Chhattisgarhi, Magahi and Brahui
-   have no such measure; their tests read everyday words. Of the 51 checked in the seven tables
+   Yiddish, Awadhi, Saraiki, Tulu, Chhattisgarhi, Magahi, Brahui and the
+   second scripts of Sindhi and Meitei have no such measure; their tests
+   read everyday words. Of the 51 checked in the seven tables
    new with Wikipedia's text, 48 come first and 49 are on the strip;
    Kathmandu's and Lahore's English spellings are not, and Pashto's da
    comes after ده. Sanskrit's, Santali's and Yiddish's tables put first
@@ -313,7 +321,11 @@ but no model to match the glide against · `—` off
    Saraiki and Tulu, 53 come first (Tulu's undu is ಉಂದು, "this", before
    ಉಂಡು, "is"), and of 74 of Dogri, Chhattisgarhi, Magahi and Brahui, 70,
    the others being two words typed alike, the other first (Chhattisgarhi's
-   la: ला before ल). Hindi's, Marathi's and Malayalam's tables also read
+   la: ला before ल). Of 69 everyday words of Sindhi in Devanagari, 65 come
+   first and all are on the strip (its implosives typed single, the word
+   without one first where the web writes both: boli: बोली, ॿोली), and all
+   54 of Meitei's in the Bengali script. Hindi's, Marathi's and
+   Malayalam's tables also read
    English spellings, for the English words those languages write in
    their script (school: स्कूल).
 5. Hinglish is Hindi typed in Latin letters and left in them: the US
@@ -351,10 +363,12 @@ but no model to match the glide against · `—` off
    pointed letters and ligatures (`scripts/build-derived-layouts.py`).
    Bishnupriya Manipuri's wiki is not used: nearly all of it is town
    stubs a bot wrote (98% of its sentences fit 2 000 templates).
-7. These five models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These seven models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
-   Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of their own.
+   Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of their own,
+   and Sindhi in Devanagari and Meitei in the Bengali script, whose wikis
+   are in their other scripts.
    Its language classifier mistakes close languages, so a document is
    kept only when it reads as its language (`scripts/fineweb-text.py`):
    none heavy with Hindi's or Urdu's own function words, none that is a
@@ -364,15 +378,22 @@ but no model to match the glide against · `—` off
    are not used, nor its Garo, all one Bible. Keystroke savings on
    FineWeb-2's held-out test text, which is not committed, the text
    being the web's: Bodo 48.1%, Brahui 46.4%, Magahi 31.4%,
-   Chhattisgarhi 30.1%, Dogri 30.1% (its test text only 33 sentences).
-   Bodo, Dogri, Chhattisgarhi and Magahi are typed on Hindi's keys,
+   Chhattisgarhi 30.1%, Dogri 30.1% (its test text only 33 sentences),
+   Sindhi in Devanagari 40.6% (125), Meitei in the Bengali script 36.5%.
+   Three quarters of the Bengali-script Meitei is the Prime Minister's
+   speeches in translation (narendramodi.in), which its model's
+   suggestions lean to. Sindhi's implosives, which the web mostly writes
+   as a plain letter with the underline ॒ (ग॒), are read as the letters
+   Unicode has for them (ॻ ॼ ॾ ॿ), which its keyboard types. Bodo, Dogri,
+   Chhattisgarhi, Magahi and Sindhi are typed on Hindi's keys (Sindhi's
+   implosives on the long presses of ग ज ड ब), Meitei on Bengali's with ৱ,
    Brahui on Urdu's with ۺ. Bodo's apostrophe, which marks a vowel inside
    a word and at its end (बर'), is in the lexicon inside a word only.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **86 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **88 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -383,7 +404,7 @@ but no model to match the glide against · `—` off
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy** (note 6) ·
-  **web text: brx doi hne mag brh** (FineWeb-2's; note 7). Built by
+  **web text: brx doi hne mag brh sd-Deva mni-Beng** (FineWeb-2's; note 7). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet, because Tatoeba has too few
