@@ -169,10 +169,11 @@ contributors (each article's history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Seven models learn from FineWeb-2's web text alone: those of Bodo,
+Eight models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of
-their own, and of Sindhi in Devanagari (`sd-Deva`) and Meitei in the
-Bengali script (`mni-Beng`), whose wikis are in their other scripts.
+their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei in the
+Bengali script (`mni-Beng`), whose wikis are in their other scripts,
+and of Lao, whose wiki is small.
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
 Pipeline to Scale Them All", arXiv 2506.20920) is text from Common
 Crawl's crawls, sorted by language; **it is ODC-By 1.0, and its use is
@@ -241,17 +242,24 @@ notices below.
 
 ## Word lists
 
-`wordbreak/th.txt`, the word list that cuts Thai text into words (Thai is
-written without spaces between them), in the trainer, the keyboard and
-`eval-predict` alike, is **ICU's Thai word-break dictionary**,
-`icu4c/source/data/brkitr/dictionaries/thaidict.txt` of ICU 79.1,
-committed as ICU has it, its copyright lines with it
-(`scripts/fetch-word-lists.sh` pins it by sha256). It says: "Copyright (C)
-2016 and later: Unicode, Inc. and others. License & terms of use:
-http://www.unicode.org/copyright.html. Copyright (c) 2006-2015
+`wordbreak/th.txt` and `wordbreak/lo.txt`, the word lists that cut Thai
+and Lao text into words (neither is written with spaces between them),
+in the trainer, the keyboard and `eval-predict` alike, are **ICU's Thai
+and Lao word-break dictionaries**,
+`icu4c/source/data/brkitr/dictionaries/thaidict.txt` and `laodict.txt`
+of ICU 79.1, committed as ICU has them, their copyright lines with them
+(`scripts/fetch-word-lists.sh` pins them by sha256). Thai's says:
+"Copyright (C) 2016 and later: Unicode, Inc. and others. License & terms
+of use: http://www.unicode.org/copyright.html. Copyright (c) 2006-2015
 International Business Machines Corporation, Apple Inc., and others. All
-Rights Reserved." Thai's model (`predict/th.*`) is built from Tatoeba's
-sentences cut with it. ICU's licence, for the file, from ICU's `LICENSE`:
+Rights Reserved." Lao's: "Copyright (C) 2016 and later: Unicode, Inc. and
+others. License & terms of use: http://www.unicode.org/copyright.html.
+Copyright (c) 2015 International Business Machines Corporation and
+others. All Rights Reserved.", and that it is the Lao Word List of Brian
+Eugene Wilson and Robert Martin Campbell, below. Thai's model
+(`predict/th.*`) is built from Tatoeba's sentences cut with its list,
+Lao's (`predict/lo.*`) from FineWeb-2's text cut with its. ICU's licence,
+for the files, from ICU's `LICENSE`:
 
 ```text
 UNICODE LICENSE V3
@@ -337,6 +345,38 @@ property of their respective owners.
 ```
 
 Source: https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/thaidict.txt
+
+Lao's list is ICU's copy of the **Lao Word List** of Brian Eugene Wilson
+and Robert Martin Campbell, "with special thanks to Erik Mundall, Arlyta
+Keosamone, and Bualong Nyoukmai" (its version of 2020-11-22, as ICU's
+file says), whose notice, in that file's header, goes with it:
+
+```text
+Copyright (C) 2013 Brian Eugene Wilson, Robert Martin Campbell.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+	Redistributions of source code must retain the above copyright notice, this
+	list of conditions and the following disclaimer. Redistributions in binary
+	form must reproduce the above copyright notice, this list of conditions and
+	the following disclaimer in the documentation and/or other materials
+	provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+Source: https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/laodict.txt
 
 ## Dialect flags
 

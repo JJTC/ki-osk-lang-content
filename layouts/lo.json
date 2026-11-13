@@ -4,7 +4,8 @@
   "xkb_layout": "la",
   "direction": "ltr",
   "swipe_enabled": false,
-  "prediction_enabled": false,
+  "prediction_enabled": true,
+  "prediction_lang": "lo",
   "views": [
     {
       "id": "base",
@@ -12,13 +13,6 @@
         {
           "height_units": 1.0,
           "keys": [
-            {
-              "width_units": 1.5,
-              "label": "",
-              "output": {
-                "kind": "none"
-              }
-            },
             {
               "width_units": 1,
               "label": "ຢ",
@@ -49,6 +43,22 @@
               "output": {
                 "kind": "keycode",
                 "code": 5
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ຸ",
+              "output": {
+                "kind": "keycode",
+                "code": 6
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ູ",
+              "output": {
+                "kind": "keycode",
+                "code": 7
               }
             },
             {
@@ -92,10 +102,11 @@
               }
             },
             {
-              "width_units": 1.5,
-              "label": "",
+              "width_units": 1,
+              "label": "ໍ",
               "output": {
-                "kind": "none"
+                "kind": "keycode",
+                "code": 13
               }
             }
           ]
@@ -524,6 +535,22 @@
             },
             {
               "width_units": 1,
+              "label": "໌",
+              "output": {
+                "kind": "keycode",
+                "code": 6
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ຼ",
+              "output": {
+                "kind": "keycode",
+                "code": 7
+              }
+            },
+            {
+              "width_units": 1,
               "label": "໕",
               "output": {
                 "kind": "keycode",
@@ -560,6 +587,14 @@
               "output": {
                 "kind": "keycode",
                 "code": 12
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ໍ",
+              "output": {
+                "kind": "keycode",
+                "code": 13
               }
             }
           ]

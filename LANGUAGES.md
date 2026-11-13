@@ -13,7 +13,7 @@ Dhivehi, Yiddish; Hinglish) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) ·
 39 transliteration layouts (Latin letters → the language's script,
 `-abc`) · emoji + numeric. All render native keycaps. 211 are here; the
 numeric keypad is built into ki-osk. The table below is the complete
-list; **88 languages** carry a prediction
+list; **89 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -113,7 +113,7 @@ but no model to match the glide against · `—` off
 | `or` | `or` | Odia | in · ori | LTR | **Full** (or)⁶ | — | — |
 | `si` | `si` | Sinhala | lk · sin_phonetic | LTR | **Full** (si)³ | — | — |
 | `km` | `km` | Khmer | kh | LTR | — | — | — |
-| `lo` | `lo` | Lao | la | LTR | — | — | — |
+| `lo` | `lo` | Lao | la | LTR | **Full** (lo)⁷ | — | — |
 | `my` | `my` | Burmese | mm | LTR | — | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | — | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | — | — | — |
@@ -363,12 +363,12 @@ but no model to match the glide against · `—` off
    pointed letters and ligatures (`scripts/build-derived-layouts.py`).
    Bishnupriya Manipuri's wiki is not used: nearly all of it is town
    stubs a bot wrote (98% of its sentences fit 2 000 templates).
-7. These seven models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These eight models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of their own,
-   and Sindhi in Devanagari and Meitei in the Bengali script, whose wikis
-   are in their other scripts.
+   Sindhi in Devanagari and Meitei in the Bengali script, whose wikis are
+   in their other scripts, and Lao, whose wiki is small.
    Its language classifier mistakes close languages, so a document is
    kept only when it reads as its language (`scripts/fineweb-text.py`):
    none heavy with Hindi's or Urdu's own function words, none that is a
@@ -387,13 +387,23 @@ but no model to match the glide against · `—` off
    Unicode has for them (ॻ ॼ ॾ ॿ), which its keyboard types. Bodo, Dogri,
    Chhattisgarhi, Magahi and Sindhi are typed on Hindi's keys (Sindhi's
    implosives on the long presses of ग ज ड ब), Meitei on Bengali's with ৱ,
-   Brahui on Urdu's with ۺ. Bodo's apostrophe, which marks a vowel inside
+   Brahui on Urdu's with ۺ. Lao, written without spaces between words,
+   is cut into words with ICU's Lao word list, as Thai is with its own;
+   FineWeb-2 has 780 million characters of it, of which every 12th row
+   group is read (590 000 sentences), cut where an English word stands
+   (half the words of a model learned with them were English names,
+   each rare), and its letters written two ways (ໍາ and ຳ, ຫນ and ໜ, ຫມ
+   and ໝ, ຫລ and ຫຼ) are one word in the text, the word list and what
+   is typed (`osk_data::wordbreak::lao_fold`). Keystroke savings 44.0%
+   on 9 593 held-out words. Its keyboard now has the vowel signs
+   xkeyboard-config keeps on the number row (ຸ ູ ໍ, and ໌ ຼ on Shift),
+   which the layout's generator had left out. Bodo's apostrophe, which marks a vowel inside
    a word and at its end (बर'), is in the lexicon inside a word only.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **88 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **89 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -404,12 +414,12 @@ but no model to match the glide against · `—` off
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy** (note 6) ·
-  **web text: brx doi hne mag brh sd-Deva mni-Beng** (FineWeb-2's; note 7). Built by
+  **web text: brx doi hne mag brh sd-Deva mni-Beng lo** (FineWeb-2's; note 7; Lao cut into words with ICU's word list too). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet, because Tatoeba has too few
   sentences (< ~6k): the smaller Indic / SE-Asian / minor
-  languages (km lo my mt fo bs sl ga sq tg kk ky, sr-latn) plus syr (Syriac), ber (Tamazight),
+  languages (km my mt fo bs sl ga sq tg kk ky, sr-latn) plus syr (Syriac), ber (Tamazight),
   qu, gn, ay, and most of Tiers E–H (European minority, African, Pacific /
   Americas, and the new-script layouts) — **except `oc gl br eu` and the
   corpus-audit batch `tt mr as ms os`, which cleared the bar** (see above).

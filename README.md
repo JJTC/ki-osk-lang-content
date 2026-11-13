@@ -27,18 +27,18 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 | Path | What | Built by |
 |---|---|---|
-| `predict/<lang>.fst` | Prefix-completion lexicon (88 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
+| `predict/<lang>.fst` | Prefix-completion lexicon (89 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
-| `wordbreak/<lang>.txt` | The word list of a language written without spaces between words (Thai), which cuts its text into words in the trainer, the keyboard and `eval-predict`: ICU's word-break dictionary, as ICU has it | `make word-lists` |
+| `wordbreak/<lang>.txt` | The word list of a language written without spaces between words (Thai, Lao), which cuts its text into words in the trainer, the keyboard and `eval-predict`: ICU's word-break dictionary, as ICU has it | `make word-lists` |
 | `rules/all.weir`, `rules/<lang>.weir` | Text rules: what typing a key does to the text before the caret beyond typing it (the space after a strip word giving way to punctuation, French spacing), and where autocorrect acts besides space, Weir-style, with their tests | by hand |
 | `translit/<lang>.txt` | Transliteration tables (39: Sindhi's and Meitei's for both their scripts): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand; `make eval-translit` measures them |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `$SRC_DIR/dakshina/` | Wikipedia text and romanizations of 12 South Asian languages (the Dakshina dataset) — **not committed** | `make fetch-dakshina` |
 | `$SRC_DIR/wikipedia/` | The text of sixteen wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki, Tulu), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
 | `$SRC_DIR/aksharantar/` | Words people romanized, from the test split of AI4Bharat's Aksharantar dataset (Assamese, Maithili, Nepali, Odia, Sanskrit, Konkani, Kashmiri, Meitei, Bodo): what `make eval-translit` measures those tables on — **not committed** | `make fetch-aksharantar` |
-| `$SRC_DIR/fineweb/` | FineWeb-2's web text of five languages with no Wikipedia of their own (Bodo, Dogri, Chhattisgarhi, Magahi, Brahui) and of Sindhi in Devanagari and Meitei in the Bengali script, the documents that read as their language, and its held-out test text — **not committed**: the text is the web's | `make fetch-fineweb` (needs pyarrow: `FINEWEB_PYTHON`) |
+| `$SRC_DIR/fineweb/` | FineWeb-2's web text of five languages with no Wikipedia of their own (Bodo, Dogri, Chhattisgarhi, Magahi, Brahui), of Sindhi in Devanagari and Meitei in the Bengali script, and of Lao, the documents that read as their language, and its held-out test text — **not committed**: the text is the web's | `make fetch-fineweb` (needs pyarrow: `FINEWEB_PYTHON`) |
 | `eval/<lang>.txt` | Held-out text no model is trained on (Tatoeba's, or the Wikipedia text of the languages that learn from it alone, Dakshina's or the wikis' own): what keystroke savings are measured on | `make fetch-corpora`, `make fetch-dakshina`, `make fetch-wikipedia` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |
 | `zhuyin/cedict.bin` | Bopomofo → Traditional | `make zhuyin-assets` |
@@ -64,10 +64,10 @@ sight rather than mis-decoded.
 
 A pack is one language's files: its keyboard layouts, and an `.fst`
 lexicon and an `.ngram.bin` table for each of the 88 prediction
-languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's with its word list, thirty-nine with a transliteration
+languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's and Lao's with their word lists, thirty-nine with a transliteration
 table and the layout that types through it); `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
 (kana–kanji) and `ko` (Hangul) with their layouts; and a pack of its
-layouts alone for each of the 74 other languages with a layout and no
+layouts alone for each of the 73 other languages with a layout and no
 model yet. Three packs every language shares: `rules`, the text rules,
 which are written by hand, Weir-style (after the rule language of the
 Harper grammar checker): each rule a pattern over the end of the text
@@ -186,8 +186,8 @@ names and jargon, a domain's words, or a bigger corpus than Tatoeba's.
 3. **Build**: `make own-corpus TAG=en CORPUS=corpus.txt OUT=my-data`
    writes `my-data/predict/en.fst`, `en.ngram.bin` and `en.forms.fst`,
    built as the release builds that language (its caps, and the sentence
-   start's), with the text rules in `my-data/rules/` (and Thai's word
-   list in `my-data/wordbreak/`). `TAG` names the language; nothing in
+   start's), with the text rules in `my-data/rules/` (and Thai's or
+   Lao's word list in `my-data/wordbreak/`). `TAG` names the language; nothing in
    this tree changes.
 4. **Measure** with ki-osk's `toolbox eval-predict`, on your held-out
    text and on `eval/`, so as to see that general typing did not get

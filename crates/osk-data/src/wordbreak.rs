@@ -1,18 +1,20 @@
 //! Word lists for the languages written without spaces between words,
-//! Thai first: what [`crate::words::Splitter`] cuts their runs of letters
+//! Thai and Lao: what [`crate::words::Splitter`] cuts their runs of letters
 //! into words with, the same way in the trainer, the keyboard and the
 //! measure.
 //!
 //! A list is a plain text file, one word per line, as ICU's word-break
-//! dictionaries are (`thaidict.txt`): blank lines, lines starting with `#`
+//! dictionaries are (`thaidict.txt`, `laodict.txt`): blank lines, lines starting with `#`
 //! and a byte-order mark are skipped. It has no frequencies, so a run is
 //! cut into the fewest words of the list that cover as much of it as they
 //! can (maximal matching), the earlier word the longer where two cuts tie.
 //! What no word of the list covers is a word of its own, as long as it
 //! runs. A word starts only where the script lets one start: never before
 //! a vowel sign or a tone mark, nor right after a vowel written before its
-//! consonant.
+//! consonant. Lao's letters written two ways ([`lao_fold`]) are one in the
+//! list and in what is looked up in it.
 
+use std::borrow::Cow;
 use std::fmt;
 use std::ops::Range;
 
@@ -25,15 +27,18 @@ use unicode_normalization::{UnicodeNormalization, is_nfc};
 pub enum Script {
     /// Thai, U+0E00 to U+0E7F.
     Thai,
+    /// Lao, U+0E80 to U+0EFF.
+    Lao,
 }
 
 impl Script {
     /// The script `lang` (a BCP-47 tag) is written in, when it is one of
-    /// these: `th`.
+    /// these: `th`, `lo`.
     #[must_use]
     pub fn of_lang(lang: &str) -> Option<Self> {
         match lang.split(['-', '_']).next().unwrap_or(lang) {
             "th" => Some(Self::Thai),
+            "lo" => Some(Self::Lao),
             _ => None,
         }
     }
@@ -45,13 +50,17 @@ impl Script {
     pub fn holds(self, c: char) -> bool {
         match self {
             Self::Thai => ('\u{0E01}'..='\u{0E4E}').contains(&c) && c != '\u{0E3F}',
+            Self::Lao => {
+                ('\u{0E81}'..='\u{0EDF}').contains(&c) && !('\u{0ED0}'..='\u{0ED9}').contains(&c)
+            }
         }
     }
 
     /// Whether a word may start at `c`, after `before`: not on a vowel
     /// sign or a tone mark (marks, and the vowels written after their
-    /// consonant: ะ า ำ ๅ, and the abbreviation mark ฯ), nor right after a
-    /// vowel written before its consonant (เ แ โ ใ ไ).
+    /// consonant: Thai's ะ า ำ ๅ, Lao's ະ າ ຳ and ຽ, and the abbreviation
+    /// marks ฯ ຯ), nor right after a vowel written before its consonant
+    /// (เ แ โ ใ ไ, ເ ແ ໂ ໃ ໄ).
     fn may_start(self, before: char, c: char) -> bool {
         match self {
             Self::Thai => {
@@ -62,16 +71,42 @@ impl Script {
                     )
                     && !('\u{0E40}'..='\u{0E44}').contains(&before)
             }
+            Self::Lao => {
+                !is_combining_mark(c)
+                    && !matches!(
+                        c,
+                        '\u{0EB0}' | '\u{0EB2}' | '\u{0EB3}' | '\u{0EBD}' | '\u{0EAF}'
+                    )
+                    && !('\u{0EC0}'..='\u{0EC4}').contains(&before)
+            }
         }
     }
 
     /// Whether `c` alone is a word, though no list holds it: the
-    /// repetition mark ๆ, written after the word it repeats.
+    /// repetition mark ๆ (ໆ), written after the word it repeats.
     fn is_word_alone(self, c: char) -> bool {
         match self {
             Self::Thai => c == '\u{0E46}',
+            Self::Lao => c == '\u{0EC6}',
         }
     }
+}
+
+/// Lao's letters written two ways, written the way its keyboard types
+/// them: ໍ and າ as ຳ (U+0EB3), ຫ before ນ, ມ and ລ as the ligatures ໜ and
+/// ໝ and as ຫຼ, the subscript lo. The web writes both (a third of its ຳ is
+/// ໍາ), and so does ICU's word list. Other text is left as it is.
+#[must_use]
+pub fn lao_fold(s: &str) -> Cow<'_, str> {
+    if !s.contains(['\u{0ECD}', '\u{0EAB}']) {
+        return Cow::Borrowed(s);
+    }
+    Cow::Owned(
+        s.replace("\u{0ECD}\u{0EB2}", "\u{0EB3}")
+            .replace("\u{0EAB}\u{0E99}", "\u{0EDC}")
+            .replace("\u{0EAB}\u{0EA1}", "\u{0EDD}")
+            .replace("\u{0EAB}\u{0EA5}", "\u{0EAB}\u{0EBC}"),
+    )
 }
 
 /// A language's words, for cutting its text where it has no spaces.
@@ -146,7 +181,7 @@ impl WordList {
     {
         let mut words: Vec<String> = words
             .into_iter()
-            .map(|w| w.as_ref().nfc().collect::<String>())
+            .map(|w| lao_fold(&w.as_ref().nfc().collect::<String>()).into_owned())
             .filter(|w| !w.is_empty())
             .collect();
         words.sort_unstable();
@@ -257,12 +292,12 @@ impl WordList {
     }
 }
 
-/// `f` of `s` in NFC, which the list's words are in.
+/// `f` of `s` in NFC and Lao's letters folded, as the list's words are.
 fn nfc_then(s: &str, f: impl Fn(&str) -> bool) -> bool {
     if is_nfc(s) {
-        f(s)
+        f(&lao_fold(s))
     } else {
-        f(&s.nfc().collect::<String>())
+        f(&lao_fold(&s.nfc().collect::<String>()))
     }
 }
 
@@ -379,6 +414,66 @@ mod tests {
     }
 
     #[test]
+    fn lao_is_cut_as_thai_is() {
+        let list = WordList::from_words([
+            "ພາສາ",
+            "ລາວ",
+            "ພາສາລາວ",
+            "ເປັນ",
+            "ຂອງ",
+            "ປະເທດ",
+            "ປະເທດລາວ",
+            "ເດັກ",
+            "ກິນ",
+            "ເຂົ້າ",
+        ]);
+        let cut = |run: &str| -> Vec<String> {
+            list.cut(Script::Lao, run, false)
+                .into_iter()
+                .map(|r| run[r].to_string())
+                .collect()
+        };
+        assert_eq!(
+            cut("ພາສາລາວເປັນພາສາຂອງປະເທດລາວ"),
+            ["ພາສາລາວ", "ເປັນ", "ພາສາ", "ຂອງ", "ປະເທດລາວ"]
+        );
+        // No word starts after ເ, nor on ະ or ັ; ໆ is a word of its own.
+        assert_eq!(cut("ເດັກໆກິນເຂົ້າ"), ["ເດັກ", "ໆ", "ກິນ", "ເຂົ້າ"]);
+        let list = WordList::from_words(["ເ", "ດັກ", "ປ", "ະ"]);
+        assert_eq!(
+            list.cut(Script::Lao, "ເດັກ", false).len(),
+            1,
+            "ເດັກ is one word"
+        );
+        assert_eq!(
+            list.cut(Script::Lao, "ປະ", false).len(),
+            1,
+            "ປະ is one word"
+        );
+    }
+
+    #[test]
+    fn lao_written_two_ways_is_one() {
+        assert_eq!(lao_fold("ສໍາລັບ"), "ສຳລັບ");
+        assert_eq!(lao_fold("ນ້ໍາ"), "ນ້ຳ");
+        assert_eq!(lao_fold("ຫນ້າ ຫມາກ ຫລາຍ"), "ໜ້າ ໝາກ ຫຼາຍ");
+        assert!(matches!(lao_fold("ບໍ່"), Cow::Owned(ref w) if w == "ບໍ່"));
+        assert!(matches!(lao_fold("ภาษาไทย"), Cow::Borrowed(_)));
+        // A word the list has one way is found written the other, in a
+        // run of the other.
+        let list = WordList::from_words(["ສໍາລັບ", "ໜ້າ", "ເດັກ"]);
+        assert!(list.contains("ສຳລັບ") && list.contains("ສໍາລັບ"));
+        assert!(list.contains("ຫນ້າ") && list.begins("ຫນ"));
+        let run = "ສຳລັບເດັກຫນ້າ";
+        let words: Vec<&str> = list
+            .cut(Script::Lao, run, false)
+            .into_iter()
+            .map(|r| &run[r])
+            .collect();
+        assert_eq!(words, ["ສຳລັບ", "ເດັກ", "ຫນ້າ"]);
+    }
+
+    #[test]
     fn the_script_s_characters() {
         assert!(Script::Thai.holds('ก'));
         assert!(Script::Thai.holds('ๆ'));
@@ -387,5 +482,8 @@ mod tests {
         assert!(!Script::Thai.holds('a'));
         assert_eq!(Script::of_lang("th-TH"), Some(Script::Thai));
         assert_eq!(Script::of_lang("en"), None);
+        assert!(Script::Lao.holds('ກ') && Script::Lao.holds('ໆ') && Script::Lao.holds('ໜ'));
+        assert!(!Script::Lao.holds('໑') && !Script::Lao.holds('ก'));
+        assert_eq!(Script::of_lang("lo"), Some(Script::Lao));
     }
 }

@@ -30,7 +30,7 @@ ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
                  oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
                  bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                 brx doi hne mag brh sd-Deva mni-Beng
+                 brx doi hne mag brh sd-Deva mni-Beng lo
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -60,14 +60,15 @@ WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 
 # FineWeb-2's web text, the whole corpus of languages with no Wikipedia of
-# their own: Bodo, Dogri, Chhattisgarhi, Magahi and Brahui, and of Sindhi
-# in Devanagari and Meitei in the Bengali script (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
+# their own: Bodo, Dogri, Chhattisgarhi, Magahi and Brahui, of Sindhi in
+# Devanagari and Meitei in the Bengali script, and of Lao, whose wiki is
+# small (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
 # the held-out text is FineWeb-2's test split, in $(FINEWEB_DIR)/eval, and
 # like the corpus it is not committed. Reading parquet needs pyarrow:
 # FINEWEB_PYTHON names a Python that has it.
-FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng
+FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo
 FINEWEB_DIR = $(SRC_DIR)/fineweb
 FINEWEB_PYTHON ?= python3
 
@@ -138,7 +139,7 @@ PREDICT_WIDE_NGRAM ?= 90000
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
 PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                      brx doi hne mag brh sd-Deva mni-Beng
+                      brx doi hne mag brh sd-Deva mni-Beng lo
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the

@@ -32,11 +32,11 @@
 //!   (`Ի՞նչ`), Hebrew's gershayim in acronyms (`לחו"ל`), a leading
 //!   apostrophe in Breton (`'zo`) and in Dutch's `'s`, `'t`, `'n`, `'k` and
 //!   `'m`.
-//! - Thai is written without spaces between words: a run of Thai letters is
-//!   cut into the words of the language's word list
+//! - Thai and Lao are written without spaces between words: a run of their
+//!   letters is cut into the words of the language's word list
 //!   ([`crate::wordbreak`], given with [`Splitter::with_word_list`]), each
 //!   after the first glued to the one before, as `homme` is to `l'`; so a
-//!   keyboard types no space after a Thai word. Without a list, a run is
+//!   keyboard types no space after a Thai or Lao word. Without a list, a run is
 //!   one word.
 //!
 //! A word's identity, what lexicons and n-gram tables are keyed on, is
@@ -88,7 +88,8 @@ pub struct Splitter {
     /// Dotted and dotless i (Turkish, Azerbaijani): `I` lower-cases to
     /// `ı`, `İ` to `i`, and `i` upper-cases to `İ`.
     turkic: bool,
-    /// The script the language writes without spaces between words (Thai).
+    /// The script the language writes without spaces between words (Thai,
+    /// Lao).
     script: Option<Script>,
     /// The words its runs are cut into.
     word_list: Option<Arc<WordList>>,
@@ -135,6 +136,9 @@ enum Fold {
     Marathi,
     /// Latin as Cyrillic: the texts write both, the keyboard types Cyrillic.
     Serbian,
+    /// Lao's ໍາ, ຫນ, ຫມ and ຫລ as the keyboard types them: ຳ ໜ ໝ ຫຼ
+    /// ([`crate::wordbreak::lao_fold`]).
+    Lao,
 }
 
 /// The elided words French writes with an apostrophe before a vowel.
@@ -370,6 +374,7 @@ impl Splitter {
             "ar" | "ug" => s.fold = Fold::Arabic,
             "mr" => s.fold = Fold::Marathi,
             "sr" => s.fold = Fold::Serbian,
+            "lo" => s.fold = Fold::Lao,
             _ => {}
         }
         s
@@ -377,7 +382,7 @@ impl Splitter {
 
     /// Whether the language is written without spaces between words, so
     /// that its words are found with a word list ([`Self::with_word_list`]):
-    /// Thai.
+    /// Thai, Lao.
     #[must_use]
     pub fn wants_word_list(&self) -> bool {
         self.script.is_some()
@@ -426,6 +431,7 @@ impl Splitter {
                 .replace("\u{905}\u{200D}\u{945}", "\u{972}")
                 .replace("\u{905}\u{945}", "\u{972}"),
             Fold::Serbian => cyrillic(&lower),
+            Fold::Lao => crate::wordbreak::lao_fold(&lower).into_owned(),
             _ => lower,
         }
     }
@@ -698,7 +704,7 @@ impl Splitter {
 
     /// Whether the next word follows `word` with no space between: it is
     /// elided (`l'`, `dell'`, Kabyle `fell-`), or ends in a script written
-    /// without spaces between words (Thai), so a keyboard that types it
+    /// without spaces between words (Thai, Lao), so a keyboard that types it
     /// types no space after it.
     #[must_use]
     pub fn glues_on(&self, word: &str) -> bool {

@@ -60,6 +60,7 @@ kn  = "Kannada"
 kok = "Konkani"
 ks  = "Kashmiri"
 ku  = "Kurdish (Kurmanji)"
+lo  = "Lao"
 lt  = "Lithuanian"
 lv  = "Latvian"
 mag = "Magahi"
@@ -147,6 +148,18 @@ licenses = [
 ]
 sources = [
   { name = "ICU's Thai word-break dictionary (thaidict.txt, ICU 79.1)", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/thaidict.txt", lock = "predict/th", input = "wordbreak/th.txt" },
+]
+
+# Lao's list carries its authors' BSD notice in its header, as ICU has it
+# (the notice is that header's; NOTICES.md).
+[prediction.wordbreak.lo]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+  { name = "ICU License (ICU 1.8.1 to 57.1)", url = "https://github.com/unicode-org/icu/blob/release-79.1/LICENSE", share_alike = false },
+  { name = "BSD-2-Clause (the Lao Word List, Brian Eugene Wilson and Robert Martin Campbell)", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/laodict.txt", share_alike = false },
+]
+sources = [
+  { name = "ICU's Lao word-break dictionary (laodict.txt, ICU 79.1), from the Lao Word List", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/laodict.txt", lock = "predict/lo", input = "wordbreak/lo.txt" },
 ]
 
 # Wikipedia text of twelve South Asian languages, as the Dakshina dataset
@@ -408,7 +421,6 @@ ky  = "Kyrgyz"
 lb  = "Luxembourgish"
 lg  = "Luganda"
 ln  = "Lingala"
-lo  = "Lao"
 mg  = "Malagasy"
 mi  = "Māori"
 mt  = "Maltese"

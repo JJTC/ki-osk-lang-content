@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # fetch-fineweb.sh — web text of the languages that have no Wikipedia of
 # their own, from FineWeb-2 (the Makefile's FINEWEB_LANGS): Bodo, Dogri,
-# Chhattisgarhi, Magahi and Brahui, and Sindhi in Devanagari and Meitei in
-# the Bengali script, whose wikis are in their other scripts.
+# Chhattisgarhi, Magahi and Brahui, Sindhi in Devanagari and Meitei in
+# the Bengali script, whose wikis are in their other scripts, and Lao,
+# whose wiki is small.
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
 # it is ODC-By 1.0, and its use subject to Common Crawl's Terms of Use.
@@ -45,6 +46,8 @@ sd-Deva   snd_Deva  train/000_00000.parquet  7f1ec469c99291070d1260138aaae2baea0
 sd-Deva   snd_Deva  test/000_00000.parquet   cf891207f43a93754a5f0c870fe9c4da73fb28e1e575e6c7d1e29523fa2a8638
 mni-Beng  mni_Beng  train/000_00000.parquet  70c880e2be17a13639b86139961cda481a96c25429ba0f136e6061cf6288a73e
 mni-Beng  mni_Beng  test/000_00000.parquet   92dd42dc4360a753b7e1a96a5c2a92edcf52a7f747c1c9e73346b24df8875773
+lo   lao_Laoo  train/000_00000.parquet  19e5de2c1054ceed9946a91922db64690af5e61b248c8556de0832c8d3f66040
+lo   lao_Laoo  test/000_00000.parquet   d0d84f18de6400f06a2ed725f0858a517593fbbe0ac0698dc3418b2f5138b4ce
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

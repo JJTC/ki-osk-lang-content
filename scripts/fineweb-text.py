@@ -26,6 +26,15 @@ the letters Unicode has for them (ॻ ॼ ॾ ॿ) or, more often on the web,
 as ग ज ड द ब with the underline ॒ (U+0952, after any vowel sign), are
 read as those letters, which the keyboard types. Meitei in the Bengali
 script (mni-Beng) has Bengali's function words (এবং করে হয়…) against it.
+Lao, written without spaces between words, ends a sentence at a line's
+end too, its sentences being as often unpunctuated, and a short one is
+one of fewer than 15 letters rather than 3 words; FineWeb-2 has far more
+of it than a model needs (780 million characters), so every 12th of its
+row groups is read (`every`), 70 million characters. Its sentences are
+cut where a word in another script stands (English names, mostly: half
+the words of a model learned with them were English, each rare), and
+its letters written two ways are written as the keyboard types them
+(ໍາ as ຳ, ຫນ ຫມ ຫລ as ໜ ໝ ຫຼ; osk_data::wordbreak::lao_fold).
 
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
@@ -66,6 +75,11 @@ IMPLOSIVE = {"ग": "ॻ", "ज": "ॼ", "ड": "ॾ", "द": "ॾ", "ब": "ॿ
 UNDERLINED = re.compile("([गजडदब])([\u0900-\u0903\u093a-\u094c\u094e\u094f\u0955-\u0957\u0962\u0963]*)\u0952")
 
 
+def lao(text):
+    return (text.replace("\u0ecd\u0eb2", "\u0eb3").replace("\u0eab\u0e99", "\u0edc")
+            .replace("\u0eab\u0ea1", "\u0edd").replace("\u0eab\u0ea5", "\u0eab\u0ebc"))
+
+
 def sindhi(text):
     text = UNDERLINED.sub(lambda m: IMPLOSIVE[m.group(1)] + m.group(2), text)
     return text.replace("\u0952", "")
@@ -83,6 +97,8 @@ LANGS = {
     "brh": {"script": "ARABIC", "neighbour": URDU},
     "sd-Deva": {"script": "DEVANAGARI", "neighbour": HINDI - {"में", "का"}, "normalize": sindhi},
     "mni-Beng": {"script": "BENGALI", "neighbour": BENGALI},
+    "lo": {"script": "LAO", "neighbour": set(), "lines": True, "unspaced": True, "every": 12,
+           "normalize": lao, "script_only": True},
 }
 
 
@@ -126,21 +142,44 @@ def in_script(s, script):
     return 2 * own >= len(letters)
 
 
+def long_enough(s, conf):
+    if conf.get("unspaced"):
+        return sum(c.isalpha() for c in s) >= 15
+    return len(s.split()) >= 3
+
+
 def sentences(text, conf):
     script = conf["script"]
     text = STEERING.sub("", text)
     if "normalize" in conf:
         text = conf["normalize"](text)
-    for s in END.split(text):
-        s = " ".join(s.split())
-        if len(s) <= 1000 and len(s.split()) >= 3 and not MARKUP.search(s) and in_script(s, script):
-            yield s
+    pieces = text.split("\n") if conf.get("lines") else [text]
+    for piece in pieces:
+        for s in END.split(piece):
+            for s in script_runs(s, script) if conf.get("script_only") else [" ".join(s.split())]:
+                if len(s) <= 1000 and long_enough(s, conf) and not MARKUP.search(s) and in_script(s, script):
+                    yield s
 
 
-def documents(paths):
+def script_runs(s, script):
+    """`s` cut where a word has letters of another script, those left out."""
+    runs, run = [], []
+    for w in s.split():
+        if all(unicodedata.name(c, "").startswith(script) for c in w if c.isalpha()):
+            run.append(w)
+        elif run:
+            runs.append(" ".join(run))
+            run = []
+    if run:
+        runs.append(" ".join(run))
+    return runs
+
+
+def documents(paths, every=1):
     for path in paths:
-        for batch in pq.ParquetFile(path).iter_batches(columns=["text"], batch_size=1000):
-            yield from batch.column("text").to_pylist()
+        f = pq.ParquetFile(path)
+        for g in range(0, f.metadata.num_row_groups, every):
+            yield from f.read_row_group(g, columns=["text"]).column("text").to_pylist()
 
 
 def main():
@@ -157,7 +196,7 @@ def main():
     seen = set()
     docs = dropped = 0
     with open(opts.out, "w", encoding="utf-8") as out:
-        for text in documents(train):
+        for text in documents(train, conf.get("every", 1)):
             docs += 1
             if not kept(text, conf):
                 dropped += 1

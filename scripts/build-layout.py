@@ -110,6 +110,7 @@ LANGS = [
     # ต จ ข ช, and on Shift ู ฿), lifted to a top row with the vowel signs
     # among them (NUMBER_ROW_MARKS).
     ("th", "ไทย", "th", "", "thai"),
+    # Lao: its number row likewise (ຢ ຟ ໂ ຖ ຸ ູ ຄ ຕ ຈ ຂ ຊ ໍ; ໌ ຼ on Shift).
     ("lo", "ລາວ", "la", "", "lao"),
     ("my", "မြန်မာ", "mm", "", "myanmar"),
     # --- Central-Asian / Baltic: extra letters on the NUMBER ROW ---
@@ -409,8 +410,9 @@ def _spacer(width):
 
 
 # Scripts whose national keymap puts vowel signs on the number row, which
-# `.isalpha()` does not take for letters: Thai's ุ and ึ (and ู on Shift).
-NUMBER_ROW_MARKS = {"thai"}
+# `.isalpha()` does not take for letters: Thai's ุ and ึ (and ู on Shift),
+# Lao's ຸ ູ and ໍ (and ໌ ຼ on Shift).
+NUMBER_ROW_MARKS = {"thai", "lao"}
 
 
 def is_mark(g):

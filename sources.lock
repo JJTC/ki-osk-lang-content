@@ -835,6 +835,24 @@
         "words": "2"
       }
     },
+    "predict/lo": {
+      "encoder": "476e4b3f5e3a-dirty",
+      "inputs": {
+        "fineweb/lo.txt": "e11fe3d059c8815eed17b616cbe82ea2357055ce4a908c9a9b5939ef41a37cab",
+        "wordbreak/lo.txt": "3c876934a3fa81031d2333525eafaca6a7c9f842e3b98f18c38880420afb5d36"
+      },
+      "outputs": {
+        "predict/lo.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/lo.fst": "acf5331b6c23f1b9e45b483e803fe6534450e9cad480d71fcf0c14685074184d",
+        "predict/lo.ngram.bin": "146debc8f24588b0b4ca0633e136695ab34cabebf0a4e6c61bb33e4f450fff96"
+      },
+      "recipe": {
+        "ngram_keep": "60000",
+        "start_keep": "5000",
+        "vocab_size": "30000",
+        "words": "2"
+      }
+    },
     "predict/lt": {
       "encoder": "d7a0b8cec89d-dirty",
       "inputs": {

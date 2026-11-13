@@ -186,8 +186,21 @@ fn every_offensive_list_has_words() {
     }
 }
 
+/// Lao written as it is written, for its word list: its held-out text is
+/// FineWeb-2's, which is not committed.
+const LAO: &[&str] = &[
+    "ພາສາລາວເປັນພາສາທາງການຂອງປະເທດລາວ",
+    "ຂ້ອຍຮັກເຈົ້າຫຼາຍ",
+    "ມື້ນີ້ອາກາດດີ",
+    "ລາວໄປໂຮງຮຽນທຸກມື້",
+    "ຂອບໃຈຫຼາຍໆ",
+    "ພວກເຮົາກິນເຂົ້າຢູ່ເຮືອນ",
+    "ນະຄອນຫຼວງວຽງຈັນ",
+];
+
 /// Each word list parses, belongs to a language written without spaces
-/// between words, and cuts its held-out text into words of the list.
+/// between words, and cuts its held-out text (Lao's, [`LAO`]) into words of
+/// the list.
 #[test]
 fn every_word_list_cuts_its_language() {
     use std::sync::Arc;
@@ -219,8 +232,12 @@ fn every_word_list_cuts_its_language() {
             name(&p)
         );
         let splitter = splitter.with_word_list(list.clone());
-        let eval = std::fs::read_to_string(root().join(format!("eval/{lang}.txt")))
-            .unwrap_or_else(|e| panic!("eval/{lang}.txt: {e}"));
+        let eval = if lang == "lo" {
+            LAO.join("\n")
+        } else {
+            std::fs::read_to_string(root().join(format!("eval/{lang}.txt")))
+                .unwrap_or_else(|e| panic!("eval/{lang}.txt: {e}"))
+        };
         let (mut words, mut known) = (0usize, 0usize);
         for line in eval.lines() {
             for w in splitter.words(line) {
@@ -252,6 +269,29 @@ fn thai_is_cut_as_written() {
         .map(|w| w.text)
         .collect();
     assert_eq!(words, ["ผม", "ต้อง", "ไป", "ธนาคาร", "ฉัน", "ไป", "โรงเรียน"]);
+}
+
+#[test]
+fn lao_is_cut_as_written() {
+    use std::sync::Arc;
+
+    use osk_data::wordbreak::WordList;
+    use osk_data::words::Splitter;
+
+    let text = std::fs::read_to_string(root().join("wordbreak/lo.txt")).unwrap();
+    let list = WordList::parse(&text).unwrap();
+    let splitter = Splitter::new("lo").with_word_list(Arc::new(list));
+    let cut = |s: &str| -> Vec<String> { splitter.words(s).into_iter().map(|w| w.text).collect() };
+    assert_eq!(cut("ຂ້ອຍຮັກເຈົ້າຫຼາຍ"), ["ຂ້ອຍ", "ຮັກ", "ເຈົ້າ", "ຫຼາຍ"]);
+    // The same words written the other way (ຫລ for ຫຼ; ໍາ for ຳ and ຫນ for
+    // ໜ alike) are the same words.
+    assert_eq!(cut("ຂ້ອຍຮັກເຈົ້າຫລາຍ"), cut("ຂ້ອຍຮັກເຈົ້າຫຼາຍ"));
+    assert_eq!(
+        splitter.normalize("ຫລາຍ"),
+        splitter.normalize("ຫຼາຍ"),
+        "one word, written two ways"
+    );
+    assert_eq!(splitter.normalize("ສໍາລັບ"), "ສຳລັບ");
 }
 
 /// A language's lexicon, read as the keyboard reads it, for a table's
