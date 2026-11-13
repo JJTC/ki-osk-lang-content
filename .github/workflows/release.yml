@@ -9,6 +9,13 @@ name: release language content
 # change what a released version contains. A version with a release is
 # never released again, so most pushes stop at the first step.
 #
+# A release is built as a draft and published once every asset is on it.
+# GitHub refuses content requests past about 500 an hour, and each asset
+# is one: scripts/release-upload.sh uploads only what the draft lacks,
+# waits out a refusal and carries on, and a run that still ran out of
+# time leaves its draft, which the next run (a re-run, or the next push)
+# finishes. A draft without the corpora is such a draft, not a refresh's.
+#
 # Assets (`make release`, then the corpora):
 #   packs.json, <path>.gz, NOTICES.md   the packs: the index, each file
 #                                       gzipped, the licence notices
@@ -32,7 +39,7 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 180
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
@@ -40,7 +47,7 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
 
@@ -50,9 +57,13 @@ jobs:
           set -euo pipefail
           version=$(python3 scripts/version.py get); tag=v$version
           state=$(gh release view "$tag" --json isDraft --jq .isDraft 2>/dev/null || echo none)
-          case "$state" in
-            false) mode=released; echo "$tag is released; nothing to do" ;;
-            true) mode=draft; echo "publishing the refresh's draft $tag" ;;
+          corpora=$(gh release view "$tag" --json assets \
+            --jq "any(.assets[]; .name == \"ki-osk-lang-corpora-$version.tar.xz\")" \
+            2>/dev/null || echo false)
+          case "$state/$corpora" in
+            false/*) mode=released; echo "$tag is released; nothing to do" ;;
+            true/true) mode=draft; echo "publishing the refresh's draft $tag" ;;
+            true/*) mode=resume; echo "finishing the draft $tag a run left" ;;
             *) mode=new; echo "releasing $tag" ;;
           esac
           prev=$(gh release list --exclude-drafts --limit 1 --json tagName --jq '.[0].tagName // empty')
@@ -116,28 +127,34 @@ jobs:
             echo "ki-osk does this with \`toolbox lang install\`, against a pinned \`packs.json\`."
             echo
             echo "Licences travel with these files: the Chinese and Cantonese dictionaries"
-            echo "(\`zh-Hans\`, \`zh-Hant\`, \`yue\`) are share-alike, the prediction packs carry"
-            echo "Tatoeba's CC BY 2.0 FR, and \`ja\` mozc's BSD licence. \`NOTICES.md\` is an asset"
-            echo "and inside the tarball."
+            echo "(\`zh-Hans\`, \`zh-Hant\`, \`yue\`) and the packs whose models learn from"
+            echo "Wikipedia text (the Dakshina dataset's or the wikis' own) are share-alike, the"
+            echo "other prediction packs carry Tatoeba's CC BY 2.0 FR, and \`ja\` mozc's BSD"
+            echo "licence. Each pack's manifest names its licences; \`NOTICES.md\` is an asset and"
+            echo "inside the tarball."
           } > "$RUNNER_TEMP/notes.md"
           cat "$RUNNER_TEMP/notes.md" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Publish the refresh's draft
-        if: steps.v.outputs.mode == 'draft'
-        env:
-          TAG: ${{ steps.v.outputs.tag }}
-        run: |
-          set -euo pipefail
-          gh release upload "$TAG" dist/release/* --clobber
-          gh release edit "$TAG" --target "$GITHUB_SHA" --draft=false --latest \
-            --title "Language content $TAG" --notes-file "$RUNNER_TEMP/notes.md"
-
-      - name: Create the release
+      - name: Create the draft
         if: steps.v.outputs.mode == 'new'
         env:
           TAG: ${{ steps.v.outputs.tag }}
         run: |
           set -euo pipefail
-          gh release create "$TAG" --target "$GITHUB_SHA" --latest \
-            --title "Language content $TAG" --notes-file "$RUNNER_TEMP/notes.md" \
-            dist/release/*
+          gh release create "$TAG" --draft --target "$GITHUB_SHA" \
+            --title "Language content $TAG" --notes-file "$RUNNER_TEMP/notes.md"
+
+      - name: Upload the assets
+        if: steps.v.outputs.mode != 'released'
+        env:
+          TAG: ${{ steps.v.outputs.tag }}
+        run: scripts/release-upload.sh "$TAG" dist/release
+
+      - name: Publish the release
+        if: steps.v.outputs.mode != 'released'
+        env:
+          TAG: ${{ steps.v.outputs.tag }}
+        run: |
+          set -euo pipefail
+          gh release edit "$TAG" --target "$GITHUB_SHA" --draft=false --latest \
+            --title "Language content $TAG" --notes-file "$RUNNER_TEMP/notes.md"
