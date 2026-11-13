@@ -455,7 +455,7 @@ record how each group was added and what it needs at runtime:
   Santali predicts since its wiki's text gave it a model (note 6), the
   others are layout-only pending corpora. Verified headless: Dhivehi renders
   RTL-mirrored, Santali in Ol Chiki, and Tibetan now renders too — proven
-  on the NUC via `dz` Dzongkha (Tier H), which shares the `bo` face.
+  on the test machine via `dz` Dzongkha (Tier H), which shares the `bo` face.
 - **Tier E — European minority / regional**: 14 more,
   all DejaVu-drawable. Ten Latin on the us/es base — Celtic (`cy` Welsh
   with ŵ/ŷ, `gd` Scottish Gaelic), Iberian (`eu` Basque, `gl` Galician),
@@ -486,7 +486,7 @@ record how each group was added and what it needs at runtime:
   `bo` face. `ti` Tigrinya shares the Amharic
   Ge'ez phonetic composer (`ImeKind::Geez`) and Noto Sans Ethiopic. Each
   new face loads lazily like the others. **Render-verified headless on the
-  NUC** — all four new-script keyboards paint real glyphs (Meetei/Tibetan
+  test machine** — all four new-script keyboards paint real glyphs (Meetei/Tibetan
   combining signs show on a dotted circle, the mobile convention). (N'Ko
   and Yi were probed but aren't in this host's xkeyboard-config, so they're
   deferred.)

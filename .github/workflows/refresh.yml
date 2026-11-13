@@ -75,7 +75,7 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
 
@@ -93,7 +93,7 @@ jobs:
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "tag=v$version" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: corpora
           path: predict/corpora/*.txt
@@ -101,7 +101,7 @@ jobs:
           retention-days: 14
       # The held-out text fetch-corpora set aside: what keystroke savings
       # are measured on, before and after.
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: eval
           path: eval/*.txt
@@ -117,13 +117,13 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
       - uses: ./.github/actions/rust
         with:
           cache-key: dicts
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: corpora
           path: predict/corpora
@@ -146,7 +146,7 @@ jobs:
       - name: CJK dictionaries (fetches the upstream datasets)
         run: make cjk-assets SRC_DIR="$RUNNER_TEMP/sources"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: dicts
           path: |
@@ -173,11 +173,11 @@ jobs:
         shell: bash
         working-directory: ki-osk-lang-content
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           path: ki-osk-lang-content
           persist-credentials: false
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           repository: ${{ env.KI_OSK_REPO }}
           ref: ${{ inputs.ki_osk_ref || vars.KI_OSK_REF || '' }}
@@ -215,11 +215,11 @@ jobs:
           } >> .cargo/config.toml
           cargo update -p osk-data
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: corpora
           path: ki-osk-lang-content/predict/corpora
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: eval
           path: ki-osk-lang-content/eval
@@ -236,7 +236,7 @@ jobs:
           --data ../ki-osk-lang-content --eval ../ki-osk-lang-content/eval
           --json "$RUNNER_TEMP/ksr-before.json"
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: dicts
           path: ki-osk-lang-content
@@ -309,7 +309,7 @@ jobs:
           # The exact text every model in this refresh was trained on.
           tar --sort=name --owner=0 --group=0 --numeric-owner --mtime=@0 \
             -C predict/corpora -cf - . | xz -9 -T1 > "$out/ki-osk-lang-corpora-$VERSION.tar.xz"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: steps.diff.outputs.changed == 'true'
         with:
           name: result
@@ -335,8 +335,8 @@ jobs:
       BRANCH: data-refresh
       BASE: ${{ github.event.repository.default_branch }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
         with:
           name: result
           path: ${{ runner.temp }}/result

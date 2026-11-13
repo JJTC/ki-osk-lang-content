@@ -26,7 +26,7 @@ runs:
         rustup toolchain install "$chan" --profile minimal --component rustfmt,clippy --no-self-update
         cargo --version
 
-    - uses: actions/cache@v4
+    - uses: actions/cache@v6
       with:
         path: |
           ~/.cargo/registry/index
