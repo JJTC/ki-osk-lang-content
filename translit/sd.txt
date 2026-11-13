@@ -6,6 +6,9 @@
 # retroflexes ٽ ڊ ڙ ڻ, the aspirates ڀ ٿ ٺ ڦ ڇ ڌ ڍ ک, k as ڪ, and two
 # words written as signs: ۾ (men, in) and ۽ (ain, and). The lexicon
 # chooses among them.
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
 
 script abjad
 
@@ -24,6 +27,9 @@ ny   ڃ
 ch   چ  ڇ:1
 chh  ڇ
 c    چ  ڪ:1.5
+c>v  چ  س:2  ڪ:1.5
+ck   ڪ:0.5
+sch  سڪ:0.5  اسڪ:0.8
 h    ه  ح:1  ھ:2
 h$   ه  هه:0.8  ح:1
 kh   ک  خ:0.5
@@ -67,7 +73,7 @@ u$    -:0.3  و
 ^oo   او
 oo    و
 ^o    او  ا:1
-o     و  -:1.5
+o     و  -:1.5  ا:2
 o$    و  ه:2
 ^e    ا  اي:0.7
 e     ي  -:2
@@ -85,6 +91,9 @@ ou    و
 ei    ي
 
 [other]
+er$   ر:1.5
+y$    ي:2
+tion  شن:1
 ^men$   ۾:0.3
 ^mein$  ۾:0.3
 ^main$  ۾:0.5

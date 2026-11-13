@@ -7,6 +7,9 @@
 # invisible here, and reads only after a consonant. v and w are both ව, t
 # and d both the dental and the retroflex letter, e mostly the æ of ඇ, and
 # the lexicon chooses.
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
 
 script abugida
 virama ්
@@ -21,6 +24,10 @@ kh   ඛ  ක:1
 g    ග  ඟ:1
 gh   ඝ  ග:1
 ch   ච
+c    ච  ක:1.5
+c>v  ච  ස:1.5  ක:1.5
+ck   ක්ක:0.5
+sch  ස්ක:0.5
 chh  ඡ  ච:1
 j    ජ
 jh   ඣ  ජ:1
@@ -70,11 +77,14 @@ uu    ඌ/ූ
 e     එ/ෙ  ඇ/ැ:0.2  ඒ/ේ:0.6  ඈ/ෑ:1.2
 ei    එයි/ෙයි:0.3  ඒ/ේ:1
 ai    ඓ/ෛ  අයි/යි:1
-o     ඔ/ො  ඕ/ෝ:0.6
+o     ඔ/ො  ඕ/ෝ:0.6  ආ/ා:2
 au    ඖ/ෞ  අවු/වු:1
 ru    ඍ/ෘ:1.5
 
 [other]
+er$   ර්:1.5
+y$    ි:2
+tion  ෂන්:1
 n>c   ං:0.8
 m>c   ං:1
 ng$   ං

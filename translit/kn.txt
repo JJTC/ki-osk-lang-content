@@ -2,6 +2,9 @@
 # Latin. Kannada writes every vowel it speaks, so two consonants typed
 # together are joined by the virama; a word's last m is the nasal sign,
 # any other last consonant takes the virama.
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
 
 script abugida
 virama ್
@@ -19,6 +22,9 @@ gh   ಘ
 ch   ಚ  ಛ:1
 chh  ಛ
 c    ಚ  ಕ:1.5
+c>v  ಚ  ಸ:1.5  ಕ:1.5
+ck   ಕ್ಕ:0.5
+sch  ಸ್ಕ:0.5
 j    ಜ  ಝ:2.5
 jh   ಝ
 z    ಜ
@@ -64,13 +70,16 @@ e     ಎ/ೆ  ಏ/ೇ:0.6
 ae    ಏ/ೇ
 ai    ಐ/ೈ
 ei    ಐ/ೈ:0.5  ಏ/ೇ:1
-o     ಒ/ೊ  ಓ/ೋ:0.6
+o     ಒ/ೊ  ಓ/ೋ:0.6  ಆ/ಾ:2
 au    ಔ/ೌ
 ou    ಔ/ೌ
 ru    ಋ/ೃ:1.5
 ri    ಋ/ೃ:1.8
 
 [other]
+er$   ರ್:1.5
+y$    ೀ:2
+tion  ಷನ್:1
 n>c   ಂ:0.5
 m>c   ಂ:1
 m$    ಂ:0.3

@@ -2,6 +2,9 @@
 # Gurmukhi writes two consonants side by side without a virama, joining
 # only ਰ, ਵ and ਹ below (pr: ਪ੍ਰ), and doubles a consonant with ਅੱਧਕ
 # (pakka: ਪੱਕਾ); a nasal is ਟਿੱਪੀ or ਬਿੰਦੀ.
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
 
 script abugida
 virama ੍
@@ -19,6 +22,9 @@ gh   ਘ  ਗ਼:2
 ch   ਚ  ਛ:0.8  ੱਚ:1
 chh  ਛ
 c    ਚ  ਕ:1.5
+c>v  ਚ  ਸ:2  ਕ:1.5
+ck   ਕ:0.5
+sch  ਸਕ:0.5
 j    ਜ  ਜ਼:1.5  ਝ:2.5  ੱਜ:1.2
 jh   ਝ
 z    ਜ਼  ਜ:0.3
@@ -89,12 +95,16 @@ ya    ਇਆ/ਿਆ:1
 ai    ਐ/ੈ  ਏ/ੇ:1.5  ਆਈ/ਾਈ:1.2
 ae    ਐ/ੈ:0.5  ਏ/ੇ:1
 ei    ਏ/ੇ:0.5  ਈ/ੀ:0.8
-o     ਓ/ੋ  ਉ/ੁ:1  ਔ/ੌ:1.5
+o     ਓ/ੋ  ਉ/ੁ:1  ਔ/ੌ:1.5  ਆ/ਾ:2
 ^o    ਓ/ੋ:0.3  ਉ/ੁ:0.5
 au    ਔ/ੌ  ਓ/ੋ:2
 ou    ਔ/ੌ  ਓ/ੋ:1.5
 
 [other]
+er$   ਰ:1.5
+or$   ਰ:2
+y$    ੀ:2
+tion  ਸ਼ਨ:1
 n>c   ੰ:0.5  ਂ:0.8
 m>c   ੰ:1.2
 n$    ਂ:0.8  ੰ:1.2

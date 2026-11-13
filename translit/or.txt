@@ -1,0 +1,74 @@
+# Odia (Odia script) from Latin letters, as Odia is typed in Latin. Odia
+# speaks the vowel a consonant carries, typed a or o (bhala: ଭଲ), a for
+# ା as well; t and d are ତ and ଦ or ଟ and ଡ, d also ଡ଼ (odia: ଓଡ଼ିଆ), y is
+# ୟ or ଯ, l ଲ or ଳ, and the lexicon chooses.
+
+script abugida
+virama ୍
+cluster 0
+schwa 1.5
+final 0.5
+final-virama 1.5
+
+[consonants]
+k    କ
+kh   ଖ  କ୍ଷ:2
+g    ଗ
+gh   ଘ
+ng   ଙ:1.5  ଙ୍ଗ:1
+ch   ଚ  ଛ:0.8
+chh  ଛ  ଚ୍ଛ:0.8
+c    ଚ  କ:1.5
+j    ଜ  ଯ:0.5  ଝ:2.5
+jh   ଝ
+z    ଜ  ଯ:0.8
+t    ତ  ଟ:0.6
+tt   ଟ:0.5  ତ୍ତ:0.3  ଟ୍ଟ:1
+th   ଥ  ଠ:0.8  ତ:1.5
+d    ଦ  ଡ:0.6  ଡ଼:0.8
+dd   ଡ:0.5  ଦ୍ଦ:0.3  ଡ୍ଡ:1
+dh   ଧ  ଢ:1  ଢ଼:1.5  ଦ:2
+n    ନ  ଣ:0.8
+p    ପ
+ph   ଫ
+f    ଫ
+b    ବ
+bh   ଭ
+v    ଵ:0.5  ୱ:0.5  ବ:0.5
+w    ୱ  ଵ:0.5  ବ:1
+m    ମ
+y    ୟ  ଯ:0.5
+r    ର  ଡ଼:1.5
+rh   ଢ଼:1  ଡ଼:1
+l    ଲ  ଳ:0.5
+sh   ଶ  ଷ:0.8  ସ:1.5
+s    ସ  ଶ:0.7  ଷ:2
+h    ହ
+x    କ୍ସ  କ୍ଷ:1
+ksh  କ୍ଷ
+
+[vowels]
+a     ଅ/-  ଆ/ା:1
+^a    ଅ/-  ଆ/ା:0.8
+a$    ଅ/-  ଆ/ା:0.8
+aa    ଆ/ା
+o     ଓ/ୋ  ଅ/-:0.5
+o$    ଓ/ୋ  ଅ/-:0.6
+oo    ଉ/ୁ  ଓ/ୋ:0.7  ଊ/ୂ:1.5
+i     ଇ/ି  ଈ/ୀ:1
+ee    ଈ/ୀ  ଇ/ି:0.7
+ii    ଈ/ୀ
+u     ଉ/ୁ  ଊ/ୂ:1
+u$    ଉ/ୁ  ଉଁ/ୁଁ:0.8
+uu    ଊ/ୂ
+e     ଏ/େ
+ai    ଐ/ୈ  ଆଇ/ାଇ:0.7  ଏଇ/େଇ:0.8
+oi    ଓଇ/ୋଇ:0.8  ଅଇ/ଇ:1
+ou    ଔ/ୌ  ଓ/ୋ:1
+au    ଔ/ୌ  ଆଉ/ାଉ:0.7
+ri    ଋ/ୃ:2
+
+[other]
+n>c   ଂ:0.8
+ng    ଂ:0.3
+n$    ଂ:1.5  ଁ:1.5

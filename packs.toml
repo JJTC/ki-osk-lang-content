@@ -21,6 +21,7 @@ as  = "Assamese"
 az  = "Azerbaijani"
 be  = "Belarusian"
 bg  = "Bulgarian"
+bho = "Bhojpuri"
 bn  = "Bengali"
 br  = "Breton"
 ca  = "Catalan"
@@ -54,16 +55,22 @@ kn  = "Kannada"
 ku  = "Kurdish (Kurmanji)"
 lt  = "Lithuanian"
 lv  = "Latvian"
+mai = "Maithili"
 mk  = "Macedonian"
 ml  = "Malayalam"
+mn  = "Mongolian"
 mr  = "Marathi"
 ms  = "Malay"
+ne  = "Nepali"
 nl  = "Dutch"
 no  = "Norwegian (Bokmål)"
 oc  = "Occitan"
+or  = "Odia"
 os  = "Ossetian"
 pa  = "Punjabi"
 pl  = "Polish"
+pnb = "Western Punjabi (Shahmukhi)"
+ps  = "Pashto"
 pt  = "Portuguese"
 ro  = "Romanian"
 ru  = "Russian"
@@ -138,6 +145,13 @@ sources = [
 license = { name = "CC BY-SA 4.0 (the Dakshina dataset)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
 source  = { name = "The Dakshina dataset v1.0 (Google Research): Wikipedia text", url = "https://github.com/google-research-datasets/dakshina" }
 
+# The wikis' own text (scripts/fetch-wikipedia.sh: their CirrusSearch
+# dumps, plain text, pinned by sha256): the whole corpus of Bhojpuri,
+# Maithili, Mongolian, Nepali, Odia, Western Punjabi and Pashto.
+[prediction.wikipedia]
+license = { name = "CC BY-SA 4.0 (Wikipedia)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
+source  = { name = "Wikipedia, the wikis' CirrusSearch dumps of 2026-11-08", url = "https://dumps.wikimedia.org/other/cirrus_search_index/20261108/" }
+
 # Transliteration tables (translit/<lang>.txt, osk_data::translit): how the
 # Latin letters typed for a language become its script, written for this
 # repository. Each joins the pack of its language, beside the layout that
@@ -172,6 +186,7 @@ ba      = ["ba"]
 be      = ["be"]
 ber     = ["ber"]
 bg      = ["bg"]
+bho     = ["bho-abc"]
 bm      = ["bm"]
 bn      = ["bn", "bn-abc"]
 bo      = ["bo"]
@@ -238,18 +253,19 @@ ln      = ["ln"]
 lo      = ["lo"]
 lt      = ["lt"]
 lv      = ["lv"]
+mai     = ["mai-abc"]
 mg      = ["mg"]
 mi      = ["mi"]
 mk      = ["mk"]
 ml      = ["ml", "ml-abc"]
-mn      = ["mn"]
+mn      = ["mn", "mn-abc"]
 mni     = ["mni"]
 mr      = ["mr", "mr-abc"]
 ms      = ["ms"]
 mt      = ["mt"]
 my      = ["my"]
 nah     = ["nah"]
-ne      = ["ne"]
+ne      = ["ne", "ne-abc"]
 nl      = ["nl"]
 no      = ["no"]
 nr      = ["nr"]
@@ -257,11 +273,12 @@ nso     = ["nso"]
 ny      = ["ny"]
 oc      = ["oc"]
 om      = ["om"]
-or      = ["or"]
+or      = ["or", "or-abc"]
 os      = ["os"]
 pa      = ["pa", "pa-abc"]
 pl      = ["pl"]
-ps      = ["ps"]
+pnb     = ["pnb-abc"]
+ps      = ["ps", "ps-abc"]
 pt      = ["pt-br", "pt"]
 qu      = ["qu"]
 rm      = ["rm"]
@@ -354,18 +371,14 @@ ln  = "Lingala"
 lo  = "Lao"
 mg  = "Malagasy"
 mi  = "Māori"
-mn  = "Mongolian"
 mni = "Meitei"
 mt  = "Maltese"
 my  = "Burmese"
 nah = "Nahuatl"
-ne  = "Nepali"
 nr  = "Southern Ndebele"
 nso = "Northern Sotho"
 ny  = "Chichewa"
 om  = "Oromo"
-or  = "Odia"
-ps  = "Pashto"
 qu  = "Quechua"
 rm  = "Romansh"
 rn  = "Kirundi"

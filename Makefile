@@ -22,12 +22,14 @@ TOOLS = $(CARGO) run --release --quiet -p osk-data-tools --bin
 ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 
 # Every language with a committed prediction model. Each needs an entry
-# in scripts/fetch-corpora.sh's MAP too, but for the last nine, which learn
-# from Wikipedia text alone (DAKSHINA_ONLY_LANGS, below). Nine (kab to
+# in scripts/fetch-corpora.sh's MAP too, but for those that learn from
+# Wikipedia text alone: Dakshina's (DAKSHINA_ONLY_LANGS) or the wikis' own
+# (WIKIPEDIA_LANGS), below. Nine (kab to
 # th) were missing until 2026-11-08, so `make predict-assets` silently
 # skipped models that were already committed.
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
-                 oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur
+                 oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
+                 bho mai mn ne or pnb ps
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -46,6 +48,14 @@ DAKSHINA_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 DAKSHINA_ONLY_LANGS ?= gu kn ml pa sd si ta te ur
 DAKSHINA_DIR = $(SRC_DIR)/dakshina
 TATOEBA_WEIGHT ?= 10
+
+# Wikipedia's own text, the whole corpus of languages Tatoeba and Dakshina
+# have too little of: Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
+# Punjabi and Pashto (scripts/fetch-wikipedia.sh, the wikis' CirrusSearch
+# dumps pinned by sha256, CC BY-SA 4.0), every 20th article held out for
+# eval/<lang>.txt.
+WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps
+WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 
 # Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
 # Only the .bins built from them are committed.
@@ -106,7 +116,7 @@ PREDICT_WIDE_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
-PREDICT_WIKI_LANGS ?= hi gu pa sd si ur
+PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
@@ -128,6 +138,7 @@ help:
 	@echo "  fetch-corpora    download Tatoeba corpora into predict/corpora/"
 	@echo "  fetch-dakshina   Wikipedia text and romanizations of 12 South Asian"
 	@echo "                   languages (the Dakshina dataset) into SRC_DIR"
+	@echo "  fetch-wikipedia  the wikis' own text, for WIKIPEDIA_LANGS, into SRC_DIR"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
@@ -159,7 +170,7 @@ help:
 # only what the lock says is out of date, then refuses a result that
 # lost a file or shrank one.
 .PHONY: refresh
-refresh: fetch-corpora fetch-dakshina
+refresh: fetch-corpora fetch-dakshina fetch-wikipedia
 	$(MAKE) predict-assets hinglish-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) check
 
@@ -170,6 +181,10 @@ fetch-corpora:
 .PHONY: fetch-dakshina
 fetch-dakshina:
 	OUT=$(DAKSHINA_DIR) ./scripts/fetch-dakshina.sh
+
+.PHONY: fetch-wikipedia
+fetch-wikipedia:
+	OUT=$(WIKIPEDIA_DIR) ./scripts/fetch-wikipedia.sh $(WIKIPEDIA_LANGS)
 
 # The word lists of the languages written without spaces between words
 # (wordbreak/<lang>.txt, committed): ICU's word-break dictionaries, pinned
@@ -200,7 +215,7 @@ predict-assets:
 			*" $$lang "*) vocab=$(PREDICT_WIDE_VOCAB); ngram=$(PREDICT_WIDE_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
-		case " $(DAKSHINA_ONLY_LANGS) " in \
+		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) " in \
 			*" $$lang "*) ;; \
 			*) case " $(DAKSHINA_LANGS) " in \
 				*" $$lang "*) corpus="--corpus $(TATOEBA_WEIGHT):$(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt"; \
@@ -212,6 +227,10 @@ predict-assets:
 		case " $(DAKSHINA_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(DAKSHINA_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input dakshina/$$lang.txt=$(DAKSHINA_DIR)/$$lang.txt" ;; \
+		esac; \
+		case " $(WIKIPEDIA_LANGS) " in \
+			*" $$lang "*) corpus="$$corpus --corpus $(WIKIPEDIA_DIR)/$$lang.txt"; \
+			              corpus_in="$$corpus_in --input wikipedia/$$lang.txt=$(WIKIPEDIA_DIR)/$$lang.txt" ;; \
 		esac; \
 		words=; words_in=; \
 		if [ -f wordbreak/$$lang.txt ]; then \

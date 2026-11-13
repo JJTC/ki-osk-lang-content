@@ -133,6 +133,10 @@ jobs:
       # which the script keeps only the text the models use.
       - name: Dakshina's Wikipedia text
         run: make fetch-dakshina SRC_DIR="$RUNNER_TEMP/sources"
+      # Seven languages learn from their wikis' own text: the dumps of one
+      # date, pinned by sha256.
+      - name: Wikipedia's text
+        run: make fetch-wikipedia SRC_DIR="$RUNNER_TEMP/sources"
       - name: Prediction models
         run: make predict-assets SRC_DIR="$RUNNER_TEMP/sources"
       # Hinglish: Hindi's corpora (Tatoeba's, from the prepare job, and

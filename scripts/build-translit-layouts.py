@@ -35,13 +35,25 @@ NAMES = {
     "fa": "فارسی",
 }
 
+# The languages with no layout of their own, whose transliteration layout
+# is their one layout: their names, and the fonts their scripts need.
+ALONE = {
+    "bho": ("भोजपुरी", "devanagari"),
+    "mai": ("मैथिली", "devanagari"),
+    "pnb": ("پنجابی", "arabic"),
+}
+
 
 def letter(label):
     return len(label) == 1 and label.isascii() and label.isalpha()
 
 
 def build(lang, us):
-    own = json.loads((ROOT / "layouts" / f"{lang}.json").read_text(encoding="utf-8"))
+    if lang in ALONE:
+        name, font = ALONE[lang]
+        own = {"name": name, "font_script": font}
+    else:
+        own = json.loads((ROOT / "layouts" / f"{lang}.json").read_text(encoding="utf-8"))
     name = NAMES.get(lang, own["name"])
     out = {
         "id": f"{lang}-abc",

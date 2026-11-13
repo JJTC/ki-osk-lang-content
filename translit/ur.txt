@@ -4,6 +4,9 @@
 # a is ا or ہ and its last e ے; several letters share a sound (s: س ص ث, z:
 # ز ذ ض ظ, t: ت ط), and h after a consonant is the ھ of its aspirate (bh:
 # بھ). The lexicon chooses among them.
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
 
 script abjad
 
@@ -23,6 +26,9 @@ jh   جھ
 ch   چ
 chh  چھ
 c    چ  ک:1.5
+c>v  چ  س:2  ک:1.5
+ck   ک:0.5
+sch  سک:0.5  اسک:0.8
 h    ہ  ح:1  ھ:2
 kh   خ  کھ:0.3
 d    د  ڈ:0.8  ڑ:1
@@ -68,7 +74,7 @@ u$    و
 ^oo   او
 oo    و
 ^o    او  ا:1
-o     و  -:1.5
+o     و  -:1.5  ا:2
 o$    و  ہ:2
 ^e    ا  ای:0.7  اے:1
 e     ی  ے:1  -:2
@@ -91,4 +97,7 @@ oye   وئے:0.5
 ey$   ے  ی:1
 
 [other]
+er$   ر:1.5
+y$    ی:2
+tion  شن:1
 n$    ں:0.3

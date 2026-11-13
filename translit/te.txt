@@ -2,6 +2,9 @@
 # Telugu writes every vowel it speaks, so two consonants typed together
 # are joined by the virama; a word's last m (and n) is the nasal sign
 # (kalam: కలం), any other last consonant takes the virama.
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
 
 script abugida
 virama ్
@@ -19,6 +22,9 @@ gh   ఘ
 ch   చ  ఛ:1
 chh  ఛ
 c    చ  క:1.5
+c>v  చ  స:1.5  క:1.5
+ck   క్క:0.5
+sch  స్క:0.5
 j    జ  ఝ:2.5
 jh   ఝ
 z    జ
@@ -66,13 +72,16 @@ e     ఎ/ె  ఏ/ే:0.6
 ae    ఏ/ే
 ai    ఐ/ై
 ei    ఐ/ై:0.5  ఏ/ే:1
-o     ఒ/ొ  ఓ/ో:0.6
+o     ఒ/ొ  ఓ/ో:0.6  ఆ/ా:2
 au    ఔ/ౌ
 ou    ఔ/ౌ
 ru    ఋ/ృ:1.5
 ri    ఋ/ృ:1.8
 
 [other]
+er$   ర్:1.5
+y$    ీ:2
+tion  షన్:1
 n>c   ం:0.5
 m>c   ం:1
 m$    ం:0.3

@@ -149,6 +149,20 @@ other by rule. `eval/hi-Latn.txt` is the first 500 of Dakshina's romanized
 Hindi test sentences, as people typed them, which the Wikipedia text it
 learns from leaves out.
 
+### Wikipedia text (the wikis' own)
+
+Seven languages' models learn from their own Wikipedia alone: Bhojpuri,
+Maithili, Mongolian, Nepali, Odia, Western Punjabi and Pashto. The text
+is each wiki's CirrusSearch dump of 2026-11-08 (Wikimedia's
+`cirrus_search_index`, an article's plain text a JSON field), pinned by
+sha256 in `scripts/fetch-wikipedia.sh`, cut into sentences by
+`scripts/wikipedia-text.py`: at most 400 000 a language. Every 20th
+article is held out of it, and the first 500 sentences of those are
+`eval/<lang>.txt`. **Wikipedia's text is CC BY-SA 4.0**, share-alike:
+the packs of those seven languages, their models and that held-out text
+carry those terms, with attribution to Wikipedia's contributors (each
+article's history, at its wiki, names them).
+
 **The Dakshina dataset is CC BY-SA 4.0**, share-alike: the packs of
 those twelve languages, their models and the held-out text in `eval/`
 carry those terms, with attribution, besides Tatoeba's where they use
@@ -185,9 +199,10 @@ next `make fetch-corpora`.
 ## Transliteration tables
 
 `translit/<lang>.txt` say how the Latin letters typed for a language
-become its script (`osk_data::translit`): Assamese, Bengali, Greek,
-Gujarati, Hindi, Armenian, Kannada, Malayalam, Marathi, Punjabi, Persian,
-Sindhi, Sinhala, Tamil, Telugu and Urdu. They were written here, MIT licensed, each joining its
+become its script (`osk_data::translit`): Assamese, Bengali, Bhojpuri,
+Greek, Gujarati, Hindi, Armenian, Kannada, Maithili, Malayalam, Marathi,
+Mongolian, Nepali, Odia, Punjabi (Gurmukhi and Shahmukhi), Persian,
+Pashto, Sindhi, Sinhala, Tamil, Telugu and Urdu. They were written here, MIT licensed, each joining its
 language's pack; what they choose among, the language's lexicon chooses.
 Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'

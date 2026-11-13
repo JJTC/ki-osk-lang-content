@@ -1,0 +1,52 @@
+# Mongolian (Cyrillic) from Latin letters, as Mongolian is typed in Latin.
+# Each Cyrillic letter has its Latin one or two (kh and h: х, ts: ц, ch:
+# ч, sh: ш, ya: я, yu: ю, ye: е, yo: ё); o and u stand for ө and ү too,
+# as q and w do for some, and i for й and ы. The lexicon chooses.
+
+script alphabet
+
+[consonants]
+b    б
+v    в  ү:2
+g    г
+d    д
+j    ж  з:1
+z    з  ж:1.5
+k    к  х:1
+kh   х
+h    х
+x    х
+l    л
+m    м
+n    н
+p    п
+r    р
+s    с
+t    т
+f    ф
+ts   ц
+c    ц  к:1.5
+ch   ч
+sh   ш
+sch  щ:1
+w    ү:0.8  в:0.5
+y    й  ы:0.5
+
+[vowels]
+a    а
+e    э  е:0.5  ө:1.5
+ye   е
+yo   ё
+i    и  й:1  ы:1.5
+ii   ий  ы:0.8  ии:1
+o    о  ө:0.5
+oo   оо  өө:0.5
+q    ө:0.3
+u    у  ү:0.5
+uu   уу  үү:0.5
+ya   я
+yu   ю
+ai   ай
+ei   эй  ей:1
+oi   ой  өй:0.5
+ui   уй  үй:0.5

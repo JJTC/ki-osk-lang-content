@@ -1,0 +1,63 @@
+# Pashto (Perso-Arabic script) from Latin letters, as Pashto is typed in
+# Latin. Short vowels mostly go unwritten inside a word; a word's last a
+# is ه (khabara: خبره), its last e ې, its last ay ی or ۍ. Pashto has
+# letters of its own for its sounds (ټ ډ ړ ڼ for the retroflexes, ښ ږ, ځ
+# څ, ګ), typed as their nearest Latin ones. The lexicon chooses.
+
+script abjad
+
+[consonants]
+b    ب
+p    پ
+t    ت  ټ:0.6  ط:1.5
+tt   ټ:0.3  ت:0.5
+s    س  ص:1.5  ث:2
+j    ج  ځ:1.5
+ch   چ
+ts   څ  تس:2
+c    څ:0.5  ک:1  چ:1.5
+dz   ځ
+h    ه  ح:1
+kh   خ
+x    ښ:0.5  خ:0.8
+d    د  ډ:0.6
+dd   ډ:0.3  د:0.5
+z    ز  ذ:2  ض:2  ظ:2  ځ:1.5
+r    ر  ړ:0.8
+rr   ړ:0.5  ر:0.5
+zh   ژ  ږ:0.6
+sh   ش  ښ:0.6
+gh   غ
+f    ف
+q    ق
+k    ک
+g    ګ  گ:1
+l    ل
+m    م
+n    ن  ڼ:0.8
+w    و
+v    و
+y    ی  ي:1
+
+[vowels]
+^a    ا  آ:1  ع:1.5
+a     -  ا:0.8  ه:2
+a$    ه  ا:0.5  ې:2
+^aa   آ  ا:1
+aa    ا
+^i    ا  اي:0.8
+i     -  ي:0.5  ی:1
+i$    ي  ی:0.5  ې:1
+ee    ي  ی:1
+^e    ا  اې:1
+e     ې  ي:1  -:2
+e$    ې  ه:1  ي:1.5
+ay$   ی  ۍ:0.5  ې:1
+ai    ی  ې:0.8  ي:1
+^o    او  ا:1
+o     و  -:1.5
+^u    ا  او:0.8
+u     -  و:0.5
+u$    و
+oo    و
+ou    و

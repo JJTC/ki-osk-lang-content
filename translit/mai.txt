@@ -1,0 +1,97 @@
+# Maithili (Devanagari) from Latin letters, as Maithili is typed in Latin:
+# Hindi's ways, which Maithili's writers follow (long vowels often written
+# short, the retroflex consonants as the dental ones, a word's last a
+# usually long, the vowel between two consonants left out where it is not
+# spoken), and English words as English spells them. The lexicon chooses.
+
+script abugida
+virama ्
+cluster 0
+schwa 1.2
+final 0
+final-virama 4
+
+[consonants]
+k    क  क़:2.5
+kh   ख  ख़:2
+q    क़  क:0.5
+g    ग  ग़:2.5
+gh   घ  ग़:2
+ch   च  छ:1
+chh  छ  च्छ:0.8
+cch  च्छ
+c    च  क:1.5
+c>v  च  स:2  क:1.5
+ck   क:0.5  च्क:1
+sch  स्क:0.5  श:1.5
+j    ज  ज़:1.5  झ:3
+jh   झ
+z    ज़  ज:0.3
+t    त  ट:0.6
+tt   ट:0.5  त्त:0.3  ट्ट:1
+th   थ  ठ:0.8  त:1.5
+d    द  ड:0.6  ड़:1.5
+dd   ड:0.5  द्द:0.3  ड्ड:1
+dh   ध  ढ:1  ढ़:1.5  द:2  द्ध:1.2
+n    न  ण:2
+p    प
+ph   फ  फ़:0.7
+f    फ़  फ:0.5
+b    ब
+bh   भ
+m    म
+y    य
+r    र  ड़:2
+rh   ढ़:1
+l    ल
+v    व
+w    व
+sh   श  ष:1  स:2.5
+s    स  श:1.5  ष:3
+h    ह
+x    क्स  क्ष:1
+ksh  क्ष
+gy   ज्ञ:1.5
+
+[vowels]
+a     अ/-  आ/ा:1.2
+^a    अ/-  आ/ा:0.8
+a$    आ/ा  अ/-:1.5  आँ/ाँ:2
+aa    आ/ा
+^aa   आ/ा  अ/-:2
+aa$   आ/ा  आँ/ाँ:1.5  आं/ां:2
+i     इ/ि  ई/ी:1
+i$    ई/ी  इ/ि:0.8  ईं/ीं:1.5
+ee    ई/ी  इ/ि:2
+ee$   ई/ी  ईं/ीं:1.5
+ii    ई/ी
+u     उ/ु  ऊ/ू:1  अ/-:2  यू/्यू:2  ओ/ो:2.5
+u$    उ/ु  ऊ/ू:0.5  ऊँ/ूँ:1.5
+oo    ऊ/ू  ओ/ो:2
+uu    ऊ/ू
+e     ए/े  ऐ/ै:1.5  अ/-:2  इ/ि:3
+e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:2.5
+ai    ऐ/ै  ए/े:1.5  आई/ाई:1.2
+ai$   ऐ/ै  ऐं/ैं:0.6  ए/े:1.5  आई/ाई:1.2  अय/य:1.8
+ae    ऐ/ै:0.5  ए/े:1
+ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
+ye    ए/े:0.3
+yi    ई/ी:0.5
+o     ओ/ो  ओं/ों:1.2  ऑ/ॉ:1.5  औ/ौ:1.5  अ/-:2.5
+o$    ओ/ो  ओं/ों:1.5  औ/ौ:2
+au    औ/ौ  ओ/ो:2
+ou    औ/ौ  ओ/ो:1.5  ऊ/ू:2
+ri    ऋ/ृ:2
+ru    ऋ/ृ:2.5
+
+[other]
+er$   र:1.5
+or$   र:2
+le$   ल:2
+y$    ी:2
+tion  शन:1  ्शन:1
+n>c   ं:0.7
+m>c   ं:1.5
+n$    ं:0.8  ँ:1.5
+m$    ं:0.8
+ngh   ंह:0.5

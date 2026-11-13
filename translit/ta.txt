@@ -4,6 +4,9 @@
 # One letter stands for voiced and voiceless alike (k and g: க), n is ந
 # at a word's start and ன after, and l, n, r and t each have several
 # letters the lexicon chooses among (ல ள ழ, ன ந ண, ர ற, ட த).
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
 
 script abugida
 virama ்
@@ -21,6 +24,9 @@ h    ஹ  க:2
 ng   ங்க  ங:0.5
 ch   ச  ச்ச:0.8
 c    ச  க:2
+c>v  ச  ஸ:1.5  க:1.5
+ck   க்க:0.5
+sch  ஸ்க:0.5
 s    ச  ஸ:0.4  ஷ:2
 sh   ஷ  ச:1.5
 j    ஜ  ச:1
@@ -76,6 +82,11 @@ ai    ஐ/ை  அய்/ய்:1
 aai   ஆய்/ாய்:0.5  ஆஐ/ாஐ:2
 ei    எய்/ெய்:0.5  ஐ/ை:0.5  ஏ/ே:1
 ey    எய்/ெய்:0.3
-o     ஒ/ொ  ஓ/ோ:0.6
+o     ஒ/ொ  ஓ/ோ:0.6  ஆ/ா:2
 au    ஔ/ௌ  அவு/வு:1.5
 ou    ஔ/ௌ
+
+[other]
+er$   ர்:1.5
+y$    ி:2
+tion  ஷன்:1
