@@ -11,7 +11,7 @@ files carries their terms.
 The code here — the Makefile, the Cargo workspace and `crates/`, the
 scripts, the workflows and `packs.toml` — is MIT licensed (`LICENSE`), as
 are the text rules in `rules/` and the transliteration tables in
-`translit/`, which were written here (twenty-four tables' costs then
+`translit/`, which were written here (twenty-six tables' costs then
 fitted to the Dakshina and Aksharantar datasets' romanizations, below).
 The data keeps its original licence, below. That includes the seeds in
 `seeds/`, which are excerpts of the datasets they are listed under. Add an entry here whenever a
@@ -179,7 +179,8 @@ Eight models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of
 their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei in the
 Bengali script (`mni-Beng`), whose wikis are in their other scripts,
-and of Lao, whose wiki is small.
+and of Lao, whose wiki is small; and Assamese's from it beside its
+Tatoeba sentences.
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
 Pipeline to Scale Them All", arXiv 2506.20920) is text from Common
 Crawl's crawls, sorted by language; **it is ODC-By 1.0, and its use is
@@ -192,6 +193,21 @@ repository and its packs hold; the text itself is not, neither the
 corpus nor the held-out text: it is the web's, whose pages keep their
 own rights. Each pack with such a model names FineWeb-2 among its
 sources, with this licence, as ODC-By asks of what is made from it.
+
+### MADLAD-400 (web text)
+
+Garhwali's and Rajasthani's models learn from MADLAD-400's web text
+alone, which neither Wikipedia nor FineWeb-2 has of them: MADLAD-400
+(Google; Kudugunta et al., "MADLAD-400: A Multilingual And
+Document-Level Large Audited Dataset", arXiv 2309.04662; at Hugging Face
+as `allenai/MADLAD-400`), text from Common Crawl sorted by language and
+audited. **Its card releases it under CC BY 4.0** (its metadata says
+ODC-By 1.0), **its use subject to Common Crawl's Terms of Use**. Its
+files, at one revision, are pinned by sha256 in `scripts/fetch-madlad.sh`;
+`scripts/fineweb-text.py` keeps the documents that read as their
+language. As with FineWeb-2, the models made from it are what this
+repository and its packs hold, never the text; each pack with such a
+model names MADLAD-400 among its sources, with that licence.
 
 **The Dakshina dataset is CC BY-SA 4.0**, share-alike: the packs of
 those twelve languages, their models and the held-out text in `eval/`
@@ -235,7 +251,8 @@ Mongolian, Nepali, Odia, Punjabi (Gurmukhi and Shahmukhi), Persian,
 Pashto, Sanskrit, Santali, Sindhi (Perso-Arabic and Devanagari),
 Sinhala, Tamil, Telugu, Urdu, Yiddish, Awadhi, Kashmiri, Konkani, Meitei
 (Meetei Mayek and the Bengali script), Saraiki, Tulu, Bodo, Dogri,
-Chhattisgarhi, Magahi and Brahui. They were written here, MIT licensed,
+Chhattisgarhi, Magahi, Brahui, Garhwali and Rajasthani. They were
+written here, MIT licensed,
 each joining its language's pack; what they choose among, the
 language's lexicon chooses. The costs of the twelve the Dakshina dataset
 romanizes (Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi,
@@ -252,9 +269,9 @@ valid splits romanized by hand and of the names it took from Wikidata,
 chosen by the other fifth, its test words left out; seven moved
 (Assamese's, Nepali's and Odia's stayed as written), and their packs
 name it (its card: the manually collected data CC BY, the mined and
-existing data CC0; `packs.toml`'s `[[translit.fitted]]`). And seven
+existing data CC0; `packs.toml`'s `[[translit.fitted]]`). And nine
 tables of languages neither dataset has (Awadhi, Bhojpuri, Brahui,
-Chhattisgarhi, Western Punjabi, Saraiki, Tulu) were fitted to Dakshina's
+Chhattisgarhi, Garhwali, Rajasthani, Western Punjabi, Saraiki, Tulu) were fitted to Dakshina's
 romanizations of the words their lexicons share with Hindi's, Urdu's or
 Kannada's, and are measured so; their packs name it, adding no licence
 (Chhattisgarhi's and Brahui's models are FineWeb-2's, not share-alike).

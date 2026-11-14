@@ -33,7 +33,10 @@
 //!
 //! With `--known`, only the pairs whose word the lexicon has are used: a
 //! related language's romanizations then fit a table to the words the
-//! two languages share (Bhojpuri's to Dakshina's Hindi).
+//! two languages share (Bhojpuri's to Dakshina's Hindi). A cost no word
+//! meant was read charging stays as written: those words never take the
+//! language's own letters (Saraiki's ٻ, Rajasthani's ळ), and would only
+//! push them down.
 //!
 //! The table's own costs and each round's, rounded to `--grain`, are
 //! measured on `--dev` (the word meant first, as eval-translit measures
@@ -193,6 +196,9 @@ struct Readings {
     unwritten: f64,
     unwritten_pairs: Vec<String>,
     total: f64,
+    /// The costs some word meant was read charging: with `--known`, the
+    /// others stay as written.
+    meant_charged: std::collections::HashSet<u32>,
 }
 
 fn read(
@@ -244,6 +250,9 @@ fn read(
             out.likelihood.push(r.log_prob.map_or(unknown, f64::from));
             out.meant.push(is_meant);
             for way in &r.paths {
+                if is_meant {
+                    out.meant_charged.extend(way.charges.iter().copied());
+                }
                 let set: f64 = way
                     .charges
                     .iter()
@@ -400,6 +409,15 @@ fn descend(
             again(r, &narrow(&costs))?;
         }
         last = loss(r, &costs, &own, args, &mut grad);
+        if args.known {
+            // A related language's words say nothing of a way none of them
+            // takes (Saraiki's implosives, Rajasthani's ळ): it stays.
+            for (i, g) in grad.iter_mut().enumerate() {
+                if !u32::try_from(i).is_ok_and(|i| r.meant_charged.contains(&i)) {
+                    *g = 0.0;
+                }
+            }
+        }
         #[allow(clippy::cast_possible_truncation, clippy::cast_possible_wrap)]
         let t = step as i32;
         for i in 0..costs.len() {

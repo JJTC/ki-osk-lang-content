@@ -25,6 +25,7 @@
 //! `sources.lock` records them: Tatoeba's (`corpora/<lang>.txt`), the
 //! Dakshina dataset's Wikipedia text (`dakshina/<lang>.txt`), the wikis'
 //! own (`wikipedia/<lang>.txt`), FineWeb-2's web text (`fineweb/<lang>.txt`),
+//! MADLAD-400's (`madlad/<lang>.txt`),
 //! with their licences.
 //!
 //! It refuses rather than guesses:
@@ -165,6 +166,9 @@ struct Prediction {
     /// FineWeb-2's web text: the licence and source of the models built
     /// from it.
     fineweb: Added,
+    /// MADLAD-400's web text: the licence and source of the models built
+    /// from it.
+    madlad: Added,
 }
 
 /// What a file beside a language's model adds to its pack.
@@ -303,6 +307,7 @@ fn main() -> anyhow::Result<()> {
             ("dakshina", &p.dakshina.license, &p.dakshina.source),
             ("wikipedia", &p.wikipedia.license, &p.wikipedia.source),
             ("fineweb", &p.fineweb.license, &p.fineweb.source),
+            ("madlad", &p.madlad.license, &p.madlad.source),
         ] {
             let sha = recorded(&entry, &format!("{dir}/{lang}.txt"))
                 .or_else(|| recorded(&entry, &format!("{dir}/{primary}.txt")));
@@ -317,7 +322,7 @@ fn main() -> anyhow::Result<()> {
         }
         ensure!(
             !sources.is_empty(),
-            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/ or fineweb/, {lang}.txt or {primary}.txt)"
+            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/, fineweb/ or madlad/, {lang}.txt or {primary}.txt)"
         );
         // Dialect flags and word lists carry their own sources' licences
         // into the pack.

@@ -1,0 +1,132 @@
+# Garhwali (Devanagari) from Latin letters, as Garhwali is typed in
+# Latin: Hindi's ways, which its writers follow (long vowels often written
+# short, the retroflex consonants as the dental ones, a word's last a
+# usually long, the vowel between two consonants left out where it is not
+# spoken), and English words as English spells them; l is ल or Garhwali's
+# ळ (गढ़वळि), which is typed l as ल is, so at a small cost: the lexicon
+# chooses. Its costs are fitted to how people
+# romanized the words Garhwali shares with Hindi (the Dakshina dataset's;
+# make fit-translit, FIT_BORROWED).
+
+script abugida
+virama ्
+cluster 0.6
+schwa 1.3
+final 0
+final-virama 4
+acronym 0.9
+
+[consonants]
+k    क:0.1  क़:2.5
+kh   ख  ख़:2
+q    क़  क:0.5
+g    ग:0.1  ग़:2.5
+gh   घ  ग़:2
+ch   च  छ:1.1
+chh  छ  च्छ:0.8
+cch  च्छ
+c    च:0.3  क:1.2
+c>v  च:0.4  स:1.9  क:1.1
+ck   क:0.5  च्क:1
+sch  स्क:0.5  श:1.5
+j    ज  ज़:1.5  झ:3
+jh   झ
+z    ज़:0.1  ज:0.2
+t    त:0.4  ट:0.2
+tt   ट:0.5  त्त:0.4  ट्ट:0.8
+th   थ      ठ:0.4  त:1.9
+d    द:0.7  ड:0.5  ड़:0.9
+dd   ड:0.5  द्द:0.3  ड्ड:1
+dh   ध  ढ:0.9  ढ़:1.3  द:2.4  द्ध:1.2
+n    न:0.2  ण:1.8
+p    प
+ph   फ  फ़:0.7
+f    फ़:0.6  फ
+b    ब:0.1
+bh   भ
+m    म:0.2
+y    य
+r    र:0.2  ड़:2.3
+rh   ढ़:0.9
+l    ल  ळ:0.3
+v    व
+w    व
+sh   श:0.1  ष:0.5  स:2.9
+s    स  श:1.8  ष:3
+h    ह:0.2
+x    क्स  क्ष:1
+ksh  क्ष
+gy   ज्ञ:1.5
+
+[vowels]
+a     अ/-:0.3  आ/ा:0.3
+^a    अ/-:0.1  आ/ा:0.7
+a$    आ/ा  अ/-:2.9  आँ/ाँ:2
+aa    आ/ा
+^aa   आ/ा  अ/-:2.1
+aa$   आ/ा  आँ/ाँ:1.5  आं/ां:2
+i     इ/ि:0.6  ई/ी:0.7
+i$    ई/ी  इ/ि:1    ईं/ीं:1.5
+ee    ई/ी  इ/ि:2
+ee$   ई/ी  ईं/ीं:1.5
+ii    ई/ी
+u     उ/ु  ऊ/ू:0.6  अ/-:2.5  यू/्यू:1.9  ओ/ो:2.8
+u$    उ/ु:0.1  ऊ/ू:0.4  ऊँ/ूँ:1.5
+oo    ऊ/ू  ओ/ो:2
+uu    ऊ/ू
+e     ए/े      ऐ/ै:1.6  अ/-:2.3  इ/ि:2.9
+e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:3.2
+ai    ऐ/ै:0.1  ए/े:1.5  आई/ाई:1.2
+ai$   ऐ/ै:0.3  ऐं/ैं:0.6  ए/े:1.8  आई/ाई:1.2  अय/य:1.8
+ae    ऐ/ै:0.5  ए/े:1.1
+ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
+ye    ए/े:0.3
+yi    ई/ी:0.5
+o     ओ/ो  ओं/ों:1.2  ऑ/ॉ:0.8  औ/ौ:1.8  अ/-:3.2
+o$    ओ/ो  ओं/ों:1.6  औ/ौ:2
+au    औ/ौ  ओ/ो:2.1
+ou    औ/ौ  ओ/ो:1.5  ऊ/ू:2
+ri    ऋ/ृ:1.9
+ru    ऋ/ृ:2.4
+
+[other]
+er$   र:1.4
+or$   र:2
+le$   ल:2.2
+y$    ी:2
+tion  शन:1  ्शन:1
+n>c   ं:0.2
+m>c   ं:1.1
+n$    ं:0.7  ँ:1.7
+m$    ं:1
+ngh   ंह:0.5
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: टीवी), as the language's Wikipedia writes them.
+[letters]
+a  ए
+b  बी
+c  सी
+d  डी
+e  ई
+f  एफ
+g  जी
+h  एच
+i  आई
+j  जे
+k  के
+l  एल
+m  एम
+n  एन
+o  ओ
+p  पी
+q  क्यू
+r  आर
+s  एस
+t  टी
+u  यू
+v  वी
+w  डब्ल्यू
+x  एक्स
+y  वाई
+z  ज़ेड

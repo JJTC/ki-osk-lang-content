@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**212 layouts**: 164 keyboard layouts (RTL: ar he fa + Urdu, Western
+**216 layouts**: 166 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Pashto, Sindhi, Uyghur, Syriac,
 Dhivehi, Yiddish; Hinglish) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) ·
-39 transliteration layouts (Latin letters → the language's script,
-`-abc`) · emoji + numeric. All render native keycaps. 211 are here; the
+41 transliteration layouts (Latin letters → the language's script,
+`-abc`) · emoji + numeric. All render native keycaps. 215 are here; the
 numeric keypad is built into ki-osk. The table below is the complete
-list; **89 languages** carry a prediction
+list; **91 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -101,6 +101,8 @@ but no model to match the glide against · `—` off
 | `doi` | `doi` | Dogri डोगरी | in | LTR | **Full** (doi)⁷ | — | — |
 | `hne` | `hne` | Chhattisgarhi छत्तीसगढ़ी | in | LTR | **Full** (hne)⁷ | — | — |
 | `mag` | `mag` | Magahi मगही | in | LTR | **Full** (mag)⁷ | — | — |
+| `gbm` | `gbm` | Garhwali गढ़वाली | in (+ ळ long-press) | LTR | **Full** (gbm)⁸ | — | — |
+| `raj` | `raj` | Rajasthani राजस्थानी | in (+ ळ long-press) | LTR | **Full** (raj)⁸ | — | — |
 | `hi-latn` | `hi-Latn` | Hinglish (Hindi in Latin letters) | us | LTR | **Full** (hi-Latn)⁵ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
@@ -143,7 +145,7 @@ but no model to match the glide against · `—` off
 | `mai` | `mai` | Maithili मैथिली | in | LTR | **Full** (mai)⁶ | — | — |
 | `sa` | `sa` | Sanskrit संस्कृतम् | in + long-press ऽ ॐ | LTR | **Full** (sa)⁶ | — | — |
 | `awa` | `awa` | Awadhi अवधी | in | LTR | **Full** (awa)⁶ | — | — |
-| `as` | `as` | Assamese | in · ben (+ ৰ ৱ long-press) | LTR | **Full** (as) | — | — |
+| `as` | `as` | Assamese | in · ben (+ ৰ ৱ long-press) | LTR | **Full** (as)⁷ | — | — |
 | `bo` | `bo` | Tibetan བོད་ཡིག | cn · tib | LTR | — | — | — |
 | `dv` | `dv` | Dhivehi ދިވެހި | mv | RTL | — | — | — |
 | `sat` | `sat` | Santali ᱥᱟᱱᱛᱟᱲᱤ | in · sat | LTR | **Full** (sat)⁶ | — | — |
@@ -240,6 +242,8 @@ but no model to match the glide against · `—` off
 | `hne-abc` | `hne` | Chhattisgarhi छत्तीसगढ़ी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hne lexicon choosing |
 | `mag-abc` | `mag` | Magahi मगही (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the mag lexicon choosing |
 | `brh-abc` | `brh` | Brahui براہوئی (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the brh lexicon choosing |
+| `gbm-abc` | `gbm` | Garhwali गढ़वाली (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the gbm lexicon choosing |
+| `raj-abc` | `raj` | Rajasthani राजस्थानी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the raj lexicon choosing |
 | `emoji` | `emoji` | Emoji picker | — | — | — | — | Unicode 16 — categories, search, skin-tone, recents |
 | `numeric` | — (ki-osk) | Numeric keypad | — | — | — | — | — |
 
@@ -310,7 +314,7 @@ but no model to match the glide against · `—` off
    Gujarati's and Kannada's stayed as written, no fit doing better on
    their dev words. Lexicons of 200 000 words (from 120 000) then added
    Kannada 1.2 points, Telugu 0.9 (and its table, fitted again to it,
-   0.7) and Tamil 0.8. Twenty-four of the tables name the Latin letters
+   0.7) and Tamil 0.8. Twenty-seven of the tables name the Latin letters
    as their language's Wikipedia or web text writes them (`[letters]`;
    Hindi's names for the Devanagari languages whose text has too few
    abbreviations to tell), for abbreviations typed letter by letter (tv:
@@ -327,11 +331,14 @@ but no model to match the glide against · `—` off
    Dogri are measured on the words people romanized for AI4Bharat's
    Aksharantar dataset (its test split, 2 000 to 6 900 words each, mostly
    rare words and names; fetched to measure and fit, never shipped): of
-   those their lexicons have, the word comes first for Assamese 86.0%
-   (88.6% among the strip's two), Sanskrit 85.7% (91.6%), Maithili 83.7%
-   (89.3%), Konkani 79.5% (84.9%), Meitei 77.8% (81.9%), Nepali 77.1%
-   (82.9%), Odia 76.7% (82.5%), Bodo 67.7% (74.5%), Dogri 57.4% (63.1%)
-   and Kashmiri 47.1% (61.2%). Seven of these tables' costs were fitted
+   those their lexicons have, the word comes first for Sanskrit 85.7%
+   (91.6% among the strip's two), Maithili 83.7% (89.3%), Konkani 79.5%
+   (84.9%), Meitei 77.8% (81.9%), Nepali 77.1% (82.9%), Odia 76.7%
+   (82.5%), Assamese 73.2% (77.1%), Bodo 67.7% (74.5%), Dogri 57.4%
+   (63.1%) and Kashmiri 47.1% (61.2%). Assamese's lexicon, learned from
+   FineWeb-2's text now (note 7), has 48% of its test words, from 17%,
+   and of all of them puts 39.7% first, from 24.0% (of the few it had,
+   86.0%). Seven of these tables' costs were fitted
    as Dakshina's were, to four fifths of the words Aksharantar's train
    and valid splits romanized by hand and of its Wikidata names, the
    other fifth to choose by: Kashmiri and Meitei rose 2.6 points so,
@@ -356,20 +363,23 @@ but no model to match the glide against · `—` off
    its table reading Greeklish's digits for letters (8a: θα, pai3ei:
    παίζει), v for ν and ω (vomizo: νομίζω, mporv: μπορώ) and k for και;
    many of the rest are a writer's spelling without its accent (ΠΟΛΥ).
-   Nine tables of languages neither dataset has are measured on
+   Eleven tables of languages neither dataset has are measured on
    Dakshina's romanizations of the words their lexicons share with
-   Hindi's, Urdu's or Kannada's: three quarters to nine tenths of the
-   words of its test sentences, and how the people of a neighbouring
-   language type them, the closest measure open data gives. Of those
-   words, first: Tulu 89.4% (91.0% among the strip's two), Bhojpuri 87.2%
-   (92.2%), Awadhi 86.1% (93.2%), Sindhi in Devanagari 85.9% (91.3%),
-   Chhattisgarhi 80.2% (92.8%), Magahi 78.9% (87.6%), Western Punjabi
-   78.6% (88.5%), Saraiki 78.0% (86.0%) and Brahui 67.0% (82.0%). Seven
+   Hindi's, Urdu's or Kannada's: two thirds to nine tenths of the words
+   of its test sentences (Tulu's 45%), and how the people of a
+   neighbouring language type them, the closest measure open data gives.
+   Of those words, first: Tulu 89.4% (91.0% among the strip's two),
+   Bhojpuri 87.2% (92.2%), Awadhi 86.2% (93.2%), Sindhi in Devanagari
+   85.9% (91.3%), Rajasthani 85.7% (93.0%), Garhwali 85.4% (93.2%),
+   Chhattisgarhi 80.1% (92.9%), Magahi 78.9% (87.6%), Western Punjabi
+   78.6% (88.5%), Saraiki 77.9% (85.7%) and Brahui 67.0% (82.0%). Nine
    were fitted to those romanizations' training words as Dakshina's own
-   tables were (Magahi's and Sindhi's stayed as written): Brahui rose 4.3
-   points so, Western Punjabi 3.8, Chhattisgarhi 3.4, Saraiki 1.9, Awadhi
-   1.0, Bhojpuri 0.6 and Tulu 0.2, before the word before ranked them
-   too. Armenian, Persian, Pashto, Mongolian, Santali, Yiddish and Meitei
+   tables were (Magahi's and Sindhi's stayed as written), a cost no
+   shared word takes kept as written (Saraiki's implosives, Garhwali's
+   and Rajasthani's ळ, which those words would only push down): on their
+   dev words Brahui rose 4.4 points so, Western Punjabi 3.9,
+   Chhattisgarhi 3.5, Saraiki 2.1, Rajasthani 1.5, Awadhi 1.2, Bhojpuri
+   0.6, Garhwali 0.3 and Tulu 0.2. Armenian, Persian, Pashto, Mongolian, Santali, Yiddish and Meitei
    in the Bengali script have no such measure (Persian's and Pashto's
    speakers type the words they share with Urdu otherwise; Meitei shares
    few with Bengali); their tests read everyday words. Of the 51 checked in the seven tables
@@ -428,12 +438,14 @@ but no model to match the glide against · `—` off
    pointed letters and ligatures (`scripts/build-derived-layouts.py`).
    Bishnupriya Manipuri's wiki is not used: nearly all of it is town
    stubs a bot wrote (98% of its sentences fit 2 000 templates).
-7. These eight models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These nine models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of their own,
    Sindhi in Devanagari and Meitei in the Bengali script, whose wikis are
-   in their other scripts, and Lao, whose wiki is small.
+   in their other scripts, and Lao, whose wiki is small; and Assamese's
+   beside its 14 000 Tatoeba sentences (counted ten times), whose model
+   lacked two fifths of the web's running words.
    Its language classifier mistakes close languages, so a document is
    kept only when it reads as its language (`scripts/fineweb-text.py`):
    none heavy with Hindi's or Urdu's own function words, none that is a
@@ -464,12 +476,32 @@ but no model to match the glide against · `—` off
    xkeyboard-config keeps on the number row (ຸ ູ ໍ, and ໌ ຼ on Shift),
    which the layout's generator had left out. Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
-   (बर' is among its lexicon's commonest).
+   (बर' is among its lexicon's commonest). Assamese's text is every 6th
+   row group of its FineWeb-2 (856 000 sentences), each document's ৰ
+   outnumbering Bengali's র (only 14 of 267 000 failed): keystroke
+   savings on FineWeb-2's held-out text 17.9% -> 34.1%, the words its
+   lexicon lacks 41.4% -> 10.2% (80 000 words; on Tatoeba's held-out
+   sentences 42.3%, from 43.3%); its lexicon has 48% of Aksharantar's
+   test words, from 17%, the word first for 39.7% of them, from 24.0%.
+8. These two models learn from web text, MADLAD-400's (Google; CC BY 4.0
+   by its card, whose metadata says ODC-By; subject to Common Crawl's
+   Terms of Use; `scripts/fetch-madlad.sh`, its files at one revision
+   pinned by sha256): Garhwali and Rajasthani, which neither Wikipedia nor
+   FineWeb-2 has. Its clean files are small (137 and 40 documents), so its
+   noisy ones are read too, a document kept where Hindi's function words
+   are under 6% of its words and its own (Garhwali's मा च छौ ह्वे कु,
+   Rajasthani's री सूं मांय रो) are more, and Garhwali's where Nepali's are
+   fewer (its noisy file is half Nepali casino spam): 977 and 493
+   documents, 46 000 and 42 000 sentences, every 20th document held out.
+   Keystroke savings on those: Garhwali 31.9%, Rajasthani 30.1% (a tenth
+   of the words unknown). Both are typed on Hindi's keys with ळ on the
+   long press of ल, which both write (Rajasthani's सगळा, all); their
+   tables are Hindi's, with ळ for l at a small cost.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **89 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **91 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -480,7 +512,7 @@ but no model to match the glide against · `—` off
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy** (note 6) ·
-  **web text: brx doi hne mag brh sd-Deva mni-Beng lo** (FineWeb-2's; note 7; Lao cut into words with ICU's word list too). Built by
+  **web text: brx doi hne mag brh sd-Deva mni-Beng lo** (FineWeb-2's; note 7; Lao cut into words with ICU's word list too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet, because Tatoeba has too few

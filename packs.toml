@@ -40,6 +40,7 @@ et  = "Estonian"
 eu  = "Basque"
 fa  = "Persian"
 fi  = "Finnish"
+gbm = "Garhwali"
 fil = "Filipino"
 fr  = "French"
 gl  = "Galician"
@@ -82,6 +83,7 @@ pa  = "Punjabi"
 pl  = "Polish"
 pnb = "Western Punjabi (Shahmukhi)"
 ps  = "Pashto"
+raj = "Rajasthani"
 pt  = "Portuguese"
 ro  = "Romanian"
 ru  = "Russian"
@@ -185,11 +187,21 @@ source  = { name = "Wikipedia, the wikis' CirrusSearch dumps of 2026-11-08", url
 # revision, pinned by sha256; scripts/fineweb-text.py keeps the documents
 # that read as their language): the whole corpus of the languages, and
 # the second scripts of languages, with no Wikipedia of their own that
-# script names. ODC-By asks that what is made from it say so: each such
-# pack names it, and NOTICES.md.
+# script names, and Assamese's beside its Tatoeba sentences. ODC-By asks
+# that what is made from it say so: each such pack names it, and
+# NOTICES.md.
 [prediction.fineweb]
 license = { name = "ODC-By 1.0 (FineWeb-2)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false }
 source  = { name = "FineWeb-2 (Hugging Face): web text from Common Crawl, revision af9c133", url = "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2" }
+
+# MADLAD-400's web text (scripts/fetch-madlad.sh: its files at one
+# revision, pinned by sha256; scripts/fineweb-text.py keeps the documents
+# that read as their language): the whole corpus of Garhwali and
+# Rajasthani. Its card releases it under CC BY 4.0 (its metadata says
+# ODC-By); either asks that what is made from it say so.
+[prediction.madlad]
+license = { name = "CC BY 4.0 (MADLAD-400)", url = "https://creativecommons.org/licenses/by/4.0/", share_alike = false }
+source  = { name = "MADLAD-400 (Google; allenai/MADLAD-400 at Hugging Face): web text from Common Crawl, revision 9d886a7", url = "https://huggingface.co/datasets/allenai/MADLAD-400" }
 
 # Transliteration tables (translit/<lang>.txt, osk_data::translit): how the
 # Latin letters typed for a language become its script, written for this
@@ -218,11 +230,12 @@ langs   = ["brx", "doi", "kok", "ks", "mai", "mni", "sa"]
 # romanizations of the words they share with Hindi, Urdu or Kannada
 # (make fit-translit's FIT_BORROWED; Magahi's and Sindhi's in Devanagari
 # stayed as written). Named, and no licence added: the tables hold the
-# numbers learned, none of the dataset's words, and Chhattisgarhi's and
-# Brahui's packs are not otherwise share-alike.
+# numbers learned, none of the dataset's words, and Chhattisgarhi's,
+# Brahui's, Garhwali's and Rajasthani's packs are not otherwise
+# share-alike.
 [[translit.fitted]]
 source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons of Hindi, Urdu or Kannada, the transliteration table's costs fitted to the words they share with this language", url = "https://github.com/google-research-datasets/dakshina" }
-langs   = ["awa", "bho", "brh", "hne", "pnb", "skr", "tcy"]
+langs   = ["awa", "bho", "brh", "gbm", "hne", "pnb", "raj", "skr", "tcy"]
 
 # Keyboard layouts (layouts/<id>.json): the keys of each, and what each
 # types. The national ones are read from xkeyboard-config's keymaps
@@ -289,6 +302,7 @@ ga      = ["ga"]
 gd      = ["gd"]
 gl      = ["gl"]
 gn      = ["gn"]
+gbm     = ["gbm", "gbm-abc"]
 gu      = ["gu", "gu-abc"]
 ha      = ["ha"]
 haw     = ["haw"]
@@ -353,6 +367,7 @@ pl      = ["pl"]
 pnb     = ["pnb", "pnb-abc"]
 ps      = ["ps", "ps-abc"]
 pt      = ["pt-br", "pt"]
+raj     = ["raj", "raj-abc"]
 qu      = ["qu"]
 rm      = ["rm"]
 rn      = ["rn"]

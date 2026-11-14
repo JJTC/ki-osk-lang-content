@@ -45,18 +45,27 @@ most EVAL sentences of the `test` split (which FineWeb-2 keeps apart for
 measuring) that the corpus does not have, is what eval-predict measures
 the model on. Neither is committed: the text is the web's.
 
-    fineweb-text.py --lang L [--eval N] OUT EVAL --train F.parquet... --test F.parquet...
+Garhwali and Rajasthani come from MADLAD-400 (Google; Common Crawl's
+text, audited by language), its JSON lines read the same way: a
+document is kept where Hindi's function words are under 6% of its words
+and its own (Garhwali's मा च छौ ह्वे कु…, Rajasthani's री सूं मांय रो…)
+are at least 1% and more than Hindi's, and for Garhwali Nepali's too
+(पनि भएको हुन्छ…: its casino spam shares मा and नि). With no test split, every 20th
+document kept is held out instead (`--hold`).
 
-Needs pyarrow. The files are read in the order given, so the same files
-always give the same text.
+    fineweb-text.py --lang L [--eval N] OUT EVAL --train F... [--test F... | --hold N]
+
+Needs pyarrow for parquet. The files are read in the order given, so
+the same files always give the same text.
 """
 
 import argparse
+import gzip
+import json
 import re
 import sys
 import unicodedata
 
-import pyarrow.parquet as pq
 
 END = re.compile(r"(?<=[.!?।॥۔؟])\s+")
 STEERING = re.compile("[‎‏‪-‮⁦-⁩﻿]")
@@ -67,6 +76,13 @@ HINDI = set("है हैं था थी थे का की में क�
 URDU = set("ہے ہیں تھا تھی تھے کا کی میں کو نے نہیں یہ وہ اور لیے کے سے".split())
 PUNJABI = set("नूं तों विच नाल वी सी लई हुण".split())
 DOGRI = set("ऐ गी कन्नै कन्ने नेई बी लेई एह् ओह् च".split())
+GARHWALI = set("मा च छौ छन छा ह्वे कु बि नि तैं".split())
+# Nepali's, which Garhwali does not use (it shares मा and नि; its and is
+# अर, Nepali's र), and the words of the Nepali casino spam MADLAD-400's
+# Garhwali holds.
+NEPALI = set("पनि भएको गरेको हुन्छ थियो गर्न छन् हुने गरी र छैन तपाईंको तपाइँको "
+             "गर्नुहोस् मार्फत क्यासिनो कैसीनो बोनस".split())
+RAJASTHANI = set("री सूं मांय रो रै नीं पण नै रा".split())
 BENGALI = set("এবং করে হয় এই যে থেকে জন্য করা তার আমি আমাদের হয়েছে একটি সঙ্গে করেন হবে".split())
 
 # Sindhi's implosives: the letter, or (on the web) its plain consonant
@@ -87,8 +103,9 @@ def sindhi(text):
 
 # Each language: its script (Unicode's name for it), the neighbour whose
 # function words mark a document as not its own, for a language that a
-# rival is mistaken for, its own words and the rival's, and how its text
-# is read where the web spells it two ways.
+# rival is mistaken for, its own words and the rival's (or its own letter
+# and the rival's, which it must write more often), and how its text is
+# read where the web spells it two ways.
 LANGS = {
     "brx": {"script": "DEVANAGARI", "neighbour": HINDI},
     "doi": {"script": "DEVANAGARI", "neighbour": HINDI, "own": DOGRI, "rival": PUNJABI},
@@ -97,6 +114,13 @@ LANGS = {
     "brh": {"script": "ARABIC", "neighbour": URDU},
     "sd-Deva": {"script": "DEVANAGARI", "neighbour": HINDI - {"में", "का"}, "normalize": sindhi},
     "mni-Beng": {"script": "BENGALI", "neighbour": BENGALI},
+    # Assamese shares Bengali's script and এই, যে, হয়; its r is ৰ where
+    # Bengali's is র, which a document must write more often.
+    "as": {"script": "BENGALI", "neighbour": BENGALI - {"এই", "যে", "হয়"}, "letters": ("ৰ", "র"),
+           "every": 6},
+    # MADLAD-400's (no test split: every 20th document held out).
+    "gbm": {"script": "DEVANAGARI", "neighbour": HINDI, "own": GARHWALI, "rival": NEPALI},
+    "raj": {"script": "DEVANAGARI", "neighbour": HINDI, "own": RAJASTHANI, "rival": set()},
     "lo": {"script": "LAO", "neighbour": set(), "lines": True, "unspaced": True, "every": 12,
            "normalize": lao, "script_only": True},
 }
@@ -129,6 +153,10 @@ def kept(text, conf):
         return False
     if share(ws, conf["neighbour"]) > 0.06:
         return False
+    if "letters" in conf:
+        own, rival = conf["letters"]
+        if text.count(own) <= text.count(rival):
+            return False
     if "own" in conf:
         own = share(ws, conf["own"])
         if own < 0.01 or own <= share(ws, conf["rival"]) + share(ws, conf["neighbour"]):
@@ -177,6 +205,17 @@ def script_runs(s, script):
 
 def documents(paths, every=1):
     for path in paths:
+        if path.endswith(".jsonl.gz"):
+            # MADLAD-400's: a JSON object a line, its text in "text".
+            with gzip.open(path, "rt", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        # Its line breaks are written as the two
+                        # characters \ and n.
+                        yield json.loads(line)["text"].replace("\\n", "\n")
+            continue
+        import pyarrow.parquet as pq
+
         f = pq.ParquetFile(path)
         for g in range(0, f.metadata.num_row_groups, every):
             yield from f.read_row_group(g, columns=["text"]).column("text").to_pylist()
@@ -188,29 +227,34 @@ def main():
     ap.add_argument("--eval", type=int, default=500, help="held-out sentences written at most")
     ap.add_argument("out")
     ap.add_argument("eval_out")
-    ap.add_argument("--train", nargs="+", required=True, help="the train split's parquet files")
-    ap.add_argument("--test", nargs="+", required=True, help="the test split's parquet files")
+    ap.add_argument("--train", nargs="+", required=True, help="the train split's files")
+    ap.add_argument("--test", nargs="+", help="the test split's files")
+    ap.add_argument("--hold", type=int, default=20,
+                    help="with no test split, every HOLDth document kept is held out")
     opts = ap.parse_args()
-    train, test = opts.train, opts.test
+    train, test = opts.train, opts.test or []
     conf = LANGS[opts.lang]
     seen = set()
     docs = dropped = 0
+    held_docs = []
     with open(opts.out, "w", encoding="utf-8") as out:
         for text in documents(train, conf.get("every", 1)):
             docs += 1
             if not kept(text, conf):
                 dropped += 1
                 continue
+            if not test and (docs - dropped) % opts.hold == 0:
+                held_docs.append(text)
+                continue
             for s in sentences(text, conf):
                 if s not in seen:
                     seen.add(s)
                     out.write(s + "\n")
     held = {}
-    for text in documents(test):
-        if kept(text, conf):
-            for s in sentences(text, conf):
-                if s not in seen:
-                    held.setdefault(s, None)
+    for text in held_docs or (t for t in documents(test) if kept(t, conf)):
+        for s in sentences(text, conf):
+            if s not in seen:
+                held.setdefault(s, None)
     held = list(held)[: opts.eval]
     with open(opts.eval_out, "w", encoding="utf-8") as ev:
         for s in held:

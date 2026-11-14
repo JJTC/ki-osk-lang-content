@@ -3,7 +3,8 @@
 # their own, from FineWeb-2 (the Makefile's FINEWEB_LANGS): Bodo, Dogri,
 # Chhattisgarhi, Magahi and Brahui, Sindhi in Devanagari and Meitei in
 # the Bengali script, whose wikis are in their other scripts, and Lao,
-# whose wiki is small.
+# whose wiki is small; and Assamese, whose Tatoeba corpus is small, beside
+# it (the Makefile's FINEWEB_PLUS_LANGS).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
 # it is ODC-By 1.0, and its use subject to Common Crawl's Terms of Use.
@@ -48,6 +49,8 @@ mni-Beng  mni_Beng  train/000_00000.parquet  70c880e2be17a13639b86139961cda481a9
 mni-Beng  mni_Beng  test/000_00000.parquet   92dd42dc4360a753b7e1a96a5c2a92edcf52a7f747c1c9e73346b24df8875773
 lo   lao_Laoo  train/000_00000.parquet  19e5de2c1054ceed9946a91922db64690af5e61b248c8556de0832c8d3f66040
 lo   lao_Laoo  test/000_00000.parquet   d0d84f18de6400f06a2ed725f0858a517593fbbe0ac0698dc3418b2f5138b4ce
+as   asm_Beng  train/000_00000.parquet  66c64bd424c0084aee17ec4936a21d6e0b307b068f2fd29bf8acd60204a4891b
+as   asm_Beng  test/000_00000.parquet   fe65d2e25063872f4593f01af4cb0e0e69fc50e5af9714bdefc3701a100dfcc3
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

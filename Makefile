@@ -30,7 +30,7 @@ ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
                  oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
                  bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                 brx doi hne mag brh sd-Deva mni-Beng lo
+                 brx doi hne mag brh sd-Deva mni-Beng lo gbm raj
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -69,7 +69,19 @@ WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # like the corpus it is not committed. Reading parquet needs pyarrow:
 # FINEWEB_PYTHON names a Python that has it.
 FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo
+# And beside a small Tatoeba corpus, counted TATOEBA_WEIGHT times as
+# Hindi's is beside Dakshina's text: Assamese (14 000 sentences).
+FINEWEB_PLUS_LANGS ?= as
 FINEWEB_DIR = $(SRC_DIR)/fineweb
+
+# MADLAD-400's web text (scripts/fetch-madlad.sh, its files at one revision
+# pinned by sha256; CC BY 4.0 by its card, subject to Common Crawl's Terms
+# of Use), the whole corpus of languages neither Wikipedia nor FineWeb-2
+# has: Garhwali and Rajasthani. scripts/fineweb-text.py keeps the
+# documents that read as their language and holds out every 20th, in
+# $(MADLAD_DIR)/eval; nothing of it is committed.
+MADLAD_LANGS ?= gbm raj
+MADLAD_DIR = $(SRC_DIR)/madlad
 FINEWEB_PYTHON ?= python3
 
 # Words romanized by hand, from the test split of AI4Bharat's Aksharantar
@@ -131,8 +143,9 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # (DAKSHINA_LANGS) its and Bengali's lexicons keep growing: from 40 000
 # words (Marathi) and 30 000 (Bengali) to 80 000, transliteration's first
 # reading is right 3.8 and 2.0 points more often, and keystroke savings on
-# Tatoeba's held-out text rise 0.5 and 1.9 points.
-PREDICT_LARGE_LANGS ?= bn mr
+# Tatoeba's held-out text rise 0.5 and 1.9 points. Assamese, Bengali's
+# neighbour, with FineWeb-2's text (FINEWEB_PLUS_LANGS), too.
+PREDICT_LARGE_LANGS ?= bn mr as
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -158,7 +171,7 @@ PREDICT_WIDER_NGRAM ?= 90000
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
 PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                      brx doi hne mag brh sd-Deva mni-Beng lo
+                      brx doi hne mag brh sd-Deva mni-Beng lo gbm raj
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
@@ -190,6 +203,7 @@ help:
 	@echo "  fetch-greeklish  Greek typed in Latin letters, for eval-translit"
 	@echo "  fetch-fineweb    FineWeb-2's web text, for FINEWEB_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
+	@echo "  fetch-madlad     MADLAD-400's web text, for MADLAD_LANGS, into SRC_DIR"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
@@ -226,7 +240,7 @@ help:
 # only what the lock says is out of date, then refuses a result that
 # lost a file or shrank one.
 .PHONY: refresh
-refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb
+refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad
 	$(MAKE) predict-assets hinglish-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) check
 
@@ -252,7 +266,11 @@ fetch-greeklish:
 
 .PHONY: fetch-fineweb
 fetch-fineweb:
-	OUT=$(FINEWEB_DIR) PYTHON=$(FINEWEB_PYTHON) ./scripts/fetch-fineweb.sh $(FINEWEB_LANGS)
+	OUT=$(FINEWEB_DIR) PYTHON=$(FINEWEB_PYTHON) ./scripts/fetch-fineweb.sh $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS)
+
+.PHONY: fetch-madlad
+fetch-madlad:
+	OUT=$(MADLAD_DIR) ./scripts/fetch-madlad.sh $(MADLAD_LANGS)
 
 # The word lists of the languages written without spaces between words
 # (wordbreak/<lang>.txt, committed): ICU's word-break dictionaries, pinned
@@ -286,9 +304,9 @@ predict-assets:
 			*" $$lang "*) vocab=$(PREDICT_WIDER_VOCAB); ngram=$(PREDICT_WIDER_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
-		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) " in \
+		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) " in \
 			*" $$lang "*) ;; \
-			*) case " $(DAKSHINA_LANGS) " in \
+			*) case " $(DAKSHINA_LANGS) $(FINEWEB_PLUS_LANGS) " in \
 				*" $$lang "*) corpus="--corpus $(TATOEBA_WEIGHT):$(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt"; \
 				              weight="--recipe tatoeba_weight=$(TATOEBA_WEIGHT)" ;; \
 				*) corpus="--corpus $(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt" ;; \
@@ -303,9 +321,13 @@ predict-assets:
 			*" $$lang "*) corpus="$$corpus --corpus $(WIKIPEDIA_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input wikipedia/$$lang.txt=$(WIKIPEDIA_DIR)/$$lang.txt" ;; \
 		esac; \
-		case " $(FINEWEB_LANGS) " in \
+		case " $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(FINEWEB_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input fineweb/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt" ;; \
+		esac; \
+		case " $(MADLAD_LANGS) " in \
+			*" $$lang "*) corpus="$$corpus --corpus $(MADLAD_DIR)/$$lang.txt"; \
+			              corpus_in="$$corpus_in --input madlad/$$lang.txt=$(MADLAD_DIR)/$$lang.txt" ;; \
 		esac; \
 		words=; words_in=; \
 		if [ -f wordbreak/$$lang.txt ]; then \
@@ -638,7 +660,7 @@ eval-translit:
 # table fitted before starts from its fitted costs.
 FIT_TRANSLIT_LANGS ?= $(DAKSHINA_LANGS)
 FIT_AKSHARANTAR_LANGS ?= $(AKSHARANTAR_LANGS)
-FIT_BORROWED ?= bho:hi awa:hi mag:hi hne:hi sd-Deva:hi pnb:ur skr:ur brh:ur tcy:kn
+FIT_BORROWED ?= bho:hi awa:hi mag:hi hne:hi sd-Deva:hi gbm:hi raj:hi pnb:ur skr:ur brh:ur tcy:kn
 DAKSHINA_DEV = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.dev.tsv
 .PHONY: fit-translit
 fit-translit:

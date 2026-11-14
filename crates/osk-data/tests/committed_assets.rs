@@ -505,6 +505,11 @@ fn every_translit_table_reads_its_language() {
                 ("waphom", "ৱাফম"),
             ],
         ),
+        ("gbm", &[("ar", "अर"), ("ma", "मा"), ("garhwali", "गढ़वाली")]),
+        (
+            "raj",
+            &[("ri", "री"), ("mharo", "म्हारो"), ("sagla", "सगळा")],
+        ),
     ];
     let tables = files("translit", ".txt");
     assert_eq!(

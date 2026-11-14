@@ -95,3 +95,33 @@ ng    ং:0.3
 n$    ং:2  ঁ:2
 t$    ৎ:1
 t>c   ৎ:1
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (bjp: বিজেপি), as its web text writes them.
+[letters]
+a  এ
+b  বি
+c  চি
+d  ডি
+e  ই
+f  এফ
+g  জি
+h  এইচ
+i  আই
+j  জে
+k  কে
+l  এল
+m  এম
+n  এন
+o  অ'
+p  পি
+q  কিউ
+r  আৰ
+s  এছ
+t  টি
+u  ইউ
+v  ভি
+w  ডব্লিউ
+x  এক্স
+y  ৱাই
+z  জেড
