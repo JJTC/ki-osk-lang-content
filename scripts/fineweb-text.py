@@ -38,7 +38,10 @@ its letters written two ways are written as the keyboard types them
 Kokborok (trp), written in Latin letters, has English against it, its
 words counted in lower case, and a sentence of it whose words are more
 than 15% English's (`sentence_rival`) is left out (39 of the 4 843 of
-the documents kept).
+the documents kept). Mizo is read so too, every third row group of it
+(100 MB in all). Khasi has Pnar (Jaintia) against it as well, which
+FineWeb-2 files under Khasi (wyrta.com, two fifths of its documents):
+Khasi writes ba jong bad kiba kaba, Pnar wa ya kiwa kawa ko wow.
 
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
@@ -89,6 +92,10 @@ NEPALI = set("पनि भएको गरेको हुन्छ थिय�
 RAJASTHANI = set("री सूं मांय रो रै नीं पण नै रा".split())
 ENGLISH = set("the of and to in is that for on with as was are by this it from be at an or".split())
 KOKBOROK = set("tei ni no bai khe bo kha kaisa tongo bini hwnwi wngkha twi nwng ang".split())
+MIZO = set("chu leh hi kan te hian ah pawh tur chuan ni ang tak tih awm".split())
+KHASI = set("ba jong bad kiba kaba uba ia ïa".split())
+# Pnar (Jaintia), Khasi's neighbour, which FineWeb-2 files under Khasi.
+PNAR = set("wa ya kiwa kawa uwa ko wow".split())
 BENGALI = set("এবং করে হয় এই যে থেকে জন্য করা তার আমি আমাদের হয়েছে একটি সঙ্গে করেন হবে".split())
 
 # Sindhi's implosives: the letter, or (on the web) its plain consonant
@@ -130,6 +137,12 @@ LANGS = {
     # Kokborok, in Latin letters: a document whose own words outnumber
     # English's, the English sentences in it left out.
     "trp": {"script": "LATIN", "neighbour": set(), "own": KOKBOROK, "rival": ENGLISH,
+            "sentence_rival": ENGLISH},
+    # Mizo, in Latin letters: as Kokborok; every 3rd row group.
+    "lus": {"script": "LATIN", "neighbour": set(), "own": MIZO, "rival": ENGLISH,
+            "sentence_rival": ENGLISH, "every": 3},
+    # Khasi: a document whose own words outnumber Pnar's and English's.
+    "kha": {"script": "LATIN", "neighbour": set(), "own": KHASI, "rival": PNAR | ENGLISH,
             "sentence_rival": ENGLISH},
     "lo": {"script": "LAO", "neighbour": set(), "lines": True, "unspaced": True, "every": 12,
            "normalize": lao, "script_only": True},

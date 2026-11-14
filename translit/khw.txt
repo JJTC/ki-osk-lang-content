@@ -1,0 +1,107 @@
+# Khowar (Perso-Arabic script) from Latin letters, as Khowar is typed in
+# Latin: Urdu's ways and their costs, fitted to how people romanized
+# Urdu's words (the Dakshina dataset's; NOTICES.md), whose script and
+# spelling Khowar writes with (short vowels mostly unwritten inside a
+# word, a word's first vowel on an alif, h after a consonant its
+# aspirate), with Khowar's own letters: its retroflex ݯ ݮ ݰ ݱ beside ch,
+# j, sh and zh's چ ج ش ژ, at a cost (chitrar: ݯھترار), and څ and ځ for ts
+# and dz. The lexicon chooses.
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
+
+script abjad
+
+[consonants]
+b    ب:0.1
+bb   ب  بب:1
+bh   بھ
+p    پ
+ph   پھ  ف:1
+t    ت:0.8  ٹ:0.5  ط:1.1
+tt   ت:0.6  ٹ:0.5  تت:1
+th   تھ:0.1  ٹھ:0.9  ث:2
+s    س:0.8  ص:1    ث:2.1
+ss   س:0.3  سس:1
+j    ج  ݮ:1
+jh   جھ
+ch   چ  ݯ:1
+chh  چھ  ݯھ:1
+c    چ:0.1  ک:1.5
+c>v  چ:0.3  س:2  ک:1
+ck   ک:0.5
+sch  سک:0.5  اسک:0.8
+h    ہ:1    ح:0.7  ھ:1.6
+kh   خ      کھ:0.2
+d    د:0.5  ڈ:0.4  ڑ:0.8
+dd   د:0.4  ڈ:0.4  دد:1
+dh   دھ:0.1  ڈھ:1
+z    ز:0.6  ذ:1.7  ض:1.7  ظ:1.9
+r    ر      ڑ:1.6
+rr   ر:0.5  ڑ:1  رر:1
+rh   ڑھ  رہ:0.5
+zh   ژ  ݱ:1
+sh   ش  ݰ:1
+ts   څ  تس:1
+dz   ځ  دز:1
+gh   غ:0.1  گھ:0.2
+f    ف
+q    ق  ک:1.5
+k    ک  ق:1.7
+kk   ک:0.5  کک:1
+g    گ
+l    ل:0.1
+ll   ل:0.3  لل:1
+m    م
+mm   م:0.3  مم:1
+n    ن:0.1
+nn   ن:0.3  نن:1
+v    و
+w    و
+y    ی
+x    کس  خ:1
+
+[vowels]
+^a    ا:0.2  آ:1.1  ع:1.3
+a     -:1.8  ا:1.4  ع:1.7  ہ:3.4
+a$    ا  ہ:0.4  ی:3    -:4
+^aa   آ  ا:1.3  عا:1.8
+aa    ا  ع:1.8
+^i    ا:0.1  ای:1  ع:2
+i     -:0.7  ی:0.1
+i$    ی  ے:2.6  ہ:2.4  یں:1.2
+^ee   ای
+ee    ی
+^u    ا  او:0.7  ع:2
+u     -:0.5  و:0.2
+u$    و
+^oo   او
+oo    و
+^o    او  ا:1
+o     و  -:2.5  ا:2.4
+o$    و  ہ:2.3
+^e    ا:0.1  ای:0.6  اے:1
+e     ی:0.3  ے:1  -:2.3
+e$    ے  ی:1.4  ہ:1.8
+^ai   اے  ای:1  ع:2
+ai    ی  ے:1  ا:2.2
+ai$   ے  ی:1.1
+^au   او
+au    و
+ou    و
+ei    ی  ے:1
+aye   ئے:0.4  ائے:0.9
+ayi   ئی:0.3
+ai$   ئی:0.8
+ui    وئی:0.3
+uye   وئے:0.3
+uwe   وئے:0.5
+oi    وئی:0.3
+oye   وئے:0.5
+ey$   ے  ی:1.3
+
+[other]
+er$   ر:1.4
+y$    ی:2
+tion  شن:1
+n$    ں:0.2

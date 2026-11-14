@@ -86,11 +86,11 @@
               "long_press": [
                 {
                   "kind": "text",
-                  "text": "ग़"
+                  "text": "ॻ"
                 },
                 {
                   "kind": "text",
-                  "text": "ॻ"
+                  "text": "ग़"
                 }
               ]
             },
@@ -112,15 +112,15 @@
               "long_press": [
                 {
                   "kind": "text",
+                  "text": "ॼ"
+                },
+                {
+                  "kind": "text",
                   "text": "ज़"
                 },
                 {
                   "kind": "text",
                   "text": "ज्ञ"
-                },
-                {
-                  "kind": "text",
-                  "text": "ॼ"
                 }
               ]
             },
@@ -134,11 +134,11 @@
               "long_press": [
                 {
                   "kind": "text",
-                  "text": "ड़"
+                  "text": "ॾ"
                 },
                 {
                   "kind": "text",
-                  "text": "ॾ"
+                  "text": "ड़"
                 }
               ]
             }

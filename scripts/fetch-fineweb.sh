@@ -3,8 +3,9 @@
 # their own, from FineWeb-2 (the Makefile's FINEWEB_LANGS): Bodo, Dogri,
 # Chhattisgarhi, Magahi and Brahui, Sindhi in Devanagari and Meitei in
 # the Bengali script, whose wikis are in their other scripts, Lao, whose
-# wiki is small, and Kokborok, which has none; and Assamese, whose Tatoeba
-# corpus is small, beside it (the Makefile's FINEWEB_PLUS_LANGS).
+# wiki is small, and Kokborok, Mizo and Khasi, which have none; and
+# Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
+# FINEWEB_PLUS_LANGS).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
 # it is ODC-By 1.0, and its use subject to Common Crawl's Terms of Use.
@@ -53,6 +54,10 @@ as   asm_Beng  train/000_00000.parquet  66c64bd424c0084aee17ec4936a21d6e0b307b06
 as   asm_Beng  test/000_00000.parquet   fe65d2e25063872f4593f01af4cb0e0e69fc50e5af9714bdefc3701a100dfcc3
 trp  trp_Latn  train/000_00000.parquet  3becfceb5073d2991ba09f7f69d6d76a045bc154d10b5b058aca4bb0b44ace9c
 trp  trp_Latn  test/000_00000.parquet   18b9059b96e18148350efbb260dc6120c72ca251dc317fe51b543100bef495ea
+lus  lus_Latn  train/000_00000.parquet  ae86b93ee0ce7565f66dc07a63ea4111530d3088ba9fac91cdf195885e225da3
+lus  lus_Latn  test/000_00000.parquet   82931cb2bc0affbe7402e3d92b616485a30cab1f29a226d4a17490e6a4090444
+kha  kha_Latn  train/000_00000.parquet  d2293b5ec62d94d3b1019aab7a3ce03f01801d7c7a8ac1a1a3ce3315d4c44f66
+kha  kha_Latn  test/000_00000.parquet   c2e85f6aa8725b703a40b395668198eec7d3036c2e4013b8c116152381eb894b
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

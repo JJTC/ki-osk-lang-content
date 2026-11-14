@@ -3,7 +3,10 @@
 # languages whose models learn from it alone (the Makefile's
 # WIKIPEDIA_LANGS): Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
 # Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the Goan wiki's
-# Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki and Tulu.
+# Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki and Tulu; and
+# the text of the Wikimedia Incubator's test wikis of languages with no
+# Wikipedia yet: Magahi (beside its FineWeb-2 text), Adilabad Gondi, in
+# the Telugu script, and Khowar.
 #
 # The text comes from each wiki's CirrusSearch dump (Wikimedia's
 # cirrus_search_index, an article a JSON document whose "text" is its
@@ -19,8 +22,12 @@
 #                       held out of the corpus: what eval-predict measures
 #                       the model on (committed)
 #
-# The dumps are kept in $OUT/raw, and a kept one whose sha256 is right is
-# not downloaded again.
+# The Incubator's dump holds all its test wikis: a language's articles
+# are those whose title starts with its prefix (Wp/mag/), and with a
+# neighbour named, an article heavy with that neighbour's function words
+# is left out (wikipedia-text.py --neighbour): a test wiki's writers paste
+# their neighbour's articles in. The dumps are kept in $OUT/raw, and a
+# kept one whose sha256 is right is not downloaded again.
 #
 #   scripts/fetch-wikipedia.sh            # every language
 #   scripts/fetch-wikipedia.sh ne or      # some
@@ -51,19 +58,36 @@ awa  awa  awawiki_content-20261108-00000.json.bz2  b9b119cc5dcb3b2f7c0e9c08d7238
 skr  skr  skrwiki_content-20261108-00000.json.bz2  879bbf4d040968cda18a2476c43777f0ff84ba6dc229696be2172c06e863140b  ARABIC
 tcy  tcy  tcywiki_content-20261108-00000.json.bz2  985c3225bcfab543d358122f3ced04060446c1a2a5ddc1d7c16784e3801020e5  KANNADA
 "
+INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
+INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1
+# language  prefix  script  neighbour (- for none)
+INCUBATOR="
+mag  Wp/mag/  DEVANAGARI  hi
+wsg  Wp/wsg/  TELUGU      -
+khw  Wp/khw/  ARABIC      ur
+"
 
 HERE=$(cd "$(dirname "$0")" && pwd)
 OUT=${OUT:-${TMPDIR:-/tmp}/ki-osk-sources/wikipedia}
 CAP=${CAP:-400000}
 EVAL_CAP=${EVAL_CAP:-500}
 EVAL_OUT=${EVAL_OUT:-eval}
-langs=${*:-$(echo "$DUMPS" | awk 'NF {print $1}')}
+langs=${*:-$(echo "$DUMPS$INCUBATOR" | awk 'NF {print $1}')}
 
 mkdir -p "$OUT/raw" "$EVAL_OUT"
 for lang in $langs; do
 	row=$(echo "$DUMPS" | awk -v l="$lang" '$1 == l')
-	[ -n "$row" ] || { echo "fetch-wikipedia: no dump for $lang" >&2; exit 2; }
-	read -r _ wiki file sha script <<<"$row"
+	extra=()
+	if [ -n "$row" ]; then
+		read -r _ wiki file sha script <<<"$row"
+	else
+		row=$(echo "$INCUBATOR" | awk -v l="$lang" '$1 == l')
+		[ -n "$row" ] || { echo "fetch-wikipedia: no dump for $lang" >&2; exit 2; }
+		read -r _ prefix script neighbour <<<"$row"
+		wiki=incubator file=$INCUBATOR_FILE sha=$INCUBATOR_SHA
+		extra=(--prefix "$prefix")
+		[ "$neighbour" = - ] || extra+=(--neighbour "$neighbour")
+	fi
 	dump="$OUT/raw/$file"
 	if [ ! -f "$dump" ] || [ "$(sha256sum "$dump" | cut -d' ' -f1)" != "$sha" ]; then
 		curl -fsSL --retry 5 --retry-all-errors -o "$dump.part" \
@@ -78,6 +102,6 @@ for lang in $langs; do
 	fi
 	keep=()
 	[ "$script" = - ] || keep=(--script "${script//_/ }")
-	python3 -I "$HERE/wikipedia-text.py" --cap "$CAP" --eval "$EVAL_CAP" "${keep[@]}" \
+	python3 -I "$HERE/wikipedia-text.py" --cap "$CAP" --eval "$EVAL_CAP" "${keep[@]}" "${extra[@]}" \
 		"$OUT/$lang.txt" "$EVAL_OUT/$lang.txt" "$dump"
 done

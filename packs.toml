@@ -57,12 +57,15 @@ is  = "Icelandic"
 it  = "Italian"
 ka  = "Georgian"
 kab = "Kabyle"
+kha = "Khasi"
+khw = "Khowar"
 kn  = "Kannada"
 kok = "Konkani"
 ks  = "Kashmiri"
 ku  = "Kurdish (Kurmanji)"
 lo  = "Lao"
 lt  = "Lithuanian"
+lus = "Mizo"
 lv  = "Latvian"
 mag = "Magahi"
 mai = "Maithili"
@@ -107,6 +110,7 @@ ug  = "Uyghur"
 uk  = "Ukrainian"
 ur  = "Urdu"
 vi  = "Vietnamese"
+wsg = "Gondi (Adilabad)"
 yi  = "Yiddish"
 
 # The dialect flags (predict/<lang>.dialects.bin: which varieties of a
@@ -179,10 +183,11 @@ source  = { name = "The Dakshina dataset v1.0 (Google Research): Wikipedia text"
 
 # The wikis' own text (scripts/fetch-wikipedia.sh: their CirrusSearch
 # dumps, plain text, pinned by sha256): the whole corpus of the languages
-# that script names.
+# that script names, the Wikimedia Incubator's test wikis among them
+# (Gondi's, Khowar's, and Magahi's beside its FineWeb-2 text).
 [prediction.wikipedia]
 license = { name = "CC BY-SA 4.0 (Wikipedia)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
-source  = { name = "Wikipedia, the wikis' CirrusSearch dumps of 2026-11-08", url = "https://dumps.wikimedia.org/other/cirrus_search_index/20261108/" }
+source  = { name = "Wikipedia and the Wikimedia Incubator's test wikis, their CirrusSearch dumps of 2026-11-08", url = "https://dumps.wikimedia.org/other/cirrus_search_index/20261108/" }
 
 # FineWeb-2's web text (scripts/fetch-fineweb.sh: its parquet files at one
 # revision, pinned by sha256; scripts/fineweb-text.py keeps the documents
@@ -228,15 +233,15 @@ source  = { name = "The Aksharantar dataset (AI4Bharat): words romanized by hand
 langs   = ["brx", "doi", "kok", "ks", "mai", "mni", "sa"]
 
 # The tables of languages neither dataset has, fitted to Dakshina's
-# romanizations of the words they share with Hindi, Urdu or Kannada
-# (make fit-translit's FIT_BORROWED; Magahi's and Sindhi's in Devanagari
-# stayed as written). Named, and no licence added: the tables hold the
-# numbers learned, none of the dataset's words, and Chhattisgarhi's,
-# Brahui's, Garhwali's and Rajasthani's packs are not otherwise
-# share-alike.
+# romanizations of the words they share with Hindi, Urdu, Kannada or
+# Telugu (make fit-translit's FIT_BORROWED; Sindhi's in Devanagari
+# stayed as written, Gondi's at Telugu's fitted costs). Named, and no
+# licence added: the tables hold the numbers learned, none of the
+# dataset's words, and Chhattisgarhi's, Brahui's, Garhwali's and
+# Rajasthani's packs are not otherwise share-alike.
 [[translit.fitted]]
-source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons of Hindi, Urdu or Kannada, the transliteration table's costs fitted to the words they share with this language", url = "https://github.com/google-research-datasets/dakshina" }
-langs   = ["awa", "bho", "brh", "gbm", "hne", "pnb", "raj", "skr", "tcy"]
+source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons of Hindi, Urdu, Kannada or Telugu, the transliteration table's costs fitted to the words they share with this language", url = "https://github.com/google-research-datasets/dakshina" }
+langs   = ["awa", "bho", "brh", "gbm", "hne", "khw", "mag", "pnb", "raj", "skr", "tcy", "wsg"]
 
 # Keyboard layouts (layouts/<id>.json): the keys of each, and what each
 # types. The national ones are read from xkeyboard-config's keymaps
@@ -324,6 +329,8 @@ ja      = ["jp-romaji"]
 jv      = ["jv"]
 ka      = ["ka"]
 kab     = ["kab"]
+kha     = ["kha"]
+khw     = ["khw", "khw-abc"]
 kk      = ["kk"]
 kl      = ["kl"]
 km      = ["km"]
@@ -338,6 +345,7 @@ lg      = ["lg"]
 ln      = ["ln"]
 lo      = ["lo"]
 lt      = ["lt"]
+lus     = ["lus"]
 lv      = ["lv"]
 mag     = ["mag", "mag-abc"]
 mai     = ["mai", "mai-abc"]
@@ -415,6 +423,7 @@ ur      = ["ur", "ur-abc"]
 uz      = ["uz"]
 ve      = ["ve"]
 vi      = ["vi"]
+wsg     = ["wsg", "wsg-abc"]
 wo      = ["wo"]
 xh      = ["xh"]
 yi      = ["yi", "yi-abc"]

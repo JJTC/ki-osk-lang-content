@@ -146,6 +146,9 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("mni-beng", "ৱ"),
         ("gbm", "ळ"),
         ("raj", "ळ"),
+        ("khw", "څځݮݯݰݱ"),
+        ("lus", "âêîôûṭÂÊÎÔÛṬ"),
+        ("kha", "ïñÏÑ"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {

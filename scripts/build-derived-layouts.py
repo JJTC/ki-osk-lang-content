@@ -18,9 +18,15 @@ pointed letters (אַ אָ פּ פֿ וּ יִ …) and the ligatures װ ױ ײ o
 long presses of the letters they are made from. Sindhi in Devanagari
 (sd-Deva) is typed on Hindi's keys, its implosives ॻ ॼ ॾ ॿ on the long
 presses of ग ज ड ब, and Meitei in the Bengali script (mni-Beng) on
-Bengali's, with ৱ on ব's. A letter only a long press types turns the
-gesture on for the layout (`long_press_letters`). A layout's id is its
-language's tag in lower case (sd-deva), its prediction language the tag.
+Bengali's, with ৱ on ব's. Khowar is typed on Urdu's keys, its own
+letters on the long presses of those that sound nearest: ځ ݮ on ج, څ ݯ on
+چ, ݰ on ش, ݱ on ز. Adilabad Gondi is typed on Telugu's keys. Mizo
+and Khasi, in Latin letters, are typed on the US keys with their own
+letters first on the long presses, the menu's others after them: Mizo's
+â ê î ô û and ṭ, Khasi's ï and ñ. A letter only a long press types turns
+the gesture on for the layout (`long_press_letters`). A layout's id is
+its language's tag in lower case (sd-deva), its prediction language the
+tag.
 
     scripts/build-derived-layouts.py [--check]
 
@@ -33,7 +39,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 # The layout made, the one it is made from, its name, and what its keys
-# gain on a long press (a key's label → the letters), on every view.
+# gain on a long press (a key's label → the letters, first in its menu),
+# on every view.
 DERIVED = [
     ("bho", "hi", "भोजपुरी", {}),
     ("mai", "hi", "मैथिली", {}),
@@ -81,6 +88,18 @@ DERIVED = [
             "ת": ["תּ"],
         },
     ),
+    ("wsg", "te", "గోండి", {}),
+    (
+        "lus",
+        "us",
+        "Mizo",
+        {
+            "a": ["â"], "e": ["ê"], "i": ["î"], "o": ["ô"], "u": ["û"], "t": ["ṭ"],
+            "A": ["Â"], "E": ["Ê"], "I": ["Î"], "O": ["Ô"], "U": ["Û"], "T": ["Ṭ"],
+        },
+    ),
+    ("kha", "us", "Khasi", {"i": ["ï"], "n": ["ñ"], "I": ["Ï"], "N": ["Ñ"]}),
+    ("khw", "ur", "کھوار", {"ج": ["ځ", "ݮ"], "چ": ["څ", "ݯ"], "ش": ["ݰ"], "ز": ["ݱ"]}),
 ]
 
 
@@ -101,9 +120,8 @@ def build(lang, base, name, extra):
             for key in row["keys"]:
                 letters = extra.get(key.get("label"))
                 if letters:
-                    key["long_press"] = key.get("long_press", []) + [
-                        {"kind": "text", "text": t} for t in letters
-                    ]
+                    rest = [k for k in key.get("long_press", []) if k.get("text") not in letters]
+                    key["long_press"] = [{"kind": "text", "text": t} for t in letters] + rest
                     added.add(key.get("label"))
     missing = set(extra) - added
     if missing:

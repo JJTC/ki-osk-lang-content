@@ -1,0 +1,121 @@
+# Adilabad Gondi (Telugu script) from Latin letters, as Gondi is typed in
+# Latin: Telugu's ways, whose script the Gondi of Telangana is written
+# in, and its costs, fitted to how people romanized Telugu's words (the
+# Dakshina dataset's; NOTICES.md). Two consonants typed together are
+# joined by the virama; a word's last m (and n) is the nasal sign, any
+# other last consonant takes the virama, as Gondi's many words that end
+# in one do (koytur: కోయ్తూర్, gond: గోండ్).
+# English words, which the language writes in its script too, are typed
+# as English spells them: c, ck, sch, o, er, y and tion have English
+# ways too, at a cost.
+
+script abugida
+virama ్
+cluster 0.4
+schwa 3.2
+final 2
+final-virama 0.2
+
+[consonants]
+k    క
+kh   ఖ
+q    క
+g    గ
+gh   ఘ
+ch   చ  ఛ:1
+chh  ఛ
+c    చ  క:1.5
+c>v  చ  స:1.5  క:1.5
+ck   క్క:0.5
+sch  స్క:0.5
+j    జ  ఝ:2.5
+jh   ఝ
+z    జ
+t    త:0.3  ట:0.4
+tt   ట్ట:0.3  త్త:0.5  ట:1.2
+th   థ:0.4  ఠ:1  త:0.5  త్త:0.6
+d    ద:0.2  డ:0.4
+dd   డ్డ:0.3  ద్ద:0.5  డ:1
+dh   ధ:0.2  ఢ:1  ద:0.8
+n    న:0.4  ణ:1.2
+p    ప
+ph   ఫ
+f    ఫ
+b    బ
+bh   భ
+m    మ:0.4
+y    య
+r    ర:0.2  ఱ:2.5
+l    ల  ళ:0.6
+ll   ల్ల  ళ్ళ:0.5
+jn   జ్ఞ:0.3
+v    వ
+w    వ
+sh   శ:0.1  ష:0.6  స:2
+s    స:0.1  శ:0.6  ష:2
+h    హ:0.4
+x    క్స  క్ష:1
+ksh  క్ష
+
+[vowels]
+a     అ/-:0.3  ఆ/ా:0.9
+^a    అ/-  ఆ/ా:1
+^vu   ఉ/ు:0.5  ఊ/ూ:1
+^vo   ఒ/ొ:0.5  ఓ/ో:0.8
+^ye   ఏ/ే:0.3  ఎ/ె:0.5
+a$    అ/-  ఆ/ా:0.7
+aa    ఆ/ా
+i     ఇ/ి:0.1  ఈ/ీ:1.1
+ee    ఈ/ీ  ఏ/ే:0.7
+ii    ఈ/ీ
+u     ఉ/ు  ఊ/ూ:1.2
+oo    ఊ/ూ:0.3  ఓ/ో:0.4
+uu    ఊ/ూ
+e     ఎ/ె:0.4  ఏ/ే:0.3
+ae    ఏ/ే
+ai    ఐ/ై
+ei    ఐ/ై:0.5  ఏ/ే:1
+o     ఒ/ొ:0.2  ఓ/ో:0.3  ఆ/ా:2.2
+au    ఔ/ౌ
+ou    ఔ/ౌ
+ru    ఋ/ృ:1.4
+ri    ఋ/ృ:1.8
+
+[other]
+er$   ర్:1.5
+y$    ీ:2
+tion  షన్:1
+n>c   ం:0.3
+m>c   ం:0.6
+m$    ం:0.3
+n$    ం:1.5
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: టీవీ), as the language's Wikipedia writes them.
+[letters]
+a  ఏ
+b  బీ
+c  సీ
+d  డీ
+e  ఈ
+f  ఎఫ్
+g  జీ
+h  హెచ్
+i  ఐ
+j  జే
+k  కే
+l  ఎల్
+m  ఎం
+n  ఎన్
+o  ఓ
+p  పీ
+q  క్యూ
+r  ఆర్
+s  ఎస్
+t  టీ
+u  యూ
+v  వీ
+w  డబ్ల్యూ
+x  ఎక్స్
+y  వై
+z  జెడ్

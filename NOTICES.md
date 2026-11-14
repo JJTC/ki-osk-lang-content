@@ -11,8 +11,9 @@ files carries their terms.
 The code here — the Makefile, the Cargo workspace and `crates/`, the
 scripts, the workflows and `packs.toml` — is MIT licensed (`LICENSE`), as
 are the text rules in `rules/` and the transliteration tables in
-`translit/`, which were written here (twenty-six tables' costs then
-fitted to the Dakshina and Aksharantar datasets' romanizations, below).
+`translit/`, which were written here (twenty-eight tables' costs then
+fitted to the Dakshina and Aksharantar datasets' romanizations, and
+Gondi's taken from Telugu's, below).
 The data keeps its original licence, below. That includes the seeds in
 `seeds/`, which are excerpts of the datasets they are listed under. Add an entry here whenever a
 new dataset is pulled in.
@@ -121,7 +122,8 @@ with its word list (see [Word lists](#word-lists)).
 Size tiers are recorded in the Makefile: 34 languages
 (`PREDICT_COMPACT_LANGS`) keep 18 000 words and 30 000 n-grams, those
 whose lexicons Wikipedia or web text widens (below) 30 000 and 60 000,
-Bengali and Marathi 80 000 and 90 000 (`PREDICT_LARGE_LANGS`), the
+Bengali, Marathi, Assamese and Magahi 80 000 and 90 000
+(`PREDICT_LARGE_LANGS`), the
 Dravidian languages 200 000 and 90 000 (`PREDICT_WIDER_LANGS`), the
 others 20 000 and 60 000.
 
@@ -165,22 +167,27 @@ and Tulu. The text is each wiki's CirrusSearch dump of 2026-11-08
 field), pinned by sha256 in `scripts/fetch-wikipedia.sh`, cut into
 sentences by `scripts/wikipedia-text.py`: at most 400 000 a language.
 Every 20th article is held out of it, and the first 500 sentences of
-those are `eval/<lang>.txt`. **Wikipedia's text is CC BY-SA 4.0**,
-share-alike: the packs of those sixteen languages, their models and that
-held-out text carry those terms, with attribution to Wikipedia's
-contributors (each article's history, at its wiki, names them).
+those are `eval/<lang>.txt`. Three more learn from the Wikimedia
+Incubator's test wikis, in its dump of the same date (each article's
+title starting with its wiki's prefix, `Wp/mag/`): Adilabad Gondi's and
+Khowar's alone, Magahi's beside its FineWeb-2 text; an article or
+sentence heavy with Hindi's or Urdu's own words is left out. **Wikipedia's
+text, and the Incubator's, is CC BY-SA 4.0**, share-alike: the packs of
+those nineteen languages, their models and that held-out text carry those
+terms, with attribution to the wikis' contributors (each article's
+history, at its wiki, names them).
 
 ### FineWeb-2 (web text)
 
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Nine models learn from FineWeb-2's web text alone: those of Bodo,
-Dogri, Chhattisgarhi, Magahi, Brahui and Kokborok, which have no
-Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei in the
-Bengali script (`mni-Beng`), whose wikis are in their other scripts,
-and of Lao, whose wiki is small; and Assamese's from it beside its
-Tatoeba sentences.
+Ten models learn from FineWeb-2's web text alone: those of Bodo,
+Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
+Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
+in the Bengali script (`mni-Beng`), whose wikis are in their other
+scripts, and of Lao, whose wiki is small; and Assamese's from it beside
+its Tatoeba sentences, and Magahi's beside its Incubator text.
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
 Pipeline to Scale Them All", arXiv 2506.20920) is text from Common
 Crawl's crawls, sorted by language; **it is ODC-By 1.0, and its use is
@@ -269,12 +276,15 @@ valid splits romanized by hand and of the names it took from Wikidata,
 chosen by the other fifth, its test words left out; seven moved
 (Assamese's, Nepali's and Odia's stayed as written), and their packs
 name it (its card: the manually collected data CC BY, the mined and
-existing data CC0; `packs.toml`'s `[[translit.fitted]]`). And nine
+existing data CC0; `packs.toml`'s `[[translit.fitted]]`). And eleven
 tables of languages neither dataset has (Awadhi, Bhojpuri, Brahui,
-Chhattisgarhi, Garhwali, Rajasthani, Western Punjabi, Saraiki, Tulu) were fitted to Dakshina's
-romanizations of the words their lexicons share with Hindi's, Urdu's or
-Kannada's, and are measured so; their packs name it, adding no licence
-(Chhattisgarhi's and Brahui's models are FineWeb-2's, not share-alike).
+Chhattisgarhi, Garhwali, Khowar, Magahi, Rajasthani, Western Punjabi,
+Saraiki, Tulu) were fitted to Dakshina's romanizations of the words their
+lexicons share with Hindi's, Urdu's or Kannada's, and are measured so;
+Adilabad Gondi's is Telugu's table and fitted costs, measured on the
+words its lexicon shares with Telugu's. Their packs name the dataset,
+adding no licence (Chhattisgarhi's, Brahui's, Garhwali's and
+Rajasthani's models are not otherwise share-alike).
 The tables
 are measured on romanizations nothing here ships: the Dakshina
 dataset's test sentences and words, and for those ten Aksharantar's

@@ -30,7 +30,7 @@ ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
                  oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
                  bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                 brx doi hne mag brh sd-Deva mni-Beng lo gbm raj trp
+                 brx doi hne mag brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -55,20 +55,30 @@ TATOEBA_WEIGHT ?= 10
 # Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei,
 # Awadhi, Saraiki and Tulu (scripts/fetch-wikipedia.sh, the wikis'
 # CirrusSearch dumps pinned by sha256, CC BY-SA 4.0), every 20th article
-# held out for eval/<lang>.txt.
-WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy
+# held out for eval/<lang>.txt. And the Wikimedia Incubator's test wikis
+# of languages with no Wikipedia yet: Adilabad Gondi's and Khowar's, their
+# whole corpus, and Magahi's, beside its FineWeb-2 text.
+WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy mag wsg khw
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 
 # FineWeb-2's web text, the whole corpus of languages with no Wikipedia of
-# their own: Bodo, Dogri, Chhattisgarhi, Magahi and Brahui, of Sindhi in
-# Devanagari and Meitei in the Bengali script, and of Lao, whose wiki is
-# small (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
+# their own: Bodo, Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi
+# (Magahi's beside its Incubator text), of Sindhi in Devanagari and Meitei
+# in the Bengali script, and of Lao, whose wiki is small
+# (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
 # the held-out text is FineWeb-2's test split, in $(FINEWEB_DIR)/eval, and
 # like the corpus it is not committed. Reading parquet needs pyarrow:
 # FINEWEB_PYTHON names a Python that has it.
-FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp
+FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha
+# A language with both (Magahi, whose Incubator text is twice its
+# FineWeb-2 text) counts FineWeb-2's FINEWEB_WEIGHT times: the web's
+# text, nearer what is typed than a wiki's stubs, leads the strip. At 5
+# Magahi's keystroke savings on FineWeb-2's held-out text are as before
+# (31.4%), on its Incubator's held-out articles 38.7% (from 17.8%); at 1,
+# 29.8% and 42.4%.
+FINEWEB_WEIGHT ?= 5
 # And beside a small Tatoeba corpus, counted TATOEBA_WEIGHT times as
 # Hindi's is beside Dakshina's text: Assamese (14 000 sentences).
 FINEWEB_PLUS_LANGS ?= as
@@ -152,8 +162,10 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # words (Marathi) and 30 000 (Bengali) to 80 000, transliteration's first
 # reading is right 3.8 and 2.0 points more often, and keystroke savings on
 # Tatoeba's held-out text rise 0.5 and 1.9 points. Assamese, Bengali's
-# neighbour, with FineWeb-2's text (FINEWEB_PLUS_LANGS), too.
-PREDICT_LARGE_LANGS ?= bn mr as
+# neighbour, with FineWeb-2's text (FINEWEB_PLUS_LANGS), too; and Magahi,
+# with its Incubator text beside FineWeb-2's (72 000 words; at 30 000 its
+# keystroke savings on FineWeb-2's held-out text fall 1.1 points more).
+PREDICT_LARGE_LANGS ?= bn mr as mag
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -179,7 +191,7 @@ PREDICT_WIDER_NGRAM ?= 90000
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
 PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                      brx doi hne mag brh sd-Deva mni-Beng lo gbm raj trp
+                      brx doi hne brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
@@ -336,8 +348,11 @@ predict-assets:
 			              corpus_in="$$corpus_in --input wikipedia/$$lang.txt=$(WIKIPEDIA_DIR)/$$lang.txt" ;; \
 		esac; \
 		case " $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS) " in \
-			*" $$lang "*) corpus="$$corpus --corpus $(FINEWEB_DIR)/$$lang.txt"; \
-			              corpus_in="$$corpus_in --input fineweb/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt" ;; \
+			*" $$lang "*) fw=; case " $(WIKIPEDIA_LANGS) " in \
+				*" $$lang "*) fw="$(FINEWEB_WEIGHT):"; weight="$$weight --recipe fineweb_weight=$(FINEWEB_WEIGHT)" ;; \
+			   esac; \
+			   corpus="$$corpus --corpus $$fw$(FINEWEB_DIR)/$$lang.txt"; \
+			   corpus_in="$$corpus_in --input fineweb/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt" ;; \
 		esac; \
 		case " $(MADLAD_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(MADLAD_DIR)/$$lang.txt"; \
@@ -684,7 +699,7 @@ eval-translit:
 # table fitted before starts from its fitted costs.
 FIT_TRANSLIT_LANGS ?= $(DAKSHINA_LANGS)
 FIT_AKSHARANTAR_LANGS ?= $(AKSHARANTAR_LANGS)
-FIT_BORROWED ?= bho:hi awa:hi mag:hi hne:hi sd-Deva:hi gbm:hi raj:hi pnb:ur skr:ur brh:ur tcy:kn
+FIT_BORROWED ?= bho:hi awa:hi mag:hi hne:hi sd-Deva:hi gbm:hi raj:hi pnb:ur skr:ur brh:ur khw:ur tcy:kn wsg:te
 DAKSHINA_DEV = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.dev.tsv
 .PHONY: fit-translit
 fit-translit:
