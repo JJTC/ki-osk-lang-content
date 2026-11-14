@@ -11,7 +11,7 @@ files carries their terms.
 The code here — the Makefile, the Cargo workspace and `crates/`, the
 scripts, the workflows and `packs.toml` — is MIT licensed (`LICENSE`), as
 are the text rules in `rules/` and the transliteration tables in
-`translit/`, which were written here (seventeen tables' costs then
+`translit/`, which were written here (twenty-four tables' costs then
 fitted to the Dakshina and Aksharantar datasets' romanizations, below).
 The data keeps its original licence, below. That includes the seeds in
 `seeds/`, which are excerpts of the datasets they are listed under. Add an entry here whenever a
@@ -139,7 +139,10 @@ nine, the first 500 lines of its held-out text
 (`<lang>.wiki-filt.valid.text.shuf.txt.gz`) are `eval/<lang>.txt`.
 `scripts/fetch-dakshina.sh` reads the archive, pinned by its sha256;
 `sources.lock` records the sha256 of each language's text as
-`dakshina/<lang>.txt`. Its romanization lexicons' training words fit the
+`dakshina/<lang>.txt`. The sentences it romanizes are in that text too,
+a few hundred to 4 500 lines a language: `scripts/fetch-dakshina.sh`
+leaves them out, so that no model knows a word from the sentences the
+tables are measured on. Its romanization lexicons' training words fit the
 costs of twelve transliteration tables (`make fit-translit`, below), and
 its test words and the test half of its romanized sentences measure them
 (`make eval-translit`); none of them is shipped.
@@ -249,7 +252,13 @@ valid splits romanized by hand and of the names it took from Wikidata,
 chosen by the other fifth, its test words left out; seven moved
 (Assamese's, Nepali's and Odia's stayed as written), and their packs
 name it (its card: the manually collected data CC BY, the mined and
-existing data CC0; `packs.toml`'s `[[translit.fitted]]`). The tables
+existing data CC0; `packs.toml`'s `[[translit.fitted]]`). And seven
+tables of languages neither dataset has (Awadhi, Bhojpuri, Brahui,
+Chhattisgarhi, Western Punjabi, Saraiki, Tulu) were fitted to Dakshina's
+romanizations of the words their lexicons share with Hindi's, Urdu's or
+Kannada's, and are measured so; their packs name it, adding no licence
+(Chhattisgarhi's and Brahui's models are FineWeb-2's, not share-alike).
+The tables
 are measured on romanizations nothing here ships: the Dakshina
 dataset's test sentences and words, and for those ten Aksharantar's
 test words ("Aksharantar: Towards Building Open Transliteration Tools

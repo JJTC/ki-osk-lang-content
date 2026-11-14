@@ -89,3 +89,33 @@ n>c   ଂ:0.8  ଁ:1
 h>c   ଃ:1.5
 ng    ଂ:0.3
 n$    ଂ:1.5  ଁ:1.5
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: ଟିଭି), as its Wikipedia writes them.
+[letters]
+a  ଏ
+b  ବି
+c  ସି
+d  ଡି
+e  ଇ
+f  ଏଫ୍
+g  ଜି
+h  ଏଚ୍
+i  ଆଇ
+j  ଜେ
+k  କେ
+l  ଏଲ୍
+m  ଏମ୍
+n  ଏନ୍
+o  ଓ
+p  ପି
+q  କ୍ୟୁ
+r  ଆର୍
+s  ଏସ୍
+t  ଟି
+u  ୟୁ
+v  ଭି
+w  ଡବ୍ଲ୍ୟୁ
+x  ଏକ୍ସ
+y  ୱାଇ
+z  ଜେଡ୍

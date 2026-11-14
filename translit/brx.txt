@@ -72,3 +72,33 @@ ng>c  ं:0.4
 ng>v  ं:0.7
 n>c   ं:0.6
 m>c   ं:1
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (mla: एमएलए), as its web text writes them.
+[letters]
+a  ए
+b  बी
+c  सी
+d  डी
+e  ई
+f  एफ
+g  जी
+h  एच
+i  आई
+j  जे
+k  के
+l  एल
+m  एम
+n  एन
+o  ओ
+p  पी
+q  क्यू
+r  आर
+s  एस
+t  टी
+u  यू
+v  वी
+w  डब्ल्यू
+x  एक्स
+y  वाई
+z  ज़ेड

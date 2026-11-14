@@ -568,9 +568,12 @@ hinglish-assets:
 # sentences (every word once; scripts/dakshina-halves.py cuts the halves)
 # and on its romanization lexicon's test words (each romanization as often
 # as it was typed); and the keystrokes the strip saves, typing the test
-# sentences' first 20 000 words a letter at a time. After `make
+# sentences' first 20 000 words a letter at a time, each sentence's words
+# ranked after the words before them with the language's n-grams, as the
+# keyboard ranks them. After `make
 # fetch-dakshina`; the tables' costs are fitted on what these leave out
-# (fit-translit, below). Then the tables Dakshina has nothing for, on
+# (fit-translit, below). Then FIT_BORROWED's tables, on the related
+# language's test sentences and words, of the words the two share. Then the tables Dakshina has nothing for, on
 # Aksharantar's words romanized by hand (mostly rare words and names, so
 # what the lexicon has is the measure): after `make fetch-aksharantar`.
 # And Greek's, on people's Greeklish: after `make fetch-greeklish`.
@@ -584,13 +587,27 @@ eval-translit:
 		test -f $$d/$(DAKSHINA_TEST) || $(PYTHON) scripts/dakshina-halves.py $(DAKSHINA_DIR) $$lang || exit 1; \
 		echo "$$lang, romanized sentences (test):"; \
 		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
-			--pairs $$d/$(DAKSHINA_TEST) | tail -n 1 || exit 1; \
+			--ngrams predict/$$lang.ngram.bin --pairs $$d/$(DAKSHINA_TEST) | tail -n 1 || exit 1; \
 		echo "$$lang, romanization lexicon (test):"; \
 		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
 			--pairs $$d/lexicons/$$lang.translit.sampled.test.tsv | tail -n 1 || exit 1; \
 		echo "$$lang, typed a letter at a time:"; \
 		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
-			--pairs $$d/$(DAKSHINA_TEST) --keystrokes --limit 20000 | tail -n 1 || exit 1; \
+			--ngrams predict/$$lang.ngram.bin --pairs $$d/$(DAKSHINA_TEST) \
+			--keystrokes --limit 20000 | tail -n 1 || exit 1; \
+	done
+	@for pair in $(FIT_BORROWED); do \
+		lang=$${pair%%:*}; from=$${pair##*:}; d=$(DAKSHINA_DIR)/$$from; \
+		test -d $$d || { echo "no $$d: run make fetch-dakshina"; exit 1; }; \
+		echo "$$lang, $$from's romanized sentences (test), the words they share:"; \
+		$(TOOLS) eval-translit -- --known --table translit/$$lang.txt --lang $$lang \
+			--lexicon predict/$$lang.fst --ngrams predict/$$lang.ngram.bin \
+			--pairs $$d/romanized/$$from.romanized.rejoined.aligned.cased_nopunct.test.tsv \
+			| tail -n 1 || exit 1; \
+		echo "$$lang, $$from's romanization lexicon (test), the words they share:"; \
+		$(TOOLS) eval-translit -- --known --table translit/$$lang.txt --lang $$lang \
+			--lexicon predict/$$lang.fst --pairs $$d/lexicons/$$from.translit.sampled.test.tsv \
+			| tail -n 1 || exit 1; \
 	done
 	@for lang in $(AKSHARANTAR_LANGS); do \
 		p=$(AKSHARANTAR_DIR)/$$lang.tsv; \
@@ -613,12 +630,15 @@ eval-translit:
 # of its dev words and dev sentences' words first is written into
 # translit/<lang>.txt. Then the Aksharantar languages' tables, fitted to
 # four fifths of the words its train and valid splits romanized by hand
-# and of Wikidata's names, chosen by the other fifth. eval-translit's
-# test sentences and words are left out. After `make fetch-dakshina` and
-# `make fetch-aksharantar`. A table fitted before starts from its fitted
-# costs.
+# and of Wikidata's names, chosen by the other fifth. Then the tables of
+# languages neither has, each fitted to a related language's Dakshina
+# romanizations of the words the two share (FIT_BORROWED, lang:from;
+# fit-translit --known). eval-translit's test sentences and words are
+# left out. After `make fetch-dakshina` and `make fetch-aksharantar`. A
+# table fitted before starts from its fitted costs.
 FIT_TRANSLIT_LANGS ?= $(DAKSHINA_LANGS)
 FIT_AKSHARANTAR_LANGS ?= $(AKSHARANTAR_LANGS)
+FIT_BORROWED ?= bho:hi awa:hi mag:hi hne:hi sd-Deva:hi pnb:ur skr:ur brh:ur tcy:kn
 DAKSHINA_DEV = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.dev.tsv
 .PHONY: fit-translit
 fit-translit:
@@ -636,6 +656,17 @@ fit-translit:
 		test -f $$p.fit.tsv || { echo "no $$p.fit.tsv: run make fetch-aksharantar"; exit 1; }; \
 		$(TOOLS) fit-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
 			--train $$p.fit.tsv --dev $$p.choose.tsv --write || exit 1; \
+	done
+	@for pair in $(FIT_BORROWED); do \
+		lang=$${pair%%:*}; from=$${pair##*:}; d=$(DAKSHINA_DIR)/$$from; \
+		test -d $$d || { echo "no $$d: run make fetch-dakshina"; exit 1; }; \
+		test -f $$d/romanized/$$from.romanized.rejoined.aligned.cased_nopunct.dev.tsv || \
+			$(PYTHON) scripts/dakshina-halves.py $(DAKSHINA_DIR) $$from || exit 1; \
+		$(TOOLS) fit-translit -- --known --table translit/$$lang.txt --lang $$lang \
+			--lexicon predict/$$lang.fst --train $$d/lexicons/$$from.translit.sampled.train.tsv \
+			--dev $$d/lexicons/$$from.translit.sampled.dev.tsv \
+			--dev $$d/romanized/$$from.romanized.rejoined.aligned.cased_nopunct.dev.tsv \
+			--write || exit 1; \
 	done
 
 # The transliteration layouts (layouts/<lang>-abc.json), one for each

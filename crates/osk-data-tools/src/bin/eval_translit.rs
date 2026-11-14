@@ -28,6 +28,10 @@
 //! lexicon has, and the share the cheapest reading alone writes right (the
 //! table without a lexicon).
 //!
+//! With `--known` only the pairs whose word the lexicon has are measured:
+//! a related language's romanizations then measure a table on the words
+//! the two languages share (Bhojpuri's on Dakshina's Hindi).
+//!
 //! A word is the same word as the lexicon keys it: its identity
 //! (`osk_data::words::Splitter::normalize`, of the table's language, by
 //! its file name or `--lang`), so Sindhi's ھ and ه, which its texts write
@@ -38,7 +42,8 @@ use std::path::PathBuf;
 
 use anyhow::{Context, bail};
 use clap::Parser;
-use osk_data::translit::{Lexicon, Scheme, UNKNOWN_BELOW_RAREST};
+use osk_data::ngram::NgramModel;
+use osk_data::translit::{CONTEXT_WEIGHT, Lexicon, Scheme, UNKNOWN_BELOW_RAREST};
 use osk_data::words::Splitter;
 use osk_data_tools::lexicon::FstLexicon;
 
@@ -71,6 +76,24 @@ struct Args {
     /// Offer no word the letters only begin: to compare.
     #[arg(long)]
     no_completions: bool,
+    /// Measure only the pairs whose word the lexicon has: a related
+    /// language's romanizations, of the words the two share.
+    #[arg(long)]
+    known: bool,
+    /// The language's n-grams (`predict/<lang>.ngram.bin`): each word's
+    /// readings ranked after the words before it in its sentence, as the
+    /// keyboard ranks them after the words typed
+    /// (`osk_data::translit::CONTEXT_WEIGHT`).
+    #[arg(long)]
+    ngrams: Option<PathBuf>,
+    /// The weight of the words before, to try another than the keyboard's.
+    #[arg(long, default_value_t = CONTEXT_WEIGHT)]
+    context_weight: f32,
+    /// Write every pair's readings here, a line each (its line, the word,
+    /// the romanization, then each reading's text, likelihood and cost),
+    /// and `</s>` where the pairs have it: for trying other rankings.
+    #[arg(long)]
+    dump: Option<PathBuf>,
     /// The language whose words' identities are compared; the table's file
     /// name (`hi` of `translit/hi.txt`) by default.
     #[arg(long)]
@@ -89,6 +112,45 @@ impl Lexicon for Whole<'_> {
     }
     fn unknown_log_prob(&self) -> f32 {
         self.0.unknown_log_prob()
+    }
+}
+
+/// A lexicon that knows the words before the one typed: how likely each
+/// word is after them, from the n-grams, the weight scaled to
+/// `--context-weight`.
+struct InContext<'a> {
+    inner: &'a dyn Lexicon,
+    model: &'a NgramModel,
+    before: &'a [String],
+    splitter: &'a Splitter,
+    scale: f32,
+}
+
+impl Lexicon for InContext<'_> {
+    fn has_prefix(&self, prefix: &str) -> bool {
+        self.inner.has_prefix(prefix)
+    }
+    fn log_prob(&self, word: &str) -> Option<f32> {
+        self.inner.log_prob(word)
+    }
+    fn unknown_log_prob(&self) -> f32 {
+        self.inner.unknown_log_prob()
+    }
+    fn completions(&self, prefix: &str, limit: usize) -> Vec<(String, f32)> {
+        self.inner.completions(prefix, limit)
+    }
+    fn context_log_prob(&self, word: &str) -> Option<f32> {
+        let prev = self.before.last()?;
+        let alone = self.inner.log_prob(word)?;
+        let prev_alone = self.inner.log_prob(prev)?;
+        let after = osk_data::translit::log_prob_after(
+            self.model,
+            prev,
+            &self.splitter.normalize(word),
+            prev_alone,
+            alone,
+        );
+        Some(alone + (after - alone) * self.scale)
     }
 }
 
@@ -152,8 +214,25 @@ fn main() -> anyhow::Result<()> {
     let same = |text: &str, word: &str| splitter.normalize(text) == word;
     let pairs = fs::read_to_string(&args.pairs)
         .with_context(|| format!("reading {}", args.pairs.display()))?;
+    let model = match &args.ngrams {
+        Some(path) => Some(
+            NgramModel::from_bytes(
+                &fs::read(path).with_context(|| format!("reading {}", path.display()))?,
+            )
+            .with_context(|| format!("{}", path.display()))?,
+        ),
+        None => None,
+    };
+    // The sentence's last two words before the one typed.
+    let mut before: Vec<String> = Vec::new();
     let mut t = Tally::default();
     let mut shown = 0;
+    let mut dump = match &args.dump {
+        Some(path) => Some(std::io::BufWriter::new(
+            fs::File::create(path).with_context(|| format!("writing {}", path.display()))?,
+        )),
+        None => None,
+    };
     for (i, line) in pairs
         .lines()
         .enumerate()
@@ -168,12 +247,55 @@ fn main() -> anyhow::Result<()> {
             );
         };
         let n: f64 = fields.next().and_then(|c| c.parse().ok()).unwrap_or(1.0);
+        let context = before.clone();
+        if word == "</s>" {
+            before.clear();
+        } else {
+            before.push(splitter.normalize(word));
+            if before.len() > 2 {
+                before.remove(0);
+            }
+        }
         if word == "</s>" || word == latin || latin.is_empty() {
+            if let Some(d) = dump.as_mut() {
+                use std::io::Write as _;
+                writeln!(d, "{}\t{word}\t{latin}", i + 1)?;
+            }
             continue;
         }
         let word = splitter.normalize(word);
-        let got = scheme.candidates(latin, lexicon, 2);
         let known = lexicon.log_prob(&word).is_some();
+        if args.known && !known {
+            continue;
+        }
+        if let Some(d) = dump.as_mut() {
+            use std::io::Write as _;
+            let unknown = lexicon.unknown_log_prob();
+            write!(d, "{}\t{word}\t{latin}", i + 1)?;
+            for c in scheme.candidates(latin, lexicon, 6) {
+                write!(
+                    d,
+                    "\t{}|{:.4}|{:.4}|{}",
+                    splitter.normalize(&c.text),
+                    c.log_prob.unwrap_or(unknown),
+                    c.cost,
+                    u8::from(c.completes)
+                )?;
+            }
+            writeln!(d)?;
+        }
+        let in_context = model.as_ref().map(|m| InContext {
+            inner: lexicon,
+            model: m,
+            before: &context,
+            splitter: &splitter,
+            scale: args.context_weight / CONTEXT_WEIGHT,
+        });
+        let lexicon: &dyn Lexicon = match &in_context {
+            Some(c) => c,
+            None => lexicon,
+        };
+        let got = scheme.candidates(latin, lexicon, 2);
         let first = got.first().is_some_and(|c| same(&c.text, &word));
         let three = got.iter().any(|c| same(&c.text, &word));
         t.pairs += n;

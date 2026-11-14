@@ -120,6 +120,35 @@ const COMPLETIONS: usize = 3;
 /// rare words lost to cheaper readings that were none.
 pub const UNKNOWN_BELOW_RAREST: f32 = 6.0;
 
+/// How much a word's likelihood after the words before it
+/// ([`Lexicon::context_log_prob`]) counts beyond its likelihood alone, in
+/// the readings' ranking: the homophones of Hindi and Urdu (है and हैं,
+/// کی and کے) are told apart by the word before them.
+pub const CONTEXT_WEIGHT: f32 = 0.8;
+
+/// How likely `word` is after `before` (a natural log), from a language's
+/// n-grams ([`crate::ngram::NgramModel`], which keep each pair's share of
+/// the text) and how likely each word is alone: the pair's share less the
+/// word before's. A pair the n-grams do not keep was rarer than the rarest
+/// they do (their unknown), and is taken to be no likelier than that, nor
+/// than `word` alone: after a common word, a common word that never
+/// follows it there is told so.
+#[must_use]
+pub fn log_prob_after(
+    model: &crate::ngram::NgramModel,
+    before: &str,
+    word: &str,
+    before_alone: f32,
+    alone: f32,
+) -> f32 {
+    let pair = model.score(word, &[before]);
+    if pair.total_cmp(&model.unk_log_prob).is_eq() {
+        (model.unk_log_prob - before_alone).min(alone)
+    } else {
+        pair - before_alone
+    }
+}
+
 /// The words a table's readings are checked against: a language's
 /// lexicon.
 pub trait Lexicon {
@@ -141,6 +170,15 @@ pub trait Lexicon {
     fn completions(&self, prefix: &str, limit: usize) -> Vec<(String, f32)> {
         let _ = (prefix, limit);
         Vec::new()
+    }
+
+    /// How likely `word` is after the words written before it (a natural
+    /// log), where the lexicon knows: none, unless it was given those
+    /// words and holds the pair. A reading's word gains (or loses)
+    /// [`CONTEXT_WEIGHT`] times what that is above its likelihood alone.
+    fn context_log_prob(&self, word: &str) -> Option<f32> {
+        let _ = word;
+        None
     }
 }
 
@@ -778,9 +816,16 @@ impl Scheme {
             }
         }
         let unknown = lexicon.unknown_log_prob();
+        // A word the words before it make likelier, or less likely.
+        let here = |c: &Candidate| -> f32 {
+            match (c.log_prob, lexicon.context_log_prob(&c.text)) {
+                (Some(alone), Some(after)) => CONTEXT_WEIGHT * (after - alone),
+                _ => 0.0,
+            }
+        };
         let likelier = |a: &Candidate, b: &Candidate| {
-            b.score(unknown)
-                .total_cmp(&a.score(unknown))
+            (b.score(unknown) + here(b))
+                .total_cmp(&(a.score(unknown) + here(a)))
                 .then_with(|| a.text.cmp(&b.text))
         };
         readings.sort_by(likelier);
@@ -1657,6 +1702,70 @@ mod tests {
             let table = format!("{HINDI}\n[letters]\n{bad}\n");
             assert!(Scheme::parse(&table).is_err(), "{bad}");
         }
+    }
+
+    /// A lexicon of a few words that knows what follows `before`.
+    struct After<'a> {
+        words: Words,
+        follows: &'a [(&'a str, f32)],
+    }
+
+    impl Lexicon for After<'_> {
+        fn has_prefix(&self, prefix: &str) -> bool {
+            self.words.has_prefix(prefix)
+        }
+        fn log_prob(&self, word: &str) -> Option<f32> {
+            self.words.log_prob(word)
+        }
+        fn unknown_log_prob(&self) -> f32 {
+            self.words.unknown_log_prob()
+        }
+        fn context_log_prob(&self, word: &str) -> Option<f32> {
+            self.follows
+                .iter()
+                .find(|(w, _)| *w == word)
+                .map(|(_, lp)| *lp)
+        }
+    }
+
+    #[test]
+    fn the_words_before_choose_among_readings() {
+        let s = hindi();
+        // तम is the likelier word alone; after these words, टम is.
+        let words = || Words::of(&[("तम", 30), ("टम", 10)]);
+        assert_eq!(s.candidates("tam", &words(), 2)[0].text, "तम");
+        let after = After {
+            words: words(),
+            follows: &[("टम", -0.5), ("तम", -6.0)],
+        };
+        assert_eq!(s.candidates("tam", &after, 2)[0].text, "टम");
+        // Nothing known of the pair: the order of the words alone.
+        let none = After {
+            words: words(),
+            follows: &[],
+        };
+        assert_eq!(s.candidates("tam", &none, 2)[0].text, "तम");
+    }
+
+    #[test]
+    fn a_word_after_another_is_its_pair_s_share_of_that_word() {
+        // In 1000 words: वह 400 times, है 50, हैं 20; वह है 300 times, वह
+        // हैं not kept, the rarest pair kept 5 times.
+        let ln = |n: f32| (n / 1000.0).ln();
+        let mut model = crate::ngram::NgramModel::empty();
+        model.add_bigram("वह", "है", ln(300.0));
+        model.add_bigram("वे", "हैं", ln(5.0));
+        model.unk_log_prob = ln(5.0) - 1.0;
+        let after = log_prob_after(&model, "वह", "है", ln(400.0), ln(50.0));
+        assert!((after - (300.0f32 / 400.0).ln()).abs() < 1e-5);
+        // A pair not kept after a common word: rarer than the rarest kept,
+        // so less likely than the word alone.
+        let after = log_prob_after(&model, "वह", "हैं", ln(400.0), ln(20.0));
+        assert!((after - (ln(5.0) - 1.0 - ln(400.0))).abs() < 1e-5);
+        assert!(after < ln(20.0));
+        // After a rare word, nothing below the word alone is known.
+        let after = log_prob_after(&model, "कभी", "हैं", ln(2.0), ln(20.0));
+        assert!((after - ln(20.0)).abs() < 1e-5);
     }
 
     #[test]

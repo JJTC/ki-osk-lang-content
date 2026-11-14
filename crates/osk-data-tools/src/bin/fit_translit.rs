@@ -31,6 +31,10 @@
 //! pair whose word no reading writes (an English word in its English
 //! spelling, an acronym) teaches nothing and is counted aside.
 //!
+//! With `--known`, only the pairs whose word the lexicon has are used: a
+//! related language's romanizations then fit a table to the words the
+//! two languages share (Bhojpuri's to Dakshina's Hindi).
+//!
 //! The table's own costs and each round's, rounded to `--grain`, are
 //! measured on `--dev` (the word meant first, as eval-translit measures
 //! it), and those that put the most first are kept: with `--write` they
@@ -108,6 +112,10 @@ struct Args {
     /// Print this many of the pairs whose word no reading writes.
     #[arg(long, default_value_t = 0)]
     unwritten: usize,
+    /// Fit to and choose by only the pairs whose word the lexicon has: a
+    /// related language's romanizations, of the words the two share.
+    #[arg(long)]
+    known: bool,
 }
 
 /// A word and a romanization of it, and how many typed it so.
@@ -633,6 +641,10 @@ fn main() -> anyhow::Result<()> {
     let mut dev = Vec::new();
     for path in &args.dev {
         dev.extend(load(path, &splitter)?);
+    }
+    if args.known {
+        train.retain(|p| lexicon.log_prob(&p.word).is_some());
+        dev.retain(|p| lexicon.log_prob(&p.word).is_some());
     }
     let own = scheme.costs();
     let p = places(&table);

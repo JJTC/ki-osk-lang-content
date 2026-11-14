@@ -10,7 +10,11 @@
 #                        text (wiki-filt.train), the corpus build-predict
 #                        adds to Tatoeba's for Hindi, Bengali and Marathi
 #                        and uses alone for the other nine (`make
-#                        predict-assets`), which sources.lock records
+#                        predict-assets`), which sources.lock records; but
+#                        the sentences the dataset romanizes, which that
+#                        text holds too (a few hundred to 4 500 lines a
+#                        language) and the tables are measured on, so that
+#                        no lexicon knows a word from them
 #   $OUT/<lang>/         its romanization lexicons and romanized sentences
 #                        (lexicons/, romanized/), what `make eval-translit`
 #                        measures the transliteration tables on (the test
@@ -46,6 +50,30 @@ TATOEBA="bn hi mr"
 OUT=${OUT:-${TMPDIR:-/tmp}/ki-osk-sources/dakshina}
 CAP=${CAP:-300000}
 EVAL_CAP=${EVAL_CAP:-500}
+
+# The lines of stdin but those that are, word for word (their letters,
+# marks and digits), a sentence of the files named.
+UNSEEN='
+import os, sys, unicodedata
+sys.stdin.reconfigure(encoding="utf-8", errors="surrogateescape")
+sys.stdout.reconfigure(encoding="utf-8", errors="surrogateescape")
+def words(line):
+    return " ".join(
+        "".join(c for c in w if unicodedata.category(c)[0] in "LMN")
+        for w in unicodedata.normalize("NFC", line).split()
+    )
+held = set()
+for path in sys.argv[1:]:
+    with open(path, encoding="utf-8") as f:
+        held.update(words(line) for line in f)
+try:
+    for line in sys.stdin:
+        if words(line) not in held:
+            sys.stdout.write(line)
+except BrokenPipeError:
+    # head has its lines.
+    os.dup2(os.open(os.devnull, os.O_WRONLY), sys.stdout.fileno())
+'
 EVAL_OUT=${EVAL_OUT:-eval}
 langs=${*:-$ALL}
 
@@ -86,7 +114,9 @@ fi
 for l in $langs; do
 	d="$work/dakshina_dataset_v1.0/$l"
 	# No pipefail for these two: head exiting at its cap stops zcat.
-	(set +o pipefail; zcat "$d/native_script_wikipedia/$l.wiki-filt.train.text.shuf.txt.gz" | head -n "$CAP") > "$OUT/$l.txt.part"
+	(set +o pipefail; zcat "$d/native_script_wikipedia/$l.wiki-filt.train.text.shuf.txt.gz" \
+		| python3 -I -c "$UNSEEN" "$d"/romanized/"$l".romanized.rejoined.{dev,test}.native.txt \
+		| head -n "$CAP") > "$OUT/$l.txt.part"
 	n=$(wc -l < "$OUT/$l.txt.part")
 	[ "$n" -gt 0 ] || { echo "fetch-dakshina: $l: no text" >&2; exit 1; }
 	mv -f "$OUT/$l.txt.part" "$OUT/$l.txt"

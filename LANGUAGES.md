@@ -279,17 +279,26 @@ but no model to match the glide against · `—` off
    the readings that are words, the likeliest first, and offers the words
    the likeliest readings begin from the first letter (`namas`: नमस्ते);
    the strip shows two and the letters as typed, and Space takes the
-   reading of the letters typed. How often the word meant comes first
+   reading of the letters typed; the readings are ranked after the word
+   written before them too, with the language's n-grams
+   (`osk_data::translit::CONTEXT_WEIGHT`: `hai` is है after वह, हैं after
+   वे). How often the word meant comes first
    (and among the strip's two), on the test half of Dakshina's romanized
    Wikipedia sentences (some 5 000 a language), and the keystrokes the
-   strip saves typing them: Hindi 82.5% (86.6%; 20.4%), Urdu 79.7% (83.1%;
-   19.0%), Gujarati 78.3% (81.7%; 23.4%), Punjabi 77.2% (81.5%; 21.7%),
-   Marathi 76.6% (78.7%; 16.7%), Kannada 75.2% (76.6%; 20.1%), Sinhala
-   74.7% (78.1%; 20.1%), Telugu 74.1% (75.7%; 19.6%), Tamil 73.1% (75.0%;
-   17.4%), Bengali 72.4% (75.3%; 19.4%), Sindhi 69.1% (74.4%; 16.5%),
-   Malayalam 63.3% (66.2%; 15.2%); of the words the lexicon has, 78–91%
+   strip saves typing them: Hindi 83.4% (86.6%; 23.3%), Urdu 81.2% (84.0%;
+   23.2%), Gujarati 78.4% (81.7%; 25.3%), Punjabi 77.4% (81.6%; 24.6%),
+   Marathi 76.7% (78.7%; 18.4%), Kannada 75.2% (76.6%; 20.8%), Sinhala
+   74.9% (78.2%; 22.0%), Telugu 74.1% (75.7%; 20.8%), Tamil 73.2% (75.1%;
+   18.6%), Bengali 72.5% (75.4%; 21.6%), Sindhi 70.2% (74.7%; 20.4%),
+   Malayalam 63.3% (66.2%; 16.1%); of the words the lexicon has, 79–91%
    (`make eval-translit`, a word being the same word as its lexicon keys
-   it: Sindhi's two h letters one). These twelve tables were written by
+   it: Sindhi's two h letters one). The word before raised Urdu 1.5
+   points, Sindhi 1.1, Hindi 0.9 and the others up to 0.3, whose
+   homophones it tells apart, and the words offered as letters are typed
+   most: 0.7 to 4.2 points more keystrokes saved. The sentences are left
+   out of the text the lexicons learn from, which held a few hundred to
+   4 500 lines of them (`scripts/fetch-dakshina.sh`); the figures moved a
+   tenth at most. These twelve tables were written by
    hand, then their costs fitted to how people romanized Dakshina's
    training words (`make fit-translit`: each word meant made as likely
    among its readings as the costs allow, each cost held to the one
@@ -301,11 +310,12 @@ but no model to match the glide against · `—` off
    Gujarati's and Kannada's stayed as written, no fit doing better on
    their dev words. Lexicons of 200 000 words (from 120 000) then added
    Kannada 1.2 points, Telugu 0.9 (and its table, fitted again to it,
-   0.7) and Tamil 0.8. Ten of the tables name the Latin letters as their
-   language's Wikipedia writes them (`[letters]`), for abbreviations
-   typed letter by letter (tv: टीवी, bbc: பிபிசி, phd: পিএইচডি): rare in
-   running text, they add at most 0.2 points there, Hindi's test words
-   0.6. Malayalam's and Tamil's tables
+   0.7) and Tamil 0.8. Twenty-four of the tables name the Latin letters
+   as their language's Wikipedia or web text writes them (`[letters]`;
+   Hindi's names for the Devanagari languages whose text has too few
+   abbreviations to tell), for abbreviations typed letter by letter (tv:
+   टीवी, bbc: பிபிசி, phd: পিএইচডি): rare in running text, they add at
+   most 0.2 points there, Hindi's test words 0.6. Malayalam's and Tamil's tables
    read a doubled consonant typed single (palakad: പാലക്കാട്, thaakuthal:
    தாக்குதல்), which their typists often do, and Malayalam's ri as ൃ, mb
    as മ്പ and nch as ഞ്ച, with its lexicon's 200 000 words. Bengali's
@@ -318,9 +328,9 @@ but no model to match the glide against · `—` off
    Aksharantar dataset (its test split, 2 000 to 6 900 words each, mostly
    rare words and names; fetched to measure and fit, never shipped): of
    those their lexicons have, the word comes first for Assamese 86.0%
-   (88.6% among the strip's two), Sanskrit 85.7% (91.6%), Maithili 83.6%
-   (89.2%), Konkani 79.5% (84.9%), Meitei 77.8% (81.9%), Nepali 77.1%
-   (82.9%), Odia 76.7% (82.5%), Bodo 67.6% (74.5%), Dogri 56.8% (62.4%)
+   (88.6% among the strip's two), Sanskrit 85.7% (91.6%), Maithili 83.7%
+   (89.3%), Konkani 79.5% (84.9%), Meitei 77.8% (81.9%), Nepali 77.1%
+   (82.9%), Odia 76.7% (82.5%), Bodo 67.7% (74.5%), Dogri 57.4% (63.1%)
    and Kashmiri 47.1% (61.2%). Seven of these tables' costs were fitted
    as Dakshina's were, to four fifths of the words Aksharantar's train
    and valid splits romanized by hand and of its Wikidata names, the
@@ -346,11 +356,23 @@ but no model to match the glide against · `—` off
    its table reading Greeklish's digits for letters (8a: θα, pai3ei:
    παίζει), v for ν and ω (vomizo: νομίζω, mporv: μπορώ) and k for και;
    many of the rest are a writer's spelling without its accent (ΠΟΛΥ).
-   Armenian, Persian, Pashto, Mongolian, Bhojpuri, Western Punjabi,
-   Santali,
-   Yiddish, Awadhi, Saraiki, Tulu, Chhattisgarhi, Magahi, Brahui and the
-   second scripts of Sindhi and Meitei have no such measure; their tests
-   read everyday words. Of the 51 checked in the seven tables
+   Nine tables of languages neither dataset has are measured on
+   Dakshina's romanizations of the words their lexicons share with
+   Hindi's, Urdu's or Kannada's: three quarters to nine tenths of the
+   words of its test sentences, and how the people of a neighbouring
+   language type them, the closest measure open data gives. Of those
+   words, first: Tulu 89.4% (91.0% among the strip's two), Bhojpuri 87.2%
+   (92.2%), Awadhi 86.1% (93.2%), Sindhi in Devanagari 85.9% (91.3%),
+   Chhattisgarhi 80.2% (92.8%), Magahi 78.9% (87.6%), Western Punjabi
+   78.6% (88.5%), Saraiki 78.0% (86.0%) and Brahui 67.0% (82.0%). Seven
+   were fitted to those romanizations' training words as Dakshina's own
+   tables were (Magahi's and Sindhi's stayed as written): Brahui rose 4.3
+   points so, Western Punjabi 3.8, Chhattisgarhi 3.4, Saraiki 1.9, Awadhi
+   1.0, Bhojpuri 0.6 and Tulu 0.2, before the word before ranked them
+   too. Armenian, Persian, Pashto, Mongolian, Santali, Yiddish and Meitei
+   in the Bengali script have no such measure (Persian's and Pashto's
+   speakers type the words they share with Urdu otherwise; Meitei shares
+   few with Bengali); their tests read everyday words. Of the 51 checked in the seven tables
    new with Wikipedia's text, 48 come first and 49 are on the strip;
    Kathmandu's and Lahore's English spellings are not, and Pashto's da
    comes after ده. Sanskrit's, Santali's and Yiddish's tables put first

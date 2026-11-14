@@ -214,6 +214,16 @@ license = { name = "CC BY (Aksharantar's manually collected data)", url = "https
 source  = { name = "The Aksharantar dataset (AI4Bharat): words romanized by hand and Wikidata's names, the transliteration table's costs fitted to them", url = "https://huggingface.co/datasets/ai4bharat/Aksharantar" }
 langs   = ["brx", "doi", "kok", "ks", "mai", "mni", "sa"]
 
+# The tables of languages neither dataset has, fitted to Dakshina's
+# romanizations of the words they share with Hindi, Urdu or Kannada
+# (make fit-translit's FIT_BORROWED; Magahi's and Sindhi's in Devanagari
+# stayed as written). Named, and no licence added: the tables hold the
+# numbers learned, none of the dataset's words, and Chhattisgarhi's and
+# Brahui's packs are not otherwise share-alike.
+[[translit.fitted]]
+source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons of Hindi, Urdu or Kannada, the transliteration table's costs fitted to the words they share with this language", url = "https://github.com/google-research-datasets/dakshina" }
+langs   = ["awa", "bho", "brh", "hne", "pnb", "skr", "tcy"]
+
 # Keyboard layouts (layouts/<id>.json): the keys of each, and what each
 # types. The national ones are read from xkeyboard-config's keymaps
 # through libxkbcommon (scripts/build-layout.py, build-national-grid.py,

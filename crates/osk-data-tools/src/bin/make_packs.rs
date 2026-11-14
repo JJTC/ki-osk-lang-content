@@ -115,7 +115,10 @@ struct Translit {
 /// The tables whose costs were fitted to one dataset's romanizations.
 #[derive(Deserialize)]
 struct Fitted {
-    license: License,
+    /// None where the dataset is named for what was learned from it, its
+    /// words not in the tables.
+    #[serde(default)]
+    license: Option<License>,
     source: SourceDef,
     langs: Vec<String>,
 }
@@ -736,10 +739,12 @@ fn add_translit(root: &Path, t: &Translit, manifests: &mut [Manifest]) -> anyhow
             .fitted
             .iter()
             .filter(|f| f.langs.iter().any(|l| l == lang));
-        let added =
-            std::iter::once((&t.license, &t.source)).chain(fitted.map(|f| (&f.license, &f.source)));
+        let added = std::iter::once((Some(&t.license), &t.source))
+            .chain(fitted.map(|f| (f.license.as_ref(), &f.source)));
         for (license, source) in added {
-            if !m.licenses.contains(license) {
+            if let Some(license) = license
+                && !m.licenses.contains(license)
+            {
                 m.licenses.push(license.clone());
             }
             m.sources.push(Source {
