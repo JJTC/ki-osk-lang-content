@@ -30,7 +30,8 @@ ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
                  oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
                  bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                 brx doi hne mag brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw
+                 brx doi hne mag brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw \
+                 dty anp new
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -58,7 +59,7 @@ TATOEBA_WEIGHT ?= 10
 # held out for eval/<lang>.txt. And the Wikimedia Incubator's test wikis
 # of languages with no Wikipedia yet: Adilabad Gondi's and Khowar's, their
 # whole corpus, and Magahi's, beside its FineWeb-2 text.
-WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy mag wsg khw
+WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 
 # FineWeb-2's web text, the whole corpus of languages with no Wikipedia of
@@ -72,13 +73,13 @@ WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # like the corpus it is not committed. Reading parquet needs pyarrow:
 # FINEWEB_PYTHON names a Python that has it.
 FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha
-# A language with both (Magahi, whose Incubator text is twice its
-# FineWeb-2 text) counts FineWeb-2's FINEWEB_WEIGHT times: the web's
-# text, nearer what is typed than a wiki's stubs, leads the strip. At 5
-# Magahi's keystroke savings on FineWeb-2's held-out text are as before
-# (31.4%), on its Incubator's held-out articles 38.7% (from 17.8%); at 1,
-# 29.8% and 42.4%.
-FINEWEB_WEIGHT ?= 5
+# A language with web text and a wiki's (Magahi, whose Incubator text is
+# twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
+# times: the web's text, nearer what is typed than a wiki's stubs, leads
+# the strip. At 5 Magahi's keystroke savings on FineWeb-2's held-out text
+# are as before (31.4%), on its Incubator's held-out articles 38.7% (from
+# 17.8%); at 1, 29.8% and 42.4%.
+WEB_WEIGHT ?= 5
 # And beside a small Tatoeba corpus, counted TATOEBA_WEIGHT times as
 # Hindi's is beside Dakshina's text: Assamese (14 000 sentences).
 FINEWEB_PLUS_LANGS ?= as
@@ -92,6 +93,16 @@ FINEWEB_DIR = $(SRC_DIR)/fineweb
 # $(MADLAD_DIR)/eval; nothing of it is committed.
 MADLAD_LANGS ?= gbm raj
 MADLAD_DIR = $(SRC_DIR)/madlad
+
+# GlotCC's web text (scripts/fetch-glotcc.sh, its files at one revision
+# pinned by sha256; its packaging CC0 1.0, its text under Common Crawl's
+# Terms of Use), for languages whose wiki is mostly a bot's stubs: Newari,
+# beside its wiki's text (WEB_WEIGHT). scripts/fineweb-text.py keeps the
+# documents that read as their language and holds out every 20th, in
+# $(GLOTCC_DIR)/eval; nothing of it is committed. Reading parquet needs
+# pyarrow (FINEWEB_PYTHON).
+GLOTCC_LANGS ?= new
+GLOTCC_DIR = $(SRC_DIR)/glotcc
 FINEWEB_PYTHON ?= python3
 
 # Words romanized by hand, from the test split of AI4Bharat's Aksharantar
@@ -164,8 +175,11 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # Tatoeba's held-out text rise 0.5 and 1.9 points. Assamese, Bengali's
 # neighbour, with FineWeb-2's text (FINEWEB_PLUS_LANGS), too; and Magahi,
 # with its Incubator text beside FineWeb-2's (72 000 words; at 30 000 its
-# keystroke savings on FineWeb-2's held-out text fall 1.1 points more).
-PREDICT_LARGE_LANGS ?= bn mr as mag
+# keystroke savings on FineWeb-2's held-out text fall 1.1 points more);
+# and Newari, with its news beside its wiki (at 30 000 words its savings
+# on the news held out are 38.7%, at 80 000 42.1%, its words unknown
+# 6.6%).
+PREDICT_LARGE_LANGS ?= bn mr as mag new
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -191,7 +205,7 @@ PREDICT_WIDER_NGRAM ?= 90000
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
 PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                      brx doi hne brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw
+                      brx doi hne brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw dty anp
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
@@ -226,6 +240,8 @@ help:
 	@echo "  fetch-fineweb    FineWeb-2's web text, for FINEWEB_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  fetch-madlad     MADLAD-400's web text, for MADLAD_LANGS, into SRC_DIR"
+	@echo "  fetch-glotcc     GlotCC's web text, for GLOTCC_LANGS, into SRC_DIR"
+	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
@@ -262,7 +278,7 @@ help:
 # only what the lock says is out of date, then refuses a result that
 # lost a file or shrank one.
 .PHONY: refresh
-refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad
+refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad fetch-glotcc
 	$(MAKE) predict-assets hinglish-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) check
 
@@ -298,6 +314,10 @@ fetch-fineweb:
 fetch-madlad:
 	OUT=$(MADLAD_DIR) ./scripts/fetch-madlad.sh $(MADLAD_LANGS)
 
+.PHONY: fetch-glotcc
+fetch-glotcc:
+	OUT=$(GLOTCC_DIR) PYTHON=$(FINEWEB_PYTHON) ./scripts/fetch-glotcc.sh $(GLOTCC_LANGS)
+
 # The word lists of the languages written without spaces between words
 # (wordbreak/<lang>.txt, committed): ICU's word-break dictionaries, pinned
 # by release and sha256 in the script. build-predict cuts their text into
@@ -330,7 +350,7 @@ predict-assets:
 			*" $$lang "*) vocab=$(PREDICT_WIDER_VOCAB); ngram=$(PREDICT_WIDER_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
-		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) " in \
+		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(GLOTCC_LANGS) " in \
 			*" $$lang "*) ;; \
 			*) case " $(DAKSHINA_LANGS) $(FINEWEB_PLUS_LANGS) " in \
 				*" $$lang "*) corpus="--corpus $(TATOEBA_WEIGHT):$(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt"; \
@@ -347,16 +367,22 @@ predict-assets:
 			*" $$lang "*) corpus="$$corpus --corpus $(WIKIPEDIA_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input wikipedia/$$lang.txt=$(WIKIPEDIA_DIR)/$$lang.txt" ;; \
 		esac; \
+		fw=; case " $(WIKIPEDIA_LANGS) " in \
+			*" $$lang "*) case " $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS) $(GLOTCC_LANGS) " in \
+				*" $$lang "*) fw="$(WEB_WEIGHT):"; weight="$$weight --recipe web_weight=$(WEB_WEIGHT)" ;; \
+			   esac ;; \
+		esac; \
 		case " $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS) " in \
-			*" $$lang "*) fw=; case " $(WIKIPEDIA_LANGS) " in \
-				*" $$lang "*) fw="$(FINEWEB_WEIGHT):"; weight="$$weight --recipe fineweb_weight=$(FINEWEB_WEIGHT)" ;; \
-			   esac; \
-			   corpus="$$corpus --corpus $$fw$(FINEWEB_DIR)/$$lang.txt"; \
-			   corpus_in="$$corpus_in --input fineweb/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt" ;; \
+			*" $$lang "*) corpus="$$corpus --corpus $$fw$(FINEWEB_DIR)/$$lang.txt"; \
+			              corpus_in="$$corpus_in --input fineweb/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt" ;; \
 		esac; \
 		case " $(MADLAD_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(MADLAD_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input madlad/$$lang.txt=$(MADLAD_DIR)/$$lang.txt" ;; \
+		esac; \
+		case " $(GLOTCC_LANGS) " in \
+			*" $$lang "*) corpus="$$corpus --corpus $$fw$(GLOTCC_DIR)/$$lang.txt"; \
+			              corpus_in="$$corpus_in --input glotcc/$$lang.txt=$(GLOTCC_DIR)/$$lang.txt" ;; \
 		esac; \
 		words=; words_in=; \
 		if [ -f wordbreak/$$lang.txt ]; then \
@@ -699,7 +725,7 @@ eval-translit:
 # table fitted before starts from its fitted costs.
 FIT_TRANSLIT_LANGS ?= $(DAKSHINA_LANGS)
 FIT_AKSHARANTAR_LANGS ?= $(AKSHARANTAR_LANGS)
-FIT_BORROWED ?= bho:hi awa:hi mag:hi hne:hi sd-Deva:hi gbm:hi raj:hi pnb:ur skr:ur brh:ur khw:ur tcy:kn wsg:te
+FIT_BORROWED ?= bho:hi awa:hi mag:hi hne:hi sd-Deva:hi gbm:hi raj:hi anp:hi dty:hi new:hi pnb:ur skr:ur brh:ur khw:ur tcy:kn wsg:te
 DAKSHINA_DEV = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.dev.tsv
 .PHONY: fit-translit
 fit-translit:

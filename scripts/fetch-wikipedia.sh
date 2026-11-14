@@ -3,7 +3,8 @@
 # languages whose models learn from it alone (the Makefile's
 # WIKIPEDIA_LANGS): Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
 # Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the Goan wiki's
-# Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki and Tulu; and
+# Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki, Tulu, Dotyali,
+# Angika and Newari (beside its web text, scripts/fetch-glotcc.sh); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
 # Wikipedia yet: Magahi (beside its FineWeb-2 text), Adilabad Gondi, in
 # the Telugu script, and Khowar.
@@ -39,7 +40,8 @@ set -euo pipefail
 DATE=20261108
 BASE=https://dumps.wikimedia.org/other/cirrus_search_index/$DATE
 # language  wiki  dump file  sha256  script (its Unicode name, _ for a
-# space; - keeps every sentence)
+# space; - keeps every sentence)  [neighbour: hi or ur, whose articles
+# and sentences are left out, as the Incubator's below]
 DUMPS="
 bho  bh   bhwiki_content-20261108-00000.json.bz2   e1becbc89778d7994831288afa94b9c1cce69d1b6b65a485d3500b34a5e822cc  -
 mai  mai  maiwiki_content-20261108-00000.json.bz2  1119ae395e8ca315a20422db6d09d5280e01e7d2530d301ebfb486212fcb5f4c  -
@@ -57,6 +59,9 @@ mni  mni  mniwiki_content-20261108-00000.json.bz2  99c8a4cf0de0a86b641d8c396755f
 awa  awa  awawiki_content-20261108-00000.json.bz2  b9b119cc5dcb3b2f7c0e9c08d72384780ce21cd23db06474c5081a89008f0de5  DEVANAGARI
 skr  skr  skrwiki_content-20261108-00000.json.bz2  879bbf4d040968cda18a2476c43777f0ff84ba6dc229696be2172c06e863140b  ARABIC
 tcy  tcy  tcywiki_content-20261108-00000.json.bz2  985c3225bcfab543d358122f3ced04060446c1a2a5ddc1d7c16784e3801020e5  KANNADA
+dty  dty  dtywiki_content-20261108-00000.json.bz2  42b44cbca756eb46985b9ef5680aa95642bd4223a8ed636c520e399c55e95a31  DEVANAGARI
+anp  anp  anpwiki_content-20261108-00000.json.bz2  19363d8660dd1a8d540fcd7253851a9d90737ba4ac8cc59606a476fa6df458a3  DEVANAGARI  hi
+new  new  newwiki_content-20261108-00000.json.bz2  c8d5a485491d164b541fed44b20f4af5d185cdf13d0544d151d02b233e2f7e73  DEVANAGARI
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1
@@ -79,7 +84,8 @@ for lang in $langs; do
 	row=$(echo "$DUMPS" | awk -v l="$lang" '$1 == l')
 	extra=()
 	if [ -n "$row" ]; then
-		read -r _ wiki file sha script <<<"$row"
+		read -r _ wiki file sha script neighbour <<<"$row"
+		[ -z "$neighbour" ] || extra=(--neighbour "$neighbour")
 	else
 		row=$(echo "$INCUBATOR" | awk -v l="$lang" '$1 == l')
 		[ -n "$row" ] || { echo "fetch-wikipedia: no dump for $lang" >&2; exit 2; }

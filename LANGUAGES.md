@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**223 layouts**: 171 keyboard layouts (RTL: ar he fa + Urdu, Western
+**229 layouts**: 174 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
-Amharic/Tigrinya Ge'ez) · 43 transliteration layouts (Latin letters →
+Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 222 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **96 languages** carry a prediction
+keycaps. 228 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **99 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -146,8 +146,11 @@ but no model to match the glide against · `—` off
 | `mr` | `mr` | Marathi | in · marathi | LTR | **Full** (mr)³ | — | — |
 | `kok` | `kok` | Konkani कोंकणी | in · marathi | LTR | **Full** (kok)⁶ | — | — |
 | `ne` | `ne` | Nepali | np | LTR | **Full** (ne)⁶ | — | — |
+| `dty` | `dty` | Dotyali डोटेली | np | LTR | **Full** (dty)⁶ | — | — |
+| `new` | `new` | Newari नेपाल भाषा | np | LTR | **Full** (new)⁶ | — | — |
 | `bho` | `bho` | Bhojpuri भोजपुरी | in | LTR | **Full** (bho)⁶ | — | — |
 | `mai` | `mai` | Maithili मैथिली | in | LTR | **Full** (mai)⁶ | — | — |
+| `anp` | `anp` | Angika अंगिका | in | LTR | **Full** (anp)⁶ | — | — |
 | `sa` | `sa` | Sanskrit संस्कृतम् | in + long-press ऽ ॐ | LTR | **Full** (sa)⁶ | — | — |
 | `awa` | `awa` | Awadhi अवधी | in | LTR | **Full** (awa)⁶ | — | — |
 | `as` | `as` | Assamese | in · ben (+ ৰ ৱ long-press) | LTR | **Full** (as)⁷ | — | — |
@@ -226,6 +229,9 @@ but no model to match the glide against · `—` off
 | `sd-deva-abc` | `sd-Deva` | Sindhi सिंधी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the sd-Deva lexicon choosing |
 | `si-abc` | `si` | Sinhala සිංහල (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Sinhala, the si lexicon choosing |
 | `ne-abc` | `ne` | Nepali नेपाली (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the ne lexicon choosing |
+| `dty-abc` | `dty` | Dotyali डोटेली (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the dty lexicon choosing |
+| `new-abc` | `new` | Newari नेपाल भाषा (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the new lexicon choosing |
+| `anp-abc` | `anp` | Angika अंगिका (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the anp lexicon choosing |
 | `or-abc` | `or` | Odia ଓଡ଼ିଆ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Odia, the or lexicon choosing |
 | `ps-abc` | `ps` | Pashto پښتو (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the ps lexicon choosing |
 | `mn-abc` | `mn` | Mongolian Монгол (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Cyrillic, the mn lexicon choosing |
@@ -370,7 +376,7 @@ but no model to match the glide against · `—` off
    its table reading Greeklish's digits for letters (8a: θα, pai3ei:
    παίζει), v for ν and ω (vomizo: νομίζω, mporv: μπορώ) and k for και;
    many of the rest are a writer's spelling without its accent (ΠΟΛΥ).
-   Thirteen tables of languages neither dataset has are measured on
+   Sixteen tables of languages neither dataset has are measured on
    Dakshina's romanizations of the words their lexicons share with
    Hindi's, Urdu's, Kannada's or Telugu's: two thirds to nine tenths of
    the words of its test sentences (Tulu's 45%), and how the people of a
@@ -378,19 +384,24 @@ but no model to match the glide against · `—` off
    Of those words, first: Tulu 89.4% (91.0% among the strip's two),
    Bhojpuri 87.2% (92.2%), Awadhi 86.2% (93.2%), Sindhi in Devanagari
    85.9% (91.3%), Rajasthani 85.7% (93.0%), Adilabad Gondi 85.5% (87.8%),
-   Garhwali 85.4% (93.2%), Chhattisgarhi 80.1% (92.9%), Magahi 79.1%
+   Garhwali 85.4% (93.2%), Angika 83.0% (90.6%), Newari 82.3% (89.8%),
+   Dotyali 80.3% (89.1%), Chhattisgarhi 80.1% (92.9%), Magahi 79.1%
    (90.6%), Western Punjabi 78.6% (88.5%), Saraiki 77.9% (85.7%), Khowar
    77.2% (86.2%) and Brahui 67.0% (82.0%). Gondi's is Telugu's table and
-   costs, Khowar's Urdu's with its own letters (ݯ ݮ ݰ ݱ beside چ ج ش ژ,
-   څ ځ for ts and dz). Eleven were fitted to those romanizations'
-   training words as Dakshina's own tables were (Sindhi's stayed as
-   written, Gondi's at Telugu's costs), a cost no shared word takes kept
-   as written (Saraiki's implosives, Garhwali's and Rajasthani's ळ,
-   Khowar's own letters, which those words would only push down): on
-   their dev words Khowar rose 6.8 points so, Brahui 4.4, Western Punjabi
-   3.9, Chhattisgarhi 3.5, Saraiki 2.1, Rajasthani 1.5, Awadhi 1.2,
-   Bhojpuri 0.6, Garhwali 0.3, Magahi 0.3 (with its larger lexicon) and
-   Tulu 0.2. Yiddish's table is measured on
+   costs, Angika's Hindi's, Khowar's Urdu's with its own letters (ݯ ݮ ݰ ݱ
+   beside چ ج ش ژ, څ ځ for ts and dz), Dotyali's and Newari's Nepali's,
+   Dotyali's with the avagraha it writes after a long last vowel (rahya:
+   रह्याऽ), Newari's with its visarga for h at a word's end or before a
+   consonant (khah: खः, yahgu: याःगु). Thirteen were fitted to those
+   romanizations' training words as Dakshina's own tables were (Sindhi's
+   stayed as written, Gondi's and Angika's at Telugu's and Hindi's
+   costs), a cost no shared word takes kept as written (Saraiki's
+   implosives, Garhwali's and Rajasthani's ळ, Khowar's own letters,
+   Newari's visarga, which those words would only push down): on their
+   dev words Khowar rose 6.8 points so, Brahui 4.4, Western Punjabi 3.9,
+   Chhattisgarhi 3.5, Saraiki 2.1, Rajasthani 1.5, Newari 1.3, Awadhi
+   1.2, Dotyali 1.0, Bhojpuri 0.6, Garhwali 0.3, Magahi 0.3 (with its
+   larger lexicon) and Tulu 0.2. Yiddish's table is measured on
    Wiktionary's words and their romanizations, which are YIVO's, the
    one people type (13 976 words and forms, as kaikki.org extracts them;
    `scripts/fetch-wiktionary-romanized.sh`): the word first for 82.3%
@@ -432,12 +443,13 @@ but no model to match the glide against · `—` off
    as their writers spelled them, 13.4% of whose words the lexicon (60 000
    words) lacks: no two writers spell alike. For the same reason
    autocorrect changes 2.2% of right words, more than elsewhere.
-6. These sixteen models learn from their own Wikipedia (CC BY-SA 4.0,
+6. These nineteen models learn from their own Wikipedia (CC BY-SA 4.0,
    share-alike; `scripts/fetch-wikipedia.sh`, the wikis' CirrusSearch
    dumps of 2026-11-08): Bhojpuri, Maithili, Mongolian, Nepali, Odia,
    Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the
-   Goan wiki's Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki and
-   Tulu. Keystroke savings on held-out articles: Santali 50.2%, Kashmiri
+   Goan wiki's Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki,
+   Tulu, and Dotyali, Angika and Newari (below). Keystroke savings on
+   held-out articles of the first sixteen: Santali 50.2%, Kashmiri
    48.6%, Maithili 43.4%, Meitei 43.2%, Bhojpuri 41.6%, Yiddish 41.0%,
    Nepali 40.3%, Awadhi 40.2%, Pashto 39.4%, Mongolian 38.7%, Western
    Punjabi 38.0%, Saraiki 37.0%, Odia 34.6%, Tulu 31.6%, Konkani 31.1%,
@@ -458,7 +470,25 @@ but no model to match the glide against · `—` off
    on Urdu's with their own letters, Yiddish on Hebrew's with its
    pointed letters and ligatures (`scripts/build-derived-layouts.py`).
    Bishnupriya Manipuri's wiki is not used: nearly all of it is town
-   stubs a bot wrote (98% of its sentences fit 2 000 templates).
+   stubs a bot wrote (98% of its sentences fit 2 000 templates), and so is
+   GlotCC's Bishnupriya (copies of it). Three wikis came later: Dotyali's
+   (34 827 sentences from 4 129 articles: keystroke savings 34.8% on its
+   held-out articles, 15.9% of the words unknown), Angika's (9 717
+   sentences, 497 articles heavy with Hindi's own words left out: 45.2%,
+   9.3% unknown, a third of its sentences being village statistics, which
+   flatters it) and Newari's (230 401 sentences from 75 059 articles, half
+   of them village stubs a bot wrote). Newari learns from web text too,
+   news from GlotCC (CC0 1.0 for its packaging, the text under Common
+   Crawl's Terms of Use; `scripts/fetch-glotcc.sh`, its file at one
+   revision pinned by sha256): 24 984 sentences from 1 241 documents
+   (nepalbhasatimes.com the most), a document kept where its own words
+   (दु खः नं थ्व जूगु) are at least 1% and Hindi's and Nepali's under 6%,
+   every 20th held out. The news counts five times (WEB_WEIGHT) and the
+   lexicon keeps 80 000 words: keystroke savings on the held-out news
+   42.1% (6.6% unknown; from the news alone 42.6%, 10.8% unknown), on
+   the wiki's held-out articles 56.0% (from the wiki alone 57.4%, but
+   23.5% on the news). Dotyali and Newari are typed on Nepali's keys,
+   Angika on Hindi's.
    Languages with no Wikipedia yet have test wikis in the Wikimedia
    Incubator, whose dump (the same date's, CC BY-SA 4.0) holds them all,
    each article's title starting with its wiki's prefix (`Wp/mag/`).
@@ -475,7 +505,9 @@ but no model to match the glide against · `—` off
    sound nearest (ځ ݮ on ج, څ ݯ on چ, ݰ on ش, ݱ on ز), Gondi on
    Telugu's. Haryanvi's test wiki is in the Urdu script and mostly lists
    of names, Pahari-Pothwari's mostly a script page, Chakma's 267
-   sentences and Marwari's empty: none is used.
+   sentences and Marwari's empty: none is used. Rangpuri's (2 118
+   sentences once 196 in standard Bengali are left out, with infobox
+   fragments among them) is not used yet.
 7. These twelve models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
@@ -568,7 +600,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **96 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **99 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -578,8 +610,9 @@ but no model to match the glide against · `—` off
   cut into words with ICU's word list, as it has no spaces between
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
-  text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy**, and the
-  Incubator's test wikis: **wsg khw** (note 6) ·
+  text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp
+  new** (Newari with GlotCC's news too), and the Incubator's test wikis:
+  **wsg khw** (note 6) ·
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha** (FineWeb-2's; note 7;
   Magahi with its Incubator text too; Lao cut into words with ICU's word list too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the

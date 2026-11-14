@@ -58,7 +58,11 @@ document is kept where Hindi's function words are under 6% of its words
 and its own (Garhwali's मा च छौ ह्वे कु…, Rajasthani's री सूं मांय रो…)
 are at least 1% and more than Hindi's, and for Garhwali Nepali's too
 (पनि भएको हुन्छ…: its casino spam shares मा and नि). With no test split, every 20th
-document kept is held out instead (`--hold`).
+document kept is held out instead (`--hold`). Newari comes from GlotCC
+(Common Crawl's text sorted for minority languages), its parquet files'
+text in "content", a document kept where its own words (दु खः नं थ्व
+जूगु…) are at least 1% and Hindi's and Nepali's under 6%, every 20th held
+out as MADLAD-400's are.
 
     fineweb-text.py --lang L [--eval N] OUT EVAL --train F... [--test F... | --hold N]
 
@@ -94,6 +98,7 @@ ENGLISH = set("the of and to in is that for on with as was are by this it from b
 KOKBOROK = set("tei ni no bai khe bo kha kaisa tongo bini hwnwi wngkha twi nwng ang".split())
 MIZO = set("chu leh hi kan te hian ah pawh tur chuan ni ang tak tih awm".split())
 KHASI = set("ba jong bad kiba kaba uba ia ïa".split())
+NEWARI = set("दु खः नं थ्व जूगु याःगु यायेगु धकाः यानाः कथं".split())
 # Pnar (Jaintia), Khasi's neighbour, which FineWeb-2 files under Khasi.
 PNAR = set("wa ya kiwa kawa uwa ko wow".split())
 BENGALI = set("এবং করে হয় এই যে থেকে জন্য করা তার আমি আমাদের হয়েছে একটি সঙ্গে করেন হবে".split())
@@ -144,6 +149,9 @@ LANGS = {
     # Khasi: a document whose own words outnumber Pnar's and English's.
     "kha": {"script": "LATIN", "neighbour": set(), "own": KHASI, "rival": PNAR | ENGLISH,
             "sentence_rival": ENGLISH},
+    # GlotCC's (no test split: every 20th document held out). Newari: its
+    # own words, and neither Hindi's nor Nepali's.
+    "new": {"script": "DEVANAGARI", "neighbour": HINDI | NEPALI, "own": NEWARI, "rival": set()},
     "lo": {"script": "LAO", "neighbour": set(), "lines": True, "unspaced": True, "every": 12,
            "normalize": lao, "script_only": True},
 }
@@ -243,8 +251,10 @@ def documents(paths, every=1):
         import pyarrow.parquet as pq
 
         f = pq.ParquetFile(path)
+        # FineWeb-2's text is in "text", GlotCC's in "content".
+        column = "text" if "text" in f.schema_arrow.names else "content"
         for g in range(0, f.metadata.num_row_groups, every):
-            yield from f.read_row_group(g, columns=["text"]).column("text").to_pylist()
+            yield from f.read_row_group(g, columns=[column]).column(column).to_pylist()
 
 
 def main():

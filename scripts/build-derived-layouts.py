@@ -2,9 +2,10 @@
 """build-derived-layouts.py — the layouts that are another language's
 keys, renamed, for the languages that write with them.
 
-Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi and
-Magahi are written in Devanagari as Hindi is, and typed on Hindi's
-InScript keys (xkeyboard-config's `in`): their layouts are Hindi's,
+Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi, Magahi
+and Angika are written in Devanagari as Hindi is, and typed on Hindi's
+InScript keys (xkeyboard-config's `in`), Dotyali and Newari on Nepali's
+(`np`): their layouts are Hindi's,
 named in their own words and predicting from their own models,
 Sanskrit's with its avagraha ऽ on the long press of ः and ॐ on ओ's.
 Konkani is typed on Marathi's keys (`in(marathi)`), ळ among them, and
@@ -89,6 +90,9 @@ DERIVED = [
         },
     ),
     ("wsg", "te", "గోండి", {}),
+    ("anp", "hi", "अंगिका", {}),
+    ("dty", "ne", "डोटेली", {}),
+    ("new", "ne", "नेपाल भाषा", {}),
     (
         "lus",
         "us",

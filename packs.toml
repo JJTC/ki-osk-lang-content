@@ -18,6 +18,7 @@ source  = { name = "Tatoeba", url = "https://tatoeba.org/" }
 [prediction.names]
 ar  = "Arabic"
 as  = "Assamese"
+anp = "Angika"
 awa = "Awadhi"
 az  = "Azerbaijani"
 be  = "Belarusian"
@@ -32,6 +33,7 @@ cs  = "Czech"
 da  = "Danish"
 de  = "German"
 doi = "Dogri"
+dty = "Dotyali"
 el  = "Greek"
 en  = "English"
 eo  = "Esperanto"
@@ -77,6 +79,7 @@ mni-Beng = "Meitei (Bengali script)"
 mr  = "Marathi"
 ms  = "Malay"
 ne  = "Nepali"
+new = "Newari (Nepal Bhasa)"
 nl  = "Dutch"
 no  = "Norwegian (Bokmål)"
 oc  = "Occitan"
@@ -209,6 +212,15 @@ source  = { name = "FineWeb-2 (Hugging Face): web text from Common Crawl, revisi
 license = { name = "CC BY 4.0 (MADLAD-400)", url = "https://creativecommons.org/licenses/by/4.0/", share_alike = false }
 source  = { name = "MADLAD-400 (Google; allenai/MADLAD-400 at Hugging Face): web text from Common Crawl, revision 9d886a7", url = "https://huggingface.co/datasets/allenai/MADLAD-400" }
 
+# GlotCC's web text (scripts/fetch-glotcc.sh: its files at one revision,
+# pinned by sha256; scripts/fineweb-text.py keeps the documents that read
+# as their language): Newari's news, beside its wiki's text. Its card
+# licenses its packaging, metadata and annotations CC0 1.0, the text
+# being under Common Crawl's Terms of Use; the packs name it all the same.
+[prediction.glotcc]
+license = { name = "CC0 1.0 (GlotCC's packaging; the text under Common Crawl's Terms of Use)", url = "https://creativecommons.org/publicdomain/zero/1.0/", share_alike = false }
+source  = { name = "GlotCC v1.0 (cis-lmu/GlotCC-V1 at Hugging Face): web text from Common Crawl, revision 9ad140b", url = "https://huggingface.co/datasets/cis-lmu/GlotCC-V1" }
+
 # Transliteration tables (translit/<lang>.txt, osk_data::translit): how the
 # Latin letters typed for a language become its script, written for this
 # repository. Each joins the pack of its language, beside the layout that
@@ -235,13 +247,14 @@ langs   = ["brx", "doi", "kok", "ks", "mai", "mni", "sa"]
 # The tables of languages neither dataset has, fitted to Dakshina's
 # romanizations of the words they share with Hindi, Urdu, Kannada or
 # Telugu (make fit-translit's FIT_BORROWED; Sindhi's in Devanagari
-# stayed as written, Gondi's at Telugu's fitted costs). Named, and no
+# stayed as written, Gondi's at Telugu's fitted costs, Angika's at
+# Hindi's). Named, and no
 # licence added: the tables hold the numbers learned, none of the
 # dataset's words, and Chhattisgarhi's, Brahui's, Garhwali's and
 # Rajasthani's packs are not otherwise share-alike.
 [[translit.fitted]]
 source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons of Hindi, Urdu, Kannada or Telugu, the transliteration table's costs fitted to the words they share with this language", url = "https://github.com/google-research-datasets/dakshina" }
-langs   = ["awa", "bho", "brh", "gbm", "hne", "khw", "mag", "pnb", "raj", "skr", "tcy", "wsg"]
+langs   = ["anp", "awa", "bho", "brh", "dty", "gbm", "hne", "khw", "mag", "new", "pnb", "raj", "skr", "tcy", "wsg"]
 
 # Keyboard layouts (layouts/<id>.json): the keys of each, and what each
 # types. The national ones are read from xkeyboard-config's keymaps
@@ -263,6 +276,7 @@ ak      = ["ak"]
 am      = ["am"]
 ar      = ["ar"]
 as      = ["as", "as-abc"]
+anp     = ["anp", "anp-abc"]
 awa     = ["awa", "awa-abc"]
 ay      = ["ay"]
 az      = ["az"]
@@ -287,6 +301,7 @@ cy      = ["cy"]
 da      = ["dk"]
 de      = ["de"]
 doi     = ["doi", "doi-abc"]
+dty     = ["dty", "dty-abc"]
 dv      = ["dv"]
 dz      = ["dz"]
 ee      = ["ee"]
@@ -362,6 +377,7 @@ mt      = ["mt"]
 my      = ["my"]
 nah     = ["nah"]
 ne      = ["ne", "ne-abc"]
+new     = ["new", "new-abc"]
 nl      = ["nl"]
 no      = ["no"]
 nr      = ["nr"]
