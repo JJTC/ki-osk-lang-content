@@ -32,6 +32,14 @@
 //! a related language's romanizations then measure a table on the words
 //! the two languages share (Bhojpuri's on Dakshina's Hindi).
 //!
+//! With `--unpointed` a reading is the word meant when the two differ
+//! only in points (Hebrew's niqqud, the dots and strokes of Yiddish's
+//! pointed letters) and in Yiddish's ligatures (װ ױ ײ for וו וי יי), and
+//! the lexicon has the word when it has it so: Wiktionary points Yiddish's
+//! words as YIVO spells them (פֿינף), its wiki and its readers often do
+//! not (פינף), and which a reader writes is the lexicon's to rank, not the
+//! table's to find.
+//!
 //! A word is the same word as the lexicon keys it: its identity
 //! (`osk_data::words::Splitter::normalize`, of the table's language, by
 //! its file name or `--lang`), so Sindhi's ھ and ه, which its texts write
@@ -46,6 +54,7 @@ use osk_data::ngram::NgramModel;
 use osk_data::translit::{CONTEXT_WEIGHT, Lexicon, Scheme, UNKNOWN_BELOW_RAREST};
 use osk_data::words::Splitter;
 use osk_data_tools::lexicon::FstLexicon;
+use unicode_normalization::UnicodeNormalization as _;
 
 #[derive(Parser)]
 #[command(about = "Measure a transliteration table against romanizations people typed")]
@@ -98,6 +107,33 @@ struct Args {
     /// name (`hi` of `translit/hi.txt`) by default.
     #[arg(long)]
     lang: Option<String>,
+    /// Compare words without their points and ligatures (Yiddish's
+    /// Wiktionary romanizations: its words as YIVO points them).
+    #[arg(long)]
+    unpointed: bool,
+}
+
+/// `word` without its points (Hebrew's niqqud, the dots and strokes of
+/// Yiddish's pointed letters), its ligatures as their two letters (װ וו,
+/// ױ וי, ײ יי): what `--unpointed` compares.
+fn unpointed(word: &str) -> String {
+    let mut out = String::with_capacity(word.len());
+    for c in word.nfd() {
+        match c {
+            '\u{0591}'..='\u{05BD}'
+            | '\u{05BF}'
+            | '\u{05C1}'
+            | '\u{05C2}'
+            | '\u{05C4}'
+            | '\u{05C5}'
+            | '\u{05C7}' => {}
+            '\u{05F0}' => out.push_str("\u{05D5}\u{05D5}"),
+            '\u{05F1}' => out.push_str("\u{05D5}\u{05D9}"),
+            '\u{05F2}' => out.push_str("\u{05D9}\u{05D9}"),
+            c => out.push(c),
+        }
+    }
+    out
 }
 
 /// A lexicon that gives no completions.
@@ -211,7 +247,14 @@ fn main() -> anyhow::Result<()> {
             .with_context(|| format!("{}: no language in its name", args.table.display()))?,
     };
     let splitter = Splitter::new(&lang);
-    let same = |text: &str, word: &str| splitter.normalize(text) == word;
+    let same = |text: &str, word: &str| {
+        let text = splitter.normalize(text);
+        if args.unpointed {
+            unpointed(&text) == unpointed(word)
+        } else {
+            text == word
+        }
+    };
     let pairs = fs::read_to_string(&args.pairs)
         .with_context(|| format!("reading {}", args.pairs.display()))?;
     let model = match &args.ngrams {
@@ -264,7 +307,8 @@ fn main() -> anyhow::Result<()> {
             continue;
         }
         let word = splitter.normalize(word);
-        let known = lexicon.log_prob(&word).is_some();
+        let known = lexicon.log_prob(&word).is_some()
+            || (args.unpointed && lexicon.log_prob(&unpointed(&word)).is_some());
         if args.known && !known {
             continue;
         }

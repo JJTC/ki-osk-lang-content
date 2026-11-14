@@ -454,6 +454,8 @@ fn every_translit_table_reads_its_language() {
                 ("oyf", "אויף"),
                 ("vos", "וואס"),
                 ("sholem", "שלום"),
+                ("simkhes", "שמחות"),
+                ("khsidem", "חסידים"),
             ],
         ),
         ("awa", &[("aur", "अउर"), ("kay", "कय"), ("ekthu", "एक्ठु")]),

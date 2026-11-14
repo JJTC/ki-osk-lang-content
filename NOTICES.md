@@ -175,9 +175,9 @@ contributors (each article's history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Eight models learn from FineWeb-2's web text alone: those of Bodo,
-Dogri, Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of
-their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei in the
+Nine models learn from FineWeb-2's web text alone: those of Bodo,
+Dogri, Chhattisgarhi, Magahi, Brahui and Kokborok, which have no
+Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei in the
 Bengali script (`mni-Beng`), whose wikis are in their other scripts,
 and of Lao, whose wiki is small; and Assamese's from it beside its
 Tatoeba sentences.
@@ -284,7 +284,10 @@ for the Next Billion Users", arXiv 2205.03018), which
 Greek AUEB's real-world Greeklish (Toumazatos, Pavlopoulos,
 Androutsopoulos and Vassos, "Still All Greeklish to Me: Greeklish to
 Greek Transliteration", LREC-COLING 2024; github.com/nlpaueb/greeklish,
-Apache-2.0), which `scripts/fetch-greeklish.sh` downloads to measure.
+Apache-2.0), which `scripts/fetch-greeklish.sh` downloads to measure,
+and for Yiddish Wiktionary's words and their romanizations as kaikki.org
+extracts them (CC BY-SA 4.0), which `scripts/fetch-wiktionary-romanized.sh`
+downloads to measure.
 Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'
 notices below.

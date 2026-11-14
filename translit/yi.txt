@@ -6,9 +6,10 @@
 # וי, and a word's first i, u, ey, ay or oy rides an alef (in: אין, oyf:
 # אויף). Its words from Hebrew keep Hebrew's spelling, leaving vowels out,
 # writing ח ת ש for kh, s and t (emes: אמת, khaver: חבר), and ו where
-# Yiddish says e for Hebrew's o (sholem: שלום): ways at a cost, for the
-# lexicon to find. m, n, kh, f and ts take their final forms at a word's
-# end (fun: פון).
+# Yiddish says e for Hebrew's o (sholem: שלום), and their plurals' -em
+# and -es as Hebrew's ים and ות (khsidem: חסידים, simkhes: שמחות): ways
+# at a cost, for the lexicon to find. m, n, kh, f and ts take their final
+# forms at a word's end (fun: פון).
 
 script alphabet
 
@@ -75,3 +76,5 @@ ai    יי:0.5  ײַ:1
 
 [other]
 vu    וואו  ווּ:1
+em$   עם  ים:1
+es$   עס  ות:1

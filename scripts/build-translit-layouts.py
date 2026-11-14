@@ -20,10 +20,12 @@ language in a second script (translit/sd-Deva.txt) is its tag's, and its
 layouts' ids are the tag in lower case (sd-deva, sd-deva-abc). --check
 fails if a written file would differ, as a test of the tree.
 
-It writes Hinglish's layout too, hi-latn: Hindi typed in Latin letters
-and left in them, so no composer, but the US layout as it is (its keys,
-its accent menus, glide typing) suggesting from the hi-Latn model, Hindi's
-text respelled as people type it (scripts/build-hinglish.py).
+It writes the layouts of the languages typed in Latin letters and left in
+them too, so with no composer but the US layout as it is (its keys, its
+accent menus, glide typing) suggesting from the language's model:
+Hinglish, hi-latn, whose model is Hindi's text respelled as people type
+it (scripts/build-hinglish.py), and Kokborok, trp, written in Latin
+letters.
 """
 import json
 import pathlib
@@ -72,11 +74,15 @@ def build(lang, us):
     return json.dumps(out, ensure_ascii=False, indent=2) + "\n"
 
 
-def hinglish(us):
+# The languages typed on the US keys as they are: layout id, name, model.
+LATIN = [("hi-latn", "Hinglish", "hi-Latn"), ("trp", "Kokborok", "trp")]
+
+
+def latin(us, layout_id, name, lang):
     out = dict(us)
-    out["id"] = "hi-latn"
-    out["name"] = "Hinglish"
-    out["prediction_lang"] = "hi-Latn"
+    out["id"] = layout_id
+    out["name"] = name
+    out["prediction_lang"] = lang
     return json.dumps(out, ensure_ascii=False, indent=2) + "\n"
 
 
@@ -85,7 +91,7 @@ def main():
     us = json.loads((ROOT / "layouts" / "us.json").read_text(encoding="utf-8"))
     stale = []
     outputs = [(f"{t.stem.lower()}-abc", build(t.stem, us)) for t in sorted((ROOT / "translit").glob("*.txt"))]
-    outputs.append(("hi-latn", hinglish(us)))
+    outputs += [(layout_id, latin(us, layout_id, name, lang)) for layout_id, name, lang in LATIN]
     for name, text in outputs:
         path = ROOT / "layouts" / f"{name}.json"
         if check:

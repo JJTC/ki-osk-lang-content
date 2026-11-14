@@ -2,7 +2,7 @@
 
 Keyboard layouts, dictionaries, prediction models and input-method tables
 for [ki-osk](https://github.com/jjtc/ki-osk), an on-screen keyboard, as
-language packs: one per language, 169 in all, and three every language
+language packs: one per language, 170 in all, and three every language
 shares: the text rules, the emoji picker and the offensive-word lists.
 Everything ki-osk knows about a language is here; ki-osk itself is code.
 Beside the data are the builders that produce it
@@ -29,7 +29,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 | Path | What | Built by |
 |---|---|---|
-| `predict/<lang>.fst` | Prefix-completion lexicon (91 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
+| `predict/<lang>.fst` | Prefix-completion lexicon (92 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
@@ -41,7 +41,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `$SRC_DIR/wikipedia/` | The text of sixteen wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki, Tulu), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
 | `$SRC_DIR/greeklish/` | Greek typed in Latin letters, from AUEB's real-world Greeklish test set (forum comments and chat messages, each written out in Greek by several people; Apache-2.0): what `make eval-translit` measures Greek's table on — **not committed** | `make fetch-greeklish` |
 | `$SRC_DIR/aksharantar/` | Words people romanized, from the test split of AI4Bharat's Aksharantar dataset (Assamese, Maithili, Nepali, Odia, Sanskrit, Konkani, Kashmiri, Meitei, Bodo, Dogri): what `make eval-translit` measures those tables on, and the words of its train and valid splits romanized by hand and Wikidata's names, what `make fit-translit` fits their costs to — **not committed** | `make fetch-aksharantar` |
-| `$SRC_DIR/fineweb/` | FineWeb-2's web text of five languages with no Wikipedia of their own (Bodo, Dogri, Chhattisgarhi, Magahi, Brahui), of Sindhi in Devanagari and Meitei in the Bengali script, of Lao, and of Assamese beside its Tatoeba sentences, the documents that read as their language, and its held-out test text — **not committed**: the text is the web's | `make fetch-fineweb` (needs pyarrow: `FINEWEB_PYTHON`) |
+| `$SRC_DIR/fineweb/` | FineWeb-2's web text of six languages with no Wikipedia of their own (Bodo, Dogri, Chhattisgarhi, Magahi, Brahui, Kokborok), of Sindhi in Devanagari and Meitei in the Bengali script, of Lao, and of Assamese beside its Tatoeba sentences, the documents that read as their language, and its held-out test text — **not committed**: the text is the web's | `make fetch-fineweb` (needs pyarrow: `FINEWEB_PYTHON`) |
 | `$SRC_DIR/madlad/` | MADLAD-400's web text of Garhwali and Rajasthani, which neither Wikipedia nor FineWeb-2 has, the documents that read as their language, every 20th held out — **not committed**: the text is the web's | `make fetch-madlad` |
 | `eval/<lang>.txt` | Held-out text no model is trained on (Tatoeba's, or the Wikipedia text of the languages that learn from it alone, Dakshina's or the wikis' own): what keystroke savings are measured on | `make fetch-corpora`, `make fetch-dakshina`, `make fetch-wikipedia` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |
@@ -52,7 +52,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `sources.lock` | What each output was built from | every build target |
 | `pinyin/syllables.txt` | The 413 Mandarin syllables in toneless Pinyin | by hand |
 | `pinyin/double-pinyin.json` | The six double-Pinyin schemes: which key carries which initial and finals | by hand |
-| `layouts/<id>.json` | Keyboard layouts (215): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps (those of Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi, Magahi, Sindhi in Devanagari, Konkani, Tulu, Meitei in the Bengali script, Western Punjabi, Saraiki, Kashmiri, Brahui, Garhwali, Rajasthani and Yiddish another language's, renamed), the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make derived-layouts`; `make translit-layouts` |
+| `layouts/<id>.json` | Keyboard layouts (216): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps (those of Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi, Magahi, Sindhi in Devanagari, Konkani, Tulu, Meitei in the Bengali script, Western Punjabi, Saraiki, Kashmiri, Brahui, Garhwali, Rajasthani and Yiddish another language's, renamed), the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make derived-layouts`; `make translit-layouts` |
 | `emoji/catalogue.json` | Every fully-qualified emoji with its CLDR name and keywords: the emoji search | `scripts/build-emoji.py` |
 | `offensive/<lang>.txt` | Words a keyboard can keep off its strip (LDNOOBW, AOSP) | by hand |
 | `seeds/` | Tiny Pinyin, Jyutping and kana seeds (offline fallback) | by hand |
@@ -67,7 +67,7 @@ sight rather than mis-decoded.
 ## Packs and releases
 
 A pack is one language's files: its keyboard layouts, and an `.fst`
-lexicon and an `.ngram.bin` table for each of the 90 prediction
+lexicon and an `.ngram.bin` table for each of the 91 prediction
 languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's and Lao's with their word lists, forty-one with a transliteration
 table and the layout that types through it); `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
 (kana–kanji) and `ko` (Hangul) with their layouts; and a pack of its

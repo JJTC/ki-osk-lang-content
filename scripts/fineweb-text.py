@@ -35,6 +35,10 @@ cut where a word in another script stands (English names, mostly: half
 the words of a model learned with them were English, each rare), and
 its letters written two ways are written as the keyboard types them
 (ໍາ as ຳ, ຫນ ຫມ ຫລ as ໜ ໝ ຫຼ; osk_data::wordbreak::lao_fold).
+Kokborok (trp), written in Latin letters, has English against it, its
+words counted in lower case, and a sentence of it whose words are more
+than 15% English's (`sentence_rival`) is left out (39 of the 4 843 of
+the documents kept).
 
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
@@ -83,6 +87,8 @@ GARHWALI = set("मा च छौ छन छा ह्वे कु बि न�
 NEPALI = set("पनि भएको गरेको हुन्छ थियो गर्न छन् हुने गरी र छैन तपाईंको तपाइँको "
              "गर्नुहोस् मार्फत क्यासिनो कैसीनो बोनस".split())
 RAJASTHANI = set("री सूं मांय रो रै नीं पण नै रा".split())
+ENGLISH = set("the of and to in is that for on with as was are by this it from be at an or".split())
+KOKBOROK = set("tei ni no bai khe bo kha kaisa tongo bini hwnwi wngkha twi nwng ang".split())
 BENGALI = set("এবং করে হয় এই যে থেকে জন্য করা তার আমি আমাদের হয়েছে একটি সঙ্গে করেন হবে".split())
 
 # Sindhi's implosives: the letter, or (on the web) its plain consonant
@@ -121,6 +127,10 @@ LANGS = {
     # MADLAD-400's (no test split: every 20th document held out).
     "gbm": {"script": "DEVANAGARI", "neighbour": HINDI, "own": GARHWALI, "rival": NEPALI},
     "raj": {"script": "DEVANAGARI", "neighbour": HINDI, "own": RAJASTHANI, "rival": set()},
+    # Kokborok, in Latin letters: a document whose own words outnumber
+    # English's, the English sentences in it left out.
+    "trp": {"script": "LATIN", "neighbour": set(), "own": KOKBOROK, "rival": ENGLISH,
+            "sentence_rival": ENGLISH},
     "lo": {"script": "LAO", "neighbour": set(), "lines": True, "unspaced": True, "every": 12,
            "normalize": lao, "script_only": True},
 }
@@ -148,7 +158,8 @@ def junk(text, ws, script):
 
 
 def kept(text, conf):
-    ws = words(text)
+    # In lower case: Latin's function words start sentences too.
+    ws = words(text.lower())
     if junk(text, ws, conf["script"]):
         return False
     if share(ws, conf["neighbour"]) > 0.06:
@@ -185,6 +196,8 @@ def sentences(text, conf):
     for piece in pieces:
         for s in END.split(piece):
             for s in script_runs(s, script) if conf.get("script_only") else [" ".join(s.split())]:
+                if "sentence_rival" in conf and share(words(s.lower()), conf["sentence_rival"]) > 0.15:
+                    continue
                 if len(s) <= 1000 and long_enough(s, conf) and not MARKUP.search(s) and in_script(s, script):
                     yield s
 

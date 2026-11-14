@@ -30,7 +30,7 @@ ENCODER = $(shell git describe --always --dirty --abbrev=12 2>/dev/null)
 PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be id fil az ku ug hi bn hy ka lt lv kab \
                  oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
                  bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                 brx doi hne mag brh sd-Deva mni-Beng lo gbm raj
+                 brx doi hne mag brh sd-Deva mni-Beng lo gbm raj trp
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -68,7 +68,7 @@ WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # the held-out text is FineWeb-2's test split, in $(FINEWEB_DIR)/eval, and
 # like the corpus it is not committed. Reading parquet needs pyarrow:
 # FINEWEB_PYTHON names a Python that has it.
-FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo
+FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp
 # And beside a small Tatoeba corpus, counted TATOEBA_WEIGHT times as
 # Hindi's is beside Dakshina's text: Assamese (14 000 sentences).
 FINEWEB_PLUS_LANGS ?= as
@@ -96,6 +96,14 @@ AKSHARANTAR_DIR = $(SRC_DIR)/aksharantar
 # sha256; Apache-2.0), what eval-translit measures Greek's table on. Never
 # committed or shipped.
 GREEKLISH_DIR = $(SRC_DIR)/greeklish
+
+# Words and their romanizations from Wiktionary, as kaikki.org extracts
+# them (scripts/fetch-wiktionary-romanized.sh; CC BY-SA 4.0): what
+# eval-translit measures Yiddish's table on, Wiktionary's romanization of
+# Yiddish being YIVO's, the one people type. kaikki.org keeps only its
+# latest extract, so the measure moves with it. Never committed or shipped.
+WIKTIONARY_ROMANIZED_LANGS ?= yi
+WIKTIONARY_ROMANIZED_DIR = $(SRC_DIR)/wiktionary
 
 # Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
 # Only the .bins built from them are committed.
@@ -171,7 +179,7 @@ PREDICT_WIDER_NGRAM ?= 90000
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
 PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                      brx doi hne mag brh sd-Deva mni-Beng lo gbm raj
+                      brx doi hne mag brh sd-Deva mni-Beng lo gbm raj trp
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
@@ -201,6 +209,8 @@ help:
 	@echo "  fetch-wikipedia  the wikis' own text, for WIKIPEDIA_LANGS, into SRC_DIR"
 	@echo "  fetch-aksharantar  romanized words for eval-translit, into SRC_DIR"
 	@echo "  fetch-greeklish  Greek typed in Latin letters, for eval-translit"
+	@echo "  fetch-wiktionary-romanized  Wiktionary's romanized Yiddish words,"
+	@echo "                   for eval-translit"
 	@echo "  fetch-fineweb    FineWeb-2's web text, for FINEWEB_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  fetch-madlad     MADLAD-400's web text, for MADLAD_LANGS, into SRC_DIR"
@@ -216,7 +226,7 @@ help:
 	@echo "  cjk-assets-seed  rebuild from seeds (offline; DOWNGRADES, needs CONFIRM=yes)"
 	@echo "  eval-translit    how often each transliteration table puts the word"
 	@echo "                   meant first (after fetch-dakshina, fetch-aksharantar,"
-	@echo "                   fetch-greeklish)"
+	@echo "                   fetch-greeklish, fetch-wiktionary-romanized)"
 	@echo "  fit-translit     fit the Dakshina and Aksharantar languages' tables'"
 	@echo "                   costs to their training romanizations (after"
 	@echo "                   fetch-dakshina, fetch-aksharantar)"
@@ -263,6 +273,10 @@ fetch-aksharantar:
 .PHONY: fetch-greeklish
 fetch-greeklish:
 	OUT=$(GREEKLISH_DIR) ./scripts/fetch-greeklish.sh
+
+.PHONY: fetch-wiktionary-romanized
+fetch-wiktionary-romanized:
+	OUT=$(WIKTIONARY_ROMANIZED_DIR) ./scripts/fetch-wiktionary-romanized.sh $(WIKTIONARY_ROMANIZED_LANGS)
 
 .PHONY: fetch-fineweb
 fetch-fineweb:
@@ -592,13 +606,16 @@ hinglish-assets:
 # as it was typed); and the keystrokes the strip saves, typing the test
 # sentences' first 20 000 words a letter at a time, each sentence's words
 # ranked after the words before them with the language's n-grams, as the
-# keyboard ranks them. After `make
-# fetch-dakshina`; the tables' costs are fitted on what these leave out
-# (fit-translit, below). Then FIT_BORROWED's tables, on the related
-# language's test sentences and words, of the words the two share. Then the tables Dakshina has nothing for, on
-# Aksharantar's words romanized by hand (mostly rare words and names, so
-# what the lexicon has is the measure): after `make fetch-aksharantar`.
-# And Greek's, on people's Greeklish: after `make fetch-greeklish`.
+# keyboard ranks them. After `make fetch-dakshina`; the tables' costs are
+# fitted on what these leave out (fit-translit, below). Then FIT_BORROWED's
+# tables, on the related language's test sentences and words, of the words
+# the two share. Then the tables Dakshina has nothing for, on Aksharantar's
+# words romanized by hand (mostly rare words and names, so what the lexicon
+# has is the measure): after `make fetch-aksharantar`. And Greek's, on
+# people's Greeklish: after `make fetch-greeklish`. And Yiddish's, on
+# Wiktionary's words and their romanizations, a reading right when it is
+# the word but for its points (eval-translit --unpointed): after `make
+# fetch-wiktionary-romanized`.
 TRANSLIT_EVAL_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 DAKSHINA_TEST = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.test.tsv
 .PHONY: eval-translit
@@ -643,6 +660,13 @@ eval-translit:
 	echo "el, AUEB's Greeklish:"; \
 	$(TOOLS) eval-translit -- --table translit/el.txt --lexicon predict/el.fst \
 		--pairs $$p | tail -n 1
+	@for lang in $(WIKTIONARY_ROMANIZED_LANGS); do \
+		p=$(WIKTIONARY_ROMANIZED_DIR)/$$lang.tsv; \
+		test -f $$p || { echo "no $$p: run make fetch-wiktionary-romanized"; exit 1; }; \
+		echo "$$lang, Wiktionary's romanized words, the words but for their points:"; \
+		$(TOOLS) eval-translit -- --unpointed --table translit/$$lang.txt \
+			--lexicon predict/$$lang.fst --pairs $$p | tail -n 1 || exit 1; \
+	done
 
 # The costs of the Dakshina languages' tables (each way's after its
 # colon, and an abugida's cluster, schwa, final and final-virama), fitted

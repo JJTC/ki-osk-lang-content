@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**216 layouts**: 166 keyboard layouts (RTL: ar he fa + Urdu, Western
+**217 layouts**: 167 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Pashto, Sindhi, Uyghur, Syriac,
-Dhivehi, Yiddish; Hinglish) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) ·
+Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK + Amharic/Tigrinya Ge'ez) ·
 41 transliteration layouts (Latin letters → the language's script,
-`-abc`) · emoji + numeric. All render native keycaps. 215 are here; the
+`-abc`) · emoji + numeric. All render native keycaps. 216 are here; the
 numeric keypad is built into ki-osk. The table below is the complete
-list; **91 languages** carry a prediction
+list; **92 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -104,6 +104,7 @@ but no model to match the glide against · `—` off
 | `gbm` | `gbm` | Garhwali गढ़वाली | in (+ ळ long-press) | LTR | **Full** (gbm)⁸ | — | — |
 | `raj` | `raj` | Rajasthani राजस्थानी | in (+ ळ long-press) | LTR | **Full** (raj)⁸ | — | — |
 | `hi-latn` | `hi-Latn` | Hinglish (Hindi in Latin letters) | us | LTR | **Full** (hi-Latn)⁵ | ✓ | — |
+| `trp` | `trp` | Kokborok | us | LTR | **Full** (trp)⁷ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -379,11 +380,21 @@ but no model to match the glide against · `—` off
    and Rajasthani's ळ, which those words would only push down): on their
    dev words Brahui rose 4.4 points so, Western Punjabi 3.9,
    Chhattisgarhi 3.5, Saraiki 2.1, Rajasthani 1.5, Awadhi 1.2, Bhojpuri
-   0.6, Garhwali 0.3 and Tulu 0.2. Armenian, Persian, Pashto, Mongolian, Santali, Yiddish and Meitei
-   in the Bengali script have no such measure (Persian's and Pashto's
-   speakers type the words they share with Urdu otherwise; Meitei shares
-   few with Bengali); their tests read everyday words. Of the 51 checked in the seven tables
-   new with Wikipedia's text, 48 come first and 49 are on the strip;
+   0.6, Garhwali 0.3 and Tulu 0.2. Yiddish's table is measured on
+   Wiktionary's words and their romanizations, which are YIVO's, the
+   one people type (13 976 words and forms, as kaikki.org extracts them;
+   `scripts/fetch-wiktionary-romanized.sh`): the word first for 82.3%
+   of them and 87.8% of those its lexicon has, a word right without its
+   points (Wiktionary writes פֿינף, Yiddish's wiki and many of its
+   writers פינף, which of the two comes first being the lexicon's).
+   Hebrew's plural endings ים and ות for -em and -es (khsidem: חסידים)
+   raised the half of the words they were not chosen on from 85.6% to
+   87.6% of the words the lexicon has. Armenian, Persian, Pashto,
+   Mongolian, Santali and Meitei in the Bengali script have no such
+   measure (Persian's and Pashto's speakers type the words they share
+   with Urdu otherwise; Meitei shares few with Bengali); their tests
+   read everyday words. Of the 51 checked in the seven tables new with
+   Wikipedia's text, 48 come first and 49 are on the strip;
    Kathmandu's and Lahore's English spellings are not, and Pashto's da
    comes after ده. Sanskrit's, Santali's and Yiddish's tables put first
    all of 127 of their wikis' commonest words, typed as their Latin
@@ -438,10 +449,11 @@ but no model to match the glide against · `—` off
    pointed letters and ligatures (`scripts/build-derived-layouts.py`).
    Bishnupriya Manipuri's wiki is not used: nearly all of it is town
    stubs a bot wrote (98% of its sentences fit 2 000 templates).
-7. These nine models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These ten models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
-   Chhattisgarhi, Magahi and Brahui, which have no Wikipedia of their own,
+   Chhattisgarhi, Magahi, Brahui and Kokborok, which have no Wikipedia
+   of their own,
    Sindhi in Devanagari and Meitei in the Bengali script, whose wikis are
    in their other scripts, and Lao, whose wiki is small; and Assamese's
    beside its 14 000 Tatoeba sentences (counted ten times), whose model
@@ -483,6 +495,15 @@ but no model to match the glide against · `—` off
    lexicon lacks 41.4% -> 10.2% (80 000 words; on Tatoeba's held-out
    sentences 42.3%, from 43.3%); its lexicon has 48% of Aksharantar's
    test words, from 17%, the word first for 39.7% of them, from 24.0%.
+   Kokborok, written in Latin letters in Tripura and typed on the US
+   keys, has 226 documents in FineWeb-2, two fifths of them from
+   adivasilivesmatter.com and most of the rest from Kokborok sites; the
+   217 of its 222 training documents whose own words (tei ni no bai khe)
+   outnumber English's give 4 664 sentences, a sentence mostly English
+   left out, and a lexicon of 15 356 words. Keystroke savings 36.9% on
+   the 76 sentences of its four test documents (1 806 words, 15.8% of
+   them unknown). MADLAD-400's Kokborok is not used: it is mostly Thai
+   dating and download spam, and Garo news.
 8. These two models learn from web text, MADLAD-400's (Google; CC BY 4.0
    by its card, whose metadata says ODC-By; subject to Common Crawl's
    Terms of Use; `scripts/fetch-madlad.sh`, its files at one revision
@@ -501,7 +522,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **91 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **92 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -512,7 +533,7 @@ but no model to match the glide against · `—` off
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy** (note 6) ·
-  **web text: brx doi hne mag brh sd-Deva mni-Beng lo** (FineWeb-2's; note 7; Lao cut into words with ICU's word list too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
+  **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp** (FineWeb-2's; note 7; Lao cut into words with ICU's word list too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet, because Tatoeba has too few

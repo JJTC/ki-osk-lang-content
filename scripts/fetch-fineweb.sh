@@ -2,9 +2,9 @@
 # fetch-fineweb.sh — web text of the languages that have no Wikipedia of
 # their own, from FineWeb-2 (the Makefile's FINEWEB_LANGS): Bodo, Dogri,
 # Chhattisgarhi, Magahi and Brahui, Sindhi in Devanagari and Meitei in
-# the Bengali script, whose wikis are in their other scripts, and Lao,
-# whose wiki is small; and Assamese, whose Tatoeba corpus is small, beside
-# it (the Makefile's FINEWEB_PLUS_LANGS).
+# the Bengali script, whose wikis are in their other scripts, Lao, whose
+# wiki is small, and Kokborok, which has none; and Assamese, whose Tatoeba
+# corpus is small, beside it (the Makefile's FINEWEB_PLUS_LANGS).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
 # it is ODC-By 1.0, and its use subject to Common Crawl's Terms of Use.
@@ -51,6 +51,8 @@ lo   lao_Laoo  train/000_00000.parquet  19e5de2c1054ceed9946a91922db64690af5e61b
 lo   lao_Laoo  test/000_00000.parquet   d0d84f18de6400f06a2ed725f0858a517593fbbe0ac0698dc3418b2f5138b4ce
 as   asm_Beng  train/000_00000.parquet  66c64bd424c0084aee17ec4936a21d6e0b307b068f2fd29bf8acd60204a4891b
 as   asm_Beng  test/000_00000.parquet   fe65d2e25063872f4593f01af4cb0e0e69fc50e5af9714bdefc3701a100dfcc3
+trp  trp_Latn  train/000_00000.parquet  3becfceb5073d2991ba09f7f69d6d76a045bc154d10b5b058aca4bb0b44ace9c
+trp  trp_Latn  test/000_00000.parquet   18b9059b96e18148350efbb260dc6120c72ca251dc317fe51b543100bef495ea
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)
