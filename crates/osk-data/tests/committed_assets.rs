@@ -342,6 +342,85 @@ impl osk_data::translit::Lexicon for FstLexicon {
 
 /// Each transliteration table parses, has the layout that types through it,
 /// and reads everyday words of its language first with its lexicon.
+/// `scheme`, reading the English words `lang` writes, where it has them
+/// (`translit/<lang>.english.txt`), as the keyboard reads them.
+fn with_english(scheme: osk_data::translit::Scheme, lang: &str) -> osk_data::translit::Scheme {
+    let p = root().join(format!("translit/{lang}.english.txt"));
+    match std::fs::read_to_string(&p) {
+        Ok(text) => scheme
+            .with_english(&text)
+            .unwrap_or_else(|e| panic!("{}: {e}", name(&p))),
+        Err(_) => scheme,
+    }
+}
+
+#[test]
+fn every_english_word_list_reads_with_its_table() {
+    use osk_data::translit::Scheme;
+
+    // English words typed as English spells them, which the tables alone
+    // do not read as the word.
+    let words: &[(&str, &[(&str, &str)])] = &[
+        (
+            "hi",
+            &[("college", "कॉलेज"), ("system", "सिस्टम"), ("railway", "रेलवे")],
+        ),
+        (
+            "bn",
+            &[
+                ("college", "কলেজ"),
+                ("police", "পুলিশ"),
+                ("station", "স্টেশন"),
+            ],
+        ),
+        (
+            "ta",
+            &[("college", "காலேஜ்"), ("police", "போலீஸ்"), ("team", "டீம்")],
+        ),
+        ("te", &[("college", "కాలేజ్"), ("station", "స్టేషన్")]),
+        (
+            "ur",
+            &[("college", "کالج"), ("police", "پولیس"), ("system", "سسٹم")],
+        ),
+    ];
+    let lists: Vec<_> = files("translit", ".english.txt");
+    assert!(!lists.is_empty(), "no English words");
+    for p in &lists {
+        let file = p.file_name().unwrap().to_string_lossy().to_string();
+        let lang = file.trim_end_matches(".english.txt").to_string();
+        let table = root().join(format!("translit/{lang}.txt"));
+        let scheme = Scheme::parse(&std::fs::read_to_string(&table).unwrap()).unwrap();
+        let scheme = with_english(scheme, &lang);
+        assert!(
+            scheme.english_words() > 1000,
+            "{}: few English words",
+            name(p)
+        );
+    }
+    for (lang, expected) in words {
+        let table = root().join(format!("translit/{lang}.txt"));
+        let scheme = Scheme::parse(&std::fs::read_to_string(&table).unwrap()).unwrap();
+        let plain = scheme.clone();
+        let scheme = with_english(scheme, lang);
+        let lexicon = FstLexicon::open(&root().join(format!("predict/{lang}.fst")));
+        for (latin, word) in *expected {
+            let got = scheme.candidates(latin, &lexicon, 3);
+            assert_eq!(
+                got.first().map(|c| c.text.as_str()),
+                Some(*word),
+                "{lang}: {latin} offers {:?}",
+                got.iter().map(|c| &c.text).collect::<Vec<_>>()
+            );
+            let alone = plain.candidates(latin, &lexicon, 1);
+            assert_ne!(
+                alone.first().map(|c| c.text.as_str()),
+                Some(*word),
+                "{lang}: {latin}"
+            );
+        }
+    }
+}
+
 #[test]
 fn every_translit_table_reads_its_language() {
     use osk_data::layout::{ImeKind, LayoutDef};
@@ -571,7 +650,10 @@ fn every_translit_table_reads_its_language() {
         ("anp", &[("chhai", "छै"), ("aaru", "आरू"), ("kerau", "केरौ")]),
         ("new", &[("khah", "खः"), ("thwa", "थ्व"), ("yahgu", "याःगु")]),
     ];
-    let tables = files("translit", ".txt");
+    let tables: Vec<_> = files("translit", ".txt")
+        .into_iter()
+        .filter(|p| !name(p).ends_with(".english.txt"))
+        .collect();
     assert_eq!(
         tables.len(),
         words.len(),
@@ -580,7 +662,10 @@ fn every_translit_table_reads_its_language() {
     for p in tables {
         let lang = p.file_stem().unwrap().to_string_lossy().to_string();
         let text = std::fs::read_to_string(&p).unwrap();
-        let scheme = Scheme::parse(&text).unwrap_or_else(|e| panic!("{}: {e}", name(&p)));
+        let scheme = with_english(
+            Scheme::parse(&text).unwrap_or_else(|e| panic!("{}: {e}", name(&p))),
+            &lang,
+        );
         let layout: LayoutDef = serde_json::from_str(
             &std::fs::read_to_string(
                 root().join(format!("layouts/{}-abc.json", lang.to_lowercase())),

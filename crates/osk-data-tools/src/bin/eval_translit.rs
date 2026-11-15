@@ -111,6 +111,14 @@ struct Args {
     /// Wiktionary romanizations: its words as YIVO points them).
     #[arg(long)]
     unpointed: bool,
+    /// English words and how the language writes them
+    /// (`translit/<lang>.english.txt`), read besides the table's readings.
+    #[arg(long)]
+    english: Option<PathBuf>,
+    /// What reading an English word so costs, to try another than the
+    /// table's (`english`).
+    #[arg(long)]
+    english_cost: Option<f32>,
 }
 
 /// `word` without its points (Hebrew's niqqud, the dots and strokes of
@@ -185,7 +193,17 @@ fn main() -> anyhow::Result<()> {
     let args = Args::parse();
     let table = fs::read_to_string(&args.table)
         .with_context(|| format!("reading {}", args.table.display()))?;
-    let scheme = Scheme::parse(&table).with_context(|| format!("{}", args.table.display()))?;
+    let mut scheme = Scheme::parse(&table).with_context(|| format!("{}", args.table.display()))?;
+    if let Some(path) = &args.english {
+        let text =
+            fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;
+        scheme = scheme
+            .with_english(&text)
+            .with_context(|| format!("{}", path.display()))?;
+    }
+    if let Some(cost) = args.english_cost {
+        scheme.set_english_cost(cost);
+    }
     let lexicon: Box<dyn Lexicon> = match &args.lexicon {
         Some(path) => Box::new(FstLexicon::open(
             fs::read(path).with_context(|| format!("reading {}", path.display()))?,

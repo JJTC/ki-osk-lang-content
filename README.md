@@ -16,7 +16,10 @@ it can do.
 `LICENSE` (MIT) covers the code and tooling only, and the text rules and
 transliteration tables, which were written here (thirty tables' costs
 then fitted to the Dakshina and Aksharantar datasets' romanizations, and
-Gondi's and Angika's taken from Telugu's and Hindi's: `NOTICES.md`). The data keeps the
+Gondi's and Angika's taken from Telugu's and Hindi's: `NOTICES.md`). The
+English words each table's language writes (`translit/<lang>.english.txt`)
+are made from CMUdict, under its BSD-2-Clause-style notice, and the
+language's lexicon. The data keeps the
 licences of the datasets it was built from, listed in `NOTICES.md`, and
 **several are share-alike** (CC BY-SA): the Chinese and Cantonese
 dictionaries, the Portuguese and Spanish dialect flags, and the models of
@@ -36,6 +39,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `wordbreak/<lang>.txt` | The word list of a language written without spaces between words (Thai, Lao), which cuts its text into words in the trainer, the keyboard and `eval-predict`: ICU's word-break dictionary, as ICU has it | `make word-lists` |
 | `rules/all.weir`, `rules/<lang>.weir` | Text rules: what typing a key does to the text before the caret beyond typing it (the space after a strip word giving way to punctuation, French spacing), and where autocorrect acts besides space, Weir-style, with their tests | by hand |
 | `translit/<lang>.txt` | Transliteration tables (46: Sindhi's and Meitei's for both their scripts): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand, the costs of the Dakshina languages', of seven of the Aksharantar languages' and of thirteen related languages' (on the words they share with Hindi, Urdu or Kannada) then fitted to those datasets' romanizations (`make fit-translit`); `make eval-translit` measures them |
+| `translit/<lang>.english.txt` | The English words each table's language writes in its script (40: college कॉलेज, police পুলিশ), which people type as English spells them: read with the table, each typed whole read as its words too, and from three letters the words they begin offered (`osk_data::translit::Scheme::with_english`) | CMUdict's pronunciations spelled in Latin letters as the language's sounds are typed, read by the table, the likeliest reading the lexicon has kept (`make english-assets`, after `make fetch-cmudict`) |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `$SRC_DIR/dakshina/` | Wikipedia text and romanizations of 12 South Asian languages (the Dakshina dataset) — **not committed** | `make fetch-dakshina` |
 | `$SRC_DIR/wikipedia/` | The text of twenty-one wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki, Tulu, Dotyali, Angika, Newari, and Armenian and Persian beside their Tatoeba sentences) and of three of the Wikimedia Incubator's test wikis (Magahi, Adilabad Gondi, Khowar), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
@@ -122,6 +126,7 @@ make fetch-wikipedia   # twenty-four wikis' own text -> SRC_DIR
 make predict-assets    # corpora -> predict/*.fst + *.ngram.bin
 make hinglish-assets   # Hindi's corpora respelled in Latin -> predict/hi-Latn.*
 make fit-translit      # the tables' costs, fitted to Dakshina's and Aksharantar's romanizations
+make english-assets    # the English words each table's language writes, from CMUdict
 make eval-translit     # how often the transliteration tables are right
 make fit-ranker        # how much a learned ranking of their readings would add
 make cjk-assets        # upstream -> pinyin, zhuyin, jyutping, kana

@@ -104,13 +104,16 @@ struct Packs {
 }
 
 /// The transliteration tables: the licence and source each adds to its
-/// pack, and those each dataset their costs were fitted to adds.
+/// pack, those each dataset their costs were fitted to adds, and those the
+/// English words a language writes in its script add
+/// (`translit/<lang>.english.txt`).
 #[derive(Deserialize)]
 struct Translit {
     license: License,
     source: SourceDef,
     #[serde(default)]
     fitted: Vec<Fitted>,
+    english: Option<Added>,
 }
 
 /// The tables whose costs were fitted to one dataset's romanizations.
@@ -389,7 +392,7 @@ fn main() -> anyhow::Result<()> {
     }
 
     add_layouts(&args.root, &defs.layouts, &mut manifests)?;
-    add_translit(&args.root, &defs.translit, &mut manifests)?;
+    add_translit(&args.root, &defs.translit, &recorded, &mut manifests)?;
     check_coverage(&args.root, &manifests)?;
 
     prepare_out(&args.out)?;
@@ -723,7 +726,12 @@ fn add_layouts(root: &Path, l: &Layouts, manifests: &mut Vec<Manifest>) -> anyho
 /// Each transliteration table joins the pack of its language, which carries
 /// the tables' licence and source besides its own, and the fitted tables'
 /// dataset's.
-fn add_translit(root: &Path, t: &Translit, manifests: &mut [Manifest]) -> anyhow::Result<()> {
+fn add_translit(
+    root: &Path,
+    t: &Translit,
+    recorded: &dyn Fn(&str, &str) -> Option<String>,
+    manifests: &mut [Manifest],
+) -> anyhow::Result<()> {
     let mut tables: Vec<String> = fs::read_dir(root.join("translit"))
         .context("reading translit/")?
         .flatten()
@@ -732,6 +740,31 @@ fn add_translit(root: &Path, t: &Translit, manifests: &mut [Manifest]) -> anyhow
         .collect();
     tables.sort();
     for name in tables {
+        if let Some(lang) = name.strip_suffix(".english.txt") {
+            let english = t.english.as_ref().with_context(|| {
+                format!("translit/{name}: packs.toml has no [translit.english] to say whose")
+            })?;
+            if !root.join(format!("translit/{lang}.txt")).is_file() {
+                bail!("translit/{name}: no table translit/{lang}.txt to read it with");
+            }
+            let m = manifests
+                .iter_mut()
+                .find(|m| m.id == lang)
+                .with_context(|| format!("translit/{name}: no pack `{lang}` to take it"))?;
+            m.components
+                .push(component(root, kind::ENGLISH, &format!("translit/{name}"))?);
+            if !m.licenses.contains(&english.license) {
+                m.licenses.push(english.license.clone());
+            }
+            // The CMUdict they were made from, as `make english-assets`
+            // recorded it.
+            m.sources.push(Source {
+                name: english.source.name.clone(),
+                url: english.source.url.clone(),
+                sha256: recorded(&format!("english/{lang}"), "cmudict.dict"),
+            });
+            continue;
+        }
         let lang = name
             .strip_suffix(".txt")
             .with_context(|| format!("translit/{name} is no .txt table"))?;

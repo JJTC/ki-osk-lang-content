@@ -13,7 +13,8 @@ strip's words in that layout's font.
 
   scripts/build-translit-layouts.py [--check]
 
-Writes layouts/<lang>-abc.json for every table in translit/, each
+Writes layouts/<lang>-abc.json for every table in translit/ (not the
+English words beside some, translit/<lang>.english.txt), each
 language having a layout of its own (scripts/build-derived-layouts.py
 makes those of the languages typed on another's keys); a table of a
 language in a second script (translit/sd-Deva.txt) is its tag's, and its
@@ -90,7 +91,10 @@ def main():
     check = "--check" in sys.argv[1:]
     us = json.loads((ROOT / "layouts" / "us.json").read_text(encoding="utf-8"))
     stale = []
-    outputs = [(f"{t.stem.lower()}-abc", build(t.stem, us)) for t in sorted((ROOT / "translit").glob("*.txt"))]
+    # The tables, not the English words some languages' have beside them
+    # (translit/<lang>.english.txt).
+    tables = [t for t in sorted((ROOT / "translit").glob("*.txt")) if not t.name.endswith(".english.txt")]
+    outputs = [(f"{t.stem.lower()}-abc", build(t.stem, us)) for t in tables]
     outputs += [(layout_id, latin(us, layout_id, name, lang)) for layout_id, name, lang in LATIN]
     for name, text in outputs:
         path = ROOT / "layouts" / f"{name}.json"

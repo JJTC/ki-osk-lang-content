@@ -325,6 +325,62 @@ Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'
 notices below.
 
+### English words (CMUdict)
+
+`translit/<lang>.english.txt` are the English words a language with a
+table writes in its own script (computer: कंप्यूटर), which people type as
+English spells them, not as the table reads its own sounds; the table
+reads each such word typed whole as those words too
+(`osk_data::translit::Scheme::with_english`). They are made from the
+Carnegie Mellon University Pronouncing Dictionary, CMUdict
+(github.com/cmusphinx/cmudict, at commit 74790861f652, which
+`scripts/fetch-cmudict.sh` downloads and pins by sha256): how American
+English says each word, spelled in Latin letters as the language's sounds
+are typed, in the few ways this repository's
+`crates/osk-data-tools/src/bin/build_english.rs` gives, and read by the
+language's table; the likeliest reading that is a word of the language's
+lexicon is kept, where the table does not read the English spelling so
+already, and, for a word English's own lexicon (`predict/en.fst`) lacks,
+where the table reads it as no word of the language (`make
+english-assets`). Each joins its language's pack, under CMUdict's
+notice:
+
+```text
+Copyright (C) 1993-2015 Carnegie Mellon University. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+   The contents of this file are deemed to be source code.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in
+   the documentation and/or other materials provided with the
+   distribution.
+
+This work was supported in part by funding from the Defense Advanced
+Research Projects Agency, the Office of Naval Research and the National
+Science Foundation of the United States of America, and by member
+companies of the Carnegie Mellon Sphinx Speech Consortium. We acknowledge
+the contributions of many volunteers to the expansion and improvement of
+this dictionary.
+
+THIS SOFTWARE IS PROVIDED BY CARNEGIE MELLON UNIVERSITY ``AS IS'' AND
+ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL CARNEGIE MELLON UNIVERSITY
+NOR ITS EMPLOYEES BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
 ## Word lists
 
 `wordbreak/th.txt` and `wordbreak/lo.txt`, the word lists that cut Thai

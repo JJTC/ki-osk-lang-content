@@ -39,6 +39,10 @@ name = "build-connection"
 path = "src/bin/build_connection.rs"
 
 [[bin]]
+name = "build-english"
+path = "src/bin/build_english.rs"
+
+[[bin]]
 name = "eval-translit"
 path = "src/bin/eval_translit.rs"
 

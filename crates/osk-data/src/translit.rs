@@ -70,15 +70,24 @@
 //! lexicon; and where it is none, the letters hold no vowel and their
 //! cheapest reading is no word either, in that reading's place.
 //!
+//! A table may be given English words besides ([`Scheme::with_english`],
+//! `translit/<lang>.english.txt`): each English word a line, then the
+//! words of the language that write it (`computer कंप्यूटर`), as the
+//! language writes the English words it has taken, which people type as
+//! English spells them, not as they sound. Typed whole, such a word is
+//! read as each of them too, at the setting `english`'s cost
+//! ([`ENGLISH_COST`] without it), and ranked with the other readings.
+//!
 //! A tool fitting a table's costs to romanizations people typed reads
 //! every cost each reading was charged ([`Scheme::readings`]) and tries
 //! others ([`Scheme::costs`], [`Scheme::set_costs`]).
 
 use std::cmp::Ordering;
 use std::collections::hash_map::Entry;
-use std::collections::{HashMap, HashSet};
+use std::collections::{BTreeMap, HashMap, HashSet};
 use std::fmt;
 use std::hash::Hash;
+use std::ops::Bound;
 
 use unicode_normalization::UnicodeNormalization;
 
@@ -370,6 +379,10 @@ pub struct Scheme {
     acronym: f32,
     /// How its readings are ranked, when it has learned to (`[ranker]`).
     ranker: Option<Ranker>,
+    /// The English words it was given ([`Scheme::with_english`]), each
+    /// by its letters in lower case, and what reading them so costs.
+    english: BTreeMap<String, Vec<String>>,
+    english_cost: f32,
 }
 
 /// The part of a table a line is in.
@@ -392,6 +405,22 @@ const SETTINGS: usize = 5;
 /// What reading letters typed as the Latin letters' names costs, where
 /// the table does not say (`acronym`).
 pub const ACRONYM_COST: f32 = 1.0;
+
+/// What reading an English word typed as the language writes it costs,
+/// where the table does not say (`english`): it is taken to be this many
+/// nats less likely than as common a word the letters spell out, for an
+/// English word people type is often also a word of the language's own
+/// spelled so (men: में, not मेन). Four puts the word meant first most
+/// often on the dev halves of Dakshina's twelve languages' romanized
+/// sentences, 1.1 points more than without them (`eval-translit`); between
+/// three and five they move by under 0.1.
+pub const ENGLISH_COST: f32 = 4.0;
+
+/// The fewest letters typed whose English words' words are offered as
+/// completions ([`Scheme::with_english`]), and how many English words the
+/// letters begin are looked at.
+const ENGLISH_PREFIX: usize = 3;
+const ENGLISH_SCANNED: usize = 64;
 
 /// The most letters read as an abbreviation's.
 const MAX_ACRONYM: usize = 5;
@@ -604,6 +633,7 @@ impl Scheme {
         let mut final_bare = 0.0;
         let mut final_virama = 3.0;
         let mut acronym = ACRONYM_COST;
+        let mut english_cost = ENGLISH_COST;
         let mut vowels: Vec<char> = "aeiou".chars().collect();
         let mut part = Part::Settings;
         let mut rules: Vec<Rule> = Vec::new();
@@ -705,6 +735,7 @@ impl Scheme {
                     "final" => final_bare = cost(&rest)?,
                     "final-virama" => final_virama = cost(&rest)?,
                     "acronym" => acronym = cost(&rest)?,
+                    "english" => english_cost = cost(&rest)?,
                     "vowels" => {
                         vowels = one(&rest)?.chars().collect();
                     }
@@ -772,7 +803,52 @@ impl Scheme {
             letters,
             acronym,
             ranker,
+            english: BTreeMap::new(),
+            english_cost,
         })
+    }
+
+    /// The table, reading the English words of `text` as the language
+    /// writes them ([module docs](self)): an English word a line, in lower
+    /// case, then the words that write it, separated by spaces; `#` starts
+    /// a comment.
+    ///
+    /// # Errors
+    ///
+    /// [`TranslitError::Line`] for a line without a word that writes its
+    /// English word, or whose English word is not of Latin letters in
+    /// lower case (and `'` and `-` within).
+    pub fn with_english(mut self, text: &str) -> Result<Self, TranslitError> {
+        let mut english: BTreeMap<String, Vec<String>> = BTreeMap::new();
+        for (i, raw) in text.trim_start_matches('\u{feff}').lines().enumerate() {
+            let err = |why: String| TranslitError::Line { line: i + 1, why };
+            let line = raw.split('#').next().unwrap_or("").trim();
+            let mut fields = line.split_whitespace();
+            let Some(word) = fields.next() else { continue };
+            let latin = |c: char| c.is_ascii_lowercase() || c == '\'' || c == '-';
+            if !word.chars().all(latin) || !word.starts_with(|c: char| c.is_ascii_lowercase()) {
+                return Err(err(format!("`{word}` is no English word in lower case")));
+            }
+            let written: Vec<String> = fields.map(|w| w.nfc().collect()).collect();
+            if written.is_empty() {
+                return Err(err(format!("`{word}`: no word writes it")));
+            }
+            english.entry(word.to_string()).or_default().extend(written);
+        }
+        self.english = english;
+        Ok(self)
+    }
+
+    /// How many English words it was given ([`Scheme::with_english`]).
+    #[must_use]
+    pub fn english_words(&self) -> usize {
+        self.english.len()
+    }
+
+    /// What reading an English word as the language writes it costs
+    /// (`english`): to try another.
+    pub fn set_english_cost(&mut self, cost: f32) {
+        self.english_cost = cost;
     }
 
     /// How the readings are ranked: the table's learned ranker, or
@@ -1035,9 +1111,71 @@ impl Scheme {
                 });
             }
         }
+        let typed = latin.to_lowercase();
+        if let Some(written) = self.english.get(&typed) {
+            for text in written {
+                if !readings.iter().any(|c| c.text == *text) {
+                    readings.push(Candidate {
+                        log_prob: lexicon.log_prob(text),
+                        text: text.clone(),
+                        cost: self.english_cost,
+                        completes: false,
+                    });
+                }
+            }
+        }
         let spelled: Vec<&str> = readings.iter().map(|c| c.text.as_str()).collect();
-        let more = Self::completions(ends, lexicon, &spelled);
+        let mut more = Self::completions(ends, lexicon, &spelled);
+        let english = self.english_completions(&typed, lexicon, &spelled, &more);
+        more.extend(english);
         (readings, more, capital)
+    }
+
+    /// The words that write the English words `typed` begins, but for
+    /// those `spelled` out or offered as completions already: the
+    /// likeliest [`COMPLETIONS`] of those of the first [`ENGLISH_SCANNED`]
+    /// English words, each at the setting `english`'s cost and
+    /// [`COMPLETION_COST`], from [`ENGLISH_PREFIX`] letters typed.
+    fn english_completions(
+        &self,
+        typed: &str,
+        lexicon: &dyn Lexicon,
+        spelled: &[&str],
+        offered: &[Candidate],
+    ) -> Vec<Candidate> {
+        if typed.chars().count() < ENGLISH_PREFIX {
+            return Vec::new();
+        }
+        let mut found: Vec<(f32, &str)> = Vec::new();
+        let begun = self
+            .english
+            .range::<str, _>((Bound::Excluded(typed), Bound::Unbounded))
+            .take_while(|(word, _)| word.starts_with(typed))
+            .take(ENGLISH_SCANNED);
+        for (_, written) in begun {
+            for text in written {
+                if spelled.contains(&text.as_str())
+                    || offered.iter().any(|c| c.text == *text)
+                    || found.iter().any(|(_, t)| t == text)
+                {
+                    continue;
+                }
+                if let Some(log_prob) = lexicon.log_prob(text) {
+                    found.push((log_prob, text));
+                }
+            }
+        }
+        found.sort_by(|a, b| b.0.total_cmp(&a.0).then_with(|| a.1.cmp(b.1)));
+        found
+            .into_iter()
+            .take(COMPLETIONS)
+            .map(|(log_prob, text)| Candidate {
+                text: text.to_string(),
+                cost: self.english_cost + COMPLETION_COST,
+                log_prob: Some(log_prob),
+                completes: true,
+            })
+            .collect()
     }
 
     /// The names of the Latin letters `input` spells, run together, when
@@ -1651,6 +1789,45 @@ mod tests {
         assert_eq!(plain.candidates("tamaatar", &words, 3)[0].text, "टमाटर");
         // A line of the wrong length is refused.
         assert!(Scheme::parse(&format!("{HINDI}\n[ranker]\nlinear 1 -1\n")).is_err());
+    }
+
+    #[test]
+    fn an_english_word_is_read_as_the_language_writes_it() {
+        // Read by its letters, "computer" is no word; given the English
+        // word, it is कंप्यूटर, which then comes first, typed in any case.
+        let words = Words::of(&[("कंप्यूटर", 20), ("नमस्ते", 100)]);
+        let plain = hindi();
+        assert!(
+            plain
+                .candidates("computer", &words, 3)
+                .iter()
+                .all(|c| c.text != "कंप्यूटर")
+        );
+        let s = hindi()
+            .with_english("# a comment\ncomputer कंप्यूटर\n\nnamaste नमस्ते\n")
+            .unwrap();
+        assert_eq!(s.english_words(), 2);
+        assert_eq!(s.candidates("computer", &words, 3)[0].text, "कंप्यूटर");
+        assert_eq!(s.candidates("Computer", &words, 3)[0].text, "कंप्यूटर");
+        // From three letters, the words of the English words they begin
+        // are offered too, after the readings.
+        let compu = s.candidates("compu", &words, 4);
+        assert!(
+            compu.iter().any(|c| c.text == "कंप्यूटर" && c.completes),
+            "{compu:?}"
+        );
+        assert!(!compu[0].completes);
+        assert!(
+            s.candidates("co", &words, 4)
+                .iter()
+                .all(|c| c.text != "कंप्यूटर")
+        );
+        // One the letters read as already is not read twice.
+        let namaste = s.candidates("namaste", &words, 3);
+        assert_eq!(namaste.iter().filter(|c| c.text == "नमस्ते").count(), 1);
+        // A word that is not English, or that no word writes, is refused.
+        assert!(hindi().with_english("Computer कंप्यूटर\n").is_err());
+        assert!(hindi().with_english("computer\n").is_err());
     }
 
     #[test]

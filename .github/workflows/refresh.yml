@@ -159,6 +159,13 @@ jobs:
         run: make hinglish-assets SRC_DIR="$RUNNER_TEMP/sources"
       - name: CJK dictionaries (fetches the upstream datasets)
         run: make cjk-assets SRC_DIR="$RUNNER_TEMP/sources"
+      # The English words each language with a transliteration table
+      # writes in its script, read from the new lexicons: made anew where
+      # one changed.
+      - name: English words of the transliteration tables
+        run: |
+          make fetch-cmudict SRC_DIR="$RUNNER_TEMP/sources"
+          make english-assets SRC_DIR="$RUNNER_TEMP/sources"
 
       - uses: actions/upload-artifact@v7
         with:
@@ -166,6 +173,7 @@ jobs:
           path: |
             predict/*.fst
             predict/*.ngram.bin
+            translit/*.english.txt
             pinyin/
             zhuyin/
             jyutping/
@@ -298,9 +306,9 @@ jobs:
         id: diff
         run: |
           set -euo pipefail
-          if [ -n "$(git status --porcelain -- predict pinyin zhuyin jyutping kana sources.lock)" ]; then
+          if [ -n "$(git status --porcelain -- predict translit pinyin zhuyin jyutping kana sources.lock)" ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            git status --short -- predict pinyin zhuyin jyutping kana sources.lock
+            git status --short -- predict translit pinyin zhuyin jyutping kana sources.lock
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "nothing changed upstream; no PR this month" | tee -a "$GITHUB_STEP_SUMMARY"
@@ -317,7 +325,7 @@ jobs:
             --run "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           out=$RUNNER_TEMP/result
           mkdir -p "$out/tree"
-          cp -r predict pinyin zhuyin jyutping kana eval sources.lock "$out/tree/"
+          cp -r predict translit pinyin zhuyin jyutping kana eval sources.lock "$out/tree/"
           rm -rf "$out/tree/predict/corpora"
           cp "$RUNNER_TEMP/report.md" "$out/report.md"
           # The exact text every model in this refresh was trained on.
@@ -386,7 +394,7 @@ jobs:
           cp -r "$RUNNER_TEMP/result/tree/." .
           python3 scripts/version.py bump patch
           test "$(python3 scripts/version.py get)" = "$VERSION"
-          git add -A -- predict pinyin zhuyin jyutping kana eval sources.lock \
+          git add -A -- predict translit pinyin zhuyin jyutping kana eval sources.lock \
             Cargo.toml crates/osk-data/Cargo.toml Cargo.lock
           git -c user.name='github-actions[bot]' \
               -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \

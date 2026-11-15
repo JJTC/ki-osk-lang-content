@@ -256,6 +256,16 @@ langs   = ["brx", "doi", "kok", "ks", "mai", "mni", "sa"]
 source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons of Hindi, Urdu, Kannada or Telugu, the transliteration table's costs fitted to the words they share with this language", url = "https://github.com/google-research-datasets/dakshina" }
 langs   = ["anp", "awa", "bho", "brh", "dty", "gbm", "hne", "khw", "mag", "new", "pnb", "raj", "skr", "tcy", "wsg"]
 
+# The English words a language with a table writes in its script, which
+# people type as English spells them (translit/<lang>.english.txt, `make
+# english-assets`): how CMUdict says each word, spelled in Latin letters as
+# the language's sounds are typed and read by its table, kept where its
+# lexicon has the reading. Each joins its language's pack beside the
+# table, where the lexicon's licence already is.
+[translit.english]
+license = { name = "BSD-2-Clause-style notice (CMUdict)", url = "https://github.com/cmusphinx/cmudict/blob/74790861f652b15e4ac49015a90074ad62a27690/LICENSE", share_alike = false }
+source  = { name = "The CMU Pronouncing Dictionary (cmusphinx/cmudict at 74790861f652): how English says its words, spelled and read by the language's transliteration table", url = "https://github.com/cmusphinx/cmudict" }
+
 # Keyboard layouts (layouts/<id>.json): the keys of each, and what each
 # types. The national ones are read from xkeyboard-config's keymaps
 # through libxkbcommon (scripts/build-layout.py, build-national-grid.py,

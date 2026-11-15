@@ -102,6 +102,11 @@ pub mod kind {
     /// A transliteration table, [`crate::translit::Scheme`]
     /// (`translit/<lang>.txt`).
     pub const TRANSLIT: &str = "translit";
+    /// The English words a language writes in its script, which its
+    /// transliteration table reads besides
+    /// ([`crate::translit::Scheme::with_english`],
+    /// `translit/<lang>.english.txt`).
+    pub const ENGLISH: &str = "english";
 }
 
 /// How a release asset carries its file.

@@ -42,6 +42,566 @@
         "words": "2"
       }
     },
+    "english/anp": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/anp.fst": "02e543cdd34b48bf40d820ef3ff5f327c01a12f05831379fafad4579d55b9f99",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "translit/anp.txt": "13b31d75e2233cf0ea6afef564bb823239347643c069fa0a827d91cdc1cb9c28"
+      },
+      "outputs": {
+        "translit/anp.english.txt": "ba1abadf2618341d83c543811c3306a74b4c774d3ba36ba6f5bf0e7eacaf120f"
+      },
+      "recipe": {}
+    },
+    "english/as": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/as.fst": "c9d34215c7059c64107d776da056b290c8d0218749fac8e8dfce12204f8a1f85",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "translit/as.txt": "6aca65f25aa5d313a8ca2de087961ab471619f26deea832f03432a4395dfdc4a"
+      },
+      "outputs": {
+        "translit/as.english.txt": "2797a2084615859f1dd349300fef542476c9aed2b44a58fd8747a125f8f8244a"
+      },
+      "recipe": {}
+    },
+    "english/awa": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/awa.fst": "404ba3f79fb37ab33734aaa08d83b34b7918828d984d4233ebfa0c1da0ef0a99",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "translit/awa.txt": "a91ec250a8d443ffdca515ca289aa1c74374781f8eb16fe849ee3e3ef1c19c5a"
+      },
+      "outputs": {
+        "translit/awa.english.txt": "153ce1b530b53c1267659e8c47e22aef12150f6f8f3abb76a210f1cc6f6f1a73"
+      },
+      "recipe": {}
+    },
+    "english/bho": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/bho.fst": "dba487dff8868ac6f6d6479e4179146c3a55bce7843923b0a7057d064dbe2099",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "translit/bho.txt": "f7d486041ab65a3a93cb2ffcb16215cbe5d1460db2c4a5eed9389bfc240b032e"
+      },
+      "outputs": {
+        "translit/bho.english.txt": "b8171c772e520890668138bfcd414712428285df71fba8e145a9e9f3e918c63d"
+      },
+      "recipe": {}
+    },
+    "english/bn": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/bn.fst": "45b5e00b880131bced7c3581200d964491bbb5c403534f13b6d8906d1f1c179e",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "translit/bn.txt": "348cbea4e295bfe33d96b3b7ccd5e067523134485581223245f03b3518197b3c"
+      },
+      "outputs": {
+        "translit/bn.english.txt": "1356af8c15e8f2e9bbfc863f500eb84753ade58be606aadf8eb8f1a9ec43edf3"
+      },
+      "recipe": {}
+    },
+    "english/brh": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/brh.fst": "ad5de32b181437be5ab158a46d63c9b56f4bae30f5d1cd7bbc654825372134f0",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "translit/brh.txt": "41d9d3d1513fabd74a9b4be88b058dc4f40aece00730d76a067864b20338aa2e"
+      },
+      "outputs": {
+        "translit/brh.english.txt": "1bf4afedc56248139d7aeed522bb6054b74c1a137b35b4eaedb25c38fb902f52"
+      },
+      "recipe": {}
+    },
+    "english/brx": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/brx.fst": "9059d19d063616887b2a03b07b2880a588dce3aced659337a84b32543fc2b968",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "translit/brx.txt": "6120589879dbb1e797af985a0b8ddee56748913f405da4322d8edde930a9c2c2"
+      },
+      "outputs": {
+        "translit/brx.english.txt": "07c7fb6afff0dc3177d56bc725d451600e4682e07cbce4c76e284a1c54662fd4"
+      },
+      "recipe": {}
+    },
+    "english/doi": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/doi.fst": "aa18e48b8140d72356fdbec1e2bc7817314e38f67872e13aa1087ef0ac71ed60",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "translit/doi.txt": "866a8a43e81ee6401795b317c21e73c283b2a99c49235752eec1f83a8e516949"
+      },
+      "outputs": {
+        "translit/doi.english.txt": "4a0f9aa3fedf5397633c8669e43efd334c3ce50b32f48dd305f7d6876b59c38c"
+      },
+      "recipe": {}
+    },
+    "english/dty": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/dty.fst": "b23a2689364802765ba884279a0169a98c80247c7fd1f06cc4e503822899fc3b",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "translit/dty.txt": "8e1974a28cf06fd7be57fc8573b9923fc2957e11c7caa8755cb5227757ce0fba"
+      },
+      "outputs": {
+        "translit/dty.english.txt": "1d43405d98eb367a299037fb4d27cdf964b42ced5fb8d880937afdfa789e4ccc"
+      },
+      "recipe": {}
+    },
+    "english/gbm": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/gbm.fst": "7faecd1de7f0f4a3e292f56e091c9166e54862338d17abc2a588ae32abc99a86",
+        "translit/gbm.txt": "de60e8bfb5bed95dfc36319c8b0797bc5e7137eecd7158f3b1428da10966ce75"
+      },
+      "outputs": {
+        "translit/gbm.english.txt": "9f469a65a350b443787fe353beede61a4ddfe5a5bdaa303b6afe20e3c6e61845"
+      },
+      "recipe": {}
+    },
+    "english/gu": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/gu.fst": "4d9623042ced4809ad206de2b162ee6c4bf7723e7af07daa5228c081b8c2465b",
+        "translit/gu.txt": "52b11acfd30d4988c009c89511b108948c1dffb674d323dc1796e257c1c99718"
+      },
+      "outputs": {
+        "translit/gu.english.txt": "884d11b4787b73909e995fe752fb2a7dd5148bcd76ac9c8f2996bd35190e2cf6"
+      },
+      "recipe": {}
+    },
+    "english/hi": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/hi.fst": "f3bbf589468eca29b587a352903adc3f1cfd9440a43dbe4029a3123c880e691f",
+        "translit/hi.txt": "f5eac68955b5af203119b32f17f1b1a6a90f60bc433c3d5aee56a773a969ed5f"
+      },
+      "outputs": {
+        "translit/hi.english.txt": "a7cc79051c0fe36f8c7f12a3815483ca55ba1fa7aae8d5d5b51a512778caf66d"
+      },
+      "recipe": {}
+    },
+    "english/hne": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/hne.fst": "7a34159f9187e428582eba6d181f0bd1b44dd406b16c7a4da866045e21c3d189",
+        "translit/hne.txt": "0f117888356cec178b346a1fad5e8fca3d73f835daf309e7c806e14af4a6ac19"
+      },
+      "outputs": {
+        "translit/hne.english.txt": "41b6cc339a724b4de42f3431ddaba0f7dda03205df9f0c489274c510fd4e3fe5"
+      },
+      "recipe": {}
+    },
+    "english/khw": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/khw.fst": "6b438b4d2561981257beeeeb6ec5e7f7ce01104f0463b0ef6277ad9c14c87d9d",
+        "translit/khw.txt": "573f3f041f0158981ac5b7606f4739c5c16e0a08f0f07fcc0f2ac11aae0e0a04"
+      },
+      "outputs": {
+        "translit/khw.english.txt": "209d6dc1324155d92854a3403a29d62ae2ee9403f1a8ae6dcd10035819b44cca"
+      },
+      "recipe": {}
+    },
+    "english/kn": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/kn.fst": "8c26b5e86bdd3153da9282aa7a606c957a8ac54885363589dfef11823b6ff5e1",
+        "translit/kn.txt": "5cd889398b8f0876dfd296eb7a5e2daa7df2ce3665390d34cf2c29a66316582e"
+      },
+      "outputs": {
+        "translit/kn.english.txt": "883e0f35cc4a33c1a1cf5e087f002dc8d75729e5b59e8e2af8fd28d52df3a382"
+      },
+      "recipe": {}
+    },
+    "english/kok": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/kok.fst": "fa08b02b531dc0a04b1ff86a71c83c58a0fe718f07ae1a2723a1caa9e8e0928c",
+        "translit/kok.txt": "f323f9096bc0d86e5f1293edd2b08037074232c4dc3635de3e36303effe0fa51"
+      },
+      "outputs": {
+        "translit/kok.english.txt": "9357fc8d08de990639e963bbeb32bb4af1ab9c2cf9bd17babc170471713c5d08"
+      },
+      "recipe": {}
+    },
+    "english/ks": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/ks.fst": "7e977a3504643ad9ae1989bd72ff57b72084e68722c5c754cc789a6ec3015a04",
+        "translit/ks.txt": "f1cdfdef35d92373bb2a805a19142f90816a7ee2cde84848d069898e6e24c04e"
+      },
+      "outputs": {
+        "translit/ks.english.txt": "768f2dbed5da918894c82066bec656a0b6c67c97eb9f07d0c26640f642d04e56"
+      },
+      "recipe": {}
+    },
+    "english/mag": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/mag.fst": "c9bf9519998daf1b4a6434d1af4439c0ebba5a555558c061c8fff4c246ee0704",
+        "translit/mag.txt": "5664e9fcf5f4f0742aba896c6c384ea188790c0169ea8f3d7de420fd892d943e"
+      },
+      "outputs": {
+        "translit/mag.english.txt": "bc81c98890bd774585b583b4f8a3a5a8a44ffbf634e78381f875c0e8d3120cf5"
+      },
+      "recipe": {}
+    },
+    "english/mai": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/mai.fst": "94d366513a36a6d1cdd2a068deede24af0e0e044c7dbe9160e85d04d230c76b1",
+        "translit/mai.txt": "76b4231ed8499edecd838cb917ddfcc074132cf5c4af37e19732ff107a805f1d"
+      },
+      "outputs": {
+        "translit/mai.english.txt": "410f3fb8bb787ae56fc62883d23cd99ed8e0b03dff48d6e57ec5344cab010f0e"
+      },
+      "recipe": {}
+    },
+    "english/ml": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/ml.fst": "c3b1d4bee3af2b02e59a6105261e43ee10331587ee7c2df357d98ebac81c895e",
+        "translit/ml.txt": "c6a9a249b24f10873a9d17c203add3bf78c5bbdbfc8f788d743a43ad0998a3b4"
+      },
+      "outputs": {
+        "translit/ml.english.txt": "5bc09411f672c3fb50e3a674a4f0f152a1b21ae2a507ca88be07efe0b64db4fe"
+      },
+      "recipe": {}
+    },
+    "english/mni": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/mni.fst": "332bbbb5b9ddbbad3dd890252de1a8ee24d7daffbeae0527c1f20b7774c929c9",
+        "translit/mni.txt": "a415779391e621683f573beb4356cac38fb6270019e8086852c767eb5d55f83a"
+      },
+      "outputs": {
+        "translit/mni.english.txt": "fce0ec704ca9dd604b3fcbab454fdbdb45275c502b004ff6e50b49086f51731e"
+      },
+      "recipe": {}
+    },
+    "english/mni-Beng": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/mni-Beng.fst": "7edf0877dcea4155bd2fbf80d29e7dcf0b6e43ca23b1b76a7c5fcb9436e1bb61",
+        "translit/mni-Beng.txt": "256440d4155ebc738ffe3f4c30889c1a11cb02eab9a5d02abd69f936b119f50f"
+      },
+      "outputs": {
+        "translit/mni-Beng.english.txt": "8eb46420698c81bf3114e0ed93452926006fd7e61cba592c14a0191a0cd4ddd6"
+      },
+      "recipe": {}
+    },
+    "english/mr": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/mr.fst": "64c27dfc045637d5dd5eb59ff0ec8acf25a76b03dd980731b2e5b5f86b99d641",
+        "translit/mr.txt": "238ea54f62e1c7edc341e3065ea96f809e38c1b0dbf939ac31db93a96285f956"
+      },
+      "outputs": {
+        "translit/mr.english.txt": "c7483e1b9f67e4395f51e0e1753fccee39533ceb23da55cc0252c5fff90e50da"
+      },
+      "recipe": {}
+    },
+    "english/ne": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/ne.fst": "97af710a3f3521230074f65d48f3b522b81310f16958b72098c1c1d6e86210eb",
+        "translit/ne.txt": "374621930662f67b1c8d44dc6fb45b335cf099193435e8037315a18b37e3be14"
+      },
+      "outputs": {
+        "translit/ne.english.txt": "d6e20fb011757948d4fd8f012d36e31e6d300d87196f15f2ec08d73cbb2a1521"
+      },
+      "recipe": {}
+    },
+    "english/new": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/new.fst": "07b20c18f750c4b8475743d50913c0d0f49e777dfbea9621a210b5c87c83e4df",
+        "translit/new.txt": "216c5519c543c7a8f71ba746bbb5a0badae15bda316014776e57f97fc6da7f89"
+      },
+      "outputs": {
+        "translit/new.english.txt": "a956776f2a178f8ba6f33adcb4ffcbfc71d3fd551c96ffd87b3f4d74ffab83d4"
+      },
+      "recipe": {}
+    },
+    "english/or": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/or.fst": "a021f72e8bd2d90abd22a62f4ffb149aa76349068fad4f3bb62827aaf3be70f3",
+        "translit/or.txt": "ec88e205c20e1b81a78bed764d2be33dc74f538d24d532c1738c8efb6c785499"
+      },
+      "outputs": {
+        "translit/or.english.txt": "a55023caeda8e091acaa8191ec775f8d57fb48739b242bc326e238e7305e1dcb"
+      },
+      "recipe": {}
+    },
+    "english/pa": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/pa.fst": "1dd4d57916f9b4344c50d9a38625cf0370cf73969badd58888608a89d30a91c1",
+        "translit/pa.txt": "3189bb69532e254fdda15f62a9ead34baa63a85cfb55a3c7a23613d845aaecae"
+      },
+      "outputs": {
+        "translit/pa.english.txt": "30309fe1f42aa018d8feb013d66cd36d4ea50ec51ab8b757d5d36eb77785ffdb"
+      },
+      "recipe": {}
+    },
+    "english/pnb": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/pnb.fst": "c1a3a61a1a11259b21735f44fc5b09f351bd895d738e90af88eddcea652a2b02",
+        "translit/pnb.txt": "a46a2362e65d5b491f5aa3bd2e7c24117f7a9ebd6f8291a1c597159a0c86b7ae"
+      },
+      "outputs": {
+        "translit/pnb.english.txt": "1bca2c089806b237450b7bd15ca3258d2e3ea9240c2f466f15697dc07e632271"
+      },
+      "recipe": {}
+    },
+    "english/ps": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/ps.fst": "0a1a9b4e5421bb394413cc09a3792cb77e3d6b73985e53a9a24f963f2dc6ceb5",
+        "translit/ps.txt": "6a481ced52ad3ee6a7c8043b2a9ed26d4cc5d1a7c44a67116f80030ddced0c16"
+      },
+      "outputs": {
+        "translit/ps.english.txt": "53ea178a2d3ce5c489ac9244d40413c14731974236f2718b2dce4fcf7660966e"
+      },
+      "recipe": {}
+    },
+    "english/raj": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/raj.fst": "d47a5d33e4c85d90ec5d8a78f8d8e4a4be677aa3c08265187accb9e4263bb6d0",
+        "translit/raj.txt": "7bf244cc81fbefd4eeb369b5d27fc0463558e4b13b2af383a656e41b5b833510"
+      },
+      "outputs": {
+        "translit/raj.english.txt": "49875534da28e9d7fed06360ac9f721ee76edca142cbbafe1f1170846d441d61"
+      },
+      "recipe": {}
+    },
+    "english/sa": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/sa.fst": "bcb3f7cfed6350e63f7c132d974a6028aa78bca19c93b779e7f755b1f51915b0",
+        "translit/sa.txt": "0ce0c6aebcd48eb74feb8df5004d192d0b6201372542fb45948f77fb1401d54a"
+      },
+      "outputs": {
+        "translit/sa.english.txt": "28f680c527d5db05c47bf47f0c814a058b4b86527b1abdabc45cd43f3393f21b"
+      },
+      "recipe": {}
+    },
+    "english/sd": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/sd.fst": "582ea3e86e5baccf319d7b5358897c5ad3ccf778bd42ae6924d7951c42096143",
+        "translit/sd.txt": "d73aaa5106703ad8dadd46a34bd60e789d4ef0e95d57137e3e8822cc8a4a33c7"
+      },
+      "outputs": {
+        "translit/sd.english.txt": "06528b2916874efa7ac3d1aaa2b56c2fd2bbbd554129a98c37c1527cc04973be"
+      },
+      "recipe": {}
+    },
+    "english/sd-Deva": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/sd-Deva.fst": "0e8b42090301adbfbab664d61b680ba0c9b7a2f870c24a15c6f0e53081621e36",
+        "translit/sd-Deva.txt": "4a1064428b879f85de78aa877d221daf53055f5d75d7457bce36a923fc862a97"
+      },
+      "outputs": {
+        "translit/sd-Deva.english.txt": "f0f8277b470c3e526e8a73c0ac842bbec8c84816c1fde8bafda1d1ec84c62b0f"
+      },
+      "recipe": {}
+    },
+    "english/si": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/si.fst": "1f7bcf6b3030f8378e31b060ec51b13b47e0e73ca376c4224a8f5a6775da1d30",
+        "translit/si.txt": "60bb49cef890b5cfbd749012327ac492551126f245fad154f99ed30be59c50a7"
+      },
+      "outputs": {
+        "translit/si.english.txt": "4957f1fdd7dcc4acc1a2489cd0a3f05e5656cce9d7fe6144851db82e72cc855f"
+      },
+      "recipe": {}
+    },
+    "english/skr": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/skr.fst": "d55876bb1cc3b9f9eeab5855c8088389db983671bb3be90336acc5bd75bf6a2d",
+        "translit/skr.txt": "03ed14e00a0abd1c5b3648ec2c1e18376f53957cb4500d864acd30a9c0f6176b"
+      },
+      "outputs": {
+        "translit/skr.english.txt": "5161af666a83238b2825e2e0e8bc152b16d9308adb2794f4fe9b8fe6eaeeec23"
+      },
+      "recipe": {}
+    },
+    "english/ta": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/ta.fst": "c4fa7dccb30f8e7e3cfa5530b3aa8957d39981ed4c2ef7cba2f8104c9f150692",
+        "translit/ta.txt": "71f04b75ef3d9b4c65d999ab457f47c90e72aad177e59507561ca3053744efaa"
+      },
+      "outputs": {
+        "translit/ta.english.txt": "1024ab27d24c431080f96d97d44fc2d8d33214854bb391986bd467e7a9e1fdc6"
+      },
+      "recipe": {}
+    },
+    "english/tcy": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/tcy.fst": "5440cc7d303b4419fa8efa98c4f972d45ed00248b8a32129aae773dbe9623f4f",
+        "translit/tcy.txt": "d4aebd3b63acfaab742e120bb5e77b45a97f44d9245d7d9af1dc83795bba4835"
+      },
+      "outputs": {
+        "translit/tcy.english.txt": "b1cfe335986e5ca44fe18580b17c72e92f423f73d6e8719a3b4ebf416898ef47"
+      },
+      "recipe": {}
+    },
+    "english/te": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/te.fst": "97680b81dfa346b2fa80161db0b5a4e0162356c343a4d046be279fcf9611123e",
+        "translit/te.txt": "19464625460c2eda1ee5b8d87d211c4c2cd8d05178d1d35f67b7f217243076bd"
+      },
+      "outputs": {
+        "translit/te.english.txt": "1949f78c75d4e3edafc1955a0796a5f4872886e68b4ae0d0d5584560360c8518"
+      },
+      "recipe": {}
+    },
+    "english/ur": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/ur.fst": "c9ad7949f48aa79f9c642b7e74c554b34036bf846bf94d475e4b269afc4f9b98",
+        "translit/ur.txt": "b49a0d04d1ed21646f1653f0d887377e5f3448e7d061f18499856f7f5c358831"
+      },
+      "outputs": {
+        "translit/ur.english.txt": "3ff99eaefd9cf7e2f0963034886be97fc4bb480d7e6ad1b4278b8c407bcff93a"
+      },
+      "recipe": {}
+    },
+    "english/wsg": {
+      "encoder": "8580e61a4725-dirty",
+      "inputs": {
+        "build_english.rs": "e2ea65938220c739fd8d49585e0b7bbe18dfcc8babe1ceba7b6789fd7eafd2aa",
+        "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+        "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
+        "predict/wsg.fst": "3b9fa5d64d1bda6e1bd1acf1fae13399d137c6ac872681be7246f88deb0bc6ec",
+        "translit/wsg.txt": "17f46336e27b40991ac5ba648a11654a6180e103e4f410669eac57e0328c49ff"
+      },
+      "outputs": {
+        "translit/wsg.english.txt": "0ca1e5e04670259c52787c49e66b7a0f53e514a5c1c24d91000b1751e37e7f7d"
+      },
+      "recipe": {}
+    },
     "jyutping": {
       "encoder": "v0.3.0-20-g5f356ac298b1",
       "inputs": {

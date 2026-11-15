@@ -155,6 +155,12 @@ GREEKLISH_DIR = $(SRC_DIR)/greeklish
 WIKTIONARY_ROMANIZED_LANGS ?= yi hy fa ps mn sat
 WIKTIONARY_ROMANIZED_DIR = $(SRC_DIR)/wiktionary
 
+# CMUdict, how American English says its words (scripts/fetch-cmudict.sh,
+# pinned by sha256; BSD-2-Clause-style): what english-assets spells and
+# reads with each language's table. Only the English words made from it
+# are committed, translit/<lang>.english.txt.
+CMUDICT_DIR = $(SRC_DIR)/cmudict
+
 # Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
 # Only the .bins built from them are committed.
 SRC_DIR ?= $(or $(TMPDIR),/tmp)/ki-osk-sources
@@ -266,6 +272,7 @@ help:
 	@echo "  fetch-greeklish  Greek typed in Latin letters, for eval-translit"
 	@echo "  fetch-wiktionary-romanized  Wiktionary's romanized words of yi hy"
 	@echo "                   fa ps mn sat, for eval-translit"
+	@echo "  fetch-cmudict    CMUdict, English's pronunciations, for english-assets"
 	@echo "  fetch-fineweb    FineWeb-2's web text, for FINEWEB_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  fetch-madlad     MADLAD-400's web text, for MADLAD_LANGS, into SRC_DIR"
@@ -293,6 +300,8 @@ help:
 	@echo "  derived-layouts  write the layouts made from another language's keys"
 	@echo "  hinglish-assets  rebuild predict/hi-Latn.* (Hindi typed in Latin letters)"
 	@echo "                   from Hindi's corpora respelled (after fetch-dakshina)"
+	@echo "  english-assets   rebuild translit/<lang>.english.txt, the English words"
+	@echo "                   each table's language writes (after fetch-cmudict)"
 	@echo "  check            compare the tree against HEAD: missing, shrunk or"
 	@echo "                   broken outputs fail (scripts/check-assets.py)"
 	@echo "  lock-verify      check every output still matches sources.lock"
@@ -309,8 +318,9 @@ help:
 # only what the lock says is out of date, then refuses a result that
 # lost a file or shrank one.
 .PHONY: refresh
-refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad fetch-glotcc
+refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad fetch-glotcc fetch-cmudict
 	$(MAKE) predict-assets hinglish-assets cjk-assets dialect-assets ONLY_STALE=1
+	$(MAKE) english-assets ONLY_STALE=1
 	$(MAKE) check
 
 .PHONY: fetch-corpora
@@ -341,6 +351,10 @@ fetch-wiktionary-romanized:
 .PHONY: fetch-fineweb
 fetch-fineweb:
 	OUT=$(FINEWEB_DIR) PYTHON=$(FINEWEB_PYTHON) ./scripts/fetch-fineweb.sh $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS)
+
+.PHONY: fetch-cmudict
+fetch-cmudict:
+	OUT=$(CMUDICT_DIR) ./scripts/fetch-cmudict.sh
 
 .PHONY: fetch-madlad
 fetch-madlad:
@@ -680,6 +694,40 @@ hinglish-assets:
 		--ngram-keep $(HINGLISH_NGRAM) --start-keep $(PREDICT_START) && \
 	record "$$@"
 
+# The English words each language with a transliteration table writes in
+# its script, which people type as English spells them
+# (translit/<lang>.english.txt, osk_data::translit::Scheme::with_english):
+# CMUdict's pronunciations spelled in Latin letters as the language's
+# sounds are typed, read by its table, the likeliest reading its lexicon
+# has kept (crates/osk-data-tools/src/bin/build_english.rs); a word
+# English's lexicon lacks (a name, or a word of another language CMUdict
+# says too: hain, yah) is left out where the table reads it as a word of
+# the language already. Made anew where CMUdict, the table, the lexicons
+# or the tool changed, so after predict-assets; after `make fetch-cmudict`.
+# Not Greek's, Persian's, Armenian's, Mongolian's, Santali's or Yiddish's:
+# their measures (Greeklish, Wiktionary's headwords) hold no English words
+# to gain on, and lost up to 0.8 points to the readings they added.
+ENGLISH_NOT_LANGS ?= el fa hy mn sat yi
+ENGLISH_LANGS ?= $(filter-out $(ENGLISH_NOT_LANGS),$(sort $(patsubst translit/%.txt,%,$(filter-out %.english.txt,$(wildcard translit/*.txt)))))
+.PHONY: english-assets
+english-assets:
+	@$(LOCKED); test -f $(CMUDICT_DIR)/cmudict.dict || { echo "no $(CMUDICT_DIR)/cmudict.dict: run make fetch-cmudict"; exit 1; }; \
+	for lang in $(ENGLISH_LANGS); do \
+		set -- english/$$lang \
+			--input cmudict.dict=$(CMUDICT_DIR)/cmudict.dict \
+			--input translit/$$lang.txt=translit/$$lang.txt \
+			--input predict/$$lang.fst=$(PREDICT_OUT_DIR)/$$lang.fst \
+			--input predict/en.fst=$(PREDICT_OUT_DIR)/en.fst \
+			--input build_english.rs=crates/osk-data-tools/src/bin/build_english.rs \
+			--output translit/$$lang.english.txt; \
+		stale "$$@" || continue; \
+		$(TOOLS) build-english -- --table translit/$$lang.txt \
+			--lexicon $(PREDICT_OUT_DIR)/$$lang.fst --cmudict $(CMUDICT_DIR)/cmudict.dict \
+			--english-words $(PREDICT_OUT_DIR)/en.fst --out translit/$$lang.english.txt \
+			--source "The English words $$lang writes in its script, as its table reads them (make english-assets): from CMUdict (cmusphinx/cmudict; its notice in NOTICES.md) and predict/$$lang.fst." && \
+		record "$$@" || exit 1; \
+	done
+
 # How often each transliteration table (translit/<lang>.txt), with its
 # language's lexicon, puts the word meant first, as the composer's strip
 # offers them: on the test half of Dakshina's romanized Wikipedia
@@ -697,9 +745,12 @@ hinglish-assets:
 # people's Greeklish: after `make fetch-greeklish`. And Yiddish's, on
 # Wiktionary's words and their romanizations, a reading right when it is
 # the word but for its points (eval-translit --unpointed): after `make
-# fetch-wiktionary-romanized`.
+# fetch-wiktionary-romanized`. Each table is read with the English words
+# its language writes, where it has them (translit/<lang>.english.txt,
+# english-assets).
 TRANSLIT_EVAL_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 DAKSHINA_TEST = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.test.tsv
+TRANSLIT_ENGLISH = $$(test -f translit/$$lang.english.txt && echo --english translit/$$lang.english.txt)
 .PHONY: eval-translit
 eval-translit:
 	@for lang in $(TRANSLIT_EVAL_LANGS); do \
@@ -707,13 +758,13 @@ eval-translit:
 		test -d $$d || { echo "no $$d: run make fetch-dakshina"; exit 1; }; \
 		test -f $$d/$(DAKSHINA_TEST) || $(PYTHON) scripts/dakshina-halves.py $(DAKSHINA_DIR) $$lang || exit 1; \
 		echo "$$lang, romanized sentences (test):"; \
-		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+		$(TOOLS) eval-translit -- --table translit/$$lang.txt $(TRANSLIT_ENGLISH) --lexicon predict/$$lang.fst \
 			--ngrams predict/$$lang.ngram.bin --pairs $$d/$(DAKSHINA_TEST) | tail -n 1 || exit 1; \
 		echo "$$lang, romanization lexicon (test):"; \
-		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+		$(TOOLS) eval-translit -- --table translit/$$lang.txt $(TRANSLIT_ENGLISH) --lexicon predict/$$lang.fst \
 			--pairs $$d/lexicons/$$lang.translit.sampled.test.tsv | tail -n 1 || exit 1; \
 		echo "$$lang, typed a letter at a time:"; \
-		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+		$(TOOLS) eval-translit -- --table translit/$$lang.txt $(TRANSLIT_ENGLISH) --lexicon predict/$$lang.fst \
 			--ngrams predict/$$lang.ngram.bin --pairs $$d/$(DAKSHINA_TEST) \
 			--keystrokes --limit 20000 | tail -n 1 || exit 1; \
 	done
@@ -721,12 +772,12 @@ eval-translit:
 		lang=$${pair%%:*}; from=$${pair##*:}; d=$(DAKSHINA_DIR)/$$from; \
 		test -d $$d || { echo "no $$d: run make fetch-dakshina"; exit 1; }; \
 		echo "$$lang, $$from's romanized sentences (test), the words they share:"; \
-		$(TOOLS) eval-translit -- --known --table translit/$$lang.txt --lang $$lang \
+		$(TOOLS) eval-translit -- --known --table translit/$$lang.txt $(TRANSLIT_ENGLISH) --lang $$lang \
 			--lexicon predict/$$lang.fst --ngrams predict/$$lang.ngram.bin \
 			--pairs $$d/romanized/$$from.romanized.rejoined.aligned.cased_nopunct.test.tsv \
 			| tail -n 1 || exit 1; \
 		echo "$$lang, $$from's romanization lexicon (test), the words they share:"; \
-		$(TOOLS) eval-translit -- --known --table translit/$$lang.txt --lang $$lang \
+		$(TOOLS) eval-translit -- --known --table translit/$$lang.txt $(TRANSLIT_ENGLISH) --lang $$lang \
 			--lexicon predict/$$lang.fst --pairs $$d/lexicons/$$from.translit.sampled.test.tsv \
 			| tail -n 1 || exit 1; \
 	done
@@ -734,20 +785,20 @@ eval-translit:
 		p=$(AKSHARANTAR_DIR)/$$lang.tsv; \
 		test -f $$p || { echo "no $$p: run make fetch-aksharantar"; exit 1; }; \
 		echo "$$lang, Aksharantar's words:"; \
-		$(TOOLS) eval-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+		$(TOOLS) eval-translit -- --table translit/$$lang.txt $(TRANSLIT_ENGLISH) --lexicon predict/$$lang.fst \
 			--pairs $$p | tail -n 1 || exit 1; \
 	done
-	@p=$(GREEKLISH_DIR)/el.tsv; \
+	@lang=el; p=$(GREEKLISH_DIR)/el.tsv; \
 	test -f $$p || { echo "no $$p: run make fetch-greeklish"; exit 1; }; \
 	echo "el, AUEB's Greeklish:"; \
-	$(TOOLS) eval-translit -- --table translit/el.txt --lexicon predict/el.fst \
+	$(TOOLS) eval-translit -- --table translit/el.txt $(TRANSLIT_ENGLISH) --lexicon predict/el.fst \
 		--pairs $$p | tail -n 1
 	@for lang in $(WIKTIONARY_ROMANIZED_LANGS); do \
 		p=$(WIKTIONARY_ROMANIZED_DIR)/$$lang.tsv; \
 		test -f $$p || { echo "no $$p: run make fetch-wiktionary-romanized"; exit 1; }; \
 		case $$lang in yi) u=--unpointed; but=", the words but for their points" ;; *) u=; but= ;; esac; \
 		echo "$$lang, Wiktionary's romanized words$$but:"; \
-		$(TOOLS) eval-translit -- $$u --table translit/$$lang.txt \
+		$(TOOLS) eval-translit -- $$u --table translit/$$lang.txt $(TRANSLIT_ENGLISH) \
 			--lexicon predict/$$lang.fst --pairs $$p | tail -n 1 || exit 1; \
 	done
 
