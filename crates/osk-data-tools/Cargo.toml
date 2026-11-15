@@ -47,6 +47,10 @@ name = "fit-translit"
 path = "src/bin/fit_translit.rs"
 
 [[bin]]
+name = "fit-ranker"
+path = "src/bin/fit_ranker.rs"
+
+[[bin]]
 name = "make-packs"
 path = "src/bin/make_packs.rs"
 

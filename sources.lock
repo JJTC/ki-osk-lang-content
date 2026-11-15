@@ -1117,20 +1117,20 @@
       }
     },
     "predict/mr": {
-      "encoder": "6fd57765fd7f-dirty",
+      "encoder": "3c3fd6ce91ed-dirty",
       "inputs": {
         "corpora/mr.txt": "f2ee3fdfc6f692a5241b8075f41355af05b478b61fc551fc310b830ce5e12cc8",
         "dakshina/mr.txt": "daf49ef24a02f9257b02508c5c83462dccd87d33465db5df982d03e5012dc660"
       },
       "outputs": {
-        "predict/mr.forms.fst": "406a4443238b058d2bbc29654addd8ee72acd22f5a67bf620e8033541041dace",
-        "predict/mr.fst": "9f194c5a5e0b7b07f1ea603378d572b1e90b0e9ff379503fb01795ffe5416d0c",
-        "predict/mr.ngram.bin": "dabbeb55244eea075374624bdb54c01e126dd58338202ddd8f1e463a95346247"
+        "predict/mr.forms.fst": "95e80bfc404635a65cca54308b685a2721e4516ba67864ccc35843e52448e0ca",
+        "predict/mr.fst": "64c27dfc045637d5dd5eb59ff0ec8acf25a76b03dd980731b2e5b5f86b99d641",
+        "predict/mr.ngram.bin": "5ad122e69025feea99a41fde890d65bd28195551c91b6014942967e613507636"
       },
       "recipe": {
         "ngram_keep": "90000",
         "start_keep": "5000",
-        "tatoeba_weight": "30",
+        "tatoeba_weight": "10",
         "vocab_size": "80000",
         "words": "2"
       }

@@ -53,7 +53,7 @@ use clap::Parser;
 use osk_data::ngram::NgramModel;
 use osk_data::translit::{CONTEXT_WEIGHT, Lexicon, Scheme, UNKNOWN_BELOW_RAREST};
 use osk_data::words::Splitter;
-use osk_data_tools::lexicon::FstLexicon;
+use osk_data_tools::lexicon::{FstLexicon, InContext};
 use unicode_normalization::UnicodeNormalization as _;
 
 #[derive(Parser)]
@@ -148,45 +148,6 @@ impl Lexicon for Whole<'_> {
     }
     fn unknown_log_prob(&self) -> f32 {
         self.0.unknown_log_prob()
-    }
-}
-
-/// A lexicon that knows the words before the one typed: how likely each
-/// word is after them, from the n-grams, the weight scaled to
-/// `--context-weight`.
-struct InContext<'a> {
-    inner: &'a dyn Lexicon,
-    model: &'a NgramModel,
-    before: &'a [String],
-    splitter: &'a Splitter,
-    scale: f32,
-}
-
-impl Lexicon for InContext<'_> {
-    fn has_prefix(&self, prefix: &str) -> bool {
-        self.inner.has_prefix(prefix)
-    }
-    fn log_prob(&self, word: &str) -> Option<f32> {
-        self.inner.log_prob(word)
-    }
-    fn unknown_log_prob(&self) -> f32 {
-        self.inner.unknown_log_prob()
-    }
-    fn completions(&self, prefix: &str, limit: usize) -> Vec<(String, f32)> {
-        self.inner.completions(prefix, limit)
-    }
-    fn context_log_prob(&self, word: &str) -> Option<f32> {
-        let prev = self.before.last()?;
-        let alone = self.inner.log_prob(word)?;
-        let prev_alone = self.inner.log_prob(prev)?;
-        let after = osk_data::translit::log_prob_after(
-            self.model,
-            prev,
-            &self.splitter.normalize(word),
-            prev_alone,
-            alone,
-        );
-        Some(alone + (after - alone) * self.scale)
     }
 }
 

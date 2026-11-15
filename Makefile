@@ -49,11 +49,17 @@ PREDICT_OUT_DIR = predict
 # beside FineWeb-2's text), for transliteration's first reading on
 # Dakshina's test sentences 0.3, 0.2 and 0.5 points less often right and
 # Assamese's savings on the web's text 0.6 points lower; at 100 Hindi's
-# rise 0.7 more and its transliteration falls 0.4 more.
+# rise 0.7 more and its transliteration falls 0.4 more. The keystrokes
+# transliteration saves on Dakshina's test sentences fell with it: Hindi
+# 0.6 points, net of the single letters' 0.4 gain, Bengali 0.2, Marathi
+# 1.7, whose Tatoeba text then counts ten times still
+# (TATOEBA_LIGHT_LANGS).
 DAKSHINA_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 DAKSHINA_ONLY_LANGS ?= gu kn ml pa sd si ta te ur
 DAKSHINA_DIR = $(SRC_DIR)/dakshina
 TATOEBA_WEIGHT ?= 30
+TATOEBA_LIGHT_LANGS ?= mr
+TATOEBA_LIGHT_WEIGHT ?= 10
 
 # Wikipedia's own text, the whole corpus of languages Tatoeba and Dakshina
 # have too little of: Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
@@ -281,6 +287,8 @@ help:
 	@echo "  fit-translit     fit the Dakshina and Aksharantar languages' tables'"
 	@echo "                   costs to their training romanizations (after"
 	@echo "                   fetch-dakshina, fetch-aksharantar)"
+	@echo "  fit-ranker       how much a learned ranking of the readings would do"
+	@echo "                   (after fetch-dakshina; writes nothing)"
 	@echo "  translit-layouts write layouts/<lang>-abc.json for translit/<lang>.txt"
 	@echo "  derived-layouts  write the layouts made from another language's keys"
 	@echo "  hinglish-assets  rebuild predict/hi-Latn.* (Hindi typed in Latin letters)"
@@ -376,7 +384,10 @@ predict-assets:
 		corpus=; corpus_in=; weight=; \
 		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(GLOTCC_LANGS) " in \
 			*" $$lang "*) ;; \
-			*) tw=$(TATOEBA_WEIGHT); case " $(WIKIPEDIA_PLUS_LANGS) " in \
+			*) tw=$(TATOEBA_WEIGHT); case " $(TATOEBA_LIGHT_LANGS) " in \
+				*" $$lang "*) tw=$(TATOEBA_LIGHT_WEIGHT) ;; \
+			   esac; \
+			   case " $(WIKIPEDIA_PLUS_LANGS) " in \
 				*" $$lang "*) tw=$(TATOEBA_WIKI_WEIGHT) ;; \
 			   esac; \
 			   case " $(DAKSHINA_LANGS) $(FINEWEB_PLUS_LANGS) $(WIKIPEDIA_PLUS_LANGS) " in \
@@ -785,6 +796,33 @@ fit-translit:
 			--dev $$d/lexicons/$$from.translit.sampled.dev.tsv \
 			--dev $$d/romanized/$$from.romanized.rejoined.aligned.cased_nopunct.dev.tsv \
 			--write || exit 1; \
+	done
+
+# How much a learned ranking of the readings would do
+# (crates/osk-data-tools/src/bin/fit_ranker.rs, osk_data::translit::Ranker:
+# a weighed sum of each reading's likelihood, cost, context, ... and a few
+# tanh units of them, held to the default): for each Dakshina language,
+# how often the word meant is a reading at all, how often the default
+# ranking puts it first, and how often a ranker learned from its training
+# words and its even dev sentences does, chosen by its dev words and odd
+# dev sentences. Nothing is written (fit-ranker --write would put it in
+# the table's [ranker] section). Measured 2026-11-15: the default ranking
+# was within 0.2 points of the learned one on those, and on the test
+# sentences the learned one lost keystrokes (Urdu 24.0% -> 23.3%), so no
+# table has one: of the words meant, 6% to 14% of those the lexicons have
+# are no reading at all, which a ranker cannot help, and the readings'
+# ranking misses only 2.5 to 7 points more, mostly homophones (Urdu's wa:
+# و or وہ). After `make fetch-dakshina`.
+FIT_RANKER_LANGS ?= $(DAKSHINA_LANGS)
+.PHONY: fit-ranker
+fit-ranker:
+	@for lang in $(FIT_RANKER_LANGS); do \
+		d=$(DAKSHINA_DIR)/$$lang; \
+		test -d $$d || { echo "no $$d: run make fetch-dakshina"; exit 1; }; \
+		test -f $$d/$(DAKSHINA_DEV) || $(PYTHON) scripts/dakshina-halves.py $(DAKSHINA_DIR) $$lang || exit 1; \
+		$(TOOLS) fit-ranker -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
+			--ngrams predict/$$lang.ngram.bin --train $$d/lexicons/$$lang.translit.sampled.train.tsv \
+			--dev $$d/lexicons/$$lang.translit.sampled.dev.tsv --halve $$d/$(DAKSHINA_DEV) || exit 1; \
 	done
 
 # The transliteration layouts (layouts/<lang>-abc.json), one for each

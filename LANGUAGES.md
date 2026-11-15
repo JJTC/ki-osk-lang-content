@@ -278,16 +278,18 @@ but no model to match the glide against · `—` off
 3. These twelve models learn from Wikipedia text, the Dakshina dataset's
    (CC BY-SA 4.0, share-alike; `scripts/fetch-dakshina.sh`): all of it
    for the nine Tatoeba has too few sentences of, beside Tatoeba's (counted
-   thirty times) for Hindi, Bengali and Marathi, whose lexicons widen
-   (Bengali's and Marathi's to 80 000 words) while their keystroke savings
-   on Tatoeba's held-out text rise (Hindi 48.2%, from 46.6% on Tatoeba's
-   alone; Bengali 43.4%, from 40.7%; Marathi 43.4%, from 42.6%). Counted
-   ten times, as they were until data release 0.24.0, Tatoeba's text led
-   less: Hindi saved 45.9%, Bengali 42.5%, Marathi 42.8%, for
-   transliteration's first reading on Dakshina's test sentences right
-   0.3, 0.1 and 0.5 points more often (their tables fitted again to the
-   new lexicons; Hindi's now reads 2.1 points more of Dakshina's test
-   words, Marathi's 0.7 fewer). Keystroke
+   thirty times, Marathi's ten) for Hindi, Bengali and Marathi, whose
+   lexicons widen (Bengali's and Marathi's to 80 000 words) while their
+   keystroke savings on Tatoeba's held-out text rise (Hindi 48.2%, from
+   46.6% on Tatoeba's alone; Bengali 43.4%, from 40.7%; Marathi 42.8%,
+   from 42.6%). Counted ten times, as they were until data release
+   0.24.0, Tatoeba's text led less: Hindi saved 45.9%, Bengali 42.5%, for
+   transliteration's first reading on Dakshina's test sentences right 0.3
+   and 0.1 points more often and its keystrokes saved some 1 and 0.2
+   points more (their tables fitted again to the new lexicons; Hindi's
+   now reads 2.1 points more of Dakshina's test words); Marathi's at
+   thirty gained 0.6 points on Tatoeba's text and lost 1.7 of its
+   transliteration's keystrokes, and stays at ten. Keystroke
    savings of the nine on held-out Wikipedia text: Punjabi 41.8%, Urdu
    41.8%, Sindhi 40.4%, Sinhala 36.1%, Tamil 34.5%, Gujarati 33.6%, Telugu
    32.8%, Malayalam 30.7%, Kannada 30.3%. The Dravidian languages' words
@@ -308,12 +310,12 @@ but no model to match the glide against · `—` off
    वे). How often the word meant comes first
    (and among the strip's two), on the test half of Dakshina's romanized
    Wikipedia sentences (some 5 000 a language), and the keystrokes the
-   strip saves typing them: Hindi 83.4% (86.6%; 23.3%), Urdu 81.2% (84.0%;
-   23.2%), Gujarati 78.4% (81.7%; 25.3%), Punjabi 77.4% (81.6%; 24.6%),
-   Marathi 76.7% (78.7%; 18.4%), Kannada 75.2% (76.6%; 20.8%), Sinhala
-   74.9% (78.2%; 22.0%), Telugu 74.1% (75.7%; 20.8%), Tamil 73.2% (75.1%;
-   18.6%), Bengali 72.5% (75.4%; 21.6%), Sindhi 70.2% (74.7%; 20.4%),
-   Malayalam 63.3% (66.2%; 16.1%); of the words the lexicon has, 79–91%
+   strip saves typing them: Hindi 83.2% (86.6%; 23.1%), Urdu 82.9% (85.5%;
+   23.4%), Punjabi 79.5% (83.8%; 25.1%), Gujarati 78.4% (81.7%; 25.3%),
+   Marathi 76.7% (78.6%; 18.6%), Kannada 75.3% (76.8%; 20.8%), Sinhala
+   74.9% (78.3%; 22.0%), Telugu 74.2% (75.8%; 20.9%), Bengali 73.4% (76.2%;
+   21.4%), Tamil 73.3% (75.2%; 18.6%), Sindhi 72.5% (76.6%; 20.8%),
+   Malayalam 63.8% (66.7%; 16.1%); of the words the lexicon has, 79–91%
    (`make eval-translit`, a word being the same word as its lexicon keys
    it: Sindhi's two h letters one). The word before raised Urdu 1.5
    points, Sindhi 1.1, Hindi 0.9 and the others up to 0.3, whose
@@ -331,7 +333,25 @@ but no model to match the glide against · `—` off
    Marathi 0.8, Punjabi 0.6, Hindi and Sinhala 0.5, Bengali and Telugu
    0.4, Malayalam 0.3 and Tamil 0.1, their keystroke savings with them;
    Gujarati's and Kannada's stayed as written, no fit doing better on
-   their dev words. Lexicons of 200 000 words (from 120 000) then added
+   their dev words. Of the words people typed that the lexicons have, 6%
+   (Hindi) to 16% (Bengali) were no reading of the table at all, which no
+   ranking mends, and the ranking put the word first for all but 2.5 to 7
+   points of the rest, the misses mostly homophones (Urdu's wa: و or وہ):
+   a ranker learned from Dakshina's training words and dev sentences
+   (`make fit-ranker`, `osk_data::translit::Ranker`, a weighed sum of each
+   reading's likelihood, cost and context and a few tanh units of them)
+   gained 0.2 points at most on the dev words and lost keystrokes on
+   Urdu's test sentences, so no table has one. The tables gained the ways
+   their misses asked for instead: Urdu's a doubled consonant written once
+   (taraqqi: ترقی), the ع a vowel is said with (istemaal: استعمال), a last
+   o's nasal (dono: دونوں), a last ay's ے (from 81.2% first), Punjabi's the
+   addak before an aspirate (mukkh: ਮੁੱਖ), hn ਨ੍ਹ, aya ਿਆ, eh ਹਿ, nasal
+   ends (toh: ਤੋਂ; from 77.4%), Sindhi's the nasal its pronouns write
+   before their h (jahin, jenh: جنهن) and the hamza's seat (huwa: هئا; from
+   70.2%), Bengali's nch ঞ্চ, ddh ধ, tt ত্ব and a hyphen typed before a
+   suffix (bangladesh-er: বাংলাদেশের; from 72.5%); and one letter typed
+   alone is read as its name too, an initial (k: കെ; Malayalam from
+   63.3%). Lexicons of 200 000 words (from 120 000) then added
    Kannada 1.2 points, Telugu 0.9 (and its table, fitted again to it,
    0.7) and Tamil 0.8. Twenty-seven of the tables name the Latin letters
    as their language's Wikipedia or web text writes them (`[letters]`;
@@ -391,9 +411,9 @@ but no model to match the glide against · `—` off
    Bhojpuri 87.1% (92.4%), Awadhi 86.2% (93.2%), Sindhi in Devanagari
    85.9% (91.3%), Rajasthani 85.7% (93.0%), Adilabad Gondi 85.5% (87.8%),
    Garhwali 85.4% (93.2%), Angika 83.0% (90.6%), Newari 82.3% (89.8%),
-   Dotyali 80.3% (89.1%), Chhattisgarhi 80.1% (92.9%), Magahi 79.1%
-   (90.6%), Western Punjabi 80.0% (88.4%), Saraiki 78.2% (86.1%), Khowar
-   77.2% (86.2%) and Brahui 67.0% (82.0%). Gondi's is Telugu's table and
+   Western Punjabi 81.7% (89.9%), Dotyali 80.3% (89.1%), Chhattisgarhi
+   80.1% (92.9%), Khowar 79.5% (87.2%), Magahi 79.1% (90.6%), Saraiki
+   78.6% (87.2%) and Brahui 70.1% (84.2%). Gondi's is Telugu's table and
    costs, Angika's Hindi's, Khowar's Urdu's with its own letters (ݯ ݮ ݰ ݱ
    beside چ ج ش ژ, څ ځ for ts and dz), Dotyali's and Newari's Nepali's,
    Dotyali's with the avagraha it writes after a long last vowel (rahya:
@@ -407,7 +427,10 @@ but no model to match the glide against · `—` off
    dev words Khowar rose 6.8 points so, Brahui 4.4, Western Punjabi 3.9,
    Chhattisgarhi 3.5, Saraiki 2.1, Rajasthani 1.5, Newari 1.3, Awadhi
    1.2, Dotyali 1.0, Bhojpuri 0.6, Garhwali 0.3, Magahi 0.3 (with its
-   larger lexicon) and Tulu 0.2. Yiddish's table is measured on
+   larger lexicon) and Tulu 0.2. Urdu's new ways (above) raised the
+   tables made from its: on those test words Brahui from 67.0%, Khowar
+   from 77.2%, Western Punjabi from 80.0%, Saraiki from 78.2%, fitted
+   again. Yiddish's table is measured on
    Wiktionary's words and their romanizations, which are YIVO's, the
    one people type (14 010 words and forms, as kaikki.org extracts them;
    `scripts/fetch-wiktionary-romanized.sh`): the word first for 82.3%

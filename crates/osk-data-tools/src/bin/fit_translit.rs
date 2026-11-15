@@ -518,8 +518,8 @@ fn places(table: &str) -> Places {
         settings: Default::default(),
         last_setting: 0,
     };
-    // Before any section, settings; in [letters], names, which cost
-    // nothing; in the others, rules.
+    // Before any section, settings; in [letters], names, and in [ranker],
+    // weights, which cost nothing; in the others, rules.
     let mut in_rules = false;
     let mut in_letters = false;
     for (n, raw) in table.lines().enumerate() {
@@ -530,7 +530,7 @@ fn places(table: &str) -> Places {
         }
         if trimmed.starts_with('[') && trimmed.ends_with(']') {
             in_rules = true;
-            in_letters = trimmed[1..trimmed.len() - 1].trim() == "letters";
+            in_letters = matches!(trimmed[1..trimmed.len() - 1].trim(), "letters" | "ranker");
             continue;
         }
         if in_letters {

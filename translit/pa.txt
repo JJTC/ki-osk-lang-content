@@ -1,7 +1,10 @@
 # Punjabi (Gurmukhi) from Latin letters, as Punjabi is typed in Latin.
 # Gurmukhi writes two consonants side by side without a virama, joining
 # only ਰ, ਵ and ਹ below (pr: ਪ੍ਰ), and doubles a consonant with ਅੱਧਕ
-# (pakka: ਪੱਕਾ); a nasal is ਟਿੱਪੀ or ਬਿੰਦੀ.
+# (pakka: ਪੱਕਾ), an aspirate too (mukkh: ਮੁੱਖ), though a consonant typed
+# twice may be one; a nasal is ਟਿੱਪੀ or ਬਿੰਦੀ, a word's last vowel often
+# nasal (toh: ਤੋਂ, naa: ਨਾਂ); eh before a consonant is ਹਿ (pehla: ਪਹਿਲਾ),
+# hn ਨ੍ਹ (ohna: ਉਨ੍ਹਾਂ), aya ਿਆ (gaya: ਗਿਆ).
 # English words, which the language writes in its script too, are typed
 # as English spells them: c, ck, sch, o, er, y and tion have English
 # ways too, at a cost.
@@ -52,17 +55,26 @@ sh   ਸ਼  ਸ:1.7
 s    ਸ  ਸ਼:1.9  ੱਸ:1.2
 h    ਹ:0.2
 x    ਕਸ
-kk   ੱਕ
-tt   ੱਤ:0.1  ੱਟ:0.5
-dd   ੱਦ:0.1  ੱਡ:0.6
-pp   ੱਪ
-bb   ੱਬ
+kk   ੱਕ  ਕ:1
+tt   ੱਤ:0.1  ੱਟ:0.5  ਤ:1
+dd   ੱਦ:0.1  ੱਡ:0.6  ਦ:1
+pp   ੱਪ  ਪ:1
+bb   ੱਬ  ਬ:1
 cch  ੱਚ
 chch ੱਚ
-jj   ੱਜ
-ll   ੱਲ
-gg   ੱਗ
-ss   ੱਸ
+jj   ੱਜ  ਜ:1
+ll   ੱਲ  ਲ:1
+gg   ੱਗ  ਗ:1
+ss   ੱਸ  ਸ:1
+kkh  ੱਖ
+tth  ੱਥ  ੱਠ:0.5
+ddh  ੱਧ  ੱਢ:0.5
+pph  ੱਫ
+bbh  ੱਭ
+ggh  ੱਘ
+jjh  ੱਝ
+hn   ਨ੍ਹ:1
+hm   ਮ੍ਹ:1.2
 mm   ੰਮ  ੱਮ:0.5
 nn   ੰਨ  ੱਨ:0.5
 pr   ਪ੍ਰ:0.3
@@ -78,8 +90,9 @@ sr   ਸ੍ਰ:0.5
 [vowels]
 a     ਅ/-:0.3  ਆ/ਾ:0.6
 ^a    ਅ/-  ਆ/ਾ:0.8
-a$    ਆ/ਾ  ਅ/-:2.9
+a$    ਆ/ਾ  ਅ/-:2.9  ਆਂ/ਾਂ:1.2
 aa    ਆ/ਾ:0.1
+aa$   ਆ/ਾ  ਆਂ/ਾਂ:1
 i     ਇ/ਿ:0.3  ਈ/ੀ:0.7
 i$    ਈ/ੀ  ਇ/ਿ:0.7  ਈਂ/ੀਂ:1.1
 ee    ਈ/ੀ  ਇ/ਿ:2.1
@@ -95,15 +108,19 @@ yi    ਈ/ੀ:0.4
 iya   ਇਆ/ਿਆ:0.4  ਈਆ/ੀਆ:0.4
 eya   ਇਆ/ਿਆ:0.3
 ya    ਇਆ/ਿਆ:1
+aya   ਇਆ/ਿਆ:0.6
 ai    ਐ/ੈ:0.1  ਏ/ੇ:1.7  ਆਈ/ਾਈ:1.2
 ae    ਐ/ੈ:0.3  ਏ/ੇ:1.1
 ei    ਏ/ੇ:0.5  ਈ/ੀ:0.8
 o     ਓ/ੋ  ਉ/ੁ:1.3  ਔ/ੌ:1.5  ਆ/ਾ:2.6
 ^o    ਓ/ੋ:0.3  ਉ/ੁ:0.5
 au    ਔ/ੌ:0.2  ਓ/ੋ:2.1
+oh$   ਓ/ੋ:1  ਓਂ/ੋਂ:0.8
+ey$   ਏ/ੇ:0.3  ਏਂ/ੇਂ:0.8
 ou    ਔ/ੌ:0.1  ਓ/ੋ:1.5
 
 [other]
+eh>c  ਹਿ:0.5
 er$   ਰ:1.5
 or$   ਰ:2
 y$    ੀ:2

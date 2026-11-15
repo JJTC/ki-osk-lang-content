@@ -126,6 +126,107 @@ pub const UNKNOWN_BELOW_RAREST: f32 = 6.0;
 /// کی and کے) are told apart by the word before them.
 pub const CONTEXT_WEIGHT: f32 = 0.8;
 
+/// How many things a [`Ranker`] reads of a reading ([`Ranker::features`]).
+pub const RANK_FEATURES: usize = 7;
+
+/// How a table's readings are ranked when it has learned to (its
+/// `[ranker]` section, `make fit-ranker`): a score of what each reading
+/// is, the likeliest first. Of each reading it reads, in order: the word's
+/// likelihood (or the unknown one, [`Lexicon::unknown_log_prob`]), its
+/// cost, what the words before it add to its likelihood
+/// ([`Lexicon::context_log_prob`]), whether it is a word, whether the
+/// letters only begin it, and its length and the letters typed's, in tens
+/// of characters. The score is a weighed sum of them (`linear`), and of
+/// a few units that each weigh them and bend the sum (`tanh`), so that,
+/// say, a word's likelihood can count for more when the letters typed are
+/// many. A table without it ranks by [`Ranker::standard`]'s sum: the
+/// likelihood less the cost, and [`CONTEXT_WEIGHT`] times the context.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Ranker {
+    /// The weight of each feature, summed.
+    pub linear: [f32; RANK_FEATURES],
+    /// The units, each `out * tanh(bias + weights · features)`.
+    pub units: Vec<RankUnit>,
+}
+
+/// One unit of a [`Ranker`].
+#[derive(Debug, Clone, PartialEq)]
+pub struct RankUnit {
+    /// Its bias.
+    pub bias: f32,
+    /// What it weighs each feature by.
+    pub weights: [f32; RANK_FEATURES],
+    /// What it adds to the score, times its value.
+    pub out: f32,
+}
+
+impl Ranker {
+    /// The ranking of a table that has not learned one: the likelihood
+    /// less the cost, and [`CONTEXT_WEIGHT`] times what the words before
+    /// add.
+    #[must_use]
+    pub fn standard() -> Self {
+        Self {
+            linear: [1.0, -1.0, CONTEXT_WEIGHT, 0.0, 0.0, 0.0, 0.0],
+            units: Vec::new(),
+        }
+    }
+
+    /// What the ranker reads of `c`: `unknown` the likelihood of a reading
+    /// that is no word, `context` what the words before add to its
+    /// likelihood (0 where none is known), `typed` the letters typed.
+    #[must_use]
+    pub fn features(
+        c: &Candidate,
+        unknown: f32,
+        context: f32,
+        typed: usize,
+    ) -> [f32; RANK_FEATURES] {
+        #[allow(clippy::cast_precision_loss)]
+        let tens = |n: usize| n as f32 / 10.0;
+        [
+            c.log_prob.unwrap_or(unknown),
+            c.cost,
+            context,
+            if c.log_prob.is_some() { 1.0 } else { 0.0 },
+            if c.completes { 1.0 } else { 0.0 },
+            tens(c.text.chars().count()),
+            tens(typed),
+        ]
+    }
+
+    /// The score of a reading of `features`.
+    #[must_use]
+    pub fn score(&self, features: &[f32; RANK_FEATURES]) -> f32 {
+        let dot =
+            |w: &[f32; RANK_FEATURES]| -> f32 { w.iter().zip(features).map(|(w, x)| w * x).sum() };
+        dot(&self.linear)
+            + self
+                .units
+                .iter()
+                .map(|u| u.out * (u.bias + dot(&u.weights)).tanh())
+                .sum::<f32>()
+    }
+
+    /// The `[ranker]` section's lines: `linear` and its weights, and a
+    /// `unit` line for each unit, its bias, weights and out.
+    #[must_use]
+    pub fn to_table(&self) -> String {
+        use std::fmt::Write as _;
+        let nums = |ns: &[f32]| {
+            ns.iter()
+                .map(|n| format!("{n:.4}"))
+                .collect::<Vec<_>>()
+                .join(" ")
+        };
+        let mut out = format!("linear {}\n", nums(&self.linear));
+        for u in &self.units {
+            let _ = writeln!(out, "unit {:.4} {} {:.4}", u.bias, nums(&u.weights), u.out);
+        }
+        out
+    }
+}
+
 /// How likely `word` is after `before` (a natural log), from a language's
 /// n-grams ([`crate::ngram::NgramModel`], which keep each pair's share of
 /// the text) and how likely each word is alone: the pair's share less the
@@ -267,6 +368,8 @@ pub struct Scheme {
     /// lower case, and what reading letters as them costs.
     letters: HashMap<char, String>,
     acronym: f32,
+    /// How its readings are ranked, when it has learned to (`[ranker]`).
+    ranker: Option<Ranker>,
 }
 
 /// The part of a table a line is in.
@@ -275,6 +378,7 @@ enum Part {
     Settings,
     Rules(Class),
     Letters,
+    Ranker,
 }
 
 /// The settings' places in [`Scheme::costs`], after the ways'.
@@ -504,6 +608,7 @@ impl Scheme {
         let mut part = Part::Settings;
         let mut rules: Vec<Rule> = Vec::new();
         let mut letters: HashMap<char, String> = HashMap::new();
+        let mut ranker: Option<Ranker> = None;
         for (i, raw) in text.trim_start_matches('\u{feff}').lines().enumerate() {
             let line_no = i + 1;
             let err = |why: String| TranslitError::Line { line: line_no, why };
@@ -517,6 +622,7 @@ impl Scheme {
                     "vowels" => Part::Rules(Class::Vowel),
                     "other" => Part::Rules(Class::Other),
                     "letters" => Part::Letters,
+                    "ranker" => Part::Ranker,
                     other => return Err(err(format!("no section [{other}]"))),
                 };
                 continue;
@@ -524,6 +630,38 @@ impl Scheme {
             let mut fields = line.split_whitespace();
             let head = fields.next().unwrap_or_default();
             let rest: Vec<&str> = fields.collect();
+            if let Part::Ranker = part {
+                let nums: Vec<f32> = rest
+                    .iter()
+                    .map(|v| v.parse::<f32>().ok().filter(|n| n.is_finite()))
+                    .collect::<Option<_>>()
+                    .ok_or_else(|| err(format!("`{head}`: a weight that is no number")))?;
+                let r = ranker.get_or_insert_with(|| Ranker {
+                    linear: [0.0; RANK_FEATURES],
+                    units: Vec::new(),
+                });
+                match head {
+                    "linear" if nums.len() == RANK_FEATURES => {
+                        r.linear.copy_from_slice(&nums);
+                    }
+                    "unit" if nums.len() == RANK_FEATURES + 2 => {
+                        let mut weights = [0.0; RANK_FEATURES];
+                        weights.copy_from_slice(&nums[1..=RANK_FEATURES]);
+                        r.units.push(RankUnit {
+                            bias: nums[0],
+                            weights,
+                            out: nums[RANK_FEATURES + 1],
+                        });
+                    }
+                    _ => {
+                        return Err(err(format!(
+                            "`{head}`: a ranker's lines are `linear` and {RANK_FEATURES} weights, \
+                             or `unit`, a bias, {RANK_FEATURES} weights and an out"
+                        )));
+                    }
+                }
+                continue;
+            }
             if let Part::Letters = part {
                 let mut chars = head.chars();
                 let letter = match (chars.next(), chars.next()) {
@@ -633,7 +771,22 @@ impl Scheme {
             ways,
             letters,
             acronym,
+            ranker,
         })
+    }
+
+    /// How the readings are ranked: the table's learned ranker, or
+    /// [`Ranker::standard`].
+    #[must_use]
+    pub fn ranker(&self) -> Ranker {
+        self.ranker.clone().unwrap_or_else(Ranker::standard)
+    }
+
+    /// The table, ranking its readings by `ranker`.
+    #[must_use]
+    pub fn with_ranker(mut self, ranker: Option<Ranker>) -> Self {
+        self.ranker = ranker;
+        self
     }
 
     /// The costs the table sets, each at its place: every rule's ways, the
@@ -794,6 +947,73 @@ impl Scheme {
     /// ([`Candidate::score`]).
     #[must_use]
     pub fn candidates(&self, latin: &str, lexicon: &dyn Lexicon, limit: usize) -> Vec<Candidate> {
+        let (mut readings, more, capital) = self.gather(latin, lexicon);
+        let typed = latin.chars().count();
+        let unknown = lexicon.unknown_log_prob();
+        let ranker = self.ranker.as_ref();
+        let score = |c: &Candidate| -> f32 {
+            let context = Self::context(c, lexicon);
+            match ranker {
+                Some(r) => r.score(&Ranker::features(c, unknown, context, typed)),
+                None => c.score(unknown) + CONTEXT_WEIGHT * context,
+            }
+        };
+        let likelier = |a: &(f32, Candidate), b: &(f32, Candidate)| {
+            b.0.total_cmp(&a.0).then_with(|| a.1.text.cmp(&b.1.text))
+        };
+        let mut scored: Vec<(f32, Candidate)> =
+            readings.drain(..).map(|c| (score(&c), c)).collect();
+        scored.sort_by(likelier);
+        // A word the letters only begin never comes first.
+        let mut rest = scored.split_off(1.min(scored.len()));
+        rest.extend(more.into_iter().map(|c| (score(&c), c)));
+        rest.sort_by(likelier);
+        scored.extend(rest);
+        scored.truncate(limit);
+        scored
+            .into_iter()
+            .map(|(_, mut c)| {
+                c.text = Self::cap(std::mem::take(&mut c.text), capital);
+                c
+            })
+            .collect()
+    }
+
+    /// The readings of `latin` [`Scheme::candidates`] ranks, unranked:
+    /// those it spells out, and the words they begin (each `completes`),
+    /// and what [`Ranker::features`] reads of each. For learning a ranker
+    /// (`fit-ranker`).
+    #[must_use]
+    pub fn rankable(
+        &self,
+        latin: &str,
+        lexicon: &dyn Lexicon,
+    ) -> Vec<(Candidate, [f32; RANK_FEATURES])> {
+        let (readings, more, _) = self.gather(latin, lexicon);
+        let typed = latin.chars().count();
+        let unknown = lexicon.unknown_log_prob();
+        readings
+            .into_iter()
+            .chain(more)
+            .map(|c| {
+                let x = Ranker::features(&c, unknown, Self::context(&c, lexicon), typed);
+                (c, x)
+            })
+            .collect()
+    }
+
+    /// What the words before a reading add to its likelihood, where the
+    /// lexicon knows both.
+    fn context(c: &Candidate, lexicon: &dyn Lexicon) -> f32 {
+        match (c.log_prob, lexicon.context_log_prob(&c.text)) {
+            (Some(alone), Some(after)) => after - alone,
+            _ => 0.0,
+        }
+    }
+
+    /// The readings of `latin` it spells out, the words they begin but for
+    /// those spelled out, and whether the word starts with a capital.
+    fn gather(&self, latin: &str, lexicon: &dyn Lexicon) -> (Vec<Candidate>, Vec<Candidate>, bool) {
         let (input, capital) = self.prepare(latin);
         let ends: Vec<State> = if input.len() <= MAX_INPUT {
             self.search(&input, lexicon)
@@ -815,42 +1035,18 @@ impl Scheme {
                 });
             }
         }
-        let unknown = lexicon.unknown_log_prob();
-        // A word the words before it make likelier, or less likely.
-        let here = |c: &Candidate| -> f32 {
-            match (c.log_prob, lexicon.context_log_prob(&c.text)) {
-                (Some(alone), Some(after)) => CONTEXT_WEIGHT * (after - alone),
-                _ => 0.0,
-            }
-        };
-        let likelier = |a: &Candidate, b: &Candidate| {
-            (b.score(unknown) + here(b))
-                .total_cmp(&(a.score(unknown) + here(a)))
-                .then_with(|| a.text.cmp(&b.text))
-        };
-        readings.sort_by(likelier);
-        let mut rest = readings.split_off(1.min(readings.len()));
-        let spelled: Vec<&str> = readings
-            .iter()
-            .chain(&rest)
-            .map(|c| c.text.as_str())
-            .collect();
+        let spelled: Vec<&str> = readings.iter().map(|c| c.text.as_str()).collect();
         let more = Self::completions(ends, lexicon, &spelled);
-        rest.extend(more);
-        rest.sort_by(likelier);
-        readings.extend(rest);
-        readings.truncate(limit);
-        for c in &mut readings {
-            c.text = Self::cap(std::mem::take(&mut c.text), capital);
-        }
-        readings
+        (readings, more, capital)
     }
 
     /// The names of the Latin letters `input` spells, run together, when
-    /// the table names them and `input` is two to [`MAX_ACRONYM`] of them:
-    /// how the script writes an abbreviation typed letter by letter.
+    /// the table names them and `input` is one to [`MAX_ACRONYM`] of them:
+    /// how the script writes an abbreviation typed letter by letter, or an
+    /// initial (k: കെ, as in K. Karunakaran; on Dakshina's Malayalam test
+    /// sentences 0.5 points more words first, the others up to 0.2).
     fn acronym(&self, input: &[char]) -> Option<String> {
-        if self.letters.is_empty() || !(2..=MAX_ACRONYM).contains(&input.len()) {
+        if self.letters.is_empty() || !(1..=MAX_ACRONYM).contains(&input.len()) {
             return None;
         }
         input
@@ -1432,6 +1628,32 @@ mod tests {
     }
 
     #[test]
+    fn a_ranker_is_read_from_its_section_and_ranks() {
+        let words = Words::of(&[("कमला", 50), ("नमस्ते", 100), ("टमाटर", 10)]);
+        let plain = hindi();
+        // The default ranker, written out, ranks as no ranker does.
+        let written = format!("{HINDI}\n[ranker]\n{}", Ranker::standard().to_table());
+        let same = Scheme::parse(&written).unwrap();
+        assert_eq!(same.ranker(), Ranker::standard());
+        for latin in ["kamla", "namas", "tamaatar"] {
+            assert_eq!(
+                same.candidates(latin, &words, 3),
+                plain.candidates(latin, &words, 3)
+            );
+        }
+        // Weights that heed only the cost put the cheapest reading first,
+        // the word or not.
+        let cheapest =
+            format!("{HINDI}\n[ranker]\nlinear 0 -1 0 0 0 0 0\nunit 0 0 0 0 0 0 0 0 0\n");
+        let s = Scheme::parse(&cheapest).unwrap();
+        assert_eq!(s.ranker().units.len(), 1);
+        assert_eq!(s.candidates("tamaatar", &words, 3)[0].text, "तमातर");
+        assert_eq!(plain.candidates("tamaatar", &words, 3)[0].text, "टमाटर");
+        // A line of the wrong length is refused.
+        assert!(Scheme::parse(&format!("{HINDI}\n[ranker]\nlinear 1 -1\n")).is_err());
+    }
+
+    #[test]
     fn a_word_the_lexicon_lacks_is_its_cheapest_reading() {
         let s = hindi();
         let words = Words::of(&[("नमस्ते", 100)]);
@@ -1648,12 +1870,12 @@ mod tests {
         let got = s.candidates("tm", &Words::of(&[("तम", 100)]), 3);
         assert_eq!(got[0].text, "तम");
         assert!(got.iter().any(|c| c.text == "टीएम"), "{got:?}");
-        // With a vowel typed, names that are no word are not offered; nor
-        // are one letter's, or more than five.
+        // With a vowel typed, names that are no word are not offered, nor
+        // more than five letters'; one letter's is, an initial.
         let got = s.candidates("ta", &lexicon, 3);
         assert!(!got.iter().any(|c| c.text == "टीए"), "{got:?}");
         assert!(
-            !s.candidates("t", &lexicon, 3)
+            s.candidates("t", &lexicon, 3)
                 .iter()
                 .any(|c| c.text == "टी")
         );

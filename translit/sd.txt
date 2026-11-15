@@ -7,6 +7,10 @@
 # words written as signs: ۾ (men, in) and ۽ (ain, and). The lexicon
 # chooses among them. Its h is ه: the texts write ھ for it too, and the
 # lexicon reads the two as one letter (osk_data::words, generation 3).
+# The nasal its pronouns write before their h is typed after it (jahin,
+# jenh: جنهن; pahinje: پنهنجي), the hamza's seat is typed as a vowel
+# (huwa: هئا, ie: ئي), a word's last i may take ءَ and its last aye ءِ
+# (zindagi: زندگيءَ, laye: لاءِ), and b alone is به, as chat writes it.
 # English words, which the language writes in its script too, are typed
 # as English spells them: c, ck, sch, o, er, y and tion have English
 # ways too, at a cost.
@@ -17,76 +21,79 @@
 script abjad
 
 [consonants]
-b    ب:0.1  ٻ:0.7
-bh   ڀ  ٻ:2.1
+b    ب:0.2  ٻ:0.6
+bh   ڀ  ٻ:2.2
 p    پ
 ph   ڦ  ف:1
-t    ت:0.4  ٽ:0.4  ط:1.4
+t    ت:0.5  ٽ:0.3  ط:1.4
 tt   ٽ:0.5  ت:0.5
-th   ٿ:0.1  ٺ:0.5  ث:2
-s    س:0.2  ص:1.4  ث:2.4
-j    ج:0.1  ڄ:0.7  ڃ:1.5
+th   ٿ:0.2  ٺ:0.4  ث:2
+s    س:0.4  ص:1.3  ث:2.3
+j    ج:0.2  ڄ:0.6  ڃ:1.5
 jh   جه  ڄ:1.5
 ny   ڃ
-ch   چ  ڇ:1.1
+ch   چ  ڇ:1.2
 chh  ڇ
-c    چ:0.1  ڪ:1.5
-c>v  چ:0.2  س:2  ڪ:1.3
+c    چ:0.2  ڪ:1.5
+c>v  چ:0.4  س:2  ڪ:1.1
 ck   ڪ:0.5
 sch  سڪ:0.5  اسڪ:0.8
-h    ه:0.4  ح:0.8
-h$   ه  هه:1    ح:1
-kh   ک:0.1  خ:0.4
-d    د:0.4  ڏ:0.7  ڊ:0.4
+h    ه:0.6  ح:0.7
+h$   ه  هه:1.2  ح:1
+kh   ک:0.2  خ:0.3
+d    د:0.4  ڏ:0.8  ڊ:0.4
 dd   ڏ:0.5  ڊ:0.5  د:0.8
-dh   ڌ:0.1  ڍ:0.6
-z    ز:0.2  ذ:1.9  ض:1.9  ظ:2
-r    ر:0.3  ڙ:0.4
-rr   ڙ:0.5  ر:0.6
+dh   ڌ:0.2  ڍ:0.5
+z    ز:0.4  ذ:1.8  ض:1.8  ظ:2
+r    ر:0.2  ڙ:0.5
+rr   ڙ:0.5  ر:0.7
 sh   ش
 gh   غ:0.1  گه:0.5
 f    ف  ڦ:1.1
-q    ق  ڪ:1.2
-k    ڪ  ک:1.2  ق:1.6
-g    گ:0.1  ڳ:0.6
+q    ق  ڪ:1.4
+k    ڪ  ک:1.4  ق:1.7
+g    گ:0.2  ڳ:0.5  غ:1.3
+ss   س:0.3  سس:1
 gg   ڳ:0.3  گ:0.8
 ng   ڱ:0.8  نگ:0.5
 l    ل
 m    م
 mm   م  مم:1
-n    ن:0.2  ڻ:0.4
-nn   ڻ:0.4  ن:0.6
+n    ن:0.2  ڻ:0.3
+nn   ڻ:0.3  ن:0.7
 v    و
 w    و
 y    ي
 
 [vowels]
-^a    ا:0.1  آ:1  ع:1.5
-a     -:1.2  ا:0.8  ع:1.7  ه:3.5
-a$    ا  -:2.4  ه:0.8  ي:3.5
-^aa   آ  ا:1.1  عا:2
-aa    ا  ع:1.9
+^a    ا:0.2  آ:1  ع:1.5
+a     -:1.7  ا:1.1  ع:1.5  ه:3.9
+a$    ا  -:3.5  ه:0.9  ي:3.9
+^aa   آ  ا:1.2  عا:2
+aa    ا  ع:1.9  آ:1.8
 ^i    ا  اي:1  ع:2
-i     -:0.5  ي:0.2
-i$    ي  -:2.8  ءِ:1  ه:2.1
+i     -:0.5  ي:0.3
+i$    ي  -:3.9  ءِ:1  ه:2.2  يءَ:1
 ^ee   اي
-ee    ي
-^u    ا:0.1  او:0.7  ع:1.9
-u     -:0.2  و:0.4
-u$    -:0.4  و
+ee    ي:0.1  ئي:0.6
+ie    ئي:0.5  ي:1
+^u    ا:0.1  او:0.7  ع:1.8
+u     -:0.3  و:0.4
+u$    -:0.5  و
 ^oo   او
 oo    و
-^o    او  ا:1.1
-o     و  -:2.6  ا:2.3
-o$    و  ه:2.2
-^e    ا:0.1  اي:0.6
-e     ي  -:2.5
-e$    ي  ا:1.3  ه:1.1
+^o    او  ا:1.2
+o     و  -:3.2  ا:2.5
+o$    و  ه:2.4
+^e    ا:0.2  اي:0.5
+e     ي:0.1  -:2.8
+e$    ي  ا:1.5  ه:1.2
 ^ai   اي  ع:2
 ai    ي  ئي:1  ا:2
 ai$   ي  ئي:0.5  ءِ:1.5
 ui    ئي:0.3  وئي:0.5
-ae$   اءِ:0.5  ائي:0.5
+uwa   ئا:1  وا:0.5
+ae$   اءِ:0.5  ائي:0.3
 aai$  ائي:0.5  اءِ:0.5
 oi$   وءِ:0.5  وئي:0.8
 ^au   او
@@ -95,6 +102,13 @@ ou    و
 ei    ي
 
 [other]
+ahin  نهن:1
+ehn   نهن:1
+enh   نهن:1
+inh   نهن:1
+ihn   نهن:1.2
+aye$  اءِ:0.5  ائي:1
+^b$   به:1
 er$   ر:1.5
 y$    ي:2
 tion  شن:1

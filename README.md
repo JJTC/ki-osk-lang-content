@@ -123,6 +123,7 @@ make predict-assets    # corpora -> predict/*.fst + *.ngram.bin
 make hinglish-assets   # Hindi's corpora respelled in Latin -> predict/hi-Latn.*
 make fit-translit      # the tables' costs, fitted to Dakshina's and Aksharantar's romanizations
 make eval-translit     # how often the transliteration tables are right
+make fit-ranker        # how much a learned ranking of their readings would add
 make cjk-assets        # upstream -> pinyin, zhuyin, jyutping, kana
 make refresh           # all three, rebuilding only what changed, then check
 make check             # refuse a tree that lost, broke or shrank a file

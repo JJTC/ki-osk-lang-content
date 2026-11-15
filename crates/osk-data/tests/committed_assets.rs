@@ -349,7 +349,16 @@ fn every_translit_table_reads_its_language() {
 
     let words: &[(&str, &[(&str, &str)])] = &[
         ("as", &[("moi", "মই"), ("tumi", "তুমি"), ("axom", "অসম")]),
-        ("bn", &[("ami", "আমি"), ("tumi", "তুমি"), ("bhalo", "ভালো")]),
+        (
+            "bn",
+            &[
+                ("ami", "আমি"),
+                ("tumi", "তুমি"),
+                ("bhalo", "ভালো"),
+                ("onchole", "অঞ্চলে"),
+                ("bangladesh-er", "বাংলাদেশের"),
+            ],
+        ),
         (
             "el",
             &[
@@ -383,13 +392,24 @@ fn every_translit_table_reads_its_language() {
         ("kn", &[("kannada", "ಕನ್ನಡ"), ("naanu", "ನಾನು")]),
         ("ml", &[("malayalam", "മലയാളം"), ("ente", "എന്റെ")]),
         ("mr", &[("aahe", "आहे"), ("maharashtra", "महाराष्ट्र")]),
-        ("pa", &[("punjab", "ਪੰਜਾਬ"), ("vich", "ਵਿੱਚ")]),
+        (
+            "pa",
+            &[
+                ("punjab", "ਪੰਜਾਬ"),
+                ("vich", "ਵਿੱਚ"),
+                ("gaya", "ਗਿਆ"),
+                ("toh", "ਤੋਂ"),
+                ("mukkh", "ਮੁੱਖ"),
+            ],
+        ),
         (
             "sd",
             &[
                 ("sindh", "سنڌ"),
                 ("pakistan", "پاڪستان"),
                 ("karachi", "ڪراچي"),
+                ("jahin", "جنهن"),
+                ("pahinje", "پنهنجي"),
             ],
         ),
         (
@@ -398,7 +418,16 @@ fn every_translit_table_reads_its_language() {
         ),
         ("ta", &[("tamil", "தமிழ்"), ("enna", "என்ன")]),
         ("te", &[("telugu", "తెలుగు"), ("nenu", "నేను")]),
-        ("ur", &[("kya", "کیا"), ("pakistan", "پاکستان")]),
+        (
+            "ur",
+            &[
+                ("kya", "کیا"),
+                ("pakistan", "پاکستان"),
+                ("taraqqi", "ترقی"),
+                ("istemaal", "استعمال"),
+                ("dono", "دونوں"),
+            ],
+        ),
         (
             "bho",
             &[("bhojpuri", "भोजपुरी"), ("ham", "हम"), ("bihar", "बिहार")],

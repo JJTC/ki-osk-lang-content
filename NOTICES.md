@@ -136,7 +136,8 @@ first 300 000 lines (all, where fewer) of its filtered Wikipedia text
 (`<lang>.wiki-filt.train.text.shuf.txt.gz`). It is the whole corpus of
 Gujarati, Kannada, Malayalam, Punjabi, Sindhi, Sinhala, Tamil, Telugu and
 Urdu, of which Tatoeba has too few sentences, and is added to Tatoeba's
-for Hindi, Bengali and Marathi, Tatoeba's counted thirty times. For those
+for Hindi, Bengali and Marathi, Tatoeba's counted thirty times (Marathi's
+ten). For those
 nine, the first 500 lines of its held-out text
 (`<lang>.wiki-filt.valid.text.shuf.txt.gz`) are `eval/<lang>.txt`.
 `scripts/fetch-dakshina.sh` reads the archive, pinned by its sha256;
