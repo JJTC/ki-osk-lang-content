@@ -133,7 +133,7 @@ jobs:
       # which the script keeps only the text the models use.
       - name: Dakshina's Wikipedia text
         run: make fetch-dakshina SRC_DIR="$RUNNER_TEMP/sources"
-      # Twenty-two languages learn from their wikis' own text, or the
+      # Twenty-four languages learn from their wikis' own text, or the
       # Wikimedia Incubator's test wikis: the dumps of one date, pinned by
       # sha256.
       - name: Wikipedia's text

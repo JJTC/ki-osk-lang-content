@@ -54,7 +54,7 @@ but no model to match the glide against · `—` off
 | `ar` | `ar` | Arabic | ara | **RTL** | **Full** (ar) | — | — |
 | `he` | `he` | Hebrew | il | **RTL** | **Full** (he) | — | — |
 | `yi` | `yi` | Yiddish ייִדיש | il + long-press אַ אָ בֿ וּ װ ױ יִ ײ ײַ כּ פּ פֿ שׂ תּ | **RTL** | **Full** (yi)⁶ | — | — |
-| `fa` | `fa` | Persian (Farsi) | ir | **RTL** | **Full** (fa) | — | — |
+| `fa` | `fa` | Persian (Farsi) | ir | **RTL** | **Full** (fa)⁶ | — | — |
 | `pt` | `pt` | Portuguese (PT) | pt | LTR | **Full** (pt) | ✓ | — |
 | `ro` | `ro` | Romanian | ro · std | LTR | **Full** (ro) | ✓ | — |
 | `hu` | `hu` | Hungarian | hu | LTR | **Full** (hu) | ✓ | — |
@@ -96,7 +96,7 @@ but no model to match the glide against · `—` off
 | `lt` | `lt` | Lithuanian | lt | LTR | **Full** (lt) | ✓ | — |
 | `lv` | `lv` | Latvian | lv | LTR | **Full** (lv) | ✓ | — |
 | `ka` | `ka` | Georgian | ge | LTR | **Full** (ka) | — | — |
-| `hy` | `hy` | Armenian | am | LTR | **Full** (hy) | — | — |
+| `hy` | `hy` | Armenian | am | LTR | **Full** (hy)⁶ | — | — |
 | `hi` | `hi` | Hindi | in | LTR | **Full** (hi)³ | — | — |
 | `brx` | `brx` | Bodo बड़ो | in | LTR | **Full** (brx)⁷ | — | — |
 | `doi` | `doi` | Dogri डोगरी | in | LTR | **Full** (doi)⁷ | — | — |
@@ -403,18 +403,31 @@ but no model to match the glide against · `—` off
    1.2, Dotyali 1.0, Bhojpuri 0.6, Garhwali 0.3, Magahi 0.3 (with its
    larger lexicon) and Tulu 0.2. Yiddish's table is measured on
    Wiktionary's words and their romanizations, which are YIVO's, the
-   one people type (13 976 words and forms, as kaikki.org extracts them;
+   one people type (14 010 words and forms, as kaikki.org extracts them;
    `scripts/fetch-wiktionary-romanized.sh`): the word first for 82.3%
    of them and 87.8% of those its lexicon has, a word right without its
    points (Wiktionary writes פֿינף, Yiddish's wiki and many of its
    writers פינף, which of the two comes first being the lexicon's).
    Hebrew's plural endings ים and ות for -em and -es (khsidem: חסידים)
    raised the half of the words they were not chosen on from 85.6% to
-   87.6% of the words the lexicon has. Armenian, Persian, Pashto,
-   Mongolian, Santali and Meitei in the Bengali script have no such
-   measure (Persian's and Pashto's speakers type the words they share
-   with Urdu otherwise; Meitei shares few with Bengali); their tests
-   read everyday words. Of the 51 checked in the seven tables new with
+   87.6% of the words the lexicon has. Armenian's, Persian's, Pashto's,
+   Mongolian's and Santali's are measured on Wiktionary's words too,
+   whose romanizations are scholarly (Armenian's ղ ġ, Persian's خ x): each
+   is folded to the letters its table reads, as its header says they are
+   typed (ġ gh, x kh, č ch; `scripts/wiktionary-romanized.py`), so this
+   measures how often the table and its lexicon find a word spelled as
+   the table expects, not how people spell it. Of the words its lexicon
+   has, first: Armenian 95.8% (19 123 words, the lexicon having 49% of
+   them), Mongolian 94.2% (4 906; 54%), Santali 87.3% (787; 77%), Pashto
+   75.1% (1 409; 68%) and Persian 74.8% (13 531, Wiktionary's Iranian
+   romanization, the one Finglish follows; 77%), where most of the rest
+   are words Finglish spells alike (safar: سفر, صفر). Persian's table now
+   reads a consonant typed twice, as Wiktionary writes a doubled one, as
+   the script writes it, once (mosallam: مسلم; from 75.4% with its old
+   lexicon to 79.0%), and Pashto's writes ی for i and y inside a word,
+   where ي and ی are one letter (73.3% to 75.1%). Meitei in the Bengali
+   script has no such measure (Wiktionary has three of its words); its
+   tests read everyday words. Of the 51 checked in the seven tables new with
    Wikipedia's text, 48 come first and 49 are on the strip;
    Kathmandu's and Lahore's English spellings are not, and Pashto's da
    comes after ده. Sanskrit's, Santali's and Yiddish's tables put first
@@ -443,15 +456,16 @@ but no model to match the glide against · `—` off
    as their writers spelled them, 13.4% of whose words the lexicon (60 000
    words) lacks: no two writers spell alike. For the same reason
    autocorrect changes 2.2% of right words, more than elsewhere.
-6. These nineteen models learn from their own Wikipedia (CC BY-SA 4.0,
+6. These twenty-one models learn from their own Wikipedia (CC BY-SA 4.0,
    share-alike; `scripts/fetch-wikipedia.sh`, the wikis' CirrusSearch
    dumps of 2026-11-08): Bhojpuri, Maithili, Mongolian, Nepali, Odia,
    Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the
    Goan wiki's Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki,
-   Tulu, and Dotyali, Angika and Newari (below). Keystroke savings on
+   Tulu, and Dotyali, Angika, Newari, Armenian and Persian (below).
+   Keystroke savings on
    held-out articles of the first sixteen: Santali 50.2%, Kashmiri
    48.6%, Maithili 43.4%, Meitei 43.2%, Bhojpuri 41.6%, Yiddish 41.0%,
-   Nepali 40.3%, Awadhi 40.2%, Pashto 39.4%, Mongolian 38.7%, Western
+   Nepali 40.3%, Pashto 40.2%, Awadhi 40.2%, Mongolian 38.7%, Western
    Punjabi 38.0%, Saraiki 37.0%, Odia 34.6%, Tulu 31.6%, Konkani 31.1%,
    Sanskrit 27.5%. Each sentence is learned once: wikis that grew from
    templates repeat theirs (a quarter of Meitei's sentences were such
@@ -488,7 +502,20 @@ but no model to match the glide against · `—` off
    42.1% (6.6% unknown; from the news alone 42.6%, 10.8% unknown), on
    the wiki's held-out articles 56.0% (from the wiki alone 57.4%, but
    23.5% on the news). Dotyali and Newari are typed on Nepali's keys,
-   Angika on Hindi's.
+   Angika on Hindi's. Armenian's and Persian's models learn from their
+   wikis too, beside their Tatoeba sentences: the first 400 000
+   sentences of each (eight and thirteen times Tatoeba's), Tatoeba's
+   counted a hundred times so that everyday text leads the strip, and
+   80 000 words: keystroke savings on Tatoeba's held-out sentences 46.6%
+   -> 48.2% (Armenian) and 41.0% -> 41.7% (Persian), the words unknown
+   4.8% -> 2.7% and 3.6% -> 2.4%, and the share of Wiktionary's words
+   their lexicons have 20% -> 49% and 46% -> 77% (counted ten times, as
+   Hindi's is, the savings fell two points). Pashto's wiki writes ي
+   inside a word as often as ی, which are one letter there (22 000 of
+   its words both ways), and Arabic ك, Persian گ and ى for ک ګ ی: its
+   words are read with them made one, as its keyboard types them
+   (`osk_data::words`, generation 4): keystroke savings 39.4% -> 40.2%,
+   its words unknown 6.5% -> 5.9%.
    Languages with no Wikipedia yet have test wikis in the Wikimedia
    Incubator, whose dump (the same date's, CC BY-SA 4.0) holds them all,
    each article's title starting with its wiki's prefix (`Wp/mag/`).
@@ -611,8 +638,8 @@ but no model to match the glide against · `—` off
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp
-  new** (Newari with GlotCC's news too), and the Incubator's test wikis:
-  **wsg khw** (note 6) ·
+  new** (Newari with GlotCC's news too), **hy fa** beside Tatoeba's, and
+  the Incubator's test wikis: **wsg khw** (note 6) ·
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha** (FineWeb-2's; note 7;
   Magahi with its Incubator text too; Lao cut into words with ICU's word list too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the

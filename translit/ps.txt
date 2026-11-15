@@ -2,7 +2,9 @@
 # Latin. Short vowels mostly go unwritten inside a word; a word's last a
 # is ه (khabara: خبره), its last e ې, its last ay ی or ۍ. Pashto has
 # letters of its own for its sounds (ټ ډ ړ ڼ for the retroflexes, ښ ږ, ځ
-# څ, ګ), typed as their nearest Latin ones. The lexicon chooses.
+# څ, ګ), typed as their nearest Latin ones. Inside a word ي and ی are one
+# letter, written ی as the keyboard types it (osk_data::words folds the
+# texts' ي to it); at a word's end ي is -i and ی -ay. The lexicon chooses.
 
 script abjad
 
@@ -31,13 +33,13 @@ gh   غ
 f    ف
 q    ق
 k    ک
-g    ګ  گ:1
+g    ګ
 l    ل
 m    م
 n    ن  ڼ:0.8
 w    و
 v    و
-y    ی  ي:1
+y    ی
 
 [vowels]
 ^a    ا  آ:1  ع:1.5
@@ -45,15 +47,16 @@ a     -  ا:0.8  ه:2
 a$    ه  ا:0.5  ې:2
 ^aa   آ  ا:1
 aa    ا
-^i    ا  اي:0.8
-i     -  ي:0.5  ی:1
+^i    ا  ای:0.8
+i     -  ی:0.5
 i$    ي  ی:0.5  ې:1
-ee    ي  ی:1
+ee    ی
+ee$   ي  ی:1
 ^e    ا  اې:1
-e     ې  ي:1  -:2
+e     ې  ی:1  -:2
 e$    ې  ه:1  ي:1.5
 ay$   ی  ۍ:0.5  ې:1
-ai    ی  ې:0.8  ي:1
+ai    ی  ې:0.8
 ^o    او  ا:1
 o     و  -:1.5
 ^u    ا  او:0.8

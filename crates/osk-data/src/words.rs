@@ -67,8 +67,10 @@ pub const GENERATION: u32 = 2;
 /// The languages (primary subtags) whose words a later generation changed,
 /// and changed alone, with that generation. Generation 3 made Sindhi's two
 /// h letters one: its texts write ه (U+0647) and ھ (U+06BE) for the same
-/// h, six to one, and its lexicon kept the same word twice.
-pub const LATER_GENERATIONS: &[(&str, u32)] = &[("sd", 3)];
+/// h, six to one, and its lexicon kept the same word twice. Generation 4
+/// made Pashto's letters written two ways one (its ي inside a word, ك, گ,
+/// ى): its wiki writes 22 000 words both ways.
+pub const LATER_GENERATIONS: &[(&str, u32)] = &[("sd", 3), ("ps", 4)];
 
 /// The generation of the rules `lang`'s words are read by: [`GENERATION`],
 /// or its primary subtag's later one ([`LATER_GENERATIONS`]).
@@ -159,6 +161,10 @@ enum Fold {
     /// Sindhi's ھ as ه, its usual h: its texts write both for the same
     /// letter (generation 3).
     Sindhi,
+    /// Pashto's letters as its keyboard types them (generation 4): ی for
+    /// ي inside a word, where the two are one letter (at a word's end ي is
+    /// -i, ی -ay), ک for Arabic ك, ګ for Persian گ, ی for ى.
+    Pashto,
     /// Lao's ໍາ, ຫນ, ຫມ and ຫລ as the keyboard types them: ຳ ໜ ໝ ຫຼ
     /// ([`crate::wordbreak::lao_fold`]).
     Lao,
@@ -399,6 +405,7 @@ impl Splitter {
             "sr" => s.fold = Fold::Serbian,
             "lo" => s.fold = Fold::Lao,
             "sd" => s.fold = Fold::Sindhi,
+            "ps" => s.fold = Fold::Pashto,
             _ => {}
         }
         s
@@ -465,11 +472,19 @@ impl Splitter {
     /// but with its case as written.
     fn fold(&self, word: &str) -> String {
         let mut mapped = String::with_capacity(word.len());
-        for c in word.nfc() {
+        let mut chars = word.nfc().peekable();
+        while let Some(c) = chars.next() {
             match c {
                 c if is_apostrophe(c) || c == '\u{02BC}' => mapped.push('\''),
                 c if is_hyphen(c) => mapped.push('-'),
                 '\u{05F4}' => mapped.push('"'),
+                // Pashto's ي before another letter: its ی.
+                '\u{064A}'
+                    if self.fold == Fold::Pashto
+                        && chars.peek().is_some_and(|n| n.is_alphabetic()) =>
+                {
+                    mapped.push('\u{06CC}');
+                }
                 c => self.fold_char(c, &mut mapped),
             }
         }
@@ -520,8 +535,11 @@ impl Splitter {
         match (self.fold, c) {
             (Fold::Ossetian, 'æ') => out.push('ӕ'),
             (Fold::Ossetian, 'Æ') => out.push('Ӕ'),
-            (Fold::Persian, '\u{064A}' | '\u{0649}') => out.push('\u{06CC}'),
-            (Fold::Persian, '\u{0643}') => out.push('\u{06A9}'),
+            // Pashto's ي is folded only inside a word (`fold`).
+            (Fold::Persian, '\u{064A}' | '\u{0649}') | (Fold::Pashto, '\u{0649}') => {
+                out.push('\u{06CC}');
+            }
+            (Fold::Persian | Fold::Pashto, '\u{0643}') => out.push('\u{06A9}'),
             (Fold::Persian | Fold::Arabic, c) if is_harakah(c) => {}
             (Fold::Armenian, '\u{055E}' | '\u{055B}' | '\u{055C}') => {}
             (Fold::Armenian, '\u{0587}') => out.push_str("եվ"),
@@ -530,6 +548,7 @@ impl Splitter {
             (Fold::Kabyle, 'ε') => out.push('ɛ'),
             (Fold::Kabyle, 'Ε') => out.push('Ɛ'),
             (Fold::Sindhi, '\u{06BE}') => out.push('\u{0647}'),
+            (Fold::Pashto, '\u{06AF}') => out.push('\u{06AB}'),
             (_, c) => out.push(c),
         }
     }
@@ -1082,6 +1101,22 @@ mod tests {
         assert_eq!(generation("sd"), 3);
         assert_eq!(generation("sd-Deva"), 3);
         assert_eq!(generation("hi"), GENERATION);
+    }
+
+    #[test]
+    fn pashto_s_letters_written_two_ways_are_one() {
+        let ps = Splitter::new("ps");
+        // ي inside a word is ی; at its end it is -i, apart from ی, -ay.
+        assert_eq!(ps.normalize("روغتيا"), "روغتیا");
+        assert_eq!(ps.normalize("سړي"), "سړي");
+        assert_eq!(ps.normalize("سړی"), "سړی");
+        assert_eq!(ps.normalize("يو"), "یو");
+        assert_eq!(ps.normalize("كور"), "کور");
+        assert_eq!(ps.normalize("گل"), "ګل");
+        assert_eq!(ps.normalize("دى"), "دی");
+        // Persian and Urdu keep their own.
+        assert_eq!(Splitter::new("ur").normalize("گل"), "گل");
+        assert_eq!(generation("ps"), 4);
     }
 
     #[test]

@@ -20,7 +20,7 @@ Gondi's and Angika's taken from Telugu's and Hindi's: `NOTICES.md`). The data ke
 licences of the datasets it was built from, listed in `NOTICES.md`, and
 **several are share-alike** (CC BY-SA): the Chinese and Cantonese
 dictionaries, the Portuguese and Spanish dialect flags, and the models of
-the thirty-five languages that learn from Wikipedia text (the Dakshina
+the thirty-seven languages that learn from Wikipedia text (the Dakshina
 dataset's, or the wikis' own, Hinglish's from Hindi's). Whoever redistributes those files, or anything
 built from them, takes on those terms. The layouts carry
 xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
@@ -38,7 +38,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `translit/<lang>.txt` | Transliteration tables (46: Sindhi's and Meitei's for both their scripts): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand, the costs of the Dakshina languages', of seven of the Aksharantar languages' and of thirteen related languages' (on the words they share with Hindi, Urdu or Kannada) then fitted to those datasets' romanizations (`make fit-translit`); `make eval-translit` measures them |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `$SRC_DIR/dakshina/` | Wikipedia text and romanizations of 12 South Asian languages (the Dakshina dataset) — **not committed** | `make fetch-dakshina` |
-| `$SRC_DIR/wikipedia/` | The text of nineteen wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki, Tulu, Dotyali, Angika, Newari) and of three of the Wikimedia Incubator's test wikis (Magahi, Adilabad Gondi, Khowar), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
+| `$SRC_DIR/wikipedia/` | The text of twenty-one wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki, Tulu, Dotyali, Angika, Newari, and Armenian and Persian beside their Tatoeba sentences) and of three of the Wikimedia Incubator's test wikis (Magahi, Adilabad Gondi, Khowar), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
 | `$SRC_DIR/greeklish/` | Greek typed in Latin letters, from AUEB's real-world Greeklish test set (forum comments and chat messages, each written out in Greek by several people; Apache-2.0): what `make eval-translit` measures Greek's table on — **not committed** | `make fetch-greeklish` |
 | `$SRC_DIR/aksharantar/` | Words people romanized, from the test split of AI4Bharat's Aksharantar dataset (Assamese, Maithili, Nepali, Odia, Sanskrit, Konkani, Kashmiri, Meitei, Bodo, Dogri): what `make eval-translit` measures those tables on, and the words of its train and valid splits romanized by hand and Wikidata's names, what `make fit-translit` fits their costs to — **not committed** | `make fetch-aksharantar` |
 | `$SRC_DIR/fineweb/` | FineWeb-2's web text of eight languages with no Wikipedia of their own (Bodo, Dogri, Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo, Khasi), of Sindhi in Devanagari and Meitei in the Bengali script, of Lao, and of Assamese beside its Tatoeba sentences, the documents that read as their language, and its held-out test text — **not committed**: the text is the web's | `make fetch-fineweb` (needs pyarrow: `FINEWEB_PYTHON`) |
@@ -118,7 +118,7 @@ The builders need only this repository and its pinned toolchain.
 ```sh
 make fetch-corpora     # Tatoeba -> predict/corpora/ and eval/
 make fetch-dakshina    # Dakshina's Wikipedia text and romanizations -> SRC_DIR
-make fetch-wikipedia   # twenty-two wikis' own text -> SRC_DIR
+make fetch-wikipedia   # twenty-four wikis' own text -> SRC_DIR
 make predict-assets    # corpora -> predict/*.fst + *.ngram.bin
 make hinglish-assets   # Hindi's corpora respelled in Latin -> predict/hi-Latn.*
 make fit-translit      # the tables' costs, fitted to Dakshina's and Aksharantar's romanizations

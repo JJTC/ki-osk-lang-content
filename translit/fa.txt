@@ -2,8 +2,9 @@
 # Latin ("Finglish"). The script leaves short vowels unwritten inside a
 # word: a, e and o there are mostly nothing, but a also stands for the
 # long ا; a word's first vowel rides an alef, its last e is ه, and several
-# letters share a sound (s: س ص ث, z: ز ذ ض ظ, t: ت ط, h: ه ح, gh: غ ق).
-# The lexicon chooses among them.
+# letters share a sound (s: س ص ث, z: ز ذ ض ظ, t: ت ط, h: ه ح, gh: غ ق),
+# and a consonant typed twice, for a doubled one, is written once, as the
+# script writes it (mosallam: مسلم). The lexicon chooses among them.
 
 script abjad
 
@@ -34,6 +35,21 @@ v    و
 w    و
 y    ی
 '    ع  ئ:1  ء:1.5
+bb   ب:0.3
+dd   د:0.3
+ff   ف:0.3
+jj   ج:0.3
+kk   ک:0.3
+ll   ل:0.3
+mm   م:0.3
+nn   ن:0.3
+rr   ر:0.3
+ss   س:0.3  ص:1.3  ث:1.8
+tt   ت:0.3  ط:1.3
+zz   ز:0.3  ذ:1.8  ض:1.8  ظ:1.8
+hh   ه:0.5  ح:1
+vv   و:0.3
+yy   ی:0.3
 
 [vowels]
 ^a    ا  آ:0.5  ع:1.5

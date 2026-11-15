@@ -119,11 +119,11 @@ with its word list (see [Word lists](#word-lists)).
 | tt | tat | mr | mar | as | asm | ms | zsm |
 | os | oss | th | tha | — | — | — | — |
 
-Size tiers are recorded in the Makefile: 34 languages
+Size tiers are recorded in the Makefile: 32 languages
 (`PREDICT_COMPACT_LANGS`) keep 18 000 words and 30 000 n-grams, those
 whose lexicons Wikipedia or web text widens (below) 30 000 and 60 000,
-Bengali, Marathi, Assamese and Magahi 80 000 and 90 000
-(`PREDICT_LARGE_LANGS`), the
+Bengali, Marathi, Assamese, Magahi, Newari, Armenian and Persian 80 000
+and 90 000 (`PREDICT_LARGE_LANGS`), the
 Dravidian languages 200 000 and 90 000 (`PREDICT_WIDER_LANGS`), the
 others 20 000 and 60 000.
 
@@ -162,8 +162,10 @@ learns from leaves out.
 Eighteen languages' models learn from their own Wikipedia alone:
 Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto,
 Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki,
-Tulu, Dotyali and Angika; and Newari's from its own beside its news
-(GlotCC's, below). The text is each wiki's CirrusSearch dump of 2026-11-08
+Tulu, Dotyali and Angika; Newari's from its own beside its news
+(GlotCC's, below); and Armenian's and Persian's from theirs beside their
+Tatoeba sentences, the first 400 000 sentences of each, whose held-out
+articles are not committed (Tatoeba's held-out text measures them). The text is each wiki's CirrusSearch dump of 2026-11-08
 (Wikimedia's `cirrus_search_index`, an article's plain text a JSON
 field), pinned by sha256 in `scripts/fetch-wikipedia.sh`, cut into
 sentences by `scripts/wikipedia-text.py`: at most 400 000 a language.
@@ -174,7 +176,7 @@ title starting with its wiki's prefix, `Wp/mag/`): Adilabad Gondi's and
 Khowar's alone, Magahi's beside its FineWeb-2 text; an article or
 sentence heavy with Hindi's or Urdu's own words is left out. **Wikipedia's
 text, and the Incubator's, is CC BY-SA 4.0**, share-alike: the packs of
-those twenty-two languages, their models and that held-out text carry those
+those twenty-four languages, their models and that held-out text carry those
 terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 
@@ -312,9 +314,10 @@ Greek AUEB's real-world Greeklish (Toumazatos, Pavlopoulos,
 Androutsopoulos and Vassos, "Still All Greeklish to Me: Greeklish to
 Greek Transliteration", LREC-COLING 2024; github.com/nlpaueb/greeklish,
 Apache-2.0), which `scripts/fetch-greeklish.sh` downloads to measure,
-and for Yiddish Wiktionary's words and their romanizations as kaikki.org
-extracts them (CC BY-SA 4.0), which `scripts/fetch-wiktionary-romanized.sh`
-downloads to measure.
+and for Yiddish, Armenian, Persian, Pashto, Mongolian and Santali
+Wiktionary's words and their romanizations as kaikki.org extracts them
+(CC BY-SA 4.0), which `scripts/fetch-wiktionary-romanized.sh` downloads
+to measure.
 Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'
 notices below.

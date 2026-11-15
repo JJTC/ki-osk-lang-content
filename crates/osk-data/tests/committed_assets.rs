@@ -360,7 +360,15 @@ fn every_translit_table_reads_its_language() {
                 ("k", "και"),
             ],
         ),
-        ("fa", &[("salam", "سلام"), ("man", "من"), ("iran", "ایران")]),
+        (
+            "fa",
+            &[
+                ("salam", "سلام"),
+                ("man", "من"),
+                ("iran", "ایران"),
+                ("tashakkor", "تشکر"),
+            ],
+        ),
         ("gu", &[("che", "છે"), ("gujarat", "ગુજરાત")]),
         (
             "hi",
@@ -427,6 +435,8 @@ fn every_translit_table_reads_its_language() {
                 ("kabul", "کابل"),
                 ("afghanistan", "افغانستان"),
                 ("pashto", "پښتو"),
+                ("roghtya", "روغتیا"),
+                ("gul", "ګل"),
             ],
         ),
         (

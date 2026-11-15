@@ -61,6 +61,19 @@ TATOEBA_WEIGHT ?= 10
 # whole corpus, and Magahi's, beside its FineWeb-2 text.
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
+# And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
+# four fifths and half of Wiktionary's words, the first 400 000 sentences
+# of their wikis beside Tatoeba's, which count TATOEBA_WIKI_WEIGHT times
+# (their wikis' text is eight and thirteen times Tatoeba's). Their
+# held-out text stays Tatoeba's (eval/<lang>.txt); the wiki's held out
+# goes to $(WIKIPEDIA_DIR)/eval, uncommitted. With 80 000 words
+# (PREDICT_LARGE_LANGS): keystroke savings on Tatoeba's held-out text
+# 46.6% -> 48.2% (Armenian), 41.0% -> 41.7% (Persian), its words unknown
+# 4.8% -> 2.7% and 3.6% -> 2.4%, Wiktionary's words the lexicons have
+# 20% -> 49% and 46% -> 77%; counted ten times, as Hindi's is, the
+# savings fell two points.
+WIKIPEDIA_PLUS_LANGS ?= hy fa
+TATOEBA_WIKI_WEIGHT ?= 100
 
 # FineWeb-2's web text, the whole corpus of languages with no Wikipedia of
 # their own: Bodo, Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi
@@ -121,9 +134,13 @@ GREEKLISH_DIR = $(SRC_DIR)/greeklish
 # Words and their romanizations from Wiktionary, as kaikki.org extracts
 # them (scripts/fetch-wiktionary-romanized.sh; CC BY-SA 4.0): what
 # eval-translit measures Yiddish's table on, Wiktionary's romanization of
-# Yiddish being YIVO's, the one people type. kaikki.org keeps only its
-# latest extract, so the measure moves with it. Never committed or shipped.
-WIKTIONARY_ROMANIZED_LANGS ?= yi
+# Yiddish being YIVO's, the one people type; and Armenian's, Persian's,
+# Pashto's, Mongolian's and Santali's, their scholarly romanizations
+# folded to the letters each table reads (scripts/wiktionary-romanized.py):
+# how often the table and lexicon find a word spelled as the table
+# expects, not how people spell it. kaikki.org keeps only its latest
+# extract, so the measure moves with it. Never committed or shipped.
+WIKTIONARY_ROMANIZED_LANGS ?= yi hy fa ps mn sat
 WIKTIONARY_ROMANIZED_DIR = $(SRC_DIR)/wiktionary
 
 # Where the CJK upstream downloads go (scripts/fetch-cjk-sources.sh).
@@ -162,8 +179,8 @@ PREDICT_NGRAM ?= 60000
 # tables by up to 2x. Moving a language to the full tier is a size
 # decision: take it out of this list. Hindi left it for the WIKI tier
 # (below) when Wikipedia text joined its corpus.
-PREDICT_COMPACT_LANGS ?= no da fi cs tr vi el ru uk ar he fa ro hu sk hr et is ca eo bg sr mk be \
-                         id fil az ku ug hy ka lt lv kab
+PREDICT_COMPACT_LANGS ?= no da fi cs tr vi el ru uk ar he ro hu sk hr et is ca eo bg sr mk be \
+                         id fil az ku ug ka lt lv kab
 PREDICT_COMPACT_VOCAB ?= 18000
 PREDICT_COMPACT_NGRAM ?= 30000
 # The LARGE tier: languages whose words, kept whole (osk_data::words), are
@@ -179,7 +196,7 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # and Newari, with its news beside its wiki (at 30 000 words its savings
 # on the news held out are 38.7%, at 80 000 42.1%, its words unknown
 # 6.6%).
-PREDICT_LARGE_LANGS ?= bn mr as mag new
+PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -235,8 +252,8 @@ help:
 	@echo "  fetch-wikipedia  the wikis' own text, for WIKIPEDIA_LANGS, into SRC_DIR"
 	@echo "  fetch-aksharantar  romanized words for eval-translit, into SRC_DIR"
 	@echo "  fetch-greeklish  Greek typed in Latin letters, for eval-translit"
-	@echo "  fetch-wiktionary-romanized  Wiktionary's romanized Yiddish words,"
-	@echo "                   for eval-translit"
+	@echo "  fetch-wiktionary-romanized  Wiktionary's romanized words of yi hy"
+	@echo "                   fa ps mn sat, for eval-translit"
 	@echo "  fetch-fineweb    FineWeb-2's web text, for FINEWEB_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  fetch-madlad     MADLAD-400's web text, for MADLAD_LANGS, into SRC_DIR"
@@ -293,6 +310,7 @@ fetch-dakshina:
 .PHONY: fetch-wikipedia
 fetch-wikipedia:
 	OUT=$(WIKIPEDIA_DIR) ./scripts/fetch-wikipedia.sh $(WIKIPEDIA_LANGS)
+	OUT=$(WIKIPEDIA_DIR) EVAL_OUT=$(WIKIPEDIA_DIR)/eval ./scripts/fetch-wikipedia.sh $(WIKIPEDIA_PLUS_LANGS)
 
 .PHONY: fetch-aksharantar
 fetch-aksharantar:
@@ -352,9 +370,12 @@ predict-assets:
 		corpus=; corpus_in=; weight=; \
 		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(GLOTCC_LANGS) " in \
 			*" $$lang "*) ;; \
-			*) case " $(DAKSHINA_LANGS) $(FINEWEB_PLUS_LANGS) " in \
-				*" $$lang "*) corpus="--corpus $(TATOEBA_WEIGHT):$(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt"; \
-				              weight="--recipe tatoeba_weight=$(TATOEBA_WEIGHT)" ;; \
+			*) tw=$(TATOEBA_WEIGHT); case " $(WIKIPEDIA_PLUS_LANGS) " in \
+				*" $$lang "*) tw=$(TATOEBA_WIKI_WEIGHT) ;; \
+			   esac; \
+			   case " $(DAKSHINA_LANGS) $(FINEWEB_PLUS_LANGS) $(WIKIPEDIA_PLUS_LANGS) " in \
+				*" $$lang "*) corpus="--corpus $$tw:$(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt"; \
+				              weight="--recipe tatoeba_weight=$$tw" ;; \
 				*) corpus="--corpus $(CURDIR)/$(PREDICT_CORPORA_DIR)/$$lang.txt" ;; \
 			   esac; \
 			   corpus_in="--input corpora/$$lang.txt=$(PREDICT_CORPORA_DIR)/$$lang.txt" ;; \
@@ -363,7 +384,7 @@ predict-assets:
 			*" $$lang "*) corpus="$$corpus --corpus $(DAKSHINA_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input dakshina/$$lang.txt=$(DAKSHINA_DIR)/$$lang.txt" ;; \
 		esac; \
-		case " $(WIKIPEDIA_LANGS) " in \
+		case " $(WIKIPEDIA_LANGS) $(WIKIPEDIA_PLUS_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(WIKIPEDIA_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input wikipedia/$$lang.txt=$(WIKIPEDIA_DIR)/$$lang.txt" ;; \
 		esac; \
@@ -704,8 +725,9 @@ eval-translit:
 	@for lang in $(WIKTIONARY_ROMANIZED_LANGS); do \
 		p=$(WIKTIONARY_ROMANIZED_DIR)/$$lang.tsv; \
 		test -f $$p || { echo "no $$p: run make fetch-wiktionary-romanized"; exit 1; }; \
-		echo "$$lang, Wiktionary's romanized words, the words but for their points:"; \
-		$(TOOLS) eval-translit -- --unpointed --table translit/$$lang.txt \
+		case $$lang in yi) u=--unpointed; but=", the words but for their points" ;; *) u=; but= ;; esac; \
+		echo "$$lang, Wiktionary's romanized words$$but:"; \
+		$(TOOLS) eval-translit -- $$u --table translit/$$lang.txt \
 			--lexicon predict/$$lang.fst --pairs $$p | tail -n 1 || exit 1; \
 	done
 

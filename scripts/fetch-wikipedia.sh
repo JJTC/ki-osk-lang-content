@@ -4,7 +4,9 @@
 # WIKIPEDIA_LANGS): Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
 # Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the Goan wiki's
 # Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki, Tulu, Dotyali,
-# Angika and Newari (beside its web text, scripts/fetch-glotcc.sh); and
+# Angika and Newari (beside its web text, scripts/fetch-glotcc.sh); of
+# Armenian and Persian beside their Tatoeba sentences (the Makefile's
+# WIKIPEDIA_PLUS_LANGS, whose held-out text goes elsewhere: EVAL_OUT); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
 # Wikipedia yet: Magahi (beside its FineWeb-2 text), Adilabad Gondi, in
 # the Telugu script, and Khowar.
@@ -62,6 +64,8 @@ tcy  tcy  tcywiki_content-20261108-00000.json.bz2  985c3225bcfab543d358122f3ced0
 dty  dty  dtywiki_content-20261108-00000.json.bz2  42b44cbca756eb46985b9ef5680aa95642bd4223a8ed636c520e399c55e95a31  DEVANAGARI
 anp  anp  anpwiki_content-20261108-00000.json.bz2  19363d8660dd1a8d540fcd7253851a9d90737ba4ac8cc59606a476fa6df458a3  DEVANAGARI  hi
 new  new  newwiki_content-20261108-00000.json.bz2  c8d5a485491d164b541fed44b20f4af5d185cdf13d0544d151d02b233e2f7e73  DEVANAGARI
+hy   hy   hywiki_content-20261108-00000.json.bz2   66aa04cde62eb5d4f16317e0bd00dfffca8b5c4def9bb9f86a2f673f3f220ea8  ARMENIAN
+fa   fa   fawiki_content-20261108-00000.json.bz2   1c793a3006d5ed7f78e58cf3f12059fe423c6fd30efbff1fe696a53c7e240ae1  ARABIC
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1
