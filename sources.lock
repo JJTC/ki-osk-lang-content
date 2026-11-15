@@ -1418,6 +1418,24 @@
         "words": "2"
       }
     },
+    "predict/km": {
+      "encoder": "51626642e328-dirty",
+      "inputs": {
+        "fineweb/km.txt": "86f819276bffe9c434473e1b11ec37239ef33f1546d372c7b57ed0a71376d920",
+        "wordbreak/km.txt": "87bee2d17cd5148aa36957eb05409eefc124de8ad519b81b789298ef3e60b5d9"
+      },
+      "outputs": {
+        "predict/km.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/km.fst": "abf3dcb8d8911802f66e10dd02c0da8a78a2aa57b6961a17045ded31f4e9667a",
+        "predict/km.ngram.bin": "8378a01bfe6de14b344897a8d69841c384946b2060fa9282c21667289024d71c"
+      },
+      "recipe": {
+        "ngram_keep": "60000",
+        "start_keep": "5000",
+        "vocab_size": "30000",
+        "words": "2"
+      }
+    },
     "predict/kn": {
       "encoder": "5090cd25a1e7-dirty",
       "inputs": {
@@ -1709,6 +1727,24 @@
         "ngram_keep": "60000",
         "start_keep": "5000",
         "vocab_size": "20000",
+        "words": "2"
+      }
+    },
+    "predict/my": {
+      "encoder": "51626642e328-dirty",
+      "inputs": {
+        "fineweb/my.txt": "3f2137dc30691b1bc0fbb2f0e67913f414d0dfd21a6af0436506fb08e16ae29d",
+        "wordbreak/my.txt": "61d8abc3d9102b2f9bf0c9f44db0d7ab89b18172d8cd26832e4c83174bd8673b"
+      },
+      "outputs": {
+        "predict/my.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/my.fst": "e4809b0e1321bf9a69a3ffae5569adbfa51ec1a44d254e1d06580f4832723c32",
+        "predict/my.ngram.bin": "618033c6adead383885afde89aaf018673aa86abd91c66b46cdf0112299e6e5a"
+      },
+      "recipe": {
+        "ngram_keep": "60000",
+        "start_keep": "5000",
+        "vocab_size": "30000",
         "words": "2"
       }
     },

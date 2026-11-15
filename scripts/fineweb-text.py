@@ -42,6 +42,20 @@ the documents kept). Mizo is read so too, every third row group of it
 (100 MB in all). Khasi has Pnar (Jaintia) against it as well, which
 FineWeb-2 files under Khasi (wyrta.com, two fifths of its documents):
 Khasi writes ba jong bad kiba kaba, Pnar wa ya kiwa kawa ko wow.
+Khmer and Burmese, written without spaces between words, are read as
+Lao is, a sentence ending at ។ ៕ and ။ as well, a space after them or
+not; every 40th row group of each (some 3 000 and 7 000 million
+characters in all). Burmese's web was written in Zawgyi, a font's
+encoding of its letters at other code points, until 2019 (two fifths of
+FineWeb-2's Burmese text, most of it before 2020; 9% of 2024's): a
+document that reads as Zawgyi, ေ before its consonant, ္ ending a
+syllable or the letters of U+1060 to U+1097 being more than 0.3% of its
+Burmese characters (Unicode's Burmese has none; Zawgyi's 5% and more),
+is left out, as the keyboard and ICU's word list are Unicode's, and so
+is one whose Zawgyi was read as Unicode (ျ for ်, ွ for ြ: ငျ, which
+Burmese never writes, twice or more; 3% of the text kept before); and
+the digit ၀ written for the letter ဝ, which older text does, is read as
+ဝ where a letter or a sign follows it and no digit comes before it.
 
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
@@ -79,6 +93,12 @@ import unicodedata
 
 
 END = re.compile(r"(?<=[.!?।॥۔؟])\s+")
+# Khmer's and Burmese's ends of sentences, often with no space after them.
+UNSPACED_END = re.compile(r"(?<=[។៕။])\s*")
+# What marks Burmese text as Zawgyi's: ေ before its consonant, ္ ending a
+# syllable, and the shapes Zawgyi put at U+1060 to U+1097.
+ZAWGYI = re.compile(r"(?:^|[^\u1000-\u109F])\u1031|\u1039(?![\u1000-\u1021])|[\u1060-\u1097]")
+MYANMAR = re.compile(r"[\u1000-\u109F]")
 STEERING = re.compile("[‎‏‪-‮⁦-⁩﻿]")
 MARKUP = re.compile(r"\[\[|\]\]|\{\{|\}\}")
 WORDS = re.compile(r"[\s.,;:!?।॥۔؟،\"'()\[\]{}<>«»“”‘’\-–—/|*#@&%$+=~`^]+")
@@ -112,6 +132,19 @@ UNDERLINED = re.compile("([गजडदब])([\u0900-\u0903\u093a-\u094c\u094e\u
 def lao(text):
     return (text.replace("\u0ecd\u0eb2", "\u0eb3").replace("\u0eab\u0e99", "\u0edc")
             .replace("\u0eab\u0ea1", "\u0edd").replace("\u0eab\u0ea5", "\u0eab\u0ebc"))
+
+
+def burmese(text):
+    # The digit zero for the letter wa, where a letter or a sign follows
+    # it and no digit comes before it (၀င်း, not ၁၀ကြိမ်).
+    return re.sub("(?<![\u1040-\u1049])\u1040(?=[\u1000-\u103F])", "\u101D", text)
+
+
+def zawgyi(text):
+    # Or Zawgyi's letters read as Unicode's, ျ for ် and ွ for ြ: ငျ, which
+    # Burmese never writes, for the ever-present င်.
+    return (len(ZAWGYI.findall(text)) > 0.003 * max(1, len(MYANMAR.findall(text)))
+            or text.count("\u1004\u103B") >= 2)
 
 
 def sindhi(text):
@@ -154,6 +187,10 @@ LANGS = {
     "new": {"script": "DEVANAGARI", "neighbour": HINDI | NEPALI, "own": NEWARI, "rival": set()},
     "lo": {"script": "LAO", "neighbour": set(), "lines": True, "unspaced": True, "every": 12,
            "normalize": lao, "script_only": True},
+    "km": {"script": "KHMER", "neighbour": set(), "lines": True, "unspaced": True, "every": 40,
+           "script_only": True},
+    "my": {"script": "MYANMAR", "neighbour": set(), "lines": True, "unspaced": True, "every": 40,
+           "normalize": burmese, "script_only": True, "unicode": True},
 }
 
 
@@ -182,6 +219,8 @@ def kept(text, conf):
     # In lower case: Latin's function words start sentences too.
     ws = words(text.lower())
     if junk(text, ws, conf["script"]):
+        return False
+    if conf.get("unicode") and zawgyi(text):
         return False
     if share(ws, conf["neighbour"]) > 0.06:
         return False
@@ -215,7 +254,8 @@ def sentences(text, conf):
         text = conf["normalize"](text)
     pieces = text.split("\n") if conf.get("lines") else [text]
     for piece in pieces:
-        for s in END.split(piece):
+        ends = UNSPACED_END.split(piece) if conf.get("unspaced") else [piece]
+        for s in (s for e in ends for s in END.split(e)):
             for s in script_runs(s, script) if conf.get("script_only") else [" ".join(s.split())]:
                 if "sentence_rival" in conf and share(words(s.lower()), conf["sentence_rival"]) > 0.15:
                     continue

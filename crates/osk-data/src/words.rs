@@ -32,11 +32,14 @@
 //!   (`Ի՞նչ`), Hebrew's gershayim in acronyms (`לחו"ל`), a leading
 //!   apostrophe in Breton (`'zo`) and in Dutch's `'s`, `'t`, `'n`, `'k` and
 //!   `'m`.
-//! - Thai and Lao are written without spaces between words: a run of their
-//!   letters is cut into the words of the language's word list
+//! - Thai, Lao, Khmer and Burmese are written without spaces between
+//!   words: a run of their letters is cut into the words of the language's
+//!   word list
 //!   ([`crate::wordbreak`], given with [`Splitter::with_word_list`]), each
 //!   after the first glued to the one before, as `homme` is to `l'`; so a
-//!   keyboard types no space after a Thai or Lao word. Without a list, a run is
+//!   keyboard types no space after a Thai, Lao, Khmer or Burmese word. A
+//!   zero-width space, which their text often puts between words, parts
+//!   words as a space does, in every language. Without a list, a run is
 //!   one word.
 //!
 //! A word's identity, what lexicons and n-gram tables are keyed on, is
@@ -111,7 +114,7 @@ pub struct Splitter {
     /// `ı`, `İ` to `i`, and `i` upper-cases to `İ`.
     turkic: bool,
     /// The script the language writes without spaces between words (Thai,
-    /// Lao).
+    /// Lao, Khmer, Burmese).
     script: Option<Script>,
     /// The words its runs are cut into.
     word_list: Option<Arc<WordList>>,
@@ -168,6 +171,13 @@ enum Fold {
     /// Lao's ໍາ, ຫນ, ຫມ and ຫລ as the keyboard types them: ຳ ໜ ໝ ຫຼ
     /// ([`crate::wordbreak::lao_fold`]).
     Lao,
+}
+
+/// Whether `c` parts words as a space does: whitespace, and the zero-width
+/// space, which Khmer and Burmese text puts between words where it shows
+/// none.
+fn is_space(c: char) -> bool {
+    c.is_whitespace() || c == '\u{200B}'
 }
 
 /// The elided words French writes with an apostrophe before a vowel.
@@ -413,7 +423,7 @@ impl Splitter {
 
     /// Whether the language is written without spaces between words, so
     /// that its words are found with a word list ([`Self::with_word_list`]):
-    /// Thai, Lao.
+    /// Thai, Lao, Khmer, Burmese.
     #[must_use]
     pub fn wants_word_list(&self) -> bool {
         self.script.is_some()
@@ -748,7 +758,8 @@ impl Splitter {
 
     /// Whether the next word follows `word` with no space between: it is
     /// elided (`l'`, `dell'`, Kabyle `fell-`), or ends in a script written
-    /// without spaces between words (Thai, Lao), so a keyboard that types it
+    /// without spaces between words (Thai, Lao, Khmer, Burmese), so a
+    /// keyboard that types it
     /// types no space after it.
     #[must_use]
     pub fn glues_on(&self, word: &str) -> bool {
@@ -798,7 +809,7 @@ impl Splitter {
         };
         let mut token_start: Option<usize> = None;
         for (at, c) in text.char_indices() {
-            if c.is_whitespace() {
+            if is_space(c) {
                 if let Some(start) = token_start.take() {
                     self.token_words(text, start..at, &mut after, each);
                 }
@@ -910,7 +921,7 @@ impl Splitter {
         let cut = before_caret
             .char_indices()
             .rev()
-            .find(|&(_, c)| c.is_whitespace())
+            .find(|&(_, c)| is_space(c))
             .map_or(0, |(i, c)| i + c.len_utf8());
         let (done, token) = before_caret.split_at(cut);
         let mut context = Context {
@@ -1461,6 +1472,22 @@ mod tests {
         assert_eq!(read_with(&en, "ฉันรักภาษาไทย"), ["|ฉันรักภาษาไทย"]);
         assert!(thai().wants_word_list());
         assert!(!en.wants_word_list());
+    }
+
+    #[test]
+    fn a_zero_width_space_parts_words() {
+        let khmer = Splitter::new("km").with_word_list(Arc::new(WordList::from_words([
+            "ខ្ញុំ",
+            "ស្រលាញ់",
+            "ភាសា",
+            "ខ្មែរ",
+        ])));
+        // Between two runs, as Khmer text often has it: no word holds it.
+        assert_eq!(
+            read_with(&khmer, "ខ្ញុំ\u{200B}ស្រលាញ់ភាសាខ្មែរ"),
+            ["|ខ្ញុំ", "ស្រលាញ់_", "+ភាសា_", "+ខ្មែរ"]
+        );
+        assert_eq!(read("en", "two\u{200B}words"), ["|two", "words"]);
     }
 
     #[test]

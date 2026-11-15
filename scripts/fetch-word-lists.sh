@@ -12,9 +12,9 @@
 #   scripts/fetch-word-lists.sh            # every list below
 #
 # Lao's is the Lao Word List of Brian Eugene Wilson and Robert Martin
-# Campbell, as ICU has it, with its own BSD notice besides (NOTICES.md).
-# Khmer and Burmese could follow the same way: ICU has their lists too
-# (khmerdict.txt, burmesedict.txt), Burmese's with a notice of its own.
+# Campbell, as ICU has it, with its own BSD notice besides (NOTICES.md);
+# Burmese's is LeRoy Benjamin Sharon's word list, with his BSD notice in
+# its header; Khmer's is ICU's own.
 set -eu
 
 ICU=release-79.1
@@ -25,6 +25,8 @@ OUT=${OUT:-wordbreak}
 LISTS="
 th thaidict.txt 3166abde40c0f44ab91c28f5ce96d7d1472cb7882e1c0bda0a72f8f69dba4274
 lo laodict.txt 3c876934a3fa81031d2333525eafaca6a7c9f842e3b98f18c38880420afb5d36
+km khmerdict.txt 87bee2d17cd5148aa36957eb05409eefc124de8ad519b81b789298ef3e60b5d9
+my burmesedict.txt 61d8abc3d9102b2f9bf0c9f44db0d7ab89b18172d8cd26832e4c83174bd8673b
 "
 
 sha() { sha256sum "$1" | cut -d' ' -f1; }

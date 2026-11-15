@@ -142,7 +142,11 @@ jobs:
       # from web text: FineWeb-2's, MADLAD-400's and GlotCC's files at one
       # revision each, pinned by sha256, the parquet ones read with
       # pyarrow.
+      # Each language's parquet files are deleted once its text is written
+      # (KEEP_RAW=0): Khmer's and Burmese's alone are 5.4 GB.
       - name: FineWeb-2's text
+        env:
+          KEEP_RAW: "0"
         run: |
           python3 -m venv "$RUNNER_TEMP/pyenv"
           "$RUNNER_TEMP/pyenv/bin/pip" install --quiet pyarrow

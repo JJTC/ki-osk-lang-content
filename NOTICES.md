@@ -188,11 +188,12 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Ten models learn from FineWeb-2's web text alone: those of Bodo,
+Twelve models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
-scripts, and of Lao, whose wiki is small; and Assamese's from it beside
+scripts, and of Lao, Khmer and Burmese, whose wikis are small or written
+as few type; and Assamese's from it beside
 its Tatoeba sentences, and Magahi's beside its Incubator text.
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
 Pipeline to Scale Them All", arXiv 2506.20920) is text from Common
@@ -383,12 +384,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## Word lists
 
-`wordbreak/th.txt` and `wordbreak/lo.txt`, the word lists that cut Thai
-and Lao text into words (neither is written with spaces between them),
-in the trainer, the keyboard and `eval-predict` alike, are **ICU's Thai
-and Lao word-break dictionaries**,
-`icu4c/source/data/brkitr/dictionaries/thaidict.txt` and `laodict.txt`
-of ICU 79.1, committed as ICU has them, their copyright lines with them
+`wordbreak/th.txt`, `lo.txt`, `km.txt` and `my.txt`, the word lists that
+cut Thai, Lao, Khmer and Burmese text into words (none is written with
+spaces between them), in the trainer, the keyboard and `eval-predict`
+alike, are **ICU's Thai, Lao, Khmer and Burmese word-break
+dictionaries**, `icu4c/source/data/brkitr/dictionaries/thaidict.txt`,
+`laodict.txt`, `khmerdict.txt` and `burmesedict.txt` of ICU 79.1,
+committed as ICU has them, their copyright lines with them
 (`scripts/fetch-word-lists.sh` pins them by sha256). Thai's says:
 "Copyright (C) 2016 and later: Unicode, Inc. and others. License & terms
 of use: http://www.unicode.org/copyright.html. Copyright (c) 2006-2015
@@ -397,10 +399,18 @@ Rights Reserved." Lao's: "Copyright (C) 2016 and later: Unicode, Inc. and
 others. License & terms of use: http://www.unicode.org/copyright.html.
 Copyright (c) 2015 International Business Machines Corporation and
 others. All Rights Reserved.", and that it is the Lao Word List of Brian
-Eugene Wilson and Robert Martin Campbell, below. Thai's model
-(`predict/th.*`) is built from Tatoeba's sentences cut with its list,
-Lao's (`predict/lo.*`) from FineWeb-2's text cut with its. ICU's licence,
-for the files, from ICU's `LICENSE`:
+Eugene Wilson and Robert Martin Campbell, below. Khmer's: "Copyright (C)
+2016 and later: Unicode, Inc. and others. License & terms of use:
+http://www.unicode.org/copyright.html. Copyright (c) 2011-2015
+International Business Machines Corporation and others. All Rights
+Reserved." Burmese's: "Copyright (C) 2016 and later: Unicode, Inc. and
+others. License & terms of use: http://www.unicode.org/copyright.html.
+Copyright (c) 2015 International Business Machines Corporation and
+others. All Rights Reserved.", and that it is LeRoy Benjamin Sharon's
+word list, below. Thai's model (`predict/th.*`) is built from Tatoeba's
+sentences cut with its list, Lao's, Khmer's and Burmese's (`predict/lo.*`,
+`km.*`, `my.*`) from FineWeb-2's text cut with theirs. ICU's licence, for
+the files, from ICU's `LICENSE`:
 
 ```text
 UNICODE LICENSE V3
@@ -518,6 +528,44 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
 Source: https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/laodict.txt
+
+Burmese's list is ICU's copy of LeRoy Benjamin Sharon's Burmese word
+list, "with special thanks to Robert Martin Campbell" (from the my-l10n
+project and NCSoft's Myanmar-English dictionary, its header says; part of
+github.com/kanyawtech/myanmar-karen-word-lists), whose notice, in that
+file's header and in ICU's `LICENSE`, goes with it:
+
+```text
+Copyright (c) 2013, LeRoy Benjamin Sharon
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+  Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+  Redistributions in binary form must reproduce the above copyright notice, this
+  list of conditions and the following disclaimer in the documentation and/or
+  other materials provided with the distribution.
+
+  Neither the name Myanmar Karen Word Lists, nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+Source: https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/burmesedict.txt
 
 ## Dialect flags
 

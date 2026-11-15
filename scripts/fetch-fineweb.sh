@@ -2,8 +2,9 @@
 # fetch-fineweb.sh — web text of the languages that have no Wikipedia of
 # their own, from FineWeb-2 (the Makefile's FINEWEB_LANGS): Bodo, Dogri,
 # Chhattisgarhi, Magahi and Brahui, Sindhi in Devanagari and Meitei in
-# the Bengali script, whose wikis are in their other scripts, Lao, whose
-# wiki is small, and Kokborok, Mizo and Khasi, which have none; and
+# the Bengali script, whose wikis are in their other scripts, Lao, Khmer
+# and Burmese, whose wikis are small or few write as people do, and
+# Kokborok, Mizo and Khasi, which have none; and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -22,12 +23,16 @@
 #
 # Neither is committed: the text is the web's. The parquet files are kept
 # in $OUT/raw, and a kept one whose sha256 is right is not downloaded
-# again. Reading them needs pyarrow: PYTHON names a Python that has it.
+# again; with KEEP_RAW=0 each language's are deleted once its text is
+# written (Khmer's and Burmese's are 2.3 and 3.1 GB: what a CI runner's
+# disk is spared). Reading them needs pyarrow: PYTHON names a Python that
+# has it.
 #
 #   scripts/fetch-fineweb.sh            # every language
 #   scripts/fetch-fineweb.sh brx sd-Deva    # some
 #
 # Env: OUT=$TMPDIR/ki-osk-sources/fineweb  EVAL_OUT=$OUT/eval  PYTHON=python3
+#      KEEP_RAW=1
 set -euo pipefail
 
 REV=af9c13333eb981300149d5ca60a8e9d659b276b9
@@ -50,6 +55,10 @@ mni-Beng  mni_Beng  train/000_00000.parquet  70c880e2be17a13639b86139961cda481a9
 mni-Beng  mni_Beng  test/000_00000.parquet   92dd42dc4360a753b7e1a96a5c2a92edcf52a7f747c1c9e73346b24df8875773
 lo   lao_Laoo  train/000_00000.parquet  19e5de2c1054ceed9946a91922db64690af5e61b248c8556de0832c8d3f66040
 lo   lao_Laoo  test/000_00000.parquet   d0d84f18de6400f06a2ed725f0858a517593fbbe0ac0698dc3418b2f5138b4ce
+km   khm_Khmr  train/000_00000.parquet  6f4506f65ad66b48e5f73350e593fcac045e15fdf65d4a55924199b84c7ee993
+km   khm_Khmr  test/000_00000.parquet   26ae4e654770b07e24a4ef6b8ef3a01c84076a920f1922ac014364ab411b84f0
+my   mya_Mymr  train/000_00000.parquet  d7d8182c4fed89e2a81e69a2c6ef5e6083c9ff3df48c276cd87934b41a6089a0
+my   mya_Mymr  test/000_00000.parquet   61c4bb5b164bc690815f16f997e35a20068021e4279357042e399283306ed25d
 as   asm_Beng  train/000_00000.parquet  66c64bd424c0084aee17ec4936a21d6e0b307b068f2fd29bf8acd60204a4891b
 as   asm_Beng  test/000_00000.parquet   fe65d2e25063872f4593f01af4cb0e0e69fc50e5af9714bdefc3701a100dfcc3
 trp  trp_Latn  train/000_00000.parquet  3becfceb5073d2991ba09f7f69d6d76a045bc154d10b5b058aca4bb0b44ace9c
@@ -94,4 +103,7 @@ for lang in $langs; do
 	done <<<"$rows"
 	"$PYTHON" -I "$HERE/fineweb-text.py" --lang "$lang" "$OUT/$lang.txt" "$EVAL_OUT/$lang.txt" \
 		--train "${train[@]}" --test "${test[@]}"
+	if [ "${KEEP_RAW:-1}" = 0 ]; then
+		rm -f -- "${train[@]}" "${test[@]}"
+	fi
 done

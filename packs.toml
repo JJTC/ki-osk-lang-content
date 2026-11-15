@@ -61,6 +61,7 @@ ka  = "Georgian"
 kab = "Kabyle"
 kha = "Khasi"
 khw = "Khowar"
+km  = "Khmer"
 kn  = "Kannada"
 kok = "Konkani"
 ks  = "Kashmiri"
@@ -78,6 +79,7 @@ mni = "Meitei"
 mni-Beng = "Meitei (Bengali script)"
 mr  = "Marathi"
 ms  = "Malay"
+my  = "Burmese"
 ne  = "Nepali"
 new = "Newari (Nepal Bhasa)"
 nl  = "Dutch"
@@ -170,6 +172,27 @@ licenses = [
 ]
 sources = [
   { name = "ICU's Lao word-break dictionary (laodict.txt, ICU 79.1), from the Lao Word List", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/laodict.txt", lock = "predict/lo", input = "wordbreak/lo.txt" },
+]
+
+# Khmer's is ICU's own; Burmese's is LeRoy Benjamin Sharon's word list,
+# which carries his BSD notice in its header, as ICU has it (NOTICES.md).
+[prediction.wordbreak.km]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+  { name = "ICU License (ICU 1.8.1 to 57.1)", url = "https://github.com/unicode-org/icu/blob/release-79.1/LICENSE", share_alike = false },
+]
+sources = [
+  { name = "ICU's Khmer word-break dictionary (khmerdict.txt, ICU 79.1)", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/khmerdict.txt", lock = "predict/km", input = "wordbreak/km.txt" },
+]
+
+[prediction.wordbreak.my]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+  { name = "ICU License (ICU 1.8.1 to 57.1)", url = "https://github.com/unicode-org/icu/blob/release-79.1/LICENSE", share_alike = false },
+  { name = "BSD-3-Clause-style (the Burmese word list, LeRoy Benjamin Sharon)", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/burmesedict.txt", share_alike = false },
+]
+sources = [
+  { name = "ICU's Burmese word-break dictionary (burmesedict.txt, ICU 79.1), from LeRoy Benjamin Sharon's Myanmar word list", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/burmesedict.txt", lock = "predict/my", input = "wordbreak/my.txt" },
 ]
 
 # Wikipedia text of twelve South Asian languages, as the Dakshina dataset
@@ -492,7 +515,6 @@ iu  = "Inuktitut"
 jv  = "Javanese"
 kk  = "Kazakh"
 kl  = "Greenlandic"
-km  = "Khmer"
 ko  = "Korean, Hangul input"
 ky  = "Kyrgyz"
 lb  = "Luxembourgish"
@@ -501,7 +523,6 @@ ln  = "Lingala"
 mg  = "Malagasy"
 mi  = "Māori"
 mt  = "Maltese"
-my  = "Burmese"
 nah = "Nahuatl"
 nr  = "Southern Ndebele"
 nso = "Northern Sotho"

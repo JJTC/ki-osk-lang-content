@@ -356,6 +356,7 @@ BASE_ROWS = [list(range(16, 26)), list(range(30, 39)), list(range(44, 51))]
 # a per-view dedup below removes any that merely repeat a base-grid letter.
 EXTRA_ROWS = [[26, 27, 41], [39, 40, 43], [51, 52, 53, 86]]
 KEY_LEFTSHIFT = 42  # evdev
+KEY_RIGHTALT = 100  # evdev: AltGr, the third level under level3(ralt_switch)
 
 
 class _Rmlvo(ctypes.Structure):
@@ -401,7 +402,10 @@ def maps_for(layout, variant):
     x.xkb_state_update_key(st, KEY_LEFTSHIFT + 8, 1)
     shift = {c: ch(c) for c in codes}
     x.xkb_state_update_key(st, KEY_LEFTSHIFT + 8, 0)
-    return base, shift
+    x.xkb_state_update_key(st, KEY_RIGHTALT + 8, 1)
+    alt = {c: ch(c) for c in codes}
+    x.xkb_state_update_key(st, KEY_RIGHTALT + 8, 0)
+    return base, shift, alt
 
 
 def _spacer(width):
@@ -413,6 +417,22 @@ def _spacer(width):
 # `.isalpha()` does not take for letters: Thai's ุ and ึ (and ู on Shift),
 # Lao's ຸ ູ and ໍ (and ໌ ຼ on Shift).
 NUMBER_ROW_MARKS = {"thai", "lao"}
+
+# Scripts whose national keymap puts letters and signs on the number row's
+# Shift level, its base level being the script's digits: Khmer's ៗ ៍ ័ ៏,
+# Burmese's ဍ ၒ ဋ ရ (ရ among its commonest letters). Each gets a key of its
+# own on the top row, typing it in either view.
+NUMBER_ROW_SHIFT = {"khmer", "myanmar"}
+
+# Scripts whose national keymap puts letters on AltGr, which the views do
+# not reach: Khmer's independent vowels ឯ ឱ ឫ ឦ… and ៈ. Each is offered on
+# a long press of its key.
+LEVEL3_LONGPRESS = {"khmer"}
+
+
+def is_letter_or_mark(g):
+    """Whether `g` is a non-ASCII letter (L*) or combining mark (M*)."""
+    return bool(g) and not g.isascii() and unicodedata.category(g[0])[0] in ("L", "M")
 
 
 def is_mark(g):
@@ -450,7 +470,7 @@ def kept_codes(base_codes, extra_codes, chars, script):
 
 
 def build(base_dir, lid, name, xlayout, xvariant, script):
-    base, shift = maps_for(xlayout, xvariant)
+    base, shift, alt = maps_for(xlayout, xvariant)
 
     with open(f"{base_dir}/{TEMPLATE}.json", encoding="utf-8") as f:
         layout = json.load(f)
@@ -497,6 +517,15 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
         if (base[c].isalpha() or (script in NUMBER_ROW_MARKS and is_mark(base[c])))
         and base[c] not in grid_letters
     ]
+    shift_grid = set()
+    for br, er in zip(BASE_ROWS, EXTRA_ROWS):
+        shift_grid.update(shift[c] for c in kept_codes(br, er, shift, script))
+    shift_top = []
+    if script in NUMBER_ROW_SHIFT:
+        for c in NUM_ROW + [41]:
+            g = shift[c]
+            if is_letter_or_mark(g) and g not in grid_letters | shift_grid and g not in shift_top:
+                shift_top.append(g)
 
     keep_lp = script == "latin"
     for view in layout["views"]:
@@ -537,7 +566,12 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
                     ]
             elif keep_lp and code in old_lp:
                 key["long_press"] = old_lp[code]
+            if script in LEVEL3_LONGPRESS and is_letter_or_mark(alt[code]):
+                key["long_press"] = [{"kind": "text", "text": alt[code]}]
             return key
+
+        def text_key(g):
+            return {"width_units": 1, "label": g, "output": {"kind": "text", "text": g}}
 
         r0 = kept_codes(BASE_ROWS[0], EXTRA_ROWS[0], chars, script)
         r1 = kept_codes(BASE_ROWS[1], EXTRA_ROWS[1], chars, script)
@@ -549,9 +583,9 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
         # Prepend the overflow letters as a top row, centred to the top
         # letter row's width with edge spacers (a 2-key row for ky/tg
         # then sits as two normal keys, not two half-screen ones).
-        if extra_top:
-            pad = max(0.0, (len(r0) - len(extra_top)) / 2.0)
-            top = [kc(c) for c in extra_top]
+        if extra_top or shift_top:
+            pad = max(0.0, (len(r0) - len(extra_top) - len(shift_top)) / 2.0)
+            top = [kc(c) for c in extra_top] + [text_key(g) for g in shift_top]
             if pad > 0:
                 top = [_spacer(pad)] + top + [_spacer(pad)]
             view["rows"].insert(0, {"height_units": rows[0].get("height_units", 1.0), "keys": top})
@@ -587,7 +621,8 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
         json.dump(layout, f, ensure_ascii=False, indent=2)
         f.write("\n")
     row0 = " ".join(base[c] for c in kept_codes(BASE_ROWS[0], EXTRA_ROWS[0], base, script))
-    tail = f"  +toprow=[{' '.join(base[c] for c in extra_top)}]" if extra_top else ""
+    tops = [base[c] for c in extra_top] + shift_top
+    tail = f"  +toprow=[{' '.join(tops)}]" if tops else ""
     return f"{lid:8} ({xlayout}/{xvariant or '-'}): row0=[{row0}]{tail}"
 
 # Laid out by hand now, each as its language's phone keyboard (AOSP's

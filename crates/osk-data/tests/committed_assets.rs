@@ -198,9 +198,30 @@ const LAO: &[&str] = &[
     "ນະຄອນຫຼວງວຽງຈັນ",
 ];
 
+/// Everyday Khmer and Burmese, as [`LAO`] is: their held-out text is the
+/// web's too.
+const KHMER: &[&str] = &[
+    "ខ្ញុំស្រលាញ់ភាសាខ្មែរ",
+    "សួស្តីអ្នកសុខសប្បាយជាទេ",
+    "ថ្ងៃនេះអាកាសធាតុល្អ",
+    "គាត់ទៅសាលារៀនរាល់ថ្ងៃ",
+    "សូមអរគុណច្រើន",
+    "យើងញ៉ាំបាយនៅផ្ទះ",
+    "រាជធានីភ្នំពេញ",
+];
+const BURMESE: &[&str] = &[
+    "မြန်မာဘာသာစကားကို ကျွန်တော် ချစ်တယ်",
+    "မင်္ဂလာပါ နေကောင်းလား",
+    "ဒီနေ့ ရာသီဥတု ကောင်းတယ်",
+    "သူ နေ့တိုင်း ကျောင်းသွားတယ်",
+    "ကျေးဇူးတင်ပါတယ်",
+    "ကျွန်တော်တို့ အိမ်မှာ ထမင်းစားတယ်",
+    "ရန်ကုန်မြို့",
+];
+
 /// Each word list parses, belongs to a language written without spaces
-/// between words, and cuts its held-out text (Lao's, [`LAO`]) into words of
-/// the list.
+/// between words, and cuts its held-out text (Lao's, Khmer's and
+/// Burmese's: [`LAO`], [`KHMER`], [`BURMESE`]) into words of the list.
 #[test]
 fn every_word_list_cuts_its_language() {
     use std::sync::Arc;
@@ -232,11 +253,12 @@ fn every_word_list_cuts_its_language() {
             name(&p)
         );
         let splitter = splitter.with_word_list(list.clone());
-        let eval = if lang == "lo" {
-            LAO.join("\n")
-        } else {
-            std::fs::read_to_string(root().join(format!("eval/{lang}.txt")))
-                .unwrap_or_else(|e| panic!("eval/{lang}.txt: {e}"))
+        let eval = match lang.as_str() {
+            "lo" => LAO.join("\n"),
+            "km" => KHMER.join("\n"),
+            "my" => BURMESE.join("\n"),
+            _ => std::fs::read_to_string(root().join(format!("eval/{lang}.txt")))
+                .unwrap_or_else(|e| panic!("eval/{lang}.txt: {e}")),
         };
         let (mut words, mut known) = (0usize, 0usize);
         for line in eval.lines() {
@@ -292,6 +314,28 @@ fn lao_is_cut_as_written() {
         "one word, written two ways"
     );
     assert_eq!(splitter.normalize("ສໍາລັບ"), "ສຳລັບ");
+}
+
+#[test]
+fn khmer_and_burmese_are_cut_as_written() {
+    use std::sync::Arc;
+
+    use osk_data::wordbreak::WordList;
+    use osk_data::words::Splitter;
+
+    let splitter = |lang: &str| {
+        let text = std::fs::read_to_string(root().join(format!("wordbreak/{lang}.txt"))).unwrap();
+        Splitter::new(lang).with_word_list(Arc::new(WordList::parse(&text).unwrap()))
+    };
+    let (km, my) = (splitter("km"), splitter("my"));
+    let cut =
+        |s: &Splitter, t: &str| -> Vec<String> { s.words(t).into_iter().map(|w| w.text).collect() };
+    assert_eq!(cut(&km, "ខ្ញុំស្រលាញ់ភាសាខ្មែរ"), ["ខ្ញុំ", "ស្រលាញ់", "ភាសាខ្មែរ"]);
+    // A zero-width space between words, as Khmer text often has, is no
+    // part of either.
+    assert_eq!(cut(&km, "ខ្ញុំ\u{200B}ស្រលាញ់"), ["ខ្ញុំ", "ស្រលាញ់"]);
+    assert_eq!(cut(&my, "ကျေးဇူးတင်ပါတယ်"), ["ကျေးဇူးတင်", "ပါ", "တယ်"]);
+    assert_eq!(cut(&my, "မင်္ဂလာပါ"), ["မင်္ဂလာ", "ပါ"]);
 }
 
 /// A language's lexicon, read as the keyboard reads it, for a table's

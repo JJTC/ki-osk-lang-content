@@ -13,7 +13,7 @@ Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
 keycaps. 228 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **99 languages** carry a prediction
+table below is the complete list; **101 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -119,9 +119,9 @@ but no model to match the glide against · `—` off
 | `pa` | `pa` | Punjabi | in · guru | LTR | **Full** (pa)³ | — | — |
 | `or` | `or` | Odia | in · ori | LTR | **Full** (or)⁶ | — | — |
 | `si` | `si` | Sinhala | lk · sin_phonetic | LTR | **Full** (si)³ | — | — |
-| `km` | `km` | Khmer | kh | LTR | — | — | — |
+| `km` | `km` | Khmer | kh | LTR | **Full** (km)⁷ | — | — |
 | `lo` | `lo` | Lao | la | LTR | **Full** (lo)⁷ | — | — |
-| `my` | `my` | Burmese | mm | LTR | — | — | — |
+| `my` | `my` | Burmese | mm | LTR | **Full** (my)⁷ | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | — | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | — | — | — |
 | `kab` | `kab` | Kabyle | us | LTR | **Full** (kab) | ✓ | — |
@@ -609,13 +609,14 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These twelve models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These fourteen models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
    no Wikipedia of their own, Sindhi in Devanagari and Meitei in the
-   Bengali script, whose wikis are in their other scripts, and Lao, whose
-   wiki is small; and Assamese's beside its 14 000 Tatoeba sentences
+   Bengali script, whose wikis are in their other scripts, and Lao, Khmer
+   and Burmese, whose wikis are small or written as few type; and
+   Assamese's beside its 14 000 Tatoeba sentences
    (counted thirty times; at ten its savings on them were 42.3%, now
    44.3%, on the web's held-out text 34.1%, now 33.5%), whose model
    lacked two fifths of the web's running words.
@@ -647,7 +648,28 @@ but no model to match the glide against · `—` off
    is typed (`osk_data::wordbreak::lao_fold`). Keystroke savings 44.0%
    on 9 593 held-out words. Its keyboard now has the vowel signs
    xkeyboard-config keeps on the number row (ຸ ູ ໍ, and ໌ ຼ on Shift),
-   which the layout's generator had left out. Bodo's apostrophe, which
+   which the layout's generator had left out. Khmer and Burmese are read
+   as Lao is, cut with ICU's Khmer and Burmese word lists (Burmese's is
+   LeRoy Benjamin Sharon's, under its BSD notice), every 40th row group
+   of each (Khmer's 602 000 sentences of its 3 000 million characters,
+   Burmese's 476 000 of 7 000 million), a sentence ending at ។ ៕ and ။
+   too, and a zero-width space, which Khmer text often puts between
+   words, parting them as a space does (`osk_data::words`). A word starts
+   in neither on a consonant written below another (after Khmer's coeng ្,
+   Burmese's virama ္), nor in Burmese on one its asat makes the last of
+   a syllable (the န of ကန်). Burmese's web was written in Zawgyi, a
+   font's own encoding, until 2019: two fifths of FineWeb-2's Burmese
+   text (9% of 2024's), and a third of the documents read are left out
+   as Zawgyi (ေ before its consonant, ္ ending a syllable, the letters at
+   U+1060 to U+1097) or as Zawgyi read as Unicode (ငျ for င်), the
+   keyboard and the word list being Unicode's; the digit ၀ written for
+   the letter ဝ is read as ဝ. Keystroke savings on FineWeb-2's held-out
+   text: Khmer 46.7% (9 434 words), Burmese 45.6% (8 494). Their keyboards
+   now have the letters and signs xkeyboard-config keeps on the number
+   row's Shift, a key each on the top row (Burmese's ရ, among its
+   commonest letters, ဍ ၒ ဋ; Khmer's ៗ ៍ ័ ៏ ៌), and Khmer's those on
+   AltGr on a long press (ឯ ឱ ឫ ឦ ៈ…): of their held-out text's letters,
+   2.2% and 1.0% had no key before, none and 0.2% now. Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
    row group of its FineWeb-2 (856 000 sentences), each document's ৰ
@@ -706,7 +728,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **99 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **101 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -719,13 +741,13 @@ but no model to match the glide against · `—` off
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp
   new** (Newari with GlotCC's news too), **hy fa** beside Tatoeba's, and
   the Incubator's test wikis: **wsg khw** (note 6) ·
-  **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha** (FineWeb-2's; note 7;
-  Magahi with its Incubator text too; Lao cut into words with ICU's word list too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
+  **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my** (FineWeb-2's; note 7;
+  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet, because Tatoeba has too few
   sentences (< ~6k): the smaller Indic / SE-Asian / minor
-  languages (km my mt fo bs sl ga sq tg kk ky, sr-latn) plus syr (Syriac), ber (Tamazight),
+  languages (mt fo bs sl ga sq tg kk ky, sr-latn) plus syr (Syriac), ber (Tamazight),
   qu, gn, ay, and most of Tiers E–H (European minority, African, Pacific /
   Americas, and the new-script layouts) — **except `oc gl br eu` and the
   corpus-audit batch `tt mr as ms os`, which cleared the bar** (see above).

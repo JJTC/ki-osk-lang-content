@@ -1,18 +1,21 @@
 //! Word lists for the languages written without spaces between words,
-//! Thai and Lao: what [`crate::words::Splitter`] cuts their runs of letters
+//! Thai, Lao, Khmer and Burmese: what [`crate::words::Splitter`] cuts their runs of letters
 //! into words with, the same way in the trainer, the keyboard and the
 //! measure.
 //!
 //! A list is a plain text file, one word per line, as ICU's word-break
-//! dictionaries are (`thaidict.txt`, `laodict.txt`): blank lines, lines starting with `#`
+//! dictionaries are (`thaidict.txt`, `laodict.txt`, `khmerdict.txt`,
+//! `burmesedict.txt`): blank lines, lines starting with `#`
 //! and a byte-order mark are skipped. It has no frequencies, so a run is
 //! cut into the fewest words of the list that cover as much of it as they
 //! can (maximal matching), the earlier word the longer where two cuts tie.
 //! What no word of the list covers is a word of its own, as long as it
 //! runs. A word starts only where the script lets one start: never before
 //! a vowel sign or a tone mark, nor right after a vowel written before its
-//! consonant. Lao's letters written two ways ([`lao_fold`]) are one in the
-//! list and in what is looked up in it.
+//! consonant, nor on a consonant joined below the one before it (Khmer's
+//! coeng, Burmese's virama), nor on a Burmese consonant its asat makes the
+//! last of the syllable before. Lao's letters written two ways
+//! ([`lao_fold`]) are one in the list and in what is looked up in it.
 
 use std::borrow::Cow;
 use std::fmt;
@@ -29,23 +32,39 @@ pub enum Script {
     Thai,
     /// Lao, U+0E80 to U+0EFF.
     Lao,
+    /// Khmer, U+1780 to U+17FF.
+    Khmer,
+    /// Myanmar, U+1000 to U+109F: Burmese.
+    Myanmar,
 }
+
+/// Khmer's coeng, which writes the consonant after it below the one before.
+const COENG: char = '\u{17D2}';
+/// Myanmar's virama, which stacks the consonant after it under the one
+/// before, and its asat, which takes a consonant's vowel away.
+const MYANMAR_VIRAMA: char = '\u{1039}';
+const ASAT: char = '\u{103A}';
 
 impl Script {
     /// The script `lang` (a BCP-47 tag) is written in, when it is one of
-    /// these: `th`, `lo`.
+    /// these: `th`, `lo`, `km`, `my`.
     #[must_use]
     pub fn of_lang(lang: &str) -> Option<Self> {
         match lang.split(['-', '_']).next().unwrap_or(lang) {
             "th" => Some(Self::Thai),
             "lo" => Some(Self::Lao),
+            "km" => Some(Self::Khmer),
+            "my" => Some(Self::Myanmar),
             _ => None,
         }
     }
 
     /// Whether `c` is one of this script's characters, which its runs are
     /// made of. Its digits, its currency sign and its punctuation end a
-    /// run, as they end a word anywhere.
+    /// run, as they end a word anywhere, and so does a zero-width space,
+    /// which Khmer and Burmese text often puts between words; the
+    /// zero-width joiner and non-joiner, which a few of their words hold,
+    /// do not.
     #[must_use]
     pub fn holds(self, c: char) -> bool {
         match self {
@@ -53,15 +72,35 @@ impl Script {
             Self::Lao => {
                 ('\u{0E81}'..='\u{0EDF}').contains(&c) && !('\u{0ED0}'..='\u{0ED9}').contains(&c)
             }
+            // Not ។ ៕ ៖ (sentence and colon), ៘ ៙ ៚ ៛ (marks, the riel),
+            // nor the digits.
+            Self::Khmer => {
+                ('\u{1780}'..='\u{17D3}').contains(&c)
+                    || matches!(
+                        c,
+                        '\u{17D7}' | '\u{17DC}' | '\u{17DD}' | '\u{200C}' | '\u{200D}'
+                    )
+            }
+            // Not ၊ ။ (comma and full stop), nor the digits, Burmese's and
+            // Shan's; ၌ ၍ ၎ ၏ are words.
+            Self::Myanmar => {
+                (('\u{1000}'..='\u{109F}').contains(&c)
+                    && !('\u{1040}'..='\u{104B}').contains(&c)
+                    && !('\u{1090}'..='\u{1099}').contains(&c))
+                    || matches!(c, '\u{200C}' | '\u{200D}')
+            }
         }
     }
 
-    /// Whether a word may start at `c`, after `before`: not on a vowel
-    /// sign or a tone mark (marks, and the vowels written after their
-    /// consonant: Thai's ะ า ำ ๅ, Lao's ະ າ ຳ and ຽ, and the abbreviation
-    /// marks ฯ ຯ), nor right after a vowel written before its consonant
-    /// (เ แ โ ใ ไ, ເ ແ ໂ ໃ ໄ).
-    fn may_start(self, before: char, c: char) -> bool {
+    /// Whether a word may start at `c`, after `before` and before `after`:
+    /// not on a vowel sign or a tone mark (marks, and the vowels written
+    /// after their consonant: Thai's ะ า ำ ๅ, Lao's ະ າ ຳ and ຽ, and the
+    /// abbreviation marks ฯ ຯ), nor right after a vowel written before its
+    /// consonant (เ แ โ ใ ไ, ເ ແ ໂ ໃ ໄ); in Khmer and Burmese not on a
+    /// consonant joined below the one before (after ្, after ္), nor in
+    /// Burmese on one the asat or the virama after it makes the last of a
+    /// syllable (the န of ကန်, the မ of the kinzi's own).
+    fn may_start(self, before: char, c: char, after: Option<char>) -> bool {
         match self {
             Self::Thai => {
                 !is_combining_mark(c)
@@ -79,6 +118,13 @@ impl Script {
                     )
                     && !('\u{0EC0}'..='\u{0EC4}').contains(&before)
             }
+            Self::Khmer => !is_combining_mark(c) && before != COENG && !is_joiner(c),
+            Self::Myanmar => {
+                !is_combining_mark(c)
+                    && before != MYANMAR_VIRAMA
+                    && !is_joiner(c)
+                    && !matches!(after, Some(ASAT | MYANMAR_VIRAMA))
+            }
         }
     }
 
@@ -88,8 +134,16 @@ impl Script {
         match self {
             Self::Thai => c == '\u{0E46}',
             Self::Lao => c == '\u{0EC6}',
+            Self::Khmer => c == '\u{17D7}',
+            Self::Myanmar => ('\u{104C}'..='\u{104F}').contains(&c),
         }
     }
+}
+
+/// The zero-width joiner or non-joiner, which joins or parts the letters
+/// either side within a word.
+fn is_joiner(c: char) -> bool {
+    matches!(c, '\u{200C}' | '\u{200D}')
 }
 
 /// Lao's letters written two ways, written the way its keyboard types
@@ -227,8 +281,10 @@ impl WordList {
         // Where a word may start, and the run's end.
         let mut bounds = Vec::new();
         let mut before = None;
-        for (at, c) in run.char_indices() {
-            if before.is_none_or(|b| script.may_start(b, c)) {
+        let mut chars = run.char_indices().peekable();
+        while let Some((at, c)) = chars.next() {
+            let after = chars.peek().map(|&(_, a)| a);
+            if before.is_none_or(|b| script.may_start(b, c, after)) {
                 bounds.push(at);
             }
             before = Some(c);
@@ -450,6 +506,49 @@ mod tests {
             1,
             "ປະ is one word"
         );
+    }
+
+    #[test]
+    fn khmer_is_cut_where_its_words_may_start() {
+        let list = WordList::from_words(["ខ្ញុំ", "ស្រលាញ់", "ភាសា", "ខ្មែរ", "ខ", "ញុំ", "ៗ"]);
+        let cut = |run: &str| -> Vec<String> {
+            list.cut(Script::Khmer, run, false)
+                .into_iter()
+                .map(|r| run[r].to_string())
+                .collect()
+        };
+        assert_eq!(cut("ខ្ញុំស្រលាញ់ភាសាខ្មែរ"), ["ខ្ញុំ", "ស្រលាញ់", "ភាសា", "ខ្មែរ"]);
+        // No word starts on the consonant the coeng writes below another:
+        // ខ្ញុំ is not ខ and ញុំ.
+        let list = WordList::from_words(["ខ", "ញុំ"]);
+        assert_eq!(list.cut(Script::Khmer, "ខ្ញុំ", false).len(), 1);
+        // ៗ repeats the word before it, and ends no run; ។ ends one.
+        assert!(Script::Khmer.holds('ៗ') && !Script::Khmer.holds('។'));
+        assert!(!Script::Khmer.holds('\u{200B}') && Script::Khmer.holds('\u{200C}'));
+    }
+
+    #[test]
+    fn burmese_is_cut_at_its_syllables_starts() {
+        let list = WordList::from_words(["မြန်မာ", "စာ", "မင်္ဂလာ", "ပါ", "သူ"]);
+        let cut = |run: &str| -> Vec<String> {
+            list.cut(Script::Myanmar, run, false)
+                .into_iter()
+                .map(|r| run[r].to_string())
+                .collect()
+        };
+        assert_eq!(cut("မြန်မာစာ"), ["မြန်မာ", "စာ"]);
+        assert_eq!(cut("မင်္ဂလာပါ"), ["မင်္ဂလာ", "ပါ"]);
+        // ၏ is a word, though no list holds it.
+        assert_eq!(cut("သူ၏"), ["သူ", "၏"]);
+        // A consonant its asat or virama makes the last of a syllable
+        // starts no word (the န of မြန်), nor does one stacked under it.
+        let list = WordList::from_words(["မြ", "န်မာ", "ဂလာ"]);
+        assert_eq!(list.cut(Script::Myanmar, "မြန်မာ", false).len(), 1);
+        assert_eq!(list.cut(Script::Myanmar, "မင်္ဂလာ", false).len(), 1);
+        // ။ and the digits end a run.
+        assert!(!Script::Myanmar.holds('။') && !Script::Myanmar.holds('၁'));
+        assert_eq!(Script::of_lang("my"), Some(Script::Myanmar));
+        assert_eq!(Script::of_lang("km"), Some(Script::Khmer));
     }
 
     #[test]

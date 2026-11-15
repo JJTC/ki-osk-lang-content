@@ -31,7 +31,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
                  bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
                  brx doi hne mag brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw \
-                 dty anp new
+                 dty anp new km my
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -90,14 +90,14 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # FineWeb-2's web text, the whole corpus of languages with no Wikipedia of
 # their own: Bodo, Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi
 # (Magahi's beside its Incubator text), of Sindhi in Devanagari and Meitei
-# in the Bengali script, and of Lao, whose wiki is small
-# (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
+# in the Bengali script, and of Lao, Khmer and Burmese, whose wikis are
+# small or few write as people type (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
 # the held-out text is FineWeb-2's test split, in $(FINEWEB_DIR)/eval, and
 # like the corpus it is not committed. Reading parquet needs pyarrow:
 # FINEWEB_PYTHON names a Python that has it.
-FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha
+FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -240,7 +240,7 @@ PREDICT_WIDER_NGRAM ?= 90000
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
 # transliteration under a point.
 PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                      brx doi hne brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw dty anp
+                      brx doi hne brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw dty anp km my
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the

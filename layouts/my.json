@@ -4,11 +4,63 @@
   "xkb_layout": "mm",
   "direction": "ltr",
   "swipe_enabled": false,
-  "prediction_enabled": false,
+  "prediction_enabled": true,
+  "prediction_lang": "my",
   "views": [
     {
       "id": "base",
       "rows": [
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 4.0,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ဍ",
+              "output": {
+                "kind": "text",
+                "text": "ဍ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ၒ",
+              "output": {
+                "kind": "text",
+                "text": "ၒ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ဋ",
+              "output": {
+                "kind": "text",
+                "text": "ဋ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ရ",
+              "output": {
+                "kind": "text",
+                "text": "ရ"
+              }
+            },
+            {
+              "width_units": 4.0,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            }
+          ]
+        },
         {
           "height_units": 1.0,
           "keys": [
@@ -364,6 +416,57 @@
     {
       "id": "shift",
       "rows": [
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 4.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ဍ",
+              "output": {
+                "kind": "text",
+                "text": "ဍ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ၒ",
+              "output": {
+                "kind": "text",
+                "text": "ၒ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ဋ",
+              "output": {
+                "kind": "text",
+                "text": "ဋ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ရ",
+              "output": {
+                "kind": "text",
+                "text": "ရ"
+              }
+            },
+            {
+              "width_units": 4.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            }
+          ]
+        },
         {
           "height_units": 1.0,
           "keys": [
