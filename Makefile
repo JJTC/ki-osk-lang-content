@@ -43,13 +43,17 @@ PREDICT_OUT_DIR = predict
 # joins Tatoeba's for Hindi, Bengali and Marathi, whose lexicons it widens:
 # their transliteration tables (translit/) then find far more of the
 # words typed. Tatoeba's sentences count TATOEBA_WEIGHT times, so that
-# everyday text still leads the strip: keystroke savings on Tatoeba's
-# held-out text moved by -0.5 (hi), -0.1 (bn) and -0.3 (mr) points, words
-# the lexicon lacks fell from 4.0% to 1.6% (hi).
+# everyday text still leads the strip: words the lexicon lacks fell from
+# 4.0% to 1.6% (hi). At 30 (from 10) keystroke savings on Tatoeba's
+# held-out text rise 2.3 points (hi), 0.9 (bn), 0.6 (mr) and 2.0 (as,
+# beside FineWeb-2's text), for transliteration's first reading on
+# Dakshina's test sentences 0.3, 0.2 and 0.5 points less often right and
+# Assamese's savings on the web's text 0.6 points lower; at 100 Hindi's
+# rise 0.7 more and its transliteration falls 0.4 more.
 DAKSHINA_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 DAKSHINA_ONLY_LANGS ?= gu kn ml pa sd si ta te ur
 DAKSHINA_DIR = $(SRC_DIR)/dakshina
-TATOEBA_WEIGHT ?= 10
+TATOEBA_WEIGHT ?= 30
 
 # Wikipedia's own text, the whole corpus of languages Tatoeba and Dakshina
 # have too little of: Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
@@ -70,7 +74,7 @@ WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # (PREDICT_LARGE_LANGS): keystroke savings on Tatoeba's held-out text
 # 46.6% -> 48.2% (Armenian), 41.0% -> 41.9% (Persian), its words unknown
 # 4.8% -> 2.4% and 3.6% -> 2.3%, Wiktionary's words the lexicons have
-# 20% -> 50% and 46% -> 77%; counted ten times, as Hindi's is, the
+# 20% -> 50% and 46% -> 77%; counted ten times, as Hindi's were, the
 # savings fell two points. Their sentences are cut where a Latin word
 # stands (wikipedia-text.py --script-only): a tenth of their commonest
 # words were the references' Latin.
@@ -623,10 +627,13 @@ CHECK_REPORT       ?=
 # scripts/build-hinglish.py respells Hindi's corpora word by word in the
 # spellings Dakshina's romanization lexicons attest, as often as each was
 # typed (the rest by rule), leaving out the romanized test sentences whose
-# Latin side is eval/hi-Latn.txt; build-predict then counts them as Hindi's
-# are counted (Tatoeba's ten times). Its inputs are the corpora, the
-# lexicons and the script. After fetch-corpora and fetch-dakshina.
+# Latin side is eval/hi-Latn.txt; build-predict then counts Tatoeba's
+# HINGLISH_TATOEBA_WEIGHT times: ten, as Hindi's were (at 30, as Hindi's
+# are now, its savings on those sentences fall a point, 31.8% -> 30.8%,
+# they being Wikipedia's). Its inputs are the corpora, the lexicons and
+# the script. After fetch-corpora and fetch-dakshina.
 HINGLISH_DIR = $(DAKSHINA_DIR)/hinglish
+HINGLISH_TATOEBA_WEIGHT ?= 10
 # Spelled many ways, Hinglish's words are many: from 30 000 to 60 000, the
 # share of the held-out words its lexicon lacks falls from 16.2% to 13.4%.
 HINGLISH_VOCAB ?= 60000
@@ -643,7 +650,7 @@ hinglish-assets:
 		--input dakshina/hi.translit.sampled.test.tsv=$$d/lexicons/hi.translit.sampled.test.tsv \
 		--input dakshina/hi.romanized.rejoined.test.native.txt=$$d/romanized/hi.romanized.rejoined.test.native.txt \
 		--input scripts/build-hinglish.py=scripts/build-hinglish.py \
-		--recipe tatoeba_weight=$(TATOEBA_WEIGHT) \
+		--recipe tatoeba_weight=$(HINGLISH_TATOEBA_WEIGHT) \
 		--recipe vocab_size=$(HINGLISH_VOCAB) --recipe ngram_keep=$(HINGLISH_NGRAM) \
 		--recipe start_keep=$(PREDICT_START) --recipe words=$$(words_gen hi-Latn) \
 		--output $(PREDICT_OUT_DIR)/hi-Latn.fst --output $(PREDICT_OUT_DIR)/hi-Latn.ngram.bin \
@@ -657,7 +664,7 @@ hinglish-assets:
 		$(DAKSHINA_DIR)/hi.txt $(HINGLISH_DIR)/wikipedia.txt && \
 	echo "build-predict hi-Latn (vocab $(HINGLISH_VOCAB), n-grams $(HINGLISH_NGRAM))" && \
 	$(TOOLS) build-predict -- --lang hi-Latn \
-		--corpus $(TATOEBA_WEIGHT):$(HINGLISH_DIR)/tatoeba.txt --corpus $(HINGLISH_DIR)/wikipedia.txt \
+		--corpus $(HINGLISH_TATOEBA_WEIGHT):$(HINGLISH_DIR)/tatoeba.txt --corpus $(HINGLISH_DIR)/wikipedia.txt \
 		--out $(CURDIR)/$(PREDICT_OUT_DIR) --vocab-size $(HINGLISH_VOCAB) \
 		--ngram-keep $(HINGLISH_NGRAM) --start-keep $(PREDICT_START) && \
 	record "$$@"

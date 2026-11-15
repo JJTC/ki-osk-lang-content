@@ -136,7 +136,7 @@ first 300 000 lines (all, where fewer) of its filtered Wikipedia text
 (`<lang>.wiki-filt.train.text.shuf.txt.gz`). It is the whole corpus of
 Gujarati, Kannada, Malayalam, Punjabi, Sindhi, Sinhala, Tamil, Telugu and
 Urdu, of which Tatoeba has too few sentences, and is added to Tatoeba's
-for Hindi, Bengali and Marathi, Tatoeba's counted ten times. For those
+for Hindi, Bengali and Marathi, Tatoeba's counted thirty times. For those
 nine, the first 500 lines of its held-out text
 (`<lang>.wiki-filt.valid.text.shuf.txt.gz`) are `eval/<lang>.txt`.
 `scripts/fetch-dakshina.sh` reads the archive, pinned by its sha256;
@@ -168,7 +168,9 @@ Tatoeba sentences, the first 400 000 sentences of each, whose held-out
 articles are not committed (Tatoeba's held-out text measures them). The text is each wiki's CirrusSearch dump of 2026-11-08
 (Wikimedia's `cirrus_search_index`, an article's plain text a JSON
 field), pinned by sha256 in `scripts/fetch-wikipedia.sh`, cut into
-sentences by `scripts/wikipedia-text.py`: at most 400 000 a language.
+sentences by `scripts/wikipedia-text.py`, and where a word in another
+script stands, that word left out (the references' and English
+passages' Latin): at most 400 000 a language.
 Every 20th article is held out of it, and the first 500 sentences of
 those are `eval/<lang>.txt`. Three more learn from the Wikimedia
 Incubator's test wikis, in its dump of the same date (each article's

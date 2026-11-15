@@ -103,7 +103,7 @@ but no model to match the glide against · `—` off
 | `hne` | `hne` | Chhattisgarhi छत्तीसगढ़ी | in | LTR | **Full** (hne)⁷ | — | — |
 | `mag` | `mag` | Magahi मगही | in | LTR | **Full** (mag)⁶ ⁷ | — | — |
 | `gbm` | `gbm` | Garhwali गढ़वाली | in (+ ळ long-press) | LTR | **Full** (gbm)⁸ | — | — |
-| `raj` | `raj` | Rajasthani राजस्थानी | in (+ ळ long-press) | LTR | **Full** (raj)⁸ | — | — |
+| `raj` | `raj` | Rajasthani (Marwari) राजस्थानी | in (+ ळ long-press) | LTR | **Full** (raj)⁸ | — | — |
 | `hi-latn` | `hi-Latn` | Hinglish (Hindi in Latin letters) | us | LTR | **Full** (hi-Latn)⁵ | ✓ | — |
 | `trp` | `trp` | Kokborok | us | LTR | **Full** (trp)⁷ | ✓ | — |
 | `lus` | `lus` | Mizo | us + long-press â ê î ô û ṭ | LTR | **Full** (lus)⁷ | ✓ | — |
@@ -278,10 +278,16 @@ but no model to match the glide against · `—` off
 3. These twelve models learn from Wikipedia text, the Dakshina dataset's
    (CC BY-SA 4.0, share-alike; `scripts/fetch-dakshina.sh`): all of it
    for the nine Tatoeba has too few sentences of, beside Tatoeba's (counted
-   ten times) for Hindi, Bengali and Marathi, whose lexicons widen
+   thirty times) for Hindi, Bengali and Marathi, whose lexicons widen
    (Bengali's and Marathi's to 80 000 words) while their keystroke savings
-   on Tatoeba's held-out text hold or rise (Hindi 46.1%, from 46.6%;
-   Bengali 42.5%, from 40.7%; Marathi 42.8%, from 42.6%). Keystroke
+   on Tatoeba's held-out text rise (Hindi 48.2%, from 46.6% on Tatoeba's
+   alone; Bengali 43.4%, from 40.7%; Marathi 43.4%, from 42.6%). Counted
+   ten times, as they were until data release 0.24.0, Tatoeba's text led
+   less: Hindi saved 45.9%, Bengali 42.5%, Marathi 42.8%, for
+   transliteration's first reading on Dakshina's test sentences right
+   0.3, 0.1 and 0.5 points more often (their tables fitted again to the
+   new lexicons; Hindi's now reads 2.1 points more of Dakshina's test
+   words, Marathi's 0.7 fewer). Keystroke
    savings of the nine on held-out Wikipedia text: Punjabi 41.8%, Urdu
    41.8%, Sindhi 40.4%, Sinhala 36.1%, Tamil 34.5%, Gujarati 33.6%, Telugu
    32.8%, Malayalam 30.7%, Kannada 30.3%. The Dravidian languages' words
@@ -344,10 +350,10 @@ but no model to match the glide against · `—` off
    Dogri are measured on the words people romanized for AI4Bharat's
    Aksharantar dataset (its test split, 2 000 to 6 900 words each, mostly
    rare words and names; fetched to measure and fit, never shipped): of
-   those their lexicons have, the word comes first for Sanskrit 85.7%
-   (91.6% among the strip's two), Maithili 83.7% (89.3%), Konkani 79.5%
-   (84.9%), Meitei 77.8% (81.9%), Nepali 77.1% (82.9%), Odia 76.7%
-   (82.5%), Assamese 73.2% (77.1%), Bodo 67.7% (74.5%), Dogri 57.4%
+   those their lexicons have, the word comes first for Sanskrit 85.1%
+   (91.0% among the strip's two), Maithili 82.5% (88.4%), Konkani 79.5%
+   (84.9%), Meitei 77.8% (81.9%), Nepali 75.8% (81.8%), Odia 74.9%
+   (81.0%), Assamese 73.2% (77.1%), Bodo 67.7% (74.5%), Dogri 57.4%
    (63.1%) and Kashmiri 47.1% (61.2%). Assamese's lexicon, learned from
    FineWeb-2's text now (note 7), has 48% of its test words, from 17%,
    and of all of them puts 39.7% first, from 24.0% (of the few it had,
@@ -382,11 +388,11 @@ but no model to match the glide against · `—` off
    the words of its test sentences (Tulu's 45%), and how the people of a
    neighbouring language type them, the closest measure open data gives.
    Of those words, first: Tulu 89.4% (91.0% among the strip's two),
-   Bhojpuri 87.2% (92.2%), Awadhi 86.2% (93.2%), Sindhi in Devanagari
+   Bhojpuri 87.1% (92.4%), Awadhi 86.2% (93.2%), Sindhi in Devanagari
    85.9% (91.3%), Rajasthani 85.7% (93.0%), Adilabad Gondi 85.5% (87.8%),
    Garhwali 85.4% (93.2%), Angika 83.0% (90.6%), Newari 82.3% (89.8%),
    Dotyali 80.3% (89.1%), Chhattisgarhi 80.1% (92.9%), Magahi 79.1%
-   (90.6%), Western Punjabi 78.6% (88.5%), Saraiki 77.9% (85.7%), Khowar
+   (90.6%), Western Punjabi 80.0% (88.4%), Saraiki 78.2% (86.1%), Khowar
    77.2% (86.2%) and Brahui 67.0% (82.0%). Gondi's is Telugu's table and
    costs, Angika's Hindi's, Khowar's Urdu's with its own letters (ݯ ݮ ݰ ݱ
    beside چ ج ش ژ, څ ځ for ts and dz), Dotyali's and Newari's Nepali's,
@@ -464,10 +470,26 @@ but no model to match the glide against · `—` off
    Tulu, and Dotyali, Angika, Newari, Armenian and Persian (below).
    Keystroke savings on
    held-out articles of the first sixteen: Santali 50.2%, Kashmiri
-   48.6%, Maithili 43.4%, Meitei 43.2%, Bhojpuri 41.6%, Yiddish 41.0%,
-   Nepali 40.3%, Pashto 40.2%, Awadhi 40.2%, Mongolian 38.7%, Western
-   Punjabi 38.0%, Saraiki 37.0%, Odia 34.6%, Tulu 31.6%, Konkani 31.1%,
-   Sanskrit 27.5%. Each sentence is learned once: wikis that grew from
+   48.7%, Meitei 43.2%, Bhojpuri 43.0%, Maithili 42.1%, Pashto 41.3%,
+   Yiddish 41.1%, Awadhi 40.2%, Nepali 40.0%, Odia 39.6%, Western
+   Punjabi 38.6%, Mongolian 38.3%, Saraiki 37.4%, Tulu 31.6%, Konkani
+   31.1%, Sanskrit 26.9%. The wikis' sentences are cut where a word in
+   another script stands, the word left out (`wikipedia-text.py
+   --script-only`): their references and English passages had put Latin
+   words into their lexicons, two thirds of Nepali's 30 000 and three
+   fifths of Odia's in place of their own words, a sixth to a fifth of
+   Pashto's, Western Punjabi's, Maithili's, Sanskrit's and Mongolian's.
+   On the held-out articles cut so, the models before saved Odia 36.7%,
+   Bhojpuri 42.0%, Maithili 41.3%, Pashto 40.5%, Nepali 39.3%, Western
+   Punjabi 38.1%, Mongolian 37.9% and Saraiki 37.2%, the others as now;
+   the words unknown fell most in Odia's (19.4% -> 15.8%) and Pashto's
+   (4.9% -> 3.7%). The transliteration tables then find more of the
+   words people typed (Aksharantar's words first, of all of them:
+   Nepali 29.3% -> 31.2%, Odia 26.6% -> 27.8%, Maithili 38.5% ->
+   40.4%, Sanskrit 34.1% -> 36.5%), the lexicons holding more of them,
+   rarer and harder; Bhojpuri's, Western Punjabi's, Saraiki's, Odia's and
+   Sanskrit's costs were fitted again to the new lexicons (Sanskrit's dev
+   words 53.8% -> 57.3%). Each sentence is learned once: wikis that grew from
    templates repeat theirs (a quarter of Meitei's sentences were such
    copies, a fifth of Konkani's, an eighth of Maithili's), and the
    held-out text has none the model learned, as it had when Maithili
@@ -509,8 +531,8 @@ but no model to match the glide against · `—` off
    80 000 words: keystroke savings on Tatoeba's held-out sentences 46.6%
    -> 48.2% (Armenian) and 41.0% -> 41.9% (Persian), the words unknown
    4.8% -> 2.4% and 3.6% -> 2.3%, and the share of Wiktionary's words
-   their lexicons have 20% -> 50% and 46% -> 77% (counted ten times, as
-   Hindi's is, the savings fell two points). Their sentences are cut
+   their lexicons have 20% -> 50% and 46% -> 77% (counted ten times, the
+   savings fell two points). Their sentences are cut
    where a word in another script stands: the references' Latin
    (Wayback Machine, IMDb) was a tenth of their commonest words. Pashto's wiki writes ي
    inside a word as often as ی, which are one letter there (22 000 of
@@ -544,8 +566,9 @@ but no model to match the glide against · `—` off
    no Wikipedia of their own, Sindhi in Devanagari and Meitei in the
    Bengali script, whose wikis are in their other scripts, and Lao, whose
    wiki is small; and Assamese's beside its 14 000 Tatoeba sentences
-   (counted ten times), whose model lacked two fifths of the web's
-   running words.
+   (counted thirty times; at ten its savings on them were 42.3%, now
+   44.3%, on the web's held-out text 34.1%, now 33.5%), whose model
+   lacked two fifths of the web's running words.
    Its language classifier mistakes close languages, so a document is
    kept only when it reads as its language (`scripts/fineweb-text.py`):
    none heavy with Hindi's or Urdu's own function words, none that is a
@@ -624,7 +647,11 @@ but no model to match the glide against · `—` off
    Keystroke savings on those: Garhwali 31.9%, Rajasthani 30.1% (a tenth
    of the words unknown). Both are typed on Hindi's keys with ळ on the
    long press of ल, which both write (Rajasthani's सगळा, all); their
-   tables are Hindi's, with ळ for l at a small cost.
+   tables are Hindi's, with ळ for l at a small cost. Rajasthani's text
+   is Marwari's, the Rajasthani most written (its री रो सूं, म्हारो), and
+   its pack is named so, "Rajasthani (Marwari)": no source here has
+   Marwari apart from it (its test wiki in the Incubator is empty), so a
+   pack of its own would be the same files.
 
 ## Prediction model tiers
 

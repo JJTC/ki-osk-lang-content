@@ -46,21 +46,21 @@ BASE=https://dumps.wikimedia.org/other/cirrus_search_index/$DATE
 # neighbour whose articles and sentences are left out, as the
 # Incubator's below; --script-only]
 DUMPS="
-bho  bh   bhwiki_content-20261108-00000.json.bz2   e1becbc89778d7994831288afa94b9c1cce69d1b6b65a485d3500b34a5e822cc  -
-mai  mai  maiwiki_content-20261108-00000.json.bz2  1119ae395e8ca315a20422db6d09d5280e01e7d2530d301ebfb486212fcb5f4c  -
-mn   mn   mnwiki_content-20261108-00000.json.bz2   7712756bc38a38469c054fa6ea3239bf2d7bb593c4038f0208bcf48256b8f355  -
-ne   ne   newiki_content-20261108-00000.json.bz2   4e1254afeb877796bdc2caf1408a4400ab0ba6f5d1341fcf4be0f298addd0d5c  -
-or   or   orwiki_content-20261108-00000.json.bz2   26367cdc4341073a1d43ce6f79267b7832d65d6ccfc0939d24e7d2d9d1cec913  -
-pnb  pnb  pnbwiki_content-20261108-00000.json.bz2  ce4acfa4f564706f8643bd4cc2e39b82576a1aa6720571fefdfa6ea8fd7117b6  -
-ps   ps   pswiki_content-20261108-00000.json.bz2   7f4e3cb5f365405c45ac34851f6edf68c26d457da265d44492d835726a436451  -
-sa   sa   sawiki_content-20261108-00000.json.bz2   2bd0f5c4d0afe46270fb88f474fd5663c50458babbd9f18f632f5d4d60d3871c  DEVANAGARI
-sat  sat  satwiki_content-20261108-00000.json.bz2  bf8da87ab8e60974ab304b2486cdf55941c57900bc09cb9b64dea05974d7500c  OL_CHIKI
-yi   yi   yiwiki_content-20261108-00000.json.bz2   1beb539d0d40d423894bed9891b614c964f349056d6a88cfc65b13b133faae3c  HEBREW
+bho  bh   bhwiki_content-20261108-00000.json.bz2   e1becbc89778d7994831288afa94b9c1cce69d1b6b65a485d3500b34a5e822cc  DEVANAGARI  --script-only
+mai  mai  maiwiki_content-20261108-00000.json.bz2  1119ae395e8ca315a20422db6d09d5280e01e7d2530d301ebfb486212fcb5f4c  DEVANAGARI  --script-only
+mn   mn   mnwiki_content-20261108-00000.json.bz2   7712756bc38a38469c054fa6ea3239bf2d7bb593c4038f0208bcf48256b8f355  CYRILLIC  --script-only
+ne   ne   newiki_content-20261108-00000.json.bz2   4e1254afeb877796bdc2caf1408a4400ab0ba6f5d1341fcf4be0f298addd0d5c  DEVANAGARI  --script-only
+or   or   orwiki_content-20261108-00000.json.bz2   26367cdc4341073a1d43ce6f79267b7832d65d6ccfc0939d24e7d2d9d1cec913  ORIYA  --script-only
+pnb  pnb  pnbwiki_content-20261108-00000.json.bz2  ce4acfa4f564706f8643bd4cc2e39b82576a1aa6720571fefdfa6ea8fd7117b6  ARABIC  --script-only
+ps   ps   pswiki_content-20261108-00000.json.bz2   7f4e3cb5f365405c45ac34851f6edf68c26d457da265d44492d835726a436451  ARABIC  --script-only
+sa   sa   sawiki_content-20261108-00000.json.bz2   2bd0f5c4d0afe46270fb88f474fd5663c50458babbd9f18f632f5d4d60d3871c  DEVANAGARI  --script-only
+sat  sat  satwiki_content-20261108-00000.json.bz2  bf8da87ab8e60974ab304b2486cdf55941c57900bc09cb9b64dea05974d7500c  OL_CHIKI  --script-only
+yi   yi   yiwiki_content-20261108-00000.json.bz2   1beb539d0d40d423894bed9891b614c964f349056d6a88cfc65b13b133faae3c  HEBREW  --script-only
 kok  gom  gomwiki_content-20261108-00000.json.bz2  0a60c2753284ff11a8d4871ee64dcd72bcf753f7380b622cf152a04f3d93337c  DEVANAGARI
-ks   ks   kswiki_content-20261108-00000.json.bz2   0be241d83fa3e8f7dd6fabb6a9a97152e0cffd6450f02b8f2f8fbe5b4f94efb4  ARABIC
+ks   ks   kswiki_content-20261108-00000.json.bz2   0be241d83fa3e8f7dd6fabb6a9a97152e0cffd6450f02b8f2f8fbe5b4f94efb4  ARABIC  --script-only
 mni  mni  mniwiki_content-20261108-00000.json.bz2  99c8a4cf0de0a86b641d8c396755f5a1b838d46b73e4432b90d76c7ab3992d7f  MEETEI
 awa  awa  awawiki_content-20261108-00000.json.bz2  b9b119cc5dcb3b2f7c0e9c08d72384780ce21cd23db06474c5081a89008f0de5  DEVANAGARI
-skr  skr  skrwiki_content-20261108-00000.json.bz2  879bbf4d040968cda18a2476c43777f0ff84ba6dc229696be2172c06e863140b  ARABIC
+skr  skr  skrwiki_content-20261108-00000.json.bz2  879bbf4d040968cda18a2476c43777f0ff84ba6dc229696be2172c06e863140b  ARABIC  --script-only
 tcy  tcy  tcywiki_content-20261108-00000.json.bz2  985c3225bcfab543d358122f3ced04060446c1a2a5ddc1d7c16784e3801020e5  KANNADA
 dty  dty  dtywiki_content-20261108-00000.json.bz2  42b44cbca756eb46985b9ef5680aa95642bd4223a8ed636c520e399c55e95a31  DEVANAGARI
 anp  anp  anpwiki_content-20261108-00000.json.bz2  19363d8660dd1a8d540fcd7253851a9d90737ba4ac8cc59606a476fa6df458a3  DEVANAGARI  --neighbour hi
