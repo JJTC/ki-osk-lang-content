@@ -489,15 +489,15 @@
       }
     },
     "predict/fa": {
-      "encoder": "72384f480dd4-dirty",
+      "encoder": "02492e3658bb-dirty",
       "inputs": {
         "corpora/fa.txt": "753ae384859e3a8d9c28038c2afe1efa7d2b62b50263b042e29f82ab87a56c45",
-        "wikipedia/fa.txt": "34988c720dc5192858661d56913df2f851e3fa5d3eefe76326284184c1241a37"
+        "wikipedia/fa.txt": "2a1882264e909c591ef05c6a79ef1e22923279988a5ce25c5c4052c1e7090375"
       },
       "outputs": {
-        "predict/fa.forms.fst": "00603b548ed07cf1eaf277a7f4a39e87efee947e9422e83c08452018634a33e2",
-        "predict/fa.fst": "97c9cb168a4803da66bf84455346deb7e31cfb8283fc61e38ae46ff17eb5df4f",
-        "predict/fa.ngram.bin": "db6c767fda67ec6cb83e1038154bdf1551b605f6f32fa972002529df122241b9"
+        "predict/fa.forms.fst": "1dc4eb6394aafd28ea13021efdda3be99996e63068ebb13803825950c2aedf72",
+        "predict/fa.fst": "23443dfe55da30cff89ea22cc05bc99ebd858ea8f5b3e03560331a184d54cd3c",
+        "predict/fa.ngram.bin": "d29b48b10a9904ca386a45dfa1567cc60f81f6c2b3455f80c2f4e20318caf290"
       },
       "recipe": {
         "ngram_keep": "90000",
@@ -721,15 +721,15 @@
       }
     },
     "predict/hy": {
-      "encoder": "72384f480dd4-dirty",
+      "encoder": "02492e3658bb-dirty",
       "inputs": {
         "corpora/hy.txt": "cc3312f4b662cd5539f637329b2ddd23cc30aff5e7ce8b6565a0418f58bc1785",
-        "wikipedia/hy.txt": "d4b55f13153db8851f04c3d942df0c6ddbf9312ca6b022242373058a30af4aaf"
+        "wikipedia/hy.txt": "515147dc481a1fa6b2528c2aac361c1fb3d130b8fecea05342d52917c435d4a4"
       },
       "outputs": {
-        "predict/hy.forms.fst": "fbdccc427bca90eb583d913a47f9b0979d4f84e22ea850fd1bac2de1769a40aa",
-        "predict/hy.fst": "d4ce0cbc13e6f878a4bb19bbcd898640abaa94c5a6efbe3b8ae3953ab84aef84",
-        "predict/hy.ngram.bin": "119354908b1d64cce97116c48ca7d0355e50cc49d90331870ac3a172709772ce"
+        "predict/hy.forms.fst": "babc5e6fdb145b2e692196668adba0e0f1a93b388af74987edee4655d6fb62cd",
+        "predict/hy.fst": "104fd6948c20dc08b6d6ee4e6481f396682b618ee40ea02a0f608f263e1027f1",
+        "predict/hy.ngram.bin": "1504eb60e6be5e1f2f48068d09965b9cd4343014a468ec44b5c0100bf3cfc657"
       },
       "recipe": {
         "ngram_keep": "90000",

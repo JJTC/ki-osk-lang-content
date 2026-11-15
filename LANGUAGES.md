@@ -417,9 +417,9 @@ but no model to match the glide against · `—` off
    typed (ġ gh, x kh, č ch; `scripts/wiktionary-romanized.py`), so this
    measures how often the table and its lexicon find a word spelled as
    the table expects, not how people spell it. Of the words its lexicon
-   has, first: Armenian 95.8% (19 123 words, the lexicon having 49% of
+   has, first: Armenian 95.8% (19 123 words, the lexicon having 50% of
    them), Mongolian 94.2% (4 906; 54%), Santali 87.3% (787; 77%), Pashto
-   75.1% (1 409; 68%) and Persian 74.8% (13 531, Wiktionary's Iranian
+   75.1% (1 409; 68%) and Persian 74.7% (13 531, Wiktionary's Iranian
    romanization, the one Finglish follows; 77%), where most of the rest
    are words Finglish spells alike (safar: سفر, صفر). Persian's table now
    reads a consonant typed twice, as Wiktionary writes a doubled one, as
@@ -507,10 +507,12 @@ but no model to match the glide against · `—` off
    sentences of each (eight and thirteen times Tatoeba's), Tatoeba's
    counted a hundred times so that everyday text leads the strip, and
    80 000 words: keystroke savings on Tatoeba's held-out sentences 46.6%
-   -> 48.2% (Armenian) and 41.0% -> 41.7% (Persian), the words unknown
-   4.8% -> 2.7% and 3.6% -> 2.4%, and the share of Wiktionary's words
-   their lexicons have 20% -> 49% and 46% -> 77% (counted ten times, as
-   Hindi's is, the savings fell two points). Pashto's wiki writes ي
+   -> 48.2% (Armenian) and 41.0% -> 41.9% (Persian), the words unknown
+   4.8% -> 2.4% and 3.6% -> 2.3%, and the share of Wiktionary's words
+   their lexicons have 20% -> 50% and 46% -> 77% (counted ten times, as
+   Hindi's is, the savings fell two points). Their sentences are cut
+   where a word in another script stands: the references' Latin
+   (Wayback Machine, IMDb) was a tenth of their commonest words. Pashto's wiki writes ي
    inside a word as often as ی, which are one letter there (22 000 of
    its words both ways), and Arabic ك, Persian گ and ى for ک ګ ی: its
    words are read with them made one, as its keyboard types them

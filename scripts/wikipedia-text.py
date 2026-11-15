@@ -35,8 +35,16 @@ out, as scripts/fineweb-text.py leaves out such a web page: a test wiki's
 writers paste their neighbour's articles in; and so is a sentence more
 than 15% of whose words are those, from an article that mixes the two.
 
+With --script-only, a sentence is cut where a word with letters of
+another script stands, the word left out, and each piece of three words
+or more kept: the Persian and Armenian wikis' references write
+`Wayback Machine`, `IMDb` and `displaystyle` into their sentences, a
+tenth of the 80 000 commonest words, none of them typed on those
+languages' keys.
+
     wikipedia-text.py [--cap N] [--eval N] [--holdout K] [--script NAME]
-                      [--prefix P] [--neighbour hi|ur] OUT EVAL DUMP...
+                      [--script-only] [--prefix P] [--neighbour hi|ur]
+                      OUT EVAL DUMP...
 
 The dumps are read in the order given, the articles in dump order, so
 the same dumps always give the same files.
@@ -71,17 +79,28 @@ def in_script(s, script):
     return 2 * own >= len(letters)
 
 
-def sentences(text, script, neighbour=None):
+def script_runs(s, script):
+    """`s` cut where a word has letters of another script, those left out."""
+    runs, run = [], []
+    for w in s.split():
+        if all(unicodedata.name(c, "").startswith(script) for c in w if c.isalpha()):
+            run.append(w)
+        elif run:
+            runs.append(" ".join(run))
+            run = []
+    if run:
+        runs.append(" ".join(run))
+    return runs
+
+
+def sentences(text, script, neighbour=None, script_only=False):
     for s in END.split(STEERING.sub("", text)):
         s = " ".join(s.split())
-        if (
-            len(s) <= 1000
-            and len(s.split()) >= 3
-            and not MARKUP.search(s)
-            and (not script or in_script(s, script))
-            and not (neighbour and neighbourly(s, neighbour, 0.15))
-        ):
-            yield s
+        if MARKUP.search(s) or (neighbour and neighbourly(s, neighbour, 0.15)):
+            continue
+        for s in script_runs(s, script) if script_only and script else [s]:
+            if len(s) <= 1000 and len(s.split()) >= 3 and (not script or in_script(s, script)):
+                yield s
 
 
 def main():
@@ -90,6 +109,8 @@ def main():
     ap.add_argument("--eval", type=int, default=500, help="held-out sentences written")
     ap.add_argument("--holdout", type=int, default=20, help="every K-th article held out")
     ap.add_argument("--script", help="keep sentences at least half of whose letters are of this script")
+    ap.add_argument("--script-only", action="store_true",
+                    help="with --script, cut a sentence where another script's word stands")
     ap.add_argument("--prefix", help="read only the articles whose title starts so (the Incubator's Wp/mag/)")
     ap.add_argument("--neighbour", choices=sorted(NEIGHBOURS), help="leave out articles heavy with its words")
     ap.add_argument("out")
@@ -119,10 +140,10 @@ def main():
                         continue
                     articles += 1
                     if articles % opts.holdout == 0:
-                        for s in sentences(text, opts.script, neighbour):
+                        for s in sentences(text, opts.script, neighbour, opts.script_only):
                             held.setdefault(s, None)
                         continue
-                    for s in sentences(text, opts.script, neighbour):
+                    for s in sentences(text, opts.script, neighbour, opts.script_only):
                         if corpus < opts.cap and s not in seen:
                             seen.add(s)
                             out.write(s + "\n")

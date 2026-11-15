@@ -68,10 +68,12 @@ WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # held-out text stays Tatoeba's (eval/<lang>.txt); the wiki's held out
 # goes to $(WIKIPEDIA_DIR)/eval, uncommitted. With 80 000 words
 # (PREDICT_LARGE_LANGS): keystroke savings on Tatoeba's held-out text
-# 46.6% -> 48.2% (Armenian), 41.0% -> 41.7% (Persian), its words unknown
-# 4.8% -> 2.7% and 3.6% -> 2.4%, Wiktionary's words the lexicons have
-# 20% -> 49% and 46% -> 77%; counted ten times, as Hindi's is, the
-# savings fell two points.
+# 46.6% -> 48.2% (Armenian), 41.0% -> 41.9% (Persian), its words unknown
+# 4.8% -> 2.4% and 3.6% -> 2.3%, Wiktionary's words the lexicons have
+# 20% -> 50% and 46% -> 77%; counted ten times, as Hindi's is, the
+# savings fell two points. Their sentences are cut where a Latin word
+# stands (wikipedia-text.py --script-only): a tenth of their commonest
+# words were the references' Latin.
 WIKIPEDIA_PLUS_LANGS ?= hy fa
 TATOEBA_WIKI_WEIGHT ?= 100
 
