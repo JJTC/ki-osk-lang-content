@@ -87,7 +87,6 @@ accordion അക്കോർഡിയൻ
 accosting കാസ്റ്റിങ്
 account കൗണ്ട്
 accountancy അക്കൗണ്ടൻസി
-accountant അക്കൗണ്ടിന്റ്
 accounted അക്കൗണ്ട്
 accounting അക്കൗണ്ടിംഗ്
 accounts അക്കൗണ്ട്‌സ്
@@ -97,11 +96,10 @@ accrued ക്രൂഡ്
 accrues ക്രോസ് ക്രൂസ്
 accustom കസ്റ്റം
 ace എസ്
-acero സെറോ തേരോ
 acerra സെറ അസർ
 acetate അസറ്റേറ്റ്
 acetone അസറ്റോൺ
-acetylene അസറ്റലിൻ അസറ്റ്‌ലീൻ
+acetylene അസെറ്റ്ലീൻ അസെറ്റിലീൻ
 achaean ചീയാൻ
 ache ഏക ഏക്
 ached ഏക്ത
@@ -674,7 +672,6 @@ animate എണ്ണമറ്റ അനാമത്ത്
 ankh ഇങ്ക് ഇൻക്
 ann ആണ് എൻ
 anna എന്ന എൻ
-annas അനസ് അനാസ്
 annaud നോട് ആനോഡ്
 anne ആണ് എൻ
 anneal അനിൽ നീൽ
@@ -709,12 +706,13 @@ antaya ആന്റി
 antell ഇന്റൽ ഇന്റെൽ
 antenna എന്തെന്ന് ഇന്റേൺ
 antennae ആന്റണി
-antenne എന്തെന്ന് ആന്റൺ
+antenne ആന്റൺ എന്തെന്ന്
 anterior ഇന്റീരിയർ
 anthill ഇനത്തിൽ എന്നതിൽ
 anthon എന്താണ് ആന്റൺ
 anthony ആന്തണി
 antic അണ്ടിക്കു അന്റിക്ക
+antics ഇന്റക്സ്
 antietam അന്റീറ്റം
 antigua ആന്റിഗ്വ
 antill ആണ്ടിൽ ഇന്റൽ
@@ -900,7 +898,7 @@ asche ആഷ് ആശ
 ascii ആസ്കി
 ascott സ്കോട്ട് സ്കോട്
 asda അസദ്
-asea ആസിയ
+asea അസിയ ആസിയ
 asean ആസിയാൻ അജയൻ
 aselma സെൽമ സൽമ
 ash ആശ
@@ -914,11 +912,11 @@ asia ഏഴു ഏഴ്
 asiain ഏജിയൻ
 asian ഏഴിന് ഏഴിനു
 asians ഇഴഞ്ഞ്
-asic ഐസക് ഇസ്സിക്
 aside സൈദ് സൈഡ്
 ask ഐസക്
 aska ഐസക് ആസ്ക്
-asked ഇസ്റ്റ് അസറ്റ്
+askance അസ്കേനസ്
+asked അസ്തു ഇസ്റ്റ്
 askew സ്ക്യൂ
 askin സ്കിൻ സ്കീൻ
 asleep സ്ലീപ് സ്‌ലിപ്
@@ -935,18 +933,19 @@ assante അശാന്തി
 assault സാൾട്ട് സാൽട്
 assaults സാൾട്ട്സ്
 assays എസ്സേയ്സ്
-assed ഇസ്റ്റ് അസറ്റ്
-assembler അസംബ്ലർ
+assed അസ്തു ഇസ്റ്റ്
+assembler അസെംബ്ലർ അസംബ്ലർ
 assemblies അസംബ്ലീസ്
 assembly അസംബ്ലി അസെംബ്ലി
 assent സെന്റ്
 assess സൈസ് സസ്
-assessment അസസ്മെന്റ് അസസ്സ്മെന്റ്
-asset അസറ്റ് അസത്ത്
-assign സൈൻ
+assessment അസെസ്മെന്റ് അസസ്മെന്റ്
+asset അസെറ്റ് അസറ്റ്
+assign സൈൻ അസൈൻ
 assira സീറാ സേറാ
 assistance സിസ്റ്റംസ് അസിസ്റ്റൻസ്
 assistant അസിസ്റ്റന്റ്
+assistants അസിസ്റ്റന്റ്‌സ്
 assisted അസിസ്റ്റഡ്
 associate അസോസിയേറ്റ്
 associates അസോസിയേറ്റ്സ്
@@ -959,7 +958,7 @@ assumption അസംപ്ഷൻ അസം‌പ്ഷൻ
 assurance അഷുറൻസ്
 assure ശുർ അഷൂർ
 assured ഷോർട്
-assyria അസീറിയ
+assyria അസീറിയ അസിറിയ
 assyrian അസീറിയൻ അസ്സീറിയൻ
 asta ആസ്തി ഓസ്റ്റ്
 astaire എസ്തേർ എസ്റ്റർ
@@ -969,8 +968,9 @@ astor എസ്റ്റർ എസ്തേർ
 astra എസ്റ്റർ എസ്തർ
 astray സ്ത്രി ഇസ്ത്രി
 astro ആസ്റ്റ്രോ
+astronomer അസ്ട്രോണമർ
 astronomy അസ്ട്രോണമി ആസ്ട്രോണമി
-astrophysics ആസ്ട്രോഫിസിക്സ്
+astrophysics ആസ്ട്രോഫിസിക്സ് അസ്ട്രോഫിസിക്സ്
 asuncion അസൻഷൻ അസംഷൻ
 asunder സാൻഡർ സന്താര
 asus എസ്സ്
@@ -1140,6 +1140,7 @@ awe ആ എ
 awed ആട് ഓട്
 aweida വേദ അവെഡ
 awesome അസം ആസാം
+awestruck അസ്ട്രുക്ക്
 awkward അക്വാർഡ്
 awning ഒന്നിന് ആണെന്ന്
 awoke വോക് വോക്ക്
@@ -1164,7 +1165,6 @@ aytes ഇറ്റ്സ്
 ayyad ഐയോട്
 azbell ഇസബെൽ
 azmeer അജ്മീർ ഇസ്മിർ
-azores അസോർസ് സോർസ്
 azuka അശോക അശോക്
 azzato അസതോ അസറ്റൊ
 baade ബാഡ് ബാദ്
@@ -1290,7 +1290,7 @@ ballet ബാലെ ബാല
 ballew ബാലു ബെലോ
 balli ബലി ബാലി
 ballin ബാലൻ ബലീൻ
-balling ബാലൻ ബൗളിങ്ങ്
+balling ബാലൻ ബൗളിംഗ്
 ballistic ബാലിസ്റ്റിക്
 ballo ബെലോ ബേലോ
 ballon ബാലൻ
@@ -2366,6 +2366,7 @@ bracher ബ്രേക്കർ
 bracht ബ്രെക്റ്റ്
 bracker ബ്രേക്കർ
 bradlee ബ്രാഡ്ലി ബ്രാഡ്‌ലി
+bradway ബ്രാഡ്വേ
 braga ബ്രാഗ്
 bragg ബ്രാഗ്
 brahmin ബ്രോമിൻ
@@ -2510,7 +2511,7 @@ broadcasting ബ്രോഡ്കാസ്റ്റിങ്ങ് ബ്രോ
 broadie ബ്രോഡി
 broadley ബ്രാഡ്ലി ബ്രാഡ്‌ലി
 broadly ബ്രാഡ്ലി ബ്രാഡ്‌ലി
-broadway ബ്രോഡ്വേ
+broadway ബ്രോഡ്വേ ബ്രാഡ്വേ
 broady ബ്രോഡി
 broce ബ്രോസ്
 brochu ബ്രോക്ക് ബറോക്
@@ -2893,7 +2894,7 @@ caison കസിൻ കേസിന്
 caisse കേസ്
 caisson കസിൻ കേസിന്
 caissons കസിൻസ്
-caitlin കാതലീൻ കടലിനു
+caitlin കാത്ലീൻ കാതലീൻ
 caito കറ്റൊ
 cajole കാജോൾ
 cake കേക്ക് കേക
@@ -3052,8 +3053,8 @@ carie കയറി കെറി
 cariker കരികാർ
 caring കെരെൻ കരിൻ
 carl കരൾ കാറൽ
-carleen കരളിനു കരളിന്
-carlene കരളിനു കരളിന്
+carleen കരളിന് കരളിനു
+carlene കരളിന് കരളിനു
 carlisle കാർലൈൽ
 carll കരൾ കാറൽ
 carlough കാർലോ
@@ -3126,6 +3127,7 @@ cascade കാസ്കേഡ്
 case കേസ്
 casein കസിൻ കേസിന്
 casella കോസല കാസ്സൽ
+cases കേസ്സ്
 cash കാശ്
 cashew കാഷ് കാശ്
 cashier കശേരു
@@ -3159,6 +3161,7 @@ catacomb കാടകം കടകം
 catain കടന്നു കൈറ്റിൻ
 catalogue കാറ്റലോഗ്
 cataloguing കാറ്റലോഗിങ്
+catawba കറ്റൗബ
 catch കച്ച്
 catcher കച്ചാർ
 cathedral കത്തീഡ്രൽ കതീഡ്രൽ
@@ -3292,7 +3295,7 @@ chairman ചെയർമാൻ
 chait ചെയ്തു ചെയ്ത്
 chalet ശൈലി ശില
 chalets ശൈലജ
-chalk ചക് ചാക്ക്
+chalk ചക് ചൗക്ക്
 chalker ചാകര
 challenge ചലഞ്ച്
 challenger ചലഞ്ചർ ചാലഞ്ചർ
@@ -3304,7 +3307,7 @@ champ ചെമ്പ് ചെമ്പു
 champaign ചെമ്പൻ
 champoux ഷാമ്പൂ ഷാംപൂ
 chance ചാൻസ്
-chancellor ചാൻസലർ
+chancellor ചാൻസലർ ചാൻസ്ലർ
 chandon ശന്തനു ശാന്തൻ
 chanel ഷാനെൽ
 change ചേഞ്ച്
@@ -3574,7 +3577,7 @@ cinnamon സിന്നമൺ
 cinq സിങ്ക്
 cinque സിങ്ക്
 cinram സെന്റം
-cinthie സെന്റീ സെന്റി
+cinthie സെന്റി സെന്റീ
 ciocca ചോക് ചോക്ക്
 ciotti ചോതി
 cipher സൈഫർ
@@ -3627,6 +3630,7 @@ classmates ക്ലാസ്മേറ്റ്സ്
 classon കലാസൻ
 claude ക്ലൗഡ് ക്ലോഡ്
 claudia ക്ലോഡിയ
+claudie ക്ലൗഡി
 claudius ക്ലോഡിയസ് ക്ലാഡിയസ്
 claus ക്ലാസ് ക്ലോസ്
 clause ക്ലാസ് ക്ലോസ്
@@ -4010,10 +4014,10 @@ conoco കോങ്കോ
 conolly കനോലി കാനോലി
 conquer കാങ്കർ
 conran കാന്റൺ കാന്റീൻ
-conrey കാന്റി കാൻറി
-conroe കൊൻറോ
-conrow കൊൻറോ
-conry കാന്റി കാൻറി
+conrey കാന്റി കാനറി
+conroe കൊന്റോ
+conrow കൊന്റോ
+conry കാന്റി കാനറി
 cons കാൻസ് കൊഞ്ച്
 consenting കൺസേണിങ്
 conser കാൻസർ
@@ -4192,7 +4196,6 @@ cottee കോടി കൊടി
 cottle കടൽ കാതൽ
 cotton കടന്നു കടന്ന്
 cottons കടഞ്ഞ് കടഞ്ഞു
-cougar കൂഗർ
 cough കാഫ് കഫ്
 coughed കോഫ്ത
 coughing കോഫിൻ കഫീൻ
@@ -4279,9 +4282,9 @@ cravin ക്രേവൻ
 craving ക്രേവൻ
 crawl ക്രോൾ ക്രൗൾ
 crawler കരാളർ
-crawley കരൗലി
+crawley ക്രൗളി
 crawling കരോളിൻ കരോലിൻ
-crawly കരൗലി
+crawly ക്രൗളി
 crawmer ക്രാമർ
 crayne കരേൻ
 crays കറേജ്
@@ -4377,9 +4380,10 @@ crowe ക്രോ
 crowell ക്രൗൾ ക്രോൾ
 crowl ക്രൗൾ
 crowle ക്രൗൾ
-crowley കരൗലി
+crowley ക്രൗളി
 crown ക്രൗൺ
 crowne ക്രൗൺ
+crowned ക്രൗൺഡ്
 crows ക്രോസ് ക്രോസ്സ്
 crowther ക്രൗത്തർ
 cruce ക്രോസ് ക്രൂസ്
@@ -4427,7 +4431,7 @@ cuccia കോച്ച് കുച്ച്
 cuckoo കുക്ക് കൂകൂ
 cuco കോകോ
 cuddle കടൽ
-cuddling കടലിനു കടലിന്
+cuddling കടലിന് കടലിനു
 cuddly കദളി
 cudgel കാജൽ കാജോൾ
 cue ക്യൂ ക്യു
@@ -4489,8 +4493,8 @@ curie ക്യൂറി
 curl കരൾ കാറൽ
 curle കോറൽ കാറൽ
 curless കാർലോസ്
-curlin കരളിനു കരളിന്
-curling കർളിംഗ് കരളിനു
+curlin കരളിന് കരളിനു
+curling കർളിംഗ് കരളിന്
 curnow കാർണോ
 curnutt കർണാട് കറന്റ്
 curnutte കർണാട് കർണാട
@@ -4551,7 +4555,7 @@ cymbal സിമ്പിൾ
 cynara കിന്നര കണ്ണാറ
 cynic സീനിക്
 cynth സെന്റ്
-cynthie സെന്റീ സെന്റി
+cynthie സെന്റി സെന്റീ
 cypher സൈഫർ
 cypress സൈപ്രസ്
 cyprian സിപ്രിയൻ
@@ -4663,12 +4667,12 @@ danny ടൈനി ഡാനി
 dano ഡോനോ
 dansie ടെനസി
 dante ദാന്തെ
-dantin ടണ്ടൻ ദാന്തൻ
+dantin ഡെന്റീൻ ടണ്ടൻ
 danton ടണ്ടൻ ദാന്തൻ
 danube ഡാന്യൂബ്
 danza ടൈംസ്
 danzy ടെനസി
-dao ഡൗ ദൗ
+dao ഡൗ ടൗ
 darak ടെറെക് ഡെറക്
 darbonne ടർബൻ ദർബൻ
 darcie ടർക്കി
@@ -4736,7 +4740,7 @@ dawdy ഡാഡി ദാടി
 dawes ദാസ് ഡോസ്
 dawkins ഡോക്കിൻസ്
 dawley ദാലി ഡോളി
-dawn ഡോൺ ടൗൺ
+dawn ടൗൺ ഡോൺ
 dawned ഡോണ്ട്
 dawning ടാനിൻ
 dawns ഡാൻസ് ടോംസ്
@@ -4925,16 +4929,17 @@ denomme ദൈനം
 dense ടൈംസ്
 denshin ടെൻഷൻ
 denson ടെൻസിൻ
-dent ടെൻ‌ത്
+dent ടെൻത്
 dental ടണൽ
-dentin ടണ്ടൻ
-denton ടണ്ടൻ
-dentton ടണ്ടൻ
+dentine ഡെന്റീൻ
+denting ഡെന്റീൻ
+denton ടണ്ടൻ ഡെന്റീൻ
+dentton ടണ്ടൻ ഡെന്റീൻ
 denys ടെന്നിസ് ഡെനിസ്
 denzil ഡെൻസൽ
 deo ടിയോ ഡിയോ
 deon ടിയാൻ ടീയാൻ
-department ഡിപ്പാർട്ട്മെന്റ് ഡിപ്പാർട്മെന്റ്
+department ഡിപ്പാർട്ട്മെന്റ് ഡിപാർട്ട്മെന്റ്
 departmental ഡിപ്പാർട്ട്മെന്റിൽ
 depo ഡിപ്പോ
 deported ഡിപ്പാർട്ടട്
@@ -5352,19 +5357,20 @@ douville ട്യൂവൽ ഡോവൽ
 douwe ഡോ ദ്
 dove ടോവ് ടാവു
 dovey ദേവ ദാവ
-dow ഡൗ ദൗ
-dowe ഡൗ ദൗ
+dow ഡൗ ടൗ
+dowe ഡൗ ടൗ
 dowell ടവൽ ഡോവൽ
 dowen ടൗൺ ഡൗൺ
 down ടൗൺ ഡൗൺ
 downe ടൗൺ ഡൗൺ
 downen ടൗണിന്
-downes ടൗൺസ്
+downer ഡൗണർ
+downes ഡൗൺസ് ടൗൺസ്
 downey ഡൗണി
 downie ഡൗണി
 downing ടൗണിന്
-download ഡൗൺലോഡ്
-downs ടൗൺസ്
+download ഡൗൺലോഡ് ഡൗൻലോഡ്
+downs ഡൗൺസ് ടൗൺസ്
 downy ഡൗണി
 dowse ദൗസ
 doxey ടാക്സി
@@ -5686,7 +5692,7 @@ early ഏർലി ഏർളി
 earn ആരൺ
 earned അരണ്ട
 earney അരണി
-earp അരപു അരപ്പ്
+earp അരപ്പ് അരപു
 earring എറിൻ ഇറേൻ
 ears ഐആർഎസ് എർസ
 earth എർത്ത് ആർട്ട്
@@ -5964,6 +5970,7 @@ enterprise എന്റർപ്രൈസ് എന്റെർപ്രൈസ�
 enterra ഇന്റർ ഇന്റെർ
 entomb എന്തും
 entrance എൻട്രൻസ്
+entreaty എന്റ്റിറ്റി
 enzon ഇൻജൻ
 enzyme എൻസൈം
 eohippus ഇയോഹിപ്പസ്
@@ -6097,9 +6104,12 @@ eusebio യുസേബിയോ
 eustace യുസ്തൂസ് യുസ്‌തുസ്
 eustachian യൂസ്റ്റേക്കിയൻ
 eustis യുസ്തൂസ് യുസ്‌തുസ്
+evaleen എവ്ലിൻ
 evan ഇവൻ
 evans ഇവിൻസ്
 evatt ഇവിട
+eveline എവ്ലിൻ
+evelyn എവ്ലിൻ
 even ഇവന്
 evening ഈവനിംഗ്
 evens ഇവാൻസ്
@@ -6112,6 +6122,7 @@ evil ഈവിൽ ഇവൾ
 evin ഇവൻ ഇവന്
 evince ഇവിൻസ്
 evitt ഇവിട
+evlyn എവ്ലിൻ
 evon ഇവാൻ ഇവൻ
 evonne ഇവാൻ ഇവൻ
 ewell യൂൾ യൂവെൽ
@@ -6208,7 +6219,7 @@ falin ഫാലൻ
 falise ഫെലിസ്
 falkland ഫാക്ലൻഡ്
 falkner ഫോക്നർ
-fall ഫാൾ ഫല
+fall ഫാൾ ഫൗൾ
 falla ഫല ഫെലോ
 fallaw ഫെലോ ഫെല്ലോ
 fallen ഫാലൻ
@@ -6293,7 +6304,7 @@ fauss ഫോസ് ഫാസ്
 fausta ഫാസ്റ്റ്
 fauteux ഫോട്ടോ
 fauth ഫാറ്റ്
-faw ഫാ ഫൊ
+faw ഫാ ഫൗ
 fawkes ഫോക്സ് ഫൗക്സ്
 fawley ഫോളി ഫോലി
 fawn ഫോൺ ഫാൻ
@@ -6573,7 +6584,7 @@ fly ഫ്ലൈ ഫ്ളൈ
 flye ഫ്ലൈ ഫ്ളൈ
 flying ഫ്ലൈയിംഗ് ഫ്ലൈയിങ്ങ്
 flynn ഫ്ലിൻ
-flynt ഫ്ലിന്റ്
+flynt ഫ്ലിന്റ് ഫ്ളിന്റ്
 foam ഫോം
 foaming ഫോമിംഗ്
 foard ഫോർഡ്
@@ -6736,6 +6747,7 @@ freemon ഫ്രീമാൻ ഫ്രീമൻ
 freer ഫ്രിയർ
 freese ഫ്രീസ്
 freestyle ഫ്രീസ്റ്റൈൽ ഫ്രീസ്‌റ്റൈൽ
+freetown ഫ്രീടൗൺ
 freeware ഫ്രീവെയർ
 freeze ഫ്രീസ്
 freidman ഫ്രീഡ്മാൻ
@@ -7075,7 +7087,7 @@ genoa ജെനോവ
 genome ജീനോം
 genomics ജീനോമിക്സ് ജിനോമിക്സ്
 genova ജെനോവ
-genre സാന്റാ
+genre സാന്റാ സാന്റ
 genteel ജെന്റിൽ
 genter ജന്തർ
 gentiles ജെന്റൈൽസ്
@@ -7354,7 +7366,7 @@ gooda ഗുഡ് ഗോഡ്
 goodall ഗുഡാൽ
 goode ഗുഡ് ഗോഡ്
 goods ഗുഡ്സ്
-goodwill ഗുഡ്‌വിൽ
+goodwill ഗുഡ്‌വിൽ ഗുഡ്വിൽ
 goodwyn ഗുഡ്വിൻ ഗുഡ്‌വിൻ
 gooey ജിയുഐ
 google ഗൂഗിൾ
@@ -7391,6 +7403,7 @@ gotta ഗോട്ട് ഗട്ടാ
 gotten ഗാത്തൂൺ
 gotti ഗതി
 goudeau ഗോദോ
+goudie ഗൗഡി
 gough ഗോഫ്
 goughnour ഗൗണാർ
 gouin ഗ്വിൻ
@@ -7407,6 +7420,7 @@ goverment ഗവർമെന്റ്
 governing ഗവേർണിംഗ്
 government ഗവർമെന്റ് ഗവർണ്മെന്റ്
 governor ഗവർണർ ഗവർണ്ണർ
+gowdy ഗൗഡി
 gown ഗൗൺ
 goza ഗോസ്
 grabbe ഗ്രബ്
@@ -7977,7 +7991,7 @@ hauling ഹാളിന് ഹാളിനു
 haun ഹാൻ ഹോൺ
 haunt ഹാന്റ്
 haury ഹാരി
-hausen ഹൗസിന് ഹൗസിനു
+hausen ഹൗസിനു ഹൗസിന്
 hauss ഹൗസ്
 haut ഹാറ്റ് ഹോട്ട്
 hautala ഹോട്ടൽ
@@ -8164,11 +8178,11 @@ henness ഹൈനസ്
 henney ഹണി ഹണീ
 hennis ഹൈനസ്
 hennon ഹെനാൻ ഹൈനാൻ
-henrika ഹെൻറിക്ക് ഹെന്റിക്
+henrika ഹെന്റിക്ക് ഹെന്റിക്
 henrique അംരീക അന്റിക്ക
 henriques അംരീക അന്റിക്ക
 henriquez അംരീക അന്റിക്ക
-henry ഹെന്റി
+henry ഹെന്രി
 hens ഹൈൻസ്
 henslee ഹെൻസ്ലി
 henson ഹെൻസൺ
@@ -8500,7 +8514,7 @@ hoppert ഹപ്പെർട്ട്
 hoppes ഹോപ്സ്
 hopping ഹോപ്പിന്
 hopps ഹോപ്സ്
-hora ഹാരി ഹോർ
+hora ഹാരി ഹൗറ
 horace ഹാരിസ് ഹോറസ്
 horak ഹാരിക്ക്
 horde ഹാർഡ് ഹോർഡ്
@@ -8543,8 +8557,8 @@ hour ഔർ ഔവർ
 house ഹൗസ്
 houseal ഹൗസിൽ
 housel ഹൗസിൽ
-housen ഹൗസിന് ഹൗസിനു
-housing ഹൗസിന്
+housen ഹൗസിനു ഹൗസിന്
+housing ഹൗസിനു
 houston ഹ്യൂസ്റ്റൺ
 houx ഹോ ഹൂ
 hover ഹൂവർ
@@ -8554,7 +8568,7 @@ howe ഹൗ
 howes ഹൗസ്
 howse ഹൗസ്
 howsell ഹൗസിൽ
-howson ഹൗസിന് ഹൗസിനു
+howson ഹൗസിനു ഹൗസിന്
 howton ഹൗട്ടൺ
 howze ഹൗസ്
 hribar റബർ
@@ -8893,6 +8907,7 @@ insure ഇൻഷുർ
 insurgency ഇൻസർജൻസി
 intan എന്താണ് എന്തിന്
 intefadeh ഇൻതിഫാദ
+integer ഇന്റിജർ
 integrated ഇന്റഗ്രേറ്റഡ്
 integration ഇന്റഗ്രേഷൻ
 intel ഇന്റെൽ
@@ -8904,6 +8919,7 @@ interactive ഇന്ററാക്ടീവ് ഇന്ററാക്റ്�
 interchange ഇന്റർചെയ്ഞ്ച്
 interface ഇന്റർഫേസ്
 interior ഇന്റീരിയർ
+intermedia ഇന്റർമീഡിയ
 internacional ഇന്റർനാഷണൽ ഇന്റർനാഷനൽ
 international ഇന്റർനാഷനൽ
 internatonal ഇന്റർനാഷണൽ ഇന്റർനാഷനൽ
@@ -8995,7 +9011,7 @@ izzo ഇജോ ഈശോ
 izzy ഇസി എസി
 jabah ജബ ജെബ്
 jabbour സബൂർ സബോർ
-jabril ജിബ്‌രീൽ
+jabril ജിബ്‌രീൽ ജിബ്രീൽ
 jacinta ജാസിന്റോ
 jack ജാക്
 jacka ജാക്ക് ജാക്
@@ -9246,6 +9262,7 @@ journal ജേർണൽ
 journalism ജേർണലിസം
 journalist ജേർണലിസ്റ്റ്
 journalists ജേർണലിസ്റ്റ്സ്
+journals ജേർണൽസ്
 journey ജേർണി
 jowley ജോലി
 joyce ജോയ്സ്
@@ -9392,7 +9409,7 @@ karner കോർണർ
 karnes കരഞ്ഞു കരഞ്ഞ്
 karnow കാർണോ
 karns കരഞ്ഞു കരഞ്ഞ്
-karolyn കരളിനു കരളിന്
+karolyn കരളിന് കരളിനു
 karon കയറാൻ കരൺ
 karoun കരുൺ കരുണ
 karow കാരോ
@@ -9422,7 +9439,7 @@ katcher കച്ചാർ
 kate കേട്ട് കേതു
 kathalene കാതലീൻ കാതലിന്
 kathie കത്തി കാതി
-kathlene കാതലീൻ കാതലിന്
+kathlene കാത്ലീൻ കാതലീൻ
 kathryn കാതറിൻ കത്രീന
 kathy കാതി
 katie കെട്ടി കത്തി
@@ -9707,7 +9724,7 @@ kircher കരക്കാർ
 kirin കിരൺ കെരെൻ
 kirker കരക്കാർ
 kirkey കാർകി
-kirlin കരളിനു കരളിന്
+kirlin കരളിന് കരളിനു
 kirnan കർണ്ണൻ കർണൻ
 kirsch കെർഷ്
 kirsh കെർഷ്
@@ -10244,7 +10261,7 @@ landes ലാൻഡ്സ്
 landin ലണ്ടൻ
 landon ലണ്ടൻ
 landscape ലാൻഡ്സ്കേപ് ലാൻഡ്സ്കേപ്പ്
-landt ലാന്റ് ലന്റ
+landt ലാന്റ്
 lane ലെൻ ലേൻ
 lanes ലെൻസ്
 lanete ലൂണേറ്റ്
@@ -10662,6 +10679,7 @@ lift ലെഫ്റ്റ്
 lifting ലിഫ്റ്റിംഗ്
 light ലൈറ്റ്
 lighten ലൈറ്റൺ
+lighthouse ലൈറ്റ്‌ഹൗസ്
 lights ലൈറ്റ്സ്
 lignite ലിഗ്നൈറ്റ്
 ligon ലീഗിന് ലീഗിനു
@@ -10911,6 +10929,7 @@ lough ലൗ
 louis ലൂവീസ്
 louisa ലൂവീസ്
 louise ലൂവീസ്
+lounge ലൗന്ജ്
 loup ലൂപ് ലൂപ്പ്
 loupe ലൂപ് ലൂപ്പ്
 louque ലോക ലോക്
@@ -11864,6 +11883,7 @@ mellow മെലോ മെല്ലോ
 melody മെലഡി മൈലാടി
 melon മെലൺ മേലാണ്
 melor മോളാർ
+meltdown മെൽറ്റ്ഡൗൺ
 melvina മെൽവിൻ
 melvyn മെൽവിൻ
 member മെംബർ
@@ -11888,7 +11908,7 @@ menor മൈനർ
 menorah മെനൊരാ
 mensah മെൻസ്
 mental മെന്തോൾ
-mentally മണലി മനാലി
+mentally മണലി മന്ത്ലി
 menton മണ്ടൻ
 mentor മെന്റർ മന്തർ
 menze മഞ്ഞ മെൻസ്
@@ -12324,6 +12344,7 @@ montella മണ്ടേല
 montenay മൊണ്ടാന
 monter മന്തർ
 month മന്ത് മുണ്ട്
+monthly മന്ത്ലി
 montie മാന്തി മണ്ടി
 monzo മഞ്ഞോ
 mood മൂട്
@@ -12386,6 +12407,8 @@ morken മാർക്കാണ് മാർക്കിന്
 morlan മാർലിൻ മാർലൺ
 morna മോറൻ മാരൻ
 moron മാറാൻ മോറാൻ
+moros മൗറോസ്
+moroz മൗറോസ്
 morphine മോർഫിൻ മോർഫീൻ
 morra മാറി മാർ
 morrall മോറൽ മൊറൽ
@@ -12467,6 +12490,7 @@ mouse മൗസ്
 moussa മൗസ്
 mousse മൂസ മുസ്
 mousseau മോസോ
+mouthpiece മൗത്ത്പീസ്
 mouton മൂടാൻ
 moutray മൂത്ര
 movable മൂവബിൾ
@@ -12476,8 +12500,8 @@ mover മൂവർ
 movie മൂവി
 movies മൂവീസ്
 mow മോ
-mowat മൂത്ത മൂട്
-mowatt മൂത്ത മൂട്
+mowat മൂത്ത മൗത്ത്
+mowatt മൂത്ത മൗത്ത്
 mowdy മോദി മോടി
 mowed മോഡ്
 mowen മൂന്നു മൂന്ന്
@@ -13266,7 +13290,7 @@ office ഓഫീസ് ഓഫിസ്
 officer ഓഫീസർ ഓഫിസർ
 officers ഓഫീസേർസ്
 officio ഫിസിയോ
-offline ഓഫ്‌ലൈൻ
+offline ഓഫ്ലൈൻ ഓഫ്‌ലൈൻ
 offset ഓഫ്സെറ്റ് ഓഫ്‌സെറ്റ്
 offshore ഓഫ്ഷോർ
 ogg ആഗ് ഓഗ്
@@ -13455,6 +13479,7 @@ osbun ഓസ്ബോൺ
 osby അശ്ബേ
 oscar ഓസ്കർ
 oscillate അസലത്
+osco അസ്കോ
 ose ഒഎസ് ഓസ്
 osha ഓഷോ ഓഷ്
 osher അസ്ഹർ ആഷർ
@@ -13464,6 +13489,7 @@ osmon ഒസ്മാൻ
 osmun അജ്മാൻ ഒസ്മാൻ
 ossa ആശ ആസ്
 ossman ഒസ്മാൻ
+osswald ഓസ്വാൾഡ്
 oster ആസ്റ്റർ
 osting ആസ്റ്റിൻ ഓസ്റ്റിൻ
 ostling അസ്ലൻ
@@ -13531,7 +13557,7 @@ ozanne ഓശാന
 ozelle സെൽ ജെൽ
 ozmun അജ്മാൻ ഒസ്മാൻ
 ozone ഓസോൺ
-ozora സോറ
+ozora സോറ അസോർ
 ozuna ഓസോൺ
 ozzie അസി
 ozzy അസി
@@ -13631,7 +13657,7 @@ panting പന്തിന് പന്തിനു
 pantle പന്തൽ
 panton പാണ്ടൻ പന്താണ്
 panza പഞ്ച
-paoli പൗളി പയ്യോളി
+paoli പൗളി
 paolo പൗലോ പൗളോ
 pap പപ്പു പൈപ്പ്
 papa പാപ്പ
@@ -13797,7 +13823,7 @@ paying പൈൻ പെയിൻ
 payload പേലോഡ്
 paylor പലർ പള്ളർ
 payment പേയ്മെന്റ്
-payments പേയ്മെന്റ്സ് പേയ്‌മെന്റ്‌സ്
+payments പേയ്മെന്റ്സ് പെയ്മെന്റ്സ്
 payna പെൺ പേന
 payne പെൺ പെൻ
 paynter പന്തർ
@@ -13897,12 +13923,13 @@ pennock പങ്ക് പങ്കു
 penns പഞ്ച് പഞ്ച
 penny പനി പണി
 penology പീനോളജി
-penrose പെൻറോസ്
+penrose പെന്റോസ്
 pens പഞ്ച് പഞ്ച
 pension പെൻഷൻ
 pensyl പെൻസിൽ
 pentagon പെന്റഗൺ
 pentair പന്തർ
+pentium പെന്റിയം
 penton പന്തിന് പന്താണ്
 penwell പൻവേൽ പനവേൽ
 penza പഞ്ച പഞ്ച്
@@ -14028,6 +14055,7 @@ pharris ഫാരിസ്
 phase ഫേസ് ഫെയ്സ്
 phased ഫേയ്സ്ഡ്
 phases ഫേസസ് ഫെയ്‌സസ്
+pheasant ഫെസന്റ്
 phebus ഫീബസ്
 phenol ഫൈനൽ ഫീനോൾ
 phenotype ഫീനോടൈപ്പ്
@@ -14237,6 +14265,7 @@ planetarium പ്ലാനറ്റെറിയം പ്ലാനറ്റേ�
 plankton പ്ലാങ്ക്ടൺ
 planning പ്ലാനിങ് പ്ലാനിംഗ്
 plant പ്ളാന്റ്
+plantain പ്ലാന്റാണ്
 plantation പ്ലാന്റേഷൻ പ്ളാന്റേഷൻ
 plantations പ്ലാന്റേഷൻസ്
 plante പ്ലാന്റ് പ്ളാന്റ്
@@ -14430,7 +14459,6 @@ pottenger പടിഞ്ഞാറ്
 potter പട്ടർ
 pottle പാട്ടിൽ പാടൽ
 pou പൂ പോ
-poul പോൾ പുൽ
 pouliot പോളിയോ
 pounding പൗണ്ടിന്
 pour പോർ പാറ
@@ -14439,6 +14467,7 @@ pouring പോരിനു പോരിന്
 pours പാർസ് പോറസ്
 poverty പാവറട്ടി
 powder പൗഡർ
+powell പൗൾ
 powley പൗളി
 pows പോസ്
 pozzi പാശി പാസ്സി
@@ -14512,6 +14541,7 @@ pride പ്രൈഡ്
 pried പ്രൈഡ്
 priem പ്രേം
 pries പ്രൈസ്
+priest പ്രീസ്റ്റ്
 priestley പ്രീസ്റ്റ്ലി
 priestly പ്രീസ്റ്റ്ലി
 prieta പ്രീതി പ്രീത
@@ -14597,7 +14627,6 @@ protection പ്രൊട്ടെക്ഷൻ
 protein പ്രോട്ടീൻ
 proteins പ്രോട്ടീൻസ്
 proteome പ്രോട്ടിയം പ്രൊട്ടേം
-protestant പ്രോട്ടസ്റ്റന്റ്
 protium പ്രോട്ടിയം പ്രൊട്ടേം
 protocol പ്രോട്ടോക്കോൾ
 prototype പ്രോട്ടോടൈപ്പ്
@@ -14989,7 +15018,7 @@ rawding റോഡിനു റോഡിൻ
 rawdon റാഡൻ റോഡിനു
 rawles റോൾസ്
 rawley റാലി റൗളി
-rawling റൗളിങ് റോളിംഗ്
+rawling റൗളിംഗ് റൗളിങ്
 rawlings റോളിൻസ്
 rawlins റോളിൻസ്
 rawls റോൾസ്
@@ -15234,7 +15263,7 @@ reta റൈറ്റ് റേറ്റ്
 retain റിട്ടേൺ റിട്ടൺ
 retains റിട്ടേൺസ്
 retinyl റെറ്റിനൽ റെറ്റിനോൾ
-reto റിട്ട് റീത്ത്
+reto റീത്ത് റിട്ട്
 retreat റിട്രീറ്റ്
 retriever റിട്രീവർ
 retter റൈറ്റർ റൈട്ടർ
@@ -15660,7 +15689,7 @@ rouyn റോവൻ
 roving റോവൻ
 row റോ
 rowaine റോവൻ
-rowand റൗണ്ട് റോന്തു
+rowand റൗണ്ട്
 rowboat റോബോട് റോബോട്ട്
 rowden റോഡിനു റോഡാണ്
 rowdy റൗഡി
@@ -15909,7 +15938,7 @@ sake ശക
 sakes സെക്സ്
 saks സെക്സ് സൈക്സ്
 saksa സെക്സ് സൈക്സ്
-salad സാലഡ്
+salad സലാഡ്
 salada സലാഡ്
 salak ശൈലിക്ക് സാൽക്ക്
 salami സലോമി
@@ -16060,7 +16089,6 @@ sauk സാക് സാക്ക്
 sauls സാൽസ സോൾസ്
 sault സാൾട്ട് സാൽട്
 saum സാം സം
-sauna സാൻ സോണി
 sauro സോറോ
 saus സോസ് സാജു
 sause സോസ് സാജു
@@ -16143,7 +16171,7 @@ schaff ഷെഫ്
 schaja ഷാജി ഷാജു
 schake ഷേക്ക് ഷെയ്ക്ക്
 schalk ഷോക്ക് ഷാക്
-schall ശാല ശൗൽ
+schall ശൗൽ ശാല
 schallock ശൈലിക്ക് ഷെലക്
 schama ശാം ശം
 schanck ശങ്കു ശങ്ക
@@ -16406,7 +16434,7 @@ segar സിഗാർ സീഗർ
 sege സൈജു സേജ്
 segel സീഗൽ സീഗൾ
 seger സിഗാർ സീഗർ
-segmentation സെഗ്മെന്റേഷൻ
+segmentation സെഗ്മെന്റേഷൻ സെഗ്മെന്റെഷൻ
 segue സെഗ്
 sehorn സഹാറൻ
 seide സൈദ് സൈഡ്
@@ -16464,7 +16492,7 @@ seminole സെമിനോൾ
 semmes ശംസ്
 semon സൈമൺ സമാൻ
 semple ശമ്പള
-senate സെന്റ് സെനറ്റ്
+senate സെന്റ്
 senator സെന്റർ
 sendawal സന്തോവാൽ
 sending സെൻഡങ്ങ്
@@ -16473,9 +16501,9 @@ seneker ശങ്കർ
 senna സേന സെൻ
 senne സെൻ സേന
 senner സെനർ
-sennet സെന്റ് സെനറ്റ്
+sennet സെന്റ്
 sennett സെനറ്റ് സെനെറ്റ്
-sennott സെന്റ് സെനറ്റ്
+sennott സെന്റ്
 sense സൈൻസ് സെൻസ്
 sensing സെൻസിങ്
 sensitive സെൻസിറ്റീവ്
@@ -16581,11 +16609,12 @@ sharron ശരൺ സഹാറൻ
 sharry ശരി ശാരി
 sharum ശരം
 shasteen ശാസ്തിന
-shaull ശാല ശൗൽ
+shaull ശൗൽ ശാല
 shaun ഷാൻ ഷോൺ
 shauna ഷാൻ ഷോൺ
 shave ഷേവ്
-shawl ശാല ശൗൽ
+shawl ശൗൽ ശാല
+shawley ശൗലേ
 shawn ഷാൻ ഷോൺ
 shawna ഷാൻ ഷോൺ
 shawnut ശാന്ത
@@ -16718,6 +16747,7 @@ shorey ശാരി
 shorn സഹാറൻ
 shorr ഷോർ
 short ഷോർട്
+shotwell ഷോട്ട്വെൽ
 shough ഷൗ
 shoulder ഷോൾഡർ
 shoup ഷോപ്പ് ഷൂപ്പ്
@@ -16888,7 +16918,7 @@ sinned സിന്ദു സന്ത്
 sinner സെനർ ശിനാർ
 sinnett സെനെറ്റ്
 sinning സെന്നിന് സെന്നിനു
-sinnott സെന്റ് സെനറ്റ്
+sinnott സെന്റ്
 sins സെൻസ്
 sinton സെന്റിന് ശന്തനു
 sinus സൈനസ് സൈൻസ്
@@ -17153,7 +17183,6 @@ sough സോ
 sought സൗത്ത് സാറ്റ്
 souk സുകു സൂക്ക്
 soul സോൾ സോള
-soule ശൗൽ
 soules സോൾസ്
 souls സോൾസ്
 sounding സൗണ്ടിംഗ്
@@ -17164,6 +17193,7 @@ sous സോസ് സുസു
 sousa സുജ സോസ്
 soutar സൂതർ സോട്ടർ
 souter സൂതർ സോട്ടർ
+southall സൗത്തുൽ
 souther സത്താർ സദർ
 southerland സതർലാൻഡ്
 southin സൗത്തേൺ
@@ -17803,7 +17833,7 @@ synder സിൻഡർ
 syndicate സിണ്ടിക്കേറ്റ്
 syndication സിൻഡിക്കേഷൻ
 syndrome സിൻഡ്രോം സിൻഡ്രം
-synnott സെന്റ് സെനറ്റ്
+synnott സെന്റ്
 synod സിനഡ് സിന്ദു
 synoptic സിനാപ്റ്റിക് സിനാപ്റ്റിക്ക്
 syntax സിന്റാക്സ്
@@ -17926,7 +17956,7 @@ tanton തണ്ടാൻ ടണ്ടൻ
 tantrum തന്ത്രം
 tanya ടോണി തോന്നി
 tanzi ടെനസി
-tao ഡൗ ദൗ
+tao ഡൗ ടൗ
 tap ടൈപ്പ് ടൈപ്
 tape ടേപ്പ് ടേപ്
 tapia താപീയ
@@ -17938,7 +17968,8 @@ tar ടാർ
 tariff ടർഫ്
 taro തേരോ
 tarot തേരോ
-tarrant ത്താറുണ്ട്
+tarp തോർപ്പ്
+tarrant ടോറന്റ് ത്താറുണ്ട്
 tarred ടാർഡ് ടർടു
 tarring താരൻ തോരൻ
 tarry ടെറി തേരേ
@@ -18043,7 +18074,7 @@ tel തേൾ
 telamon തലമാണ്
 telephone ടെലിഫോൺ ടെലഫോൺ
 telephoto ടെലിഫോട്ടോ
-telescope ടെലസ്കോപ് ടെലിസ്കോപ്
+telescope ടെലസ്കോപ് ടെലസ്കോപ്പ്
 tell ടെൽ തേൾ
 tellep തളാപ്പ്
 teller ടൈലർ
@@ -18139,7 +18170,9 @@ thames ടൈംസ് തേംസ്
 than ടൺ
 thanh താൻ തേൻ
 thank ടാങ്ക് തങ്കു
-thao ഡൗ ദൗ
+thao ഡൗ ടൗ
+tharp തോർപ്പ്
+tharpe തോർപ്പ്
 that ദത്ത് തോട്
 thatch തേച്ച് ടച്ച്
 thatcher താച്ചർ
@@ -18251,10 +18284,12 @@ thorn താരൻ
 thorne തോരൻ താരൻ
 thoro ടോറോ
 thorough ടോറോ തേരോ
+thorpe തോർപ്പ്
 thorsen ടാർസൻ
 thorson ടാർസൻ
+thorup തോർപ്പ്
 those ഡോസ് ടോസ്
-thou ഡൗ ദൗ
+thou ഡൗ ടൗ
 though ഡോ ദോ
 thought തോട് തൊട്ടു
 thoughts തോട്ട്സ്
@@ -18528,6 +18563,7 @@ torpedo ടോർപിഡോ ടോർപിഡൊ
 torque താരക്
 torras ടാർസ് ടാറസ്
 torray താരെ താര
+torrent ടോറന്റ്
 torres ടോറെസ് ടാറസ്
 torrey ടോറി താരി
 torrez ടോറെസ് ടാറസ്
@@ -18623,7 +18659,7 @@ traugh ത്രോ
 traum തരം ട്രാം
 trauma തരം ട്രാം
 traumas ട്രോംസ്
-trauth ട്രോട്ട് ത്രോട്ട്
+trauth ട്രൗട്ട് ട്രോട്ട്
 travail ട്രാവൽ
 travails ട്രാവൽസ്
 traveller ട്രാവലർ
@@ -18696,7 +18732,7 @@ tropical ട്രോപ്പിക്കൽ ട്രോപിക്കൽ
 tropp ട്രാപ്പ് ട്രാപ്
 trosch ത്രഷ്
 trost ട്രസ്റ്റ് ത്രസ്റ്റ്
-troth ട്രോട്ട് ത്രോട്ട്
+troth ട്രൗട്ട് ട്രോട്ട്
 trouble ട്രബിൾ
 trough ട്രോഫ്
 troup ട്രൂപ്പ്
@@ -18959,8 +18995,8 @@ unnerve ഉണർവ് നെർവ്
 uno നോ ഒന്നോ
 unrath അനർത്ഥ് അനർട്ട്
 unring അന്റിൻ ആന്റിന
-unrue ആന്റ് ആൻറ്
-unruh ആന്റ് ആൻറ്
+unrue ആന്റ്
+unruh ആന്റ്
 unsaid ഇൻസൈഡ്
 unsell ആൻസൽ
 unser അൻസാർ അംസാർ
@@ -18970,7 +19006,7 @@ unsure ഇൻഷുർ
 until ആണ്ടിൽ ഇന്റൽ
 unto ഉണ്ട് ആന്റ്
 untold അൺടോൾഡ്
-untrue ആണ്ട്രൂ
+untrue ആണ്ട്രൂ ഇന്റ്റു
 untruth ആന്ത്രോത്ത്
 unz അഞ്ചു അഞ്ച്
 update അപ്ഡേറ്റ് അപ്ടെട്ടു
@@ -19121,6 +19157,7 @@ vapor വേപ്പർ
 vardon വാർഡാണ്
 varela വാരൽ
 varghese വർഗീസ്
+variant വേരിയന്റ്
 variation വേരിയേഷൻ
 variations വേരിയേഷൻസ്
 varon വരാൻ
@@ -19157,7 +19194,7 @@ veazie വീശി
 vector വെക്ടർ വെക്റ്റർ
 vedder വേടർ
 veech വിച്ച്
-veered വെർദ് വേർഡ്
+veered വേർഡ് വെർദ്
 vegh വേഗ വൈഗ
 veiled വേൾഡ് വെൽഡ്
 veiling വേലൻ
@@ -19264,7 +19301,7 @@ vienneau വേണോ
 vienot വേണാട് വീണത്
 viens വീഞ്ഞ് വീഞ്ഞു
 viera വീര വേറെ
-viereck വരിക വിറക്
+viereck വിറക് വരിക
 vierra വിര വീര
 vies വൈസ്
 viet വിയറ്റ്
@@ -19490,8 +19527,8 @@ warren വാറൻ
 warrick വാരിക
 warrior വാര്യർ വാരിയർ
 wart വാർത്തു
-warthen വാർട്ടൺ
-warton വാർട്ടൺ
+warthen വാർത്താണ് വാർട്ടൺ
+warton വാർട്ടൺ വാർത്താണ്
 wary വേറേ
 was വാസു
 wasch വാഷ്
@@ -19688,7 +19725,7 @@ wham വേം വാം
 whan വൻ വാൻ
 whang വൻ വന്നു
 wharry വരി വാരി
-wharton വാർട്ടൺ
+wharton വാർട്ടൺ വാർത്താണ്
 what വാട്ട് വട
 whate വെറ്റ് വെട്ട്
 whats വാട്ട്സ് വിറ്റ്സ്
@@ -19944,7 +19981,7 @@ wiper വൈപർ വൈപ്പർ
 wiping വൈപ്പിൻ
 wire വൈര
 wires വൈറസ്
-wirick വരിക വിറക്
+wirick വിറക് വരിക
 wirkkala വർക്കല
 wiry വരി വേറേ
 wisch വിഷു വിഷ
@@ -20015,6 +20052,7 @@ woodroof വുഡ്റൂഫ്
 woodrow വുഡ്രോ
 woodruff വുഡ്റൂഫ്
 woods വുഡ്സ്
+woodworth വുഡ്വർത്ത്
 woody വുഡി
 wooed വുഡ് വുദു
 wool വുളു
@@ -20026,7 +20064,7 @@ wooton വോട്ടിനു വോട്ടിന്
 wootten വോട്ടിനു വോട്ടിന്
 wootton വോട്ടിനു വോട്ടിന്
 wor വാർ വാരു
-word വാർഡ് വെർദ്
+word വാർഡ് വേർഡ്
 wordell വാർഡിൽ
 worden വാർഡൻ വാർഡാണ്
 wordsworth വേർഡ്സ്വർത്
@@ -20051,10 +20089,10 @@ worry വരി വാരി
 worse വാർസ്
 worsham വർഷം
 worth വാർത്ത വർത്ത്
-worthen വാർട്ടൺ വരതനു
+worthen വാർത്താണ് വാർട്ടൺ
 worthey വർദി
 worthy വർദി
-worton വാർട്ടൺ വരതനു
+worton വാർട്ടൺ വാർത്താണ്
 wotton വതൻ വോട്ടാണ്
 wouk വോക് വോക്ക്
 would വുഡ് വുദു
@@ -20136,7 +20174,7 @@ wynns വീഞ്ഞ് വീഞ്ഞു
 wynter വിന്റർ
 wynton വന്താൻ
 wyre വൈര
-wyrick വരിക വിറക്
+wyrick വിറക് വരിക
 wythe വൈഡ്
 xanthe ജന്തു ശാന്ത
 xavier സേവ്യർ
@@ -20329,7 +20367,6 @@ zarre സർ സാർ
 zarrella സരള സരളാ
 zarro സോറോ
 zaugg ജോഗ് സാഗ്
-zaun ജോൺ സാൻ
 zauner സോണാർ
 zayre സർ സേർ
 zazueta ശാശ്വത

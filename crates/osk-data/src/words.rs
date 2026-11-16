@@ -72,8 +72,11 @@ pub const GENERATION: u32 = 2;
 /// h letters one: its texts write ه (U+0647) and ھ (U+06BE) for the same
 /// h, six to one, and its lexicon kept the same word twice. Generation 4
 /// made Pashto's letters written two ways one (its ي inside a word, ك, گ,
-/// ى): its wiki writes 22 000 words both ways.
-pub const LATER_GENERATIONS: &[(&str, u32)] = &[("sd", 3), ("ps", 4)];
+/// ى): its wiki writes 22 000 words both ways. Generation 5 wrote
+/// Malayalam's old spellings as its keyboard types them (ൻറ as ന്റ, ൌ as
+/// ൗ, a last ു് as ്, a chillu as one letter, no zero-width joiner): its
+/// lexicon held some 1 700 words the old way.
+pub const LATER_GENERATIONS: &[(&str, u32)] = &[("sd", 3), ("ps", 4), ("ml", 5)];
 
 /// The generation of the rules `lang`'s words are read by: [`GENERATION`],
 /// or its primary subtag's later one ([`LATER_GENERATIONS`]).
@@ -171,6 +174,36 @@ enum Fold {
     /// Lao's ໍາ, ຫນ, ຫມ and ຫລ as the keyboard types them: ຳ ໜ ໝ ຫຼ
     /// ([`crate::wordbreak::lao_fold`]).
     Lao,
+    /// Malayalam's old spellings as its keyboard types them (generation
+    /// 5): ൻറ as ന്റ, the two-part ൌ as ൗ, a last ു് as ്, a chillu written
+    /// as its consonant, the virama and a zero-width joiner as the one
+    /// letter, and no zero-width joiner else.
+    Malayalam,
+}
+
+/// Malayalam's old spellings of `word` as its keyboard types them
+/// ([`Fold::Malayalam`]).
+fn malayalam(word: &str) -> String {
+    let mut s = word.to_string();
+    // A chillu as its consonant, the virama and a zero-width joiner.
+    for (consonant, chillu) in [
+        ('\u{0D23}', '\u{0D7A}'),
+        ('\u{0D28}', '\u{0D7B}'),
+        ('\u{0D30}', '\u{0D7C}'),
+        ('\u{0D32}', '\u{0D7D}'),
+        ('\u{0D33}', '\u{0D7E}'),
+        ('\u{0D15}', '\u{0D7F}'),
+    ] {
+        s = s.replace(&format!("{consonant}\u{0D4D}\u{200D}"), &chillu.to_string());
+    }
+    s = s
+        .replace('\u{200D}', "")
+        .replace("\u{0D7B}\u{0D31}", "\u{0D28}\u{0D4D}\u{0D31}")
+        .replace('\u{0D4C}', "\u{0D57}");
+    match s.strip_suffix("\u{0D41}\u{0D4D}") {
+        Some(stem) => format!("{stem}\u{0D4D}"),
+        None => s,
+    }
 }
 
 /// Whether `c` parts words as a space does: whitespace, and the zero-width
@@ -416,6 +449,7 @@ impl Splitter {
             "lo" => s.fold = Fold::Lao,
             "sd" => s.fold = Fold::Sindhi,
             "ps" => s.fold = Fold::Pashto,
+            "ml" => s.fold = Fold::Malayalam,
             _ => {}
         }
         s
@@ -473,6 +507,7 @@ impl Splitter {
                 .replace("\u{905}\u{945}", "\u{972}"),
             Fold::Serbian => cyrillic(&lower),
             Fold::Lao => crate::wordbreak::lao_fold(&lower).into_owned(),
+            Fold::Malayalam => malayalam(&lower),
             _ => lower,
         }
     }
@@ -1112,6 +1147,24 @@ mod tests {
         assert_eq!(generation("sd"), 3);
         assert_eq!(generation("sd-Deva"), 3);
         assert_eq!(generation("hi"), GENERATION);
+    }
+
+    #[test]
+    fn malayalam_s_old_spellings_are_its_keyboard_s() {
+        let s = Splitter::new("ml");
+        // ൻറ as ന്റ, ൌ as ൗ, a last ു് as ്.
+        assert_eq!(s.normalize("എൻറെ"), "എന്റെ");
+        assert_eq!(s.normalize("ബ്രൌൺ"), "ബ്രൗൺ");
+        assert_eq!(s.normalize("ചെയ്തു്"), "ചെയ്ത്");
+        // A chillu of the virama and a joiner is the one letter; a stray
+        // joiner is dropped; a non-joiner stays.
+        assert_eq!(s.normalize("അവന്\u{200D}"), "അവൻ");
+        assert_eq!(s.normalize("അവർ\u{200D}ക്കായി"), "അവർക്കായി");
+        assert_eq!(s.normalize("മുൻ\u{200C}നിര"), "മുൻ\u{200C}നിര");
+        // ു് inside a word, and other languages, are as they are.
+        assert_eq!(s.normalize("കു്ക"), "കു്ക");
+        assert_eq!(Splitter::new("ta").normalize("எൻറ"), "எൻറ");
+        assert_eq!(generation("ml"), 5);
     }
 
     #[test]

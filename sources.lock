@@ -43,9 +43,9 @@
       }
     },
     "english/anp": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/anp.fst": "02e543cdd34b48bf40d820ef3ff5f327c01a12f05831379fafad4579d55b9f99",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
@@ -57,9 +57,9 @@
       "recipe": {}
     },
     "english/as": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/as.fst": "c9d34215c7059c64107d776da056b290c8d0218749fac8e8dfce12204f8a1f85",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
@@ -71,9 +71,9 @@
       "recipe": {}
     },
     "english/awa": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/awa.fst": "404ba3f79fb37ab33734aaa08d83b34b7918828d984d4233ebfa0c1da0ef0a99",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
@@ -85,9 +85,9 @@
       "recipe": {}
     },
     "english/bho": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/bho.fst": "dba487dff8868ac6f6d6479e4179146c3a55bce7843923b0a7057d064dbe2099",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
@@ -99,9 +99,9 @@
       "recipe": {}
     },
     "english/bn": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/bn.fst": "45b5e00b880131bced7c3581200d964491bbb5c403534f13b6d8906d1f1c179e",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
@@ -113,9 +113,9 @@
       "recipe": {}
     },
     "english/brh": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/brh.fst": "ad5de32b181437be5ab158a46d63c9b56f4bae30f5d1cd7bbc654825372134f0",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
@@ -127,9 +127,9 @@
       "recipe": {}
     },
     "english/brx": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/brx.fst": "9059d19d063616887b2a03b07b2880a588dce3aced659337a84b32543fc2b968",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
@@ -141,9 +141,9 @@
       "recipe": {}
     },
     "english/doi": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/doi.fst": "aa18e48b8140d72356fdbec1e2bc7817314e38f67872e13aa1087ef0ac71ed60",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
@@ -155,9 +155,9 @@
       "recipe": {}
     },
     "english/dty": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/dty.fst": "b23a2689364802765ba884279a0169a98c80247c7fd1f06cc4e503822899fc3b",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
@@ -169,9 +169,9 @@
       "recipe": {}
     },
     "english/gbm": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/gbm.fst": "7faecd1de7f0f4a3e292f56e091c9166e54862338d17abc2a588ae32abc99a86",
@@ -183,9 +183,9 @@
       "recipe": {}
     },
     "english/gu": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/gu.fst": "4d9623042ced4809ad206de2b162ee6c4bf7723e7af07daa5228c081b8c2465b",
@@ -197,9 +197,9 @@
       "recipe": {}
     },
     "english/hi": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/hi.fst": "f3bbf589468eca29b587a352903adc3f1cfd9440a43dbe4029a3123c880e691f",
@@ -211,9 +211,9 @@
       "recipe": {}
     },
     "english/hne": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/hne.fst": "7a34159f9187e428582eba6d181f0bd1b44dd406b16c7a4da866045e21c3d189",
@@ -225,9 +225,9 @@
       "recipe": {}
     },
     "english/khw": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/khw.fst": "6b438b4d2561981257beeeeb6ec5e7f7ce01104f0463b0ef6277ad9c14c87d9d",
@@ -239,9 +239,9 @@
       "recipe": {}
     },
     "english/kn": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/kn.fst": "8c26b5e86bdd3153da9282aa7a606c957a8ac54885363589dfef11823b6ff5e1",
@@ -253,9 +253,9 @@
       "recipe": {}
     },
     "english/kok": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/kok.fst": "fa08b02b531dc0a04b1ff86a71c83c58a0fe718f07ae1a2723a1caa9e8e0928c",
@@ -267,9 +267,9 @@
       "recipe": {}
     },
     "english/ks": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/ks.fst": "7e977a3504643ad9ae1989bd72ff57b72084e68722c5c754cc789a6ec3015a04",
@@ -281,9 +281,9 @@
       "recipe": {}
     },
     "english/mag": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/mag.fst": "c9bf9519998daf1b4a6434d1af4439c0ebba5a555558c061c8fff4c246ee0704",
@@ -295,9 +295,9 @@
       "recipe": {}
     },
     "english/mai": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/mai.fst": "94d366513a36a6d1cdd2a068deede24af0e0e044c7dbe9160e85d04d230c76b1",
@@ -309,23 +309,23 @@
       "recipe": {}
     },
     "english/ml": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
-        "predict/ml.fst": "c3b1d4bee3af2b02e59a6105261e43ee10331587ee7c2df357d98ebac81c895e",
+        "predict/ml.fst": "cf6297892820f6c17bc398b935e53df4f6a38183b9a81d23bb84fd6a66564dbb",
         "translit/ml.txt": "98bdb961d9c7b7c3bad0062816c81fe59f4ca54caf41780c6e4b6af81f47e160"
       },
       "outputs": {
-        "translit/ml.english.txt": "dbf539c233e6be1ec430555dcdaca5845684c88697e89c9cc896f1eb6bbe47c1"
+        "translit/ml.english.txt": "905fafc560a98f9fa71ddb268c07af358e63f256356cc0dcaa2d2c333a3e64cc"
       },
       "recipe": {}
     },
     "english/mni": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/mni.fst": "332bbbb5b9ddbbad3dd890252de1a8ee24d7daffbeae0527c1f20b7774c929c9",
@@ -337,9 +337,9 @@
       "recipe": {}
     },
     "english/mni-Beng": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/mni-Beng.fst": "7edf0877dcea4155bd2fbf80d29e7dcf0b6e43ca23b1b76a7c5fcb9436e1bb61",
@@ -351,9 +351,9 @@
       "recipe": {}
     },
     "english/mr": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/mr.fst": "64c27dfc045637d5dd5eb59ff0ec8acf25a76b03dd980731b2e5b5f86b99d641",
@@ -365,9 +365,9 @@
       "recipe": {}
     },
     "english/ne": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/ne.fst": "97af710a3f3521230074f65d48f3b522b81310f16958b72098c1c1d6e86210eb",
@@ -379,9 +379,9 @@
       "recipe": {}
     },
     "english/new": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/new.fst": "07b20c18f750c4b8475743d50913c0d0f49e777dfbea9621a210b5c87c83e4df",
@@ -393,9 +393,9 @@
       "recipe": {}
     },
     "english/or": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/or.fst": "a021f72e8bd2d90abd22a62f4ffb149aa76349068fad4f3bb62827aaf3be70f3",
@@ -407,9 +407,9 @@
       "recipe": {}
     },
     "english/pa": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/pa.fst": "1dd4d57916f9b4344c50d9a38625cf0370cf73969badd58888608a89d30a91c1",
@@ -421,9 +421,9 @@
       "recipe": {}
     },
     "english/pnb": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/pnb.fst": "c1a3a61a1a11259b21735f44fc5b09f351bd895d738e90af88eddcea652a2b02",
@@ -435,9 +435,9 @@
       "recipe": {}
     },
     "english/ps": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/ps.fst": "0a1a9b4e5421bb394413cc09a3792cb77e3d6b73985e53a9a24f963f2dc6ceb5",
@@ -449,9 +449,9 @@
       "recipe": {}
     },
     "english/raj": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/raj.fst": "d47a5d33e4c85d90ec5d8a78f8d8e4a4be677aa3c08265187accb9e4263bb6d0",
@@ -463,9 +463,9 @@
       "recipe": {}
     },
     "english/sa": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/sa.fst": "bcb3f7cfed6350e63f7c132d974a6028aa78bca19c93b779e7f755b1f51915b0",
@@ -477,9 +477,9 @@
       "recipe": {}
     },
     "english/sd": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/sd.fst": "582ea3e86e5baccf319d7b5358897c5ad3ccf778bd42ae6924d7951c42096143",
@@ -491,9 +491,9 @@
       "recipe": {}
     },
     "english/sd-Deva": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/sd-Deva.fst": "0e8b42090301adbfbab664d61b680ba0c9b7a2f870c24a15c6f0e53081621e36",
@@ -505,9 +505,9 @@
       "recipe": {}
     },
     "english/si": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/si.fst": "1f7bcf6b3030f8378e31b060ec51b13b47e0e73ca376c4224a8f5a6775da1d30",
@@ -519,9 +519,9 @@
       "recipe": {}
     },
     "english/skr": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/skr.fst": "d55876bb1cc3b9f9eeab5855c8088389db983671bb3be90336acc5bd75bf6a2d",
@@ -533,9 +533,9 @@
       "recipe": {}
     },
     "english/ta": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/ta.fst": "c4fa7dccb30f8e7e3cfa5530b3aa8957d39981ed4c2ef7cba2f8104c9f150692",
@@ -547,9 +547,9 @@
       "recipe": {}
     },
     "english/tcy": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/tcy.fst": "5440cc7d303b4419fa8efa98c4f972d45ed00248b8a32129aae773dbe9623f4f",
@@ -561,9 +561,9 @@
       "recipe": {}
     },
     "english/te": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/te.fst": "97680b81dfa346b2fa80161db0b5a4e0162356c343a4d046be279fcf9611123e",
@@ -575,9 +575,9 @@
       "recipe": {}
     },
     "english/ur": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/ur.fst": "c9ad7949f48aa79f9c642b7e74c554b34036bf846bf94d475e4b269afc4f9b98",
@@ -589,9 +589,9 @@
       "recipe": {}
     },
     "english/wsg": {
-      "encoder": "5dd266f126cd-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
-        "build_english.rs": "52310c96a3c4139d65264336da18e74a8200a424860c9cfaa54d2578386576ae",
+        "build_english.rs": "91c8e5db124fd508c9bd19fd7e7b0a950973d45e9c71bc00b2640b1e056612cb",
         "cmudict.dict": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
         "predict/en.fst": "1710239be3cfebc743a68ef404292717da8e2e6e25007e3d5623ad0e30402c68",
         "predict/wsg.fst": "3b9fa5d64d1bda6e1bd1acf1fae13399d137c6ac872681be7246f88deb0bc6ec",
@@ -1627,20 +1627,20 @@
       }
     },
     "predict/ml": {
-      "encoder": "5090cd25a1e7-dirty",
+      "encoder": "2953d4a97b28-dirty",
       "inputs": {
         "dakshina/ml.txt": "7e2d9636cdbe701f54255b0094603e05007bb166c34d5cc88f9fdb0365ac5813"
       },
       "outputs": {
         "predict/ml.forms.fst": "658f7b824814e41b70f2a00e501d5e5f3e9db13ad4adebc8c7fb827e23c4c38e",
-        "predict/ml.fst": "c3b1d4bee3af2b02e59a6105261e43ee10331587ee7c2df357d98ebac81c895e",
-        "predict/ml.ngram.bin": "7f5d5cd518e72369714670e13f93797fbf8730f2470807277db5662426431420"
+        "predict/ml.fst": "cf6297892820f6c17bc398b935e53df4f6a38183b9a81d23bb84fd6a66564dbb",
+        "predict/ml.ngram.bin": "9c63a9ca933929adec442e6278d894d10dbf6062e66ec3945fa270fab5e1caec"
       },
       "recipe": {
         "ngram_keep": "90000",
         "start_keep": "5000",
         "vocab_size": "200000",
-        "words": "2"
+        "words": "5"
       }
     },
     "predict/mn": {

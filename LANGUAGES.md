@@ -292,7 +292,11 @@ but no model to match the glide against · `—` off
    transliteration's keystrokes, and stays at ten. Keystroke
    savings of the nine on held-out Wikipedia text: Punjabi 41.8%, Urdu
    41.8%, Sindhi 40.4%, Sinhala 36.1%, Tamil 34.5%, Gujarati 33.6%, Telugu
-   32.8%, Malayalam 30.7%, Kannada 30.3%. The Dravidian languages' words
+   32.8%, Malayalam 31.1%, Kannada 30.3%. Malayalam's old spellings, which
+   its lexicon held some 1 700 words of (ൻറ for ന്റ, the two-part ൌ for
+   ൗ, a last ു് for ്, stray zero-width joiners), are written as its
+   keyboard types them (`osk_data::words`, generation 5): from 31.0%, its
+   unknown words 22.8% -> 22.6%. The Dravidian languages' words
    take their endings with them: their lexicons keep 200 000 words (2.4
    to 3.0 MB) and still lack 15% (Tamil, Telugu) to 23% (Malayalam) of
    the running words; at 120 000 Tamil's and Telugu's lacked 17%,
@@ -315,7 +319,7 @@ but no model to match the glide against · `—` off
    Marathi 78.1% (80.2%; 18.8%), Telugu 78.0% (80.2%; 21.3%), Kannada
    77.4% (79.3%; 21.0%), Bengali 75.8% (79.1%; 21.7%), Sinhala 75.4%
    (78.9%; 22.1%), Tamil 74.5% (76.5%; 18.8%), Sindhi 72.8% (77.0%; 20.9%),
-   Malayalam 67.6% (71.0%; 16.8%), the English words the tables read
+   Malayalam 67.8% (71.3%; 16.8%), the English words the tables read
    (below) among them; of the words the lexicon has, 82–92%
    (`make eval-translit`, a word being the same word as its lexicon keys
    it: Sindhi's two h letters one). The word before raised Urdu 1.5
@@ -523,7 +527,8 @@ but no model to match the glide against · `—` off
    and ll for ண and ள, ae for ெ and a first r for இர (ramasamy:
    இராமசாமி); Kannada's last h for the visarga (moolatah: ಮೂಲತಃ).
    Telugu's and Tamil's costs were fitted again. On the test sentences
-   above the words first rose: Malayalam 2.1 points (from 65.5%), Telugu
+   above the words first rose: Malayalam 2.3 points (from 65.5%; 0.2 of
+   them its old spellings made one, note 3), Telugu
    1.7, Bengali and Tamil 0.5, Marathi 0.3, Kannada 0.2; keystrokes saved
    up to 0.4 more (Malayalam), none fewer. Of the 73 measures above, 15
    put up to 0.4 points fewer words first (Tamil's test words, Dotyali),
