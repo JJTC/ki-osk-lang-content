@@ -31,7 +31,10 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  oc gl br eu tt mr as ms os th gu kn ml pa sd si ta te ur \
                  bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
                  brx doi hne mag brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw \
-                 dty anp new km my
+                 dty anp new km my \
+                 sw af sl zu \
+                 sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
+                 xh fo ceb mi su co ny sm sn ig st haw yo dv
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -90,14 +93,18 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # FineWeb-2's web text, the whole corpus of languages with no Wikipedia of
 # their own: Bodo, Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi
 # (Magahi's beside its Incubator text), of Sindhi in Devanagari and Meitei
-# in the Bengali script, and of Lao, Khmer and Burmese, whose wikis are
-# small or few write as people type (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
+# in the Bengali script, of Lao, Khmer and Burmese, whose wikis are
+# small or few write as people type, and of thirty-eight languages that
+# had a keyboard and no model, from Swahili to Zulu (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
 # the held-out text is FineWeb-2's test split, in $(FINEWEB_DIR)/eval, and
 # like the corpus it is not committed. Reading parquet needs pyarrow:
 # FINEWEB_PYTHON names a Python that has it.
-FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my
+FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
+                 sw af sl zu \
+                 sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
+                 xh fo ceb mi su co ny sm sn ig st haw yo dv
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -213,8 +220,14 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # keystroke savings on FineWeb-2's held-out text fall 1.1 points more);
 # and Newari, with its news beside its wiki (at 30 000 words its savings
 # on the news held out are 38.7%, at 80 000 42.1%, its words unknown
-# 6.6%).
-PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa
+# 6.6%); and the languages whose web text FineWeb-2 has plenty of (at
+# 30 000 words Zulu saved 39.3% of the keystrokes of its held-out text,
+# Slovenian 37.1%; at 80 000 42.4% and 39.8%, their words unknown 20.1%
+# -> 12.9% and 8.8% -> 3.3%).
+PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
+                       sw af sl zu \
+                       sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
+                       xh fo ceb mi su co ny sm sn ig st haw yo dv
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -222,8 +235,14 @@ PREDICT_LARGE_NGRAM ?= 90000
 # words its lexicon lacks falls from 25.6% to 17.0% (Malayalam's from
 # 33.2% to 25.4%), keystroke savings rise 2.7 points (3.0), and
 # transliteration's first reading is right 3.4 points more often (4.4),
-# for lexicons of 1.4 to 1.7 MB. None is left in it: all four are WIDER.
-PREDICT_WIDE_LANGS ?=
+# for lexicons of 1.4 to 1.7 MB; all four are WIDER now. And the
+# languages FineWeb-2's text gives the most word forms, whose lexicons
+# lacked 8% to 12% of the held-out words at 80 000 (Kazakh, Bosnian,
+# Slovenian, Uzbek, Xhosa, Zulu, Shona, Luxembourgish, Dhivehi, Irish,
+# Bashkir): at 120 000 they lack 1 to 2 points fewer, and save 0.3 to 0.8
+# points more keystrokes, 0.7 to 1.9 with taps astray (Zulu 43.1% ->
+# 43.9%, Kazakh 35.2% -> 35.9%).
+PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a

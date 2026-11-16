@@ -26,7 +26,10 @@
 //!   So a word is offered and learned whole. French, Italian, Catalan and
 //!   Occitan instead split after an elided word: `l'homme` is `l'` and
 //!   `homme`, the second glued to the first, with no space between; and
-//!   Kabyle after a hyphen, before its clitics (`fell-` and `i`).
+//!   Kabyle after a hyphen, before its clitics (`fell-` and `i`), as do
+//!   Maltese after its articles and elisions (`il-` and `kelb`, `b'` and
+//!   `mod`) and Irish after the t- and n- before a vowel (`t-` and `athair`).
+//!   Uzbek's apostrophes for the ʻ of oʻ and gʻ are that letter.
 //! - Per language: Catalan's middle dot (`col·legi`), Armenian's question,
 //!   emphasis and exclamation marks, written on a word's stressed vowel
 //!   (`Ի՞նչ`), Hebrew's gershayim in acronyms (`לחו"ל`), a leading
@@ -102,8 +105,12 @@ pub struct Splitter {
     lead: Lead,
     fold: Fold,
     /// A hyphen between letters ends a word, which keeps it, and glues the
-    /// next one on (Kabyle `fell-i`).
+    /// next one on (Kabyle `fell-i`, Maltese `il-kelb`).
     hyphen_glues: bool,
+    /// Uzbek: the apostrophes its texts write for the ʻ of oʻ and gʻ (‘, the
+    /// grave accent, ʼ and the others) belong to the word, and are that ʻ
+    /// (U+02BB).
+    uzbek: bool,
     /// U+00B7 between letters (Catalan `l·l`).
     middle_dot: bool,
     /// Armenian: marks written on a word's vowel, and `:` written for the
@@ -222,6 +229,9 @@ const FRENCH_ELISIONS: &[&str] = &[
 const CATALAN_ELISIONS: &[&str] = &["l", "d", "m", "t", "s", "n"];
 /// Occitan's.
 const OCCITAN_ELISIONS: &[&str] = &["l", "d", "qu", "m", "t", "s", "n"];
+/// Maltese's prepositions and its negation elided before a vowel (`b'mod`,
+/// `f'kull`, `x'inhu`, `m'għandux`).
+const MALTESE_ELISIONS: &[&str] = &["b", "f", "x", "m", "s", "l", "t"];
 /// Italian's apocopes: words cut short, written with an apostrophe and a
 /// space after (`un po' di`), not elided.
 const ITALIAN_APOCOPES: &[&str] = &[
@@ -232,6 +242,13 @@ const DUTCH_CLIPPED: &[&str] = &["s", "t", "n", "k", "m"];
 
 /// Apostrophes: ASCII, the typographic right single quote, and the Hebrew
 /// geresh. U+02BC is a letter already.
+/// Whether the character before `cs[i]` is an o or a g: Uzbek's oʻ and gʻ.
+fn after_o_or_g(cs: &[(usize, char)], i: usize) -> bool {
+    i.checked_sub(1)
+        .and_then(|j| cs.get(j))
+        .is_some_and(|&(_, c)| matches!(c, 'o' | 'O' | 'g' | 'G'))
+}
+
 fn is_apostrophe(c: char) -> bool {
     matches!(c, '\'' | '\u{2019}' | '\u{05F3}')
 }
@@ -412,6 +429,7 @@ impl Splitter {
             lead: Lead::Never,
             fold: Fold::None,
             hyphen_glues: false,
+            uzbek: false,
             middle_dot: false,
             armenian: false,
             hebrew: false,
@@ -441,6 +459,12 @@ impl Splitter {
                 s.hyphen_glues = true;
                 s.fold = Fold::Kabyle;
             }
+            "mt" => {
+                s.hyphen_glues = true;
+                s.elide = Elide::After(MALTESE_ELISIONS);
+            }
+            "ga" => s.hyphen_glues = true,
+            "uz" => s.uzbek = true,
             "os" => s.fold = Fold::Ossetian,
             "fa" => s.fold = Fold::Persian,
             "ar" | "ug" => s.fold = Fold::Arabic,
@@ -520,6 +544,16 @@ impl Splitter {
         let mut chars = word.nfc().peekable();
         while let Some(c) = chars.next() {
             match c {
+                // Uzbek's oʻ and gʻ, whichever apostrophe the text writes.
+                c if self.uzbek
+                    && matches!(
+                        c,
+                        '\'' | '\u{2019}' | '\u{2018}' | '`' | '\u{02BC}' | '\u{02BB}'
+                    )
+                    && mapped.ends_with(['o', 'O', 'g', 'G']) =>
+                {
+                    mapped.push('\u{02BB}');
+                }
                 c if is_apostrophe(c) || c == '\u{02BC}' => mapped.push('\''),
                 c if is_hyphen(c) => mapped.push('-'),
                 '\u{05F4}' => mapped.push('"'),
@@ -690,6 +724,8 @@ impl Splitter {
                 self.armenian && prev_in
             } else if matches!(c, '"' | '\u{05F4}') {
                 self.hebrew && prev_in && next_letter
+            } else if self.uzbek && matches!(c, '\u{2018}' | '`' | '\u{02BC}') {
+                prev_in && (next_letter || after_o_or_g(&cs, i))
             } else {
                 false
             };
@@ -1147,6 +1183,39 @@ mod tests {
         assert_eq!(generation("sd"), 3);
         assert_eq!(generation("sd-Deva"), 3);
         assert_eq!(generation("hi"), GENERATION);
+    }
+
+    #[test]
+    fn maltese_s_articles_and_elisions_glue_the_word_on() {
+        assert_eq!(split("mt", "il-kelb"), ["il-", "+kelb"]);
+        assert_eq!(split("mt", "għall-familja"), ["għall-", "+familja"]);
+        assert_eq!(split("mt", "b\u{2019}mod"), ["b\u{2019}", "+mod"]);
+        assert_eq!(split("mt", "x'inhu"), ["x'", "+inhu"]);
+        // ta' before a space is a word of its own.
+        assert_eq!(split("mt", "ta'"), ["ta'"]);
+        // Irish's t- and n- before a vowel glue the noun on.
+        assert_eq!(split("ga", "t-athair"), ["t-", "+athair"]);
+    }
+
+    #[test]
+    fn uzbek_s_okina_is_one_letter_whichever_the_text_writes() {
+        let s = Splitter::new("uz");
+        for written in [
+            "o\u{02BB}zbek",
+            "o'zbek",
+            "o\u{2018}zbek",
+            "o\u{2019}zbek",
+            "o`zbek",
+            "o\u{02BC}zbek",
+        ] {
+            assert_eq!(split("uz", written).len(), 1, "{written}");
+            assert_eq!(s.normalize(written), "o\u{02BB}zbek", "{written}");
+        }
+        assert_eq!(s.normalize("bog\u{2018}"), "bog\u{02BB}");
+        // An apostrophe after another letter is the tutuq belgisi, as written.
+        assert_eq!(s.normalize("ma'no"), "ma'no");
+        // Other languages keep their apostrophes.
+        assert_eq!(Splitter::new("en").normalize("o'clock"), "o'clock");
     }
 
     #[test]

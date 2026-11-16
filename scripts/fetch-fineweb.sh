@@ -4,7 +4,9 @@
 # Chhattisgarhi, Magahi and Brahui, Sindhi in Devanagari and Meitei in
 # the Bengali script, whose wikis are in their other scripts, Lao, Khmer
 # and Burmese, whose wikis are small or few write as people do, and
-# Kokborok, Mizo and Khasi, which have none; and
+# Kokborok, Mizo and Khasi, which have none; thirty-eight languages that
+# had a keyboard and no model (Swahili, Slovenian, Kazakh, Zulu…), of
+# whose train split the first file is read; and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -59,6 +61,82 @@ km   khm_Khmr  train/000_00000.parquet  6f4506f65ad66b48e5f73350e593fcac045e15fd
 km   khm_Khmr  test/000_00000.parquet   26ae4e654770b07e24a4ef6b8ef3a01c84076a920f1922ac014364ab411b84f0
 my   mya_Mymr  train/000_00000.parquet  d7d8182c4fed89e2a81e69a2c6ef5e6083c9ff3df48c276cd87934b41a6089a0
 my   mya_Mymr  test/000_00000.parquet   61c4bb5b164bc690815f16f997e35a20068021e4279357042e399283306ed25d
+sw   swh_Latn  train/000_00000.parquet  947eb094e73b5d934a21e996b21405092a0537dd0b2a44810e621c8664b1c60b
+sw   swh_Latn  test/000_00000.parquet   691a5e068adafa26cafad5ae79675997a2742ad056dd1df19729ef0975673906
+af   afr_Latn  train/000_00000.parquet  3a5b2c02fca9ed9f95232d6b56713dcb27f419c8bd837c6d3a8a7384a400a7de
+af   afr_Latn  test/000_00000.parquet   95937767aadf4f677bb833a471a6fb928f025f0b781c55a1e2a2d6060754540b
+sl   slv_Latn  train/000_00000.parquet  e9ef19f8901096acba2b871c9f1d1c66f837375195c773434c8f76089d51e8dd
+sl   slv_Latn  test/000_00000.parquet   c511b10f3b92559a896bcd379a27890512d83b16a435e45cbaae2872f2d65509
+zu   zul_Latn  train/000_00000.parquet  4821a416e2c8bf0c3d7ef075245be32b85fe52ca1f45fc767ac18bb1d80ea740
+zu   zul_Latn  test/000_00000.parquet   07a39540741ff7e52a9aa6040e418e07f8f417e5a3ccec432d33e0b420f49ce8
+sq   als_Latn  train/000_00000.parquet  63cdd078064346807de7db8051d2cf88059ed1f241aa2d31fe24b3de39341e7e
+sq   als_Latn  test/000_00000.parquet   bf2b939e00de3942ef9a3a4abdb8081472c030edce4280d0b9b8d87f5c016f18
+kk   kaz_Cyrl  train/000_00000.parquet  73c49c5c7d221481b8ae456252338428cd5f93d7f4c9233024bf404ba555caed
+kk   kaz_Cyrl  test/000_00000.parquet   f3269a305f48bb9cccc3b69ec64cd9a05bcfa9e248bac1172523db38d2064608
+uz   uzn_Latn  train/000_00000.parquet  1bf6de7b3180172ca2295cc60fa644eb2f83017d22ef194deb8b7f876b02b7e3
+uz   uzn_Latn  test/000_00000.parquet   2c6e528e1726a146abdd76b6add8f7f614a244e937d14de15a91cd7157cb2bc7
+bs   bos_Latn  train/000_00000.parquet  cf9200044d3ab62bbd54d5d70e7ab1230705aee2d5cf95404073227d7ff488fa
+bs   bos_Latn  test/000_00000.parquet   359880fa4a663981b3092eb167451330bc4b4e1bb37eab426e04755f7871748b
+ky   kir_Cyrl  train/000_00000.parquet  8ae30162ca29117c22d470a2a3837fb5748f7d3882db8ad54df4fde5e301bb41
+ky   kir_Cyrl  test/000_00000.parquet   f28b3829be9f1197ecbc557b3c169e7116f1cf07ef516ba132ab166a067ffed1
+tg   tgk_Cyrl  train/000_00000.parquet  2546bb779a97d49d469d8fb647999e7ddbd9242df2807ec52b9c22ec900a9f77
+tg   tgk_Cyrl  test/000_00000.parquet   a3fd71c6250ebb3bc1efefccc726782c0300b1bef6caa6feb4a7f20ae47a75fa
+cy   cym_Latn  train/000_00000.parquet  2e82ec4f4a2aa1bbe6051660b62886291b15e4db77d6d128c7d8c2c04496f44e
+cy   cym_Latn  test/000_00000.parquet   8e21e5d68f968891f83b97ff20d2049af4b0fc6f3f915d81c27976fec338e1d2
+so   som_Latn  train/000_00000.parquet  ef1914dab809c4835fa56c54f2e8e9d4b24b57d74fecb06dfc1c49eee22c91cd
+so   som_Latn  test/000_00000.parquet   3723dc49123c674e3b103d1ade14a8b2a083214ab4beb49a90bfea09f73d9ee0
+ga   gle_Latn  train/000_00000.parquet  03f2a5d94b506257cecd578a939eb297a26af84101444bd262a193721efa1ec6
+ga   gle_Latn  test/000_00000.parquet   ce1b9eedd61c6505cabd1b4f506c9886573f9c278e69892c5cf89a950bc00917
+mt   mlt_Latn  train/000_00000.parquet  4aff356520a50842f574f257c582543385c39bd387a68792cc7d42b341541c78
+mt   mlt_Latn  test/000_00000.parquet   5b47e81b543e560263a89bf2d8fbb82c8b242d2454a90082c3e580ea82168140
+ha   hau_Latn  train/000_00000.parquet  44a054948a9e92addb334b24e2dfb1775db97d785b47be3fbcd941badb323ef8
+ha   hau_Latn  test/000_00000.parquet   f12a70a9c5d97fd051902a5007ab9659d808b28c769236502f36ed3fca1290b0
+lb   ltz_Latn  train/000_00000.parquet  112b76629c3f23da980f2017aafc94b3d833f24c0f15a819d132babc88f7e5a9
+lb   ltz_Latn  test/000_00000.parquet   ec7b91838d2e7cda1d185a550bb255fe0f9c404f6a07e447b13c1bdf015648a3
+mg   plt_Latn  train/000_00000.parquet  be6ffe2ce57c1bc160839b56a97db601ef43fd4d565620dc8c421d490630cb9c
+mg   plt_Latn  test/000_00000.parquet   fc5c381cbd8d99e658e5a86be7ca0da431383674b948277cf0737771620f98f9
+rw   kin_Latn  train/000_00000.parquet  68c47e09e9fdf73baac4f21213e7ac11b3502729a19a4b0ae5901beade4f04ed
+rw   kin_Latn  test/000_00000.parquet   1161a8f829264f8674e9f10b9bce9666d89bc310256591f5fd88106198370843
+gd   gla_Latn  train/000_00000.parquet  5c3b2241dbd97de8e44534fd8794f1bd7419eb4ad935a2dada78e20555d5781d
+gd   gla_Latn  test/000_00000.parquet   1d3050582f1e1d66d56db7219906e7c5d9f6a0a6b06b090cacb6516d8892656b
+fy   fry_Latn  train/000_00000.parquet  3ed67ac48ccb722b87b3c0f1c241cc5d3328d2d4b815014c4a63f67b8783711b
+fy   fry_Latn  test/000_00000.parquet   f72c2ca9962657d237c897411d53a9ecc0c0268014a1b8252cb52f5e0eb6bc80
+jv   jav_Latn  train/000_00000.parquet  82a1785cfe88313ab9a1f47b6c8ec34233dbc10e8fe6d698cf6c80e4834f787e
+jv   jav_Latn  test/000_00000.parquet   f450e11c7275f9a3d21ae44cb86faf2d760c5e7c4d01fe2768eed1f3bbca274d
+tk   tuk_Latn  train/000_00000.parquet  f21e703f98eab1a58f4ad0a65893b7b16079492f7c37af1c242a89f479a529a8
+tk   tuk_Latn  test/000_00000.parquet   cd3adc265ed4a6f4dade86961a70455de0683107af42426dc8d2a707dc125a26
+ht   hat_Latn  train/000_00000.parquet  a20a800fdcc8876c15daf42e7d1980dbcefd12037f321048374c9c8affae62f4
+ht   hat_Latn  test/000_00000.parquet   aaa350b3b2467830c15ac467d6ee0f101db2423e5c74ca9ea982e9da9c9893f3
+ba   bak_Cyrl  train/000_00000.parquet  8acf0cda328accfe2db4093b6e618e5873f3f7a53499ff5e2d4b81b3fb8a0ef5
+ba   bak_Cyrl  test/000_00000.parquet   6abfd5dbf3d756bb917ccb01b508242df657a24c589dc0393020f38810453a44
+xh   xho_Latn  train/000_00000.parquet  65d92c6b8102931a838683881323054d9c1cf4471f3f9f5fbc6cb0c1d77c8790
+xh   xho_Latn  test/000_00000.parquet   9a000bcc30bb70a1a28ae179d640c1f0fdac6da31628429a6698f650b7757573
+fo   fao_Latn  train/000_00000.parquet  dc632925f2207c18f02e0197a7561da03ce80772524b8ac3fa2f9794997273c6
+fo   fao_Latn  test/000_00000.parquet   16ab4dca9b97facf2fba92d00584fedb4b30fde8eaa19ee79c2ef63a0a5b73d0
+ceb  ceb_Latn  train/000_00000.parquet  4982dae9f61107d1f9c60725bb8434e1d0d4b990f596c8fd1e890ebef5f98a3a
+ceb  ceb_Latn  test/000_00000.parquet   6306e28bc11a70aafe22f6aebcd84a9d40d12e778106dd08b7702411e35c077b
+mi   mri_Latn  train/000_00000.parquet  bf2719b555d52734700eb1cf030e91c4a48bc2d4ca7eed02c36a1c3511a387c5
+mi   mri_Latn  test/000_00000.parquet   55677506712d6a64d6cef8fffa5e37ad29b33edf8fddf4f5dbe40b85e533481f
+su   sun_Latn  train/000_00000.parquet  4686a31da809abfefefe19e1de3572f83ec70d54f543d4351663ddb158a65e55
+su   sun_Latn  test/000_00000.parquet   5c2e06c1d0f1820793d2c9858f7261e5efc447fded05f22a6c2b339f8f851d0e
+co   cos_Latn  train/000_00000.parquet  383c945a39bac0e55471ebd62686465afcfb87404d1318c6cfd3b36182caf138
+co   cos_Latn  test/000_00000.parquet   779ea6415f0226a5f6ee4f25094c70b625295bfd59337dc9a23a4e79ef7c4cd9
+ny   nya_Latn  train/000_00000.parquet  3e43f0fb7da66aa611ef01cd896a6a3d5e2b7f41327b0ca5b17530545350e084
+ny   nya_Latn  test/000_00000.parquet   83f8661d63eb4254e1e8748153d22dfc021ed3371d1ed8ded1cae3809c9d0fec
+sm   smo_Latn  train/000_00000.parquet  91aa508532c98294312deaea2aa2286297a9bf13d785f9e78cc7938e72a29c01
+sm   smo_Latn  test/000_00000.parquet   0c71952fa37dbe2ccd12670ae61acd8d6d9401e4c305e175cefda8e62c5208d1
+sn   sna_Latn  train/000_00000.parquet  584789dcda57a41648cee3003c46b49a18bd659b07f465e5da6c6fdd859159c2
+sn   sna_Latn  test/000_00000.parquet   2cb65e119d95549d6c2ee1d06522b6ddb0d341c4339f33dde8e26aedfc574498
+ig   ibo_Latn  train/000_00000.parquet  6fa74f8c0174f101aa1e8ed8deff9ac4de9e73d6a71a7ff7156d82d5531198c0
+ig   ibo_Latn  test/000_00000.parquet   e84a4b13072ca3ed377514c6ccee90adb72b05b5c6d3315b8dcd6eaadabf829d
+st   sot_Latn  train/000_00000.parquet  0870749a3e67319cd8b5567275ff57235dfd1f1e868ea7780837fa39d7180574
+st   sot_Latn  test/000_00000.parquet   8fc2c018643c18b7ef0510ae9e51d3dfee97046d366667ca0da59e24b1fe64e8
+haw  haw_Latn  train/000_00000.parquet  8f7c31e05173a24c01fa9452269784883db4a3c203d6c7d4ebda46fc120b1e9a
+haw  haw_Latn  test/000_00000.parquet   dcc5b7aae61ad7aef036feb174a383681046ec69244e83eee27d76bb1c5211af
+yo   yor_Latn  train/000_00000.parquet  c68be98df36ac8fbbf0f2e0dbf9e0c116df5aba239f5008f2362f9fdb9579520
+yo   yor_Latn  test/000_00000.parquet   0d7031c38478bfe11f8a42cb1f63f8b6d644ce183b474b59d0a5e9e36317b113
+dv   div_Thaa  train/000_00000.parquet  a0ec1b2b0f98968ed04fb1c37f33a3fbad43c611fa37d2c01681758664f5aa81
+dv   div_Thaa  test/000_00000.parquet   302f0d4f9e8472c3eaa5fab9042df503bd6a149569268f821aaf6c79fd32e14d
 as   asm_Beng  train/000_00000.parquet  66c64bd424c0084aee17ec4936a21d6e0b307b068f2fd29bf8acd60204a4891b
 as   asm_Beng  test/000_00000.parquet   fe65d2e25063872f4593f01af4cb0e0e69fc50e5af9714bdefc3701a100dfcc3
 trp  trp_Latn  train/000_00000.parquet  3becfceb5073d2991ba09f7f69d6d76a045bc154d10b5b058aca4bb0b44ace9c

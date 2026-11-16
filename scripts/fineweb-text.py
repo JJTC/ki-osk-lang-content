@@ -57,6 +57,22 @@ Burmese never writes, twice or more; 3% of the text kept before); and
 the digit ၀ written for the letter ဝ, which older text does, is read as
 ဝ where a letter or a sign follows it and no digit comes before it.
 
+Thirty-eight languages that had a keyboard and no model, FineWeb-2 has
+hundreds of millions of characters of: Afrikaans, Albanian, Bashkir,
+Bosnian, Cebuano, Chichewa, Corsican, Dhivehi, Faroese, Frisian,
+Haitian Creole, Hausa, Hawaiian, Igbo, Irish, Javanese, Kazakh,
+Kinyarwanda, Kyrgyz, Luxembourgish, Malagasy, Maltese, Māori, Samoan,
+Scottish Gaelic, Sesotho, Shona, Slovenian, Somali, Sundanese, Swahili,
+Tajik, Turkmen, Uzbek, Welsh, Xhosa, Yoruba and Zulu. Of each, the first
+file of its train split is read, every Nth row group (some 45 MB of the
+parquet, 100 million characters or so), and a sentence of English is
+left out, one whose words are more than 15% English's own (the, and,
+that…: not in, is, of, which Afrikaans writes too), or for Kazakh,
+Kyrgyz, Tajik and Bashkir of Russian (в на что…). Their classifier's
+neighbours do not show: a sample's commonest words are each language's
+own (Frisian's fan it yn, Faroese's í á við sum, Cebuano's nga ug usa,
+Corsican's u è chì).
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -115,6 +131,13 @@ NEPALI = set("पनि भएको गरेको हुन्छ थिय�
              "गर्नुहोस् मार्फत क्यासिनो कैसीनो बोनस".split())
 RAJASTHANI = set("री सूं मांय रो रै नीं पण नै रा".split())
 ENGLISH = set("the of and to in is that for on with as was are by this it from be at an or".split())
+# English's words that no language read beside it writes too (Afrikaans
+# has in, is, of and op; Swahili and Zulu a; Slovenian to and on): what
+# marks a sentence of theirs as English.
+ENGLISH_ONLY = set("the and that for with was are by this from which have".split())
+# Russian's words that Kazakh, Kyrgyz, Tajik and Bashkir do not write (not
+# не, which Kazakh's is "what"): what marks a sentence of theirs as Russian.
+RUSSIAN_ONLY = set("в на что с по это как для от из но или так же все был при".split())
 KOKBOROK = set("tei ni no bai khe bo kha kaisa tongo bini hwnwi wngkha twi nwng ang".split())
 MIZO = set("chu leh hi kan te hian ah pawh tur chuan ni ang tak tih awm".split())
 KHASI = set("ba jong bad kiba kaba uba ia ïa".split())
@@ -187,6 +210,47 @@ LANGS = {
     "new": {"script": "DEVANAGARI", "neighbour": HINDI | NEPALI, "own": NEWARI, "rival": set()},
     "lo": {"script": "LAO", "neighbour": set(), "lines": True, "unspaced": True, "every": 12,
            "normalize": lao, "script_only": True},
+    # The languages with a keyboard and no model before, whose web text
+    # FineWeb-2 has plenty of: every Nth row group, for some 100 million
+    # characters; a sentence of English left out.
+    "sw": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 30},
+    "af": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 80},
+    "sl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 100},
+    "zu": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 5},
+    "sq": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 108},
+    "kk": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "every": 108},
+    "uz": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 45},
+    "bs": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 108},
+    "ky": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "every": 33},
+    "tg": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "every": 27},
+    "cy": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 26},
+    "so": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 22},
+    "ga": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 22},
+    "mt": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 16},
+    "ha": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 13},
+    "lb": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 11},
+    "mg": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 9},
+    "rw": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 8},
+    "gd": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 8},
+    "fy": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 7},
+    "jv": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 7},
+    "tk": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 7},
+    "ht": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 7},
+    "ba": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "every": 6},
+    "xh": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 6},
+    "fo": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 6},
+    "ceb": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 6},
+    "mi": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 5},
+    "su": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 4},
+    "co": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 4},
+    "ny": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 4},
+    "sm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 4},
+    "sn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
+    "ig": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
+    "st": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
+    "haw": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
+    "yo": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
+    "dv": {"script": "THAANA", "neighbour": set(), "every": 8},
     "km": {"script": "KHMER", "neighbour": set(), "lines": True, "unspaced": True, "every": 40,
            "script_only": True},
     "my": {"script": "MYANMAR", "neighbour": set(), "lines": True, "unspaced": True, "every": 40,
