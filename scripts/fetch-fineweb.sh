@@ -10,7 +10,9 @@
 # whose wiki is Wikipedia's prose, and Nigerian Pidgin, whose wiki
 # spells as few type (scripts/fetch-glotcc.sh reads GlotCC's beside it,
 # after this); nineteen languages of Southeast Asia (Hmong Daw, Hakha
-# Chin, Hiligaynon, Iloko, Iban…); and
+# Chin, Hiligaynon, Iloko, Iban…); twenty-six of Europe's regional
+# languages (Nynorsk, Asturian, Low German, Neapolitan, the Sorbians…),
+# whose text FineWeb-2 has their wikis' pages among; and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -191,6 +193,58 @@ tet  tet_Latn  train/000_00000.parquet  505ad3d4c161b06cf725d7b6f3e81270e85f6012
 tet  tet_Latn  test/000_00000.parquet   0bdbc2a74f84071381fa936010c2aa4beb38d5faacf8f423f435403ad5ae436c
 ium  ium_Latn  train/000_00000.parquet  58fbd1f9f0bd7511da7bd7ec50dc013fbe0eddb0f95ea77ecbb0d885e64b5838
 ium  ium_Latn  test/000_00000.parquet   8ae6913a15c5a3b3a7e2e601af3225ab9cbbb3c4506fde406ac7acd077c028d7
+nn   nno_Latn  train/000_00000.parquet  4c8db1523a7f7ef1c3ae9f032001a99e68fe2242406d3f77610fc9f1c6893d45
+nn   nno_Latn  test/000_00000.parquet   c2624e31ae0b6dbee239e69da796a23748d2685fb1281030d9402ab927363d0e
+ast  ast_Latn  train/000_00000.parquet  8ad0472c575ef23d47ede2994cfec5437f7782013a0e4a19bda3ac78456223fe
+ast  ast_Latn  test/000_00000.parquet   f0c9cc5ac8313addd0ab2ea889243a38bf81c8ac249629a9b72a6b5a11c991d0
+an   arg_Latn  train/000_00000.parquet  70b37a437f4165c574efdd1a9d2a90c7c7ad2b4d019e3b474199fe8ab464a242
+an   arg_Latn  test/000_00000.parquet   3a2f7a5f7e0e7b0bb9f75b67bc42237fb71f47bb9c981d91b24021f9f4e70913
+lad  lad_Latn  train/000_00000.parquet  a9b12be8c3a6fe79a689a2cc0b0a03b026cc632ec35d3c179195428c9e9c70ef
+lad  lad_Latn  test/000_00000.parquet   0ab31e805657a68b8e357c574d1b14758e836f7601bd399c2a95ae484b3059e0
+gsw  gsw_Latn  train/000_00000.parquet  5c3a9671fc9ab923a40855f84b328f0a015703b7e3200873a0d758ebfd24aa52
+gsw  gsw_Latn  test/000_00000.parquet   7b720ec7e806bca9ebe5cbf4beb6034dff41b528a799ffe362eb620cafc492ca
+bar  bar_Latn  train/000_00000.parquet  d2597a1fb531530df1ef11cfb563b583358b389ea8853e6ef8641a3902105a4b
+bar  bar_Latn  test/000_00000.parquet   7b6e491a8a715bc0ea88fd12b1894eda3f0dc94b538077e5a11d740e3fbc40d2
+nds  nds_Latn  train/000_00000.parquet  eac2c22dad84354b34b9bdc6ca1c3440d009f3416738d743f7f01274d22cb37e
+nds  nds_Latn  test/000_00000.parquet   a85a673c3d67b45e481267e73f63f9e2ac671e475cc21c9ee611357d73cde3fb
+pfl  pfl_Latn  train/000_00000.parquet  9587172ad7edc6477d286b5803a214e5f27e568eb7a7b64ddbd1ffd864da6173
+pfl  pfl_Latn  test/000_00000.parquet   f15dd6ea96646bba2f5aeca47ce027ea2b87d559a21c86a8cfdb83c945da27b3
+ksh  ksh_Latn  train/000_00000.parquet  ab67ff43fc508674beb4675884b4401e1587782eea7c0e967f5b149ef497a700
+ksh  ksh_Latn  test/000_00000.parquet   900414db30de3d701e742b72380637a7925f924c5f340d821544decdeaf686c9
+li   lim_Latn  train/000_00000.parquet  b80ca89323e0069518fca15c3619f31aaad8a9ccc8283b8140ec04f0bf658bfb
+li   lim_Latn  test/000_00000.parquet   da20254bd6096ea90b205cd291400dc4ae58a115fe6345d5874333dcdd4fba1e
+hsb  hsb_Latn  train/000_00000.parquet  37e46a5c5c0b944efc6e22953f4f4be403c737a79501fe88155b4228418e200e
+hsb  hsb_Latn  test/000_00000.parquet   a53196705dbfe4628a188f396c8da51380cf7c8f001d41dde0d12d79f0fc9b07
+dsb  dsb_Latn  train/000_00000.parquet  9caf20a27f42b054c72956e75f69df0ed9d4a138a34d68ffb969876fbebe312b
+dsb  dsb_Latn  test/000_00000.parquet   495bfb484b9571d89f2aea3e44bce73cfa242fac1a008b6b2d633d7d8200df80
+nap  nap_Latn  train/000_00000.parquet  0c645c77001b713b05a9d5d4b19a5e7da15217d9503fe16bcb59e4d55c2e4989
+nap  nap_Latn  test/000_00000.parquet   86f139a6fa3c3f9c51e8fbecff0520ea01fedc6937b0ddb47aaf60c37f133455
+scn  scn_Latn  train/000_00000.parquet  2f7e2bb279629930f8c7df1b18b540578a62732e5dbb99ea8ed0d45469186956
+scn  scn_Latn  test/000_00000.parquet   861dcd9299d6e201436dbc606a4a97311a53f15e4c45a4d71fa3ecdea9b82fd4
+sc   srd_Latn  train/000_00000.parquet  cf5d807e21dbf0c2f1d10b376c89c3608b5d326329151010ffcfb7aeb58124df
+sc   srd_Latn  test/000_00000.parquet   88f7f6a68e7e83b000a0137103ed07b76be52ff6881e1c71bc54937f8f4dcb95
+fur  fur_Latn  train/000_00000.parquet  4df549bc1beb34f42fce12b1894e13b33fa328a93b7c4bc862ddb4f3a7964d4c
+fur  fur_Latn  test/000_00000.parquet   6812d3a90336ecce9f38c3c8c2e22fa4667ade1633ea9a92183eb5322acc314b
+pms  pms_Latn  train/000_00000.parquet  dfbcbbdde1c1fba06f41a16309373e69bff273c9e2af97149c2a66a4b946d5db
+pms  pms_Latn  test/000_00000.parquet   492a5650b1091272bb46d413b1e0c579dad9ab2381ecb0766824f56f27a8d28e
+lij  lij_Latn  train/000_00000.parquet  73a36961d674c73818f11f5e82c6865fdaade9cc0079f2e477c5cf364fc47ad0
+lij  lij_Latn  test/000_00000.parquet   791fe7b0c33743f7305defbf229fdfeccac74063b6b54c33ff6a2f30aa54895b
+wa   wln_Latn  train/000_00000.parquet  ea5ee3668b0fb937887cb0980d7694d620d145d451c380c292dcaea7b8c1b77f
+wa   wln_Latn  test/000_00000.parquet   cd9d0ea38e12d8ff44dd31e54cb4e59a445e2da75aa347a6cb8b4efd03add764
+ltg  ltg_Latn  train/000_00000.parquet  efbea58a7d562549d20f05a4df6c352941bb46b83727a91069860da972fbff0e
+ltg  ltg_Latn  test/000_00000.parquet   89f117a413b922f1f6fef3dc1931a90d42883809f617b169859eebb6d1ebeb07
+vro  vro_Latn  train/000_00000.parquet  b66600a3436e7d186da6c546a2936187d4e8dd98f65f0023bf449326394bbfd9
+vro  vro_Latn  test/000_00000.parquet   4b224fceb7841bb0e9bdcd5082718bb01f84641c3ebd1b1a5b0dd63a3a43ecf1
+csb  csb_Latn  train/000_00000.parquet  f211813a6c295d5a54e0e4a7a18a67dff5abc8280f12eb9879340476ab128d05
+csb  csb_Latn  test/000_00000.parquet   b36e4e31d61860caf60517225a3d120af85c0cee6099d98a24aafd00f28e1419
+szl  szl_Latn  train/000_00000.parquet  fc628ffb59dea4d679afb3aee254c0dbe158f8bb47c8f74bddbeec7227cd314d
+szl  szl_Latn  test/000_00000.parquet   0615fde9757d9a1a27873e8beb04ae9922cd6161d55c9c7dd4088799bb0241fe
+crh  crh_Latn  train/000_00000.parquet  69ecf985016655497119d4a4343813e01a0f2ca9d1326562be8f5f3208d427d6
+crh  crh_Latn  test/000_00000.parquet   cd0d797b13a9f2eefe4f87c6e906f51d53a2424623fd3d477e89470cb6522bf7
+sco  sco_Latn  train/000_00000.parquet  c026625d2c6327c0763c5bed40b7a988df194a3543592e3bb292948b63f19522
+sco  sco_Latn  test/000_00000.parquet   a927e9a5fe7402b24b033246fd5e78db08feb42b97f7e04fb18e246736b20fb1
+rue  rue_Cyrl  train/000_00000.parquet  65579203ebf8606a5f1b2d0112fcb5c2425efe76eb952903a7ade442b67a9093
+rue  rue_Cyrl  test/000_00000.parquet   7dd795f4a260b89691ade2497de57f1785ea155f9b108a003a9edcda13525a50
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

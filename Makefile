@@ -36,7 +36,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
                  xh fo ceb mi su co ny sm sn ig st haw yo dv \
                  ckb pcm \
-                 mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium
+                 mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium \
+                 nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -99,7 +100,8 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # small or few write as people type, of thirty-eight languages that
 # had a keyboard and no model, from Swahili to Zulu, of Central
 # Kurdish (Sorani) and Nigerian Pidgin (beside GlotCC's, below), and of
-# nineteen languages of Southeast Asia, from Hmong Daw to Iu Mien
+# nineteen languages of Southeast Asia, from Hmong Daw to Iu Mien, and
+# of twenty-six of Europe's regional languages, from Nynorsk to Rusyn
 # (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
@@ -111,7 +113,8 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
                  xh fo ceb mi su co ny sm sn ig st haw yo dv \
                  ckb pcm \
-                 mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium
+                 mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium \
+                 nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -233,12 +236,14 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # Slovenian 37.1%; at 80 000 42.4% and 39.8%, their words unknown 20.1%
 # -> 12.9% and 8.8% -> 3.3%); and Southeast Asia's nineteen, whose
 # lexicons at 80 000 save 0.3 (Kadazandusun) to 2.5 points (Iloko) more
-# than at 30 000, the small corpora's every word (36 000 to 70 000).
+# than at 30 000, the small corpora's every word (36 000 to 70 000);
+# and Europe's twenty-six regional languages.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
                        xh fo ceb mi su co ny sm sn ig st haw yo dv \
-                       mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium
+                       mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium \
+                       nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -258,8 +263,13 @@ PREDICT_LARGE_NGRAM ?= 90000
 # keystrokes, at 120 000 10.4% and 33.6%. And Iloko and Balinese, whose
 # lexicons at 80 000 lack 5.7% and 9.7% of their held-out words: at
 # 120 000 4.7% and 7.9%, 0.5 and 0.4 points more saved (1.4 and 1.0 with
-# taps astray).
-PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb ilo ban
+# taps astray). And nineteen of Europe's regional languages, many of them
+# written as each writer speaks (the German and Italian dialects, Kashubian,
+# Silesian, Rusyn…), whose lexicons at 80 000 lack 6.9% (Nynorsk) to 21.2%
+# (Kashubian) of their held-out words: at 120 000 0.3 to 0.9 points more
+# saved, 0.6 to 2.2 with taps astray.
+PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb ilo ban \
+                      nn gsw bar nds pfl ksh li hsb dsb nap scn sc lij ltg vro csb szl sco rue
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a

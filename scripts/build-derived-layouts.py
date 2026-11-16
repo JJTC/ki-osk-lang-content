@@ -31,7 +31,19 @@ presses: Hakha Chin's ṭ; Hiligaynon's, Iloko's, Central Bikol's,
 Pangasinan's, Kapampangan's, Kinaray-a's and Tetum's ñ, which their
 Spanish and Portuguese words write; Acehnese's vowels é ë è ô ö;
 Balinese's é; and Hmong Daw, Jingpho, Iban, Batak Toba, Karo, Simalungun,
-Banjar, Kadazandusun and Iu Mien as they are. A letter only a long press types turns
+Banjar, Kadazandusun and Iu Mien as they are. Twenty-six of Europe's
+regional languages are typed on their national language's keys, their
+own letters first on the long presses: Nynorsk on Norwegian's;
+Asturian, Aragonese and Ladino on Spanish's; Alemannic (è é à ì ò ù),
+Bavarian (å), Low German, Palatine German, Kölsch and the two Sorbians
+(Upper's ć č ě ł ń ó ř š ž ź, Lower's ć č ě ł ń ó ŕ ś š ž ź) on
+German's; Limburgish on Dutch's (è ë ö ó first); Neapolitan, Sicilian
+(â ê î ô û after the graves), Sardinian, Friulian (â ê î ô û ç),
+Piedmontese (ë, ò ö, ù ü) and Ligurian (â æ ç…) on Italian's; Walloon
+on French's (å); Latgalian on Latvian's (ō); Võro on Estonian's (š ž);
+Kashubian (ë ò ô ã ù) and Silesian (ō ŏ ô ů ã) on Polish's; Crimean
+Tatar on Turkish's (ñ â); Scots on the UK's; and Rusyn on Ukrainian's
+(ы on и, ъ on ь, ё on е). A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -131,6 +143,32 @@ DERIVED = [
     ("dtp", "us", "Kadazandusun", {}),
     ("tet", "us", "Tetun", {"n": ["ñ"], "N": ["Ñ"]}),
     ("ium", "us", "Iu Mienh", {}),
+    ("nn", "no", "Norsk nynorsk", {}),
+    ("ast", "es", "Asturianu", {}),
+    ("an", "es", "Aragonés", {}),
+    ("lad", "es", "Ladino", {}),
+    ("gsw", "de", "Alemannisch", {"e": ["è", "é"], "a": ["à"], "i": ["ì"], "o": ["ò"], "u": ["ù"], "E": ["È", "É"], "A": ["À"], "I": ["Ì"], "O": ["Ò"], "U": ["Ù"]}),
+    ("bar", "de", "Boarisch", {"a": ["å"], "A": ["Å"]}),
+    ("nds", "de", "Plattdüütsch", {}),
+    ("pfl", "de", "Pälzisch", {}),
+    ("ksh", "de", "Kölsch", {}),
+    ("li", "nl", "Limburgs", {"e": ["è", "ë", "é", "ê"], "o": ["ö", "ó", "ô", "ò"], "E": ["È", "Ë", "É", "Ê"], "O": ["Ö", "Ó", "Ô", "Ò"]}),
+    ("hsb", "de", "Hornjoserbsce", {"c": ["ć", "č"], "e": ["ě"], "l": ["ł"], "n": ["ń"], "o": ["ó"], "r": ["ř"], "s": ["š"], "z": ["ž", "ź"], "C": ["Ć", "Č"], "E": ["Ě"], "L": ["Ł"], "N": ["Ń"], "O": ["Ó"], "R": ["Ř"], "S": ["Š"], "Z": ["Ž", "Ź"]}),
+    ("dsb", "de", "Dolnoserbski", {"c": ["ć", "č"], "e": ["ě"], "l": ["ł"], "n": ["ń"], "o": ["ó"], "r": ["ŕ"], "s": ["ś", "š"], "z": ["ž", "ź"], "C": ["Ć", "Č"], "E": ["Ě"], "L": ["Ł"], "N": ["Ń"], "O": ["Ó"], "R": ["Ŕ"], "S": ["Ś", "Š"], "Z": ["Ž", "Ź"]}),
+    ("nap", "it", "Napulitano", {}),
+    ("scn", "it", "Sicilianu", {"a": ["à", "â"], "e": ["è", "ê"], "i": ["ì", "î"], "o": ["ò", "ô"], "u": ["ù", "û"], "A": ["À", "Â"], "E": ["È", "Ê"], "I": ["Ì", "Î"], "O": ["Ò", "Ô"], "U": ["Ù", "Û"]}),
+    ("sc", "it", "Sardu", {}),
+    ("fur", "it", "Furlan", {"a": ["â", "à"], "e": ["ê", "è"], "i": ["î", "ì"], "o": ["ô", "ò"], "u": ["û", "ù"], "c": ["ç"], "A": ["Â", "À"], "E": ["Ê", "È"], "I": ["Î", "Ì"], "O": ["Ô", "Ò"], "U": ["Û", "Ù"], "C": ["Ç"]}),
+    ("pms", "it", "Piemontèis", {"e": ["ë", "é", "è", "ė"], "o": ["ò", "ö"], "u": ["ù", "ü"], "E": ["Ë", "É", "È", "Ė"], "O": ["Ò", "Ö"], "U": ["Ù", "Ü"]}),
+    ("lij", "it", "Ligure", {"a": ["â", "à", "æ"], "e": ["é", "è", "ê"], "c": ["ç"], "o": ["ò", "ô", "ö"], "u": ["ù", "û", "ü"], "A": ["Â", "À", "Æ"], "E": ["É", "È", "Ê"], "C": ["Ç"], "O": ["Ò", "Ô", "Ö"], "U": ["Ù", "Û", "Ü"]}),
+    ("wa", "fr-azerty", "Walon", {"a": ["å", "â", "à"], "A": ["Å", "Â", "À"]}),
+    ("ltg", "lv", "Latgalīšu", {"o": ["ō"], "O": ["Ō"]}),
+    ("vro", "et", "Võro", {"s": ["š"], "z": ["ž"], "S": ["Š"], "Z": ["Ž"]}),
+    ("csb", "pl", "Kaszëbsczi", {"e": ["ë", "é", "ę"], "o": ["ò", "ô", "ó"], "a": ["ã", "ą"], "u": ["ù"], "E": ["Ë", "É", "Ę"], "O": ["Ò", "Ô", "Ó"], "A": ["Ã", "Ą"], "U": ["Ù"]}),
+    ("szl", "pl", "Ślōnski", {"o": ["ō", "ŏ", "ô", "ó"], "u": ["ů"], "a": ["ã"], "O": ["Ō", "Ŏ", "Ô", "Ó"], "U": ["Ů"], "A": ["Ã"]}),
+    ("crh", "tr", "Qırımtatarca", {"n": ["ñ"], "a": ["â"], "N": ["Ñ"], "A": ["Â"]}),
+    ("sco", "gb", "Scots", {}),
+    ("rue", "uk", "Русиньскый", {"и": ["ы"], "ь": ["ъ"], "е": ["ё"], "И": ["Ы"], "Ь": ["Ъ"], "Е": ["Ё"]}),
 ]
 
 
@@ -138,6 +176,10 @@ def build(lang, base, name, extra):
     layout = json.loads((ROOT / "layouts" / f"{base}.json").read_text(encoding="utf-8"))
     out = {}
     for k, v in layout.items():
+        # The base's variety of its own language (English's GB) is not
+        # one of this language's.
+        if k == "dialect":
+            continue
         if k == "views" and extra:
             # A letter only a long press types: the gesture is on for it.
             out["long_press_letters"] = True

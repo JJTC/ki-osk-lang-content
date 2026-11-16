@@ -113,6 +113,31 @@ read as the apostrophe. FineWeb-2's Betawi is everyday Indonesian, its
 Musi porn spam, its Banjar in the Arabic script Malaysia's Jawi and its
 Chavacano Spanish lyrics: none is read.
 
+Twenty-six of Europe's regional languages are read whole (Asturian
+every other row group, Nynorsk every 28th): Nynorsk, Asturian,
+Aragonese, Ladino, Alemannic, Bavarian, Low German, Palatine German,
+Kölsch, Limburgish, Upper and Lower Sorbian, Neapolitan, Sicilian,
+Sardinian, Friulian, Piedmontese, Ligurian, Walloon, Latgalian, Võro,
+Kashubian, Silesian, Crimean Tatar, Scots and Rusyn. Their text mixes
+with their national language's, which writes its own words for theirs
+(Bokmål's ikke jeg hun, Nynorsk's ikkje eg ho; German's ist nicht,
+Bavarian's is ned): a sentence more than 15% the national language's is
+left out, or English's, and for the dialects mixed with it most
+(Neapolitan and Sicilian with Italian, the German ones with German,
+Limburgish with Dutch, Scots with English) a document whose own words
+(Neapolitan's nun pe ca chesto, Low German's dat vun nich hett) are
+under 1% of its words or not more than the national language's. Much
+of their text is their wikis' pages (Asturian's 46%, Low German's 33%),
+whose section-editing links ([editar],
+[ännern | Bornkood ännern]) go, as does every short span in brackets.
+Neapolitan's has Roman's songs and comments in it (er pane, vojo): a
+sentence with Roman's article er or quer is left out; Võro's has a
+dictionary's entries (s_nimi sg.nom.), and Crimean Tatar's escort spam.
+FineWeb-2's Zeelandic is Middle Dutch from text archives, its West
+Flemish half Dutch Low Saxon's wiki, its Picard a dictionary's glosses
+in French, its Lombard half Ladin, its Gagauz Kazakh and Cyrillic
+letters for Latin ones, its Venetian spam: none is read yet.
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -158,6 +183,9 @@ ZAWGYI = re.compile(r"(?:^|[^\u1000-\u109F])\u1031|\u1039(?![\u1000-\u1021])|[\u
 MYANMAR = re.compile(r"[\u1000-\u109F]")
 STEERING = re.compile("[‎‏‪-‮⁦-⁩﻿]")
 MARKUP = re.compile(r"\[\[|\]\]|\{\{|\}\}")
+# A short span in brackets: in a wiki page's text, the link that edits a
+# section ([editar], [ännern | Bornkood ännern]).
+BRACKETED = re.compile(r"\[[^\[\]\n]{1,60}\]")
 WORDS = re.compile(r"[\s.,;:!?।॥۔؟،\"'()\[\]{}<>«»“”‘’\-–—/|*#@&%$+=~`^]+")
 
 HINDI = set("है हैं था थी थे का की में को ने नहीं यह वह और लिए".split())
@@ -207,6 +235,39 @@ VIETNAMESE_ONLY = set("và của là có không được những người một 
 # Balinese writes basa Inggris, basa Bali.
 BALINESE_RIVAL = INDONESIAN_ONLY | set("yang dan ini itu dari pada dalam".split())
 LABELS = set("english balinese indonesian".split())
+# Europe's regional languages and their national languages' words, which
+# they write their own for (Nynorsk's ikkje eg ho frå for Bokmål's ikke
+# jeg hun fra, Bavarian's ned hom for German's nicht haben…): a sentence
+# more than 15% the national language's is left out, and for the
+# dialects that text mixes most with it, a document whose own words are
+# under 1% of its words or not more than the national language's.
+BOKMAL_ONLY = set("ikke jeg hun fra hva hvor noen mye hvordan bare".split())
+SPANISH_ONLY = set("es está están hay muy también desde sus".split())
+ARAGONESE_RIVAL = SPANISH_ONLY | set("los las del".split())
+LADINO_RIVAL = set("que con como y porque cuando quien muy".split())
+GERMAN_ONLY = set("ist nicht eine einen einem haben auch werden".split())
+SORBIAN_RIVAL = set("und die der das ist nicht mit von für sie eine auf".split())
+DUTCH_ONLY = set("voor niet naar ook zijn wordt worden hebben heeft".split())
+ITALIAN_ONLY = set("il della del per una sono questo anche gli nel alla perché molto".split())
+FRENCH_ONLY = set("une pour dans avec nous cette qui".split())
+LATVIAN_ONLY = set("arī kā bija vai viņš viņa tas pie ko viņi šo".split())
+ESTONIAN_ONLY = set("on ning see oli kui aga või mis seda".split())
+POLISH_ONLY = set("się nie jest oraz który która które tylko bardzo też".split())
+RUSYN_RIVAL = set("що це від також який яка які что это как или был была".split())
+TURKISH_ONLY = set("için olarak değil gibi çok kadar sonra şey bunu olan".split())
+SCOTS_RIVAL = set("of with was from have not all were would".split())
+SCOTS = set("o tae wi wis frae hae nae aw ken yin twa efter fowk awa doon oot aboot thair maist".split())
+NEAPOLITAN = set("nun pe ca na nu cu chesto chillo chella isso essa pecché comme sti stu nuje vuje addò mo tene stanno".split())
+SICILIAN = set("lu li ca cu pi nu comu sunnu nun chistu iddu idda ccà ddu dda picchì puru".split())
+LIMBURGISH = set("veur vaan neet det nao ouch mit ich waat dao gein ós".split())
+BAVARIAN = set("is ned net hod hob hom mia oiso scho aa oan oa nimma dea vo bissl gwen gwesn hoid wos wia".split())
+ALEMANNIC = set("isch nid nöd het hei dr vo au uf si gsi üs öppis chunt chönd".split())
+LOW_GERMAN = set("dat vun nich hett ok wat weer un sünd ik maakt wedder över ünner".split())
+PALATINE = set("unn mer net hot vun uff gewest nix awwer hawwe emol".split())
+KOLSCH = set("dat et dä mer op och nit jet ens wat jo sin hät".split())
+# English's words these write too, out of what marks English.
+ENGLISH_NOT_NORSE = ENGLISH_ONLY - {"for", "by"}
+ENGLISH_NOT_GERMANIC = ENGLISH_ONLY - {"was"}
 # Arabic's words, after Sorani's letters are folded (فی for في), that
 # Sorani does not write: what marks a sentence of Arabic in its text.
 ARABIC_ONLY = set("فی علی إلی الی الذی التی هذا هذه عن".split())
@@ -393,6 +454,32 @@ LANGS = {
     "tet": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY | INDONESIAN_ONLY,
             "normalize": tetum},
     "ium": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | VIETNAMESE_ONLY},
+    "nn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_NOT_NORSE | BOKMAL_ONLY, "every": 28, "brackets": True},
+    "ast": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SPANISH_ONLY, "every": 2, "brackets": True},
+    "an": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | ARAGONESE_RIVAL, "brackets": True},
+    "lad": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | LADINO_RIVAL, "brackets": True},
+    "gsw": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_NOT_GERMANIC | GERMAN_ONLY, "own": ALEMANNIC, "rival": GERMAN_ONLY, "brackets": True},
+    "bar": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_NOT_GERMANIC | GERMAN_ONLY, "own": BAVARIAN, "rival": GERMAN_ONLY, "brackets": True},
+    "nds": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_NOT_GERMANIC | GERMAN_ONLY, "own": LOW_GERMAN, "rival": GERMAN_ONLY, "brackets": True},
+    "pfl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_NOT_GERMANIC | GERMAN_ONLY, "own": PALATINE, "rival": GERMAN_ONLY, "brackets": True},
+    "ksh": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_NOT_GERMANIC | GERMAN_ONLY, "own": KOLSCH, "rival": GERMAN_ONLY, "brackets": True},
+    "li": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_NOT_GERMANIC | DUTCH_ONLY, "own": LIMBURGISH, "rival": DUTCH_ONLY, "brackets": True},
+    "hsb": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SORBIAN_RIVAL, "brackets": True},
+    "dsb": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SORBIAN_RIVAL, "brackets": True},
+    "nap": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | ITALIAN_ONLY, "own": NEAPOLITAN, "rival": ITALIAN_ONLY, "brackets": True, "sentence_never": {"er", "quer"}},
+    "scn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | (ITALIAN_ONLY - {"una"}), "own": SICILIAN, "rival": ITALIAN_ONLY - {"una"}, "brackets": True},
+    "sc": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | (ITALIAN_ONLY - {"una"}), "brackets": True},
+    "fur": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | (ITALIAN_ONLY - {"il"}), "brackets": True},
+    "pms": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | ITALIAN_ONLY, "brackets": True},
+    "lij": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | (ITALIAN_ONLY - {"per"}), "brackets": True},
+    "wa": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_ONLY, "brackets": True},
+    "ltg": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | LATVIAN_ONLY, "brackets": True},
+    "vro": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | ESTONIAN_ONLY, "brackets": True, "sentence_never": {"sg"}},
+    "csb": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | POLISH_ONLY, "brackets": True},
+    "szl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | POLISH_ONLY, "brackets": True},
+    "crh": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TURKISH_ONLY, "sentence_never": {"escort"}, "brackets": True},
+    "sco": {"script": "LATIN", "neighbour": set(), "sentence_rival": SCOTS_RIVAL, "own": SCOTS, "rival": SCOTS_RIVAL, "brackets": True},
+    "rue": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSYN_RIVAL, "brackets": True},
 }
 
 
@@ -452,6 +539,8 @@ def long_enough(s, conf):
 def sentences(text, conf):
     script = conf["script"]
     text = STEERING.sub("", text)
+    if conf.get("brackets"):
+        text = BRACKETED.sub(" ", text)
     if "normalize" in conf:
         text = conf["normalize"](text)
     pieces = text.split("\n") if conf.get("lines") else [text]

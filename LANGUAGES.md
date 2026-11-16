@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**250 layouts**: 195 keyboard layouts (RTL: ar he fa + Urdu, Western
+**276 layouts**: 221 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 249 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **160 languages** carry a prediction
+keycaps. 275 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **186 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -129,6 +129,32 @@ but no model to match the glide against · `—` off
 | `dtp` | `dtp` | Kadazandusun | us | LTR | **Full** (dtp)⁷ | ✓ | — |
 | `tet` | `tet` | Tetum Tetun | us + long-press ñ | LTR | **Full** (tet)⁷ | ✓ | — |
 | `ium` | `ium` | Iu Mien Iu Mienh | us | LTR | **Full** (ium)⁷ | ✓ | — |
+| `nn` | `nn` | Norwegian Nynorsk Norsk nynorsk | no | LTR | **Full** (nn)⁷ | ✓ | — |
+| `ast` | `ast` | Asturian Asturianu | es | LTR | **Full** (ast)⁷ | ✓ | — |
+| `an` | `an` | Aragonese Aragonés | es | LTR | **Full** (an)⁷ | ✓ | — |
+| `lad` | `lad` | Ladino (Judaeo-Spanish) Ladino | es | LTR | **Full** (lad)⁷ | ✓ | — |
+| `gsw` | `gsw` | Alemannic (Swiss German, Alsatian) Alemannisch | de + long-press è é à ì ò ù | LTR | **Full** (gsw)⁷ | ✓ | — |
+| `bar` | `bar` | Bavarian Boarisch | de + long-press å | LTR | **Full** (bar)⁷ | ✓ | — |
+| `nds` | `nds` | Low German Plattdüütsch | de | LTR | **Full** (nds)⁷ | ✓ | — |
+| `pfl` | `pfl` | Palatine German Pälzisch | de | LTR | **Full** (pfl)⁷ | ✓ | — |
+| `ksh` | `ksh` | Kölsch | de | LTR | **Full** (ksh)⁷ | ✓ | — |
+| `li` | `li` | Limburgish Limburgs | nl + long-press è ë é ê ö ó ô ò | LTR | **Full** (li)⁷ | ✓ | — |
+| `hsb` | `hsb` | Upper Sorbian Hornjoserbsce | de + long-press ć č ě ł ń ó ř š ž ź | LTR | **Full** (hsb)⁷ | ✓ | — |
+| `dsb` | `dsb` | Lower Sorbian Dolnoserbski | de + long-press ć č ě ł ń ó ŕ ś š ž ź | LTR | **Full** (dsb)⁷ | ✓ | — |
+| `nap` | `nap` | Neapolitan Napulitano | it | LTR | **Full** (nap)⁷ | ✓ | — |
+| `scn` | `scn` | Sicilian Sicilianu | it + long-press à â è ê ì î ò ô ù û | LTR | **Full** (scn)⁷ | ✓ | — |
+| `sc` | `sc` | Sardinian Sardu | it | LTR | **Full** (sc)⁷ | ✓ | — |
+| `fur` | `fur` | Friulian Furlan | it + long-press â à ê è î ì ô ò û ù ç | LTR | **Full** (fur)⁷ | ✓ | — |
+| `pms` | `pms` | Piedmontese Piemontèis | it + long-press ë é è ė ò ö ù ü | LTR | **Full** (pms)⁷ | ✓ | — |
+| `lij` | `lij` | Ligurian Ligure | it + long-press â à æ é è ê ç ò ô ö ù û ü | LTR | **Full** (lij)⁷ | ✓ | — |
+| `wa` | `wa` | Walloon Walon | fr-azerty + long-press å â à | LTR | **Full** (wa)⁷ | ✓ | — |
+| `ltg` | `ltg` | Latgalian Latgalīšu | lv + long-press ō | LTR | **Full** (ltg)⁷ | ✓ | — |
+| `vro` | `vro` | Võro | et + long-press š ž | LTR | **Full** (vro)⁷ | ✓ | — |
+| `csb` | `csb` | Kashubian Kaszëbsczi | pl + long-press ë é ę ò ô ó ã ą ù | LTR | **Full** (csb)⁷ | ✓ | — |
+| `szl` | `szl` | Silesian Ślōnski | pl + long-press ō ŏ ô ó ů ã | LTR | **Full** (szl)⁷ | ✓ | — |
+| `crh` | `crh` | Crimean Tatar Qırımtatarca | tr + long-press ñ â | LTR | **Full** (crh)⁷ | ✓ | — |
+| `sco` | `sco` | Scots | gb | LTR | **Full** (sco)⁷ | ✓ | — |
+| `rue` | `rue` | Rusyn Русиньскый | uk + long-press ы ъ ё | LTR | **Full** (rue)⁷ | — | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -659,7 +685,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These seventy-three models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These ninety-nine models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -802,7 +828,51 @@ but no model to match the glide against · `—` off
    kej); 96.6% are right after the space. Shan, Mon and Sgaw Karen, in
    the Myanmar script, write their syllables run together between
    spaces, as Burmese does, and have no word list to cut them with: not
-   yet used. Bodo's apostrophe, which
+   yet used.
+   Twenty-six of Europe's regional languages learn from FineWeb-2's text
+   whole (Asturian's every second row group, Nynorsk's every 28th):
+   Norwegian Nynorsk, Asturian, Aragonese, Ladino, Alemannic, Bavarian,
+   Low German, Palatine German, Kölsch, Limburgish, Upper and Lower
+   Sorbian, Neapolitan, Sicilian, Sardinian, Friulian, Piedmontese,
+   Ligurian, Walloon, Latgalian, Võro, Kashubian, Silesian, Crimean
+   Tatar, Scots and Rusyn, from 1.4 million words (Lower Sorbian) to 21
+   million (Low German). Their text mixes with their national
+   language's, which writes its own words for theirs (Bokmål's ikke jeg
+   hun for Nynorsk's ikkje eg ho, German's ist nicht for Bavarian's is
+   ned): a sentence more than 15% the national language's, or English's,
+   is left out, and for the dialects mixed with it most (Neapolitan and
+   Sicilian with Italian, the German dialects with German, Limburgish
+   with Dutch, Scots with English) a document whose own words are under
+   1% of its words or not more than the national language's (nearly half
+   of Neapolitan's documents, three tenths of Limburgish's, a fifth of
+   Bavarian's, Low German's and Sicilian's). Much
+   of their text is their wikis' pages, whose section-editing links
+   ([editar], [ännern | Bornkood ännern]) go; Neapolitan's has Roman's
+   songs and comments in it (er pane, vojo), left out by Roman's article,
+   Võro's a dictionary's entries, Crimean Tatar's escort spam. Each is
+   typed on its national language's keys, its own letters first on the
+   long presses (the table above). Their lexicons keep 80 000 words, or
+   120 000 for the nineteen whose lexicons lacked 6.9% (Nynorsk) to 21%
+   (Kashubian) of their held-out words at 80 000 (0.3 to 0.9 points more
+   saved). Keystroke savings on
+   FineWeb-2's held-out text of each (6 700 to 14 000 words): Crimean
+   Tatar 47.5%, Asturian 43.7%, Aragonese 43.2%, Walloon 41.4%, Ligurian
+   41.0%, Nynorsk 40.6%, Piedmontese 40.0%, Upper Sorbian 39.5%, Lower
+   Sorbian 39.5%, Limburgish 38.6%, Ladino 37.9%, Scots 37.6%, Low German
+   37.6%, Latgalian 36.5%, Friulian 36.5%, Sardinian 36.1%, Alemannic
+   35.0%, Võro 33.6%, Sicilian 31.9%, Rusyn 31.3%, Kölsch 30.9%, Silesian
+   29.8%, Bavarian 29.6%, Kashubian 28.7%, Neapolitan 27.3%, Palatine
+   German 27.0%; 28.5% on average with taps astray, their words unknown
+   4.9% to 18.5% (Kashubian's), at most 0.66% of right words changed
+   (Sicilian's). The dialects with no spelling of their own save the
+   least: each writer spells as they speak. A letter only a long press
+   types is one eval-predict counts as having no key (Kashubian's 14%,
+   the Sorbians' 8–9%, as Yoruba's 18%), so their savings undercount
+   what a long press gives. FineWeb-2's Zeelandic (Middle Dutch from
+   text archives), West Flemish (half Dutch Low Saxon's wiki), Picard (a
+   dictionary's glosses in French), Lombard (half Ladin), Gagauz (Kazakh,
+   and Cyrillic letters for Latin ones) and Venetian (spam) are not used
+   yet. Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
    row group of its FineWeb-2 (856 000 sentences), each document's ৰ
@@ -861,7 +931,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **160 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **186 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1060,6 +1130,7 @@ are built on a `us`/`es` base and add theirs the same way:
 | `ace` Acehnese | é ë è ô ö | `ace` |
 | `ban` Balinese | é | `ban` |
 | `hil` `ilo` `bcl` `pag` `pam` `krj` `tet` | ñ (Hiligaynon, Iloko, Central Bikol, Pangasinan, Kapampangan, Kinaray-a, Tetum) | each its own |
+| `gsw` `bar` `li` `hsb` `dsb` `scn` `fur` `pms` `lij` `wa` `ltg` `vro` `csb` `szl` `crh` `rue` | each language's own letters first on its national layout's long presses (the language table above lists them: Upper Sorbian's ć č ě ł ń ó ř š ž ź on German's keys, Rusyn's ы ъ ё on Ukrainian's…) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per
 *script*. InScript keeps the alphabet on the letter block and digits on
