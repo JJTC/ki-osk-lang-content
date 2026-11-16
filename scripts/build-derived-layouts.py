@@ -25,7 +25,13 @@ letters on the long presses of those that sound nearest: ځ ݮ on ج, څ ݯ on
 and Khasi, in Latin letters, are typed on the US keys with their own
 letters first on the long presses, the menu's others after them: Mizo's
 â ê î ô û and ṭ, Khasi's ï and ñ; Nigerian Pidgin, which the web writes
-in the 26 letters, on them as they are. A letter only a long press types turns
+in the 26 letters, on them as they are. Nineteen languages of Southeast
+Asia are typed on them too, some with their letters first on the long
+presses: Hakha Chin's ṭ; Hiligaynon's, Iloko's, Central Bikol's,
+Pangasinan's, Kapampangan's, Kinaray-a's and Tetum's ñ, which their
+Spanish and Portuguese words write; Acehnese's vowels é ë è ô ö;
+Balinese's é; and Hmong Daw, Jingpho, Iban, Batak Toba, Karo, Simalungun,
+Banjar, Kadazandusun and Iu Mien as they are. A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -106,6 +112,25 @@ DERIVED = [
     ("kha", "us", "Khasi", {"i": ["ï"], "n": ["ñ"], "I": ["Ï"], "N": ["Ñ"]}),
     ("khw", "ur", "کھوار", {"ج": ["ځ", "ݮ"], "چ": ["څ", "ݯ"], "ش": ["ݰ"], "ز": ["ݱ"]}),
     ("pcm", "us", "Naijá", {}),
+    ("mww", "us", "Hmoob Dawb", {}),
+    ("cnh", "us", "Laiholh", {"t": ["ṭ"], "T": ["Ṭ"]}),
+    ("kac", "us", "Jinghpaw", {}),
+    ("hil", "us", "Hiligaynon", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("ilo", "us", "Ilokano", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("bcl", "us", "Bikol Sentral", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("pag", "us", "Pangasinan", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("pam", "us", "Kapampangan", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("krj", "us", "Kinaray-a", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("iba", "us", "Jaku Iban", {}),
+    ("bbc", "us", "Hata Batak Toba", {}),
+    ("btx", "us", "Cakap Karo", {}),
+    ("bts", "us", "Sahap Simalungun", {}),
+    ("ace", "us", "Bahsa Acèh", {"e": ["é", "ë", "è"], "o": ["ô", "ö"], "E": ["É", "Ë", "È"], "O": ["Ô", "Ö"]}),
+    ("ban", "us", "Basa Bali", {"e": ["é"], "E": ["É"]}),
+    ("bjn", "us", "Bahasa Banjar", {}),
+    ("dtp", "us", "Kadazandusun", {}),
+    ("tet", "us", "Tetun", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("ium", "us", "Iu Mienh", {}),
 ]
 
 

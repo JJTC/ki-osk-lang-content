@@ -95,6 +95,24 @@ again nor held out, so that the held-out text of each is in neither
 corpus; FineWeb-2's test split of it is six documents, GlotCC's every
 20th held out.
 
+Nineteen languages of Southeast Asia are read whole (Hmong Daw every
+6th row group): Hmong Daw, Hakha Chin, Jingpho, Hiligaynon, Iloko,
+Central Bikol, Pangasinan, Kapampangan, Kinaray-a, Iban, Batak Toba,
+Acehnese, Karo, Simalungun, Banjar, Kadazandusun, Balinese, Tetum and Iu
+Mien. A sentence of the big languages written beside them is left out:
+of English's, and of Tagalog's in the Philippines' (ng ay hindi, where
+Hiligaynon writes sang indi), Indonesian's or Malay's in Indonesia's and
+Borneo's (dengan untuk tidak, where Iban writes enggau ngagai enda),
+Portuguese's and Indonesian's in Tetum, Vietnamese's in Iu Mien (whose
+Bible site is Vietnamese's beside it). Four fifths of Balinese's is a
+dictionary site's entries, whose labels (In English, In Balinese) leave
+a sentence out, and Indonesian's yang dan ini itu dari, for which
+Balinese writes sane lan puniki punika saking, count against it too.
+Tetum's saltillo (ꞌ), a letter, written for the apostrophe of ne'e, is
+read as the apostrophe. FineWeb-2's Betawi is everyday Indonesian, its
+Musi porn spam, its Banjar in the Arabic script Malaysia's Jawi and its
+Chavacano Spanish lyrics: none is read.
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -174,6 +192,21 @@ BENGALI = set("এবং করে হয় এই যে থেকে জন�
 # than 15% of English's.
 NAIJA = set("di dey wey dem na don una wetin sey pipo dis im fit wan bin dat dia oda tok".split())
 NAIJA_RIVAL = set("the is was are this that which have were".split())
+# The words of the big languages that Southeast Asia's write beside them,
+# which they do not write themselves (Iban's enggau ngagai enda for
+# Indonesian's and Malay's dengan kepada tidak, Hiligaynon's sang indi for
+# Tagalog's ng hindi): what marks a sentence of them in their text.
+INDONESIAN_ONLY = set("dengan untuk tidak adalah akan bahwa bahawa oleh kepada tersebut".split())
+TAGALOG_ONLY = set("ng ay hindi ito nang kanyang ating".split())
+PORTUGUESE_ONLY = set("que não uma os do da em dos das pelo".split())
+VIETNAMESE_ONLY = set("và của là có không được những người một các".split())
+# And Indonesian's that Balinese writes its own for (sane, lan, puniki,
+# punika, saking: yang, dan, ini, itu, dari), and the words of the
+# Balinese dictionary site's labels, which four fifths of FineWeb-2's
+# Balinese is (In English, In Balinese, Balinese-English Dictionary):
+# Balinese writes basa Inggris, basa Bali.
+BALINESE_RIVAL = INDONESIAN_ONLY | set("yang dan ini itu dari pada dalam".split())
+LABELS = set("english balinese indonesian".split())
 # Arabic's words, after Sorani's letters are folded (فی for في), that
 # Sorani does not write: what marks a sentence of Arabic in its text.
 ARABIC_ONLY = set("فی علی إلی الی الذی التی هذا هذه عن".split())
@@ -243,6 +276,11 @@ def sorani(text):
     parts = SENTENCE_GAP.split(text)
     text = "".join("" if i % 2 == 0 and old_start(p) else p for i, p in enumerate(parts))
     return FINAL_AE.sub("\u06D5", text.translate(SORANI_FOLD)).replace("\u0640", "")
+
+
+def tetum(text):
+    # The saltillo, a letter, written for the apostrophe of ne'e, ha'u.
+    return text.replace("\uA78C", "'")
 
 
 def sindhi(text):
@@ -334,6 +372,27 @@ LANGS = {
             "sentence_rival": ARABIC_ONLY, "every": 10},
     "pcm": {"script": "LATIN", "neighbour": set(), "own": NAIJA, "rival": NAIJA_RIVAL, "own_least": 0.05,
             "sentence_rival": NAIJA_RIVAL},
+    "mww": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 6},
+    "cnh": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY},
+    "kac": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY},
+    "hil": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TAGALOG_ONLY},
+    "ilo": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TAGALOG_ONLY},
+    "bcl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TAGALOG_ONLY},
+    "pag": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TAGALOG_ONLY},
+    "pam": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TAGALOG_ONLY},
+    "krj": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TAGALOG_ONLY},
+    "iba": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY},
+    "bbc": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY},
+    "ace": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY},
+    "btx": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY},
+    "bts": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY},
+    "bjn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY},
+    "dtp": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY},
+    "ban": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | BALINESE_RIVAL,
+            "sentence_never": LABELS},
+    "tet": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY | INDONESIAN_ONLY,
+            "normalize": tetum},
+    "ium": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | VIETNAMESE_ONLY},
 }
 
 
@@ -401,6 +460,8 @@ def sentences(text, conf):
         for s in (s for e in ends for s in END.split(e)):
             for s in script_runs(s, script) if conf.get("script_only") else [" ".join(s.split())]:
                 if "sentence_rival" in conf and share(words(s.lower()), conf["sentence_rival"]) > 0.15:
+                    continue
+                if "sentence_never" in conf and not conf["sentence_never"].isdisjoint(words(s.lower())):
                     continue
                 if len(s) <= 1000 and long_enough(s, conf) and not MARKUP.search(s) and in_script(s, script):
                     yield s

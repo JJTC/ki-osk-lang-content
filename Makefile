@@ -35,7 +35,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  sw af sl zu \
                  sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
                  xh fo ceb mi su co ny sm sn ig st haw yo dv \
-                 ckb pcm
+                 ckb pcm \
+                 mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -96,8 +97,9 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # (Magahi's beside its Incubator text), of Sindhi in Devanagari and Meitei
 # in the Bengali script, of Lao, Khmer and Burmese, whose wikis are
 # small or few write as people type, of thirty-eight languages that
-# had a keyboard and no model, from Swahili to Zulu, and of Central
-# Kurdish (Sorani) and Nigerian Pidgin (beside GlotCC's, below)
+# had a keyboard and no model, from Swahili to Zulu, of Central
+# Kurdish (Sorani) and Nigerian Pidgin (beside GlotCC's, below), and of
+# nineteen languages of Southeast Asia, from Hmong Daw to Iu Mien
 # (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
@@ -108,7 +110,8 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  sw af sl zu \
                  sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
                  xh fo ceb mi su co ny sm sn ig st haw yo dv \
-                 ckb pcm
+                 ckb pcm \
+                 mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -228,11 +231,14 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # 6.6%); and the languages whose web text FineWeb-2 has plenty of (at
 # 30 000 words Zulu saved 39.3% of the keystrokes of its held-out text,
 # Slovenian 37.1%; at 80 000 42.4% and 39.8%, their words unknown 20.1%
-# -> 12.9% and 8.8% -> 3.3%).
+# -> 12.9% and 8.8% -> 3.3%); and Southeast Asia's nineteen, whose
+# lexicons at 80 000 save 0.3 (Kadazandusun) to 2.5 points (Iloko) more
+# than at 30 000, the small corpora's every word (36 000 to 70 000).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
-                       xh fo ceb mi su co ny sm sn ig st haw yo dv
+                       xh fo ceb mi su co ny sm sn ig st haw yo dv \
+                       mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -249,8 +255,11 @@ PREDICT_LARGE_NGRAM ?= 90000
 # 43.9%, Kazakh 35.2% -> 35.9%). And Central Kurdish (Sorani), which
 # writes its prepositions and endings onto its words: at 80 000 its
 # lexicon lacks 12.2% of the held-out words and saves 33.2% of their
-# keystrokes, at 120 000 10.4% and 33.6%.
-PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb
+# keystrokes, at 120 000 10.4% and 33.6%. And Iloko and Balinese, whose
+# lexicons at 80 000 lack 5.7% and 9.7% of their held-out words: at
+# 120 000 4.7% and 7.9%, 0.5 and 0.4 points more saved (1.4 and 1.0 with
+# taps astray).
+PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb ilo ban
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a

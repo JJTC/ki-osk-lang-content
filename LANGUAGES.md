@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**231 layouts**: 176 keyboard layouts (RTL: ar he fa + Urdu, Western
+**250 layouts**: 195 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 230 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **141 languages** carry a prediction
+keycaps. 249 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **160 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -110,6 +110,25 @@ but no model to match the glide against · `—` off
 | `lus` | `lus` | Mizo | us + long-press â ê î ô û ṭ | LTR | **Full** (lus)⁷ | ✓ | — |
 | `kha` | `kha` | Khasi | us + long-press ï ñ | LTR | **Full** (kha)⁷ | ✓ | — |
 | `pcm` | `pcm` | Nigerian Pidgin (Naijá) | us | LTR | **Full** (pcm)⁷ | ✓ | — |
+| `mww` | `mww` | Hmong Daw (White Hmong) Hmoob Dawb | us | LTR | **Full** (mww)⁷ | ✓ | — |
+| `cnh` | `cnh` | Hakha Chin Laiholh | us + long-press ṭ | LTR | **Full** (cnh)⁷ | ✓ | — |
+| `kac` | `kac` | Jingpho (Kachin) Jinghpaw | us | LTR | **Full** (kac)⁷ | ✓ | — |
+| `hil` | `hil` | Hiligaynon | us + long-press ñ | LTR | **Full** (hil)⁷ | ✓ | — |
+| `ilo` | `ilo` | Iloko (Ilocano) Ilokano | us + long-press ñ | LTR | **Full** (ilo)⁷ | ✓ | — |
+| `bcl` | `bcl` | Central Bikol Bikol Sentral | us + long-press ñ | LTR | **Full** (bcl)⁷ | ✓ | — |
+| `pag` | `pag` | Pangasinan | us + long-press ñ | LTR | **Full** (pag)⁷ | ✓ | — |
+| `pam` | `pam` | Kapampangan | us + long-press ñ | LTR | **Full** (pam)⁷ | ✓ | — |
+| `krj` | `krj` | Kinaray-a | us + long-press ñ | LTR | **Full** (krj)⁷ | ✓ | — |
+| `iba` | `iba` | Iban Jaku Iban | us | LTR | **Full** (iba)⁷ | ✓ | — |
+| `bbc` | `bbc` | Batak Toba Hata Batak Toba | us | LTR | **Full** (bbc)⁷ | ✓ | — |
+| `btx` | `btx` | Karo (Batak Karo) Cakap Karo | us | LTR | **Full** (btx)⁷ | ✓ | — |
+| `bts` | `bts` | Batak Simalungun Sahap Simalungun | us | LTR | **Full** (bts)⁷ | ✓ | — |
+| `ace` | `ace` | Acehnese Bahsa Acèh | us + long-press é ë è ô ö | LTR | **Full** (ace)⁷ | ✓ | — |
+| `ban` | `ban` | Balinese Basa Bali | us + long-press é | LTR | **Full** (ban)⁷ | ✓ | — |
+| `bjn` | `bjn` | Banjar Bahasa Banjar | us | LTR | **Full** (bjn)⁷ | ✓ | — |
+| `dtp` | `dtp` | Kadazandusun | us | LTR | **Full** (dtp)⁷ | ✓ | — |
+| `tet` | `tet` | Tetum Tetun | us + long-press ñ | LTR | **Full** (tet)⁷ | ✓ | — |
+| `ium` | `ium` | Iu Mien Iu Mienh | us | LTR | **Full** (ium)⁷ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -640,7 +659,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These fifty-four models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These seventy-three models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -749,7 +768,41 @@ but no model to match the glide against · `—` off
    Naija Langwej Akedemi's spelling (tek, afta, ples, where the web writes
    take, after, place), is not read. Keystroke savings 44.0% on the
    held-out text of both (397 sentences, 9 708 words, 5.7% unknown),
-   39.1% with taps astray, its lexicon's 26 565 words all its text has. Bodo's apostrophe, which
+   39.1% with taps astray, its lexicon's 26 565 words all its text has.
+   Nineteen languages of Southeast Asia learn from FineWeb-2's text whole
+   (Hmong Daw's every sixth row group): Hmong Daw, Hakha Chin, Jingpho,
+   Hiligaynon, Iloko, Central Bikol, Pangasinan, Kapampangan, Kinaray-a,
+   Iban, Batak Toba, Karo, Simalungun, Acehnese, Balinese, Banjar,
+   Kadazandusun, Tetum and Iu Mien, from 0.7 million words (Kadazandusun)
+   to 23 million (Hakha Chin). A sentence of the big language written
+   beside each is left out: English's, and Tagalog's in the Philippines'
+   (ng ay hindi), Indonesian's or Malay's in Indonesia's and Borneo's
+   (dengan untuk tidak), Portuguese's in Tetum, Vietnamese's in Iu Mien.
+   Four fifths of FineWeb-2's Balinese is a dictionary site's entries,
+   whose labels (In English, In Balinese) leave a sentence out; Tetum's
+   saltillo (ꞌ) written for the apostrophe of ne'e is read as the
+   apostrophe. FineWeb-2's Betawi is everyday Indonesian, its Musi porn
+   spam, its Banjar in the Arabic script Malaysia's Jawi, its Chavacano
+   Spanish lyrics: none is used. They are typed on the US keys, with ñ
+   on n's long press for the Philippines' languages and Tetum, Acehnese's
+   é ë è ô ö, Balinese's é and Hakha Chin's ṭ first in theirs. Their
+   lexicons keep 80 000 words (Iloko's and Balinese's 120 000; at 30 000
+   they saved 0.3 to 2.5 points fewer). Keystroke savings on FineWeb-2's
+   held-out text of each (5 700 to 19 800 words): Iu Mien 63.4%,
+   Kadazandusun 56.8%, Simalungun 55.7%, Tetum 55.3%, Hiligaynon 54.0%,
+   Acehnese 53.8%, Karo 53.3%, Jingpho 53.2%, Iban 51.6%, Pangasinan
+   50.7%, Hmong Daw 48.3%, Central Bikol 48.3%, Kinaray-a 47.2%, Batak
+   Toba 46.6%, Hakha Chin 46.6%, Iloko 46.3%, Banjar 44.7%, Kapampangan
+   43.3%, Balinese 40.6%; 46.8% on average with taps astray, their words
+   unknown 0.5% to 7.9%. Most of Iu Mien's text, and of Acehnese's,
+   Pangasinan's, Karo's and Simalungun's, is the Bible, as their held-out
+   text is, which flatters them. With taps astray Hmong Daw's corrector
+   changes 1.0% of the words typed right (0.3% when taps land true), its
+   words told apart by their last letter, which writes the tone (kev,
+   kej); 96.6% are right after the space. Shan, Mon and Sgaw Karen, in
+   the Myanmar script, write their syllables run together between
+   spaces, as Burmese does, and have no word list to cut them with: not
+   yet used. Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
    row group of its FineWeb-2 (856 000 sentences), each document's ৰ
@@ -808,7 +861,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **141 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **160 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -824,7 +877,8 @@ but no model to match the glide against · `—` off
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my**, and of
   thirty-eight languages that had a keyboard and no model, **sw af sl zu sq kk uz bs
   ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba xh fo ceb mi su co ny sm sn ig st
-  haw yo dv**, and **ckb pcm** (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
+  haw yo dv**, **ckb pcm**, and of Southeast Asia **mww cnh kac hil ilo bcl pag pam krj iba bbc
+  btx bts ace ban bjn dtp tet ium** (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
@@ -1002,6 +1056,10 @@ are built on a `us`/`es` base and add theirs the same way:
 | `tk` Turkmen | ä ç ž ň ö ş ü ý | `tk` |
 | `as` Assamese | ৰ ৱ (on Bengali র/ব) | `as` |
 | `ckb` Central Kurdish | ێ ڵ ڕ (on ی ل ر; on Shift too) | `ckb` |
+| `cnh` Hakha Chin | ṭ | `cnh` |
+| `ace` Acehnese | é ë è ô ö | `ace` |
+| `ban` Balinese | é | `ban` |
+| `hil` `ilo` `bcl` `pag` `pam` `krj` `tet` | ñ (Hiligaynon, Iloko, Central Bikol, Pangasinan, Kapampangan, Kinaray-a, Tetum) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per
 *script*. InScript keeps the alphabet on the letter block and digits on

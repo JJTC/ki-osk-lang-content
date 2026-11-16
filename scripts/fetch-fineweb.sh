@@ -9,7 +9,8 @@
 # whose train split the first file is read; Central Kurdish (Sorani),
 # whose wiki is Wikipedia's prose, and Nigerian Pidgin, whose wiki
 # spells as few type (scripts/fetch-glotcc.sh reads GlotCC's beside it,
-# after this); and
+# after this); nineteen languages of Southeast Asia (Hmong Daw, Hakha
+# Chin, Hiligaynon, Iloko, Iban…); and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -152,6 +153,44 @@ ckb  ckb_Arab  train/000_00000.parquet  3ab3414974031e9e561b61af2c356185263dea30
 ckb  ckb_Arab  test/000_00000.parquet   8a40340a3b4684f6a2a6d88ca358d329cc994fd72537e5db03f4e7cf2aad8605
 pcm  pcm_Latn  train/000_00000.parquet  5711b000d4ebd02cf25016bae966411be0a9d908484fcb825fa04493d40ddbb6
 pcm  pcm_Latn  test/000_00000.parquet   143c3b204d839b630d0c78c8ae199d8704601e7a1b31e7da80fd10e12e1bb039
+mww  mww_Latn  train/000_00000.parquet  9fb86f543904d6aac25ce8579f55fdfbace553db0f29832e102f37a43910c5d5
+mww  mww_Latn  test/000_00000.parquet   0a0d4ffce4cfe9d8160c2badafbb5c5eb8dead634ae5028c8921a6011578d798
+cnh  cnh_Latn  train/000_00000.parquet  60e1303e9af94acfd5e4cd51fab994226d3649a46092b1540d83d9534cd6c011
+cnh  cnh_Latn  test/000_00000.parquet   152207cc49a19742b83a735bcf9993ebbe242e613b71eba8b5f9a437e592fcfe
+kac  kac_Latn  train/000_00000.parquet  874231df9b50402d9c3d535479418039028119264debe93297ebe2ece111c87d
+kac  kac_Latn  test/000_00000.parquet   11cb0e7638cb0978d28379810c582e9dd854b5d0cb8503b515d6432544a82093
+hil  hil_Latn  train/000_00000.parquet  bd9f6fb7f06ae8b1cb0fc62a4a01221ec9b78178ddccbd2ce77acd5a7452a87c
+hil  hil_Latn  test/000_00000.parquet   190a82ed8823aa989d24ebe26bfa6744f09179a6efe947439d1003464f6dbc29
+ilo  ilo_Latn  train/000_00000.parquet  f970a137ca919e02f830646a6157d9ba4b6b39c33791b847413fbc8053ac22e1
+ilo  ilo_Latn  test/000_00000.parquet   64f021f41df577cf0ec9841e2c9303e1565a6bcf4a161d61e0c25469885403e4
+bcl  bcl_Latn  train/000_00000.parquet  109069b0235c2248fbb89ff35e46a9f647f0c4f0ef4a09a29c53eadefb02b616
+bcl  bcl_Latn  test/000_00000.parquet   dffdbdfb8ac4b21d85fa8d882bd5cec0ce47e6f56df3fab2e4296901a69828d1
+pag  pag_Latn  train/000_00000.parquet  8a22a7845a02055643982a602162e5663e7e2ead8bf5395cd55ca72e284f0008
+pag  pag_Latn  test/000_00000.parquet   cab847bb05556a976158403339c44a3e6218e63f9de04d747eeb5ee76629c3d7
+pam  pam_Latn  train/000_00000.parquet  6f867746f2a32391bd20741abf3d18f7dbd50bb0746f16ca1a989b9911cf7677
+pam  pam_Latn  test/000_00000.parquet   56a514e50d29889dbf6785cae2564d2e05a90b4e77a2582c384665622788f1d0
+krj  krj_Latn  train/000_00000.parquet  f79a17ed50b51e8607142c609541ee8d5292a04a7c3ae4e185a3f090f1e49379
+krj  krj_Latn  test/000_00000.parquet   e55109608d7d35f34400515f51cad9fff991fb50a11b1d605ad8da4b344ed268
+iba  iba_Latn  train/000_00000.parquet  a3519066a4a80b9d9b7192f1fd2885487590365783635054b89ab1ae0ab861d6
+iba  iba_Latn  test/000_00000.parquet   eef6b2d90148565d21b325ae4956c397c190609c2e93bf9af7b9724e26d0b4fd
+bbc  bbc_Latn  train/000_00000.parquet  db895b72716b129e5fa32a419210388f7c784868b7928132704b13f471f11476
+bbc  bbc_Latn  test/000_00000.parquet   69d6a3c08f4949394b1b5323a683ecbb3c734d06bea566fa290a574520779434
+ace  ace_Latn  train/000_00000.parquet  02532c90394b33abdfab9544a5348bcc1a7b6fbf3ea9c4041a1f4f873b953b88
+ace  ace_Latn  test/000_00000.parquet   c63392eb5a048003ee3e6faa6cbd76b8715f9ddec245b70019823eb77a9f9f27
+btx  btx_Latn  train/000_00000.parquet  52fd145df6f623aaef6cf1527dd1a66b74cc5c283dd73537d89e1db0d478ead1
+btx  btx_Latn  test/000_00000.parquet   9c10f7f842354d7f20c663e1b39500d9723ca43b4d877900cb950aed58525475
+bts  bts_Latn  train/000_00000.parquet  a27e10a2012c751037d7d09251311de6315c2c54b02566056febdc57c3ab7659
+bts  bts_Latn  test/000_00000.parquet   95db1795e5289c79c1bc903ccd07e51e92a41894c4bd2cf3dc8bdfaa2c158e29
+bjn  bjn_Latn  train/000_00000.parquet  4c4c4719eb8170c84b159927c0569a079ec9c8b01fc7e0afa86e1d19fc5e262d
+bjn  bjn_Latn  test/000_00000.parquet   60f844a68a1d1648f7b857483e6957200028926ac2ea48c3c47f15aa053fdb6c
+dtp  dtp_Latn  train/000_00000.parquet  ce627a07f39876a8eb996266f25fabd3b0bbb58f72b73f077bb6dacfac4541c2
+dtp  dtp_Latn  test/000_00000.parquet   68ede3dae4c1e69470bebcee560b1ecfc0712e3d4312663f462e7eedfa41f65a
+ban  ban_Latn  train/000_00000.parquet  2e5419955cdccc06d7d49d2b5bd1defcfb26d2fb7f391292b31b2e3adbf57451
+ban  ban_Latn  test/000_00000.parquet   b0f1ee4a8aee5ee4be6fdd435ea6fa7e3171cc97b05877d8c60a4112332ad548
+tet  tet_Latn  train/000_00000.parquet  505ad3d4c161b06cf725d7b6f3e81270e85f60128b3657de731a73318d384016
+tet  tet_Latn  test/000_00000.parquet   0bdbc2a74f84071381fa936010c2aa4beb38d5faacf8f423f435403ad5ae436c
+ium  ium_Latn  train/000_00000.parquet  58fbd1f9f0bd7511da7bd7ec50dc013fbe0eddb0f95ea77ecbb0d885e64b5838
+ium  ium_Latn  test/000_00000.parquet   8ae6913a15c5a3b3a7e2e601af3225ab9cbbb3c4506fde406ac7acd077c028d7
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)
