@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # fetch-glotcc.sh — web text of languages whose wiki is mostly a bot's
 # stubs, from GlotCC (the Makefile's GLOTCC_LANGS): Newari, whose wiki is
-# half village stubs a bot wrote and whose web text is news.
+# half village stubs a bot wrote and whose web text is news; and of
+# Nigerian Pidgin, whose web text FineWeb-2 has too little of alone.
 #
 # GlotCC (cis-lmu/GlotCC-V1 at Hugging Face; Kargaran, Yvon and Schütze,
 # "GlotCC: An Open Broad-Coverage CommonCrawl Corpus and Pipeline for
@@ -11,7 +12,11 @@
 # Common Crawl's Terms of Use. Each language's parquet file, at one
 # revision, is pinned by sha256 below. scripts/fineweb-text.py keeps the
 # documents that read as the language, and holds out every 20th of them,
-# GlotCC having no test split. It writes
+# GlotCC having no test split. A language FineWeb-2 has as well
+# (ALSO_FINEWEB) is read after scripts/fetch-fineweb.sh has written its
+# text: a sentence that text has, its corpus's or held out, is neither
+# written again nor held out, so that the language's held-out text is in
+# neither corpus. It writes
 #
 #   $OUT/<lang>.txt       the sentences of the documents kept, each once:
 #                         the corpus build-predict learns the model from
@@ -26,6 +31,7 @@
 #   scripts/fetch-glotcc.sh new        # some
 #
 # Env: OUT=$TMPDIR/ki-osk-sources/glotcc  EVAL_OUT=$OUT/eval  PYTHON=python3
+#      FINEWEB_OUT=$OUT/../fineweb (scripts/fetch-fineweb.sh's OUT)
 set -euo pipefail
 
 REV=9ad140b6be3ac7b539606a2b4809b49d122823de
@@ -33,10 +39,13 @@ BASE=https://huggingface.co/datasets/cis-lmu/GlotCC-V1/resolve/$REV
 # language  file  sha256
 FILES="
 new  v1.0/new-Deva/new-Deva_0.parquet  77ab27dc09914605ecc0d102f5acd56e9f4a6889fc9cd96fc51cf6c930360b68
+pcm  v1.0/pcm-Latn/pcm-Latn_0.parquet  490ffb1a6813455318b27b533bcfc6a634ba199f69eaea369ca07640c3795d73
 "
+ALSO_FINEWEB="pcm"
 
 OUT=${OUT:-${TMPDIR:-/tmp}/ki-osk-sources/glotcc}
 EVAL_OUT=${EVAL_OUT:-$OUT/eval}
+FINEWEB_OUT=${FINEWEB_OUT:-$OUT/../fineweb}
 PYTHON=${PYTHON:-python3}
 langs=${*:-$(echo "$FILES" | awk 'NF {print $1}' | sort -u)}
 
@@ -61,8 +70,16 @@ for lang in $langs; do
 		fi
 		train+=("$local_file")
 	done <<<"$rows"
+	exclude=()
+	case " $ALSO_FINEWEB " in
+		*" $lang "*)
+			for f in "$FINEWEB_OUT/$lang.txt" "$FINEWEB_OUT/eval/$lang.txt"; do
+				[ -f "$f" ] || { echo "fetch-glotcc: no $f (scripts/fetch-fineweb.sh $lang first)" >&2; exit 2; }
+			done
+			exclude=(--exclude "$FINEWEB_OUT/$lang.txt" "$FINEWEB_OUT/eval/$lang.txt") ;;
+	esac
 	"$PYTHON" -I "$(dirname "$0")/fineweb-text.py" --lang "$lang" \
-		"$OUT/$lang.txt.part" "$EVAL_OUT/$lang.txt.part" --train "${train[@]}" --hold 20
+		"$OUT/$lang.txt.part" "$EVAL_OUT/$lang.txt.part" --train "${train[@]}" --hold 20 "${exclude[@]}"
 	mv -f "$OUT/$lang.txt.part" "$OUT/$lang.txt"
 	mv -f "$EVAL_OUT/$lang.txt.part" "$EVAL_OUT/$lang.txt"
 done

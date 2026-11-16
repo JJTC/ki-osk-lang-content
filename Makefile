@@ -34,7 +34,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  dty anp new km my \
                  sw af sl zu \
                  sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
-                 xh fo ceb mi su co ny sm sn ig st haw yo dv
+                 xh fo ceb mi su co ny sm sn ig st haw yo dv \
+                 ckb pcm
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -94,8 +95,10 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # their own: Bodo, Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi
 # (Magahi's beside its Incubator text), of Sindhi in Devanagari and Meitei
 # in the Bengali script, of Lao, Khmer and Burmese, whose wikis are
-# small or few write as people type, and of thirty-eight languages that
-# had a keyboard and no model, from Swahili to Zulu (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
+# small or few write as people type, of thirty-eight languages that
+# had a keyboard and no model, from Swahili to Zulu, and of Central
+# Kurdish (Sorani) and Nigerian Pidgin (beside GlotCC's, below)
+# (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
 # the held-out text is FineWeb-2's test split, in $(FINEWEB_DIR)/eval, and
@@ -104,7 +107,8 @@ TATOEBA_WIKI_WEIGHT ?= 100
 FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  sw af sl zu \
                  sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
-                 xh fo ceb mi su co ny sm sn ig st haw yo dv
+                 xh fo ceb mi su co ny sm sn ig st haw yo dv \
+                 ckb pcm
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -129,11 +133,12 @@ MADLAD_DIR = $(SRC_DIR)/madlad
 # GlotCC's web text (scripts/fetch-glotcc.sh, its files at one revision
 # pinned by sha256; its packaging CC0 1.0, its text under Common Crawl's
 # Terms of Use), for languages whose wiki is mostly a bot's stubs: Newari,
-# beside its wiki's text (WEB_WEIGHT). scripts/fineweb-text.py keeps the
-# documents that read as their language and holds out every 20th, in
-# $(GLOTCC_DIR)/eval; nothing of it is committed. Reading parquet needs
-# pyarrow (FINEWEB_PYTHON).
-GLOTCC_LANGS ?= new
+# beside its wiki's text (WEB_WEIGHT); and for Nigerian Pidgin beside
+# FineWeb-2's text, whose sentences it leaves out (fetch-fineweb first).
+# scripts/fineweb-text.py keeps the documents that read as their language
+# and holds out every 20th, in $(GLOTCC_DIR)/eval; nothing of it is
+# committed. Reading parquet needs pyarrow (FINEWEB_PYTHON).
+GLOTCC_LANGS ?= new pcm
 GLOTCC_DIR = $(SRC_DIR)/glotcc
 FINEWEB_PYTHON ?= python3
 
@@ -241,8 +246,11 @@ PREDICT_LARGE_NGRAM ?= 90000
 # Slovenian, Uzbek, Xhosa, Zulu, Shona, Luxembourgish, Dhivehi, Irish,
 # Bashkir): at 120 000 they lack 1 to 2 points fewer, and save 0.3 to 0.8
 # points more keystrokes, 0.7 to 1.9 with taps astray (Zulu 43.1% ->
-# 43.9%, Kazakh 35.2% -> 35.9%).
-PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba
+# 43.9%, Kazakh 35.2% -> 35.9%). And Central Kurdish (Sorani), which
+# writes its prepositions and endings onto its words: at 80 000 its
+# lexicon lacks 12.2% of the held-out words and saves 33.2% of their
+# keystrokes, at 120 000 10.4% and 33.6%.
+PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a
@@ -257,9 +265,12 @@ PREDICT_WIDER_VOCAB ?= 200000
 PREDICT_WIDER_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
 # text too (DAKSHINA_LANGS); twice as many words gain Hindi's
-# transliteration under a point.
+# transliteration under a point. And the small web corpora: Nigerian
+# Pidgin's 540 000 words have 26 565 kinds (at 20 000 it saves 43.5% of
+# its held-out keystrokes, with all of them 44.0%).
 PREDICT_WIKI_LANGS ?= hi gu pa sd si ur bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy \
-                      brx doi hne brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw dty anp km my
+                      brx doi hne brh sd-Deva mni-Beng lo gbm raj trp wsg lus kha khw dty anp km my \
+                      pcm
 PREDICT_WIKI_VOCAB ?= 30000
 PREDICT_WIKI_NGRAM ?= 60000
 # The bigrams and trigrams that start a sentence, kept apart from the
@@ -381,7 +392,7 @@ fetch-madlad:
 
 .PHONY: fetch-glotcc
 fetch-glotcc:
-	OUT=$(GLOTCC_DIR) PYTHON=$(FINEWEB_PYTHON) ./scripts/fetch-glotcc.sh $(GLOTCC_LANGS)
+	OUT=$(GLOTCC_DIR) FINEWEB_OUT=$(FINEWEB_DIR) PYTHON=$(FINEWEB_PYTHON) ./scripts/fetch-glotcc.sh $(GLOTCC_LANGS)
 
 # The word lists of the languages written without spaces between words
 # (wordbreak/<lang>.txt, committed): ICU's word-break dictionaries, pinned

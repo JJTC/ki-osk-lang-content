@@ -24,7 +24,8 @@ letters on the long presses of those that sound nearest: ځ ݮ on ج, څ ݯ on
 چ, ݰ on ش, ݱ on ز. Adilabad Gondi is typed on Telugu's keys. Mizo
 and Khasi, in Latin letters, are typed on the US keys with their own
 letters first on the long presses, the menu's others after them: Mizo's
-â ê î ô û and ṭ, Khasi's ï and ñ. A letter only a long press types turns
+â ê î ô û and ṭ, Khasi's ï and ñ; Nigerian Pidgin, which the web writes
+in the 26 letters, on them as they are. A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -104,6 +105,7 @@ DERIVED = [
     ),
     ("kha", "us", "Khasi", {"i": ["ï"], "n": ["ñ"], "I": ["Ï"], "N": ["Ñ"]}),
     ("khw", "ur", "کھوار", {"ج": ["ځ", "ݮ"], "چ": ["څ", "ݯ"], "ش": ["ݰ"], "ز": ["ݱ"]}),
+    ("pcm", "us", "Naijá", {}),
 ]
 
 

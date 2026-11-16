@@ -89,6 +89,7 @@ LANGS = [
     ("ps", "پښتو", "af", "ps", "arabic"),
     ("sd", "سنڌي", "pk", "snd", "arabic"),
     ("ug", "ئۇيغۇرچە", "cn", "ug", "arabic"),
+    ("ckb", "کوردیی ناوەندی", "iq", "ku_ara", "arabic"),
     # --- Tier 3: complex Asian / Caucasus scripts (bundled Noto faces) ---
     # Alphabetic — fit the grid cleanly, no combining marks:
     ("ka", "ქართული", "ge", "", "georgian"),
@@ -296,6 +297,9 @@ DIACRITIC_LONGPRESS = {
     # Assamese: the two letters that distinguish it from Bengali — Assamese
     # ra ৰ (long-press Bengali ra র) and wa ৱ (long-press Bengali ba ব).
     "as": {"র": ["ৰ"], "ব": ["ৱ"]},
+    # Central Kurdish (Sorani): ێ ڵ ڕ, among its commonest letters, which
+    # its keymap puts on shift, on the long presses of ی ل ر as well.
+    "ckb": {"ی": ["ێ"], "ل": ["ڵ"], "ر": ["ڕ"]},
     # --- Tier E: European minority (letters beyond the inherited us menus) ---
     # Welsh: the circumflex ("to bach") set — incl. ŵ ŷ on the semivowels.
     "cy": {

@@ -33,6 +33,7 @@ brx = "Bodo"
 bs  = "Bosnian"
 ca  = "Catalan"
 ceb = "Cebuano"
+ckb = "Central Kurdish (Sorani)"
 co  = "Corsican"
 cs  = "Czech"
 cy  = "Welsh"
@@ -111,6 +112,7 @@ oc  = "Occitan"
 or  = "Odia"
 os  = "Ossetian"
 pa  = "Punjabi"
+pcm = "Nigerian Pidgin"
 pl  = "Polish"
 pnb = "Western Punjabi (Shahmukhi)"
 ps  = "Pashto"
@@ -275,7 +277,8 @@ source  = { name = "MADLAD-400 (Google; allenai/MADLAD-400 at Hugging Face): web
 
 # GlotCC's web text (scripts/fetch-glotcc.sh: its files at one revision,
 # pinned by sha256; scripts/fineweb-text.py keeps the documents that read
-# as their language): Newari's news, beside its wiki's text. Its card
+# as their language): Newari's news, beside its wiki's text, and Nigerian
+# Pidgin's, beside FineWeb-2's (the sentences it lacks). Its card
 # licenses its packaging, metadata and annotations CC0 1.0, the text
 # being under Common Crawl's Terms of Use; the packs name it all the same.
 [prediction.glotcc]
@@ -366,6 +369,7 @@ bs      = ["bs"]
 ca      = ["ca"]
 ceb     = ["ceb"]
 chr     = ["chr"]
+ckb     = ["ckb"]
 co      = ["co"]
 cs      = ["cz"]
 cy      = ["cy"]
@@ -459,6 +463,7 @@ om      = ["om"]
 or      = ["or", "or-abc"]
 os      = ["os"]
 pa      = ["pa", "pa-abc"]
+pcm     = ["pcm"]
 pl      = ["pl"]
 pnb     = ["pnb", "pnb-abc"]
 ps      = ["ps", "ps-abc"]

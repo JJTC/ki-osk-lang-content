@@ -6,7 +6,10 @@
 # and Burmese, whose wikis are small or few write as people do, and
 # Kokborok, Mizo and Khasi, which have none; thirty-eight languages that
 # had a keyboard and no model (Swahili, Slovenian, Kazakh, Zulu…), of
-# whose train split the first file is read; and
+# whose train split the first file is read; Central Kurdish (Sorani),
+# whose wiki is Wikipedia's prose, and Nigerian Pidgin, whose wiki
+# spells as few type (scripts/fetch-glotcc.sh reads GlotCC's beside it,
+# after this); and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -145,6 +148,10 @@ lus  lus_Latn  train/000_00000.parquet  ae86b93ee0ce7565f66dc07a63ea4111530d3088
 lus  lus_Latn  test/000_00000.parquet   82931cb2bc0affbe7402e3d92b616485a30cab1f29a226d4a17490e6a4090444
 kha  kha_Latn  train/000_00000.parquet  d2293b5ec62d94d3b1019aab7a3ce03f01801d7c7a8ac1a1a3ce3315d4c44f66
 kha  kha_Latn  test/000_00000.parquet   c2e85f6aa8725b703a40b395668198eec7d3036c2e4013b8c116152381eb894b
+ckb  ckb_Arab  train/000_00000.parquet  3ab3414974031e9e561b61af2c356185263dea30929a8044c7367f9eb9c6c9b2
+ckb  ckb_Arab  test/000_00000.parquet   8a40340a3b4684f6a2a6d88ca358d329cc994fd72537e5db03f4e7cf2aad8605
+pcm  pcm_Latn  train/000_00000.parquet  5711b000d4ebd02cf25016bae966411be0a9d908484fcb825fa04493d40ddbb6
+pcm  pcm_Latn  test/000_00000.parquet   143c3b204d839b630d0c78c8ae199d8704601e7a1b31e7da80fd10e12e1bb039
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

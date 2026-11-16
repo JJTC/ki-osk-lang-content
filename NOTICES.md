@@ -188,7 +188,7 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Fifty models learn from FineWeb-2's web text alone: those of Bodo,
+Fifty-one models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
@@ -199,8 +199,9 @@ Corsican, Dhivehi, Faroese, Frisian, Haitian Creole, Hausa, Hawaiian,
 Igbo, Irish, Javanese, Kazakh, Kinyarwanda, Kyrgyz, Luxembourgish,
 Malagasy, Maltese, Māori, Samoan, Scottish Gaelic, Sesotho, Shona,
 Slovenian, Somali, Sundanese, Swahili, Tajik, Turkmen, Uzbek, Welsh,
-Xhosa, Yoruba and Zulu); and Assamese's from it beside
-its Tatoeba sentences, and Magahi's beside its Incubator text.
+Xhosa, Yoruba and Zulu), and of Central Kurdish (Sorani); and
+Assamese's from it beside its Tatoeba sentences, Magahi's beside its
+Incubator text, and Nigerian Pidgin's beside GlotCC's (below).
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
 Pipeline to Scale Them All", arXiv 2506.20920) is text from Common
 Crawl's crawls, sorted by language; **it is ODC-By 1.0, and its use is
@@ -232,17 +233,19 @@ model names MADLAD-400 among its sources, with that licence.
 ### GlotCC (web text)
 
 Newari's model learns from GlotCC's web text beside its wiki's, whose
-articles are half village stubs a bot wrote: GlotCC v1.0 (Kargaran, Yvon
+articles are half village stubs a bot wrote, and Nigerian Pidgin's
+beside FineWeb-2's, the sentences that lacks: GlotCC v1.0 (Kargaran, Yvon
 and Schütze, "GlotCC: An Open Broad-Coverage CommonCrawl Corpus and
 Pipeline for Minority Languages", NeurIPS 2024; at Hugging Face as
 `cis-lmu/GlotCC-V1`), text from Common Crawl sorted by language for a
 thousand minority languages. **Its card licenses its packaging, metadata
 and annotations CC0 1.0, the text itself being under [Common Crawl's
-Terms of Use](https://commoncrawl.org/terms-of-use)**. Its file, at one
-revision, is pinned by sha256 in `scripts/fetch-glotcc.sh`;
-`scripts/fineweb-text.py` keeps the documents that read as Newari. As
-with FineWeb-2, the model made from it is what this repository and its
-pack hold, never the text; the pack names GlotCC among its sources.
+Terms of Use](https://commoncrawl.org/terms-of-use)**. Its files, at one
+revision, are pinned by sha256 in `scripts/fetch-glotcc.sh`;
+`scripts/fineweb-text.py` keeps the documents that read as their
+language. As with FineWeb-2, the models made from it are what this
+repository and its packs hold, never the text; each pack names GlotCC
+among its sources.
 
 **The Dakshina dataset is CC BY-SA 4.0**, share-alike: the packs of
 those twelve languages, their models and the held-out text in `eval/`

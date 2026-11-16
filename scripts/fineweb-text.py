@@ -73,6 +73,28 @@ neighbours do not show: a sample's commonest words are each language's
 own (Frisian's fan it yn, Faroese's í á við sum, Cebuano's nga ug usa,
 Corsican's u è chì).
 
+Central Kurdish (Sorani) is read every 10th row group. A third of its
+web text is in the old Arabic-keyboard spelling, which writes the vowel
+ە as ه (ئهنجلۆس, له), ه being h as well: a document in it is left out,
+one more of whose words begin ئه or ده and a letter (ئهو, دهکات) than ئە
+or دە (ئەو, دەکات), or in which ه ends more words than ە is written, and
+so is a sentence of it by how its words begin; so is a document whose
+letters are under 4% Sorani's own (ە ێ ۆ ڵ ڕ: Persian or Arabic), and a
+sentence more than 15% of whose words are Arabic's (فی علی الذی…).
+The letters Arabic and Persian keyboards typed for Sorani's (ك ي ى ھ)
+are read as those its keyboard types (ک ی ی ه), a word's last ه as ە
+but after ا (شاه, گوناه) and in الله (half the words ending in ه have
+their ە form commoner: ە typed as the old keyboards had it, لاپەڕه,
+ئیسلامەوه), and the tatweel that stretches a word goes. Nigerian Pidgin's documents are
+kept where its own words (di dey wey dem na don…) are at least 5% of
+their words and more than English's (the is was are…: the rest of what
+FineWeb-2 and GlotCC file under it is poster shops, porn and English),
+and a sentence of English is left out. Its GlotCC text is read after its
+FineWeb-2 text (`--exclude`): a sentence that has is neither written
+again nor held out, so that the held-out text of each is in neither
+corpus; FineWeb-2's test split of it is six documents, GlotCC's every
+20th held out.
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -95,6 +117,7 @@ text in "content", a document kept where its own words (दु खः नं थ
 out as MADLAD-400's are.
 
     fineweb-text.py --lang L [--eval N] OUT EVAL --train F... [--test F... | --hold N]
+                    [--exclude F...]
 
 Needs pyarrow for parquet. The files are read in the order given, so
 the same files always give the same text.
@@ -145,6 +168,32 @@ NEWARI = set("दु खः नं थ्व जूगु याःगु या
 # Pnar (Jaintia), Khasi's neighbour, which FineWeb-2 files under Khasi.
 PNAR = set("wa ya kiwa kawa uwa ko wow".split())
 BENGALI = set("এবং করে হয় এই যে থেকে জন্য করা তার আমি আমাদের হয়েছে একটি সঙ্গে করেন হবে".split())
+# Nigerian Pidgin's own words, and English's that it does not write (it
+# writes di, dey, wey, na, don, dis, dat; for, and, of and with as English
+# does): a document of it has more of its own, a sentence of English more
+# than 15% of English's.
+NAIJA = set("di dey wey dem na don una wetin sey pipo dis im fit wan bin dat dia oda tok".split())
+NAIJA_RIVAL = set("the is was are this that which have were".split())
+# Arabic's words, after Sorani's letters are folded (فی for في), that
+# Sorani does not write: what marks a sentence of Arabic in its text.
+ARABIC_ONLY = set("فی علی إلی الی الذی التی هذا هذه عن".split())
+# Sorani's own letters, which Persian and Arabic do not write.
+SORANI = set("ەێۆڵڕ")
+# Sorani's letters as Arabic and Persian keyboards wrote them: Arabic's
+# kaf and yeh, alef maksura for a final yeh, and the doachashmee heh,
+# each read as the letter the keyboard types.
+SORANI_FOLD = str.maketrans({"\u0643": "\u06A9", "\u064A": "\u06CC", "\u0649": "\u06CC", "\u06BE": "\u0647"})
+# ه ending a word: in the old spelling, ە mostly. In text that writes the
+# rest as Unicode's, it is ە typed as the old keyboards had it (لاپەڕه,
+# ئیسلامەوه, له), but after ا (شاه, گوناه, ئاگاه) and in الله.
+FINAL_HEH = re.compile("\u0647(?![\u0600-\u06FF])")
+# A word begun with ئه or ده and a letter: the old spelling's ئهو دهکات,
+# Unicode's ئەو دەکات.
+OLD_START = re.compile("(?<![\u0600-\u06FF])[\u0626\u062F]\u0647(?=[\u0600-\u06FF])")
+NEW_START = re.compile("(?<![\u0600-\u06FF])[\u0626\u062F]\u06D5")
+FINAL_AE = re.compile("(?<=[\u0620-\u06FF])(?<!\u0627)(?<!\u0627\u0644\u0644)\u0647(?![\u0600-\u06FF])")
+# Where a sentence of text ends, as `sentences` cuts it.
+SENTENCE_GAP = re.compile(r"((?<=[.!?\u061F])\s+|\n)")
 
 # Sindhi's implosives: the letter, or (on the web) its plain consonant
 # with the underline after any vowel signs.
@@ -168,6 +217,32 @@ def zawgyi(text):
     # Burmese never writes, for the ever-present င်.
     return (len(ZAWGYI.findall(text)) > 0.003 * max(1, len(MYANMAR.findall(text)))
             or text.count("\u1004\u103B") >= 2)
+
+
+def old_start(text):
+    """Text that writes ە as ه within words, the old Arabic-keyboard
+    spelling, in which ه is h as well and cannot be read back: more of its
+    words begin ئه or ده and a letter than ئە or دە."""
+    return len(OLD_START.findall(text)) > len(NEW_START.findall(text))
+
+
+def old_sorani(text):
+    """A document not written as Unicode's Sorani: one whose letters are
+    under 4% Sorani's own (ە ێ ۆ ڵ ڕ: Persian or Arabic), or in the old
+    spelling, by how its words begin or by ه ending more of them than ە
+    is written (each test finds old documents the other does not)."""
+    letters = sum(c.isalpha() for c in text)
+    return (sum(c in SORANI for c in text) < 0.04 * max(1, letters) or old_start(text)
+            or len(FINAL_HEH.findall(text)) > text.count("\u06D5"))
+
+
+def sorani(text):
+    # A sentence in the old spelling, which a document in Unicode's quotes
+    # or a comment under it writes, is left out; the rest is read as its
+    # keyboard types it, the tatweel that stretches a word's letters gone.
+    parts = SENTENCE_GAP.split(text)
+    text = "".join("" if i % 2 == 0 and old_start(p) else p for i, p in enumerate(parts))
+    return FINAL_AE.sub("\u06D5", text.translate(SORANI_FOLD)).replace("\u0640", "")
 
 
 def sindhi(text):
@@ -254,7 +329,11 @@ LANGS = {
     "km": {"script": "KHMER", "neighbour": set(), "lines": True, "unspaced": True, "every": 40,
            "script_only": True},
     "my": {"script": "MYANMAR", "neighbour": set(), "lines": True, "unspaced": True, "every": 40,
-           "normalize": burmese, "script_only": True, "unicode": True},
+           "normalize": burmese, "script_only": True, "foreign": zawgyi},
+    "ckb": {"script": "ARABIC", "neighbour": set(), "foreign": old_sorani, "normalize": sorani,
+            "sentence_rival": ARABIC_ONLY, "every": 10},
+    "pcm": {"script": "LATIN", "neighbour": set(), "own": NAIJA, "rival": NAIJA_RIVAL, "own_least": 0.05,
+            "sentence_rival": NAIJA_RIVAL},
 }
 
 
@@ -284,7 +363,7 @@ def kept(text, conf):
     ws = words(text.lower())
     if junk(text, ws, conf["script"]):
         return False
-    if conf.get("unicode") and zawgyi(text):
+    if "foreign" in conf and conf["foreign"](text):
         return False
     if share(ws, conf["neighbour"]) > 0.06:
         return False
@@ -294,7 +373,7 @@ def kept(text, conf):
             return False
     if "own" in conf:
         own = share(ws, conf["own"])
-        if own < 0.01 or own <= share(ws, conf["rival"]) + share(ws, conf["neighbour"]):
+        if own < conf.get("own_least", 0.01) or own <= share(ws, conf["rival"]) + share(ws, conf["neighbour"]):
             return False
     return True
 
@@ -371,10 +450,17 @@ def main():
     ap.add_argument("--test", nargs="+", help="the test split's files")
     ap.add_argument("--hold", type=int, default=20,
                     help="with no test split, every HOLDth document kept is held out")
+    ap.add_argument("--exclude", nargs="+", default=[],
+                    help="another source's sentences of the language (its corpus and held-out "
+                         "text): neither written nor held out")
     opts = ap.parse_args()
     train, test = opts.train, opts.test or []
     conf = LANGS[opts.lang]
     seen = set()
+    for path in opts.exclude:
+        with open(path, encoding="utf-8") as f:
+            seen.update(line.rstrip("\n") for line in f)
+    excluded = len(seen)
     docs = dropped = 0
     held_docs = []
     with open(opts.out, "w", encoding="utf-8") as out:
@@ -399,9 +485,9 @@ def main():
     with open(opts.eval_out, "w", encoding="utf-8") as ev:
         for s in held:
             ev.write(s + "\n")
-    if not seen or not held:
+    if len(seen) == excluded or not held:
         sys.exit(f"fineweb-text: {opts.lang}: no text")
-    print(f"{opts.out}: {len(seen)} sentences from {docs - dropped} of {docs} documents, {len(held)} held out")
+    print(f"{opts.out}: {len(seen) - excluded} sentences from {docs - dropped} of {docs} documents, {len(held)} held out")
 
 
 if __name__ == "__main__":

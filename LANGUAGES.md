@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**229 layouts**: 174 keyboard layouts (RTL: ar he fa + Urdu, Western
+**231 layouts**: 176 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
+Central Kurdish, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 228 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **139 languages** carry a prediction
+keycaps. 230 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **141 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -79,6 +79,7 @@ but no model to match the glide against · `—` off
 | `fil` | `fil` | Filipino | ph | LTR | **Full** (fil) | ✓ | — |
 | `az` | `az` | Azerbaijani | az | LTR | **Full** (az) | ✓ | — |
 | `ku` | `ku` | Kurdish (Kurmanji) | iq · ku | LTR | **Full** (ku) | ✓ | — |
+| `ckb` | `ckb` | Central Kurdish (Sorani) کوردیی ناوەندی | iq · ku_ara + long-press ێ ڵ ڕ | **RTL** | **Full** (ckb)⁷ | — | — |
 | `ur` | `ur` | Urdu | pk | **RTL** | **Full** (ur)³ | — | — |
 | `brh` | `brh` | Brahui براہوئی | pk + long-press ۺ | **RTL** | **Full** (brh)⁷ | — | — |
 | `khw` | `khw` | Khowar کھوار | pk + long-press ځ ݮ څ ݯ ݰ ݱ | **RTL** | **Full** (khw)⁶ | — | — |
@@ -108,6 +109,7 @@ but no model to match the glide against · `—` off
 | `trp` | `trp` | Kokborok | us | LTR | **Full** (trp)⁷ | ✓ | — |
 | `lus` | `lus` | Mizo | us + long-press â ê î ô û ṭ | LTR | **Full** (lus)⁷ | ✓ | — |
 | `kha` | `kha` | Khasi | us + long-press ï ñ | LTR | **Full** (kha)⁷ | ✓ | — |
+| `pcm` | `pcm` | Nigerian Pidgin (Naijá) | us | LTR | **Full** (pcm)⁷ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -638,7 +640,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These fifty-two models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These fifty-four models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -721,7 +723,33 @@ but no model to match the glide against · `—` off
    articles and elided prepositions glue the word after them on, as
    French's l' does (il-kelb, b'mod), and Irish's t- and n- before a vowel
    (t-athair); Uzbek's oʻ and gʻ are one spelling, whichever apostrophe a
-   text writes for the ʻ (`osk_data::words`). Bodo's apostrophe, which
+   text writes for the ʻ (`osk_data::words`). Central Kurdish (Sorani) is
+   typed on xkeyboard-config's Sorani keys (`iq(ku_ara)`), its ێ ڵ ڕ,
+   which they put on Shift, on the long presses of ی ل ر too. Every 10th
+   row group of its FineWeb-2 text is read. A third of it is in the old
+   Arabic-keyboard spelling, which writes ە as ه (ئهو, دهکات), ه being h
+   as well, and cannot be read back: a document in it is left out, and a
+   sentence of it in a document that is not. The letters those keyboards
+   typed (ك ي ى ھ) are read as the ones its keyboard types (ک ی ی ه), and
+   a word's last ه as ە but after ا (شاه) and in الله (in text otherwise
+   Unicode's, half the words ending in ه have their ە form commoner:
+   لاپەڕه, ئیسلامەوه); 465 760 sentences from 36 798 of 56 000 documents.
+   Its lexicon keeps 120 000 words, its words taking their prepositions
+   and endings with them: keystroke savings 33.6% on FineWeb-2's held-out
+   text (12 060 words, 10.4% unknown; with 80 000 words 33.2%, 12.2%),
+   23.6% with taps astray (Arabic's, on Tatoeba's sentences, 33.6% and
+   27.8%). Nigerian Pidgin,
+   typed on the US keys, learns from FineWeb-2's text and GlotCC's (note
+   6), what each files under it being poster shops, porn and English as
+   well: a document is kept where its own words (di dey wey dem na don)
+   are at least 5% of its words and more than English's (the is was
+   are), 876 and 790 documents, 16 579 and 6 980 sentences (540 000
+   words), GlotCC's those FineWeb-2's lacks; a third is the Bible in
+   Pidgin, the rest news, sport and lyrics. Its Wikipedia, written in the
+   Naija Langwej Akedemi's spelling (tek, afta, ples, where the web writes
+   take, after, place), is not read. Keystroke savings 44.0% on the
+   held-out text of both (397 sentences, 9 708 words, 5.7% unknown),
+   39.1% with taps astray, its lexicon's 26 565 words all its text has. Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
    row group of its FineWeb-2 (856 000 sentences), each document's ৰ
@@ -780,7 +808,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **139 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **141 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -796,7 +824,7 @@ but no model to match the glide against · `—` off
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my**, and of
   thirty-eight languages that had a keyboard and no model, **sw af sl zu sq kk uz bs
   ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba xh fo ceb mi su co ny sm sn ig st
-  haw yo dv** (FineWeb-2's; note 7;
+  haw yo dv**, and **ckb pcm** (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
@@ -973,6 +1001,7 @@ are built on a `us`/`es` base and add theirs the same way:
 | `uz` Uzbek | oʻ gʻ (turned comma) | `uz` |
 | `tk` Turkmen | ä ç ž ň ö ş ü ý | `tk` |
 | `as` Assamese | ৰ ৱ (on Bengali র/ব) | `as` |
+| `ckb` Central Kurdish | ێ ڵ ڕ (on ی ل ر; on Shift too) | `ckb` |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per
 *script*. InScript keeps the alphabet on the letter block and digits on
