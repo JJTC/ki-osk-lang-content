@@ -186,6 +186,18 @@ Abkhaz's ҧ and Latin ə as ԥ and ә. FineWeb-2's Southern Kurdish is
 Sorani's news, its Gilaki Persian shops' spam and its Gorani mostly
 Sorani: none is read.
 
+Twenty-four of Africa's, those of which FineWeb-2 has 2 MB or more, are
+read whole: Seychellois Creole, Northern Ndebele, Ndonga, Efik, Sango,
+Kwanyama, Tshiluba, Kiluba, Cape Verdean Creole, Mossi, Réunion Creole,
+Kikongo, Wolaytta, Dholuo, Tiv, Isoko, Bemba, Fon, Acholi, Baoulé, Jula,
+Kikuyu, Kimbundu and Umbundu. A sentence of English is left out, of
+French beside those where it is the state's language (not pour, which
+Seychellois writes), of Portuguese beside Kimbundu, Umbundu and Cape
+Verdean, and of Spanish beside Cape Verdean (not es, its "they"). Most of
+their text is the Bible and Watchtower (Kiluba's, Isoko's and Efik's
+nearly all), Seychellois Creole's its National Assembly's records, and
+Kikuyu's Kenya's news.
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -374,6 +386,9 @@ ABKHAZ_FOLD = str.maketrans("ҧҦəƏ", "ԥԤәӘ")
 KARAKALPAK_LETTERS = {"a": "á", "o": "ó", "u": "ú", "g": "ǵ", "n": "ń", "i": "ı",
                       "A": "Á", "O": "Ó", "U": "Ú", "G": "Ǵ", "N": "Ń", "I": "I"}
 KARAKALPAK_OLD = re.compile("([aouginAOUGIN])['’ʼ‘`](?=[^\\W\\d_])(?!s\\b)")
+# Africa's: Spanish's words that Cape Verdean Creole does not write (not
+# es, its "they"), beside Portuguese's.
+CAPE_VERDE_RIVAL = PORTUGUESE_ONLY | set("el los las del con por una para que".split())
 # Arabic's words, after Sorani's letters are folded (فی for في), that
 # Sorani does not write: what marks a sentence of Arabic in its text.
 ARABIC_ONLY = set("فی علی إلی الی الذی التی هذا هذه عن".split())
@@ -695,6 +710,30 @@ LANGS = {
     "krc": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "brackets": True},
     "ab": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": abkhaz, "brackets": True},
     "xmf": {"script": "GEORGIAN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | GEORGIAN_ONLY, "brackets": True},
+    "crs": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | (FRENCH_SET - {"pour"}), "brackets": True},
+    "nd": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "ng": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "efi": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "sg": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "kj": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "lua": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "lu": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "kea": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | CAPE_VERDE_RIVAL, "brackets": True},
+    "mos": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "rcf": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "kg": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "wal": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "luo": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "tiv": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "iso": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "bem": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "fon": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "ach": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "bci": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "dyu": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "ki": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "kmb": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY, "brackets": True},
+    "umb": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY, "brackets": True},
 }
 
 

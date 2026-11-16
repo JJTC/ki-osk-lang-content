@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**310 layouts**: 255 keyboard layouts (RTL: ar he fa + Urdu, Western
+**334 layouts**: 279 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 309 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **243 languages** carry a prediction
+keycaps. 333 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **267 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -189,6 +189,30 @@ but no model to match the glide against · `—` off
 | `krc` | `krc` | Karachay-Balkar Къарачай-малкъар тил | ru | LTR | **Full** (krc)⁷ | — | — |
 | `ab` | `ab` | Abkhaz Аԥсшәа | ru + long-press ә қ ҟ ԥ ҭ ҳ ҵ ҿ ҽ ҷ ҩ ӡ џ ҕ ӷ | LTR | **Full** (ab)⁷ | — | — |
 | `xmf` | `xmf` | Mingrelian მარგალური | ka + long-press ჷ ჲ ჸ | LTR | **Full** (xmf)⁷ | — | — |
+| `crs` | `crs` | Seychellois Creole Kreol Seselwa | us | LTR | **Full** (crs)⁷ | ✓ | — |
+| `nd` | `nd` | Northern Ndebele Sindebele | us | LTR | **Full** (nd)⁷ | ✓ | — |
+| `ng` | `ng` | Ndonga Oshindonga | us | LTR | **Full** (ng)⁷ | ✓ | — |
+| `efi` | `efi` | Efik Efịk | us + long-press ọ ẹ ụ ị | LTR | **Full** (efi)⁷ | ✓ | — |
+| `sg` | `sg` | Sango Sängö | us + long-press ë ê é â ä ô ö û ï î | LTR | **Full** (sg)⁷ | ✓ | — |
+| `kj` | `kj` | Kwanyama Oshikwanyama | us | LTR | **Full** (kj)⁷ | ✓ | — |
+| `lua` | `lua` | Luba-Kasai Tshiluba | us | LTR | **Full** (lua)⁷ | ✓ | — |
+| `lu` | `lu` | Luba-Katanga Kiluba | us + long-press ā ū ō ē ñ | LTR | **Full** (lu)⁷ | ✓ | — |
+| `kea` | `kea` | Cape Verdean Creole Kabuverdianu | us + long-press á ã â à é ê ó ô ç | LTR | **Full** (kea)⁷ | ✓ | — |
+| `mos` | `mos` | Mossi Mòoré | us + long-press ã ẽ ɛ ɩ ĩ ʋ ũ õ | LTR | **Full** (mos)⁷ | ✓ | — |
+| `rcf` | `rcf` | Réunion Creole Kréol rényoné | us + long-press é è | LTR | **Full** (rcf)⁷ | ✓ | — |
+| `kg` | `kg` | Kongo Kikongo | us | LTR | **Full** (kg)⁷ | ✓ | — |
+| `wal` | `wal` | Wolaytta Wolayttatto | us | LTR | **Full** (wal)⁷ | ✓ | — |
+| `luo` | `luo` | Luo Dholuo | us | LTR | **Full** (luo)⁷ | ✓ | — |
+| `tiv` | `tiv` | Tiv | us + long-press ô é | LTR | **Full** (tiv)⁷ | ✓ | — |
+| `iso` | `iso` | Isoko | us + long-press ọ ẹ | LTR | **Full** (iso)⁷ | ✓ | — |
+| `bem` | `bem` | Bemba Ichibemba | us | LTR | **Full** (bem)⁷ | ✓ | — |
+| `fon` | `fon` | Fon Fɔngbè | us + long-press ɔ ó ò ɛ é è ě ɖ í ǐ ú ǔ á ǎ | LTR | **Full** (fon)⁷ | ✓ | — |
+| `ach` | `ach` | Acholi Acoli | us + long-press ŋ | LTR | **Full** (ach)⁷ | ✓ | — |
+| `bci` | `bci` | Baoulé Wawle | us + long-press ɛ ɔ ɲ | LTR | **Full** (bci)⁷ | ✓ | — |
+| `dyu` | `dyu` | Jula Julakan | us + long-press ɛ ɔ ɲ ŋ | LTR | **Full** (dyu)⁷ | ✓ | — |
+| `ki` | `ki` | Kikuyu Gĩkũyũ | us + long-press ĩ ũ | LTR | **Full** (ki)⁷ | ✓ | — |
+| `kmb` | `kmb` | Kimbundu | us | LTR | **Full** (kmb)⁷ | ✓ | — |
+| `umb` | `umb` | Umbundu | us + long-press ã ẽ ĩ ũ õ ñ | LTR | **Full** (umb)⁷ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -719,7 +743,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These one hundred and fifty-six models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These one hundred and eighty models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -986,7 +1010,32 @@ but no model to match the glide against · `—` off
    4.6% to 18.3%, at most 0.56% of right words changed (Mazandarani's).
    Tabasaran's and Mazandarani's held-out text is small (2 500 and 2 200
    words). FineWeb-2's Southern Kurdish is Sorani's news, its Gilaki
-   Persian shops' spam and its Gorani mostly Sorani: none is used. Bodo's apostrophe, which
+   Persian shops' spam and its Gorani mostly Sorani: none is used.
+   Twenty-four of Africa's learn from FineWeb-2's text whole, those it has
+   2 MB or more of: Seychellois Creole, Northern Ndebele, Ndonga, Efik,
+   Sango, Kwanyama, Tshiluba, Kiluba, Cape Verdean Creole, Mossi, Réunion
+   Creole, Kikongo, Wolaytta, Dholuo, Tiv, Isoko, Bemba, Fon, Acholi,
+   Baoulé, Jula, Kikuyu, Kimbundu and Umbundu, each typed on the US keys
+   with its letters first on the long presses (the table above). A
+   sentence of English is left out, and of French, Portuguese or Spanish
+   beside those whose state writes it. Most of their text is the Bible and
+   Watchtower (Kiluba's, Isoko's and Efik's nearly all), and so is their
+   held-out text, whose words their lexicons nearly all have (0.3% to 5%
+   unknown): their savings say how well a strip offers a text it has read
+   much like, more than everyday typing. Seychellois Creole's text is its
+   National Assembly's records, Kikuyu's Kenya's news. Their lexicons keep
+   80 000 words, Northern Ndebele's and Cape Verdean's 120 000. Keystroke
+   savings on FineWeb-2's held-out text of each (6 500 to 12 000 words):
+   Baoulé 61.4%, Kikongo 60.0%, Sango 59.6%, Efik 58.1%, Kwanyama 57.9%,
+   Umbundu 57.8%, Isoko 56.8%, Kimbundu 55.9%, Fon 55.4%, Jula 55.1%,
+   Kikuyu 54.0%, Seychellois Creole 53.8%, Tiv 53.3%, Tshiluba 52.8%,
+   Kiluba 52.3%, Ndonga 51.2%, Mossi 50.8%, Acholi 49.4%, Bemba 49.0%,
+   Réunion Creole 48.6%, Northern Ndebele 47.8%, Dholuo 47.6%, Wolaytta
+   45.7%, Cape Verdean Creole 29.3% (its text spelled both as ALUPEC and
+   as Portuguese, 10.4% of its words unknown); at most 0.59% of right
+   words changed (Seychellois Creole's). FineWeb-2 has under 2 MB of the
+   other Africa's languages Gboard has, mostly Bible pages, and none of
+   Krio, Kanuri, Mandinka or Tumbuka. Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
    row group of its FineWeb-2 (856 000 sentences), each document's ৰ
@@ -1045,7 +1094,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **243 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **267 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1066,7 +1115,8 @@ but no model to match the glide against · `—` off
   nap scn sc fur pms lij wa ltg vro csb szl crh sco rue**, of Russia and the north **sah cv sme
   mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep**, and twenty-three more that had a
   keyboard and no model, **kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu**,
-  and of Iran and the Caucasus **azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf**
+  of Iran and the Caucasus **azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf**,
+  and of Africa **crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb**
   (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the

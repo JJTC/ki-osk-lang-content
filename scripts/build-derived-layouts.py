@@ -55,7 +55,14 @@ are made from (ә on а, ԥ on п, ҭ on т, ҟ қ on к…); South Azerbaijani 
 Mazandarani on Persian's keys, Azerbaijani's ۆ ۇ on و and ې on ی;
 Karakalpak on the US keys with á ǵ ı ń ó ú, the two Zazakis on Turkish's
 with ê î û, Talysh on Azerbaijani's, and Mingrelian on Georgian's with ჷ
-on ე, ჲ on ი, ჸ on ყ. A letter only a long press types turns
+on ე, ჲ on ი, ჸ on ყ. Twenty-four of Africa's are typed on the US keys,
+their letters first on the long presses: Efik's and Isoko's ọ ẹ ụ ị,
+Sango's ë â ê ô û ï, Kiluba's ā ū ō ē ñ, Cape Verdean's á ã é ê ó ç,
+Mossi's ã ẽ ɛ ɩ ʋ õ, Réunion Creole's é è, Tiv's ô é, Fon's ɔ ɛ ɖ and
+tones, Acholi's ŋ, Baoulé's and Jula's ɛ ɔ ɲ, Kikuyu's ĩ ũ, Umbundu's
+nasal vowels and ñ; Seychellois Creole, Northern Ndebele, Ndonga,
+Kwanyama, Tshiluba, Kikongo, Wolaytta, Dholuo, Bemba and Kimbundu as
+they are. A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -205,6 +212,30 @@ DERIVED = [
     ("ab", "ru", "Аԥсшәа", {"а": ["ә"], "к": ["қ", "ҟ"], "п": ["ԥ"], "т": ["ҭ"], "х": ["ҳ"], "ц": ["ҵ"], "ч": ["ҿ", "ҽ", "ҷ"], "о": ["ҩ"], "з": ["ӡ"], "д": ["џ"], "г": ["ҕ", "ӷ"], "А": ["Ә"], "К": ["Қ", "Ҟ"], "П": ["Ԥ"], "Т": ["Ҭ"], "Х": ["Ҳ"], "Ц": ["Ҵ"], "Ч": ["Ҿ", "Ҽ", "Ҷ"], "О": ["Ҩ"], "З": ["Ӡ"], "Д": ["Џ"], "Г": ["Ҕ", "Ӷ"]}),
     ("azb", "fa", "تۆرکجه", {"و": ["ۆ", "ۇ"], "ی": ["ې"]}),
     ("xmf", "ka", "მარგალური", {"ე": ["ჷ"], "ი": ["ჲ"], "ყ": ["ჸ"]}),
+    ("crs", "us", "Kreol Seselwa", {}),
+    ("nd", "us", "Sindebele", {}),
+    ("ng", "us", "Oshindonga", {}),
+    ("efi", "us", "Efịk", {"o": ["ọ"], "e": ["ẹ"], "u": ["ụ"], "i": ["ị"], "O": ["Ọ"], "E": ["Ẹ"], "U": ["Ụ"], "I": ["Ị"]}),
+    ("sg", "us", "Sängö", {"e": ["ë", "ê", "é"], "a": ["â", "ä"], "o": ["ô", "ö"], "u": ["û"], "i": ["ï", "î"], "E": ["Ë", "Ê", "É"], "A": ["Â", "Ä"], "O": ["Ô", "Ö"], "U": ["Û"], "I": ["Ï", "Î"]}),
+    ("kj", "us", "Oshikwanyama", {}),
+    ("lua", "us", "Tshiluba", {}),
+    ("lu", "us", "Kiluba", {"a": ["ā"], "u": ["ū"], "o": ["ō"], "e": ["ē"], "n": ["ñ"], "A": ["Ā"], "U": ["Ū"], "O": ["Ō"], "E": ["Ē"], "N": ["Ñ"]}),
+    ("kea", "us", "Kabuverdianu", {"a": ["á", "ã", "â", "à"], "e": ["é", "ê"], "o": ["ó", "ô"], "c": ["ç"], "A": ["Á", "Ã", "Â", "À"], "E": ["É", "Ê"], "O": ["Ó", "Ô"], "C": ["Ç"]}),
+    ("mos", "us", "Mòoré", {"a": ["ã"], "e": ["ẽ", "ɛ"], "i": ["ɩ", "ĩ"], "u": ["ʋ", "ũ"], "o": ["õ"], "A": ["Ã"], "E": ["Ẽ", "Ɛ"], "I": ["Ɩ", "Ĩ"], "U": ["Ʋ", "Ũ"], "O": ["Õ"]}),
+    ("rcf", "us", "Kréol rényoné", {"e": ["é", "è"], "E": ["É", "È"]}),
+    ("kg", "us", "Kikongo", {}),
+    ("wal", "us", "Wolayttatto", {}),
+    ("luo", "us", "Dholuo", {}),
+    ("tiv", "us", "Tiv", {"o": ["ô"], "e": ["é"], "O": ["Ô"], "E": ["É"]}),
+    ("iso", "us", "Isoko", {"o": ["ọ"], "e": ["ẹ"], "O": ["Ọ"], "E": ["Ẹ"]}),
+    ("bem", "us", "Ichibemba", {}),
+    ("fon", "us", "Fɔngbè", {"o": ["ɔ", "ó", "ò"], "e": ["ɛ", "é", "è", "ě"], "d": ["ɖ"], "i": ["í", "ǐ"], "u": ["ú", "ǔ"], "a": ["á", "ǎ"], "O": ["Ɔ", "Ó", "Ò"], "E": ["Ɛ", "É", "È", "Ě"], "D": ["Ɖ"], "I": ["Í", "Ǐ"], "U": ["Ú", "Ǔ"], "A": ["Á", "Ǎ"]}),
+    ("ach", "us", "Acoli", {"n": ["ŋ"], "N": ["Ŋ"]}),
+    ("bci", "us", "Wawle", {"e": ["ɛ"], "o": ["ɔ"], "n": ["ɲ"], "E": ["Ɛ"], "O": ["Ɔ"], "N": ["Ɲ"]}),
+    ("dyu", "us", "Julakan", {"e": ["ɛ"], "o": ["ɔ"], "n": ["ɲ", "ŋ"], "E": ["Ɛ"], "O": ["Ɔ"], "N": ["Ɲ", "Ŋ"]}),
+    ("ki", "us", "Gĩkũyũ", {"i": ["ĩ"], "u": ["ũ"], "I": ["Ĩ"], "U": ["Ũ"]}),
+    ("kmb", "us", "Kimbundu", {}),
+    ("umb", "us", "Umbundu", {"a": ["ã"], "e": ["ẽ"], "i": ["ĩ"], "u": ["ũ"], "o": ["õ"], "n": ["ñ"], "A": ["Ã"], "E": ["Ẽ"], "I": ["Ĩ"], "U": ["Ũ"], "O": ["Õ"], "N": ["Ñ"]}),
 ]
 
 

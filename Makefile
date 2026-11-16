@@ -40,7 +40,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue \
                  sah cv sme mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep \
                  kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu \
-                 azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf
+                 azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
+                 crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -107,8 +108,9 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # twenty-six of Europe's regional languages, from Nynorsk to Rusyn, of
 # fifteen of Russia's and the north's, from Sakha to Veps, and of the
 # twenty-three more that had a keyboard and no model, from Udmurt and
-# Greenlandic to Inuktitut, and of nineteen of Iran's and the Caucasus',
-# from South Azerbaijani to Mingrelian
+# Greenlandic to Inuktitut, of nineteen of Iran's and the Caucasus', from
+# South Azerbaijani to Mingrelian, and of twenty-four of Africa's, from
+# Seychellois Creole to Umbundu
 # (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
@@ -124,7 +126,8 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue \
                  sah cv sme mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep \
                  kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu \
-                 azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf
+                 azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
+                 crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -248,8 +251,8 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # lexicons at 80 000 save 0.3 (Kadazandusun) to 2.5 points (Iloko) more
 # than at 30 000, the small corpora's every word (36 000 to 70 000);
 # and Europe's twenty-six regional languages, Russia's fifteen, the
-# twenty-three more that had a keyboard and no model, and Iran's and the
-# Caucasus' nineteen.
+# twenty-three more that had a keyboard and no model, Iran's and the
+# Caucasus' nineteen, and Africa's twenty-four.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -258,7 +261,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue \
                        sah cv sme mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep \
                        kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu \
-                       azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf
+                       azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
+                       crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -287,11 +291,13 @@ PREDICT_LARGE_NGRAM ?= 90000
 # 80 000 lack 7.8% (Kirundi) to 17.7% (Quechua) of their held-out words:
 # 0.3 to 0.9 points more saved at 120 000. And ten of Iran's and the
 # Caucasus', whose lexicons at 80 000 lack 8.1% (Lak) to 15.5% (South
-# Azerbaijani): 0.3 to 0.8 points more.
+# Azerbaijani): 0.3 to 0.8 points more. And Northern Ndebele and Cape
+# Verdean Creole, which lack 11.1% and 12.0% at 80 000: 0.9 and 0.5 points
+# more at 120 000.
 PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb ilo ban \
                       nn gsw bar nds pfl ksh li hsb dsb nap scn sc lij ltg vro csb szl sco rue \
                       sah sme lg vep qu krl olo udm bxr mdf myv tyv kpv rn \
-                      ab ady lbe krc kaa inh kiu azb tly diq
+                      ab ady lbe krc kaa inh kiu azb tly diq nd kea
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a
