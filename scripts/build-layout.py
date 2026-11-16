@@ -93,6 +93,17 @@ LANGS = [
     # Northern Sami on its Norwegian keymap, its letters (á š ŧ ŋ đ č ž) on
     # the base level; `sme`, as `se` is Sweden's layout.
     ("sme", "Davvisámegiella", "no", "smi", "latin"),
+    # The Caucasus' languages that write the palochka, Ӏ, on Russian's keys
+    # with a key for it (HOME_ROW_TEXT).
+    ("ce", "Нохчийн", "ru", "", "cyrillic"),
+    ("inh", "ГӀалгӀай", "ru", "", "cyrillic"),
+    ("av", "Авар мацӀ", "ru", "", "cyrillic"),
+    ("kbd", "Къэбэрдейбзэ", "ru", "", "cyrillic"),
+    ("ady", "Адыгабзэ", "ru", "", "cyrillic"),
+    ("lez", "Лезги чӀал", "ru", "", "cyrillic"),
+    ("lbe", "Лакку маз", "ru", "", "cyrillic"),
+    ("tab", "Табасаран чӀал", "ru", "", "cyrillic"),
+    ("dar", "Дарган мез", "ru", "", "cyrillic"),
     # --- Tier 3: complex Asian / Caucasus scripts (bundled Noto faces) ---
     # Alphabetic — fit the grid cleanly, no combining marks:
     ("ka", "ქართული", "ge", "", "georgian"),
@@ -436,12 +447,14 @@ NUMBER_ROW_SHIFT = {"khmer", "myanmar"}
 # a long press of its key.
 LEVEL3_LONGPRESS = {"khmer"}
 
-# Layouts whose language writes a letter no key of the US grid types and
-# the national keymap has none for: Polynesian's glottal stop, ʻ (U+02BB,
+# Layouts whose language writes a letter no key of its grid types and the
+# national keymap has none for: Polynesian's glottal stop, ʻ (U+02BB,
 # Hawaiian's ʻokina, Samoan's koma liliu, Tongan's fakauʻa, Tahitian's
-# ʻeta), a key of its own at the home row's end, which then has ten keys
-# as the top row does.
-HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ"}
+# ʻeta), and the Caucasus' palochka, Ӏ (U+04C0: Chechen's дӀа, Avar's
+# гьечӀо), a key of its own at the home row's end, in place of its
+# spacers.
+HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ",
+                 **{lid: "Ӏ" for lid in ("ce", "inh", "av", "kbd", "ady", "lez", "lbe", "tab", "dar")}}
 
 
 def is_letter_or_mark(g):

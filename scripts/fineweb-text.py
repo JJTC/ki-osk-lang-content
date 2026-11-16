@@ -166,6 +166,26 @@ is left out, as Zawgyi's Burmese is. FineWeb-2's
 Nahuatl is three quarters one variety's Bible (Eastern Huasteca's): not
 read for the keyboard of Nahuatl at large.
 
+Nineteen of Iran's and the Caucasus' are read whole: South Azerbaijani,
+Mazandarani, Kirmanjki and Zazaki, Talysh, Karakalpak (in Latin letters,
+its alphabet since 2016), Chechen, Ingush, Avar, Kabardian, Adyghe,
+Lezgian, Lak, Tabasaran, Dargwa, Kumyk, Karachay-Balkar, Abkhaz and
+Mingrelian. A sentence of the big language written beside each is left
+out: Russian's beside the Caucasus', Persian's and Arabic's (in Persian
+letters) beside South Azerbaijani and Mazandarani, Turkish's and
+Kurmanji's beside the Zazakis (with their viagra spam), Azerbaijani's
+beside Talysh, Georgian's beside Mingrelian; Lak's and Tabasaran's news
+sites' Russian page furniture (читать далее, опубликовано) is left out,
+and a religious-books site (download.ghbook.ir) that FineWeb-2 files under
+South Azerbaijani and Mazandarani, mostly Arabic and Persian. The
+palochka, Ӏ, which the Caucasus' alphabets write and keyboards without it
+type as 1, I, i, l, |, і or ι (д1а, гьечiо), is read as Ӏ beside a
+Cyrillic letter: a digit would otherwise cut the word in two. Karakalpak's
+letters as its 1994 alphabet wrote them (ha'm) are read as 2016's (hám),
+Abkhaz's ҧ and Latin ə as ԥ and ә. FineWeb-2's Southern Kurdish is
+Sorani's news, its Gilaki Persian shops' spam and its Gorani mostly
+Sorani: none is read.
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -324,6 +344,36 @@ KOMI_I = re.compile(r"(?<=[\u0400-\u04FF])[iI]|[iI](?=[\u0400-\u04FF])")
 # which the keyboard types. A quote before a consonant (’s, ‘Hello) is
 # left as it is.
 GLOTTAL = re.compile("(?:^|(?<=[\\s(\\[«\"“\\-—–/])|(?<=[^\\W\\d_]))[‘’'`](?=[aeiouāēīōūAEIOUĀĒĪŌŪ])")
+# The Caucasus' and Iran's: Persian's own words (not این از در, which
+# Mazandarani writes too), Arabic's in Persian letters (فی علی for في على),
+# Turkish's beside Zazaki, Azerbaijani's beside Talysh, Georgian's beside
+# Mingrelian, and spam's beside Zazaki.
+PERSIAN_ONLY = set("است را شده شد بود هستند آنها برای".split())
+ARABIC_IN_PERSIAN = set("فی علی أن الذی التی هذا هذه عن إلی الی کان قال".split())
+AZERBAIJANI_ONLY = set("üçün ilə olan edir deyil olub".split())
+GEORGIAN_ONLY = set("და არის რომ ეს იყო მისი ასევე".split())
+SPAM = set("viagra cialis http https www url casino porn".split())
+# The palochka, Ӏ (U+04C0), which the Caucasus' Cyrillic alphabets write
+# (Chechen's дӀа, Avar's гьечӀо) and keyboards without it type as 1, I, i,
+# l, |, і or Greek's ι (д1а, гьечiо): beside a Cyrillic letter, it is Ӏ. A
+# digit would otherwise cut the word in two.
+PALOCHKA = re.compile("(?<=[\u0400-\u04FF])[1Iil|\u0406\u0456\u04CF\u03B9](?=[\u0400-\u04FF])"
+                      "|(?<![\\w])[Ii|\u0406\u0456\u04CF\u03B9](?=[\u0430-\u044F\u0451])"
+                      "|(?<=[\u0400-\u04FF])[Iil|\u0406\u0456\u04CF\u03B9](?![\\w])")
+# Kurmanji's words that Zazaki writes its own for (ji li ku for ra de ke):
+# a sentence of Kurmanji in Zazaki's text. Not di, Zazaki's two.
+KURMANJI_ONLY = set("ji li ku jî dike dikin heye hene bû".split())
+# A site of religious books in Arabic and Persian, which FineWeb-2 files
+# under South Azerbaijani and Mazandarani as well (download.ghbook.ir).
+RELIGIOUS_BOOKS = re.compile(r"ghbook")
+# Abkhaz's pe written as Cyrillic's ҧ, its schwa as Latin's ə.
+ABKHAZ_FOLD = str.maketrans("ҧҦəƏ", "ԥԤәӘ")
+# Karakalpak's letters as its 1994 alphabet wrote them, a letter and an
+# apostrophe (ha'm, a', g', n'), as its alphabet of 2016 writes them (hám);
+# not an English possessive's 's.
+KARAKALPAK_LETTERS = {"a": "á", "o": "ó", "u": "ú", "g": "ǵ", "n": "ń", "i": "ı",
+                      "A": "Á", "O": "Ó", "U": "Ú", "G": "Ǵ", "N": "Ń", "I": "I"}
+KARAKALPAK_OLD = re.compile("([aouginAOUGIN])['’ʼ‘`](?=[^\\W\\d_])(?!s\\b)")
 # Arabic's words, after Sorani's letters are folded (فی for في), that
 # Sorani does not write: what marks a sentence of Arabic in its text.
 ARABIC_ONLY = set("فی علی إلی الی الذی التی هذا هذه عن".split())
@@ -393,6 +443,18 @@ def sorani(text):
     parts = SENTENCE_GAP.split(text)
     text = "".join("" if i % 2 == 0 and old_start(p) else p for i, p in enumerate(parts))
     return FINAL_AE.sub("\u06D5", text.translate(SORANI_FOLD)).replace("\u0640", "")
+
+
+def palochka(text):
+    return PALOCHKA.sub("\u04C0", text)
+
+
+def karakalpak(text):
+    return KARAKALPAK_OLD.sub(lambda m: KARAKALPAK_LETTERS[m.group(1)], text)
+
+
+def abkhaz(text):
+    return text.translate(ABKHAZ_FOLD)
 
 
 def chuvash(text):
@@ -612,6 +674,27 @@ LANGS = {
     "qu": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SPANISH_SET, "brackets": True},
     "bm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True, "normalize": bambara},
     "iu": {"script": "CANADIAN SYLLABICS", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "script_only": True, "brackets": True},
+    "azb": {"script": "ARABIC", "neighbour": set(), "sentence_rival": PERSIAN_ONLY | ARABIC_IN_PERSIAN, "brackets": True,
+            "hosts_out": RELIGIOUS_BOOKS},
+    "mzn": {"script": "ARABIC", "neighbour": set(), "sentence_rival": PERSIAN_ONLY | ARABIC_IN_PERSIAN, "brackets": True,
+            "hosts_out": RELIGIOUS_BOOKS},
+    "kiu": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TURKISH_ONLY | KURMANJI_ONLY, "sentence_never": SPAM, "brackets": True},
+    "diq": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TURKISH_ONLY | KURMANJI_ONLY, "sentence_never": SPAM, "brackets": True},
+    "tly": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | AZERBAIJANI_ONLY, "brackets": True},
+    "kaa": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "normalize": karakalpak, "brackets": True},
+    "ce": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": palochka, "brackets": True},
+    "inh": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": palochka, "brackets": True},
+    "av": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": palochka, "brackets": True},
+    "kbd": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": palochka, "brackets": True},
+    "ady": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": palochka, "brackets": True},
+    "lez": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": palochka, "brackets": True},
+    "lbe": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": palochka, "sentence_never": {"читать", "далее"}, "brackets": True},
+    "tab": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": palochka, "sentence_never": {"опубликовано", "просмотров"}, "brackets": True},
+    "dar": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": palochka, "brackets": True},
+    "kum": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "brackets": True},
+    "krc": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "brackets": True},
+    "ab": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": abkhaz, "brackets": True},
+    "xmf": {"script": "GEORGIAN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | GEORGIAN_ONLY, "brackets": True},
 }
 
 

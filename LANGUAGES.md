@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**291 layouts**: 236 keyboard layouts (RTL: ar he fa + Urdu, Western
+**310 layouts**: 255 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central Kurdish, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
+Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 290 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **224 languages** carry a prediction
+keycaps. 309 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **243 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -170,6 +170,25 @@ but no model to match the glide against · `—` off
 | `olo` | `olo` | Livvi-Karelian Livvi | fi + long-press č š ž | LTR | **Full** (olo)⁷ | ✓ | — |
 | `vep` | `vep` | Veps Vepsän kel’ | et + long-press č š ž | LTR | **Full** (vep)⁷ | ✓ | — |
 | `sme` | `sme` | Northern Sami Davvisámegiella | no · smi | LTR | **Full** (sme)⁷ | ✓ | — |
+| `azb` | `azb` | South Azerbaijani تۆرکجه | fa + long-press ۆ ۇ ې | **RTL** | **Full** (azb)⁷ | — | — |
+| `mzn` | `mzn` | Mazandarani مازرونی | fa | **RTL** | **Full** (mzn)⁷ | — | — |
+| `kiu` | `kiu` | Kirmanjki (Northern Zazaki) Kirmanckî | tr + long-press ê î û | LTR | **Full** (kiu)⁷ | ✓ | — |
+| `diq` | `diq` | Zazaki (Southern Zaza) Zazakî | tr + long-press ê î û | LTR | **Full** (diq)⁷ | ✓ | — |
+| `tly` | `tly` | Talysh Tolışə zıvon | az | LTR | **Full** (tly)⁷ | ✓ | — |
+| `kaa` | `kaa` | Karakalpak Qaraqalpaqsha | us + long-press á ǵ ı ń ó ú | LTR | **Full** (kaa)⁷ | ✓ | — |
+| `ce` | `ce` | Chechen Нохчийн | ru + key Ӏ | LTR | **Full** (ce)⁷ | — | — |
+| `inh` | `inh` | Ingush ГӀалгӀай | ru + key Ӏ | LTR | **Full** (inh)⁷ | — | — |
+| `av` | `av` | Avar Авар мацӀ | ru + key Ӏ | LTR | **Full** (av)⁷ | — | — |
+| `kbd` | `kbd` | Kabardian Къэбэрдейбзэ | ru + key Ӏ | LTR | **Full** (kbd)⁷ | — | — |
+| `ady` | `ady` | Adyghe Адыгабзэ | ru + key Ӏ | LTR | **Full** (ady)⁷ | — | — |
+| `lez` | `lez` | Lezgian Лезги чӀал | ru + key Ӏ | LTR | **Full** (lez)⁷ | — | — |
+| `lbe` | `lbe` | Lak Лакку маз | ru + key Ӏ | LTR | **Full** (lbe)⁷ | — | — |
+| `tab` | `tab` | Tabasaran Табасаран чӀал | ru + key Ӏ | LTR | **Full** (tab)⁷ | — | — |
+| `dar` | `dar` | Dargwa Дарган мез | ru + key Ӏ | LTR | **Full** (dar)⁷ | — | — |
+| `kum` | `kum` | Kumyk Къумукъ тил | ru | LTR | **Full** (kum)⁷ | — | — |
+| `krc` | `krc` | Karachay-Balkar Къарачай-малкъар тил | ru | LTR | **Full** (krc)⁷ | — | — |
+| `ab` | `ab` | Abkhaz Аԥсшәа | ru + long-press ә қ ҟ ԥ ҭ ҳ ҵ ҿ ҽ ҷ ҩ ӡ џ ҕ ӷ | LTR | **Full** (ab)⁷ | — | — |
+| `xmf` | `xmf` | Mingrelian მარგალური | ka + long-press ჷ ჲ ჸ | LTR | **Full** (xmf)⁷ | — | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -700,7 +719,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These one hundred and thirty-seven models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These one hundred and fifty-six models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -937,7 +956,37 @@ but no model to match the glide against · `—` off
    Southern Ndebele's, Tahitian's and Fijian's text is the Bible and
    Watchtower, as their held-out text is. FineWeb-2's Nahuatl is three
    quarters Eastern Huasteca Nahuatl's Bible, not the language the
-   keyboard of Nahuatl at large types: not used. Bodo's apostrophe, which
+   keyboard of Nahuatl at large types: not used.
+   Nineteen of Iran's and the Caucasus' learn from FineWeb-2's text whole:
+   South Azerbaijani, Mazandarani, Kirmanjki and Zazaki, Talysh,
+   Karakalpak (in Latin letters, its alphabet since 2016), Chechen,
+   Ingush, Avar, Kabardian, Adyghe, Lezgian, Lak, Tabasaran, Dargwa,
+   Kumyk, Karachay-Balkar, Abkhaz and Mingrelian. A sentence of the big
+   language beside each is left out (Russian's, Persian's, Arabic's in
+   Persian letters, Turkish's and Kurmanji's, Azerbaijani's, Georgian's),
+   as are the Zazakis' spam, Lak's and Tabasaran's news sites' Russian
+   page furniture, and a site of Arabic and Persian religious books that
+   FineWeb-2 files under South Azerbaijani and Mazandarani. The
+   palochka, Ӏ, which the Caucasus' alphabets write and keyboards without
+   it type as 1, I, i, l, |, і or ι (д1а, гьечiо: a digit would cut the
+   word in two), is read as Ӏ beside a Cyrillic letter, and the nine that
+   write it (Chechen, Ingush, Avar, Kabardian, Adyghe, Lezgian, Lak,
+   Tabasaran, Dargwa) have a key for it at their home row's end, on
+   Russian's keys; Kumyk and Karachay-Balkar are typed on Russian's keys
+   as they are, Abkhaz with its letters on long presses (ә on а, ԥ on п,
+   ҭ on т…). Karakalpak's letters as its 1994 alphabet wrote them (ha'm)
+   are read as 2016's (hám). Their lexicons keep 80 000 words, 120 000 for
+   ten and 200 000 for Kabardian and Mingrelian. Keystroke savings on
+   FineWeb-2's held-out text of each (2 200 to 8 500 words): Tabasaran
+   55.2%, Abkhaz 51.8%, Adyghe 50.4%, Dargwa 45.3%, Lak 44.5%, Kumyk 44.0%,
+   Lezgian 42.7%, Avar 41.4%, Chechen 41.1%, Karachay-Balkar 38.9%,
+   Mazandarani 38.7%, Karakalpak 38.3%, Ingush 36.7%, Mingrelian 36.5%,
+   Kirmanjki 36.0%, South Azerbaijani 35.5%, Talysh 35.2%, Zazaki 32.0%,
+   Kabardian 30.8%; 34.0% on average with taps astray, their words unknown
+   4.6% to 18.3%, at most 0.56% of right words changed (Mazandarani's).
+   Tabasaran's and Mazandarani's held-out text is small (2 500 and 2 200
+   words). FineWeb-2's Southern Kurdish is Sorani's news, its Gilaki
+   Persian shops' spam and its Gorani mostly Sorani: none is used. Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
    row group of its FineWeb-2 (856 000 sentences), each document's ৰ
@@ -996,7 +1045,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **224 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **243 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1016,7 +1065,8 @@ but no model to match the glide against · `—` off
   btx bts ace ban bjn dtp tet ium**, of Europe **nn ast an lad gsw bar nds pfl ksh li hsb dsb
   nap scn sc fur pms lij wa ltg vro csb szl crh sco rue**, of Russia and the north **sah cv sme
   mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep**, and twenty-three more that had a
-  keyboard and no model, **kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu**
+  keyboard and no model, **kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu**,
+  and of Iran and the Caucasus **azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf**
   (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
@@ -1197,6 +1247,9 @@ are built on a `us`/`es` base and add theirs the same way:
 | `ban` Balinese | é | `ban` |
 | `hil` `ilo` `bcl` `pag` `pam` `krj` `tet` | ñ (Hiligaynon, Iloko, Central Bikol, Pangasinan, Kapampangan, Kinaray-a, Tetum) | each its own |
 | `gsw` `bar` `li` `hsb` `dsb` `scn` `fur` `pms` `lij` `wa` `ltg` `vro` `csb` `szl` `crh` `rue` | each language's own letters first on its national layout's long presses (the language table above lists them: Upper Sorbian's ć č ě ł ń ó ř š ž ź on German's keys, Rusyn's ы ъ ё on Ukrainian's…) | each its own |
+| `haw` `sm` `to` `ty` | ʻ, the glottal stop, a key of its own at the home row's end | each its own |
+| `ce` `inh` `av` `kbd` `ady` `lez` `lbe` `tab` `dar` | Ӏ, the palochka, a key of its own at the home row's end (on Russian's keys) | each its own |
+| `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per
 *script*. InScript keeps the alphabet on the letter block and digits on

@@ -49,7 +49,13 @@ letters xkeyboard-config's keymaps put them over (Chuvash's ӑ ӗ ҫ ӳ on а
 е с у, Sakha's ҕ ҥ ө һ ү, the Komis' і ӧ, the Maris' ӓ ӧ ӱ and ҥ or ӹ,
 Tuvan's, Buryat's and Kalmyk's ң ө ү һ ә җ), Erzya and Moksha on them as
 they are; Karelian and Livvi on Finnish's keys, Veps on Estonian's, each
-with č š ž. A letter only a long press types turns
+with č š ž. Kumyk and Karachay-Balkar are typed on Russian's keys as they
+are, Abkhaz on them with its letters on the long presses of those they
+are made from (ә on а, ԥ on п, ҭ on т, ҟ қ on к…); South Azerbaijani and
+Mazandarani on Persian's keys, Azerbaijani's ۆ ۇ on و and ې on ی;
+Karakalpak on the US keys with á ǵ ı ń ó ú, the two Zazakis on Turkish's
+with ê î û, Talysh on Azerbaijani's, and Mingrelian on Georgian's with ჷ
+on ე, ჲ on ი, ჸ on ყ. A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -189,6 +195,16 @@ DERIVED = [
     ("krl", "fi", "Karjala", {"c": ["č"], "s": ["š"], "z": ["ž"], "C": ["Č"], "S": ["Š"], "Z": ["Ž"]}),
     ("olo", "fi", "Livvi", {"c": ["č"], "s": ["š"], "z": ["ž"], "C": ["Č"], "S": ["Š"], "Z": ["Ž"]}),
     ("vep", "et", "Vepsän kel’", {"c": ["č"], "s": ["š"], "z": ["ž"], "C": ["Č"], "S": ["Š"], "Z": ["Ž"]}),
+    ("kum", "ru", "Къумукъ тил", {}),
+    ("krc", "ru", "Къарачай-малкъар тил", {}),
+    ("mzn", "fa", "مازرونی", {}),
+    ("kaa", "us", "Qaraqalpaqsha", {"a": ["á"], "g": ["ǵ"], "i": ["ı"], "n": ["ń"], "o": ["ó"], "u": ["ú"], "A": ["Á"], "G": ["Ǵ"], "N": ["Ń"], "O": ["Ó"], "U": ["Ú"]}),
+    ("kiu", "tr", "Kirmanckî", {"e": ["ê"], "i": ["î"], "u": ["û"], "E": ["Ê"], "I": ["Î"], "U": ["Û"]}),
+    ("diq", "tr", "Zazakî", {"e": ["ê"], "i": ["î"], "u": ["û"], "E": ["Ê"], "I": ["Î"], "U": ["Û"]}),
+    ("tly", "az", "Tolışə zıvon", {}),
+    ("ab", "ru", "Аԥсшәа", {"а": ["ә"], "к": ["қ", "ҟ"], "п": ["ԥ"], "т": ["ҭ"], "х": ["ҳ"], "ц": ["ҵ"], "ч": ["ҿ", "ҽ", "ҷ"], "о": ["ҩ"], "з": ["ӡ"], "д": ["џ"], "г": ["ҕ", "ӷ"], "А": ["Ә"], "К": ["Қ", "Ҟ"], "П": ["Ԥ"], "Т": ["Ҭ"], "Х": ["Ҳ"], "Ц": ["Ҵ"], "Ч": ["Ҿ", "Ҽ", "Ҷ"], "О": ["Ҩ"], "З": ["Ӡ"], "Д": ["Џ"], "Г": ["Ҕ", "Ӷ"]}),
+    ("azb", "fa", "تۆرکجه", {"و": ["ۆ", "ۇ"], "ی": ["ې"]}),
+    ("xmf", "ka", "მარგალური", {"ე": ["ჷ"], "ი": ["ჲ"], "ყ": ["ჸ"]}),
 ]
 
 
