@@ -33,8 +33,9 @@
 //!   dictionary.
 //! - [`pack`] — the manifest describing one language pack, the unit a
 //!   device installs, and the index a release offers packs through.
-//!   With the `install` feature it also opens downloads and writes them
-//!   into an install tree.
+//!   With the `install` feature it also opens a pack's download, one
+//!   archive of its files, and writes them into an install tree.
+//! - [`ustar`] — the archives a release serves packs in, and its bundle.
 //!
 //! This repository's builders (`osk-data-tools`) write through these
 //! types and ki-osk's `osk-core` reads through them, so an encoder and a
@@ -62,5 +63,6 @@ pub mod pack;
 pub mod pinyin;
 pub mod rules;
 pub mod translit;
+pub mod ustar;
 pub mod wordbreak;
 pub mod words;

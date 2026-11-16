@@ -5,7 +5,7 @@ description  = "The ki-osk language-data format: the KIOS asset codec, the seria
 # this crate as a dependency from inside its own tree, where cargo
 # resolves inherited keys against ki-osk's workspace, not this one.
 # Keep `version` equal to [workspace.package] in the root Cargo.toml.
-version      = "0.33.0"
+version      = "0.34.0"
 edition      = "2024"
 rust-version = "1.99"
 license      = "MIT"
@@ -18,8 +18,9 @@ default = []
 # Checksum verification of a pack's files against its manifest. Off by
 # default so a reader that only decodes does not compile a hash.
 verify = ["dep:sha2"]
-# Opening a release's downloads (gzip) and writing them into an install
-# tree — what a client that fetches packs needs.
+# Opening a release's downloads (a pack's files in one gzipped ustar
+# archive) and writing them into an install tree — what a client that
+# fetches packs needs — and writing such an archive.
 install = ["verify", "dep:flate2"]
 
 # Versions and features match ki-osk's workspace, so ki-osk builds one

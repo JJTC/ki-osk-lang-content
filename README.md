@@ -32,7 +32,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 | Path | What | Built by |
 |---|---|---|
-| `predict/<lang>.fst` | Prefix-completion lexicon (99 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
+| `predict/<lang>.fst` | Prefix-completion lexicon (186 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
@@ -93,8 +93,8 @@ changes or the set of packs does. Each release carries:
 
 | Asset | What |
 |---|---|
-| `packs.json` | The index: every pack's manifest — its files with size and sha256, its licences, its upstream sources — and how each file is served |
-| `<path>.gz` | Each file, gzipped: `predict.en.fst.gz` is `predict/en.fst` |
+| `packs.json` | The index: every pack's manifest — its files with size and sha256, its licences, its upstream sources — and the asset each pack is served in |
+| `pack.<id>.tar.gz` | Each pack's files at their paths, in one gzipped ustar archive: `pack.en.tar.gz` holds `predict/en.fst`, `layouts/us.json`… One asset a pack, as GitHub keeps at most 1 000 in a release (`make release` refuses more) |
 | `NOTICES.md` | The licence notices, which go with any pack |
 | `ki-osk-lang-X.Y.Z.tar.xz` | Every pack, installed into one tree |
 | `ki-osk-lang-corpora-X.Y.Z.tar.xz` | The text the prediction models were trained on (data releases) |
@@ -106,10 +106,11 @@ Every pack at once:
 tar -xJf ki-osk-lang-X.Y.Z.tar.xz -C /usr/share/ki-osk
 ```
 
-Some packs: read `packs.json`, download their files, and check each one
-twice, the download against the index before decompressing it and the
-result against the pack's manifest after (`osk_data::pack` does both,
-with the `install` feature). An install tree holds each file at its
+Some packs: read `packs.json`, download their archives, and check each
+pack twice, the archive against the index before decompressing it and
+each file it holds against the pack's manifest after
+(`osk_data::pack::Download::open_pack` does both, with the `install`
+feature; `tar -xzf pack.<id>.tar.gz` unpacks one by hand). An install tree holds each file at its
 path, each pack's manifest at `packs/<id>.json` and the notices at
 `NOTICES.md`. Since `packs.json` holds every checksum, keeping it pins a
 release byte for byte; ki-osk keeps one as `lang.lock`.

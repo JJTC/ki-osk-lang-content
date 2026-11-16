@@ -10,7 +10,9 @@ name: release language content
 # never released again, so most pushes stop at the first step.
 #
 # A release is built as a draft and published once every asset is on it.
-# GitHub limits how fast content is created, and each asset is a request:
+# GitHub keeps at most 1 000 assets in a release, so each pack is one
+# asset, its files in one archive (`make release` refuses more). It also
+# limits how fast content is created, and each asset is a request:
 # scripts/release-upload.sh uploads one a second, only what the draft
 # lacks, waits out a refusal and carries on, and a run that still ran out
 # of time leaves its draft, which the next run (a re-run, or the next
@@ -18,8 +20,9 @@ name: release language content
 # refresh's.
 #
 # Assets (`make release`, then the corpora):
-#   packs.json, <path>.gz, NOTICES.md   the packs: the index, each file
-#                                       gzipped, the licence notices
+#   packs.json, pack.<id>.tar.gz,       the packs: the index, each pack's
+#   NOTICES.md                          files in one gzipped ustar archive,
+#                                       the licence notices
 #   ki-osk-lang-<version>.tar.xz        every pack as one install tree
 #                                       (`tar -xJf … -C /usr/share/ki-osk`)
 #   ki-osk-lang-corpora-<version>.tar.xz  the training text (refreshes)
@@ -123,8 +126,8 @@ jobs:
             cargo run --release --quiet -p osk-data-tools --bin pack-changes -- "${old[@]}" dist/release/packs.json
             echo
             echo "**Every pack:** \`tar -xJf ki-osk-lang-$VERSION.tar.xz -C /usr/share/ki-osk\`."
-            echo "**Some packs:** \`packs.json\` lists each pack's files and their \`.gz\` assets;"
-            echo "check each download against it, then the result against the pack's manifest."
+            echo "**Some packs:** \`packs.json\` lists each pack's files and its \`pack.<id>.tar.gz\`;"
+            echo "check each archive against it, then each file it holds against the pack's manifest."
             echo "ki-osk does this with \`toolbox lang install\`, against a pinned \`packs.json\`."
             echo
             echo "Licences travel with these files: the Chinese and Cantonese dictionaries"

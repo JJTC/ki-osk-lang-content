@@ -4,8 +4,9 @@
 //! Usage:
 //!   pack-changes [--old OLD/packs.json] NEW/packs.json
 //!
-//! With `--old`, the previous release's index, it lists the packs whose
-//! data changed, was added or was removed ([`Index::changes_since`]).
+//! With `--old`, the previous release's index (of any schema: only its
+//! packs are read, [`osk_data::pack::manifests`]), it lists the packs whose
+//! data changed, was added or was removed ([`osk_data::pack::changes`]).
 //! Without it — a first release — it lists every pack.
 
 use std::fs;
@@ -13,7 +14,7 @@ use std::path::{Path, PathBuf};
 
 use anyhow::Context as _;
 use clap::Parser;
-use osk_data::pack::{Index, Manifest};
+use osk_data::pack::{self, Index, Manifest};
 
 #[derive(Parser)]
 #[command(name = "pack-changes")]
@@ -54,7 +55,7 @@ fn main() -> anyhow::Result<()> {
     let args = Args::parse();
     let new = load(&args.new)?;
     let size: u64 = new.packs.iter().map(Manifest::size).sum();
-    let served: u64 = new.downloads.values().map(|d| d.size).sum();
+    let served: u64 = new.assets.values().map(|d| d.size).sum();
     println!(
         "**{} packs**: {} installed, {} to download.",
         new.packs.len(),
@@ -77,10 +78,13 @@ fn main() -> anyhow::Result<()> {
         }
         return Ok(());
     };
-    let old = load(old)?;
-    let changes = new.changes_since(&old);
+    // Its packs alone: an index of an older schema has the same manifests.
+    let old = fs::read_to_string(old).with_context(|| format!("reading {}", old.display()))?;
+    let old = pack::manifests(&old).context("reading the previous release's packs")?;
+    let old_version = old.first().map_or("?", |m| m.version.as_str());
+    let changes = pack::changes(&old, &new.packs);
     if changes.is_empty() {
-        println!("No pack's data changed since v{}.", old.version);
+        println!("No pack's data changed since v{old_version}.");
         return Ok(());
     }
     let (mut changed, mut added, mut removed) = (0, 0, 0);
@@ -88,7 +92,7 @@ fn main() -> anyhow::Result<()> {
     for c in &changes {
         let name = new
             .pack(&c.id)
-            .or_else(|| old.pack(&c.id))
+            .or_else(|| old.iter().find(|m| m.id == c.id))
             .map_or("", |m| m.name.as_str());
         let (what, sizes) = match (c.before, c.after) {
             (None, Some(after)) => {
@@ -107,10 +111,7 @@ fn main() -> anyhow::Result<()> {
         };
         rows.push(format!("| `{}` | {name} | {what} | {sizes} |", c.id));
     }
-    println!(
-        "Since v{}: {changed} changed, {added} added, {removed} removed.",
-        old.version
-    );
+    println!("Since v{old_version}: {changed} changed, {added} added, {removed} removed.");
     println!();
     println!("| Pack | Name | | Size |");
     println!("|---|---|---|---|");

@@ -15,23 +15,32 @@
 //! # Releases
 //!
 //! A release offers its packs through an [`Index`] (`packs.json`): every
-//! pack's manifest and, for each file, a [`Download`] — the release asset
-//! that carries it, gzip-compressed, with the asset's own size and
-//! checksum. A client reads the index, picks packs and fetches only their
-//! assets. Each file is checked twice: the asset against the index before
-//! it is decompressed, and the result against the manifest before it is
-//! written. Keeping a release's index pins that release byte for byte,
-//! since every checksum is in it.
+//! pack's manifest and, for each pack, a [`Download`] — the release asset
+//! that carries its files, one gzipped ustar archive
+//! ([`encoding::TAR_GZIP`]), with the asset's own size and checksum. One
+//! asset a pack, not one a file: GitHub keeps at most 1 000 assets in a
+//! release, and creates them at a limited rate. A client reads the index,
+//! picks packs and fetches only their assets. Each file is checked twice:
+//! the asset against the index before it is decompressed, and each file
+//! it holds against the pack's manifest before it is written
+//! ([`Download::open_pack`]). Keeping a release's index pins that release
+//! byte for byte, since every checksum is in it.
 //!
 //! An install tree holds each file at its path, each installed pack's
 //! manifest at [`Manifest::install_path`] (`packs/<id>.json`), and the
 //! release's licence notices at [`NOTICES_PATH`]. With the `install`
-//! feature this module also opens downloads ([`Download::open`]) and
-//! writes files into a tree ([`install_file`]).
+//! feature this module also opens a pack's download
+//! ([`Download::open_pack`]), writes one ([`pack_archive`]), and writes
+//! files into a tree ([`install_file`]).
 //!
 //! # Compatibility
 //!
-//! [`Manifest::schema`] and [`Index::schema`] version these documents;
+//! [`Manifest::schema`] ([`SCHEMA`]) and [`Index::schema`]
+//! ([`INDEX_SCHEMA`]) version these documents. An index of schema 2
+//! serves each pack as one asset; schema 1's served each file as its own.
+//! The manifests are the same in both, so an install tree a client wrote
+//! from either reads the same, and [`manifests`] reads the packs of an
+//! index of any schema, to compare releases across the change.
 //! [`Manifest::format`] is the [`crate::codec::VERSION`] the `.bin`
 //! components were written with. A component's [`Component::kind`] is a
 //! plain string, and readers must skip kinds they do not know — that is
@@ -44,8 +53,12 @@ use std::fmt;
 
 use serde::{Deserialize, Serialize};
 
-/// The schema of the manifests and indexes this crate reads and writes.
+/// The schema of the manifests this crate reads and writes.
 pub const SCHEMA: u32 = 1;
+
+/// The schema of the indexes this crate reads and writes: 2 serves each
+/// pack as one asset ([`Index::assets`]); 1 served each file as its own.
+pub const INDEX_SCHEMA: u32 = 2;
 
 /// Where an install tree keeps the release's licence notices.
 pub const NOTICES_PATH: &str = "NOTICES.md";
@@ -115,9 +128,12 @@ pub mod encoding {
     pub const IDENTITY: &str = "identity";
     /// The file gzip-compressed: one RFC 1952 member.
     pub const GZIP: &str = "gzip";
+    /// A pack's files, each at its tree path, in one POSIX ustar archive
+    /// ([`crate::ustar`]), gzip-compressed: how a release serves a pack.
+    pub const TAR_GZIP: &str = "tar+gzip";
 
     /// The encodings this crate can open.
-    pub const KNOWN: [&str; 2] = [IDENTITY, GZIP];
+    pub const KNOWN: [&str; 3] = [IDENTITY, GZIP, TAR_GZIP];
 }
 
 /// Everything a device needs to know about one pack.
@@ -178,18 +194,18 @@ pub struct Source {
     pub sha256: Option<String>,
 }
 
-/// What a release offers: every pack, and how each of its files is
-/// served.
+/// What a release offers: every pack, and the asset each is served in.
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Index {
-    /// Index schema; [`SCHEMA`] for every index this crate writes.
+    /// Index schema; [`INDEX_SCHEMA`] for every index this crate writes.
     pub schema: u32,
     /// The release (semver). Every manifest carries the same.
     pub version: String,
     /// Every pack in the release.
     pub packs: Vec<Manifest>,
-    /// How each pack file is served, by its tree path.
-    pub downloads: BTreeMap<String, Download>,
+    /// The asset each pack's files are served in, one archive
+    /// ([`encoding::TAR_GZIP`]), by pack id.
+    pub assets: BTreeMap<String, Download>,
     /// The release's licence notices, served as they are. Whoever
     /// installs a pack installs these too, at [`NOTICES_PATH`]:
     /// share-alike terms travel with the files.
@@ -201,7 +217,8 @@ pub struct Index {
 pub struct Download {
     /// The asset's file name: a plain name, no directories.
     pub asset: String,
-    /// How the asset carries its file — one of [`encoding`].
+    /// How the asset carries its file, or a pack's files — one of
+    /// [`encoding`].
     pub encoding: String,
     /// The asset's size in bytes, as downloaded.
     pub size: u64,
@@ -218,6 +235,8 @@ pub enum Error {
     Schema {
         /// The schema the document declares.
         found: u32,
+        /// The schema this crate reads for such a document.
+        understood: u32,
     },
 }
 
@@ -225,8 +244,11 @@ impl fmt::Display for Error {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
             Self::Json(e) => write!(f, "invalid pack JSON: {e}"),
-            Self::Schema { found } => {
-                write!(f, "pack schema {found}; this reader understands {SCHEMA}")
+            Self::Schema { found, understood } => {
+                write!(
+                    f,
+                    "pack schema {found}; this reader understands {understood}"
+                )
             }
         }
     }
@@ -257,7 +279,10 @@ impl Manifest {
     pub fn parse(json: &str) -> Result<Self, Error> {
         let m: Self = serde_json::from_str(json).map_err(Error::Json)?;
         if m.schema != SCHEMA {
-            return Err(Error::Schema { found: m.schema });
+            return Err(Error::Schema {
+                found: m.schema,
+                understood: SCHEMA,
+            });
         }
         Ok(m)
     }
@@ -356,10 +381,13 @@ pub enum IndexProblem {
     UnsafePath(String),
     /// Two components share a path.
     DuplicatePath(String),
-    /// A component with no download.
-    NoDownload(String),
-    /// A download for a path no pack has.
-    UnusedDownload(String),
+    /// A pack with no asset.
+    NoAsset(String),
+    /// An asset for an id no pack has.
+    UnusedAsset(String),
+    /// A pack whose asset is not an archive of its files
+    /// ([`encoding::TAR_GZIP`]).
+    NotAnArchive(String),
     /// An asset name that is not a plain file name.
     UnsafeAsset(String),
     /// Two downloads share an asset.
@@ -393,8 +421,11 @@ impl fmt::Display for IndexProblem {
             }
             Self::UnsafePath(p) => write!(f, "{p:?} is not a path a pack may install"),
             Self::DuplicatePath(p) => write!(f, "{p} belongs to two packs"),
-            Self::NoDownload(p) => write!(f, "{p} has no download"),
-            Self::UnusedDownload(p) => write!(f, "a download names {p}, which no pack has"),
+            Self::NoAsset(id) => write!(f, "pack `{id}` has no asset"),
+            Self::UnusedAsset(id) => write!(f, "an asset is given for `{id}`, which is no pack"),
+            Self::NotAnArchive(id) => {
+                write!(f, "pack `{id}`'s asset is not an archive of its files")
+            }
             Self::UnsafeAsset(a) => write!(f, "asset name {a:?} is not a plain file name"),
             Self::DuplicateAsset(a) => write!(f, "two downloads share the asset {a}"),
             Self::UnknownEncoding { asset, encoding } => {
@@ -410,12 +441,13 @@ impl Index {
     ///
     /// # Errors
     /// [`Error::Json`] for malformed JSON, [`Error::Schema`] for a schema
-    /// other than [`SCHEMA`].
+    /// other than [`INDEX_SCHEMA`].
     pub fn parse(json: &str) -> Result<Self, Error> {
         let index: Self = serde_json::from_str(json).map_err(Error::Json)?;
-        if index.schema != SCHEMA {
+        if index.schema != INDEX_SCHEMA {
             return Err(Error::Schema {
                 found: index.schema,
+                understood: INDEX_SCHEMA,
             });
         }
         Ok(index)
@@ -438,9 +470,9 @@ impl Index {
 
     /// Everything structurally wrong with the index; empty when it is
     /// sound. An index may arrive from a download, so a client checks
-    /// this before acting on any of it: every id names a file, every
-    /// path is safe and has exactly one owner and one download, and every
-    /// asset is a plain name this crate can open.
+    /// this before acting on any of it: every id names a file and has one
+    /// asset, an archive; every path is safe and has exactly one owner;
+    /// and every asset is a plain name this crate can open.
     #[must_use]
     pub fn problems(&self) -> Vec<IndexProblem> {
         let mut out = Vec::new();
@@ -453,26 +485,31 @@ impl Index {
             if !ids.insert(m.id.as_str()) {
                 out.push(IndexProblem::DuplicatePack(m.id.clone()));
             }
-            if m.schema != self.schema || m.version != self.version {
+            if m.schema != SCHEMA || m.version != self.version {
                 out.push(IndexProblem::ForeignManifest(m.id.clone()));
+            }
+            match self.assets.get(&m.id) {
+                None => out.push(IndexProblem::NoAsset(m.id.clone())),
+                Some(d) if d.encoding != encoding::TAR_GZIP => {
+                    out.push(IndexProblem::NotAnArchive(m.id.clone()));
+                }
+                Some(_) => {}
             }
             for c in &m.components {
                 if !c.has_safe_path() || is_reserved(&c.path) {
                     out.push(IndexProblem::UnsafePath(c.path.clone()));
                 } else if !paths.insert(c.path.as_str()) {
                     out.push(IndexProblem::DuplicatePath(c.path.clone()));
-                } else if !self.downloads.contains_key(&c.path) {
-                    out.push(IndexProblem::NoDownload(c.path.clone()));
                 }
             }
         }
-        for path in self.downloads.keys() {
-            if !paths.contains(path.as_str()) {
-                out.push(IndexProblem::UnusedDownload(path.clone()));
+        for id in self.assets.keys() {
+            if !ids.contains(id.as_str()) {
+                out.push(IndexProblem::UnusedAsset(id.clone()));
             }
         }
         let mut assets = BTreeSet::new();
-        for d in self.downloads.values().chain([&self.notices]) {
+        for d in self.assets.values().chain([&self.notices]) {
             if !is_plain_asset(&d.asset) {
                 out.push(IndexProblem::UnsafeAsset(d.asset.clone()));
             }
@@ -498,23 +535,52 @@ impl Index {
     /// their metadata moved. By id.
     #[must_use]
     pub fn changes_since(&self, older: &Index) -> Vec<PackChange> {
-        let ids: BTreeSet<&str> = self
-            .packs
-            .iter()
-            .chain(&older.packs)
-            .map(|m| m.id.as_str())
-            .collect();
-        ids.into_iter()
-            .filter_map(|id| match (older.pack(id), self.pack(id)) {
-                (Some(before), Some(after)) if before.components == after.components => None,
-                (before, after) => Some(PackChange {
-                    id: id.to_string(),
-                    before: before.map(Manifest::size),
-                    after: after.map(Manifest::size),
-                }),
-            })
-            .collect()
+        changes(&older.packs, &self.packs)
     }
+}
+
+/// The packs whose data differs between `older` and `newer`, two
+/// releases' packs: added, removed, or with other files (paths or
+/// checksums). Packs with the same files are left out, even if their
+/// metadata moved. By id. [`Index::changes_since`], for packs read with
+/// [`manifests`] from an index of another schema.
+#[must_use]
+pub fn changes(older: &[Manifest], newer: &[Manifest]) -> Vec<PackChange> {
+    let find = |packs: &'_ [Manifest], id: &str| packs.iter().find(|m| m.id == id).cloned();
+    let ids: BTreeSet<&str> = newer.iter().chain(older).map(|m| m.id.as_str()).collect();
+    ids.into_iter()
+        .filter_map(|id| match (find(older, id), find(newer, id)) {
+            (Some(before), Some(after)) if before.components == after.components => None,
+            (before, after) => Some(PackChange {
+                id: id.to_string(),
+                before: before.as_ref().map(Manifest::size),
+                after: after.as_ref().map(Manifest::size),
+            }),
+        })
+        .collect()
+}
+
+/// The packs of an index of any schema: its manifests, whose schema
+/// ([`SCHEMA`]) is the same whatever the index's. What comparing two
+/// releases needs, when one was released before [`INDEX_SCHEMA`] last
+/// changed.
+///
+/// # Errors
+/// [`Error::Json`] when `json` is no index, [`Error::Schema`] for a
+/// manifest of another schema.
+pub fn manifests(json: &str) -> Result<Vec<Manifest>, Error> {
+    #[derive(Deserialize)]
+    struct Packs {
+        packs: Vec<Manifest>,
+    }
+    let packs: Packs = serde_json::from_str(json).map_err(Error::Json)?;
+    if let Some(m) = packs.packs.iter().find(|m| m.schema != SCHEMA) {
+        return Err(Error::Schema {
+            found: m.schema,
+            understood: SCHEMA,
+        });
+    }
+    Ok(packs.packs)
 }
 
 /// How one pack differs between two releases ([`Index::changes_since`]).
@@ -649,6 +715,15 @@ pub enum OpenError {
         /// What went wrong.
         error: std::io::Error,
     },
+    /// A pack's archive does not hold exactly its files: an entry that is
+    /// not one, a file twice or missing, a file other than its manifest
+    /// says, or an archive that does not read.
+    Archive {
+        /// The asset.
+        asset: String,
+        /// What is wrong.
+        problem: String,
+    },
 }
 
 #[cfg(feature = "install")]
@@ -665,6 +740,7 @@ impl fmt::Display for OpenError {
                 write!(f, "{asset}: cannot open the {encoding:?} encoding")
             }
             Self::Decode { asset, error } => write!(f, "{asset}: {error}"),
+            Self::Archive { asset, problem } => write!(f, "{asset}: {problem}"),
         }
     }
 }
@@ -721,6 +797,107 @@ impl Download {
             }),
         }
     }
+
+    /// Check that `bytes` are this asset, a pack's archive
+    /// ([`encoding::TAR_GZIP`]), then read the files of `manifest` from
+    /// it, each checked against its [`Component`] (path, size, sha256):
+    /// ready to write, in the manifest's order. Nothing is decompressed
+    /// before the asset's checksum, nor past the size an archive of those
+    /// files has; an archive that holds anything but exactly the pack's
+    /// files is refused whole.
+    ///
+    /// # Errors
+    /// [`OpenError`] when the bytes are not this asset, it is not an
+    /// archive, it does not decompress within its size, or it does not
+    /// hold exactly the pack's files.
+    pub fn open_pack(
+        &self,
+        bytes: &[u8],
+        manifest: &Manifest,
+    ) -> Result<Vec<(String, Vec<u8>)>, OpenError> {
+        use std::io::Read as _;
+        if !self.matches(bytes) {
+            return Err(OpenError::NotTheAsset(self.asset.clone()));
+        }
+        if self.encoding != encoding::TAR_GZIP {
+            return Err(OpenError::Encoding {
+                asset: self.asset.clone(),
+                encoding: self.encoding.clone(),
+            });
+        }
+        let archive_error = |problem: String| OpenError::Archive {
+            asset: self.asset.clone(),
+            problem,
+        };
+        let limit = crate::ustar::archived_size(manifest.components.iter().map(|c| c.size));
+        let mut tar = Vec::new();
+        flate2::read::GzDecoder::new(bytes)
+            .take(limit.saturating_add(1))
+            .read_to_end(&mut tar)
+            .map_err(|error| OpenError::Decode {
+                asset: self.asset.clone(),
+                error,
+            })?;
+        if tar.len() as u64 > limit {
+            return Err(archive_error(format!(
+                "decompresses past the {limit} bytes an archive of its files has"
+            )));
+        }
+        let mut found: BTreeMap<String, &[u8]> = BTreeMap::new();
+        for (name, file) in crate::ustar::files(&tar).map_err(|e| archive_error(e.to_string()))? {
+            let Some(c) = manifest.components.iter().find(|c| c.path == name) else {
+                return Err(archive_error(format!(
+                    "holds {name}, which pack `{}` has not",
+                    manifest.id
+                )));
+            };
+            if !c.matches(file) {
+                return Err(archive_error(format!(
+                    "{name} is not the file pack `{}` names",
+                    manifest.id
+                )));
+            }
+            if found.insert(name.clone(), file).is_some() {
+                return Err(archive_error(format!("holds {name} twice")));
+            }
+        }
+        manifest
+            .components
+            .iter()
+            .map(|c| {
+                found
+                    .get(&c.path)
+                    .map(|file| (c.path.clone(), file.to_vec()))
+                    .ok_or_else(|| archive_error(format!("lacks {}", c.path)))
+            })
+            .collect()
+    }
+}
+
+/// A pack's asset as a release serves it ([`encoding::TAR_GZIP`]): `files`
+/// (each a tree path and its bytes, in the manifest's order) in one ustar
+/// archive, gzipped, with nothing of the machine that wrote it in either
+/// — owner 0, time 0, no file name in the gzip header — so the same files
+/// always make the same asset.
+///
+/// # Errors
+/// An [`std::io::Error`] of kind [`std::io::ErrorKind::InvalidInput`] for
+/// a path a ustar header cannot hold; otherwise none in practice, the
+/// archive being written to memory.
+#[cfg(feature = "install")]
+pub fn pack_archive(files: &[(&str, &[u8])]) -> std::io::Result<Vec<u8>> {
+    use std::io::Write as _;
+    let mut tar = Vec::new();
+    for (path, bytes) in files {
+        crate::ustar::entry(&mut tar, path, Some(bytes), 0)
+            .map_err(|e| std::io::Error::new(std::io::ErrorKind::InvalidInput, e))?;
+    }
+    crate::ustar::end(&mut tar);
+    let mut e = flate2::GzBuilder::new()
+        .mtime(0)
+        .write(Vec::new(), flate2::Compression::best());
+    e.write_all(&tar)?;
+    e.finish()
 }
 
 /// Write `bytes` to `path`, a tree path, under `root`, replacing any file
@@ -800,12 +977,12 @@ mod tests {
 
     fn sample_index() -> Index {
         Index {
-            schema: SCHEMA,
+            schema: INDEX_SCHEMA,
             version: "0.1.0".into(),
             packs: vec![sample()],
-            downloads: BTreeMap::from([(
-                "predict/en.fst".to_string(),
-                download("predict.en.fst.gz", encoding::GZIP),
+            assets: BTreeMap::from([(
+                "en".to_string(),
+                download("pack.en.tar.gz", encoding::TAR_GZIP),
             )]),
             notices: download("NOTICES.md", encoding::IDENTITY),
         }
@@ -825,13 +1002,41 @@ mod tests {
         m.schema = SCHEMA + 1;
         let err = Manifest::parse(&m.to_json().unwrap()).unwrap_err();
         assert!(
-            matches!(err, Error::Schema { found } if found == SCHEMA + 1),
+            matches!(err, Error::Schema { found, .. } if found == SCHEMA + 1),
             "{err}"
         );
         let mut index = sample_index();
-        index.schema = SCHEMA + 1;
+        index.schema = 1;
         let err = Index::parse(&index.to_json().unwrap()).unwrap_err();
-        assert!(matches!(err, Error::Schema { .. }), "{err}");
+        assert!(
+            matches!(
+                err,
+                Error::Schema {
+                    found: 1,
+                    understood: INDEX_SCHEMA
+                }
+            ),
+            "{err}"
+        );
+    }
+
+    /// An index of schema 1, which served each file as its own asset,
+    /// still gives its packs, to compare a release with.
+    #[test]
+    fn an_older_index_s_packs_are_read() {
+        let mut old = serde_json::to_value(sample_index()).unwrap();
+        old["schema"] = 1.into();
+        old.as_object_mut().unwrap().remove("assets");
+        old["downloads"] =
+            serde_json::json!({"predict/en.fst": download("predict.en.fst.gz", encoding::GZIP)});
+        let json = old.to_string();
+        assert!(Index::parse(&json).is_err());
+        let packs = manifests(&json).unwrap();
+        assert_eq!(packs, vec![sample()]);
+        assert_eq!(changes(&packs, &sample_index().packs), vec![]);
+        let mut newer = sample_index();
+        newer.packs[0].components[0].sha256 = "ef".into();
+        assert_eq!(changes(&packs, &newer.packs).len(), 1);
     }
 
     /// A newer release may add fields and component kinds; an older
@@ -852,8 +1057,8 @@ mod tests {
         assert_eq!(m.components_of("dialect-table").count(), 1);
 
         let json = sample_index().to_json().unwrap().replacen(
-            "\"schema\": 1,",
-            "\"schema\": 1, \"channel\": \"stable\",",
+            "\"schema\": 2,",
+            "\"schema\": 2, \"channel\": \"stable\",",
             1,
         );
         assert_eq!(
@@ -949,7 +1154,11 @@ mod tests {
             vec![IndexProblem::DuplicatePack("en".into())]
         );
         assert_eq!(
-            found(&|i| i.packs[0].id = "../en".into()),
+            found(&|i| {
+                i.packs[0].id = "../en".into();
+                let d = i.assets.remove("en").unwrap();
+                i.assets.insert("../en".into(), d);
+            }),
             vec![IndexProblem::UnsafeId("../en".into())]
         );
         assert_eq!(
@@ -973,12 +1182,12 @@ mod tests {
         );
         assert_eq!(
             found(&|i| {
-                let d = i.downloads.remove("predict/en.fst").unwrap();
-                i.downloads.insert("predict/de.fst".into(), d);
+                let d = i.assets.remove("en").unwrap();
+                i.assets.insert("de".into(), d);
             }),
             vec![
-                IndexProblem::NoDownload("predict/en.fst".into()),
-                IndexProblem::UnusedDownload("predict/de.fst".into()),
+                IndexProblem::NoAsset("en".into()),
+                IndexProblem::UnusedAsset("de".into()),
             ]
         );
         assert_eq!(
@@ -986,17 +1195,22 @@ mod tests {
             vec![IndexProblem::UnsafeAsset("../NOTICES.md".into())]
         );
         assert_eq!(
-            found(&|i| i.notices.asset = "predict.en.fst.gz".into()),
-            vec![IndexProblem::DuplicateAsset("predict.en.fst.gz".into())]
+            found(&|i| i.notices.asset = "pack.en.tar.gz".into()),
+            vec![IndexProblem::DuplicateAsset("pack.en.tar.gz".into())]
         );
         assert_eq!(
-            found(&|i| {
-                i.downloads.get_mut("predict/en.fst").unwrap().encoding = "zstd".into();
-            }),
-            vec![IndexProblem::UnknownEncoding {
-                asset: "predict.en.fst.gz".into(),
-                encoding: "zstd".into()
-            }]
+            found(&|i| i.assets.get_mut("en").unwrap().encoding = encoding::GZIP.into()),
+            vec![IndexProblem::NotAnArchive("en".into())]
+        );
+        assert_eq!(
+            found(&|i| i.assets.get_mut("en").unwrap().encoding = "zstd".into()),
+            vec![
+                IndexProblem::NotAnArchive("en".into()),
+                IndexProblem::UnknownEncoding {
+                    asset: "pack.en.tar.gz".into(),
+                    encoding: "zstd".into()
+                }
+            ]
         );
         assert_eq!(
             found(&|i| i.notices.encoding = encoding::GZIP.into()),
@@ -1095,6 +1309,100 @@ mod tests {
         let unknown = download_of(&asset, "zstd");
         assert!(matches!(
             unknown.open(&asset, 10_000),
+            Err(OpenError::Encoding { .. })
+        ));
+    }
+
+    /// A pack of two files, and its asset as a release serves it.
+    #[cfg(feature = "install")]
+    fn served_pack() -> (Manifest, Download, Vec<u8>) {
+        let files: [(&str, &[u8]); 2] =
+            [("predict/en.fst", b"lexicon"), ("layouts/us.json", b"{}")];
+        let mut m = sample();
+        m.components = files
+            .iter()
+            .map(|(path, bytes)| Component {
+                kind: kind::LEXICON.into(),
+                path: (*path).into(),
+                size: bytes.len() as u64,
+                sha256: sha256_hex(bytes),
+            })
+            .collect();
+        let asset = pack_archive(&files).unwrap();
+        let mut d = download_of(&asset, encoding::TAR_GZIP);
+        d.asset = "pack.en.tar.gz".into();
+        (m, d, asset)
+    }
+
+    #[cfg(feature = "install")]
+    #[test]
+    fn a_pack_opens_to_exactly_its_files() {
+        let (m, d, asset) = served_pack();
+        assert_eq!(
+            d.open_pack(&asset, &m).unwrap(),
+            vec![
+                ("predict/en.fst".to_string(), b"lexicon".to_vec()),
+                ("layouts/us.json".to_string(), b"{}".to_vec()),
+            ]
+        );
+        // The same files always make the same asset.
+        assert_eq!(
+            pack_archive(&[("predict/en.fst", b"lexicon"), ("layouts/us.json", b"{}")]).unwrap(),
+            asset
+        );
+
+        // Bytes that are not the asset: refused before decompressing.
+        let mut tampered = asset.clone();
+        *tampered.last_mut().unwrap() ^= 1;
+        assert!(matches!(
+            d.open_pack(&tampered, &m),
+            Err(OpenError::NotTheAsset(_))
+        ));
+        // An archive whose asset checks out, but whose files are not the
+        // pack's: one changed, one missing, one more.
+        let archive = |files: &[(&str, &[u8])]| {
+            let a = pack_archive(files).unwrap();
+            let mut d = download_of(&a, encoding::TAR_GZIP);
+            d.asset = "pack.en.tar.gz".into();
+            (d, a)
+        };
+        for files in [
+            &[
+                ("predict/en.fst", &b"lexicoN"[..]),
+                ("layouts/us.json", b"{}"),
+            ][..],
+            &[("predict/en.fst", b"lexicon")],
+            &[
+                ("predict/en.fst", b"lexicon"),
+                ("layouts/us.json", b"{}"),
+                ("rules/all.weir", b""),
+            ],
+            &[
+                ("predict/en.fst", b"lexicon"),
+                ("predict/en.fst", b"lexicon"),
+                ("layouts/us.json", b"{}"),
+            ],
+        ] {
+            let (d, a) = archive(files);
+            assert!(
+                matches!(d.open_pack(&a, &m), Err(OpenError::Archive { .. })),
+                "{files:?}"
+            );
+        }
+        // A file larger than the manifest says is not inflated past the
+        // archive's size.
+        let (d, a) = archive(&[
+            ("predict/en.fst", &[0u8; 4096][..]),
+            ("layouts/us.json", b"{}"),
+        ]);
+        assert!(matches!(
+            d.open_pack(&a, &m),
+            Err(OpenError::Archive { .. })
+        ));
+        // A single file's encoding is not a pack's.
+        let plain = download_of(&asset, encoding::GZIP);
+        assert!(matches!(
+            plain.open_pack(&asset, &m),
             Err(OpenError::Encoding { .. })
         ));
     }

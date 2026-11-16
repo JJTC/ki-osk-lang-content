@@ -981,19 +981,29 @@ check-version:
 	python3 scripts/version.py check
 
 # Every asset of release v$(VERSION), in dist/release/: the packs
-# (packs.json, each file gzipped, NOTICES.md), the all-languages bundle
-# ki-osk-lang-$(VERSION).tar.xz and SHA256SUMS. The bundle is every pack
-# installed from those assets as a client installs them:
+# (packs.json, each pack's files in one archive, pack.<id>.tar.gz, and
+# NOTICES.md), the all-languages bundle ki-osk-lang-$(VERSION).tar.xz and
+# SHA256SUMS. The bundle is every pack installed from those assets as a
+# client installs them:
 # `tar -xJf ki-osk-lang-$(VERSION).tar.xz -C /usr/share/ki-osk`. The same
-# commit gives the same bytes; the bundle's entries carry its time.
+# commit gives the same bytes; the bundle's entries carry its time. GitHub
+# keeps at most RELEASE_MAX_ASSETS in a release, and refuses the upload
+# of one more, so a release with more is refused here, before any upload
+# (a refresh adds its corpora, one asset more).
 RELEASE_OUT       ?= dist/release
+RELEASE_MAX_ASSETS = 1000
 SOURCE_DATE_EPOCH ?= $(shell git log -1 --format=%ct 2>/dev/null || echo 0)
 .PHONY: release
 release:
 	$(TOOLS) make-packs -- --out $(RELEASE_OUT) --bundle --mtime $(SOURCE_DATE_EPOCH)
 	xz -9 -T1 -f $(RELEASE_OUT)/ki-osk-lang-$(VERSION).tar
 	@$(MAKE) -s release-sums
-	@echo "release v$(VERSION): $$(ls $(RELEASE_OUT) | wc -l) assets in $(RELEASE_OUT)"
+	@n=$$(ls $(RELEASE_OUT) | wc -l); \
+	if [ $$((n + 1)) -gt $(RELEASE_MAX_ASSETS) ]; then \
+		echo "release v$(VERSION): $$n assets, and a refresh's corpora one more:" \
+		     "GitHub keeps at most $(RELEASE_MAX_ASSETS) in a release"; exit 1; \
+	fi; \
+	echo "release v$(VERSION): $$n assets in $(RELEASE_OUT)"
 
 # SHA256SUMS over every other asset in $(RELEASE_OUT), in C-locale name
 # order so it does not depend on whose machine wrote it. Run again after
