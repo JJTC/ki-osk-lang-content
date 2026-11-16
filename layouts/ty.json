@@ -4,7 +4,8 @@
   "xkb_layout": "us",
   "direction": "ltr",
   "swipe_enabled": true,
-  "prediction_enabled": false,
+  "prediction_enabled": true,
+  "prediction_lang": "ty",
   "views": [
     {
       "id": "base",
@@ -122,13 +123,6 @@
           "height_units": 1.0,
           "keys": [
             {
-              "width_units": 0.5,
-              "label": "",
-              "output": {
-                "kind": "none"
-              }
-            },
-            {
               "width_units": 1,
               "label": "a",
               "output": {
@@ -207,10 +201,11 @@
               }
             },
             {
-              "width_units": 0.5,
-              "label": "",
+              "width_units": 1,
+              "label": "ʻ",
               "output": {
-                "kind": "none"
+                "kind": "text",
+                "text": "ʻ"
               }
             }
           ]
@@ -475,13 +470,6 @@
           "height_units": 1.0,
           "keys": [
             {
-              "width_units": 0.5,
-              "label": "",
-              "output": {
-                "kind": "none"
-              }
-            },
-            {
               "width_units": 1,
               "label": "A",
               "output": {
@@ -560,10 +548,11 @@
               }
             },
             {
-              "width_units": 0.5,
-              "label": "",
+              "width_units": 1,
+              "label": "ʻ",
               "output": {
-                "kind": "none"
+                "kind": "text",
+                "text": "ʻ"
               }
             }
           ]

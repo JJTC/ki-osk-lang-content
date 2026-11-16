@@ -37,7 +37,9 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  xh fo ceb mi su co ny sm sn ig st haw yo dv \
                  ckb pcm \
                  mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium \
-                 nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue
+                 nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue \
+                 sah cv sme mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep \
+                 kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -100,8 +102,11 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # small or few write as people type, of thirty-eight languages that
 # had a keyboard and no model, from Swahili to Zulu, of Central
 # Kurdish (Sorani) and Nigerian Pidgin (beside GlotCC's, below), and of
-# nineteen languages of Southeast Asia, from Hmong Daw to Iu Mien, and
-# of twenty-six of Europe's regional languages, from Nynorsk to Rusyn
+# nineteen languages of Southeast Asia, from Hmong Daw to Iu Mien, of
+# twenty-six of Europe's regional languages, from Nynorsk to Rusyn, of
+# fifteen of Russia's and the north's, from Sakha to Veps, and of the
+# twenty-three more that had a keyboard and no model, from Udmurt and
+# Greenlandic to Inuktitut
 # (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
@@ -114,7 +119,9 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  xh fo ceb mi su co ny sm sn ig st haw yo dv \
                  ckb pcm \
                  mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium \
-                 nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue
+                 nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue \
+                 sah cv sme mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep \
+                 kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -237,13 +244,16 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # -> 12.9% and 8.8% -> 3.3%); and Southeast Asia's nineteen, whose
 # lexicons at 80 000 save 0.3 (Kadazandusun) to 2.5 points (Iloko) more
 # than at 30 000, the small corpora's every word (36 000 to 70 000);
-# and Europe's twenty-six regional languages.
+# and Europe's twenty-six regional languages, Russia's fifteen and the
+# twenty-three more that had a keyboard and no model.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
                        xh fo ceb mi su co ny sm sn ig st haw yo dv \
                        mww cnh kac hil ilo bcl pag pam krj iba bbc ace btx bts bjn dtp ban tet ium \
-                       nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue
+                       nn ast an lad gsw bar nds pfl ksh li hsb dsb nap scn sc fur pms lij wa ltg vro csb szl crh sco rue \
+                       sah cv sme mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep \
+                       kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -268,8 +278,12 @@ PREDICT_LARGE_NGRAM ?= 90000
 # Silesian, Rusyn…), whose lexicons at 80 000 lack 6.9% (Nynorsk) to 21.2%
 # (Kashubian) of their held-out words: at 120 000 0.3 to 0.9 points more
 # saved, 0.6 to 2.2 with taps astray.
+# And fourteen of Russia's, the north's and Africa's whose lexicons at
+# 80 000 lack 7.8% (Kirundi) to 17.7% (Quechua) of their held-out words:
+# 0.3 to 0.9 points more saved at 120 000.
 PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb ilo ban \
-                      nn gsw bar nds pfl ksh li hsb dsb nap scn sc lij ltg vro csb szl sco rue
+                      nn gsw bar nds pfl ksh li hsb dsb nap scn sc lij ltg vro csb szl sco rue \
+                      sah sme lg vep qu krl olo udm bxr mdf myv tyv kpv rn
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a
@@ -278,8 +292,13 @@ PREDICT_WIDE_NGRAM ?= 90000
 # keystroke savings rise a point (30.7%), and transliteration's first
 # reading is right 1.4 points more often; Tamil's, Telugu's and
 # Kannada's first readings 0.8-1.1 points, for a megabyte more each
-# (packs fetched as a language is wanted, none in the Android app).
-PREDICT_WIDER_LANGS ?= kn ml ta te
+# (packs fetched as a language is wanted, none in the Android app). And
+# the languages that build words from many parts whose web text is
+# small: Greenlandic, Inuktitut, Swati, Aymara and Southern Ndebele, whose
+# lexicons at 80 000 lack 14.6% (Ndebele) to 36.0% (Inuktitut) of their
+# held-out words; at 200 000 10.9% to 32.4%, 0.7 to 1.8 points more saved
+# and 2.2 to 6.5 with taps astray (Greenlandic 1.7% -> 8.2%).
+PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr
 PREDICT_WIDER_VOCAB ?= 200000
 PREDICT_WIDER_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia

@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**276 layouts**: 221 keyboard layouts (RTL: ar he fa + Urdu, Western
+**291 layouts**: 236 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 275 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **186 languages** carry a prediction
+keycaps. 290 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **224 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -155,6 +155,21 @@ but no model to match the glide against · `—` off
 | `crh` | `crh` | Crimean Tatar Qırımtatarca | tr + long-press ñ â | LTR | **Full** (crh)⁷ | ✓ | — |
 | `sco` | `sco` | Scots | gb | LTR | **Full** (sco)⁷ | ✓ | — |
 | `rue` | `rue` | Rusyn Русиньскый | uk + long-press ы ъ ё | LTR | **Full** (rue)⁷ | — | — |
+| `cv` | `cv` | Chuvash Чӑвашла | ru + long-press ӑ ӗ ҫ ӳ | LTR | **Full** (cv)⁷ | — | — |
+| `sah` | `sah` | Sakha (Yakut) Саха тыла | ru + long-press ҕ ҥ ө һ ү | LTR | **Full** (sah)⁷ | — | — |
+| `kpv` | `kpv` | Komi-Zyrian Коми кыв | ru + long-press і ӧ | LTR | **Full** (kpv)⁷ | — | — |
+| `koi` | `koi` | Komi-Permyak Перым коми кыв | ru + long-press і ӧ | LTR | **Full** (koi)⁷ | — | — |
+| `mhr` | `mhr` | Meadow Mari Олык марий | ru + long-press ӓ ҥ ӧ ӱ | LTR | **Full** (mhr)⁷ | — | — |
+| `mrj` | `mrj` | Hill Mari Кырык мары | ru + long-press ӓ ӧ ӱ ӹ | LTR | **Full** (mrj)⁷ | — | — |
+| `tyv` | `tyv` | Tuvan Тыва дыл | ru + long-press ң ө ү | LTR | **Full** (tyv)⁷ | — | — |
+| `bxr` | `bxr` | Buryat Буряад хэлэн | ru + long-press ө ү һ | LTR | **Full** (bxr)⁷ | — | — |
+| `xal` | `xal` | Kalmyk Хальмг келн | ru + long-press ә җ ң ө ү һ | LTR | **Full** (xal)⁷ | — | — |
+| `myv` | `myv` | Erzya Эрзянь кель | ru | LTR | **Full** (myv)⁷ | — | — |
+| `mdf` | `mdf` | Moksha Мокшень кяль | ru | LTR | **Full** (mdf)⁷ | — | — |
+| `krl` | `krl` | Karelian Karjala | fi + long-press č š ž | LTR | **Full** (krl)⁷ | ✓ | — |
+| `olo` | `olo` | Livvi-Karelian Livvi | fi + long-press č š ž | LTR | **Full** (olo)⁷ | ✓ | — |
+| `vep` | `vep` | Veps Vepsän kel’ | et + long-press č š ž | LTR | **Full** (vep)⁷ | ✓ | — |
+| `sme` | `sme` | Northern Sami Davvisámegiella | no · smi | LTR | **Full** (sme)⁷ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -172,9 +187,9 @@ but no model to match the glide against · `—` off
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | — | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | — | — | — |
 | `kab` | `kab` | Kabyle | us | LTR | **Full** (kab) | ✓ | — |
-| `qu` | `qu` | Quechua | es | LTR | — | ~ | — |
+| `qu` | `qu` | Quechua | es | LTR | **Full** (qu)⁷ | ✓ | — |
 | `gn` | `gn` | Guaraní | es | LTR | — | ~ | — |
-| `ay` | `ay` | Aymara | es | LTR | — | ~ | — |
+| `ay` | `ay` | Aymara | es | LTR | **Full** (ay)⁷ | ✓ | — |
 | `sw` | `sw` | Swahili | us | LTR | **Full** (sw)⁷ | ✓ | — |
 | `ms` | `ms` | Malay | us | LTR | **Full** (ms) | ✓ | — |
 | `so` | `so` | Somali | us | LTR | **Full** (so)⁷ | ✓ | — |
@@ -183,7 +198,7 @@ but no model to match the glide against · `—` off
 | `af` | `af` | Afrikaans | us | LTR | **Full** (af)⁷ | ✓ | — |
 | `jv` | `jv` | Javanese | us | LTR | **Full** (jv)⁷ | ✓ | — |
 | `su` | `su` | Sundanese | us | LTR | **Full** (su)⁷ | ✓ | — |
-| `om` | `om` | Oromo | us | LTR | — | ~ | — |
+| `om` | `om` | Oromo | us | LTR | **Full** (om)⁷ | ✓ | — |
 | `ceb` | `ceb` | Cebuano | es | LTR | **Full** (ceb)⁷ | ✓ | — |
 | `ha` | `ha` | Hausa | us + long-press ɓ ɗ ƙ ƴ | LTR | **Full** (ha)⁷ | ✓ | — |
 | `yo` | `yo` | Yoruba | us + long-press dot/tone | LTR | **Full** (yo)⁷ | ✓ | — |
@@ -212,42 +227,42 @@ but no model to match the glide against · `—` off
 | `br` | `br` | Breton Brezhoneg | us + long-press ñ ç â ê î ô û ù | LTR | **Full** (br) | ✓ | — |
 | `co` | `co` | Corsican Corsu | us | LTR | **Full** (co)⁷ | ✓ | — |
 | `lb` | `lb` | Luxembourgish Lëtzebuergesch | us + long-press ä ë é ï ö ü | LTR | **Full** (lb)⁷ | ✓ | — |
-| `rm` | `rm` | Romansh Rumantsch | us | LTR | — | ~ | — |
+| `rm` | `rm` | Romansh Rumantsch | us | LTR | **Full** (rm)⁷ | ✓ | — |
 | `fy` | `fy` | Frisian Frysk | us + long-press â ê ë î ï ô û ú | LTR | **Full** (fy)⁷ | ✓ | — |
 | `tt` | `tt` | Tatar Татарча | ru · tt | LTR | **Full** (tt) | — | — |
 | `ba` | `ba` | Bashkir Башҡортса | ru · bak | LTR | **Full** (ba)⁷ | — | — |
 | `os` | `os` | Ossetian Ирон | ru · os_winkeys | LTR | **Full** (os) | — | — |
-| `udm` | `udm` | Udmurt Удмурт | ru · udm | LTR | — | — | — |
-| `wo` | `wo` | Wolof | us + long-press ñ ŋ ë ó | LTR | — | ~ | — |
-| `ln` | `ln` | Lingala Lingála | us + long-press ɛ ɔ | LTR | — | ~ | — |
+| `udm` | `udm` | Udmurt Удмурт | ru · udm | LTR | **Full** (udm)⁷ | — | — |
+| `wo` | `wo` | Wolof | us + long-press ñ ŋ ë ó | LTR | **Full** (wo)⁷ | ✓ | — |
+| `ln` | `ln` | Lingala Lingála | us + long-press ɛ ɔ | LTR | **Full** (ln)⁷ | ✓ | — |
 | `rw` | `rw` | Kinyarwanda | us | LTR | **Full** (rw)⁷ | ✓ | — |
-| `rn` | `rn` | Kirundi | us | LTR | — | ~ | — |
+| `rn` | `rn` | Kirundi | us | LTR | **Full** (rn)⁷ | ✓ | — |
 | `sn` | `sn` | Shona chiShona | us | LTR | **Full** (sn)⁷ | ✓ | — |
 | `ny` | `ny` | Chichewa | us + long-press ŵ | LTR | **Full** (ny)⁷ | ✓ | — |
 | `mg` | `mg` | Malagasy | us + long-press ñ ô | LTR | **Full** (mg)⁷ | ✓ | — |
 | `st` | `st` | Sesotho | us | LTR | **Full** (st)⁷ | ✓ | — |
-| `tn` | `tn` | Setswana | us + long-press š | LTR | — | ~ | — |
-| `nso` | `nso` | Sepedi | us + long-press š ê ô | LTR | — | ~ | — |
-| `lg` | `lg` | Luganda | us + long-press ŋ ɲ | LTR | — | ~ | — |
-| `ak` | `ak` | Akan | us + long-press ɛ ɔ | LTR | — | ~ | — |
-| `ee` | `ee` | Ewe Eʋegbe | us + long-press ɖ ɛ ƒ ɣ ɔ ʋ ŋ | LTR | — | ~ | — |
-| `bm` | `bm` | Bambara Bamanankan | us + long-press ɛ ɔ ɲ ŋ | LTR | — | ~ | — |
+| `tn` | `tn` | Setswana | us + long-press š | LTR | **Full** (tn)⁷ | ✓ | — |
+| `nso` | `nso` | Sepedi | us + long-press š ê ô | LTR | **Full** (nso)⁷ | ✓ | — |
+| `lg` | `lg` | Luganda | us + long-press ŋ ɲ | LTR | **Full** (lg)⁷ | ✓ | — |
+| `ak` | `ak` | Akan | us + long-press ɛ ɔ | LTR | **Full** (ak)⁷ | ✓ | — |
+| `ee` | `ee` | Ewe Eʋegbe | us + long-press ɖ ɛ ƒ ɣ ɔ ʋ ŋ | LTR | **Full** (ee)⁷ | ✓ | — |
+| `bm` | `bm` | Bambara Bamanankan | us + long-press ɛ ɔ ɲ ŋ | LTR | **Full** (bm)⁷ | ✓ | — |
 | `ff` | `ff` | Fula Fulfulde | us + long-press ɓ ɗ ƴ ŋ | LTR | — | ~ | — |
-| `ts` | `ts` | Tsonga Xitsonga | us | LTR | — | ~ | — |
-| `ve` | `ve` | Venda Tshivenḓa | us + long-press ḓ ḽ ṋ ṱ | LTR | — | ~ | — |
-| `ss` | `ss` | Swati siSwati | us | LTR | — | ~ | — |
-| `nr` | `nr` | Ndebele isiNdebele | us | LTR | — | ~ | — |
+| `ts` | `ts` | Tsonga Xitsonga | us | LTR | **Full** (ts)⁷ | ✓ | — |
+| `ve` | `ve` | Venda Tshivenḓa | us + long-press ḓ ḽ ṋ ṱ | LTR | **Full** (ve)⁷ | ✓ | — |
+| `ss` | `ss` | Swati siSwati | us | LTR | **Full** (ss)⁷ | ✓ | — |
+| `nr` | `nr` | Ndebele isiNdebele | us | LTR | **Full** (nr)⁷ | ✓ | — |
 | `mi` | `mi` | Māori | us + long-press ā ē ī ō ū | LTR | **Full** (mi)⁷ | ✓ | — |
-| `haw` | `haw` | Hawaiian Ōlelo Hawaiʻi | us + long-press ā ē ī ō ū | LTR | **Full** (haw)⁷ | ✓ | — |
-| `sm` | `sm` | Samoan Gagana Sāmoa | us + long-press ā ē ī ō ū | LTR | **Full** (sm)⁷ | ✓ | — |
-| `to` | `to` | Tongan Lea faka-Tonga | us + long-press ā ē ī ō ū | LTR | — | ~ | — |
-| `fj` | `fj` | Fijian Vosa Vakaviti | us + long-press ā ē ī ō ū | LTR | — | ~ | — |
-| `ty` | `ty` | Tahitian Reo Tahiti | us + long-press ā ē ī ō ū | LTR | — | ~ | — |
+| `haw` | `haw` | Hawaiian ʻŌlelo Hawaiʻi | us + key ʻ + long-press ā ē ī ō ū | LTR | **Full** (haw)⁷ | ✓ | — |
+| `sm` | `sm` | Samoan Gagana Sāmoa | us + key ʻ + long-press ā ē ī ō ū | LTR | **Full** (sm)⁷ | ✓ | — |
+| `to` | `to` | Tongan Lea faka-Tonga | us + key ʻ + long-press ā ē ī ō ū | LTR | **Full** (to)⁷ | ✓ | — |
+| `fj` | `fj` | Fijian Vosa Vakaviti | us + long-press ā ē ī ō ū | LTR | **Full** (fj)⁷ | ✓ | — |
+| `ty` | `ty` | Tahitian Reo Tahiti | us + key ʻ + long-press ā ē ī ō ū | LTR | **Full** (ty)⁷ | ✓ | — |
 | `ht` | `ht` | Haitian Creole Kreyòl | us | LTR | **Full** (ht)⁷ | ✓ | — |
 | `nah` | `nah` | Nahuatl Nāhuatl | us + long-press ā ē ī ō | LTR | — | ~ | — |
-| `kl` | `kl` | Greenlandic Kalaallisut | us | LTR | — | ~ | — |
+| `kl` | `kl` | Greenlandic Kalaallisut | us | LTR | **Full** (kl)⁷ | ✓ | — |
 | `chr` | `chr` | Cherokee ᏣᎳᎩ | us · chr | LTR | — | — | — |
-| `iu` | `iu` | Inuktitut ᐃᓄᒃᑎᑐᑦ | ca · ike | LTR | — | — | — |
+| `iu` | `iu` | Inuktitut ᐃᓄᒃᑎᑐᑦ | ca · ike | LTR | **Full** (iu)⁷ | — | — |
 | `mni` | `mni` | Meitei ꯃꯤꯇꯩ ꯂꯣꯟ | in · mni | LTR | **Full** (mni)⁶ | — | — |
 | `mni-beng` | `mni-Beng` | Meitei মণিপুরী (Bengali script) | in · ben + long-press ৱ | LTR | **Full** (mni-Beng)⁷ | — | — |
 | `dz` | `dz` | Dzongkha རྫོང་ཁ | bt | LTR | — | — | — |
@@ -685,7 +700,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These ninety-nine models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These one hundred and thirty-seven models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -872,7 +887,57 @@ but no model to match the glide against · `—` off
    text archives), West Flemish (half Dutch Low Saxon's wiki), Picard (a
    dictionary's glosses in French), Lombard (half Ladin), Gagauz (Kazakh,
    and Cyrillic letters for Latin ones) and Venetian (spam) are not used
-   yet. Bodo's apostrophe, which
+   yet.
+   Sixteen of Russia's and the north's learn from FineWeb-2's text whole
+   (Sakha's and Chuvash's every other row group): Sakha, Chuvash,
+   Northern Sami, Meadow and Hill Mari, Udmurt, Tuvan, Buryat,
+   Komi-Zyrian, Komi-Permyak, Erzya, Moksha, Kalmyk, Karelian, Livvi and
+   Veps; and twenty-two more that had a keyboard and no model: Tongan,
+   Fijian, Tahitian, Ewe, Venda, Tsonga, Lingala, Romansh, Akan (Twi's
+   text), Sepedi, Kirundi, Setswana, Southern Ndebele, Oromo, Bambara,
+   Luganda, Quechua (Ayacucho's), Wolof, Greenlandic, Swati, Aymara and
+   Inuktitut. A sentence of the big language written beside each is left
+   out (Russian's, Norwegian's, Danish's, German's, French's, Spanish's,
+   English's). FineWeb-2 has chat sites' machine-made pages in the Maris'
+   and Udmurt's name (half of Hill Mari's documents): a document read at
+   such an address is left out. Letters typed for others are read as the
+   keyboard types them: Chuvash's Latin ă ĕ ç as ӑ ӗ ҫ (вăл, вӑл), the
+   Komis' and Maris' Latin ö ä ÿ as ӧ ӓ ӱ, Buryat's and Kalmyk's fita ѳ as
+   ө, Bambara's Greek ε as ɛ, and a Polynesian glottal stop written as an
+   apostrophe or a quote before a vowel (fa'a, ‘o) as ʻ. Nearly a third
+   of FineWeb-2's Akan was typed in an old Ghanaian font that put ɛ on j and ɔ
+   on c (yj, sj for yɛ, sɛ): left out, as Zawgyi's Burmese is, it took
+   Akan's savings from 16.6% to 47.0% and its unknown words from 26% to
+   1.4%. Russia's languages written in Cyrillic are typed on Russian's
+   keys with their letters on the long presses of those xkeyboard-config's
+   keymaps put them over (Chuvash's ӑ ӗ ҫ ӳ on а е с у…), Northern Sami on
+   its Norwegian keymap, Karelian and Livvi on Finnish's keys and Veps on
+   Estonian's with č š ž. Tongan, Tahitian, Hawaiian and Samoan have a key
+   for the glottal stop, ʻ, which their keyboards lacked: Hawaiian's
+   letters with no key fell from 9.5% to 4.3%, its savings rose 45.1% ->
+   46.1%, Samoan's 47.7% -> 48.7%. Their lexicons keep 80 000 words, 120 000
+   for fourteen and 200 000 for the five that build words from many parts
+   (Greenlandic, Inuktitut, Swati, Aymara, Southern Ndebele). Keystroke
+   savings on FineWeb-2's held-out text of each (2 000 to 15 000 words):
+   Hill Mari 50.3%, Kalmyk 44.2%, Moksha 42.6%, Meadow Mari 42.6%, Chuvash
+   42.4%, Tuvan 42.0%, Erzya 41.0%, Northern Sami 40.6%, Karelian 40.5%,
+   Komi-Zyrian 40.1%, Veps 39.5%, Buryat 38.2%, Komi-Permyak 38.2%, Udmurt
+   38.1%, Sakha 37.7%, Livvi 34.1%; Tongan 53.9%, Fijian 52.9%, Tahitian
+   52.3%, Ewe 52.2%, Venda 51.9%, Tsonga 51.2%, Lingala 49.3%, Romansh
+   48.8%, Akan 47.0%, Sepedi 46.7%, Kirundi 45.6%, Setswana 45.5%, Southern
+   Ndebele 44.9%, Oromo 42.2%, Bambara 41.9%, Luganda 41.0%, Quechua 40.8%,
+   Wolof 34.2%, Greenlandic 33.5%, Swati 28.8%, Aymara 28.0%, Inuktitut
+   23.4%; at most 0.66% of right words changed (Wolof's). Greenlandic,
+   Inuktitut, Swati and Aymara still lack a fifth to a third of their
+   held-out words, a sentence's worth of word parts each, and with taps
+   astray save little (Greenlandic 8.2%, Inuktitut 0.5%): a word typed
+   wrong costs its deleting and retyping, which a keyboard with no model
+   pays for every such word, and these strips and corrections take back
+   only some of it. Most of Ewe's, Tsonga's, Sepedi's, Setswana's,
+   Southern Ndebele's, Tahitian's and Fijian's text is the Bible and
+   Watchtower, as their held-out text is. FineWeb-2's Nahuatl is three
+   quarters Eastern Huasteca Nahuatl's Bible, not the language the
+   keyboard of Nahuatl at large types: not used. Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
    row group of its FineWeb-2 (856 000 sentences), each document's ৰ
@@ -931,7 +996,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **186 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **224 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -948,21 +1013,22 @@ but no model to match the glide against · `—` off
   thirty-eight languages that had a keyboard and no model, **sw af sl zu sq kk uz bs
   ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba xh fo ceb mi su co ny sm sn ig st
   haw yo dv**, **ckb pcm**, and of Southeast Asia **mww cnh kac hil ilo bcl pag pam krj iba bbc
-  btx bts ace ban bjn dtp tet ium** (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
+  btx bts ace ban bjn dtp tet ium**, of Europe **nn ast an lad gsw bar nds pfl ksh li hsb dsb
+  nap scn sc fur pms lij wa ltg vro csb szl crh sco rue**, of Russia and the north **sah cv sme
+  mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep**, and twenty-three more that had a
+  keyboard and no model, **kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu**
+  (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 32 layouts, the languages
-  whose web text FineWeb-2 has little of or none (Akan, Aymara,
-  Bambara, Ewe, Fijian, Fula, Guarani, Greenlandic, Lingala, Luganda,
-  Nahuatl, Oromo, Quechua, Romansh, Kirundi, the Southern Bantu languages
-  but Sesotho, Xhosa and Zulu, Tahitian, Tongan, Udmurt, Wolof…), the
-  ones written without spaces whose word lists ICU lacks (Tibetan,
-  Dzongkha), scripts it barely has (Syriac, Tamazight in Tifinagh,
-  Cherokee, Inuktitut syllabics), and Serbian in Latin letters, Serbian's
-  model reading Cyrillic. The recognizer runs but has no vocabulary for
-  them. Thirty-eight layout-only languages got their models from
-  FineWeb-2's web text (note 7).
+- **Layout-only** — no bundled model yet: 9 layouts, the languages
+  whose web text FineWeb-2 has little of (Fula, Guarani, Cherokee,
+  Tamazight in Tifinagh) or only of one variety (Nahuatl's, Eastern
+  Huasteca's Bible; Syriac's, the classical language's), the ones
+  written without spaces whose word lists ICU lacks (Tibetan, Dzongkha),
+  and Serbian in Latin letters, Serbian's model reading Cyrillic. The
+  recognizer runs but has no vocabulary for them. Sixty-one layout-only
+  languages got their models from FineWeb-2's web text (note 7).
 - **IME dictionaries** — Pinyin (CC-CEDICT `pinyin/cedict.bin`),
   Japanese (`kana/mozc-kanji.bin`); Hangul is algorithmic and needs no
   dictionary.

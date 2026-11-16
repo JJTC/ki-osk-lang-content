@@ -90,6 +90,9 @@ LANGS = [
     ("sd", "سنڌي", "pk", "snd", "arabic"),
     ("ug", "ئۇيغۇرچە", "cn", "ug", "arabic"),
     ("ckb", "کوردیی ناوەندی", "iq", "ku_ara", "arabic"),
+    # Northern Sami on its Norwegian keymap, its letters (á š ŧ ŋ đ č ž) on
+    # the base level; `sme`, as `se` is Sweden's layout.
+    ("sme", "Davvisámegiella", "no", "smi", "latin"),
     # --- Tier 3: complex Asian / Caucasus scripts (bundled Noto faces) ---
     # Alphabetic — fit the grid cleanly, no combining marks:
     ("ka", "ქართული", "ge", "", "georgian"),
@@ -228,7 +231,7 @@ LANGS = [
     # apostrophe). Display names use macron-only endonyms, no okina, so the
     # picker never shows tofu.
     ("mi", "Māori", "us", "", "latin"),
-    ("haw", "Ōlelo Hawaii", "us", "", "latin"),
+    ("haw", "ʻŌlelo Hawaiʻi", "us", "", "latin"),
     ("sm", "Gagana Sāmoa", "us", "", "latin"),
     ("to", "Lea faka-Tonga", "us", "", "latin"),
     ("fj", "Vosa Vakaviti", "us", "", "latin"),
@@ -433,6 +436,13 @@ NUMBER_ROW_SHIFT = {"khmer", "myanmar"}
 # a long press of its key.
 LEVEL3_LONGPRESS = {"khmer"}
 
+# Layouts whose language writes a letter no key of the US grid types and
+# the national keymap has none for: Polynesian's glottal stop, ʻ (U+02BB,
+# Hawaiian's ʻokina, Samoan's koma liliu, Tongan's fakauʻa, Tahitian's
+# ʻeta), a key of its own at the home row's end, which then has ten keys
+# as the top row does.
+HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ"}
+
 
 def is_letter_or_mark(g):
     """Whether `g` is a non-ASCII letter (L*) or combining mark (M*)."""
@@ -581,7 +591,10 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
         r1 = kept_codes(BASE_ROWS[1], EXTRA_ROWS[1], chars, script)
         r2 = kept_codes(BASE_ROWS[2], EXTRA_ROWS[2], chars, script)
         rows[0]["keys"] = [kc(c) for c in r0]
-        rows[1]["keys"] = [spacer()] + [kc(c) for c in r1] + [spacer()]
+        if lid in HOME_ROW_TEXT:
+            rows[1]["keys"] = [kc(c) for c in r1] + [text_key(HOME_ROW_TEXT[lid])]
+        else:
+            rows[1]["keys"] = [spacer()] + [kc(c) for c in r1] + [spacer()]
         rows[2]["keys"] = [shift_key] + [kc(c) for c in r2] + [backspace]
 
         # Prepend the overflow letters as a top row, centred to the top

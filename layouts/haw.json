@@ -1,6 +1,6 @@
 {
   "id": "haw",
-  "name": "Ōlelo Hawaii",
+  "name": "ʻŌlelo Hawaiʻi",
   "xkb_layout": "us",
   "direction": "ltr",
   "swipe_enabled": true,
@@ -123,13 +123,6 @@
           "height_units": 1.0,
           "keys": [
             {
-              "width_units": 0.5,
-              "label": "",
-              "output": {
-                "kind": "none"
-              }
-            },
-            {
               "width_units": 1,
               "label": "a",
               "output": {
@@ -208,10 +201,11 @@
               }
             },
             {
-              "width_units": 0.5,
-              "label": "",
+              "width_units": 1,
+              "label": "ʻ",
               "output": {
-                "kind": "none"
+                "kind": "text",
+                "text": "ʻ"
               }
             }
           ]
@@ -476,13 +470,6 @@
           "height_units": 1.0,
           "keys": [
             {
-              "width_units": 0.5,
-              "label": "",
-              "output": {
-                "kind": "none"
-              }
-            },
-            {
               "width_units": 1,
               "label": "A",
               "output": {
@@ -561,10 +548,11 @@
               }
             },
             {
-              "width_units": 0.5,
-              "label": "",
+              "width_units": 1,
+              "label": "ʻ",
               "output": {
-                "kind": "none"
+                "kind": "text",
+                "text": "ʻ"
               }
             }
           ]

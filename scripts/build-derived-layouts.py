@@ -43,7 +43,13 @@ Piedmontese (ë, ò ö, ù ü) and Ligurian (â æ ç…) on Italian's; Walloon
 on French's (å); Latgalian on Latvian's (ō); Võro on Estonian's (š ž);
 Kashubian (ë ò ô ã ù) and Silesian (ō ŏ ô ů ã) on Polish's; Crimean
 Tatar on Turkish's (ñ â); Scots on the UK's; and Rusyn on Ukrainian's
-(ы on и, ъ on ь, ё on е). A letter only a long press types turns
+(ы on и, ъ on ь, ё on е). Russia's languages written in Cyrillic are
+typed on Russian's keys, their letters on the long presses of the
+letters xkeyboard-config's keymaps put them over (Chuvash's ӑ ӗ ҫ ӳ on а
+е с у, Sakha's ҕ ҥ ө һ ү, the Komis' і ӧ, the Maris' ӓ ӧ ӱ and ҥ or ӹ,
+Tuvan's, Buryat's and Kalmyk's ң ө ү һ ә җ), Erzya and Moksha on them as
+they are; Karelian and Livvi on Finnish's keys, Veps on Estonian's, each
+with č š ž. A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -169,6 +175,20 @@ DERIVED = [
     ("crh", "tr", "Qırımtatarca", {"n": ["ñ"], "a": ["â"], "N": ["Ñ"], "A": ["Â"]}),
     ("sco", "gb", "Scots", {}),
     ("rue", "uk", "Русиньскый", {"и": ["ы"], "ь": ["ъ"], "е": ["ё"], "И": ["Ы"], "Ь": ["Ъ"], "Е": ["Ё"]}),
+    ("cv", "ru", "Чӑвашла", {"а": ["ӑ"], "е": ["ӗ"], "с": ["ҫ"], "у": ["ӳ"], "А": ["Ӑ"], "Е": ["Ӗ"], "С": ["Ҫ"], "У": ["Ӳ"]}),
+    ("sah", "ru", "Саха тыла", {"г": ["ҕ"], "н": ["ҥ"], "о": ["ө"], "х": ["һ"], "у": ["ү"], "Г": ["Ҕ"], "Н": ["Ҥ"], "О": ["Ө"], "Х": ["Һ"], "У": ["Ү"]}),
+    ("kpv", "ru", "Коми кыв", {"и": ["і"], "о": ["ӧ"], "И": ["І"], "О": ["Ӧ"]}),
+    ("koi", "ru", "Перым коми кыв", {"и": ["і"], "о": ["ӧ"], "И": ["І"], "О": ["Ӧ"]}),
+    ("mhr", "ru", "Олык марий", {"а": ["ӓ"], "н": ["ҥ"], "о": ["ӧ"], "у": ["ӱ"], "А": ["Ӓ"], "Н": ["Ҥ"], "О": ["Ӧ"], "У": ["Ӱ"]}),
+    ("mrj", "ru", "Кырык мары", {"а": ["ӓ"], "о": ["ӧ"], "у": ["ӱ"], "ы": ["ӹ"], "А": ["Ӓ"], "О": ["Ӧ"], "У": ["Ӱ"], "Ы": ["Ӹ"]}),
+    ("tyv", "ru", "Тыва дыл", {"н": ["ң"], "о": ["ө"], "у": ["ү"], "Н": ["Ң"], "О": ["Ө"], "У": ["Ү"]}),
+    ("bxr", "ru", "Буряад хэлэн", {"о": ["ө"], "у": ["ү"], "х": ["һ"], "О": ["Ө"], "У": ["Ү"], "Х": ["Һ"]}),
+    ("xal", "ru", "Хальмг келн", {"а": ["ә"], "ж": ["җ"], "н": ["ң"], "о": ["ө"], "у": ["ү"], "х": ["һ"], "А": ["Ә"], "Ж": ["Җ"], "Н": ["Ң"], "О": ["Ө"], "У": ["Ү"], "Х": ["Һ"]}),
+    ("myv", "ru", "Эрзянь кель", {}),
+    ("mdf", "ru", "Мокшень кяль", {}),
+    ("krl", "fi", "Karjala", {"c": ["č"], "s": ["š"], "z": ["ž"], "C": ["Č"], "S": ["Š"], "Z": ["Ž"]}),
+    ("olo", "fi", "Livvi", {"c": ["č"], "s": ["š"], "z": ["ž"], "C": ["Č"], "S": ["Š"], "Z": ["Ž"]}),
+    ("vep", "et", "Vepsän kel’", {"c": ["č"], "s": ["š"], "z": ["ž"], "C": ["Č"], "S": ["Š"], "Z": ["Ž"]}),
 ]
 
 

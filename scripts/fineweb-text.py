@@ -138,6 +138,34 @@ Flemish half Dutch Low Saxon's wiki, its Picard a dictionary's glosses
 in French, its Lombard half Ladin, its Gagauz Kazakh and Cyrillic
 letters for Latin ones, its Venetian spam: none is read yet.
 
+Fifteen of Russia's and the north's languages are read whole (Sakha's
+and Chuvash's every other row group): Sakha, Chuvash, Northern Sami,
+Meadow and Hill Mari, Udmurt, Tuvan, Buryat, Komi-Zyrian, Komi-Permyak,
+Erzya, Moksha, Kalmyk, Karelian, Livvi and Veps; and twenty-three more
+languages that had a keyboard and no model: Greenlandic, Oromo, Romansh,
+Kirundi, Luganda, Lingala, Fijian, Ewe, Akan (Twi's text), Tsonga,
+Sepedi, Setswana, Tongan, Wolof, Tahitian, Venda, Southern Ndebele,
+Aymara, Swati, Quechua (Ayacucho's), Bambara and Inuktitut. A sentence
+of the big language written beside them is left out: Russian's beside
+Russia's, Norwegian's beside Sami, Danish's beside Greenlandic, German's
+beside Romansh, French's beside Lingala, Ewe, Wolof, Tahitian and
+Bambara (not la or de, which Wolof and Bambara write), Spanish's beside
+Aymara and Quechua, and English's. FineWeb-2 has chat sites' machine-made
+pages in the Maris' and Udmurt's name (mrj.videochat.date: half of Hill
+Mari's documents): a document read at such an address is left out
+(`hosts_out`). Letters typed for others are read as the keyboard types
+them: Chuvash's Latin ă ĕ ç ÿ as ӑ ӗ ҫ ӳ (вăл, вӑл), the Komis' ö and i as
+ӧ and і, the Maris' ä ö ÿ as ӓ ӧ ӱ, Buryat's and Kalmyk's fita ѳ and Latin
+schwas as ө and ә, ӊ as ң, Bambara's Greek ε as ɛ; and a Polynesian glottal
+stop written as an apostrophe or a quote before a vowel (fa'a, ‘o) as ʻ,
+in Tongan, Tahitian, Hawaiian and Samoan alike. Akan's and Inuktitut's
+sentences are cut where a word of another script stands, and a document
+of Akan's typed in an old font's encoding, ɛ on j and ɔ on c (yj, sj for
+yɛ, sɛ: c and j more than 1% of its letters, which Twi writes neither of),
+is left out, as Zawgyi's Burmese is. FineWeb-2's
+Nahuatl is three quarters one variety's Bible (Eastern Huasteca's): not
+read for the keyboard of Nahuatl at large.
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -268,6 +296,34 @@ KOLSCH = set("dat et dä mer op och nit jet ens wat jo sin hät".split())
 # English's words these write too, out of what marks English.
 ENGLISH_NOT_NORSE = ENGLISH_ONLY - {"for", "by"}
 ENGLISH_NOT_GERMANIC = ENGLISH_ONLY - {"was"}
+# The big languages written beside the north's and Africa's, Oceania's
+# and the Andes': Norwegian's beside Northern Sami, Danish's beside
+# Greenlandic, French's beside Lingala, Wolof, Bambara, Ewe and Tahitian
+# (not la and de, which Wolof and Bambara write), Spanish's beside Aymara
+# and Quechua.
+NORWEGIAN_ONLY = set("og ikke jeg er på til som av med det".split())
+DANISH_ONLY = set("og er til det af med på som ikke for at en den".split())
+FRENCH_SET = set("le les et des une pour dans avec est que qui du au sont pas".split())
+SPANISH_SET = set("de la y en el que los del las se por para con un una es".split())
+# Sites of machine-made chat-room pages, which FineWeb-2 has in the Maris'
+# and Udmurt's name (mrj.videochat.date: two fifths of Hill Mari's text).
+CHAT_SPAM = re.compile(r"video-?chat")
+# Latin letters typed for Cyrillic ones: Chuvash's ă ĕ ç ÿ for ӑ ӗ ҫ ӳ (вăл,
+# вӑл), Komi's ö for ӧ, and i for і within a Cyrillic word.
+CHUVASH_FOLD = str.maketrans("ăĂĕĔçÇÿŸ", "ӑӐӗӖҫҪӳӲ")
+# And the Maris' ä ö ÿ ü for ӓ ӧ ӱ; the old fita ѳ and Latin schwas ǝ ə
+# for Buryat's and Kalmyk's ө ә, and ӊ (en with a hook) for their and
+# Tuvan's ң; Greek's ε and Cyrillic's є for Bambara's ɛ; the modifier ˈ
+# for Tahitian's ʻ.
+MARI_FOLD = str.maketrans("äÄöÖÿŸüÜ", "ӓӒӧӦӱӰӱӰ")
+MONGOLIC_FOLD = str.maketrans("ѳѲǝƎəƏӊӉ", "өӨәӘәӘңҢ")
+BAMBARA_FOLD = str.maketrans("εΕєЄ", "ɛƐɛƐ")
+KOMI_I = re.compile(r"(?<=[\u0400-\u04FF])[iI]|[iI](?=[\u0400-\u04FF])")
+# A Polynesian glottal stop written as an apostrophe or a quote mark
+# before a vowel (fa'a, fa’a, ‘o for faʻa, ʻo): one letter, ʻ (U+02BB),
+# which the keyboard types. A quote before a consonant (’s, ‘Hello) is
+# left as it is.
+GLOTTAL = re.compile("(?:^|(?<=[\\s(\\[«\"“\\-—–/])|(?<=[^\\W\\d_]))[‘’'`](?=[aeiouāēīōūAEIOUĀĒĪŌŪ])")
 # Arabic's words, after Sorani's letters are folded (فی for في), that
 # Sorani does not write: what marks a sentence of Arabic in its text.
 ARABIC_ONLY = set("فی علی إلی الی الذی التی هذا هذه عن".split())
@@ -337,6 +393,43 @@ def sorani(text):
     parts = SENTENCE_GAP.split(text)
     text = "".join("" if i % 2 == 0 and old_start(p) else p for i, p in enumerate(parts))
     return FINAL_AE.sub("\u06D5", text.translate(SORANI_FOLD)).replace("\u0640", "")
+
+
+def chuvash(text):
+    return text.translate(CHUVASH_FOLD)
+
+
+def komi(text):
+    return KOMI_I.sub(lambda m: "\u0456" if m.group() == "i" else "\u0406", text.replace("ö", "\u04E7").replace("Ö", "\u04E6"))
+
+
+def polynesian(text):
+    return GLOTTAL.sub("\u02BB", text)
+
+
+def tahitian(text):
+    return polynesian(text.replace("\u02C8", "\u02BB"))
+
+
+def mari(text):
+    return text.translate(MARI_FOLD)
+
+
+def mongolic(text):
+    return text.translate(MONGOLIC_FOLD)
+
+
+def bambara(text):
+    return text.translate(BAMBARA_FOLD)
+
+
+def twi_font(text):
+    """A document typed in an old Ghanaian font's encoding, which put
+    Twi's ɛ on j and ɔ on c (yj, sj, asomafoc for yɛ, sɛ, asomafoɔ), as
+    Zawgyi does Burmese's letters: Twi writes neither c nor j, so they are
+    more than 1% of such a document's letters."""
+    letters = sum(c.isalpha() for c in text)
+    return sum(c in "cjCJ" for c in text) > 0.01 * max(1, letters)
 
 
 def tetum(text):
@@ -418,11 +511,11 @@ LANGS = {
     "su": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 4},
     "co": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 4},
     "ny": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 4},
-    "sm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 4},
+    "sm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 4, "normalize": polynesian},
     "sn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
     "ig": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
     "st": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
-    "haw": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
+    "haw": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3, "normalize": polynesian},
     "yo": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 3},
     "dv": {"script": "THAANA", "neighbour": set(), "every": 8},
     "km": {"script": "KHMER", "neighbour": set(), "lines": True, "unspaced": True, "every": 40,
@@ -480,6 +573,45 @@ LANGS = {
     "crh": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TURKISH_ONLY, "sentence_never": {"escort"}, "brackets": True},
     "sco": {"script": "LATIN", "neighbour": set(), "sentence_rival": SCOTS_RIVAL, "own": SCOTS, "rival": SCOTS_RIVAL, "brackets": True},
     "rue": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSYN_RIVAL, "brackets": True},
+    "sah": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "every": 2, "brackets": True},
+    "cv": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "every": 2, "normalize": chuvash, "brackets": True},
+    "sme": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | NORWEGIAN_ONLY, "brackets": True},
+    "mhr": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "hosts_out": CHAT_SPAM, "brackets": True, "normalize": mari},
+    "mrj": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "hosts_out": CHAT_SPAM, "brackets": True, "normalize": mari},
+    "udm": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "hosts_out": CHAT_SPAM, "brackets": True},
+    "tyv": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "brackets": True, "normalize": mongolic},
+    "bxr": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "brackets": True, "normalize": mongolic},
+    "kpv": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": komi, "brackets": True},
+    "koi": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "normalize": komi, "brackets": True},
+    "myv": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "brackets": True},
+    "mdf": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "brackets": True},
+    "xal": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "brackets": True, "normalize": mongolic},
+    "krl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "olo": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "vep": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "kl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | DANISH_ONLY, "brackets": True},
+    "om": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "rm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | GERMAN_ONLY, "brackets": True},
+    "rn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "lg": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "ln": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "fj": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "ee": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "ak": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "script_only": True, "brackets": True,
+           "foreign": twi_font},
+    "ts": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "nso": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "tn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "to": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "normalize": polynesian, "brackets": True},
+    "wo": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "ty": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "normalize": tahitian, "brackets": True},
+    "ve": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "nr": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "ay": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SPANISH_SET, "brackets": True},
+    "ss": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "qu": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SPANISH_SET, "brackets": True},
+    "bm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True, "normalize": bambara},
+    "iu": {"script": "CANADIAN SYLLABICS", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "script_only": True, "brackets": True},
 }
 
 
@@ -571,6 +703,8 @@ def script_runs(s, script):
 
 
 def documents(paths, every=1):
+    """Each document's text and the address it was read at ("" where a
+    source does not say)."""
     for path in paths:
         if path.endswith(".jsonl.gz"):
             # MADLAD-400's: a JSON object a line, its text in "text".
@@ -579,15 +713,21 @@ def documents(paths, every=1):
                     if line.strip():
                         # Its line breaks are written as the two
                         # characters \ and n.
-                        yield json.loads(line)["text"].replace("\\n", "\n")
+                        yield json.loads(line)["text"].replace("\\n", "\n"), ""
             continue
         import pyarrow.parquet as pq
 
         f = pq.ParquetFile(path)
-        # FineWeb-2's text is in "text", GlotCC's in "content".
-        column = "text" if "text" in f.schema_arrow.names else "content"
+        names = f.schema_arrow.names
+        # FineWeb-2's text is in "text" and its address in "url", GlotCC's
+        # in "content" and "warc-target-uri".
+        column = "text" if "text" in names else "content"
+        where = next((n for n in ("url", "warc-target-uri") if n in names), None)
         for g in range(0, f.metadata.num_row_groups, every):
-            yield from f.read_row_group(g, columns=[column]).column(column).to_pylist()
+            group = f.read_row_group(g, columns=[column] + ([where] if where else []))
+            texts = group.column(column).to_pylist()
+            urls = group.column(where).to_pylist() if where else [""] * len(texts)
+            yield from zip(texts, (u or "" for u in urls))
 
 
 def main():
@@ -614,9 +754,9 @@ def main():
     docs = dropped = 0
     held_docs = []
     with open(opts.out, "w", encoding="utf-8") as out:
-        for text in documents(train, conf.get("every", 1)):
+        for text, url in documents(train, conf.get("every", 1)):
             docs += 1
-            if not kept(text, conf):
+            if not kept(text, conf) or ("hosts_out" in conf and conf["hosts_out"].search(url)):
                 dropped += 1
                 continue
             if not test and (docs - dropped) % opts.hold == 0:
@@ -627,7 +767,9 @@ def main():
                     seen.add(s)
                     out.write(s + "\n")
     held = {}
-    for text in held_docs or (t for t in documents(test) if kept(t, conf)):
+    held_test = (t for t, url in documents(test)
+                 if kept(t, conf) and not ("hosts_out" in conf and conf["hosts_out"].search(url)))
+    for text in held_docs or held_test:
         for s in sentences(text, conf):
             if s not in seen:
                 held.setdefault(s, None)
