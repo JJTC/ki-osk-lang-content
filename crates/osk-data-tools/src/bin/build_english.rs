@@ -55,6 +55,12 @@ struct Args {
     /// better wins over a commoner one (case: केस, not किस).
     #[arg(long, default_value_t = 1.0)]
     fit: f32,
+    /// How many of a word's readings are kept, the likeliest first: those
+    /// within `--second` nats of the likeliest.
+    #[arg(long, default_value_t = 2)]
+    readings: usize,
+    #[arg(long, default_value_t = 3.0)]
+    second: f32,
     /// How many Latin spellings of each pronunciation are read.
     #[arg(long, default_value_t = 12)]
     spellings: usize,
@@ -144,7 +150,8 @@ fn is_vowel(phone: &str) -> bool {
 /// English the languages took from (British, as it was taught) says it
 /// beside its neighbours. A vowel before another is glided into it with
 /// `y` or `w` (media: meediya, मीडिया); `oo` after n, t or d is `yoo`
-/// (new: nyoo, न्यू); and `e` before r is `eya` (share: sheyar, शेयर).
+/// (new: nyoo, न्यू); and `e` before r is `eya` (share: sheyar, शेयर). A
+/// word that ends in a consonant is spelled with a u after it too.
 fn ways_at(phones: &[&str], i: usize) -> Vec<(String, f32)> {
     let phone = phones[i];
     let base = phone.trim_end_matches(['0', '1', '2']);
@@ -201,8 +208,20 @@ fn latin(phones: &[&str], limit: usize) -> Vec<(String, f32)> {
         at = next;
     }
     at.truncate(limit);
+    // A last consonant with a u after it, as the Dravidian languages write
+    // the English words they take (court: కోర్టు, college: ಕಾಲೇಜು).
+    if phones.last().is_some_and(|p| !is_vowel(p)) {
+        let with_u: Vec<(String, f32)> = at
+            .iter()
+            .map(|(t, c)| (format!("{t}u"), c + FINAL_U))
+            .collect();
+        at.extend(with_u);
+    }
     at
 }
+
+/// What a u typed after an English word's last consonant costs.
+const FINAL_U: f32 = 0.6;
 
 /// A lexicon that gives no completions: only the readings of all the
 /// letters count.
@@ -231,7 +250,8 @@ fn written(
     sounds: &[Vec<&str>],
     args: &Args,
 ) -> Option<String> {
-    let mut best: Option<(f32, String)> = None;
+    // Each reading that is a word, at its best score.
+    let mut found: Vec<(f32, String)> = Vec::new();
     for phones in sounds {
         for (spelled, spelling_cost) in latin(phones, args.spellings) {
             for c in scheme.candidates(&spelled, lexicon, 4) {
@@ -243,23 +263,31 @@ fn written(
                     continue;
                 }
                 let score = log_prob - args.fit * cost;
-                if best.as_ref().is_none_or(|(s, _)| score > *s) {
-                    best = Some((score, c.text));
+                match found.iter_mut().find(|(_, t)| *t == c.text) {
+                    Some(slot) => slot.0 = slot.0.max(score),
+                    None => found.push((score, c.text)),
                 }
             }
         }
     }
-    let (_, text) = best?;
+    found.sort_by(|a, b| b.0.total_cmp(&a.0).then_with(|| a.1.cmp(&b.1)));
+    let top = found.first()?.0;
     let first = scheme.candidates(word, lexicon, 1);
     let first = first.first();
-    if first.is_some_and(|c| c.text == text) {
-        return None;
-    }
     let not_english = english.is_some_and(|e| e.log_prob(word).is_none());
     if not_english && first.is_some_and(|c| c.log_prob.is_some()) {
         return None;
     }
-    Some(text)
+    // The likeliest, and those within `--second` nats of it, up to
+    // `--readings`, but for the one the table reads the word as first.
+    let kept: Vec<String> = found
+        .into_iter()
+        .take_while(|(s, _)| top - s <= args.second)
+        .take(args.readings)
+        .map(|(_, t)| t)
+        .filter(|t| first.is_none_or(|c| c.text != *t))
+        .collect();
+    (!kept.is_empty()).then(|| kept.join(" "))
 }
 
 fn main() -> anyhow::Result<()> {

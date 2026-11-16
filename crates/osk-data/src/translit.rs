@@ -70,13 +70,23 @@
 //! lexicon; and where it is none, the letters hold no vowel and their
 //! cheapest reading is no word either, in that reading's place.
 //!
+//! Two consonants are also joined with the virama and a zero-width
+//! non-joiner, and a consonant after a sign (a nasal sign, a chillu) with
+//! a non-joiner, at a cost, where the lexicon has a word written so: the
+//! joiner keeps apart letters the script would join, as some words are
+//! written (ಗುಜರಾತ್‌ನ, മുൻ‌നിര).
+//!
 //! A table may be given English words besides ([`Scheme::with_english`],
 //! `translit/<lang>.english.txt`): each English word a line, then the
 //! words of the language that write it (`computer कंप्यूटर`), as the
 //! language writes the English words it has taken, which people type as
 //! English spells them, not as they sound. Typed whole, such a word is
 //! read as each of them too, at the setting `english`'s cost
-//! ([`ENGLISH_COST`] without it), and ranked with the other readings.
+//! ([`ENGLISH_COST`] without it), and ranked with the other readings; one
+//! whose first letters are such a word reads the rest on from each word
+//! that writes it, as the language adds to it (collegenalli: ಕಾಲೇಜಿನಲ್ಲಿ),
+//! and from three letters the words of the English words begun are
+//! offered as completions.
 //!
 //! A tool fitting a table's costs to romanizations people typed reads
 //! every cost each reading was charged ([`Scheme::readings`]) and tries
@@ -406,6 +416,14 @@ const SETTINGS: usize = 5;
 /// the table does not say (`acronym`).
 pub const ACRONYM_COST: f32 = 1.0;
 
+/// What joining two consonants with a zero-width non-joiner costs beyond
+/// joining them without one: the joiner keeps apart two letters the script
+/// would write as one, after a virama or a sign (ಗುಜರಾತ್‌ನ, മുൻ‌നിര), as
+/// the words of some languages are written. Only a word of the lexicon is
+/// read so.
+const ZWNJ_JOIN: f32 = 1.0;
+const ZWNJ: char = '\u{200C}';
+
 /// What reading an English word typed as the language writes it costs,
 /// where the table does not say (`english`): it is taken to be this many
 /// nats less likely than as common a word the letters spell out, for an
@@ -420,6 +438,17 @@ pub const ENGLISH_COST: f32 = 4.0;
 /// completions ([`Scheme::with_english`]), and how many English words the
 /// letters begin are looked at.
 const ENGLISH_PREFIX: usize = 3;
+
+/// What reading the letters after an English word on from the word that
+/// writes it costs, beyond the English word's own cost: it is taken to be
+/// this many nats less likely than the English word typed alone.
+const STEM_COST: f32 = 1.0;
+
+/// What each word that writes an English word after its first costs
+/// beyond the first, the likeliest of them written first: the second is
+/// offered on the strip without taking the first's place from a word of
+/// the language's own.
+const LATER_ENGLISH: f32 = 2.0;
 const ENGLISH_SCANNED: usize = 64;
 
 /// The most letters read as an abbreviation's.
@@ -1113,15 +1142,22 @@ impl Scheme {
         }
         let typed = latin.to_lowercase();
         if let Some(written) = self.english.get(&typed) {
+            let mut cost = self.english_cost;
             for text in written {
                 if !readings.iter().any(|c| c.text == *text) {
                     readings.push(Candidate {
                         log_prob: lexicon.log_prob(text),
                         text: text.clone(),
-                        cost: self.english_cost,
+                        cost,
                         completes: false,
                     });
                 }
+                cost += LATER_ENGLISH;
+            }
+        }
+        for c in self.english_stems::<()>(&input, &typed, lexicon) {
+            if !readings.iter().any(|r| r.text == c.text) {
+                readings.push(c);
             }
         }
         let spelled: Vec<&str> = readings.iter().map(|c| c.text.as_str()).collect();
@@ -1129,6 +1165,77 @@ impl Scheme {
         let english = self.english_completions(&typed, lexicon, &spelled, &more);
         more.extend(english);
         (readings, more, capital)
+    }
+
+    /// The words of `typed` read as an English word and what the language
+    /// adds to it (collegenalli: ಕಾಲೇಜಿನಲ್ಲಿ, germanyile: ജർമനിയിലെ): where
+    /// its first letters, from [`ENGLISH_PREFIX`] of them, are an English
+    /// word the table was given, the rest read on from each word that
+    /// writes it, as the rules read after a consonant or a vowel; those
+    /// that are words of the lexicon, at the setting `english`'s cost and
+    /// [`STEM_COST`] beyond the rest's.
+    fn english_stems<T: Trace>(
+        &self,
+        input: &[char],
+        typed: &str,
+        lexicon: &dyn Lexicon,
+    ) -> Vec<Candidate> {
+        let mut out: Vec<Candidate> = Vec::new();
+        if self.english.is_empty() || input.len() > MAX_INPUT {
+            return out;
+        }
+        let chars: Vec<char> = typed.chars().collect();
+        for i in ENGLISH_PREFIX..chars.len() {
+            let stem: String = chars[..i].iter().collect();
+            let Some(written) = self.english.get(&stem) else {
+                continue;
+            };
+            let mut cost = self.english_cost + STEM_COST;
+            for w in written {
+                let start = State {
+                    text: w.clone(),
+                    prev: Class::Consonant,
+                    cost,
+                    trace: T::default(),
+                };
+                cost += LATER_ENGLISH;
+                let Some(start) = self.stem_state(start) else {
+                    continue;
+                };
+                let ends = self.search_from(input, i, start, lexicon);
+                for (c, _) in self.words(&ends, lexicon) {
+                    match out.iter_mut().find(|o| o.text == c.text) {
+                        Some(o) => o.cost = o.cost.min(c.cost),
+                        None => out.push(c),
+                    }
+                }
+            }
+        }
+        out
+    }
+
+    /// How a word that writes an English word ends, for what follows to be
+    /// read on from it: a last consonant with the virama as the bare
+    /// consonant, a chillu as its consonant, a vowel sign as a vowel; `None`
+    /// for what the rules cannot follow.
+    fn stem_state<T: Trace>(&self, mut s: State<T>) -> Option<State<T>> {
+        if self.script != Script::Abugida {
+            return Some(s);
+        }
+        let last = s.text.chars().next_back()?;
+        if !self.virama.is_empty() && s.text.ends_with(self.virama.as_str()) {
+            s.text.truncate(s.text.len() - self.virama.len());
+            s.prev = Class::Consonant;
+        } else if let Some(base) = chillu_consonant(last) {
+            s.text.truncate(s.text.len() - last.len_utf8());
+            s.text.push(base);
+            s.prev = Class::Consonant;
+        } else if is_mark(last) {
+            s.prev = Class::Vowel;
+        } else {
+            s.prev = Class::Consonant;
+        }
+        Some(s)
     }
 
     /// The words that write the English words `typed` begins, but for
@@ -1280,16 +1387,33 @@ impl Scheme {
     /// The readings of all of `input` that start a word of `lexicon`, each
     /// at its cheapest, its letters kept only while they start one.
     fn search<T: Trace>(&self, input: &[char], lexicon: &dyn Lexicon) -> Vec<State<T>> {
+        let start = State {
+            text: String::new(),
+            prev: Class::Start,
+            cost: 0.0,
+            trace: T::default(),
+        };
+        self.search_from(input, 0, start, lexicon)
+    }
+
+    /// [`Scheme::search`] from `start`, the reading of `input[..from]`.
+    fn search_from<T: Trace>(
+        &self,
+        input: &[char],
+        from: usize,
+        start: State<T>,
+        lexicon: &dyn Lexicon,
+    ) -> Vec<State<T>> {
         let n = input.len();
         let mut at: Vec<HashMap<(String, Class), (f32, T)>> = vec![HashMap::new(); n + 1];
-        at[0].insert((String::new(), Class::Start), (0.0, T::default()));
+        at[from].insert((start.text, start.prev), (start.cost, start.trace));
         let state = |((text, prev), (cost, trace)): ((String, Class), (f32, T))| State {
             text,
             prev,
             cost,
             trace,
         };
-        for pos in 0..n {
+        for pos in from..n {
             let mut states: Vec<State<T>> = std::mem::take(&mut at[pos])
                 .into_iter()
                 .map(state)
@@ -1384,6 +1508,7 @@ impl Scheme {
     /// Every way the rules read on from `s` at `pos`, each handed to `put`
     /// with the position it reaches; a character no rule reads is written
     /// as it is.
+    #[allow(clippy::too_many_lines)] // a branch for each class a rule reads after
     fn expand<T: Trace>(
         &self,
         input: &[char],
@@ -1427,10 +1552,39 @@ impl Scheme {
                         put(
                             next,
                             State {
+                                text: format!("{}{}{ZWNJ}{}", s.text, self.virama, w.letter),
+                                prev: Class::Consonant,
+                                cost: cost + self.cluster + ZWNJ_JOIN,
+                                trace: trace.and(self.ways + CLUSTER),
+                            },
+                        );
+                        put(
+                            next,
+                            State {
                                 text: format!("{}{}", s.text, w.letter),
                                 prev: Class::Consonant,
                                 cost: cost + self.schwa,
                                 trace: trace.and(self.ways + SCHWA),
+                            },
+                        );
+                    }
+                    Class::Consonant if abugida && s.prev == Class::Other => {
+                        put(
+                            next,
+                            State {
+                                text: format!("{}{}", s.text, w.letter),
+                                prev: Class::Consonant,
+                                cost,
+                                trace: trace.clone(),
+                            },
+                        );
+                        put(
+                            next,
+                            State {
+                                text: format!("{}{ZWNJ}{}", s.text, w.letter),
+                                prev: Class::Consonant,
+                                cost: cost + ZWNJ_JOIN,
+                                trace,
                             },
                         );
                     }
@@ -1625,6 +1779,25 @@ fn cheaper<T: Trace>(a: &State<T>, b: &State<T>) -> bool {
     }
 }
 
+/// The consonant a Malayalam chillu writes without its vowel (ൽ: ല), which
+/// a vowel or a suffix after it takes back.
+fn chillu_consonant(c: char) -> Option<char> {
+    match c {
+        '\u{0D7A}' => Some('\u{0D23}'),
+        '\u{0D7B}' => Some('\u{0D28}'),
+        '\u{0D7C}' => Some('\u{0D30}'),
+        '\u{0D7D}' => Some('\u{0D32}'),
+        '\u{0D7E}' => Some('\u{0D33}'),
+        '\u{0D7F}' => Some('\u{0D15}'),
+        _ => None,
+    }
+}
+
+/// Whether `c` is a combining mark (a vowel sign, a nasal sign).
+fn is_mark(c: char) -> bool {
+    unicode_normalization::char::is_combining_mark(c)
+}
+
 fn lower(c: char) -> char {
     let mut l = c.to_lowercase();
     match (l.next(), l.next()) {
@@ -1792,6 +1965,27 @@ mod tests {
     }
 
     #[test]
+    fn a_word_written_with_a_non_joiner_is_read_so() {
+        // The lexicon writes these two with a zero-width non-joiner where the
+        // script would join their letters: after the virama, after a sign.
+        let words = Words::of(&[("कम\u{94d}\u{200c}ला", 10), ("हं\u{200c}स", 10)]);
+        let s = hindi();
+        assert_eq!(
+            s.candidates("kamla", &words, 3)[0].text,
+            "कम\u{94d}\u{200c}ला"
+        );
+        assert_eq!(s.candidates("hans", &words, 3)[0].text, "हं\u{200c}स");
+        // A word the lexicon writes without one is read without one.
+        let plain = Words::of(&[("कमला", 10)]);
+        assert_eq!(s.candidates("kamla", &plain, 3)[0].text, "कमला");
+        assert!(
+            s.candidates("kamla", &plain, 3)
+                .iter()
+                .all(|c| !c.text.contains('\u{200c}'))
+        );
+    }
+
+    #[test]
     fn an_english_word_is_read_as_the_language_writes_it() {
         // Read by its letters, "computer" is no word; given the English
         // word, it is कंप्यूटर, which then comes first, typed in any case.
@@ -1821,6 +2015,17 @@ mod tests {
             s.candidates("co", &words, 4)
                 .iter()
                 .all(|c| c.text != "कंप्यूटर")
+        );
+        // An English word with what the language adds to it: the rest read
+        // on from the word that writes it.
+        let words = Words::of(&[("कॉलेजसे", 5), ("कॉलेज", 20)]);
+        let s2 = hindi().with_english("college कॉलेज\n").unwrap();
+        assert_eq!(s2.candidates("collegese", &words, 3)[0].text, "कॉलेजसे");
+        assert!(
+            hindi()
+                .candidates("collegese", &words, 3)
+                .iter()
+                .all(|c| c.text != "कॉलेजसे")
         );
         // One the letters read as already is not read twice.
         let namaste = s.candidates("namaste", &words, 3);

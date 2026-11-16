@@ -1,7 +1,8 @@
 # Kannada (Kannada script) from Latin letters, as Kannada is typed in
 # Latin. Kannada writes every vowel it speaks, so two consonants typed
 # together are joined by the virama; a word's last m is the nasal sign,
-# any other last consonant takes the virama.
+# any other last consonant takes the virama, and a last h (or ha) is the
+# visarga (moolatah: ಮೂಲತಃ).
 # English words, which the language writes in its script too, are typed
 # as English spells them: c, ck, sch, o, er, y and tion have English
 # ways too, at a cost.
@@ -84,6 +85,8 @@ n>c   ಂ:0.5
 m>c   ಂ:1
 m$    ಂ:0.3
 n$    ಂ:1.5
+h$    ಃ:1
+ha$   ಃ:2
 
 # The Latin letters' names, for abbreviations typed letter by letter
 # (tv: ಟಿವಿ), as the language's Wikipedia writes them.

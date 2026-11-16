@@ -310,12 +310,12 @@ but no model to match the glide against · `—` off
    वे). How often the word meant comes first
    (and among the strip's two), on the test half of Dakshina's romanized
    Wikipedia sentences (some 5 000 a language), and the keystrokes the
-   strip saves typing them: Hindi 84.3% (87.7%; 23.3%), Urdu 83.7% (86.4%;
-   23.6%), Punjabi 80.7% (85.0%; 25.1%), Gujarati 79.2% (82.5%; 25.3%),
-   Marathi 77.8% (79.8%; 18.8%), Kannada 77.2% (78.7%; 21.0%), Telugu
-   76.3% (78.0%; 21.2%), Sinhala 75.4% (78.8%; 22.0%), Bengali 75.3% (78.3%;
-   21.7%), Tamil 74.0% (76.0%; 18.7%), Sindhi 72.8% (76.9%; 20.9%),
-   Malayalam 65.5% (68.4%; 16.4%), the English words the tables read
+   strip saves typing them: Hindi 84.3% (87.9%; 23.3%), Urdu 83.7% (86.5%;
+   23.6%), Punjabi 80.8% (85.3%; 25.1%), Gujarati 79.3% (82.7%; 25.4%),
+   Marathi 78.1% (80.2%; 18.8%), Telugu 78.0% (80.2%; 21.3%), Kannada
+   77.4% (79.3%; 21.0%), Bengali 75.8% (79.1%; 21.7%), Sinhala 75.4%
+   (78.9%; 22.1%), Tamil 74.5% (76.5%; 18.8%), Sindhi 72.8% (77.0%; 20.9%),
+   Malayalam 67.6% (71.0%; 16.8%), the English words the tables read
    (below) among them; of the words the lexicon has, 82–92%
    (`make eval-translit`, a word being the same word as its lexicon keys
    it: Sindhi's two h letters one). The word before raised Urdu 1.5
@@ -372,10 +372,10 @@ but no model to match the glide against · `—` off
    Aksharantar dataset (its test split, 2 000 to 6 900 words each, mostly
    rare words and names; fetched to measure and fit, never shipped): of
    those their lexicons have, the word comes first for Sanskrit 87.4%
-   (93.4% among the strip's two), Meitei 85.9% (90.1%), Maithili 85.8%
-   (92.2%), Konkani 82.0% (87.6%), Nepali 81.2% (87.4%), Odia 76.6%
-   (82.8%), Assamese 75.9% (79.9%), Bodo 72.1% (79.1%), Dogri 60.8%
-   (66.5%) and Kashmiri 50.3% (64.8%), the English words their tables
+   (93.9% among the strip's two), Meitei 86.8% (91.7%), Maithili 85.9%
+   (92.8%), Konkani 82.2% (88.0%), Nepali 81.2% (88.5%), Odia 76.6%
+   (84.2%), Assamese 76.0% (80.6%), Bodo 73.7% (81.9%), Dogri 61.0%
+   (67.5%) and Kashmiri 50.4% (65.2%), the English words their tables
    read (below) among them. Assamese's lexicon, learned from
    FineWeb-2's text now (note 7), has 48% of its test words, from 17%,
    and of all of them puts 40.6% first, from 24.0% (of the few it had,
@@ -409,12 +409,12 @@ but no model to match the glide against · `—` off
    Hindi's, Urdu's, Kannada's or Telugu's: two thirds to nine tenths of
    the words of its test sentences (Tulu's 45%), and how the people of a
    neighbouring language type them, the closest measure open data gives.
-   Of those words, first: Tulu 92.9% (94.6% among the strip's two),
-   Adilabad Gondi 89.4% (91.8%), Bhojpuri 88.4% (93.8%), Awadhi 87.3%
-   (94.4%), Sindhi in Devanagari 86.6% (92.0%), Rajasthani 86.3% (93.7%),
-   Garhwali 86.2% (94.0%), Angika 84.1% (91.8%), Newari 82.9% (90.0%),
-   Western Punjabi 82.2% (90.7%), Chhattisgarhi 81.0% (93.8%), Dotyali
-   80.8% (89.8%), Khowar 80.4% (88.1%), Magahi 80.0% (91.1%), Saraiki
+   Of those words, first: Tulu 92.9% (94.7% among the strip's two),
+   Adilabad Gondi 89.9% (93.1%), Bhojpuri 88.4% (93.9%), Awadhi 87.3%
+   (94.5%), Sindhi in Devanagari 86.6% (92.1%), Rajasthani 86.3% (93.7%),
+   Garhwali 86.2% (94.1%), Angika 83.9% (91.7%), Newari 82.8% (90.1%),
+   Western Punjabi 82.3% (90.8%), Chhattisgarhi 81.0% (93.9%), Dotyali
+   80.5% (89.5%), Khowar 80.2% (88.2%), Magahi 79.9% (91.2%), Saraiki
    79.5% (87.8%) and Brahui 70.4% (85.0%), the English words their tables
    read (below) among them. Gondi's is Telugu's table and
    costs, Angika's Hindi's, Khowar's Urdu's with its own letters (ݯ ݮ ݰ ݱ
@@ -503,7 +503,31 @@ but no model to match the glide against · `—` off
    Devanagari and Dotyali up to 1.5 points. Greek's, Persian's,
    Armenian's, Mongolian's, Santali's and Yiddish's tables read none:
    their measures hold no English words, and lost up to 0.8 points to the
-   readings they added.
+   readings they added. An English word typed with what the language adds
+   to it (collegenalli: ಕಾಲೇಜಿನಲ್ಲಿ, germanyile: ജർമനിയിലെ) is read as
+   the word that writes the English word, the rest read on from it as the
+   rules read after a consonant or a vowel; the English words are spelled
+   with a last u too (court: కోర్టు), and two of the ways a language
+   writes one are kept where both are likely (ಕಾಲೇಜು, ಕಾಲೇಜ್), the second
+   costing 2 nats more (`osk_data::translit::LATER_ENGLISH`). Two letters
+   the script would join are read apart with a zero-width non-joiner too,
+   where the lexicon has a word so written (ಗುಜರಾತ್‌ನ, മുൻ‌നിര). And the
+   tables of the four lowest gained the ways the readings closest to their
+   misses asked for, chosen on the dev sentences: Malayalam's d and t for
+   ഠ (padanam: പഠനം), th for ത്ഥ, ndh for ന്ത, ls for ത്സ (chikilsa:
+   ചികിത്സ), ng for ങ്ക (engil: എങ്കിൽ), e for the vowel a consonant
+   carries (sheri: ശരി), a last y for ി, e for ഈ and il for ൽ, and its
+   last k as ക് (organik: ഓർഗാനിക്), which its k$ had hidden; Telugu's dh
+   for థ (pradhamika: ప్రాథమిక), dd for ద్ధ, ai for ాయి, a last y for ి
+   and e for the vowel a consonant carries (Gondi's with them); Tamil's nn
+   and ll for ண and ள, ae for ெ and a first r for இர (ramasamy:
+   இராமசாமி); Kannada's last h for the visarga (moolatah: ಮೂಲತಃ).
+   Telugu's and Tamil's costs were fitted again. On the test sentences
+   above the words first rose: Malayalam 2.1 points (from 65.5%), Telugu
+   1.7, Bengali and Tamil 0.5, Marathi 0.3, Kannada 0.2; keystrokes saved
+   up to 0.4 more (Malayalam), none fewer. Of the 73 measures above, 15
+   put up to 0.4 points fewer words first (Tamil's test words, Dotyali),
+   and the strip's two hold 0.4 points more on average.
 5. Hinglish is Hindi typed in Latin letters and left in them: the US
    keys, suggestions and glide from a model of Hindi's corpora respelled
    in the spellings people use, as often as each is used (the Dakshina

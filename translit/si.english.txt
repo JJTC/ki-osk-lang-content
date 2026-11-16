@@ -1,99 +1,102 @@
 # The English words si writes in its script, as its table reads them (make english-assets): from CMUdict (cmusphinx/cmudict; its notice in NOTICES.md) and predict/si.fst.
-aaker ආකාර
+aaker ආකාර ආකර
 aalen ඇලන්
 aaliyah ආලියා
-aase ඇස්
-aasen ආසන
-aback බක්
-abad බෝඩ්
-abadi බෙදී
-abadie බෙදී
-abair බෙර
+aamodt ඇමතූ
+aase ඇස් අස්
+aasen ආසන ඕසෝන්
+aback බක් බෙක්
+abad බදු බඩු
+abadi බෙදී බැදී
+abadie බෙදී බැදී
+abair බෙර බේයර්
 abarca බාර්කා
-abate බැට
-abba අබ්
+abate බැට බැත
+abba අබ් අබ
 abbado බාදා
 abbe එබී
-abbett බයිට්
+abbett බයිට් බැට
 abbey එබී
 abbie එබී
-abboud බෝඩ්
+abboud බුදු
 abby එබී
-abed බැද
-abedi බෙදී
-abee බී
+abed බෙදූ බෙදු
+abedi බෙදී බැදී
+abee බී ඔබේ
 abela අබෙල්
-abele බෙල්
+abele බෙල් බැලූ
 abella අබෙල්
 abend බැඳ
-abet බයිට්
+abet බයිට් බැට
 abie එබී
-abode බෝඩ්
-abood බෝඩ්
-abor බෝර්
-abott බත්
-abou බෝ
-above බව
+abode බොදු බෝඩ්
+abood බුදු
+abor බොරු බෝර්
+abott බත් බාත්
+abou බෝ අබු
+above බව බැව්
 abraham ඒබ්‍රහම්
 abrams ඒබ්‍රම්ස්
 abril බ්‍රේල්
-abut බත්
-abyss බේස්
-acacia කේශ
+abut බත් ඔබට
+abyss බේස් බැස
+acacia කේශ කේෂ
 academy ඇකඩමි
-acaena සේනා
+acaena සේනා සේන
 acc අයිසීසී
 accessed එක්සේසත්
 accor ආකාර
 accost කෝස්ට්
 account කවුන්ට්
 accrue කරු
-ace එස්
+ace එස් ඇස්
+aced ඇසතු
 acerra සැර
 acey එසේ
 ache එක්
-ached එකට
-achee චි
+ached එකතු එකට
+achee චි චී
 achene කින්
 aches එක්ස්
-aching එකින්
-achy එකී
+aching එකින් එකෙන්
+achy එකී එකේ
 ack එක්
-acker ආකාර
+acker ආකාර ආකර
 ackerson ආකර්ශන
 acomb එකම
-acosta කොස්තා
+acosta කොස්තා කොස්ටා
 acree ක්‍රි
-across ක්‍රොස්
-act එකත්
-acta එකට
+across ක්‍රොස් ක්‍රෝස්
+act එකතු
+acta එකට ඒක්තා
 actin එක්තැන්
 acton එක්තැන්
 acts එක්ස්
 acuff කාෆ්
-adah අද
-adair ඩේර්
-adalah අදාල
-add අද
-addair ඩේර්
-added අදද
+adah අද එදා
+adair දැරූ ඩේර්
+adalah අදාල අදාළ
+adam ඇඩම්
+add අඩු අද
+addair දැරූ ඩේර්
+added අදද ඇද්ද
 adder ආදර
 addict දෙකත්
-addie ආදී
-adding ආදීන්
-addis ආදේශ
+addie ආදී ආදි
+adding ආදීන් අදින්
+addis ආදේශ අදිශ
 addison එඩිසන්
-addle අදාල
+addle අදාල අදාළ
 adds ඒඩ්ස්
-addy ආදී
-adela දැල
-adele දැල්
-adell දැල්
-adelle දැල්
-adey ඇදී
-adhere අදියර
+addy ආදී ආදි
+adela දැල ඇඩෙල්
+adele දැල් ඇඩෙල්
+adell දැල් ඇඩෙල්
+adelle දැල් ඇඩෙල්
+adey ඇදී එඩී
+adhere අදියර දියර
 adia ආදිය
-adid ඩෙඩ්
+adid ඩෙඩ් දීද
 adieu අඩු
 adjust අජාසත්
 adjusting ජස්ටින්
@@ -102,7 +105,7 @@ admen එඩ්මන්
 ado අඩු
 adobe ඩාබි
 adolpha ඇඩොල්ෆ්
-adore දොර
+adore දොර දාර
 adoree ආදරයේ
 ads ඒඩ්ස්
 adss ඒඩ්ස්
@@ -113,9 +116,9 @@ affair ෆෙයාර්
 afield ෆීල්ඩ්
 afoot ෆෝට්
 afraid ෆ්‍රෙඩ්
-again ගෙන
-agate අගට
-age ඒජ්
+again ගෙන ගෙන්
+agate අගට ඇඟට
+age ඒජ් එජ
 agency ඒජන්සි
 agent ඒජන්ත
 aggie ඇගේ
@@ -125,230 +128,247 @@ aggy ඇගේ
 aghast ගැසට්
 agie ඇගේ
 agne අග්නි
-ago ගෝ
-agog ගඟ
+ago ගෝ ඊගෝ
+agog ගඟ ගග
 agree ග්‍රේ
-ahah ආහ
-ahead හැඩ
-ahh ඒ
-ahl අල්
-ahlen ලෙන්
+aha අහෝ
+ahah ආහ අහෝ
+ahead හැඩ හෙද
+ahh ඒ ආ
+ahl අල් අළු
+ahlen ලෙන් ඇලන්
 ahlin අලින්
-ahmann අමන්
-ahn අන්
+ahmann අමන් ආමාන
+ahn අන් එන්
 ahren අරන්
-ahsahka අශෝක
+ahsahka අශෝක අසෝක
 ahwahnee වානේ
-aickin එකින්
+aickin එකින් එකෙන්
 aid ඇද
 aide ඇද
 aided ඇද්ද
 aiden ඇදෙන
 aidenn ඇදෙන
 aides ඒඩ්ස්
-aiding එදින
+aiding එදින ඇදෙන
 aids ඒඩ්ස්
-aiken එකින්
-aikey එකී
-aikin එකින්
-ailee එළි
-ailey එළි
+aiken එකින් එකෙන්
+aikey එකී එකේ
+aikin එකින් එකෙන්
+ailee එළි ඇලී
+ailey එළි ඇලී
 ailing ඇලෙන
 ailor එළාර
-aim එම
-aime එම
-aimee එමී
+aim එම එම්
+aime එම එම්
+aimee එමී ඒමේ
 aimetti ඇමැති
-aiming එමෙන්
-aine එන්
-ainge එන්
+aiming එමෙන් එමින්
+aine එන් එන
+ainge එන් එන
 ainu එනු
-air ර්
-aires ඒරීස්
+air ර් එයාර්
+aires ඒරීස් එරිස්
 aisle අයිල්
+aist ඇසතු
 aix එක්ස්
 aja අයියා
 ajaj ජෝජ්
-aka එකී
+aka එකී එකේ
 akai එකයි
-akali කාලි
+akali කාලි කාලේ
 akc එක්
 ake එක්
-akel කෙළ
-akella කෙළ
-aken එකෙන්
-aker ආකාර
+akel කෙළ කැල
+akella කෙළ කැල
+aken එකෙන් එකං
+aker ආකාර ආකර
 akerson ආකර්ශන
-akey කි
+akey කි කී
 akin කින්
-akita කේත
+akita කේත කීට
 akiva කීවා
-akre ආකාර
+akre ආකාර ආකර
 akst එක්සත්
-alain ලෙන්
-alaine ලෙන්
+alain ලෙන් ලේන්
+alaine ලෙන් ලේන්
 alana ඇලෙන
 aland අයිලන්ඩ්
-alane ලෙන්
+alane ලෙන් ලේන්
 alann ඇලන්
 alar එළාර
 alarica ඕලාරික
 alas ලෙස
-alayne ලෙන්
+alayne ලෙන් ලේන්
 alba එල්බ
 albaugh ලබා
 albee ලබේ
 albert ඇල්බර්ට්
-album ඇල්බම්
+album ඇල්බම් ඇල්බම
 alcan ඇල්කේන
 alda ඕල්ඩ්
-ale එල්
-aleen අලින්
-alene අලින්
-aleo අලියා
+ale එල් ඇල්
+aleen අලින් ලේන්
+alene අලින් ලේන්
+aleo අලියා ආලියා
 aleutian ලූෂන්
-aleve ඔලිව්
+aleve ඔලිව් ලිවූ
 alexa ඇලෙක්ස්
-aley එළි
+aley එළි ඇලී
 alfred ඇල්ෆ්‍රඩ්
 algom අල්ගම
-alice ඇලිස්
-alie අලි
+alice ඇලිස් එලිස්
+alie අලි එළි
 alight ලයිට්
 align ලයින්
 aline ලයින්
 alissa ඇලිස්
 alive ලයිව්
 alix ඇලෙක්ස්
-aliyah ලීය
+aliyah ලීය අලියා
 alkene ඇල්කේන
-all ඕල්
-allain ලෙන්
-allais ලේ
+all ඕල් අවුල්
+allain ලෙන් ලේන්
+allais ලේ ලෙ
 allan ඇලන්
 allar එළාර
-allay ලේ
-allayed ලෙඩ්
+allay ලේ ලෙ
+allayed ලෙඩ් ලෙඩ
 allbaugh ලබා
-allee ලී
-allele උළෙලේ
+allee ලී අලි
+allele උළෙලේ ලෙලි
 allen ඇලන්
 allene අලින්
-alley අලි
+alley අලි එළි
 alleyne ඇලෙන
-alli අලි
-allie අලි
-allin ලෙන්
-allis ඇලිස්
+alli අලි එළි
+allie අලි එළි
+allin ලෙන් අලින්
+allis ඇලිස් එලිස්
 allocca ආලෝක
+allot ලාටු
 allude ලෝඩ්
 allum ඇල්ම
 allweiss අල්විස්
 allyn අලින්
 almond ආමන්ඩ්
+alms අංශු අංශූ
 alon ඇලන්
+alot ලාටු
 alun ඇලන්
-alvah අල්වා
+alvah අල්වා එලවා
 alvey අලවි
-alyce ඇලිස්
-alyea එළිය
+alyce ඇලිස් එලිස්
+alyea එළිය එලිය
 alyssa ඇලිස්
 amalia මාලය
 amalya මාලය
 amann අමන්
 amason ඇමසන්
-amass මේස්
+amass මේස් මේස
 amateur අමතර
+ambs අංශු අංශූ
 ambuehl ඇඹුල්
-ame එම
+ame එම එම්
 ameen මින්
-amen එමෙන්
-ameri මේරි
+amen එමෙන් ඒමෙන්
+ameri මේරි මැරී
+america ඇමෙරිකා
+american ඇමෙරිකානු
 amerson එමර්සන්
-amey එමී
-amid මැද
-amie එමී
+amey එමී ඒමේ
+amid මැද මේද
+amie එමී ඒමේ
 amine එමින්
-amiss අමිස්
+amiss අමිස් මිස
 ammann අමන්
 ammeen මින්
 ammeter ඇමීටර
 ammonium ඇමෝනියම්
-amok මක්
-among මං
+amok මක් මාක්
+among මං උමං
 amoolya මූල්‍ය
-amor අමර්
-amoss මාස
+amor අමර් අමර
+amore අමාරු
+amoss මාස මාස්
 ampere අම්පාර
-amre අමර
+amre අමර අමර්
 amsterdam ඇම්ස්ටර්ඩෑම්
-amuck මක්
-amy එමී
+amuck මක් මාක්
+amy එමී ඒමේ
 anac අනෙක්
 analogue ඇනලොග්
 ancient ඒන්ෂන්ට්
+and අඳ
 andersen ඇන්ඩර්සන්
 anderson ඇන්ඩර්සන්
 andersson ඇන්ඩර්සන්
-andie ඇඳි
-anding අඳින
+andie ඇඳි ඇන්දේ
+anding අඳිනු අඳින
 ando ඈඳා
 andrea ඓන්ද්‍රීය
 andrej අන්දරේ
 andreu ඇන්ඩෘ
 andrew ඇන්ඩෘ
-andrey ඇන්ඩ්රි
+andrey ඇන්ඩ්රි අන්දරේ
 andria ඓන්ද්‍රීය
 andrzej අන්දරේ
-anello නෙලා
-anette නැත
-anew අණු
+andy ඇන්දේ
+anello නෙලා නෙළා
+anette නැත නෙත්
+anew අණු අනු
 angel ඒන්ජල්
-angeles ඇන්ජලීස්
+angeles ඇන්ජලීස් ඇන්ජලිස්
 angeline ඇන්ජලින්
 angell ඒන්ජල්
-angelo ආන්ජලෝ
-angelou ආන්ජලෝ
-anisa එනිසා
+angelo ආන්ජලෝ ඈන්ජලෝ
+angelou ආන්ජලෝ ඈන්ජලෝ
+anisa එනිසා ඒනිසා
 anja ඔන්ජෝ
-ann අන්
-anna එන
-anne අන්
-anneal නිල්
-annen එන්න
-annett නැත
-annette නැත
-annick අනෙක්
-annie අනේ
-annissa එනිසා
-anno ඇනා
+ann අන් එන්
+anna එන අන්
+annaud නාඩු
+anne අන් එන්
+anneal නිල් නීල්
+annen එන්න අන්න
+annett නැත නෙත්
+annette නැත නෙත්
+annick අනෙක් අනික්
+annie අනේ ඇණි
+annissa එනිසා ඒනිසා
+anno ඇනා ආනා
 annum එනම්
 anomie එනමි
 another නතර
-anse අංශ
+anse අංශු අංශ
+ant ඈන්ට
 anthea ආනතිය
 anthon ඇන්ටන්
-anthony ඇන්තනී
+anthony ඇන්තනී ඇන්තනි
 antique ආන්තික
 antone අන්තෝනි
 antonio අන්තෝනියෝ
 antoniu අන්තෝනියෝ
+any ඇනී
 apathy අපතේ
 ape ඇප
-apiece පීස්
-apollo ඇපලෝ
+apiece පීස් පිස
+apollo ඇපලෝ පෝලෝ
 apopa පාප
-apostle පාසල්
-appall පොල්
-appeal පිල්
+apostle පාසල් පාසැල්
+appall පොල් පෝල්
+appeal පිල් පිල
 appel ඇපල්
 appell ඇපල්
 appian ඇපියන්
 apple ඇපල්
+apps ආපසු
 aqua එක්ව
 aquirre එක්වර
 arabie අරාබි
-are ආර්
+aral අරළු
+arc ආරක්
+are ආර් ර්
 aren අරන්
 arey ආරේ
 argentina ආර්ජන්ටිනා
@@ -356,94 +376,102 @@ argonne ඇරගෝන්
 ari ආරේ
 aria අරීය
 aric එරික්
-aries ඒරීස්
-aris ඒරීස්
+aries ඒරීස් එරිස්
+aris ඒරීස් එරිස්
 arizona ඇරිසෝනා
 arjo ආර්යා
+ark ආරක්
+armenian ආර්මේනියානු
 arne අරන්
 arnn අරන්
 array ආරේ
 arrick එරික්
-arrow එරා
+arrow එරා අරා
 arum ඇරීම
 arva ආර්වී
 arval ආරවුල්
 arvey ආර්වී
+ascend සේන්දු
 ascent සෙන්ට්
 ascott ස්කොට්
 asea ඇසීය
 ashish ශේෂ
-asia එජ
+asia එජ එජා
 aska ඇසක්
+asked ඇසතු
 asker අස්කර
 askin ස්කෑන්
-ass එස්
-assad සාද
+ass එස් අයිස්
+assad සෑදූ සාද
 assaf සයිෆ්
-assail සෙල්
-assam ඇසෑම්
+assail සෙල් සැල්
+assam ඇසෑම් අසම
 assay එසේ
+assed ඇසතු
 assent සෙන්ට්
 assert සරත්
+assess සෙසු
 assessed සේසත්
 asset එසේත්
-assign සයින්
+assign සයින් සයින
 assira අසීරු
 assume සෝම
 assure ශූර
+assyrian ඇසිරියානු
 astin ඔස්ටින්
-astle අසල
+astle අසල අසල්
 atari අතරේ
-ate ඇත
+ate ඇත ඇත්
 atek එතෙක්
-athena ඇතීනා
-athene අතින්
+athena ඇතීනා ටීනා
+athene අතින් අයිතීන්
 athey ඇති
 athie ඇති
+atlantic අත්ලන්තික්
 atoll තොල්
 atom ඇතැම්
-aton ටොන්
+aton ටොන් ආටන්
 atone ටොන්
-atop තාප
-attack තෙක්
-attain එතැන්
+atop තාප ටොප්
+attack තෙක් අටක්
+attain එතැන් තැන්
 attainder ටෙන්ඩර්
 attar අතර
 attempt තැම්පත්
 attest ටෙස්ට්
 attic එතෙක්
 attie ඇති
-attune තුන්
+attune තුන් ඇතුන්
 attuned තුණ්ඩ
-atv ඇතිවේ
+atv ඇතිවේ ඇතිවී
 atwell අත්වැල්
 atz ආට්ස්
 aube ඔබ
-auden ආදීන්
-audi ආදී
+auden ආදීන් ආදාන
+audi ආදී ආදි
 audia ආදිය
 audis ආදේශ
 audrey ආදරේ
-audrie ආදරේ
+audrie ආදරේ ආදරයේ
 audry ආදරේ
 aue අවු
 auel අවුල්
-aug ඔගස්ට්
-aught ඔත්
-august ඔගස්ට්
-augusta අගස්ති
-auguste ඔගස්ට්
+aug ඔගස්ට් ඕගස්ට්
+aught ඔත් ආට්
+august අගෝස්තු ඔගස්ට්
+augusta අගස්ති ගසට
+auguste ඔගස්ට් ඕගස්ට්
 augustine ඔගස්ටින්
 augustus ඔගස්ටස්
-auker ආකාර
+auker ආකාර ආකර
 auld ඕල්ඩ්
-aull ඕල්
+aull ඕල් අවුල්
 auman ආමාන
 aumann ආමාන
-aune ඔන්
-aung ඔන්
-aunt අන්ත
-aura ආර්
+aune ඔන් ආන්
+aung ඔන් ආන්
+aunt අන්ත ඈන්ට
+aura ආර් ඔරු
 aurora අරෝරා
 aurum ආරාම
 auschwitz අවුෂ්විට්ස්
@@ -452,14 +480,15 @@ austin ඔස්ටින්
 austine ඔස්ටින්
 auston ඔස්ටින්
 austria ඔස්ට්‍රියා
+austrian ඔස්ට්‍රියානු
 auther ආතර්
 author ආතර්
-auto ඔටෝ
-auton ආටන්
-autumn ඕටම්
-aux ඕ
-avail වැල්
-avella වෙලා
+auto ඔටෝ ඔතා
+auton ආටන් ආටෙන්
+autumn ඕටම් ආත්ම
+aux ඕ ආ
+avail වැල් වෙල්
+avella වෙලා වේලා
 avenue එවනු
 averse වර්ශ
 avia ආවේය
@@ -467,55 +496,58 @@ avila විල
 avilla විල
 avitia ආවේශ
 avon එවන්
-awad වාද
-await වෙත
+awad වාද ඒවාද
+await වෙත වෙත්
 awan එවන්
 aware වෙර
 away වේ
-awe ඒ
-aweida වැඩ
+awe ඒ ආ
+aweida වැඩ වේද
 awesome අසම
 axe එක්ස්
 axed එක්සත්
 axt එක්සත්
-ayala යාල
+ayala යාල අයාලේ
 aycock එකක්
-aydt ඇත
+aydt ඇත ඇත්
 aye අයි
-ayer එයාර්
+ayer එයාර් අයියර්
 ayes අයිස්
 ayler එළාර
 ayling ඇලෙන
 aylor එළාර
 ayotte එයාට
-ayr ර්
-ayre ර්
+ayr ර් එයාර්
+ayre ර් එයාර්
 azhar අසාර
-azuka අශෝක
-azura අසුර
-baab බොබ්
+azuka අශෝක අසෝක
+azura අසුර අසුරා
+baab බොබ් බාබු
 baack බක්
-baade බෝඩ්
+baade බදු බඩු
 baars බර්ජ්
-baas බස්
+baas බස් බෝස්
+bab බාබු
+babb බාබු
 babble බයිබල්
 babel බයිබල්
 bacchi බේකි
 bach බක්
-back බක්
-backe බක්
+back බක් බෙක්
+backe බක් බෙක්
 backed බකට්
 backer බේකර්
 bacot බකට්
-bacteria බැක්ටීරියා
-bade බැද
+bacteria බැක්ටීරියා බැක්ටිරියා
+bad බදු බඩු
+bade බෙදූ බෙදු
 badeah බාදිය
-badeau බෙදා
-badeaux බෙදා
-baden බෙදන
+badeau බෙදා බාදා
+badeaux බෙදා බාදා
+baden බෙදනු බෙදන
 badia බාදිය
 baecker බේකර්
-baehr බෙර
+baehr බෙර බේයර්
 baek බෙක්
 baeza බීජ
 bag බෙග්
@@ -532,25 +564,25 @@ baghdad බැග්ඩෑඩ්
 baguette බාගෙට
 baham බෑම
 bahama බෑම
-bahl බල
-bahm බම්
-bahman බෝමන්
-bahn බෙන්
-bahr බාර්
-bahre බාර්
+bahl බල බාල්
+bahm බම් බෑම
+bahman බෝමන් බමන
+bahn බෙන් බණ
+bahr බාර් බොරු
+bahre බාර් බොරු
 baie බායි
 baier බේයර්
 baig බෙග්
-bail බෙල්
-baile බෙල්
-bailey බැලේ
-bailie බැලේ
+bail බෙල් බැලූ
+baile බෙල් බැලූ
+bailey බැලේ බෙලි
+bailie බැලේ බෙලි
 bailin බැලෙන
 bailing බැලෙන
-baillie බැලේ
-bailly බැලේ
+baillie බැලේ බෙලි
+bailly බැලේ බෙලි
 bailon බැලෙන
-baily බැලේ
+baily බැලේ බෙලි
 bailyn බැලෙන
 baim බෑම
 bain බෙන්
@@ -558,36 +590,36 @@ baine බෙන්
 baines බෙන්ස්
 bains බෙන්ස්
 bainter බෙන්තර
-bair බෙර
+bair බෙර බේයර්
 baird බෙයාර්ඩ්
-baise බේස්
-bait බැට
-baize බේස්
+baise බේස් බැස
+bait බැට බැත
+baize බේස් බැස
 baja බොහෝ
 baka බක්
 bake බෙක්
 baker බේකර්
 bakey බේකි
-bakke බක්
+bakke බක් බෙක්
 bakker බේකර්
 balaguer බලාගාර
 baldwin බෝල්ඩ්වින්
-baley බැලේ
+baley බැලේ බෙලි
 bali බාලි
 balin බලෙන්
 baling බැලෙන
 balkan බෝල්කන්
 balks බොක්ස්
-ball බෝල්
-balle බෙල්
+ball බෝල් බොල්
+balle බෙල් බැලූ
 ballet බැලේ
-ballew බැලූ
-balli බැලේ
+ballew බැලූ බැලු
+balli බැලේ බලි
 ballin බලෙන්
-ballon බලන
-ballou බැලූ
+ballon බලන බාලන්
+ballou බැලූ බ්ලූ
 ballow බලා
-bally බැලේ
+bally බැලේ බලි
 balmy බැමි
 balogh බලා
 balow බලා
@@ -595,34 +627,41 @@ baltic බෝල්ටික්
 bame බෑම
 bamut බෑමට
 ban බෙන්
-band බැඳ
+banach බැංකු
+banc බැංකු
+band බඳු බන්දු
 bandana බැඳෙන
-bander බණ්ඩාර
+bander බණ්ඩාර බංඩාර
 banding බඳින
+bandt බන්ටු
 bandy බැඳී
 bane බෙන්
 banes බෙන්ස්
-bang බෙන්
-banged බැඳ
+bang බෙන් බණ
+banged බඳු බන්දු
 banging බැඟින්
-banh බෙන්
+banh බෙන් බණ
+bank බැංකු
+banke බැංකු
 banker බංකර
-bann බෙන්
-banned බැඳ
+bann බෙන් බණ
+banned බඳු බන්දු
+banque බැංකු
 bans බෙන්ස්
 banter බෙන්තර
-bar බාර්
-barach බරක්
-barack බරක්
+bar බාර් බොරු
+barach බරක් බැරක්
+barack බරක් බැරක්
 baran බෝරෝන්
-barch බර්ක්
-bare බෙර
+barch බර්ක් බරක්
+bare බෙර බේයර්
 bared බෙයාර්ඩ්
-barey බැරි
+barey බැරි බේරී
 barge බර්ජ්
 baril බැරල්
-barile බැරල්
-barke බර්ක්
+barile බැරල් බොරළු
+bark බරක්
+barke බර්ක් බරක්
 barkow බාර්කා
 barley බාර්ලි
 barna බර්න්
@@ -630,102 +669,105 @@ barney බර්නී
 barny බර්නී
 baron බර්න්
 baroness බෙරෙනිස්
-barr බාර්
-barra බර
-barrack බරක්
+barr බාර් බොරු
+barra බර බාර
+barrack බරක් බැරක්
 barratt බරට
-barre බැරි
+barre බැරි බාර්
 barred බර්ඩ්
 barrel බැරල්
 barren බර්න්
 barres බර්ජ්
-barrie බැරි
+barrie බැරි බේරී
 barring බරින්
 barron බර්න්
 barrow බේරා
 barrs බර්ජ්
-barry බැරි
+barry බැරි බේරී
 bars බර්ජ්
 bartee බර්ටි
 bartell බොරතෙල්
 barz බර්ජ්
 basal බැසිල්
-base බේස්
+base බේස් බැස
 baseball බේස්බෝල්
 basque බසක්
-bass බස්
-bassa බස්
-basse බස්
-bassi බසී
+bass බස් බේස්
+bassa බස් බස
+basse බස් බේස්
+bassi බසී බසේ
 bassin බසින්
-bate බැට
-bathe බැද
-bathing බේඩින්
+bat බාත්
+bate බැට බැත
+bath බාත්
+bathe බෙදූ බෙදු
+bathing බේඩින් බෙදෙන
 batra බටර්
-batt බත්
-batte බත්
+batt බත් බාත්
+batte බත් බාත්
 batter බටර්
-battle බැට්ල්
+battle බැටළු බැට්ල්
 baucus බොක්ස්
-baud බෝඩ්
-baugh බෝ
-baugher බෝර්
+baud බොදු බෝඩ්
+baugh බෝ බා
+baugher බෝර් බාර්
 baughman බෝමන්
-baughn බොන
+baughn බානු බොන
 baum බෑම
-baun බොන
-baur බෝර්
+baun බානු බොන
+baur බොරු බෝර්
 baus බෝස්
-bawl බෝල්
-bay බේ
+bawl බෝල් බොල්
+bay බේ බෑ
 bayard බෙයාර්ඩ්
-baye බේ
-bayed බැද
-bayes බේස්
-bayh බේ
-bayle බෙල්
-baylee බැලේ
+baye බේ බෑ
+bayed බෙදූ බෙදු
+bayes බේස් බැස
+bayh බේ බෑ
+bayle බෙල් බැලූ
+baylee බැලේ බෙලි
 baylen බැලෙන
-bayley බැලේ
-bayly බැලේ
+bayley බැලේ බෙලි
+bayly බැලේ බෙලි
 bayne බෙන්
 baynes බෙන්ස්
-bays බේස්
-bayse බේස්
+bays බේස් බැස
+bayse බේස් බැස
 baytree බැටරි
 bayuk බෙක්
-bayul බෙල්
-bayus බේස්
-baz බස්
-baze බේස්
-bea බී
+bayul බෙල් බැලූ
+bayus බේස් බැස
+baz බස් බේස්
+baze බේස් බැස
+bea බී බේ
 beach බීච්
 bead බිද
 beading බේඩින්
-beady බිදී
+beady බිදී බේදි
 beahm බිම්
 beaker බේකර්
 beal බිල්
 beale බිල්
 beall බිල්
 beam බිම්
-beaman බිමන්
-beaming බිමින්
-beamon බිමන්
+beaman බිමන් බිමෙන්
+beaming බිමින් බිමෙන්
+beamon බිමන් බිමෙන්
 bean බින්
 beane බින්
-bear බෙර
-beara බෙර
-beare බියර්
-beary බැරි
-beas බීජ
-beat බිට්
+bear බෙර බේයර්
+beara බෙර බේරා
+beare බියර් බෙර
+beary බැරි බේරී
+beas බීජ බේස්
+beason බීජානු
+beat බිට් බිතු
 beata බියට
-beau බෝ
+beau බෝ බා
 beauce බෝස්
 beaulac බාලක
 beauvais බෝවේ
-beaux බෝ
+beaux බෝ බා
 beavan බැවින්
 becher බේකර්
 beck බෙක්
@@ -733,88 +775,96 @@ becker බේකර්
 becki බේකි
 beckie බේකි
 becky බේකි
-bedding බේඩින්
+bed බෙදූ බෙදු
+bedding බේඩින් බෙදෙන
 beddoe බෙදා
 beddow බෙදා
+bee බේ
 beede බිද
-beedie බිදී
+beedie බිදී බේදි
 beel බිල්
-beeman බිමන්
-been බින්
+beeman බිමන් බිමෙන්
+been බින් බෙන්
 beene බින්
 beens බෙන්ස්
-beer බියර්
-beery බැරි
+beer බියර් බෙර
+beery බැරි බේරී
 bees බීජ
-beese බීජ
-beet බිට්
+beese බීජ බේස්
+beeson බීජානු
+beet බිට් බිතු
 begg බෙග්
 begging බැගින්
 begue බෙග්
 begun බැගින්
-behl බෙල්
+behl බෙල් බැලූ
 behling බැලෙන
 behm බෑම
 behn බෙන්
 behne බෙන්
-behr බෙර
+behnke බැංකු
+behr බෙර බේයර්
 behrle බැරල්
-beightol බැට්ල්
+beightol බැටළු බැට්ල්
 beil බිල්
 beilin බැලෙන
 bein බින්
 beine බින්
-beit බයිට්
+beit බයිට් බැට
 bejar බේයර්
 bekker බේකර්
 bekki බේකි
-bela බෙල්
+bela බෙල් බැලූ
 belaire බ්ලෙයාර්
-belew බැලූ
+belew බැලූ බැලු
 belin බැලෙන
-bell බෙල්
-bellah බෙල්
+bell බෙල් බැලූ
+bellah බෙල් බැලූ
 bellamy බැලීමේ
-bellew බැලූ
-belli බැලේ
+bellew බැලූ බැලු
+belli බැලේ බෙලි
 bellin බැලෙන
 belling බැලෙන
 bellomy බැලීමේ
 bellon බැලෙන
-bellum බැලීම්
-belly බැලේ
-belyea බැලිය
-beman බිමන්
+bellum බැලීම් බැලුම්
+belly බැලේ බෙලි
+belyea බැලිය බැලීය
+beman බිමන් බිමෙන්
+benak බැංකු
 benatar බෙන්තර
 bence බෙන්ස්
 bendick බෙනඩික්
 bending බැඳෙන
-bene බෙන්
+bene බෙන් බෙන
+benecke බැංකු
 benedek බෙනඩික්
 benedick බෙනඩික්
 benedict බෙනඩික්ට්
 benedikt බෙනඩික්ට්
-bengel බෙංගාල
+beneke බැංකු
+bengel බෙංගාල බෙන්ගාල
 benjimen බෙන්ජමින්
+benke බැංකු
 benn බෙන්
 benne බෙන්
-benno බෑනා
+benno බෑනා බෑණා
 bensen බෙන්සීන්
 bensing බෙන්සීන්
 benson බෙන්සීන්
 benter බෙන්තර
-benz බෙන්ස්
+benz බෙන්ස් බාන්ස්
 benzene බෙන්සීන්
 benzine බෙන්සීන්
 bercaw බාර්කා
-berch බර්ක්
-bere බියර්
+berch බර්ක් බරක්
+bere බියර් බෙර
 berea බැරිය
 berge බර්ජ්
 berger බර්ගර්
 beria බැරිය
-berka බර්ක්
-berke බර්ක්
+berka බර්ක් බාර්කා
+berke බර්ක් බරක්
 berken බරකින්
 berko බාර්කා
 berle බැරල්
@@ -825,253 +875,268 @@ berne බර්න්
 berney බර්නී
 bernie බර්නී
 berny බර්නී
-berra බෙර
-berrey බැරි
-berri බැරි
-berrie බැරි
+berra බෙර බේරා
+berrey බැරි බේරී
+berri බැරි බේරී
+berrie බැරි බේරී
 berrill බැරල්
-berry බැරි
-berta බර්ටි
-bertha බරට
+berry බැරි බේරී
+berta බර්ටි බරට
+bertha බරට බර්ටි
 bertie බර්ටි
 bertram බර්ට්‍රම්
 berty බර්ටි
 beryl බැරල්
 besaw බිසෝ
-bess බේස්
-besse බේස්
+bess බේස් බැස
+besse බේස් බැස
 beswick බෙස්වික්
 bet බයිට්
-betel බැට්ල්
+betel බැටළු බැට්ල්
+beth බයිට්
 bethea බෙදිය
-bethel බැට්ල්
-bethell බැට්ල්
-bett බයිට්
-betta බැට
-beu බෝ
-beula බෝල
-beury බැරි
+bethel බැටළු බැට්ල්
+bethell බැටළු බැට්ල්
+bett බයිට් බැට
+betta බැට බැත
+beu බෝ බු
+beula බෝල බෝල්
+beury බැරි බේරී
 bevan බැවින්
 beven බැවින්
-bey බේ
-beyl බෙල්
+bey බේ බෑ
+beyl බෙල් බැලූ
 bhakta බකට්
-bhatt බත්
+bhatt බත් බාත්
 bhirud බිරිද
 bible බයිබල්
 bick බෙක්
 bicker බේකර්
 bicycle බයිසිකල්
-bidden බේඩින්
-biddie බෙදී
+bid බෙදූ
+bidden බේඩින් බෙදෙන
+biddie බෙදී බිදී
 bidding බේඩින්
-biddy බෙදී
-bieda බිද
+biddy බෙදී බිදී
+bieda බිද බිදී
 biehl බිල්
 biehn බින්
 bieker බේකර්
 biel බිල්
-biela බිල්
+biela බිල් බිලි
 bien බින්
-bier බියර්
-bieri බැරි
-biery බැරි
+bier බියර් බීර
+bieri බැරි බේරී
+biery බැරි බේරී
 big බෙග්
 bigan බැගින්
 biggins බැගින්ස්
 bight බයිට්
-bihl බිල්
+bihl බිල් බෙල්
 bihm බිම්
-bihn බින්
-bijan බීජිං
-bila බිල්
-bill බිල්
-billie බිලී
+bihn බින් බෙන්
+bijan බීජානු බීජිං
+bila බිල් බිලි
+bill බිල් බෙල්
+billie බිලී බැලේ
 billon බැලෙන
-billy බිලී
+billy බිලී බැලේ
+bin බෙන්
 bina බින්
+bink බැංකු
 binns බෙන්ස්
 bins බෙන්ස්
 binz බෙන්ස්
 bird බර්ඩ්
 birge බර්ජ්
-birk බර්ක්
+birk බර්ක් බරක්
 birle බැරල්
 birley බාර්ලි
 birmingham බර්මිංහැම්
 birney බර්නී
 birnie බර්නී
-birr බර
+birr බර බාර්
 birren බර්න්
-bis බේස්
+bis බේස් බැස
 bisel බැසිල්
 bissell බැසිල්
 bisso බිසෝ
+bit බිතු
 bitch බීච්
 bite බයිට්
-bittel බැට්ල්
-bittle බැට්ල්
+bittel බැටළු බැට්ල්
+bittle බැටළු බැට්ල්
 bivin බැවින්
-biz බීජ
-black බ්ලැක්
-blah බලා
+biz බීජ බේස්
+black බ්ලැක් බ්ලේක්
+blah බලා බල
 blain බලෙන්
 blaine බලෙන්
 blair බ්ලෙයාර්
-blake බ්ලැක්
+blake බ්ලැක් බ්ලේක්
 blane බලෙන්
 blare බ්ලෙයාර්
 blayne බලෙන්
 blea බලි
 bleak බ්ලේක්
 bleau බලා
-blech බ්ලැක්
-bleck බ්ලැක්
+blech බ්ලැක් බ්ලේක්
+bleck බ්ලැක් බ්ලේක්
 bleu බ්ලූ
 blew බ්ලූ
-blick බ්ලැක්
+blick බ්ලැක් බ්ලේක්
 bligh බලයි
 blinn බලෙන්
 bloc බ්ලැක්
 bloch බ්ලැක්
 block බ්ලැක්
 blok බ්ලැක්
+blom බලමු
 blood බ්ලඩ්
 blow බලා
 blowe බලා
 blue බ්ලූ
 blues බ්ලූස්
-boa බෝ
-boal බෝල්
-boan බොන
-boar බෝර්
+bluhm බලමු
+boa බෝ බෝවේ
+boal බෝල් බොල්
+boan බොන බානු
+boar බොරු බෝර්
 boase බෝස්
 boast බෝසත්
 boat බාත්
-bobb බොබ්
+bob බාබු
+bobb බොබ් බාබු
 bobbo බබා
 bobe බොබ්
 boch බක්
 bockus බොක්ස්
 bocock බොක්ක
-boddie බැදී
-boddy බැදී
-bode බෝඩ්
-body බැදී
-boe බෝ
-boeh බෝ
-boehl බෝල්
+boddie බැදී බැදි
+boddy බැදී බැදි
+bode බොදු බෝඩ්
+body බැදී බැදි
+boe බෝ බා
+boeh බෝ බා
+boehl බෝල් බොල්
 boehm බෑම
 boehme බෑම
-boehne බොන
-boen බොන
+boehne බොන බානු
+boen බොන බානු
 boes බෝස්
 boese බෝස්
 bogey බාගේ
 bogota බාගත
 bogue බෝග
-bohen බෝවන
-bohl බෝල්
+bohen බෝවන බොන
+bohl බෝල් බොල්
 bohlen බාලන්
 bohlke බක්
 bohlken බෝල්කන්
-bohm බම්
+bohm බම් බෑම
 bohman බෝමන්
-bohn බොන
-bohne බොන
-bohr බෝර්
+bohn බොන බානු
+bohne බොන බානු
+bohr බොරු බෝර්
 bohren බෝරෝන්
 bois බව
 bok බක්
-bole බෝල්
+bola බාල
+bole බෝල් බොල්
 bolen බාලන්
 boley බාලි
-boll බෝල්
-bolla බල
-bolle බල
-bollen බාලන්
+boll බෝල් බොල්
+bolla බල බාල
+bolle බල බාල්
+bollen බාලන් බලන
 bollin බලෙන්
 bolly බාලි
 bollywood බොලිවුඩ්
 bolon බාලන්
-bom බම්
-bomb බම්
+bom බම් බෑම
+bomb බම් බෑම
 bombay බොම්බේ
-bon බණ
-bond බඳ
-bondar බණ්ඩාර
-bonde බඳ
-bondi බැඳී
+bon බානු බණ
+bond බඳු බන්දු
+bondar බණ්ඩාර බංඩාර
+bonde බඳු බන්දු
+bondi බැඳී බැඳි
 bonding බඳින
-bondy බැඳී
-bone බොන
+bondt බන්ටු
+bondy බැඳී බැඳි
+bone බොන බානු
 boned බොඳ
 bones බාන්ස්
-bong බණ
-bonn බණ
-bonne බණ
-bonneau බෑනා
+bong බානු බණ
+bonk බැංකු
+bonn බානු බණ
+bonne බානු බණ
+bonneau බෑනා බෑණා
 bonnes බාන්ස්
+bonnet බන්ටු
+bonte බන්ටු
 bonus බාන්ස්
 boock බුක්
 booe බෝ
-booed බෝඩ්
+booed බුදු
 booee බෝවේ
 booher බෝර්
 book බුක්
-boole බෝල්
+boole බෝල් බුල්
 boon බුන්
 boone බුන්
 boose බෝස්
 boote බූට්
-boothe බෝඩ්
+boothe බුදු
 booz බෝස්
 booze බෝස්
-borah බාර
-bore බෝර්
+borah බාර බොර
+boral බොරළු
+bore බොරු බෝර්
 boredom බොරදම්
+borel බොරළු
 boren බෝරෝන්
 borja බාරය
 boro බේරා
 borough බේරා
-borre බෝර්
+borre බොරු බෝර්
 bortle බොරතෙල්
 bose බෝස්
-boss බස්
-bosse බස්
+boss බස් බෝස්
+bosse බස් බෝස්
 bossed බෝසත්
 boston බොස්ටන්
-botha බට
-bothe බෝඩ්
-bothell බෝතල්
+botha බට බත
+bothe බොදු බෝඩ්
+bothell බෝතල් බැටළු
 bother බටර්
-bott බත්
-botta බත්
-bottel බෝතල්
-bottle බෝතල්
+bott බත් බාත්
+botta බත් බට
+bottel බෝතල් බැටළු
+bottle බෝතල් බැටළු
 bottler බට්ලර්
 boucher බුෂ්
-bought බත්
+bought බත් බාත්
 bouie බෝවේ
 boulden බුදුන්
-boule බෝල්
+boule බෝල් බුල්
 bouman බෝමන්
-bourke බර්ක්
+bourke බර්ක් බරක්
 boutte බූට්
-boven බැවින්
+boven බැවින් බවින්
 bovey බෝවේ
-bow බෝ
-bowar බෝර්
-bowed බෝඩ්
-bowen බෝවන
+bow බෝ බා
+bowar බෝර් බාර්
+bowed බොදු බෝඩ්
+bowen බෝවන බොන
 bowes බෝස්
 bowie බෝවේ
-bowl බෝල්
+bowl බෝල් බොල්
 bowlen බාලන්
 bowley බාලි
 bowman බෝමන්
 bowmen බෝමන්
-bowne බොන
+bowne බොන බානු
 bowron බෝරෝන්
 bows බෝස්
 bowse බෝස්
@@ -1126,64 +1191,72 @@ brugh බර
 brunkow බ්‍රන්කා
 bryna බරින්
 brys බ්රේස්
-bubba බබා
-buck බක්
+bub බාබු
+bubb බාබු
+bubba බබා බාබු
+bubble බුබුළු බුබුලු
+bubel බුබුළු බුබුලු
+buck බක් බුක්
 bucked බකට්
 bucket බකට්
-bud බඩ
-budd බඩ
-budde බඩ
-budden බුදුන්
-buddha බුදු
-buddie බැදී
+bud බදු බුදු
+budd බදු බුදු
+budde බදු බුදු
+budden බුදුන් බදුන්
+buddha බුදු බුද
+buddie බැදී බැදි
 buddin බදින
 budding බදින
-buddy බැදී
+buddy බැදී බැදි
 bue බවයි
 buena බුන්
 buer බෝර්
-buerry බැරි
+buerry බැරි බේරී
 bugging බැගින්
 buggy බාගේ
-buhman බමන
-bui බී
-buice බේස්
-buie බෝවේ
-buis බීජ
+buhman බමුණු බමන
+bui බී බි
+buice බේස් බැස
+buie බෝවේ බවේ
+buis බීජ බේස්
 bulb බල්බ
-bulen බලන
-bull බෝල්
-bulla බෝල
+bulen බලන බලෙන්
+bull බෝල් බුල්
+bulla බෝල බෝල්
 bullet බුලත්
 bulman බලමින්
 bum බම්
 bunce බාන්ස්
-bund බඳ
-bunda බඳ
-bunde බඳ
-bundle බන්දුල
-bundy බැඳී
-bung බණ
+bund බඳු බන්දු
+bunda බඳ බඳු
+bunde බඳු බන්දු
+bundle බන්දුල බූන්දල
+bundy බැඳී බැඳි
+bung බණ බන්
 bungalow බංගලා
+bunk බැංකු
+bunke බැංකු
 bunker බංකර
-bunn බණ
+bunn බණ බන්
 buns බාන්ස්
-buol බෝල්
+bunt බන්ටු
+bunte බන්ටු
+buol බෝල් බොල්
 buoy බෝවේ
-bur බර
-burck බර්ක්
+bur බර බාර්
+burck බර්ක් බරක්
 burd බර්ඩ්
 burdge බර්ජ්
 burel බැරල්
 burell බැරල්
 burger බර්ගර්
 burgher බර්ගර්
-burk බර්ක්
-burke බර්ක්
+burk බර්ක් බරක්
+burke බර්ක් බරක්
 burkeen බරකින්
 burkina බරකින්
 burl බැරල්
-burleigh බාර්ලි
+burleigh බාර්ලි බැරල්
 burley බාර්ලි
 burling බර්ලින්
 burly බාර්ලි
@@ -1191,269 +1264,289 @@ burn බර්න්
 burne බර්න්
 burness බරණැස්
 burney බර්නී
-burr බර
+burr බර බාර්
 burres බර්ජ්
+burrill බොරළු
 burro බේරා
 burrough බේරා
 burrow බේරා
-burry බැරි
-bury බැරි
-bus බස්
+burrus බුරුසු
+burruss බුරුසු
+burry බැරි බේරී
+bury බැරි බේරී
+bus බස් බස
 busch බුෂ්
 busche බුෂ්
-busey බසී
+busey බසී බසේ
 busha බුෂ්
 busing බසින්
 busk බසක්
 buske බසක්
-buss බස්
+buss බස් බස
 bussa බෝස්
-busse බස්
-bussell බුසල්
+busse බස් බස
+bussell බුසල් බැසිල්
 bussen බසින්
-bussey බසී
-bussi බසී
-bussie බසී
+bussey බසී බසේ
+bussi බසී බසේ
+bussie බසී බසේ
 bussing බසින්
 busta බසට
-bustle බුසල්
-but බත්
+bustle බුසල් බැසිල්
+but බත් බටු
 butler බට්ලර්
-butt බත්
+butt බත් බටු
 butter බටර්
 buttery බැටරි
 buttler බට්ලර්
 buus බෝස්
 buy බයි
-buzz බස්
-buzze බස්
+buzz බස් බස
+buzze බස් බස
 buzzing බසින්
-buzzy බසී
+buzzy බසී බසේ
 bye බයි
-bynoe බෑනා
+bylund බිළිඳු
+bynoe බෑනා බෑණා
 byrd බර්ඩ්
 byrne බර්න්
 byte බයිට්
 cabin කාබන්
 cable කේබල්
 caccia කාච
-cache කේශ
+cache කේශ කේෂ
 cadaver කඩවර
-caddie කැඩී
+caddie කැඩී කදී
 caddock කඩක්
-caddy කැඩී
+caddy කැඩී කදී
+cadge කජු
 caesar සීසර්
 caffeine කැෆේන්
+cagle කෑගලු කෑගලූ
 cahasa කාශ
 cahill කෙහෙල්
-cahoon කෝණ
-cahoot කෝට්
+cahoon කුණු කුනු
+cahoot කෝට් කුත්
 cahora කාර
-cahouet කෝට්
+cahouet කෝට් කුත්
 cai කාය
 caine කෙන්
-caire කැර
+caire කෙරූ කැර
 caisse කෙස්
 caissie කෙසේ
 caisson කේසොං
 caitlin කැත්ලීන්
 cake කේක්
-calais කළේ
+calais කළේ කලේ
 calaway කලාවේ
 calcium කැල්සියම්
-calcutta කල්කටා
+calcutta කල්කටා කලකට
 calf කාෆ්
-calia කළේය
+calia කළේය කලේය
 calida කළේද
-call කාල්
-callace කලස්
-callais කළේ
+call කාල් කාල
+callace කලස් කලස
+callais කළේ කලේ
 callaway කලාවේ
-calle කෙළ
+calle කෙළ කැල
 called කෝල්ඩ්
-calleja කළේය
-calley කළේ
-callie කාලි
-calling කාලීන
-callis කෙලෙස්
-callous කලස්
-callow කලා
+calleja කළේය කලේය
+calley කළේ කලේ
+callie කාලි කාලේ
+calling කාලීන කොලින්
+callis කෙලෙස් කෙළෙස්
+callous කලස් කලස
+callow කලා කළා
 calloway කලාවේ
-callum කේලාම්
-callus කලස්
-calm කම්
-calma කෝලම්
+callum කේලාම් කේළාම්
+callus කලස් කලස
+calm කම් කාම
+calma කෝලම් කෝළම්
 calmer කාමර
-calming කමින්
+calming කමින් කෑමෙන්
 caloway කලාවේ
-calvary කෙළවරේ
-calvery කෙළවරේ
+calvary කෙළවරේ කෙලවරේ
+calvery කෙළවරේ කෙලවරේ
 calving කෙවින්
-cambridge කේම්බ්‍රිජ්
-came කෑම
+cambridge කේම්බ්‍රිජ් කේම්බ්රිජ්
+came කෑම කෑම්
 camel කමල්
-camera කැමරා
+camera කැමරා කාමර
 cameron කැමරන්
 cameroon කැමරූන්
-camm කම්
-cammack කමක්
+camm කම් කාම
+cammack කමක් කෑමක්
 cammer කාමර
 campeau කම්පා
 campen කම්පන
 can කින්
+cana කන්
 canchola කංකාල
 candidate කෙනඩිට
-candie කෙඳි
-candy කෙඳි
+candie කෙඳි කන්දේ
+candy කෙඳි කන්දේ
 cane කෙන්
 caned කැඳ
-cannan කනාන්
-canned කන්ද
-cannes කන්
-canney කනේ
-cannon කනාන්
-cannot කෙනත්
-canoe කණු
+canion කෙන්යානු
+cannan කනාන් කන්න
+canned කඳු කාන්දු
+cannes කන් කණු
+canney කනේ කණි
+cannock කෙනකු
+cannon කනාන් කන්න
+cannot කුණාටු කෙනත්
+canoe කණු කාණු
 cant කෙන්ට්
 canter කාන්තාර
 cantey කාන්ති
 cantley කන්තලේ
 cantore කාන්තාර
-canuck කෙනෙක්
+canuck කෙනෙක් කෙනෙකු
 canvass කැන්වස්
-cape කේප්
+canyon කෙන්යානු
+cap කපු
+cape කේප් කැප
 capitol කැපිටල්
 capote කපාට
 cappel කපාල
 cappo කපා
 cappy කැපී
 captain කැප්ටන්
+caput කපුටු
 caq කේක්
+car කාර්
 caraway කයිරෝවේ
 cardoon කරදුන්
-care කැර
-careen කෙරිණ
+care කෙරූ කැර
+careen කෙරිණ කෙරින
 carelli කැරැලි
-carew කෙරූ
+carew කෙරූ කරු
 carey කෙරේ
-caribbean කැරිබියන්
+caribbean කැරිබියන් කැරිබියානු
 carie කෙරේ
-caring කෙරෙන
-carinii කෙරිණි
-carle කොරල්
+caring කෙරෙන කෙරෙන්
+carinii කෙරිණි කෙරිනි
+carl කොරල්
+carle කොරල් කරල්
 carley කෝරළේ
-carll කාර්ල්
+carll කාර්ල් කොරල්
 carmack කාර්මික
+carmel කරමල්
 carmie කරමි
-carnaud කාරණා
-carne කරන්
+carnaud කාරණා කරනා
+carne කරනු
 carneal කර්නල්
 carnell කර්නල්
-carol කරල්
-carole කරල්
+carol කරල් කේරල
+carole කරල් කේරල
 carollo කරලා
-carr කර
+carp කරපු
+carr කර කාර්
 carra කර
-carrano කාරණා
+carrano කාරණා කරනා
 carraway කයිරෝවේ
-carre කර
-carrel කරල්
+carre කර කාර්
+carrel කරල් කරල
 carrey කෙරේ
 carribean කැරිබියන්
 carrie කෙරේ
 carried කෙරේද
 carro කරා
-carrol කරල්
-carroll කරල්
-carron කරන
-carrot කෙරෙත්
-carrow කරා
+carrol කරල් කරල
+carroll කරල් කේරල
+carron කරනු කරන
+carrot කෙරෙත් කැරට්
+carrow කරා කයිරෝ
 carry කෙරේ
-cars කොස්
-carte කර්ට්
-cartee කාර්ති
+cars කොස් කජු
+cart කරත්
+carte කර්ට් කරත්
+cartee කාර්ති කරති
 carthage කාර්තේජ්
+carve කරවූ කරවු
 carvey කරවී
-caryl කේරල
+caryl කේරල කේරළ
 case කෙස්
 casey කෙසේ
-cash කේශ
+cash කේශ කේෂ
 casola කොසොල්
 cason කේසොං
 caspian කැස්පියන්
 cassatt කැසට්
-cassel කසල
+cassel කසල කසළ
 cassell කෙසෙල්
-cassie කෙසේ
+cassie කෙසේ කාසි
 casson කේසොං
 casta කැසට්
 caste කැසට්
-castle කසල
-cat කට
+castle කසල කසළ
+cat කට කටු
 catain කටින්
 catch කාච
-cate කේට්
+cate කේට් කේතු
 catering කැතරින්
 catharine කැතරින්
 catherine කැතරින්
-cathey කැඩී
-cathie කෙටි
+cathey කැඩී කදී
+cathie කෙටි කති
 cathode කැතෝඩ
-cathy කෙටි
+cathy කෙටි කති
 catniss කැට්නිස්
 catoe කතා
 catone කීටෝන
 cats කයිට්ස්
 cattolica කතෝලික
-catty කෙටි
+catty කෙටි කති
 cauble කාබුල්
 caucasus කෝකසස්
-caucus කොකොස්
+caucus කොකොස් කොකිස්
 caudal කඩොල්
-caughey කොයි
-caughlin කාලීන
+caughey කොයි කායි
+caughlin කාලීන කොලින්
 caughman කොමන්
 caughron කාරණ
-caught කොට
-caul කළ
-cauley කාලි
-caulk කොක්
+caught කොට කට
+caul කළ කල
+cauley කාලි කාලේ
+caulk කොක් කොකු
 caulking කොකේන්
-causal කාජල්
-cause කොස්
+causal කාජල් කෝසල
+cause කොස් කජු
 causey කාසි
-cauthen කොටින්
-cauthon කොටින්
+cauthen කොටින් කොටන
+cauthon කොටින් කොටන
 cavanah කවන
+cave කැවූ
 caven කෙවින්
 caving කෙවින්
-cawley කාලි
-cawood කවුද
-cawsl කොසොල්
-cawthon කොටින්
+cawley කාලි කාලේ
+cawood කවුද කවුඩු
+cawsl කොසොල් කෝසල
+cawthon කොටින් කොටන
 cayce කෙස්
 cayes කෙස්
-caylin කෙලින්
+caylin කෙලින් කෙළින්
 cayman කෙමෙන්
 cayne කෙන්
 cayson කේසොං
-cea සිය
-ceara සිර
+cea සිය සේ
+ceara සිර සිරි
 ceasar සසර
+cease සිසු
 ceased සේසත්
 ceaser සීසර්
-cech සේක
+cech සේක සේක්
 cecil සිසිල්
 cecile සිසිල්
 ceded සිද්ද
 ceiling සිලිං
-ceja සෑය
+ceja සෑය සේයා
 cejka චෙක්
-celia සීලය
+celia සීලය ශීලය
 celica සෛලික
-celine සෙලීන්
-cell සෙල්
-celo ශිලා
+celine සෙලීන් සිලිං
+cell සෙල් සෛල
+celo ශිලා ශීලා
 celsius සෙල්සියස්
 cenith සෙනෙට්
 centerre සෙන්ටර්
@@ -1461,106 +1554,109 @@ centimeter සෙන්ටිමීටර්
 centimetre සෙන්ටිමීටර්
 centre සෙන්ටර්
 ceo සීයා
-cerra සැර
+cerra සැර සර්
 cesar සීසර්
 ceylon සිලෝන්
 chace චෙස්
 chachere ශිශිර
-chadd චැඩ්
-chain චෙන්
+chadd චැඩ් චෙඩ්
+chain චෙන් චෙං
 challenger චැලෙන්ජර්
 challis ෂෙලී
-chana චෙන්
+chana චෙන් චෙං
 chancellor චාන්සලර්
 channel චැනල්
 channell චැනල්
 channon චන්න
 chapp චාප
 charles චාර්ල්ස්
-charon කෙරෙන
-charron කෙරෙන
+charon කෙරුණු කෙරෙන
+charron කෙරුණු කෙරෙන
 chase චෙස්
 chasse චෙස්
 chatterjee චැටර්ජී
-chaw චෞ
-chawla චෝළ
-chayon චීන
+chaw චෞ චෝ
+chawla චෝළ චෝල
+chayon චීන චෙන්
 chaz චෙස්
 chazz චෙස්
-chea චි
-cheane චීන
+chea චි චී
+cheane චීන චින්
 check චෙක්
-cheely චිලී
+cheely චිලී චිලි
 cheese චීස්
-chem කෑම
+chem කෑම කෑම්
 cheque චෙක්
 cherico චාරිකා
 chess චෙස්
 chevette ශ්වේත
-chew චූ
-cheyne චෙන්
+chew චූ චෝ
+cheyne චෙන් චෙං
 chez චෙස්
-chia චී
-chiang චෙං
+chia චී චේ
+chiang චෙං චං
 chick චෙක්
 chicken චිකන්
-chien චෙන්
-chiesa කිසි
-chile චිලී
+chien චෙන් චෙං
+chiesa කිසි කේසි
+chile චිලී චිලි
 chili චිලී
-chilly චිලී
+chilly චිලී චිලි
+chin චින්
 china චයිනා
 chinen චීනුන්
-ching චෙං
-chinh චීන
-chinn චීන
-chiu චූ
+ching චෙං චීන
+chinh චීන චින්
+chinn චීන චින්
+chiu චූ චෝ
 chloride ක්ලෝරයිඩ්
 chlorine ක්ලෝරීන්
-chocolat චොක්ලට්
-chocolate චොක්ලට්
-choe චෝ
+chocolat චොක්ලට් චොකලට්
+chocolate චොක්ලට් චොකලට්
+choe චෝ චා
 cholera කොලරා
-cholla චෝළ
+cholla චෝළ චෝල
 choma චාම්
 chon චං
 choon චුං
 choong චුං
 chopp චාප
 choral කොරල්
-chorale කරල්
-chou චූ
+chorale කරල් කාර්යාල
+chore චාරු
+chou චූ චෝ
 chow චෞ
 chris ක්‍රිස්
 chriss ක්‍රිස්
 christa ක්‍රිස්තු
 christi ක්‍රිස්ටි
-christiaan ක්‍රිස්ටියන්
-christiane ක්‍රිස්ටියන්
-christianne ක්‍රිස්ටියන්
+christiaan ක්‍රිස්තියානු ක්‍රිස්ටියන්
+christiane ක්‍රිස්තියානු ක්‍රිස්ටියන්
+christianne ක්‍රිස්තියානු ක්‍රිස්ටියන්
 christie ක්‍රිස්ටි
 christmas ක්‍රිස්මස්
 christon ක්‍රිස්තුන්
 christopher ක්‍රිස්ටෝෆර්
 christy ක්‍රිස්ටි
 chromium ක්‍රෝමියම්
-chseing චෙං
-chua කෝ
+chryst ක්‍රිස්තු
+chseing චෙං චෙන්
+chua කෝ ක්ව
 chuah චාඕ
-chuang චෙං
+chuang චෙං චං
 chubby චාබි
 chum චාම්
-chunn චං
+chunn චං චුං
 chunnel චැනල්
 chupp චාප
 churchill චර්චිල්
 cian ෂින්
 ciao චෞ
-cicero සෙසාරෝ
-cid සෙඩ්
-cie සේ
-ciel සීල්
-ciera සිර
+cicero සෙසාරෝ සිසාරා
+cid සිදු
+cie සේ සී
+ciel සීල් සිල්
+ciera සිර ශිරා
 cieri සිරි
 cindy සැන්ඩි
 cinema සිනමා
@@ -1575,41 +1671,45 @@ cissell සිසිල්
 cissie සැසි
 cist සේසත්
 cite සයිට්
-ciulla චෝළ
-civet සැවැත්
+city සිටී
+ciulla චෝළ චෝල
+civet සැවැත් ශිවට
 civilly සෙවිලි
-clack ක්ලාක්
-claddagh කලද
+clack ක්ලාක් කලක්
+claddagh කලද කළද
 claes ක්ලේශ
 claeys ක්ලේශ
 claimant ක්ලෙමන්ට්
 clair ක්ලෙයාර්
 claire ක්ලෙයාර්
-clammy කලෙමි
+clammy කලෙමි කළෙමි
+clap කලපු
+clapp කලපු
 clara ක්ලෙයාර්
 clare ක්ලෙයාර්
 clarence ක්ලැරන්ස්
 clarke ක්ලාර්ක්
-class ක්ලාශ්
+clash ක්ලේශ
+class ක්ලාශ් කලස්
 claudius ක්ලෝඩියස්
 claus ක්ලාශ්
 clause ක්ලාශ්
 clauss ක්ලාශ්
 clavin කලාවෙන්
 claws ක්ලාශ්
-clay කළේ
-clayey කළේ
+clay කළේ කලේ
+clayey කළේ කලේ
 claymont ක්ලෙමන්ට්
 clays ක්ලේශ
-cleah කියා
+cleah කියා කී
 clean කලින්
 clearance ක්ලැරන්ස්
 cleats ක්ලීටස්
 cleek ක්ලික්
 cleese ක්ලේශ
 clement ක්ලෙමන්ට්
-clemmie කලෙමි
-clemmy කලෙමි
+clemmie කලෙමි කළෙමි
+clemmy කලෙමි කළෙමි
 clerc ක්ලාර්ක්
 clercq ක්ලාර්ක්
 clerk ක්ලාර්ක්
@@ -1618,169 +1718,174 @@ cling කලින්
 clinton ක්ලින්ටන්
 clique ක්ලික්
 cloak ක්ලාක්
-clock ක්ලාක්
-cloe කලා
+clock ක්ලාක් කලක්
+cloe කලා කළෝ
 cloke ක්ලාක්
 close ක්ලාශ්
 closs ක්ලාශ්
-clothe කලොත්
+cloth කළොත්
+clothe කලොත් කළොත්
 clothes ක්ලාශ්
-clott කළත්
+clott කළත් කලත්
 club ක්ලබ්
 clubb ක්ලබ්
-cluck ක්ලාක්
+cluck ක්ලාක් කලක්
 clucking කලකින්
-clue කළු
+clue කළු කලු
 coach කාච
-coad කෝඩ්
+coad කෝඩ් කාඩ්
 coady කොඩි
-coal කොළ
-coale කොළ
-coan කොන්
+coal කොළ කාල්
+coale කොළ කාල්
+coan කොන් කොං
 coar කාර්
 coast කෝස්ට්
-coat කොට
+coat කොට කොත්
 coating කොටින්
 coats කොටස්
 cobalt කොබෝල්ට්
 cobaugh කබා
-cobble කාබුල්
+cobble කාබුල් කබල
 coben කාබන්
 coble කාබුල්
 cobleigh කබල
 cocaine කොකේන්
-cocca කොකා
+cocca කොකා කොකෝ
 coccia කාච
-cocco කොකෝ
+cocco කොකෝ කොකා
 coccus කොකොස්
-cock කොක්
-cocke කොක්
+cock කොක් කොකු
+cocke කොක් කොකු
 cocking කොකේන්
-cocoa කොකෝ
+cocoa කොකෝ කොකා
 cocoon කැකුණ
-codd කාඩ්
+codd කාඩ් කදු
 codding කඩින්
 coddle කඩොල්
-code කෝඩ්
-coe කො
-coed කෝඩ්
+code කෝඩ් කාඩ්
+coe කො කෝ
+coed කෝඩ් කාඩ්
 coehlo කාලෝ
-coeur කුර්
+coeur කුර් කූරු
 coffeen කැෆේන්
 cognac කෝණයක්
 cohan කොහෙන්
 cohee කොහි
 cohill කොහිල
-cohn කොන්
-cohoon කෝණ
+cohn කොන් කොං
+cohoon කුණු කුනු
 cohr කාර්
-cohron කරන
-coia කාය
-coke කොක්
+cohron කරනු කරන
+coia කාය කොයි
+coke කොක් කොකු
 coking කොකේන්
-cola කොළ
+cola කොළ කාල
 colan කොලින්
 colaw කාලෝ
 colen කොලින්
-coley කෝලි
+coley කෝලි කාලි
 colinas කොලින්ස්
-collagen කාලගුණ
-colle කොළ
+collagen කාලගුණ කාළගුණ
+colle කොළ කාල්
 collect කලෙකත්
 colledge කොලේජ්
-colleen කලින්
+colleen කලින් කාලීන
 college කොලේජ්
-collen කාලීන
-colley කළේ
-colli කෝලි
-collick කලෙක
-collie කළේ
+collen කාලීන කාලින
+colley කළේ කලේ
+colli කෝලි කාලි
+collick කලෙක කාලික
+collie කළේ කලේ
 collies කොලේජ්
-collin කලින්
-colling කලින්
+collin කලින් කාලීන
+colling කලින් කාලීන
 collins කොලින්ස්
-collom කෝලම්
-collomb කෝලම්
-collum කෝලම්
-colly කළේ
+collom කෝලම් කෝළම්
+collomb කෝලම් කෝළම්
+collum කෝලම් කෝළම්
+colly කළේ කලේ
 colmer කාමර
-colomb කෝලම්
+colomb කෝලම් කෝළම්
 colon කොලින්
 colonel කර්නල්
-colony කොලනි
+colony කොලනි කැලණි
 colors කලර්ස්
 colours කලර්ස්
 columba කොළඹ
-column කෝලම්
-com කම්
-coma කාම
-comb කොම්
-combe කොම්
+column කෝලම් කෝළම්
+com කම් කාම
+coma කාම කොම්
+comb කොම් කාම
+combe කොම් කාම
 combee කම්බි
 comber කාමර
 comby කම්බි
 come කම්
 comeau කෝමා
 comeaux කෝමා
-comer කුමාර්
-comet කමත්
+comer කුමාර් කාමර
+comet කමත් කොම්ට්
+cometh කමිටු
 coming කමින්
-comm කම්
-comma කාම
-commack කමක්
+comm කම් කාම
+comma කාම කම්
+commack කමක් කෑමක්
 commander කමාන්ඩර්
 commando කමාන්ඩෝ
 commercial කොමර්ෂල්
 commerical කොමර්ෂල්
 commision කොමිෂන්
 commission කොමිෂන්
+commit කමිටු
 commitee කැමැති
 committee කැමැති
-common කොමන්
+common කොමන් කෑමෙන්
 compean කම්පන
 compeau කම්පා
 compo කම්පා
 comrie කාමරයේ
-con කන්
+con කන් කාන්
 concorde කොන්කෝර්ඩ්
 concrete කොන්ක්‍රීට්
-conde කන්ද
-condie කන්දේ
+conde කඳු කාන්දු
+condie කන්දේ කඳේ
 condom කොන්ඩම්
 condon කඳන්
 condone කඳාන
-cone කොන්
+cone කොන් කොං
 coney කෝණී
-connan කොනන්
+connan කොනන් කනාන්
 connect කෙනෙක්ට
-conned කන්ද
-connick කෝණික
+conned කඳු කාන්දු
+connett කනිටු
+connick කෝණික කණික
 connie කෝණී
-connon කොනන්
-conny කෝණී
+connon කොනන් කනාන්
+connote කුණාටු කුනාටු
+conny කෝණී කනේ
 consol කොන්සල්
 constellation කොන්ස්ටලේෂන්
 consul කොන්සල්
-conte කාන්ට්
-cooed කෝඩ්
+conte කාන්ට් කවුන්ට්
+cooed කුඩු කෝඩ්
 cook කුක්
 cooke කුක්
-cool කුල
-coole කුල
+cool කුළු කුල
+coole කුළු කුල
 cooled කෝල්ඩ්
-cooley කුලී
-coolly කුලී
-coombe කුම
-coomer කුමාර්
-coone කෝණ
+cooley කුලී කෝලි
+coolly කුලී කෝලි
+coombe කුම කුඹ
+coomer කුමාර් කුමාර
+coone කුණු කුනු
 cooney කෝණී
 coop කෝප
-coote කෝට්
-coover කුවේර
-cop කප්
-cope කෝප
+coote කෝට් කුත්
+coover කුවේර කුවෙර
+cop කොපු කපු
+cope කොපු කෝප
 copenhagen කෝපන්හේගන්
-coppee කැපී
+coppee කැපී කෝපි
 coppel කපාල
 copper කොපර්
 copple කපාල
@@ -1791,7 +1896,7 @@ corea කොරියා
 coren කාරණ
 corey කාරී
 coria කොරියා
-corinne කෙරිණ
+corinne කෙරිණ කෙරින
 corio කොරියා
 corkum කාරකම්
 corley කෝරළේ
@@ -1802,13 +1907,13 @@ cornick කාර්නැක්
 corolla කාර්යාල
 corps කාර්
 corr කාර්
-corral කරල්
+corral කරල් කාර්යාල
 correa කොරියා
 corrie කාරී
 corrode කරාද
 corroon කවුරුන්
 corry කාරී
-corsa කොස්
+corsa කොස් කාසි
 cortege කාර්තේජ්
 cortes කාර්තේජ්
 cortez කාර්තේජ්
@@ -1816,54 +1921,66 @@ corteze කාර්තේජ්
 cose කොස්
 cosey කාසි
 coss කොස්
-cossa කොස්
+cossa කොස් කාසි
 cossat කැසට්
-cosset කෝස්ට්
+cosset කෝස්ට් කැසට්
 cossey කාසි
 coste කෝස්ට්
+cot කට
 cotes කොටස්
-cottam කොටම
-cotten කාටුන්
-cotter කාටර්
+cottam කොටම කටම
+cotten කාටුන් කාටූන්
+cotter කාටර් කටාර්
 cotto කොටා
-cottom කොටම
-cotton කාටුන්
-cotty කොටි
-cou කෝ
+cottom කොටම කටම
+cotton කාටුන් කොටින්
+cotty කොටි කති
+cou කෝ කු
 cough කාෆ්
-could කෝඩ්
-coulee කුලී
+could කුඩු කෝඩ්
+coulee කුලී කෝලි
+coull කවුළු
 council කවුන්සල
 counsel කවුන්සල
 counsell කවුන්සල
 count කවුන්ට්
-coup කෝ
+coup කෝ කු
 coupe කෝප
-couper කුර්
-couple කපාල
-coups කෝ
-cour කුර්
+couper කුර් කුවේර
+couple කපාල කපිල
+coups කෝ කු
+cour කුර් කුරු
 coury කාරී
-coutee කුටි
-covel කොවුල්
-coven කවීන්
+coutee කුටි කෝටි
+covel කොවුල් කෝවිල්
+coven කවීන් කවන
 covent කවුන්ට්
 cover කවර
 covey කවි
-coville කෝවිල්
-cowed කවුද
-cowen කොන්
+coville කෝවිල් කෝවිල
+cowed කවුද කවුඩු
+cowen කොන් කොං
 cowher කවර
+cowl කවුළු
 cowper කූපර්
 coye කාය
-coz කොස්
+coz කොස් කජු
 cozy කාසි
-cozza කොටස්
+cozza කොටස් කොටස
 cozzi කොටසේ
+crab කරාබු
+crabb කරාබු
+crabbe කරාබු
+cragun කරගනු
+crain කරැණු
+craine කරැණු
+crane කරැණු
+crap කරපු
 cratty කරති
 craugh කරා
 craven කරැවන්
 craw කරා
+crayne කරැණු
 crea ක්‍රි
 creak ක්‍රික්
 creaked ක්‍රිකට්
@@ -1872,6 +1989,7 @@ crear ක්‍රෑර
 crease ක්‍රිස්
 credo ක්‍රීඩා
 creek ක්‍රික්
+creep ක්‍රිපූ
 creer ක්‍රෑර
 crees ක්‍රිස්
 creme ක්‍රීම්
@@ -1879,39 +1997,45 @@ cresses ක්‍රයිසිස්
 crew කරු
 crewe කරු
 crewes ක්‍රෝස්
-crewman කෘමීන්
-crewmen කෘමීන්
+crewman කෘමීන් කෘමින්
+crewmen කෘමීන් කෘමින්
 crews ක්‍රෝස්
 crick ක්‍රික්
 cricket ක්‍රිකට්
 crimm ක්‍රීම්
+crip ක්‍රිපූ
 crisis ක්‍රයිසිස්
 criss ක්‍රිස්
+crist ක්‍රිස්තු
 crista ක්‍රිස්තු
 cristiani ක්‍රිස්තියානි
 criven කරැවන්
+croghan කරගනු
 crom ක්‍රම
 cromie කරමි
-cron කරන්
-crose ක්‍රොස්
-cross ක්‍රොස්
-crosse ක්‍රොස්
-crotty කරති
+cron කරනු
+croon කරුණු
+crop කරපු
+cropp කරපු
+crose ක්‍රොස් ක්‍රෝස්
+cross ක්‍රොස් ක්‍රෝස්
+crosse ක්‍රොස් ක්‍රෝස්
+crotty කරති කරාතේ
 crough කරවු
-crouton කෘතීන්
+crouton කෘතීන් කෘතින්
 crow කරා
 crowe කරා
-crows ක්‍රොස්
+crows ක්‍රොස් ක්‍රෝස්
 cruce ක්‍රෝස්
 cruey කරයි
 cruise ක්‍රෝස්
 cruiser කෘසර
-crull කරල්
+crull කරල් කරල
 crum ක්‍රම
 crumb ක්‍රම
 crumm ක්‍රම
-crummey කෘමි
-crummy කෘමි
+crummey කෘමි කරමි
+crummy කෘමි කරමි
 cruse ක්‍රෝස්
 cruser කෘසර
 crute කෘත
@@ -1919,362 +2043,379 @@ cruz ක්‍රෝස්
 cruze ක්‍රෝස්
 cry කරයි
 crye කරයි
-csar සර්
+csar සර් සාර්
 cudahy කදී
-cudd කාඩ්
-cuddle කඩොල්
-cuddy කදී
+cudd කදු කාඩ්
+cuddle කඩොල් කඩුලු
+cuddy කදී කැඩී
 cudgel කාජල්
 cuff කාෆ්
 cuffe කාෆ්
 cuhney කෝණී
 culkin කලකින්
-cullan කලින්
+cullan කලින් කාලීන
 culled කලද
-cullen කලින්
+cullen කලින් කාලීන
 cullers කලර්ස්
-cullet කළත්
-culley කළේ
-cullin කලින්
-culling කලින්
-cullop කලාප
-cullud කලද
-cully කළේ
-culp කල්ප
+cullet කළත් කලත්
+culley කළේ කලේ
+cullin කලින් කාලීන
+culling කලින් කාලීන
+cullop කලාප කලපු
+cullud කලද කළද
+cully කළේ කලේ
+culp කල්ප කලපු
 culpa කල්ප
-cult කළත්
+cult කළත් කලත්
 cumbee කම්බි
 cumbie කම්බි
 cumby කම්බි
 cumming කමින්
-cummock කමක්
-cundall කණ්ඩුල
-cundy කන්දේ
+cummock කමක් කුමක්
+cundall කඳුළු
+cundy කන්දේ කඳේ
 cunha කෝණ
-cunnane කනාන්
+cunnane කනාන් කන්න
 cunt කාන්ට්
-cup කප්
+cup කපු කප්
 cupola කපාල
-cupp කප්
+cupp කපු කප්
 cuppett කුපිත
 cuppy කැපී
-curl කාර්ල්
+curl කාර්ල් කරල්
 curle කොරල්
-curlee කැරලි
-curley කැරලි
-curly කැරලි
+curlee කැරලි කැරළි
+curley කැරලි කැරළි
+curly කැරලි කැරළි
 curragh කර
-curran කරන
-curren කරන
+curran කරනු කරන
+curren කරනු කරන
 current කරන්ට
-currey කෙරේ
-currie කෙරේ
+currey කෙරේ කරයි
+currie කෙරේ කරයි
 curried කෙරේද
-curry කෙරේ
-curt කර්ට්
+curry කෙරේ කරයි
+curt කර්ට් කරත්
+curve කරවූ කරවු
 curvy කරවී
 cushion කුෂාණ
-cuss කුස
+cuss කුස කාශ
 cussed කැසට්
 cusson කසුන්
-cut කට
+cut කට කටු
 cutaway කතාවේ
-cutter කාටර්
+cutter කාටර් කටාර්
 cutting කටින්
 cyber සයිබර්
-cyd සෙඩ්
+cyd සිදු
 cylinder සිලින්ඩර
 cyndi සැන්ඩි
-cynth සෙන්ට්
+cynth සෙන්ට් සීනත්
 cynthie සෙන්ටි
 cypress සයිප්‍රස්
 cyprus සයිප්‍රස්
-cyr සර්
-cyran කිරණ
+cyr සර් සිර
+cyran කිරණ කිරාන්
 cyril සිරිල්
 cyrilla සිරිල්
 cyst සේසත්
-czar සර්
+czar සර් සාර්
 czech චෙක්
-czyz චීස්
-daane දොන්
+czyz චීස් චෙස්
+daane දොන් දැන්
 dabah ඩබ්
 dabber දබර
 dabbs දෙබස්
-dace දෙස
-dacey දැසි
-dacia දේශීය
-dack දැක්
-dacy දැසි
-dad ඩෙඩ්
+dace දෙස දෙස්
+dacey දැසි ඩේසි
+dacia දේශීය දේශිය
+dack දැක් දෙක
+dacy දැසි ඩේසි
+dad ඩෙඩ් දඩු
 daddy දැඩි
 dade ඩෙඩ්
-daemon දීමෙන්
+daemon දීමෙන් දෙමින්
 dagan දෙගුණ
 dagg දඟ
-dagger දගර
+dagger දගර දඟර
 dagley දාග්ලි
 dagon දෙගුණ
 dague දඟ
-daher දාර
-dahl දළ
+daher දාර ඩර්
+dahl දළ දැල්
 dahlen දෝලන
 dahler ඩොලර්
-dahlia ඩේලි
+dahlia ඩේලි දැලි
 dahlke දැලක්
-dahman දමන
-daikin දෙකෙන්
-dail දැල්
-daile දැල්
-dailey ඩේලි
-dailies දැලිස්
-daily ඩේලි
-dain දැන්
-daini දැනේ
+dahman දමන දමනු
+dahrain දරැණු
+daikin දෙකෙන් දෙකින්
+dail දැල් ඩෙල්
+daile දැල් ඩෙල්
+dailey ඩේලි දැලි
+dailies දැලිස් දැලිස
+daily ඩේලි දැලි
+dain දැන් දෙන
+daini දැනේ ඩැනී
 dairy දැරී
-dais දෙස
-daise දෙස
-daisey දැසි
-daisy දැසි
-daiwa දේව
-dake දැක්
+dais දෙස දෙස්
+daise දෙස දෙස්
+daisey දැසි ඩේසි
+daisy දැසි ඩේසි
+daiwa දේව දැව
+dake දැක් දෙක
 dalal දැල්ල
-dale දැල්
-daley ඩේලි
+dale දැල් ඩෙල්
+daley ඩේලි දැලි
 dalia දැලි
 dalke දැලක්
 dallaire ඩොලර්
-dalley ඩේලි
-dally ඩේලි
+dalley ඩේලි දැලි
+dally ඩේලි දැලි
 dalton ඩෝල්ටන්
-dame දේම
-damm දම්
-damman දමන
-dammann දමන
-damme දම්
-dammen දමන
+dam දැමූ
+dame දැමූ දැමු
+damm දම් දැමූ
+damman දමන දමනු
+dammann දමන දමනු
+damme දම් දැමූ
+dammen දමන දමනු
 damming දෙමින්
-damn දම්
+damn දම් දැමූ
 damning දෙමින්
-damon දෙමින්
+damon දෙමින් දැමුණු
+dan දෙන
 dance ඩාන්ස්
-danek දෙනෙක්
-daney දැනේ
+danek දෙනෙක් දෙනෙකු
+daney දැනේ ඩැනී
 danica දෛනික
-danielle ඩැනියෙල්
-dannen දෙන්න
-dannie දැනේ
-danny දැනේ
+danielle ඩැනියෙල් දනියෙල්
+dannen දෙන්න දන්න
+dannie දැනේ ඩැනී
+danny දැනේ ඩැනී
 danz ඩාන්ස්
-dare ඩේර්
+dare දැරූ ඩේර්
+daren දරැණු
 darfur ඩාෆූර්
 daria දැරීය
 darien දැරියන්
+darin දරැණු
 darke දාරක
-darr ඩේර්
-darragh දැරූ
-darrah දරා
-darren දරන
+darr දැරූ දරු
+darragh දැරූ ඩේර්
+darrah දරා දර
+darren දරන දරනු
+darrin දරැණු
 darroch දාරක
-dasch දේශ
-dase දෙස
+dart දොරටු
+darth දොරටු
+dartt දොරටු
+dasch දේශ දශ
+dase දෙස දෙස්
 dash දේශ
 dashed දෂ්ට
 dashnaw දේශනා
-dass දෙස
+dass දෙස දෙස්
 data දත්
 database ඩෙටාබේස්
-date දෑත්
+date දෑත් දෙත්
 dating දෑතින්
-dau දා
+dau දා දෝ
 daughney දානි
 daughton දෑතින්
 daulton ඩෝල්ටන්
-daum දොම්
-daun දොන්
-daus දොස්
-davao දවා
-davault දවා
-dave දෙව්
-davey දේවී
+daum දොම් දාම
+daun දොන් දොං
+daus දොස් දාස්
+davao දවා දිවා
+davault දවා දිවා
+dave දෙව් දේව්
+davey දේවී දෙවි
 david ඩේවිඩ්
 davidson ඩේවිඩ්සන්
-davie දේවී
+davie දේවී දෙවි
 davis ඩේවිස්
 davitt දාවිත්
-davy දේවී
+davy දේවී දෙවි
 dawdy දාදි
-dawe දා
-dawes දොස්
+dawe දා දෑ
+dawes දොස් දාස්
 dawley ඩොලී
-dawn දොන්
+dawn දොන් දොං
 dawns ඩාන්ස්
 dawson ඩෝසන්
-day දේ
-dayan දැන්
-daye දේ
-dayle දැල්
-dayley ඩේලි
-dayne දැන්
-days දෙස
+day දේ දෑ
+dayan දැන් දෙන
+daye දේ දෑ
+dayle දැල් ඩෙල්
+dayley ඩේලි දැලි
+dayne දැන් දෙන
+days දෙස දෙස්
 dayton දෑතින්
-daze දෙස
-dazey දැසි
-dazs දොස්
+daze දෙස දෙස්
+dazey දැසි ඩේසි
+dazs දොස් දාස්
 dea දී
 dead ඩෙඩ්
-deaden දෙදෙන
+deaden දෙදෙන දේදුනු
 deady දැඩි
-deahl දිල්
+deahl දිල් ඩිල්
 deak දික්
-deal දිල්
-deale දිල්
+deal දිල් ඩිල්
+deale දිල් ඩිල්
 dealey ඩේලි
 dealy ඩේලි
-deam දීම
-dean දින
-deane දින
-dear ඩේර්
+deam දීම දීම්
+dean දින ඩීන්
+deane දින ඩීන්
+dear දැරූ ඩේර්
 dearmon දරමින්
-deary දිරි
-deas දිස්
-dease දිස්
+deary දිරි දැරී
+deas දිස් දේශ
+dease දිස් දේශ
 deason දේශන
-deasy දීසි
-death දෑත්
+deasy දීසි ඩේසි
+death දෑත් දෙත්
 debose දෙබස්
-debt දෑත්
+debt දෑත් දෙත්
+dec දෙක
 decay දෙකේ
-dech දැක්
+dech දැක් දෙක
 dechene දෙකින්
-deck දැක්
-decked දෙකට
-decking දෙකෙන්
+deck දැක් දෙක
+decked දෙකට දෙකත්
+decking දෙකෙන් දෙකින්
 decom දෙකම
 dede දීද
 deedy ඩීඩී
 deegan දිගින්
-deehan ඩීන්
-deel දිල්
+deehan ඩීන් දියන්
+deel දිල් ඩිල්
 deeley ඩේලි
 deemed දීමද
-deeney දිණි
-deere ඩේර්
-deery දිරි
-deese දිස්
+deeney දිණි දිනි
+deer දැරූ
+deere දැරූ ඩේර්
+deery දිරි දැරී
+deese දිස් දේශ
 degan දිගින්
 degen දෙගුණ
 dehere දිරි
-dehm දේම
-dehn දැන්
-dehne දැන්
+dehm දැමූ දැමු
+dehn දැන් දෙන
+dehne දැන් දෙන
 deighan දෙගුණ
 deighton දෑතින්
-deign දැන්
+deign දැන් දෙන
 deike දික්
 deion දියන්
-dekay දෙකේ
-dekom දෙකම
+dekay දෙකේ දුකේ
+dekom දෙකම දැක්ම
+del ඩෙල්
 delaine දිලෙන
-delee ඩේලි
-delhi ඩේලි
+delee ඩේලි දැලි
+delhi ඩේලි දැලි
 delia ඩේලි
-delle දැල්
-dellis දැලිස්
+delle දැල් ඩෙල්
+dellis දැලිස් දැලිස
 demain දීමෙන්
 demaio දැමූ
 deman දීමෙන්
 demean දෙමින්
-demel දෙමළ
+demel දෙමළ දෙමල
 demesne දීමෙන්
 deming දෙමින්
-demme දේම
+demme දැමූ දැමු
 demming දෙමින්
-demmon දෙමින්
+demmon දෙමින් දැමුණු
 demon දීමෙන්
-demuth දීමත්
-denault දිනා
-deneau දිනා
-deneault දිනා
-deneke දෙනෙක්
-deng දැන්
-denham දැනුම්
+demuth දීමත් දීමට
+den දෙන
+denault දිනා දෙනා
+deneau දිනා දෙනා
+deneault දිනා දෙනා
+deneke දෙනෙක් දෙනෙකු
+deng දැන් දෙන
+denham දැනුම් දැනුම
 denice ඩෙනිස්
-denike දෙනෙක්
+denike දෙනෙක් දෙනෙකු
 denise ඩෙනිස්
 deniz ඩෙනිස්
-dennen දෙන්න
+denk දෙනකු
+denmark ඩෙන්මාර්ක
+dennen දෙන්න දැනෙන
 dennett දෙනෙත්
-denney දැනේ
-dennie දැනේ
+denney දැනේ ඩැනී
+dennie දැනේ ඩැනී
 dennin දැනෙන
 dennis ඩෙනිස්
-denny දැනේ
-denomme දැනුම්
+denny දැනේ ඩැනී
+denomme දැනුම් දැනුම
+denude දැනුදු
 denys ඩෙනිස්
 deo දියා
 deon දියන්
 depass දෙපස
-depaul දේපොළ
-depaula දේපොළ
+depaul දේපොළ දේපොල
+depaula දේපොළ දේපොල
 depot දීපා
 deren දෙරණ
 derman දරමින්
-derr ඩේර්
+derr දැරූ ඩේර්
 derry දැරී
 dersch දර්ශ
 dery දැරී
-desai දේශයේ
+desai දේශයේ දේසායි
 desch දේශ
 desert ඩෙසර්ට්
 deshane දේශන
 deshon දේශන
 dessert ඩෙසර්ට්
-detty දෙති
+detty දෙති දැති
 deuce දෝශ
 deuss දෝශ
-deux දූ
-devall දේවල්
-devalle දේවල්
-devane දිවෙන
-devaney දෙවැනි
-devaul දෙවොල්
+deux දූ දු
+devall දේවල් දෙවොල්
+devalle දේවල් දේවාල
+devane දිවෙන දැවෙන
+devaney දෙවැනි දෙවනි
+devaul දෙවොල් දෙවොල
 devault දිවා
 devaux දිවා
 deveau දිවා
 deveaux දිවා
-deveney දෙවැනි
-devenney දෙවැනි
-devenny දෙවැනි
+deveney දෙවැනි දෙවෙනි
+devenney දෙවැනි දෙවෙනි
+devenny දෙවැනි දෙවෙනි
 devey දිවේ
-devil දේවල්
+devil දේවල් දෙවොල්
 devin දැවෙන
-deviney දෙවැනි
-devinney දෙවැනි
+deviney දෙවැනි දෙවෙනි
+devinney දෙවැනි දෙවෙනි
 devoe දිවා
-devoll දේවල්
+devoll දේවල් දෙවොල්
 devon දෙවන
 devona දෙවන
 devoss දිවැස්
-dew දූ
-dewayne දිවෙන
+dew දූ දු
+dewayne දිවෙන දැවෙන
 dewey දුවේ
 dewitt දාවිත්
 dews දෝශ
 deyton දෑතින්
 dhabi ඩාබි
-dhaharan දරන
-dhahran දරන
-dhia දී
+dhaharan දරන දරනු
+dhahran දරන දරනු
+dhia දී දිය
 dhillon දිලෙන
-dhole දොළ
+dhole දොළ දොල
 dhondt දන්ත
-dia දී
+dia දී දිය
 dibs දෙබස්
-dick දික්
+dick දික් දැක්
 dickason ඩික්සන්
-dicke දික්
-dicken දෙකෙන්
+dicke දික් දැක්
+dicken දෙකෙන් දෙකින්
 dickey දෙකේ
 dickie දෙකේ
 dickson ඩික්සන්
@@ -2285,154 +2426,159 @@ diddy දැඩි
 die ඩයි
 dieck දික්
 diede දීද
-diehl දිල්
-diehm දීම
-diel දිල්
-diem දීම
+diehl දිල් ඩිල්
+diehm දීම දීම්
+diel දිල් ඩිල්
+diem දීම දීම්
 diep දීප
-dier ඩේර්
-diery දිරි
+dier ඩේර් දියර
+diery දිරි දැරී
 diesel ඩීසල්
-digga දිග
+dig දිගු
+digga දිග දිගු
 digging දිගින්
 digital ඩිජිටල්
-dill දැල්
+dill දැල් දිල්
 dillan දිලෙන
-dille දැල්
+dillard දිලිදු දිළිදු
+dille දැල් දිල්
 dillen දිලෙන
-dilley ඩේලි
-dillie ඩේලි
+dilley ඩේලි දැලි
+dillie ඩේලි දැලි
 dillin දිලෙන
 dilling දිලෙන
 dillon දිලෙන
-dimming දෙමින්
+dim දීම්
+dimming දෙමින් දීමෙන්
 dimock දීමක්
-dimon දීමෙන්
+dimon දීමෙන් දෙමින්
+din දැන්
 dinda දිනදී
-ding දින
+ding දින දැන්
 dingham දිනම
-dinghy දැනේ
-dinh දින
+dinghy දැනේ දිණි
+dinh දින දැන්
 dinning දිනෙන්
 dione දියන්
 dionne දියන්
 dipped දීප්ත
-dippel දේපල
-dipple දේපල
-dirr ඩේර්
-dirty දරති
+dippel දේපල දේපළ
+dipple දේපල දේපළ
+dirr ඩේර් ඩර්
+dirty දරති දෙරටේ
 disch දේශ
 discovery ඩිස්කවරි
 dish දේශ
 dishon දෙසින්
 disney ඩිස්නි
 dison දෙසින්
-diss දිස්
+diss දිස් දෙස
 dissing දෙසින්
 ditties දෙතිස්
 ditto ඩේටා
 ditton දෑතින්
 dittus දෙතිස්
-ditty දෙති
-divall දේවල්
-divan දෙවන
-divine දිවයින්
-divis ඩේවිස්
+ditty දෙති දැති
+divall දේවල් දේවාල
+divan දෙවන දිවයින්
+divine දිවයින් දිවයින
+divis ඩේවිස් දිවැස්
 divvied ඩේවිඩ්
-divvy දිවි
+divvy දිවි දේවී
 dixon ඩික්සන්
 dixson ඩික්සන්
-dizzy දීසි
+dizzy දීසි දැසි
 djibouti ජිබුටි
-doan දොන්
-doane දොන්
-doanh දොන්
-doanna දොන්
-doar දොර
+doan දොන් දොං
+doane දොන් දොං
+doanh දොන් දොං
+doanna දොන් දෝන
+doar දොර දාර
 dob ඩබ්
 dobb ඩබ්
 dobbie ඩාබි
 dobey ඩාබි
 dobie ඩාබි
-doc දැක්
+doc දැක් දක්
 docie දකී
-dock දැක්
-docking දකින
-dodd දඩ
+dock දැක් දක්
+docking දකින දකිනු
+dodd දඩු දඩ
 dodson ඩොඩ්සන්
-doe දා
-doell දොළ
-doer දුර
-doerr දොර
-does දිස්
-doh දා
-dohm දම්
-dohme දොම්
-dohn දොන්
-dohr දොර
+doe දා දෝ
+doell දොළ දොල
+doer දුරු දුර
+doerr දොර දාර
+does දිස් දස
+doh දා දෝ
+dohm දම් දාම
+dohme දොම් දාම
+dohn දොන් දැන්
+dohr දොර දාර
 dohse දොස්
-dole දොළ
+dole දොළ දොල
 dolen දෝලන
 doley ඩොලී
-doll දළ
+doll දළ දැල්
 dollan දෝලන
 dollar ඩොලර්
-dolle දළ
-dolley ඩොලී
-dollie ඩොලී
-dolly ඩොලී
+dolle දළ දැල්
+dolley ඩොලී දැලි
+dollie ඩොලී දැලි
+dolly ඩොලී දැලි
 dolomite ඩොලමයිට්
 dolton ඩෝල්ටන්
-dome දොම්
+dome දොම් දාම
 dominey දැමිණි
 domini දැමිණි
 dommie දැමී
+don දැන්
 donais දැනේ
 donalda ඩොනල්ඩ්
-donata දැනට
+donata දැනට දෙනාට
 donath දනට
 donde දණ්ඩ
-done දුන්
+done දුන් දැන්
 dones ඩාන්ස්
-doney දානි
-donna දාන
-donnan දාන්න
+doney දානි දැනේ
+donna දාන දොන්
+donnan දාන්න දන්න
 donnay දැනේ
-donne දුන්
+donne දුන් දැන්
 donned දණ්ඩ
-donnie දානි
+donnie දානි දැනේ
 donning දණින්
-donny දානි
+donny දානි දැනේ
 donovan දනවන
 donvan දන්වන
 donze ඩාන්ස්
 doogie දුගී
 doom දුම්
 doonan දුන්න
-door දොර
+door දොර දාර
 doose දෝශ
-dore දොර
+dore දොර දාර
 doris දර්ශ
 dorow ඩෝරා
-dorr දොර
+dorr දොර දාර
 dorroh ඩෝරා
-dosch දෝෂ
+dosch දෝෂ දෝශ
 dose දොස්
 dosie දැසි
-doss දොස්
+doss දොස් දාස්
 dossey දැසි
 doster දොස්තර
-dot දත්
+dot දත් දෑත්
 doth දෑත්
 dothan දෑතින්
-dott දත්
-dottie දෑතේ
+dott දත් දෑත්
+dottie දෑතේ දැති
 dotting දෑතින්
-dotty දෑතේ
+dotty දෑතේ දැති
 double දුබල
-douche දෝෂ
+douche දෝෂ දෝශ
 doug දඟ
-dough දා
+dough දා දෝ
 doughten දෑතින්
 doughtie දෑතේ
 doughty දෑතේ
@@ -2440,20 +2586,23 @@ dougie දුගී
 douglas ඩග්ලස්
 douglass ඩග්ලස්
 doulton ඩෝල්ටන්
-douma දාම
-douwe දූ
-dove දාව
+douma දාම දොම්
+douwe දූ දු
+dove දාව දැව
 doves දවස්
-dovey දිවේ
-dowel දවුල්
+dovey ද්‌වෙ දිවේ
+dowel දවුල් දවුල
 doze දොස්
+drain දරැණු
+draine දරැණු
 drama ඩ්‍රම්
+drane දරැණු
 draughn ද්‍රෝණ
 draw දරා
 drawn ද්‍රෝණ
 dream ඩ්‍රීම්
 drew දරු
-drina දින
+drina දින දිනා
 driven දරැවන්
 drohan ද්‍රෝණ
 drone ද්‍රෝණ
@@ -2469,134 +2618,141 @@ dub ඩබ්
 dubey ඩාබි
 dubie ඩාබි
 ducey දැසි
-duchene දුකින්
-duck දුක්
-ducking දුකින්
+duchene දුකින් දකින
+duck දුක් දැක්
+ducking දුකින් දකින
 ducote ඩෙකාට්
-dud දඩ
+dud දඩු දඩ
 duda ඩයෝඩ
-dudd දඩ
+dudd දඩු දඩ
 duddy දැඩි
 dudley ඩඩ්ලි
-due දූ
+due දූ දු
 duell ජූල්
-duerr දුර
+duerr දුරු දුර
 dues දෝශ
 duey දුවේ
 dufour ඩාෆූර්
 dug දඟ
-duggar දගර
-dugger දගර
+duggar දගර දඟර
+dugger දගර දඟර
 duh ද
-duhr ඩේර්
+duhr ඩේර් ඩර්
 duke දුක්
 duking දුකින්
 dula දෝලා
 dulac දැලක්
-dull දළ
-dulle දළ
+dull දළ දැල්
+dulle දළ දැල්
 dulles දැලිස්
 dumaine දීමෙන්
 dumais දීමේ
 dumas දුම
-dumb දම්
-dumm දම්
+dumb දම් දුම්
+dumm දම් දුම්
 dummy දැමී
 dunavan දනවන
 duncan ඩන්කන්
 dundee දිනදී
 dundon දණ්ඩන
 dune දුන්
-dung දුන්
+dung දුන් දැන්
 dungeon දන්ජොං
 dunham දැනුම්
-dunja දුනි
+dunja දුනි දුණි
 dunnam දැනුම්
 dunned දණ්ඩ
 dunnett දනිත්
 dunning දණින්
 duns ඩාන්ස්
-duped දූපත්
+duped දූපත් දුපත්
 dupin දෙපයින්
 duque දුක්
 duquesne දුකෙන්
 durakon දුරකින්
-duran දරන
+duran දරන දරනු
 duray දුරැ
 duren දුරින්
 during දුරින්
+durn දරනු දරණු
 duro ඩෝරා
-durr ඩේර්
-durrah දුර
+durr ඩේර් ඩර්
+durrah දුර දුරු
 dusch දශ
-dush දෝෂ
-dussault දිසා
-dusseau දිසා
-dusseault දිසා
+dush දෝෂ දශ
+dussault දිසා දිශා
+dusseau දිසා දිශා
+dusseault දිසා දිශා
 dusza දශ
 duthie දැති
-dutt දත්
+dutt දත් දුටු
 duzan ඩෝසන්
 dye ඩයි
-dyk දික්
+dyk දික් දැක්
 dylan දිලෙන
 dynamite ඩයිනමයිට්
 dysart ඩෙසර්ට්
 dysert ඩෙසර්ට්
 eaddy ඉදි
-eade ඉඩ
+eade ඉඩ ඉඩ්
 eades ඒඩ්ස්
-eadie ඇදී
+eadie ඇදී එඩී
 eads ඒඩ්ස්
 eady ඉදි
-eagan ඉගෙන
-eagen ඉගෙන
-eagon ඉගෙන
+eagan ඉගෙන ඉගන
+eagen ඉගෙන ඉගන
+eagon ඉගෙන ඉගන
 eakle ඒකල
-eamon ඊමාන්
+eamon ඊමාන් ඒමෙන්
+eanes ඉන්සු
 eap අයිපී
-ear ර්
+ear ර් ඉරු
+earl අරළු
+earle අරළු
+earll අරළු
 earn අරන්
+earring ඉරිඟු
 ears ඉයර්ස්
-earth අර්ථ
+earth අර්ථ ආර්ට්
 eartha අර්ථ
 earvin අර්වින්
 eary ඉරි
-ease ඊස්
+ease ඊස් ඒජ්
 eason ඊසාන
 east ඊස්ට්
-eat ඊට
+eat ඊට ඉටු
 eaten ඉතින්
 eating ඉතින්
 eaton ඉතින්
-eau ඕ
-eaux ඕ
-eave ඒව
+eau ඕ ආ
+eaux ඕ ආ
+eave ඒව ඉව
 eba ඉබේ
-eban ඉබන්
+eban ඉබන් ඉබ්න්
 ebay ඉබේ
 ebba එබී
+ebbed එබදු
 ebby එබී
 ebey එබී
 eby ඉබේ
 eccles එකලස්
-echo එකො
+echo එකො එකා
 echols එකලස්
 eckel එකල
 eckels එකලස්
 eckes එක්ස්
 eckles එකලස්
 ecton එක්තැන්
-edan ඉදං
+edan ඉදුණු ඉදං
 edana ඇදෙන
-eddie ඇදී
+eddie ඇදී එඩී
 edds ඒඩ්ස්
-eddy ඇදී
+eddy ඇදී එඩී
 edell ඇඩෙල්
 edema ඇදීම
 edes ඒඩ්ස්
-edge ඒජ්
-edie ඇදී
+edge ඒජ් එජ
+edie ඇදී එඩී
 edison එඩිසන්
 edit එදාට
 editor එඩිතර
@@ -2604,68 +2760,68 @@ edmond එඩ්මන්ඩ්
 edmund එඩ්මන්ඩ්
 edmunda එඩ්මන්ඩ්
 eduard එඩ්වර්ඩ්
-edye ඉදි
+edye ඉදි ඇදී
 eeg ඉඟ
 eel ඉල්
 eerie ඉරි
 efaw අයිෆා
-egan ඉගෙන
-egg ඇග
-egge ඇග
+egan ඉගෙන ඉගන
+egg ඇග ඇඟ
+egge ඇග ඇඟ
 eggen ඇගෙන්
 egging ඇගෙන්
 eggum ඇගේම
-ego ඊගෝ
-egon ඉගෙන
-egypt ඊජිප්ට්
-ehle එල්
+ego ඊගෝ ඊගා
+egon ඉගෙන ඉගන
+egypt ඊජිප්තු ඊජිප්ට්
+ehle එල් ඇල්
 ehlen ඇලන්
 ehler එළාර
-ehly එළි
-ehman එමෙන්
-ehmann එමෙන්
-ehmen එමෙන්
+ehly එළි ඇලී
+ehman එමෙන් එමින්
+ehmann එමෙන් එමින්
+ehmen එමෙන් ඒමෙන්
 ehrich එරික්
 eichen අයිකන
-eighmey එමී
-eight ඇත
+eighmey එමී ඒමේ
+eight ඇත ඇත්
 eighteen ඈතින්
-eighth ඇත
+eighth ඇත ඇත්
 eighty ඇති
 eiland අයිලන්ඩ්
 einstein අයින්ස්ටයින්
-eisa එසේ
+eisa එසේ එස්
 elaina ඇලෙන
-elaine ලෙන්
-elam ඇලුම්
+elaine ලෙන් ලේන්
+elam ඇලුම් ඇල්ම
 elane ඇලෙන
 elayne ඇලෙන
 elbe එල්බ
 elbert ඇල්බර්ට්
 election ඉලෙක්ෂන්
 electrode ඉලෙක්ට්‍රෝඩ
-electron ඉලෙක්ට්රෝන
+electron ඉලෙක්ට්රෝන ඉලෙක්ට්‍රොන
 electronic ඉලෙක්ට්‍රොනික්
-elektron ඉලෙක්ට්රෝන
-elephant එලිෆන්ට්
-elga ඊළග
-elie එළි
-eliot එලියට්
-eliott එලියට්
-elise ඇලිස්
-elissa ඇලිස්
+elektron ඉලෙක්ට්රෝන ඉලෙක්ට්‍රොන
+elephant එලිෆන්ට් එළිෆන්ට්
+elga ඊළග ඊලග
+elie එළි ඇලී
+eliot එලියට් එළියට
+eliott එලියට් එළියට
+elise ඇලිස් එලිස්
+elissa ඇලිස් එලිස්
 ellan ඇලන්
 ellen ඇලන්
 eller එළාර
 ellesse එලෙස
-elley එළි
-ellice ඇලිස්
-ellie එළි
+elley එළි ඇලී
+ellice ඇලිස් එලිස්
+ellie එළි ඇලී
 elling ඇලෙන
-elliot එලියට්
-elliott එලියට්
-ellis ඇලිස්
-elly එළි
+elliot එලියට් එළියට
+elliott එලියට් එළියට
+ellis ඇලිස් එලිස්
+elly එළි ඇලී
 ellyn ඇලෙන
 elyn ඇලෙන
 embalm එම්බාම්
@@ -2676,36 +2832,38 @@ emile එමිල්
 emina එමින්
 emitter ඇමීටර
 emma එම
-emme එම
+emme එම එම්
 emmel එමිල්
 emmerson එමර්සන්
-emmi එමී
-emmie එමී
-emmott ඒමට
-emmy එමී
+emmi එමී ඒමේ
+emmie එමී ඒමේ
+emmott ඒමට ඒමත්
+emmy එමී ඒමේ
 emo ඉමා
-emogene එමගින්
-empt ඒමත්
+emogene එමගින් එමඟින්
+empt ඒමත් ඇමතූ
 empty ඇමති
+end ඇඳ
 enderson ඇන්ඩර්සන්
 enea ඇණිය
 enema එනම්
 enemy එනමි
 engen එන්න
-engh එන්
+engh එන් එන
 engine එන්ජින්
 ennea ඇණිය
 ennen එන්න
+enos ඉන්සු
 ensue ඉන්සු
 entertainment එන්ටර්ටේන්මන්ට්
-entre අන්තර
+entre අන්තර ආන්තර
 eon ඉයන්
 epp ඇප
 eppel ඇපල්
 epple ඇපල්
-era ඉර
-erck ආර්ක්
-ere ර්
+era ඉර ර්
+erck ආර්ක් අරක්
+ere ර් එයාර්
 erects ඉරෙක්ටස්
 erica එරික්
 erich එරික්
@@ -2721,17 +2879,18 @@ erika එරික්
 eriksen එරික්සන්
 erikson එරික්සන්
 eriksson එරික්සන්
-erisa ඒරීස්
-erk ආර්ක්
+erisa ඒරීස් එරිස්
+erk ආර්ක් අරක්
+erl අරළු
 erle ඇරලා
-erna අරන්
+erna අරන් අරණ
 erne අරන්
 ernest අර්නස්ට්
 ernst අර්නස්ට්
 eroh එරා
 eron ඉරාන
-err ආර්
-erra ර්
+err ආර් ර්
+erra ර් ඇර
 errickson එරික්සන්
 erte ආර්ට්
 ervin අර්වින්
@@ -2740,64 +2899,66 @@ erwin අර්වින්
 erykah එරික්
 espe ඇස්ප්
 esque ඇසක්
-ess එස්
-essa එසේ
+ess එස් ඇස්
+essa එසේ එස්
 essay එසේ
-esse එස්
-essen ඇසින්
+esse එස් ඇස්
+essen ඇසින් ඇසෙන
 essential එසෙන්ශල්
 esses අයිසිස්
-essick අයිසැක්
+essick අයිසැක් අයිසෙක්
 essie එසේ
-esson ඇසින්
-estle ඇසළ
+esson ඇසින් ඇසෙන
+estle ඇසළ ඇසල
 etch එච්
 ethane එතැන්
-ethel ඇතුල්
-ethene අයිතීන්
+ethel ඇතුල් ඇතුළු
+ethene අයිතීන් ඈතින්
 ethic එතෙක්
-ethyl ඇතුල්
-etiquette එතකොට
+ethical ඇතිකළ
+ethyl ඇතුල් ඇතුළු
+etiquette ඇටකටු එතකොට
 eton ඉතින්
 etter එතෙර
 ettie ඇති
 etty ඇති
-euan යුවාන්
+euan යුවාන් යූන්
 euclid යුක්ලීඩ්
-eure ආර්
-euro යුරෝ
+eure ආර් ර්
+euro යුරෝ යූරෝ
 europa යුරෝපා
 european යුරෝපීයන්
 eury යුරි
-evatt එවිට
-eve ඒව
+evatt එවිට ඒවාට
+eve ඒව ඉව
 everest එවරස්ට්
-evett එවිට
-evitt එවිට
+evett එවිට ඇවිත්
+evitt එවිට ඇවිත්
 evon එවන්
 evonne එවන්
-ewe යූ
-ewell යුවල
-ewen යුවාන්
+ewe යූ යු
+ewell යුවල යුවළ
+ewen යුවාන් යූන්
+ewers යුවරජු
 ewong යුවාන්
 exit එක්සත්
 explorer එක්ස්ප්ලෝරර්
 eyde ඇද
-eydie ඇදී
+eydie ඇදී එඩී
 eye අයි
 eyer අයියර්
 eyes අයිස්
 eyler එළාර
-eyman එමෙන්
+eyman එමෙන් එමින්
 eynon එන්න
-eyre ර්
-eyton එතැන්
-ezell ජෙල්
+eyre ර් එයාර්
+eyton එතැන් ඇතුන්
+ezell ජෙල් අසේල
 ezoe එජා
-ezzell ඇසළ
+ezzell ඇසළ ඇසල
 ezzo එජා
 faal ඵල
-fac ඵක්
+fac ඵක් පහක්
 face ෆේස්
 facebook ෆේස්බුක්
 fahl ඵල
@@ -2813,9 +2974,9 @@ fan පහෙන්
 fane පහෙන්
 fann පහෙන්
 faraday ෆැරඩේ
-farah ෆේරි
+farah ෆේරි ෆෙයාර්
 fare ෆෙයාර්
-farrah ෆේරි
+farrah ෆේරි ෆෙයාර්
 farrey ෆේරි
 farry ෆේරි
 fashion ෆැෂන්
@@ -2829,7 +2990,7 @@ faught ෆෝට්
 faulks ෆොක්ස්
 fauth ෆෝට්
 faux ෆොක්ස්
-faw ෆො
+faw ෆො ෆෝ
 fawkes ෆොක්ස්
 fay පහේ
 faye පහේ
@@ -2855,9 +3016,9 @@ fels ෆයිල්ස්
 fen පහෙන්
 fenn පහෙන්
 fer ෆෙයාර්
-fera ෆේරි
+fera ෆේරි ෆෙයාර්
 ferdie ෆැරඩේ
-ferra ෆේරි
+ferra ෆේරි ෆෙයාර්
 ferre ෆෙයාර්
 ferree ෆේරි
 ferri ෆේරි
@@ -2886,7 +3047,7 @@ fletcher ෆ්ලෙචර්
 florance ෆ්ලොරන්ස්
 florence ෆ්ලොරන්ස්
 focus ෆොක්ස්
-foe ෆො
+foe ෆො ෆෝ
 folkes ෆොක්ස්
 folks ෆොක්ස්
 foote ෆෝට්
@@ -2896,7 +3057,7 @@ fox ෆොක්ස්
 foxx ෆොක්ස්
 frady ෆ්‍රෙඩී
 franc ෆ්‍රෑන්ක්
-france ෆ්‍රාන්ස්
+france ෆ්‍රාන්ස් ෆ්රාන්ස්
 frances ෆ්‍රැන්සිස්
 franck ෆ්‍රෑන්ක්
 francke ෆ්‍රෑන්ක්
@@ -2923,50 +3084,50 @@ frome ෆ්‍රොම්
 fromm ෆ්‍රොම්
 fromme ෆ්‍රොම්
 fronk ෆ්‍රෑන්ක්
-frunze ෆ්‍රාන්ස්
+frunze ෆ්‍රාන්ස් ෆ්රාන්ස්
 fsi ඵසේ
-fuck ඵක්
+fuck ඵක් පහක්
 fulk ෆැල්ක්
 fun පහන්
 furry ෆේරි
 fussy ඵසේ
 futon ෆෝටෝන
-gaar ගොර
+gaar ගරු
 gabay ගැබේ
 gabby ගැබේ
 gabie ගැබේ
 gaby ගැබේ
-gacy ගැසී
+gacy ගැසී ගැසේ
 gaddie ගෙඩි
 gaddy ගෙඩි
 gadfly ගැඩ්ෆ්ලයි
 gadhafi ගඩාෆි
 gae ගයි
-gaea ගිය
+gaea ගිය ගේ
 gaetz ගේට්ස්
-gagen ගගන
-gagne ගැනේ
-gahli ගලේ
-gahm ගම්
-gahr ගොර
+gagen ගගන ගඟන
+gagne ගැනේ ගෙනි
+gahli ගලේ ගැලී
+gahm ගම් ගේම්
+gahr ගරු
 gaige ගේජ්
-gail ගේල්
-gaile ගේල්
+gail ගේල් ගැල්
+gaile ගේල් ගැල්
 gailey ගැලී
 gaily ගැලී
-gain ගෙන
-gainey ගැනේ
-gaining ගෙනෙන
-gait ගැට
+gain ගෙන ගෙන්
+gainey ගැනේ ගෙනි
+gaining ගෙනෙන ගැනිණ
+gait ගැට ගෙට
 galane ගලෙන්
 galaxy ගැලැක්සි
-gale ගේල්
+gale ගේල් ගැල්
 galey ගැලී
 galie ගැලී
-galka ගලක්
-gall ගෝල්
-galley ගලේ
-galli ගලේ
+galka ගලක් ගෙලක්
+gall ගෝල් ගාලු
+galley ගලේ ගැලී
+galli ගලේ ගැලී
 gallien ගලින්
 gallo ගලා
 gallon ගලන
@@ -2975,51 +3136,53 @@ galoob ග්ලෝබ්
 gamba ගෙම්බා
 game ගේම්
 games ගේම්ස්
-gamm ගම්
-gamma ගම
+gamm ගම් ගේම්
+gamma ගම ගම්
 gamut ගමට
-gananoque ගණනක්
-gandee ගන්දි
-gandhi ගන්දි
-ganem ගැනීම
-ganey ගැනේ
-gang ගෙන
+gananoque ගණනක් ගනනක්
+gandee ගන්දි ගණ්ඩි
+gandhi ගන්දි ගණ්ඩි
+ganem ගැනීම ගැනීම්
+ganey ගැනේ ගෙනි
+gang ගෙන ගෙන්
 gannett ගණිත
-gannon ගණන්
-gano ගොනා
+gannon ගණන් ගන්න
+gano ගොනා ගෝනා
 ganoe ගෙනා
 gantt ගැනත්
 gaona ගෝනා
-gar ගොර
-garden ගෝර්ඩන්
+gar ගරු
+garden ගෝර්ඩන් ගෝර්ඩ්න්
 gareau ගරා
-garro ගොරෝ
+garr ගරු
+garro ගොරෝ ගරා
 garrol ගර්ල්
+gas ගෑස්
 gaskey ගසකි
-gass ගස්
-gassed ගැසට්
-gassee ගසේ
+gass ගස් ගෑස්
+gassed ගාස්තු ගැසට්
+gassee ගසේ ගැසී
 gassen ගසන
 gaston ගැස්ටන්
-gate ගැට
+gate ගැට ගෙට
 gates ගේට්ස්
 gather ගෙදර
 gating ගැටෙන
-gatt ගත්
-gatti ගති
-gatty ගති
+gatt ගත් ගත
+gatti ගති ගෙතී
+gatty ගති ගෙතී
 gatz ගේට්ස්
-gau ගෝ
+gau ගෝ ගො
 gaub ගොබ
 gaudin ගෝඩන්
 gaudy ගොඩේ
 gauge ගේජ්
-gaugh ගෝ
+gaugh ගෝ ගා
 gaughan ගායන
 gaughman ගාමින්
-gaul ගෝල්
-gaulle ගෝල්
-gauna ගොනු
+gaul ගෝල් ගාලු
+gaulle ගෝල් ගාලු
+gauna ගොනු ගොන්
 gause ගොස්
 gauss ගවුස්
 gaut ගොත්
@@ -3027,35 +3190,41 @@ gauthreaux ගාත්‍රා
 gauvain ගෝවෙන්
 gauvin ගෝවෙන්
 gauze ගොස්
-gavan ගෙවන
+gavan ගෙවනු ගෙවන
+gave ගෙවූ
 gavel ගෙවල්
-gaven ගෙවන
+gaven ගෙවනු ගෙවන
 gawen ගායන
 gawk ගොක්
-gawne ගොන්
+gawne ගොන් ගොනු
 gay ගේ
 gayda ගෙඩි
-gaydar ගෙදර
+gaydar ගෙදර ගේදොර
 gaye ගේ
-gayle ගේල්
-gays ගෑස්
-gaytan ගැටෙන
-gayton ගැටෙන
-gaz ගොස්
+gayle ගේල් ගැල්
+gaymon ගැමුණු
+gays ගෑස් ගේජ්
+gaytan ගෙතුණු ගැටුණු
+gayton ගෙතුණු ගැටුණු
+gaz ගොස් ගස්
 gaza ගාසා
-gaze ගෑස්
-gean ජින්
-gear ගියර්
+gaze ගෑස් ගේජ්
+gean ජින් ජීන්
+gear ගියර් ගිර
 gearey ගිරි
 geary ගිරි
 geck ජැක්
-gee ජී
+gee ජී ජේ
 geeing ජීන්
-geena ගිනි
+geena ගිනි ගිණි
 geenen ගින්න
-geer ගියර්
-gehl ගේල්
+geer ගියර් ගිර
+gees ජේසු
+geez ජේජු ජේසු
+geeze ජේජු ජේසු
+gehl ගේල් ගැල්
 gehm ජෑම්
+gehman ගැමුණු
 geiger ගයිගර්
 geis ගයිස්
 geise ගයිස්
@@ -3065,44 +3234,47 @@ gelli ගැලී
 gem ජෑම්
 gemma ජෑම්
 gemme ජෑම්
-gene ජින්
-general ජෙනරාල්
-generale ජෙනරාල්
-geng ජෑං
-genna ජෛන
+gene ජින් ජීන්
+general ජෙනරාල් ජෙනරල්
+generale ජෙනරාල් ජෙනරල්
+geng ජෑං ජේන්
+genna ජෛන ජේන්
 gens ජෙන්ස්
 genson ජැන්සන්
 genz ජෙන්ස්
 geoff ජෙෆ්
 geoffrey ජෙෆ්රි
-george ජෝර්ජ්
+george ජෝර්ජ් ජොර්ජ්
 georges ජෝර්ජස්
-georgia ජෝර්ජ්
+georgia ජෝර්ජ් ජොර්ජ්
 georgio ජෝර්ජියා
 gerald ජෙරල්ඩ්
-gere ගියර්
-german ජර්මන්
+gere ගියර් ගිර
+german ජර්මන් ජර්මානු
 germani ජර්මනි
 germany ජර්මනි
 gerrald ජෙරල්ඩ්
 gert ගර්ත
 gerth ගර්ත
 gesell ගැසල්
-gess ජෑස්
+gess ජේසු ජෑස්
 gessel ගැසල්
 get ගීත
+gettel ගැටලු ගැටළු
 getting ගැටෙන
+gettle ගැටලු ගැටළු
 getts ගේට්ස්
-getty ගෙතී
+getty ගෙතී ගැටී
 getz ගේට්ස්
-geving ජීවීන්
+geving ජීවීන් ජීවින්
 ghada ගොඩ
-gheen ගින්
-ghez ගෑස්
-ghezzi ගැසී
+gheen ගින් ගිං
+ghez ගෑස් ගේජ්
+ghezzi ගැසී ගැසේ
 ghose ගොස්
-ghoul ගෝල්
-giang ජෝන්
+ghost ගාස්තු
+ghoul ගෝල් ගෝල
+giang ජෝන් ජොං
 gianni ජොනී
 gib ගැබ්
 gibbs ගිබ්ස්
@@ -3111,40 +3283,42 @@ gick ජැක්
 giddy ගෙඩි
 gide ජේඩ්
 giel ජිල්
-gies ගේජ්
+gies ගේජ් ගිජු
+giese ජේසු
 giger ගයිගර්
-gill ගිල්
-gillam ගැලුම්
+gill ගිල් ගේල්
+gillam ගැලුම් ගැලීම්
 gillan ගිලන්
 gillean ගිලන්
-gillem ගැලීම්
+gillem ගැලීම් ගැලීම
 gillen ගිලන්
 gilles ජිල්
-gilley ගිලී
-gillie ගිලී
+gilley ගිලී ගැලී
+gillie ගිලී ගැලී
 gillock ගෙලක්
 gillon ගිලන්
-gillum ගැලුම්
-gilly ගිලී
+gillum ගැලුම් ගැලීම්
+gilly ගිලී ගැලී
 gimme ගැමි
-gin ජින්
-gina ජින්
+gin ජින් ජීන්
+gina ජින් ජීන්
 ginther ගින්දර
-giorgia ජෝර්ජ්
+giorgia ජෝර්ජ් ජොර්ජ්
 giorgio ජෝර්ජියා
-gipp ජීප්
+gipp ජීප් ජිප්
 girdle ගර්ඩ්ල්
-giren ජීරණ
+giren ජීරණ ජීර්ණ
 girl ගර්ල්
 giron ජීරණ
 girt ගර්ත
 girth ගර්ත
-gissi ගැසී
+gissi ගැසී ගැසේ
 gisu ජේසු
 gitter ගිටාර්
 giulio ජූලියා
-givan ගෙවන
-given ගෙවන
+givan ගෙවනු ගෙවන
+give ගෙවූ
+given ගෙවනු ගෙවන
 giza ගිජා
 glaab ග්ලෝබ්
 glahn ගලෙන්
@@ -3163,21 +3337,21 @@ glow ගලා
 glows ග්ලාස්
 gluck ගලක්
 glucose ග්ලූකෝස්
-glyn ගලින්
-glynn ගලින්
-gmbh ගම්
-gnann නාන්
-gnat නැත
+glyn ගලින් ගලෙන්
+glynn ගලින් ගලෙන්
+gmbh ගම් ගම
+gnann නාන් නන්
+gnat නැත නෙත්
 gnats නයිට්ස්
-gnaw නො
-gnawed නාද
+gnaw නො නා
+gnawed නාද නාඩු
 gnawing නාඉන්
 gnaws නාස්
-gnome නාම
-goa ගොවි
+gnome නාම නොම
+goa ගොවි ගෝ
 goad ගොඩ
-goal ගෝල්
-goan ගොන්
+goal ගෝල් ගෝල
+goan ගොන් ගොනු
 goar ගොර
 goat ගොත්
 goatee ගොතේ
@@ -3185,53 +3359,53 @@ gobie ගෝබි
 gocke ගොක්
 godar ගේදොර
 godden ගෝඩන්
-goe ගෝ
+goe ගෝ ගො
 goecke ගොක්
 goedde ගොඩ
 goede ගොඩ
 goeden ගෝඩන්
 goeke ගොක්
 goeman ගාමින්
-goen ගොන්
+goen ගොන් ගොනු
 goes ගොස්
 goethe ගොත්
-goette ගැට
+goette ගැට ගෙට
 goetz ගේට්ස්
-gogh ගෝ
+gogh ගෝ ගො
 goghs ගොස්
-goh ගෝ
-goheen ගිහින්
-gohl ගෝල්
+goh ගෝ ගො
+goheen ගිහින් ගින්
+gohl ගෝල් ගෝල
 gohlke ගොක්
 gohman ගාමින්
-gohn ගොන්
-gohr ගොර
-going ගොවීන්
+gohn ගනු ගොන්
+gohr ගරු
+going ගොවීන් ගොවින්
 golan ගලන
 golda ගෝල්ඩ්
 golde ගෝල්ඩ්
 golden ගෝල්ඩන්
 golen ගලන
 golf ගල්ෆ්
-golly ගලේ
+golly ගලේ ගැලී
 gond ගඳ
 gonda ගඳ
-gone ගොන්
-gong ගොන්
-gonna ගැන
+gone ගොන් ගොනු
+gong ගොන් ගොනු
+gonna ගැන ගොන්
 gonya ගෝනි
-good ගුඩ්
-gooda ගුද
-goode ගුඩ්
+good ගුඩ් ගුඩු
+gooda ගුද ගුඩ්
+goode ගුඩ් ගුඩු
 gooden ගෝඩන්
 goodin ගෝඩන්
 gooey ගෝවේ
 google ගූගල්
 gooley ගුලි
-goon ගුණ
+goon ගුණ ගුං
 gootee ගුටි
-gorden ගෝර්ඩන්
-gordon ගෝර්ඩන්
+gorden ගෝර්ඩන් ගෝර්ඩ්න්
+gordon ගෝර්ඩන් ගෝර්ඩ්න්
 gore ගොර
 goree ගෞරි
 gorey ගෞරි
@@ -3240,27 +3414,27 @@ gorr ගොර
 gory ගෞරි
 gose ගොස්
 goss ගොස්
-gosse ගොස්
+gosse ගොස් ගස්
 gossen ගොසින්
-got ගත්
+got ගත් ගත
 gotcher ගෝචර
 gothic ගතික
-gott ගත්
-gotta ගත
+gott ගත් ගත
+gotta ගත ගත්
 gotten ගොතන
-gotti ගති
+gotti ගති ගොතේ
 gould ගෝල්ඩ්
 goulden ගෝඩන්
 goupil ගෝපාල්
-govan ගොවීන්
+govan ගොවීන් ගොවින්
 goza ගාසා
 grace ග්‍රේස්
 graddy ගරාදි
-graeme ග්‍රෑම්
-graham ග්‍රෑම්
+graeme ග්‍රෑම් ග්රෑම්
+graham ග්‍රෑම් ග්රෑම්
 grained ග්‍රෑන්ඩ්
 gramaphone ග්‍රැමෆෝන්
-gramm ග්‍රෑම්
+gramm ග්‍රෑම් ග්රෑම්
 grammophon ග්‍රැමෆෝන්
 grammy ග්‍රැමී
 grand ග්‍රෑන්ඩ්
@@ -3269,8 +3443,8 @@ grande ග්‍රෑන්ඩ්
 grandt ග්‍රන්ත
 granted ග්‍රෑන්ඩ්
 granville ග්‍රැන්විල්
-grass ග්රස්
-grasse ග්රස්
+grass ග්රස් ග්‍රේස්
+grasse ග්රස් ග්‍රේස්
 grate ග්‍රේට්
 graue ගරු
 grauer ග්‍රෝවර්
@@ -3280,10 +3454,11 @@ gray ග්‍රේ
 graye ග්‍රේ
 grays ග්‍රේස්
 graze ග්‍රේස්
-grease ග්රීස්
+grease ග්රීස් ග්‍රේස්
 great ග්‍රේට්
 grecian ග්‍රේෂන්
-greece ග්රීස්
+greece ග්රීස් ග්‍රේස්
+greek ග්‍රීක්
 greene ග්‍රීන්
 gregorie ග්‍රෙගරි
 gregory ග්‍රෙගරි
@@ -3296,23 +3471,23 @@ grew ගරු
 grewe ගරු
 grey ග්‍රේ
 grieme ග්‍රිම්
-griese ග්රීස්
-griess ග්රීස්
+griese ග්රීස් ග්‍රේස්
+griess ග්රීස් ග්‍රේස්
 griffen ග්‍රිෆින්
 griffin ග්‍රිෆින්
 griffing ග්‍රිෆින්
 griffon ග්‍රිෆින්
 grigory ග්‍රෙගරි
-grim ග්‍රෑම්
+grim ග්‍රෑම් ග්රෑම්
 grima ග්‍රිම්
-grimm ග්‍රෑම්
-grimme ග්‍රෑම්
+grimm ග්‍රෑම් ග්රෑම්
+grimme ග්‍රෑම් ග්රෑම්
 grinde ග්‍රෑන්ඩ්
 gring ග්‍රීන්
 grinned ග්‍රෑන්ඩ්
 grisham ග්‍රීෂ්ම
 grit ග්‍රේට්
-griz ග්රීස්
+griz ග්රීස් ග්‍රේස්
 groer ග්‍රෝවර්
 groh ගරා
 grosse ග්රස්
@@ -3325,24 +3500,24 @@ gruss ග්රස්
 gruver ග්‍රෝවර්
 guay ගේ
 guba ගෝබි
-guel ගේල්
-guenna ගෙන
-guess ගෑස්
+guel ගේල් ගැල්
+guenna ගෙන ගැන
+guess ගෑස් ගැසූ
 guessed ගැසට්
 guessing ගැසෙන
 guest ගැසට්
-guez ගෑස්
+guez ගෑස් ගේජ්
 gugel ගූගල්
 guhl ගල්
 guice ගයිස්
-guill ගිල්
+guill ගිල් ගේල්
 guillen ගිලන්
 guillot ගිලා
-guin ගෙන
-guinea ගිනි
+guin ගෙන ගෙන්
+guinea ගිනි ගැනේ
 guiness ගිනස්
-guiney ගිනි
-guinn ගෙන
+guiney ගිනි ගැනේ
+guinn ගෙන ගෙන්
 guinness ගිනස්
 guinther ගින්දර
 guise ගයිස්
@@ -3350,140 +3525,141 @@ guitar ගිටාර්
 gul ගල්
 gulf ගල්ෆ්
 gull ගල්
-gulla ගල්
-gullah ගල්
-gulley ගලේ
+gulla ගල් ගලා
+gullah ගල් ගලා
+gulley ගලේ ගැලී
 gulli ගුලි
-gully ගලේ
-gum ගම්
-gumm ගම්
-gummi ගමේ
-gummy ගමේ
-gun ගැන
-gundy ගන්දි
-gunn ගැන
+gully ගලේ ගැලී
+gum ගම් ගම
+gumm ගම් ගම
+gummi ගමේ ගැමි
+gummy ගමේ ගැමි
+gun ගනු ගැන
+gundy ගන්දි ගණ්ඩි
+gunn ගනු ගැන
 gunned ගඳ
 gunny ගනී
 gura ගුරු
 gus ගස්
 gusky ගසකි
 guss ගස්
-gussie ගසේ
-gussy ගසේ
-gust ගැසට්
-guste ගැසට්
+gussie ගසේ ගැසී
+gussy ගසේ ගැසී
+gust ගාස්තු ගැසට්
+guste ගාස්තු ගැසට්
 guston ගැස්ටන්
-gut ගත්
-gutt ගත්
+gut ගත් ගත
+gutt ගත් ගත
 guy ගයි
 guys ගයිස්
 guzman ගජමන්
 guzzle ගැසල්
 gwen ගවයින්
 gyger ගයිගර්
-gym ජිම්
+gym ජිම් ජෑම්
 gymnastic ජිම්නාස්ටික්
-gyms ජේම්ස්
-gyn ගෙන
-gyp ජීප්
-haack හැක
-haacke හැක
-haak හැක
-haake හැක
-haan හන්
-haas හස
-haase හස
-haass හස
+gyms ජේම්ස් ජෙම්ස්
+gyn ගෙන ගෙන්
+gyp ජීප් ජිප්
+haack හැක හක්
+haacke හැක හක්
+haak හැක හක්
+haake හැක හක්
+haan හන් හොං
+haas හසු
+haase හසු
+haass හසු
 habel හබල්
 haberle හබරල
 haby හෙබි
 hack හැක
-had හැඩ
-hadd හැඩ
+had හැඩ හෙද
+hadd හැඩ හෙද
 haddan හදන
 hadden හදන
 haddock හඩක්
 haddon හදන
 haddow හදා
-hade හැඩ
+hade හැඩ හෙද
 haden හැදින්
 hadson හඩ්සන්
-haese හිස්
+haese හිස් හිස
 hag හේග්
 hagg හේග්
 hagge හේග්
 hague හේග්
-hagy හැඟී
-hah හා
-hahl හාල්
-hahm හම්
-hahn හන්
-hahne හේන්
-hahs හස
-haid හැඩ
-haidee හැදී
+hagy හැඟී හැගේ
+hah හා හෝ
+hahl හාල් හෝල්
+hahm හමු හම්
+hahn හන් හොං
+hahne හේන් හැන්
+hahs හසු
+haid හැඩ හෙද
+haidee හැදී හැදි
 haig හේග්
-haigh හේ
-haight හෙට
+haigh හේ හෙ
+haight හේතු
 haik හැක
-hail හැල්
-haile හැල්
-hailey හෙළි
+hail හැල් හෙළ
+haile හැල් හෙළ
+hailey හෙළි හෙලි
 haim හැම
-hain හේන්
+hain හේන් හැන්
 hainey හේනේ
 hair හැර
 haire හැර
 hairr හැර
-hairy හැරී
-hait හෙට
-haith හෙට
+hairy හැරී හැරේ
+hait හේතු
+haith හේතු
 haiti හැටි
 hajj හජ්
 hake හැක
 hakki හැකි
-hale හැල්
-haley හෙළි
+hale හැල් හෙළ
+haley හෙළි හෙලි
 halima හෙලීම
-hall හෝල්
-halla හෙළ
-halle හෙළි
-halley හෙළි
-hallie හවුලේ
+hall හෝල් හාල්
+halla හෙළ හෙලා
+halle හෙළි හැල්
+halley හෙළි හෙලි
+hallie හවුලේ හෝලි
 hallin හැලෙන
 hallman හොල්මන්
-hallow හෙලා
-hally හෙළි
-halm හම්
-halo හෙලා
-halon හෙලන්
+hallow හෙලා හෙළා
+hally හෙළි හෙලි
+halm හමු හම්
+halo හෙලා හෙළා
+halon හෙලන් හෙලන
 halved හාවඩ්
-hamann හෝමෝන
+ham හමු
+hamann හෝමෝන හමන
 hamer හමාර
 hamlet හැම්ලට්
-hamm හම්
+hamm හමු හම්
 hamman හමන
 hammann හමන
 hammar හමාර
 hammas හමාස්
-hamme හම්
+hamme හමු හම්
 hammen හමන
 hammer හමාර
 hammon හමන
 hamon හමන
 hamre හමාර
-hance හාන්ස්
+hance හාන්ස් හංස
 hancock හැන්කොක්
 hand හැඳ
 handing හැඳින්
 hands හාන්ස්
-hane හේන්
+hane හේන් හැන්
 haney හේනේ
-hang හන්
-hanged හැඳ
-hann හන්
-hanna හන්
-hannah හන්
+hang හන් හේන්
+hanged හැඳ හඳ
+hann හන් හේන්
+hanna හන් හේන්
+hannah හන් හේන්
 hannay හේනේ
 hannes හාන්ස්
 hanney හානි
@@ -3492,24 +3668,26 @@ hannibal හැනිබල්
 hannie හානි
 hannoch හේනක්
 hanny හානි
+hans හංස
 haq හැක
 haque හැක
 harass හරස්
 harcum හොරකම්
 hare හැර
-harem හැරීම
+harem හැරීම හැරීම්
 hariz හැරිස්
 harke හරක්
 harmen හර්මන්
 harmon හර්මන්
 harold හැරල්ඩ්
-harr හැර
-harra හැර
-harrah හැර
-harre හැර
+harr හැර හර
+harra හැර හොර
+harrah හැර හර
+harre හැර හර
 harren හාරන
 harries හැරිස්
 harriman හැරීමෙන්
+harring හරිනු
 harriott හරියට
 harris හැරිස්
 harrison හැරිසන්
@@ -3517,274 +3695,286 @@ harriss හැරිස්
 harrod හෙරොද්
 harrold හැරල්ඩ්
 harron හාරන
+harroun හැරුණු හැරුනු
 harrow හාරා
-harry හැරී
-harsch හර්ෂ්
+harry හැරී හැරේ
+harsch හර්ෂ් හර්ෂ
+harsh හර්ෂ
 harten හෝර්ටන්
 harton හෝර්ටන්
 hartz හර්ට්ස්
-has හජ්
-hass හස
+has හජ් හසු
+hass හසු
 hassan හසන්
-hasse හස
+hasse හසු
 hassel හසල
 hassell හසල
 hassen හසන්
 hassett හසිත
 hassle හසල
 hasson හසන්
-hate හෙට
+hat හේතු
+hata හොත්
+hate හේතු
 hatem හෙතෙම
-hatt හට
+hatt හේතු හට
 hattan හැටන්
 hatten හැටන්
 hatter හතර
 hatteras හතරැස්
-hattie හැටි
+hattie හැටි හතේ
 hatton හැටන්
-hatty හැටි
-haugh හා
-haughey හොකී
+hatty හැටි හතේ
+haugh හා හෝ
+haughey හොකී හොකි
 haughn හොං
-haught හොත්
+haught හොත් හොට්
 haughton හෝටන්
 haughty හොති
 haun හොං
 hausa හවුස්
 hause හවුස්
 hauss හවුස්
-haut හොත්
+haut හොත් හොට්
 hautala හෝටල්
-haute හට
-hauth හොත්
+haute හට හොත්
+hauth හොත් හොතු
 haven හෙවන්
-haw හා
+haw හා හෝ
 hawass හවාස්
-hawe හා
+hawe හා හෝ
 hawes හවුස්
-hawkey හොකී
-hawley හවුලේ
+hawkey හොකී හොකි
+hawley හවුලේ හෝලි
 hawn හොං
 haws හවුස්
-hay හේ
+hay හේ හෙ
 hayden හැදින්
 haydon හැදින්
-haying හෙයින්
-hayley හෙළි
+haying හෙයින් හේන්
+hayley හෙළි හෙලි
 hayman හෙමින්
 haymon හෙමින්
-hayn හේන්
-hayne හේන්
+hayn හේන් හැන්
+hayne හේන් හැන්
 haynie හේනේ
-hayton හේතූන්
-head හැඩ
+hayton හේතූන් හැටන්
+head හැඩ හෙද
 headen හැදින්
 heading හැදින්
-heady හැදී
+heady හැදී හැදි
 heal හිල්
 heaney හේනේ
 heap හිප්
 heape හිප්
-hear හිර
+hear හිරු
 hearon හිරාන්
-hearron හොරෙන්
+hearron හොරෙන් හොරණ
 hearse හරස්
 hearten හෝර්ටන්
 hearths හර්ට්ස්
 hearts හර්ට්ස්
-heat හීත්
-heath හීත්
+heat හේතු
+heath හේතු
 heathen හිතන
-heaton හේතූන්
+heaton හේතූන් හේතුන්
 heaven හෙවන්
 hebb හෙබ
 heck හැක
 heckuva හැකිව
 hectare හෙක්ටර්
 hector හෙක්ටර්
-hedda හැඩ
+hedda හැඩ හෙද
 hedden හැදින්
 hedding හැදින්
-heddy හැදී
+heddy හැදී හැදි
 hedeen හැදින්
 hee හි
 heed හිද
 heel හිල්
 heeney හේනේ
 heeren හිරාන්
-hees හිස්
-heese හිස්
+hees හිස් හිස
+heese හිස් හිස
 hegenna හැඟෙන
 hegg හේග්
 hegge හේග්
-heggie හැඟී
-heh හේ
-hehl හැල්
+heggie හැඟී හැගේ
+heh හේ හෙ
+hehl හැල් හෙළ
 hehman හෙමින්
-hehn හේන්
+hehn හේන් හැන්
 hehr හැර
-heir ර්
-heiress එරිස්
+heir ර් එයාර්
+heiress එරිස් ඒරිස්
 helane හැලෙන
-helen හෙලන්
-helena හෙලන
-helie හෙළි
+helen හෙලන් හෙලන
+helena හෙලන හෙලන්
+helicopter හෙලිකොප්ටර
+helie හෙළි හෙලි
 helin හැලෙන
 helium හීලියම්
-hell හැල්
-helle හැල්
-hellen හෙලන්
-hello හෙලා
+hell හැල් හෙළ
+helle හැල් හෙළ
+hellen හෙලන් හෙලන
+hello හෙලා හෙළා
 hemann හෙමින්
 heming හෙමින්
 hemm හැම
 hemme හැම
 hemmen හෙමින්
 hemming හෙමින්
+hen හැන්
 hendee හැඳි
 heney හේනේ
-heng හේන්
+heng හේන් හැන්
 henie හේනේ
 henke හේනක්
-henn හේන්
-henna හේන්
-henne හේන්
+henn හේන් හැන්
+henna හේන් හේන
+henne හේන් හැන්
 henney හේනේ
-heon හේන්
+heon හේන් හීන්
+her හර
 herdt හේරත්
-here හිර
+here හිරු
 herin හැරෙන
+hering හරිනු
 herk හරක්
 herman හර්මන්
 hermann හර්මන්
 hermon හර්මන්
 herold හැරල්ඩ්
-heron හැරෙන
+heron හැරුණු හැරුනු
 herr හැර
-herre හැර
-herren හැරෙන
+herre හැර හරි
+herren හැරුණු හැරුනු
 herriman හැරීමෙන්
 herrin හැරෙන
 herrod හෙරොද්
-herron හැරෙන
+herron හැරුණු හැරුනු
 hers හරස්
-hersch හර්ෂ්
-hersh හර්ෂ්
+hersch හර්ෂ් හර්ෂ
+hersh හර්ෂ් හර්ෂ
 herta හේරත්
 hertha හේරත්
 hertz හර්ට්ස්
 heryana හර්යානා
 herz හරස්
-hett හෙට
+hett හේතු
 hetti හැටි
 hettie හැටි
-hey හේ
-heyd හැඩ
-heyde හැඩ
+heuring හරිනු
+hey හේ හෙ
+heyd හැඩ හෙද
+heyde හැඩ හෙද
 heyden හැදින්
 heydon හැදින්
 heye හයි
-heying හෙයින්
-heyl හැල්
+heying හෙයින් හේන්
+heyl හැල් හෙළ
 heyman හෙමින්
 heymann හෙමින්
-heyn හේන්
-heyne හේන්
+heyn හේන් හැන්
+heyne හේන් හැන්
 hick හැක
 hickey හැකි
-hid හැඩ
+hid හැඩ හෙද
 hidden හැදින්
 high හයි
-hiley හෙළි
-hill හිල්
-hilla හෙළ
+hiley හෙළි හෙලි
+hill හිල් හැල්
+hilla හෙළ හිල්
 hillary හිලරි
-hille හිල්
+hille හිල් හැල්
 hilleary හිලරි
-hillen හෙලන්
+hillen හෙලන් හෙලන
 hillery හිලරි
-hilley හෙළි
-hilly හෙළි
+hilley හෙළි හෙලි
+hilly හෙළි හෙලි
 hilton හිල්ටන්
-him එම
+him එම එම්
 himel හිමාල
 himmel හිමාල
 himmler හිම්ලර්
-hinde හිඳ
+hinde හින්දු
 hiney හේනේ
-hinn හේන්
+hinn හේන් හීන්
 hinny හේනේ
 hinson හිංසන
 hipp හිප්
 hippe හිප්
-hirsch හර්ෂ්
-hirsh හර්ෂ්
+hirsch හර්ෂ් හර්ෂ
+hirsh හර්ෂ් හර්ෂ
 hirt හේරත්
 hirth හේරත්
 hirtz හර්ට්ස්
+his හිස
 hisey හිසේ
-hiss හිස්
-hissing හිසින්
+hiss හිස් හිස
+hissing හිසින් හිසෙන්
 history හිස්ට්‍රි
-hitt හීත්
+hit හේතු
+hitler හිට්‌ලර්
+hitt හේතු
 hittite හිටයිට්
-hitty හිටි
-hmm හම්
-hmmm හම්
-hmong මොන්
+hitty හිටි හිතේ
+hmm හමු හම්
+hmmm හමු හම්
+hmong මොන් මාන්
 hoang හොං
-hoar හොර
-hoare හොර
+hoar හොර හාර
+hoare හොර හාර
 hoarse හොරස්
 hobbes හොබ්ස්
 hobble හබල්
 hobbs හොබ්ස්
-hoc හැක
-hoch හැක
-hock හැක
-hockey හැකි
-hodde හොද
+hoc හැක හක්
+hoch හැක හක්
+hock හැක හක්
+hockey හැකි හොකී
+hodde හොද හද
 hodding හොදින්
 hodge හජ්
 hodson හඩ්සන්
-hoe හෝ
+hoe හෝ හා
 hoehn හොං
 hoehne හොං
-hoel හෝල්
-hoell හෝල්
-hoelle හෝල්
+hoel හෝල් හාල්
+hoell හෝල් හාල්
+hoelle හෝල් හාල්
 hoen හොං
-hoerr හොර
+hoerr හොර හාර
 hoffman හොෆ්මන්
 hoffmann හොෆ්මන්
 hofmann හොෆ්මන්
-hoh හෝ
-hohl හෝල්
+hoh හෝ හා
+hohl හෝල් හාල්
 hohman හෝමෝන
 hohmann හෝමෝන
-hohn හන්
-hokey හොකී
-hola හෝල්
-hole හෝල්
+hohn හන් හොං
+hokey හොකී හොකි
+hola හෝල් හාල්
+hole හෝල් හාල්
 holeman හොල්මන්
-holl හාල්
-holle හාල්
+holl හාල් හෝල්
+holle හාල් හෝල්
 holleman හොල්මන්
-holley හෝලි
-hollie හෝලි
+holley හෝලි හැලී
+hollie හෝලි හැලී
 hollman හොල්මන්
 hollmann හොල්මන්
-holly හෝලි
+holly හෝලි හැලී
 hollywood හොලිවුඩ්
-holm හෝම්
+holm හෝම් හෝම
 holmes හෝම්ස්
 homan හෝමෝන
 homann හෝමෝන
-home හෝම්
+home හෝම් හෝම
 homen හෝමෝන
 homes හෝම්ස්
 hominy හාමිනේ
-homme හම්
+homme හමු හම්
 hommes හෝම්ස්
 homola හිමාල
 honaker හානිකර
@@ -3794,36 +3984,39 @@ honed හොඳ
 hones හාන්ස්
 honey හානි
 hongkong හොංකොං
-honn හන්
-honse හාන්ස්
+honn හන් හොං
+honse හාන්ස් හංස
 hoock හුක්
+hood හුදු
 hook හුක්
 hooke හුක්
 hoole හෝල්
 hooley හෝලි
-hoon හුන්
-hoonah හුණු
+hoon හුණු හුන්
+hoonah හුණු හුන්
 hooten හෝටන්
 hooton හෝටන්
 hooven හුවාං
-hope හොප්
-hopp හොප්
-hoppa හොප්
-hoppe හොප්
+hop හෝප්
+hope හොප් හෝප්
+hopp හොප් හෝප්
+hoppa හොප් හෝප්
+hoppe හොප් හෝප්
 horace හොරස්
 horman හෝර්මෝන
 hormann හෝර්මෝන
 hormone හෝර්මෝන
-horr හොර
+horr හොර හාර
 horse හොරස්
 horten හෝර්ටන්
 horton හෝර්ටන්
 horus හොරස්
-hoss හස
-hossain හුසේන්
-hote හොත්
+hoss හසු
+hossain හුසේන් හිසෙන්
+hot හට
+hote හොත් හොට්
 hoten හෝටන්
-hott හොත්
+hott හොත් හට
 hottel හෝටල්
 hotter හතර
 hottle හෝටල්
@@ -3847,119 +4040,127 @@ howle හවුල්
 howley හවුලේ
 howse හවුස්
 howze හවුස්
-hron රන්
+hren රේණු
+hron රන් රොන්
 hruby රූබි
-hsia සහ
+hsia සහ ෂා
 hua හෝ
 huan හ්වොන්
 huang හ්වොන්
 hubbell හබල්
 hubble හබල්
-huck හැක
-hucke හැක
-hud හද
+huck හැක හක්
+hucke හැක හක්
+hud හුදු හද
 huda හුදු
 hudak හුදෙක්
-huddie හැදී
-huddy හැදී
-hudock හුදෙක්
+huddie හැදී හාඩි
+huddy හැදී හාඩි
+hudock හුදෙක් හඩක්
 hudson හඩ්සන්
 huettl හෝටල්
-huggy හැඟී
-hugh යූ
-hughen යුවාන්
-hughey හැඟී
+huggy හැඟී හැගේ
+hugh යූ යු
+hughen යුවාන් යූන්
+hughey හැඟී හැගේ
 huh හා
-huhn හන්
-hula හෝල්
-huldie හැදී
-hull හල්
-hum හම්
+huhn හන් හුණු
+hula හෝල් හෝලි
+huldie හැදී හාඩි
+hull හල් හාල්
+hum හමු හම්
 huml හුමාල
-humm හම්
+humm හමු හම්
 hummel හුමාල
 hummell හුමාල
 hummer හමාර
 hummus හෝම්ස්
 hums හංස
-hund හඳ
-hung හන්
+hund හඳ හැඳ
+hung හන් හං
 hunger හන්ගර්
-hunted හඳ
+hunted හඳ හැඳ
 hunton හන්තාන
-hunza හන්ජා
-hur හැර
+hunza හන්ජා හංස
+hur හැර හර
 hurled හැරල්ඩ්
-hurray හැරේ
-hurri හැරී
-hurry හැරී
-hursh හර්ෂ්
+hurray හැරේ හිරැ
+hurri හැරී හරි
+hurry හැරී හරි
+hursh හර්ෂ් හර්ෂ
 hurt හේරත්
 hurta හේරත්
 hurts හර්ට්ස්
 hurtt හේරත්
 huson හුසේන්
-huss හස
+huss හසු
 hussain හුසේන්
 hussein හුසේන්
-husson හසන්
+husson හසන් හුසේන්
 hust හස්ත
 hustle හසල
 huston හස්තීන්
-hut හට
-hutt හට
+hut හට හත්
+hutt හට හත්
 hutter හතර
-hutton හතෙන්
+hutton හතෙන් හැටන්
 hwan හ්වොන්
 hwang හ්වොන්
 hydrogen හයිඩ්‍රජන්
 hylton හිල්ටන්
-hymn හිම
-hynd හිඳ
+hymn හිම හැම
+hynd හින්දු
 hynson හිංසන
 ian ඉයන්
 iba ඉබේ
+iberian අයිබීරියානු
 icahn අයිකන
 ice අයිස්
 ices අයිසිස්
 ich එච්
 ignace ඇග්නස්
-igoe ඊගෝ
+igoe ඊගෝ ඊගා
 igou ඊගෝ
-ihde ඉඩ
-ihnen ඉන්න
+ihde ඉඩ ඉඩ්
+ihnen ඉන්න එන්න
+ihrig ඉරිඟු
 ihrke ඉරක්
-iida ඉඩ
-iie ඊ
-ikey එකී
-ikie එකී
+iida ඉඩ ඉදි
+iie ඊ ඊයේ
+ikey එකී එකේ
+ikie එකී එකේ
 ikle එකල
 ikon අයිකන
 ila ඉල්
 iliad ඉලියඩ්
-ill එල්
-ilva එලවා
-ilya එළි
+ill එල් ඉල්
+ilva එලවා එළවා
+ilya එළි එලි
 imai ඒමයි
 imel එමිල්
-imm එම
+imm එම එම්
 immel එමිල්
+ince ඉන්සු
 index ඉන්ඩෙක්ස්
 india ඉන්දීය
-indian ඉන්දියන්
-indie ඉඳි
+indian ඉන්දියානු ඉන්දියන්
+indie ඉඳි ඇඳි
 indo ඈඳා
 indri ඇන්ඩ්රි
 indyk ඉන්දික
 inn ඉන්
+innes ඉන්සු
+inns ඉන්සු
+ins ඉන්සු
 intan ඇන්ටන්
 internacional ඉන්ටර්නැෂනල්
 international ඉන්ටර්නැෂනල්
 internatonal ඉන්ටර්නැෂනල්
 internet ඉන්ටර්නෙට්
-into ඉන්ටු
+into ඉන්ටු ඈන්ට
 iphone අයිෆෝන්
-iraq ඉරාක
+iranian ඉරානියානු
+iraq ඉරාක ඉරක්
 irick එරික්
 iridium ඉරිඩියම්
 irish අයිරිෂ්
@@ -3971,27 +4172,27 @@ ise අයිස්
 isla ඉල්
 island අයිලන්ඩ්
 isle අයිල්
-issa එසේ
+issa එසේ එස්
 issac ඇසක්
-issah එසේ
+issah එසේ එස්
 issam එසේම
 issie එසේ
 issing ඇසින්
 issy එසේ
-isu ඇසූ
+isu ඇසූ ඇසු
 itami ඇතැමි
 itch එච්
 item අයිතම
-iten අයිතීන්
+iten අයිතීන් අයිතින්
 ithaca ඈතක
 itoh ඉතා
 itty ඇති
 ivana ඉවාන්
-ivane එවන්
+ivane එවන් ඉවාන්
 ivanna ඉවාන්
 iven අයිවන්
 ivory අයිවරි
-iwen එවන්
+iwen එවන් ඉවාන්
 izzi එසේ
 izzo එජා
 izzy එසේ
@@ -4011,9 +4212,9 @@ jade ජේඩ්
 jae ජේ
 jaffa ජෙෆ්
 jaffrey ජෙෆ්රි
-jahn ජන
+jahn ජන ජේන්
 jahnke ජනක්
-jahns ජෝන්ස්
+jahns ජෝන්ස් ජොන්ජු
 jai හයි
 jail ජෙල්
 jakab ජේකබ්
@@ -4022,77 +4223,82 @@ jakie ජැකී
 jam ජෑම්
 jama ජෑම්
 jamb ජෑම්
-james ජේම්ස්
-jams ජේම්ස්
+james ජේම්ස් ජෙම්ස්
+jams ජේම්ස් ජෙම්ස්
+jan ජේන්
 jandt ජෙනට්
-jane ජේන්
-janella ජනේල
-janelle ජනෙල්
+jane ජේන් ජෑං
+janella ජනේල ජනෙල්
+janelle ජනෙල් ජනේල
 janes ජෙන්ස්
-janet ජෙනට්
-jani යෝනි
+janet ජෙනට් ජනිත
+jani යෝනි යොනි
 janice ජෙන්ස්
-janii ජුනි
+janii ජුනි ජූනි
 janisch ජනේෂ්
 janke ජනක්
-jannock ජානක
+jannock ජානක ජනක
 jannotta ජනතා
 janow යානා
-jans ජෙන්ස්
+jans ජෙන්ස් ජංසු
 jansa ජෙන්ස්
 jansen ජැන්සන්
 janson ජැන්සන්
 janssen ජැන්සන්
 jansson ජැන්සන්
 janus ජෙන්ස්
-janz ජෙන්ස්
-jarmin ජර්මන්
+janz ජෙන්ස් ජංසු
+jarmin ජර්මන් ජර්මානු
 jarreau ජරා
 jarrod ජරා
-jars ජෝර්ජ්
-jas ජෑස්
+jars ජෝර්ජ් ජොර්ජ්
+jas ජේසු ජෑස්
 jason ජේසන්
-jass ජෑස්
+jass ජේසු ජෑස්
 java ජාවා
-jaw ජෝ
+jaw ජෝ ජා
 jaws ජෝජ්
 jay ජේ
 jaye ජේ
 jaymes ජේමිස්
-jayne ජේන්
+jayne ජේන් ජෑං
 jaynes ජෙන්ස්
-jays ජෑස්
+jays ජේජු ජේසු
 jayson ජේසන්
-jazz ජෑස්
-jean ජින්
-jeana ජින්
-jeane ජින්
-jeanne ජින්
+jazz ජේජු ජේසු
+jean ජින් ජීන්
+jeana ජින් ජීන්
+jeane ජින් ජීන්
+jeanne ජින් ජීන්
 jeansonne ජැන්සන්
 jech ජැක්
+jeep ජිප්
+jees ජේජු ජේසු
+jeez ජේජු ජේසු
+jeeze ජේජු ජේසු
 jeff ජෙෆ්
 jeffe ජෙෆ්
-jefferson ජෙෆෙර්සන්
+jefferson ජෙෆෙර්සන් ජෙෆර්සන්
 jeffrey ජෙෆ්රි
 jeffry ජෙෆ්රි
 jehovah ජාවා
 jell ජෙල්
 jelley ජෙලි
 jelly ජෙලි
-jena ජින්
-jenn ජේන්
-jenna ජෛන
-jenne ජේන්
+jena ජින් ජීන්
+jenn ජේන් ජෛන
+jenna ජෛන ජේන්
+jenne ජේන් ජෛන
 jensen ජැන්සන්
 jenson ජැන්සන්
 jenssen ජැන්සන්
-jeong ජෑං
+jeong ජෑං ජේන්
 jeremy ජෙරමි
-jerman ජර්මන්
+jerman ජර්මන් ජර්මානු
 jerrold ජෙරල්ඩ්
 jersey ජර්සි
 jerzy ජර්සි
-jess ජෑස්
+jess ජේසු ජෑස්
 jessen ජේසන්
 jesson ජේසන්
 jett ජෙට්
@@ -4100,20 +4306,21 @@ jetta ජෙට්
 jette ජෙට්
 jew ජෝ
 jewel ජූල්
-jewry ජූරි
+jewry ජූරි ජුරි
 jews ජෝජ්
 jheel ජිල්
-jia ජී
-jian ජීන්
-jiang ජෝන්
-jie ජී
+jia ජී ජේ
+jian ජීන් ජේන්
+jiang ජෝන් ජොං
+jie ජී ජේ
 jif ජෙෆ්
-jill ජිල්
-jima ජිම්
+jill ජිල් ජෙල්
+jim ජෑම්
+jima ජිම් ජිමී
 jimmie ජිමී
 jimmy ජිමී
 jive ජෛව
-joan ජෝන්
+joan ජෝන් ජොන්
 joanie ජොනී
 joann ජොඈන්
 joanne ජොඈන්
@@ -4121,35 +4328,36 @@ joao ජෝ
 jobes ජොබ්ස්
 jock ජැක්
 jockey ජැකී
-joe ජෝ
+joe ජෝ ජා
 joel ජූල්
-joens ජෝන්ස්
+joens ජෝන්ස් ජොන්ජු
 joes ජෝජ්
-joh ජෝ
+joh ජෝ ජා
 johann යොහාන්
 johanna ජෛන
-john ජෝන්
+john ජෝන් ජන
 johnathan ජොනතන්
 johnathon ජොනතන්
 johnie ජොනී
 johnnie ජොනී
 johnny ජොනී
-johns ජෝන්ස්
+johns ජෝන්ස් ජොන්ජු
 johnsen ජොන්සන්
 johnson ජොන්සන්
 johnta ජනතා
 johny ජොනී
 johson ජොසොන්
-jonah ජෝන්
+jon ජන
+jonah ජෝන් ජාන
 jonas ජෝන්ස්
 jonathon ජොනතන්
-jone ජෝන්
-jones ජෝන්ස්
-jonn ජෝන්
+jone ජෝන් ජොන්
+jones ජෝන්ස් ජොන්ජු
+jonn ජෝන් ජන
 jonothan ජොනතන්
 jonson ජොන්සන්
 jonsson ජොන්සන්
-joong ජෝන්
+joong ජෝන් ජුං
 joos ජෝජ්
 jopp ජප
 jorden ජෝර්දාන්
@@ -4162,324 +4370,346 @@ joule ජූල්
 journal ජර්නල්
 jozef ජෝසෆ්
 jua ජෝ
-juan වන
+juan වන වනු
 juana වන
-judah ජූඩ්
+judah ජූඩ් ජුදා
 judd ජූඩ්
 jude ජූඩ්
 jue ජෝ
 juel ජූල්
 juge ජෝජ්
-juhl ජල
+juhl ජල ජාල
 juhnke ජනක්
 juicy ජුසේ
 jule ජූල්
-julia ජූලි
-julian ජූලියන්
-juliann ජූලියන්
-julie ජූලි
-julien ජූලියන්
+julia ජූලි ජුලි
+julian ජූලියානු ජූලියන්
+juliann ජූලියානු ජූලියන්
+julie ජූලි ජුලි
+julien ජූලියානු ජූලියන්
 julio ජූලියා
-jun ජන
+jun ජන ජාන
 junda ජන්ද
 june ජෝන්
 junes ජෝන්ස්
-junge ජං
+junge ජං ජන
+jungman ජන්මානු ජන්මාණු
 junia යෝනිය
 junk ජනක්
 junkie ජානකී
 junky ජානකී
-jura ජූරි
+jura ජූරි ජුරි
+jury ජුරි
 jus ජෝ
 justen ජස්ටින්
 justin ජස්ටින්
 justine ජස්ටින්
-jutting ජාතීන්
+jutting ජාතීන් ජාතින්
 kaatz කොටස්
 kabbah කබා
-kabbalah කබාලි
+kabbalah කබාලි කබොල
 kabel කේබල්
 kadow කඩා
-kady කැඩී
-kaelin කෙලින්
-kahan ඛාන්
-kahane කෙන්
-kahl කළ
-kahle කළ
-kahley කළේ
-kahn කන්
-kahng කොං
-kahr කර
-kahre කර
+kady කැඩී කෙදි
+kaelin කෙලින් කෙළින්
+kagel කෑගලු කෑගලූ
+kahan ඛාන් කන්
+kahane කෙන් කොහෙන්
+kahl කළ කල
+kahle කළ කල
+kahley කළේ කලේ
+kahn කන් කාන්
+kahng කොං කං
+kahr කර කාර්
+kahre කර කාර්
 kahuna කෝණ
 kai කාය
-kail කෙළ
-kaim කෑම
+kail කෙළ කැල
+kaim කෑම කෑම්
 kaine කෙන්
 kairey කෙරේ
-kaisha කේශ
-kalan කෙලින්
-kalen කෙලින්
-kalil කලල
-kalis කෙලෙස්
-kallal කලල
-kallam කේලාම්
-kallen කාලීන
-kallis කෙලෙස්
-kallus කලස්
+kaisha කේශ කේෂ
+kalan කෙලින් කෙළින්
+kalen කෙලින් කෙළින්
+kalil කලල කළල
+kalis කෙලෙස් කෙළෙස්
+kallal කලල කළල
+kallam කේලාම් කේළාම්
+kallen කාලීන කොලින්
+kallis කෙලෙස් කෙළෙස්
+kallus කලස් කලස
 kalok කලක්
-kalous කලස්
-kalthoff කළත්
+kalous කලස් කලස
+kalthoff කළත් කලත්
 kaman කෙමෙන්
 kamel කමල්
 kamen කෙමෙන්
 kamke කමකි
-kamm කම්
+kamm කම් කාම
 kammer කාමර
 kampen කම්පන
 kanady කෙනඩි
-kannan කොනන්
-kanne කන්
-kanno කානෝ
+kanak කෙනකු
+kanda කඳ
+kannan කොනන් කනාන්
+kanne කන් කණු
+kanno කානෝ කෙනා
 kanter කාන්තාර
 kaori කාරී
+kapaun කැපවුණු
 kapler කෙප්ලර්
-kappa කපා
+kappa කපා කැප
 kappel කපාල
 kappler කෙප්ලර්
 kapton කැප්ටන්
+karate කරඇති
 karch කාරක
-karel කේරල
+karel කේරල කේරළ
 karema ක්‍රෑම
-karen කෙරෙන
-karet කෙරෙත්
-karin කෙරෙන
-karle කොරල්
-karon කෙරෙන
-karoun කරුණ
-karr කර
-karren කරන
+karen කෙරුණු කෙරෙන
+karet කෙරෙත් කැරට්
+karin කෙරෙන කෙරෙන්
+karl කොරල්
+karle කොරල් කරල්
+karon කෙරුණු කෙරෙන
+karoun කරුණු කෙරුණු
+karp කරපු
+karr කර කාර්
+karren කරනු කරන
 karry කෙරේ
-kasch කේශ
+kasch කේශ කේෂ
 kase කෙස්
-kasel කසල
-kasell කසල
-kasey කෙසේ
+kasel කසල කසළ
+kasell කසල කසළ
+kasey කෙසේ කාසි
 kassan කේසොං
-kassel කසල
+kassel කසල කසළ
 kassen කේසොං
 kasson කේසොං
-kastle කසල
-kasza කෝෂ
-kate කේට්
+kastle කසල කසළ
+kasza කෝෂ කාශ
+kate කේට් කේතු
 katey කෙටි
 katharine කැතරින්
 katherine කැතරින්
-kathie කෙටි
+kathie කෙටි කති
 kathlene කැත්ලීන්
 kathryn කැතරින්
 kathy කෙටි
-katia කොටියා
+katia කොටියා කෝටිය
 katie කෙටි
-katja කොටි
+katja කොටි කති
 kats කයිට්ස්
-katyn කටින්
+katyn කටින් කොටින්
 katz කයිට්ස්
 kauble කාබුල්
-kauk කොක්
-kaul කාල්
-kaunda කාණ්ඩ
-kaup කෝප
-kaupp කෝප
+kauk කොක් කොකු
+kaul කාල් කාල
+kaunda කාණ්ඩ කොණ්ඩා
+kaup කොපු කෝප
+kaupp කොපු කෝප
 kauppi කෝපි
 kaus කොස්
-kauth කොට
+kauth කොට කොත්
 kautz කොටස්
-kay කේ
-kaydon කැඩෙන
+kawa කවා
+kay කේ කෑ
+kaydon කැඩුණු කැඩෙන
 kayes කෙස්
-kayla කෙළ
-kaylie කෙලී
-kaylynn කෙලින්
+kayla කෙළ කැල
+kaylie කෙලී කැලේ
+kaylynn කෙලින් කෙළින්
 kayne කෙන්
 kays කෙස්
 kazee කාසි
 kazoo කජු
-kea කි
+kea කි කී
 kean කින්
 keane කින්
-kear කැර
-kearley කැරලි
-kearn කරන්
-keary කෙරේ
+kear කෙරූ කැර
+kearley කැරලි කැරළි
+kearn කරනු
+keary කෙරේ කිරි
 keas කේශ
-keath කේට්
-keaton කීටෝන
-keats කීට්ස්
-keatts කීට්ස්
+keath කේතු කිතු
+keaton කිතුනු කීටෝන
+keats කීට්ස් කිට්ස්
+keatts කීට්ස් කිට්ස්
 keay කී
 keck කේක්
-keddy කැඩී
+keddy කැඩී කෙදි
 kedo කයිඩා
 keeble කේබල්
-keehan කියන
+keehan කියනු කියන
 keehn කින්
 keen කින්
 keena කින්
 keene කින්
 keenum කිනම්
-keeran කිරණ
+keep කීප
+keeran කිරණ කිරාන්
 keese කේශ
-keesee කිසි
-keesey කිසි
-keevil කේවල්
-kehl කෙළ
-kehm කෑම
-kehn කෙන්
-kehne කෙන්
-kehr කැර
-keim කිම්
-keitt කේට්
-keitz කීට්ස්
-kellam කේලාම්
-kellan කෙලින්
-kellen කෙලින්
-kelley කෙලී
-kelli කෙලී
-kellie කෙලී
-kelling කෙලින්
-kellis කෙලෙස්
-kellum කේලාම්
-kelly කෙලී
-kelvan කෙල්වින්
-kelven කෙල්වින්
+keesee කිසි කේසි
+keesey කිසි කේසි
+keeton කිතුනු
+keevil කේවල් කේවල
+kehl කෙළ කැල
+kehm කෑම කෑම්
+kehn කෙන් කයින්
+kehne කෙන් කයින්
+kehr කෙරූ කැර
+keim කිම් කීම
+keitt කේට් කේතු
+keitz කීට්ස් කිට්ස්
+kellam කේලාම් කේළාම්
+kellan කෙලින් කෙළින්
+kellen කෙලින් කෙළින්
+kelley කෙලී කැලේ
+kelli කෙලී කැලේ
+kellie කෙලී කැලේ
+kelling කෙලින් කෙළින්
+kellis කෙලෙස් කෙළෙස්
+kellum කේලාම් කේළාම්
+kelly කෙලී කැලේ
+kelvan කෙල්වින් කැල්වින්
+kelven කෙල්වින් කැල්වින්
 kemal කමල්
 kemron කැමරන්
+ken කයින්
 kendrick කේන්ද්‍රික
-kenn කෙන්
-kenna කෙනා
-kennedy කෙඳි
-kennett කෙනත්
+kenn කෙන් කයින්
+kenna කෙනා කෙන්
+kennedy කෙඳි කෙනඩි
+kennett කෙනත් කෙන්ට්
 kentucky කෙන්ටකි
+kenyan කෙන්යානු
+kenyen කෙන්යානු
+kenyon කෙන්යානු
 keo කියා
 keogh කියා
 keough කියා
-kepp කේප්
+kepp කේප් කැප
 keppler කෙප්ලර්
-kerley කැරලි
+kerley කැරලි කැරළි
 kerman කරමින්
-kern කරන්
+kern කරනු
 kernel කර්නල්
 kerr කර
 kerrey කෙරේ
 kerri කෙරේ
 kerry කෙරේ
+kerwen කරවනු
 kessel කෙසෙල්
 kessell කෙසෙල්
 kessen කේසොං
 kessle කෙසෙල්
 kesten කේසොං
 ketone කීටෝන
-ketou කටු
+ketou කටු කොටු
 kettering කැතරින්
 ketti කෙටි
 ketz කයිට්ස්
 kevan කෙවින්
-key කි
+key කි කී
 keye කාය
 keyes කේශ
-keylon කෙලින්
+keylon කෙලින් කෙළින්
 keys කේශ
-keyton කීටෝන
+keyton කිතුනු කීටෝන
 khalid කළේද
-khalil කලල
-khuu කෝ
-kiam කීම
-kian කියන
+khalil කලල කළල
+khuu කෝ කු
+kiam කීම කියමු
+kian කියනු කියන
 kiawah කියවා
 kibbel කේබල්
 kibble කේබල්
 kibell කේබල්
-kick කේක්
-kiddie කැඩී
-kiddy කැඩී
+kick කේක් කික්
+kiddie කැඩී කෙදි
+kiddy කැඩී කෙදි
 kidwa කැදවා
 kiehn කින්
 kiehne කින්
 kiene කින්
-kier කැර
-kieran කිරණ
+kier කෙරූ කැර
+kieran කිරණ කිරාන්
 kiess කේශ
 kihn කින්
-kika කේක්
-kila කිලෝ
-kilen කෙලින්
-kill කෙළ
-killam කේලාම්
-kille කෙළ
-killeen කෙලින්
-killen කෙලින්
-killey කෙලී
-killin කෙලින්
-killing කෙලින්
+kika කේක් කික්
+kila කිලෝ කෙළ
+kilen කෙලින් කෙළින්
+kill කෙළ කැල
+killam කේලාම් කේළාම්
+kille කෙළ කැල
+killeen කෙලින් කෙළින්
+killen කෙලින් කෙළින්
+killey කෙලී කැලේ
+killin කෙලින් කෙළින්
+killing කෙලින් කෙළින්
 kilogram කිලෝග්‍රෑම්
-kilometer කිලෝමීටර්
-kilometre කිලෝමීටර්
+kilometer කිලෝමීටර් කිලෝමීටර
+kilometre කිලෝමීටර් කිලෝමීටර
 kimball කිඹුල්
 kimbel කිඹුල්
 kimble කිඹුල්
 kimm කිම්
-kimmey කිමී
+kimmey කිමී කීමේ
 kindrick කේන්ද්‍රික
 kindt කෙන්ට්
 kinect කෙනෙක්ට
 kineta කිනිති
 king කින්
 kingen කැන්ගන්
+kinion කෙන්යානු
 kinn කින්
 kinne කින්
-kinnick කෙනෙක්
-kinnock කෙනෙක්
+kinnick කෙනෙක් කෙනෙකු
+kinnock කෙනෙක් කෙනෙකු
 kinsley කිංස්ලි
 kint කෙන්ට්
-kipp කේප්
-kir කැර
+kinyon කෙන්යානු
+kipp කේප් කීප
+kir කෙරූ කැර
 kira කැර
-kirin කෙරෙන
+kirgan කරගනු
+kirin කෙරෙන කෙරෙන්
 kirkham කාරකම්
-kirley කැරලි
-kirt කර්ට්
+kirley කැරලි කැරළි
+kirt කර්ට් කරත්
+kirven කරවනු
 kis කෙස්
-kisch කේශ
-kish කේශ
-kisha කේශ
+kisch කේශ කේෂ
+kish කේශ කේෂ
+kisha කේශ කේෂ
 kiss කෙස්
 kissam කිසිම
 kissane කේසොං
 kissed කැසට්
-kissee කෙසේ
+kissee කෙසේ කිසි
 kissel කෙසෙල්
 kissell කෙසෙල්
 kist කැසට්
-kit කේට්
+kit කිතු කේට්
 kites කයිට්ස්
-kitt කේට්
+kitt කිතු කේට්
 kittel කිතුල්
 kittell කිතුල්
-kitten කීටෝන
+kitten කිතුනු කිතුණු
 kittle කිතුල්
-kitts කීට්ස්
-kitz කීට්ස්
+kitts කීට්ස් කිට්ස්
+kitz කීට්ස් කිට්ස්
 kivi කීවේ
 kiwi කීවේ
+klapp කලපු
 klare ක්ලෙයාර්
 klase ක්ලේශ
-klass ක්ලාශ්
-klatt කළත්
+klass ක්ලාශ් කලස්
+klatt කළත් කලත්
 kleck කලෙක
-klecka කලෙක
+klecka කලෙක කළෙක
 kleen කලින්
-klema කලෙමි
+klema කලෙමි කළෙමි
 klement ක්ලෙමන්ට්
 klerk ක්ලාර්ක්
 klesch ක්ලේශ
@@ -4488,66 +4718,66 @@ klick ක්ලික්
 kling කලින්
 klish ක්ලේශ
 klitz ක්ලීටස්
-klock ක්ලාක්
-klocke ක්ලාක්
-klopp කලාප
+klock ක්ලාක් කලක්
+klocke ක්ලාක් කලක්
+klopp කලාප කලපු
 klose ක්ලාශ්
 kloss ක්ලාශ්
-kluck ක්ලාක්
-klugh කළ
-klugt කළත්
+kluck ක්ලාක් කලක්
+klugh කළ කල
+klugt කළත් කලත්
 klundt ක්ලාන්ත
-klus ක්ලාශ්
+klus ක්ලාශ් කලස්
 knack නෙක
-knarr නර
+knarr නේරු නර
 knaus නාස්
 knauss නාස්
 knave නැව්
-knead නේද
-kneale නිල්
-knee නේ
+knead නේද නිද
+kneale නිල් නීල්
+knee නේ නී
 kneece නිස
-kneed නේද
-kneel නිල්
-kneer නෑර
-knees නිජ
+kneed නේද නිද
+kneel නිල් නීල්
+kneer නේරු නෑර
+knees නිජ නිස
 knell නයිල්
-knerr නෑර
-knew නෝ
-knick නික
+knerr නේරු නෑර
+knew නෝ නු
+knick නික නෙක
 kniess නිස
-knigge නිග්
+knigge නිග් නැගූ
 knight නයිට්
 knights නයිට්ස්
-knill නිල්
+knill නිල් නිල
 knin නැණ
 knipl නේපාල
 knippel නේපාල
 knipple නේපාල
 kniss නිස
-knit නැත
+knit නැත නෙත්
 knitted නැතිද
 knitter නිතර
-knitting නීතීන්
+knitting නීතීන් නීතින්
 knobby නබි
 knobel නොබෙල්
 knoble නොබෙල්
-knochel නොකළ
+knochel නොකළ නොකල
 knocks නොක්ස්
-knode නාද
+knode නාද නාඩු
 knoebel නොබෙල්
 knoell නාල
 knoll නාල
 knorr නෑර
-knot නැත
-knoth නැත
-knott නැත
+knot නතු නැත
+knoth නතු නැත
+knott නතු නැත
 knotty නැති
 knous නාස්
-know නො
-knowed නාද
-knowing නාඉන්
-known නාන්
+know නො නෝ
+knowed නාද නාඩු
+knowing නාඉන් නොවෙන
+known නාන් නාන
 knows නාස්
 knox නොක්ස්
 knuckle නකුල
@@ -4555,20 +4785,20 @@ knuckles නකල්ස්
 kobel කාබුල්
 koble කාබුල්
 kochis කොකිස්
-kock කොක්
+kock කොක් කොකු
 kodiak කොඩියක්
 koebel කාබුල්
-koehl කොළ
-koehn කොන්
-koehne කොන්
+koehl කොළ කාල්
+koehn කොන් කොං
+koehne කොන් කොං
 koehnen කොනන්
-koelle කොළ
+koelle කොළ කාල්
 koelling කොලින්
-koen කොන්
+koen කොන් කොං
 koenen කොනන්
-koep කෝප
-koepp කෝප
-koeppe කෝප
+koep කොපු කෝප
+koepp කොපු කෝප
+koeppe කොපු කෝප
 koether කාටර්
 koetter කාටර්
 koetting කොටින්
@@ -4576,168 +4806,186 @@ koff කාෆ්
 koga කාගේ
 kogi කාගේ
 kogut කාගේත්
-koh කො
-kohl කොළ
-kohli කෝලි
-kohn කන්
-kohne කොන්
+koh කො කෝ
+kohl කොළ කාල්
+kohli කෝලි කාලි
+kohn කන් කාන්
+kohne කොන් කොං
 kohnen කොනන්
 kohr කාර්
-kohut කොට
+kohut කොට කොත්
 kokan කොකේන්
-koke කොක්
+koke කොක් කොකු
+koko කොකා
 kolasa කලස
-kollath කළත්
-kolle කළ
-kolli කළේ
-kolling කලින්
+kollath කළත් කලත්
+kolle කළ කල
+kolli කළේ කලේ
+kolling කලින් කාලීන
 komer කාමර
 kommer කාමර
-konen කොනන්
+konen කොනන් කනාන්
+kong කොන්
 kook කුක්
-kool කුල
-koone කෝණ
-koor කුර්
-kope කෝප
-koppe කප්
+kool කුළු කුල
+koone කුණු කුනු
+koor කුර් කූරු
+kope කොපු කෝප
+koppe කොපු කපු
 koppel කපාල
 koppell කපාල
 koppen කපන
 kopper කොපර්
 kopple කපාල
 korea ක්‍රියා
+korean කොරියානු
 koren කාරණ
 korey කාරී
 korry කාරී
-kosch කෝෂ
-kosel කොසොල්
+kosch කෝෂ කෝශ
+kosel කොසොල් කෝසල
 koss කොස්
 kossuth කැසට්
 kotara කාටර්
 kotch කාච
-kotter කාටර්
+kotter කාටර් කටාර්
 kotz කොටස්
-kouril කෝරළ
-kourou කූරු
-koval කොවුල්
+kouril කුරුළු කුරුලු
+kourou කූරු කුරු
+koval කොවුල් කෝවිල්
 kovatch කවච
+kowal කවුළු
+kowall කවුළු
 kowtow කොටා
-koza කෝශ
-kozel කාජල්
-kozol කාජල්
+koza කෝශ කාශ
+kozel කාජල් කෝසල
+kozol කාජල් කෝසල
 kraai කරයි
-krah කර
+krabbe කරාබු
+krah කර කරා
 krahl කරල්
-krahn කරන්
+krahn කරනු
+krain කරැණු
 kramm ක්‍රම
 kramme ක්‍රම
-krause ක්‍රොස්
-krausse ක්‍රොස්
+krane කරැණු
+krapp කරපු
+krause ක්‍රොස් ක්‍රෝස්
+krausse ක්‍රොස් ක්‍රෝස්
 kraynak කරැණක්
 kreh කරයි
 kreher ක්‍රෑර
+krein කරැණු
 kreis ක්‍රිස්
+kren කරැණු
+krenn කරැණු
 kreuzer කෘසර
 krey කරේ
 krick ක්‍රික්
 kriese ක්‍රිස්
 kriss ක්‍රිස්
+krist ක්‍රිස්තු
 krista ක්‍රිස්තු
 kristen ක්‍රිස්තුන්
 kristie ක්‍රිස්ටි
 kriz ක්‍රිස්
-kroes ක්‍රොස්
-kroese ක්‍රොස්
-kroeze ක්‍රොස්
+krob කරාබු
+kroes ක්‍රොස් ක්‍රෝස්
+kroese ක්‍රොස් ක්‍රෝස්
+kroeze ක්‍රොස් ක්‍රෝස්
 kroh කරා
 krom ක්‍රම
 kromm ක්‍රම
-kron කරන්
-kross ක්‍රොස්
+kron කරනු
+kroon කරුණු
+kropp කරපු
+kross ක්‍රොස් ක්‍රෝස්
 krowe කරා
 krugh කර
-krul කරල්
-krull කරල්
+krul කරල් කරල
+krull කරල් කරල
 krum ක්‍රම
 krumm ක්‍රම
 krumme ක්‍රම
 krummel කරමල්
+krupp කරපු
 kruppa කරපු
 kruse ක්‍රෝස්
 krypton ක්රිප්ටන්
 kuala ක්වාලා
-kubala කබාලි
-kubly කැබලි
+kubala කබාලි කබොල
+kubly කැබලි කබලේ
 kuch කාච
 kuck කුක්
 kueck කුක්
-kuehl කුල
-kuehn කෝණ
-kuehne කෝණ
-kuhl කළ
-kuhle කෝවිල්
-kuhn කෝණ
-kuhne කන්
-kuhrt කර්ට්
+kuehl කුළු කුල
+kuehn කුණු කුනු
+kuehne කුණු කුනු
+kuhl කළ කල
+kuhle කෝවිල් කෝවිල
+kuhn කුණු කුනු
+kuhne කන් කණු
+kuhrt කර්ට් කරත්
 kuiper කූපර්
-kull කළ
-kulla කළ
-kully කළේ
-kulp කල්ප
+kull කළ කල
+kulla කළ කල
+kully කළේ කලේ
+kulp කල්ප කලපු
 kulpa කල්ප
 kumble කුඹල්
 kumm කම්
-kummer කුමාර්
-kumouri කුමාරි
-kun කන්
-kunath කාන්ට්
-kunda කන්ද
-kunde කන්ද
-kung කං
+kummer කුමාර් කාමර
+kumouri කුමාරි කුමාරී
+kun කන් කණු
+kunath කුණාටු කාන්ට්
+kunda කන්ද කඳු
+kunde කඳු කන්ද
+kung කං කන්
 kunkel කංකාල
 kunkle කංකාල
 kuo කාඕ
 kupper කූපර්
-kuril කරල්
+kuril කරල් කාර්යාල
 kurka කාරක
 kurman කරමින්
-kurmel කාර්මෙල්
+kurmel කාර්මෙල් කරමල්
 kuroda කරාද
-kurt කර්ට්
-kurth කර්ට්
-kusch කුෂ්
+kurt කර්ට් කරත්
+kurth කර්ට් කරත්
+kusch කුෂ් කාශ
 kuschel කුශල
 kusel කුසල්
 kusiak කාසියක්
-kuss කුස
+kuss කුස කාශ
 kutch කාච
 kutsch කාච
-kutter කාටර්
+kutter කාටර් කටාර්
 kuwait කුවේට්
 kuzel කෝසල
-kyi කි
+kyi කි කී
 kyllo කිලෝ
 kym කිම්
 kyna කින්
 kyne කයින්
 kyowa ක්‍යා
 kyra කයිරෝ
-laack ලක්
-laake ලක්
-labadie ලබාදී
+laack ලක් ලෝක
+laake ලක් ලෝක
+lab ලැබූ ලැබු
+labadie ලබාදී ලබාදේ
 labate ලැබෙත්
-labatt ලබත්
-labbe ලැබ
+labatt ලබත් ලැබෙත්
+labbe ලැබූ ලැබු
 labeau ලබා
 label ලේබල්
-labine ලැබිණි
+labine ලැබිණි ලැබිනි
 labov ලැබුව
 labove ලැබුව
 labow ලබා
 lace ලෙස
 laced ලෙසත්
 lacer ලේසර්
-lacewell ලැස්වෙල්
+lacewell ලැස්වෙල් ලැස්වේල්
 lack ලක්
 lackey ලකී
 lackie ලකී
@@ -4747,40 +4995,47 @@ lactose ලැක්ටෝස්
 ladd ලද
 lady ලැදි
 laff ලයිෆ්
-lagging ළඟින්
-lagow ලගා
-lague ළඟ
-lahn ලෙන්
+lag ලග
+lagging ළඟින් ලඟින්
+lagow ලගා ලඟා
+lague ළඟ ලග
+lahn ලෙන් ලයින්
 lahore ලාහෝර්
-laib ලැබ
+laib ලැබූ ලැබු
 laible ලේබල්
-laid ලෙඩ්
-lain ලෙන්
-laine ලෙන්
+laid ලෙඩ් ලෙඩ
+lain ලෙන් ලේන්
+laine ලෙන් ලේන්
 lais ලෙස
 lake ලේක්
 lala ලාල්
 lall ලාල්
 lalla ලාල්
-lalley ලෙලි
-lalli ලෙලි
+lalley ලෙලි ලෑලි
+lalli ලෙලි ලෑලි
 lallie ලෑලි
-lally ලෙලි
-lance ලාන්ස්
-landen ලන්ඩන්
-landon ලන්ඩන්
-lane ලෙන්
+lally ලෙලි ලෑලි
+lambs ලංසු
+lamp ලාම්පු
+lampe ලාම්පු
+lampp ලාම්පු
+lance ලාන්ස් ලංසු
+land ලඳු
+lande ලඳු
+landen ලන්ඩන් ලංඩන්
+landon ලන්ඩන් ලංඩන්
+lane ලෙන් ලේන්
 laney ලෙනේ
-lange ලෙන්
+lange ලෙන් ලං
 langham ළඟම
 laning ලෙනින්
 lank ලෙනක්
-lann ලෙන්
-lanna ලෙන්
+lann ලෙන් ලයින්
+lanna ලෙන් ලෙන
 lanni ලෙනේ
 lanning ලෙනින්
 lanny ලෙනේ
-lanz ලාන්ස්
+lanz ලාන්ස් ලංසු
 laotian ලූෂන්
 lapp ලප
 lappe ලප
@@ -4793,24 +5048,24 @@ lash ලෙෂ
 laskin ලෙසකින්
 lasley ලෙස්ලි
 lass ලෙස
-lassa ලොස්
+lassa ලොස් ලාස්
 lasser ලේසර්
-lasswell ලැස්වෙල්
+lasswell ලැස්වෙල් ලැස්වේල්
 last ලෙස
 laster ලෙස්ටර්
 lastra ලෙස්ටර්
-laswell ලැස්වෙල්
-lathe ලෙඩ්
-latta ලත්
+laswell ලැස්වෙල් ලැස්වේල්
+lathe ලෙඩ් ලෙඩ
+latta ලත් ලතා
 lattin ලතින්
-laub ලොබ
-laube ලොබ
-lauck ලෝක
+laub ලොබ ලාබ
+laube ලොබ ලාබ
+lauck ලෝක ලොකු
 laud ලෝඩ්
 laude ලෝඩ්
 laudon ලාඩන්
 laugh ලයිෆ්
-laura ලෝරා
+laura ලෝරා ලොරි
 laurance ලෝරන්ස්
 laurence ලෝරන්ස්
 laurens ලෝරන්ස්
@@ -4820,47 +5075,49 @@ lauri ලොරි
 laurie ලොරි
 lauro ලෝරා
 laury ලොරි
+laut ලාටු
+lauth ලාටු
 lava ලොව
 lave ලැව්
-laveau ලවා
+laveau ලවා ලාවා
 laveda ලෝවැඩ
 laven ලෙවින්
-lavie ලුවී
+lavie ලුවී ලොවේ
 lavin ලෙවින්
-law ලා
+law ලා ලෝ
 laware ලූවර්
-lawes ලොස්
+lawes ලොස් ලාස්
 lawley ලෑලි
 lawns ලාන්ස්
 lawrance ලෝරන්ස්
 lawrence ලෝරන්ස්
 lawrie ලොරි
 lawry ලොරි
-laws ලොස්
+laws ලොස් ලාස්
 laxson ලක්ශන
-lay ලේ
-layah ලී
-laye ලේ
-laying ලෙයින්
-layne ලෙන්
+lay ලේ ලෙ
+layah ලී ලේ
+laye ලේ ලෙ
+laying ලෙයින් ලේන්
+layne ලෙන් ලේන්
 lays ලෙස
 lazar ලේසර්
 lazer ලේසර්
-lea ලී
-lead ලෙඩ්
+lea ලී ලේ
+lead ලෙඩ් ලෙඩ
 leader ලීඩර්
 leads ලීඩ්ස්
 league ලීග්
-leah ලී
+leah ලී ලියා
 leak ලේක්
 leake ලේක්
-leala ලීලා
+leala ලීලා ලිලී
 lealia ලේලිය
 lealie ලිලී
-lean ලේන්
-leana ලේන්
-leaned ලිඳ
-leann ලීයෙන්
+lean ලේන් ලින්
+leana ලේන් ලින්
+leaned ලිඳ ළිඳ
+leann ලීයෙන් ලියන
 leans ලිනස්
 leap ලිප
 leaping ලිපින
@@ -4868,6 +5125,7 @@ leased ලිස්ට්
 leaser ලේසර්
 least ලිස්ට්
 leath ලිත්
+leave ලිවූ
 leaven ලෙවින්
 leavey ලිවී
 leavy ලිවී
@@ -4875,38 +5133,41 @@ leazer ලේසර්
 lebanon ලෙබනන්
 lebel ලේබල්
 leble ලේබල්
-lebon ලැබෙන
+lebon ලැබෙන ලැබුණු
 lebow ලබා
 lech ලේක්
 leck ලේක්
+led ලෙඩ
 leddy ලැදි
-leena ලේන්
+lee ලේ
+leena ලේන් ලින්
 leep ලිප
 leet ලිත්
 leete ලිත්
 leeth ලිත්
+leeuwen ලූණු
 leff ලයිෆ්
-leh ලේ
-lehn ලෙන්
-lehne ලෙන්
+leh ලේ ලෙ
+lehn ලෙන් ලේන්
+lehne ලෙන් ලේන්
 lehnen ලෙනින්
-leia ලියා
+leia ලියා ලියෝ
 leicester ලෙස්ටර්
 leick ලේක්
-leigh ලී
-leija ලියා
+leigh ලී ලේ
+leija ලියා ලීය
 leiken ලයිකන
-leila ලීලා
+leila ලීලා ලිලී
 leilia ලේලිය
 leins ලිනස්
 leis ලෙස
 leite ලිත්
 leith ලිත්
-lela ලීලා
-lelah ලෙලි
+lela ලීලා ලිලී
+lelah ලෙලි ලෑලි
 leleux ලීලා
 lema ලීම
-leng ලෙන්
+leng ලෙන් ලේන්
 lenis ලිනස්
 lennane ලිනන්
 lennie ලෙනේ
@@ -4915,13 +5176,13 @@ lennon ලෙනින්
 lenny ලෙනේ
 lenon ලෙනින්
 leny ලෙනේ
-leo ලියෝ
-leoda ලෙඩ
-leola ලෙලි
-leon ලියන
+leo ලියෝ ලියා
+leoda ලෙඩ ලෙඩ්
+leola ලෙලි ලෑලි
+leon ලියන ලියෝන්
 leona ලියෝන්
 leone ලියෝන්
-leong ලෙන්
+leong ලෙන් ලේන්
 leonie ලෙනේ
 leota ලයිට්
 lepe ලිප
@@ -4943,16 +5204,19 @@ leta ලයිට්
 leth ලයිට්
 lethal ලිට්ල්
 lett ලයිට්
-leu ලෝ
-leuck ලෝක
+leu ලෝ ලූ
+leuck ලෝක ලූක්
+leung ලුණු ලූණු
 leva ලැව්
 levan ලෙවින්
 levangie ලෙවින්ගේ
+leve ලිවූ
 levene ලෙවින්
 levie ලිවී
 levina ලෙවින්
-levine ලෙවින්
+levine ලෙවින් ලොවින්
 levy ලිවී
+lewan ලූණු
 lewd ලෝඩ්
 lewey ලුවී
 lewi ලුවී
@@ -4962,81 +5226,84 @@ lewter ලූතර්
 lewton ලුටන්
 lewy ලුවී
 lexington ලෙක්සින්ග්ටන්
-ley ලේ
-leya ලී
-leyba ලැබේ
-leyda ලෙඩ
-leyh ලේ
+ley ලේ ලෙ
+leya ලී ලේ
+leyba ලැබේ ලැබ
+leyda ලෙඩ ලෙඩ්
+leyh ලේ ලෙ
 leys ලෙස
 leysen ලෙසින්
 leyva ලැව්
-lhasa ලොස්
-lia ලී
+lhasa ලොස් ලාස්
+lia ලී ලියා
 liam ලීම
 lian ලයන්
-liane ලීයෙන්
+liane ලීයෙන් ලියන
 liang ලයන්
-lianne ලීයෙන්
-lib ලැබ
-libbey ලැබේ
-libby ලැබේ
+lianne ලීයෙන් ලියන
+lib ලැබූ ලැබු
+libbey ලැබේ ලැබී
+libbing ලැබෙනු
+libby ලැබේ ලැබී
 liberal ලිබරල්
 libya ලැබීය
+libyan ලිබියානු
 lichen ලයිකන
 lick ලේක්
-lid ලෙඩ්
+lid ලෙඩ් ලෙඩ
 liddy ලැදි
 liebel ලේබල්
 liebl ලේබල්
 lieder ලීඩර්
 liem ලීම
-lien ලේන්
+lien ලේන් ලින්
 lienau ලුනා
 liens ලිනස්
 lieser ලේසර්
-lieu ලෝ
+lieu ලෝ ලූ
 lieurance ලෝරන්ස්
 life ලයිෆ්
 light ලයිට්
 liken ලයිකන
-lilah ලීලා
-liley ලිලී
+lilah ලීලා ලිලී
+liley ලිලී ලෙලි
 lilia ලේලිය
-lilla ලීලා
-lilley ලිලී
-lilli ලිලී
-lillie ලිලී
+lilla ලීලා ලිලී
+lilley ලිලී ලෙලි
+lilli ලිලී ලෙලි
+lillie ලිලී ලෙලි
 lillo ලීලා
-lilly ලිලී
-lily ලිලී
+lilly ලිලී ලෙලි
+lily ලිලී ලෙලි
 limb ලීම
 limit ලීමට
 limited ලිමිටඩ්
 limn ලීම
-lina ලේන්
+lina ලේන් ලින්
 linc ලෙනක්
 lince ලිනස්
 linck ලෙනක්
 lincoln ලින්කන්
-linde ලිඳ
-lindh ලිඳ
+linda ළිඳ
+linde ලිඳ ළිඳ
+lindh ලිඳ ළිඳ
 line ලයින්
-linen ලිනන්
-lingg ලිං
-linh ලෙන්
+linen ලිනන් ලෙනින්
+lingg ලිං ළිං
+linh ලෙන් ලේන්
 link ලෙනක්
 linke ලෙනක්
-linnane ලිනන්
+linnane ලිනන් ලෙනින්
 linnas ලිනස්
-linne ලෙන්
+linne ලෙන් ලේන්
 linney ලෙනේ
 linse ලිනස්
 linux ලිනක්ස්
 linz ලිනස්
-liou ලියූ
+liou ලියූ ලියු
 lipide ලිපිඩ
 lipp ලිප
-lippa ලිපි
+lippa ලිපි ලිප
 lippe ලිප
 lippi ලිපි
 lippy ලිපි
@@ -5047,60 +5314,62 @@ liss ලෙස
 list ලෙසත්
 listen ලෙසින්
 lister ලෙස්ටර්
-liszt ලෙසත්
+liszt ලෙසත් ලිස්ට්
 lita ලිත්
 lite ලයිට්
+liter ලීටර
 lithe ලයිට්
 lithium ලිතියම්
 litt ලිත්
 littell ලිට්ල්
-litter ලීටර්
+litter ලීටර් ලීටර
 little ලිට්ල්
-liv ලැව්
-live ලයිව්
-livia ලිවිය
+liv ලැව් ලිවූ
+live ලයිව් ලැව්
+livia ලිවිය ලිවීය
 living ලෙවින්
 livvie ලිවී
 liz ලෙස
-llama ළමා
-llosa ලොස්
+llama ළමා ලොම්
+llosa ලොස් ලෝස්
 load ලෝඩ්
 loam ලොම්
 loans ලාන්ස්
+loath ලාටු
 loathe ලෝඩ්
 lobaugh ලබා
-lobb ලැබ
+lobb ලැබූ ලැබු
 lobban ලබන
 lobbia ලැබීය
-lobby ලැබේ
-lobe ලොබ
+lobby ලැබේ ලැබී
+lobe ලොබ ලාබ
 lobel ලාබාල
 loblaw ලබලා
 location ලොකේෂන්
-loch ලක්
+loch ලක් ලෝක
 loci ලෝකේ
-lock ලක්
-locka ලෝක
-locke ලක්
-lockey ලකී
-lockie ලකී
+lock ලක් ලෝක
+locka ලෝක ලක්
+locke ලක් ලෝක
+lockey ලකී ලෝකේ
+lockie ලකී ලෝකේ
 lode ලෝඩ්
 loden ලාඩන්
-loe ලෝ
-loeb ලොබ
-loera ලෝරා
-loess ලොස්
+loe ලෝ ලා
+loeb ලොබ ලාබ
+loera ලෝරා ලොරි
+loess ලොස් ලෝස්
 loesser ලේසර්
-loew ලෝ
-loewe ලෝ
+loew ලෝ ලා
+loewe ලෝ ලා
 loewi ලොවේ
-loews ලොස්
+loews ලොස් ලෝස්
 loewy ලොවේ
-lohn ලං
+lohn ලණු ලනු
 lohnes ලාන්ස්
 lohrey ලොරි
-lohse ලොස්
-lois ලොස්
+lohse ලොස් ලෝස්
+lois ලොස් ලෝස්
 loise ලුවිස්
 lokey ලෝකේ
 lola ලාල්
@@ -5110,14 +5379,17 @@ lolli ලෑලි
 lolling ලෝලීන්
 lolly ලෑලි
 lomb ලොම්
-lon ලං
-london ලන්ඩන්
+lon ලණු ලනු
+london ලන්ඩන් ලංඩන්
 lones ලාන්ස්
-loose ලෝස්
+look ලූක්
+loon ලුණු ලූණු
+loong ලුණු ලූණු
+loose ලෝස් ලාඕස්
 lope ලොප්
 lopes ලෝපස්
-lopp ලොප්
-lorah ලෝරා
+lopp ලොප් ලප
+lorah ලෝරා ලොරි
 lorance ලෝරන්ස්
 loree ලොරි
 lorence ලෝරන්ස්
@@ -5126,210 +5398,221 @@ lorey ලොරි
 lorie ලොරි
 lorrie ලොරි
 lorry ලොරි
-lose ලෝස්
-loss ලොස්
+los ලාස්
+lose ලෝස් ලාඕස්
+loss ලොස් ලාස්
+lost ලාස්ට්
 lot ලත්
 loth ලත්
 lott ලත්
-lotta ලත්
+lotta ලත් ලතා
 lotte ලත්
 lotto ලතා
-lou ලෝ
+lou ලෝ ලූ
 louie ලුවී
-louis ලුවී
-louque ලෝක
+louis ලුවී ලුවිස්
+louque ලෝක ලූක්
 louvre ලූවර්
-louw ලෝ
-loux ලෝ
+louw ලෝ ලූ
+loux ලෝ ලූ
 lovan ලොවින්
-love ලව්
+love ලව් ලැව්
 loven ලවණ
 lover ලූවර්
 lovie ලුවී
-low ලෝ
+low ලෝ ලා
 lowden ලාඩන්
 lowell ලාල්
-lowen ලොවින්
-lowes ලොස්
-lowest ලොස්ට්
+lowen ලොවින් ලූණු
+lowes ලොස් ලෝස්
+lowest ලොස්ට් ලාස්ට්
 lowey ලොවේ
 lowing ලොවින්
 lowrance ලෝරන්ස්
 lowrie ලොරි
-lows ලොස්
+lows ලොස් ලෝස්
 lowy ලොවේ
 loya ලායි
-lua ලෝ
+lua ලෝ ලූ
+luane ලූණු
 lubben ලබන
 luca ලෝක
 lucca ලෝක
-luce ලෝස්
+luce ලෝස් ලාඕස්
 lucian ලූෂන්
 lucio ලුසියා
 luck ලක්
 lucke ලක්
-lucken ලකුණ
+lucken ලකුණු
 luckey ලකී
 luckie ලකී
 lucky ලකී
 ludden ලාඩන්
-luddy ලදී
-lue ලෝ
-luecke ලෝක
+luddy ලදී ලදි
+lue ලෝ ලූ
+luecke ලෝක ලූක්
 luellen ලෝලීන්
 luera ලූවර්
-lug ළඟ
-lugging ළඟින්
-luhman ළමුන්
-luhmann ළමුන්
-luhn ලං
+lug ළඟ ලග
+lugging ළඟින් ලඟින්
+luhman ළමුන් ලමුන්
+luhmann ළමුන් ලමුන්
+luhn ලුණු ලණු
 lui ලුවී
-luick ලෝක
+luick ලෝක ලූක්
 luis ලුවිස්
-luiz ලෝස්
+luiz ලෝස් ලාඕස්
 luka ලෝක
-luke ලෝක
+luke ලෝක ලූක්
 lull ලාල්
 luma ලෝම
-lun ලං
-lunden ලන්ඩන්
-lung ලං
-lungs ලාන්ස්
-lunn ලං
-lunz ලාන්ස්
+lummus ලංසු
+lump ලාම්පු
+lumpp ලාම්පු
+lun ලුණු ලණු
+lund ලඳු
+lunde ලඳු
+lunden ලන්ඩන් ලංඩන්
+lung ලං ළං
+lungs ලාන්ස් ලංසු
+lunn ලුණු ලණු
+lunz ලාන්ස් ලංසු
 luo ලවා
 lupus ලෝපස්
-luque ලෝක
+luque ලෝක ලූක්
 lura ලෝරා
-luse ලෝස්
+luse ලෝස් ලාඕස්
 lust ලාස්ට්
 luten ලුටන්
 luton ලුටන්
 lutter ලූතර්
-lutton ලතින්
+lutton ලතින් ලුටන්
 luwana ලවණ
 luxembourg ලක්සම්බර්ග්
 luz ලාස්
-lyanne ලීයෙන්
+lyanne ලීයෙන් ලියන
 lycan ලයිකන
 lydie ලැදි
 lykin ලයිකන
-lynd ලිඳ
-lynda ලිඳ
-lynde ලිඳ
+lynd ලිඳ ළිඳ
+lynda ලිඳ ළිඳ
+lynde ලිඳ ළිඳ
 lyne ලයින්
-lyng ලෙන්
+lyng ලෙන් ලිං
 lynk ලෙනක්
-lynn ලෙන්
+lynn ලෙන් ලේන්
 lynna ලයින්
-lynne ලෙන්
+lynne ලෙන් ලේන්
 lysne ලයින්
 lyster ලෙස්ටර්
 lyttle ලිට්ල්
-maack මාක්
-maag මග
-maahs මස්
-maam මම
-maass මස්
+maack මාක් මක්
+maag මග මඟ
+maahs මස් මාස
+maam මම මම්
+maass මස් මාස
 mac මාක්
 macaw මකා
-macchi මෙකී
-mace මේස්
+macchi මෙකී මැකී
+mace මේස් මේස
 macey මෙසේ
-mach මාක්
+mach මාක් මක්
 macher මකර
 machi මැකී
 machine මැෂින්
-mack මාක්
-mackall මයිකල්
-macke මාක්
-mackel මයිකල්
-mackey මෙකී
-mackie මෙකී
-macks මැක්ස්
-macro මයික්‍රො
+mack මාක් මක්
+mackall මයිකල් මෙකල
+macke මාක් මක්
+mackel මයිකල් මෙකල
+mackey මෙකී මැකී
+mackie මෙකී මැකී
+macks මැක්ස් මාක්ස්
+macro මයික්‍රො මයික්‍රෝ
 macy මෙසේ
+mad මඩු
 madam මැඩම්
-madame මැඩම්
+madame මැඩම් මඩම්
 madan මැදින්
-madd මැද
-maddie මැදි
+madd මැද මඩු
+maddie මැදි මදි
 madding මැදින්
 maddock මදක්
-maddy මැදි
-made මැද
+maddy මැදි මදි
+made මැද මේද
 madeira මැදිරි
 maden මැදින්
 madey මැදි
 madoc මදක්
 madock මදක්
 madonna මැඩෝනා
-maes මේස්
-maese මේස්
-maeve මේව
-magaw මෙගා
+maes මේස් මේස
+maese මේස් මිස
+maeve මැවූ මේව
+magaw මෙගා මාගෝ
 magenta මැජෙන්ටා
-maggie මගේ
-maggot මාගට්
+maggie මගේ මාගේ
+maggot මාගට් මගට
 magic මැජික්
 mahalah මහල
 mahaney මෙහෙණි
 mahannah මහණ
-mahdi මෝදි
+mahdi මෝදි මැදි
 mahe මෙහි
-mahen මෙන්
-maher මාර
-mahila මෙහිලා
+mahen මෙන් මෙයින්
+maher මාරු මරු
+mahila මෙහිලා මහේල
 mahindra මහේන්ද්‍ර
 mahnke මඟක්
-mahon මෙන්
-mahone මහන්
-mahtar මෝටර්
-mahwah මව
-maid මැද
-maida මැද
+mahon මෙන් මෙයින්
+mahone මහන් මහණ
+mahrt මාර්තු
+mahtar මෝටර් මාතර
+mahwah මව මාව
+maid මැද මේද
+maida මැද මේද
 maiden මැදින්
 maidie මැදි
 maier මීර්
-mail මෙල්
-maile මෙල්
-mailey මැලේ
-maille මෙල්
+mail මෙල් මේල්
+maile මෙල් මේල්
+mailey මැලේ මැලි
+maille මෙල් මේල්
 maim මෙම
 main මෙන්
 maina මෙන්
 maine මෙන්
-mair මැර
-maire මැර
-mais මේස්
+mair මේරූ මැර
+maire මේරූ මැර
+mais මේස් මේස
 maisie මෙසේ
 maison මේසන්
 maiti මැටි
 maitre මෙට්‍රෝ
-maize මේස්
+maize මේස් මේස
 maiziere මේජර්
 majer මේජර්
 majka මයික්
 major මේජර්
-make මැක්
+make මැක් මේක
 makes මැක්ස්
-malacca මලක
+makhoul මකුළු
+malacca මලක මාලක
 malaria මැලේරියා
 malbon මෙල්බන්
-male මෙල්
+male මෙල් මේල්
 malec මලික්
-maley මැලේ
+maley මැලේ මැලි
 mali මාලේ
 malice මෙලෙස
 malick මලික්
 maline මාලිනී
-mall මෝල්
+mall මාළු මෝල්
 malle මල්
 mallek මලික්
 mallen මාලන්
-malley මැලේ
+malley මැලේ මාලේ
 mallick මලික්
-mallie මාලේ
+mallie මාලේ මාලි
 mallin මලින්
 mallis මෙලෙස
 mallo මාලා
@@ -5337,17 +5620,18 @@ malloch මලක්
 mallon මාලන්
 mallonee මාලනී
 mallow මාලා
-mally මැලේ
-malm මම
+mally මැලේ මාලේ
+malm මම මම්
 malon මාලන්
 malone මිලාන්
 malott මාලට
 mame මෙම
 mamet මමත්
-mamma මම
+mamma මම මාමා
 mammen මමං
 mammoth මමත්
 man මෙන්
+manage මංජු
 mandel මණ්ඩල
 mandell මණ්ඩල
 mandella මැන්ඩෙලා
@@ -5355,35 +5639,39 @@ mandle මණ්ඩල
 mane මෙන්
 manella මානෙල්
 maney මෙනි
-mangual මංගල්
+mangual මංගල් මංගල
 mania මැනිය
 mank මඟක්
 manke මඟක්
 mann මෙන්
-manna මෙන්
+manna මෙන් මනා
 manne මෙන්
-manned මඳ
+manned මඳ මන්ද
 mannella මානෙල්
-mannen මෙනන්
+mannen මෙනන් මෙන්න
 manner මයිනර්
-manney මෙනි
-manni මෙනි
-mannie මෙනි
+mannes මංජු
+manney මෙනි මණි
+manni මෙනි මණි
+mannie මෙනි මණි
 mannina මනින
-manning මැනිං
+manning මැනිං මනිනු
 mannion මානයන්
-manno මනෝ
-mannon මෙනන්
-manny මෙනි
+manno මනෝ මනා
+mannon මෙනන් මෙන්න
+manns මංජු
+manny මෙනි මණි
 manor මයිනර්
-mansel මංසල්
-mansell මංසල්
+mansel මංසල් මාංසල
+mansell මංසල් මාංසල
 manter මන්තර
-manthe මඳ
+manthe මඳ මන්ද
 mantia මාංශ
 many මෙනි
+manz මංජු
 manza මාංශ
 mapp මැප්
+mar මාරු මරු
 maradonna මරදාන
 marathon මැරතන්
 marcoe මාර්කෝ
@@ -5392,36 +5680,42 @@ marcoux මාර්කෝ
 marcy මර්සි
 marden මර්දන
 mardon මර්දන
-maria මරියා
+mari මාරේ
+maria මරියා මරිය
 marice මොරිස්
-marie මේරි
+marie මේරි මැරී
 marin මැරෙන
 marine මැරයින්
 maring මැරෙන
-mario මාරියෝ
+mario මාරියෝ මරියා
 marke මාර්ක්
-markka මාර්ක්
-markkaa මාර්කෝ
+markka මාර්ක් මාර්කෝ
+markkaa මාර්කෝ මාරක
 markow මාර්කෝ
 marohn මරණ
+maroon මැරුණු
 marque මාර්ක්
-marr මාර
-marra මරා
+marr මාරු මරු
+marra මරා මාරු
 marren මරණ
 marrin මැරෙන
 marriner මැරිනර්
-marro මරා
-marron මැරෙන
-marrou මාරු
+marro මරා මෝරා
+marron මැරෙන මැරුණු
+marrou මාරු මරු
 marrs මාර්ස්
-marry මේරි
+marry මේරි මැරී
 marschall මාර්ෂල්
 marse මාර්ස්
 marsee මර්සි
 marshall මාර්ෂල්
+mart මාර්තු
 marta මාර්තු
+marte මාර්තු
 marten මාර්ටින්
+marth මාර්තු
 martha මාර්තු
+marthe මාර්තු
 marthena මාර්ටින්
 martial මාර්ෂල්
 martina මාර්ටින්
@@ -5429,40 +5723,44 @@ martine මාර්ටින්
 marting මාර්ටින්
 marton මාර්ටින්
 martyn මාර්ටින්
-mary මේරි
+mary මේරි මැරී
 maryse මොරිස්
 marz මාර්ස්
 masai මාසයේ
 masch මේෂ
 masci මෙසේ
-mase මේස්
+mase මේස් මේස
 maser මේජර්
 mash මේෂ
 maslow මැස්ලෝ
 mason මේසන්
-mass මස්
+mass මස් මස
 massachusetts මැසචූසට්ස්
 massachussetts මැසචූසට්ස්
-masse මස්
+masse මස් මස
+massed මස්තු
 massey මෙසේ
 massi මෙසේ
 massie මෙසේ
 masson මේසන්
-mate මෙත්
-mater මෝටර්
+mast මස්තු
+mat මතු
+mate මෙත් මේත්
+mater මෝටර් මාතර
 matey මැටි
-mathan මෙතේන්
-mathe මැද
+math මතු
+mathan මෙතේන් මෙතැන්
+mathe මැද මේද
 mather මාතර
-mathey මැදි
-mathie මැටි
+mathey මැදි මදි
+mathie මැටි මැති
 mathur මාතර
 matic මෙතෙක්
-mating මෙතේන්
-mation මැෂින්
-matott මතට
-matt මත
-matte මත
+mating මෙතේන් මෙතැන්
+mation මැෂින් මතයන්
+matott මතට මතත්
+matt මත මතු
+matte මත මතු
 mattea මේෂ
 mattei මතයි
 matter මාතර
@@ -5470,161 +5768,164 @@ matthey මෑතදී
 mattick මෙතෙක්
 mattie මැටි
 mattina මාටින්
-matting මතින්
-matton මෙතැන්
+matting මතින් මාටින්
+matton මෙතැන් මෙතන
 matty මැටි
 maucher මකර
-mauck මාක්
-maud මෝඩ
-maude මෝඩ
-mauk මාක්
-maule මෝල්
-maull මෝල්
-mauna මාන
-maune මොන්
-maung මොන්
-maura මාර
-mauri මාරි
+mauck මාක් මොක්
+maud මාදු මෝඩ
+maude මාදු මෝඩ
+mauk මාක් මොක්
+maule මාළු මෝල්
+maull මාළු මෝල්
+mauna මාන මොන
+maune මොන් මාන්
+maung මොන් මාන්
+maura මාර මෝරා
+mauri මාරි මාරේ
 maurice මොරිස්
-maurie මාරි
+maurie මාරි මාරේ
 mauro මෝරා
-maurus මොරිස්
-maury මාරි
-maus මාස
-mauss මාස
-maute මෑත
-mauthe මෑත
+maurus මොරිස් මාර්ස්
+maury මාරි මාරේ
+maus මාස මාස්
+mauss මාස මාස්
+maute මෑත මොට
+mauthe මාදු මෑත
 mauve මාව
-mave මේව
+mave මැවූ මේව
 maven මෙවන්
-mawr මාර
-max මැක්ස්
-maxa මැක්ස්
+mawr මාරු මරු
+max මැක්ස් මාක්ස්
+maxa මැක්ස් මාක්ස්
 maxwell මැක්ස්වෙල්
-maxx මැක්ස්
+maxx මැක්ස් මාක්ස්
 may මේ
-mayda මැද
-mayde මැද
+mayda මැද මේද
+mayde මැද මේද
 mayden මැදින්
-maydena මැදින්
+maydena මැදින් මෙදින
 maye මේ
 mayer මීර්
-mayes මේස්
-mayhan මෙන්
+mayes මේස් මේස
+mayhan මෙන් මෙයින්
 mayhem මෙහෙම
 mayher මීර්
 mayhugh මෙහි
-mayle මැලේ
+mayle මැලේ මෙල්
 mayme මෙම
 mayne මෙන්
 mayor මීර්
-mayr මැර
-mays මේස්
-mayse මේස්
+mayr මේරූ මැර
+mays මේස් මේස
+mayse මේස් මේස
 mayson මේසන්
-mayton මෙතේන්
-maz මස්
+mayton මෙතේන් මෙතැන්
+maz මස් මාස
 maza මාස
-maze මේස්
+maze මේස් මේස
 mazer මේජර්
 mazie මෙසේ
 mazur මේජර්
 mazyck මැජික්
 mccaw මකා
+mccool මකුළු
 mccraw මකරා
 mcculla මෙකල
 mccullah මෙකල
 mcculloh මෙකල
 mccullough මෙකල
 mccur මකර
-mcgagh මෙගා
+mcgagh මෙගා මාගෝ
 mcgahee මගෙහි
 mcgahey මගෙහි
-mcgath මාගට්
-mcgaugh මෙගා
-mcgaw මෙගා
-mcgee මගේ
+mcgath මාගට් මගට
+mcgaugh මෙගා මාගෝ
+mcgaw මෙගා මාගෝ
+mcgee මගේ මගී
 mcgehee මගෙහි
-mcghee මගේ
-mcghie මගේ
+mcghee මගේ මගී
+mcghie මගේ මගී
 mcgill මිගෙල්
-mcginn මගින්
+mcginn මගින් මඟින්
 mcgrath මාග්‍රට්
-mcguinn මගින්
-mckee මෙකී
-mckey මෙකී
-mckie මෙකී
+mcguinn මගින් මඟින්
+mckee මෙකී මැකී
+mckey මෙකී මැකී
+mckie මෙකී මැකී
 mea මේ
-mead මේද
-meade මේද
+mead මේද මීඩ්
+meade මේද මීඩ්
 meadow මෙදා
-meagher මාර
-meal මිල
+meagher මාරු මරු
+meal මිල මේල්
 mealer මිලර්
 mealey මිලි
 mealing මිලෙන්
 mealor මිලර්
 mealy මිලි
 mean මින්
-meaney මිනී
-meany මිනී
-mear මීර්
-meara මීරා
-mease මේස්
+meaney මිනී මිණි
+meany මිනී මිණි
+mear මීර් මේරූ
+meara මීරා මීර්
+mease මේස් මිස
 measure මේජර්
 meat මීට
-meath මීට
+meath මීට මේත්
 meaty මිටි
-meaux මා
+meaux මා මෝ
 meave මේව
-mecca මේක
-mech මැක්
-meck මැක්
-meckel මයිකල්
+mecca මේක මෙකී
+mech මැක් මේක
+meck මැක් මේක
+meckel මයිකල් මෙකල
 meckes මැක්ස්
 meddaugh මෙදා
 media මීඩියා
 medio මීඩියා
 medvedev මෙද්වදෙව්
-meece මේස්
-meehan මීයන්
-meehl මිල
+meece මේස් මිස
+meehan මීයන් මේන්
+meehl මිල මේල්
 meeler මිලර්
-meese මේස්
+meese මේස් මිස
 meeting මීතේන්
 megawatt මෙගාවොට්
 mehdi මැදි
-mehl මෙල්
+mehl මෙල් මේල්
 mehner මයිනර්
-mehr මැර
-mehran මැරෙන
+mehr මේරූ මැර
+mehran මැරෙන මැරුණු
 mehring මැරෙන
 mehringer මැරිනර්
-meighan මීයන්
+meidl මිදුළු
+meighan මීයන් මේන්
 meine මින්
 meiner මයිනර්
-meir මැර
-meise මේස්
+meir මේරූ මැර
+meise මේස් මිස
 melbourne මෙල්බර්න්
 melburn මෙල්බර්න්
 melessa මෙලෙස
 melinda මිලින්ද
 melisse මෙලෙස
 melius මිලීස්
-melle මෙල්
-melley මැලේ
-melli මැලේ
-mellie මැලේ
+melle මෙල් මේල්
+melley මැලේ මැලි
+melli මැලේ මැලි
+mellie මැලේ මැලි
 mellis මෙලෙස
 mellowing මෙලොවින්
-melly මැලේ
+melly මැලේ මැලි
+mench මැංචු
 mendillo මැන්ඩෙලා
 menem මෙන්ම
 meng මෙන්
-menia මිණි
-mennan මෙනන්
+menia මිණි මිනි
+mennan මෙනන් මෙන්න
 menne මෙන්
-mennen මෙනන්
+mennen මෙනන් මෙන්න
 menning මැනිං
 menor මයිනර්
 meo මීයා
@@ -5633,16 +5934,16 @@ merce මාර්ස්
 merci මර්සි
 merck මාර්ක්
 mercy මර්සි
-mere මීර්
+mere මීර් මේරූ
 merit මෙරට
 meriting මෙරටින්
 merk මාර්ක්
-merrie මේරි
+merrie මේරි මැරී
 merrin මැරෙන
-merry මේරි
+merry මේරි මැරී
 mers මාර්ස්
-merten මාර්ටින්
-merton මාර්ටින්
+merten මාර්ටින් මැරතන්
+merton මාර්ටින් මැරතන්
 mervin මර්වින්
 mervyn මර්වින්
 merwin මර්වින්
@@ -5651,25 +5952,27 @@ merz මාර්ස්
 mesch මේෂ
 meshell මෙෂාල්
 meshing මැෂින්
-mess මේස්
+mess මේස් මේස
 messy මෙසේ
+met මේත්
 meta මීට
-mete මීට
-meter මීටර්
-methane මෙතේන්
-metra මෛත්‍රී
-metre මීටර්
+mete මීට මෑත
+meter මීටර් මීටර
+methane මෙතේන් මෙතැන්
+metra මෛත්‍රී මෙට්‍රෝ
+metre මීටර් මීටර
 metrick මෙට්‍රික්
-mette මෙත්
+mette මෙත් මේත්
 mex මැක්ස්
+mexican මෙක්සිකානු මැක්සිකානු
 mexico මෙක්සිකෝ
 meyn මෙන්
-mez මේස්
+mez මේස් මේස
 meza මේස
 mezey මෙසේ
 mhm මහම්
-mia මේ
-mic මැක්
+mia මේ මිය
+mic මැක් මේක
 micah මයික්
 michael මයිකල්
 michal මිචෙල්
@@ -5677,28 +5980,29 @@ micheal මයිකල්
 michel මයිකල්
 michell මිචෙල්
 michl මිචෙල්
-mick මැක්
-micka මේක
-micke මැක්
+mick මැක් මේක
+micka මේක මෙකී
+micke මැක් මේක
 mickel මෙකල
-mickey මෙකී
-micki මෙකී
-mickie මෙකී
+mickey මෙකී මැකී
+micki මෙකී මැකී
+mickie මෙකී මැකී
 mickle මෙකල
 mickus මැක්ස්
-micky මෙකී
-micro මයික්‍රො
+micky මෙකී මැකී
+micro මයික්‍රො මයික්‍රෝ
 microsoft මයික්‍රොසොෆ්ට්
-mid මැද
+mid මැද මේද
 middaugh මෙදා
-miele මිල
+middle මිදුළු
+miele මිල මේල්
 mien මින්
-miera මීරා
+miera මීරා මීර්
 mieras මිරාජ්
-miesse මේස්
+miesse මේස් මිස
 miguel මිගෙල්
 mihm මෙම
-mihn මෙන්
+mihn මෙන් මින්
 mika මේක
 mike මයික්
 mikel මෙකල
@@ -5706,57 +6010,60 @@ mikell මෙකල
 milburn මෙල්බර්න්
 milian මිලියන
 milke මිලක්
-mill මිල
-millan මිලන්
+mill මිල මෙල්
+millan මිලන් මිලෙන්
 millar මිලර්
 millay මැලේ
 millburn මෙල්බර්න්
-mille මිල
-millen මිලන්
+mille මිල මෙල්
+millen මිලන් මිලෙන්
 miller මිලර්
-millet මිලට
-milley මිලි
-milli මිලි
-millie මිලි
-millimeter මිලිමීටර්
-millimetre මිලිමීටර්
-millin මිලන්
+millet මිලට මිළට
+milley මිලි මැලේ
+milli මිලි මැලේ
+millie මිලි මැලේ
+millimeter මිලිමීටර් මිලිමීටර
+millimetre මිලිමීටර් මිලිමීටර
+millin මිලන් මිලෙන්
 milling මිලෙන්
-millis මෙලෙස
+millis මෙලෙස මිලීස්
 milln මිලන්
-millon මිලන්
-milly මිලි
+millon මිලන් මිලෙන්
+milly මිලි මැලේ
 milne මිලන්
 milone මිලාන්
-milot මිලට
-miltie මැටි
+milot මිලට මිළට
+miltie මැටි මිටි
 milton මිල්ටන්
 mim මෙම
 minar මයිනර්
 minas මිනිස්
+minch මැංචු
 mineer මයිනර්
 miner මයිනර්
 minerva මිනර්වා
-ming මෙන්
-minh මෙන්
+ming මෙන් මින්
+minh මෙන් මින්
+mini මෙනි
 minick මැණික්
-minna මෙන්
+minna මෙන් මින්
 minnesota මිනිසාට
-minney මිනී
+minney මිනී මෙනි
 minnick මැණික්
-minnie මිනී
+minnie මිනී මෙනි
 minnis මිනිස්
-minny මිනී
+minny මිනී මෙනි
 minor මයිනර්
 mirna මරණ
-mirra මීරා
+mirra මීරා මීර්
 mirror මිරර්
+mirth මාර්තු
 misch මේෂ
 mischa මේෂ
 mischel මෙෂාල්
 mish මේෂ
 misha මේෂ
-miss මිස
+miss මිස මිස්
 misses මිසිස්
 missey මෙසේ
 missie මෙසේ
@@ -5765,115 +6072,126 @@ missis මිසිස්
 mississippi මිසිසිපි
 missus මිසිස්
 missy මෙසේ
+mit මිට
 mitchel මිචෙල්
 mitchell මිචෙල්
-mithun මීතේන්
+mithun මීතේන් මෙතැන්
 miti මැටි
 mitral මයිට්‍රල්
 mitro මෙට්‍රෝ
-mitten මීතේන්
-mitton මීතේන්
+mitten මීතේන් මෙතේන්
+mitton මීතේන් මෙතේන්
 miura මියුරා
 mix මැක්ස්
-moacq මොක්
-moad මෝඩ
-moak මොක්
-moan මොන්
+moacq මොක් මාක්
+moad මාදු මෝඩ
+moak මොක් මාක්
+moan මොන් මාන්
 moat මොට
-moch මාක්
-mocha මොක්
+moch මාක් මක්
+mocha මොක් මාක්
 mochas මාකස්
-mock මාක්
-mocks මාක්ස්
-mode මෝඩ
+mock මාක් මක්
+mocks මාක්ස් මැක්ස්
+mode මාදු මෝඩ
 model මොඩල
-moe මා
-moede මෝඩ
-moen මොන්
+moe මා මෝ
+moede මාදු මෝඩ
+moen මොන් මාන්
 moerke මාර්ක්
 moes මාස්
-moga මාගේ
+moga මාගේ මාගෝ
 mogel මෝගල්
-mogg මග
+mogg මග මඟ
 mogle මෝගල්
 mogul මෝගල්
-mohel මූල
+mohel මූල මෝල්
 moher මහර
-mohl මෝල්
-mohney මණි
-mohr මාර
-mohs මස්
-moi මව
-moka මොක්
-moke මොක්
+mohl මෝල් මාළු
+mohney මණි මනි
+mohr මාරු මාර
+mohs මස් මාස
+moi මව මවා
+moka මොක් මාක්
+moke මොක් මාක්
 mokes මාක්ස්
-mole මෝල්
-molen මාලන්
-moll මල්
-molle මල්
+mole මෝල් මාළු
+molen මාලන් මාලුන්
+moll මල් මාළු
+molle මල් මාළු
 mollen මලින්
-molley මාලේ
+molley මාලේ මාලි
 mollica මලික්
-mollie මාලේ
+mollie මාලේ මාලි
 mollo මාලා
-molly මාලේ
-molock මලක්
-mom මම
-momma මම
+molly මාලේ මාලි
+molock මලක් මාලක
+mom මම මම්
+momma මම මාමා
 mommy මමී
-monda මඳ
+mona මොන්
+monda මඳ මන්ද
 monday මුණ්ඩි
 mondays මැන්දිස්
-monde මඳ
-mone මොන්
+monde මඳ මන්ද
+mone මොන් මාන්
 monell මානෙල්
-money මණි
-mong මොන්
+money මණි මනි
+mong මොන් මාන්
+monge මංජු
 monica මැණික්
+monje මංජු
 monk මඟක්
-monn මාන්
-monnin මනින
+monn මාන් මං
+monnin මනිනු මනින
 monte මොන්ටි
 montee මොන්ටි
 monter මන්තර
 montie මොන්ටි
 monus මානස
-moodie මෝදි
-moon මුන්
-moone මුන්
-mooney මුනි
-moonie මුනි
+mood මුදු මුඩු
+moodie මෝදි මූඩි
+moody මූඩි
+moon මුන් මුං
+moone මුන් මුං
+mooney මුනි මුණි
+moonie මුනි මුණි
 moorco මාර්කෝ
-moore මුර
-moosa මුසු
-moot මුත්
+moore මාරු මුර
+moos මුසු
+moosa මුසු මුසා
+moose මුසු
+moot මුත් මුතු
 mop මැප්
 morain මැරෙන
 moraine මැරෙන
-morais මරේ
-moran මරණ
-more මාර
+morais මරේ මාරේ
+moran මරණ මැරයින්
+morath මාර්තු
+more මාරු මාර
 morea මාරියා
 moreau මරා
 moren මෝරුන්
 mores මොරිස්
-morey මාරි
+morey මාරි මාරේ
 morgen මෝර්ගන්
 morgue මාර්ග
 morgun මෝර්ගන්
+mori මාරේ
 moria මාරියා
 morice මොරිස්
-morr මාර
-morra මාර
+morr මාරු මාර
+morra මාර මෝරා
 morren මෝරුන්
-morrie මාරි
-morris මොරිස්
+morrie මාරි මාරේ
+morris මොරිස් මාර්ස්
 morriss මොරිස්
 morro මෝරා
-morrow මරා
-morry මාරි
+morrow මරා මෝරා
+morry මාරි මාරේ
 morse මාර්ස්
 morss මාර්ස්
+mort මාර්තු
 morten මාර්ටින්
 morton මාර්ටින්
 morze මාර්ස්
@@ -5882,9 +6200,9 @@ mosel මෝසල්
 mosie මැසි
 mosle මෝසල්
 mosque මසක්
-moss මාස
+moss මාස මාස්
 mossey මැසි
-most මාස
+most මාස මාස්
 mosul මෝසල්
 mote මොට
 moten මාටින්
@@ -5892,216 +6210,230 @@ moth මෑත
 mother මාතර
 mothon මාටින්
 motley මාතලේ
-motor මෝටර්
-mott මත
-motte මත
-motter මෝටර්
+motor මෝටර් මොටර්
+mott මත මතු
+motte මත මතු
+motter මෝටර් මාතර
 mottley මාතලේ
-motto මාතා
+motto මාතා මතා
 moua මවු
-moue මු
+moue මු මෝ
 moul මවුල
 moulder මෝල්ඩර්
-moura මුර
+moura මුර මෝරා
+mousse මුසු
 mousseau මුසා
 move මුව
 mover මුවර්
 movie මූවී
 moving මුවින්
-mow මා
-mowatt මාවත්
+mow මා මෝ
+mowatt මාවත් මාවත
 mowdy මෝදි
-mowed මෝඩ
-mowen මොවුන්
-mowrey මාරි
-mowry මාරි
+mowed මාදු මෝඩ
+mowen මොවුන් මොන්
+mowrey මාරි මාරේ
+mowry මාරි මාරේ
 moye මෝය
 mrs මිසිස්
-muck මක්
+muck මක් මාක්
 muckey මැකී
+muckle මකුළු
 mucky මැකී
-mud මැද
-mudd මැද
+mud මඩු මැද
+mudd මඩු මැද
 muddle මුදල්
-muddy මැදි
-mug මග
-mugging මගින්
-muggy මගේ
-muhl මුල්
-muhr මුර
-muhs මස්
+muddy මැදි මදි
+mug මග මඟ
+mugging මගින් මඟින්
+muggy මගේ මගී
+muhl මුල් මල්
+muhr මුර මෝර
+muhs මස් මස
 mui මූවී
-mull මුල්
+muise මුසු
+mull මුල් මල්
 mullady මුලදී
-mullah මුල්
-mullan මුලින්
-mullane මුලින්
-mullaney මාලනී
-mullany මාලනී
-mullen මුලින්
-mullet මාලට
-mullin මුලින්
-mulling මුලින්
-mum මම
+mullah මුල් මල්
+mullan මුලින් මාලන්
+mullane මුලින් මාලන්
+mullaney මාලනී මාලිනී
+mullany මාලනී මාලිනී
+mullen මුලින් මාලන්
+mullet මාලට මුලට
+mullin මුලින් මලින්
+mulling මුලින් මලින්
+mum මම මම්
 mumia මමිය
-mumm මම
+mumm මම මම්
 mumma මම
-mumme මම
+mumme මම මම්
 mummey මමී
 mummy මමී
+mums මංජු
 munce මාංශ
 muncee මනසේ
 muncey මනසේ
+munch මැංචු
 muncie මනසේ
 muncy මනසේ
 mundell මණ්ඩල
 mundie මුණ්ඩි
 mundis මැන්දිස්
 mungin මඟින්
-mungle මංගල්
+mungle මංගල් මංගල
 munk මඟක්
-munn මං
+munn මං මන්
 munnell මානෙල්
-munni මණි
+munni මණි මනි
+munns මංජු
+muns මංජු
 munsch මාංශ
-munsell මංසල්
+munsell මංසල් මංසල
 munsey මනසේ
 munter මන්තර
 munyan මානයන්
 munyon මානයන්
+munz මංජු
 murch මාර්ක්
 murden මර්දන
 murk මාර්ක්
 muro මෝරා
-murr මාර
-murray මේරි
-murree මේරි
+murr මාර මැර
+murray මේරි මාරි
+murree මේරි මැරී
 murren මරණ
-murrey මේරි
-murrie මේරි
+murrey මේරි මැරී
+murrie මේරි මැරී
 murrow මරා
-murry මේරි
-murton මාර්ටින්
+murry මේරි මැරී
+murton මාර්ටින් මැරතන්
 musil මෝසල්
 musk මසක්
-muska මසක්
+muska මසක් මසක
 muske මසක්
 musso මුසා
-mussolini මුසෝලිනී
+mussolini මුසෝලිනී මුසොලීනි
 musson මසුන්
+must මස්තු
 muster මාස්ටර්
-mutt මත
+mutt මත මතු
 mutter මාතර
-mutton මතින්
+mutton මතින් මාටින්
 muzzey මැසි
 muzzy මැසි
-myhre මීර්
+myhre මීර් මේරූ
 myrna මරණ
-myrrh මාර
-myrta මාර්තු
-myth මීට
+myrrh මාර මැර
+myrta මාර්තු මෙරට
+myth මීට මෙත්
 mythic මෙතෙක්
 nabil නබි
 nacco නෙකෝ
 nack නෙක
 nacke නෙක
-nadeau නිදා
-nadia නාදය
-nadja නාදය
+nadeau නිදා නෝඩා
+nadia නාදය නාඩි
+nadja නාදය නාඩි
 nagao නාගයා
 nagging නගින
-nah නො
+nah නො නා
 nahm නම්
 naik නෙක
-nair නෑර
-naira නෙරා
+naiman නැමුණු
+nair නේරු නෑර
+naira නෙරා නේරු
 naito නේටෝ
 nakata නොකොට
 name නෑම
-nanna නාන
+nana නැණ
+nanna නාන නැණ
 nanney නානි
 nanni නානි
 nanny නානි
 napoleon නැපෝලියන්
+nara නෑර
 naron නොරොන්
 narrow නෙරා
 narum නෙරුම්
 nasa නාසා
 nass නාස්
-nassau නාසා
-nate නැත
-nathe නැත
+nassau නාසා නසා
+nate නැත නෙත්
+nathe නැත නෙත්
 nathene නීතීන්
 national නැෂනල්
 nationale නැෂනල්
-native නැතිව
+native නැතිව නැතිවූ
 nato නේටෝ
 nats නයිට්ස්
 natter නතර
 nattie නැති
 natty නැති
-nau නො
+nau නො නෝ
 naught නෝට්
 nault නොලත්
 naus නාස්
 nauss නාස්
-nautica නාටක
+nautica නාටක නොතකා
 naval නෙවිල්
 navel නෙවිල්
-navy නැවී
+navy නැවී නැවේ
 nawrot නෝර්ත්
-nay නේ
+nay නේ නෑ
 nazi නට්සි
 neace නිස
-nead නේද
-neal නිල්
-neala නිල
-neale නිල්
-nealey නිළි
-neall නිල්
-nealy නිළි
-near නෑර
+nead නේද නිද
+neal නිල් නීල්
+neala නිල නිල්
+neale නිල් නීල්
+nealey නිළි නිලි
+neall නිල් නීල්
+nealy නිළි නිලි
+near නේරු නෑර
 neary නිරි
-neas නිජ
-nease නිජ
+neas නිජ නිස
+nease නිජ නිස
 neater නිතර
-neault නො
+neault නො නෝ
 neave නිව්
 neaves නිව්ස්
 neck නෙක
 nedeau නිදා
 neece නිස
+need නිද
 needy නිදි
-neeley නිළි
-neely නිළි
+neeley නිළි නිලි
+neely නිළි නිලි
 neeman නිම්න
-neer නෑර
-nees නිජ
-neese නිජ
+neer නේරු නෑර
+nees නිජ නිස
+neese නිජ නිස
 nehru නේරු
 neice නිස
-neigh නේ
-neil නිල්
-neile නිල්
-neill නිල්
+neigh නේ නෑ
+neil නිල් නීල්
+neile නිල් නීල්
+neill නිල් නීල්
 neils නීල්ස්
 neiman නිම්න
-neira නෙරා
-neis නිජ
+neira නෙරා නේරු
+neis නිජ නිස
 neiss නිස
 neither නිතර
-nej නේ
+nej නේ නෑ
 nel නයිල්
 nell නයිල්
-nella නෙලා
+nella නෙලා නෙළා
 nelle නයිල්
-nelon නෙළන
+nelon නෙළන නෙලන
 nelsen නෙල්සන්
 nelson නෙල්සන්
 nemir නාමර්
 neolithic නියෝලිතික
-neon නියෝන්
+neon නියෝන් නියං
 nepl නේපාල
+net නෙත්
 nets නයිට්ස්
 netted නැතිද
 nettie නැති
@@ -6115,26 +6447,27 @@ neveau නිවා
 neves නිව්ස්
 nevill නෙවිල්
 neville නෙවිල්
-new නෝ
-newer නුවර
+new නෝ නු
+newer නුවර නූර්
 newman නෝමන්
 newmann නෝමන්
-newton නූතන
-ney නේ
-neylon නෙළන
+newton නූතන නුතන
+ney නේ නෑ
+neylon නෙළන නෙලන
+neyman නැමුණු
 ngai ගයි
 niall නයිල්
 niamh නිව්
-niccum නෑකම්
+niccum නෑකම් නික්ම
 nice නිස
 nichola නිහාල්
-nicholas නිකලස්
+nicholas නිකලස් නිකොලස්
 nicholes නිකොලස්
 nicholl නිකල්
 nicholls නිකලස්
 nichols නිකලස්
 nicholson නිකොල්සන්
-nick නික
+nick නික නෙක
 nickel නිකල්
 nickell නිකල්
 nickels නිකලස්
@@ -6148,72 +6481,74 @@ nickolas නිකලස්
 nickols නිකලස්
 nickolson නිකොල්සන්
 nickson නික්සන්
-nickum නෑකම්
+nickum නෑකම් නික්ම
 nicol නිකල්
 nicoll නිකල්
 nicolls නිකලස්
 nicolson නිකොල්සන්
 nicoson නික්සන්
 nicotine නැකතින්
-nie නේ
+nie නේ නී
 niece නිස
-nied නේද
-niel නිල්
+nied නේද නිද
+niel නිල් නීල්
 niels නීල්ස්
 nieman නිම්න
 niemann නිම්න
 niemi නිමි
 nierman නිර්මාණ
-niese නිජ
+niese නිජ නිස
 niess නිස
 nieto නේටෝ
 niger නයිජර්
-nigg නිග්
+nigg නිග් නැගූ
 night නයිට්
 nights නයිට්ස්
 nihei නැහැ
 nikkel නිකල්
-nikkhah නික
+nikkhah නික නෙකෝ
+nil නිල
 nile නයිල්
-nill නිල්
-nilly නිළි
+nill නිල් නිල
+nilly නිළි නිලි
 nilsen නෙල්සන්
 nilson නෙල්සන්
 nilsson නෙල්සන්
 nimmo නිමා
 nine නාඉන්
-ning නැඟ
+ning නැඟ නැණ
 nipple නේපාල
 niquette නැකැත්
-nir නෑර
+nir නේරු නෑර
 niro නෙරා
 nissa නිසා
 nissho නිශා
 nissim නැසීම
-nit නැත
+nit නැත නෙත්
 nita නීති
 nite නයිට්
 nito නේටෝ
-nitrate නයිට්‍රේට්
+nitrate නයිට්‍රේට් නයිට්‍රේට
 nitric නයිට්‍රික්
-nitrogen නයිට්‍රජන්
-nitta නීති
+nitrogen නයිට්‍රජන් නයිට්රජන්
+nitta නීති නැත
 nitto නේටෝ
-nitty නීති
+nitty නීති නැති
 nixon නික්සන්
-noa නොව
-noaa නොව
-noah නොව
+noa නොව නොවේ
+noaa නොව නොවේ
+noah නොව නොවේ
 noakes නොක්ස්
-noam නාම
+noam නාම නොම
 noble නොබෙල්
 noce නාස්
-noe නො
+nod නඩු
+noe නො නෝ
 noecker නොකර
 noell නාල
 noes නාස්
 noeth නෝට්
-noh නො
+noh නො නෝ
 nohl නාල
 nohr නෑර
 nokes නොක්ස්
@@ -6222,8 +6557,9 @@ nole නාල
 noll නාල
 nolla නාල
 nolte නොලත්
-nome නාම
-none නන්
+nome නාම නොම
+non නන්
+none නන් නාන්
 nonie නානි
 nor නෑර
 nora නෑර
@@ -6231,74 +6567,74 @@ norah නෑර
 noren නොරොන්
 norrod නාරද
 norte නෝර්ත්
-norway නෝර්වේ
+norway නෝර්වේ නොර්වේ
 nose නාස්
 noss නාස්
-not නැත
+not නතු නැත
 note නෝට්
 nother නතර
-nott නැත
-notte නැත
+nott නතු නැත
+notte නතු නැත
 notter නතර
-novack නාවික
-novia නොවීය
+novack නාවික නවක
+novia නොවීය නොවිය
 novick නාවික
 novoa නොවූ
-novum නොවීම
+novum නොවීම නොවිම
 nowell නූල්
 nth ඈන්ට
 nuckles නකල්ස්
 nuckolls නකල්ස්
 nuckols නකල්ස්
-nudd නාද
+nudd නඩු
 nudo නෝඩා
 nugget නැගිට
-nuhn නන්
-null නූල්
+nuhn නන් නාන්
+null නළු නූල්
 numb නම්
 numbing නමින්
-nun නන්
-nunn නන්
+nun නන් නාන්
+nunn නන් නාන්
 nuno නෝනා
-nurr නර
-nurre නර
+nurr නර නෑර
+nurre නර නෑර
 nuss නාස්
-nut නැත
-nutt නැත
+nut නතු නැත
+nutt නතු නැත
 nutter නතර
 nutty නැති
-nycum නෑකම්
+nycum නෑකම් නික්ම
 nye නයි
-nylen නෙළන
+nylen නෙළන නෙලන
 nyssa නිසා
 oak ඕක්
 oakar ආකාර
-oana ඕන
-oanh ඔන්
-oar ආර්
-oat ඔත්
+oana ඕන ඔන්
+oanh ඔන් ඕන්
+oar ආර් ඔරු
+oat ඔත් ආට්
 oates ආට්ස්
-oath ඔත්
+oath ඔත් ආට්
 oaths ආට්ස්
 oats ආට්ස්
-obar බාර්
+obar බාර් බොරු
 obese බේස්
-obey ඔබේ
+obey ඔබේ ඔබෙ
 obie ඔබේ
 oblique බ්ලේක්
 obscene බසින්
-occult කළත්
+occult කළත් කලත්
 occur කර
-och ඕක්
+och අකු ඕක්
 ochra ආකර
-ochre ආකාර
-ocker ආකාර
-oda ආදී
-odd අද
-odden ආදීන්
+ochre ආකාර ආකර
+ocker ආකාර ආකර
+oda ආදී ආදි
+odd අඩු අද
+odden ආදීන් ආදාන
 odder ආදර
-oddi ආදී
-oddy ආදී
+oddi ආදී ආදි
+oddy ආදී ආදි
 odea ආදිය
 oden ආදීන්
 odeon ආදීන්
@@ -6314,25 +6650,25 @@ odysseus ඔඩිසියස්
 oehme ඕම්
 oetting ආටෙන්
 off ඔෆ්
-office ඔෆීස්
+office ඔෆීස් ඔෆිස්
 ogg අග
 oharra ආහාර
-ohba ඔබ
-ohh ඕ
-ohl ඕල්
-ohland ඕලන්ද
+ohba ඔබ ඔබේ
+ohh ඕ ආ
+ohl ඕල් ඕලු
+ohland ඕලන්ද ඔළිඳ
 ohm ඕම්
-ohr ආර්
+ohr ආර් ඔරු
 ohrt ආර්ට්
-ohs ඕඑස්
+ohs ඔසු ඕඑස්
 oie ඔය
-oja ඔය
+oja ඔය ඔයා
 oka ඕක්
-ola ඕල්
-olah ලා
+ola ඕල් ඕලු
+olah ලා අල
 olcott ඕල්කට්
 olde ඕල්ඩ්
-ole ඕල්
+ole ඕල් ඕලු
 olea ආලියා
 olen ඇලන්
 oleo ආලියා
@@ -6342,36 +6678,38 @@ olive ඔලිව්
 olivia ඔලිවියා
 oliwa ඔලිව්
 olk ඕක්
-olley අලි
-ollie අලි
+olley අලි ඇලී
+ollie අලි ඇලී
 ollila ඇලීල
-olly අලි
+olly අලි ඇලී
 olovo ලාවා
 olund ඕලන්ද
 olympic ඔලිම්පික්
 olympus ඔලිම්පස්
 oma ඕම්
-omary මේරි
+omary මේරි මැරී
 omeara ආමීර්
-ommen අමන්
+ommen අමන් ආමාන
 omonia ඇමෝනියා
 onan ඔන්න
-once වංශ
+once වංශ වංස
 ondo ඈඳා
-one වන
-oneness වංශ
-ones වංශ
-ong ඔන්
+one වන වනු
+oneness වංශ වංස
+ones වංශ වංස
+ong ඔන් ආන්
 online ඔන්ලයින්
-onnen ඔන්න
-onni අනේ
-onno ආනා
-ooh ඌ
-oohs උස්
-oooh ඌ
-ooohs උස්
+onnen ඔන්න අන්න
+onni අනේ ඇණි
+onno ආනා ඕනා
+ono ආනා
+ons අංශු අංශූ
+ooh ඌ ඕ
+oohs උස් උස
+oooh ඌ ඕ
+ooohs උස් උස
 oop උප
-ooze උස්
+ooze උස් උස
 opalka පාලක
 opaque ඔපෙක්
 open ඕපන්
@@ -6381,133 +6719,144 @@ oppel ඇපල්
 opper අපර
 oppress ප්‍රෙස්
 oppression ඔපරේෂන්
-orca ආර්ක්
-ore ආර්
-orea අරීය
+ops ආපසු
+opus ආපසු
+orca ආර්ක් ආරක්
+ore ආර් ඔරු
+orea අරීය අරිය
 ori ආරේ
-orr ආර්
+orr ආර් ඔරු
 orta ආර්ට්
 orthodox ඕර්තඩොක්ස්
 orum ආරාම
 orva ආර්වී
-ose ඕඑස්
+ose ඔසු ඕඑස්
 osika ආශයිකා
 oslin අසලින්
-oss ඕඑස්
-ossa අසා
-osso ආශා
+oss ඔසු ඕඑස්
+ossa අසා ඇස
+osso ආශා ආසා
 osswald ඔස්වල්ඩ්
 osteen ඔස්ටින්
-osten ආසන
+osten ආසන ඕසෝන්
 osting ඔස්ටින්
-osuch ඇසක්
+osuch ඇසක් අශෝක්
 osuna ඕසෝන්
 other අතර
-otoole ඇතුල්
-ott ඇත
-otten ආටන්
-otter අතර
+otoole ඇතුල් ඇතුළු
+ott ඇත අත්
+otten ආටන් ආටෙන්
+otter අතර ආතර්
 otting අතින්
-otto ඔටෝ
+otto ඔටෝ ඇතා
 otts ආට්ස්
 ottum ඇතැම්
 otwell අත්වැල්
-ouaga වගා
-ought ඔත්
-oughta ඈත
-oui වේ
+ouaga වගා වාග්
+ought ඔත් ආට්
+oughta ඈත ඔටෝ
+oui වේ වී
 our ආර්
-out අවුත්
-outta ඌට
+out අවුත් අවුට්
+outta ඌට අවුත්
 over ආවාර
 oveson අවසන්
-owe ඕ
+owe ඕ ආ
 owen ඔවුන්
-owes ඕඑස්
+owes ඔසු ඕඑස්
 owl අවුල්
-own ඔන්
+own ඔන් ඕන්
+owned ආණ්ඩු
 oxford ඔක්ස්ෆර්ඩ්
 oxide ඔක්සයිඩ්
 oxygen ඔක්සිජන්
 ozawa ආශාව
-ozelle ජෙල්
-ozone ඕසෝන්
+ozelle ජෙල් අසේල
+ozone ඕසෝන් ඕසොන්
 ozora අසාර
 ozzie අජේ
 ozzy අජේ
-paape පාප්
+paape පාප් පොප්
+paasch පශු
 paccar පාකර්
-pacella පාසැල්
+pacella පාසැල් පාසැල
 pacelli පාසැලේ
-pacey පේශි
+pacey පේශි පේශී
 pacifica පැසිෆික්
 pacing පේශීන්
-pack පාක්
+pack පාක් පක්
 package පැකේජ
 packer පාකර්
+pad පාද
 paddack පාදක
 padden පාදන
 paddock පාදක
-paddy පැදි
-paean පියන්
+paddy පැදි පඩි
+paean පියන් පියන
 paging පෙජෙං
 paid පෑඩ්
-paign පැන්
+paign පැන් පැන
 paik පැයක්
-pail පෙළ
-paille පෙළ
+pail පෙළ පැල්
+paille පෙළ පැල්
 pails පැලස්
-pain පැන්
-paine පැන්
+pain පැන් පැන
+paine පැන් පැන
 painter පේන්ටර්
 pair පෙර
 paired පෙරද
 paisley පේස්ලි
-pait පෙත්
-paiva පෙවූ
+pait පෙත් පැට්
+paiva පෙවූ පෑවේ
 pake පැයක්
+pal පෙළ
 palace පැලස්
-palais පෙලේ
-palate පළාත්
-pale පෙළ
+palais පෙලේ පොලේ
+palate පළාත් පලාත්
+pale පෙළ පැල්
 palen පාලන
 pales පැලස්
-palette පළාත්
-paley පෙලේ
-palin පෙළෙන
-pall පොල්
+palette පළාත් පලාත්
+paley පෙලේ පේළි
+palin පෙළෙන පෙලෙන
+pall පොල් පෝල්
 pallas පැලස්
-pallet පළාත්
-pallett පළාත්
+pallet පළාත් පලාත්
+pallett පළාත් පලාත්
 pallid පැළද
-pallo පලා
-palm පාම
-palme පාම
-paluch පෙළක්
-paluck පෙළක්
+pallo පලා පළා
+palm පළමු පාම
+palme පළමු පාම
+palms පාංශු
+paluch පෙළක් පාලක
+paluck පෙළක් පාලක
 pam පෙම්
-pan පැන්
+pan පැන් පයින්
 panaco පංකා
 pander පාන්දර
 pandey පාණ්ඩේ
-pane පැන්
+pane පැන් පැන
 panella පනේල
-panem පෙනුම
-pang පැන්
+panem පෙනුම පැනීම
+pang පැන් පයින්
 pankow පංකා
+panned පන්දු
 pannill පනේල
 panning පනින
 pannu පණු
-panny පෙනී
+panny පෙනී පෙනේ
+pans පාංශු
 panter පේන්ටර්
-panthea පන්තිය
+panthea පන්තිය පංතිය
 panther පේන්ටර්
 panting පන්තීන්
 paoli පවුලේ
-papal පැපොල්
-papp පාප්
-pappa පාප
-paque පාක්
+pap පපු
+papa පපු
+papal පැපොල් පැපොල
+papp පාප් පපු
+pappa පාප පාප්
+paque පාක් පක්
 par පාර
 parachute පැරෂුට්
 paradee පෙරදී
@@ -6520,161 +6869,176 @@ parke පාර්ක්
 paro පොරෝ
 parody පෙරදී
 parole පරාල
-parr පාර
-parra පාර
-parrack පාරක්
-parrill පර්ල්
+parr පාර පර
+parra පාර පර
+parrack පාරක් පාර්ක්
+parrill පර්ල් පරාල
 parris පැරිස්
-parrot පෙරත්
-parrott පෙරත්
+parrot පෙරටු පෙරත්
+parrott පෙරටු පෙරත්
 parrotta පරාතා
 parrow පෙරා
 parry පෙරී
+pars පර්ශු
+parse පර්ශු
 parsell පාර්සල්
 parte පාරට
 pascale පැස්කල්
-pasch පසක්
+pasch පාස්කු පසක්
 paschen පාෂාණ
+pash පශු
 pasing පේශීන්
 paske පැසක්
 paskey පසකි
 paslay පාසලේ
-pasley පේස්ලි
-pasque පසක්
-pass පස්
+pasley පේස්ලි පාසලේ
+pasque පාස්කු පසක්
+pass පසු පස්
 passel පාසැල්
-passey පසේ
+passey පසේ පේශි
 passing පසින්
 passion පාෂාණ
 passon පසන්
-passow පාසා
+passow පාසා පේසා
 pasta පෝස්ට්
 patane පටන්
-pate පෙත්
+pate පෙත් පැට්
 patella පටෙල්
 patent පේටන්ට්
 patese පෑතිස්
-patey පෙති
+patey පෙති පැති
 pathway පත්වේ
 patio පෙතියා
-patois පටවා
+patois පටවා පැටවා
 paton පටන්
 patrick පැට්‍රික්
 patter පතර
-pattie පෙති
+pattie පෙති පැති
 pattin පාටින්
 patting පාටින්
 pattis පෑතිස්
 pattiz පෑතිස්
 patton පටන්
-patty පෙති
-paugh පා
-paul පොල්
+patty පෙති පැති
+paugh පා පෝ
+paul පොල් පෝල්
 paula පොල්
-pauley පාලි
-pauli පාලි
-paulie පාලි
+pauley පාලි පවුලේ
+pauli පාලි පවුලේ
+paulie පාලි පවුලේ
 paulin පවුලෙන්
 pauling පවුලෙන්
 paulita පාලිත
-paull පොල්
+paull පොල් පෝල්
 paullin පවුලෙන්
-paulo පෝලෝ
+paulo පෝලෝ පොළෝ
 paulus පොලිස්
-pauly පාලි
-paup පොප්
+pauly පාලි පවුලේ
+paup පොප් පාප්
+pave පෙවූ
 pavey පෑවේ
 pavia පෑවේය
-pavon පවන්
-paw පා
-pawed පාද
-pawlak පාලක
-pawley පාලි
+pavon පවන් පොවන
+paw පා පෝ
+pawed පොදු
+pawlak පාලක පොළක්
+pawley පාලි පවුලේ
 pawling පවුලෙන්
-pawn පාන්
+pawn පාන් පාන
+pawns පාංශු
 pawson පොසොන්
-pay පෙ
-payan පැන්
-paye පෙ
+pay පෙ පෑ
+payan පැන් පැන
+paye පෙ පෑ
 payee පේ
 payer පේර
 payette පීට්
 payeur පේර
-payna පැන
-payne පැන්
+payna පැන පෙනේ
+payne පැන් පැන
 paynter පේන්ටර්
-paz පස්
-pea පී
-peace පීස්
-peal පිල්
-peale පිල්
+paz පසු පස්
+pea පී පි
+peace පීස් පිස
+peal පිල් පිල
+peale පිල් පිල
 pear පෙර
 pearl පර්ල්
 pearle පර්ල්
-peart පෙරත්
-peary පිරී
-peas පීස්
-pease පීස්
-peasey පේශි
+pearse පර්ශු
+peart පෙරටු පෙරත්
+peary පිරී පිරි
+peas පීස් පිස
+pease පීස් පිස
+peasey පේශි පේශී
 peaslee පේස්ලි
 peasley පේස්ලි
-peat පීට්
-peay පී
+peat පීට් පිටු
+peay පී පි
 peddie පැදි
 peddy පැදි
-peel පිල්
-peele පිල්
+peed පිදූ පිදු
+peel පිල් පිල
+peele පිල් පිල
 peer පෙර
-peery පිරී
-peete පීට්
-pehl පෙළ
-peil පිල්
+peery පිරී පිරි
+peete පීට් පිටු
+pehl පෙළ පැල්
+peil පිල් පිල
 peine පින්
 pelkey පෙළකි
-pell පෙළ
-pella පෙළ
+pell පෙළ පැල්
+pella පෙළ පැළ
 pelland පැළඳ
-pelle පෙළ
+pelle පෙළ පැල්
 pellet පෙළට
-pelley පෙලේ
-pelon පෙළෙන
+pelley පෙලේ පේළි
+pelon පෙළුණු පෙළෙන
 pelot පෙළට
 pelz පැලස්
-penang පෙනෙන
+pen පැන
+penang පෙනෙන පෙනෙනු
 pencil පැන්සල්
-peng පැන්
-penh පැන්
+peng පැන් පැන
+penh පැන් පැන
 penis පිණිස
-penn පැන්
-penney පෙනී
-pennie පෙනී
-penning පෙනෙන
-penny පෙනී
+penn පැන් පැන
+penney පෙනී පෙනේ
+pennie පෙනී පෙනේ
+penning පෙනෙන පෙනෙනු
+penny පෙනී පෙනේ
 pentair පේන්ටර්
-peon පියන්
-peppel පැපොල්
-pepple පැපොල්
+peon පියන් පියන
+peppel පැපොල් පැපොල
+pepple පැපොල් පැපොල
 peptide පෙප්ටයිඩ
+per පර
 peras පැරිස්
 perc පාර්ක්
+perce පර්ශු
 percy පර්සි
-pere පෙර
-periman පරිමාණ
+pere පෙර පර
+periman පරිමාණ පරිමාන
 perk පාර්ක්
 perl පර්ල්
 perle පර්ල්
 perna පරණ
-perot පෙරා
+perot පෙරා පරයා
 perry පෙරී
+pers පර්ශු
 persall පාර්සල්
+perse පර්ශු
+peru පාරු
+perz පර්ශු
 pesina පේශීන්
 pessin පේශීන්
-pete පීට්
-peter පීටර්
+pet පැට්
+pete පීට් පිටු
+peter පීටර් පිටර්
 petersburg පීටර්ස්බර්ග්
-petey පිටි
-petie පෙති
-petit පෙති
+petey පිටි පිති
+petie පෙති පැති
+petit පෙති පැති
 petite පතිත
 petra පෙට්‍රී
 petrak පැට්‍රික්
@@ -6683,15 +7047,15 @@ petrich පැට්‍රික්
 petrick පැට්‍රික්
 petrie පෙට්‍රී
 petry පෙට්‍රී
-pettey පෙති
+pettey පෙති පැති
 petteys පෑතිස්
-pettie පෙති
+pettie පෙති පැති
 petties පෑතිස්
 pettis පෑතිස්
 pettry පෙට්‍රී
 pettus පෑතිස්
-petty පෙති
-peyman පැමිණ
+petty පෙති පැති
+peyman පැමිණ පැමින
 pezza පේසා
 pfahl ඵල
 phair ෆෙයාර්
@@ -6707,171 +7071,183 @@ phoenix ෆීනික්ස්
 phu ෆෝ
 phut පහත්
 phylis ෆයිල්ස්
-pia පියා
+pia පියා පී
 piaget පියාජේ
 piana පියන
-piano පියන
+piano පියන පියානෝ
 picasso පිකාසෝ
 picazo පිකාසෝ
 pictures පික්චර්ස්
 piddock පීඩක
 pie පයි
-piece පීස්
+piece පීස් පිස
 piechota පිහාටු
 piecing පේශීන්
 piedra පේද්‍රා
-piehl පිල්
-piel පිල්
-piela පිල
+piehl පිල් පිල
+piel පිල් පිල
+piela පිල පිල්
 pier පෙර
 pieratt පිරිත්
-pieri පිරී
+pieri පිරී පිරි
 pierro පෙරා
-piet පීට්
-pieter පීටර්
-piette පීට්
+piet පීට් පිටු
+pieter පීටර් පිටර්
+piette පීට් පිටු
 pigeon පෙජෙං
 pigg පිග්
 pigue පිග්
-pih පී
-pihl පිල්
+pih පී පි
+pihl පිල් පෙළ
 piland පැළඳ
-pill පිල්
-pilla පෙළ
-pilley පිළි
+pill පිල් පෙළ
+pilla පෙළ පිල
+pilley පිළි පිලේ
 pilon පිළවුන්
+pin පැන්
 pine පයින්
 pinion පින්යින්
-pinn පින්
-pinney පෙනී
+pinn පින් පැන්
+pinney පෙනී පෙනේ
+pinning පෙනෙනු
 pinnock පිනක්
-pintar පේන්ටර්
+pintar පේන්ටර් පින්තාරු
 pinyan පින්යින්
 pio පායා
-pippen පිපෙන
+pippen පිපුණු පිපෙන
 pippin පිපෙන
-pirie පිරී
+pirie පිරී පිරි
 piro පෙරා
 pirog පරාග
 pirro පෙරා
 pisca පැසක්
-piss පීස්
+piss පීස් පිස
 pissing පේශීන්
 pistil පැස්ටල්
 pistol පැස්ටල්
-piston පිස්ටන්
+piston පිස්ටන් පිස්ටන
+pit පිටු
 pitting පිටින්
-pivot පැවත
+pity පෙති
+pivot පැවත පැවැත්
 pixar පික්සාර්
-pixel පික්සෙල්
-pizzi පේශි
+pixel පික්සෙල් පික්සල්
+pizzi පේශි පේශී
 pizzo පේසා
 plack පලක්
 placke පලක්
+plam පළමු පලමු
 planck ප්ලාන්ක්
 plaque පලක්
 plass ප්ලස්
 plasse ප්ලස්
 plateau ප්ලේටෝ
 plato ප්ලේටෝ
-platt පළාත්
-platte පළාත්
-plaut ප්ලොට්
+platt පළාත් පලාත්
+platte පළාත් පලාත්
+plaut ප්ලොට් පළාත්
 plea පළි
 ploch පලක්
 plock පලක්
 plonka ප්ලාන්ක්
 plot පළාත්
-plott පළාත්
+plott පළාත් ප්ලොට්
 plough පලා
 pluck පලක්
+plude පලුදු පළුදු
+plum පළමු පලමු
+plumb පළමු පලමු
 plunk ප්ලාන්ක්
 plus ප්ලස්
 pluta ප්ලූටෝ
 plutonium ප්ලූටෝනියම්
 poag පාග
-poch පාක්
-pock පාක්
-poe පෝ
-poehl පොල්
-poel පොල්
-poet පොත්
+poch පාක් පෝක්
+pock පාක් පෝක්
+pod පොදු
+poe පෝ පා
+poehl පොල් පෝල්
+poel පොල් පෝල්
+poet පොත් පොතු
 pogue පාග
-poh පෝ
-pohl පොල්
-poke පාක්
-polack පොළක්
-pole පොල්
+poh පෝ පා
+pohl පොල් පෝල්
+poke පාක් පෝක්
+polack පොළක් පාලක
+pole පොල් පෝල්
 polen පාලන
-poley පොලී
+poley පොලී පොළී
 police පොලිස්
 polio පෝලියෝ
 politte පාලිත
-polity පළාතේ
-poll පොල්
-pollack පාලක
-pollak පාලක
+polity පළාතේ පලාතේ
+poll පොල් පෝල්
+pollack පාලක පලක්
+pollak පාලක පලක්
 pollan පාලන
 pollen පාලන
 pollet පාලිත
 pollett පාලිත
-polley පාලි
+polley පාලි පාලී
 pollio පෝලියෝ
 pollitt පාලිත
-pollo පලා
-pollock පාලක
-pollok පාලක
-polly පාලි
+pollo පලා පෝලෝ
+pollock පාලක පලක්
+pollok පාලක පලක්
+polly පාලි පාලී
+polo පොළෝ
 polus පොලිස්
 polyester පොලියෙස්ටර්
 polyp පොලිප්
 pommel පාමුල
 pompey පොම්පේ
-ponce පනස්
+ponce පාංශු පනස්
+pond පන්දු
 ponder පාන්දර
-pong පාන්
-pons පනස්
-pont පනත්
-ponte පනත්
-ponti පන්ති
-pooh පූ
-poohed පුද
+pong පාන් පාන
+pons පාංශු පනස්
+pont පනත් පණත්
+ponte පනත් පණත්
+ponti පන්ති පංති
+pooh පූ පෝ
+poohed පුද පුඩු
 poole පෝල්
 poon පුන්
 poor පුර
 poore පුර
 pop පාප්
-pope පොප්
-popp පාප්
-poppa පාප්
-poppe පාප්
-poppell පැපොල්
-popple පැපොල්
+pope පොප් පාප්
+popp පාප් පොප්
+poppa පාප් පාප
+poppe පාප් පොප්
+poppell පැපොල් පැපොල
+popple පැපොල් පැපොල
 poppy පාපී
-porr පාර
+porr පාර පොර
 porro පොරෝ
-pos පස්
+pos පසු පස්
 posey පාසි
-posse පසේ
-possehl පාසල්
+posh පශු
+posse පසේ පාසි
+possehl පාසල් පාසැල්
 possum පසම්
 postel පැස්ටල්
 postell පැස්ටල්
-postle පාසල්
+postle පාසල් පාසැල්
 pot පත්
 poteet පතිත
 poteete පතිත
 poten පාටින්
 pothole පාතාල
 potion පෝෂණ
-potter පොටර්
-pottle පතල්
-pou පූ
+potter පොටර් පෝටර්
+pottle පතල් පටල
+pou පූ පෝ
 poul පෝල්
 pouliot පෝලියෝ
-pour පාර
+pour පාර පොර
 powder පවුඩර්
-powell පවුල්
+powell පවුල් පවුල
 powley පවුලේ
 pozzi පාසි
 prague ප්‍රාග්
@@ -6893,12 +7269,12 @@ pretty ප්‍රීති
 prey පරෙ
 preys ප්‍රෙස්
 price ප්‍රයිස්
-priddy පරිදි
+priddy පරිදි පරිදී
 priem ප්‍රේම
 pries ප්‍රයිස්
 priestley ප්‍රිස්ට්ලි
 priestly ප්‍රිස්ට්ලි
-prieta ප්‍රේත
+prieta ප්‍රේත ප්‍රීති
 prim ප්‍රේම
 primm ප්‍රේම
 prince ප්‍රින්ස්
@@ -6912,102 +7288,107 @@ prize ප්‍රයිස්
 prod පරාද
 prody පොඩි
 prong ප්‍රාණ
-protean ප්‍රෝටීන්
-protein ප්‍රෝටීන්
+protean ප්‍රෝටීන් ප්‍රෝටීන
+protein ප්‍රෝටීන් ප්‍රෝටීන
 prussia පරුෂ
-prussian ප්‍රශ්න
+prussian ප්‍රශ්න ප්‍රශ්ණ
 pryce ප්‍රයිස්
-psalm සෑම
-psalms සංස්
+psalm සෑම සම්
+psalms සංස් සංජු
 pseudo සෝදා
 pshew පශු
-psi සෑය
+psi සෑය සාය
 ptolemy ටොලමි
-puck පාක්
+puck පාක් පක්
 pucker පාකර්
 puerto පාරට
-puett පුත්
+puett පුත් පුතු
 pug පාග
-puhl පල
+puhl පල පල්
 puleo පෝලියෝ
 pulitzer පුලිට්සර්
 pull පෝල්
 pullan පුළුන්
 pullen පුළුන්
 pulse පැලස්
+pumice පාංශු
 pummel පාමුල
-pun පන්
+pun පන් පැන්
 punch පංච
 pundit පණ්ඩිත්
-pundt පනත්
-pung පන්
-punjab පන්ජාබ්
+pundt පනත් පණත්
+pung පන් පැන්
+punjab පන්ජාබ් පංජාබ්
 punk පන්ක්
-puns පනස්
-punt පනත්
-pup පාප්
+puns පාංශු පනස්
+punt පනත් පණත්
+pup පාප් පපු
 puppy පාපී
 purdie පෙරදී
 purdy පෙරදී
 purim පුරාම
 purk පාර්ක්
-purr පෙර
+purr පෙර පර
+purrs පර්ශු
+purse පර්ශු
 pursel පාර්සල්
 pursell පාර්සල්
 pursue පර්ශු
-purt පෙරත්
-pus පස්
-puss පස්
+purt පෙරටු පෙරත්
+pus පසු පස්
+pusch පශු
+puss පසු පස්
+put පුතු
 putt පත්
 putter පතර
-putting පුටින්
-putty පටි
-puza පූජා
-puzo පූජා
-puzzle පාසල්
-puzzo පූජා
+putting පුටින් පාටින්
+putty පටි පතේ
+puza පූජා පුජා
+puzo පූජා පුජා
+puzzle පාසල් පාසැල්
+puzzo පූජා පුජා
 pvc පිවිසි
 pye පයි
 pymm පෙම්
 pyne පයින්
 pyongyang ප්යොංග්යෑං
-pyramid පිරමිඩ
-pyron පිරෙන
-pythia පිටිය
+pyramid පිරමිඩ පිරමීඩ
+pyron පිරුණු පිරෙන
+pythia පිටිය පැතීය
 python පයිතන්
 qaeda කයිඩා
-qana කන
-qatar කටාර්
+qana කන කෝණ
+qatar කටාර් කාටර්
 qawi කවි
-qian ජින්
+qian ජින් කියනු
 qin කින්
-qing කින්
-qom කම්
-qua ක්ව
+qing කින් කිං
+qom කම් කාම
+qua ක්ව කවා
 quack ක්වාක්
-quai කි
-quantum ක්වොන්ටම්
-quay කි
-quaye කේ
+quai කි කී
+quantum ක්වොන්ටම් ක්වන්ටම්
+quay කි කී
+quaye කේ කෑ
 quays කෙස්
 queau කවා
 quebec ක්විබෙක්
-queen ක්වීන්
-queena ක්වීන්
-qui කි
-quiche කේශ
-quin ක්වින්
-quina ක්වීන්
+queen ක්වීන් ක්වින්
+queena ක්වීන් ක්වින්
+qui කි කී
+quiche කේශ කේෂ
+quin ක්වින් ක්විං
+quina ක්වීන් ක්වින්
 quincey ක්වින්සි
 quincy ක්වින්සි
-quinn ක්වින්
+quinn ක්වින් ක්විං
 quo කවා
-raad රෝඩ්
+raad රෝඩ් රෝද
 raben රබන්
 rabin රොබින්
 rabine රොබින්
 rabun රබන්
-race රැස්
+race රැස් රේස්
 rachi රාශි
 racine රාශීන්
 rack රැක
@@ -7019,7 +7400,7 @@ rad රෙඩ්
 radar රේඩාර්
 radde රෙඩ්
 radder රේඩාර්
-radel රදළ
+radel රදළ රදල
 rader රේඩාර්
 radio රේඩියෝ
 radium රේඩියම්
@@ -7029,36 +7410,43 @@ rael රේල්
 raether රේඩාර්
 raffel රයිෆල්
 raffle රයිෆල්
+rag රාග
 ragain රේගන්
-raging රැජින
+raging රැජින රැජිණ
 ragu රේගු
-rague රඟ
-rahm රාම්
+rague රේගු රඟ
+rahm රාමු රාම්
 rahn රන්
-rai රායි
-raia රායි
+rai රායි රෝයි
+raia රායි රැය
 raid රෙඩ්
 raider රේඩාර්
 raikes රෙක්ස්
 rail රේල්
 raile රේල්
-railey රැලි
+railey රැලි රැළි
+rain රේණු
 raina රේණු
+raine රේණු
 rained රේන්ද
-raisa රැස්
-raise රැස්
-raisin රැජින
-raising රැජින
-raissa රැස්
+raisa රැස් රැස
+raise රැස් රේස්
+raisin රැජින රැජිණ
+raising රැජින රැජිණ
+raissa රැස් රැස
 rake රැක
 rakes රෙක්ස්
-raley රැලි
-rally රැලි
+raley රැලි රැළි
+rally රැලි රැළි
+ram රාමු
 rambeau රම්බා
 rambow රම්බා
-ramm රාම්
+ramm රාමු රාම්
+ramon රෝමානු
+ramone රෝමානු
 ramseur රැම්සාර්
-rand රයින්ඩ්
+ranch රංචු
+rand රයින්ඩ් රේන්ද
 ranee රාණි
 rang රන්
 ranh රන්
@@ -7069,93 +7457,103 @@ raoux රාඕ
 rape රැප්
 raphel රයිෆල්
 rapp රැප්
-rappa රැප්
+rappa රැප් රෑප
 rappe රැප්
 raquel රාකෙල්
 rara රෝර
-rase රැස්
+rase රැස් රේස්
 rasey රාශි
 rasia රාශිය
 raske රැසක්
 raskyn රැසකින්
 raso රෝසා
+rat රතු
 ratay රටේ
 rather රේඩාර්
 rathke රටක
 rats රයිට්ස්
 rattan රටෙන්
-ratte රත්
+ratte රතු රත්
 ratts රයිට්ස්
 ratty රටේ
 ratz රයිට්ස්
-rauh රා
-raul රෝල්
-raun රොන්
+rauh රා රෝ
+raul රෝල් රාළ
+raun රොන් රෝන්
 raup රෑප
 raupp රෑප
 rauth රාත්
-raw රා
-rawe රා
-rawl රෝල්
+raw රා ර
+rawe රා රෝ
+rawl රෝල් රාළ
 rawson රාශීන්
-ray රේ
-raye රේ
+ray රේ රෑ
+raye රේ රෑ
 rayed රෙඩ්
 rayl රේල්
 rayle රේල්
 rayman රේමන්
-rays රැස්
-raz රැස්
-raza රජ
-raze රැස්
-razing රැජින
+rayne රේණු
+rayon රේණු
+rays රැස් රේස්
+raz රජු රැස්
+raza රජ රාජ
+raze රැස් රේස්
+razing රැජින රැජිණ
 razo රාජා
-rea රේ
-read රෙඩ්
+rea රේ රෑ
+read රෙඩ් රීඩ්
 reade රෙඩ්
 reader රේඩාර්
-ready රෙදි
-reagan රැගෙන
+ready රෙදි රැදී
+reagan රැගෙන රේගන්
 reagen රේගන්
 real රේල්
-really රැලි
+really රැලි රැළි
 rear රියර්
 reas රේස්
 rease රේස්
-reaume රෝම
-reaux රෝ
+reaume රෝම රූම්
+reaux රෝ රා
 reaves රීවස්
-reay රේ
-recchia රැකියා
+reay රේ රෑ
+recchia රැකියා රැකිය
 rech රැක
 reck රැක
-reda රෙදි
+reda රෙදි රැදී
 redder රේඩාර්
 reder රේඩාර්
 reece රේස්
 reeder රේඩාර්
 reedy රිදී
-reeh රේ
+reeg රේගු
+reeh රේ රි
+reen රේණු
 reese රේස්
 reeves රීවස්
-rega රේගේ
+reg රේගු
+rega රේගේ රේගු
 regain රැගෙන
-reggae රෙගේ
-reggy රෙගේ
-regie රෙගේ
-regina රැජින
-reh රේ
+reggae රෙගේ රේගේ
+reggy රෙගේ රේගේ
+regie රෙගේ රේගේ
+regina රැජින රැජිණ
+reh රේ රෑ
 rehder රේඩාර්
 rehm රැම්
 rehman රේමන්
 rehmann රේමන්
+rehn රේණු
 reid රීඩ්
 reider රේඩාර්
 reidy රිදී
 reifel රයිෆල්
+reign රේණු
 reigned රේන්ද
-reiley රැලි
-reilley රැලි
+reiley රැලි රැළි
+reilley රැලි රැළි
+rein රේණු
+reine රේණු
 reined රේන්ද
 reise රේස්
 reiss රයිස්
@@ -7164,28 +7562,31 @@ reits රයිට්ස්
 reitz රයිට්ස්
 remand රිමාන්ඩ්
 remme රැම්
+ren රේණු
 rena රේණු
 renault රාණා
-rende රයින්ඩ්
+rende රයින්ඩ් රේන්ද
 renew රේණු
+renn රේණු
 renna රේණු
+renne රේණු
 reo රියා
 repp රැප්
 republican රිපබ්ලිකන්
-resin රැජින
+resin රැජින රැජිණ
 reske රැසක්
-ress රැස්
-ressa රැස්
+ress රැස් රේස්
+ressa රැස් රැස
 ret රයිට්
 reta රයිට්
 retz රයිට්ස්
 reul රෝල්
 reule රෝල්
-reuss රෝස
+reuss රෝස රෝස්
 revel රැවුල
 reves රීවස්
 revolution රෙවලූෂන්
-rew රූ
+rew රූ රු
 rewey රුවේ
 rex රෙක්ස්
 reyes රේස්
@@ -7193,31 +7594,32 @@ reyman රේමන්
 reyna රේණු
 reza රැස
 rezac රැසක්
-rha රා
+rha රා ර
 rhame රැම්
-rhea රිය
-rheault රෝ
-rheaume රෝම
-rhee රේ
+rhea රිය රේ
+rheault රෝ රා
+rheaume රෝම රූම්
+rhee රේ රි
 rhem රැම්
-rheta රීති
+rheta රීති රිටි
 rhett රයිට්
-rhew රූ
-rho රෝ
-rhoad රෝඩ්
-rhoda රෝද
-rhode රෝඩ්
+rhew රූ රු
+rhin රේණු
+rho රෝ රා
+rhoad රෝඩ් රෝද
+rhoda රෝද රෝඩ්
+rhode රෝඩ් රෝද
 rhodia රොඩී
 rhody රොඩී
-rhome රෝම
+rhome රෝම රාමු
 rhonda රඳා
-rhone රොන්
-rhoney රොනී
-rhude රෝඩ්
-rhue රූ
+rhone රොන් රෝන්
+rhoney රොනී රාණි
+rhude රෝඩ් රෝද
+rhue රූ රු
 rhule රෝල්
 rhys රේස්
-ria රිය
+ria රිය රේ
 riad රියාද්
 ric රැක
 rica රිකෝ
@@ -7241,6 +7643,7 @@ ried රීඩ්
 riede රීඩ්
 rieder රේඩාර්
 riedy රිදී
+rieg රේගු
 riehl රේල්
 riel රේල්
 rieman රේමන්
@@ -7251,50 +7654,57 @@ riese රේස්
 riess රේස්
 rieves රීවස්
 rifle රයිෆල්
-riga රේගේ
-riggan රැගෙන
-riggen රැගෙන
-riggin රැගෙන
+rig රේගු
+riga රේගේ රේගු
+rigg රේගු
+riggan රැගෙන රේගන්
+riggen රැගෙන රේගන්
+riggin රැගෙන රැගිං
 rigging රැගිං
 righi රේගේ
 right රයිට්
 rights රයිට්ස්
-rijn රියන්
+rihn රේණු
+rijn රියන් රේණු
 rill රේල්
-rilla රේල්
+rilla රේල් රැලි
 rim රැම්
 rina රේණු
 rind රයින්ඩ්
+ring රේණු
+ringe රේණු
 ringed රේන්ද
+rinn රේණු
+rinne රේණු
 rio රියා
-rioux රූ
+rioux රූ රු
 rip රැප්
 ripp රැප්
 rippe රැප්
-risa රේස්
+risa රේස් රිසි
 risc රැසක්
 rise රයිස්
 risk රැසක්
 riske රැසක්
-riss රැස්
-risse රැස්
-rita රීති
+riss රැස් රේස්
+risse රැස් රේස්
+rita රීති රිටි
 ritchey රිචී
 ritchie රිචී
 rite රයිට්
 rites රයිට්ස්
 rivet රේවත
 rix රෙක්ස්
-riz රැස්
+riz රැස් රේස්
 rizzi රිසි
 roa රූ
-road රෝඩ්
+road රෝඩ් රෝද
 roadie රොඩී
 roady රොඩී
-roam රෝම
-roan රොන්
-roane රොන්
-roanna රොන්
+roam රෝම රාමු
+roan රොන් රෝන්
+roane රොන් රෝන්
+roanna රොන් රෝන්
 roar රෝර
 roat රාත්
 roath රාත්
@@ -7304,100 +7714,106 @@ robber රබර්
 robbin රොබින්
 robbing රොබින්
 robert රොබර්ට්
+robin රබන්
 robot රොබට්
 robyn රොබින්
 roch රොක්
 rocha රොක්
 rock රොක්
 rocke රොක්
-rocked රොකට්
+rocked රොකට් රක්ත
 rockefeller රොකෆෙලර්
 rockel රාකෙල්
 rocket රොකට්
 rockhill රාකෙල්
 rocking රකින
 rocque රොක්
-rodd රෝඩ්
-roddey රැදී
-roddie රැදී
-roddy රැදී
-rode රෝඩ්
-rodell රදළ
-rodge රාජ්
+rod රෝද
+rodd රෝඩ් රෝද
+roddey රැදී රොඩී
+roddie රැදී රොඩී
+roddy රැදී රොඩී
+rode රෝඩ් රෝද
+rodell රදළ රදල
+rodge රජු රාජ්
 rodger රොජර්
 rodney රොඩ්නි
-roe රෝ
-roed රෝඩ්
+roe රෝ රා
+roed රෝඩ් රෝද
 roehl රෝල්
-roehm රෝම
+roehm රෝම රාමු
 roehr රෝර
 roeland රෝලන්ඩ්
 roell රෝල්
 roelle රෝල්
-roen රොන්
-roes රොස්
-roese රොස්
+roen රොන් රෝන්
+roes රොස් රාජ්
+roese රොස් රෝස
 roeser රොජර්
 rogan රෝගීන්
 roger රොජර්
-rogge රෝග
+rogge රෝග රාග
 rogue රෝග
-rohde රෝද
-rohe රෝ
+rohde රෝද රෝඩ්
+rohe රෝ රා
 rohland රෝලන්ඩ්
-rohm රෝම
-rohman රෝමන්
+rohm රෝම රාමු
+rohman රෝමානු රෝමන්
 rohr රෝර
-rohs රොස්
+rohs රොස් රාජ්
 roil රෝයල්
 roka රොක්
 rokosz රාක්ෂ
 rolanda රෝලන්ඩ්
 role රෝල්
 roll රෝල්
-rolla රාළ
+rolla රාළ රළ
 rolland රෝලන්ඩ්
 rolle රෝල්
-rolley රලි
-rolli රලි
-rolm රෝම
-romann රෝමන්
+rolley රලි රැලි
+rolli රලි රැලි
+rolm රෝම රාමු
+roman රෝමානු
+romann රෝමානු රෝමන්
 romany රමණී
-rome රෝම
+rome රෝම රාමු
 romeo රෝමියෝ
-romm රාම්
+romm රාමු රාම්
 romney රමණී
 ron රන්
 ronalda රොනල්ඩ්
 ronda රඳා
 rondeau රඳා
-rone රොන්
-roney රොනී
-rong රොන්
-ronna රන්
-ronne රන්
-ronnie රාණි
+rone රොන් රෝන්
+roney රොනී රාණි
+rong රොන් රෝන්
+ronna රන් රණ
+ronne රන් රොන්
+ronnie රාණි රොනී
 ronning රනින්
-ronny රාණි
-roode රෝඩ්
+ronny රාණි රොනී
+roode රෝඩ් රෝද
 rook රුක්
 rooke රුක්
-roome රෝම
-roone රෝන්
-roope රූප
-roose රෝස
-ropp රැප්
+room රූම්
+roome රෝම රූම්
+roone රෝන් ඍණ
+roope රූප රූප්
+roose ඍජු රෝස
+root ඍතු
+ropp රැප් රෑප
 roque රොක්
-rose රොස්
+rosa රාජ
+rose රොස් රාජ්
 rosene රාශීන්
 roser රොජර්
 rosetta රොසෙටා
 rosey රාශි
 rosiak රාශියක්
 rosie රාශි
-ross රොස්
-rossa රෝස
-rosse රැස්
+ross රොස් රැස්
+rossa රෝස රොස්
+rosse රැස් රොස්
 rossell රසල්
 rossen රාශීන්
 rossetto රොසෙටා
@@ -7410,97 +7826,101 @@ rosso රෝසා
 rosson රාශීන්
 rossow රෝසා
 rosten රාශීන්
-rot රත්
-rota රොටි
+rot රතු රත්
+rota රොටි රාත්
 rote රාත්
-rothe රෝඩ්
-rott රත්
+rothe රෝඩ් රෝද
+rott රතු රත්
 rotten රතන්
-rotting රටින්
+rotting රටින් රටෙන්
+rouge ඍජු
 rought රාත්
-roupe රූප
+roupe රූප රූප්
 rousseau රෝසා
-roux රූ
+route ඍතු
+roux රූ රු
 rouyn රුවින්
-roven රාවන්
-row රෝ
-rowe රෝ
-rowed රෝඩ්
-rowen රොන්
-rowes රොස්
+roven රාවන් රාවණ
+row රෝ රා
+rowe රෝ රා
+rowed රෝඩ් රෝද
+rowen රොන් රෝන්
+rowes රොස් රාජ්
 rowland රෝලන්ඩ්
-rowney රොනී
-rowny රොනී
-rows රොස්
-rowse රොස්
+rowney රොනී රාණි
+rowny රොනී රාණි
+rows රොස් රාජ්
+rowse රොස් රෝස
 rowser රොජර්
 rowsey රාශි
 rowson රාශීන්
 royale රෝයල්
 royall රෝයල්
 royle රෝයල්
-roz රාජ්
-roza රෝස
+roz රජු රාජ්
+roza රෝස රාජ
 rozar රොජර්
 rozzi රාශි
-rua රූ
-ruam රෝම
+rua රූ රුව
+ruam රෝම රූම්
 rubber රබර්
 rubey රූබි
 rubie රූබි
 rucci රුචි
-ruck රුක්
-ruckel රුකුල්
-ruckle රුකුල්
-ruda රෝද
-ruddell රදළ
+ruck රුක් රැක
+ruckel රුකුල් රාකෙල්
+ruckle රුකුල් රාකෙල්
+ruda රෝද රෝඩ්
+ruddell රදළ රදල
 rudden රදුන්
-ruddle රදළ
-ruddy රැදී
-rude රෝඩ්
-rudell රදළ
-rudge රජ
-rue රූ
+ruddle රදළ රදල
+ruddy රැදී රැදි
+rude රෝඩ් රෝද
+rudell රදළ රදල
+rudge රජු රජ
+rue රූ රු
 ruegg රෝග
 ruehl රෝල්
-ruehle රෝහල්
+ruehle රෝහල් රෝහල
 ruel රෝල්
-rues රෝස
-ruess රෝස
-rug රඟ
+rues ඍජු රෝස
+ruess රෝස රෝස්
+rueth ඍතු
+rug රඟ රග
 rugby රග්බි
-rugen රැගෙන
-rugg රඟ
-rugh රූ
-ruh රූ
-ruhl රළ
-ruhle රුවල්
+ruge ඍජු
+rugen රැගෙන රඟන
+rugg රඟ රග
+rugh රූ රා
+ruh රූ රා
+ruhl රළු රළ
+ruhle රුවල් රෝල්
 ruhollah රෝහල
 ruhr රෝර
-ruin රුවන්
+ruin රුවන් රුවින්
 rula රෝල්
 ruland රෝලන්ඩ්
 rule රෝල්
-rum රාම්
-ruman රෝමන්
+rum රාමු රාම්
+ruman රෝමානු රෝමන්
 rumbaugh රම්බා
-rumen රෝමන්
+rumen රෝමානු රෝමන්
 rumney රමණී
 run රන්
-rune රෝන්
-rung රන්
+rune රෝන් ඍණ
+rung රන් රඟ
 running රනින්
 runny රාණි
-rupe රූප
-rupp රූප
-ruppe රූප
-ruse රෝස
+rupe රූප රූප්
+rupp රූප රැප්
+ruppe රූප රැප්
+ruse ඍජු රෝස
 rushin රාශීන්
 rushing රාශීන්
-russ රැස්
+russ රැස් රස
 russa රෝස
 russak රැසක්
-russe රැස්
+russe රැස් රස
 russel රසල්
 russell රසල්
 russey රාශි
@@ -7509,66 +7929,71 @@ russian රාශීන්
 russin රාශීන්
 russo රෝසා
 rustle රසල්
-rut රත්
+rut රතු රත්
 ruta ඍතු
-rutt රත්
-ruttan රතන්
-rutten රතන්
-ruud රෝඩ්
+ruth ඍතු
+rutt රතු රත්
+ruttan රතන් රටින්
+rutten රතන් රටින්
+ruud රෝඩ් රෝද
 ruzzo රෝසා
-rylee රැලි
-rys රැස්
+rylee රැලි රැළි
+rys රැස් රේස්
 ryther රේඩාර්
 ryton රීතීන්
-saal සෝල්
+saal සෝල් සල්
 saatchi සාචි
-saba සොබා
-sabah සොබා
-sable සෙබල
+saba සොබා සාබි
+sabah සොබා සාබි
+sable සෙබලු සෙබළු
 sabo සොබා
 sacher සේකර
 sachs සකස්
-sack ශාක
+sack ශාක සක්
 sackman සක්මන්
 sackmann සක්මන්
 sacks සකස්
-sad සෙඩ්
+sad සෙඩ් සේද
 saddam සදාම්
-sadden සාදන
-sadeh සාදයි
-sadie සෑදී
-sadye සාදයි
-saehan සෙන්
+sadden සාදන සාදනු
+sadeh සාදයි සෑදේ
+sadie සෑදී සැදී
+sadye සාදයි සදයි
+saehan සෙන් සෙයින්
+saez සිසු
 sahli සොළී
 sahlman සොලමන්
-sahm සෑම
-sahr සර්
-sai සෑය
-saia සොයා
-said සෙඩ්
-saidan සෑදෙන
-sail සෙල්
+sahm සෑම සම්
+sahr සර් සාර්
+sai සෑය සාය
+saia සොයා සය
+said සෙඩ් සේද
+saidan සැදුනු සැදුණු
+sail සෙල් සැල්
 sailing සෙලීන්
-saine සෙන්
+saine සෙන් සැන්
 saint සෙන්ට්
-saitta සෙත්
+sais සෙසු
+saitta සෙත් සෙත
+saiz සෙසු
 sakai ශාකයේ
-sake සේක
+sake සේක සේක්
 saker සේකර
-salah සෛල
-salak සෛලික
-sale සෙල්
+sakes සැකසූ සැකසු
+salah සෛල සෙල්
+salak සැලකූ සැලකු
+sale සෙල් සැල්
 salema සලීම්
 salemme සලීම්
 salick සෛලික
-saline සෙලීන්
+saline සෙලීන් සිලිං
 saling සෙලීන්
-salk ශාක
+salk ශාක සොක්
 sall සෝල්
-salle සෙල්
-salm සෑම
-salman සමන්
-salmon සමන්
+salle සෙල් සැල්
+salm සෑම සම්
+salman සමන් සමාන
+salmon සමන් සමාන
 salois සිල්වා
 saloma සලාම්
 salon සිලෝන්
@@ -7577,55 +8002,61 @@ saloon සිලෝන්
 salsa සොළස
 salve සව්
 sam සෑම
+samar සමරු
 samaria සැමරිය
-same සෑම
+same සෑම සෙම්
 samedan සමාදන්
-sammie සමේ
-samms සංස්
+sammie සමේ සාමි
+samms සංස් සංජු
 sammut සමත්
-sammy සමේ
-samoa සමාව
+sammy සමේ සාමි
+samoa සමාව සීමාව
 samoan සීමාවන්
 samoth සමත්
 sample සාම්පල
 samson සැම්සන්
 samsung සැම්සන්
 san සෙන්
-sana සොන්
-sanaa සේනා
+sana සොන් සන්
+sanaa සේනා සිනා
 sancho සංකා
 sancia සාංචි
+sand සඳු
 sandhu සේන්දු
-sandie සන්ඩේ
+sandie සන්ඩේ සැන්ඩි
 sandow සැන්ඩෝ
-sane සෙන්
+sane සෙන් සැන්
 sang සෙන්
-sannes සංස්
+sannes සංස් සංජු
 santa සෙන්
-sante ශාන්ත
+sante ශාන්ත සාන්ත
 santer සෙන්ටර්
 santerre සෙන්ටර්
 santia ශාන්ති
 santor සෙන්ටර්
-sanz සංස්
+sanz සංස් සංජු
 sapp සැප
-sapped සප්ත
-sarah සැර
-sare සර්
+sapped සප්ත සැපත්
+sarah සැර සර්
+sare සර් සැර
 sarene සාරින්
 sarka සාර්ක්
-sarra සාරා
+sarra සාරා සොරා
 sarratt සරත්
-sarro සාරා
+sarro සාරා සොරා
+sas සෙසු
 sash ශේෂ
 sasha ශේෂ
+sass සෙසු
+sasse සෙසු
 sasser සසර
 sassi සැසි
 sasson ශාසන
-sassoon සිසුන්
+sassoon සිසුන් සසුන්
 sassou සෙසු
 sassy සැසි
-sate සෙත්
+sat සතු
+sate සෙත් සෙට්
 satellite සැටලයිට්
 sater සතර
 sather සතර
@@ -7634,283 +8065,302 @@ satin සටන්
 satoh සතා
 satter සතර
 saturn සැටර්න්
-saud සාද
+saud සෑදූ සාද
 saudi සෑදී
 saudia සෑදිය
-sauey සායි
-sauk ශාක
+sauey සායි සෑයේ
+sauk ශාක සොක්
 saul සෝල්
-saum සෑම
-sauna සොන්
+saum සෑම සාම
+sauna සොන් සොං
 saundra සාන්ද්‍ර
-sauro සාරා
-savanna සැවානා
-savannah සැවානා
+sauro සාරා සොරා
+savanna සැවානා සැවනා
+savannah සැවානා සැවනා
 savitt සැවැත්
 savvy සවි
-saw සා
-sawdey සෑදී
-sawdon සාදන
-sawed සාද
-sawka ශාක
+saw සා සො
+sawdey සෑදී සාදි
+sawdon සාදන සාදනු
+sawed සෑදූ සාද
+sawka ශාක ශෝක
 sax සකස්
 saxe සකස්
 saxona සකසන
-say සේ
-saye සේ
-sayed සෙඩ්
-saying සෙයින්
-sayle සෙල්
-sayre සර්
+say සේ සෙ
+saye සේ සෙ
+sayed සෙඩ් සේද
+saying සෙයින් සේන්
+sayle සෙල් සැල්
+sayre සර් සැර
+says සෙසු සිසු
 scally ස්කලී
 scan ස්කෑන්
-scanner ස්කෑනර්
-scene සේන්
+scanner ස්කෑනර් ස්කෑනර
+scene සේන් සිං
 scent සෙන්ට්
-schaack ශාක
+schaack ශාක ෂාක්
 schaad ෂඩ්
 schaadt ශත
 schaal සහල්
 schaap ශාප
-schack ශාක
+schack ශාක ෂාක්
 schad ෂඩ්
 schadt ශත
 schaja සහජ
-schalk ශාක
+schalk ශාක ෂාක්
 schalow ශාලා
 schapp ශාප
 schardt ශරත්
-schau ෂෝ
+schau ෂෝ ෂා
 scheel ශීල
 scheele ශීල
-schelin ශෛලීන්
+schelin ශෛලීන් ශෛලින්
 schena ෂින්
 scherman ෂර්මන්
 scheve ශිව
 schiel ශීල
 schiele ශීල
-schill ෂෙල්
+schill ෂෙල් ශීල
 schlock ශ්ලෝක
-schoch ශාක
-schock ශාක
-schoeck ශාක
+schoch ශාක ෂාක්
+schock ශාක ෂාක්
+schoeck ශාක ශෝක
 schoen ෂාන්
 schoepe ශාප
 schoepf ශාප
 schoepp ශාප
 scholl සහල්
-schon ෂාන්
+schon ෂාන් ෂෑං
 schone ෂාන්
-schoo ශු
+schoo ශු ෂෝ
 schook ශෝක
 schopp ශාප
 schoppe ශාප
 schott ශත
-schou ශු
-schram ශ්‍රාම්
-schramm ශ්‍රාම්
+schou ශු ෂෝ
+schram ශ්‍රාම් ශ්‍රම
+schramm ශ්‍රාම් ශ්‍රම
 schrodt ශරත්
-schrom ශ්‍රාම්
-schrum ශ්‍රාම්
-schuch ශාක
-schuck ශාක
-schue ශු
-schuh ශු
+schrom ශ්‍රාම් ශ්‍රම
+schrum ශ්‍රාම් ශ්‍රම
+schuch ශාක ෂාක්
+schuck ශාක ෂාක්
+schue ශු ෂෝ
+schuh ශු ෂෝ
 schupp ශාප
 schurman ෂර්මන්
 schut ශත
 schutt ශත
 schutter ෂටර
 schuur ශූර
-sci සේ
+sci සේ සී
 sciara සහරා
-scilla ශිලා
-scinta සෙන්ට්
+scilla ශිලා සෙල්
+scinta සෙන්ට් සෙන්ටි
 scissor සීසර්
 scott ස්කොට්
 scuba ස්කූබි
 scull ස්කූල්
 sculley ස්කලී
 scully ස්කලී
-scylla ශිලා
-scythe සිත්
-sea සේ
-seal සීල්
-seale සීල්
+scylla ශිලා සෙල්
+scythe සිත් සිට
+sea සේ සී
+seal සීල් සිල්
+seale සීල් සිල්
 sealing සිලිං
 sealock සිලොක්
-seam සේම
-sean ෂාන්
-seaq සීක්
-sear සර්
+seam සේම සිම්
+sean ෂාන් ෂෑං
+seaq සීක් සේක
+sear සර් සිර
 searcy සැරසී
 sears සිරස්
-seat සිට
+seas සිසු
+sease සිසු
+seat සිට සිත්
 seated සිටීද
 seater සිතාර්
-seating සිතින්
-seato සිතා
-seaton සිතින්
-seay සේ
-seck සේක
+seating සිතින් සිටිනු
+seato සිතා සීතා
+seaton සිතින් සිටිනු
+seay සේ සෙ
+seck සේක සේක්
 secor සේකර
-sedam සැදුම්
-sedan සාදන
-seddon සෑදෙන
+sedam සැදුම් සේදුම්
+sedan සාදන සාදනු
+seddon සැදුනු සැදුණු
 sedona සුඩාන
+see සී
+seed සිදු
 seegert සිගරට්
+seeing සීනු
+seek සේක
 seeker සේකර
 seeling සිලිං
+seem සිම්
+seen සිං
 seep සිප
 seer සිර
 seers සිරස්
 seery සිරි
-seethe සිත්
+sees සිසු
+seese සිසු
+seethe සිදු සිත්
 seething සිතින්
-seetin සිටින
-seeton සිතින්
+seetin සිටින සිතින්
+seeton සිතින් සිටිනු
 seff සයිෆ්
 sehnert සෙනරත්
-sehr සර්
+sehr සර් සැර
 seiber සයිබර්
 seil සෛල
-seine සෙන්
+seine සෙන් සැන්
 seip සිප
 seipp සිප
-seita සෙත්
-seith සිත්
+seis සිසු
+seita සෙත් සෙත
+seith සිත් සිට
 seiyu සියෝ
-sejm සෑම
-selassie සැලසේ
-selene සෙලීන්
-selia සෛලීය
-sell සෙල්
-sella සෛල
-selle සෙල්
+seize සිසු
+sejm සෑම සෙම්
+selassie සැලසේ සැලසී
+selene සෙලීන් සිලිං
+selia සෛලීය ශෛලීය
+selk සැලකූ සැලකු
+sell සෙල් සෛල
+sella සෛල සෙල්
+selle සෙල් සෛල
 selleck සෛලික
-sellen සෙලීන්
+sellen සෙලීන් ශෛලීන්
 sellick සෛලික
-sellin සෙලීන්
-selling සෙලීන්
-sellon සෙලීන්
+sellin සෙලීන් ශෛලීන්
+selling සෙලීන් ශෛලීන්
+sellon සෙලීන් ශෛලීන්
 semien සෙමින්
-semon සෙමෙන්
-senate සෙනෙට්
+semon සෙමෙන් සෙමින්
+senate සෙනෙට් සෙනට්
 senator සෙන්ටර්
+send සේන්දු
 seneca සේනක
-senn සෙන්
-senna සෙන්
-senne සෙන්
-sennet සෙනෙට්
+senn සෙන් සැන්
+senna සෙන් සේනා
+senne සෙන් සැන්
+sennet සෙනෙට් සෙනට්
 sennett සෙනෙට්
-sennott සෙනෙට්
+sennott සෙනෙට් සෙනට්
 sentra සෙන්ටර්
-seo සියා
+seo සියා සීයා
 seoul සෝල්
-seow සියා
+seow සියා සීයා
 sepe සිප
 sepp සැප
 sequa සේක්වා
-sere සර්
+serbian සර්බියානු
+sere සර් සිර
 serene සාරින්
 seres සිරස්
-serle සරල
+serle සරල සරළ
 serpe සර්ප
-serr සර්
-serra සැර
+serr සර් සැර
+serra සැර සර්
 serum සීරීම්
-serve සර්ව
+serve සර්ව සාර්ව
 server සර්වර්
 service සර්විස්
 servis සර්විස්
 serviss සර්විස්
 sesame සෙසමි
 sessa සෙසු
+set සෙට්
 seto සයිටෝ
-seton සිතින්
-sette සෙත්
-setty සැටි
-seven සෙවණ
+seton සිතින් සිටිනු
+sette සෙත් සෙට්
+setty සැටි සෙටි
+seven සෙවණ සෙවන
 sevilla සෙවිලි
 seville සිවිල්
-sew සො
+sew සො සෝ
 sewall සෝල්
 sewed සාද
 sewell සෝල්
+sex සැකසූ සැකසු
 sexy සැකසී
-seydoux සෑදූ
+seydoux සෑදූ සැදු
 seyi සේ
 shaath ශත
-shack ශාක
+shack ශාක ෂාක්
 shadd ෂඩ්
-shah සහ
+shah සහ ෂා
 shain ෂෑං
 shaine ෂෑං
 shakespeare ෂේක්ස්පියර්
 shale ෂෙල්
 shali ෂෙලී
-shall ෂෙල්
+shall ෂෙල් සහල්
 shallow ශාලා
 shane ෂෑං
-shanna ෂාන්
+shanna ෂාන් ෂෑං
 shapp ශාප
-shaq ශාක
+shaq ශාක ෂාක්
 shatt ශත
 shatter ෂටර
 shattuck ශතක
-shaun ෂාන්
-shauna ෂාන්
-shaw ෂා
-shawn ෂාන්
-shawna ෂාන්
+shaun ෂාන් ෂෑං
+shauna ෂාන් ෂෑං
+shaw ෂා ෂෝ
+shawn ෂාන් ෂෑං
+shawna ෂාන් ෂෑං
 shawnut ශාන්ත
 shayne ෂෑං
-she ශී
+she ශී ෂි
 shean ෂින්
 shears ෂියර්ස්
 sheath ශීත
 sheathe ශීත
 sheehy ශී
-sheelah ශිලා
+sheelah ශිලා ශීල
 sheen ෂින්
 sheena ෂින්
 sheil ශෛල
-sheila ශිලා
-sheilah ශිලා
+sheila ශිලා ශීල
+sheilah ශිලා ශීල
 shelburne ෂෙල්බර්න්
 shelia ශීලය
 shell ෂෙල්
 shelley ෂෙලී
-shelling ශෛලීන්
+shelling ශෛලීන් ශෛලින්
 shelly ෂෙලී
 shelton ෂෙල්ටන්
 shena ෂින්
 sherley ෂර්ලි
 sherlock ෂර්ලොක්
 sherman ෂර්මන්
-shew ශු
-shh ශ
-shia ෂියා
-shiah ෂියා
-shieh ශී
+shew ශු ෂෝ
+shh ශු ෂු
+shia ෂියා ශී
+shiah ෂියා ශී
+shieh ශී ෂි
 shiel ශීල
 shiela ශෛල
 shiina ෂින්
 shiley ෂෙලී
-shill ෂෙල්
-shing ෂින්
+shill ෂෙල් ශීල
+shing ෂින් ෂෑං
 shinn ෂින්
 shirah ශිරා
 shirlee ෂර්ලි
 shirley ෂර්ලි
 shirlie ෂර්ලි
 shirt ශරත්
-shiu ශු
+shit ශිත
+shiu ශු ෂෝ
 shive ශෛව
-shock ශාක
+shock ශාක ෂාක්
 shockey ෂොකි
 shod ෂඩ්
-shoe ශු
+shoe ශු ෂෝ
 sholl සහල්
 shona ෂාන්
 shone ෂාන්
@@ -7918,13 +8368,13 @@ shope ශාප
 shoppe ශාප
 shot ශත
 shott ශත
-show ෂෝ
-showa ෂෝවු
+show ෂෝ ෂා
+showa ෂෝවු ෂෝ
 shown ෂාන්
 shramek ශ්‍රමික
-shrum ශ්‍රාම්
-shuck ශාක
-shue ශු
+shrum ශ්‍රාම් ශ්‍රම
+shuck ශාක ෂාක්
+shue ශු ෂෝ
 shull සහල්
 shun ෂාන්
 shunt ශාන්ත
@@ -7936,82 +8386,88 @@ shutt ශත
 shutter ෂටර
 shuttle ෂටල
 shuwa ෂෝවු
-siang ෂෑං
+siang ෂෑං ෂාන්
 sias ජෝජ්
+siberian සයිබීරියානු
 sibilla සිබිල්
 sibille සිබිල්
-sibyl සිබිල්
+sibyl සෙබලු සෙබළු
 sibyll සිබිල්
-sica සේක
-sick සීක්
+sica සේක සීක්
+sick සීක් සික්
 sicker සේකර
-sid සෙඩ්
-sidden සැදෙන
-sidi සෑදී
+sid සිදු
+sidden සැදුනු සැදුණු
+sidi සෑදී සැදී
 sidney සිඩ්නි
-sie සේ
+sie සේ සී
 siebel සිබිල්
-sieck සීක්
+sieck සීක් සේක
 siegert සිගරට්
 siegman සිග්මන්
 siegmann සිග්මන්
 siegmund සිග්මන්ඩ්
-sieh සේ
-sieja සේ
-siek සීක්
+sieh සේ සී
+sieja සේ සී
+siek සීක් සේක
 sieling සිලිං
-siem සේම
+siem සේම සිම්
 siers සිරස්
-sieve සිව්
-siew සූ
-sigh සෑය
+sies සිසු
+siess සිසු
+sieve සිව් ශිව
+siew සූ සෝ
+sigh සෑය සාය
 sight සයිට්
 sigmon සිග්මන්
 sigmund සිග්මන්ඩ්
-sign සයින්
+sign සයින් සයින
 silicon සිලිකන්
 silkey සැලකේ
 silky සැලකේ
-sill සෙල්
+sill සෙල් සිල්
 simcha සිංහ
 sime සායම්
 simeone සැමියන්
 simien සෙමින්
-simm සෑම
+simm සෑම සිම්
 simmerman සිමර්මන්
-simmon සෙමෙන්
+simmon සෙමෙන් සෙමින්
 simon සයිමන්
 simpson සිම්ප්සන්
 simson සැම්සන්
 sin සෙන්
 sindt සෙන්ට්
-sine සයින්
+sine සයින් සයින
 sineath සෙනෙට්
-sinn සෙන්
-sinned සිඳ
+sing සෙන්
+sinn සෙන් සිං
+sinned සින්දු සේන්දු
 sinnett සෙනෙට්
-sinning සැනින්
-sinnott සෙනෙට්
-sioux සූ
+sinning සැනින් සැණින්
+sinnott සෙනෙට් සීනත්
+sioux සූ සෝ
 sip සැප
-sipp සැප
+sipp සැප සිප
 sipped සැපත්
-sir සර්
+sir සර් සාර්
 sirk සාර්ක්
 sirna සරණ
 sirri සිරි
+sis සෙසු සිසු
 sison සිසුන්
 sissel සිසිල්
 sissie සැසි
 sisson සිසුන්
 sissy සැසි
 sistine සිස්ටීන්
+sit සිත්
 sitcom සැත්කම්
 site සයිට්
 sitka සිතක්
 sitter සිතාර්
-sitting සිටින
-sitton සිටින
+sitting සිටින සිතින්
+sitton සිටින සිතින්
 siu සියෝ
 sivak සේවක
 sivley සීවලී
@@ -8028,6 +8484,7 @@ slew සළු
 sluka ශ්ලෝක
 slum සලාම්
 smack සමක්
+smarr සමරු
 smartt ස්මාර්ට්
 smithee සමිති
 smithey සමිති
@@ -8042,87 +8499,90 @@ snia සනී
 sniper ස්නයිපර්
 snooze සංයුජ
 soady සාදි
-soak සොක්
+soak සොක් ශෝක
 soap සෝප්
-soar සාර්
+soar සාර් සාර
 soaring සාරින්
 sobbed ශබ්ද
 sobey සාබි
 socci සාචි
 socha සාචි
 socia සාචි
-sock ශාක
+sock ශාක සක්
 socks සකස්
 soco ශාකා
-sodden සාදන
-soden සාදන
+soda සාදා
+sodden සාදන සාදනු
+soden සාදන සාදනු
 sodium සෝඩියම්
 sodomy සෑදීමේ
 soggy සගි
 sohl සෝල්
-sohm සෝම
-sohn සොන්
-sohns සංස්
-solace සොළොස්
+sohm සෝම සාම
+sohn සොන් සන්
+sohns සංස් සංජු
+solace සොළොස් සොළස
 sole සෝල්
 solely සොළී
 solemn සලාම්
 soley සොළී
 solie සොළී
-soll සෝල්
+soll සෝල් සල්
 solley සොළී
 sollie සොළී
 solloway ශාලාවේ
 solly සොළී
 solomon සොලමන්
-some සම්
-somes සංස්
+some සම් සම
+somes සංස් සංජු
 somewhat සමවත්
-somma සෑම
-somme සෑම
+somma සෑම සාම
+somme සෑම සාම
 somoza සමාජ
-son සන්
-sonat සනත්
+son සන් සුන්
+sonat සනත් ශාන්ත
 sonata සනාත
+song සොන්
 songy සංජේ
-sonn සොන්
-sonne සොන්
+sonn සොන් සන්
+sonne සොන් සන්
 sonnen සන්න
-sonnett සනත්
+sonnett සනත් ශාන්ත
 sonny සනී
-sons සංස්
+sons සංස් සංජු
 sonya සෝනි
-sood සුද
-soon සුන්
-soong සුන්
-soothe සුද
+sood සුදු
+soon සුන් සෝනු
+soong සුන් සුං
+soothe සුදු
+sop සැප
 sope සෝප්
-sopp සෝප්
+sopp සෝප් සැප
 sorcha සාර්ක්
-sore සාර්
+sore සාර් සාර
 sorey සාරි
 soria සාරිය
-sorrow සාරා
-sorry සාරි
-sot සවුත්
-sough සො
-sought සවුත්
-souk සුක්
+sorrow සාරා සොරා
+sorry සාරි සරි
+sot සොටු සවුත්
+sough සො සෝ
+sought සොටු සවුත්
+souk සුක් ශෝක
 soul සෝල්
-soup සෝප්
+soup සෝප් සුප්
 sour සෞර
 south සවුත්
 souther සතර
 southern සදර්න්
 souto සුතා
-soviet සෝවියට්
-sow සො
-sowa සූ
-sowden සාදන
+soviet සෝවියට් සොවියට්
+sow සො සෝ
+sowa සූ සො
+sowden සාදන සාදනු
 sowed සාද
 sower සාර්
 sowle සෝල්
-sown සොන්
+sown සොන් සොං
 sox සකස්
 space ස්පේස්
 spanned ස්පන්ද
@@ -8138,10 +8598,10 @@ speece ස්පේස්
 spiess ස්පේස්
 spira සපිරි
 sramek ශ්‍රමික
-staack ස්ටාක්
-stack ස්ටාක්
+staack ස්ටාක් සතක්
+stack ස්ටාක් සතක්
 stahr ස්ටාර්
-stake සතෙක්
+stake සතෙක් සතෙකු
 stalk ස්ටාක්
 stalling ස්ටාලින්
 stanley ස්ටැන්ලි
@@ -8153,12 +8613,13 @@ starr ස්ටාර්
 starry ස්ටෝරි
 stat ස්ටේට්
 state ස්ටේට්
-steak සතෙක්
-steal ස්ටීල්
-stech සතෙක්
-steck සතෙක්
-steele ස්ටීල්
-steil ස්ටීල්
+steak සතෙක් සතෙකු
+steal ස්ටීල් ස්ටිල්
+stech සතෙක් සතෙකු
+steck සතෙක් සතෙකු
+steel ස්ටිල්
+steele ස්ටීල් ස්ටිල්
+steil ස්ටීල් ස්ටිල්
 stephen ස්ටීවන්
 stepp ස්ටෙප්
 steppe ස්ටෙප්
@@ -8169,129 +8630,131 @@ stew සතු
 stewart ස්ටුවර්ට්
 stick සතෙක්
 sticka සතෙක්
-stiehl ස්ටීල්
+stiehl ස්ටීල් ස්ටිල්
 stieve ස්ටීව්
-stihl ස්ටීල්
+stihl ස්ටීල් ස්ටිල්
 stika සතෙක්
-still ස්ටීල්
-stille ස්ටීල්
+still ස්ටීල් ස්ටිල්
+stille ස්ටීල් ස්ටිල්
 stipp ස්ටෙප්
-stir ස්ටාර්
+stir ස්ටාර් ස්තර
 stirling ස්ටර්ලින්
 stith ස්ටේට්
 stitt ස්ටේට්
-stock ස්ටාක්
-stocke ස්ටාක්
+stock ස්ටාක් සතක්
+stocke ස්ටාක් සතක්
 stoehr ස්ටාර්
 stohr ස්ටාර්
 stoke ස්ටාක්
-stokke ස්ටාක්
+stokke ස්ටාක් සතක්
 stolen ස්ටාලින්
 stollen ස්ටාලින්
 stone ස්ටෝන්
 stong ස්ටෝන්
-stora ස්ටාර්
+stora ස්ටාර් ස්ටෝරි
 store ස්ටාර්
 storey ස්ටෝරි
 storie ස්ටෝරි
 storr ස්ටාර්
 stoup ස්තූප
 stower ස්ටාර්
-streett ස්ට්‍රීට්
+street ස්ට්රීට්
+streett ස්ට්‍රීට් ස්ට්රීට්
 string ස්ත්‍රීන්
 stringy ස්ත්‍රීන්ගේ
 stuart ස්ටුවර්ට්
-stuck ස්ටාක්
-stucke ස්ටාක්
+stuck ස්ටාක් සතක්
+stucke ස්ටාක් සතක්
 stuewe සතු
-stuhr ස්ටාර්
+stuhr ස්ටාර් ස්තර
 stung සටන්
 stupp ස්තූප
 subbed ශබ්ද
-submarine සබ්මැරීන්
+submarine සබ්මැරීන් සබ්මැරීන
 suchy සාචි
-suck සක්
+suck සක් ශාක
 suckle සකල
 sucks සකස්
-sudd සද
+sudd සුදු සදු
 suddam සදාම්
 suddath සුදත්
-sudden සාදන
+sudden සාදන සාදනු
 sudduth සුදත්
-sue සූ
-sued සුද
-suen සුන්
+sue සූ සෝ
+sued සුදු
+suen සුන් සෝනු
 suess ස්විස්
-sugg සග
-suh ස
+sugg සග සඟ
+suh ස සා
 suhm සෝම
-suhr සුර
-suhre සුර
+suhr සුර ශූර
+suhre සුර ශූර
 sui සවි
-suire සුර
+suire සුර ශූර
 suisse ස්විස්
 suite ශ්වේත
-sul සල්
+sul සල් සුළු
 sulfide සල්ෆයිඩ්
 sulfur සල්ෆර්
-sullen සුළං
-sullie සුළි
-sully සුළි
+sullen සුළං සුළන්
+sullie සුළි සුලි
+sully සුළි සුලි
 sulphur සල්ෆර්
-sulya සුළි
-sum සම්
-suma සෝම
+sulya සුළි සුලි
+sum සම් සම
+suma සෝම සෝමා
 sumeria සැමරිය
-summa සෝම
-summey සමේ
+summa සෝම සෝමා
+summey සමේ සාමි
 summit සමත්
 summitt සුමිත්
-summon සමන්
-summy සමේ
+summon සමන් සමාන
+summy සමේ සාමි
 sumo සෝමා
-sums සංස්
+sums සංස් සංජු
 sun සන්
 suncor සංකාර
-sund සඳ
+sund සඳ සඳු
 sundae සන්ඩේ
 sunday සන්ඩේ
 sundays සඳැස්
-sunde සඳ
+sunde සඳ සඳු
 sunder සුන්දර
 sundin සඳුන්
 sundry සුන්දරී
-sundt ශාන්ත
-sundy සන්ඩේ
-sung සං
+sundt ශාන්ත සාන්ත
+sundy සන්ඩේ සැන්ඩි
+sung සං සන්
 suni සෝනි
 sunia සෝනියා
-sunning සැනින්
+sunning සැනින් සැණින්
 sunny සනී
-suns සංස්
+suns සංස් සංජු
 suon සෝවාන්
 supan සෝපාන
 supernova සුපර්නෝවා
-suppa සෝප්
+suppa සෝප් සුප්
 supper සුපර්
 supports ස්පෝර්ට්ස්
 supra සුපර්
 sure ශූර
 suren ශූරීන්
-surrey සාරි
-surry සාරි
+surrey සාරි සරි
+surry සාරි සරි
 susannah සුසාන
 susser සසර
 suther සතර
 sutter සතර
-sutton සටන්
+sutton සටන් සතුන්
 suzie සැසි
 swam එස්වීඒඑම්
-swann ස්වං
-swathe ස්වාට්
+swan සවන්
+swann ස්වං සවන්
+swathe ස්වාට් ශ්වේත
 sweat ශ්වේත
 sweatt ශ්වේත
-sweden ස්වීඩන්
-sweeden ස්වීඩන්
+sweden ස්වීඩන් ස්වීඩන
+sweeden ස්වීඩන් ස්වීඩන
 sweney සවැනි
 swete ශ්වේත
 swett ශ්වේත
@@ -8303,111 +8766,121 @@ swyto ශ්වේතා
 sybil සිබිල්
 sybilla සිබිල්
 sybille සිබිල්
-syd සෙඩ්
+syd සිදු
 sydney සිඩ්නි
-sylla ශිලා
+sylla ශිලා සෙල්
 sylva සිල්වා
 sylvester සිල්වෙස්ටර්
 sylvestre සිල්වෙස්ටර්
-sym සෑම
+sym සෑම සිම්
 syme සායම්
-symon සෙමෙන්
+symon සෙමෙන් සෙමින්
 sympson සිම්ප්සන්
-syna සෙන්
+syna සෙන් සිනා
 sync සින්ක්
-synnott සෙනෙට්
-synod සිඳ
-syrup සිරප්
-sze ශී
-szoke ශාක
+synnott සෙනෙට් සීනත්
+synod සින්දු සේන්දු
+syrian සිරියානු
+syrup සිරප් සර්ප
+sze ශී ෂි
+szoke ශාක ශෝක
 szot ශත
 szott ශත
+tab තැබූ තැබු
+tabb තැබූ තැබු
 tabby තැබේ
 tableau තබ්ලා
 tableaux තබ්ලා
 tablet ටැබ්ලට්
-tack තෙක්
-tacke තෙක්
+taboo තැබු
+tack තෙක් තාක්
+tacke තෙක් තාක්
 tackett තකිට
 tackitt තකිට
-tadd තද
+tad තෙද
+tadd තද තෙද
 taddy ටෙඩී
-tae තේ
+tae තේ තෙ
 tague තොග
 taher තීර
 taibi තැබේ
-tail තෙල්
+tail තෙල් ටෙල්
+tailing තෙලිඟු තෙළිඟු
 tailor ටේලර්
 taima ටයිම්
 taing ටෑං
-tait තෙත්
-taite තෙත්
-taitt තෙත්
+tait තෙත් තැත්
+taite තෙත් තැත්
+taitt තෙත් තැත්
 take තෙක්
 takihyo ටෝකියෝ
-tale තෙල්
+tale තෙල් ටෙල්
 talk තාක්
-tall තොල්
-talley ටෙලි
+tall තොල් තාල
+talley ටෙලි තෙලි
 tallo තලා
 tallon තලන
 tallow තලා
-tally ටෙලි
+tally ටෙලි තෙලි
 talon තලන
+tama තමා
 tambs ටයිම්ස්
-tame ටැම්
+tame ටැම් තෙම
 tami තෙමේ
 tamke ටැංකි
-tamm තම
+tamm තම ටැම්
 tammen තමන්
 tammie තෙමේ
-tammo තමා
+tammo තමා තේමා
 tammy තෙමේ
-taney තැනී
-tania තනි
+tan තැන
+taney තැනී තැනි
+tani ටෝනි
+tania තනි ටෝනි
 tanis ටෙනිස්
-tannen තනන
-tanney තනි
+tannen තනනු තනන
+tanney තනි තැනී
 tanning තැනින්
-tanya තනි
+tanya තනි ටෝනි
 tapie තෙපි
 tappan තාපන
 tappe තාප
 tappen තාපන
-tar තොර
-tarom තේරුම්
+tar තරු තොර
+tarom තේරුම් තේරීම්
 tarot තාරා
-tarr තොර
+tarr තරු තොර
 tarry තේරී
 tarzan තර්ජන
 taste ටෙස්ට්
-tate තෙත්
-tattoo තතු
-tatty තැටි
-taught ටෝට්
-taul තොල්
-taut ටෝට්
+tate තෙත් තැත්
+tattoo තතු තටු
+tatty තැටි තැති
+taught ටෝට් තොට
+taul තොල් තාල
+taut ටෝට් තොට
 tawney ටෝනි
-tawny තනි
+tawny තනි ටෝනි
 tayler ටේලර්
 taylor ටේලර්
 tays තේජ්
-tea ටී
-teac ටික
+tea ටී තේ
+teac ටික ටේක්
 teahan තියන
-teak ටික
+teak ටික ටේක්
 team ටිම්
 teaney තීණි
-tear තිර
-teare තිර
-tearing තිරිංග
+tear තීරු තිර
+teare තීරු තිර
+tearing තිරිඟු තිරිංග
 tears තිරස්
 teary තේරී
-teas තිස්
-tease තිස්
+teas තිස් තේජ්
+tease තිස් තේජ්
 teaser තිසර
 teat තිත්
-tebben තේබොං
+tebbe තැබූ තැබු
+tebben තේබොං තැබුණු
 tech තෙක්
 teck තෙක්
 teco ටීකා
@@ -8417,22 +8890,25 @@ teehan තියන
 teem ටිම්
 teen ටින්
 teenie තීණි
-tees තිස්
+tees තිස් තේජ්
 teet තිත්
 teeth තිත්
 teethe තිත්
-tehan තැන්
+tehan තැන් තැන
 teixeira තක්සේරු
 tejan තේජොං
-tell තෙල්
-teller ටේලර්
-telly ටෙලි
-temme ටැම්
+tel ටෙල්
+tell තෙල් ටෙල්
+teller ටේලර් ටයිලර්
+telling තෙලිඟු තෙළිඟු
+telly ටෙලි තෙලි
+temme ටැම් තෙම
+ten තැන
 tenet තැනට
-tenney තැනී
+tenney තැනී තැනි
 tennis ටෙනිස්
 tennison ටෙනිසන්
-tenny තැනී
+tenny තැනී තැනි
 tennyson ටෙනිසන්
 teran තෙරුන්
 terence ටෙරන්ස්
@@ -8442,7 +8918,7 @@ termine තරමින්
 terra තෙර
 terrain තරැණ
 terrance ටෙරන්ස්
-terre තේරී
+terre තේරී තෙර
 terrence ටෙරන්ස්
 terri තේරී
 terrie තේරී
@@ -8451,49 +8927,49 @@ terry තේරී
 tesar තිසර
 tese තිස්
 testa ටෙස්ට්
-tete තෙත්
-tew ටු
+tete තෙත් තැත්
+tew ටු චූ
 texas ටෙක්සාස්
-thadda තද
-thain තැන්
-thaine තැන්
+thadda තද තෙද
+thain තැන් තැන
+thaine තැන් තැන
 thalamus තැලමස
 thaler ටේලර්
-thalia ටෙලි
+thalia ටෙලි තෙලි
 thames ටයිම්ස්
-than දුන්
-thanh තැන්
-that දත්
-thaw තා
-thayne තැන්
-the දී
-thea තියා
+than දුන් දැන්
+thanh තැන් තැන
+that දත් තෙත්
+thaw තා තෝ
+thayne තැන් තැන
+the දී ද
+thea තියා ටියා
 theano ටීනා
 thebes තීබ්ස්
 thee දී
 theil ටයිල්
 theile ටයිල්
-their ඩේර්
+their දැරූ ඩේර්
 thelma තෙල්මේ
-them තම
+them තම දම්
 theme ටිම්
-then දැන්
-theo තියා
+then දැන් දෙන
+theo තියා ටියා
 theodore තියඩෝර්
 theon තියන
 theorem තේරැම්
 theory තේරී
 therat දෙරට
-there ඩේර්
+there දැරූ ඩේර්
 thereof දැරුව
 therm තරම්
-thermae තරමේ
+thermae තරමේ තරමි
 theron තෙරුන්
 theroux තරු
-these දිස්
+these දිස් තිස්
 thesis තිස්ස
-thew ටු
-they දේ
+thew ටු තෝ
+they දේ තේ
 thick තෙක්
 thicken ටිකෙන්
 thielke තිලක්
@@ -8502,13 +8978,14 @@ thieme ටිම්
 thien ටින්
 thierry තේරී
 thiery තේරී
-thies තිස්
+thies තිස් තේජ්
 thieve ටිව්
 thill තෙල්
 thima තේමා
 thin තැන්
-thing ටෑං
+thing ටෑං තැන්
 thingy තීණි
+thinned තීන්දු
 thinness ටෙනිස්
 thinning තැනින්
 this දිස්
@@ -8517,25 +8994,26 @@ thoele තොල්
 thoen ටොන්
 thole තොල්
 tholen තලන
-tholl තොල්
-thoma ටොම්
+tholl තොල් තල්
+thoma ටොම් තොමෝ
+thomas තොමස්
 thome ටොම්
-thomes තෝමස්
+thomes තෝමස් තොමස්
 thommen තමන්
 thompsen තොම්සන්
 thompson තොම්සන්
 thomsen තොම්සන්
 thomson තොම්සන්
 thone ටොන්
-thong ටොන්
+thong ටොන් ටෑං
 thoreau තාරා
 thoren තොරණ
 thorington ටොරින්ටන්
 thornock තොරණක්
-thorough තෝරා
+thorough තෝරා තාරා
 those දොස්
-though දා
-thought ටෝට්
+though දා දෝ
+thought ටෝට් තොට
 thousand තවුසන්
 threaten ට්‍රයිටන්
 three ත්‍රි
@@ -8545,13 +9023,13 @@ through තරු
 throughway තරුවේ
 thrust ත්‍රස්ත
 thruway තරුවේ
-thull තුල
+thull තුල තුළ
 thum තම
 thumb තම
 thumm තම
-thumma තම
+thumma තම තමා
 thumped තැම්පත්
-thuot ටෝට්
+thuot ටෝට් ටුට්
 thurm තරම්
 thurman තරමින්
 thurmon තරමින්
@@ -8560,55 +9038,59 @@ thurnher ටර්නර්
 thurow තෝරා
 thurstan තර්ස්ටන්
 thurston තර්ස්ටන්
-thus දස
-thuy ටු
+thus දස දාස්
+thuy ටු ටූ
 thy ඩයි
 thyme ටයිම්
-tia ටී
+tia ටී තේ
 tibbett ටිබෙට්
-tibbie තිබේ
+tibbie තිබේ තිබී
 tibbs තීබ්ස්
-tibby තිබේ
-tibia තිබිය
+tibby තිබේ තිබී
+tibia තිබිය තැබීය
 ticked ටිකට්
 ticket ටිකට්
 ticking ටිකෙන්
 tidd තෙද
 tieken ටිකෙන්
-tier තිර
+tier තීරු තිර
 tierce තිරස්
 tiers තිරස්
 tigar ටයිගර්
 tiger ටයිගර්
 tights ටයිටස්
-til තෙල්
+til තෙල් ටෙල්
 tile ටයිල්
-till තෙල්
+till තෙල් ටෙල්
 tiller ටේලර්
-tilley ටෙලි
-tillie ටෙලි
-tilly ටෙලි
+tilley ටෙලි තෙලි
+tillie ටෙලි තෙලි
+tilling තෙලිඟු තෙළිඟු
+tilly ටෙලි තෙලි
 tim ටැම්
 time ටයිම්
 times ටයිම්ස්
 timid තෙමේද
-timm ටැම්
-timme ටැම්
+timm ටැම් ටිම්
+timme ටැම් ටිම්
 timmie තෙමේ
 timmy තෙමේ
+tin තැන්
 tina ටින්
 tinder ටෙන්ඩර්
-ting ටෑං
+ting ටෑං ටින්
+tinged තීන්දු
 tinkey ටැංකි
-tinney තැනී
+tinney තැනී තීණි
 tinnin තැනින්
-tinnon තැනින්
-tinny තැනී
+tinnon තැනින් තැන්න
+tinny තැනී තීණි
 tipa තෙපි
 tippie තෙපි
 tipple තැපැල්
 tippy තෙපි
 tirone ටිරෝන්
+tis තේජ්
 tison තෙසං
 titanium ටයිටේනියම්
 titus ටයිටස්
@@ -8616,71 +9098,74 @@ tivo තේවා
 tizzy ටීසී
 tkach කාච
 tkacz කාච
-toa ටූ
+toa ටූ තෝ
 toal තොල්
 toboggan තබාගෙන
 tocco තකා
-tock තාක්
-tod තද
+tock තාක් තක්
+tod තද ටද
 today ටුඩේ
-todd තද
+todd තද ටද
 todo තුඩු
-toe තෝ
+toe තෝ තා
 toelle තොල්
 tokio ටෝකියෝ
 tokyo ටෝකියෝ
 tole තොල්
 toll තොල්
-tolle තොල්
+tolle තොල් තල්
 tom තම
-toma ටොම්
+toma ටොම් තොමෝ
 tomasic ටමාසික්
 tomasik ටමාසික්
+tomb තුමූ
 tombs තෝමස්
 tome ටොම්
 tomei තමයි
-tomes තෝමස්
+tomes තෝමස් තොමස්
 tomson තොම්සන්
-ton තුන්
+ton තුන් තැන්
 tone ටොන්
 toney ටෝනි
-tong ටොන්
-tongue තුන්
+tong ටොන් ටෑං
+tongue තුන් තං
 tonia ටානියා
 tonie ටෝනි
-tonn ටොන්
-tonne තුන්
-tonya තනි
+tonn ටොන් තැන්
+tonne තුන් තැන්
+tonya තනි ටෝනි
 too ටු
-tool තුල
-toole තුල
-tooling තුලින්
+tool තුල තුළ
+toole තුල තුළ
+tooling තුලින් තුළින්
 tooman තුමන්
 toombs තෝමස්
 toon තුන්
 toone තුන්
-toote ටෝට්
+toote ටෝට් ටුට්
+tooth ටුට්
 toothy තුති
 top තාප
-tope ටොප්
+tope ටොප් තාප
 topple තැපැල්
 topps තපස්
 tops තපස්
-torah තෝරා
+torah තෝරා තොර
 torain තරැණ
-tore තොර
+tore තොර තෝර්
 toren තොරණ
 toria තාරීය
 torok තාරක
-torr තොර
-torre තොර
+toronto ටොරන්ටෝ
+torr තොර තෝර්
+torre තොර තෝර්
 torrington ටොරින්ටන්
-tote ටෝට්
-totty තැටි
-tour තුර
+tote ටෝට් තොට
+totty තැටි තැති
+tour තුරු තුර
 touro තෝරා
-tow තෝ
-towe තෝ
+tow තෝ තා
+towe තෝ තා
 town ටවුන්
 towne ටවුන්
 toya තායි
@@ -8713,24 +9198,27 @@ true තරු
 trump ට්‍රම්ප්
 trupp ට්‍රැප්
 trust ත්‍රස්ත
-tsai සෑය
-tsang සෙන්
-tsar සර්
+tsai සෑය සාය
+tsang සෙන් සං
+tsar සර් සාර්
 tschopp චාප
-tse සේ
-tseng සෙන්
-tso සො
-tsuda සුදු
+tse සේ සී
+tseng සෙන් සැන්
+tso සො සෝ
+tsuda සුදු සෝදා
 tsunami සුනාමි
 tsuneo සෝනියා
+tub තැබූ තුබූ
+tubb තැබූ තුබූ
 tubby තැබේ
-tuck තාක්
+tube තුබූ
+tuck තාක් තක්
 tuckett තකිට
-tue ටු
-tuel තුල
-tuell තුල
-tuite ටෝට්
-tull තුල
+tue ටු ටූ
+tuel තුල තුළ
+tuell තුල තුළ
+tuite ටෝට් ටුට්
+tull තුල තුළ
 tulloch තැලික්
 tullock තැලික්
 tummond තමන්ද
@@ -8738,9 +9226,9 @@ tuna තුන්
 tunde තුණ්ඩ
 tune තුන්
 tuned තුණ්ඩ
-tung තුන්
-tunney තනි
-tunny තනි
+tung තුන් තං
+tunney තනි තුනී
+tunny තනි තුනී
 turbine ටර්බයින
 turbo ටර්බෝ
 turbot ටර්බෝ
@@ -8750,214 +9238,220 @@ turk තර්ක
 turkic තාර්කික
 turner ටර්නර්
 turow තෝරා
-tutt තත්
+tutt තත් ටත්
 tutti තුති
-tuyle තුල
+tuyle තුල තුළ
 twang තවාන්
 twitter ට්විටර්
-two ටු
+two ටු ටූ
+twos ටුසූ
 tygar ටයිගර්
 tyger ටයිගර්
 tyler ටයිලර්
-tylka තිලක්
+tylka තිලක් තිලක
 ubben අබිං
 uchida ඕකිඩ්
-uddin අදින්
-udell අදාල
-udelle දැල්
-uden උඩින්
+uddin අදින් ආදීන්
+udell අදාල අදාළ
+udelle දැල් ඇඩෙල්
+uden උඩින් උදාන
 udolf ඇඩොල්ෆ්
-ueda වැඩ
+ueda වැඩ වැඩි
 ueland ඕලන්ද
 ugh අග
 ugly අඟලේ
-uhde උදා
-uher ඌර්
-uhh ඒ
-uhl අල්
+uhde අඩු උදා
+uher ඌර් ඕර්
+uhh ඒ ආ
+uhl අල් අළු
 uhland ඕලන්ද
-uhle ඕවල්
-uhr ඌර්
-ullock ආලෝක
-ullom ඇලුම්
+uhle ඕවල් ඕල්
+uhr ඌර් ඕර්
+ullock ආලෝක අලෝක
+ullom ඇලුම් ඇල්ම
 ulm ඇල්ම
 umbel ඇඹුල්
 umble ඇඹුල්
 umbra අඹරා
-umm ඇම්
-ummel අමල්
+umm අමු ඇම්
+ummel අමල් අම්ල
 unaware අන්වර්
-undine අඳින
-undo ආණ්ඩු
-undone ඉඳන්
-undue ආණ්ඩු
+undine අඳිනු අඳින
+undo ආණ්ඩු නඩු
+undone ඉඳන් උඳුන්
+undue ආණ්ඩු නඩු
 unesco යුනෙස්කෝ
-ung අං
+ung අං අන්
 ungo අංගා
 uni යෝනි
 unilever යුනිලීවර්
 unix යුනික්ස්
-uno නො
+uno නො නෝ
 until ඉන්ටෙල්
 unum ඕනෑම
-unz අංශ
-upon පාන්
-upp අප
-upped අපට
+unz අංශු අංශ
+upon පාන් පාන
+upp අප උප
+upped අපට උපත්
 upper අපර
 upping අපෙන්
-uppity අපතේ
+uppity අපතේ උපතේ
+ups ආපසු
 ural යූරල්
-urrea අරීය
+urrea අරීය අරිය
 urwin අර්වින්
 ury යුරි
-uthe ඇත
+uthe ඇත අත්
 uther අතර
-utt ඇත
+utt ඇත අත්
 utter අතර
 uttering අතරින්
 utz ආට්ස්
-uwe යූ
-uzzle අසල
-vaal වල
+uwe යූ යු
+uzzle අසල අසල්
+vaal වල වල්
 vacca වක
 vachon වචන
 vadnais වදනේ
 vadney වදනේ
 vague වේග
-vail වැල්
-vaile වැල්
+vail වැල් වෙල්
+vaile වැල් වෙල්
 vain වෙන්
 vajna වයින්
-vale වැල්
+val වල්
+vale වැල් වෙල්
 valea වලිය
-vales වේල්ස්
+vales වේල්ස් වෙල්ස්
 valia වලය
 valid වෙළෙද
 valided වලදීද
-valle වැල්
-valleau වෙලා
-vallely වැලි
-valles වේල්ස්
-valley වැලි
-vallot වලට
+valle වැල් වෙල්
+valleau වෙලා වලා
+vallely වැලි වෙලී
+valles වේල්ස් වෙල්ස්
+valley වැලි වෙලී
+vallot වලට වලත්
+van වෙන්
 vanasse වෙනස්
-vande වැඳ
+vande වැඳ වඳ
 vanes වෙනස්
 vaness වෙනස්
 vanilla වැනිලා
 vanname වෙනම
-vannie වැනි
+vannie වැනි වෙනි
 vanora වානරයා
 vanoss වෙනස්
 vanous වෙනස්
-vanwey වෙන්වී
-vanwhy වෙන්වී
-vanwie වෙන්වී
-vase වෙස්
-vasey වැසි
+vanwey වෙන්වී වෙන්වේ
+vanwhy වෙන්වී වෙන්වේ
+vanwie වෙන්වී වෙන්වේ
+vase වෙස් වාස්
+vasey වැසි වාසි
 vaske වෙසක්
 vassar වසර
 vasser වසර
 vasseur වසර
-vassey වැසි
-vast වෙස්ට්
-vaugh වා
+vassey වැසි වාසි
+vast වස්තු වෙස්ට්
+vatican වතිකානු
+vaugh වා වෝ
 vaughan වොන්
 vaughn වොන්
 vaught වොට්
 vault වෝල්ට්
-vause වාස්
+vause වාස් වාස
 vawter වෝටර්
-vayda වැඩ
+vayda වැඩ වැඩි
 vaz වයිස්
-veal විල්
-veale විල්
+veal විල් වේල්
+veale විල් වේල්
 veals වේල්ස්
 veasey විජේ
 veazey විජේ
 veazie විජේ
 veegenan විගණන
-veen වින්
+veen වින් වින
 veiled වෙලද
-veilleux වෙලා
+veilleux වෙලා වේලා
 vein වෙන්
 veins වෙනස්
 veira වෙර
-veit විට
-veith විට
-veley වැලි
-velie වැලි
-veney වැනි
+veit විට විත්
+veith විට විත්
+veley වැලි වෙලී
+velie වැලි වෙලී
+veney වැනි වෙනි
 venice වෙනස්
-venom වෙනම
-venous වීනස්
-venus වීනස්
+venom වෙනම වැනුම්
+venous වීනස් විනාශ
+venus වීනස් විනාශ
 verda වැරදි
 verde වැරදි
 verdes වැරදි
 verdin වරදින්
 verdon වරදින්
 verdun වරදින්
-vere වීර්
-verley වෙරළේ
+vere වීර් වීර
+verley වෙරළේ වෙරලේ
 vern වර්ණ
 verna වර්ණ
 verne වර්ණ
 vernon වර්නන්
-verrall වෙරළ
+verrall වෙරළ වෙරල
 vers වර්ශ
 versa වර්ශ
 verse වර්ශ
 version වර්ජන
 vescio වැසියෝ
-vesey වැසි
-vessey වැසි
+vesey වැසි වැසී
+vessey වැසි වැසී
 vesta වෙස්ට්
-vette වෙත
+vette වෙත වෙත්
 vetting වෙතින්
-vevey වැවේ
+vevey වැවේ වේවි
 veyne වෙන්
 via විය
-vian වියන්
-viana වියන
+vian වියන් වේයන්
+viana වියන වියානා
 viano වියානා
 vicar විකාර
 vice වයිස්
 vicious විශේශ
 vicker විකාර
-vickey විකි
-vicki විකි
-vickie විකි
-vicky විකි
+vickey විකි වැකි
+vicki විකි වැකි
+vickie විකි වැකි
+vicky විකි වැකි
 victor වික්ටර්
 victoria වික්ටෝරියා
-video වීඩියෝ
+victorian වික්ටෝරියානු
+video වීඩියෝ විඩියෝ
 vie වයි
-viel විල්
-viele විල්
-vien වින්
-vienneau වුණා
+viel විල් වේල්
+viele විල් වේල්
+vien වින් වින
+vienneau වුණා වුනා
 viens වීනස්
-viera වීර
-vierra වීර
+viera වීර වීර්
+vierra වීර වීරා
 vies වයිස්
 vietor විතර
 vietti වියැති
 vig වේග
 vigue වේග
-viking වයිකින්ග්
+viking වයිකින්ග් වයිකිං
 viktor වික්ටර්
-villa විල
+villa විල වෙලා
 villain විලීන
-ville විල්
-villi වැලි
+ville විල් වැල්
+villi වැලි විලී
 vince වෙනස්
 vincent වින්සන්ට්
 vine වයින්
-vinet විනීත්
-vinnie වැනි
-vinny වැනි
+vinet විනීත් විනීත
+vinnie වැනි වෙනි
+vinny වැනි වෙනි
 vint වෙනත්
 vinton වින්ටන්
 vinzant වින්සන්ට්
@@ -8967,84 +9461,87 @@ vires වෛරස්
 virga වර්ග
 virgen වර්ජන
 virgie වර්ගී
-virile වෙරළ
+virile වෙරළ විරල
 virna වර්ණ
-virus වෛරස්
-visa වීජ
+virus වෛරස් වෛරස
+visa වීජ වීසා
 vise වයිස්
 visit විජිත
 vist වෙස්ට්
 vitae වයිට්
-vitia විෂ
-viv වැව්
-viva වේවා
+vitia විෂ වේශ
+viv වැව් වැව
+viva වේවා වේවි
 vivian විවියන්
-vivie වැවේ
+vivid විවාද
+vivie වැවේ වේවි
 vivien විවියන්
 vivienne විවියන්
 vivo වේවා
 vlok වළක්
 vocke වක්
 voell වෝල්
-voght වත්
+voest වාස්තු
+voght වත් වොට්
 vogt වොට්
 vogue වාග්
-vohs වස්
+vohs වස් වාස්
 voland වැලඳ
 volga වල්ගා
-voll වල
+voll වල වල්
 volland වැලඳ
-volle වල
-volley වැලි
+volle වල වල්
+volley වැලි වලි
 volleyball වොලිබෝල්
 volta වෝල්ට්
 voltaire වෝල්ටර්
-vomit වමට
-vona වොන්
+vomit වමට වමත
+vona වොන් වානේ
 vong වොන්
 vonnegut වනගත
-vonnie වැනි
-vonny වැනි
+vonnie වැනි වානේ
+vonny වැනි වානේ
 vore වාර
 vose වාස්
-voss වාස්
-vossen වාසීන්
+voss වාස් වාස
+vossen වාසීන් වාසින්
 vote වොට්
 vought වොට්
-vous වූ
-voute වූත්
-vrain වරෙන්
+vous වූ වු
+voute වූත් වුත්
+vrain වරෙන් වරැන්
 waack වක්
-waah ව
-waal වල
+waah ව වා
+waal වල වල්
 wace වෙස්
 wack වක්
 wacky වැකි
 wad වාද
-waddie වැඩි
-waddle වදාළ
-waddy වැඩි
+wada වාද
+waddie වැඩි වාදී
+waddle වදාළ වදාල
+waddy වැඩි වාදී
 wading වේදීන්
-wagg වාග්
-waggy වාගේ
-wagy වාගේ
+wagg වාග් වග
+waggy වාගේ වගේ
+wagy වාගේ වගේ
 wahine වාහිනී
 wahle වෝල්
-wahlen වලන්
-waid වැඩ
-waide වැඩ
-wail වැල්
+wahlen වලන් වලං
+waid වැඩ වේද
+waide වැඩ වේද
+wail වැල් වෙල්
 wailed වෙලද
-wailes වේල්ස්
-wails වේල්ස්
+wailes වේල්ස් වෙල්ස්
+wails වේල්ස් වෙල්ස්
 waist වෙස්ට්
-wait වෙත
-waite වෙත
+wait වෙත වෙත්
+waite වෙත වෙත්
 waiting වෙතින්
-waitt වෙත
-waive වැව්
-wale වැල්
-wales වේල්ස්
+waitt වෙත වෙත්
+waive වැව් වැව
+wale වැල් වෙල්
+wales වේල්ස් වෙල්ස්
 walk වක්
 walker වෝකර්
 wall වෝල්
@@ -9052,211 +9549,216 @@ walle වෝල්
 wallen වවුලන්
 wallet වෝල්ට්
 wallow වලා
-wally වැලි
+wally වැලි වෙලී
 walter වෝල්ටර්
 walther වෝල්ටර්
 wanat වෙනත්
 wandie වන්දි
-waned වැඳ
+waned වැඳ වෙන්ඩ
 wanes වෙනස්
-wang වන
+wang වන වෙන්
 wanna වන
-wanner වෝනර්
+wanner වෝනර් වානර
 wanta වන
 war වාර
-ware වෙර
-warily වෙරළේ
+ware වෙර වෛර
+warily වෙරළේ වෙරලේ
 warr වාර
 warren වාරණ
 warrick වාරික
-washington වොෂින්ටන්
+was වාස්
+washington වොෂින්ටන් වොෂිංටන්
 wasiyu වැසියෝ
-wason වාසීන්
-wassom වසම්
-wasson වාසීන්
-wassum වසම්
+wason වාසීන් වසන්
+wassom වසම් වසම
+wasson වාසීන් වාසින්
+wassum වසම් වසම
 waste වෙස්ට්
 water වෝටර්
 watson වොට්සන්
-watt වත්
-wattie වැටී
-waugh වා
-wave වැව්
-wavy වැවේ
+watt වත් වොට්
+wattie වැටී වටේ
+waugh වා වෝ
+wave වැව් වැව
+wavy වැවේ වේවි
 way වේ
 waye වේ
 waylaid වෙළෙද
-wayland වෙළඳ
+wayland වෙළඳ වෙළෙඳ
 wayman වෙමින්
 wayne වෙන්
 ways වෙස්
-wayt වෙත
+wayt වෙත වෙත්
 weaker විකාර
-wean වින්
-weaned වින්ඩ්
-wear වෙර
-wearily වෙරළේ
-wease වීජ
+wean වින් වින
+weaned වින්ඩ් විඳ
+wear වෙර වෛර
+wearily වෙරළේ වෙරලේ
+wease විසූ වීජ
 weaver විවර
 weavil වේවැල්
 webb වෙබ්
 webber වෙබර්
 webre වෙබර්
-wedd වැඩ
+wed වේද
+wedd වැඩ වේද
 wedding වේදීන්
+weed විදු
 weeden වේදීන්
-weeding වේදීන්
+weeding වේදීන් විදින
 weedon වේදීන්
-weeny විණි
-weese වීජ
+weedy විදි
+weeny විණි විනි
+weese විසූ වීජ
 weevil වේවැල්
 wege වීජ
-wehde වැඩ
-wehle වැලි
+wehde වැඩ වේද
+wehle වැලි වෙලී
 wehman වෙමින්
-wehr වෙර
-wehrle වෙරළ
-wehrli වෙරළේ
-wehrly වෙරළේ
-weier වීර්
+wehr වෙර වෛර
+wehrle වෙරළ වෙරල
+wehrli වෙරළේ වෙරලේ
+wehrly වෙරළේ වෙරලේ
+weier වීර් වීර
 weigh වේ
-weighed වැඩ
+weighed වැඩ වේද
 weighs වෙස්
-weight වෙත
+weight වෙත වෙත්
 weighting වෙතින්
-weighty වෙති
+weighty වෙති වැටී
 weild වයිල්ඩ්
-wein වින්
+wein වින් වින
 weins වීනස්
-weir වීර්
-weise විස
+weir වීර් වීර
+weise විසූ විසු
 weiss වයිස්
 weisse වයිස්
-weith විට
+weith විට විත්
 weldon වෙළදුන්
 weldy වැළදී
-welke වේලක්
-well වැල්
-welland වෙළඳ
-welle වැල්
-welles වේල්ස්
-wells වේල්ස්
-welz වේල්ස්
-wende වැඳ
+welke වේලක් වැලක්
+well වැල් වෙල්
+welland වෙළඳ වෙළෙඳ
+welle වැල් වෙල්
+welles වේල්ස් වෙල්ස්
+wells වේල්ස් වෙල්ස්
+welz වේල්ස් වෙල්ස්
+wende වැඳ වෙන්ඩ
 wendt වෙනත්
 weng වෙන්
 wenge වෙන්
 wenker වෙන්කර
-wenona වෙන්න
+wenona වෙන්න වැන්න
 wente වෙනත්
 wenz වෙනස්
 werden වරදින්
-were වර
+were වර වාර
 werk වරක්
 werke වරක්
-werley වෙරළේ
+werley වෙරළේ වෙරලේ
 werne වර්ණ
-werre වෙර
+werre වෙර වෛර
 wesch වේශ
 wesche වේශ
 wesley වෙස්ලි
-wesson වෙසෙන
+wesson වෙසෙන වෙසින්
 western වෙස්ටර්න්
 wesun විසන්
+wet වෙත්
 wetting වෙතින්
 wever විවර
-weyer වීර්
-weyl වැල්
-weyland වෙළඳ
+weyer වීර් වීර
+weyl වැල් වෙල්
+weyland වෙළඳ වෙළෙඳ
 weyman වෙමින්
 whack වක්
-whacking වයිකින්ග්
-whale වැල්
-whales වේල්ස්
-whaley වැලි
+whacking වයිකින්ග් වයිකිං
+whale වැල් වෙල්
+whales වේල්ස් වෙල්ස්
+whaley වැලි වෙලී
 whalin වලින්
-whalley වැලි
-whammy වෙමි
-whan වන
-whang වන
+whalley වැලි වෙලී
+whammy වෙමි වමේ
+whan වන වෙන්
+whang වන වෙන්
 wharry වාරි
-what වත්
-whate වෙත
-wheat විට
-wheaten විතැන්
-wheaton විතැන්
-whedon වේදීන්
-wheel විල්
+what වත් වතු
+whate වෙත වෙත්
+wheat විට විත්
+wheaten විතැන් වේතන
+wheaton විතැන් වේතන
+whedon වේදීන් වැඩුණු
+wheel විල් වේල්
 wheeless වේල්ස්
 wheeling විලීන
-wheelock වේලක්
+wheelock වේලක් විලක්
 wheels වේල්ස්
 wheelus වේල්ස්
-wheeze වීජ
+wheeze විසූ වීජ
 when වෙන්
 whence වෙනස්
-where වෙර
-wherley වෙරළේ
-whet වෙත
-whew වූ
+where වෙර වෛර
+wherley වෙරළේ වෙරලේ
+whet වෙත වෙත්
+whew වූ වු
 whey වේ
 whicker විකාර
-whidden විදින
-whiddon විදින
+whidden විදින විදිනු
+whiddon විදින විදිනු
 whig වේග
-whim වීම
+whim වීම වීම්
 whine වයින්
-whinney වැනි
+whinney වැනි වෙනි
 whipped විපත්
 whipple විපුල
 whirl වරල්
 whirled වර්ල්ඩ්
-whirley වෙරළේ
+whirley වෙරළේ වෙරලේ
 whisk වෙසක්
-whistle විශාල
-whit විට
+whistle විශාල විසල්
+whit විට වෙත
 whitcher විචාර
 white වයිට්
-whitham විටම
+whitham විටම වෙතම
 whither විතර
-whiton විටින්
-whitt විට
-whitten විටින්
-whitting වෙතින්
-whitton විටින්
-whitty වෙති
-whiz වෙස්
+whiton විටින් විතැන්
+whitt විට වෙත
+whitten විටින් විතැන්
+whitting වෙතින් විටින්
+whitton විටින් විතැන්
+whitty වෙති වැටී
+whiz වෙස් විසූ
 who හෝ
-whoa හෝ
-whole හෝල්
-wholey හෝලි
+whoa හෝ හා
+whole හෝල් හාල්
+wholey හෝලි හැලී
 wholly හෝලි
-whom හෝම්
-whoo වූ
-whore හොර
+whom හෝම් හෝම
+whoo වූ වු
+whore හොර හාර
 whores හොරස්
 whorl වරල්
 whorton හෝර්ටන්
 why වයි
 whyte වයිට්
-wicca විකා
+wicca විකා විකි
 wice වයිස්
 wicker විකාර
-wicket විකට්
-wickey විකි
+wicket විකට් විකට
+wickey විකි වැකි
 widget විජිත
-wied වේද
+wied වේද විදු
 wieden වේදීන්
-wiehe වේ
+wiehe වේ වී
 wieman වීමෙන්
 wiemann වීමෙන්
-wien වින්
+wien වින් වින
 wiens වීනස්
 wierman වීරමන්
-wiese වීජ
-wiesel විශාල
-wiesen විසන්
-wiess විස
+wiese විසූ වීජ
+wiesel විශාල විසල්
+wiesen විසන් විශ්ණු
+wiess විසූ විසු
 wieting විටින්
 wig වේග
 wigg වේග
@@ -9267,78 +9769,83 @@ wild වයිල්ඩ්
 wilde වයිල්ඩ්
 wildey වැළදී
 wilhelma විල්හෙල්ම්
-wilke විලක්
-wilkey වැළකී
-wilkie වැළකී
-will වල
-willa විල
-wille විල්
+wilke විලක් වේලක්
+wilkey වැළකී වැලකී
+wilkie වැළකී වැලකී
+will වල වල්
+willa විල වෙලා
+wille විල් වැල්
 willen විලීන
-willey වැලි
+willey වැලි විලී
 willhelm විල්හෙල්ම්
-willi වැලි
-willie වැලි
+willi වැලි විලී
+willie වැලි විලී
 willing විලීන
-willke වැළකී
-willkie වැළකී
-willock විලක්
-willow වෙලා
-wills වේල්ස්
+willke වැළකී වැලකී
+willkie වැළකී වැලකී
+willock විලක් වේලක්
+willow වෙලා වේලා
+wills වේල්ස් වෙල්ස්
 willson විල්සන්
-willy වැලි
+willy වැලි විලී
 wilson විල්සන්
 win වෙන්
 wince වෙනස්
 winchel වෙන්කළ
-windham විඳීම්
-windom විඳීම්
-windon විඳින
+wind විඳ
+windham විඳීම් විඳීම
+windom විඳීම් විඳීම
+windon විඳින වින්දන
 windows වින්ඩෝස්
 windt වෙනත්
 wine වයින්
 wing වෙන්
-winged වින්ඩ්
+winged වින්ඩ් විඳ
 winn වෙන්
 winne වෙන්
-winnett විනීත්
-winney වැනි
-winnie වැනි
-winnow විනා
+winnett විනීත් විනීත
+winney වැනි වෙනි
+winnie වැනි වෙනි
+winnow විනා වීණා
 winnowed විනෝද
-winny වැනි
+winny වැනි වෙනි
 winston වින්ස්ටන්
 wint වෙනත්
 winton වින්ටන්
 wire වෛර
 wirz වර්ශ
-wisch විෂ
-wishon විෂන්
-wiss වෙස්
-wissa විසූ
-wissel විශාල
+wisch විෂ විශ
+wish විශ
+wishon විෂ්ණු විෂන්
+wiss වෙස් විසූ
+wissa විසූ විසි
+wissel විශාල විසල්
 wissing විසින්
 wist වෙස්ට්
-wisz විෂ
+wisz විෂ විශ
+wit වෙත
 witcher විචාර
-withe විට
-withee වෙති
-withem වැටීම්
+with වෙත
+withe විට වෙත
+withee වෙති වැටී
+withem වැටීම් වැටීම
 wither විතර
-withey වෙති
+withey වෙති වැටී
 within වෙතින්
-witte විට
-witten විටින්
+witte විට වෙත
+witten විටින් විතැන්
 witter විතර
-witthuhn විතැන්
-witting වෙතින්
-witton විටින්
+witthuhn විතැන් විටින්
+witting වෙතින් විටින්
+witton විටින් විතැන්
 wittrock විතරක්
-witty වෙති
-wiz වෙස්
-woe වා
+witty වෙති වැටී
+wiz වෙස් විසූ
+woe වා වෝ
 woehl වෝල්
 woehr වාර
 woes වාස්
+woeste වාස්තු
 wohl වෝල්
 wok වක්
 wola වෝල්
@@ -9346,21 +9853,22 @@ woldt වෝල්ට්
 wolf වුල්ෆ්
 wolfe වුල්ෆ්
 wolff වුල්ෆ්
-woll වල
-wollack වළක්
-wolle වල
-wollen වලන්
+woll වල වල්
+wollack වළක් වැලක්
+wolle වල වල්
+wollen වලන් වලං
 wollin වලින්
-women වීමෙන්
-won වන
-wonda වඳ
+women වීමෙන් විමන්
+won වන වනු
+wonda වඳ වැඳ
 wong වොන්
 wood වුඩ්
-wooed වූද
+wooed වූද වුඩ්
+wool වූල්
 woolf වුල්ෆ්
-woong වුන්
+woong වුනු වුණු
 wop වප්
-word වර්ඩ්
+word වර්ඩ් වරද
 worden වරදින්
 wording වරදින්
 wordy වැරදි
@@ -9368,7 +9876,7 @@ wore වාර
 work වරක්
 works වර්ක්ස්
 world වර්ල්ඩ්
-worley වෙරළේ
+worley වෙරළේ වෙරලේ
 worm වරම්
 worry වාරි
 worse වර්ශ
@@ -9376,204 +9884,211 @@ worthen වර්තන
 worthey වැරදි
 worthy වැරදි
 worton වර්තන
-would වුඩ්
+would වුඩ් වූද
 wrack රැක
 wracked රක්ත
 wracking රකින
-wragg රඟ
+wragg රඟ රාග
 wrap රැප්
-wrath රත්
+wrath රතු රත්
 wrather රේඩාර්
 wreaked රික්ත
 wreck රැක
 wrecks රෙක්ස්
 wrede රීඩ්
+wrenn රේණු
 wrestling රෙස්ලින්
 wrice රයිස්
 wright රයිට්
 wrights රයිට්ස්
+wring රේණු
 write රයිට්
 writes රයිට්ස්
 writhing රීතීන්
 written රීතීන්
-wroe රෝ
-wrona රොන්
-wrong රොන්
+wroe රෝ රා
+wrona රොන් රෝන්
+wrong රොන් රෝන්
 wrote රාත්
 wrought රාත්
-wrung රන්
-wuhan වූවන්
+wrung රන් රඟ
+wuhan වූවන් වුවන්
 wulff වුල්ෆ්
 wunsch වංශ
 wurl වරල්
 wurm වරම්
 wurz වර්ශ
-wuss වස්
+wuss වස් වාස්
 wussow වසා
 wye වයි
-wyka විකා
+wyka විකා විකි
 wylde වයිල්ඩ්
-wyllie වැලි
-wyndham විඳීම්
+wyllie වැලි විලී
+wyndham විඳීම් විඳීම
 wyne වයින්
 wynn වෙන්
 wynne වෙන්
 wynns වීනස්
 wynton වින්ටන්
 wyre වෛර
-wyss වෙස්
+wyss වෙස් විසූ
 wythe වයිට්
 xanthe ජන්ද
-xena සේනා
-xene ජින්
+xena සේනා සේන
+xene ජින් ජීන්
 xhosa ජෝෂි
 xian සයන්
-xie සේ
-xing ෂින්
-xio ජෝ
-xiong ජෝන්
-xoma සෝම
-xue ජෝ
-yacht යත්
+xie සේ ජී
+xing ෂින් ෂෑං
+xio ජෝ ජා
+xiong ජෝන් ජොං
+xoma සෝම සාම
+xue ජෝ සූ
+yacht යත් යට
 yachting යටින්
-yack යක්
+yack යක් යකු
 yacko යකා
 yadda යොදා
-yaden යෙදෙන
-yagi යෝගී
+yaden යෙදෙන යෙදුනු
+yagi යෝගී යෝගි
 yahr යාර
 yahweh යවයි
-yahya යයි
+yahya යයි යි
 yale යේල්
 yancey යැංසි
 yancy යැංසි
-yani යෝනි
+yani යෝනි යොනි
 yannone යන්න
 yasuda යසෝද
-yau යා
-yaun යොන්
+yau යා යෝ
+yaun යොන් යොං
 yaupon යාපන
-yawn යොන්
-yea යේ
-yeadon යෙදෙන
-yeah ය
+yawn යොන් යොං
+yea යේ යැ
+yeadon යෙදෙන යෙදුනු
+yeah ය යයි
 yeast යීස්ට්
-yedda යෙදී
-yeh යයි
+yedda යෙදී යෙදේ
+yeh යයි යේ
 yell යේල්
 yelle යේල්
 yellow යෙලෝ
 yellowstone යෙලෝස්ටෝන්
-yene යෙන්
+yen යැන්
+yene යෙන් යැන්
 yeoman යාමෙන්
 yer යාර
 yett යෙත්
 yetta යෙත්
-yeung යුං
-yew යූ
-yie යි
-yim යෑම
+yeung යුං යූන්
+yew යූ යු
+yie යි යයි
+yim යෑම යැම
 yipee යැපේ
 yippee යැපේ
 yoak යෝක්
-yoe යා
-yoh යා
-yohn යන
+yoe යා යෝ
+yoh යා යෝ
+yohn යනු යන
 yoke යෝක්
 yolk යෝක්
-yongue යං
+yongue යං යොං
 yore යාර
-yorke යෝර්ක්
-yott යත්
-you යූ
-youn යන
+york යොර්ක්
+yorke යෝර්ක් යොර්ක්
+yott යත් යට
+you යූ යු
+youghal යාලු
+youn යනු යන
 younan යන්න
-young යන
+young යනු යන
 your යාර
 youri යුරි
-youth යුත්
+youth යුතු යුත්
 yuan යුවාන්
-yucca යක්
-yuck යක්
-yue යූ
+yucca යක් යකා
+yuck යක් යකු
+yue යූ යු
 yuichi යෝක්හි
-yuk යක්
-yul යල්
+yuk යක් යකු
+yul යල් යාලු
 yum යම්
-yummy යාමේ
+yummy යාමේ යමි
 yuppie යැපේ
-yves ඒව
-yvonne එවන්
-zabel සෙබල
-zach ජැක්
+yves ඒව ඉව
+yvonne එවන් ඉවාන්
+zabel සෙබලු සෙබළු
+zach ජැක් ශාක
 zachi ජැකී
 zachow ශාකා
-zack ජැක්
+zack ජැක් ශාක
 zacks සකස්
-zada සාදා
+zada සාදා සාද
 zadeh සෑදේ
 zadoc සාදක
 zadok සාදක
-zag සග
+zag සග සඟ
 zagat ජගත්
-zahm සෑම
-zahn සෙන්
-zaid ජේඩ්
-zain සෙන්
+zahm සෑම සම්
+zahn සෙන් ජන
+zaid ජේඩ් සෙඩ්
+zain සෙන් ජේන්
 zaino සේනා
-zak ජැක්
+zak ජැක් ශාක
 zaki ජැකී
-zale සෙල්
+zale සෙල් ජෙල්
 zaley ජෙලි
-zalm සෑම
-zan සෙන්
-zand සඳ
-zandt සෙන්ට්
-zane සෙන්
+zalm සෑම සම්
+zan සෙන් ජන
+zand සඳ සඳු
+zandt සෙන්ට් සාන්ත
+zane සෙන් ජේන්
 zanella ජනේල
-zang ජං
+zang ජං ජෑං
 zanghi ජෝන්ගේ
 zani ජොනී
-zant සෙන්ට්
-zanuck ජානක
-zap සැප
-zapp සැප
+zant සෙන්ට් සාන්ත
+zanuck ජානක ජනක
+zap සැප ජප
+zapp සැප ජප
 zappa ජප
-zapped සප්ත
+zapped සප්ත සැපත්
 zara ජරා
 zarah ජරා
-zaro ජරා
-zarr සර්
-zarre සර්
-zarro සාරා
-zaun ජෝන්
-zayre සර්
-zea සේ
-zeal සීල්
-zecca සේක
-zech ජැක්
+zaro ජරා සාරා
+zarr සර් සාර්
+zarre සර් සාර්
+zarro සාරා ජරා
+zaun ජෝන් ජොන්
+zayre සර් සැර
+zea සේ ජී
+zeal සීල් සිල්
+zecca සේක සැක
+zech ජැක් සේක
 zecher සේකර
-zeck ජැක්
-zed ජේඩ්
-zee සේ
-zeek සීක්
-zeff ජෙෆ්
-zeh සේ
-zehr සර්
+zeck ජැක් සේක
+zed ජේඩ් සෙඩ්
+zee සේ ජී
+zeek සීක් සේක
+zeese ජේසු ජේජු
+zeff ජෙෆ් සයිෆ්
+zeh සේ ජේ
+zehr සර් සැර
+zeis ජේජු
 zeit සයිට්
-zeke සීක්
-zel සෙල්
-zele සීල්
+zeke සීක් සේක
+zel සෙල් ජෙල්
+zele සීල් සිල්
 zelek සෛලික
 zelie ජෙලි
-zell සෙල්
-zelle සෙල්
-zen සෙන්
-zena සේනා
+zell සෙල් ජෙල්
+zelle සෙල් ජෙල්
+zen සෙන් ජේන්
+zena සේනා සේන
 zeneca සේනක
-zeng ජෑං
+zeng ජෑං සෙන්
 zenith සීනත්
-zenna ජෛන
+zenna ජෛන සේනා
 zeno සේනා
 zens ජෙන්ස්
 zent සෙන්ට්
@@ -9584,101 +10099,101 @@ zera සැර
 zern ජීර්ණ
 zero ශිරා
 zeroed ජෙරාඩ්
-zerr සර්
+zerr සර් සිර
 zest සේසත්
-zeta ජෙට්
+zeta ජෙට් සෙත
 zev ජෛව
 zeva සේවා
-zewe ජීවී
+zewe ජීවී ජීවි
 zeyno සේනා
-zhan ජෝන්
-zhang ජොං
-zheng ජෑං
+zhan ජෝන් ජන
+zhang ජොං ජං
+zheng ජෑං සෙන්
 zhou ජෝ
 zhu ජෝ
-zia සීයා
-ziahe සීයා
-zick ජැක්
-ziehl සීල්
-ziehm ජිම්
-ziel සීල්
+zia සීයා සේයා
+ziahe සීයා සේයා
+zick ජැක් සීක්
+ziehl සීල් සිල්
+ziehm ජිම් සේම
+ziel සීල් සිල්
 zielke සිල්ක්
-zier සර්
+zier සර් සිර
 ziff ජෙෆ්
 zigman සිග්මන්
-zil සෙල්
+zil සෙල් සිල්
 zile සෛල
-zill සෙල්
-zilla ශිලා
-zillah ශිලා
-zim ජිම්
-zima සීමා
+zill සෙල් සිල්
+zilla ශිලා සීල
+zillah ශිලා සීල
+zim ජිම් සිම්
+zima සීමා සේම
 zimbabwe සිම්බාබ්වේ
 zimmerman සිමර්මන්
 zimmermann සිමර්මන්
 zinc සින්ක්
 zinck සින්ක්
 zinda සිඳ
-zine ජෛන
-zing සිං
+zine ජෛන සයින්
+zing සිං ජින්
 zinga ජිං
-zingg සිං
+zingg සිං ජෑං
 zink සින්ක්
 zinke සින්ක්
-zinn ජින්
-zinni සීනි
-zinno සිනා
+zinn ජින් සෙන්
+zinni සීනි සිනි
+zinno සිනා සේනා
 zinter සෙන්ටර්
-zip ජීප්
-zipp ජීප්
+zip ජීප් ජිප්
+zipp ජීප් ජිප්
 zirk සාර්ක්
 zirkel සර්කල්
 zirkle සර්කල්
 zisson ජේසන්
-zita ශීත
-zito සිතා
+zita ශීත සීත
+zito සිතා සීතා
 zittel සීතල
-ziv සිව්
-zoch ශාක
+ziv සිව් ජීව
+zoch ශාක සක්
 zody සාදි
-zoete ජෝති
-zogg සග
+zoete ජෝති ජාති
+zogg සග සඟ
 zoghby සාබි
-zoh ජෝ
-zohn ජෝන්
-zola ජාල
-zoll ජල
+zoh ජෝ සො
+zohn ජෝන් ජොන්
+zola ජාල ශාලා
+zoll ජල ජාල
 zollo ශාලා
-zon ජෝන්
-zona ජෝන්
-zone ජෝන්
+zon ජෝන් ජොන්
+zona ජෝන් ජාන
+zone ජෝන් ජොන්
 zoned සොඳ
-zones ජෝන්ස්
-zoo ජෝ
-zook සුක්
+zones ජෝන්ස් ජොන්ජු
+zoo ජෝ සූ
+zook සුක් ශෝක
 zoom සෝම
 zoos ජෝජ්
-zora සොරා
-zorah සොරා
-zorro සාරා
-zorz ජෝර්ජ්
+zora සොරා සොර
+zorah සොරා සොර
+zorro සාරා සොරා
+zorz ජෝර්ජ් ජොර්ජ්
 zoss ජෑස්
-zsa ජා
+zsa ජා ජෝ
 zube සුබ
-zuck සක්
+zuck සක් ශාක
 zuckerberg සකර්බර්ග්
-zue ජෝ
+zue ජෝ සූ
 zuege ජෝජ්
-zug සග
-zuk සක්
-zulli ජූලි
-zulu සුළු
+zug සග සඟ
+zuk සක් ශාක
+zulli ජූලි ජුලි
+zulu සුළු සුලු
 zummo සෝමා
-zuni ජූනි
+zuni ජූනි ජුනි
 zupan සෝපාන
 zurcher සර්කාර්
-zuri ජූරි
-zurve සර්ව
+zuri ජූරි ජුරි
+zurve සර්ව සාර්ව
 zycher සේකර
-zyla ශිලා
+zyla ශිලා සීල
 zynda සිඳ

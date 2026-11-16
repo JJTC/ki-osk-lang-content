@@ -1,30 +1,30 @@
 # The English words anp writes in its script, as its table reads them (make english-assets): from CMUdict (cmusphinx/cmudict; its notice in NOTICES.md) and predict/anp.fst.
-aalen एलन
-aamodt अंत
+aalen एलन ऐलान
+aamodt अंत आंत
 aarons एरेंज
 ababa बाबा
 aback बेक
 abair बेर
-abash बस
+abash बस बेस
 abashed बेस्ट
-abate बिट
-abba अब
-abbado बड़ो
-abbe आबै
-abbett बिट
-abbey आबी
-abbie आबी
+abate बिट बत
+abba अब अबा
+abbado बड़ो बोडो
+abbe आबै आबी
+abbett बिट बत
+abbey आबी अबी
+abbie आबी अबी
 abboud बड़
-abby आबी
-abe अब
-abed बैद
+abby आबी अबी
+abe अबू अब
+abed बैद उबैद
 abedi बड़ी
 abel एबेल
-abele बल
+abele बल बेल
 abell एबेल
-abella बेला
-abend बैंड
-abet बिट
+abella बेला बला
+abend बैंड बैन्ड
+abet बिट बत
 abeyta आबैतौ
 abhor आभार
 abide बैद
@@ -32,8 +32,8 @@ able एबेल
 aboard बोर्ड
 abode बड़
 abood बड़
-aboodi बड़ी
-abor बार
+aboodi बड़ी बोदी
+abor बार बोर
 aborn बारँ
 abott बात
 about बोट
@@ -43,30 +43,30 @@ abroad बरद
 abron बड़ों
 abut बात
 abuzz बज
-abyss बस
-acacia केश
-acaena आसीन
+abyss बस बीस
+acacia केश कैश
+acaena आसीन शीना
 acc आईसीसी
 access एक्सेस
-acclaim कलें
-accompany कंपनी
+acclaim कलें कलम
+accompany कंपनी कम्पनी
 accord कार्ड
 accordion अकार्डियन
 accost कोस्ट
 account काउंट
-accra ओकरा
-accrue ओकरो
-accrued क्रोड
-ace एस
+accra ओकरा ओकरो
+accrue ओकरो एकरो
+accrued क्रोड करोड़
+ace एस इस
 aced अस्त
-acerra असर
-acetic सटीक
-acey इसी
+acerra असर सिरा
+acetic सटीक एसिटिक
+acey इसी एस
 ache एक
 aches एक्स
 achey अछि
 achill एकल
-achille अकेली
+achille अकेली अकेले
 achmed अहमद
 achor एकर
 achy एक
@@ -75,67 +75,68 @@ ack एक
 acklin आकलन
 acmat एकमत
 acord कार्ड
-acosta कोस्टा
+acosta कोस्टा कोस्ट
 acquitaine एक्विटेन
 acre एकर
 acri ओकरे
-acro ऐकरो
+acro ऐकरो एकरो
 across क्रॉस
-acta एकटा
+acta एकटा एकता
 actinide एक्टिनाइड
-acts एक्स
+acts एक्स अक्ष
 adage एडीज
 adah अदा
-adair दर
+adair दर देर
 adak डक
 adam एडम
 adame आदमी
-adar दर
-adare दर
+adar दर दारू
+adare दर देर
 adas एडीज
-addair दर
+addair दर देर
 addeo ऑडियो
 addie आदि
-addis आदेश
+addis आदेश ओडिस
 addle एडेल
 adds एड्स
 addy आदि
-adel एडेल
-adela देला
-adele एडेल
-adell एडेल
-adelle एडेल
-adia ओड़िया
+adel एडेल देल
+adela देला एडेल
+adele एडेल देल
+adell एडेल देल
+adelle एडेल देल
+adia ओड़िया ओडिया
 adid डेड
-adieu दू
+adieu दू दु
 adin दिन
 adisq डिस्क
 adjoin जॉइन
 adjudge जज
 admission एडमिशन
-ado दू
-adore दर
+ado दू दु
+adore दर दारू
 adores दर्ज
 ads एड्स
 adss एड्स
 adult अदालत
 adz एड्स
 aero अरो
-affair फेर
-affine फाइन
+affair फेर फेरू
+affine फाइन फेनु
 affirm फार्म
 afford फोर्ड
 afghani अफगानी
 afield फील्ड
-afire फेर
+afire फेर फेरू
 afoot फुट
 afoul फौल
+africa अफ्रिका
 afula फूल
-again आगिन
+again आगिन गण
 agana गाना
 age इज
 agency एजेंसी
-agenda जिंदा
+agenda जिंदा जिन्दा
 agent एजेंट
 aggie आगे
 aggressor अग्रसर
@@ -148,49 +149,49 @@ aglo गलौ
 aglow गलौ
 agne अग्नि
 agnes एग्नेस
-ago एगो
-agoura गोरा
+ago एगो ऐगो
+agoura गोरा आगरा
 agree ओगरी
-aha ओहो
-ahah ओहो
-ahead हेड
-ahearn हेरन
-ahern हेरन
-aherne हेरन
-ahh आ
-ahl अल
-ahlen लें
+aha ओहो ओह
+ahah ओहो ओह
+ahead हेड हद
+ahearn हेरन हरण
+ahern हेरन हरण
+aherne हेरन हरण
+ahh आ ओ
+ahl अल ऑल
+ahlen लें एलन
 ahmann ओमान
-ahn एन
+ahn एन अणु
 ahnell अनिल
 aho ओहो
 ahoy होय
-ahr ओर
-ahren आरिन
+ahr आरू आरु
+ahren आरिन आरोन
 ahs आज
 ahsahka अशोक
-ahwahnee वाणी
-aichele एकल
+ahwahnee वाणी अवनी
+aichele एकल आयकल
 aicher एकर
 aidan अदन
 aiden अदन
 aidenn अदन
 aides एड्स
-aiesha ऐसे
+aiesha ऐसे एस
 aikey एक
 ailing एलन
 aimed एंड
-ainge अंग
-ainu अणु
-air एयर
+ainge अंग एन
+ainu अणु अनु
+air अरु एयर
 airforce एयरफोर्स
-airing अरिन
+airing अरिन एरिन
 airport एयरपोर्ट
-aisle एल
+aisle एल आइल
 aisles आइल्स
 aist अस्त
 ajaj जज
-ajar जोर
+ajar जोर औजार
 aka एके
 akai के
 akaka काका
@@ -198,115 +199,117 @@ akali काली
 akashi काशी
 akc एक
 ake एक
-akel कैल
-akella कला
+akel कैल एकल
+akella कला केला
 akerley करले
-akey के
+akey के कि
 akin कें
-akira कीड़ा
+akira कीड़ा आकर
 akita कीट
-alain लें
-alaine लें
-alan एलन
+alain लें एलन
+alaine लें एलन
+alan एलन ऐलान
 aland आइलेंड
-alane लें
-alann ऐलान
+alane लें एलन
+alann ऐलान एलन
 alard लार्ड
 alarie लरी
 alas लैस
-alayne लें
+alayne लें एलन
 album एल्बम
 alda ओल्ड
-ale एल
+ale एल अल
 aletti लेटी
 algeria अल्जीरिया
-alice ऐलिस
+alice ऐलिस आइल्स
 alicia अलीशा
 alig अलग
 alight लेट
-align लाइन
-aligned लैंड
+align लाइन लाईन
+aligned लैंड ऑलैण्ड
 alija लाईज
 alike लैक
-aline लाइन
+aline लाइन लाईन
 alison आलिशान
-alissa अलीशा
+alissa अलीशा ऐलिस
 alive लाइव
 aliyah लिया
-all ऑल
-alla अल
-allain लें
-allais ले
-allan एलन
+all ऑल अल
+alla अल आले
+allain लें एलन
+allais ले लै
+allan एलन ऐलान
 allar लार
-allay ले
+allay ले लै
 allday ओल्ड
-allee अली
+allee अली लिए
 allege लाईज
 allele लेली
-allen एलन
+allen एलन ऐलान
 allenbaugh लंबा
-alley अली
+alley अली ऐली
 alleyne एलन
-alli अली
-allie अली
+alli अली ऐली
+allie अली ऐली
 allies लाईज
-allin लें
+allin लें एलन
 allis ऐलिस
 allison आलिशान
 allocca इलाका
-allot लात
-allow ऐलौ
-alloy अली
+allot लात लौट
+allow ऐलौ लाओ
+alloy अली ऐली
 allum आलम
-ally लै
+ally लै ऐलै
 allyn एलन
 allyson आलिशान
 almada अल्मोड़ा
 almay आलम
-alms अंश
+alms आंसू अंश
 almy आम
 aloha लोहा
 aloi अली
-alon लोन
-alone लोन
-along लॉन्ग
-alot लात
+alon लोन ऐलान
+alone लोन एलन
+along लॉन्ग लंग
+alot लात लौट
 als आइल्स
 alta अल्टो
 altarpiece अल्टरपीस
-alumbaugh लम्बा
-alun एलन
+alumbaugh लम्बा लंबा
+alun एलन ऐलान
 alyce ऐलिस
-alyssa अलीशा
+alyssa अलीशा ऐलिस
 alza आइल्स
 amacher एंकर
 amacker एंकर
 amal माल
-amalie एमिली
+amalie एमिली इमली
 aman ओमान
-amana मैना
+amana मैना मैन
 amann इमं
-amano मानो
+amano मानो मोनो
 amargosa मारगोसा
-amass मेस
-amati माटी
+amass मेस मिस
+amati माटी माटि
 amaze मेज
-ambs अंश
+ambs अंश आंसू
 amcor एंकर
 amcore एंकर
 amen इमं
 amend मंद
 ameri मेरी
+america अमेरिकी
 ameron इमरान
 amery अमारी
 amethyst अमेथिस्ट
 amey एम
 ami आम
+amid मैदु
 amiga मिग
 aminta मिनट
-amiss मिस
-amman मां
+amiss मिस मेस
+amman मां मान
 ammann इमं
 ammon इमं
 ammonia मोनी
@@ -314,36 +317,36 @@ amoco अंकौ
 amoeba अमीबा
 amok मूक
 amon ओमान
-among मँ
+among मँ मं
 amory अमारी
-amoss मास
+amoss मास मॉस
 amount माउंट
 amour अमर
 amphibian एम्फीबियन
 amuck मूक
 amy एम
 anac अनेक
-anacker एंकर
+anacker एंकर इनकार
 anal अनिल
-analog एनालॉग
-analogue एनालॉग
+analog एनालॉग एनालाग
+analogue एनालॉग एनालाग
 anas अंश
 ancheta अंकित
 anchor एंकर
-and एंड
-andes एन्डीज
+and एंड एन्ड
+andes एन्डीज इंडीज
 andorra अंडोरा
 andras आन्द्रेस
 andrei अंडर
 andrej अंडर
 andress आन्द्रेस
 andrey इंद्री
-android एंड्रॉयड
+android एंड्रॉयड एंड्रॉइड
 andry इंद्री
 andrzej अंडर
 ands अण्डज
 anemia निमिया
-anette अनैत
+anette अनैत एनेट
 angel एंजेल
 angeli औंगली
 angell एंजेल
@@ -353,54 +356,57 @@ anime एनीमे
 anise अंश
 anja ओन्जाँ
 anker एंकर
-ann एन
-anna ऐना
+ann एन अणु
+anna ऐना ऐनी
 annals एनल्स
 annas अनाज
 annaud नोड
-anne एन
-anneal नील
-annett अनैत
-annette अनैत
+anne एन अणु
+anneal नील अनिल
+annett अनैत एनेट
+annette अनैत एनेट
 annick अनेक
 annie ऐनी
 annoy नय
-annum अनाम
+annum अनाम इनाम
 anny ऐनी
 ansohn इंसान
 anson इंसान
-anthes अंदाज
+ant आंत
+anthes अंदाज अण्डज
 anthon ऐंठन
-antilles एंटीलीज़
+antilles एंटीलीज़ एंटीलीज
 antipodal एंटीपोडल
 antonio एंटोनियो
 antoniu एंटोनियो
 anus अंश
-anway नव
+anway नव अनव
 any ऐनी
 anza ऐनजाँ
 apace पेश
-apart पोर्ट
+apart पोर्ट पार्ट
 apatite एपेटाइट
-ape एप
-apes एप्स
+ape एप ऐप
+apes एप्स ऐप्स
 apiece एपिस
-apollo अपोलो
-apopa पोप
-app आप
-appall पाल
+aplomb पलामू
+apollo अपोलो पालो
+apopa पोप पॉप
+app आप एपी
+appall पाल पॉल
+apparent परंतु
 appeal अपील
-appear पीर
+appear पीर पियर
 append पिंड
 appetite एपेटाइट
 apply प्ले
 apprentice अप्रेंटिस
 apprise प्राइज़
-apps आपस
+apps आपस एप्स
 april अप्रेल
 aprile अप्रेल
 aquitaine एक्विटेन
-aran अरुण
+aran अरुण अरिन
 architect आर्किटेक्ट
 arda ऑर्डो
 ardeen ऑर्डिन
@@ -408,25 +414,26 @@ ardene ऑर्डिन
 ardin ऑर्डिन
 ardor ऑर्डर
 ardra ऑर्डर
-are ओर
+are आरू आरु
 arens एरेंज
 areta आरती
 aretta आरती
 arey आरै
 argonne आर्गन
 ari ओरी
-aria औरिया
-aric एरिक
+aria औरिया ओड़िया
+aric एरिक एरीक
 arida रीड
 aries एरिस
 aris एरिस
 ariza अरिसा
 arney आरनि
 around आरोन
-arraign अरिन
+arraign अरिन आरिन
 arrange एरेंज
-array आरै
-arrick एरिक
+array आरै आर
+arrest अरस्तू
+arrick एरिक एरीक
 arris एरिस
 arrow आरो
 arruda अरोड़ा
@@ -435,44 +442,48 @@ artus आर्ट्स
 artz आर्ट्स
 arundel एरंडेल
 arzate अर्जित
+arzt अरस्तू
 asahi शाही
 asap एसप
-ascent सेंट
+ascent सेंट संत
 ascetic सटीक
 asea जिया
 asean आसियान
+ash एस
 asharah इशारा
+ashe एस
 ashley असली
-ashore शहर
+ashore शहर सहर
 asia इज
 aska इसका
 asked अस्त
-askey इसकी
+askey इसकी उसकी
 askin सकैं
 asp एसप
-ass एस
+ass एस ऐस
 assad साद
-assail सेल
-assam असम
+assail सेल असल
+assam असम आसाम
 assays आइसिस
 assed अस्त
 assemble सिंबल
 assembly असेंबली
-assent सेंट
+assent सेंट संत
 asset असित
-assign सें
+assign सें सैन
 assignment असाइनमेंट
-assira सिरा
+assira सिरा असर
 assistant असिस्टेंट
 assort शॉर्ट
-assume असम
-assure शूर
+assume असम सं
+assure शुरू शुरु
 assured शरद
 assyria सीरिया
-assyrian सिरियन
+assyrian सिरियन सीरियन
 astaire स्तर
-astin स्टीन
+astin स्टीन स्तन
 astle असल
+astute सतत
 atalie इटली
 atek एतेक
 athas एडीज
@@ -481,49 +492,51 @@ athletic एथलेटिक
 athletics एथलेटिक्स
 atlas एटलस
 atley इटली
-atoll एटोल
+atoll एटोल अटल
 atom आइटम
-aton तों
-atone तों
-atop ताप
+aton तों टन
+atone तों टन
+atop ताप तोप
 attack तक
 attacked टिकट
-attain तें
-attali टाली
-attalla अटल
+attain तें टन
+attained टेंडू
+attali टाली ताली
+attalla अटल तेल
+attend टेंडू
 attest टेस्ट
 attic एतेक
-attie अति
+attie अति एटी
 attila तिल
 attract ट्रैक्ट
-attune टुन
-aube आब
+attune टुन टन
+aube आब अबू
 auden अदन
 audet ऑडिट
 audette ऑडिट
 audi आदि
-audia ओड़िया
+audia ओड़िया ओडिया
 audio ऑडियो
-audit ऑडिट
+audit ऑडिट आदत
 auel ओवल
 aug अगस्त
 auge आज
 auger अगर
-aught आउट
+aught आउट अत
 augur अगर
 august अगस्त
 augusta अगस्त
 auguste अगस्त
 augustus अगस्तस
-aul ऑल
-aull ऑल
+aul ऑल अल
+aull ऑल अल
 aumann ओमान
-aune आन
+aune आन ऑन
 aung अंग
-aunt अंत
-aural औरेल
+aunt अंत आंत
+aural औरेल अरल
 aurea औरिया
-auria औरिया
+auria औरिया ओड़िया
 aurora अरोड़ा
 aurum आराम
 ausley असली
@@ -532,15 +545,17 @@ austat असतत
 austin औसतन
 austria ऑस्ट्रिया
 autery अटारी
-auth आठ
+auth आठ आउट
+auto ऑटो
 auvil ओवल
 aux ओ
-auzenne आसिन
-avail अवल
-avana वाइन
-avella वला
+auzenne आसिन आसीन
+avail अवल ओवल
+avana वाइन वैन
+avella वला अवल
 avera ओवर
 averse वर्ष
+avert अवर्त
 avian एवियन
 avice आवेश
 avila अवल
@@ -550,43 +565,44 @@ avow वो
 await वट
 awaits वत्स
 awan एवं
-aware वर
-away आवे
-awe आ
+aware वर ओवर
+away आवे वे
+awe आ ओ
 awed ओड
-aweida वेद
-awesome असम
+aweida वेद वाइड
+awesome असम आसाम
 awry आरै
 axe एक्स
 axis एक्सेस
 aydelotte अदालत
 aydt अत
 aye आई
-ayende एंड
+ayende एंड एन्ड
 ayer एयर
-ayes एस
-ayesha एस
+ayerst अरस्तू
+ayes एस ऐस
+ayesha एस ऐस
 ayling एलन
 aynes अंश
-ayr एयर
-ayre एयर
-azar औजार
+ayr अरु एयर
+ayre अरु एयर
+azar औजार औज़ार
 azeri जड़ी
-azhar औजार
-azores जोर्ज
-azura जरा
-baars बार्ज
-baas बस
-baasch बस
-babb बाब
-babble बाइबिल
-babel बाइबिल
+azhar औजार ज़ार
+azores जोर्ज जॉर्ज
+azura जरा असुर
+baars बार्ज बरस
+baas बस बोस
+baasch बस बोस
+babb बाबू बाब
+babble बाइबिल बाइबल
+babel बाइबिल बाइबल
 baby बेबी
 baccari बकरी
 bacchanal बेकिनोल
 bacchi बाकी
 bacci बाची
-bacha बेचे
+bacha बेची बेचे
 bachelor बैचलर
 back बेक
 backe बेक
@@ -595,50 +611,51 @@ backsaw बक्सा
 backseat बिकसित
 backwater बैकवाटर
 bacteria बैक्टीरिया
-bade बड़
+bade बड़ बैद
 badeah बेदिया
-badeau बड़ो
-badeaux बड़ो
+badeau बड़ो बड़ौ
+badeaux बड़ो बड़ौ
 bader बिदर
-badge बज
-badger बाजार
+badge बैजू बज
+badger बाजार बाज़ार
 badgett बजट
 badgley बिजली
 badminton बैडमिंटन
 badour बिदर
-badu बड़ो
+badu बड़ो बोडो
 badura बादुरी
 baecker बेकार
-baehr बेर
-baeza बीज
-bagg बाग
-bagge बाग
+baehr बेर बियर
+baeza बीज बीजू
+bag बग
+bagg बाग बग
+bagge बाग बग
 bagnall बागनल
 bagnell बागनल
 baham बाएं
-bahir बाहर
+bahir बाहर भीर
 bahl बाल
 bahm बम
 bahner बानर
 bahrain बारँ
-bahraini बरैनी
+bahraini बरैनी बरनी
 baht बात
-baig बग
+baig बेगू बग
 baileys बेलीज
-baillie बेली
-bailly बेली
+baillie बेली बली
+bailly बेली बली
 baim बम
-bain बिन
-baine बिन
+bain बिन बन
+baine बिन बन
 bainton बंटन
-baird बर्ड
+baird बर्ड बरद
 baisch बेस
 baisley बिजली
-bait बिट
-baize बस
+bait बिट बत
+baize बस बेस
 bajema बाएं
 bak बेक
-baka बाकी
+baka बाकी बॉका
 bake बेक
 baker बेकार
 bakke बेक
@@ -650,19 +667,19 @@ balkin बाल्कन
 balky बाकी
 ball बाल
 ballade ब्लड
-balle बल
+balle बल बेल
 ballet बाल
 ballew बालू
-balli बाली
+balli बाली बली
 ballistic बैलिस्टिक
 balliwick बैलिविक
 ballo बलौ
 ballooned बुलंद
 ballot बेल्ट
-ballou बालू
+ballou बालू ब्लू
 ballow बलौ
 ballowe बलौ
-bally बाली
+bally बाली बेली
 balm बम
 balms बांस
 balogh बलौ
@@ -671,21 +688,23 @@ baltsa बोलतस
 bamba बिम्ब
 ban बिन
 banach बैंक
+banana बनैना
 banc बैंक
-band बैंड
+band बैंड बैन्ड
+bandy बन्दी
 banet बेनेट
 bang बैंग
-banged बैंड
-banger बैनर
-banh बिन
+banged बैंड बैन्ड
+banger बैनर बानर
+banh बिन बन
 banja बनी
 banjo बैंजो
 bank बैंक
 banke बैंक
-bann बिन
+bann बिन बन
 bannan बेनिन
-banned बैंड
-banner बैनर
+banned बैंड बैन्ड
+banner बैनर बानर
 banning बेनिन
 bannon बेनिन
 banque बैंक
@@ -693,7 +712,9 @@ banya बनी
 barach बराक
 baraff बरफ
 barasch बरस
-barbour बर्बर
+barbara बरबर
+barber बरबर
+barbour बर्बर बरबर
 barcus बार्किस
 bardo बोर्डो
 bare बेर
@@ -701,41 +722,41 @@ bared बर्ड
 barela बौरैलो
 barge बार्ज
 baril बेरौल
-barium बेरियम
+barium बेरियम बरियाम
 barkow बड़को
 barkus बार्किस
 barna बारँ
 barone बड़ों
 barr बार
-barra बारे
+barra बारे बार
 barrack बराक
 barraco बड़को
 barras बैराज
 barrasso बरसौ
-barre बार
+barre बार बेरी
 barreca बड़का
-barred बोर्ड
+barred बोर्ड बर्ड
 barrel बेरौल
-barren बारँ
-barres बार्ज
+barren बारँ बड़ों
+barres बार्ज बरस
 barresi बरसी
 barretta बोरेट
-barrie बेरी
-barris बरिस
-barrish बारिश
-barro बड़ो
+barrie बेरी बारे
+barris बरिस बरस
+barrish बारिश बरिस
+barro बड़ो बड़ौ
 barron बारँ
 barrone बड़ों
 barros बरस
-barrow बड़ो
+barrow बड़ो बड़ौ
 barrows बरस
-barrs बार्ज
+barrs बार्ज बरस
 barrus बरस
-barry बेरी
+barry बेरी बारे
 bars बार्ज
 barsch बरस
-basch बस
-base बस
+basch बस बेस
+base बस बेस
 baseball बेसबॉल
 based बेस्ट
 bases बेसेज़
@@ -743,109 +764,113 @@ bashaw बासा
 bashed बेस्ट
 bashes बेसेज़
 basic बेसिक
-basin बेसन
-basing बेसिन
+basin बेसन बेसिन
+basing बेसिन बेसन
 bask बेशक
-bason बेसन
+bason बेसन बाइसन
 basque बेशक
-bass बस
-bassa बेसी
-basse बस
+bass बस बेस
+bassa बेसी बासा
+basse बस बेस
 basses बेसेज़
 bassi बेसी
-bassin बेसिन
-bassoon बोसोन
+bassin बेसिन बेसन
+bassoon बोसोन बेसन
 bast बेस्ट
 basta बेस्ट
 bastien बासतं
 bastogne बासतं
-bastone बासतं
+bastone बासतं बोस्टन
 batch बिच
 batcheller बैचलर
 batchelor बैचलर
 batey बेटी
-bathe बड़
+bath बाथ
+bathe बेथू बड़
 bather बिदर
 bathke बैठक
 batie बेटी
 batra बैटरी
 batt बात
 batte बात
-battelle बोतल
+battelle बोतल बेटल
 battery बैटरी
-battle बैटल
+battle बैटल बेटल
 baty बेटी
 baud बाद
 baughan बायाँ
-baugher बार
-baughn बाण
+baugher बार बोर
+baughn बाण बन
 baum बम
-baun बाण
+baun बाण बन
 bausch बोस
 bauxite बॉक्साइट
 bauza बोस
 bawd बाद
-bawden बदन
-bawdy बोदी
-bawer बार
+bawden बदन बड़ों
+bawdy बोदी बॉडी
+bawer बार बोर
 bawl बाल
 bay बै
-bayar बेर
+bayar बेर बियर
 bayard बियर्ड
-baye बै
-bayed बड़
-bayer बेर
-bayes बस
-bayh बै
+baye बै बी
+bayed बड़ बैद
+bayer बेर बियर
+bayes बस बेस
+bayh बै बी
 baying बैंग
-bayle बल
-baylee बेली
-bayley बेली
-bayly बेली
-bayne बिन
+bayle बल बेल
+baylee बेली बली
+bayley बेली बली
+bayly बेली बली
+bayne बिन बन
 bayonet बेनेट
 bayou बायु
-bays बस
-bayse बस
+bays बस बेस
+bayse बस बेस
 baytree बैटरी
 bayuk बेक
-bayul बल
-bayus बस
+bayul बल बेल
+bayus बस बीस
+bazaar बाज़ार
 bazan बेसन
-bazhan बाइसन
+bazhan बाइसन बेसन
 bea बी
 beach बीच
 beacham बीचों
 beachum बीचों
-beachy बीच
-beady बीडी
-beaird बियर्ड
+beachy बीच बीची
+beady बीडी बीड़ी
+beaird बियर्ड बर्ड
 beal बिल
 beale बिल
 beall बिल
+beamed बिंदु
 beamer बीमार
 bean बिन
 beane बिन
 bear बेर
-beara बेर
+beara बेर बड़ा
 bearce बरस
-beard बियर्ड
+beard बियर्ड बर्ड
 bearded बियर्ड
-beare बेर
+beare बेर बियर
 bearer बरार
 bears बरस
 bearse बरस
 bearss बरस
-beary बेरी
-beas बीज
+beary बेरी बीड़ी
+beas बीज बीजू
 beasley बिजली
+beason बिसनु
 beat बिट
 beatie बीतै
 beatles बीटल्स
 beattie बीतै
 beatty बेटी
 beaty बीतै
-beauce बोस
+beauce बोस बस
 beaudin बदन
 beazley बिजली
 bebear बाबर
@@ -856,38 +881,42 @@ beckie बेक
 becky बेक
 becor बेकार
 bed बैद
-beddoe बड़ो
-beddow बड़ो
+beddoe बड़ो बड़ौ
+beddow बड़ो बड़ौ
 bedke बड़की
 bedore बिदर
 bedouin बड़ों
 beecham बीचों
 beemer बीमार
+been बन
+beer बियर
 beers बरस
-bees बीज
+bees बीज बीजू
 beesley बिजली
+beeson बिसनु
 beetles बीटल्स
+beg बेगू
 begay बग
-begg बग
+begg बेगू बग
 behead बेहद
-behl बल
+behl बल बेल
 behlke बल्क
 behm बम
 behner बैनर
-behney बनी
+behney बनी बनि
 behning बेनिन
 behnke बैंक
 behrle बेरौल
-beige बज
+beige बैजू बज
 beiges बजाज
-beightol बेटल
-beijer बेर
+beightol बेटल बैटल
+beijer बेर बैर
 beim बाएं
 bein बिन
 beine बिन
-beit बिट
+beit बिट बत
 bejar बियर
-bekaa बॉका
+bekaa बॉका बेक
 beker बेकार
 bekker बेकार
 bekki बेक
@@ -895,20 +924,22 @@ belaire ब्लेयर
 belak बल्क
 belet बेल्ट
 believer बोलिवर
-bell बल
-bellah बेला
+bell बल बेल
+bellah बेला बला
 bellas बेलीज
-belle बल
+belle बल बेल
 belleau बलौ
 bellies बेलीज
 bello बलौ
 bellow बलौ
 bellucci बलोची
-belly बेली
+belly बेली बली
 below बलौ
 belth बेल्ट
 belyea बलिया
+ben बन
 benak बैंक
+bend बैन्ड
 bendall बंडल
 benecke बैंक
 beneke बैंक
@@ -916,21 +947,21 @@ benetton बंटन
 bengel बंगाल
 bening बेनिन
 benja बैंजो
-benn बिन
-benne बिन
+benn बिन बन
+benne बिन बन
 benner बैनर
 bennet बेनेट
 bennett बेनेट
 bennette बेनेट
-benney बनी
-bennie बनी
+benney बनी बनि
+bennie बनी बनि
 benning बेनिन
 bennitt बेनेट
-benny बनी
+benny बनी बनि
 benway बनवै
 benz बांस
 beran बड़ों
-bercaw बड़का
+bercaw बड़का बड़को
 berets बरस
 berge बार्ज
 bergum बड़गाम
@@ -942,7 +973,7 @@ bern बारँ
 berna बरनी
 bernal बर्नेल
 berne बारँ
-berra बेर
+berra बेर बड़ा
 berres बरस
 berrey बेरी
 berri बेरी
@@ -955,77 +986,79 @@ bersch बरस
 bertin बर्तन
 bertrand बर्ट्रेंड
 beryl बेरौल
-besch बस
+besch बस बेस
 besecker बेसीकर
-bess बस
-besse बस
-bessent बसंत
+bess बस बेस
+besse बस बेस
+bessent बसंत बसन्त
 bessey बेसी
 bessie बेसी
-besson बेसन
+besson बेसन बेसिन
 bessy बेसी
-betcha बेचे
-beth बिट
+bet बत
+betcha बेची बेचे
+beth बेथू बिट
 bethann बथान
 bethanne बथान
 bethea बेदिया
-bethell बेटल
+bethell बेटल बैठल
 betsch बिच
 beu बु
-beula बला
-beury बारे
+beula बला बोली
+beury बारे बेरी
 beyerle बेरौल
-beyl बल
+beyl बल बेल
 beynon बेनिन
-bezek बेसिक
-bhatia बासा
+bezek बेसिक बेशक
+bhatia बासा बस
 bhatti बात
-bhirud बियर्ड
+bhirud बियर्ड बरद
 bibbee बेबी
 bibby बेबी
 bibee बेबी
 bibi बेबी
-bible बाइबिल
+bible बाइबिल बाइबल
 biby बेबी
 bicester बिस्तर
 bick बेक
 bicker बेकार
-bid बड़
+bid बड़ बैद
 bidco बड़को
 bidder बिदर
 bide बैद
-bieda बीडी
+bieda बीडी बीड़ी
 biehl बिल
 biehn बिन
 biel बिल
 biela बिल
 bien बिन
-bier बेर
+bier बेर बियर
 bierce बरस
 bierer बरार
-bieri बेरी
-bierma बेरमा
-biery बेरी
-bies बेस
+bieri बेरी बीड़ी
+bierma बेरमा बर्मा
+biery बेरी बीड़ी
+bies बैजू बेस
+big बेगू
 biggie बिग
-bihl बिल
+bihl बिल बल
 bihm बम
 bihn बिन
 bike बेक
 biker बेकार
 bildt बेल्ट
 bilk बल्क
-bilka बल्कि
-bill बिल
+bilka बल्कि बल्क
+bill बिल बल
 billboard बिलबोर्ड
-bille बैल
+bille बैल बेल
 billet बेल्ट
 billow बलौ
-billy बेली
+billy बेली बली
 bilow बलौ
-bily बेली
+bily बेली बली
 binary बाइनरी
-bind बैंड
+bind बैंड बैन्ड
 bindel बंडल
 bindle बंडल
 binette बेनेट
@@ -1035,37 +1068,37 @@ bingley बनली
 bink बैंक
 binn बिन
 binner बैनर
-binney बनी
-binnie बनी
+binney बनी बनि
+binnie बनी बनि
 binning बेनिन
-bir बार
-bird बर्ड
+bir बार बेर
+bird बर्ड बरद
 birder बार्डर
 birge बार्ज
 birkey बड़की
 birky बड़की
-birmingham बर्मिंघम
+birmingham बर्मिंघम बर्मिन्घम
 birney बरनी
 birnie बरनी
 biro बड़ो
-birr बार
-birren बारँ
-bisch बीस
+birr बार बेर
+birren बारँ बड़ों
+bisch बीस बेस
 bisek बेसिक
-bison बाइसन
+bison बाइसन बेसन
 bisque बेशक
-biss बस
-bissen बेसन
+biss बस बीस
+bissen बेसन बिसनु
 bissey बेसी
-bisson बेसन
+bisson बेसन बिसनु
 bitch बीच
-bitchy बीच
+bitchy बीच बीची
 bither बिदर
 bitsy बेत्सी
-bittel बेटल
-bittle बेटल
+bittel बेटल बैटल
+bittle बेटल बैटल
 bitty बेटी
-bizarre बाजार
+bizarre बाजार बाज़ार
 bizet बजट
 bizrate बजट
 bizzy बेसी
@@ -1085,9 +1118,10 @@ blaser ब्लेज़र
 blasier ब्लेज़र
 blaydon बलिदान
 blazer ब्लेज़र
-blea बली
+blea बली बलि
 bleau बलौ
 blech ब्लैक
+bled ब्लड
 bleich ब्लैक
 bleier ब्लेयर
 bleu ब्लू
@@ -1109,60 +1143,60 @@ bluff ब्लफ
 blunck ब्लांक
 blunk ब्लांक
 blythe ब्लेड
-boal बोल
+boal बोल बल
 boan बन
-boar बार
+boar बार बोर
 board बोर्ड
-boarda बोर्ड
+boarda बोर्ड बोर्डो
 boarded बोर्ड
-boarder बॉर्डर
+boarder बॉर्डर बार्डर
 boarders बॉर्डर्स
 boarding बोर्डिंग
-boase बोस
+boase बोस बस
 boasting बोस्टन
 boat बोट
-bob बाब
-bobb बाब
+bob बाबू बाब
+bobb बाबू बाब
 bobber बाबर
 bobbi बॉबी
 bobbie बॉबी
 bobby बॉबी
 bober बाबर
-boccia बचे
+boccia बचे बचै
 bocian बोसोन
-bodden बदन
-bodell बादल
+bodden बदन बड़ों
+bodell बादल बुड़ैल
 bodily बदली
-body बाद
+body बाद बाड़ी
 boege बज
-boehl बोल
+boehl बोल बल
 boehlke बल्क
 boehm बम
 boehme बम
 boehne बन
 boen बन
-boers बार्ज
-boes बोस
-boesch बोस
-boese बोस
+boers बार्ज बरस
+boes बोस बस
+boesch बोस बस
+boese बोस बस
 boesen बोसोन
 boggle बगल
 bogue बग
-bohl बोल
+bohl बोल बल
 bohlke बल्क
 bohm बम
-bohren बोरोन
+bohren बोरोन बोरॉन
 bohrer बरार
 boileau बोयलौ
-bola बोली
+bola बोली बोलै
 boldt बोल्ट
 bolich बालक
 bolick बालक
 boliden बलिदान
 bolio बोलीयो
-bolivia बोलीविया
+bolivia बोलीविया बोलिविया
 bollig बालिग
-bolly बोली
+bolly बोली बाली
 bollywood बॉलीवुड
 boltz बोलतस
 bomar बीमार
@@ -1170,23 +1204,25 @@ bomb बम
 bombed बंद
 bombs बांस
 bon बाण
+bond बन्द
 bone बन
-boned बंद
-bonelli बनैली
-bonello बनलो
-bonilla बनैला
+boned बंद बन्द
+bonelli बनैली बनली
+bonello बनलो बनैलो
+bonilla बनैला बनला
 bonito बेनितो
-bonn बाण
-bonne बाण
-bonnell बनल
+bonn बाण बन
+bonne बाण बन
+bonnell बनल बनलू
 bonner बानर
 bonnes बांस
 bonnette बेनेट
-bonney बनी
-bonnie बनी
+bonney बनी बनि
+bonnie बनी बनि
 bonnor बानर
-bonny बनी
+bonny बनी बनि
 bons बांस
+bony बनि
 boo बु
 boock बुक
 boodle बुड़ैल
@@ -1195,26 +1231,29 @@ booher बोर
 book बुक
 bookie बुक
 boom बम
-boomed बूंद
+boomed बूंद बंद
 boon बन
 boone बन
 boons ब्यूनस
 boonton बंटन
 booras बरस
 boors बरस
+boot बोट
+booth बूट
 bootie बूट
 booty बूट
-booz बस
-booze बस
-boozy बसी
+booz बस बोस
+booze बस बोस
+boozy बसी बजी
 bop बाप
 bopp बाप
 bordeaux बोर्डो
+border बार्डर
 bore बार
 bored बोर्ड
 borella बौरैलो
 borello बौरैलो
-boren बोरोन
+boren बोरोन बोरॉन
 borer बरार
 bores बार्ज
 borge बार्ज
@@ -1223,34 +1262,35 @@ borin बारँ
 borja बारे
 born बारँ
 borne बारँ
-borough बड़ो
+borough बड़ो बड़ौ
 boroughs बरस
 borras बरस
-borre बार
+borre बार बोर
 borrello बौरैलो
-borris बरिस
-borrow बड़ो
+borris बरिस बारिश
+borrow बड़ो बड़ौ
 borrowed बरद
 borrows बरस
 borsuk बारसिक
 boruch बराक
-boruff बर्फ
-borum बारेम
+boruff बर्फ बरफ
+borum बारेम बौराम
 borys बरिस
-bosch बोस
-boschee बौसी
+bosch बोस बस
+boschee बौसी बसी
 boschen बोसोन
-boss बस
-bosse बस
+boss बस बोस
+bosse बस बोस
 bossen बोसोन
-bossi बौसी
-bossie बौसी
-bossy बौसी
+bossi बौसी बसी
+bossie बौसी बसी
+bossy बौसी बसी
+boston बासतं
 botched बचत
 botelho बतैलो
 botello बतैलो
 both बोट
-bothe बड़
+bothe बड़ बत
 bothell बोतल
 bothun बथान
 bottel बोतल
@@ -1259,10 +1299,10 @@ boucher बोस
 bouchey बसी
 bougher बोर
 boughs बोस
-bought बात
+bought बात बोट
 bougie बजी
-boulais बोलै
-boulden बदन
+boulais बोलै बूले
+boulden बदन बड़ों
 bouma बम
 bouncy बौंसी
 bouquet बुक
@@ -1274,34 +1314,36 @@ bourret बोरेट
 bourse बरस
 boutell बोतल
 boutelle बोतल
-bouza बज
+bouza बज बोस
 boven बावन
 bowar बोर
-bowden बदन
+bowden बदन बड़ों
 bowed बड़
 bowel बोल
 bowen बन
 bower बोर
-bowes बोस
-bowl बोल
+bowes बोस बस
+bowl बोल बल
 bowley बोली
 bown बन
 bowne बन
-bowron बोरोन
-bows बोस
-bowse बोस
+bowron बोरोन बोरॉन
+bows बोस बस
+bowse बोस बस
+boy बी
 bozza बासा
-bozzi बजी
+bozzi बजी बजे
+bra बड़ो
 braasch बरस
 bracco बड़को
 braff बरफ
 bragged बरगद
 brahm बड़ों
 brahmin ब्रोमीन
-braise बरस
+braise बरस ब्रिज
 brake ब्रेक
-brakke बराक
-bramah बरमा
+brakke बराक ब्रेक
+bramah बरमा बड़ों
 branan ब्रेनन
 branna बरैनी
 brannan ब्रेनन
@@ -1310,51 +1352,53 @@ brannon ब्रेनन
 branon ब्रेनन
 brasch बरस
 brasow बरसौ
-brass बरस
+brass बरस बरिस
 brasseaux बरसौ
 brasso बरसौ
-brassy बरसी
+brassy बरसी बरसे
 brattain ब्रिटेन
 braud बरद
 braude बरद
 brauhau बराह
 braund ब्रांड
 braune बड़ों
-brause बरस
+brause बरस ब्रज
 brave बरेव
 brawer बरार
 brawn बड़ों
-brawny बरौनी
+brawny बरौनी बरनी
 brazeal ब्राजील
 brazeau बरसौ
 braziel ब्राजील
 brea बड़ी
-bread ब्रेड
+bread ब्रेड ब्रैड
 break ब्रेक
 breakey बड़की
 breaky बड़की
-breau बड़ो
-breault बड़ो
-breaux बड़ो
+breau बड़ो बड़ौ
+breault बड़ो बड़ौ
+breaux बड़ो बड़ौ
+bred ब्रैड
+breeze बरिस
 brege ब्रिज
 brekke ब्रेक
 brennan ब्रेनन
 brennen ब्रेनन
-bress बरस
-bresse बरस
+bress बरस बरिस
+bresse बरस बरिस
 bresseau बरसौ
 brew बड़ो
 brewed बरद
-brews बरस
+brews बरस ब्रज
 bria बड़ी
 bric ब्रेक
 brick ब्रेक
-bride ब्रैड
+bride ब्रैड ब्रेड
 bridge ब्रिज
-briese ब्रिज
+briese ब्रिज बरिस
 brigade बरगद
 brine बरायन
-briney बरैनी
+briney बरैनी बरनी
 brissey बरसी
 britannia ब्रिटानिया
 briton ब्रिटेन
@@ -1379,11 +1423,11 @@ bross बरस
 brosseau बरसौ
 brosz बरस
 brothers ब्रदर्स
-brough बड़ौ
+brough बड़ौ बड़ो
 broughman ब्रोमीन
 brousseau बरसौ
-brow बड़ौ
-browe बड़ो
+brow बड़ौ बड़ो
+browe बड़ो बड़ौ
 brown बड़ों
 browne बड़ों
 brownie बरौनी
@@ -1395,7 +1439,7 @@ bruen बड़ों
 bruff बरफ
 bruges ब्रज
 brugh बड़ा
-bruise बरस
+bruise बरस ब्रज
 bruna बरनी
 brune बड़ों
 brunelle बर्नेल
@@ -1403,13 +1447,13 @@ bruss बरस
 brusseau बरसौ
 brutally बरटाली
 bruun बड़ों
-brye बरई
+brye बरई बरै
 bryk ब्रेक
 bryna बरैनी
 bryne बरायन
-brys बरिस
-bub बाब
-bubb बाब
+brys बरिस बरस
+bub बाबू बाब
+bubb बाबू बाब
 bubba बाबा
 buccheri बकरी
 bucci बचे
@@ -1420,135 +1464,137 @@ bucky बाकी
 bud बाद
 budd बाद
 budde बाद
-budden बदन
-buddha बड़ा
+budden बदन बड़ों
+buddha बड़ा बड़ो
 buddin बदन
-buddy बड़ी
+buddy बड़ी बाड़ी
 budge बज
 budget बजट
 budke बड़की
 buege बज
-buelow बोलो
-buena बनी
+buelow बोलो बलौ
+buena बनी बनै
 buerry बेरी
 bug बाग
 bugatti बगती
 bugeye बगई
-bugg बाग
-bugge बाग
-buggy बाग
-buhrow बड़ो
+bugg बाग बग
+bugge बाग बग
+buggy बाग बग
+buhrow बड़ो ब्यूरो
 bui बी
-buice बस
+buice बस बीस
 built बेल्ट
-buis बीज
+buis बीज बीजू
 bulat बोल्ट
 bulk बालक
 bulky बल्कि
-bull बल
+bull बल बुलु
 bullet बोल्ट
 bulletproof बुलेटप्रूफ
 bullets बोलतस
 bulloch बल्क
 bullock बल्क
 bulluck बल्क
-bully बोली
-bummed बंद
+bully बोली बूली
+bummed बंद बूंद
 bums बांस
 bunce बांस
 bundys बंदिश
 bunger बानर
 bungle बंगाल
-bunn बन
-bunnell बनल
+bunn बन बाण
+bunnell बनल बनलू
 bunner बानर
-bunney बनी
-bunni बनी
-bunnie बनी
-bunny बनी
+bunney बनी बनि
+bunni बनी बनि
+bunnie बनी बनि
+bunny बनी बनि
 buntain बंटन
 buntin बंटन
 buntyn बंटन
-buol बोल
+buol बोल बल
 bupp बाप
 burdge बार्ज
 bureau ब्यूरो
 burell बेरौल
 buries बरिस
 burkey बड़की
-burkus बरकिस
+burkus बरकिस बार्किस
 burling बर्लिन
-burmah बर्मा
+burmah बर्मा बेरमा
 burmese बरमीज़
 burn बारँ
 burne बारँ
 burnell बर्नेल
 burow ब्यूरो
-burr बार
+burr बार बेर
 burrer बरार
-burres बरस
+burres बरस बार्ज
 burress बरस
-burri बुरी
+burri बुरी बड़ी
 burright बोरेट
-burris बरिस
-burro बड़ो
+burris बरिस बरस
+burro बड़ो बड़ौ
 burrola बोरोलो
 burros बरस
-burrough बड़ो
+burrough बड़ो बड़ौ
 burroughs बरस
 burrous बरस
-burrow बड़ो
+burrow बड़ो बड़ौ
 burrowes बरस
 burrows बरस
-burrus बरस
-burruss बरस
-burry बारे
+burrus बरस बरिस
+burruss बरस बरिस
+burry बारे बेरी
 bursch बरस
 burundi बरण्डी
 bury बेरी
-busch बस
+busch बस बोस
 busche बस
 buseman बीसमाँ
+bush बोस
 bushey बसी
 busick बेसिक
 busily बिजली
 business बिजनेस
 buss बस
-bussa बस
+bussa बस बोस
 busse बस
 bussen बोसोन
-bussey बसी
-bussi बसी
-bussie बसी
-busta बस्ती
+bussey बसी बसि
+bussi बसी बसि
+bussie बसी बसि
+busta बस्ती बसते
 bustin बासतं
 busy बेसी
 but बात
 butt बात
-buus बस
-buy बाई
-buyer बेर
-buys बेस
+buus बस बोस
+buy बाई बै
+buyer बेर बैर
+buys बैजू बेस
 buysse बेस
-buzz बस
-buzze बस
-buzzer बाजार
-buzzy बसी
+buzz बस बज
+buzze बस बज
+buzzer बाजार बाज़ार
+buzzy बसी बजी
 bybee बेबी
-bye बाई
+bye बाई बै
 byker बेकार
 bylaw बेला
 byner बैनर
-byrd बर्ड
+byrd बर्ड बरद
 byrle बेरौल
 byrne बारँ
 byzantine बीजान्टिन
+cab काबू
 cabaret कबर
 cabell कबाइल
 cached कष्ट
-cachet कैसे
-caddie कैदी
-caddy कैदी
+cachet कैसे कैश
+caddie कैदी कड़ी
+caddy कैदी कड़ी
 cadell कोडल
 cadge काज
 caesarea केसरिया
@@ -1556,36 +1602,37 @@ cafe काफी
 caffee काफी
 caffey काफी
 cahall कहल
-cahasa खास
+cahasa खास खासा
 cahill कहल
-cairn कर्ण
-caisse केश
-caissie किसी
-caisson कैसन
-cake कक
-calais कुल
+cairn कर्ण किरण
+cairo केरौ
+caisse केश कस
+caissie किसी कैसे
+caisson कैसन किसान
+cake कक किक
+calais कुल काल
 calcite कैल्साइट
 calcium कैल्सियम
 caleb कल्ब
-calendar कैलंडर
-calender कैलंडर
+calendar कैलंडर कैलेंडर
+calender कैलंडर कैलेंडर
 calia कोलीय
 calibrate कैलिब्रेट
-call काल
+call काल कोल
 callace कलश
-callais कुल
-callan कलां
-callander कैलंडर
+callais कुल काल
+callan कलां कलन
+callander कैलंडर कैलेंडर
 calleja काली
-callen कलां
+callen कलां कलन
 callender कैलेंडर
 caller कालर
-calling कॉलिंग
+calling कॉलिंग कलिंग
 callous कलश
-callow केलो
-callum कलम
+callow केलो कालो
+callum कलम कलां
 callus कलश
-calm कम
+calm कम काम
 calmed कांड
 calmer कमर
 calmness कॉमन्स
@@ -1595,149 +1642,155 @@ calving कैविन
 cambell कम्बल
 cambodia कम्बोडिया
 cambridge कैम्ब्रिज
+came कें
+camera कैमरा
 cameroon कैमरून
-camilla कामिल
+camilla कामिल कमला
 camille कामिल
-camm कम
+camm कम काम
 cammer कमर
-cammie कमी
-cammon केमन
-cammy कमी
-camorra कमर
+cammie कमी किमी
+cammon केमन कमान
+cammy कमी किमी
+camorra कमर कमरा
 campaign कैम्पेन
 campbell कम्बल
 campen कैम्पेन
-can कें
-cana कें
+can कें कण
+cana कें कण
 cancer कैंसर
 candid कांड
 candle केन्डाल
 candy कैंडी
 cane कें
-caned केन्द
-canham केन्हं
-cann कें
+caned केन्द केंद्
+canham केन्हं कैन्हें
+cann कें कण
 cannady कैंडी
 canned कांड
-cannes कें
+cannes कें कण
 cannock कणक
 canoe कोनो
 canoes कणोज
-cant कांट
-cantu किंतु
+cant कांट कान्त
+cantu किंतु किन्तु
 canvas कैनवस
 canvass कैनवस
-cap केप
-cape केप
+cap केप कप
+cape केप कप
 caped कपट
 capital कैपिटल
 capitol कैपिटल
 capote कपट
-capp केप
+capp केप कप
 capped कपट
 capper कापर
 cappetta कपट
 cappy कपि
 captain कप्तान
-car कोर
+car कोर कर
 caracci कराची
 carat करैत
 caravello करवैलो
 carbin कार्बन
 carbonate कार्बोनेट
-care केर
+care केर कर
 career कैरियर
-carella करलो
+carella करलो करला
 carello करलो
 carer करार
 cares कर्ज
 caretaker केयरटेकर
 carew केरो
-caribbean केरिबियन
+caribbean केरिबियन कैरिबियन
 carillo करलो
-carilou करलो
-carin करें
+carilou करलो करलू
+carin करें कारन
 caring करें
+carl कार्ल
 carley करले
 carli करले
 carlin करलें
 carling करलें
-carll करल
-carlough करलो
-carlow करलो
+carll करल कार्ल
+carlo करलौ
+carlough करलो करलौ
+carlow करलो करलौ
 carly करले
 carnaud करना
 carob करीब
 caroche केरच
+carol केरल
 carolan करलें
 caroline करलें
-carollo करलो
-carolyn कैरोलिन
-carolyne कैरोलिन
-caronna करना
-carow केरो
+carollo करलो करलौ
+carolyn कैरोलिन करलें
+carolyne कैरोलिन करलें
+caronna करना कराना
+carow केरो केरौ
 carpool कार्पल
-carr कोर
-carra कोर
-carragher कारगर
-carrano कारनों
+carr कोर कर
+carra कोर कर
+carragher कारगर कारागार
+carrano कारनों कारणौ
 carrara करार
-carre करै
-carrel करल
-carrell करल
+carre करै करे
+carrel करल केरल
+carrell करल करेल
 carreno कारनों
-carretta करैत
+carretta करैत करता
 carrey करी
 carriage कर्ज
-carrick करेक
+carrick करेक करीक
 carrie करी
 carrier कैरियर
 carriero करियरौ
 carrigan कैरिगन
 carrillo करलो
-carro करो
-carrol करल
-carroll करल
-carron कारण
+carro करो कारो
+carrol करल केरल
+carroll करल केरल
+carron कारण कारन
 carrot करैत
-carrow केरो
+carrow केरो केरौ
 carry करी
 cars काज
 cart कोर्ट
-caryl करल
-caryn कारण
-casal कोसल
+carton कार्टून
+caryl करल केरल
+caryn कारण करें
+casal कोसल कौशल
 casbah कस्बा
 case केश
-casella कसलो
+casella कसलो कोसल
 caselli कोशली
 casera कासरी
-cash कैश
-cashatt कैसेट
+cash कैश केश
+cashatt कैसेट कष्ट
 cashed कष्ट
-cashen कैसन
+cashen कैसन कैसें
 cashin कैसें
-cashon कैसन
+cashon कैसन कैसें
 casillo कसलो
 casing कैसें
 caso कोसों
-casola कसलो
-cason कैसन
+casola कसलो कोसल
+cason कैसन कैसें
 caspian कैस्पियन
-cass कस
+cass कस कैश
 cassatt कैसेट
-cassella कोसल
+cassella कोसल कौसल
 cassette कैसेट
-cassie काशी
-cassin कैसें
-casson कैसन
+cassie काशी किसी
+cassin कैसें कैसन
+casson कैसन कैसें
 caste कष्ट
 casto कैस्टो
-cat कात
+cat कात काट
 catalan कैटलन
 catalog कैटलॉग
 catalogue कैटलॉग
-catch किछ
+catch किछ किछु
 cates किट्स
 cathy कैथी
 catlin कैटलन
@@ -1745,74 +1798,76 @@ cats किट्स
 cattell कुटिल
 caudell कोडल
 caudill कोडल
-caughey कोई
-caughlin कालीन
-caughman कामों
-caughron कारण
-caught कात
+caughey कोई कई
+caughlin कालीन कलें
+caughman कामों कॉमन
+caughron कारण कारन
+caught कात काट
 cauley काली
 caulfield कोलफील्ड
-caulk कोक
+caulk कोक कक
 causal कोसल
 cause काज
-cauthen कठिन
-cauthon कठिन
+cauthen कठिन कथन
+cauthon कठिन कथन
 caution कोसों
-cautious कोशिश
+cautious कोशिश कोसिस
 cavell केवल
 cavin कैविन
 caving कैविन
-caw का
+caw का को
 cawley काली
-cawsl कोसल
-cawthon कठिन
-cayce केश
-cayer केर
-cayes केश
+cawsl कोसल कौशल
+cawthon कठिन कथन
+cayce केश कस
+cayer केर कर
+cayes केश कस
 caylin कलें
 caylor केलर
-cayman केमन
-cayson किसान
-cea सी
-ceara सिरा
-cease शीश
+cayman केमन कमान
+cayson किसान कैसन
+cea सी से
+ceara सिरा सिर
+cease शीश शिशु
 cebu शिबू
 cecelia सिसिली
 cecilia सिसिली
 cees सीज
-cejka छेकै
+cejka छेकै चक
 celeb स्लैब
-celis सलेस
-cell सेल
+celis सलेस सैलेश
+cell सेल शैल
 cello कहलो
 celsius सेल्सियस
 celtic कैलटेक
 cement सीमेंट
+cent संत
 centaur सेंटर
 centauri सेन्टॉरी
 centerre सेंटर
 centigrade सेंटीग्रेड
-centimeter सेंटीमीटर
-centimetre सेंटीमीटर
+centimeter सेंटीमीटर सेन्टीमीटर
+centimetre सेंटीमीटर सेन्टीमीटर
 centrella सेंट्रल
 cents साइंस
-cerney सारणी
-cerny सारणी
-cerra सर
+cerney सारणी सारनी
+cerny सारणी सारनी
+cerra सर शेर
 cerus सेरेस
 ceryl सरल
 cesium सीजियम
 cessna सजना
-chad चैड
-chadd चैड
+chad चैड छेद
+chadd चैड छेद
 chadwick चैडविक
-chained चंद
-chair चर
-chaise सहज
+chain चयन
+chained चंद चंदू
+chair चर चिरु
+chaise सहज शेष
 chalabi चलाबै
-chalet साल
+chalet साल शैल
 chalets सलेस
-chalk चक
+chalk चक चाक
 chalker चोकर
 challenge चैलेंज
 challis शैली
@@ -1822,42 +1877,45 @@ champion चैंपियन
 championship चैंपियनशिप
 channel चैनल
 channell चैनल
-chao छौ
+chao छौ छो
 chapel छापल
 chapin स्पेन
-chapp चाप
-chappel छापल
-chappell छापल
-chapple छापल
+chapp चाप छाप
+chappel छापल छपल
+chappell छापल छपल
+chapple छापल छपल
 charade शरद
 charity चैरिटी
 charla छोड़लो
 charles चार्ल्स
 charren चरण
-charron चरण
-chary छोड़ी
-chat कहैत
+charron चरण कर्ण
+chary छोड़ी चार
+chat कहैत चित
 chateau सातो
 chateaux सातो
 chato छेतौ
 chattin चेतन
 chatty छाती
-chaw छो
-chea छै
+chaw छो छौ
+chea छै छे
 cheane चीन
 cheaney चीनी
 cheat चित
-checchi छेके
+checchi छेके चेकै
+check चेक
 cheeky छीकै
-cheese चीज
-cheesy चीज
+cheer चिरु
+cheese चीज चीज़
+cheesy चीज छीजै
 cheetah चित
 chemel कमल
-chemi किमी
+chemi किमी कमी
 chemical कंकाल
 chemyr कमर
 chenette सीनेट
 chengdu चंदू
+cheque चेक
 cheri शहरी
 cherie शहरी
 chernow चरणौ
@@ -1865,108 +1923,113 @@ chert चार्ट
 cheung चयन
 chevette श्वेत
 chevy छवि
-chew छू
-chewer छोर
+chew छू छो
+chewer छोर चोवार
 chewning चुनें
 chewy छवि
-cheyney चिनी
-chez से
-chia छे
-chiang चांग
+cheyney चिनी छनि
+chez से स
+chia छे छी
+chiang चांग चैन
 chiapas चियापास
 chicago शिकागो
-chick चक
-chide चैड
+chick चक चेक
+chide चैड छेद
 chief चीफ
-chien चैन
+chien चैन चिन
 chiesa किसी
 child चाइल्ड
-chile चिली
-chill छल
-chilly चिली
+chile चिली चली
+chili चली
+chill छल चल
+chilly चिली चली
+chimpanzee चिम्पांजी
 china चैन
 chinn चीन
 chinnock छींक
 chintung चिंतन
 chippy छिपे
-chisholm चीजों
-chism चीजों
-chisum चीजों
-chiu छू
+chisholm चीजों चीजें
+chism चीजों चीजें
+chisum चीजों चीजें
+chiu छू छो
 chloride क्लोराइड
 chlorine क्लोरीन
-choat चोट
-choate चोट
+choat चोट छोट
+choate चोट छोट
 chocolate चॉकलेट
-choi छय
-cholera कालरा
+choi छय छी
+choke चौक
+cholera कालरा कालर
 choma छौं
-chong चांग
+chong चांग छौं
 chook चक
 choong कहूँ
-chop चाप
-chopp चाप
+chop चाप छाप
+chopp चाप छाप
 chopping चोपिन
-choppy चाप
-choquette सकैत
-choral करल
-chorale करल
+choppy चाप छापै
+choquette सकैत शौकत
+choral करल कार्ल
+chorale करल करेल
 chorba कार्बी
 chord कार्ड
 choreography कोरियोग्राफी
-choric करेक
+choric करेक कारक
 chorus कोर्स
-chow छौ
-chrest क्रस्ट
+chow छौ छो
+chrest क्रस्ट क्राइस्ट
 christ क्राइस्ट
 christa क्रिस्ट
 christal क्रिस्टल
 christel क्रिस्टल
-christiaan क्रिस्टियन
-christiane क्रिस्टियन
-christianne क्रिस्टियन
-christmas क्रिस्मस
+christiaan क्रिस्टियन कृस्टियन
+christiane क्रिस्टियन कृस्टियन
+christianne क्रिस्टियन कृस्टियन
+christmas क्रिस्मस क्रिसमस
 christopher क्रिस्टोफर
 chrobak करबाक
 chromium क्रोमियम
-chryst क्रिस्ट
+chryst क्रिस्ट क्रस्ट
 chrystal क्रिस्टल
-chseing चैन
-chua कू
-chuang चांग
+chseing चैन चिंग
+chua कू को
+chuang चांग चैन
 chuckie चक
-chui कई
+chui कई कोई
 chung चांग
 chunky चूंकि
 chunn कहाँ
 chunnel चुनल
-chupp चाप
+chupp चाप छाप
 churchill चर्चिल
-ciampa चम्पा
+ciampa चम्पा चंपा
 ciani कहानी
-ciao छौ
+ciao छौ छो
 ciel सील
 cifelli सफली
 cilley शैली
 cillo सीलो
 cino कहिनो
-ciocca चक
+ciocca चक चौका
 ciotti चोटी
 ciresi सरसी
-cirque सड़क
-cite साइट
+cirque सड़क सार्क
+cite साइट सेट
 citic सटीक
 cities सिटीज
-ciulla चलै
+ciulla चलै कहलो
 ciullo कहलो
+civil सवाल
 civilly शिवली
 clad क्लैड
 claddagh क्लैड
 claes कलश
 claeys कलश
-clam कलें
-clan कलें
-clang कलें
+claim कलम
+clam कलां कलें
+clan कलां कलें
+clang कलां कलें
 clap क्लिप
 clapp क्लिप
 clarinet क्लैरिनेट
@@ -1978,48 +2041,51 @@ claw कला
 clay कलें
 clayey कली
 clays कलश
-cleah के
+cleah के की
 cleaveland क्लीवलैंड
 clergy कलर्जी
 cleveland क्लीवलैंड
 clif क्लेफ
 cliff क्लेफ
 cliffe क्लेफ
-clim कलें
+clim कलें कलम
 climb कलें
 cline कलें
+cling कलें
 clocker कलाकार
 close कलश
 closs कलश
 clubb क्लब
-clung कलां
+clung कलां कलन
 clyde क्लैड
 clyne कलें
 cnet सीनेट
 coaching कोचिंग
 coad कोड
-coady कोड
+coady कोड कड़ी
 coal कोल
 coale कोल
-coan कोन
-coar कोर
+coan कोन कण
+coar कोर कर
 coarse कोर्स
 coast कोस्ट
 coat कोट
 coax कॉकस
+cobb काबू
 cobble काबुल
-coccus कोकोस
-cock कोक
+coccus कोकोस कॉकस
+cock कोक कक
 coderre कादर
 coed कोड
-coeur कोर
-coey कोई
+coeur कोर कुरू
+coey कोई कई
 coffee काफी
 coffey काफी
-cohron कारण
+cohron कारण कारन
 cohrs कोर्स
-coia कोय
+coia कोय कोई
 coke कोक
+cola कोल
 colaw कला
 coleen कालीन
 colin कलें
@@ -2028,93 +2094,102 @@ collector कलेक्टर
 colledge कॉलेज
 colleen कालीन
 college कॉलेज
-collen कलां
+collen कलां कलन
 coller कालर
 colley काली
 collide क्लैड
 collie काली
-collin कालीन
-colling कलिंग
-collom कलम
-collomb कलां
+collin कालीन कलें
+colling कलिंग कालीन
+collom कलम कलां
+collomb कलां कलम
 collor कालर
-collum कलम
-collura कालरा
+collude कैलुदु
+collum कलम कलां
+collura कालरा कालर
 colmer कमर
 cologne कलन
 coloma कॉलम
-colomb कलम
-colombia कोलम्बिया
+colomb कलम कलां
+colombia कोलम्बिया कोलंबिया
 colonna कोलोनी
 color कालर
 colour कालर
-columbia कोलम्बिया
-column कलम
+columbia कोलम्बिया कोलंबिया
+columbus कोलम्बस
+column कलम कलां
+com काम
+coma कोमा
 comair कमर
 comb कम
 combe कम
 comber कमर
 combined कंबाइंड
-comeau कोमो
-comeaux कोमो
-comella कोमल
+come काम
+comeau कोमो कामों
+comeaux कोमो कामों
+comella कोमल कमला
 comet कांट
-comm कम
-comma कम
+comm कम काम
+comma कम काम
 command कमांड
 commander कमांडर
 commence कॉमन्स
 commerce कॉमर्स
-commie कमी
+commie कमी काम
 commision कमीशन
 commission कमीशन
-common कामों
+common कामों कमान
 compact कॉम्पैक्ट
-compagnie कंपनी
+compagnie कंपनी कम्पनी
+company कम्पनी
 computational कम्प्यूटेशनल
-con कण
+computer कम्प्यूटर
+computing कम्प्युटिंग
+con कण कान
 conan कोनों
 conaty कांटी
 conch कांच
-concha कांचे
+concha कांचे कांच
 concrete कंक्रीट
 condone कुंदन
 conductor कंडक्टर
-cone कोन
-conn कण
-connan कोनों
+cone कोन कण
+conn कण कान
+connan कोनों कानून
 connection कनेक्शन
 connectivity कनेक्टिविटी
 connexion कनेक्शन
 connie कोन
-connon कोनों
+connon कोनों कानून
 consultancy कंसल्टेंसी
 conti कांटी
 cooed कोड
 cook कुक
 cookie कुक
 cool कुल
-cooley कुल
-cooling कुलीन
-coolly कुल
+cooley कुल कुली
+cooling कुलीन कलिंग
+coolly कुल कुली
 coombe कम
 coomer कुमार
 coonan कोनों
 cooner कुनर
 coop कप
 cooped कपट
-coosa कोसी
+coosa कोसी कुश
 cooter कतर
 coover कवर
-copa कॉपी
+copa कॉपी कप
 cope कप
 coped कपट
 coplen कपलान
 copp कप
 copped कपट
-coppee कॉपी
+coppee कॉपी कपि
 copper कापर
 copperfield कॉपरफील्ड
+copy कपि
 coralie करोली
 corallo करलो
 corath करैत
@@ -2122,84 +2197,85 @@ corban कार्बन
 corbin कार्बन
 corby कार्बी
 cord कार्ड
-corda कार्ड
+corda कार्ड करदो
 corded कार्ड
-core कोर
+core कोर कर
 corea कोरिया
-corell करल
-corella करलो
+corell करल करेल
+corella करलो करला
 cores कोर्स
 coretech कार्तिक
 corette करैत
 coria कोरिया
-corinn कारण
-cork कारक
+corinn कारण कारन
+cork कारक कोरकु
 corlew करलू
-corn कारण
+corn कारण कारन
 cornea कॉर्निया
 cornia कॉर्निया
 corolla करला
-corps कोर
+corps कोर कर
 corpse कार्पस
 corpus कार्पस
-corr कोर
-corrado करदो
-corral करल
-corrao कारौ
+corr कोर कर
+corrado करदो करोड़ों
+corral करल करेल
+corrao कारौ करौ
 correa कोरिया
-correll करल
+correll करल करेल
 corrib करीब
-corrick करेक
-corrie करी
-corrin कारण
+corrick करेक कारक
+corrie करी कारी
+corrin कारण कारन
 corrode करोड़
-corron कार्यों
-corroon कारण
-corrow कारो
-corry करी
+corron कार्यों कारन
+corroon कारण कारन
+corrow कारो कारौ
+corry करी कारी
 corter कार्टर
 coscia कोश
-cosell कोसल
+cosell कोसल कौशल
 cosette कैसेट
-coss कोश
+coss कोश कोष
 cossa कोसी
 cosset कोस्ट
 cossette कैसेट
-cossey कोसी
-cot कात
+cossey कोसी काशी
+cot कात काट
 cothran कोटरान
 cothron कोटरान
 cotilla कुटिल
 cotter कतर
-couey कई
+couey कई कोई
 could कोड
-coull कौल
+coull कौल कोल
 count काउंट
 country कंट्री
 county कौन
-coup कू
+coup कू कु
 coupe कप
-couper कवर
-coups कू
+couper कवर कोर
+coups कू कु
 courage कर्ज
-couric करेक
+couric करेक कारक
 courtade कार्तिड
 courted कार्तिड
 courter कार्टर
 coutant कटांत
 couto काउटो
-coutu कुछु
+coutu कुछु कुछू
 couture कतर
-covey कवि
+covey कवि कवी
 cow को
-cowan कौन
-cowed कोड
-cowen कोन
+cowan कौन कोन
+cowed कोड कौड
+cowen कोन कौन
 cowher कवर
-cowl कौल
+cowl कौल कोल
 cowley कौल
 cows कोश
-coxe कॉकस
+coxe कॉकस कक्ष
+coy कोई
 coz काज
 cozy कोसी
 crab क्रेब
@@ -2208,56 +2284,57 @@ crabbe क्रेब
 crack करेक
 craggy करगी
 craigie करगी
-crall करल
-cram क्रम
+crall करल करलू
+cram क्रम करें
 cramer क्रेमर
 crammer क्रेमर
-crane करें
-craugh करो
-craw करो
-crawl करल
+crane करें क्रेन
+craugh करो करौ
+craw करो करौ
+crawl करल करलू
 crawley करोली
 crawly करोली
-crayne करें
+crayne करें क्रेन
 creak करीक
 cream करीम
 creath करैत
 crellin करलें
 creole क्रियोल
-crew करो
-crewe करो
+crew करो कृ
+crewe करो कृ
 crewes क्रूस
 crews क्रूस
 cribb करीब
-crill करल
+crill करल करेल
 crime करें
 crimea क्राइमिया
-crimm क्रम
+crimm क्रम करीम
 crivello करवैलो
 croix करय
-croll करल
+croll करल करलू
 croom क्रम
 croon करण
 cross क्रॉस
 crosse क्रॉस
 crossed क्रस्ट
-crough करौ
-crow करो
-crowd क्रोड
+crough करौ करो
+crow करो करौ
+crowd क्रोड करोड़
 crowded क्रोड
-crowe करो
-crowed क्रोड
+crowe करो करौ
+crowed क्रोड करोड़
 crowell करल
 crowley करोली
 crown क्राउन
 crowne क्राउन
 crows क्रॉस
 cruce क्रूस
-cruel करल
+crude करोड़
+cruel करल करलू
 cruelly करोली
 cruey करै
 cruise क्रूस
-crull करल
+crull करल करलू
 crumb क्रम
 crumbs क्रमश
 crumm क्रम
@@ -2266,18 +2343,19 @@ cruz क्रूस
 cruze क्रूस
 cry करै
 crystal क्रिस्टल
+cub काबू
 cuba क्यूबा
-cuccia कुछ
+cuccia कुछ कुछु
 cuckoos कोकोज
-cuddy कड़ी
+cuddy कड़ी कड़ि
 cuffee काफी
-cullan कलां
-cullen कलां
+cullan कलां कलन
+cullen कलां कलन
 culler कालर
-cullin कुलीन
-culling कलिंग
-cullom कलम
-cullum कलम
+cullin कुलीन कलें
+culling कलिंग कुलीन
+cullom कलम कलां
+cullum कलम कलां
 culture कल्चर
 cunnane कानून
 cunningham कनिंघम
@@ -2286,25 +2364,27 @@ cuppett कपट
 cuppy कपि
 curator क्यूरेटर
 curby कार्बी
+curl कार्ल
 curless कार्लोस
 curley करले
 curlin करलें
 curling करलें
 curly करले
-curnow कारनों
-curragh करै
-curran कारण
-curren कारण
+curnow कारनों कारणौ
+curragh करै करी
+curran कारण कारन
+curren कारण कारन
 currey करी
 currie करी
-currin कारण
-curro करो
+currin कारण कारन
+curro करो करौ
 curry करी
+curtain कर्तन
 curtin करतें
-cushey कोशी
+cushey कोशी कोसी
 cushion कुषाण
-cuss कस
-cussed कोस्ट
+cuss कस कुश
+cussed कोस्ट कष्ट
 cusson कोसों
 custody कस्टडी
 cut कात
@@ -2318,25 +2398,25 @@ cygnus सिग्नस
 cylinder सिलेंडर
 cymbal सिंबल
 cymrot सम्राट
-cynara किनारा
-cynic सिनिक
-cynth सेंट
+cynara किनारा किनारे
+cynic सिनिक सैनिक
+cynth सेंट संत
 cynthia सैंथिया
-cypress साईप्रस
-cypris साईप्रस
-cyprus साईप्रस
-cyr सिर
+cypress साईप्रस साइप्रस
+cypris साईप्रस साइप्रस
+cyprus साईप्रस साइप्रस
+cyr सिर सर
 cyran किरण
 cyril सरल
 cyrillic सिरिलिक
 cyrus सेरेस
 czajka छेकै
-czapla छापलो
-czar जोर
-czars जार्ज
-czech चक
-czyz चीज
-dabah दाब
+czapla छापलो छापल
+czar जोर ज़ार
+czars जार्ज जोर्ज
+czech चक चेक
+czyz चीज चीज़
+dabah दाब दीबा
 dabbing दबंग
 dacia देशीय
 dad डेड
@@ -2345,83 +2425,87 @@ dade डेड
 daemon दमन
 daffin दफन
 daffy दाफी
-dagg डेग
-daher दर
-dahl दल
-dahle दयाल
-dahlen दोलन
+dagg डेग दाग
+daher दर डार
+dahl दल डाल
+dahle दयाल डाल
+dahlen दोलन दलों
 dahler डॉलर
-dahlia देले
+dahlia देले डाली
 dahlin दोलन
-dahm डेम
+dahm डेम दम
 dahman दमन
 dahms डांस
-daiei दै
-dailey देले
-daily देले
+daiei दै दैय
+dailey देले देलै
+daily देले देलै
 daini देने
+dairy डेयरी
+daisy देशी
 dajun डिजेन
 dalal दल्ल
 dalen दलों
 dalia डाली
 dallaire डॉलर
-dalley डाली
-dally डाली
+dalley डाली डालै
+dally डाली डालै
 dam डेम
-dame डेम
-damm डेम
+dame डेम दें
+damm डेम दम
 damman दमन
 dammann दमन
-damme डेम
+damme डेम दम
 dammed दंड
 dammen दमन
-damn डेम
+damn डेम दम
 damned दंड
 damns डांस
+dan दिन
 danek दैनिक
 daney देने
-dang दान
+dang दान दिन
 dania देने
 danica दैनिक
-daniel डान्याल
+daniel डान्याल दन्यल
 daniele दन्यल
-danielle डेनियल
+danielle डेनियल दन्यल
 danish दिनेश
-dann दान
-danna दाना
+dann दान दिन
+danna दाना देना
 dannie देने
 danny देने
-dano दोनो
+dano दोनो दोनों
 danz डांस
-dao दो
+dao दो दौ
 daoust दोस्त
+dare देर
 dared दर्द
 dares दर्ज
-darr दर
-darragh दर
-darrah दर
+darr दर दारू
+darragh दर देरी
+darrah दर दारा
 darren दौरान
 darroch डार्क
 darth डार्ट
 darwish दर्वेश
-dasaro दोसरो
-dasch देश
-dash देश
+dasaro दोसरो दोसरौ
+dasch देश देस
+dash देश देस
 dashed दस्त
 dashes देशज
-dass देस
-dassow देशो
-dat डेट
+dass देस देश
+dassow देशो देसो
+dat डेट दैत
 data डेटा
 database डेटाबेस
-date डेट
+date डेट दैत
 dating डेटिंग
 daub दाब
 daube दाब
 daughter डॉटर
-daul दल
+daul दल डाल
 daulton डाल्टन
-daum दाम
+daum दाम दम
 dave देव
 davee देवी
 daves दिवस
@@ -2432,29 +2516,29 @@ davies डेविस
 davila डेविल
 davilla डेविल
 davin देवेन
-davis दिवस
+davis दिवस डेविस
 davy देवी
-daw दो
-dawdy दादी
-dawe दो
-dawes दास
-dawley डाली
-dawn दान
+daw दो दा
+dawdy दादी दौड़ी
+dawe दो दा
+dawes दास दस
+dawley डाली डालै
+dawn दान डॉन
 dawned दंड
 dawns डांस
-daws दास
+daws दास दस
 dawsey दोषी
 dawson दसों
-day दै
-dayle देल
-dayley देले
+day दै दे
+dayle देल दल
+dayley देले देलै
 daylong दलों
-dayne दिन
-days देस
-daze देस
-dazey देसी
-dazs दस
-dazzo देशो
+dayne दिन दें
+days देस देश
+daze देस देश
+dazey देसी देशी
+dazs दस दास
+dazzo देशो देसो
 dead डेड
 deafen दफन
 deahl दिल
@@ -2463,58 +2547,62 @@ deal दिल
 deale दिल
 dean दिन
 deane दिन
-dear दर
+dear दर देर
 dearer दरार
 dearth डार्ट
-deary दिरी
-deas दिस
-dease दिस
+deary दिरी देरी
+deas दिस डिश
+dease दिस डिश
 deason डिजेन
-death डेट
-deaver दीवार
+death डेट दैत
+deaver दीवार दिवार
 debbie देबी
 debby देबी
-debt डेट
+debt डेट दैत
 dec डक
-decay देके
-decca देके
+decay देके देकै
+decca देके देकै
+december दिसम्बर
 dechert डेकार्ट
 deckert डेकार्ट
 deehan दिन
-deere दर
+deer देर
+deere दर देर
 degas डेग
 dehaan दहन
 dehere दिरी
-dehm डेम
+dehm डेम दें
 deichert डेकार्ट
-deign दिन
-deigned दंड
+deign दिन दें
+deigned दंड दण्ड
 deigning देनें
-deihl देल
-deiss देस
-dekay देके
+deihl देल डेल
+deiss देस देश
+dekay देके देकै
+del दल
 delane दलों
-delao देलौ
+delao देलौ देलो
 delaune दलों
-delay दिल
-delhi देले
-deli देले
+delay दिल देल
+delhi देले देलै
+deli देले देलै
 delich देलक
 delong दलों
 delore डॉलर
-delucca देलकै
+delucca देलकै देलके
 demattia डिमासा
-demay डेम
-demesne डोमेन
-demme डेम
+demay डेम दम
+demesne डोमेन दमन
+demme डेम दें
 demmon दमन
+den दें
 denault दिनौ
 deneau दिनौ
 deneault दिनौ
-deng दिन
+deng दिन दें
 denham देनें
 denim देनें
-denn दिन
+denn दिन दें
 denney देने
 dennie देने
 dennin देनें
@@ -2527,34 +2615,35 @@ dependency डिपेंडेंसी
 depo डीपो
 depot डीपो
 derk डार्क
-derr दर
-derry देरी
+derr दर देर
+derry देरी डेयरी
 dervish दर्वेश
 descartes डेकार्ट
 deshaies देशज
-deshaw देशो
+deshaw देशो देशौ
 deshong देशों
-design डिजाइन
+design डिजाइन डिज़ाइन
+desk डिस्क
 detty देतै
 deuce दस
 deuss दस
-deux दू
+deux दू दु
 devalle डेविल
 devan देवेन
 devane देवेन
 devaney दिवानी
 develle डेविल
-dever दीवार
+dever दीवार दिवार
 devera देवरी
 deville डेविल
 devin देवेन
 devoll डेविल
 devon देवेन
 devona देवेन
-devor दीवार
+devor दीवार दिवार
 devore दिवार
 devoss दिवस
-dew दू
+dew दू दु
 dewarr दूर
 dewayne देवेन
 dewell डेविल
@@ -2562,11 +2651,11 @@ dhabi दाब
 dhaharan दौरान
 dhahran दौरान
 dhillon दलों
-dial देल
+dial देल डेल
 diamond डायमंड
-diary देरी
+diary देरी डेयरी
 dic डक
-dicey देसी
+dicey देसी देशी
 dick डक
 dicke डक
 dickert डेकार्ट
@@ -2581,28 +2670,28 @@ diehl दिल
 diel दिल
 dienes दिनेश
 diep दीप
-diery दिरी
-dies देस
+diery दिरी देरी
+dies देस देश
 diesel डीजल
 dig डेग
 digga डेग
 digit डिजिट
 digital डिजिटल
-dill दिल
+dill दिल देल
 dillan दलों
-dille दिल
+dille दिल देल
 dillen दलों
 dillon दलों
-dillow देलो
-dim डेम
+dillow देलो देलौ
+dim डेम दें
 dimare दमरी
-dime डेम
+dime डेम दें
 dimmed दंड
 dimon दमन
 dimond डायमंड
 dimry दमरी
-dinah देने
-dinda डंडा
+dinah देने देना
+dinda डंडा दंड
 dine दें
 ding दिन
 dinh दिन
@@ -2617,18 +2706,18 @@ dirr दर
 dirt डार्ट
 discharge डिस्चार्ज
 discovery डिस्कवरी
-dish देश
-dishaw दिशा
+dish देश देस
+dishaw दिशा देशो
 dishes देशज
-dishon देशों
-dishong देशों
-disney डिज्नी
-dison देशों
-disown देशों
+dishon देशों दसों
+dishong देशों दसों
+disney डिज्नी डिज़्नी
+dison देशों दसों
+disown देशों दसों
 display डिस्प्ले
-diss देस
+diss देस देश
 ditch डच
-dith डेट
+dith डेट दैत
 ditto देतो
 divad डेविड
 dive देव
@@ -2640,25 +2729,26 @@ divison डिवीजन
 divvied डेविड
 divvy देवी
 dizon डिजेन
-dizzy देसी
+dizzy देसी देशी
 djakarta जकार्ता
 djibouti जिबूती
 doak डक
 doan डॉन
 doane डॉन
 doanh डॉन
-doanna दोनो
-doar दर
+doanna दोनो दोनों
+doar दर दौर
 dob दाब
 dobb दाब
 dobbie दाब
 dobey दाब
 dobie दाब
 doc डक
+doctor डाक्टर
 dodd दौड़
 doell दल
-doerr दर
-does देस
+doerr दर दौर
+does देस दस
 doescher दोसर
 doetsch डच
 dog दाग
@@ -2667,38 +2757,38 @@ doggy दागै
 doh दो
 doha दहो
 doheny दाहिनी
-dohm दाम
-dohman डोमेन
+dohm दाम दम
+dohman डोमेन दमन
 dohme दम
-dohr दर
-dohse दस
-doi दय
+dohr दर दौर
+dohse दस दोष
+doi दय डी
 dolin दोलन
 doling दोलन
-doll दल
+doll दल डाल
 dollan दोलन
 dollar डॉलर
-dolle दल
-dolley डाली
-dollie डाली
-dolly डाली
+dolle दल डाल
+dolley डाली डालै
+dollie डाली डालै
+dolly डाली डालै
 domed दंड
 domin डोमेन
 dominee डोमेन
 domingue डोमेन
 dommie दाम
 don दान
-donais देने
+donais देने दिन
 donavan दानवें
 donaway दानवें
-done दान
+done दान दुनू
 dones डांस
-dong दान
+dong दान डॉन
 donn दान
-donna दान
+donna दान दोनो
 donnan दोनों
 donnay दान
-donned दंड
+donned दंड दण्ड
 donovan दानवें
 dons डांस
 donvan दानवें
@@ -2706,46 +2796,47 @@ donze डांस
 doom दम
 doomed दंड
 doonan दोनों
-door दर
+door दर दौर
 doors दर्ज
 doose दस
 dorais दर
 dorch डार्क
 doren दौरान
 dorer दरार
-dorey डारी
-dorie डारी
+dorey डारी दारी
+dorie डारी दारी
 doron दौरान
 dorotea डोर्सा
-dorr दर
-dorrie डारी
+dorr दर दौर
+dorrie डारी दारी
 dort डार्ट
 dorta डार्ट
-dosch दोष
+dosch दोष दास
 doscher दोसर
+dose दोष
 dosia दोषी
-dosie दास
-doss दास
-dossey दास
+dosie दास दोषी
+doss दास दस
+dossey दास दोषी
 douche दोष
 doug दाग
 dough दो
-dougher डोवर
-doughman डोमेन
+dougher डोवर दौर
+doughman डोमेन दमन
 douglas डगलस
 douglass डगलस
 douma दम
 douse दोष
 doused दोस्त
-douwe दू
+douwe दू दु
 dov डीएवी
 dove डीएवी
-dovey देव
-dow दो
-dowd दौड़
-dowda दौड़
+dovey देव दीव
+dow दो दौ
+dowd दौड़ दाउद
+dowda दौड़ दौड़ै
 dowdy दौड़ी
-dowe दो
+dowe दो दौ
 dowen डाउन
 dowlen दोलन
 down डाउन
@@ -2755,21 +2846,21 @@ download डाउनलोड
 downum दोनों
 dowry दौड़ी
 dowse दोष
-doyel दयाल
-doze दस
+doyel दयाल दयालु
+doze दस दोष
 drang ड्राइंग
-draughn ड्रोन
+draughn ड्रोन द्रोण
 draw ड्रा
 drawer दरार
-drawing ड्राइंग
-drawn ड्रोन
+drawing ड्राइंग ड्रॉइंग
+drawn ड्रोन द्रोण
 dream ड्रीम
 drilling ड्रिलिंग
-drina दिन
+drina दिन दिना
 drive ड्राइव
 drogue ड्रग
-drohan ड्रोन
-drown ड्रोन
+drohan ड्रोन द्रोण
+drown ड्रोन द्रोण
 drumm ड्रम
 dry दरइ
 drye दरइ
@@ -2779,12 +2870,13 @@ duba डूबै
 dubbing दबंग
 dubey दुबे
 dubie दुबे
-duby दुबे
+duby दुबे डूबै
 duck डक
 duddy दादी
-duell जल
-duenow दूनो
-duerr दूर
+due दु
+duell जल दल
+duenow दूनो दोनो
+duerr दूर दर
 duerson दर्सन
 dues दस
 duey दुई
@@ -2795,44 +2887,47 @@ duffin दफन
 duffy दाफी
 dug दाग
 duguay दागै
-duh दू
+duh दू दु
 duhr दर
+duke डक
 dulac देलक
 dulcie दल्के
 dull दल
 dullea दलीय
-dumaine डोमेन
-dumais दम
-dumb दम
-dumm दम
-dun दान
+dumaine डोमेन दमन
+dumais दम डेम
+dumb दम दाम
+dumm दम दाम
+dun दान दुनू
 dunavan दानवें
 dunaway दानवें
 dunay दान
-dung दान
-dunn दान
+dune दूनू दुनू
+dung दान दुनू
+dunn दान दुनू
 dunnaway दानवें
-dunned दंड
-dunno दोनो
+dunned दंड दण्ड
+dunno दोनो दोनों
 duns डांस
-duque ड्यूक
+duque ड्यूक डक
 durable दुर्बल
 durer दरार
 durling डार्लिंग
 durr दर
-durrah दूर
-duryee दूरी
-dusch डच
-dusett दोस्त
-dussault देशो
-dusseau देशो
-dusseault देशो
+durrah दूर दूरी
+duryee दूरी दुरी
+dusch डच दस
+dusett दोस्त दुष्ट
+dussault देशो देसो
+dusseau देशो देसो
+dusseault देशो देसो
 dust दस्त
-dusza दशा
+dusza दशा दस
 dutch डच
 dyar देर
-dyce देस
+dyce देस देश
 dye दै
+dyes देश
 dyk डक
 dylan दलों
 dymond डायमंड
@@ -2843,21 +2938,22 @@ dzokhar जकर
 each एएच
 eagle ईगल
 eamon इमं
-ear ईयर
+eap ईपू
+ear अरु ईयर
 earl अरल
 earle अरल
 earll अरल
 earnest अर्नेस्ट
 earney आरनि
-earring अरिन
+earring अरिन एरिन
 ears ईयर्स
 earth अर्थ
 eartha अर्थ
 earthen अर्थों
 earths आर्ट्स
 earthy आरती
-ease इस
-eash ईश
+ease इस इज
+eash ईश ईष
 easley इसलिए
 east ईस्ट
 eastern ईस्टर्न
@@ -2866,18 +2962,18 @@ eat आईटी
 eau ओ
 eaux ओ
 eave ईव
-ebaugh अबा
-ebb अब
-ebba अबू
+ebaugh अबा अबअ
+ebb अबू अब
+ebba अबू अब
 ebbed अब्द
-ebben इब्न
+ebben इब्न अबं
 ebby अबी
 eble एबेल
 ebling एब्लिन
 echoed एकड़
 eckes एक्स
 ecosystem इकोसिस्टम
-ecru एकरो
+ecru एकरो ऐकरो
 ecuador इक्वाडोर
 eddies एडीज
 edell एडेल
@@ -2890,53 +2986,53 @@ edmisten एडमिशन
 eduard एडवर्ड
 effie एफ
 effy एफ
-egg एग
-egge एग
+egg ऐगु एग
+egge ऐगु एग
 egger अगर
-ehle एल
-ehlen एलन
+ehle एल अल
+ehlen एलन ऐलान
 ehlinger अलीनगर
-ehly अली
+ehly अली ऐली
 ehman इमं
 ehmann इमं
 ehmen इमं
 ehmke एमके
-ehren अरुण
-ehrich एरिक
-eichel एकल
+ehren अरुण अरिन
+ehrich एरिक एरीक
+eichel एकल आयकल
 eicher एकर
 eighmey एम
 eight अत
 eighth अत
 eightieth अतीत
-eighty एटी
+eighty एटी अति
 eiland आइलेंड
-eirich एरिक
-eischen ऐसन
+eirich एरिक एरीक
+eischen ऐसन ऐशौन
 eishi इसी
-eisin ऐसन
+eisin ऐसन अइसन
 eitel एटोल
-elaine लें
+elaine लें एलन
 elayne एलन
 electrode इलेक्ट्रोड
 electrolyte इलेक्ट्रोलाइट
 electrostatic इलेक्ट्रोस्टैटिक
-elissa ऐलिस
-ell एल
-ella एल
-ellan एलन
-elle एल
-ellen एलन
-ellena एलेना
+elissa ऐलिस अलीशा
+ell एल अल
+ella एल ऐला
+ellan एलन ऐलान
+elle एल अल
+ellen एलन ऐलान
+ellena एलेना एलन
 ellesse ऐलिस
-elley अली
+elley अली ऐली
 ellice ऐलिस
-ellie अली
+ellie अली ऐली
 elling एलन
 ellinger अलीनगर
 ellis ऐलिस
 ells आइल्स
-elly अली
+elly अली ऐली
 ellyn एलन
 els आइल्स
 elsa आइल्स
@@ -2951,16 +3047,16 @@ emley इमली
 emma एम
 emme एम
 emmel अम्ल
-emmer अमर
+emmer अमर अमेर
 emmert इमारत
 emmery अमारी
-emmet अमित
-emmett अमित
+emmet अमित अमिट
+emmett अमित अमिट
 emmi एम
 emmie एम
-emmit अमित
-emmitt अमित
-emmott अंत
+emmit अमित अमिट
+emmitt अमित अमिट
+emmott अंत अमित
 emmy एम
 emogene अंगीन
 emory अमारी
@@ -2969,77 +3065,81 @@ enclave एन्क्लेव
 encryption एन्क्रिप्शन
 encyclopaedia इनसाइक्लोपीडिया
 encyclopedia इनसाइक्लोपीडिया
-ended एंड
+end एन्ड
+ended एंड एन्ड
 enderson एण्डरसन
 ends अण्डज
-endure इंडोर
-enema अनाम
+endure इंडोर इनडोर
+enema अनाम इनाम
 engen अंगीन
-engh अंग
+engh अंग एन
 engine इंजन
-englund इंग्लैंड
+english इंगलिश
+englund इंग्लैंड इंगलेंड
 enitt एनेट
 ennes अंश
 enns अंश
 enoch इंक
 ensign इंसान
 ensz अंश
+enter अन्तर
 enterra अंतर
 entrail अंतराल
 enz अंश
 enzyme एंजाइम
-eon ईओन
+eon ईओन इन
 ephesus अफोसस
 eponymous एपोनिमस
-epp एप
-eppes एप्स
-epps एप्स
-era अरु
-erany अरेनी
+epp एप ऐप
+eppes एप्स ऐप्स
+epps एप्स ऐप्स
+era अरु एयर
+erany अरेनी आरनि
 erase एरिस
-ere एयर
-erich एरिक
+ere अरु एयर
+eric एरीक
+erich एरिक एरीक
 erma आर्मी
 erna आरनि
 erney आरनि
 ernie आरनि
 erny आरनि
 eroh अरो
-eron ईरान
-err आर
-erra अरु
-erring अरिन
+eron ईरान इरान
+err आर अरु
+erra अरु एयर
+erring अरिन एरिन
 errol अरल
 erte आर्ट
 ertz आर्ट्स
-erykah एरीक
+erykah एरीक एरिक
 esau ईसा
-esch एस
-esche एस
-eschen ऐसन
+esch एस इस
+esche एस इस
+eschen ऐसन ऐशौन
 especial स्पेशल
 esque इश्क
-ess एस
-essa एस
-essay ऐसे
-essen ऐसन
+ess एस इस
+essa एस ऐसे
+essay ऐसे एसे
+essen ऐसन अइसन
 esser असर
 esses आइसिस
-esson ऐसन
+esson ऐसन अइसन
 estle असल
 estonia एस्टोनिया
 etch एच
-ethel एटोल
+ethel एटोल अटल
 ethic एतेक
 ethiopia इथियोपिया
-ethyl एटोल
-etta एटो
+ethyl एटोल अटल
+etta एटो एटी
 euan युआन
 eudy यदि
 eunice यूनुस
 euro यूरी
-europa यूरोप
-europe यूरोप
+europa यूरोप यूरोपा
+europe यूरोप युरोप
 europium यूरोपियम
 eury यूरी
 eva ईव
@@ -3058,15 +3158,15 @@ excess एक्सेस
 excise एक्सेस
 exposure एक्सपोजर
 express एक्सप्रेस
-eye आई
+eye आई आय
 eyecare एकर
-eyeless ऐलिस
+eyeless ऐलिस आइल्स
 eyepiece एपिस
-eyes एस
+eyes एस ऐस
 eyetech एतेक
 eyman इमं
-eyring अरिन
-ezell जल
+eyring अरिन एरिन
+ezell जल जेल
 ezer असर
 ezzell असल
 faal फल
@@ -3080,55 +3180,57 @@ facteau फैक्टो
 facto फैक्टो
 fad पहाड़
 fadel फिडल
-faeth फीट
-fahd पहाड़
+faeth फीट फिट
+fahd पहाड़ फाड़
 fahl फल
-fahr फॉर
-fail फल
+fahr फॉर फोर
+fail फल पहिल
 failing फ़लिन
-fairey फेयरी
+fair फेरू
+fairey फेयरी फेर
 fairleigh फरलै
-fairy फेयरी
+fairy फेयरी फेर
 faisal फसल
 fait फिट
-faith फिट
+faith फिट फतह
 faley फैली
-fall फल
-falla फैली
-fallaw पहलो
+fall फल फौल
+falla फैली फाइल
+fallaw पहलो पहिलो
 fallen फलन
-fallin फ़लिन
+fallin फ़लिन फैलन
 falling फ़लिन
-fallon फैलन
-fallow पहलो
+fallon फैलन फलन
+fallow पहलो पहलौ
 falls फॉल्स
 false फॉल्स
-falynn फ़लिन
+falynn फ़लिन फैलन
 fame फेम
-fan फाइन
+fan फेनु फाइन
 fancy फांसी
-fang फाइन
+fane फेनु फेनू
+fang फेनु फाइन
 fanger फिंगर
-fann फाइन
+fann फेनु फाइन
 fanned फांड
 fannie पहनी
 fanny पहनी
-far फॉर
-farah फेर
-farai फेर
+far फॉर फोर
+farah फेर फेरू
+farai फेर फॉर
 farce फोर्स
-fare फेर
-farese फारसी
+fare फेर फेरू
+farese फारसी फ़ारसी
 faro फैरो
-faron फेरूँ
+faron फेरूँ फर्न
 farouk फरक
-farr फॉर
-farra फॉर
-farrah फेर
+farr फॉर फोर
+farra फॉर फोर
+farrah फेर फेरू
 farran फर्न
-farren फेरूँ
+farren फेरूँ फर्न
 farrey पहाड़ी
-farron फेरूँ
+farron फेरूँ फर्न
 farrow फैरो
 farry पहाड़ी
 fascell फसल
@@ -3143,10 +3245,10 @@ fatty फटै
 faucet फास्ट
 faughn फोन
 faulks फोकस
-faull फल
-fauroux फरू
+faull फल फौल
+fauroux फरू फरु
 faus फौज
-fausta फास्ट
+fausta फास्ट फास्तो
 fausto फास्तो
 fauteux फोटो
 fauth फतह
@@ -3155,59 +3257,62 @@ fawkes फोकस
 fawley पहली
 fawn फोन
 fay फ
-fayanne पहीन
+fayanne फेनु फेनू
 faye फ
 fayette फीट
 fayme फेम
-fear फिर
+fayne फेनु फेनू
+fear फिर फेर
 fearn फर्न
-feat फीट
+feat फीट फिट
 febles फेबल्स
 fecteau फैक्टो
 federation फेडरेशन
 feel पहिल
-fehl फल
+feet फिट
+fehl फल फाइल
 fehling फ़लिन
-fehn फाइन
-fehr फेर
+fehn फेनु फेनू
+fehr फेर फेरू
 fehrman फरमान
 feight फिट
+feign फेनु फेनू
 feil पहिल
-fein फाइन
-fell फल
-fellin फ़लिन
+fein फेनु फाइन
+fell फल फाइल
+fellin फ़लिन फैलन
 felling फ़लिन
-fellow पहलो
+fellow पहलो पहिलो
 felucca पहिलका
 femme फेम
-fen फाइन
+fen फेनु फेनू
 fender फाइंडर
-feng फाइन
-fenn फाइन
+feng फेनु फेनू
+fenn फेनु फेनू
 fenney पहनी
-ferch फर्क
+ferch फर्क फरक
 ferdinand फर्डिनेंड
 ferm फार्म
 fermium फर्मीयम
-ferra फेर
-ferran फेरूँ
-ferre फेर
+ferra फेर फेरू
+ferran फेरूँ फर्न
+ferre फेर फेरू
 ferree पहाड़ी
-ferren फेरूँ
-ferri फेयरी
+ferren फेरूँ फर्न
+ferri फेयरी फेर
 ferrick फेरिक
-ferrie फेयरी
+ferrie फेयरी फेर
 ferrite फेराइट
 ferro फैरो
-ferron फेरूँ
-ferry फेयरी
-fery फेयरी
+ferron फेरूँ फर्न
+ferry फेयरी फेर
+fery फेयरी फेर
 fessel फसल
 fete फिट
 fetter फाइटर
-feur फेर
+feur फेर फिर
 fey फ
-feyen फाइन
+feyen फाइन फेनु
 fib फैब
 fiber फाइबर
 fibre फाइबर
@@ -3219,38 +3324,39 @@ fiene पहीन
 fierman फरमान
 fierro फैरो
 fiery फेयरी
-fifth फीट
+fifth फीट फिट
 fighter फाइटर
 fijian फिजियन
-fil पहिल
-fila फाइल
+fil पहिल फल
+fila फाइल फैलै
 file फाइल
 filene फ़लिन
-filet पहिले
-fill पहिल
-filla पहिल
+filet पहिले पहिल
+fill पहिल फल
+filla पहिल फल
 filled फील्ड
-fillet फल
+fillet फल पहले
 filleted फ्लड
 filley फैली
 fillip फ़िलिप
 filly फैली
-filo पहिलो
-fin पहीन
+film फ़िल्म
+filo पहिलो पहिलौ
+fin फेनु पहीन
 fina फाइन
-finan पहिनँ
+finan पहिनँ पहीनं
 finder फाइंडर
-fine फाइन
+fine फाइन फेनु
 finland फिनलैंड
-finn पहीन
-finnan पहिनँ
-finne पहीन
+finn फेनु पहीन
+finnan पहिनँ पहीनं
+finne फेनु पहीन
 finney पहनी
 finnie पहनी
 finnish फिनिश
-fire फेर
+fire फेर फेरू
 firm फार्म
-firma फार्म
+firma फार्म फर्मी
 firman फरमान
 first फ़र्स्ट
 fisherman फिशरमैन
@@ -3259,70 +3365,71 @@ fissell फसल
 fissile फसल
 fission फैशन
 fissures फिशर्स
-fithe फीट
+fit फिट
+fithe फीट फिट
 flaim पहलें
 flakes फ्लेक्स
 flam पहलें
 flame पहलें
 flamm पहलें
-flann पहलें
+flann पहलें फलन
 flanna फलन
 flasch फ्लैश
 flash फ्लैश
-flaugh पहलो
+flaugh पहलो पहलौ
 flaum पहलों
-flaw पहलो
+flaw पहलो पहलौ
 flawed फ्लड
-flawn पहलों
+flawn पहलों फलन
 flax फ्लेक्स
-flay फल
+flay फल पहले
 flayed फ्लड
-flea पहली
+flea पहली फल
 flee पहली
 fleiss फ्लैश
-flew पहलू
+flew पहलू पहलो
 flicks फ्लेक्स
 flies फ्लैश
 flim पहलें
-fling फ़लिन
-flinn पहलें
+fling फ़लिन फलन
+flinn पहलें फ़लिन
 flis फ्लैश
 fliss फ्लैश
-flo पहलो
+flo पहलो पहलौ
 flom पहलों
 flood फ्लड
 flooded फ्लड
 flooring फ्लोरीन
 florance फ्लोरेंस
 floren फ्लोरीन
-flow पहलो
-flowe पहलो
+flow पहलो पहलौ
+flowe पहलो पहलौ
 flowed फ्लड
-flown पहलों
-flu पहलू
+flown पहलों फलन
+flu पहलू पहलो
 flume पहलों
 flung फलन
 fluorine फ्लोरीन
 fluorite फ्लोराइट
 fly पहले
 flye पहले
-flynn पहलें
-foal फल
-foale फल
+flynn पहलें फ़लिन
+foal फल फौल
+foale फल फौल
 foaling फ़लिन
 foard फोर्ड
 foell पहिल
 foerster फोर्स्टर
 foes फौज
-fohl फल
+fohl फल फौल
 foley पहली
 folkes फोकस
 folks फोकस
 follett फोलेट
 follette फोलेट
 folley पहली
-follin पहलें
-follow पहलो
+follin पहलें फ़लिन
+follow पहलो पहलौ
 folly पहली
 folz फॉल्स
 fond फांड
@@ -3330,6 +3437,7 @@ fong फोन
 fontaine फ़ॉन्टेन
 fonzie फांसी
 foo एफयू
+fool फल
 fooling फ़लिन
 foong फोन
 foos फ्यूज
@@ -3339,24 +3447,26 @@ foote फुट
 for फेर
 foramen फरमान
 foran फर्न
-foray फॉर
-forbes फोर्ब्स
+foray फॉर फोर
+forbes फोर्ब्स फोरब्स
 forced फ़र्स्ट
+fore फोर
 foreign फर्न
 foremen फरमान
-foresee फारसी
+foresee फारसी फ़ारसी
 forester फोर्स्टर
 forie पहाड़ी
+fork फरक
 form फार्म
 forma फार्म
 format फॉर्मेट
 formatting फॉर्मेटिंग
-forr फॉर
+forr फॉर फोर
 forrester फोर्स्टर
 forrey पहाड़ी
 forry पहाड़ी
-forshee फारसी
-forshey फारसी
+forshee फारसी फ़ारसी
+forshey फारसी फ़ारसी
 fortin फोड़तें
 forton फोड़तें
 fortune फॉर्च्यून
@@ -3378,14 +3488,14 @@ frahm फ्रेम
 fram फ्रेम
 frame फ्रेम
 framework फ्रेमवर्क
-francais फ्रांस
+francais फ्रांस फ़्रांसे
 francois फ्रांस्वा
 francoise फ्रांस्वा
 frank फ्रैंक
 frech फरक
 fredrich फ्रेडरिक
 freeh फ्री
-frew फरू
+frew फरू फरु
 freyman फरमान
 frick फरक
 fricke फरक
@@ -3393,24 +3503,24 @@ fridrich फ्रेडरिक
 frink फ्रैंक
 frohman फरमान
 fronk फ्रांक
-frueh फरू
+frueh फरू फरु
 frunze फ्रांस
 fuddy पहाड़ी
 fudge फ्यूज
 fuge फ्यूज
-fuhr फॉर
+fuhr फॉर फोर
 fuhrman फरमान
 fuhrmann फरमान
-full फूल
-fullen फलन
-fully फूल
+full फूल फल
+fullen फलन फ़लिन
+fully फूल पहली
 fund फांड
 funded फांड
 fung फोन
 funny पहनी
-fur फेर
-furr फेर
-furrh फेर
+fur फेर फिर
+furr फेर फिर
+furrh फेर फिर
 furrow फैरो
 furry पहाड़ी
 fuse फ्यूज
@@ -3421,8 +3531,8 @@ fust फास्ट
 futures फ्यूचर्स
 futurist फ्यूचरिस्ट
 fuzz फ्यूज
-gaal गोल
-gaar गोर
+gaal गोल गॉल
+gaar गोर गोड़
 gaba गाबि
 gabby गाबि
 gabriel गैबरियल
@@ -3430,18 +3540,18 @@ gabrielle गैबरियल
 gaby गाबि
 gad गाइड
 gadd गाइड
-gaea गए
-gaeta गीत
+gaea गए गे
+gaeta गीत गीता
 gaeth गीत
-gage गेज
+gage गेज गज
 gahan गेहूँ
-gahli गोली
-gahm गाम
-gahn गण
-gahr गोर
-gaige गेज
-gailey गेलै
-gaily गेलै
+gahli गोली गली
+gahm गाम गेम
+gahn गण गईं
+gahr गोर गोड़
+gaige गेज गज
+gailey गेलै गेले
+gaily गेलै गेले
 gain गण
 gained गेंद
 gainey गिनी
@@ -3454,49 +3564,50 @@ galang गैलन
 gale गेल
 gales गेल्स
 galik गेलिक
-galin गैलें
+galin गैलें गैलन
 galka गेलकै
-gall गोल
-galla गेलो
-galle गेलै
+gall गोल गॉल
+galla गेलो गेल
+galle गेलै गेल
 gallen गलन
 gallery गैलरी
 galles गेल्स
 gallet गलत
-galley गेलै
-galli गेलै
-gallia गेले
+galley गेलै गेले
+galli गेलै गेले
+gallia गेले गईले
 gallic गेलिक
 gallick गेलिक
 gallik गेलिक
 gallion गैलें
 gallium गैलियम
-gallon गैलन
+gallon गैलन गलन
 galloon गलन
-gallow गेलो
+gallow गेलो गेलौ
 gallus गेल्स
 gals गेल्स
 gambia गैम्बिया
 game गेम
-gamm गाम
-gamma गामा
+gamm गाम गेम
+gamma गामा गाम
 gammon गमन
 gamut गेंट
-ganda गेंद
-gandhi गोंडी
+ganda गेंद गैंडा
+gandhi गोंडी गन्दी
 ganey गिनी
-gang गण
+gang गण गईं
 gangrene गैंग्रीन
 gangster गैंगस्टर
 ganis गणेश
-gann गण
+gann गण गईं
 gannett गणित
 gant गेंट
 gantt गेंट
 gao गो
 gaona गायन
-gar गोर
+gar गोर गोड़
 gara गैर
+garden गर्दन
 gardin गार्डन
 gare गैर
 gareau गारो
@@ -3504,13 +3615,14 @@ garibay गरीब
 garissa ग्रीस
 garnished गर्निश्ट
 garr गैर
-garrey गाड़ी
+garrey गाड़ी गिरी
 garro गारो
 garroz गरज
-garry गाड़ी
+garry गाड़ी गिरी
 gars गरज
+gary गिरी
 gas गैस
-gase गैस
+gase गैस गेज
 gash गैस
 gass गैस
 gassee गैस
@@ -3523,26 +3635,27 @@ gates गेट्स
 gateway गेटवे
 gator गिटार
 gatt गत
-gatti गति
+gatti गति गती
 gattis गतिज
-gatty गति
+gatty गति गती
 gatz गेट्स
 gauch गाछ
-gaudier गाड़ी
+gaudier गाड़ी गोदी
 gaudy गाड़ी
-gauge गेज
+gauge गेज गज
 gaugh गो
 gaughan गायन
 gaughman गमन
 gauguin गोगन
+gaul गॉल
 gaulan गलन
 gaulin गलन
-gaulle गोल
+gaulle गोल गॉल
 gault गलत
-gaus गज
-gause गज
+gaus गज गज़
+gause गज गज़
 gaut गत
-gauze गज
+gauze गज गज़
 gavan गेविन
 gaven गेविन
 gavin गेविन
@@ -3550,29 +3663,29 @@ gavitt गावत
 gaw गो
 gawen गायन
 gawlik गॉलिक
-gawne गाउन
-gay गे
-gayer गैर
+gawne गाउन गौण
+gay गे ग
+gayer गैर गियर
 gayle गेल
 gayles गेल्स
 gayman गमन
 gaymon गमन
 gaynatie गिनती
-gaze गैस
+gaze गैस गेज
 gazelle ग़ज़ल
-gean जीन
-gear गैर
+gean जीन जेएन
+gear गैर गियर
 gearey गिरी
 gears गरज
 geary गिरी
 gebbie जबे
 ged गाइड
-gee जे
-geeing जीन
-geena गिनी
+gee जे जी
+geeing जीन जेएन
+geena गिनी गिनै
 gehl गेल
 gehling गैलें
-gehm जें
+gehm जें जैम
 gehman गमन
 gehr जड़
 gehry गिरी
@@ -3580,27 +3693,27 @@ geib गायब
 geisen गैसों
 geiss गैस
 geitz गेट्स
-gell जल
-gelli गेलै
-gem जें
+gell जल जेल
+gelli गेलै गेले
+gem जें जैम
 gemini जमीनी
-gemma जमा
-gemme जें
+gemma जमा जें
+gemme जें जैम
 gems जेम्स
 genco जिनको
-gene जीन
+gene जीन जेएन
 general जनरल
 generale जनरल
-generator जेनरेटर
+generator जेनरेटर जनरेटर
 genes जीनस
 genesee जेंसे
-geng जैन
+geng जैन जें
 genk जनक
 genoa जनो
-genung जेनां
+genung जेनां जेनॉन
 genus जीनस
-george जोर्ज
-georgia जोर्ज
+george जोर्ज जॉर्ज
+georgia जोर्ज जॉर्ज
 geothermal जिओथर्मल
 gerais जार
 germain जर्मन
@@ -3608,160 +3721,164 @@ germaine जर्मन
 german जर्मन
 germane जर्मन
 germani जर्मनी
-germanic जर्मेनिक
+germanic जर्मेनिक जर्मनिक
 germany जर्मनी
-gero जेरो
-gerow जेरो
-gerri जड़ी
-gerrie जड़ी
-gerry जड़ी
+gero जेरो जेरौ
+gerow जेरो जेरौ
+gerri जड़ी जरिए
+gerrie जड़ी जरिए
+gerry जड़ी जरिए
 get गीत
 getaway गेटवे
 geter गिटार
 getter गिटार
-getty गति
+getty गति गती
 gettys गतिज
 getz गेट्स
-ghada गोंडा
-ghali गोली
-ghandi गोंडी
+ghada गोंडा गाड़ी
+ghali गोली गली
+ghandi गोंडी गन्दी
 ghaznavi गजनवी
 ghent गेंट
-ghez गैस
+ghez गैस गेज
 ghezzi गेज
 ghitis गतिज
-ghoul गोल
-giang जॉन
-gianni जाने
-giannola जानलो
+ghoul गोल गुल
+giang जॉन जान
+gianni जाने जॉनी
+giannola जानलो जानल
 giannone जननी
 gibb जब
-gibbon गबोन
+gibbon गबोन गैबॉन
 gibby जीबी
 gibraltar जिब्राल्टर
-giel जिल
+giel जिलु जिल
 gier जड़
 giere जड़
 gieser गिसिर
 giesey जीसी
 gigot जगत
-gill गेल
+gill गेल गिल
 gillam गैलें
-gillan गैलन
-gille गेल
-gillean गैलन
+gillan गैलन गलन
+gille गेल गइल
+gillean गैलन गलन
 gillem गैलें
-gillen गैलन
-gilles जिल
-gilley गेले
+gillen गैलन गलन
+gilles जिलु जिल
+gilley गेले गली
 gilliam गैलियम
 gillick गेलिक
-gillie गेले
+gillie गेले गली
 gillin गैलें
 gillock गेलिक
-gillon गैलन
+gillon गैलन गलन
 gillott गलत
 gills गेल्स
 gillum गैलें
-gilly गेले
+gilly गेले गली
 gilt गलत
 gimenez जिमेनेज
-gin जैन
-gina जीन
+gin जैन जीन
+gina जीन जेएन
 ginas जीनस
-ging जैन
-ginn जैन
-gioia जॉय
-giorgia जोर्ज
+ging जैन जीन
+ginn जैन जीन
+gioia जॉय जय
+giorgia जोर्ज जॉर्ज
 giovanni जियोवानी
 gipp जप
-giraud जेरो
+giraud जेरो जेरौ
 giren जीर्ण
 gish गैस
 gisi जीसी
-gitana जितना
+gitana जितना जीतन
 gitlin जितलें
 gitter गिटार
-giunta जनता
+giunta जनता जंतु
 given गेविन
 giving गेविन
-giza गेज
+giza गेज गज
 glahn गलन
 glasgow ग्लासगो
-glatt गलत
-glawe गला
+glatt गलत ग्लैट
+glawe गला गलौ
 glenn गलन
 glenna गलन
 gloat गलत
 glow गलौ
 glyn गलन
 glynn गलन
-gmbh गाम
-gnagey नाजी
-gnann नँ
+gmbh गाम गेम
+gnagey नाजी निजी
+gnann नँ नां
 gnash नाश
 gnats नाइट्स
 gnau नौ
-gnaw नौ
-gnawed नोड
+gnaw नौ ना
+gnawed नोड नाडु
 gnaws नाश
 gnome नं
 gnu न्यू
-goa गो
-goad गोद
-goal गोल
-goalie गोली
-goan गौण
-goar गोर
+goa गो गोवा
+goad गोद गोड़
+goal गोल गॉल
+goalie गोली गोलि
+goan गौण गण
+goans गोंझू
+goar गोर गौर
 goat गत
-goatee गति
+goatee गति गती
 goben गबोन
+god गोड़
 goddess गॉड्स
 godot गुड़ो
-goedde गोद
-goede गोद
+goedde गोद गोड़
+goede गोद गोड़
 goeman गमन
-goen गौण
-goes गज
+goen गौण गण
+goens गोंझू
+goes गज गज़
 goethe गत
 goette गत
 goetz गेट्स
-goggin गोगन
+goggin गोगन गगन
 gogh गो
-goghs गज
+goghs गज गज़
 goh गो
-gohl गोल
+gohl गोल गॉल
 gohman गमन
-gohn गण
+gohn गण गौण
 going गईं
 goldin गोल्डन
-goll गोल
-golla गोला
-golle गोल
-golly गोली
+goll गोल गॉल
+golla गोला गोल
+golle गोल गॉल
+golly गोली गली
 gone गाउन
-gong गाउन
+gong गाउन गौण
 gonna गाना
 good गुड़
 goodlow गोदलो
-gooey गई
-googe गज
+gooey गई गईं
+googe गज गज़
 goon गुण
-goonan गुणों
-goos गज
+goonan गुणों गुणन
+goos गज गज़
 goral गोरौल
 gordon गार्डन
 gores गरज
-gorham गरम
-gorr गोर
+gorham गरम गर्म
+gorr गोर गौर
 gorrid गरुड़
-gose गज
+gose गज गज़
+gospel गॉस्पेल
 gotch गाछ
-gotcha गाछ
+gotcha गाछ गाछी
 gotsch गाछ
 gott गत
 gotta गत
-gotti गति
+gotti गति गती
 gottis गतिज
 gottsch गाछ
 gottschalk गाछोक
@@ -3772,31 +3889,31 @@ goupil गोपाल
 gouty गोटिए
 govett गावत
 gow गो
-gowan गाउन
+gowan गाउन गौण
 gowdy गोदी
-gowen गाउन
-gower गौर
-gown गाउन
-goy गई
+gowen गाउन गौण
+gower गौर गोर
+gown गाउन गौण
+goy गई गईं
 goyne गईं
 gracey ग्रेसी
 gracie ग्रेसी
 gracy ग्रेसी
 graduate ग्रेजुएट
-graeme ग्राम
+graeme ग्राम गरम
 grage गरज
 gragg ग्रेग
-graham ग्राम
-gramm ग्राम
-grammy ग्रैमी
-gras ग्रा
+graham ग्राम गरम
+gramm ग्राम गरम
+grammy ग्रैमी गरमी
+gras ग्रा ग्रो
 grassi ग्रेसी
 grassy ग्रेसी
 grate ग्रेट
 grauman ग्रामीण
 graumann ग्रामीण
-graw ग्रा
-grawe ग्रा
+graw ग्रा ग्रो
+grawe ग्रा ग्रो
 grayish ग्रीस
 grays गरज
 grease ग्रीस
@@ -3821,7 +3938,7 @@ grimy ग्रैमी
 grisly ग्रिजली
 grissett ग्रसित
 grit ग्रेट
-griz ग्रीस
+griz ग्रीस गरज
 grizzly ग्रिजली
 groom गरम
 groome गरम
@@ -3840,14 +3957,14 @@ grundy गरांडी
 grupp ग्रुप
 guam ग्वाम
 guardin गार्डन
-guay गे
+guay गे ग
 gudgel ग़ज़ल
-guenna गेना
+guenna गेना गिनी
 guerre गैर
-guerry गाड़ी
+guerry गाड़ी गिरी
 guess गैस
-guez गैस
-guhl गुल
+guez गैस गेज
+guhl गुल गोल
 guiana गियाना
 guice गैस
 guide गाइड
@@ -3855,10 +3972,10 @@ guided गाइड
 guier गैर
 guiles गेल्स
 guilin गैलें
-guill गेल
-guillen गैलन
+guill गेल गिल
+guillen गैलन गलन
 guillory गैलरी
-guillot गेलो
+guillot गेलो गेलौ
 guilt गलत
 guinea गिनी
 guiney गिनी
@@ -3866,47 +3983,50 @@ guinn गण
 guire गैर
 guise गैस
 guitar गिटार
-gull गुल
-gulla गला
-gullah गला
+gull गुल गोल
+gulla गला गोला
+gullah गला गोला
 gullatt गलत
 gullet गलत
 gullette गलत
 gulley गली
-gulli गोली
+gulli गोली गली
 gully गली
 gum गाम
 gumm गाम
-gung गुण
-gunnoe गुणों
+gun गण
+gung गुण गण
+gunnoe गुणों गुणौ
 gunny गुणे
 gurr गैर
 gurrola गोरौल
-gurry गाड़ी
+gurry गाड़ी गिरी
+guru गुरू
 gut गत
 gutherie गठरी
-guy गाय
+guy गाय गई
 guyer गैर
-guynn गईं
+guynn गईं गायन
 guys गैस
 guzzle ग़ज़ल
 gway जीव
-gym जें
+gym जें जैम
 gyms जेम्स
-gyn गईं
+gyn गईं गायन
 gyp जप
-gyro जेरो
+gyro जेरो जेरौ
 gytha जाइत
 haab हब
-haack हक
-haacke हक
+haack हक होकु
+haacke हक होकु
 haag हॉग
-haak हक
-haake हक
+haak हक होकु
+haake हक होकु
 haber हेबर
+had हेड
 hadad हेड
 hadar हेडर
-hadd हद
+hadd हद हेड
 haddad हेड
 hader हेडर
 hafnium हेफ़नियम
@@ -3916,37 +4036,37 @@ haggarty हैगर्टी
 haggerty हैगर्टी
 haggis हिग्स
 hah हो
-hahl हाल
-hahm हैं
+hahl हाल होल
+hahm हैं हम
 hahn हान
 hahne हैं
-haigh है
-haight हिट
-haik हक
-hail हल
-haile हल
-hailing हेलेन
+haigh है हैय
+haight हेतु हिट
+haik हेकु हक
+hail हल हिल
+haile हल हिल
+hailing हेलेन हेलन
 hainey हिनी
 hair हर
 haire हर
 hairr हर
-hait हिट
-haith हिट
+hait हेतु हिट
+haith हेतु हिट
 hakki हेकै
-halen हेलेन
+halen हेलेन हेलन
 halide हैलाइड
 halik हलक
-hall होल
-halla हल
-halle हाल
+hall होल हाल
+halla हल हाल
+halle हाल हल
 halleck हलक
-halley हाले
-hallie होली
-hallin हेलेन
+halley हाले हलै
+hallie होली होलै
+hallin हेलेन हेलन
 hallock हलक
 hallow हेलो
-hally हाले
-halm हम
+hally हाले हलै
+halm हम होम
 halo हेलो
 halogen हैलोजन
 halon हेलन
@@ -3954,18 +4074,18 @@ halt हॉल्ट
 halve हाव
 ham हैं
 haman हमें
-hamar होमर
+hamar होमर हमरू
 hamberg हैम्बर्ग
 hamburg हैम्बर्ग
 hamed हिंद
-hamm हैं
-hand हिंद
+hamm हैं हम
+hand हिंद हिंदू
 handa हिंद
 handel हेंडल
 handle हेंडल
 handrich हेण्ड्रिक
 hands हान्स
-handy हिंदी
+handy हिंदी हिन्दी
 haney हिनी
 hang हैं
 hanged हिंद
@@ -3974,68 +4094,70 @@ hanna हैं
 hannah हैं
 hannay हान
 hannes हान्स
-hanney हानि
-hanni हानि
-hannie हानि
-hanny हानि
+hanney हानि हिनी
+hanni हानि हिनी
+hannie हानि हिनी
+hanny हानि हिनी
 hany हिनी
-hao हौ
+hao हौ हो
 hara हर
 haraway हार्वे
 hardware हार्डवेयर
-haring हरीन
+haring हरीन हेरन
 harmonium हारमोनियम
-harr हर
-harra हर
-harrah हर
-harre हर
-harren हेरन
+harr हर हार
+harra हर हार
+harrah हर हरा
+harre हर हार
+harren हेरन हरण
 harrier हरियर
 harriet हेरिएट
 harriette हेरिएट
 harring हरीन
 harrison हैरिसन
-harron हेरन
-harroun हेरन
+harron हेरन हरण
+harroun हेरन हरण
 harry हैरी
 harsch हर्ष
 hartis हार्टस
 hartz हार्टस
 harvey हार्वे
 harvie हार्वे
-haser हजार
+haser हजार हज़ार
 hasta औसत
 hastings हेस्टिंग्स
+hat हेतु
 hata होता
-hate हिट
+hate हेतु हिट
 hattie हैती
 hatty हैती
 haub हब
-hauck हॉक
+hauck होकु हॉक
 haug हॉग
-haugh हो
+haugh हो हौ
 haughey हॉकी
 haughn हान
-haught हाट
-haughton होतें
-haughty होतै
-hauk हॉक
-hauke हॉक
+haught हाट हॉट
+haughton होतें होतँ
+haughty होतै होते
+hauk होकु हॉक
+hauke होकु हॉक
 haun हान
-haury हारी
+haury हारी हारि
 hausch हाउस
 hauss हाउस
-haut हाट
-hauth हाथ
+haut हाट हॉट
+hauth हाथ हाट
 hawes हाउस
-hawk हॉक
-hawke हॉक
+hawk होकु हॉक
+hawke होकु हॉक
 hawker होकर
 hawkey हॉकी
-hawley होली
+hawley होली होलै
 haws हाउस
-hay है
-hayen हैं
+hay है हैय
+hayek हेकु
+hayen हैं हीन
 hayer हर
 haying हैं
 hayman हमें
@@ -4043,25 +4165,25 @@ haymon हमें
 hayn हैं
 hayne हैं
 haynie हिनी
-head हेड
+head हेड हद
 headed हेड
 header हेडर
 headrick हाइड्रिक
 heal हिल
-heaney हीनी
+heaney हीनी हिनी
 hear हर
 heard हार्ड
-hearin हिरण
-hearn हेरन
-hearne हेरन
-hearon हिरण
-hearron हॉर्न
+hearin हिरण हरीन
+hearn हेरन हरण
+hearne हेरन हरण
+hearon हिरण हेरन
+hearron हॉर्न हरण
 hearse हर्ष
 hearst हर्स्ट
 hearths हार्टस
 hearts हार्टस
-heat हिट
-heath हिट
+heat हिट हित
+heath हिट हित
 heather हेडर
 heating हीटिंग
 heaven हवन
@@ -4069,45 +4191,53 @@ heavily हवेली
 heavy हाइवे
 hebb हब
 hebrew हिब्रू
+heck हेकु
 hedger हजार
 hedrich हाइड्रिक
 hedrick हाइड्रिक
-heh है
-hehl हल
+heh है हैं
+hehl हल हिल
 hehman हमें
 hehn हैं
 hehr हर
+heick हेकु
 heidrich हाइड्रिक
 heidrick हाइड्रिक
+height हेतु
+heighth हेतु
 heinlen हाएनलेन
 heinrich हैन्रिक
-heir एयर
+heir अरु एयर
 heiress एरिस
 heironimus हाइरोनिमस
+heit हेतु
 heiwa हाइवे
 helaba हिलाबै
 helen हेलन
-helin हेलेन
+helena हेलन
+helin हेलेन हेलन
 helium हीलियम
-hell हल
-helle हल
-hellen हेलन
-helling हेलेन
-hello होलो
+hell हल हिल
+helle हल हिल
+hellen हेलन हेलेन
+helling हेलेन हेलन
+hello होलो होलौ
 hemann हमें
 heming हमें
-hemm हैं
-hemmed हिंद
+hemm हैं हम
+hemmed हिंद हिंदु
 hemming हमें
 henao हनो
 hendrich हेण्ड्रिक
 heney हिनी
 heng हैं
 henn हैं
-henna हैं
+henna हैं हेना
 henney हिनी
 henrich हैन्रिक
+henry हेनरी
 heon हीन
+her हार
 herb अरब
 herd हार्ड
 herda हरदी
@@ -4115,12 +4245,12 @@ heredia हरदिया
 hering हरीन
 herr हर
 herre हर
-herren हेरन
+herren हेरन हरण
 herrick हरेक
-herrin हरीन
-herring हरीन
+herrin हरीन हेरन
+herring हरीन हेरन
 herriott हेरिएट
-herron हेरन
+herron हेरन हरण
 hersch हर्ष
 hertz हार्टस
 herve हार्वे
@@ -4131,45 +4261,49 @@ heuman ह्यूमन
 heumann ह्यूमन
 heuring हरीन
 hey है
-heyd हेड
-heyday हेड
-heyde हेड
+heyd हेड हद
+heyday हेड हद
+heyde हेड हद
 heyen हैं
 heyer हर
 heying हैं
-heyl हल
+heyl हल हिल
 heyman हमें
 heymann हमें
 heyn हैं
 heyne हैं
-heyser हजार
+heyser हजार हज़ार
 hibor हेबर
-hick हक
-hid हेड
+hick हेकु हक
+hid हेड हद
 hide हेड
 hider हेडर
+hiett हेतु
 higgs हिग्स
-high है
+high है हैं
+hight हेतु
 highway हाइवे
+hike हेकु
 hilda हल्दी
 hildy हल्दी
 hiley हिल
-hilke हल्का
-hill हिल
-hilla हिल
-hille हिल
-hillen हेलन
+hilke हल्का हलक
+hill हिल हल
+hilla हिल हल
+hille हिल हल
+hillen हेलन हेलेन
 hilley हिल
 hillian हेलेन
-hillin हेलेन
+hillin हेलेन हेलन
 hilling हेलेन
 hillock हलक
 hilly हिल
-him एम
+him एम हैं
 hindle हेंडल
-hing हैं
-hinn हैं
-hinny हिनी
+hindu हिंदू
+hing हैं हीन
+hinn हैं हीन
+hinny हिनी हीनी
 hinshaw हिंसा
 hinzack हिंसक
 hirai हेराए
@@ -4178,57 +4312,60 @@ hirsch हर्ष
 hirsh हर्ष
 hirst हर्स्ट
 hirtz हार्टस
+hit हित
 hither हेडर
 hitman हेटमैन
 hiway हाइवे
 hmm हम
-hmong मँ
+hmong मँ मां
 hoag हॉग
-hoak हॉक
-hoar हर
+hoak होकु हॉक
+hoar हर हार
 hoard हार्ड
-hoare हर
-hoary हारी
+hoare हर हार
+hoary हारी हारि
 hobaugh हबा
-hobbie होबै
-hobby होबै
-hoch हक
+hobbie होबै होबे
+hobby होबै होबे
+hoch हक होकु
 hodde हद
 hoechst होस्ट
-hoeck हॉक
+hoeck होकु हॉक
 hoecker होकर
 hoeg हॉग
-hoek हॉक
-hoel होल
-hoell होल
-hoelle होल
+hoek होकु हॉक
+hoel होल हॉल
+hoell होल हॉल
+hoelle होल हॉल
 hoene हैं
-hoerr हर
-hoey होवे
+hoerr हर हार
+hoey होवे होई
 hogg हॉग
 hogge हॉग
 hogue हॉग
 hoh हो
-hohl होल
+hohl होल हॉल
 hohlt हॉल्ट
 hohman हमें
 hohmann हमें
 hohn हान
 holda हल्दी
-hole होल
+hole होल हॉल
 holick हलक
-holl हाल
-holle हाल
-holley होली
+holl हाल होल
+holle हाल होल
+holley होली होलै
 hollick हलक
-hollie होली
-hollo होलो
-hollow होलो
-holly होली
-holm होम
+hollie होली होलै
+hollo होलो होलौ
+hollow होलो होलौ
+holly होली होलै
+holm होम हम
 holmium होल्मियम
+holy होलै
 homan हमें
 homann हमें
+home हम
 homey होम
 hon हान
 honey हुनी
@@ -4236,15 +4373,15 @@ hong हान
 honn हान
 hons हान्स
 honse हान्स
-hoock हक
+hoock हक होकु
 hood हद
-hooey हुए
-hook हक
-hooke हक
-hoonah हुनी
+hooey हुए हुई
+hook हक होकु
+hooke हक होकु
+hoonah हुनी होना
 hooray हर
-hooser हजार
-hoosier हजार
+hooser हजार हज़ार
+hoosier हजार हज़ार
 hooven हवन
 hopes हॉप्स
 hoppes हॉप्स
@@ -4252,48 +4389,52 @@ hopps हॉप्स
 horak हरेक
 hord हार्ड
 horde हार्ड
-hori हारी
-horr हर
+hori हारी हारि
+horn हरण
+horr हर हार
 horrid हार्ड
 horsch हर्ष
 horsed हर्स्ट
 hosch हाउस
 hossain हुसैन
 hot हाट
-hoth हाथ
+hoth हाथ हाट
+houck होकु
 hougham होम
 houghs हाउस
-houghton होतें
-hour और
+houghton होतें होतँ
+houk होकु
+hour और ओर
 house हाउस
 housh हाउस
 houx हो
 houze हाउस
 hovda हावड़ा
-hovey होवे
-hovy होवे
-how हौ
-howell होल
+hovey होवे होवै
+hovy होवे होवै
+how हौ हो
+howell होल होवेल
 howes हाउस
 howeth होइत
-howey होवे
-howie होवे
+howey होवे होई
+howie होवे होई
 howitt होइत
+howk होकु
 howl होल
-howle होल
-howley होली
+howle होल होवेल
+howley होली होले
 howse हाउस
 howtek होटक
-howton होतें
+howton होतें होतँ
 howze हाउस
 hreha रिहा
 hribar रबर
 hruby रूबी
-hsia स
-hsiao सौ
+hsia स सा
+hsiao सौ शो
 hsieh सही
-hsu शो
-huang ह्वेन
+hsu शो सू
+huang ह्वेन हवन
 hubby हब
 hudak हुदोक
 huerst हर्स्ट
@@ -4308,10 +4449,11 @@ hughy युए
 hugus योगेश
 huh ह
 huhn हान
-huhta होता
+huhta होता होतै
 huish यूएस
-huizar हजार
-hull हल
+huizar हजार हज़ार
+hull हल हाल
+human यमन
 humann ह्यूमन
 humm हम
 hummer होमर
@@ -4322,9 +4464,9 @@ hunn हान
 hunza हान्स
 hurd हार्ड
 hurrah हरा
-hurray हर
-hurri हैरी
-hurry हैरी
+hurray हर हार
+hurri हैरी हारी
+hurry हैरी हारी
 hurts हार्टस
 hurvey हार्वे
 huson हुसैन
@@ -4336,8 +4478,9 @@ hustle हासिल
 hut हाट
 hutt हाट
 huval होवेल
+huyck हेकु
 huynh हैं
-hwang ह्वेन
+hwang ह्वेन हवन
 hybrid हाइब्रिड
 hyde हेड
 hyder हेडर
@@ -4345,19 +4488,19 @@ hydra हेडर
 hydrogen हाइड्रोजन
 hydroxide हाइड्राक्साइड
 hymie हैम
-hymn हैं
-hynd हिंद
+hymn हैं हिम
+hynd हिन्दू हिंद
 hypertext हाइपरटेक्स्ट
-ian इन
-ice एस
+ian इन ईनू
+ice एस ऐस
 iceland आइसलैंड
 icelandic आइसलैंडिक
 ices आइसिस
 ich एच
 ichi एएच
-icing ऐसन
+icing ऐसन अइसन
 ickes एक्स
-icy ऐसे
+icy ऐसे ऐसै
 idle एडेल
 idol एडेल
 ids एडीज
@@ -4369,24 +4512,25 @@ iida इडा
 ike एक
 ikey एके
 ikie एके
-ikle एकल
+ikle एकल अकाल
 ilana ऐलान
 iles आइल्स
 ilg अलग
-iliad इलियाड
-ill एल
+iliad इलियाड ईलियाड
+ill एल अल
 illes आइल्स
 illg अलग
-ilo ऐलो
+ilo ऐलो ऐलौ
 ilona एलन
 imbedded एम्बेडेड
-immel ईमेल
+immel ईमेल अम्ल
 imperial इंपीरियल
-imre अमर
+imre अमर अम्र
 imrie अमारी
-inc इंक
-inca इनको
-incur एंकर
+inc इंक अंक
+inca इनको इंक
+inch इन्च
+incur एंकर इनकार
 indal इंदौल
 india इंडिया
 indian इंडियन
@@ -4394,47 +4538,51 @@ indiana इंडियाना
 indies इंडीज
 indium इंडियम
 indochina इंडोचाइना
+indoor इनडोर
 industries इंडस्ट्रीज
 indyk इंडिक
-infantry इंफेंटरी
-ing अंग
+infantry इंफेंटरी इन्फेंटरी
+ing अंग इन
 ingersoll इंगरसोल
 ingham इनाम
+ink अंक
 inman इनमें
 inmon इनमें
-inn इन
+inn इन एन
 innate एनेट
 inouye ईनू
 integer इंतजार
-inter अंतर
+inter अंतर अन्तर
 interaction इंटरैक्शन
-interface इंटरफेस
+interface इंटरफेस इण्टरफेस
 into अंत
 intrie एंट्री
 inversion इनवर्ज़न
 iny ऐनी
+iran इरान
+iraq ईराक
 irby अरबी
 ireene एरिन
 irene एरिन
-irick एरिक
+irick एरिक एरीक
 iridium इरीडियम
-iris एरिस
+iris एरिस आयरिश
 irish आयरिश
 irma आर्मी
-isaac आइजेक
-isaak आइजैक
+isaac आइजेक आइजैक
+isaak आइजैक आइजेक
 isabella इसाबेला
 isgur असगर
-isham अशम
+isham अशम अश्म
 isis आइसिस
 island आइलेंड
-isle एल
+isle एल आइल
 isles आइल्स
 isolate आइसोलेट
-ison ऐसन
-issa ईसा
-issac आइजेक
-issah ईसा
+ison ऐसन ऐसनु
+issa ईसा इस
+issac आइजेक आइजैक
+issah ईसा इस
 issam असम
 issie इसी
 issy इसी
@@ -4444,7 +4592,7 @@ itek एतेक
 item आइटम
 iten आयतन
 itoh ईटौ
-itty एटी
+itty एटी अति
 ivanna इवान
 iven एवं
 ivery आईवरी
@@ -4455,161 +4603,174 @@ izzy इसी
 jabah जब
 jacket जैकेट
 jackett जैकेट
-jacki जेकी
-jackie जेकी
-jacky जेकी
+jacki जेकी जेकि
+jackie जेकी जेकि
+jacky जेकी जेकि
 jacot जैकेट
 jacques झोंक
-jacquet जेके
+jacquet जेके जैकेट
 jaeckel एकल
 jaekel एकल
 jagged झगड़
 jahnke जनक
-jahns जोनस
-jahr जोर
+jahns जोनस जोन्स
+jahr जोर जार
 jail जल
 jailed जल्द
-jaimie जमी
-jakie जेकी
+jaimie जमी जिमी
+jakie जेकी जेकि
 jam जैम
-jamb जैम
+jamb जैम जं
 james जेम्स
-jamming जमीन
+jamming जमीन ज़मीन
 jams जेम्स
-jan जैन
-jane जैन
-janeane जेनां
-janella जानलो
-janelle जानल
-jani यानी
+jan जैन जान
+jandt जंतु जन्तु
+jane जैन जें
+janeane जेनां जनन
+janella जानलो जानल
+janelle जानल जानैल
+janet जंतु
+jani यानी यानि
 janick जनक
 janicke जनक
 janicki जानकी
-janii जॉनी
+janii जॉनी जाने
 jannock जनक
 jannotta जनता
-jansa जैंसे
-janzen जैंजां
-jar जोर
+jansa जैंसे जेंसे
+janzen जैंजां जैन्जां
+jar जोर जार
 jarash जोरोस
 jarmin जर्मन
-jarreau जेरो
+jarreau जेरो जेरौ
 jarring जोड़ें
-jarrod जरा
-jars जार्ज
-jason जेसें
+jarrod जरा जड़
+jars जार्ज जोर्ज
+jason जेसें जैसन
+jaunt जंतु जन्तु
 jaunty जानते
-jaw जो
-jawed जोड़
-jaws जोस
+java जावे
+javan जीवाणु
+jaw जो जा
+jawed जोड़ जादू
+jaws जोस जज
 jay जे
 jaycee जैसे
-jayme जमी
-jayne जैन
-jayroe जेरो
+jayme जमी जिमी
+jayne जैन जें
+jayroe जेरो जेरौ
 jayson जैसन
 jazz जज
-jean जीन
-jeana जीन
-jeane जीन
+jean जीन जेएन
+jeana जीन जेएन
+jeane जीन जेएन
 jeanes जीनस
 jeaney जीन
 jeanie जीन
-jeanne जीन
+jeanne जीन जेएन
 jeannie जीन
 jeans जीनस
 jeer जड़
-jell जल
+jell जल जेल
 jelled जल्द
-jelley जेली
+jelley जेली जली
 jello जेलो
-jelly जेली
+jelly जेली जली
 jemimah जैमें
-jemmie जमी
-jeong जैन
+jemmie जमी जिमी
+jemmott जंतु
+jent जंतु जन्तु
+jeong जैन जें
 jerez एरिस
 jermaine जर्मन
 jermyn जर्मन
-jerr जड़
-jerri जड़ी
-jerrie जड़ी
-jerry जड़ी
+jerr जड़ जार
+jerri जड़ी जरिए
+jerrie जड़ी जरिए
+jerry जड़ी जरिए
 jerzy जर्सी
 jessamine जिसमें
 jessamyn जिसमें
-jesse जैसे
-jessen जेसें
-jessie जैसे
-jesson जेसें
+jesse जैसे जइसे
+jessen जेसें जैसन
+jessie जैसे जइसे
+jesson जेसें जैसन
 jesus जीसस
-jetty जेते
+jet जाइत
+jetty जेते जेतै
 jew जो
-jewel जल
+jewel जल जूल
 jewell जोअल
-jewry जुड़ी
-jews जोस
-jia जे
-jian जीन
-jiang जॉन
+jewry जुड़ी जोड़ी
+jews जोस जज
+jia जे जी
+jian जीन जेएन
+jiang जॉन जान
 jiawen जीवन
 jib जब
-jill जल
-jillian जलयान
-jillion जलयान
-jim जें
+jill जल जिलु
+jillian जलयान झीलें
+jillion जलयान झीलें
+jim जें जैम
 jimena जमाना
-jimmie जिमी
-jimmy जिमी
-jing जैन
+jimmie जिमी झिमी
+jimmy जिमी झिमी
+jing जैन जीन
 jink जनक
 jiri जड़ी
 jitney जीतने
-joan जॉन
-joanie जॉनी
+joan जॉन जोन
+joanie जॉनी जोन
 joann जॉइन
 joanne जॉइन
 joanou जनो
 joao जो
+job जाब
 jobes जॉब्स
 jochen जकाँ
 joel जल
 joelle जोअल
-joens जोनस
-joes जोस
+joens जोनस जोन्स
+joes जोस जज
 joh जो
-johann यहां
+johann यहां यहाँ
 johanna जहं
 johannes जोहानस
-john जॉन
-johnie जाने
-johnnie जाने
-johnny जाने
-johns जोनस
-johnta जनता
-johny जाने
+john जॉन जान
+johnie जाने जॉनी
+johnnie जाने जॉनी
+johnny जाने जॉनी
+johns जोनस जोन्स
+johnta जनता जानते
+johny जाने जॉनी
 joke झोंक
-jolla जल
-jolley जली
-jollie जली
-jolly जली
-jonah जॉन
+jolla जल जला
+jolley जली ज़ाली
+jollie जली ज़ाली
+jolly जली ज़ाली
+jon जान
+jonah जॉन जोन
+jones जोन्स
 joong जून
 jopp जप
 joscelyn जोसेलिन
 joss जोस
 josselyn जोसेलिन
 jot जात
-jouett जायत
+jouett जायत जूट
 jouret ज्वार
-journal जर्नल
+journal जर्नल जरनल
 jowley जली
+joy जय
 jua जो
-juan वां
-juana वां
+juan वां वन
+juana वां वाँ
 jubb जब
-judah जोड़ा
-judd जड़
+judah जोड़ा जुड़ी
+judd जड़ जादू
 judge जज
+judy जुडी
 juenger यंगर
 juett जूट
 juhl जल
@@ -4617,34 +4778,39 @@ juhnke जनक
 juice जोस
 juicy जोशी
 julia जली
-julian जूलियन
+julian जूलियन जलयान
 juliana जूलियन
-juliann जूलियन
+juliann जूलियन जलयान
 julianne जूलियन
+julie जूल
 julien जूलियन
 july जुलाई
+jun जन
+jundt जंतु जन्तु
 juneau जनो
 junine जनन
 junkie जानकी
 junky जानकी
 junod झुंड
+junot जंतु जन्तु
 juras जोर्ज
 jurassic जुरासिक
 jurs जार्ज
+jury जोड़ी
 justus जस्टिस
-kaas कस
-kabbah काबू
-kach किछ
+kaas कस कोश
+kabbah काबू क्यूबा
+kach किछ किछु
 kaehler केलर
 kaelin कलें
-kah क
+kah क का
 kahler कालर
 kahley काली
-kahn कण
-kahng कण
-kahr कोर
-kahre केर
-kahrs कोर्स
+kahn कण कान
+kahng कण कान
+kahr कोर कर
+kahre केर कोर
+kahrs कोर्स कर्ज
 kailash कलश
 kairey करी
 kaisha केश
@@ -4652,38 +4818,39 @@ kalish कलश
 kalisz कलश
 kalk कोक
 kalka केलक
-kall काल
-kalla कला
-kallam कलम
+kall काल कोल
+kalla कला काल
+kallam कलम कलां
 kallay काल
-kallen कालीन
+kallen कालीन कलां
 kallus कलश
 kalok केलक
 kalous कलश
-kamin केमन
+kamin केमन केय्मैन
 kamir कमर
-kamm कम
-kamman केमन
+kamm कम काम
+kamman केमन कमान
 kammer कमर
 kampen कैम्पेन
 kamran कैमरून
 kanady कैंडी
 kanai केने
+kanda कैंडी
 kandel केन्डाल
-kandt कांट
+kandt कांट कान्त
 kaney केने
-kang कें
+kang कें कण
 kania कोणीय
-kann कें
-kannan कोनों
-kanne कें
+kann कें कण
+kannan कोनों कानून
+kanne कें कण
 kanno कणौ
 kao को
-kaori करी
+kaori करी कारी
 kaplain कपलान
 kapler केपलर
-kapp केप
-kappa केप
+kapp केप कप
+kappa केप कापा
 kappeler केपलर
 kapper कापर
 kappler केपलर
@@ -4692,37 +4859,38 @@ karabakh करबाक
 karach केरच
 karam कर्म
 karat करैत
-karch कारक
+karch कारक कोरकु
 karema करें
-karen कर्ण
+karen कर्ण करें
 karin करें
+karl कार्ल
 karlik करलक
 karlin करलें
 karline करलें
-karlow करलो
+karlow करलो करलौ
 karney कोर्नी
-karnow कारणौ
+karnow कारणौ कारनों
 karoline करलें
 karolyn कैरोलिन
-karoun कारण
-karow करो
-karr कोर
-karren कारण
+karoun कारण कारन
+karow करो कारो
+karr कोर कर
+karren कारण कारन
 karrer करार
-karrick करेक
+karrick करेक करीक
 karry करी
 karsh कोर्स
-karyn करें
-kasch कैश
-kass कस
-kassa कैसे
-kassan कैसन
-kassem कैसें
-kassen कैसन
-kassin कैसें
-kasson कैसन
+karyn करें कारन
+kasch कैश केश
+kass कस कैश
+kassa कैसे कस
+kassan कैसन कैसें
+kassem कैसें किस्म
+kassen कैसन कैसें
+kassin कैसें कैसन
+kasson कैसन कैसें
 kasun कोसों
-kasza काशी
+kasza काशी कोष
 kates किट्स
 kathy कैथी
 katja काटी
@@ -4733,29 +4901,29 @@ kaunda कांड
 kaup कप
 kaupp कप
 kauppi कॉपी
-kauth कात
+kauth कात कोट
 kavan कैविन
 kay के
-kayak कईएक
-kayes केश
-kaylie कली
+kayak कईएक कैएक
+kayes केश कस
+kaylie कली केलै
 kaylor केलर
 kaylynn कलें
 kayne कें
-kays केश
-kazan किसान
+kays केश कस
+kazan किसान कैसन
 kazen कैसन
 kazin कैसें
-kea के
-keach किछ
+kea के कि
+keach किछ किछु
 keagy कीजिए
-keal कील
+keal कील कएल
 kealey कील
 kealy कील
-kear केर
+kear केर कर
 kearby कार्बी
 kearley करले
-kearn कारण
+kearn कारण कर्ण
 kearney करने
 kearny करने
 keary करी
@@ -4763,36 +4931,37 @@ keath कीट
 keats किट्स
 keatts किट्स
 keay की
-keddy कैदी
+keddy कैदी कड़ी
 keeley कील
 keely कील
 keena कएने
-keetch किछ
+keetch किछ किछु
 keeth कीट
 kehler केलर
-kehm कम
+kehm कम कें
 kehn कें
-kehr केर
+kehr केर कर
 kehrer करार
 kehres कर्ज
 keiji कीजिए
-keirn किरण
+keirn किरण कर्ण
+keisei कैसें
 keith कीट
 keitz किट्स
-kell कैल
-kellam कलम
-kellan कलां
+kell कैल कइल
+kellam कलम कलां
+kellan कलां कलन
 kellar केलर
-kellen कलां
+kellen कलां कलन
 keller केलर
-kelley कली
-kelli कली
-kellie कली
-kelling कलिंग
+kelley कली अकेली
+kelli कली केलै
+kellie कली केलै
+kelling कलिंग कलें
 kellough केलो
 kellow केलो
-kellum कलम
-kelly कली
+kellum कलम कलां
+kelly कली केलै
 kelvan केल्विन
 kemmer कमर
 kemron कैमरून
@@ -4802,103 +4971,109 @@ kendle केन्डाल
 keneer कुनर
 kenkel कंकाल
 kenn कें
-kenna कें
+kenna कें केना
 kennedy कैंडी
+kennett किंतु
 kenney केने
 kenny केने
-kepp केप
+kent किंतु किन्तु
+kenya केने
+kepp केप कप
 keppler केपलर
-keratin करतें
+keratin करतें कर्तन
 kerby कार्बी
 kerin करें
 kerley करले
 kerlin करलें
-kernan करनें
+kernan करनें कारनों
 kerney करने
-kerr केर
+kerr केर कर
 kerrey करी
 kerri करी
-kerrick करेक
+kerrick करेक करीक
 kerrigan कैरिगन
 kerry करी
 kerstein कर्स्टिन
 kersting कर्स्टिन
 kerwen कारवां
-kess केश
-kessen कैसन
-kesten कैसन
-ketch किछ
+kess केश कस
+kessen कैसन किसान
+kesten कैसन किसान
+ketch किछ किछु
 ketter कतर
 ketz किट्स
 keune क्यों
 kevan कैविन
-key के
+key के कि
 keyboard कीबोर्ड
-keylon कलां
+keylon कलां कलन
 keziah कझिया
 khad कद
 khaki कोक
 khalsa कलश
-khat कात
-kheel कील
+khat कात काट
+kheel कील कएल
 khomeini होमिनी
-khosla कोसल
+khosla कोसल कौशल
 khost कोस्ट
 khouri कौर
 khoury कौर
-khuu कू
+khuu कू कु
+kick कक
 kid कद
 kidd कद
 kidde कद
-kiddie कैदी
-kiddy कैदी
+kiddie कैदी कड़ी
+kiddy कैदी कड़ी
 kidwa कदवा
-kiehl कील
-kiel कील
+kiehl कील कएल
+kiel कील कएल
 kielley कील
 kiely कील
-kier केर
+kier केर कर
 kieran किरण
-kies कैश
+kies कैश केश
 kihn कें
-kilen कलां
+kilen कलां कलन
 kiley कैल
-kill कील
-killam कलम
-kille कील
-killen कलां
+kill कील कैल
+killam कलम कलां
+kille कील कैल
+killen कलां कलन
 killer केलर
 killey कली
 killian कलें
 killin कलें
-killing कीलिंग
+killing कीलिंग कलिंग
 killion कलें
-killough किलो
+killough किलो केलो
 kiln कलन
+kilo केलो
 kilometer किलोमीटर
-kim कम
+kim कम कें
 kimball कम्बल
 kimbel कम्बल
 kimble कम्बल
 kimche कैंची
 kimchee कैंची
 kimchi कैंची
-kime कें
+kime कें कायम
 kimel कमल
-kimm कम
+kimm कम कें
 kimmel कमल
 kimmell कमल
 kimmer कमर
 kimmey किमी
-kimono कामों
+kimono कामों कामना
 kin कें
 kincer कैंसर
 kind केन्द
-kinda केन्द
+kinda केन्द कैंडी
 kindall केन्डाल
 kindel केन्डाल
 kindell केन्डाल
 kindle केन्डाल
+kindt किंतु किन्तु
 kindy कैंडी
 king कें
 kingen कंगन
@@ -4909,55 +5084,56 @@ kinnie केने
 kinnock कणक
 kinny केने
 kinser कैंसर
+kint किंतु किन्तु
 kinton कैंटन
 kinzer कैंसर
-kip केप
-kipp केप
-kir केर
+kip केप कप
+kipp केप कप
+kir केर कर
 kirby कार्बी
 kirch कारक
 kiri करी
-kirin किरण
+kirin किरण करें
 kirk कारक
 kirley करले
 kirlin करलें
-kirnan करनें
+kirnan करनें कारनों
 kirstein कर्स्टिन
 kirsten कर्स्टिन
 kirstin कर्स्टिन
 kirven कारवां
 kirwan कारवां
-kis केश
-kisch केश
-kise कैश
-kish केश
-kisha किसी
-kiss केश
-kissam किस्म
+kis केश कस
+kisch केश कैश
+kise कैश केश
+kish केश कैश
+kisha किसी केश
+kiss केश कस
+kissam किस्म किसिम
 kissane किसान
 kissee किसी
 kissing कैसें
-kitch किछ
-kitsch किछ
+kitch किछ किछु
+kitsch किछ किछु
 kitz किट्स
-kivi कवि
+kivi कवि कवी
 kizziah कीजिए
 kjell कयल
 klaas कलश
-klahn कलें
-klamm कलें
-klang कलें
-klann कलें
+klahn कलां कलें
+klamm कलां कलें
+klang कलां कलें
+klann कलां कलें
 klapp क्लिप
 klass कलश
 klebba क्लब
 klecka कलकै
 kleine कलें
-klemm कलें
-klemme कलें
+klemm कलें कलम
+klemme कलें कलम
 kleppe क्लिप
 kless कलश
-klim कलें
+klim कलें कलम
 klima कलें
 kline कलें
 klipp क्लिप
@@ -4966,13 +5142,13 @@ kloehn कलन
 klooster क्लस्टर
 kloss कलश
 klugh कला
-klumb कलम
-klym कलें
+klumb कलम कलां
+klym कलें कलम
 knaack नाक
 knaak नाक
 knack नाक
 knapp नाप
-knarr नर
+knarr नर नैरू
 knauer नोआर
 knaup नाप
 knaus नाश
@@ -4980,29 +5156,30 @@ knauss नाश
 knave नव
 kneale नील
 knecht निकट
-knee नी
+knee नी नै
 kneel नील
-kneer नर
+kneer नर नीर
 knerr नर
 knew न्यू
 knick नीक
 knights नाइट्स
 knill नील
-knin नें
+knin नें नँ
 knipl नेपाल
 knippel नेपाल
 knipple नेपाल
+knit नीतू
 knits नितश
 knitter नेतर
 knitting नितिन
-knobel नोबल
-knoble नोबल
+knobel नोबल नोबेल
+knoble नोबल नोबेल
 knoch नाक
 knoche नाच
 knochel नकल
 knock नाक
 knode नोड
-knoebel नोबल
+knoebel नोबल नोबेल
 knop नाप
 knopp नाप
 knorr नर
@@ -5016,7 +5193,7 @@ know नौ
 knowed नोड
 knower नोआर
 knowing नौवीं
-known नँ
+known नँ नं
 knoy नय
 knuckle नकल
 koala कोल
@@ -5024,25 +5201,25 @@ koch कोक
 kochis कॉकस
 kocian कोसों
 koehl कोल
-koehn कोन
-koehne कोन
+koehn कोन कण
+koehne कोन कण
 koehnen कोनों
 koeki कोक
 koelle कोल
-koelling कॉलिंग
+koelling कॉलिंग कलिंग
 koelsch कलश
-koen कोन
+koen कोन कण
 koenen कोनों
 koep कप
 koepp कप
 koeppe कप
 koetter कतर
 koh को
-kohli कली
-kohn कण
+kohli कली कोल
+kohn कण कान
 kohnen कोनों
 kohnke कणक
-kohr कोर
+kohr कोर कर
 kohrs कोर्स
 kohut कोट
 koki कोक
@@ -5055,11 +5232,11 @@ kollasch कलश
 kolle काल
 koller कालर
 kolli काली
-kolling कलिंग
+kolling कलिंग कालीन
 komaba कमाबै
 kommer कमर
-konen कोनों
-kong कोन
+konen कोनों कानून
+kong कोन कान
 konzi कांजी
 kooky कुक
 koop कप
@@ -5070,45 +5247,45 @@ koppe कप
 kopper कापर
 korba कार्बी
 korby कार्बी
-korda कार्ड
-korea करी
-korell करल
-korry करी
+korda कार्ड करदो
+korea करी क्रिया
+korell करल करेल
+korry करी कारी
 korth कोर्ट
 koslow कसलो
-koss कोश
+koss कोश कोष
 kossow कोसों
-koth कात
+koth कात काठ
 kothe कोड
 kotter कतर
 kouba क्यूबा
 kough को
-kouril करल
+kouril करल करलू
 kourou कुरू
 koury कौर
 kovach कवक
-kowal कौल
+kowal कौल कोल
 kowalke कवक
-kowall कौल
+kowall कौल कोल
 kowtow काउटो
 koza कोश
-kozel कोसल
+kozel कोसल कौशल
 kozlow कसलो
 kozo कोसों
-kozol कोसल
+kozol कोसल कौशल
 krabbe क्रेब
 krack करेक
 kracke करेक
-krah करो
-krahl करल
-krahn करें
-krajina करें
+krah करो करा
+krahl करल करलू
+krahn करें क्रेन
+krajina करें क्रेन
 kralik करलक
-krall करल
+krall करल करलू
 kramar क्रेमर
 kramer क्रेमर
-kramm क्रम
-kramme क्रम
+kramm क्रम करें
+kramme क्रम करें
 krammer क्रेमर
 krat करैत
 kratt करैत
@@ -5116,133 +5293,135 @@ krauer करोड़
 krause क्रॉस
 krausse क्रॉस
 krech करेक
-kreh करै
-krell करल
-krenn करें
-kreul करल
+kreh करै करे
+krell करल करेल
+krenn करें क्रेन
+kreul करल करलू
 kriete कृत
-krill करल
-kring करें
+krill करल करेल
+kring करें क्रेन
 kristall क्रिस्टल
 kroes क्रॉस
 kroese क्रॉस
 kroeze क्रॉस
-krogh करो
-kroh करो
+krogh करो करौ
+kroh करो करौ
 krohn करण
 krolick करलक
-kroll करल
+kroll करल करलू
 kromm क्रम
 kroon करण
 kross क्रॉस
 krossel करौसल
 kroupa कृपा
-krowe करो
-krugh करा
-krull करल
+krowe करो करौ
+krugh करा कर
+krull करल करलू
 krumm क्रम
 krumme क्रम
 kruppa कृपा
-krusinski क्रासिन्स्की
+krusinski क्रासिन्स्की क्रासिनस्की
 krystal क्रिस्टल
 kubat क्यूबिट
 kuchar कूकर
 kucher कूकर
-kueck कुक
+kueck कुक कोक
 kuecker कूकर
 kuehl कुल
-kuehn कण
-kuehne कण
-kuehnel कुनाल
+kuehn कण कोन
+kuehne कण कोन
+kuehnel कुनाल कुणाल
 kuehner कुनर
-kuehnle कुनाल
+kuehnle कुनाल कुणाल
 kueker कूकर
 kuennen कोनों
 kuether कतर
-kuhar कवर
-kuhn कण
+kuhar कवर कोर
+kuhn कण कोन
 kuhner कुनर
 kuhnke कणक
-kuhnle कुनाल
-kuhr केर
+kuhnle कुनाल कुणाल
+kuhr केर कर
 kujala कयल
-kulka कल्कि
-kull कुल
-kulla कुल
-kully काली
-kumm कम
-kummer कुमार
+kulka कल्कि कुलकै
+kull कुल काल
+kulla कुल कला
+kully काली कली
+kumm कम काम
+kummer कुमार कमर
 kumouri कुमारी
-kunath कंठ
-kung कण
+kunath कंठ कांट
+kung कण कान
 kunka कणक
 kunkel कंकाल
 kunkle कंकाल
 kupper कापर
 kuras कर्ज
-kuril करल
+kuril करल केरल
 kurilla करेल
 kurk कारक
 kurka कारक
-kuss कस
-kutch कुछ
-kutsch कुछ
+kuss कस कुश
+kutch कुछ कुछु
+kutsch कुछ कुछु
 kutter कतर
 kuzel कोसल
 kwik कवक
 kyd कद
 kyler केलर
 kylie कैल
-kyllo किलो
-kym कम
-kyna कें
+kyllo किलो केलो
+kym कम कें
+kyna कें केना
 kyne कें
 kyong क्यों
 kyoung क्यों
 kyowa क्यों
-kyra केरो
+kyra केरो केरौ
 laack लोक
 laake लोक
-laas लॉज़
+laas लॉज़ लॉस
 laba लाबै
-labay लेबै
+labay लाबै लेबै
 lac लैक
 lace लैस
 laced लिस्ट
-lacher लेकर
+lacher लेकर लेकिर
 lack लैक
-lackey लेके
-lackie लेके
+lackey लेके लैके
+lackie लेके लैके
 lacking लेकिन
 lacko लेको
 lacomb लेकं
 lacour लेकर
-lacquer लेकर
+lacquer लेकर लेकिर
+ladakh लड़ाकू
 laff लाइफ
-lago लोगो
-lagoon लोगों
+lag लागू
+lago लोगो लोगौ
+lagoon लोगों लुगुन
 lagrange लैग्रेंज
-lahaie लेहै
-lahaye लेहै
-lahey लेहै
+lahaie लेहै लोहे
+lahaye लेहै लेह
+lahey लेहै लेह
 lahm लें
-lahn लाइन
+lahn लाइन लें
 lahti लौटी
 laidlaw लड़लौ
 lain लें
-laing लाइन
-laissez लैस
+laing लाइन लाईन
+laissez लैस लाईज
 lak लैक
 lake लैक
-laker लेकर
-lakey लेके
+laker लेकर लेकिर
+lakey लेके लैके
 lakin लेकिन
-lall लाल
-lalla लेली
+lall लाल लालू
+lalla लेली लेल
 lalley लेली
 lalli लेली
-lallie लाली
-lallo लेलो
+lallie लाली लाल
+lallo लेलो लेलौ
 lally लेली
 lam लें
 lamb लें
@@ -5255,8 +5434,8 @@ lamme लें
 lamos लोमस
 lamothe लैंड
 lamston लाइमस्टोन
-lan लाइन
-lana लाइन
+lan लाइन लें
+lana लाइन लेना
 lancia लॉन्च
 land लैंड
 landa लैंड
@@ -5274,13 +5453,13 @@ langdon लैंडन
 langen लेनन
 laning लेनन
 lank लिंक
-lann लाइन
-lanna लाइन
+lann लाइन लें
+lanna लाइन लेना
 lannan लेनन
 lannen लेनन
-lanni लानी
+lanni लानी लेने
 lannon लेनन
-lanny लानी
+lanny लानी लेने
 lanthanum लैन्थनम
 lap लेप
 lape लेप
@@ -5288,34 +5467,35 @@ lapp लेप
 lappe लेप
 laptop लैपटॉप
 laraia लड़ाय
-larena लोरेन
+larena लोरेन लौरेन
 large लार्ज
 larkin लोरकैन
+larock लराकु लड़ाकू
 larry लरी
 lars लार्ज
-las लॉस
+las लॉस ऐलिस
 lasch लैस
 lase लैस
 laser लेजर
 lash लैस
 lass लैस
-lassa लौसा
+lassa लौसा लॉस
 lassen लैसेन
 lassie लैस
 last लैस
 lasting लिस्टिंग
 latching लाचिन
-late लेट
+late लेट लिट
 lateral लेटरल
 latin लैटिन
 latina लातिनी
 laton लैटिन
 latour लीटर
 lats लाइट्स
-latta लेट
-latte लात
+latta लेट लात
+latte लात लौट
 lattice लाइट्स
-lattin लैटिन
+lattin लैटिन लेटिन
 latty लेटी
 latvia लाट्विया
 latz लाइट्स
@@ -5323,55 +5503,56 @@ laugh लाइफ
 laughed लिफ्ट
 launch लॉन्च
 laur लार
-laura लॉरी
+laura लॉरी लार
 laure लार
-laurey लॉरी
-lauri लॉरी
+laurey लॉरी लरी
+lauri लॉरी लरी
 lauria लोरियाँ
 laurich लोरिक
-laurie लॉरी
-laurin लोरेन
-laury लॉरी
-lauth लात
+laurie लॉरी लरी
+laurin लोरेन लौरेन
+laury लॉरी लरी
+lauth लात लौट
+lava लावे
 lavey लेवी
 lavi लेवी
 lavie लेवी
 lavin लवण
 lavy लेवी
-law ला
-lawes लॉज़
+law ला ल
+lawes लॉज़ लॉस
 lawing लाईन
-lawley लाली
+lawley लाली लाल
 lawn लोन
 lawrencium लारेंसियम
-lawrie लॉरी
-lawry लॉरी
-laws लॉज़
+lawrie लॉरी लरी
+lawry लॉरी लरी
+laws लॉज़ लॉस
 lawshe लॉस
 lawther लोथार
 lawver लावर
-lay ले
-layah ले
+lay ले लै
+layah ले लै
 layering लेयरिंग
-layhee लेहै
+layhee लेहै लेह
 laying लिंग
-layla लेलो
+layla लेलो लेलौ
 layne लें
 lays लैस
 laythan लेटिन
-layton लैटिन
+layton लैटिन लेटिन
 lazar लेजर
 lazer लेजर
 lazere लेजर
 lazur लेजर
-lea लिए
+lea लिए ली
 leafed लिफ्ट
 league लीग
-leah लिया
-leahey लेहै
-leahy लेहै
-leala लीला
-lealie लिली
+leah लिया लिए
+leahey लेहै लेह
+leahy लेहै लेह
+leala लीला लिली
+lealie लिली लीली
 leap लीप
 leard लार्ड
 leary लरी
@@ -5383,53 +5564,55 @@ leath लिट
 leaven लवण
 lebanon लेबनान
 lech लैक
-leckey लेके
-leckie लेके
+leckey लेके लैके
+leckie लेके लैके
 ledge लाईज
 ledger लेजर
+lee ली
 leery लरी
 leeth लिट
-leeuwen लवण
+leeuwen लवण लोन
 leff लाइफ
 leger लेजर
 leggy लगी
 lehl लेल
-lehn लाइन
-lehne लाइन
+lehn लाइन लें
+lehne लाइन लें
 lehnen लेनन
 leia लिया
-leigh लिए
-leight लेट
-leighton लैटिन
+leigh लिए ली
+leight लेट लिट
+leighton लैटिन लेटिन
 leighty लेटी
 leising लैसेन
 leiss लैस
 leisure लेजर
 leith लिट
-leja लेय
-lelah लेली
-leleux लेलो
-lelia लिली
+leja लेय लैय
+lelah लेली लेल
+leleux लेलो लेलौ
+lelia लिली लीली
 lemm लें
 lemme लें
 lenin लेनन
 lennane लेनन
-lennie लेने
+lennie लेने लेनै
 lenning लेनन
 lennon लेनन
 lennox लिनेक्स
-lenny लेने
+lenny लेने लेनै
 lenox लिनेक्स
-leny लेने
+leny लेने लेनै
 leoda लड़ै
-leola लेली
+leola लेली लेल
 leonardo लियोनार्डो
 leong लिंग
-leonie लेने
+leonie लेने लेनै
 leora लरी
-leota लेट
+leota लेट लेटी
 lepp लेप
 leptin लेप्टन
+lerach लराकु
 lesbian लेस्बियन
 lesch लैस
 lesesne लैसेन
@@ -5438,26 +5621,27 @@ lessen लैसेन
 lessin लैसेन
 lessing लैसेन
 lesson लैसेन
-leth लेट
-letha लेट
+let लिट
+leth लेट लिट
+letha लेट लेतै
 lets लाइट्स
-letting लैटिन
+letting लैटिन लेटिन
 letts लाइट्स
 lettuce लाइट्स
 letz लाइट्स
-leu लू
+leu लू लो
 leuck लोक
-leung लंग
+leung लंग लोन
 levin लवण
 lewke लोके
 leyba लेबै
 leyda लड़ै
-leyh ले
+leyh ले लै
 leys लैस
 leysen लैसेन
-leyva लेवी
-lhasa लौसा
-lia लिया
+leyva लेवी लव
+lhasa लौसा लॉस
+lia लिया लिए
 liang लें
 liason लैसेन
 libbey लेबै
@@ -5469,41 +5653,41 @@ licence लाइसेंस
 license लाइसेंस
 lichen लेकिन
 lick लैक
-licker लेकर
+licker लेकर लेकिर
 licking लेकिन
 licon लेकिन
-lie लै
-lies लाईज
-lieu लू
+lie लै ले
+lies लाईज लैस
+lieu लू लो
 life लाइफ
 light लेट
 lighten लैटिन
 lighting लैटिन
 lights लाइट्स
 lighty लेटी
-ligon लगन
-like लैक
+ligon लगन लगान
+like लैक लायक
 liken लेकिन
 liking लेकिन
 lil लेल
 lilac लायलेक
-lilah लेली
+lilah लेली लीला
 lile लेल
 lilith ललित
-lilja लिली
+lilja लिली लीली
 lill लेल
-lilla लेली
+lilla लेली लीला
 lille लेल
 lilley लेली
 lilli लेली
 lillie लेली
-lillo लेलो
+lillo लेलो लेलौ
 lilly लेली
 lily लेली
 lim लें
 lima लें
 limb लें
-limbaugh लम्बा
+limbaugh लम्बा लंबा
 limbed लैंड
 lime लें
 limestone लाइमस्टोन
@@ -5513,10 +5697,10 @@ lin लें
 lind लैंड
 linda लैंड
 linde लैंड
-linden लंदन
+linden लंदन लैंडन
 lindh लैंड
-lindon लंदन
-line लाइन
+lindon लंदन लैंडन
+line लाइन लाईन
 lined लैंड
 linen लेनन
 linger लंगर
@@ -5529,31 +5713,32 @@ linne लें
 linney लेने
 linux लिनेक्स
 lip लेप
-lipp लेप
+lipp लेप लीप
 lippa लिपि
-lippe लेप
+lippe लेप लीप
 lippi लिपि
 lippitt लपेट
 lippy लिपि
 lipton लेप्टन
-liqueur लेकर
+liqueur लेकर लेकिर
 liquid लिक्विड
 liqun लेकं
-liquor लेकर
+liquor लेकर लेकिर
 lis लैस
-lise लाईज
+lise लाईज लैस
 lish लैस
 liss लैस
 lissa लैस
 listen लैसेन
 liszt लिस्ट
+lit लेट
 litan लैटिन
 lites लाइट्स
 lithium लिथियम
 littell लिटिल
-litten लैटिन
+litten लैटिन लेटिन
 little लिटिल
-litton लैटिन
+litton लैटिन लेटिन
 littrell लेटरल
 litty लेटी
 liv लव
@@ -5562,95 +5747,97 @@ livery लिवरे
 livvie लेवी
 liz लैस
 llama लामा
-llana लाइन
+llana लाइन लेना
 llorens लारेन्ज़
-llosa लौसा
+llosa लौसा लॉस
 loan लोन
 loar लार
 loath लौट
 lobby लाबै
 loch लोक
 lockdown लॉकडाउन
-lockey लोक
-lockie लोक
+lockey लोक लोके
+lockie लोक लोके
 lockney लोकनि
 lodge लॉज़
 loehr लार
-loera लॉरी
+loera लॉरी लार
 loesch लॉस
 loesche लॉस
 loess लॉस
-loew लो
-loewe लो
-loews लॉज़
+loew लो लाओ
+loewe लो लाओ
+loews लॉज़ लॉस
 loewy लोई
-logging लोगें
-login लोगें
+logging लोगें लोगन
+login लोगें लोगन
 lohn लोन
-lohrey लॉरी
+lohrey लॉरी लरी
 lohse लॉस
 lois लॉस
-lokey लोक
-lol लाल
-loll लाल
-lolley लाली
-lolli लाली
-lolly लाली
+lokey लोक लोके
+lol लाल लालू
+loll लाल लालू
+lolley लाली लाल
+lolli लाली लाल
+lolly लाली लाल
 loney लोन
 long लोन
 loni लानी
 lonnie लानी
 lonny लानी
 loomis लोमस
-loong लंग
+loong लंग लोन
 looped लुप्त
 loopy लूप
 lor लार
-lora लॉरी
-lorah लॉरी
-loran लोरेन
+lora लॉरी लार
+lorah लॉरी लार
+loran लोरेन लौरेन
 lord लार्ड
 lorean लोरियाँ
 lorenza लारेन्ज़
 lorge लार्ज
+lori लरी
 loria लोरियाँ
-lorin लोरेन
-loring लोरेन
-lorrie लॉरी
-lorry लॉरी
+lorin लोरेन लौरेन
+loring लोरेन लौरेन
+lorrie लॉरी लरी
+lorry लॉरी लरी
+los लाओस
 losch लॉस
-loss लॉस
+loss लॉस लाओस
 lot लात
-loth लात
+loth लात लौट
 louanne लवण
-lough लाओ
-loughran लौरेन
+lough लाओ लो
+loughran लौरेन लोरेन
 louie लुई
-louis लुई
+louis लुई लोई
 louse लाओस
 louth लौट
-louw लू
-loux लू
+louw लू लो
+loux लू लो
 lover लावर
-lovie लावे
+lovie लावे लव
 lovin लौवेन
 low लो
-lowes लॉज़
+lowes लॉज़ लॉस
 lowey लोई
 lowing लौवेन
 lowney लोन
-lowrie लॉरी
-lows लॉज़
+lowrie लॉरी लरी
+lows लॉज़ लॉस
 lowther लोथार
 lowy लोई
 lozeau लाजो
 ltd लिमिटेड
-luane लवण
+luane लवण लोन
 lubavitch लुबाविच
-lucca लोक
+lucca लोक लूका
 lucci लोची
 lucianne लूसियन
-lucien लूसियन
+lucien लूसियन लुसियन
 ludcke लड़की
 luddy लोदी
 ludke लड़की
@@ -5664,15 +5851,15 @@ lueth लूट
 lugging लगन
 luhn लोन
 luick लोक
-lulie लाली
-lull लाल
+lulie लाली लाल
+lull लाल लालू
 lummus लोमस
 lundin लंदन
 lunn लोन
 lunney लानी
 lunny लानी
 lupi लूप
-lura लूरी
+lura लूरी लरी
 lurz लार्ज
 lutey लूट
 luth लूट
@@ -5685,7 +5872,7 @@ lwin लवण
 lycan लेकिन
 lycra लेकर
 lying लाईन
-lyke लैक
+lyke लैक लायक
 lykin लेकिन
 lyle लेल
 lyme लें
@@ -5694,27 +5881,27 @@ lyn लें
 lynd लैंड
 lynda लैंड
 lynde लैंड
-lynden लंदन
-lyndon लंदन
+lynden लंदन लैंडन
+lyndon लंदन लैंडन
 lynds लैंड्स
-lyne लाइन
+lyne लाइन लाईन
 lyng लिंग
 lynk लिंक
 lynn लें
-lynna लाइन
+lynna लाइन लेना
 lynne लें
-lysne लाइन
+lysne लाइन लाईन
 lyttle लिटिल
-lytton लैटिन
+lytton लैटिन लेटिन
 maack मोंक
-maahs मास
-maass मास
+maahs मास मॉस
+maass मास मॉस
 maassen मोशन
 mabelle मोबाइल
 mac मेक
 macabre मकबरा
 macao मकाउ
-macaw मौका
+macaw मौका मकाउ
 maccarthy मैकार्थी
 macchi मकै
 maceda मसदी
@@ -5735,16 +5922,18 @@ mackel माइकल
 macoute मुकुट
 macquarrie मुकरी
 macy मेस
+mad मैदु
 madan मैदान
 maday मोड़
 madden मैदान
 maddock मादक
+made मैदु
 madel मेडल
-madelle मॉडल
+madelle मॉडल मेडल
 maden मैदान
 madge मेज
 madl मेडल
-madole मॉडल
+madole मॉडल मेडल
 madrid मैड्रिड
 mag मिग
 magan मेगन
@@ -5753,125 +5942,132 @@ maggi माझी
 magie मेज
 magistrate मजिस्ट्रेट
 magma मैग्मा
-magna मैग्ना
+magna मैग्ना मेगन
 magoon मेगन
 mah म
 mahalah महल
-mahannah महान
+mahannah महान महिना
 mahar माहिर
-mahdi मोदी
+mahdi मोदी मोड़ी
 mahe मेही
-mahen में
+mahen में मँ
 mahler मलेर
 mahlon मिलान
 mahlum मालुम
-mahn मँ
+mahn मँ में
 mahnke मानक
-mahon में
+mahon में मँ
 mahone महान
-mahr मार
+mahr मार मोर
 mahtar मोटर
+maid मैदु
 maiden मैदान
-maier मीर
+maier मीर मेयर
+mail मल
 mailer मलेर
-mailey मिली
-maille मेल
+mailey मिली मिलि
+maille मेल मल
 maillet मेलाइट
 mailloux मेलो
 maimed मंद
-maines मैन्ज
+main मँ
+maines मैन्ज मैनज़
 maino मनों
-mains मैन्ज
-mair मेयर
-maire मेयर
-mairead मरे
+mains मैन्ज मैनज़
+mair मेरु मेयर
+maire मेरु मेयर
+mairead मरे मरै
 maisch मेस
 maisie मेज
-maitre मेट्रो
+maitre मेट्रो मित्र
 maiziere मेजर
 maj मेज
-majer मेजर
+majer मेजर मजार
 majeure मेजर
 majka मेक
-major मेजर
+major मेजर मजार
 mak मेक
 make मेक
 maki मकै
 maksoud मकसद
-malacca मलिक
-malan मिलन
+malacca मलिक मालिक
+malan मिलन मिलान
 malaney मालिनी
 malave मालावी
-male मेल
-malina मोलिना
+male मेल मल
+malina मोलिना मालिनी
 maline मालिनी
-mall माल
-malle मेल
-mallek मालिक
+mall माल मल
+malle मेल माल
+mallek मालिक मलिक
 mallette मेलाइट
-malley माली
-mallick मालिक
+malley माली मिली
+mallick मालिक मलिक
 mallie माली
-mallon मिलन
+mallon मिलन मिलान
 mallow मेलो
-malloy मलय
-mally माली
-malm मां
-malon मिलन
+malloy मलय माली
+mally माली मिली
+malm मां मं
+malon मिलन मिलान
 malone मिलन
-maltais मिलतै
+maltais मिलतै मिलतें
 maltase मालटिस
-mama मां
+mama मां मं
 mame में
 mamie मेमे
-mamma मां
-manage मैन्ज
+mamma मां मं
+man में
+manage मैन्ज मनोज
 managing मैनेजिंग
 manatt मिनट
 manchuria मंचूरिया
 mandalay मंडल
 mandell मंडल
-mandella मंडेला
+mandella मंडेला मंडला
 mandolin मैंडोलिन
 mandt मिनट
-manella मानलो
+manella मानलो मनैलो
 maness मानस
-manet मानै
+manet मानै माने
 manette मिनट
 manger मंजर
-mangual मंगल
-manilow मानलो
+mangual मंगल मांगल
+manilow मानलो मनैलो
 manis मानस
 manley मानले
 manly मानले
-manned मंद
-mannella मानलो
-mannen मनन
-manner माइनर
-mannes मांस
-manney मानी
-manni मानी
-mannie मानी
+manned मंद मानद
+mannella मानलो मानलौ
+mannen मनन मनों
+manner माइनर मनेर
+mannes मांस मैन्ज
+manney मानी मणी
+manni मानी मणी
+mannie मानी मणी
 mannis मानस
-manno मानो
-mannon मनन
-manns मांस
-manny मानी
-manor माइनर
-mantel मेंटल
-mantell मेंटल
-mantia मांस
-mantle मेंटल
+manno मानो मनों
+mannon मनन मनों
+manns मांस मैन्ज
+manny मानी मणी
+manor माइनर मनेर
+mantel मेंटल मैंटल
+mantell मेंटल मैंटल
+mantia मांस मनसा
+mantle मेंटल मैंटल
 manuele मानल
 manx मैंक्स
 many मणी
-manz मांस
-manza मांस
+manz मांस मैन्ज
+manza मांस मानस
 manzi मांझी
-mao मऊ
-mapi मापै
-mapp माप
-marais मरे
+mao मऊ मो
+maori मोड़ी
+map मैप
+mapi मापै मैप
+mapp माप मैप
+mar मोर
+marais मरे मरै
 marak मार्क
 maraud मरद
 marcel मार्शल
@@ -5881,9 +6077,11 @@ marcelle मार्शल
 marchetta मरकटा
 marella मारलो
 maretta मारतें
+mari मारि
 maria मारिया
 mariam मरियम
 mariana मैरियाना
+marie मेरी
 marien मैरीन
 marin मैरीन
 marine मैरीन
@@ -5892,23 +6090,23 @@ maring मैरीन
 markka मार्क
 markkaa मार्क
 markkas मार्क्स
-marla मारलो
-marlow मारलो
-marlowe मारलो
+marla मारलो मारलौ
+marlow मारलो मारलौ
+marlowe मारलो मारलौ
 marohn मरण
 marone मरण
-maroon मैरून
+maroon मैरून मरण
 marquai मार्क
 marques मार्क्स
-marr मार
-marra मारी
+marr मार मोर
+marra मारी मार
 marrakech माराकेश
 marred मरद
 marren मरण
 marrin मैरीन
 marro मरो
-marron मिरान
-marrou मरू
+marron मिरान मरण
+marrou मरू मेरु
 marrow मरो
 marry मेरी
 marschall मार्शल
@@ -5917,98 +6115,102 @@ marshall मार्शल
 marta मारतें
 marter मोर्टार
 martha मारतें
-marthena मार्टिन
+marthena मार्टिन मार्टीन
 martial मार्शल
+martin मार्टीन
 martinek मार्तिनीक
-marting मार्टिन
+marting मार्टिन मार्टीन
 martinique मार्तिनीक
-marton मार्टिन
-martyn मार्टिन
+marton मार्टिन मारतें
+martyn मार्टिन मार्टीन
 martyr मोर्टार
-marullo मारलो
+marullo मारलो मारलौ
 mary मेरी
-marya मारी
-masch मास
+marya मारी मारे
+masch मास मेस
 mascia मास्को
 maseng मशीन
-maser मेजर
+maser मेजर मजार
 masi मौसी
 maso मिजो
-mass मास
-massa मास
-masse मास
+mass मास मेस
+massa मास मेस
+masse मास मेस
 masses मिसेज
 massimo मासिमो
 massing मशीन
 mastel मस्तूल
+master मिस्टर
 match मैच
 mateja माटी
 mater मोटर
 matera मोटर
+math मत
 mathan मैथन
 mathea मिडिया
 mathie माटी
 mathy माटी
-mation मशीन
+mation मशीन मिशन
 mato मोटो
 matsch मैच
 matt मत
-matta माता
+matta माता मत
 matte मत
-mattea मास
+mattea मास मेस
 mattera मोटर
 matthau माथो
 maucher मकर
 mauck मोंक
 mauger मगर
 mauk मोंक
-maul माल
-maule माल
+maul माल मल
+maule माल मल
 mauler मलेर
-maull माल
-maund मानद
-maune मँ
-maung मँ
+maull माल मल
+maund मानद मंद
+maune मँ मां
+maung मँ मां
 mauro मरो
-maury मारी
-mauss मास
-maw मा
-mawr मार
+maury मारी मोड़ी
+mauss मास मॉस
+maw मा मां
+mawr मार मोर
 mawson मोशन
 maximilian मैक्सिमिलियन
-may म
-mayda मैदा
+may म मे
+mayda मैदा मैदु
+mayde मैदु
 mayden मैदान
-mayer मीर
-mayes मेज
+mayer मीर मेयर
+mayes मेज मेस
 mayhall महल
-mayhan में
-mayher मीर
-mayhugh मेही
-mayle मेल
+mayhan में मँ
+mayher मीर मेयर
+mayhugh मेही महा
+mayle मेल मिली
 mayme में
-mayne में
+mayne में मँ
 mayner मनेर
-maynes मैन्ज
+maynes मैन्ज मैनज़
 maynor मनेर
-mayor मीर
-mayr मेयर
-mays मेज
-mayse मेज
-maz मास
-maza मास
-maze मेज
-mazer मेजर
+mayor मीर मेयर
+mayr मेरु मेयर
+mays मेज मेस
+mayse मेज मेस
+maz मास मॉस
+maza मास माझा
+maze मेज मेस
+mazer मेजर मजार
 mazie मेज
-mazor मजार
-mazur मेजर
-mazza मेज
+mazor मजार मज़ार
+mazur मेजर मजार
+mazza मेज माझा
 mazzie माझी
 mazzo मिजो
 mccarthy मैकार्थी
 mccary मुकरी
 mccaughey मकई
-mccaw मौका
+mccaw मौका मकाउ
 mccooey मकई
 mccorry मुकरी
 mccoy मकई
@@ -6031,35 +6233,36 @@ mcguinn मेगन
 mckoy मकई
 mcray मकर
 mcshea मोक्ष
-meagher मार
+meagher मार मोर
 meal मील
-mealey मिली
+mealey मिली मीली
 mealing मिलन
 mealo मिलौ
 mealtime मिलतें
-mealy मिली
+mealy मिली मीली
 meaner मीनार
 meanor मीनार
 meant मिनट
 mear मीर
-meara मीर
+meara मीर मीरा
 mease मिस
-measure मेजर
+measure मेजर मजार
 meath मीठ
 meaux मो
 meckel माइकल
+med मैदु
 meddaugh मैदा
-media मीडिया
-medil मॉडल
+media मीडिया मिडिया
+medil मॉडल मेडल
 medulla मेडल
 meehl मील
 megee मेज
 meghan मेगन
-mehall महल
+mehall महल माहौल
 mehler मलेर
-mehner माइनर
-mehr मेयर
-mehran मिरान
+mehner माइनर मनेर
+mehr मेरु मेयर
+mehran मिरान मरण
 mehrer मिरर
 mehring मैरीन
 meighan मेगन
@@ -6073,30 +6276,33 @@ melange मिलान
 melear मलेर
 melillo मिलैलो
 melka मिल्की
-mellen मिलन
-melley मिली
-melli मिली
-mellick मलिक
-mellie मिली
+mellen मिलन मिलान
+melley मिली मिलि
+melli मिली मिलि
+mellick मलिक मिलिक
+mellie मिली मिलि
 mellitus मिलेटस
-mellon मिलन
+mellon मिलन मिलान
 mellow मेलो
-melly मिली
+melly मिली मिलि
+melon मिलान
+men मँ
 menace माइन्स
 mendell मंडल
 menear मनेर
-menem मनों
+menem मंमू मनों
 menger मंजर
 menkes मैंक्स
-mennan मनन
-mennella मनैलो
-mennen मनन
-menor माइनर
+mennan मनन मनों
+mennella मनैलो मनइलो
+mennen मनन मनों
+menor माइनर मनेर
 menorah मनोरा
-mens मैन्ज
-mensah मनसा
-menthol मेंटल
-mer मार
+mens मैन्ज मैनज़
+mensah मनसा माइन्स
+mental मैंटल
+menthol मेंटल मैंटल
+mer मार मेरु
 merc मार्क
 merck मार्क
 mere मीर
@@ -6109,16 +6315,16 @@ merrie मेरी
 merrin मैरीन
 merrow मरो
 merry मेरी
-merten मार्टिन
-merton मार्टिन
+merten मार्टिन मारतें
+merton मार्टिन मारतें
 mervin मार्विन
 mervyn मार्विन
 merwin मार्विन
 merwyn मार्विन
 mesch मेस
 meshell मिशेल
-mess मेस
-messa मेस
+mess मेस मिस
+messa मेस मिस
 message मिसेज
 messes मिसेज
 messy मेस
@@ -6127,10 +6333,11 @@ methyl मैथिल
 metre मीटर
 mette मत
 meurer मिरर
-meyn में
+mexico मैक्सिको
+meyn में मँ
 mezey मेज
 mezzo मिजो
-mia मी
+mia मी मे
 mic मेक
 micah मेक
 mice मेस
@@ -6138,60 +6345,61 @@ mich मैच
 michael माइकल
 michaella माइकल
 micheal माइकल
-michel मिशेल
-michell मिचाल
+michel मिशेल मिचाल
+michell मिचाल मिचेल
 michelle मिशेल
-michl मिचाल
+michl मिचाल मिचेल
 mick मेक
 micka मेक
 micke मेक
-microsoft माइक्रोसॉफ्ट
+microsoft माइक्रोसॉफ्ट माइक्रोसॉफ़्ट
 microwave माइक्रोवेव
+mid मैदु
 middaugh मैदा
 middle मेडल
 midge मेज
 midland मिडलेंड
 miele मील
 mielke मिल्की
-miera मीर
-mies मेज
+miera मीर मीरा
+mies मेज मेस
 miesse मिस
 migra मगर
-mihm में
-mihn में
+mihm में मीम
+mihn में मँ
 mike मेक
 mile मेल
 milian मिलियन
-milich मिलिक
-mill मील
-millan मिलन
+milich मिलिक मलिक
+mill मील मिल
+millan मिलन मिलान
 millar मलेर
-millay मिलै
-millen मिलन
+millay मिलै मील
+millen मिलन मिलान
 millennia मालिनीयो
 miller मलेर
 millets मिलेटस
 millette मेलाइट
-milley मिली
-milli मिली
+milley मिली मीली
+milli मिली मीली
 millibar मिलिबार
-millie मिली
+millie मिली मीली
 milliliter मिलीलीटर
 millilitre मिलीलीटर
-millimeter मिलिमीटर
-millimetre मिलिमीटर
-millin मिलन
+millimeter मिलिमीटर मिलीमीटर
+millimetre मिलिमीटर मिलीमीटर
+millin मिलन मिलान
 milling मिलन
 milln मिलन
-millon मिलन
-milloy मिली
-milly मिली
+millon मिलन मिलान
+milloy मिली मीली
+milly मिली मीली
 milo मेलो
 milton मिलतें
 mimi मीम
-min में
-mina में
-minch मंच
+min में मँ
+mina में मँ
+minch मंच मंचू
 mincks मैंक्स
 minda मंद
 mindel मंडल
@@ -6200,22 +6408,22 @@ minear मनेर
 mineau मनों
 mineer माइनर
 miner माइनर
-mines मैन्ज
+mines मैन्ज मैनज़
 ming में
 minger मीनार
-mings मैन्ज
+mings मैन्ज मैनज़
 mini मणी
 minit मिनट
 minitel मेंटल
 minks मैंक्स
-minna में
+minna में मँ
 minnaar मीनार
-minner मीनार
+minner मीनार मनेर
 minney मणी
 minnie मणी
 minnow मनों
 minnows मनोज
-minns मैन्ज
+minns मैन्ज मैनज़
 minny मणी
 minoan मनौवन
 minor माइनर
@@ -6228,13 +6436,13 @@ miro मरो
 miron मिरान
 mirren मिरान
 mirror मिरर
-mirza मरज़ा
-misch मिस
-mischa मिस
+mirza मरज़ा मरजा
+misch मिस मेस
+mischa मिस मेस
 miser मेजर
-mishap मैशअप
+mishap मैशअप मैशप
 mishear मिसिर
-miss मिस
+miss मिस मेस
 missal मिशेल
 missel मिशेल
 misses मिसेज
@@ -6245,252 +6453,260 @@ missing मिशिंग
 mission मिशन
 missionary मिशनरी
 missis मिसेज
-missouri मजारा
+missouri मजारा मसूरी
 missus मिसेज
 missy मिस
 mit मत
 mitch मैच
-mitchel मिचाल
-mitchell मिचाल
-mithun मीथेन
+mitchel मिचाल मिचेल
+mitchell मिचाल मिचेल
+mithun मीथेन मैथन
 mitro मेट्रो
 mitsch मैच
 mitt मत
 mizar मेजर
-mize मेज
+mize मेज मेस
 mizelle मिशेल
 mizer मेजर
 moacq मोंक
 moad मोड़
 moak मोंक
-moan मँ
+moan मँ मं
 moaned मंद
 moans मोन्स
-moat मौत
+moat मौत मोटू
 mobay मॉब
 moch मोंक
-mocha मौका
+mocha मौका मोंक
 modell मॉडल
 modelling मॉडलिंग
 modic मादक
 moede मोड़
 moehle महल
 moeller मलेर
-moen मँ
+moen मँ मं
 moench मोंक
 moerke मार्क
 moes मॉस
 moesch मॉस
-moeser मजार
+moeser मजार मज़ार
 moffa माफी
 moher माहिर
 mohler मलेर
-mohney मानी
-mohnke मानक
-mohr मार
-mohs मास
+mohney मानी मोनी
+mohnke मानक मोंक
+mohr मार मोर
+mohs मास मॉस
 mokes मोक्ष
 molar मलेर
 moliere मलेर
-moll माल
-molle माल
+moll माल मल
+molle माल मल
 molley माली
-mollica मालिक
+mollica मालिक मलिक
 mollie माली
-molloy मलय
+molloy मलय माली
 mollusk मोलस्क
 molly माली
 molock मालिक
 mom मां
 moma मं
-momma मां
+momma मां मं
 moms मांस
-mona मँ
+mona मँ मं
 monarchy मोनार्की
 monash मानस
-monday मंद
-monde मानद
+monday मंद मानद
+monde मानद मंद
 monell मानल
 mones मोन्स
 monessen मानसुन
 monet मोनी
 monette मिनट
-money मानी
-mong मँ
+money मानी मुनि
+mong मँ मां
 mongeau मांगो
 monger मुंगेर
+monica माणिक
 monk मानक
 monnin मनन
-monsen मानसुन
+monsen मानसुन मानसून
 monsey मांझी
-monson मानसुन
-monsoon मानसुन
+monson मानसुन मानसून
+monsoon मानसुन मानसून
 monte मानते
 montee मानते
 monti मानते
 montie मानते
 monty मानते
 monus मोन्स
-moon मँ
-moone मँ
+moody मुड़ी
+moon मँ मं
+moone मँ मं
 moored मरद
 moosehead मुसैद
-moot मत
+moot मत मोटू
 mop माप
 mopping मापन
 morain मरण
 moraine मरण
-morais मरे
-more मार
+morais मरे मारे
+more मार मोर
 morea मारिया
 moreau मरो
-morella मारलो
-morello मारलो
+morella मारलो मोड़लो
+morello मारलो मरलौ
 morena मारिनो
 moreno मारिनो
-morga मार्ग
+morga मार्ग मार्गी
 morgue मार्ग
 mori मारी
 moria मारिया
-morillo मारलो
+morillo मारलो मोड़लो
 morino मारिनो
 moriya मारिया
 mork मार्क
-morr मार
-morra मारी
+morr मार मोर
+morra मारी मार
 morren मरण
-morrie मारी
+morrie मारी मोड़ी
 morro मरो
 morrow मरो
-morry मारी
+morry मारी मोड़ी
 morsel मार्शल
 mortem मारतें
-morten मार्टिन
+morten मार्टिन मारतें
 morter मोर्टार
-morton मार्टिन
+morton मार्टिन मारतें
 morven मारवान
 moscow मास्को
-moser मजार
-moshe मौसी
-mosher मजार
-mosier मजार
+moser मजार मज़ार
+moshe मौसी मॉस
+mosher मजार मज़ार
+mosier मजार मज़ार
 moskow मास्को
-moss मास
+moss मास मॉस
 mossey मौसी
 mossy मौसी
 most मॉस
-mott मौत
-motte मौत
-moua मऊ
+moth मोटू
+motion मशीन
+mott मौत मत
+motte मौत मत
+moua मऊ मो
 mount माउंट
-mourad मुराद
+mourad मुराद मरद
 mourn मरण
 mouse माउस
-moussa मौसी
+moussa मौसी माउस
 mousse मूस
 movie मूवी
 moving मूविंग
 mow मो
 mowat मौत
 mowatt मौत
-mowdy मोदी
+mowdy मोदी मोड़ी
 mowed मोड़
-mowen मं
+mowen मं मन
 mower मोर
-mowrey मारी
-mowry मारी
+mowrey मारी मोड़ी
+mowry मारी मोड़ी
 mows माउस
-moye मई
+moye मई मी
 mozambique मोजाम्बीक
 mozart मोत्सार्ट
-mozer मजार
+mozer मजार मज़ार
 mozley मझली
 mrs मिसेज
 muckey मकै
-muddy मुड़ी
+muddy मुड़ी मोदी
 muecke मूक
 muffy माफी
 mugger मगर
-muhr मोर
-muhs मास
+muhr मोर मोड़
+muhs मास मूस
 muise मूस
-mull मूल
-mullah मूल
+mull मूल माल
+mullah मूल माल
 mullaney मालिनी
 mullany मालिनी
-mulloy मलय
-mumm मं
-mumma मं
-mumme मं
+mulloy मलय माली
+mum मां
+mumm मं मां
+mumma मं मां
+mumme मं मां
 mums मांस
-munday मंद
+munch मंचू
+munday मंद मानद
 mundell मंडल
 mungo मांगो
 munley मानले
 munnell मानल
-munni मानी
-munns मांस
+munni मानी मुनि
+munns मांस मानस
 munos मनोज
-munsch मांस
+munsch मांस मानस
 munsey मांझी
-munson मानसुन
-munz मांस
+munson मानसुन मानसून
+munz मांस मानस
 murch मार्क
 murillo मारलो
 murk मार्क
 murr मार
-murray मारी
-murree मारी
-murren मरण
-murrey मारी
-murrie मारी
+murray मारी मेरी
+murree मारी मेरी
+murren मरण मिरान
+murrey मारी मेरी
+murrie मारी मेरी
 murrow मरो
-murry मारी
-murton मार्टिन
-musch मास
+murry मारी मेरी
+murton मार्टिन मारतें
+musch मास मूस
 museum म्यूजियम
-music म्यूजिक
+music म्यूजिक म्यूज़िक
 muska मास्को
 musselman मुसलमान
 mussolini मुसोलिनी
 musson मशीन
 muster मास्टर
 mutt मत
-muzyka म्यूजिक
-muzzey माझी
-muzzy माझी
+muzyka म्यूजिक म्यूज़िक
+muzzey माझी मोज़ी
+muzzy माझी मोज़ी
 myer मेयर
 myhre मीर
 myhren मिरान
-myla मेला
+myla मेला मेल
 myna में
 mynatt मिनट
 myra मेरी
+myre मेरु
 myren मैरीन
 myrna मरण
 myron मैरीन
 myrrh मार
 myrta मारतें
 mystere मिस्टर
-myth मीठ
+myth मीठ मठ
 mythic मिथक
-nada नोड
+nad नाडु
+nada नोड नदौ
 nadeau नदौ
 nadia नदी
 nadja नदी
-nagi नाग
-nah न
+nagi नाग नागै
+nah न ना
 nahm नाम
-naiman नमन
+naiman नमन निम्न
 nair नर
 naira नर
 nakao नौकाओं
 nalley नाली
 nally नाली
-name नें
-nana नँ
-nang नँ
-nanna नँ
+name नें नियम
+nana नँ नां
+nang नँ नां
+nanna नँ नां
 nanometer नैनोमीटर
 naples नेपल्स
 napoles नेपल्स
@@ -6498,12 +6714,14 @@ napoli नेपाली
 napp नाप
 nappa नाप
 nappi नापे
+nara नर
 narrow नारो
-naser नजर
+nasa नशा
+naser नजर नज़र
 nason निसान
 nass नाश
-nassau नासा
-nata नाटो
+nassau नासा नशा
+nata नाटो नाती
 natick नैतिक
 nation निशान
 national नेशनल
@@ -6512,7 +6730,7 @@ nations नेशंस
 native नेटिव
 nats नाइट्स
 natter नेतर
-nattie नाती
+nattie नाती निती
 nauer नोआर
 naughty नाती
 naus नाश
@@ -6521,35 +6739,37 @@ nautica नाटक
 naval नेवेल
 navel नेवेल
 navies नेविस
-nay नै
+nay नै ने
 neal नील
-neala नीला
+neala नीला नील
 neale नील
 nealey नीली
 neall नील
 nealy नीली
-near नर
+near नर नीर
 nears नीरज
+neat नीतू
 neault नौ
 necked निकट
 neda नदी
 nedda नदी
 neddo नदौ
-neeson निशान
+neeson निशान निसान
+neet नीतू
 negley निगली
 negroes नीग्रोस
 nehru नैरू
 neiger नाइगर
-neigh नै
+neigh नै ने
 neill नील
 neitz नितश
-nej नै
-neon नीयन
+nej नै ने
+neon नीयन नियोन
 nepl नेपाल
 nerd नारद
 nessa नशा
 nessel नस्ल
-nessen निशान
+nessen निशान निसान
 nestle नस्ल
 nets नाइट्स
 netta नेता
@@ -6573,36 +6793,38 @@ newmann नमन
 news न्यूज़
 newton न्यूटन
 newts नोट्स
-neyer नीर
+neyer नीर नर
 neysa नशा
-ngai गाय
-nghi गए
-niccoli नीकली
+ngai गाय गई
+nghi गए गे
+niaid नायडू
+niccoli नीकली निकली
 niceness नेशंस
 niche नीच
-nichol निकाल
+nichol निकाल निकल
 nicholas निकोलस
 nichole निकल
 nicholes निकोलस
-nicholi निकलै
-nicholl निकल
+nicholi निकलै निकालै
+nicholl निकल निकाल
 nicked निकट
+nickel निकाल
 nicole निकल
 niel नील
-nieman नीमन
-niemann नीमन
+nieman नीमन निम्न
+niemann नीमन निम्न
 niemi नीम
 nierman निर्माण
-niesen निशान
+niesen निशान निसान
 nietzsche नीचे
-nigeria नाइजीरिया
+nigeria नाइजीरिया नाईजीरिया
 nigger नगर
-nigh नै
+nigh नै नाय
 nighter नेतर
 nights नाइट्स
 nigro नगरो
 nikkei नीक
-nikkel निकल
+nikkel निकल निकाल
 nill नील
 nilly नीली
 nilsen नेल्सन
@@ -6611,28 +6833,32 @@ nilsson नेल्सन
 nine नें
 nineteen नाइनटीन
 nineveh नींव
-ning नें
+ning नें नं
 nipple नेपाल
 niquette निकट
 nissa नशा
-nissan निशान
-nissen निशान
-nita नीति
+nissan निशान निसान
+nissen निशान निसान
+nit नीतू
+nita नीति नीतू
 nitrate नाइट्रेट
 nitric नाइट्रिक
 nitrogen नाइट्रोजन
-nitta नेता
-nitty नीति
+nitta नेता नीति
+nitty नीति निती
 nitz नितश
 nitzsche नितश
-noa नौ
-noaa नौ
-noah नौ
+noa नौ नोवो
+noaa नौ नोवो
+noah नौ नोवो
 noam नं
+nobel नोबल
 nobelium नॉबेलियम
 nobile नोबल
+noble नोबेल
 nock नाक
-nodded नोड
+nod नाडु
+nodded नोड नाडु
 noecker नौकर
 noel नॉवेल
 noelle नॉवेल
@@ -6642,22 +6868,22 @@ nolie नाली
 nolley नाली
 nome नं
 non नां
-noncore नानकार
-none नँ
-noon नँ
-noone नँ
-nora नारा
-norah नारा
+noncore नानकार नानकर
+none नँ नां
+noon नँ नं
+noone नँ नं
+nora नारा नर
+norah नारा नर
 nord नारद
 nored नारद
-norfolk नोरफुक
+norfolk नोरफुक नॉर्फोक
 norred नारद
 norrie नारी
 norris नॉरिस
 norrod नारद
 norry नारी
 norway नॉर्वे
-nosair नजर
+nosair नजर नज़र
 noss नाश
 notch नाच
 notes नोट्स
@@ -6669,7 +6895,7 @@ nourish नरेश
 nouveau नोवो
 novack नाविक
 novell नॉवेल
-novella नॉवेल
+novella नॉवेल नोवेलो
 novello नोवेलो
 novick नाविक
 novoa नोवो
@@ -6679,10 +6905,12 @@ nth अंत
 nuclear न्यूक्लियर
 nudge न्यूज़
 nugan नग्न
-nuhn नँ
+nuhn नँ नां
 numb नाम
-numidia नूमिडिया
-nunn नँ
+number नम्बर
+numidia नूमिडिया न्यूमिडिया
+nun नां
+nunn नँ नां
 nurr नर
 nurre नर
 nuss नाश
@@ -6694,59 +6922,62 @@ nycz नीच
 nyssa नशा
 oahu ओहो
 oakar ओकर
-oana ओना
-oanh ऑन
-oar ओर
+oana ओना ऑन
+oanh ऑन अणु
+oar आरू आरु
 oat अत
 oath अत
 obama अबं
 obar बार
 obese बीस
-obey अबै
+obey अबै अबे
+obon अबँ
 observer ऑब्जर्वर
 obtain उबटन
 occur आकार
 occurred कार्ड
 occurs कर्ज
 och एके
-ochra ओकरा
+ochra ओकरा ओकरो
 ochre ओकर
 ochs अक्ष
-ocon कान
+ocon कान कोन
+oda अदा
 oday ओड
 odden अदन
 oddi आदि
 oddy आदि
-odea ओड़िया
-odessa ओडिशा
+odea ओड़िया ओडिया
+odessa ओडिशा ओड़िशा
 odette ऑडिट
 odin अदन
 oehmen ओमान
-oeser औजार
+oeser औजार औज़ार
 oeuvre ओवर
-off ऑफ
-offer ऑफर
+off ऑफ ऑफ़
+offer ऑफर अफ़ार
 office आफिस
-officer ऑफिसर
-ogg आग
+officer ऑफिसर अफसर
+ogg आग आगु
 oharra अहार
-ohba अबू
+ohba अबू अब
 ohh ओ
-ohl ऑल
+ohl ऑल अल
 ohman ओमान
 ohmann ओमान
-ohmer अमर
+ohmer अमर अमेर
 ohms औंस
-ohr ओर
-ohrt आर्ट
-oie ओय
+ohr आरू आरु
+ohrt आर्ट औरत
+oie ओय ओंय
 oien एन
 oil ऑयल
-oja ओय
-ojala ऑयल
+oja ओय ओंय
+ojala ऑयल अयलो
 okelley अकेली
 okelly अकेली
-okray ओकरे
+okra ओकरो
+okray ओकरे ओकर
 olah ला
 olea अली
 oleson आलिशान
@@ -6758,14 +6989,15 @@ olly अली
 olympic ओलम्पिक
 omaar अमर
 omani ओमान
-omeara अमारी
+omeara अमारी अमीर
 omen ओमान
+omit अमिट
 ommen ओमान
 omonia अमोनिया
 omori अमारी
 onate अनैत
 once वंश
-one वन
+one वन वां
 oneal अनिल
 oneall अनिल
 oneil अनिल
@@ -6773,47 +7005,48 @@ oneill अनिल
 oneness वंश
 ones वंश
 online ऑनलाइन
-onni आणि
+onni आणि आने
 onus औंस
-oohs उस
+oohs उस यूएस
 ooley अली
-oooh उ
-ooohs उस
-oop उप
-ooze उस
+oooh उ ऊ
+ooohs उस यूएस
+oop उप यूपी
+ooze उस यूएस
 opal अपील
 opalka पालक
 opel अपील
-opera अपरा
+opera अपरा अपरी
 operating ऑपरेटिंग
 operator ऑपरेटर
 opiela अपील
 ople अपील
-opp आप
+opp आप एपी
 oppel अपील
 opper अपार
-oppose आपस
+oppose आपस उपज
 oppress प्रेस
 oppressor प्रसार
-oprah अपरा
+oprah अपरा अपरी
 ops आपस
 oradour ऑर्डर
 oral औरेल
 oram आराम
 oran आरोन
 orchestra ऑर्केस्ट्रा
+ore आरू आरु
 organ आर्गन
 organic ऑर्गैनिक
 oriana ओरियन
 orilla औरेल
 orna आरनि
-orr ओर
+orr आरू आरु
 orran आरोन
 orrell औरेल
-orren आरिन
-orrin आरिन
+orren आरिन आरोन
+orrin आरिन अरिन
 orsa अरसे
-orsay अरसे
+orsay अरसे रस
 orum आराम
 orville ऑरवेल
 orwell ऑरवेल
@@ -6822,71 +7055,79 @@ osh आश
 oshel असल
 osley असली
 osmium ओज़मियम
-oss आस
-ossa आसा
+oss आस आश
+ossa आसा आशा
 ostin औसतन
-osuch अशोक
+osuch अशोक आशिक
 otani ओतने
 othello उठैलौ
 other उदार
 others आदर्श
 othman आठमां
 otoole अटल
-ott अत
-otte अत
-ought आउट
-oughta आटा
-oui वीं
+ott अत एटी
+otte अत एटी
+ought आउट अत
+oughta आटा ओटो
+oui वीं वी
+our आरू आरु
 out आउट
 outguessing आउटगैसिंग
 output आउटपुट
-outta आउट
-ovalle ओवल
+outta आउट अति
+oval अवल
+ovalle ओवल अवल
 owada ओड
 owe ओ
 owed ओड
-owen ऊन
-own ऑन
+owen ऊन ऊं
+own ऑन अणु
 owns औंस
-oxide आक्साइड
+oxide आक्साइड ऑक्साइड
 oxygen ऑक्सीजन
 oyola ऑयल
 ozal असल
-ozelle जल
-ozora जोड़ा
-ozzie आशी
-ozzy आशी
-paasch पास
-paccar पुकार
-pace पेश
+ozelle जल जेल
+ozora जोड़ा जोर
+ozzie आशी आज
+ozzy आशी आज
+paasch पास पशु
+paccar पुकार पाकड़
+pace पेश पशु
 paces पैसेज
 pacific पैसिफिक
 pacing पिसिन
 pacts पक्ष
 pacyna पसीने
+pad पेड़
 paddack पदक
-paddle पैदल
+paddle पैदल पेडल
 paddock पदक
 padilla पड़ला
 paean पिन
 paek पीक
-paeth पीठ
+paeth पीठ पिट
 paetz पिट्स
 page पेज
 pagey पेज
-pah प
+pah प पे
+paid पद
 paige पेज
-paighton पतन
-paign पें
+paighton पतन पेटेन
+paign पें पैन
 pain पें
 pained पिंड
 pair पर
 palace पैलेस
-palais पाल
-palash पोलिश
-palin पालन
-pall पाल
-palla पैलो
+palais पाल प्ले
+palash पोलिश पॉलिश
+palate पालतू पालतु
+palette पालतू पालतु
+palin पालन पैलें
+pall पाल पॉल
+palla पैलो पाल
+pallet पालतू पालतु
+pallett पालतू पालतु
 palm पं
 palme पं
 paluch पालक
@@ -6896,9 +7137,9 @@ pancho पेंचों
 panda पिंड
 pandy पांडे
 pandya पांडे
-pane पें
+pane पें पैन
 panel पैनल
-pang पैन
+pang पैन पँ
 panned पिंड
 pannell पैनल
 pannill पैनल
@@ -6906,43 +7147,48 @@ panora पनार
 pansy पणजी
 panting पेंटिंग
 paoli पाउल
+papa पोप
 papay पाप
 paper पेपर
 paperback पेपरबैक
 papers पेपर्स
 papp पाप
+par पार
 parada परेड
 parade परेड
 paradee पैरोडी
 parag परयोग
 paragraph पैराग्राफ
 paraguay पैराग्वे
-parella पारले
+parella पारले पारलै
+parent परंतु परन्तु
 pariah पारैय
-parillo परलो
-paris पैरिस
+parillo परलो पारलौ
+paris पैरिस पारस
 parish पैरिस
-parlay पारले
-parley पारले
-parlow परलो
+parlay पारले पारलै
+parley पारले पारलै
+parlow परलो पड़लो
 parmer परमार
 parody पैरोडी
 parquet पार्क
-parr पर
-parra पर
+parr पर पार
+parra पर पार
 parrack पार्क
 parras परास
-parrella पारले
-parrett पारित
-parrillo परलो
+parrella पारले पारलै
+parrent परंतु परन्तु
+parrett पारित परत
+parrillo परलो पारलौ
 parris पैरिस
 parrish पैरिस
 parrot परत
 parrott परत
 parrotta परत
 parrow पड़ौ
-parry परी
-paschen पैशन
+parry परी पड़ी
+part पोर्ट
+paschen पैशन पाषाण
 pass पास
 passage पैसेज
 passe पास
@@ -6950,86 +7196,89 @@ passed पास्ट
 passes पैसेज
 passey पेशी
 passing पासिंग
-passion पैशन
+passion पैशन पाषाण
 passon पैशन
 passport पासपोर्ट
+pasta पोस्ट
 pastry पेस्ट्री
 pasture पाश्चर
 paszek पोषक
 pat पेट
 patasse पोटाश
-patch पिच
-patchen पाचन
+patch पाछू पिच
+patchen पाचन पेचों
 patches पेचिश
 patchin पाचन
 patching पेचिंग
 pate पेट
-patella पतला
+patella पतला पटल
 patent पेटेंट
-patera पातरो
+patera पातरो पातरौ
 pates पिट्स
-patey पति
+patey पति पेट
+path पेट
 paths पिट्स
 pathway पटवे
-patin पतन
+patin पतन पेटेन
 patriarch पैट्रिआर्क
-patrick पैतृक
-patrie पटारी
+patrick पैतृक पैट्रिक
+patrie पटारी पतारी
 patrol पेट्रोल
 patron पैटर्न
 pats पिट्स
 patten पतन
 pattern पैटर्न
-pattin पतन
+pattin पतन पेटेन
 patting पतंग
 patton पतन
 patty पति
-paty पति
+paty पति पेट
 patz पिट्स
-paul पाल
-paula पाल
-pauletta पालतू
-pauley पाली
-pauli पाली
+paul पाल पॉल
+paula पाल पॉल
+pauletta पालतू पालतु
+paulette पालतू पालतु
+pauley पाली पालि
+pauli पाली पालि
 paulick पालक
-paulie पाली
+paulie पाली पालि
 paulik पालक
 paulin पालन
 pauling पालन
 paulk पालक
-paull पाल
+paull पाल पॉल
 paullin पालन
 paulo पालो
-pauly पाली
+pauly पाली पालि
 paunchy पंछी
 pause पास
 pausing पासिंग
-pawed पाद
+pawed पाद पद
 pawlak पालक
-pawley पाली
+pawley पाली पालि
 pawlik पालक
 pawling पालन
-pawn पँ
+pawn पँ पन
 pawned पाउंड
 paws पास
-pawson पासैं
+pawson पासैं पाषाण
 paxar पिक्सर
-pay प
-payan पें
-payday पड़ै
-payer पर
+pay प पे
+payan पें पैन
+payday पड़ै पेड़
+payer पर पीर
 payette पिट
-payeur पर
-paying पें
+payeur पर पीर
+paying पें पैन
 payless पैलेस
 payment पेमेंट
-payna पें
-pays पेज
+payna पें पैन
+pays पेज पेश
 payson पैशन
-payton पतन
+payton पतन पेटेन
 paz पास
-pea पी
-peach पिच
+pea पी प
+peach पिच पीछु
 peachey पीछे
 peachy पीछे
 peaden पडैं
@@ -7040,30 +7289,32 @@ pearly पारले
 pearman परमान
 pearse पारस
 pearson पर्सन
-peart परत
-peary पियरे
+peart परत पार्ट
+peary पियरे पीर
 peasey पीसी
 peat पिट
-peay पी
-peddie पड़ी
-peddy पड़ी
+peay पी प
+pedal पेडल
+peddie पड़ी पड़ि
+peddy पड़ी पड़ि
 peerson पर्सन
-peery पियरे
+peery पियरे पीर
 peetz पिट्स
 pegg पग
 pehrson पर्सन
 peitz पिट्स
-pelham पैलें
+pelham पलामू पैलें
 pelka पैलकै
-pelleu पैलो
+pelleu पैलो पइलो
 pelley पईले
-pellum पैलें
+pellum पलामू पैलें
 pelon पैलें
 pelzer पल्सर
-peng पें
-penh पें
+pen पैन
+peng पें पैन
+penh पें पैन
 penja पणजी
-penn पें
+penn पें पैन
 penned पिंड
 pennel पैनल
 pennell पैनल
@@ -7075,27 +7326,30 @@ penza पणजी
 peon पिन
 pepper पेपर
 peppers पेपर्स
+per पार
 perc पार्क
 perce पारस
 percy पारसी
-perella परलो
+perella परलो पड़ला
 peril पियरल
 perillo परलो
 period पीरियड
 perk पार्क
 perley पारले
-perlow परलो
-perots पड़ोस
-perry परी
+perlow परलो पड़लो
+permut परंतु
+perots पड़ोस पारस
+perry परी पड़ी
 pers पारस
 persaud परसाद
 perse पारस
 personnel पर्सनल
 persson पर्सन
 persyn पर्सन
-perusse पड़ोसी
+peru पेरु
+perusse पड़ोसी परोसी
 perz पारस
-pesce पेश
+pesce पेश पशु
 pessin पिसिन
 pesta पश्तो
 pete पिट
@@ -7104,9 +7358,9 @@ petey पीटै
 peth पेट
 pethel पटल
 pethtel पटल
-petit पति
-petrak पैतृक
-petrich पैतृक
+petit पति पेट
+petrak पैतृक पैट्रिक
+petrich पैतृक पैट्रिक
 petroleum पेट्रोलियम
 petsch पिच
 petsche पिच
@@ -7115,26 +7369,27 @@ petteway पटवे
 petting पेटेन
 pettus पिट्स
 pettway पटवे
-petty पति
+petty पति पेट
 petway पटवे
 petz पिट्स
 peyman पमान
-peyton पतन
-pezza पैसा
+peyton पतन पेटेन
+pezza पैसा पेज
 pfahl फल
-pfarr फॉर
+pfarr फॉर फोर
 pfeil फाइल
-pfohl फल
+pfohl फल फौल
 pfost फास्ट
 pfund फांड
 pham फेम
-phan फाइन
+phan फेनु फाइन
 pharaoh फैरो
-pharisee फारसी
+pharisee फारसी फ़ारसी
 pharoah फैरो
-pharr फॉर
-phen फाइन
+pharr फॉर फोर
+phen फेनु फेनू
 phenicie फेंकी
+phil फल
 philene फ़लिन
 philina फ़लिन
 philipp फ़िलिप
@@ -7148,65 +7403,66 @@ phillipe फ़िलिप
 phillipp फ़िलिप
 phillippe फ़िलिप
 philly फैली
-philon फैलन
+philon फैलन फलन
 phinney पहनी
 phlegm पहलें
 phoenix फ़ीनिक्स
-phoney फोन
+phoney फोन पहनी
 phony फोन
 phosphate फॉस्फेट
 phosphors फास्फोरस
 phu एफयू
 phung फोन
-phyla फाइल
+phyla फाइल फैलै
 phyle फाइल
 physics फिज़िक्स
 pia पी
 piano पियानो
-picchu पीछू
+picchu पीछू पीछु
 piccolo पकैलो
 pichette पोषित
-pichon पेचों
+pichon पेचों पीछें
 picton पेक्टिन
 picture पिक्चर
-piddle पैदल
+piddle पैदल पेडल
 piddock पदक
-pie पाई
+pie पाई पाइ
 piecing पिसिन
 pied पेड़
-piela पीला
+piela पीला पीलौ
 pier पर
 pieratt पीड़ित
-pieri पियरे
+pieri पियरे पीर
 pierman परमान
 piero पीरौ
-pierre पीयर
+pierre पीयर पियर
 pierro पीरौ
 pierson पर्सन
-pies पेज
-piet पेट
+pies पेज पेश
+piet पेट पिट
 pieter पीटर
-pietsch पिच
+pietsch पिच पीछु
 piette पिट
 pietz पिट्स
 pig पग
 pigg पग
-pih पी
+pih पी प
 pilate पायलट
 pile पायल
 piling पैलें
 pilling पैलें
 pillion पैलें
-pillow पैलो
+pillow पैलो पैलौ
 pilot पायलट
-pimm पें
-pimp पम्प
+pimm पें पं
+pimp पम्प पंप
+pin पें
 pinch पेंच
-pine पैन
-ping पिन
+pine पैन पें
+ping पिन पें
 pinged पिंड
 pinion पिनयिन
-pinn पिन
+pinn पिन पें
 pinned पिंड
 pinnell पैनल
 pinner पनार
@@ -7215,29 +7471,30 @@ pinyan पिनयिन
 piper पेपर
 pipers पेपर्स
 piraeus प्रयास
-pirie परी
+pirie परी पियरे
 pirog परयोग
 pirrello परलो
 pirro पीरौ
 pisa पीसी
-piss पेश
+piss पेश पशु
 pisses पैसेज
 pissing पिसिन
 pit पेट
-pitch पिच
+pitch पिच पीछु
 pitches पेचिश
-pitching पेचिंग
+pitching पेचिंग पीछें
 pithy पति
 pitney पत्नी
-pitsch पिच
+pitsch पिच पीछु
 pitting पेटेन
-pittle पीतल
-pity पति
+pittle पीतल पटल
+pity पति पीटै
 pitz पिट्स
 pizza पिट्स
-pizzi पीसी
+pizzi पीसी पेशी
 placement प्लेसमेंट
 plair प्लेयर
+plam पलामू
 plan प्लेन
 plane प्लेन
 planning प्लानिंग
@@ -7260,85 +7517,99 @@ plier प्लेयर
 plight प्लेट
 plinius प्लिनियस
 plitt प्लेट
+plum पलामू
+plumb पलामू
 plummet प्लांट
-pluta प्लूटो
+pluta प्लूटो प्लूतो
+pluto प्लूतो
 plutonium प्लोटोनियम
 ply प्ले
 poag पग
+poche पाछू
+pod पाद
 poehl पॉल
-poel पॉल
+poel पॉल पॉवेल
 poem पं
 poet पूत
 pogue पग
 pohnpei पनपै
 poisoning पॉइज़निंग
 poland पोलैंड
-police पोलिश
+police पोलिश पॉलिश
 polich पालक
+polish पॉलिश
 polite प्लेट
 polites प्लेट्स
-politte प्लेट
+politte प्लेट पालतू
 poll पॉल
 pollack पालक
 pollak पालक
 pollan पालन
 pollen पालन
-polley पाली
+pollet पालतू पालतु
+pollett पालतू पालतु
+polley पाली पालि
 pollick पालक
-pollini प्लिनी
+pollini प्लिनी पिलिनी
+pollitt पालतू पालतु
 pollo पालो
 pollock पालक
 polloi पाली
 pollok पालक
-polly पाली
+pollute पालतू पालतु
+polly पाली पालि
 polonium पोलोनियम
 polzer पल्सर
 poma पं
-pong पँ
+pong पँ पन
 pooh पू
 poohed पद
 pool पुल
 poolas पोलिश
 poole पुल
 pooley पुल
-poon पुन
+poon पुन पँ
+poor पुर
 poorbaugh परबो
 poorman परमान
 pop पाप
-popp पाप
-poppe पाप
-poppy पाप
+pope पॉप
+popp पाप पोप
+poppe पाप पोप
+poppy पाप पोप
 pork पार्क
-porous पोरस
-porr पर
+porous पोरस पारस
+porr पर पार
 porras परास
 porretta पारित
 porritt पारित
-porsche पोरस
+porsche पोरस पारस
+port पार्ट
 portable पोर्टेबल
 portell पोर्टल
 portfolio पोर्टफोलियो
-portia पारसी
+portia पारसी पोरस
 portland पोर्टलैंड
 ports पार्ट्स
 portz पार्ट्स
 pos पास
-posa पोसे
+posa पोसे पशु
 posey पोसे
-posh पास
+posh पास पशु
 poss पास
-posse पास
+posse पास पोसे
 possum पासैं
 posture पाश्चर
 pot पात
-poth पाठ
+poth पाठ पात
 potion पोषण
-pottery पटारी
+pottery पटारी पतारी
 poul पुल
 poulos पोलिश
 pound पाउंड
-pour पर
+pour पर पार
 pourciau पारसियों
+pours पारस
 powder पाउडर
 powell पाउल
 powless पोलिश
@@ -7347,10 +7618,10 @@ pracht प्रकट
 prance प्रिंस
 pratt परत
 pratte परत
-praun प्राण
-prause परास
-prawn प्राण
-pray पर
+praun प्राण प्राणु
+prause परास पड़ोस
+prawn प्राण प्राणु
+pray पर परे
 prayed परेड
 prays प्रेस
 prebble प्रबल
@@ -7359,13 +7630,13 @@ predation प्रदेशों
 preiss प्रेस
 press प्रेस
 presse प्रेस
-presser प्रसार
+presser प्रसार परिसर
 presson प्रस्न
 pretti प्रति
 pretty प्रति
 preuss पड़ोस
-prew पृ
-prey पर
+prew पृ प्रो
+prey पर परे
 preyed परेड
 preys प्रेस
 pribble प्रबल
@@ -7375,26 +7646,27 @@ prichett परिचित
 pricked प्रकट
 pride परेड
 pried परेड
-pries प्राइज़
+pries प्राइज़ प्रेस
 prieta प्रीत
 prim प्रेम
 primate प्राइमेट
 primates प्राइमेट्स
-prime प्रेम
+prime प्रेम प्राइम
 primm प्रेम
 primmer परमार
 princess प्रिंसेस
 princeton प्रिंसटन
+print परिणत
 prinz प्रिंस
 pris प्रेस
 prism प्रीज्म
 pritchett परिचित
-pritt परत
-prix परी
-prize प्राइज़
+pritt परत प्रीत
+prix परी पृ
+prize प्राइज़ प्रेस
 process प्रोसेस
 processor प्रोसेसर
-prody पड़ी
+prody पड़ी पड़ि
 professional प्रोफेशनल
 professor प्रोफेसर
 proffit प्रोफेट
@@ -7405,90 +7677,94 @@ profitt प्रोफेट
 programme प्रोग्राम
 programmer प्रोग्रामर
 programming प्रोग्रामिंग
-prong प्राण
+prong प्राण प्राणु
 pronto प्रांतो
 proofreading प्रूफरीडिंग
 propped प्राप्त
-prosch परास
+prosch परास पड़ोस
 prosise प्रोसेस
-pross परास
-prosser परासर
+pross परास पड़ोस
+prosser परासर प्रसार
 prost परास्त
 proto परत
-prough पड़ौ
+prough पड़ौ प्रो
 prouse पड़ोस
 provus प्रवास
-prow पड़ौ
+prow पड़ौ प्रो
 prowell परवल
 pruden प्रदान
 pruess पड़ोस
 pruett परत
-prugh पृ
-prusha परासी
+prugh पृ प्रो
+prusha परासी परास
 pruss परास
-prussia परासी
+prussia परासी परास
 prussian प्रश्न
 prust परास्त
-pry पड़ै
+pry पड़ै प्राय
 pryce प्रेस
 pryde परेड
 psalm सं
-psalms सामज
+psalms सामज समझ
 pshew पशु
 psi से
 ptak तक
-pty ते
-pucker पुकार
+pty ते ताई
+pucker पुकार पाकड़
 pudgie पूजे
 pudgy पूजे
-puerto पार्टी
+puerto पार्टी पोर्ट
 puett पूत
 puig पग
 pulice पोलिश
 pull पुल
+pullam पलामू
 pulley पुल
+pullum पलामू
 puma पं
-pun पँ
+pump पंप
+pun पँ पन
 punch पांच
-pung पँ
+pung पँ पन
 pup पाप
 puppy पाप
 purim परम
 purk पार्क
-purr पर
+purr पर पार
 purrs पारस
 purse पारस
 pus पास
+push पशु
 puss पास
 pussy पोसे
-putt पात
+putt पात पूत
 puttering पटरंग
 putters पतरस
-putting पतन
+putting पतन पतंग
 putty पति
 puzzo पूजो
 pyka पीक
 pyle पायल
-pymm पें
+pymm पें पं
 pyper पेपर
 pyramid पिरामिड
 pyre पैर
 pyrite पायराइट
 pyroxene पाइरोक्सीन
-pytel पीतल
+pytel पीतल पटल
 qaeda कायद
-qian जैन
+qian जैन जीन
 qin कें
 quack कवक
 quaeda कड़ा
 quake कवक
 quantum क्वांटम
-quark क्वार्क
+quark क्वार्क क्वॉर्क
 quarre कवर
 quart क्वार्ट
 quay के
 quaye के
-quays केश
+quays केश कस
 qubilah कबिला
 queen क्वीन
 queena क्वीन
@@ -7504,19 +7780,19 @@ quirke क्वार्क
 quora कवर
 raab रौब
 raabe रौब
-raad रोड
-raasch रस
+raad रोड रॉड
+raasch रस रास
 rabes रेबीज
 rabies रेबीज
 rabin रॉबिन
 rabine रॉबिन
-racca रकाँ
+racca रकाँ रिका
 rachelle रसेल
-rachi राशि
+rachi राशि राशी
 racked रक्त
 raczynski राचिन्स्की
 rad रेड
-rada रोड
+rada रोड रॉड
 radde रेड
 raden रेडॉन
 radi रोडी
@@ -7527,12 +7803,12 @@ raffi रफी
 raffles राइफल्स
 rage रिज
 ragu रागो
-rah रो
+rah रो रौ
 rahill रहल
 rahilly रहली
-rahm राम
+rahm राम रोम
 rahway राव
-raia राय
+raia राय रॉय
 raiko रिको
 railey रेल
 railway रेलवे
@@ -7543,11 +7819,11 @@ rainie रेने
 rains रेंज
 rainy रेने
 rais रस
-raise रस
-raissa रेशा
+raise रस रिज
+raissa रेशा रस
 raitt रेत
 rajala रायल
-raked रक्त
+raked रक्त रिक्त
 raleigh रोल
 rall रोल
 rallies रिलीज
@@ -7558,50 +7834,53 @@ rami राम
 ramm राम
 ramon रोमन
 ramone रोमन
-ramp रैम्प
+ramp रैम्प रैंप
 rams रेंज
+ran राइन
 ranch रेंच
-ranck रैंक
+ranck रैंक रेंक
 ranes रेंज
 range रेंज
-ranh रन
-rank रैंक
-ranke रैंक
+ranh रन राइन
+rank रैंक रेंक
+ranke रैंक रेंक
 rankine रैंकाइन
 ranking रैंकिंग
-rann रन
+rann रन राइन
 ranney रानी
 rannow रिनो
 rans रेंज
 ranz रेंज
 rao रौ
-raoul रोल
+raoul रोल रायल
 raper रैपर
 rapper रैपर
 rapport रैपर
-rasch रस
-rasche रस
+rasch रस रास
+rasche रस रास
+rash रास
+rat रेत
 rate रेत
 rats राइट्स
 rattan रतन
-ratte रात
+ratte रात रेत
 ratts राइट्स
-ratty राती
+ratty राती राति
 ratz राइट्स
-rauh रो
+rauh रो रौ
 raun रन
 raunchy रांची
-rauth रात
+rauth रात रॉट
 ravan रवों
 raven रवों
-raw रो
+raw रो रौ
 rawl रोल
 rawley रोल
 rawling रोलिंग
-rawson रोशन
+rawson रोशन राशन
 ray रे
 raychem रकम
-raycon रिकेन
+raycon रिकेन रकाँ
 rayed रेड
 raymond रेमंड
 raymonda रेमंड
@@ -7610,30 +7889,31 @@ rayne रन
 raynes रेंज
 rayno रिनो
 rayon रन
-rays रस
+rays रस रिज
 rea रे
 reach रीच
-read रीड
+read रीड रेड
 reade रेड
 reamy रिमी
 reas रिज
 reason रीजन
-reaume रोम
-reaux रो
+reaume रोम रूम
+reaux रो रौ
 reay रे
-recht रक्त
-reckon रिकेन
+recht रक्त रिक्त
+reckon रिकेन रकाँ
+record रिकार्ड
 records रिकार्ड्स
 recurred रिकार्ड
 redden रेडॉन
-reeh ड़ी
+reeh ड़ी ऋ
 reeking रिकेन
 reen ऋण
 rees रिज
 refinery रिफाईनरी
-regester रेजिस्टर
+regester रेजिस्टर रजिस्टर
 region रीजन
-register रेजिस्टर
+register रेजिस्टर रजिस्टर
 registrar रजिस्ट्रार
 reh रे
 rehak रहेक
@@ -7641,7 +7921,7 @@ rehg रिज
 reichard रेकार्ड
 reign रन
 reigns रेंज
-reihl रेल
+reihl रेल रायल
 reiley रेल
 reilley रेल
 rein रन
@@ -7664,10 +7944,10 @@ renaud रिनो
 renault रिनो
 reneau रिनो
 renew रिनो
-renison रेनेसां
-renn रन
-renna रन
-renne रन
+renison रेनेसां रेनेसाँ
+renn रन राइन
+renna रन रेने
+renne रन राइन
 rennie रेने
 renno रिनो
 renny रेने
@@ -7680,39 +7960,39 @@ research रिसर्च
 residency रेजिडेंसी
 resistor रेजिस्टर
 ress रस
-ressa रेशा
+ressa रेशा रस
 ressel रसेल
 retina रतन
 retire रिटायर
 reto ऋतु
-retton रतन
+retton रतन रत्न
 retz राइट्स
 reul रोल
 reule रोल
 reuss रूस
 reuters रॉयटर्स
-reva रवि
+reva रवि रवों
 revival रिवाइवल
 revolver रिवाल्वर
-rew रो
+rew रो रु
 rewey रवि
-reyna रन
-rha रो
+reyna रन रेने
+rha रो रौ
 rhames रेंज
-rhea रियो
-rheault रो
-rheaume रोम
+rhea रियो ड़ी
+rheault रो रौ
+rheaume रोम रूम
 rhett रेत
-rhew रो
-rhin रन
+rhew रो रु
+rhin रन ऋण
 rhine राइन
 rhines रेंज
-rho रो
-rhoad रोड
+rho रो रौ
+rhoad रोड रॉड
 rhoades रोड्स
 rhoads रोड्स
-rhoda रोड
-rhode रोड
+rhoda रोड रोडी
+rhode रोड रॉड
 rhodes रोड्स
 rhodia रोडी
 rhodus रोड्स
@@ -7726,15 +8006,16 @@ rhudy रोडी
 rhymes रेंज
 rhyne राइन
 rhynes रेंज
-ria रियो
+ria रियो ड़ी
 ribar रबर
 rican रिकेन
-ricca रिका
+ricca रिका रिको
 ricci रीच
 ricco रिको
 richco रिको
 richter रिक्टर
 ricoh रिको
+rid रेड
 ridden रेडॉन
 ride रेड
 riden रेडॉन
@@ -7749,23 +8030,23 @@ rifles राइफल्स
 right रेत
 righter रायटर
 rights राइट्स
-rihn रन
-rile रेल
+rihn रन ऋण
+rile रेल रायल
 rill रेल
 rilla रेल
 rima रिमी
 rimes रेंज
 rims रेंज
-rinck रेंक
+rinck रेंक रैंक
 rines रेंज
 ring रंग
 rings रेंज
-rink रेंक
-rinke रेंक
-rinn रन
-rinne रन
+rink रेंक रैंक
+rinke रेंक रैंक
+rinn रन ऋण
+rinne रन ऋण
 rio रियो
-rioux रो
+rioux रो रु
 ripper रैपर
 risen रीजन
 riss रस
@@ -7775,10 +8056,10 @@ ritch रीच
 rite रेत
 riter रायटर
 rites राइट्स
-ritt रेत
-rizza रिज
-roa रौ
-road रोड
+ritt रेत ऋतु
+rizza रिज रजा
+roa रौ रो
+road रोड रॉड
 roades रोड्स
 roadie रोडी
 roads रोड्स
@@ -7789,28 +8070,33 @@ roan रन
 roane रन
 roanna रन
 roat रॉट
-roath रॉट
+roath रॉट रथ
 robb रौब
 robbe रौब
 robber रबर
 robbin रॉबिन
 robbing रॉबिन
 robyn रॉबिन
-rocard रिकॉर्ड
-rocca रॉक
-rocchi रोकी
-roch रॉक
-rocha रॉक
+rocard रिकॉर्ड रिकार्ड
+rocca रॉक रोक
+rocchi रोकी रॉकी
+roch रॉक रोक
+rocha रॉक रोकै
 rochella रचलो
 rochelle रसेल
+rock रोक
 rocked रक्त
 rocket रक्त
-rockhill राखल
-rocque रॉक
+rockhill राखल रखल
+rocky रॉकी
+rocque रॉक रोक
+rod रॉड
+rode रॉड
 rodes रोड्स
 rodge राज
+roe रौ
 roeber रबर
-roed रोड
+roed रोड रॉड
 roehi रवि
 roehl रोल
 roehling रोलिंग
@@ -7819,22 +8105,22 @@ roell रोल
 roelle रोल
 roeller रोलर
 roen रन
-roes रोज
+roes रोज रस
 roese रस
 roesel रसेल
 roget रोजे
-rogge रोग
-roggow रागो
-roh रो
-rohde रोड
+rogge रोग राग
+roggow रागो रोगौ
+roh रो रौ
+rohde रोड रॉड
 rohling रोलिंग
 rohm रोम
-rohs रोज
+rohs रोज रस
 roi रॉय
 roil रॉयल
 roley रोल
 roll रोल
-rolla रोल
+rolla रोल रालौ
 rolle रोल
 rollei रोल
 roller रोलर
@@ -7848,68 +8134,70 @@ romaine रोमन
 romann रोमन
 romey रोम
 romine रोमन
-romm राम
+romm राम रोम
 ronca रंकी
-ronna रानी
+ronna रानी रन
 ronne रन
 ronnie रानी
 ronny रानी
+rookie रूकै
+room रूम
 roomy रूम
-roone रन
-root रुट
-rosa रोजे
+roone रन ऋण
+root रुट ऋतु
+rosa रोजे रोज
 rosanne रोशन
 rosary रोजरी
 rosch रास
 rose रोज
 roseanne रोशन
 rosett रजत
-rosey रोजी
-rosie रोजी
+rosey रोजी रोजे
+rosie रोजी रोजे
 rosin राशन
-ross रस
+ross रस रास
 rossa रस
-rosse रस
-rossen रोशन
-rossie राशि
-rosson रोशन
-rosten रोशन
+rosse रस रास
+rossen रोशन राशन
+rossie राशि राशी
+rosson रोशन राशन
+rosten रोशन राशन
 rosty रास्ते
-rosy रोजी
+rosy रोजी रोजे
 rot रात
 rotea रोटी
 rotella रोटली
-rotten रतन
-rought रात
+rotten रतन रत्न
+rought रात रॉट
 rouse रोज
 roussel रसेल
 roussell रसेल
 rousselle रसेल
-route रुट
-roux रो
+route रुट ऋतु
+roux रो रु
 roven रवों
-row रो
-rowan रन
+row रो रौ
+rowan रन रवों
 rowdy रोडी
-rowe रो
-rowed रोड
-rowen रन
-rowes रोज
+rowe रो रौ
+rowed रोड रॉड
+rowen रन रवों
+rowes रोज रस
 rowley रोल
 rowlie रोल
 rowly रोल
-rows रोज
+rows रोज रस
 rowse रस
 rowson रोशन
 rowton रतन
 royall रॉयल
 rozelle रसेल
 rozen राशन
-rozzi रोजी
+rozzi रोजी राज
 rua रो
-ruam रोम
+ruam रोम रूम
 rubber रबर
-rucci रुचि
+rucci रुचि रूचि
 rucinski राचिन्स्की
 rudge राज
 ruedy रोडी
@@ -7920,47 +8208,48 @@ ruel रोल
 rues रूस
 ruesch रूस
 ruess रूस
-rueth रुट
+rueth रुट रथ
 rug राग
-rugg राग
+rugg राग रोग
 ruggeri रोजरी
-rugh रा
-ruh रा
+rugh रा रु
+ruh रा रु
 ruhollah रहला
 ruin रवों
+ruler रोलर
 rum राम
 runny रानी
 rupp रूप
 ruppe रूप
-rusch रस
-rusche रस
+rusch रस रूस
+rusche रस रूस
 rush रस
 rushin राशन
-russ रस
-russa रूसी
-russe रस
+russ रस रूस
+russa रूसी रूस
+russe रस रूस
 russel रसेल
 russell रसेल
-russia राशि
-russian राशन
+russia राशि राशी
+russian राशन रोशन
 rustle रसेल
 rusty रास्ते
 rut रात
 ruth रुट
 ruthie रोटी
 rutley रोटली
-ruttan रतन
-rutten रतन
+ruttan रतन रत्न
+rutten रतन रत्न
 ruud रोड
-ruyle रेल
+ruyle रेल रायल
 ryden रेडॉन
 rye राय
-ryle रेल
+ryle रेल रायल
 rynes रेंज
 ryno रिनो
 rys रस
 ryton रतन
-saatchi सोची
+saatchi सोची सोचि
 sabah सब
 sabb सब
 sabey सेब
@@ -7973,7 +8262,7 @@ sadder सदर
 sadeghi सादगी
 sadeh साद
 sado सिदो
-saehan सँ
+saehan सँ सें
 saez सीज
 saffell सफल
 saffer सफर
@@ -7981,94 +8270,100 @@ saffir सफर
 saffle सफल
 safier सफर
 safir सफर
-saga सोंगा
-sahara शहर
+saga सोंगा सौगो
+sahara शहर सहर
 sahlen सालों
 sahli साल
 sahlman सलमान
-sahm सं
+sahm सं सें
 saia सी
 saidan सदान
 saiki सके
 sail सेल
+saint संत
 sake शक
 sakura सैकड़ो
-salak शल्क
+salak शल्क सिल्क
 salameh सलाम
 salamon सलमान
 salay साल
-sale सेल
+sale सेल शैल
 saleh सोलह
 salem सलाम
 salemme सलेम
 salim सलेम
 salis सलेस
 sall साल
-salle सेल
+salle सेल शैल
 sallee शैली
 salleh साल
 salles सलेस
 salley शैली
 sallie शैली
-sallis सलेस
+sallis सलेस सैलेश
 sally शैली
 salm सं
-salmon समान
+salmon समान सामान
 saloma सालों
 salomon सलमान
 salone सालों
-salow सालो
-salus सलेस
-salvatore साल्वाडोर
+salow सालो सालों
+salus सलेस सैलेश
+salvatore साल्वाडोर सेल्वडॉर
 salve शव
 salvia सिल्विया
+sam सें
 samaria सेमरिया
-same सें
-samella सामिल
-samelle शामिल
+same सें सं
+samella सामिल शिमला
+samelle शामिल सामिल
 samina सामना
 samir समर
-sammet समेत
-sammon समान
-samms सामज
-sammut सेंट
-sammy सामी
+sammet समेत समेट
+sammon समान सामान
+samms सामज साइंस
+sammut सेंट संत
+sammy सामी सेमी
 samos समास
 sample सैम्पल
-sams सामज
-sanaa सेना
+sams सामज साइंस
+san सं
+sanaa सेना सोना
 sancia सांचा
 sander शानदार
-sandhu सिंधु
+sandhu सिंधु सिन्धु
 sandi संडे
 sandie संडे
 sandor शानदार
 sandstone सैण्डस्टोन
-sandt सेंट
+sandt सेंट संत
 sandtown संतों
 sandy संडे
-sane सँ
-sang सँ
+sane सँ सें
+sang सँ सं
+sank शंकु
 sankei सेंकी
-sanna सँ
+sanna सँ सं
 sannes साइंस
 sano सोनो
 sans साइंस
 sansing सेंसिंग
-santa सँ
+santa सँ सं
 santer सेंटर
 santerre सेंटर
 santia शांती
 santor सेंटर
 santow संतों
 sanz साइंस
-sapiens सेपियंस
+sapiens सेपियंस सेपियन्स
 sapp शाप
 sapped सप्त
-sarah सर
+sarage सरजू
+sarah सर शेर
 sarazen सर्जन
 sardinia सार्डिनिया
-sarin सोरेन
+sarge सरजू
+sarin सोरेन सारण
 sarra सारा
 sarraj सराय
 sarris सेरेस
@@ -8082,45 +8377,47 @@ sassi शासी
 sasson शासन
 sassoon शासन
 sassy शासी
-satan सेटन
+sat सेट
+satan सेटन शैतान
 sather सदर
-satin शैतान
+satin शैतान सेटन
 saturns शतरंज
 saud साद
 sauder सदर
-saudi सदी
+saudi सदी शादी
 sauey सई
 saus सोझ
 saute सात
 sauve शव
 savanna सावन
 savannah सावन
-save शिव
+save शिव सिव
 savely शिवली
-savin सावन
+savin सावन सेवन
 saving सेवन
-savir स्वर
+savir स्वर शिविर
 savoca शावक
-saw सा
+saw सा सौ
 sawall सवाल
-sawdey सदी
+sawdey सदी शादी
 sawdon सदान
-sawdy सदी
+sawdy सदी शादी
 sawed साद
 sawhill सोहिल
 sawin साइन
-sawmill शामिल
+sawmill शामिल सामिल
 saws सोझ
 sawshank सासंक
 sawtell सटल
 sawtelle सटल
 sawyer शायर
 saxon सेक्शन
-say से
-saye से
+say से स
+saye से स
 sayiid सैयद
-saying सें
-sayle सेल
+saying सें सींग
+sayle सेल शैल
+sayres सरजू
 says सीज
 sayyid सैयद
 scalable स्केलेबल
@@ -8133,66 +8430,70 @@ scar स्कोर
 scat सकैत
 scearce सारस
 scenic सिनिक
-scent सेंट
+scent सेंट संत
 schaab सब
-schaack शोक
+schaack शोक शौक
 schaad साद
 schaadt सात
-schaaf साफ
+schaaf साफ साफ़
 schaal साल
-schaar शहर
+schaar शहर सहर
 schab सब
 schaben शाबान
 schacher शिकार
 schad साद
 schadel शेड्यूल
-schadt सात
+schadt सात सहित
 schaecher शिकार
 schaedel शेड्यूल
-schaff साफ
-schaja सहज
+schaff साफ साफ़
+schaja सहज सजा
 schall साल
 schallock शल्क
-schalow सालो
+schalow सालो सालों
 schamp सांप
+schanck शंकु
+schank शंकु
 schanz साइंस
 schapp शाप
-schar शहर
+schar शहर सहर
 schardt शॉर्ट
 scharp सर्प
-scharr शहर
-schaub सब
-schaul सोल
-schear शहर
-scheckel शक्ल
+scharr शहर सहर
+schaub सब साब
+schaul सोल सहल
+schear शहर शेर
+scheckel शक्ल शकील
 scheel सील
 scheele सील
 scheffel सफल
 scheib सेब
 scheibe सेब
 scheid शायद
-scheidt साइट
+scheidt साइट सेट
 scheiman साइमन
-schein सें
+schein सें सैन
 schell सकल
-schemm सें
-schena सिनी
+schemm सें सं
+schena सिनी शीना
+schenck शंकु
+schenk शंकु
 scherf सेर्फ
 scherff सेर्फ
-scherr शहर
-scherz सारस
-schey से
+scherr शहर शेर
+scherz सरजू सारस
+schey से स
 schick शक
 schicker शिकार
 schiel सील
 schiele सील
 schielke सिल्क
 schiemann सिमोन
-schier शायर
-schieren शरण
-schiess शीश
-schilke सिल्क
-schill शैल
+schier शायर शेर
+schieren शरण शीर्ण
+schiess शीश शिशु
+schilke सिल्क शल्क
+schill शैल सील
 schirm सेरम
 schlauch श्लोक
 schley सहल
@@ -8206,54 +8507,55 @@ schmuhl स्माल
 schnarr स्नेर
 schnur स्नेर
 schnurr स्नेर
-schoch शोक
-schoeck शोक
+schoch शोक शौक
+schoeck शोक शौक
 schoen सोन
-schoene सैन
-schoff साफ
+schoene सैन साइन
+schoff साफ साफ़
 scholl साल
-scholle सोल
+scholle सोल सहल
 schomer सोमार
-schommer सोमार
-schon सँ
+schommer सोमार समर
+schon सँ सं
 schone सोन
 schopp शाप
 schoppe शाप
 schork सार्क
-schorr शहर
+schorr शहर सौर
 schott सात
 schramm श्रम
-schrodt स्रोत
+schrodt स्रोत श्रोत
 schroer सरोवर
 schropp श्राप
 schrupp श्राप
 schtick सटीक
-schuch शक
-schuele सहल
-schuelke शुल्क
-schuff साफ
+schuch शक शोक
+schuele सहल सोल
+schuelke शुल्क शल्क
+schuff साफ साफ़
 schug सुग
-schuh शो
+schuh शो सू
 schuhmann सुमन
-schull सहल
+schull सहल सोल
 schuman सुमन
 schumann सुमन
 schumer सुमेर
-schumm सं
+schumm सं शाम
+schunk शंकु
 schupp शाप
-schurr शहर
-schuth शूट
+schurr शहर शेर
+schuth शूट सूट
 schwahn श्वान
 schwall सवाल
 schwer स्वर
-sci सी
-scianna सोना
-sciara सहारा
-scilla शिला
+sci सी स
+scianna सोना सहाना
+sciara सहारा सारा
+scilla शिला सीलो
 scimone सिमोन
-scinta सेंट
+scinta सेंट संत
 scinto संतों
-scire सैर
+scire सैर शेर
 scola सकल
 scrap स्क्रैप
 scrape स्क्रैप
@@ -8262,12 +8564,12 @@ screw स्क्रू
 scrip स्क्रैप
 scripp स्क्रैप
 scroll स्क्रॉल
-scull स्कूल
+scull स्कूल सकल
 sculley स्कूली
 scully स्कूली
-scylla शिला
-scythe साइट
-sea सी
+scylla शिला सीलो
+scythe साइट सीट
+sea सी स
 seabaugh शीबा
 seal सील
 seale सील
@@ -8277,24 +8579,27 @@ seaman सिमोन
 seamen सिमोन
 seamon सिमोन
 seamus समास
-sean शान
-sear सिर
+sean शान सोन
+sear सिर सर
 search सर्च
 searcy सरसी
 searl सरल
 searle सरल
+sears सरजू
 searson सरसों
 seas सीज
 sease सीज
 seat सीट
 seato सीटौ
-seaway शिव
+seaway शिव सिव
 seaweed सीवीड
 seawell सिविल
-seay से
+seay से स
 sebby सेब
 sebi सेब
+second सेकेण्ड
 seddon सदान
+see स
 seeing सींग
 seeker शिकार
 seeley सील
@@ -8309,74 +8614,78 @@ seid शायद
 seide शायद
 seige सीज
 seiki सके
-seine सँ
+seine सँ सें
 seivert सेवारत
 seiwert सेवारत
 seki सके
-selas सलेस
-sell सेल
-sella शैली
-selle सेल
+selas सलेस सैलेश
+sell सेल शैल
+sella शैली सेल
+selle सेल शैल
 selley शैली
 sellman सलमान
 selmon सलमान
-sematech सेमेटिक
+sematech सेमेटिक सेमिटिक
 semi समय
 semmes साइंस
-senate सेंट
+senate सेंट संत
 senator सेंटर
 seneker संकर
-senn सँ
-senna सँ
-senne सँ
-sennet सेंट
-sennott सेंट
+senn सँ सें
+senna सँ सेना
+senne सँ सें
+sennet सेंट संत
+sennott सेंट संत
 sens साइंस
 sense साइंस
 sensei साइंस
 sensor संसार
+sent संत
 sentell संताल
 seoul सोल
 sephora सफर
 seraw सारा
 serbia सर्बिया
 serda सर्दी
+serge सरजू
 seria सीरिया
 serious सिरिअस
-serr सर
-serra सर
+serr सर शेर
+serra सर शेर
 serres सेरेस
 servais सर्व
 services सर्विसेज
 servin सरवन
+set साइट
 sether सदर
 settanni शैतानी
 setting सेटन
+seven सिवान
 severe शिविर
 severt सेवारत
-sevey शिव
+sevey शिव सिव
 sevilla सिविल
 seville सिविल
 sevin सेवन
-sew सौ
-sewall सवाल
-sewell सवाल
-sewer सुर
+sew सौ शो
+sewall सवाल सोल
+sewell सवाल सोल
+sewer सुर शूर
 sexson सेक्शन
 seychelles सेशेल्स
 seydel शेड्यूल
 seydoux सिदो
-seyer सिर
+seyer सिर शेर
 sferra सफर
-sffed सफेद
-shaak शोक
+sffed सफेद सफ़ेद
+shaak शोक शौक
 shadd साद
 shaddock सड़क
 shadduck सड़क
 shadel शेड्यूल
 shadle शेड्यूल
 shady सदी
-shaff साफ
+shaff साफ साफ़
 shaft शैफ्ट
 shaggy सगी
 shaik शक
@@ -8385,134 +8694,146 @@ shaker शिकार
 shakespeare शेक्सपियर
 shakur सॉकर
 shali शैली
-shall साल
-shallow सालो
-shame सें
+shall साल शैल
+shallow सालो सालों
+shame सें सं
 shamelle शामिल
 shamir समर
 shamu शोमू
 shamus समास
-shanna सं
+shank शंकु
+shanna सं सेना
 shapp शाप
 shaquille शकील
+share शेर
 shark सार्क
-sharron शरण
+sharon सरन
+sharron शरण सरन
 sharrow शहरो
-sharry शहरी
+sharry शहरी सारी
 sharyl सरल
-shaub सब
+shaub सब साब
 shaull साल
-shave शिव
+shave शिव शैव
 shawgo सौगो
-shawhan सावन
+shawhan सावन सेवन
 shawl साल
-shawmut शांत
-shawnut शांत
-shayne सें
-shays सहज
-she सही
-shea से
-shear शहर
+shawmut शांत सहमत
+shawnut शांत सांत
+shayne सें सं
+shays सहज शेष
+she सही सी
+shea से स
+shear शहर शेर
 sheard शरद
 sheared शरद
 shearn शीर्ण
-shearon शरण
+shearon शरण शीर्ण
 shears शीर्ष
-sheath सहित
-sheathe सहित
-sheehy सही
+sheath सहित सीट
+sheathe सहित शहीद
+sheehy सही सी
 sheelah शिला
 sheer शहर
-sheeran शरण
+sheeran शरण शीर्ण
+sheet सीट
 sheilah शिला
-shekel शक्ल
+shekel शक्ल शकील
 shelia शैली
-shell शैल
+shell शैल सेल
 shelley शैली
 shelly शैली
 shema सीमा
 shemona सिमोन
-sheriff शरीफ
-sherr शहर
+shenk शंकु
+sheriff शरीफ शरिफ
+sherr शहर शेर
 sherri शहरी
 sherrie शहरी
-sherriff शरीफ
+sherriff शरीफ शरिफ
 sherrod शरद
 sherron शरण
 sherrow शहरो
 sherry शहरी
 shh स
-shia सही
-shiah सही
+shia सही सी
+shiah सही सी
 shick शक
 shied शायद
-shieh सही
+shieh सही सी
 shiel सील
-shiela शैली
+shiela शैली शैल
 shift शैफ्ट
-shih सही
+shih सही सी
 shiley शैली
-shill शैल
+shill शैल सील
 shim सें
 shimmy सेमी
 shin सें
-shine सें
+shine सें सैन
 shines साइंस
 shinn सें
 shinnick सिनिक
-shirah सिरा
-shirin शरण
+shirah सिरा शेर
+shirin शरण शीर्ण
 shirk सार्क
 shirl सरल
-shirr शहर
+shirr शहर शेर
 shithole शीतल
+shock शौक
 shocked शौकत
 shod साद
-shoddy शादी
-shoe शो
+shoddy शादी सदी
+shoe शो सू
 shoelace सलेस
-shoen सहन
+shoen सहन सोन
 shoes सहज
-shoff साफ
+shoff साफ साफ़
 sholl साल
+shonk शंकु
 shoob सब
+shook शक
+shoot सूट
 shop शाप
 shoppe शाप
 shopped सप्त
 shoptaw सप्तो
+shore सौर
 shores सारस
-shorey सारी
+shorey सारी साड़ी
 shorin सोरेन
-shorr शहर
+shorr शहर सौर
 shortage शॉर्टेज
 shot सात
 shott सात
-shough सौ
+shough सौ शो
 shovel सवाल
 show शो
-showa शो
+showa शो सौ
 shower सौर
 shown सोन
 shows सहज
 shrewd शरद
 shrub शराब
 shudder सदर
-shuey सुई
-shuff साफ
+shuey सुई सई
+shuff साफ साफ़
 shuffle सफल
-shull साल
+shull साल सहल
+shun सं
+shunk शंकु
 shunto संतों
 shupp शाप
-shurr शहर
+shurr शहर शेर
 shut सात
 shuttle सटल
-shy से
+shy से सहाय
 shyly शैली
-shyne सें
+shyne सें सैन
 shyness साइंस
 siad सैयद
-siang सें
-sias जहाज
+siang सें सं
+sias जहाज जहाज़
 sibbie सिब
 sibby सिब
 sibson सबसं
@@ -8521,7 +8842,7 @@ sichel सकल
 sicilia सिसिली
 sick शक
 sickel सकल
-sickened सेकंड
+sickened सेकंड सेकेण्ड
 sicker शिकार
 sickle सकल
 sidak सड़क
@@ -8532,59 +8853,60 @@ sidor सदर
 sidra सदर
 siebe सिब
 siege सीज
-sieh सी
-sieja से
+sieh सी स
+sieja से स
 siemon सिमोन
 sierra सिएरा
 sies सीज
-siess शीश
-sieve शिव
+siess शीश शिशु
+sieve शिव सिव
 siew सू
 sift शैफ्ट
 sigh से
 sighed शायद
-sight साइट
-sign सें
+sight साइट सेट
+sign सें सैन
 signs साइंस
 sikora शिकार
 silas सैलेश
 silica सिल्क
 silicate सिलिकेट
-sill सील
+sill सील सेल
 sillman सलमान
 silly शैली
 silman सलमान
 silvia सिल्विया
-sim सें
+sim सें सं
 simcha सिंह
 sime सें
 simes साइंस
-simm सें
+simm सें सं
 simmer समर
-simmon समान
+simmon समान सिमोन
 simon साइमन
 simple सैम्पल
-sin सँ
-sindt सेंट
-sine सें
+sin सँ सें
+sindt सेंट संत
+sine सें सैन
 sineath सीनेट
 sines साइंस
-sing सँ
+sing सँ सें
 sinker संकर
-sinn सँ
+sinn सँ सें
 sinnett सीनेट
-sinnott सेंट
-sinton संतान
+sinnott सेंट संत
+sinton संतान संतों
 sinus साइंस
 sioux सू
 sipped सप्त
-sir सर
+sir सर सार
 siris सेरेस
-sirk सड़क
-sirohi सरही
-siron सरन
-site साइट
-sithe शायद
+sirk सड़क सार्क
+sirohi सरही सारही
+siron सरन सरण
+sit सेट
+site साइट सेट
+sithe शायद सेठ
 sitton सेटन
 sivy सिव
 skaar स्कोर
@@ -8592,13 +8914,13 @@ skalla सकल
 skate सकैत
 skehan सकैं
 ski सकै
-skill शकील
+skill शकील सकल
 skim सकैं
 skin सकैं
 skinned स्कंद
 skit सकैत
 skoal सकल
-skull स्कूल
+skull स्कूल सकल
 sky सकै
 slab स्लैब
 slaght स्लेट
@@ -8616,10 +8938,11 @@ slovakia स्लोवाकिया
 slum सलाम
 small स्माल
 smarr समर
+smart स्मार्त
 smear समर
-smetana समेटने
+smetana समेटने समेटनें
 smirk स्मारक
-smith समेत
+smith समेत समेट
 smithee समिति
 smithey समिति
 smittle समतल
@@ -8628,7 +8951,7 @@ smooth समुद
 smudge समाज
 smull स्माल
 smyrna स्मरण
-smyth समेत
+smyth समेत समेट
 smythe समेत
 snabel स्नोबॉल
 snare स्नेर
@@ -8639,23 +8962,24 @@ snow स्नो
 snowball स्नोबॉल
 snowe स्नो
 soady सदी
-soak शोक
+soak शोक शौक
 soaked शौकत
 soaker सॉकर
-soar सौर
+soar सौर सार
 soares सारस
 soaring सोरेन
-soars सारस
+soars सारस सरजू
 soave शव
-sobbed शब्द
+sobbed शब्द सब्द
 soccer सॉकर
-socci सोची
+socci सोची सोचि
 sochet सौसे
 sochor सॉकर
-socia सोच
+socia सोच सोची
 social सोशल
 socialist सोशलिस्ट
 socially सोशल
+sock शौक
 socked शौकत
 socking सकैं
 socol सकल
@@ -8667,15 +8991,15 @@ sodium सोडियम
 soeder सदर
 soffel सफल
 soffer सफर
-sofie साफ
-softly साफली
-software सॉफ्टवेयर
+sofie साफ साफ़
+softly साफली सफली
+software सॉफ्टवेयर सॉफ्टवेर
 soggy सगी
-sohm सं
+sohm सं शोम
 sohmer सोमार
 soiree स्वर
 solace सलेस
-solemn सालों
+solemn सालों सलाम
 soley सोल
 soli सोल
 solie सोल
@@ -8685,79 +9009,82 @@ solley साल
 sollie साल
 sollish सलेस
 solly साल
-solow सालो
-solum सलाम
+solow सालो सालों
+solum सलाम सलेम
 somalia सोमालिया
 some सं
 someday संडे
-somes सामज
+somes सामज समझ
 somewhat संवत
-somma सं
-sommer समर
+somma सं सामी
+sommer समर सुमेर
 somoza सामज
-sonat संत
+son सं
+sonat संत सांत
 sonet संत
-song सँ
+song सँ सोन
 songy सांझी
 sonji सांझी
-sonn सँ
-sonne सँ
-sonnett संत
-sonny सुनी
+sonn सँ सं
+sonne सँ सं
+sonnett संत सांत
+sonny सुनी सानी
 sonya सोनी
-soon सँ
-soong सँ
+soon सँ सं
+soong सँ सं
 soos सोझ
 soothe सतह
-sooty सुती
-sooy सुई
+sooty सुती सती
+sooy सुई सई
 sop शाप
 sopp शाप
+sore सार
 sorell सरल
-sores सारस
-sorey सारी
+sores सारस सरजू
+sorey सारी साड़ी
+sorge सरजू
 soria सौरिया
 sorice सारस
-sorin सोरेन
+sorin सोरेन सारण
 soros सारस
 sorrel सरल
 sorrell सरल
-sorrows सारस
-sorry सारी
+sorrows सारस सरजू
+sorry सारी साड़ी
 sorus सारस
 sosa सौसे
 sotak सटीक
 sotello सटलो
 sottile सटल
 souffle सफल
-sough सौ
+sough सौ शो
 sought सात
 souped सप्त
 source सारस
 sources सोर्सेज
 souris सुरेश
 sous सोझ
-sousa शुजा
+sousa शुजा सुजा
 south साउथ
 souther सदर
-souza शुजा
+souza शुजा सुजा
 sova शव
 soviet सोवियत
-sow सौ
-sowa सौ
-sowata सूट
+sow सौ शो
+sowa सौ सू
+sowata सूट शूट
 sowden सदान
 sowder सदर
 sower सौर
 sowle सोल
-sown सँ
+sown सँ सोन
 sows सोझ
 soya शॉइया
 space स्पेस
 spacial स्पेशल
 span स्पेन
 spang स्पेन
-spanish स्पेनिश
+spanish स्पेनिश स्पैनिश
 spann स्पेन
 spartz स्पोर्ट्स
 spatial स्पेशल
@@ -8784,7 +9111,7 @@ staff स्टाफ
 staffa स्टाफ
 stage स्टेज
 stahl सटल
-stahr स्तर
+stahr स्तर स्टार
 stain स्तन
 stainless स्टेनलेस
 stair स्तर
@@ -8792,14 +9119,15 @@ stall सटल
 stalling स्टालिन
 stan स्तान
 standard स्टैंडर्ड
-stang स्तान
+stang स्तान स्तन
 stanislav स्टेनिस्लाव
-stann स्तान
+stann स्तान स्तन
+star स्टार
 starmer स्टोर्मर
 starnes शतरंज
 starns शतरंज
 staron स्टर्न
-starr स्तर
+starr स्तर स्टार
 starring स्टारिंग
 starry स्टोरी
 stassen स्टेशन
@@ -8811,7 +9139,7 @@ stats स्टेट्स
 status स्टेट्स
 statz स्टेट्स
 stauff स्टाफ
-stay सत
+stay सत सटी
 stayer स्तर
 staying स्टीन
 stays स्टेज
@@ -8822,10 +9150,10 @@ stearne स्टर्न
 stearns शतरंज
 steere स्तर
 stehr स्तर
-stell स्टाइल
-stella स्टाइल
-stelle स्टाइल
-stello सटलो
+stell स्टाइल सटल
+stella स्टाइल सटलो
+stelle स्टाइल सटल
+stello सटलो सटलौ
 sterns शतरंज
 sterr स्तर
 stetz स्टेट्स
@@ -8838,30 +9166,31 @@ stihl स्टील
 still स्टील
 stille स्टील
 sting स्टीन
-stir स्तर
+stir स्तर स्टार
 stirn स्टर्न
 stirring स्टारिंग
 stites स्टेट्स
-stitt स्टेट
+stitt स्टेट सतत
 stitz स्टेट्स
 stobie सताबै
-stoehr स्तर
+stoehr स्तर स्टार
 stoermer स्टोर्मर
 stoff स्टाफ
 stohl सटल
-stohr स्तर
+stohr स्तर स्टार
 stoll सटल
 stolle सटल
 stollen स्टालिन
-stong स्टोन
+stong स्टोन स्तान
 stool सटल
+store स्टार
 storing स्टारिंग
-storr स्तर
+storr स्तर स्टार
 stott सतत
 stough स्टाफ
 straka स्ट्रोक
 strauch स्ट्रोक
-stray स्तर
+stray स्तर सत्र
 stream स्ट्रीम
 strecker स्ट्राइकर
 streicher स्ट्राइकर
@@ -8874,38 +9203,38 @@ studies स्टडीज
 studio स्टूडियो
 studios स्टूडियोज
 stuff स्टाफ
-stuhr स्तर
+stuhr स्तर स्टार
 stull सटल
-stung स्तन
+stung स्तन स्तान
 stupay स्तूप
 stupp स्तूप
 style स्टाइल
-subbed शब्द
+subbed शब्द सब्द
 subdue शब्दो
 subfamily सबफ़ैमिली
 subtle सटल
-succumbed सेकंड
+succumbed सेकंड स्कंद
 such सच
-suck शक
+suck शक शोक
 sucked सूक्त
 sucking सकैं
 sudd साद
-sudden सदान
+sudden सदान सूडान
 sue सू
-suen सँ
+suen सँ सं
 sues सोझ
 suess स्विस
-suey सुई
+suey सुई सई
 suffer सफर
 suffolk सफोक
 sugg सुग
-suh स
+suh स सा
 suhm सं
-suire सुर
+suire शुरू सुर
 suisse स्विस
-suit सूट
-suiting शूटिंग
-suitt सूट
+suit सूट शूट
+suiting शूटिंग सुतन
+suitt सूट शूट
 sulak शुल्क
 sulfate सल्फेट
 sulfide सल्फाइड
@@ -8914,26 +9243,31 @@ sullen सालों
 sullie साल
 sully साल
 sulphate सल्फेट
-sulton सुल्तान
+sultan सूल्तान
+sulton सुल्तान सूल्तान
 sumgait संगत
 summa सं
-summar समर
-summer समर
+summar समर सुमेर
+summer समर सुमेर
 summey सामी
 summing समन
-summit संत
-summitt समेत
-summon समान
+summit संत समेत
+summitt समेत समेट
+summon समान सामान
 sump सांप
-sums सामज
+sums सामज समझ
+sun सं
 sunbath संबित
 sunday संडे
-sundays संदेश
-sundt संत
+sundays संदेश सन्देश
+sundry सुन्दरी
+sundt संत सांत
 sundy संडे
-sung सँ
-sunni सुनी
-sunny सुनी
+sung सँ सं
+sunk शंकु
+sunni सुनी सोनी
+sunny सुनी सानी
+suntan सन्तान
 sunup सांप
 sup शाप
 supine स्पेन
@@ -8943,26 +9277,27 @@ supporting सपोर्टिंग
 supports स्पोर्ट्स
 supreme सुप्रीम
 supremes सुप्रीमस
-sure शहर
-surf सेर्फ
+sure शुरू शुरु
+surf सेर्फ सिर्फ
+surge सरजू
 surgeon सर्जन
 surratt सोरोत
 surrell सरल
-surrey सारी
-surry सारी
+surrey सारी साड़ी
+surry सारी साड़ी
 survey सर्व
 susan सूजन
 susann सूजन
-susanna सुजाना
+susanna सुजाना सूजन
 susanne सूजन
 susko शासकौ
-sutch सच
+sutch सच सोच
 suther सदर
 sutton सुतन
 suva शव
-suzanna सुजाना
+suzanna सुजाना सूजन
 suzanne सूजन
-suzie शासी
+suzie शासी सजै
 swaim स्वयं
 swain स्वयं
 swaine स्वयं
@@ -8973,29 +9308,29 @@ swayne स्वयं
 sways स्विस
 swayze स्विस
 swear स्वर
-sweat श्वेत
+sweat श्वेत स्वत
 sweden स्वीडन
 swedish स्वीडिश
-swett श्वेत
+swett श्वेत स्वत
 swiss स्विस
 swung श्वान
-sycara शिकार
+sycara शिकार शिकारी
 sydow सिदो
 sykora शिकार
-sylla शिला
+sylla शिला सीलो
 sylvia सिल्विया
-sym सें
+sym सें सं
 symbol सिंबल
 syme सें
 symes साइंस
-symon समान
+symon समान सिमोन
 sympson सिम्प्सन
-syn सँ
-syna सिनी
+syn सँ सें
+syna सिनी सँ
 synagogue सिनेगॉग
 syncor संकर
 syndrome सिंड्रोम
-synnott सेंट
+synnott सेंट संत
 syntactic सिंटैक्टिक
 syntax सिंटैक्स
 syntex सिंटैक्स
@@ -9003,113 +9338,126 @@ synthetic सिंथेटिक
 sypher सफर
 syracuse सिराक्यूज
 syria सीरिया
-syrian सिरियन
-syrup सिरप
+syrian सिरियन सीरियन
+syrup सिरप सर्प
 system सिस्टम
 systemone सिस्टमों
 szczech शक
 szeto सीटौ
-szoke शोक
+szoke शोक शौक
 szot सात
 szott सात
 szuba सूबा
 szuch सच
-tabb तब
-tabby तबे
+tab टैब
+tabb तब टैब
+tabby तबे टैब
 table टेबल
 tablet टैबलेट
-tacked ताकत
+tacked ताकत टिकट
 tackett ताकत
 tackitt ताकत
 tacky ताकि
 tadd ताड़
 tadros टैड्रोस
-tag टैग
-tagg टैग
-tagge टैग
-taher तैयार
+tag टैग तेग
+tagg टैग तेग
+tagge टैग तेग
+taher तैयार तीर
 taibi तबे
-taipei टाइप
+tail तल
+taipei टाइप टेप
 tait तट
 taite तट
 taitt तट
+taiwan ताईवान
 takei तक
 talcott टैलकोट
 tale तेल
-talk तक
+talk तक टोक
 talked ताकत
 talkie ताकि
 talky ताकि
-tall ताल
-talley टाली
-tallie टाली
-tally टाली
-tama तों
+tall ताल तल
+talley टाली तेली
+tallie टाली टोली
+tally टाली तेली
+tama तों तं
 tambs टाइम्स
-tame तें
-tamm टाइम
+tame तें टिम
+tamed टेंडू
+tamm टाइम तें
+tan तें
 tanguay तंग
-tania तोंय
+tani तानी
+tania तोंय तानी
 tanis टेनिस
-tann टन
-tanney तनी
+tann टन तें
+tanned टेंडू
+tanney तनी तानी
 tantalum टैंटेलम
 tanzania तंजानिया
-tape टेप
+tap टाइप
+tape टेप तप
 tapia तापीय
-tapp ताप
+tapp ताप टाइप
 tappan तपन
-tappe ताप
+tappe ताप टाइप
 tappen तपन
 tappin तपन
 tapping टाइपिंग
+tar तौर
 tariff तरफ
 tarlow तोड़लो
 tarom टर्म
 tarot तरौ
 tarring तरंग
-tarry तेरी
+tarry तेरी तरी
 taste टेस्ट
 taube तब
 taught तट
-taul ताल
+taul ताल तल
 taut तट
 tawes टॉस
-tawney तानी
-tawny तनी
+tawney तानी तनी
+tawny तनी तानी
 taxed टेक्स्ट
-taxes टेक्सास
+taxes टेक्सास टेक्सस
 taxi टैक्सी
 tays तेज
-tea टी
-teahan तीन
+tea टी ते
+teahan तीन टीन
 teal तिल
 teale तिल
 teall तिल
 team टीम
-tear तीर
-teare तीर
+tear तीर तैयार
+teare तीर टीयर
 tearle तरल
-teary तेरी
+teary तेरी तरी
 tech तक
 technic तकनीक
 technique तकनीक
 tecla तकले
-teehan तीन
-teeing तीन
-tegge तेग
-tehan तीन
-tehran तरौन
-tejera टेरा
+teehan तीन टीन
+teeing तीन टीन
+teen टीन
+tegge तेग टैग
+tehan तीन टीन
+tehran तरौन तरण
+tejera टेरा तीर
+tel तल
 telephone टेलीफोन
 telephony टेलीफोनी
-televison टेलिविज़न
-tell तेल
+televison टेलिविज़न टेलीविजन
+tell तेल तल
 teller टाइलर
 tellurium टेलुरियम
-telly तेली
-temme तें
-tenn तें
+telly तेली टेली
+temme तें टाइम
+ten टन
+tend टेंडू
+tenn तें टन
 tennessee टेनेसी
 tenney तनी
 tennis टेनिस
@@ -9117,94 +9465,101 @@ tenny तनी
 terra टेरा
 terrain तरण
 terral तरल
-terre तैयार
+terre तैयार टेरा
 terrel तरल
 terrell तरल
-terri तेरी
-terrie तेरी
+terri तेरी तरी
+terrie तेरी तरी
 terrill तरल
 territory टेरिटरी
-terry तेरी
+terry तेरी तरी
 tessman तस्मान
-tew टू
+tew टू छू
+texas टेक्सस
 thadda ताड़
-thai ते
-thaine तें
+thai ते ताई
+thaine तें टन
 thais तेज
-thalia थैली
-thall ताल
+thalia थैली तेली
+thall ताल तल
 thallium थैलियम
 thames टाइम्स
-than दिन
-thanh टन
-thaw ठो
-thawed थोड़
+than दिन दान
+thanh टन तें
+that तहत
+thaw ठो तो
+thawed थोड़ ताड़
 thaws ठोस
-thayer तैयार
-thayne तें
-the द
+thayer तैयार तीर
+thayne तें टन
+the द डी
 thea तहिया
 theall तिल
-theano तीनो
+theano तीनो तीनों
 thee डी
 theiler टाइलर
-their दर
+their दर देर
 theirs दर्ज
-theis देस
+theis देस देश
 thekla तकले
-them डेम
+them डेम दम
 theme टीम
-then दिन
+then दिन दें
 theodore थियोडोर
-theory तेरी
-thera टेरा
-there दर
+theory तेरी तरी
+thera टेरा तैयार
+there दर देर
 therm टर्म
 theroux थारु
 therrell तरल
-these दिस
+these दिस डिश
 theses थीसिस
 thesis थीसिस
 theurer ताड़र
-thew टू
-they दै
+thew टू ठो
+they दै दे
+thick तक
 thicket टिकट
 thiel तिल
 thiele तिल
 thielke तिलक
 thiem टीम
 thieme टीम
-thien तीन
-thierry तेरी
-thiery तेरी
+thien तीन टीन
+thierry तेरी तरी
+thiery तेरी तरी
 thievery तिवारी
-thigh थाई
+thigh थाई ते
 thighs तेज
-thill तेल
+thill तेल तिल
 thima टीम
-thing तीन
+thin टिन
+thing तीन टिन
+thinned टेंडू
 thinness टेनिस
 thirty तरती
-thiry तेरी
-this देस
-thoele तल
-thoen तों
-tholl तल
-thomann डोमेन
+thiry तेरी तरी
+this देस देश
+thoele तल थल
+thoen तों टन
+tholl तल ताल
+thomann डोमेन दमन
 thomassen थॉमसन
 thomasson थॉमसन
 thommen ठामँ
-thone तों
+thone तों टन
 thoreau तरौ
 thorell तरल
 thorium थोरियम
 thorough तरौ
-thou दो
-though दो
-thought तट
+those दस
+thou दो दौ
+though दो ठो
+thought तट तहत
 thrall तरल
 threads थ्रेड्स
 threatt तड़ित
+three ट्री
 threw ट्रू
 thrill तरल
 throaty तरती
@@ -9213,22 +9568,22 @@ throw तरौ
 thrown तरौन
 thru ट्रू
 thrust ट्रस्ट
-thull तल
-thumb थम
-thumm थम
-thumma थम
-thune टुन
-thuot तट
+thull तल थल
+thumb थम ठाम
+thumm थम ठाम
+thumma थम ठाम
+thune टुन टन
+thuot तट तहत
 thurm टर्म
 thurner टर्नर
 thurnher टर्नर
 thurow तरौ
-thus दस
+thus दस दास
 thweatt ट्वीट
 thy दै
-thyme टाइम
-thyra टेरा
-tia टी
+thyme टाइम तें
+thyra टेरा टेर
+tia टी ते
 tiara टीयर
 tibbie टीबी
 tibby टीबी
@@ -9238,35 +9593,39 @@ tic तक
 ticer तेसर
 tick तक
 tickets टैकिटस
-tie ते
+tie ते ताई
 tieman टीमों
 tiemann टीमों
 tien तें
 ties तेज
-tig तेग
+tig तेग टैग
 tigar टैगोर
-tighe टैग
+tighe टैग तेग
 tigon तिगैन
 til तेल
 tile तेल
-tiley तेली
-till तेल
-tilley तेली
-tillie तेली
-tilly तेली
-time टाइम
+tiley तेली टेली
+till तेल तिल
+tilley तेली टेली
+tillie तेली टेली
+tilly तेली टेली
+time टाइम तें
+timed टेंडू
 times टाइम्स
 timm टीम
 timme टीम
 timmer तमर
-ting तीन
+tin टिन
+tina टीन
+ting तीन टिन
+tinged टेंडू
 tingen तीनों
 tinney तनी
 tinnon तीनों
 tinny तनी
-tip टेप
-tipa टीपू
-tipp टेप
+tip टीपू टेप
+tipa टीपू टेप
+tipp टीपू टेप
 tippen तपन
 tipps तपस
 tips तपस
@@ -9278,10 +9637,10 @@ tisher तेसर
 tit तट
 titanium टाइटेनियम
 tizzy तेजी
-tkach किछ
-toa टू
+tkach किछ किछु
+toa टू तो
 toal तल
-tobago टोबेगो
+tobago टोबेगो टोबैगो
 tocco तकौ
 tod ताड़
 toda तोड़ी
@@ -9292,60 +9651,65 @@ toelle तल
 toes टॉस
 toft टाफ्ट
 toll तल
-tolle तल
-tolley टाली
+tolle तल ताल
+tolley टाली ताली
 tolly टोली
-toma टोमे
-tomb तों
+tom तं
+toma टोमे तों
+tomb तों तं
 tomey टोमे
 tommie टोमे
 tommy टोमे
-ton टन
+ton टन तन
 tone तों
-tongue तंग
+tongue तंग टन
 tonia तनी
 tonight टुनाइट
 tonite टुनाइट
-tonn टन
-tonne टन
+tonn टन तन
+tonne टन तन
 tony तनी
+too तो
 took तक
-tool तल
-toole तल
-toomer ट्यूमर
+tool तुलू तल
+toole तुलू तल
+toomer ट्यूमर तमर
 toomey तुमि
-toone टुन
+toone टुन टन
 toops तपस
 toot तट
 tooth तट
-toothed तट
+toothed तट टुडु
 toothy टूटी
 top ताप
 topaz तपस
-topp ताप
+topp ताप तोप
 toppin तपन
 topps तपस
 torain तरण
 torchia तारकीय
+tore तार
 torello तोड़लो
-torok तर्क
-torr तौर
-torray तौर
-torre तौर
-torrey तोड़ी
-torry तोड़ी
+torok तर्क तारिक
+torr तौर तार
+torray तौर तार
+torre तौर तार
+torrey तोड़ी तौरी
+torry तोड़ी तौरी
 tosch टॉस
 toss टॉस
 toth तट
 toughed टाफ्ट
-toughen तूफ़ान
+toughen तूफ़ान तूफान
 toups तपस
+touring ट्यूरिंग
 touro तरौ
 tower तौर
 town टाउन
 towne टाउन
-towry तोड़ी
+towry तोड़ी तौरी
 tows टॉस
+toy टॉय
 tozer तसर
 traced ट्रस्ट
 tracht ट्रैक्ट
@@ -9357,20 +9721,22 @@ traeger ट्रिगर
 trager ट्रिगर
 trail तरल
 trained ट्रेंड
+trang ट्रेन
 transmission ट्रांसमिशन
 traugh तरौ
 traynor ट्रेनर
 tre त्रय
 treat तड़ित
+tree ट्री
 treichel ट्रैक
 trekked ट्रैक्ट
 trekking ट्रैकिंग
-trella तरल
+trella तरल तरला
 treu ट्रू
 trew ट्रू
 trial ट्रायल
 triassic ट्राइएसिक
-trick ट्रैक
+trick ट्रैक ट्रक
 tricked ट्रैक्ट
 tricking ट्रैकिंग
 trieu ट्रू
@@ -9383,7 +9749,7 @@ tritt तड़ित
 troia त्रय
 troll तरल
 trolley ट्रॉली
-troon तरुन
+troon तरुन तरुण
 troost ट्रस्ट
 trough तरफ
 troung तरौन
@@ -9391,86 +9757,88 @@ trow तरौ
 trueman ट्रूमन
 truffaut तरफो
 trull तरल
-truong तरंग
-try तराई
+truong तरंग तरौन
+try तराई ट्राई
 trying ट्रेन
 tryst ट्रस्ट
 tsai से
 tsao सौ
-tschida चैड
-tschopp चाप
-tschudy चूड़ी
-tse सी
-tseng सँ
-tso सौ
-tsuda सदी
-tsui सुई
+tschida चैड छेद
+tschopp चाप छाप
+tschudy चूड़ी छोड़ी
+tse सी स
+tseng सँ सें
+tso सौ शो
+tsuda सदी सदा
+tsui सुई सई
 tsunami सुनामी
 tubb तब
-tubby तबे
-tube ट्यूब
+tubby तबे तबै
+tube ट्यूब तब
 tucked ताकत
 tuckett ताकत
 tuckey ताकि
-tuel तल
-tuell तल
+tuel तुलू तल
+tuell तुलू तल
 tuft टाफ्ट
 tufte टाफ्ट
 tuite तट
-tull तल
+tull तल ताल
 tulley टोली
 tulloch तलक
 tullock तलक
-tully टाली
+tully टाली ताली
 tulsa तुलसी
-tuma टोमे
+tuma टोमे तों
 tumey तुमि
 tummy तुमि
-tumor ट्यूमर
-tunney तनी
-tunny तनी
+tumor ट्यूमर तमर
+tuna टन
+tune टन
+tunney तनी तानी
+tunny तनी तानी
 turchi तुर्की
 ture तौर
 turkic तार्किक
 turow तरौ
 turrell तरल
-turri तरी
+turri तरी तोड़ी
 turrill तरल
 tutorial ट्यूटोरियल
-tuyle तल
-two टू
+tuyle तुलू तल
+two टू तो
 twos तुझ
 tyco टाइको
 tycoon टाईकून
 tygar टैगोर
-tylee तेली
+tylee तेली टेली
 tyler टाइलर
-tylka तिलका
+tylka तिलका तलक
 tyne तें
 tyo तइयो
-type टाइप
+type टाइप टेप
 typing टाइपिंग
-tyra टेरा
+tyra टेरा टेर
 tyre टेर
 tyree तेरी
-ubben अबं
+ubben अबं अबँ
 uccel अचल
 ucci अछि
 uddin अदन
-udelle एडेल
-uecker ऊकर
-ueda वेद
-uganda यूगैंडा
-ugh आग
-uhde उड़ै
-uher ओर
-uhh आ
-uhl अल
-uhle ओवल
+udelle एडेल देल
+uecker ऊकर ओकर
+ueda वेद वेदी
+uganda यूगैंडा युगाण्डा
+ugh आग आगु
+uhde उड़ै अदा
+uher ओर ओवर
+uhh आ उ
+uhl अल आलू
+uhle ओवल अवल
 uhlig अलग
-uhr ओर
-uhrin अरिन
-ukraine यूक्रेन
+uhr ओर अरु
+uhrin अरिन उरैन
+ukraine यूक्रेन युक्रेन
 ullock आलोक
 ullom आलम
 ulm आलम
@@ -9478,24 +9846,26 @@ uma यम
 umm आम
 ummel अम्ल
 unarm ऑनोरम
+under अंडर
 undress आन्द्रेस
 uneasy निजी
 unholy नहोली
 united यूनाइटेड
 uno नौ
 unum अनाम
-unz अंश
+unz अंश आंसू
 update अपडेट
-upp आप
-upper ऊपर
-upping अपन
+upon आपन
+upp आप एपी
+upper ऊपर अपार
+upping अपन आपन
 uproot परत
 ups आपस
 uptain पतन
 uranus यूरेनस
 urgen अर्जन
-uric एरीक
-urich एरीक
+uric एरीक एरिक
+urich एरीक एरिक
 ursie अरसे
 ursy अरसे
 usa यूएस
@@ -9503,7 +9873,7 @@ use यस
 username यूजरनेम
 users यूजर्स
 uther उदार
-utt अत
+utt अत एटी
 uttech ऊतक
 uwe यू
 uzelac जिलाक
@@ -9514,11 +9884,11 @@ vacate विकेट
 vacco वाको
 vacuum वैक्यूम
 vague वेग
-vain वें
-vajda वाइड
+vain वें वन
+vajda वाइड वेद
 valencia वालेंसिया
 vales वेल्स
-valet वाले
+valet वाले वाली
 valin विलिन
 valis वैलिस
 valium विलियम
@@ -9530,12 +9900,12 @@ valley वाली
 valli वाली
 vallie वाली
 vallis वैलिस
-van वें
+van वें वां
 vance वंश
 vanes वंश
 vanity विनती
-vann वें
-vanna वाइन
+vann वें वां
+vanna वाइन वें
 vanni वाणी
 vannie वाणी
 vanny वाणी
@@ -9544,18 +9914,19 @@ vanya वाणी
 varden वरदान
 vardon वरदान
 vari वार
+vase वश
 vasey वेसे
 vasily वैशाली
 vaske वयस्क
-vass वास
+vass वास वश
 vassey वेसे
-vast वेस्ट
-vath वट
+vast वस्तु वेस्ट
+vath वट वाइट
 vatican वैटिकन
-vaugh वो
-vaughan वां
-vaughn वां
-vaught वोट
+vaugh वो वा
+vaughan वां वाँ
+vaughn वां वाँ
+vaught वोट वट
 vault वाल्ट
 vause वास
 vawter वाटर
@@ -9567,7 +9938,7 @@ veered वर्ड
 vegh वेग
 veiling विलिन
 veillon विलिन
-vein वें
+vein वें वन
 veins वंश
 velez वैलिस
 velika वेलिकी
@@ -9575,8 +9946,8 @@ veliz वैलिस
 vella वला
 veneer वानर
 venice वंश
-venn वें
-venne वें
+venn वें वाइन
+venne वें वाइन
 venous विनाश
 ventura वेंचर
 venture वेंचर
@@ -9586,7 +9957,7 @@ verdon वरदान
 verdun वरदान
 verena वारेन
 verging वर्जिन
-veron वरुण
+veron वरुण वर्ण
 versa वर्ष
 vesel विशाल
 vesna वैसनौ
@@ -9594,20 +9965,21 @@ vess वश
 vessel विशाल
 vessell विशाल
 vessey वेसे
+vest वस्तु
 vestron वेस्टर्न
 vetting वेतन
-veyne वें
+veyne वें वन
 viar वेयर
 vibe वेब
 vicar विकार
-vicious विशेष
+vicious विशेष विषेश
 vicker विकार
 victoria विक्टोरिया
-video वीडियो
-vied वाइड
+video वीडियो विडियो
+vied वाइड वेद
 vien वीं
-viera वीर
-vierra वेरा
+viera वीर वर
+vierra वेरा वीर
 viet वियत
 vietnam वियतनाम
 vig वेग
@@ -9616,7 +9988,7 @@ villa वला
 villain विलिन
 vina वीं
 vince वंश
-vine वाइन
+vine वाइन वें
 vinet विनीत
 vinsant विंसेंट
 viral वायरल
@@ -9629,8 +10001,8 @@ virna वर्ण
 virtual वर्चुअल
 virus वायरस
 vision विज़न
-vist वेस्ट
-vista वेस्टा
+vist वेस्ट वस्तु
+vista वेस्टा वेस्ट
 vita वाइट
 vitae वाइट
 vitia विष
@@ -9639,9 +10011,10 @@ vlok वलाक
 vocal वकील
 vodka वादक
 voegele वोगेल
-voght वोट
-vogt वोट
-vohs वास
+voest वस्तु
+voght वोट वट
+vogt वोट वट
+vohs वास वश
 voice वॉयस
 voisey वॉयस
 volley वाली
@@ -9650,13 +10023,14 @@ vonnie वाणी
 vonny वाणी
 vose वश
 voss वास
+vote वट
 votes वत्स
-voth वोट
-vought वोट
+voth वोट वट
+vought वोट वट
 vous वू
 vow वो
 voyager वॉयजर
-waah वा
+waah वा वो
 wach वॉच
 wacha वॉच
 wacker विकार
@@ -9667,15 +10041,16 @@ waddy वादी
 wade वेद
 wag वेग
 wagg वेग
-wagon वेगां
+wagon वेगां विगन
 wahine वाहिनी
 wailing विलिन
 wais वश
+waist वस्तु
 wait वट
 waites वत्स
 waits वत्स
 waiver विवर
-wajda वाइड
+wajda वाइड वेद
 wakefield विकफील्ड
 walen विलिन
 wales वेल्स
@@ -9694,39 +10069,43 @@ wally वाली
 walth वाल्ट
 wanat विनीत
 wanes वंश
-wang वें
-wann वां
-wanna वां
+wang वें वन
+wann वां वन
+wanna वां वाँ
 wanner वानर
-wanta वां
+wanta वां वाँ
 war वार
-warr वार
+ward वर्ड
+warr वार वर
 warren वरुण
 warring वारंग
 warshaw वर्षा
+was वश
+wash वास
+washed वस्तु
 waskow वास्को
-wass वास
-waste वेस्ट
+wass वास वश
+waste वेस्ट वस्तु
 waster विस्तार
 watch वॉच
 watt वोट
 wattie वोट
 watts वत्स
 watz वत्स
-waugh वो
+waugh वो वा
 wausau वसा
 waver विवर
-way वे
-waye वे
-wayman विमान
-wayne वें
+way वे वें
+waye वे वें
+wayman विमान विमेन
+wayne वें वन
 ways वश
-wayson वजन
+wayson वजन वज़न
 wayt वट
 weakened वीकेंड
 weaker विकार
 wean वीं
-wear वर
+wear वर वेयर
 wease विष
 weasel विशाल
 weaver विवर
@@ -9734,15 +10113,16 @@ webb वेब
 website वेबसाइट
 wecht वक़्त
 wecker विकार
-wedd वेद
+wed वाइड
+wedd वेद वाइड
 weep वीआईपी
 weese विष
-wehde वेद
+wehde वेद वाइड
 wehlan विलिन
 wehling विलिन
-wehman विमान
-wehr वर
-weigh वे
+wehman विमान विमेन
+wehr वर वेयर
+weigh वे वें
 weighed वेद
 weighs वश
 weight वट
@@ -9757,16 +10137,19 @@ wells वेल्स
 welz वेल्स
 wenz वंश
 werden वरदान
-werre वर
+were वार
+werre वर वेयर
 wess वश
 wessel विशाल
 wessell विशाल
 wesson वैसें
+west वस्तु
 westair विस्तर
+wet वाइट
 wetting वेतन
 wetz वत्स
 weylin विलिन
-weyman विमान
+weyman विमान विमेन
 whacked वक़्त
 whacker विकार
 whacko वाको
@@ -9776,7 +10159,7 @@ whaley हवेली
 whalin विलिन
 whaling विलिन
 whalley वाली
-whang वें
+whang वें वन
 what वट
 whate वट
 whats वत्स
@@ -9785,15 +10168,15 @@ wheeling विलिन
 wheelon विलिन
 wheeze विष
 whelan विलिन
-when वीं
+when वीं वें
 whence वंश
-where वर
-whet वट
+where वर वेयर
+whet वट वाइट
 whew वू
 whicker विकार
 whig वेग
 whigham वेगां
-whine वाइन
+whine वाइन वें
 whinery वाइनरी
 whip वीआईपी
 whipp वीआईपी
@@ -9811,23 +10194,23 @@ whitten वेतन
 whitton वेतन
 whiz विष
 who हो
-whoa हो
-whole होल
-wholey होली
-wholly होली
-whom हम
+whoa हो वो
+whole होल हॉल
+wholey होली होलै
+wholly होली होलै
+whom हम होम
 whoo वू
 whoosh वश
-whore हर
-why हवाई
+whore हर हार
+why हवाई वाई
 whyte वाइट
 wicat विकेट
 wicca विकी
 wicker विकार
-wide वाइड
+wide वाइड वेद
 widick वैदिक
 wied विद
-wiehe वीं
+wiehe वीं वी
 wieman विमान
 wiemann विमान
 wien वीं
@@ -9853,13 +10236,14 @@ willkie विल्के
 willock वलाक
 wills वेल्स
 willson विल्सन
+win वें
 wince वंश
 windows विंडोज़
-wine वाइन
+wine वाइन वें
 winery वाइनरी
-wing वीं
-winn वीं
-winne वीं
+wing वीं वें
+winn वीं वें
+winne वीं वें
 winnett विनीत
 winnowed विनोद
 winther विंटर
@@ -9867,16 +10251,18 @@ wintour विंटर
 wire वेयर
 wireless वायरलेस
 wirz वर्ष
-wisch विष
+wisch विष वश
+wish वश
 wished वेस्ट
-wiss विष
-wissa वसा
+wishon विष्णु विषाणु
+wiss विष वश
+wissa वसा विष
 wissel विशाल
-wist वेस्ट
-wisz विष
+wist वेस्ट वस्तु
+wisz विष वश
 wit वट
 witcher विचार
-with वेद
+with वेद विद
 withe वट
 without विदाउट
 wits वत्स
@@ -9887,23 +10273,24 @@ witton वेतन
 witts वत्स
 witz वत्स
 wiz विष
-woehr वार
+woehr वार वर
 woerner वर्नर
 woes वश
+woeste वस्तु
 woggle वोगेल
-wojahn वहां
+wojahn वहां वहाँ
 wollack वलाक
 wolverine वूल्वरिन
-women विमान
+women विमान विमेन
 won वां
-woong वन
+woong वन वंग
 woos वश
 wops वापस
 word वार्ड
 worden वरदान
 words वार्ड्स
 wordy वर्डे
-wore वार
+wore वार वर
 worsham वर्षों
 worthey वर्डे
 worthy वर्डे
@@ -9913,91 +10300,93 @@ wracked रक्त
 wrage रिज
 wragg राग
 wrapper रैपर
-wrath रात
+wrath रात रेत
 wray रे
 wreaked रिक्त
 wreaking रिकेन
-wrecked रक्त
+wreath ऋतु
+wrecked रक्त रिक्त
 wrede रीड
 wrench रेंच
-wrenn रन
+wrenn रन राइन
 wrestle रसेल
 wright रेत
 wrights राइट्स
-wring रंग
-writ रेत
+wring रंग रिंग
+writ रेत ऋतु
 write रेत
 writer रायटर
 writes राइट्स
-writhe रेत
+writhe रेत ऋतु
 written रतन
 wroclaw रोकलौ
 wrona रन
 wrong रंग
 wrote रॉट
 wroten रतन
-wrought रात
+wrought रात रॉट
 wruck रोक
 wrung रंग
-wry राय
-wrye राय
+wry राय रे
+wrye राय रे
 wuensch वंश
 wurz वर्ष
-wuss वास
-wyden वाइड
+wuss वास वश
+wyden वाइड वेद
 wyer वेयर
 wyka विकी
-wyne वाइन
-wynn वीं
-wynne वीं
+wyne वाइन वें
+wynn वीं वें
+wynne वीं वें
 wynter विंटर
-wyss विष
-wythe वाइड
-xan सँ
-xena जीन
-xene जीन
+wyss विष वश
+wythe वाइड वेद
+xan सँ सं
+xanthe जंतु जन्तु
+xena जीन जेएन
+xene जीन जेएन
 xenos जीनस
-xero जेरो
-xhosa जोशी
-xiao जौ
+xero जेरो जेरौ
+xhosa जोशी जोस
+xiao जौ जो
 xicor जेकर
-xie जे
-xing सें
-xio जो
-xiong जहाँ
-xue जो
+xie जे जी
+xing सें सींग
+xio जो जा
+xiong जहाँ जहां
+xue जो सू
 xuemei जमै
 xus जोस
 yack एक
 yackel एकल
 yadda याद
 yaffe एफ
-yagi योगी
-yahn यान
-yahoo योहो
+yagi योगी योग
+yahn यान एन
+yahoo योहो यहु
 yahweh यव
 yak एक
 yake एक
 yakel एकल
 yale एल
 yamin यमन
-yanda एंड
-yanni यानी
+yanda एंड एन्ड
+yanni यानी यानि
 yap एप
 yapp एप
 yaps एप्स
 yaron एरिन
-yass एस
+yass एस येसु
 yaupon यापन
-yawn यान
-yay ए
-yea ए
+yawn यान यौन
+yay ए ये
+yea ए ये
 yeagle ईगल
 yeah या
 year ईयर
-yearick एरिक
+yearick एरिक एरीक
 years ईयर्स
-yeas एस
+yeas एस यीशु
 yeast ईस्ट
 yedda यदि
 yehuda यहूदी
@@ -10006,17 +10395,19 @@ yelle एल
 yellen एलन
 yellin एलन
 yelling एलन
+yen येन
 yeo ईओ
 yeoman यमन
 yepez एपिस
-yetta एटो
+yes येसु
+yetta एटो एटी
 yeung यंग
 yilin एलन
-yim एम
-yin एन
-ying एन
+yim एम यम
+yin एन ईनू
+ying एन ईनू
 yinger यंगर
-yip एप
+yip ईपू एप
 yipee एपी
 yippee एपी
 ynjiun इंजन
@@ -10027,114 +10418,116 @@ yongue यंग
 yoos यस
 yoss यस
 youman यमन
-young यान
+young यान यंग
 younger यंगर
 yous यस
 youse यस
 youtube यूट्यूब
-yucca युकी
+yucca युकी यूके
 yummy यम
 yun यान
 yuppie यूपी
 yves ईव
-yvonne एवं
+yvonne एवं इवान
 zach शक
 zachar जकर
 zachary जेकरे
-zacher जेकर
+zacher जेकर जकर
 zachery जेकरे
 zachi साकी
 zack शक
 zackery जेकरे
-zadeh जादे
+zadeh जादे जोड़ै
 zadillo जड़लो
-zahnow सोनो
-zaid जड़
+zahnow सोनो जनो
+zaid जड़ सैयद
 zaino जनो
 zak शक
 zaki साकी
-zalm सं
-zaman समान
-zambia ज़ाम्बिया
+zalm सं जों
+zaman समान जमीन
+zambia ज़ाम्बिया जाम्बिया
 zammit सिमित
-zandt सेंट
-zanella जानलो
-zanghi जांगी
-zani सानी
-zant सेंट
+zandt सेंट संत
+zanella जानलो जानल
+zanghi जांगी ज़ंगी
+zani सानी जाने
+zant सेंट संत
 zanu जनो
 zany सिनी
-zapp जप
+zapp जप शाप
 zappa जप
 zapped सप्त
-zarah जरा
-zarella जोड़ला
+zarah जरा जाड़ा
+zarella जोड़ला जड़लो
 zaria जरिया
-zarr जड़
-zarre जारी
+zarr जड़ ज़ार
+zarre जारी जोर
 zarrella जोड़ला
-zarro जौरो
+zarro जौरो जाड़ौ
 zaugg जोग
-zayed सैयद
-zayre सर
-zea जे
-zeal जिल
-zecca जेके
+zayed सैयद सयद
+zayre सर शेर
+zea जे जी
+zeal जिलु जिल
+zecca जेके जेकी
 zech शक
 zecher जेकर
 zeck शक
 zeeb सिब
 zeh जे
-zehr सर
-zehren सरन
+zehr सर शेर
+zehren सरन सरण
 zeis सीज
-zelem जेलोम
+zelem जेलोम सलाम
 zelia जलीय
-zell जल
-zelle जल
+zell जल जेल
+zelle जल जेल
 zellman सलमान
 zelman सलमान
 zempel सैम्पल
-zen सँ
+zen सँ सें
 zenas जीनस
 zenia जैनियो
-zent सेंट
+zent सेंट संत
 zeos जीयस
 zephyr सफर
 zepp जप
 zern जीर्ण
+zero जेरौ
 zeroed सरोद
-zerr सिर
-zettle जटिल
+zerr सिर सर
+zettle जटिल सटल
 zeus जोस
 zeyno जनो
-zhang जहाँ
-zhao जौ
-zheng सँ
+zhang जहाँ जहां
+zhao जौ जो
+zheng सँ सें
 zhou जो
 zhu जो
-zia जिया
+zia जिया जीये
 ziahe जिया
 zich सच
-zieba जीबी
-ziehl जिल
-ziel जिल
+zieba जीबी शीबा
+ziehl जिलु जिल
+ziel जिलु जिल
 zielke सिल्क
-zier सिर
+zier सिर सर
 zietlow जीतलो
 zika जकाँ
 zilka सिल्क
 zilkha सिल्क
-zill जल
+zill जल जिलु
 zillah जिला
 zillion जलयान
-zim सें
+zim सें सं
+zimbabwe ज़िम्बाब्वे
 zimmer समर
-zing सें
-zinga जिनगी
-zingg सींग
+zing सें सींग
+zinga जिनगी सींग
+zingg सींग संग
 zinman जिनमें
-zinn सँ
+zinn सँ सें
 zinni सिनी
 zinno जनो
 zinser संसार
@@ -10145,53 +10538,56 @@ zipped सप्त
 zipper जिपर
 zippora जिपर
 zircon जरकुन
-zirella जोड़ला
-zirk सड़क
+zirella जोड़ला जड़लो
+zirk सड़क सार्क
 zisa जैसा
-zisson जैसन
+zisson जैसन ज़ीशान
 zitek सटीक
 zito सीटौ
 zittel शीतल
 ziwei जीव
-zoch शोक
-zoete सती
+zoch शोक शौक
+zoete सती सटी
 zoey सई
 zogg जोग
 zoh जो
-zoll साल
-zollo जालो
+zoll साल जल
+zollo जालो सालो
 zone सँ
+zones जोन्स
+zoo सू
 zooey सई
-zook शोक
+zook शोक शक
 zoomed झुंड
-zooming जमीन
-zorah जोर
-zoran जोड़ें
+zooming जमीन ज़मीन
+zoos जज
+zorah जोर जोड़ा
+zoran जोड़ें सरन
 zorana जोड़ें
 zorn सारण
 zorro जौरो
 zoss जोस
 zoucha जहाँ
-zsa जा
-zschau जौ
-zuch सच
+zsa जा जो
+zschau जौ जो
+zuch सच सोच
 zuck शक
 zuege जज
-zuehlke शुल्क
+zuehlke शुल्क शल्क
 zuelke शुल्क
 zuercher सरकार
 zuhlke शुल्क
 zuk शक
-zulli जली
-zungu सांगो
-zuni सुनी
+zulli जली जूल
+zungu सांगो जनो
+zuni सुनी सोनी
 zurcher सरकार
-zurn सारण
+zurn सारण सरन
 zurve सर्व
 zwicker स्वीकार
-zycher जेकर
+zycher जेकर शिकार
 zygmunt जिगमुंट
 zyla जिला
 zylka सिल्क
 zyman साइमन
-zynda जिंदा
+zynda जिंदा जिन्दा

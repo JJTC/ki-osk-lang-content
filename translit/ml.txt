@@ -7,7 +7,12 @@
 # പട്ടാമ്പി, panchayath: പഞ്ചായത്ത്), ri the vowel ൃ (krishnan: കൃഷ്ണൻ). Its
 # doubled consonants are as often typed single (layipichu: ലയിപ്പിച്ചു,
 # palakad: പാലക്കാട്), its long a as a, a last am as om (thadakom: തടാകം)
-# and ആയി as aye (nannaye: നന്നായി). English words, which Malayalam writes
+# and ആയി as aye (nannaye: നന്നായി); d and t stand for ഠ too (padanam:
+# പഠനം), th for ത്ഥ (arthathil: അർത്ഥത്തിൽ), ndh for ന്ത (niyandhranam:
+# നിയന്ത്രണം), ls for ത്സ (chikilsa: ചികിത്സ), ng for ങ്ക (engil: എങ്കിൽ),
+# e for the vowel a consonant carries (sheri: ശരി), a last y for ി (kutty:
+# കുട്ടി), e alone for ഈ, and il alone or after a hyphen for ൽ
+# (1990-il: 1990-ൽ). English words, which Malayalam writes
 # in its own script, are typed as English spells them (meter: മീറ്റർ,
 # school: സ്കൂൾ, india: ഇന്ത്യ): c, sch, a t as റ്റ, nd, ia and tion have
 # English ways too, at a cost.
@@ -24,13 +29,13 @@ final-virama 0.7
 
 [consonants]
 k    ക  ക്ക:1.3
-k$   ക്ക:1
+k$   ക്ക:1  ക
 kk   ക്ക:0.1
 kh   ഖ
 q    ക
 g    ഗ
 gh   ഘ
-ng   ങ്ങ  ങ:1  ംഗ:1.5
+ng   ങ്ങ  ങ:1  ംഗ:1.5  ങ്ക:1.2
 ch   ച:0.1  ച്ച:0.6  ഛ:2
 chh  ച്ഛ  ഛ:1
 c    ച  ക:1.5
@@ -45,10 +50,10 @@ nj   ഞ  ഞ്ഞ:0.5  ഞ്ച:0.8
 nch  ഞ്ച:0.3  ന്ച:1
 z    സ:1  ശ:1.5
 zh   ഴ
-t    ട:0.2  ത:0.5  റ്റ:0.7  ട്ട:1.2  ത്ത:1.2
+t    ട:0.2  ത:0.5  റ്റ:0.7  ട്ട:1.2  ത്ത:1.2  ഠ:2.5
 tt   ട്ട  റ്റ:0.4  ത്ത:0.8
-th   ത:0.2  ത്ത:0.3  ഥ:1.4
-d    ട:0.2  ദ:0.4  ഡ:0.8
+th   ത:0.2  ത്ത:0.3  ഥ:1.4  ത്ഥ:1.5
+d    ട:0.2  ദ:0.4  ഡ:0.8  ഠ:2
 dd   ദ്ദ  ഡ്ഡ:0.5  ട്ട:1
 dh   ദ്ദ:0.4  ധ:0.3  ദ്ധ:0.6  ഥ:0.8  ദ:1  ഢ:2
 n    ന:0.2  ണ:0.7  ന്ന:1.6  ണ്ണ:1.8
@@ -74,6 +79,8 @@ s    സ  ശ:1  സ്സ:1.5
 h    ഹ:0.1
 x    ക്സ  ക്ഷ:1
 ksh  ക്ഷ
+ls    ത്സ:1
+ndh   ന്ത:0.8  ന്ധ:0.4
 
 [vowels]
 a     അ/-:0.1  ആ/ാ:0.8
@@ -90,7 +97,7 @@ u     ഉ/ു  ഊ/ൂ:1.2
 u$    ഉ/്:0.2  ഉ/ു
 oo    ഊ/ൂ  ഓ/ോ:0.6
 uu    ഊ/ൂ
-e     എ/െ:0.2  ഏ/േ:0.4
+e     എ/െ:0.2  ഏ/േ:0.4  അ/-:2
 ^e    എ/െ:0.1  ഇ/ി:0.8  ഏ/േ:0.8
 ae    ഏ/േ
 ai    ഐ/ൈ  അയ്/യ്:1
@@ -101,6 +108,7 @@ au    ഔ/ൗ
 ri    ഋ/ൃ:1
 ru    ഋ/ൃ:1.5
 ou    ഔ/ൗ
+^e$   ഈ/ീ:0.5
 
 [other]
 tion$  ഷൻ:1
@@ -113,6 +121,9 @@ r>c   ർ:0.1
 l>c   ൽ:0.5  ൾ:1.5
 n>c   ൻ:0.9  ം:1.5  ൺ:1.5
 m>c   ം:0.9
+y$    ി:1
+-il$  -ൽ:0.3
+^il$  ൽ:0.5
 
 # The Latin letters' names, for abbreviations typed letter by letter
 # (tv: ടിവി), as the language's Wikipedia writes them.
