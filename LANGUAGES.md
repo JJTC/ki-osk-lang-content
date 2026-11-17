@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**423 layouts**: 368 keyboard layouts (RTL: ar he fa + Urdu, Western
+**446 layouts**: 391 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 422 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **363 languages** carry a prediction
+keycaps. 445 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **386 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -316,6 +316,29 @@ but no model to match the glide against · `—` off
 | `gvl` | `gvl` | Gulay | us + long-press è é ê à á ɓ ɗ m̂ ɔ ò…, ' key | LTR | **Full** (gvl)⁷ | ✓ | — |
 | `nnb` | `nnb` | Nande Kinande | us + long-press ĩ í į ũ ú ų á é ó, ' key | LTR | **Full** (nnb)⁷ | ✓ | — |
 | `nyo` | `nyo` | Nyoro Runyoro | us, ' key | LTR | **Full** (nyo)⁷ | ✓ | — |
+| `niu` | `niu` | Niuean Vagahau Niuē | us + long-press ā ē ō ū | LTR | **Full** (niu)⁷ | ✓ | — |
+| `hwc` | `hwc` | Hawaiian Pidgin Pidgin | us | LTR | **Full** (hwc)⁷ | ✓ | — |
+| `acf` | `acf` | Saint Lucian Creole Kwéyòl | us + long-press é è ò | LTR | **Full** (acf)⁷ | ✓ | — |
+| `mrw` | `mrw` | Maranao Meranaw | us + long-press ā ū ī | LTR | **Full** (mrw)⁷ | ✓ | — |
+| `nij` | `nij` | Ngaju | us | LTR | **Full** (nij)⁷ | ✓ | — |
+| `guc` | `guc` | Wayuu Wayuunaiki | us + long-press ü ú á é í ó ñ, ü ' keys | LTR | **Full** (guc)⁷ | ✓ | — |
+| `ljp` | `ljp` | Lampung Api Lampung | us | LTR | **Full** (ljp)⁷ | ✓ | — |
+| `sas` | `sas` | Sasak Basa Sasak | us + long-press ẽ | LTR | **Full** (sas)⁷ | ✓ | — |
+| `gor` | `gor` | Gorontalo Hulontalo | us, ' key | LTR | **Full** (gor)⁷ | ✓ | — |
+| `itv` | `itv` | Itawit | us | LTR | **Full** (itv)⁷ | ✓ | — |
+| `bku` | `bku` | Buhid | us | LTR | **Full** (bku)⁷ | ✓ | — |
+| `bpr` | `bpr` | Koronadal Blaan Blaan | us + long-press à é è ê ì ò ù | LTR | **Full** (bpr)⁷ | ✓ | — |
+| `quh` | `quh` | South Bolivian Quechua Qhichwa | us + long-press ñ á é í ó ú, ʼ key | LTR | **Full** (quh)⁷ | ✓ | — |
+| `gcr` | `gcr` | Guianan Creole Kriyòl | us + long-press é è ò à ï | LTR | **Full** (gcr)⁷ | ✓ | — |
+| `tum` | `tum` | Tumbuka Chitumbuka | us + long-press ŵ | LTR | **Full** (tum)⁷ | ✓ | — |
+| `tll` | `tll` | Tetela Otetela | us + long-press ɛ ɔ, ' key | LTR | **Full** (tll)⁷ | ✓ | — |
+| `guz` | `guz` | Gusii Ekegusii | us, ' key | LTR | **Full** (guz)⁷ | ✓ | — |
+| `kde` | `kde` | Makonde Chimakonde | us + long-press á à â é ê è í î ì ô… | LTR | **Full** (kde)⁷ | ✓ | — |
+| `nyy` | `nyy` | Nyakyusa Ikinyakyusa | us + long-press ị í ị̄ ī ụ ū ụ̄ ú ā ē… | LTR | **Full** (nyy)⁷ | ✓ | — |
+| `mas` | `mas` | Maasai Maa | us + long-press á â é ê í ó ô ú | LTR | **Full** (mas)⁷ | ✓ | — |
+| `mnk` | `mnk` | Mandinka | us + long-press ŋ ñ ǹ ì à é m̀ | LTR | **Full** (mnk)⁷ | ✓ | — |
+| `mer` | `mer` | Meru Kĩmĩĩrũ | us + long-press ĩ ũ | LTR | **Full** (mer)⁷ | ✓ | — |
+| `dga` | `dga` | Dagaare | us + long-press ɛ ē é ɛ̃ ŋ ɔ õ ɔ̃ ã ŭ… | LTR | **Full** (dga)⁷ | ✓ | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `kab` | `kab` | Kabyle | us | LTR | **Full** (kab) | ✓ | — |
@@ -832,7 +855,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These two hundred and seventy-five models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These two hundred and ninety-eight models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1407,6 +1430,40 @@ but no model to match the glide against · `—` off
    Northern Grebo's letters are typed so, which the strip spares. Nyoro's,
    Chuwabu's, Nande's and Haya's held-out words are 12% to 15% unknown,
    their words of many parts, their text small.
+   Twenty-three more of the long tail learn from FineWeb-2's text whole:
+   Southeast Asia's, the Americas' and the Pacific's that it has 0.4 to
+   1.2 MB of (Niuean, Hawaiian Pidgin, Saint Lucian Creole, Maranao,
+   Ngaju, Wayuu, Lampung Api, Sasak, Gorontalo, Itawit, Buhid, Koronadal
+   Blaan, South Bolivian Quechua, Guianan Creole) and Africa's with 0.2 to
+   0.4 MB (Tumbuka, Tetela, Gusii, Makonde, Nyakyusa, Maasai, Mandinka,
+   Meru, Dagaare): 51 000 (Meru) to 640 000 words (Niuean), the Bible's
+   in the main, Niuean's New Zealand's health pages too, Guianan
+   Creole's and Dagaare's their wikis, Maasai's, Meru's and Gusii's
+   Kenyan news and radio. A sentence of English is left out, and of the
+   state's language (Indonesian's, Tagalog's, Spanish's, French's,
+   Portuguese's, Swahili's own words); Maranao's Arabic (sermons, the
+   Quran) is left out by script, the LOLcat Bible beside Hawaiian Pidgin
+   and a book pirate's pages beside Itawit by site; Meru's ĩ written ῖ is
+   read as ĩ; every 10th document is held out. They are typed on the US
+   keys, their letters first on the long presses; Gorontalo, Tetela,
+   Gusii and Wayuu have an apostrophe key at the home row's end, Wayuu a
+   ü key beside it, and South Bolivian Quechua an ʼ key for its
+   ejectives, which its words keep as Cusco Quechua's do. Their lexicons
+   keep all their words. Keystroke savings on their held-out text (3 100
+   to 18 700 words): Sasak 67.3%, Lampung Api 66.5%, Gorontalo 66.2%,
+   Ngaju 64.9%, Itawit 64.5%, Saint Lucian Creole 61.3%, Buhid 60.9%,
+   Hawaiian Pidgin 59.2%, Koronadal Blaan 58.0%, Niuean 52.9%, Nyakyusa
+   47.3%, Tetela 47.2%, Makonde 45.6%, Tumbuka 43.5%, Mandinka 43.3%,
+   Guianan Creole 42.5%, Maranao 42.1%, Meru 41.9%, Wayuu 41.2%, Maasai
+   39.2%, South Bolivian Quechua 38.6%, Gusii 38.4%, Dagaare 37.9%; 50.9%
+   on average, 44.9% with taps astray, at most 0.62% of right words
+   changed (Wayuu's). The smallest texts know least of what is typed:
+   South Bolivian Quechua's held-out words are 24% unknown, Wayuu's,
+   Gusii's and Maasai's 18%, and they save 22% to 29% with taps astray.
+   Makassarese is not used: its Bible writes the glottal stop ' and its
+   chronicles q, and it saved 27% (8% with taps astray), a third of its
+   held-out words unknown. Lahu, which writes its tones with five marks
+   after the syllable (awˬ, teˇ), waits for a keyboard with keys for them.
    Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
@@ -1478,7 +1535,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **363 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **386 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1693,7 +1750,8 @@ are built on a `us`/`es` base and add theirs the same way:
 | `nan` `hak` | their toned vowels first on the long presses, the commonest first: Southern Min's á â ā à a̍, o͘ in its five tones on o, ⁿ first on n; Hakka's â à á a̍, ṳ in its five tones on u | each its own |
 | `ami` Amis | ', the glottal stop, a key of its own at the home row's end (its text writes it ’, ˈ and ^ too) | `ami` |
 | `zne` `skg` `bss` `men` `lgg` `xon` `dnj` `gbo` `gux` `suk` `spp` `bas` `ngl` `chw` `fat` `bud` `kao` `gvl` `nnb` `cce` | each language's own letters first on the long presses, with their tones where its text writes them (Akoose's ɛ ə ɔ with seven tones between them, Northern Grebo's ɛ ɔ with three, Ntcham's on b l m n too) | each its own |
-| `alz` `bss` `lgg` `suk` `spp` `hay` `kbr` `kao` `gvl` `nnb` `nyo` | an apostrophe, a key of its own at the home row's end: they write one in 3% to 11% of their words (Sukuma's ng'wa, Gulay's le’n, Nande's n'abandu); Akoose's is its glottal stop, ʼ, as its text writes it | each its own |
+| `niu` `acf` `mrw` `guc` `sas` `bpr` `quh` `gcr` `tum` `tll` `kde` `nyy` `mas` `mnk` `mer` `dga` | each language's own letters first on the long presses (Niuean's macrons, Sasak's ẽ, Tumbuka's ŵ, Nyakyusa's ị ụ, Dagaare's ɛ ɔ ŋ and nasals…) | each its own |
+| `alz` `bss` `lgg` `suk` `spp` `hay` `kbr` `kao` `gvl` `nnb` `nyo` `gor` `tll` `guz` `quh` `guc` | an apostrophe, a key of its own at the home row's end: they write one in 3% to 11% of their words (Sukuma's ng'wa, Gulay's le’n, Nande's n'abandu, Gorontalo's nga'amila); Akoose's is its glottal stop and South Bolivian Quechua's its ejective, ʼ, as their texts write it; Wayuu's ü, in a third of its words, has one beside it | each its own |
 | `ksw` Sgaw Karen | Keyman's phone layout, one letter a key on the base view, the asat ် a key of its own at the home row's end; whole words on long presses (လီၤ on လ, ဒီး on ဒ) | `ksw` |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 

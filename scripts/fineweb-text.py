@@ -93,6 +93,17 @@ Bantu languages Swahili's own katika kwamba lakini…, not the kwa ni wa
 ya they write too); every 10th document is held out. Fante's ͻ (a Greek
 look-alike) ɑ ε are read as ɔ a ɛ, Lugbara's ʉ as the ᴜ its text writes
 forty times as often, a scan's ﬁ as fi.
+Twenty-three more of the long tail are read so too: Southeast Asia's,
+the Americas' and the Pacific's that FineWeb-2 has 0.4 to 1.2 MB of
+(Niuean, Hawaiian Pidgin, Saint Lucian Creole, Maranao, Ngaju, Wayuu,
+Lampung, Sasak, Gorontalo, Itawit, Buhid, Blaan, South Bolivian
+Quechua, Guianan Creole) and Africa's with 0.2 to 0.4 MB
+(Tumbuka, Tetela, Gusii, Makonde, Nyakyusa, Maasai, Mandinka, Meru,
+Dagaare), each against English and its state's language (Indonesian's,
+Tagalog's, Spanish's, French's, Portuguese's, Swahili's own words);
+Maranao's Arabic (sermons, the Quran) is left out by script, and so
+are the LOLcat Bible beside Hawaiian Pidgin and a book
+pirate's pages beside Itawit; Meru's ĩ written ῖ is read as ĩ.
 
 Thirty-eight languages that had a keyboard and no model, FineWeb-2 has
 hundreds of millions of characters of: Afrikaans, Albanian, Bashkir,
@@ -611,6 +622,8 @@ LONG_TAIL_FOLD = {
     # Lugbara's ʉ, the vowel its text writes ᴜ forty times more often.
     "fat": str.maketrans("ͻϽɑⱭεΕ", "ɔƆaAɛƐ"),
     "lgg": str.maketrans({"\u0289": "\u1D1C"}),
+    # Meru's ĩ written as Greek's ῖ.
+    "mer": str.maketrans("ῖ", "ĩ"),
     # A scanned magazine's ligatures.
     "skg": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
     "lld": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
@@ -753,6 +766,11 @@ def amis(text):
 # Swahili's own words, which the Bantu languages beside it do not write
 # (its kwa, ni, wa and ya they do).
 SWAHILI_RIVAL = set("katika kwamba lakini pamoja baada sana hii yake".split())
+
+
+# Hawaiian Pidgin's English look-alikes: the LOLcat Bible and its kin.
+LOLCAT_HOSTS = re.compile(r"lolcat|catsrgreen|layonara")
+BOOK_PIRATES = re.compile(r"b-ok\.")
 
 
 # Sgaw Karen's older fonts' letters, as Unicode writes them.
@@ -1276,6 +1294,23 @@ LANGS = {
            ("ngl", PORTUGUESE_ONLY), ("gog", SWAHILI_RIVAL), ("chw", PORTUGUESE_ONLY), ("fat", set()),
            ("tsc", PORTUGUESE_ONLY), ("bud", FRENCH_ONLY), ("kao", FRENCH_ONLY), ("gvl", FRENCH_ONLY),
            ("nnb", FRENCH_ONLY | SWAHILI_RIVAL), ("nyo", SWAHILI_RIVAL))},
+    # The long tail of Southeast Asia, the Americas, the Pacific (0.4 to 1.2
+    # MB of FineWeb-2's text) and of Africa (0.2 to 0.4 MB): every 10th
+    # document held out; Maranao's Arabic (sermons, the Quran) left out by
+    # script. Makassarese's is not used: it writes its glottal stop ' in
+    # the Bible and q in its chronicles, and saved 27% (8% astray).
+    **{lang: {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | rival,
+              "letters_never": set("|"), "brackets": True, "hold": 10,
+              **({"normalize": long_tail(lang)} if lang in LONG_TAIL_FOLD else {}), **more}
+       for lang, rival, more in (
+           ("niu", set(), {}), ("hwc", set(), {"hosts_out": LOLCAT_HOSTS}), ("acf", FRENCH_ONLY, {}),
+           ("mrw", set(), {"script_only": True}), ("nij", INDONESIAN_ONLY, {}), ("guc", SPANISH_SET, {}),
+           ("ljp", INDONESIAN_ONLY, {}), ("sas", INDONESIAN_ONLY, {}),
+           ("gor", INDONESIAN_ONLY, {}),
+           ("itv", TAGALOG_ONLY, {"hosts_out": BOOK_PIRATES}), ("bku", TAGALOG_ONLY, {}), ("bpr", TAGALOG_ONLY, {}),
+           ("quh", SPANISH_SET, {}), ("gcr", FRENCH_ONLY, {}), ("tum", set(), {}), ("tll", FRENCH_ONLY, {}),
+           ("guz", SWAHILI_RIVAL, {}), ("kde", PORTUGUESE_ONLY | SWAHILI_RIVAL, {}), ("nyy", SWAHILI_RIVAL, {}),
+           ("mas", SWAHILI_RIVAL, {}), ("mnk", FRENCH_ONLY, {}), ("mer", SWAHILI_RIVAL, {}), ("dga", set(), {}))},
     # Myanmar's other languages, cut into syllables.
     **{lang: {"script": "MYANMAR", "neighbour": set(), "lines": True, "unspaced": True,
               "normalize": normalize, "script_only": True, "foreign": foreign,

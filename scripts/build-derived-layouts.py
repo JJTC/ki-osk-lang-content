@@ -101,9 +101,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # The layout made, the one it is made from, its name, and what its keys
 # gain on a long press (a key's label → the letters, first in its menu),
 # on every view; and, for some, keys that type another letter instead
-# ("swap": a key's label → the letter), or a key at the home row's end
-# in place of its spacers ("home": what it types, the apostrophe many of
-# Africa's languages write inside their words).
+# ("swap": a key's label → the letter), or keys at the home row's end
+# in place of its spacers ("home": what one types, the apostrophe many of
+# Africa's languages write inside their words, or a list: Wayuu's ü and
+# its apostrophe).
 DERIVED = [
     ("bho", "hi", "भोजपुरी", {}),
     ("mai", "hi", "मैथिली", {}),
@@ -340,6 +341,29 @@ DERIVED = [
     ("gvl", "us", "Gulay", {"e": ["è", "é", "ê"], "E": ["È", "É", "Ê"], "a": ["à", "á"], "A": ["À", "Á"], "b": ["ɓ"], "B": ["Ɓ"], "d": ["ɗ"], "D": ["Ɗ"], "m": ["m̂"], "M": ["M̂"], "o": ["ɔ", "ò", "ó"], "O": ["Ɔ", "Ò", "Ó"], "u": ["ú"], "U": ["Ú"]}, {"home": "'"}),
     ("nnb", "us", "Kinande", {"i": ["ĩ", "í", "į"], "I": ["Ĩ", "Í", "Į"], "u": ["ũ", "ú", "ų"], "U": ["Ũ", "Ú", "Ų"], "a": ["á"], "A": ["Á"], "e": ["é"], "E": ["É"], "o": ["ó"], "O": ["Ó"]}, {"home": "'"}),
     ("nyo", "us", "Runyoro", {}, {"home": "'"}),
+    ("niu", "us", "Vagahau Niuē", {"a": ["ā"], "A": ["Ā"], "e": ["ē"], "E": ["Ē"], "o": ["ō"], "O": ["Ō"], "u": ["ū"], "U": ["Ū"]}),
+    ("hwc", "us", "Pidgin", {}),
+    ("acf", "us", "Kwéyòl", {"e": ["é", "è"], "E": ["É", "È"], "o": ["ò"], "O": ["Ò"]}),
+    ("mrw", "us", "Meranaw", {"a": ["ā"], "A": ["Ā"], "u": ["ū"], "U": ["Ū"], "i": ["ī"], "I": ["Ī"]}),
+    ("nij", "us", "Ngaju", {}),
+    ("guc", "us", "Wayuunaiki", {"u": ["ü", "ú"], "U": ["Ü", "Ú"], "a": ["á"], "A": ["Á"], "e": ["é"], "E": ["É"], "i": ["í"], "I": ["Í"], "o": ["ó"], "O": ["Ó"], "n": ["ñ"], "N": ["Ñ"]}, {"home": ["ü", "'"]}),
+    ("ljp", "us", "Lampung", {}),
+    ("sas", "us", "Basa Sasak", {"e": ["ẽ"], "E": ["Ẽ"]}),
+    ("gor", "us", "Hulontalo", {}, {"home": "'"}),
+    ("itv", "us", "Itawit", {}),
+    ("bku", "us", "Buhid", {}),
+    ("bpr", "us", "Blaan", {"a": ["à"], "A": ["À"], "e": ["é", "è", "ê"], "E": ["É", "È", "Ê"], "i": ["ì"], "I": ["Ì"], "o": ["ò"], "O": ["Ò"], "u": ["ù"], "U": ["Ù"]}),
+    ("quh", "us", "Qhichwa", {"n": ["ñ"], "N": ["Ñ"], "a": ["á"], "A": ["Á"], "e": ["é"], "E": ["É"], "i": ["í"], "I": ["Í"], "o": ["ó"], "O": ["Ó"], "u": ["ú"], "U": ["Ú"]}, {"home": "ʼ"}),
+    ("gcr", "us", "Kriyòl", {"e": ["é", "è"], "E": ["É", "È"], "o": ["ò"], "O": ["Ò"], "a": ["à"], "A": ["À"], "i": ["ï"], "I": ["Ï"]}),
+    ("tum", "us", "Chitumbuka", {"w": ["ŵ"], "W": ["Ŵ"]}),
+    ("tll", "us", "Otetela", {"e": ["ɛ"], "E": ["Ɛ"], "o": ["ɔ"], "O": ["Ɔ"]}, {"home": "'"}),
+    ("guz", "us", "Ekegusii", {}, {"home": "'"}),
+    ("kde", "us", "Chimakonde", {"a": ["á", "à", "â"], "A": ["Á", "À", "Â"], "e": ["é", "ê", "è"], "E": ["É", "Ê", "È"], "i": ["í", "î", "ì"], "I": ["Í", "Î", "Ì"], "o": ["ô"], "O": ["Ô"], "u": ["ú", "ù"], "U": ["Ú", "Ù"]}),
+    ("nyy", "us", "Ikinyakyusa", {"i": ["ị", "í", "ị̄", "ī"], "I": ["Ị", "Í", "Ị̄", "Ī"], "u": ["ụ", "ū", "ụ̄", "ú"], "U": ["Ụ", "Ū", "Ụ̄", "Ú"], "a": ["ā"], "A": ["Ā"], "e": ["ē"], "E": ["Ē"], "o": ["ō"], "O": ["Ō"]}),
+    ("mas", "us", "Maa", {"a": ["á", "â"], "A": ["Á", "Â"], "e": ["é", "ê"], "E": ["É", "Ê"], "i": ["í"], "I": ["Í"], "o": ["ó", "ô"], "O": ["Ó", "Ô"], "u": ["ú"], "U": ["Ú"]}),
+    ("mnk", "us", "Mandinka", {"n": ["ŋ", "ñ", "ǹ"], "N": ["Ŋ", "Ñ", "Ǹ"], "i": ["ì"], "I": ["Ì"], "a": ["à"], "A": ["À"], "e": ["é"], "E": ["É"], "m": ["m̀"], "M": ["M̀"]}),
+    ("mer", "us", "Kĩmĩĩrũ", {"i": ["ĩ"], "I": ["Ĩ"], "u": ["ũ"], "U": ["Ũ"]}),
+    ("dga", "us", "Dagaare", {"e": ["ɛ", "ē", "é", "ɛ̃"], "E": ["Ɛ", "Ē", "É", "Ɛ̃"], "n": ["ŋ"], "N": ["Ŋ"], "o": ["ɔ", "õ", "ɔ̃"], "O": ["Ɔ", "Õ", "Ɔ̃"], "a": ["ã"], "A": ["Ã"], "u": ["ŭ", "ū", "ũ"], "U": ["Ŭ", "Ū", "Ũ"]}),
 ]
 
 
@@ -389,7 +413,8 @@ def build(lang, base, name, extra, extras=None):
             if row[0].get("output", {}).get("kind") != "none" or row[-1].get("output", {}).get("kind") != "none":
                 sys.exit(f"{lang}: {base}'s home row has no spacers to give way")
             view["rows"][1]["keys"] = row[1:-1] + [
-                {"width_units": 1, "label": home, "output": {"kind": "text", "text": home}}]
+                {"width_units": 1, "label": h, "output": {"kind": "text", "text": h}}
+                for h in ([home] if isinstance(home, str) else home)]
     return json.dumps(out, ensure_ascii=False, indent=2) + "\n"
 
 

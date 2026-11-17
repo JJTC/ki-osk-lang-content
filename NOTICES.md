@@ -188,7 +188,7 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Two hundred and sixty-nine models learn from FineWeb-2's web text alone: those of Bodo,
+Two hundred and ninety-two models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
@@ -239,7 +239,11 @@ Zhuang), and of twenty-eight more of Africa's long tail (Akoose, Alur,
 Basaa, Chopi, Chuwabu, Dan, Fante, Gamo, Gogo, Gourmanché, Gulay, Haya,
 Hehe, Kafa, Konkomba, Lomwe, Lugbara, Mende, Nande, Northern Grebo,
 Ntcham, Nyoro, Sakalava Malagasy, Sukuma, Supyire, Tswa, Xaasongaxango
-and Zande); and Assamese's from it beside its Tatoeba sentences, Magahi's beside its Incubator text, and
+and Zande), and of twenty-three more of the long tail (Buhid, Dagaare,
+Gorontalo, Guianan Creole, Gusii, Hawaiian Pidgin, Itawit, Koronadal
+Blaan, Lampung Api, Maasai, Makonde, Mandinka, Maranao, Meru, Ngaju,
+Niuean, Nyakyusa, Saint Lucian Creole, Sasak, South Bolivian Quechua,
+Tetela, Tumbuka and Wayuu); and Assamese's from it beside its Tatoeba sentences, Magahi's beside its Incubator text, and
 Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's beside GlotCC's
 (below).
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
