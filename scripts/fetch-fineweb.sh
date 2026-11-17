@@ -19,7 +19,10 @@
 # Azerbaijani, Chechen, Avar, the Zazakis…); twenty-four of Africa's
 # (Seychellois Creole, Northern Ndebele, Ndonga, Efik, Sango…); nineteen
 # of the Americas', the Pacific's and the classical (Latin, Papiamento,
-# Classical Syriac, the Mayan languages…); and
+# Classical Syriac, the Mayan languages…); four keyboards that had no
+# model: Serbian in Latin letters, Guaraní, Fula (Pular's, Maasina's and
+# the Fulfuldes' text together) and Tamazight in Tifinagh (Central Atlas'
+# and Standard Moroccan's); and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -450,6 +453,22 @@ ch   cha_Latn  train/000_00000.parquet  3d8c0f604b2ec1a5fe97c9980bf9a69ef8b9df64
 ch   cha_Latn  test/000_00000.parquet   cae8c1193c9c14c2eb4cc0e9aeea888237c00deccd7349b3c4b7ac17de280a5f
 jam  jam_Latn  train/000_00000.parquet  a5c4750065003556f4f7e5d2e3e5b897e0aa647c2a70b3d15ef89c2dc2151a81
 jam  jam_Latn  test/000_00000.parquet   40bcc8b85f1858e3cd6aab64483fbe530cf91144e63ed9764e9c8ea0fe9334b6
+sr-Latn  srp_Latn  train/000_00000.parquet 6582bb986e7917dcff4e77b8eae60f3ffbe4e06855c6c0709d669266a3cfc391
+sr-Latn  srp_Latn  test/000_00000.parquet  e9b1167ede6691602e2ad01149041dfa6133854cfda63c01d5ea8196acf44d5e
+gn       gug_Latn  train/000_00000.parquet a505385f834060ffc75bdfbb9ab5877ddb8371196e1512d5359785385f1a0d71
+gn       gug_Latn  test/000_00000.parquet  74390989c98e2de32ba525dd7fb1aca2a0b4899015482616d76b7428fa6d15dc
+ber      tzm_Tfng  train/000_00000.parquet 9e37854aa51f7c7c2bfd2d8c9bb5083e510be2724045812ebc3fe871f8f9f006
+ber      tzm_Tfng  test/000_00000.parquet  a704a733595b44ddbe655aa5b06dbaf396df0791eb50d691da4c35cb756fb58f
+ber      zgh_Tfng  train/000_00000.parquet 5d840804e18b19eb40208d4e8951f79c4bc3ff2e101e6f7c6efaff50b3b90a13
+ber      zgh_Tfng  test/000_00000.parquet  37ac9ddf375469af5b1d83fa4d64e65fe60fab5ba57709e0a6a8a1715d1d333a
+ff       fuf_Latn  train/000_00000.parquet d2d214ee18e8a15fa1080d440b052b22aa90e273a317ca2ab146974b89cc014d
+ff       fuf_Latn  test/000_00000.parquet  a99ca8d4873bf7e1cca6e35889d0f6affa20330e46c63869610b043eec619cca
+ff       ffm_Latn  train/000_00000.parquet 1efba86ce495e3ea1af48d135396fa6f46bad66805096c5063cf3ab80de50efe
+ff       ffm_Latn  test/000_00000.parquet  27be21fc5d1181278f73af25050a56f14e5124f10b11aae0f0904eddb9849c1d
+ff       fuv_Latn  train/000_00000.parquet cb773bf3bc23d096f425f0445cd6d77dada9607d7469d424288317e7d35044c3
+ff       fuv_Latn  test/000_00000.parquet  66fadf9da6a631cc03617dab7dbd0651746c5b28dc792fca85b6fa544bf14f7f
+ff       fuh_Latn  train/000_00000.parquet 384f6275fb155195f004550708f94e84f9b17c4cc52e03b4931f497cff4da422
+ff       fuh_Latn  test/000_00000.parquet  700c97f5beb2d9f6566ab60153784aba4d28f2853edfe47d8615631a7ab9262d
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

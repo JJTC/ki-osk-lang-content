@@ -291,10 +291,11 @@ DIACRITIC_LONGPRESS = {
         "c": ["č"], "g": ["ǧ", "ɣ"], "e": ["ɛ"], "d": ["ḍ"], "h": ["ḥ"],
         "r": ["ṛ"], "s": ["ṣ"], "t": ["ṭ"], "z": ["ẓ"],
     },
-    # Guaraní: the six nasal vowels + nasal g̃ (ñ is already on the es base).
+    # Guaraní: the six stressed vowels, which its text writes more often,
+    # then the six nasal ones, and nasal g̃ (ñ is already on the es base).
     "gn": {
-        "a": ["ã"], "e": ["ẽ"], "i": ["ĩ"], "o": ["õ"], "u": ["ũ"],
-        "y": ["ỹ"], "g": ["g̃"],
+        "a": ["á", "ã"], "e": ["é", "ẽ"], "i": ["í", "ĩ"], "o": ["ó", "õ"], "u": ["ú", "ũ"],
+        "y": ["ý", "ỹ"], "g": ["g̃"],
     },
     # Aymara: the three diaeresis (long) vowels.
     "ay": {"a": ["ä"], "i": ["ï"], "u": ["ü"]},
@@ -359,7 +360,7 @@ DIACRITIC_LONGPRESS = {
         "v": ["ʋ"], "n": ["ŋ"],
     },
     "bm": {"e": ["ɛ"], "o": ["ɔ"], "n": ["ɲ", "ŋ"]},
-    "ff": {"b": ["ɓ"], "d": ["ɗ"], "y": ["ƴ"], "n": ["ŋ"]},
+    "ff": {"b": ["ɓ"], "d": ["ɗ"], "y": ["ƴ"], "n": ["ŋ", "ñ", "ɲ"]},
     "ve": {"d": ["ḓ"], "l": ["ḽ"], "n": ["ṋ"], "t": ["ṱ"]},
     # --- Tier G: Pacific macron long vowels + Nahuatl macrons ---
     "mi": {"a": ["ā"], "e": ["ē"], "i": ["ī"], "o": ["ō"], "u": ["ū"]},
@@ -456,16 +457,22 @@ NUMBER_ROW_SHIFT = {"khmer", "myanmar"}
 # a long press of its key.
 LEVEL3_LONGPRESS = {"khmer"}
 
+# A layout whose model is named for the language and script it types,
+# not for the layout's id: Serbian's Latin keyboard's is Serbian in Latin
+# letters', sr-Latn (its Cyrillic one's, sr, reads Latin as Cyrillic).
+MODEL = {"sr-latn": "sr-Latn"}
+
 # Layouts whose language writes a letter no key of its grid types and the
 # national keymap has none for: Polynesian's glottal stop, ʻ (U+02BB,
 # Hawaiian's ʻokina, Samoan's koma liliu, Tongan's fakauʻa, Tahitian's
 # ʻeta), the Caucasus' palochka, Ӏ (U+04C0: Chechen's дӀа, Avar's
 # гьечӀо), and the Mayan and Quechuan glottal stop and ejective, ʼ
-# (U+02BC: Kʼicheʼ), a key of its own at the home row's end, in place of
-# its spacers.
+# (U+02BC: Kʼicheʼ), and Guaraní's, the puso, written ' (mba'e, ñe'ẽ: one
+# letter in sixty of its text), a key of its own at the home row's end, in
+# place of its spacers.
 HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ",
                  **{lid: "Ӏ" for lid in ("ce", "inh", "av", "kbd", "ady", "lez", "lbe", "tab", "dar")},
-                 **{lid: "ʼ" for lid in ("yua", "quc", "kek", "quz")}}
+                 **{lid: "ʼ" for lid in ("yua", "quc", "kek", "quz")}, "gn": "'"}
 
 
 def is_letter_or_mark(g):
@@ -527,10 +534,11 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
     # and the rest stay layout-only. (Country-code core layouts whose
     # prediction_lang differs from the id — us→en, se→sv — are hand-authored,
     # not generated here.)
-    fst = os.path.join(base_dir, "..", "predict", f"{lid}.fst")
+    model = MODEL.get(lid, lid)
+    fst = os.path.join(base_dir, "..", "predict", f"{model}.fst")
     if os.path.exists(fst):
         layout["prediction_enabled"] = True
-        layout["prediction_lang"] = lid
+        layout["prediction_lang"] = model
     else:
         layout["prediction_enabled"] = False
         layout.pop("prediction_lang", None)

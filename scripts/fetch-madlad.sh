@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # fetch-madlad.sh — web text of languages neither Wikipedia nor FineWeb-2
 # has enough of, from MADLAD-400 (the Makefile's MADLAD_LANGS): Garhwali
-# and Rajasthani.
+# and Rajasthani, and Krio, which FineWeb-2 has none of.
 #
 # MADLAD-400 (Google, at Hugging Face as allenai/MADLAD-400) is Common
 # Crawl's text sorted by language and audited by hand; its card releases
@@ -34,6 +34,8 @@ gbm  gbm/gbm_clean_0000.jsonl.gz  6516174f88d38e5c6db032a3e3d83d002e20a34df0f02f
 gbm  gbm/gbm_noisy_0000.jsonl.gz  3e11960fff77a149d570afb7f3a07706f3aa5788165bb8175b0519c4295c1f40
 raj  raj/raj_clean_0000.jsonl.gz  4fe8eec12497caabb7bdfa55fa0561c90ed6f2a6215588de9db7c9c89499626f
 raj  raj/raj_noisy_0000.jsonl.gz  7128d2555a00acb7f003efed15de90b12ded0afcf8ae4b0affa7a45c7d8464bc
+kri  kri/kri_clean_0000.jsonl.gz  d43f4956831b87d7b321e834baa781e61082367cd0c69e3641631c9a409a8f6a
+kri  kri/kri_noisy_0000.jsonl.gz  b5d08191ceb2cf066d742f89e43ca7ea3ce99c7fc2944888659c8abc96dee97f
 "
 
 OUT=${OUT:-${TMPDIR:-/tmp}/ki-osk-sources/madlad}

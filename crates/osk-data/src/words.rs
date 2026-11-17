@@ -78,8 +78,19 @@ pub const GENERATION: u32 = 2;
 /// ى): its wiki writes 22 000 words both ways. Generation 5 wrote
 /// Malayalam's old spellings as its keyboard types them (ൻറ as ന്റ, ൌ as
 /// ൗ, a last ു് as ്, a chillu as one letter, no zero-width joiner): its
-/// lexicon held some 1 700 words the old way.
-pub const LATER_GENERATIONS: &[(&str, u32)] = &[("sd", 3), ("ps", 4), ("ml", 5)];
+/// lexicon held some 1 700 words the old way. Generation 6 kept the glottal
+/// stop and ejective of Yucatec Maya, Kʼicheʼ, Qʼeqchiʼ and Cusco Quechua
+/// as ʼ (U+02BC), the letter their keyboards type: an apostrophe was read
+/// as U+0027, so the strip offered `k'iin` where the keys type `kʼ`.
+pub const LATER_GENERATIONS: &[(&str, u32)] = &[
+    ("sd", 3),
+    ("ps", 4),
+    ("ml", 5),
+    ("yua", 6),
+    ("quc", 6),
+    ("kek", 6),
+    ("quz", 6),
+];
 
 /// The generation of the rules `lang`'s words are read by: [`GENERATION`],
 /// or its primary subtag's later one ([`LATER_GENERATIONS`]).
@@ -105,12 +116,18 @@ pub struct Splitter {
     lead: Lead,
     fold: Fold,
     /// A hyphen between letters ends a word, which keeps it, and glues the
-    /// next one on (Kabyle `fell-i`, Maltese `il-kelb`).
+    /// next one on (Kabyle `fell-i`, Maltese `il-kelb`, Tamazight in
+    /// Tifinagh `ⴷ-ⵓⵙⵉⵖ`).
     hyphen_glues: bool,
     /// Uzbek: the apostrophes its texts write for the ʻ of oʻ and gʻ (‘, the
     /// grave accent, ʼ and the others) belong to the word, and are that ʻ
     /// (U+02BB).
     uzbek: bool,
+    /// The Mayan languages' and Cusco Quechua's glottal stop and ejective
+    /// (Kʼicheʼ, Qʼeqchiʼ, chʼaki): ʼ (U+02BC), as their keyboards type it,
+    /// and an apostrophe written after a letter is that letter (generation
+    /// 6).
+    ejective: bool,
     /// U+00B7 between letters (Catalan `l·l`).
     middle_dot: bool,
     /// Armenian: marks written on a word's vowel, and `:` written for the
@@ -170,6 +187,8 @@ enum Fold {
     /// The eyelash ra and the candra a as the keyboard types them.
     Marathi,
     /// Latin as Cyrillic: the texts write both, the keyboard types Cyrillic.
+    /// Not for Serbian in Latin letters (`sr-Latn`), whose keyboard types
+    /// Latin and whose model is read from Latin text.
     Serbian,
     /// Sindhi's ھ as ه, its usual h: its texts write both for the same
     /// letter (generation 3).
@@ -424,12 +443,17 @@ impl Splitter {
     #[must_use]
     pub fn new(lang: &str) -> Self {
         let primary = lang.split(['-', '_']).next().unwrap_or(lang);
+        let latin = lang
+            .split(['-', '_'])
+            .nth(1)
+            .is_some_and(|t| t.eq_ignore_ascii_case("latn"));
         let mut s = Self {
             elide: Elide::Never,
             lead: Lead::Never,
             fold: Fold::None,
             hyphen_glues: false,
             uzbek: false,
+            ejective: false,
             middle_dot: false,
             armenian: false,
             hebrew: false,
@@ -463,13 +487,14 @@ impl Splitter {
                 s.hyphen_glues = true;
                 s.elide = Elide::After(MALTESE_ELISIONS);
             }
-            "ga" => s.hyphen_glues = true,
+            "ga" | "ber" => s.hyphen_glues = true,
             "uz" => s.uzbek = true,
+            "yua" | "quc" | "kek" | "quz" => s.ejective = true,
             "os" => s.fold = Fold::Ossetian,
             "fa" => s.fold = Fold::Persian,
             "ar" | "ug" => s.fold = Fold::Arabic,
             "mr" => s.fold = Fold::Marathi,
-            "sr" => s.fold = Fold::Serbian,
+            "sr" if !latin => s.fold = Fold::Serbian,
             "lo" => s.fold = Fold::Lao,
             "sd" => s.fold = Fold::Sindhi,
             "ps" => s.fold = Fold::Pashto,
@@ -553,6 +578,15 @@ impl Splitter {
                     && mapped.ends_with(['o', 'O', 'g', 'G']) =>
                 {
                     mapped.push('\u{02BB}');
+                }
+                // The Mayan and Quechuan glottal stop and ejective: ʼ, and
+                // an apostrophe after a letter written for it.
+                c if self.ejective
+                    && (c == '\u{02BC}'
+                        || (is_apostrophe(c)
+                            && mapped.chars().next_back().is_some_and(char::is_alphabetic))) =>
+                {
+                    mapped.push('\u{02BC}');
                 }
                 c if is_apostrophe(c) || c == '\u{02BC}' => mapped.push('\''),
                 c if is_hyphen(c) => mapped.push('-'),
@@ -1307,6 +1341,8 @@ mod tests {
         assert_eq!(split("ca", "col·legi"), ["col·legi"]);
         assert_eq!(split("oc", "qu'es"), ["qu'", "+es"]);
         assert_eq!(split("kab", "fell-i"), ["fell-", "+i"]);
+        // Tamazight in Tifinagh glues its clitics on as Kabyle does.
+        assert_eq!(split("ber", "ⴷ-ⵓⵙⵉⵖ"), ["ⴷ-", "+ⵓⵙⵉⵖ"]);
         assert_eq!(
             split("kab", "ad-as-d-iniɣ"),
             ["ad-", "+as-", "+d-", "+iniɣ"]
@@ -1372,6 +1408,20 @@ mod tests {
         assert_eq!(sr.normalize("кућа"), "кућа");
         assert_eq!(sr.normalize("kuća"), "кућа");
         assert_eq!(sr.normalize("wifi"), "wifi");
+        // Serbian in Latin letters keeps them.
+        let sr_latn = Splitter::new("sr-Latn");
+        assert_eq!(sr_latn.normalize("Ljubav"), "ljubav");
+        assert_eq!(sr_latn.normalize("kuća"), "kuća");
+        assert_eq!(Splitter::new("sr-latn-RS").normalize("Džep"), "džep");
+        assert_eq!(Splitter::new("sr-RS").normalize("kuća"), "кућа");
+        // The Mayan ejective is the letter its keyboard types, however
+        // the text writes it; elsewhere ʼ is an apostrophe.
+        let quc = Splitter::new("quc");
+        assert_eq!(quc.normalize("K'iche'"), "kʼicheʼ");
+        assert_eq!(quc.normalize("Kʼicheʼ"), "kʼicheʼ");
+        assert_eq!(quc.normalize("k\u{2019}o"), "kʼo");
+        assert_eq!(Splitter::new("quz").normalize("ch'aki"), "chʼaki");
+        assert_eq!(Splitter::new("gn").normalize("mbaʼe"), "mba'e");
         // Elsewhere nothing folds.
         assert_eq!(Splitter::new("da").normalize("Æble"), "æble");
     }

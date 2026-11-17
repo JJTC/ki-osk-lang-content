@@ -222,6 +222,19 @@ words are under 15%. FineWeb-2's Fiji Hindi is Hindi in Latin letters
 differ by a letter (lo le la, ku ke ka): the keyboard's autocorrect
 changed 1.5% of the words typed right, with every tap true.
 
+Four keyboards that had no model are read whole too (Serbian's every
+18th row group): Serbian in Latin letters, sr-Latn, a document of 300
+letters written without č ć š ž đ left out, and a sentence with a
+Cyrillic letter or with è æ ð ţ ĉ (an old code page's č ć đ read as
+another's); Guaraní, its nasal vowels and g̃ written with a circumflex
+or a diaeresis (peteî, peteï, haĝua) read as the tilde its keyboard
+types, ´ as ’, and a sentence of Spanish left out (not y, la, para,
+which it writes too); Fula, Pular's, Maasina's and the Fulfuldes' text
+together, a font's å ð for ɓ ɗ and ň for ñ read as theirs, a sentence of
+French left out; and Tamazight in Tifinagh, Central Atlas and Standard
+Moroccan Tamazight's text, a run of another script's words cut out and a
+sentence with ⵧ ⴵ ⵒ, which its keyboard does not type, left out.
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -237,7 +250,12 @@ document is kept where Hindi's function words are under 6% of its words
 and its own (Garhwali's मा च छौ ह्वे कु…, Rajasthani's री सूं मांय रो…)
 are at least 1% and more than Hindi's, and for Garhwali Nepali's too
 (पनि भएको हुन्छ…: its casino spam shares मा and नि). With no test split, every 20th
-document kept is held out instead (`--hold`). Newari comes from GlotCC
+document kept is held out instead (`--hold`). Krio comes from MADLAD-400
+too: half of what it files as Krio is Australian Kriol's Bible, so a
+document is kept where Krio's own words (dɛn fɔ wetin gɛt) are 3% of its
+words and more than Kriol's (langa blanga detlot); ε and כ, written for
+ɛ ɔ, are read as them, a parallel corpus's markup lines are left out,
+and every 10th document is held out (`hold`). Newari comes from GlotCC
 (Common Crawl's text sorted for minority languages), its parquet files'
 text in "content", a document kept where its own words (दु खः नं थ्व
 जूगु…) are at least 1% and Hindi's and Nepali's under 6%, every 20th held
@@ -438,6 +456,36 @@ EJECTIVE = re.compile("(?<=[^\\W\\d_])['’ˈ‘`\uA78C]")
 # its Bibles write and few type; not the seyame (U+0308), which marks a
 # plural in unpointed text too.
 SYRIAC_POINTS = re.compile("[\u0730-\u074A]")
+# Serbian in Latin letters: the letters of its alphabet that ASCII has
+# not, which a document written without them lacks ("shaved" Latin,
+# kuca for kuća); what an old code page's č ć đ read as another's are (è
+# æ ð, ţ ĉ); and Cyrillic, which a sentence of the Latin keyboard's text
+# does not write.
+SERBIAN_DIACRITICS = set("čćšžđČĆŠŽĐ")
+MOJIBAKE = set("èæðţĉÈÆÐŢĈ")
+CYRILLIC_LETTERS = {chr(c) for c in range(0x0400, 0x0530)}
+# Guaraní's nasal vowels and g̃, which its text writes with a tilde, a
+# circumflex or a diaeresis (peteĩ, peteî, peteï; hag̃ua, haĝua), read as
+# the tilde, as its keyboard types them; its glottal stop written ´ read
+# as ’. Spanish's words that Guaraní does not write (not y, water, la, which
+# its spoken Spanish lends it, para, sea), what marks a sentence of Spanish.
+GUARANI_FOLD = str.maketrans({
+    "â": "ã", "ê": "ẽ", "î": "ĩ", "ô": "õ", "û": "ũ", "ŷ": "ỹ",
+    "ä": "ã", "ë": "ẽ", "ï": "ĩ", "ö": "õ", "ÿ": "ỹ",
+    "Â": "Ã", "Ê": "Ẽ", "Î": "Ĩ", "Ô": "Õ", "Û": "Ũ", "Ŷ": "Ỹ",
+    "Ä": "Ã", "Ë": "Ẽ", "Ï": "Ĩ", "Ö": "Õ", "Ÿ": "Ỹ",
+    "ĝ": "g\u0303", "Ĝ": "G\u0303", "\u00B4": "\u2019",
+})
+GUARANI_RIVAL = (SPANISH_SET - {"y", "la", "para"}) | ENGLISH_ONLY
+# Fula's: a Christian site's font that puts ɓ ɗ on å ð, and ñ written ň.
+FULA_FOLD = str.maketrans("åÅðÐňŇ", "ɓƁɗƊñÑ")
+# Krio's own words, and Australian Kriol's, whose Bible MADLAD-400 files
+# with Krio's text (langa blanga detlot: as much as Krio's); ε and כ
+# written for ɛ ɔ. Some of its documents are a parallel corpus's lines,
+# their markup (src)="7"> and (trg)="14"> a sentence's words src and trg.
+KRIO = set("dɛn fɔ wetin gɛt bɔt nɔ ɛn pipul mɔ dɔn tɛl lɛ fɔs sɛf ɛvri bɛtɛ".split())
+KRIOL = set("langa blanga detlot garra olabat melabat imbin deibin yumob mela gudbala".split())
+KRIO_FOLD = str.maketrans("εΕכ", "ɛƐɔ")
 # Arabic's words, after Sorani's letters are folded (فی for في), that
 # Sorani does not write: what marks a sentence of Arabic in its text.
 ARABIC_ONLY = set("فی علی إلی الی الذی التی هذا هذه عن".split())
@@ -538,6 +586,24 @@ def syriac(text):
     return SYRIAC_POINTS.sub("", text)
 
 
+def guarani(text):
+    return unicodedata.normalize("NFC", text).translate(GUARANI_FOLD)
+
+
+def fula(text):
+    return text.translate(FULA_FOLD)
+
+
+def krio(text):
+    return text.translate(KRIO_FOLD)
+
+
+def shaved(text):
+    """A Serbian document written without its letters ASCII has not: 300
+    letters and none of č ć š ž đ."""
+    return sum(c.isalpha() for c in text) >= 300 and SERBIAN_DIACRITICS.isdisjoint(text)
+
+
 def lorem(text):
     """A document holding Lorem ipsum, the placeholder Latin of web pages."""
     lowered = text.lower()
@@ -595,7 +661,8 @@ def sindhi(text):
 # function words mark a document as not its own, for a language that a
 # rival is mistaken for, its own words and the rival's (or its own letter
 # and the rival's, which it must write more often), and how its text is
-# read where the web spells it two ways.
+# read where the web spells it two ways; with no test split, how many of
+# its documents to keep for each held out (`hold`, else --hold).
 LANGS = {
     "brx": {"script": "DEVANAGARI", "neighbour": HINDI},
     "doi": {"script": "DEVANAGARI", "neighbour": HINDI, "own": DOGRI, "rival": PUNJABI},
@@ -826,6 +893,17 @@ LANGS = {
     "ho": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
     "ch": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
     "jam": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "sr-Latn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 18,
+                "foreign": shaved, "letters_never": MOJIBAKE | CYRILLIC_LETTERS, "brackets": True},
+    "gn": {"script": "LATIN", "neighbour": set(), "sentence_rival": GUARANI_RIVAL, "normalize": guarani,
+           "brackets": True},
+    "ff": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET,
+           "normalize": fula, "brackets": True},
+    "ber": {"script": "TIFINAGH", "neighbour": set(), "script_only": True, "letters_never": set("ⵧⴵⵒ"),
+            "brackets": True},
+    "kri": {"script": "LATIN", "neighbour": set(), "own": KRIO, "rival": KRIOL, "own_least": 0.03,
+            "sentence_rival": ENGLISH_ONLY, "sentence_never": {"src", "trg"}, "normalize": krio,
+            "brackets": True, "hold": 10},
 }
 
 
@@ -977,7 +1055,7 @@ def main():
             if not kept(text, conf) or ("hosts_out" in conf and conf["hosts_out"].search(url)):
                 dropped += 1
                 continue
-            if not test and (docs - dropped) % opts.hold == 0:
+            if not test and (docs - dropped) % conf.get("hold", opts.hold) == 0:
                 held_docs.append(text)
                 continue
             for s in sentences(text, conf):

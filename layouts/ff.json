@@ -4,7 +4,8 @@
   "xkb_layout": "us",
   "direction": "ltr",
   "swipe_enabled": true,
-  "prediction_enabled": false,
+  "prediction_enabled": true,
+  "prediction_lang": "ff",
   "views": [
     {
       "id": "base",
@@ -265,6 +266,14 @@
                 {
                   "kind": "text",
                   "text": "ŋ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ñ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɲ"
                 }
               ]
             },
@@ -612,6 +621,14 @@
                 {
                   "kind": "text",
                   "text": "Ŋ"
+                },
+                {
+                  "kind": "text",
+                  "text": "Ñ"
+                },
+                {
+                  "kind": "text",
+                  "text": "Ɲ"
                 }
               ]
             },

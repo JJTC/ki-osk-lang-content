@@ -65,7 +65,7 @@ Kwanyama, Tshiluba, Kikongo, Wolaytta, Dholuo, Bemba and Kimbundu as
 they are. The Americas' and the Pacific's, and Latin and Interlingua,
 are typed on the US keys too: Papiamentu's and Kichwa's ñ,
 Guadeloupean Creole's é è ò, Tuvaluan's macrons and Chamorro's å ñ first on
-the long presses. A letter only a long press types turns
+the long presses; and Krio, its ɛ ɔ ŋ first on them. A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -252,6 +252,7 @@ DERIVED = [
     ("ho", "us", "Hiri Motu", {}),
     ("ch", "us", "Finuʼ Chamoru", {"a": ["å"], "n": ["ñ"], "A": ["Å"], "N": ["Ñ"]}),
     ("jam", "us", "Patwa", {}),
+    ("kri", "us", "Krio", {"e": ["ɛ"], "o": ["ɔ"], "n": ["ŋ"], "E": ["Ɛ"], "O": ["Ɔ"], "N": ["Ŋ"]}),
 ]
 
 

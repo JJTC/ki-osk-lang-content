@@ -42,7 +42,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu \
                  azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
                  crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
-                 la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam
+                 la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
+                 sr-Latn gn ff ber kri
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -111,9 +112,10 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # twenty-three more that had a keyboard and no model, from Udmurt and
 # Greenlandic to Inuktitut, of nineteen of Iran's and the Caucasus', from
 # South Azerbaijani to Mingrelian, of twenty-four of Africa's, from
-# Seychellois Creole to Umbundu, and of eighteen of the Americas', the
+# Seychellois Creole to Umbundu, of eighteen of the Americas', the
 # Pacific's and the classical and constructed, from Latin to Jamaican
-# Patois
+# Patois, and of four more that had a keyboard and no model: Serbian in
+# Latin letters, Guaraní, Fula and Tamazight in Tifinagh
 # (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
@@ -131,7 +133,8 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu \
                  azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
                  crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
-                 la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam
+                 la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
+                 sr-Latn gn ff ber
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -147,10 +150,10 @@ FINEWEB_DIR = $(SRC_DIR)/fineweb
 # MADLAD-400's web text (scripts/fetch-madlad.sh, its files at one revision
 # pinned by sha256; CC BY 4.0 by its card, subject to Common Crawl's Terms
 # of Use), the whole corpus of languages neither Wikipedia nor FineWeb-2
-# has: Garhwali and Rajasthani. scripts/fineweb-text.py keeps the
-# documents that read as their language and holds out every 20th, in
-# $(MADLAD_DIR)/eval; nothing of it is committed.
-MADLAD_LANGS ?= gbm raj
+# has: Garhwali, Rajasthani and Krio. scripts/fineweb-text.py keeps the
+# documents that read as their language and holds out every 20th (Krio's
+# every 10th), in $(MADLAD_DIR)/eval; nothing of it is committed.
+MADLAD_LANGS ?= gbm raj kri
 MADLAD_DIR = $(SRC_DIR)/madlad
 
 # GlotCC's web text (scripts/fetch-glotcc.sh, its files at one revision
@@ -256,8 +259,9 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # than at 30 000, the small corpora's every word (36 000 to 70 000);
 # and Europe's twenty-six regional languages, Russia's fifteen, the
 # twenty-three more that had a keyboard and no model, Iran's and the
-# Caucasus' nineteen, Africa's twenty-four, and the Americas', the
-# Pacific's and the classical and constructed eighteen.
+# Caucasus' nineteen, Africa's twenty-four, the Americas', the Pacific's
+# and the classical and constructed eighteen, and Serbian in Latin
+# letters, Guaraní, Fula, Tamazight in Tifinagh and Krio.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -268,7 +272,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu \
                        azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
                        crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
-                       la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam
+                       la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
+                       sr-Latn gn ff ber kri
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -300,10 +305,14 @@ PREDICT_LARGE_NGRAM ?= 90000
 # Azerbaijani): 0.3 to 0.8 points more. And Northern Ndebele and Cape
 # Verdean Creole, which lack 11.1% and 12.0% at 80 000: 0.9 and 0.5 points
 # more at 120 000. And Cusco Quechua, which lacks 14.9%: 1.3 points more.
+# And Guaraní, Fula and Serbian in Latin letters, which lack 8.8%, 8.4%
+# and 2.9% at 80 000: at 120 000 7.7%, 7.3% and 2.0%, 0.5, 0.3 and 0.2
+# points more saved (1.0, 0.7 and 0.9 with taps astray).
 PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb ilo ban \
                       nn gsw bar nds pfl ksh li hsb dsb nap scn sc lij ltg vro csb szl sco rue \
                       sah sme lg vep qu krl olo udm bxr mdf myv tyv kpv rn \
-                      ab ady lbe krc kaa inh kiu azb tly diq nd kea quz
+                      ab ady lbe krc kaa inh kiu azb tly diq nd kea quz \
+                      gn ff sr-Latn
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a
