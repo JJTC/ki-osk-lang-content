@@ -188,7 +188,7 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Two hundred and thirty-three models learn from FineWeb-2's web text alone: those of Bodo,
+Two hundred and thirty-seven models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
@@ -233,7 +233,8 @@ Edo, Farefare, Kamba, Kipsigis, Konzo, Koongo, Madurese, Makhuwa, Moba,
 Ndau, Nias, Nkore, Sena, Sidamo, Songe, Teso and Yao), and of eleven
 more of Europe's regional languages (Cornish, Extremaduran, Gagauz,
 Ladin, Lombard, Manx, Picard, Pontic Greek, Samogitian, Venetian and
-West Flemish); and Assamese's from it beside its Tatoeba sentences, Magahi's beside its Incubator text, and
+West Flemish), and of four of Myanmar's (Mon, Pa'O, Sgaw Karen and
+Shan); and Assamese's from it beside its Tatoeba sentences, Magahi's beside its Incubator text, and
 Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's beside GlotCC's
 (below).
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
@@ -611,6 +612,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Source: https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/burmesedict.txt
 
+`wordbreak/shn.txt`, `mnw.txt`, `ksw.txt` and `blk.txt`, which cut Shan,
+Mon, Sgaw Karen and Pa'O text, have no list of words behind them: each is
+the syllables its language's FineWeb-2 text writes twice or more,
+listed by `build-syllables` (`make syllable-lists`). They are made from
+FineWeb-2, under its ODC-By 1.0 as above.
+
 ## Dialect flags
 
 `predict/en.dialects.bin` (which varieties of English write a word, and
@@ -669,7 +676,9 @@ Chhattisgarhi, Magahi and Sindhi in Devanagari are Hindi's, Konkani's
 Marathi's, Tulu's Kannada's, Meitei's in the Bengali script Bengali's,
 Western Punjabi's, Saraiki's, Kashmiri's and Brahui's Urdu's and
 Yiddish's Hebrew's, renamed, with the letters each language adds on long
-presses (`scripts/build-derived-layouts.py`).
+presses (`scripts/build-derived-layouts.py`); Pa'O's is Burmese's, its
+tones ꩻ and ႏ in place of ဩ and ၏. Sgaw Karen's layout is Keyman's
+(below).
 xkeyboard-config's copyright and permission notices, which go with every
 copy (its `COPYING`, as xkeyboard-config 2.48 ships it):
 
@@ -873,6 +882,37 @@ This file is distributed without any expressed or implied warranty.
 ```
 
 Source: https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
+
+`layouts/ksw.json`, Sgaw Karen's, is **Keyman's sil_sgaw_karen** keyboard
+(1.1.3, SIL Global), its touch layout's letter rows as its rules type
+them (`scripts/build-keyman-layouts.py`, its files pinned by sha256),
+under the MIT licence it carries:
+
+```text
+The MIT License (MIT)
+
+Copyright © 2020-2025 SIL Global
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+Source: https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_sgaw_karen
 
 ## Emoji
 

@@ -56,6 +56,21 @@ is one whose Zawgyi was read as Unicode (ျ for ်, ွ for ြ: ငျ, which
 Burmese never writes, twice or more; 3% of the text kept before); and
 the digit ၀ written for the letter ဝ, which older text does, is read as
 ဝ where a letter or a sign follows it and no digit comes before it.
+Shan, Mon, Sgaw Karen and Pa'O are written in the Myanmar script too,
+with no spaces between words, and read whole as Burmese is (Shan's 48
+million characters, Mon's 10, Karen's 8, Pa'O's 1.7), their ၀ for ဝ
+read as Burmese's is. Their letters are where Zawgyi put its shapes (U+1060
+to U+1097), so only ေ before its consonant and ္ ending a syllable mark
+a document as Zawgyi's (a third of Pa'O's, Burmese blogs; under 0.3% of
+the others'); a sentence whose syllables are more than 4% Burmese's own
+(သည် များ တွင် ၏ ပြီး…) is Burmese, and left out. A third of FineWeb-2's
+Pa'O is Burmese and Zawgyi's: a Pa'O document writes its tones ႏ and ꩻ,
+2% of its letters and more. Karen's older fonts' letters are read as
+Unicode's, as its keyboard types them: ၦ as ပှ (ၦၤ, ပှၤ), ၥ as ာ (လံၥ်,
+လံာ်), and Shan's tones ႉ and ႋ, written for its full stop, and ႇ, for
+its comma, as . and , (a fifth of its sentences). Mon writes its own
+nga, ၚ, which its keyboard types, as Burmese's င nearly a quarter of
+the time (more than half of the time in its wiki): read as ၚ.
 
 Thirty-eight languages that had a keyboard and no model, FineWeb-2 has
 hundreds of millions of characters of: Afrikaans, Albanian, Bashkir,
@@ -324,6 +339,20 @@ UNSPACED_END = re.compile(r"(?<=[។៕။])\s*")
 # syllable, and the shapes Zawgyi put at U+1060 to U+1097.
 ZAWGYI = re.compile(r"(?:^|[^\u1000-\u109F])\u1031|\u1039(?![\u1000-\u1021])|[\u1060-\u1097]")
 MYANMAR = re.compile(r"[\u1000-\u109F]")
+# Myanmar as Shan, Mon, Sgaw Karen and Pa'O write it, Extended-A and -B
+# too, and what marks their text as Zawgyi's: ေ before its consonant, ္
+# not before one (Zawgyi's asat). Zawgyi's shapes at U+1060 to U+1097 are
+# their letters, so they mark nothing. A run of their letters is what
+# osk_data::wordbreak cuts (not the digits, Shan's, Tai Laing's, nor ၊ ။).
+MYANMAR_ALL = re.compile("[\u1000-\u109F\uA9E0-\uA9FF\uAA60-\uAA7F]")
+OWN_ZAWGYI = re.compile("(?:^|[^\u1000-\u109F\uA9E0-\uA9FF\uAA60-\uAA7F])\u1031"
+                        "|\u1039(?![\u1000-\u1021\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066"
+                        "\u106E-\u1070\u1075-\u1081\u108E])")
+MYANMAR_RUN = re.compile("[\u1000-\u103F\u104C-\u108F\u109A-\u109F\uA9E0-\uA9EF\uA9FA-\uA9FF"
+                         "\uAA60-\uAA7F\u200C\u200D]+")
+# Burmese's own syllables: more than 4% of a sentence's (most Burmese
+# sentences' are 8% and more; Shan's, Mon's and Karen's under 0.3%).
+BURMESE_ONLY = set("သည် များ တွင် ၏ ပြီး သော ဖြစ် ရှိ နှင့် ခဲ့ လည်း မည် ရန် သို့ တို့ သည့် ကြောင့်".split())
 STEERING = re.compile("[‎‏‪-‮⁦-⁩﻿]")
 MARKUP = re.compile(r"\[\[|\]\]|\{\{|\}\}")
 # A short span in brackets: in a wiki page's text, the link that edits a
@@ -642,6 +671,51 @@ def burmese(text):
     # The digit zero for the letter wa, where a letter or a sign follows
     # it and no digit comes before it (၀င်း, not ၁၀ကြိမ်).
     return re.sub("(?<![\u1040-\u1049])\u1040(?=[\u1000-\u103F])", "\u101D", text)
+
+
+def myanmar_syllables(text):
+    """The syllables of `text`'s runs of Myanmar letters, cut as
+    osk_data::wordbreak cuts Shan's, Mon's and Pa'O's, and Burmese's
+    sentences, which they are counted to find, are cut: one starts on a
+    letter, but on one stacked under the one before (after ္) or one the
+    asat after it ends a syllable with."""
+    out = []
+    for m in MYANMAR_RUN.finditer(text):
+        run, start = m.group(), 0
+        for i in range(1, len(run)):
+            after = run[i + 1] if i + 1 < len(run) else ""
+            if (unicodedata.category(run[i])[0] != "M" and run[i - 1] != "\u1039"
+                    and run[i] not in "\u200c\u200d" and after != "\u103a"):
+                out.append(run[start:i])
+                start = i
+        out.append(run[start:])
+    return out
+
+
+# Sgaw Karen's older fonts' letters, as Unicode writes them.
+KAREN_FOLD = str.maketrans({"\u1066": "\u1015\u103E", "\u1065": "\u102C",
+                            "\u1089": ".", "\u108B": ".", "\u1087": ","})
+
+
+def karen(text):
+    return burmese(text).translate(KAREN_FOLD)
+
+
+def mon(text):
+    # Mon's nga, written as Burmese's nearly a quarter of the time.
+    return burmese(text).replace("\u1004", "\u105A")
+
+
+def own_zawgyi(text):
+    """Shan's, Mon's, Karen's or Pa'O's text in Zawgyi's encoding."""
+    return len(OWN_ZAWGYI.findall(text)) > 0.003 * max(1, len(MYANMAR_ALL.findall(text)))
+
+
+def not_pao(text):
+    """Zawgyi's text, or Burmese: Pa'O's tones ႏ and ꩻ under 2% of its
+    letters."""
+    tones = text.count("\u108F") + text.count("\uAA7B")
+    return own_zawgyi(text) or tones < 0.02 * max(1, len(MYANMAR_ALL.findall(text)))
 
 
 def zawgyi(text):
@@ -1114,6 +1188,14 @@ LANGS = {
     "gag": {"script": "LATIN", "neighbour": set(), "own": GAGAUZ, "rival": GAGAUZ_RIVAL,
             "sentence_rival": ENGLISH_ONLY | GAGAUZ_RIVAL, "letters_never": set("|") | CYRILLIC_LETTERS,
             "normalize": long_tail("gag"), "brackets": True},
+    # Myanmar's other languages, cut into syllables.
+    **{lang: {"script": "MYANMAR", "neighbour": set(), "lines": True, "unspaced": True,
+              "normalize": normalize, "script_only": True, "foreign": foreign,
+              "units": myanmar_syllables, "sentence_rival": BURMESE_ONLY, "rival_most": 0.04,
+              "brackets": True, **more}
+       for lang, normalize, foreign, more in (
+           ("shn", burmese, own_zawgyi, {}), ("mnw", mon, own_zawgyi, {}),
+           ("ksw", karen, own_zawgyi, {}), ("blk", burmese, not_pao, {"hold": 10}))},
 }
 
 
@@ -1160,6 +1242,12 @@ def kept(text, conf):
     return True
 
 
+def units(s, conf):
+    """`s`'s words, as the sentence filters count them: or its syllables,
+    for a language cut into them."""
+    return conf["units"](s) if "units" in conf else words(s.lower())
+
+
 def in_script(s, script):
     letters = [c for c in s if c.isalpha()]
     own = sum(unicodedata.name(c, "").startswith(script) for c in letters)
@@ -1184,7 +1272,8 @@ def sentences(text, conf):
         ends = UNSPACED_END.split(piece) if conf.get("unspaced") else [piece]
         for s in (s for e in ends for s in END.split(e)):
             for s in script_runs(s, script) if conf.get("script_only") else [" ".join(s.split())]:
-                if "sentence_rival" in conf and share(words(s.lower()), conf["sentence_rival"]) > 0.15:
+                if ("sentence_rival" in conf
+                        and share(units(s, conf), conf["sentence_rival"]) > conf.get("rival_most", 0.15)):
                     continue
                 if "sentence_never" in conf and not conf["sentence_never"].isdisjoint(words(s.lower())):
                     continue

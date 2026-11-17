@@ -36,8 +36,9 @@
 //!   apostrophe in Breton (`'zo`) and in Dutch's `'s`, `'t`, `'n`, `'k` and
 //!   `'m`.
 //! - Thai, Lao, Khmer and Burmese are written without spaces between
-//!   words: a run of their letters is cut into the words of the language's
-//!   word list
+//!   words, and so are Shan, Mon, Sgaw Karen and Pa'O: a run of their
+//!   letters is cut into the words of the language's word list (the
+//!   syllables, for the last four)
 //!   ([`crate::wordbreak`], given with [`Splitter::with_word_list`]), each
 //!   after the first glued to the one before, as `homme` is to `l'`; so a
 //!   keyboard types no space after a Thai, Lao, Khmer or Burmese word. A
@@ -157,7 +158,7 @@ pub struct Splitter {
     /// upper-cases to `İ`.
     turkic: bool,
     /// The script the language writes without spaces between words (Thai,
-    /// Lao, Khmer, Burmese).
+    /// Lao, Khmer, Burmese; Shan, Mon, Sgaw Karen, Pa'O).
     script: Option<Script>,
     /// The words its runs are cut into.
     word_list: Option<Arc<WordList>>,
@@ -540,7 +541,7 @@ impl Splitter {
 
     /// Whether the language is written without spaces between words, so
     /// that its words are found with a word list ([`Self::with_word_list`]):
-    /// Thai, Lao, Khmer, Burmese.
+    /// Thai, Lao, Khmer, Burmese; Shan, Mon, Sgaw Karen, Pa'O.
     #[must_use]
     pub fn wants_word_list(&self) -> bool {
         self.script.is_some()
@@ -902,7 +903,7 @@ impl Splitter {
 
     /// Whether the next word follows `word` with no space between: it is
     /// elided (`l'`, `dell'`, Kabyle `fell-`), or ends in a script written
-    /// without spaces between words (Thai, Lao, Khmer, Burmese), so a
+    /// without spaces between words (Thai, Lao, Khmer, Burmese, Shan…), so a
     /// keyboard that types it
     /// types no space after it.
     #[must_use]

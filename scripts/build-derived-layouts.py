@@ -77,8 +77,10 @@ Manx (ç á é í ó ú) on the UK's; Extremaduran on Spanish's (ç); Picard on
 French's (ò); Samogitian on Lithuanian's (ā ē ī ō); Pontic Greek on
 Greek's; Venetian (ł), Lombard (ò ö ó, ü ù) and Ladin (ë é è ê, ö ò ó ô,
 ü ù, ć, à á, ś) on Italian's; West Flemish on Dutch's (ê è ë é, ô); and
-Gagauz on Turkish's (ä ê ţ). A letter only a long press types turns
-the gesture on for the layout (`long_press_letters`). A layout's id is
+Gagauz on Turkish's (ä ê ţ). Pa'O is typed on Burmese's keys, its
+tones ꩻ and ႏ (an eighth of its letters) on keys of their own in place
+of ဩ and ၏, which it hardly writes. A letter only a long press types
+turns the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
 
@@ -94,7 +96,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 # The layout made, the one it is made from, its name, and what its keys
 # gain on a long press (a key's label → the letters, first in its menu),
-# on every view.
+# on every view; and, for some, keys that type another letter instead (a
+# key's label → the letter).
 DERIVED = [
     ("bho", "hi", "भोजपुरी", {}),
     ("mai", "hi", "मैथिली", {}),
@@ -299,10 +302,12 @@ DERIVED = [
     ("lmo", "it", "Lumbard", {"o": ["ò", "ö", "ó"], "u": ["ü", "ù"], "O": ["Ò", "Ö", "Ó"], "U": ["Ü", "Ù"]}),
     ("lld", "it", "Ladin", {"e": ["ë", "é", "è", "ê"], "o": ["ö", "ò", "ó", "ô"], "u": ["ü", "ù"], "c": ["ć"], "a": ["à", "á"], "s": ["ś"], "E": ["Ë", "É", "È", "Ê"], "O": ["Ö", "Ò", "Ó", "Ô"], "U": ["Ü", "Ù"], "C": ["Ć"], "A": ["À", "Á"], "S": ["Ś"]}),
     ("gag", "tr", "Gagauzça", {"a": ["ä"], "e": ["ê"], "t": ["ţ"], "A": ["Ä"], "E": ["Ê"], "T": ["Ţ"]}),
+    ("blk", "my", "ပအိုဝ်ႏ", {}, {"ဩ": "ꩻ", "၏": "ႏ"}),
 ]
 
 
-def build(lang, base, name, extra):
+def build(lang, base, name, extra, swap=None):
+    swap = swap or {}
     layout = json.loads((ROOT / "layouts" / f"{base}.json").read_text(encoding="utf-8"))
     out = {}
     for k, v in layout.items():
@@ -318,15 +323,21 @@ def build(lang, base, name, extra):
     out["name"] = name
     out["prediction_lang"] = lang
     added = set()
+    swapped = set()
     for view in out["views"]:
         for row in view["rows"]:
-            for key in row["keys"]:
+            for i, key in enumerate(row["keys"]):
+                if key.get("label") in swap:
+                    letter = swap[key["label"]]
+                    swapped.add(key["label"])
+                    row["keys"][i] = key = {"width_units": key["width_units"], "label": letter,
+                                            "output": {"kind": "text", "text": letter}}
                 letters = extra.get(key.get("label"))
                 if letters:
                     rest = [k for k in key.get("long_press", []) if k.get("text") not in letters]
                     key["long_press"] = [{"kind": "text", "text": t} for t in letters] + rest
                     added.add(key.get("label"))
-    missing = set(extra) - added
+    missing = (set(extra) - added) | (set(swap) - swapped)
     if missing:
         sys.exit(f"{lang}: no key {' '.join(sorted(missing))} on {base}'s layout")
     return json.dumps(out, ensure_ascii=False, indent=2) + "\n"
@@ -335,8 +346,8 @@ def build(lang, base, name, extra):
 def main():
     check = "--check" in sys.argv[1:]
     stale = []
-    for lang, base, name, extra in DERIVED:
-        text = build(lang, base, name, extra)
+    for lang, base, name, extra, *swap in DERIVED:
+        text = build(lang, base, name, extra, *swap)
         path = ROOT / "layouts" / f"{lang.lower()}.json"
         if check:
             if not path.exists() or path.read_text(encoding="utf-8") != text:

@@ -47,7 +47,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  bo dz \
                  kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
                  min war nia mad \
-                 cor glv ext pcd sgs pnt vec vls lmo lld gag
+                 cor glv ext pcd sgs pnt vec vls lmo lld gag \
+                 shn mnw ksw blk
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -143,7 +144,8 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  sr-Latn gn ff ber bo dz \
                  kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
                  min war nia mad \
-                 cor glv ext pcd sgs pnt vec vls lmo lld gag
+                 cor glv ext pcd sgs pnt vec vls lmo lld gag \
+                 shn mnw ksw blk
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -282,6 +284,8 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # And eleven of Europe's regional languages, whose corpora hold 255 000
 # (Pontic Greek) to 4.1 million words (Lombard, Ladin): Cornish and Gagauz
 # save no more at 120 000 (0.0 and 0.1 points).
+# Shan, Mon, Sgaw Karen and Pa'O are cut into syllables, 3 000 to 9 000
+# kinds of them: their lexicons keep them all, at any tier.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -296,7 +300,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sr-Latn gn ff ber kri bo dz \
                        kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
                        min war nia mad \
-                       cor glv ext pcd sgs pnt vec vls lmo lld gag
+                       cor glv ext pcd sgs pnt vec vls lmo lld gag \
+                       shn mnw ksw blk
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -410,6 +415,8 @@ help:
 	@echo "  fetch-glotcc     GlotCC's web text, for GLOTCC_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
+	@echo "  syllable-lists   SYLLABLE_LANGS' word lists, their syllables, in"
+	@echo "                   wordbreak/ (after fetch-fineweb)"
 	@echo "  cjk-sources      download the CJK upstream datasets into SRC_DIR"
 	@echo "  predict-assets   rebuild predict/*.fst + *.ngram.bin from corpora/"
 	@echo "  dialect-assets   rebuild predict/<lang>.dialects.bin (dialect flags)"
@@ -502,6 +509,20 @@ fetch-glotcc:
 .PHONY: word-lists
 word-lists:
 	./scripts/fetch-word-lists.sh
+
+# The languages cut into syllables (osk_data::wordbreak), no list of whose
+# words is to be had: Shan, Mon, Sgaw Karen and Pa'O. Their word lists
+# (wordbreak/<lang>.txt, committed) are the syllables their FineWeb-2
+# text writes twice or more, made from it (fetch-fineweb) before their
+# models are.
+SYLLABLE_LANGS ?= shn mnw ksw blk
+
+.PHONY: syllable-lists
+syllable-lists:
+	@for lang in $(SYLLABLE_LANGS); do \
+		$(TOOLS) build-syllables -- --lang $$lang --corpus $(FINEWEB_DIR)/$$lang.txt \
+			--out $(CURDIR)/wordbreak/$$lang.txt || exit 1; \
+	done
 
 # Rebuild every language's prefix lexicon and n-gram table. Drop a
 # bigger corpus at predict/corpora/<lang>.txt and rerun to refresh one
@@ -1019,6 +1040,13 @@ translit-layouts:
 .PHONY: derived-layouts
 derived-layouts:
 	$(PYTHON) scripts/build-derived-layouts.py
+
+# The layouts made from Keyman's touch keyboards, for the languages
+# xkeyboard-config has no keymap of (layouts/ksw.json, Sgaw Karen's): the
+# keyboards' files fetched at a pinned commit, sha256-checked.
+.PHONY: keyman-layouts
+keyman-layouts:
+	$(PYTHON) scripts/build-keyman-layouts.py
 
 .PHONY: check
 check:

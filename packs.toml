@@ -47,6 +47,7 @@ bho = "Bhojpuri"
 bi  = "Bislama"
 bin = "Edo"
 bjn = "Banjar"
+blk = "Pa'O"
 bm  = "Bambara"
 bn  = "Bengali"
 bo  = "Tibetan"
@@ -172,6 +173,7 @@ krj = "Kinaray-a"
 krl = "Karelian"
 ks  = "Kashmiri"
 ksh = "Kölsch"
+ksw = "Sgaw Karen"
 ku  = "Kurdish (Kurmanji)"
 kum = "Kumyk"
 kwy = "Koongo"
@@ -209,6 +211,7 @@ ml  = "Malayalam"
 mn  = "Mongolian"
 mni = "Meitei"
 mni-Beng = "Meitei (Bengali script)"
+mnw = "Mon"
 mos = "Mossi (Mooré)"
 mr  = "Marathi"
 mrj = "Hill Mari"
@@ -275,6 +278,7 @@ seh = "Sena"
 sg  = "Sango"
 sgc = "Kipsigis"
 sgs = "Samogitian"
+shn = "Shan"
 si  = "Sinhala"
 sid = "Sidamo"
 sk  = "Slovak"
@@ -421,6 +425,42 @@ sources = [
   { name = "ICU's Burmese word-break dictionary (burmesedict.txt, ICU 79.1), from LeRoy Benjamin Sharon's Myanmar word list", url = "https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/brkitr/dictionaries/burmesedict.txt", lock = "predict/my", input = "wordbreak/my.txt" },
 ]
 
+# Shan's, Mon's, Sgaw Karen's and Pa'O's are their syllables, those their
+# FineWeb-2 text writes twice or more (build-syllables, `make
+# syllable-lists`): no list of their words is to be had, so each syllable
+# is a word to the trainer, the keyboard and the measure.
+[prediction.wordbreak.shn]
+licenses = [
+  { name = "ODC-By 1.0 (FineWeb-2)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false },
+]
+sources = [
+  { name = "Shan's syllables in FineWeb-2's text (revision af9c133), as build-syllables lists them", url = "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2", lock = "predict/shn", input = "wordbreak/shn.txt" },
+]
+
+[prediction.wordbreak.mnw]
+licenses = [
+  { name = "ODC-By 1.0 (FineWeb-2)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false },
+]
+sources = [
+  { name = "Mon's syllables in FineWeb-2's text (revision af9c133), as build-syllables lists them", url = "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2", lock = "predict/mnw", input = "wordbreak/mnw.txt" },
+]
+
+[prediction.wordbreak.ksw]
+licenses = [
+  { name = "ODC-By 1.0 (FineWeb-2)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false },
+]
+sources = [
+  { name = "Sgaw Karen's syllables in FineWeb-2's text (revision af9c133), as build-syllables lists them", url = "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2", lock = "predict/ksw", input = "wordbreak/ksw.txt" },
+]
+
+[prediction.wordbreak.blk]
+licenses = [
+  { name = "ODC-By 1.0 (FineWeb-2)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false },
+]
+sources = [
+  { name = "Pa'O's syllables in FineWeb-2's text (revision af9c133), as build-syllables lists them", url = "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2", lock = "predict/blk", input = "wordbreak/blk.txt" },
+]
+
 # Wikipedia text of twelve South Asian languages, as the Dakshina dataset
 # gives it (scripts/fetch-dakshina.sh): the whole corpus of Gujarati,
 # Kannada, Malayalam, Punjabi, Sindhi, Sinhala, Tamil, Telugu and Urdu,
@@ -563,6 +603,7 @@ bho     = ["bho", "bho-abc"]
 bi      = ["bi"]
 bin     = ["bin"]
 bjn     = ["bjn"]
+blk     = ["blk"]
 bm      = ["bm"]
 bn      = ["bn", "bn-abc"]
 bo      = ["bo"]
@@ -691,6 +732,7 @@ krj     = ["krj"]
 krl     = ["krl"]
 ks      = ["ks", "ks-abc"]
 ksh     = ["ksh"]
+ksw     = ["ksw"]
 ku      = ["ku"]
 kum     = ["kum"]
 kwy     = ["kwy"]
@@ -728,6 +770,7 @@ ml      = ["ml", "ml-abc"]
 mn      = ["mn", "mn-abc"]
 mni     = ["mni", "mni-abc"]
 mni-Beng = ["mni-beng", "mni-beng-abc"]
+mnw     = ["mnw"]
 mos     = ["mos"]
 mr      = ["mr", "mr-abc"]
 mrj     = ["mrj"]
@@ -795,6 +838,7 @@ seh     = ["seh"]
 sg      = ["sg"]
 sgc     = ["sgc"]
 sgs     = ["sgs"]
+shn     = ["shn"]
 si      = ["si", "si-abc"]
 sid     = ["sid"]
 sk      = ["sk"]
@@ -875,6 +919,17 @@ chr = "Cherokee"
 ko  = "Korean, Hangul input"
 nah = "Nahuatl"
 ti  = "Tigrinya"
+
+# The layouts made from another source than xkeyboard-config, and the
+# licence and source each adds to its pack: Sgaw Karen's, from Keyman's
+# sil_sgaw_karen (scripts/build-keyman-layouts.py).
+[layouts.added.ksw]
+licenses = [
+  { name = "MIT (Keyman's sil_sgaw_karen, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_sgaw_karen/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Sgaw Karen keyboard (sil_sgaw_karen 1.1.3), its touch layout", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_sgaw_karen" },
+]
 
 # `lock`/`input` name the sources.lock entry and input whose recorded
 # sha256 the manifest carries, so a pack names the exact upstream file it

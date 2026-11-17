@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**387 layouts**: 332 keyboard layouts (RTL: ar he fa + Urdu, Western
+**391 layouts**: 336 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 386 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **327 languages** carry a prediction
+keycaps. 390 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **331 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -280,6 +280,10 @@ but no model to match the glide against · `—` off
 | `km` | `km` | Khmer | kh | LTR | **Full** (km)⁷ | — | — |
 | `lo` | `lo` | Lao | la | LTR | **Full** (lo)⁷ | — | — |
 | `my` | `my` | Burmese | mm | LTR | **Full** (my)⁷ | — | — |
+| `shn` | `shn` | Shan တႆး | mm · shn | LTR | **Full** (shn)⁷ | — | — |
+| `mnw` | `mnw` | Mon မန် | mm · mnw | LTR | **Full** (mnw)⁷ | — | — |
+| `ksw` | `ksw` | Sgaw Karen ကညီ | Keyman's sil_sgaw_karen | LTR | **Full** (ksw)⁷ | — | — |
+| `blk` | `blk` | Pa'O ပအိုဝ်ႏ | mm, ꩻ ႏ for ဩ ၏ | LTR | **Full** (blk)⁷ | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `kab` | `kab` | Kabyle | us | LTR | **Full** (kab) | ✓ | — |
@@ -796,7 +800,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These two hundred and thirty-nine models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These two hundred and forty-three models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1264,6 +1268,42 @@ but no model to match the glide against · `—` off
    Kemmyn, Unified and Standard Written Form; Lombard's Milanese and
    Eastern Lombard), and Pontic's and Samogitian's text is small: a fifth
    and a sixth of their held-out words are unknown.
+   Shan, Mon, Sgaw Karen and Pa'O, written in the Myanmar script without
+   spaces between words, learn from FineWeb-2's text whole (Shan's 28.7
+   million characters, Mon's 8.4, Karen's 5.8, Pa'O's 0.8), cut into
+   syllables, as Tibetan is: no list of their words is to be had, so each
+   one's word list is the syllables its text writes twice or more (`make
+   syllable-lists`, 2 200 to 8 800 of them; `osk_data::wordbreak`), and
+   the keyboard types no space after a syllable from the strip. A
+   syllable starts on a letter, but not on a sign, nor on a consonant
+   stacked under another, nor on one the asat after it ends a syllable
+   with, as Burmese's words do; a Mon consonant stacked over the next
+   starts one (ပ္ဍဲ, a minor syllable), and Karen's asat is a tone that
+   ends no consonant (ဒ်, like, is a syllable). Their lists with their
+   3 000 commonest pairs of syllables as words besides saved less (Shan
+   53.2%, Mon 34.0%). Shan is typed on xkeyboard-config's Shan keys, Mon
+   on its Mon keys, Pa'O on Burmese's with its tones ꩻ and ႏ (an eighth
+   of its letters) in place of ဩ and ၏, and Sgaw Karen on Keyman's
+   sil_sgaw_karen (SIL Global, MIT), a phone's layout whose keys type its
+   commonest signs with the asat in one tap (ၣ် ၢ် ာ်): on the base view
+   each key types one letter, the asat a key of its own, as the corrector
+   takes a tap for a letter (with keys of two letters it changed one
+   Karen word typed right in fifteen). Their letters are where Zawgyi put
+   its shapes, so a document is Zawgyi's by ေ before its consonant or ္
+   ending a syllable alone (a third of Pa'O's, Burmese blogs; 0.3% and
+   less of the others'); a sentence whose syllables are more than 4%
+   Burmese's own (သည် များ တွင် ၏…) is left out, and a Pa'O document
+   writes its tones, 2% of its letters and more. Karen's older fonts'
+   letters are read as Unicode's (ၦ as ပှ, ၥ as ာ, and Shan's tones ႉ ႋ
+   and ႇ, written for its full stop and comma, as . and ,), and Mon's ၚ,
+   written as Burmese's င nearly a quarter of the time (more than half of
+   the time in its wiki), as ၚ, which its keyboard types. Their lexicons
+   hold all their syllables (3 300 to 12 900 with the runs no list
+   holds). Keystroke savings on their held-out text (16 300 to 48 000
+   syllables; Pa'O's every 10th document, its test split's 31 sentences
+   too few): Shan 54.3%, Sgaw Karen 47.3%, Pa'O 40.1%, Mon 35.3%; 53.9%,
+   47.1%, 39.5% and 34.9% with taps astray, at most 0.96% of right
+   syllables changed (Mon's).
    Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
@@ -1335,7 +1375,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **327 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **331 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1546,6 +1586,8 @@ are built on a `us`/`es` base and add theirs the same way:
 | `ce` `inh` `av` `kbd` `ady` `lez` `lbe` `tab` `dar` | Ӏ, the palochka, a key of its own at the home row's end (on Russian's keys) | each its own |
 | `yua` `quc` `kek` `quz` | ʼ, the glottal stop and ejective (Kʼicheʼ, kʼo), a key of its own at the home row's end | each its own |
 | `dz` Dzongkha | ་, the tsheg, a key of its own at the home row's end (its keymap types it on the space bar) | `dz` |
+| `blk` Pa'O | its tones ꩻ and ႏ, keys of their own in place of Burmese's ဩ and ၏ (on Burmese's keys) | `blk` |
+| `ksw` Sgaw Karen | Keyman's phone layout, one letter a key on the base view, the asat ် a key of its own at the home row's end; whole words on long presses (လီၤ on လ, ဒီး on ဒ) | `ksw` |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per

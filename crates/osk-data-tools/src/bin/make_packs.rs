@@ -17,7 +17,9 @@
 //!
 //! A language's keyboard layouts (`layouts/<id>.json`) join its pack, as
 //! `packs.toml`'s `[layouts.packs]` says; a language with layouts and no
-//! model gets a pack of its layouts alone, named in `[layouts.names]`.
+//! model gets a pack of its layouts alone, named in `[layouts.names]`. A
+//! layout made from another source than xkeyboard-config's (Keyman's) adds
+//! that source's licence to its pack, as `[layouts.added]` says.
 //! A language's transliteration table (`translit/<lang>.txt`) joins the
 //! pack of the same id, with `[translit]`'s licence and source, and those
 //! of each `[[translit.fitted]]` naming it, whose dataset's romanizations
@@ -138,8 +140,9 @@ struct Added {
 }
 
 /// The keyboard layouts: the licence and source every pack with one takes,
-/// which pack each language's layouts join, and the names of the packs of
-/// layouts alone.
+/// which pack each language's layouts join, the names of the packs of
+/// layouts alone, and the licences and sources a layout made from another
+/// source than xkeyboard-config adds to its pack (Keyman's).
 #[derive(Deserialize)]
 struct Layouts {
     license: License,
@@ -147,6 +150,8 @@ struct Layouts {
     packs: BTreeMap<String, Vec<String>>,
     #[serde(default)]
     names: BTreeMap<String, String>,
+    #[serde(default)]
+    added: BTreeMap<String, AddedDef>,
 }
 
 #[derive(Deserialize)]
@@ -342,7 +347,13 @@ fn main() -> anyhow::Result<()> {
         ] {
             let Some(def) = def else { continue };
             components.push(component(&args.root, kind, path)?);
-            licenses.extend(def.licenses.iter().cloned());
+            // A licence the pack names already (a word list made from its
+            // model's corpus, Shan's syllables) is named once.
+            for l in &def.licenses {
+                if !licenses.contains(l) {
+                    licenses.push(l.clone());
+                }
+            }
             sources.extend(def.sources.iter().map(|s| Source {
                 name: s.name.clone(),
                 url: s.url.clone(),
@@ -622,25 +633,47 @@ fn add_layouts(root: &Path, l: &Layouts, manifests: &mut Vec<Manifest>) -> anyho
             bail!("[layouts.names] names `{id}`, but [layouts.packs] gives it no layouts");
         }
     }
+    for id in l.added.keys() {
+        if !l.packs.values().flatten().any(|i| i == id) {
+            bail!("[layouts.added] names `{id}`, but [layouts.packs] gives no pack that layout");
+        }
+    }
     for (pack, ids) in &l.packs {
         ensure!(!ids.is_empty(), "[layouts.packs] gives `{pack}` no layouts");
         let mut components = Vec::new();
+        let mut licenses = vec![l.license.clone()];
+        let mut sources = vec![Source {
+            name: l.source.name.clone(),
+            url: l.source.url.clone(),
+            sha256: None,
+        }];
         for id in ids {
             components.push(component(
                 root,
                 kind::LAYOUT,
                 &format!("layouts/{id}.json"),
             )?);
+            if let Some(a) = l.added.get(id) {
+                for license in &a.licenses {
+                    if !licenses.contains(license) {
+                        licenses.push(license.clone());
+                    }
+                }
+                sources.extend(a.sources.iter().map(|s| Source {
+                    name: s.name.clone(),
+                    url: s.url.clone(),
+                    sha256: None,
+                }));
+            }
         }
-        let source = Source {
-            name: l.source.name.clone(),
-            url: l.source.url.clone(),
-            sha256: None,
-        };
         if let Some(m) = manifests.iter_mut().find(|m| &m.id == pack) {
             m.components.extend(components);
-            m.licenses.push(l.license.clone());
-            m.sources.push(source);
+            for license in licenses {
+                if !m.licenses.contains(&license) {
+                    m.licenses.push(license);
+                }
+            }
+            m.sources.extend(sources);
         } else {
             let name = l.names.get(pack).with_context(|| {
                 format!(
@@ -655,8 +688,8 @@ fn add_layouts(root: &Path, l: &Layouts, manifests: &mut Vec<Manifest>) -> anyho
                 version: RELEASE_VERSION.to_string(),
                 format: osk_data::codec::VERSION,
                 components,
-                licenses: vec![l.license.clone()],
-                sources: vec![source],
+                licenses,
+                sources,
             });
         }
     }

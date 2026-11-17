@@ -47,8 +47,8 @@
 #                         eval-predict measures the model on
 #
 # A language whose test split is too small to measure on (Dagbani's and
-# Yao's hold a hundred words each) has none pinned: every 10th document of
-# its train split is held out instead.
+# Yao's hold a hundred words each, Pa'O's 31 sentences) has none pinned:
+# every 10th document of its train split is held out instead.
 #
 # Neither is committed: the text is the web's. The parquet files are kept
 # in $OUT/raw, and a kept one whose sha256 is right is not downloaded
@@ -554,6 +554,13 @@ lld      lmo_Latn  train/000_00000.parquet 4bdb28b9403d6933669d6e9a4c7d15fe39e07
 lld      lmo_Latn  test/000_00000.parquet  1f23c5af80043fc23bdf8eb80af77f5faf205e9f4a094f3890ebcaf330f95dbb
 gag      gag_Latn  train/000_00000.parquet 24c11b3f5c062ec5e9ce0ad630026cf16bdd42fb3557db4d1c421ab552a7ae6e
 gag      gag_Latn  test/000_00000.parquet  32839681729de5389e5cc2c5a07be1064cbefb164502b1c027eab207b55d9197
+shn      shn_Mymr  train/000_00000.parquet 493924dfacdf56589f28c454fa930100d56040b6c544f84e7296d0cc13ccb269
+shn      shn_Mymr  test/000_00000.parquet  de7a5bb54f742ebd81da190a8cdec4593bac847f18dcf89fa9b0291f2fcd276e
+mnw      mnw_Mymr  train/000_00000.parquet 852243ecb77291b83d59ad808fd3b7d85150ba6884d0eb016314609ebf8c81e2
+mnw      mnw_Mymr  test/000_00000.parquet  e762a491556bb069b96bfc9b3c22019c0b91fa59b5b5d11bac9cfcc3f2335a01
+ksw      ksw_Mymr  train/000_00000.parquet c099aea7abced6bab3c4101f96f63800820c1ee331b4f1d0fd564fe758a8a9dc
+ksw      ksw_Mymr  test/000_00000.parquet  58332907ccbe3c21bca1cf1bd7e6271539566f03d3af692c4303b46758fd6c77
+blk      blk_Mymr  train/000_00000.parquet 3d0a328e7cfb18a2349c91bea8094808336451cb2f6d60e27d044e7148403b3b
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

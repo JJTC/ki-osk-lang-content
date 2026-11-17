@@ -134,6 +134,8 @@ LANGS = [
     # Lao: its number row likewise (ຢ ຟ ໂ ຖ ຸ ູ ຄ ຕ ຈ ຂ ຊ ໍ; ໌ ຼ on Shift).
     ("lo", "ລາວ", "la", "", "lao"),
     ("my", "မြန်မာ", "mm", "", "myanmar"),
+    ("shn", "တႆး", "mm", "shn", "myanmar"),
+    ("mnw", "မန်", "mm", "mnw", "myanmar"),
     # --- Central-Asian / Baltic: extra letters on the NUMBER ROW ---
     # These alphabets overflow the 32-key letter grid, so the national
     # xkb layout parks the surplus letters on the number-row keycodes.

@@ -221,12 +221,15 @@ const BURMESE: &[&str] = &[
 
 /// Each word list parses, belongs to a language written without spaces
 /// between words, and cuts its held-out text (Lao's, Khmer's and
-/// Burmese's: [`LAO`], [`KHMER`], [`BURMESE`]) into words of the list.
+/// Burmese's: [`LAO`], [`KHMER`], [`BURMESE`]) into words of the list. A
+/// language cut into syllables (Shan, Mon, Sgaw Karen, Pa'O) has a list
+/// of them, thousands, not tens of thousands, and cuts its commonest run
+/// together back into them.
 #[test]
 fn every_word_list_cuts_its_language() {
     use std::sync::Arc;
 
-    use osk_data::wordbreak::WordList;
+    use osk_data::wordbreak::{Script, WordList};
     use osk_data::words::Splitter;
 
     let lists = files("wordbreak", ".txt");
@@ -235,8 +238,9 @@ fn every_word_list_cuts_its_language() {
         let lang = p.file_stem().unwrap().to_string_lossy().to_string();
         let text = std::fs::read_to_string(&p).unwrap_or_else(|e| panic!("{}: {e}", name(&p)));
         let list = Arc::new(WordList::parse(&text).unwrap_or_else(|e| panic!("{}: {e}", name(&p))));
+        let syllables = Script::of_lang(&lang).is_some_and(Script::cut_into_syllables);
         assert!(
-            list.len() >= 10_000,
+            list.len() >= if syllables { 2_000 } else { 10_000 },
             "{}: only {} words",
             name(&p),
             list.len()
@@ -253,6 +257,22 @@ fn every_word_list_cuts_its_language() {
             name(&p)
         );
         let splitter = splitter.with_word_list(list.clone());
+        if syllables {
+            // Its 300 commonest syllables (the list's first lines), run
+            // together, are cut back into them, each a word of the list.
+            let common: Vec<&str> = text
+                .lines()
+                .filter(|l| !l.starts_with('#'))
+                .take(300)
+                .collect();
+            let words: Vec<String> = splitter
+                .words(&common.concat())
+                .into_iter()
+                .map(|w| w.text)
+                .collect();
+            assert_eq!(words, common, "{}", name(&p));
+            continue;
+        }
         let eval = match lang.as_str() {
             "lo" => LAO.join("\n"),
             "km" => KHMER.join("\n"),
