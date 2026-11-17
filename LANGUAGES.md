@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**391 layouts**: 336 keyboard layouts (RTL: ar he fa + Urdu, Western
+**395 layouts**: 340 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 390 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **331 languages** carry a prediction
+keycaps. 394 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **335 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -284,6 +284,10 @@ but no model to match the glide against · `—` off
 | `mnw` | `mnw` | Mon မန် | mm · mnw | LTR | **Full** (mnw)⁷ | — | — |
 | `ksw` | `ksw` | Sgaw Karen ကညီ | Keyman's sil_sgaw_karen | LTR | **Full** (ksw)⁷ | — | — |
 | `blk` | `blk` | Pa'O ပအိုဝ်ႏ | mm, ꩻ ႏ for ဩ ၏ | LTR | **Full** (blk)⁷ | — | — |
+| `nan` | `nan` | Southern Min Bân-lâm-gú | us + long-press á â ā à a̍ ê ē… o͘ ⁿ | LTR | **Full** (nan)⁷ | ✓ | — |
+| `hak` | `hak` | Hakka Hak-kâ-ngî | us + long-press â à á a̍ ê è… ṳ | LTR | **Full** (hak)⁷ | ✓ | — |
+| `ami` | `ami` | Amis Pangcah | us, ' key | LTR | **Full** (ami)⁷ | ✓ | — |
+| `za` | `za` | Zhuang Vahcuengh | us | LTR | **Full** (za)⁷ | ✓ | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `kab` | `kab` | Kabyle | us | LTR | **Full** (kab) | ✓ | — |
@@ -800,7 +804,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These two hundred and forty-three models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These two hundred and forty-seven models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1304,6 +1308,42 @@ but no model to match the glide against · `—` off
    too few): Shan 54.3%, Sgaw Karen 47.3%, Pa'O 40.1%, Mon 35.3%; 53.9%,
    47.1%, 39.5% and 34.9% with taps astray, at most 0.96% of right
    syllables changed (Mon's).
+   Four of East Asia's languages written in Latin letters learn from
+   FineWeb-2's text whole: Southern Min in Pe̍h-ōe-jī, the church
+   romanization (its Wikisource's and Wikipedia's text, the Bible, church
+   and literary sites; 710 000 words), Hakka in Pha̍k-fa-sṳ (its
+   Wikipedia, the Bible; 205 000), Amis (its Wikipedia; 344 000) and
+   Zhuang, the standard written language, which FineWeb-2 files as
+   Yongbei Zhuang's (the People's Daily's and the Guangxi Minzu Bao's
+   Zhuang pages, its Wikipedia; 375 000). Their text's Han runs (Hàn-lô
+   text, a wiki's menus) are left out, a document is kept where its own
+   words are 1% of its words and more than English's, and Hakka's spam
+   sites and the Indonesian Wiktionary's pages, and a parallel corpus's
+   markup beside Amis, are left out. Southern Min's ⁿ, which Unicode
+   names a superscript, counts as a Latin letter where the Latin runs are
+   kept (every word with it had been cut away), its i written as the
+   dotless ı under a tone mark (ı̄ ı̍ ı̀ ı̂, 30 000 of them) is read as i,
+   and its o͘ written o· as o͘; Amis' glottal stop, written ’ mostly and
+   ˈ ' ‘ ` ´ ʼ and ^ in the same words, is ’. Southern Min and Hakka
+   join a word's syllables with hyphens (half of Southern Min's words
+   are written so): cut at each hyphen, the next syllable glued on as
+   Kabyle's clitics are (`osk_data::words`), so that a syllable after a
+   hyphen is offered at once, they saved 3.2 and 4.7 points more than
+   whole words, 5.6 and 9.1 with taps astray, and their unknown words
+   fell from 6.3% and 10.8% to 2.5% and 2.6%. They are typed on the US
+   keys, Southern Min's and Hakka's toned vowels first on the long
+   presses, the commonest first (Southern Min's á â ā à a̍, o͘ in its five
+   tones, ⁿ first on n; Hakka's â à á a̍, ṳ in its five on u: a quarter
+   and a sixth of their letters), Amis' glottal stop a key of its own at
+   the home row's end (one word in fifteen has it), Zhuang's tones being
+   letters. Their lexicons keep all their words (8 400 to 34 000).
+   Keystroke savings on their held-out text (Southern Min's test split,
+   the others' every 10th document, theirs too small; 9 700 to 15 200
+   words): Zhuang 61.9%, Hakka 52.7%, Southern Min 48.9%, Amis 45.8%;
+   60.6%, 51.1%, 47.5% and 39.0% with taps astray, at most 0.34% of
+   right words changed (Amis'). Hakka capitalises each syllable of a
+   place's name (Sî-Fî), and a capital after a hyphen cannot be
+   foreseen: 89% of its words come out in the right case.
    Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
@@ -1375,7 +1415,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **331 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **335 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1587,6 +1627,8 @@ are built on a `us`/`es` base and add theirs the same way:
 | `yua` `quc` `kek` `quz` | ʼ, the glottal stop and ejective (Kʼicheʼ, kʼo), a key of its own at the home row's end | each its own |
 | `dz` Dzongkha | ་, the tsheg, a key of its own at the home row's end (its keymap types it on the space bar) | `dz` |
 | `blk` Pa'O | its tones ꩻ and ႏ, keys of their own in place of Burmese's ဩ and ၏ (on Burmese's keys) | `blk` |
+| `nan` `hak` | their toned vowels first on the long presses, the commonest first: Southern Min's á â ā à a̍, o͘ in its five tones on o, ⁿ first on n; Hakka's â à á a̍, ṳ in its five tones on u | each its own |
+| `ami` Amis | ', the glottal stop, a key of its own at the home row's end (its text writes it ’, ˈ and ^ too) | `ami` |
 | `ksw` Sgaw Karen | Keyman's phone layout, one letter a key on the base view, the asat ် a key of its own at the home row's end; whole words on long presses (လီၤ on လ, ဒီး on ဒ) | `ksw` |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 

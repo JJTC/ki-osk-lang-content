@@ -165,6 +165,7 @@ LANGS = [
     # its nasal vowels + g̃, Aymara its diaeresis vowels, on long-press.
     ("qu", "Runa Simi", "es", "", "latin"),
     ("gn", "Avañe'ẽ", "es", "", "latin"),
+    ("ami", "Pangcah", "us", "", "latin"),
     ("ay", "Aymar aru", "es", "", "latin"),
     # --- Phase A: African + more Asian, Latin script ---
     # Built on the `us` (or `es`, for ñ) base like Kabyle/Guaraní — the
@@ -472,8 +473,9 @@ MODEL = {"sr-latn": "sr-Latn"}
 # (U+02BC: Kʼicheʼ), and Guaraní's, the puso, written ' (mba'e, ñe'ẽ: one
 # letter in sixty of its text), and Dzongkha's tsheg, ་, which its keymap
 # types on the space bar (Tibetan's has a key for it), a key of its own at
-# the home row's end, in place of its spacers.
-HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ",
+# the home row's end, in place of its spacers. Amis' glottal stop, written ’ or ' (in
+# one word in fifteen), has one too.
+HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ", "ami": "'",
                  **{lid: "Ӏ" for lid in ("ce", "inh", "av", "kbd", "ady", "lez", "lbe", "tab", "dar")},
                  **{lid: "ʼ" for lid in ("yua", "quc", "kek", "quz")}, "gn": "'",
                  "dz": "\u0F0B"}

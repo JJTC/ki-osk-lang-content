@@ -48,7 +48,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
                  min war nia mad \
                  cor glv ext pcd sgs pnt vec vls lmo lld gag \
-                 shn mnw ksw blk
+                 shn mnw ksw blk \
+                 nan hak ami za
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -145,7 +146,8 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
                  min war nia mad \
                  cor glv ext pcd sgs pnt vec vls lmo lld gag \
-                 shn mnw ksw blk
+                 shn mnw ksw blk \
+                 nan hak ami za
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -286,6 +288,8 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # save no more at 120 000 (0.0 and 0.1 points).
 # Shan, Mon, Sgaw Karen and Pa'O are cut into syllables, 3 000 to 9 000
 # kinds of them: their lexicons keep them all, at any tier.
+# Southern Min, Hakka, Amis and Zhuang, whose corpora hold 200 000 to
+# 710 000 words, keep all their 8 400 to 34 000 kinds of word.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -301,7 +305,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
                        min war nia mad \
                        cor glv ext pcd sgs pnt vec vls lmo lld gag \
-                       shn mnw ksw blk
+                       shn mnw ksw blk \
+                       nan hak ami za
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings

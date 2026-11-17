@@ -28,7 +28,9 @@
 //!   `homme`, the second glued to the first, with no space between; and
 //!   Kabyle after a hyphen, before its clitics (`fell-` and `i`), as do
 //!   Maltese after its articles and elisions (`il-` and `kelb`, `b'` and
-//!   `mod`) and Irish after the t- and n- before a vowel (`t-` and `athair`).
+//!   `mod`) and Irish after the t- and n- before a vowel (`t-` and `athair`),
+//!   and Southern Min and Hakka at the hyphens between a word's syllables
+//!   (`chhin-` and `chhiūⁿ`, `Hak-` and `kâ`).
 //!   Uzbek's apostrophes for the ʻ of oʻ and gʻ are that letter.
 //! - Per language: Catalan's middle dot (`col·legi`), Armenian's question,
 //!   emphasis and exclamation marks, written on a word's stressed vowel
@@ -127,7 +129,7 @@ pub struct Splitter {
     fold: Fold,
     /// A hyphen between letters ends a word, which keeps it, and glues the
     /// next one on (Kabyle `fell-i`, Maltese `il-kelb`, Tamazight in
-    /// Tifinagh `ⴷ-ⵓⵙⵉⵖ`).
+    /// Tifinagh `ⴷ-ⵓⵙⵉⵖ`; Southern Min's and Hakka's syllables, `chhin-chhiūⁿ`).
     hyphen_glues: bool,
     /// Uzbek: the apostrophes its texts write for the ʻ of oʻ and gʻ (‘, the
     /// grave accent, ʼ and the others) belong to the word, and are that ʻ
@@ -521,7 +523,7 @@ impl Splitter {
                 s.hyphen_glues = true;
                 s.elide = Elide::After(MALTESE_ELISIONS);
             }
-            "ga" | "ber" => s.hyphen_glues = true,
+            "ga" | "ber" | "nan" | "hak" => s.hyphen_glues = true,
             "uz" => s.uzbek = true,
             "yua" | "quc" | "kek" | "quz" => s.ejective = true,
             "bo" | "dz" => s.tsheg = true,
@@ -1399,6 +1401,13 @@ mod tests {
             split("kab", "ad-as-d-iniɣ"),
             ["ad-", "+as-", "+d-", "+iniɣ"]
         );
+        // Southern Min (Pe̍h-ōe-jī) and Hakka (Pha̍k-fa-sṳ) at the hyphens
+        // between a word's syllables, its ⁿ and o͘'s dot (U+0358) letters
+        // of it.
+        assert_eq!(split("nan", "chhin-chhiūⁿ"), ["chhin-", "+chhiūⁿ"]);
+        assert_eq!(split("nan", "hō\u{358}"), ["hō\u{358}"]);
+        assert_eq!(split("hak", "Hak-kâ-ngî"), ["Hak-", "+kâ-", "+ngî"]);
+        assert_eq!(split("hak", "ṳ\u{302}"), ["ṳ\u{302}"]);
         // English never elides this way, nor Russian at a hyphen.
         assert_eq!(split("en", "o'clock"), ["o'clock"]);
         assert_eq!(split("ru", "кто-нибудь"), ["кто-нибудь"]);

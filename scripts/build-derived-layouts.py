@@ -79,7 +79,11 @@ Greek's; Venetian (ł), Lombard (ò ö ó, ü ù) and Ladin (ë é è ê, ö ò 
 ü ù, ć, à á, ś) on Italian's; West Flemish on Dutch's (ê è ë é, ô); and
 Gagauz on Turkish's (ä ê ţ). Pa'O is typed on Burmese's keys, its
 tones ꩻ and ႏ (an eighth of its letters) on keys of their own in place
-of ဩ and ၏, which it hardly writes. A letter only a long press types
+of ဩ and ၏, which it hardly writes. Zhuang is typed on the US keys as they
+are; Southern Min (Pe̍h-ōe-jī) and Hakka (Pha̍k-fa-sṳ) on them with their
+toned vowels first on the long presses, the commonest first: Southern
+Min's á â ā à a̍…, o's ó ō o̍ ò ô and o͘ in its tones, ⁿ first on n;
+Hakka's â à á a̍…, and ṳ in its tones on u. A letter only a long press types
 turns the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -303,6 +307,9 @@ DERIVED = [
     ("lld", "it", "Ladin", {"e": ["ë", "é", "è", "ê"], "o": ["ö", "ò", "ó", "ô"], "u": ["ü", "ù"], "c": ["ć"], "a": ["à", "á"], "s": ["ś"], "E": ["Ë", "É", "È", "Ê"], "O": ["Ö", "Ò", "Ó", "Ô"], "U": ["Ü", "Ù"], "C": ["Ć"], "A": ["À", "Á"], "S": ["Ś"]}),
     ("gag", "tr", "Gagauzça", {"a": ["ä"], "e": ["ê"], "t": ["ţ"], "A": ["Ä"], "E": ["Ê"], "T": ["Ţ"]}),
     ("blk", "my", "ပအိုဝ်ႏ", {}, {"ဩ": "ꩻ", "၏": "ႏ"}),
+    ("za", "us", "Vahcuengh", {}),
+    ("nan", "us", "Bân-lâm-gú", {"a": ["á", "â", "ā", "à", "a̍"], "A": ["Á", "Â", "Ā", "À", "A̍"], "e": ["ê", "ē", "è", "é", "e̍"], "E": ["Ê", "Ē", "È", "É", "E̍"], "i": ["ī", "í", "i̍", "ì", "î"], "I": ["Ī", "Í", "I̍", "Ì", "Î"], "o": ["ó", "ō", "o̍", "ò", "ô", "ō͘", "ó͘", "o͘", "ò͘", "ô͘"], "O": ["Ó", "Ō", "O̍", "Ò", "Ô", "Ō͘", "Ó͘", "O͘", "Ò͘", "Ô͘"], "u": ["ū", "ú", "ù", "û", "u̍"], "U": ["Ū", "Ú", "Ù", "Û", "U̍"], "m": ["m̄"], "M": ["M̄"], "n": ["ⁿ", "n̄", "n̂", "ǹ", "ń"], "N": ["N̄", "N̂", "Ǹ", "Ń"]}),
+    ("hak", "us", "Hak-kâ-ngî", {"a": ["â", "à", "á", "a̍"], "A": ["Â", "À", "Á", "A̍"], "e": ["ê", "è", "é", "e̍"], "E": ["Ê", "È", "É", "E̍"], "i": ["î", "ì", "í", "i̍"], "I": ["Î", "Ì", "Í", "I̍"], "o": ["ô", "ò", "ó", "o̍"], "O": ["Ô", "Ò", "Ó", "O̍"], "u": ["û", "ú", "ù", "ṳ", "u̍", "ṳ̂", "ṳ́", "ṳ̀", "ṳ̍"], "U": ["Û", "Ú", "Ù", "Ṳ", "U̍", "Ṳ̂", "Ṳ́", "Ṳ̀", "Ṳ̍"], "m": ["m̀"], "M": ["M̀"], "n": ["ń", "ǹ"], "N": ["Ń", "Ǹ"]}),
 ]
 
 

@@ -71,6 +71,19 @@ Unicode's, as its keyboard types them: ၦ as ပှ (ၦၤ, ပှၤ), ၥ as
 its comma, as . and , (a fifth of its sentences). Mon writes its own
 nga, ၚ, which its keyboard types, as Burmese's င nearly a quarter of
 the time (more than half of the time in its wiki): read as ၚ.
+Four of East Asia's languages in Latin letters are read whole: Southern
+Min in Pe̍h-ōe-jī, Hakka in Pha̍k-fa-sṳ, Amis, and Standard Zhuang, which
+FineWeb-2 files as Yongbei Zhuang's (zyb_Latn). Their Han runs (Hàn-lô
+text, a wiki's menus) are left out (`script_only`), Southern Min's ⁿ
+being a Latin letter there (`script_also`: Unicode names it a
+superscript); a document is kept where its own words are 1% of its
+words and more than English's (and Indonesian's, for Hakka, beside
+which Indonesian Wiktionary's pages and spam sites are left out; a
+parallel corpus's markup beside Amis). Southern Min's i written as the
+dotless ı under a tone mark (ı̄ ı̍ ı̀) is read as i, its o͘ written o· as
+o͘; Amis' glottal stop, written ’ and ˈ ' ‘ ` ´ ʼ ^, as ’. Hakka's, Amis'
+and Zhuang's test splits are small (1 300 to 4 200 words): every 10th
+document is held out.
 
 Thirty-eight languages that had a keyboard and no model, FineWeb-2 has
 hundreds of millions of characters of: Afrikaans, Albanian, Bashkir,
@@ -692,6 +705,37 @@ def myanmar_syllables(text):
     return out
 
 
+# East Asia's in Latin letters: Southern Min's words in Pe̍h-ōe-jī,
+# Hakka's in Pha̍k-fa-sṳ, Amis', Zhuang's (Standard Zhuang, which
+# FineWeb-2 files as Yongbei Zhuang's).
+SOUTHERN_MIN = set("ê sī ū tī lâng lâi bô kóng kap lán beh koh lí chit góa lóng tùi chiū kā teh kàu mā iā".split())
+HAKKA = set("ke he chhai lâu kì yû kóng oi ngài ngì voi yung tên chhiu pûn tui".split())
+AMIS = set("ko ato saka ira ci itini ano caay sowal kitakit tamdaw miheca nina namo iso mato".split())
+ZHUANG = set("gij caeuq aen dwg miz bae aeu guh mbouj youq ndaej haenx neix vunz daengz ndaw boux hawj "
+             "ndei".split())
+# Southern Min's i, written as the dotless ı under its tone marks (ı̄ ı̍
+# ı̀), and its o͘ written o·.
+DOTLESS_UNDER_A_MARK = re.compile("\u0131(?=[\u0300-\u036F])")
+# Amis' glottal stop, written ’ most of the time, ˈ ' ‘ ` ´ ʼ and ^ (the
+# official spelling's epiglottal, written for the same words) the rest.
+AMIS_STOP = re.compile(r"(?<=[^\W\d_])[\u02C8'\u2018`\u00B4\u02BC^]|[\u02C8\u2018`\u00B4\u02BC^](?=[^\W\d_])")
+HAKKA_OUT = re.compile(r"wiktionary|sio\.si|bashgmu|politicalfriendster")
+AMIS_OUT = re.compile(r"opus\.nlpl")
+
+
+def southern_min(text):
+    text = DOTLESS_UNDER_A_MARK.sub("i", text).replace("o\u00B7", "o\u0358").replace("O\u00B7", "O\u0358")
+    return unicodedata.normalize("NFC", text)
+
+
+def hakka(text):
+    return unicodedata.normalize("NFC", text)
+
+
+def amis(text):
+    return AMIS_STOP.sub("\u2019", unicodedata.normalize("NFC", text))
+
+
 # Sgaw Karen's older fonts' letters, as Unicode writes them.
 KAREN_FOLD = str.maketrans({"\u1066": "\u1015\u103E", "\u1065": "\u102C",
                             "\u1089": ".", "\u108B": ".", "\u1087": ","})
@@ -1188,6 +1232,16 @@ LANGS = {
     "gag": {"script": "LATIN", "neighbour": set(), "own": GAGAUZ, "rival": GAGAUZ_RIVAL,
             "sentence_rival": ENGLISH_ONLY | GAGAUZ_RIVAL, "letters_never": set("|") | CYRILLIC_LETTERS,
             "normalize": long_tail("gag"), "brackets": True},
+    # East Asia's in Latin letters, their Han runs (Hàn-lô text, a wiki's
+    # menus) left out.
+    **{lang: {"script": "LATIN", "neighbour": set(), "own": own, "rival": ENGLISH_ONLY | rival,
+              "sentence_rival": ENGLISH_ONLY | rival, "script_only": True, "letters_never": set("|"),
+              "brackets": True, **more}
+       for lang, own, rival, more in (
+           ("nan", SOUTHERN_MIN, set(), {"normalize": southern_min, "script_also": frozenset("\u207F")}),
+           ("hak", HAKKA, INDONESIAN_ONLY, {"normalize": hakka, "hosts_out": HAKKA_OUT, "hold": 10}),
+           ("ami", AMIS, set(), {"normalize": amis, "hosts_out": AMIS_OUT, "hold": 10}),
+           ("za", ZHUANG, set(), {"hold": 10}))},
     # Myanmar's other languages, cut into syllables.
     **{lang: {"script": "MYANMAR", "neighbour": set(), "lines": True, "unspaced": True,
               "normalize": normalize, "script_only": True, "foreign": foreign,
@@ -1271,7 +1325,8 @@ def sentences(text, conf):
     for piece in pieces:
         ends = UNSPACED_END.split(piece) if conf.get("unspaced") else [piece]
         for s in (s for e in ends for s in END.split(e)):
-            for s in script_runs(s, script) if conf.get("script_only") else [" ".join(s.split())]:
+            for s in (script_runs(s, script, conf.get("script_also", frozenset())) if conf.get("script_only")
+                      else [" ".join(s.split())]):
                 if ("sentence_rival" in conf
                         and share(units(s, conf), conf["sentence_rival"]) > conf.get("rival_most", 0.15)):
                     continue
@@ -1285,11 +1340,13 @@ def sentences(text, conf):
                     yield s
 
 
-def script_runs(s, script):
-    """`s` cut where a word has letters of another script, those left out."""
+def script_runs(s, script, also=frozenset()):
+    """`s` cut where a word has letters of another script, those left out;
+    the letters `also` are the script's (Southern Min's ⁿ, which Unicode
+    names a superscript)."""
     runs, run = [], []
     for w in s.split():
-        if all(unicodedata.name(c, "").startswith(script) for c in w if c.isalpha()):
+        if all(unicodedata.name(c, "").startswith(script) or c in also for c in w if c.isalpha()):
             run.append(w)
         elif run:
             runs.append(" ".join(run))

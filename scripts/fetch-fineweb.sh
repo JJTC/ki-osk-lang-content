@@ -29,7 +29,10 @@
 # Waray's beside GlotCC's; eleven of Europe's regional languages
 # (Cornish, Manx, Extremaduran, Picard, Samogitian, Pontic Greek,
 # Venetian, West Flemish, Lombard, Ladin, Gagauz), Ladin's beside the
-# Ladin that FineWeb-2 files as Lombard; and
+# Ladin that FineWeb-2 files as Lombard; four of Myanmar's, written
+# without spaces between words and cut into syllables (Shan, Mon, Sgaw
+# Karen, Pa'O); four of East Asia's in Latin letters (Southern Min,
+# Hakka, Amis, Zhuang); and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -47,8 +50,9 @@
 #                         eval-predict measures the model on
 #
 # A language whose test split is too small to measure on (Dagbani's and
-# Yao's hold a hundred words each, Pa'O's 31 sentences) has none pinned:
-# every 10th document of its train split is held out instead.
+# Yao's hold a hundred words each, Pa'O's 31 sentences, Hakka's, Amis'
+# and Zhuang's 1 300 to 4 200 words) has none pinned: every 10th
+# document of its train split is held out instead.
 #
 # Neither is committed: the text is the web's. The parquet files are kept
 # in $OUT/raw, and a kept one whose sha256 is right is not downloaded
@@ -561,6 +565,11 @@ mnw      mnw_Mymr  test/000_00000.parquet  e762a491556bb069b96bfc9b3c22019c0b91f
 ksw      ksw_Mymr  train/000_00000.parquet c099aea7abced6bab3c4101f96f63800820c1ee331b4f1d0fd564fe758a8a9dc
 ksw      ksw_Mymr  test/000_00000.parquet  58332907ccbe3c21bca1cf1bd7e6271539566f03d3af692c4303b46758fd6c77
 blk      blk_Mymr  train/000_00000.parquet 3d0a328e7cfb18a2349c91bea8094808336451cb2f6d60e27d044e7148403b3b
+nan      nan_Latn  train/000_00000.parquet 527423692766e9bda720b30b16138c0707c9cb37f1cab3367ef97d4bf61f990f
+nan      nan_Latn  test/000_00000.parquet  e1abf7ee28ef5c4e062885208fa80b806713a16254103ff6c67a2adb9950764b
+hak      hak_Latn  train/000_00000.parquet d8d6816c1b2a3e74551d6abae6114be950e884483ce05a2c17fbe54ce1e802a5
+ami      ami_Latn  train/000_00000.parquet 09ba097414b6bb5ca621b7d83a0edc4617dc6dbb9609ecb04f126ee9f3641faa
+za       zyb_Latn  train/000_00000.parquet 2dcd1a26aea99f8c89e64a89d97040ddbbbf7c4dc1244dd1ac035e873b5cf1a7
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)
