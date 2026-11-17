@@ -100,8 +100,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 
 # The layout made, the one it is made from, its name, and what its keys
 # gain on a long press (a key's label → the letters, first in its menu),
-# on every view; and, for some, keys that type another letter instead (a
-# key's label → the letter).
+# on every view; and, for some, keys that type another letter instead
+# ("swap": a key's label → the letter), or a key at the home row's end
+# in place of its spacers ("home": what it types, the apostrophe many of
+# Africa's languages write inside their words).
 DERIVED = [
     ("bho", "hi", "भोजपुरी", {}),
     ("mai", "hi", "मैथिली", {}),
@@ -306,15 +308,45 @@ DERIVED = [
     ("lmo", "it", "Lumbard", {"o": ["ò", "ö", "ó"], "u": ["ü", "ù"], "O": ["Ò", "Ö", "Ó"], "U": ["Ü", "Ù"]}),
     ("lld", "it", "Ladin", {"e": ["ë", "é", "è", "ê"], "o": ["ö", "ò", "ó", "ô"], "u": ["ü", "ù"], "c": ["ć"], "a": ["à", "á"], "s": ["ś"], "E": ["Ë", "É", "È", "Ê"], "O": ["Ö", "Ò", "Ó", "Ô"], "U": ["Ü", "Ù"], "C": ["Ć"], "A": ["À", "Á"], "S": ["Ś"]}),
     ("gag", "tr", "Gagauzça", {"a": ["ä"], "e": ["ê"], "t": ["ţ"], "A": ["Ä"], "E": ["Ê"], "T": ["Ţ"]}),
-    ("blk", "my", "ပအိုဝ်ႏ", {}, {"ဩ": "ꩻ", "၏": "ႏ"}),
+    ("blk", "my", "ပအိုဝ်ႏ", {}, {"swap": {"ဩ": "ꩻ", "၏": "ႏ"}}),
     ("za", "us", "Vahcuengh", {}),
     ("nan", "us", "Bân-lâm-gú", {"a": ["á", "â", "ā", "à", "a̍"], "A": ["Á", "Â", "Ā", "À", "A̍"], "e": ["ê", "ē", "è", "é", "e̍"], "E": ["Ê", "Ē", "È", "É", "E̍"], "i": ["ī", "í", "i̍", "ì", "î"], "I": ["Ī", "Í", "I̍", "Ì", "Î"], "o": ["ó", "ō", "o̍", "ò", "ô", "ō͘", "ó͘", "o͘", "ò͘", "ô͘"], "O": ["Ó", "Ō", "O̍", "Ò", "Ô", "Ō͘", "Ó͘", "O͘", "Ò͘", "Ô͘"], "u": ["ū", "ú", "ù", "û", "u̍"], "U": ["Ū", "Ú", "Ù", "Û", "U̍"], "m": ["m̄"], "M": ["M̄"], "n": ["ⁿ", "n̄", "n̂", "ǹ", "ń"], "N": ["N̄", "N̂", "Ǹ", "Ń"]}),
     ("hak", "us", "Hak-kâ-ngî", {"a": ["â", "à", "á", "a̍"], "A": ["Â", "À", "Á", "A̍"], "e": ["ê", "è", "é", "e̍"], "E": ["Ê", "È", "É", "E̍"], "i": ["î", "ì", "í", "i̍"], "I": ["Î", "Ì", "Í", "I̍"], "o": ["ô", "ò", "ó", "o̍"], "O": ["Ô", "Ò", "Ó", "O̍"], "u": ["û", "ú", "ù", "ṳ", "u̍", "ṳ̂", "ṳ́", "ṳ̀", "ṳ̍"], "U": ["Û", "Ú", "Ù", "Ṳ", "U̍", "Ṳ̂", "Ṳ́", "Ṳ̀", "Ṳ̍"], "m": ["m̀"], "M": ["M̀"], "n": ["ń", "ǹ"], "N": ["Ń", "Ǹ"]}),
+    ("zne", "us", "Pazande", {"a": ["ã", "á"], "A": ["Ã", "Á"], "e": ["ẽ"], "E": ["Ẽ"], "i": ["ĩ", "í"], "I": ["Ĩ", "Í"], "o": ["õ"], "O": ["Õ"], "u": ["ũ", "ú"], "U": ["Ũ", "Ú"]}),
+    ("alz", "us", "Alur", {}, {"home": "'"}),
+    ("cce", "us", "Chopi", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("skg", "us", "Sakalava", {"a": ["à"], "A": ["À"], "e": ["è", "é"], "E": ["È", "É"], "i": ["ì"], "I": ["Ì"], "o": ["ò"], "O": ["Ò"]}),
+    ("bss", "us", "Akoose", {"a": ["á", "â", "ǎ", "ā"], "A": ["Á", "Â", "Ǎ", "Ā"], "e": ["é", "ɛ", "ɛ́", "ē", "ê", "ə", "ə́", "ě", "ə̄", "ɛ̄", "ɛ̂", "ɛ̌", "ə̌", "ə̂", "è"], "E": ["É", "Ɛ", "Ɛ́", "Ē", "Ê", "Ə", "Ə́", "Ě", "Ə̄", "Ɛ̄", "Ɛ̂", "Ɛ̌", "Ə̌", "Ə̂", "È"], "i": ["í", "ī", "ǐ", "î"], "I": ["Í", "Ī", "Ǐ", "Î"], "m": ["ḿ"], "M": ["Ḿ"], "n": ["ŋ", "ń"], "N": ["Ŋ", "Ń"], "o": ["ɔ́", "ó", "ɔ", "ǒ", "ō", "ɔ̄", "ô", "ɔ̂", "ɔ̌"], "O": ["Ɔ́", "Ó", "Ɔ", "Ǒ", "Ō", "Ɔ̄", "Ô", "Ɔ̂", "Ɔ̌"], "u": ["ú", "ū", "ǔ", "û"], "U": ["Ú", "Ū", "Ǔ", "Û"]}, {"home": "ʼ"}),
+    ("men", "us", "Mɛnde", {"e": ["ɛ"], "E": ["Ɛ"], "o": ["ɔ"], "O": ["Ɔ"], "n": ["ŋ"], "N": ["Ŋ"]}),
+    ("lgg", "us", "Lugbarati", {"u": ["ᴜ", "ᴜ́", "ú"], "U": ["Ú"], "i": ["ɨ", "ɨ́", "ɨ̀", "í", "ì"], "I": ["Ɨ", "Ɨ́", "Ɨ̀", "Í", "Ì"], "a": ["á", "à"], "A": ["Á", "À"], "e": ["è", "é"], "E": ["È", "É"], "o": ["ó", "ò"], "O": ["Ó", "Ò"]}, {"home": "'"}),
+    ("xon", "us", "Konkomba", {"o": ["ɔ"], "O": ["Ɔ"], "n": ["ŋ"], "N": ["Ŋ"]}),
+    ("dnj", "us", "Dan", {"e": ["ë", "ɛ"], "E": ["Ë", "Ɛ"], "o": ["ö", "ɔ"], "O": ["Ö", "Ɔ"], "u": ["ü"], "U": ["Ü"], "v": ["ʋ̈", "ʋ"], "V": ["Ʋ̈", "Ʋ"], "i": ["ɩ"], "I": ["Ɩ"]}),
+    ("gbo", "us", "Grebo", {"a": ["à", "ǎ", "ä"], "A": ["À", "Ǎ", "Ä"], "e": ["ɛ", "ě", "è", "ɛ̌", "ɛ̀", "ɛ̈"], "E": ["Ɛ", "Ě", "È", "Ɛ̌", "Ɛ̀", "Ɛ̈"], "i": ["ǐ", "ì", "ï"], "I": ["Ǐ", "Ì", "Ï"], "o": ["ɔ", "ǒ", "ò", "ɔ̀", "ɔ̌", "ɔ̈"], "O": ["Ɔ", "Ǒ", "Ò", "Ɔ̀", "Ɔ̌", "Ɔ̈"], "u": ["ù", "ǔ", "ü"], "U": ["Ù", "Ǔ", "Ü"]}),
+    ("heh", "us", "Kihehe", {}),
+    ("gux", "us", "Gulmancema", {"n": ["ŋ", "ñ"], "N": ["Ŋ", "Ñ"]}),
+    ("gmv", "us", "Gamo", {}),
+    ("suk", "us", "Kisukuma", {"i": ["ī"], "I": ["Ī"], "u": ["ū"], "U": ["Ū"]}, {"home": "'"}),
+    ("spp", "us", "Supyire", {"a": ["à", "á", "â"], "A": ["À", "Á", "Â"], "e": ["ɛ", "è", "ɛ̀", "é", "ê", "ɛ̂", "ɛ́"], "E": ["Ɛ", "È", "Ɛ̀", "É", "Ê", "Ɛ̂", "Ɛ́"], "i": ["í", "ì", "î"], "I": ["Í", "Ì", "Î"], "n": ["ŋ", "ɲ"], "N": ["Ŋ", "Ɲ"], "o": ["ɔ", "ɔ̀", "ò", "ɔ́", "ó", "ɔ̂", "ô"], "O": ["Ɔ", "Ɔ̀", "Ò", "Ɔ́", "Ó", "Ɔ̂", "Ô"], "u": ["ù", "ú", "û"], "U": ["Ù", "Ú", "Û"]}, {"home": "'"}),
+    ("bas", "us", "Basaa", {"e": ["é", "è"], "E": ["É", "È"], "n": ["ñ"], "N": ["Ñ"], "o": ["ô"], "O": ["Ô"], "a": ["à"], "A": ["À"]}),
+    ("hay", "us", "Ekihaya", {}, {"home": "'"}),
+    ("kbr", "us", "Kafa", {}, {"home": "'"}),
+    ("ngl", "us", "Elomwe", {"a": ["á", "à", "ã"], "A": ["Á", "À", "Ã"], "e": ["é"], "E": ["É"], "o": ["ó", "ò"], "O": ["Ó", "Ò"]}),
+    ("gog", "us", "Cigogo", {}),
+    ("chw", "us", "Echuwabo", {"a": ["á", "ã"], "A": ["Á", "Ã"], "c": ["ç"], "C": ["Ç"], "e": ["é"], "E": ["É"], "i": ["í"], "I": ["Í"], "n": ["ñ"], "N": ["Ñ"], "o": ["ó"], "O": ["Ó"]}),
+    ("fat", "us", "Mfantse", {"e": ["ɛ"], "E": ["Ɛ"], "o": ["ɔ", "õ"], "O": ["Ɔ", "Õ"], "a": ["ã"], "A": ["Ã"], "u": ["ũ"], "U": ["Ũ"]}),
+    ("tsc", "us", "Xitshwa", {}),
+    ("bud", "us", "Ncam", {"a": ["á", "à", "ā"], "A": ["Á", "À", "Ā"], "b": ["b́", "b̀"], "B": ["B́", "B̀"], "e": ["é", "è", "ē"], "E": ["É", "È", "Ē"], "i": ["í", "ì", "ī"], "I": ["Í", "Ì", "Ī"], "l": ["l̄", "l̀", "ĺ"], "L": ["L̄", "L̀", "Ĺ"], "m": ["ḿ", "m̀", "m̄"], "M": ["Ḿ", "M̀", "M̄"], "n": ["ŋ", "ǹ", "ń", "n̄"], "N": ["Ŋ", "Ǹ", "Ń", "N̄"], "o": ["ɔ", "ɔ́", "ò", "ɔ̃", "ɔ̄"], "O": ["Ɔ", "Ɔ́", "Ò", "Ɔ̃", "Ɔ̄"], "u": ["ú", "ū", "ù"], "U": ["Ú", "Ū", "Ù"]}),
+    ("kao", "us", "Xaasongaxango", {"n": ["ɲ", "ŋ", "ń"], "N": ["Ɲ", "Ŋ", "Ń"], "i": ["í"], "I": ["Í"], "e": ["é"], "E": ["É"]}, {"home": "'"}),
+    ("gvl", "us", "Gulay", {"e": ["è", "é", "ê"], "E": ["È", "É", "Ê"], "a": ["à", "á"], "A": ["À", "Á"], "b": ["ɓ"], "B": ["Ɓ"], "d": ["ɗ"], "D": ["Ɗ"], "m": ["m̂"], "M": ["M̂"], "o": ["ɔ", "ò", "ó"], "O": ["Ɔ", "Ò", "Ó"], "u": ["ú"], "U": ["Ú"]}, {"home": "'"}),
+    ("nnb", "us", "Kinande", {"i": ["ĩ", "í", "į"], "I": ["Ĩ", "Í", "Į"], "u": ["ũ", "ú", "ų"], "U": ["Ũ", "Ú", "Ų"], "a": ["á"], "A": ["Á"], "e": ["é"], "E": ["É"], "o": ["ó"], "O": ["Ó"]}, {"home": "'"}),
+    ("nyo", "us", "Runyoro", {}, {"home": "'"}),
 ]
 
 
-def build(lang, base, name, extra, swap=None):
-    swap = swap or {}
+def build(lang, base, name, extra, extras=None):
+    extras = extras or {}
+    swap = extras.get("swap", {})
+    home = extras.get("home")
     layout = json.loads((ROOT / "layouts" / f"{base}.json").read_text(encoding="utf-8"))
     out = {}
     for k, v in layout.items():
@@ -347,14 +379,25 @@ def build(lang, base, name, extra, swap=None):
     missing = (set(extra) - added) | (set(swap) - swapped)
     if missing:
         sys.exit(f"{lang}: no key {' '.join(sorted(missing))} on {base}'s layout")
+    if home:
+        # The home row (the second of letters), its spacers out and the
+        # key at its end, on the base and Shift views alike.
+        for view in out["views"]:
+            if view["id"] not in ("base", "shift"):
+                continue
+            row = view["rows"][1]["keys"]
+            if row[0].get("output", {}).get("kind") != "none" or row[-1].get("output", {}).get("kind") != "none":
+                sys.exit(f"{lang}: {base}'s home row has no spacers to give way")
+            view["rows"][1]["keys"] = row[1:-1] + [
+                {"width_units": 1, "label": home, "output": {"kind": "text", "text": home}}]
     return json.dumps(out, ensure_ascii=False, indent=2) + "\n"
 
 
 def main():
     check = "--check" in sys.argv[1:]
     stale = []
-    for lang, base, name, extra, *swap in DERIVED:
-        text = build(lang, base, name, extra, *swap)
+    for lang, base, name, extra, *extras in DERIVED:
+        text = build(lang, base, name, extra, *extras)
         path = ROOT / "layouts" / f"{lang.lower()}.json"
         if check:
             if not path.exists() or path.read_text(encoding="utf-8") != text:

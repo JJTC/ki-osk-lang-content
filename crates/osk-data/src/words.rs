@@ -142,9 +142,9 @@ pub struct Splitter {
     /// tsheg, so the next starts right after it.
     tsheg: bool,
     /// The Mayan languages' and Cusco Quechua's glottal stop and ejective
-    /// (Kʼicheʼ, Qʼeqchiʼ, chʼaki): ʼ (U+02BC), as their keyboards type it,
-    /// and an apostrophe written after a letter is that letter (generation
-    /// 6).
+    /// (Kʼicheʼ, Qʼeqchiʼ, chʼaki), and Akoose's glottal stop (ʼɛ): ʼ
+    /// (U+02BC), as their keyboards type it, and an apostrophe written
+    /// after a letter is that letter (generation 6).
     ejective: bool,
     /// U+00B7 between letters (Catalan `l·l`).
     middle_dot: bool,
@@ -525,7 +525,7 @@ impl Splitter {
             }
             "ga" | "ber" | "nan" | "hak" => s.hyphen_glues = true,
             "uz" => s.uzbek = true,
-            "yua" | "quc" | "kek" | "quz" => s.ejective = true,
+            "yua" | "quc" | "kek" | "quz" | "bss" => s.ejective = true,
             "bo" | "dz" => s.tsheg = true,
             "os" => s.fold = Fold::Ossetian,
             "fa" => s.fold = Fold::Persian,
@@ -1492,6 +1492,9 @@ mod tests {
         assert_eq!(quc.normalize("Kʼicheʼ"), "kʼicheʼ");
         assert_eq!(quc.normalize("k\u{2019}o"), "kʼo");
         assert_eq!(Splitter::new("quz").normalize("ch'aki"), "chʼaki");
+        // Akoose's glottal stop, which its text writes ʼ.
+        assert_eq!(Splitter::new("bss").normalize("ʼɛ"), "ʼɛ");
+        assert_eq!(Splitter::new("bss").normalize("nyaʼ"), "nyaʼ");
         assert_eq!(Splitter::new("gn").normalize("mbaʼe"), "mba'e");
         // Elsewhere nothing folds.
         assert_eq!(Splitter::new("da").normalize("Æble"), "æble");

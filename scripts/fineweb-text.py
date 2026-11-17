@@ -84,6 +84,15 @@ dotless ı under a tone mark (ı̄ ı̍ ı̀) is read as i, its o͘ written o· 
 o͘; Amis' glottal stop, written ’ and ˈ ' ‘ ` ´ ʼ ^, as ’. Hakka's, Amis'
 and Zhuang's test splits are small (1 300 to 4 200 words): every 10th
 document is held out.
+Twenty-eight of Africa's long tail that FineWeb-2 has 0.4 to 0.9 MB of
+(Zande, Alur, Chopi, Sakalava Malagasy, Akoose, Mende…) are read whole,
+the Bible's and Jehovah's Witnesses' text in the main: a sentence of
+English is left out, and of the state's language (French's, by its own
+words une pour dans avec, not le; Portuguese's; beside East Africa's
+Bantu languages Swahili's own katika kwamba lakini…, not the kwa ni wa
+ya they write too); every 10th document is held out. Fante's ͻ (a Greek
+look-alike) ɑ ε are read as ɔ a ɛ, Lugbara's ʉ as the ᴜ its text writes
+forty times as often, a scan's ﬁ as fi.
 
 Thirty-eight languages that had a keyboard and no model, FineWeb-2 has
 hundreds of millions of characters of: Afrikaans, Albanian, Bashkir,
@@ -598,7 +607,12 @@ LONG_TAIL_FOLD = {
     "gag": str.maketrans("ȇȆțȚ", "êÊţŢ"),
     "vec": str.maketrans("ƚȽ", "łŁ"),
     "pnt": str.maketrans("ќЌ", "κΚ"),
+    # Fante's ɔ written as a Greek look-alike, ͻ, its a as ɑ, its ɛ as ε;
+    # Lugbara's ʉ, the vowel its text writes ᴜ forty times more often.
+    "fat": str.maketrans("ͻϽɑⱭεΕ", "ɔƆaAɛƐ"),
+    "lgg": str.maketrans({"\u0289": "\u1D1C"}),
     # A scanned magazine's ligatures.
+    "skg": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
     "lld": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
     "lmo": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
 }
@@ -734,6 +748,11 @@ def hakka(text):
 
 def amis(text):
     return AMIS_STOP.sub("\u2019", unicodedata.normalize("NFC", text))
+
+
+# Swahili's own words, which the Bantu languages beside it do not write
+# (its kwa, ni, wa and ya they do).
+SWAHILI_RIVAL = set("katika kwamba lakini pamoja baada sana hii yake".split())
 
 
 # Sgaw Karen's older fonts' letters, as Unicode writes them.
@@ -1242,6 +1261,21 @@ LANGS = {
            ("hak", HAKKA, INDONESIAN_ONLY, {"normalize": hakka, "hosts_out": HAKKA_OUT, "hold": 10}),
            ("ami", AMIS, set(), {"normalize": amis, "hosts_out": AMIS_OUT, "hold": 10}),
            ("za", ZHUANG, set(), {"hold": 10}))},
+    # Africa's long tail, those with 0.4 to 0.9 MB of FineWeb-2's text (the
+    # Bible's and Jehovah's Witnesses' in the main): the state's language's
+    # sentences left out, every 10th document held out (their test splits
+    # hold a few hundred words).
+    **{lang: {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | rival,
+              "letters_never": set("|"), "brackets": True, "hold": 10,
+              **({"normalize": long_tail(lang)} if lang in LONG_TAIL_FOLD else {})}
+       for lang, rival in (
+           ("zne", FRENCH_ONLY), ("alz", SWAHILI_RIVAL), ("cce", PORTUGUESE_ONLY), ("skg", FRENCH_ONLY),
+           ("bss", FRENCH_ONLY), ("men", set()), ("lgg", SWAHILI_RIVAL), ("xon", FRENCH_ONLY), ("dnj", FRENCH_ONLY),
+           ("gbo", set()), ("heh", SWAHILI_RIVAL), ("gux", FRENCH_ONLY), ("gmv", set()), ("suk", SWAHILI_RIVAL),
+           ("spp", FRENCH_ONLY), ("bas", FRENCH_ONLY), ("hay", SWAHILI_RIVAL), ("kbr", set()),
+           ("ngl", PORTUGUESE_ONLY), ("gog", SWAHILI_RIVAL), ("chw", PORTUGUESE_ONLY), ("fat", set()),
+           ("tsc", PORTUGUESE_ONLY), ("bud", FRENCH_ONLY), ("kao", FRENCH_ONLY), ("gvl", FRENCH_ONLY),
+           ("nnb", FRENCH_ONLY | SWAHILI_RIVAL), ("nyo", SWAHILI_RIVAL))},
     # Myanmar's other languages, cut into syllables.
     **{lang: {"script": "MYANMAR", "neighbour": set(), "lines": True, "unspaced": True,
               "normalize": normalize, "script_only": True, "foreign": foreign,

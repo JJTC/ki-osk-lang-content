@@ -32,7 +32,9 @@
 # Ladin that FineWeb-2 files as Lombard; four of Myanmar's, written
 # without spaces between words and cut into syllables (Shan, Mon, Sgaw
 # Karen, Pa'O); four of East Asia's in Latin letters (Southern Min,
-# Hakka, Amis, Zhuang); and
+# Hakka, Amis, Zhuang); twenty-eight of Africa's that FineWeb-2 has 0.4
+# to 0.9 MB of (Zande, Alur, Chopi, Sakalava Malagasy, Akoose, Mende…);
+# and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -51,7 +53,8 @@
 #
 # A language whose test split is too small to measure on (Dagbani's and
 # Yao's hold a hundred words each, Pa'O's 31 sentences, Hakka's, Amis'
-# and Zhuang's 1 300 to 4 200 words) has none pinned: every 10th
+# and Zhuang's 1 300 to 4 200 words, the 28 of Africa's long tail with
+# 0.4 to 0.9 MB of text a few hundred) has none pinned: every 10th
 # document of its train split is held out instead.
 #
 # Neither is committed: the text is the web's. The parquet files are kept
@@ -570,6 +573,34 @@ nan      nan_Latn  test/000_00000.parquet  e1abf7ee28ef5c4e062885208fa80b806713a
 hak      hak_Latn  train/000_00000.parquet d8d6816c1b2a3e74551d6abae6114be950e884483ce05a2c17fbe54ce1e802a5
 ami      ami_Latn  train/000_00000.parquet 09ba097414b6bb5ca621b7d83a0edc4617dc6dbb9609ecb04f126ee9f3641faa
 za       zyb_Latn  train/000_00000.parquet 2dcd1a26aea99f8c89e64a89d97040ddbbbf7c4dc1244dd1ac035e873b5cf1a7
+zne      zne_Latn  train/000_00000.parquet 79512091696bc0e560e38a2f28610c948b51bb3d19a0a53054357fa70924fca2
+alz      alz_Latn  train/000_00000.parquet 69644131afa881323c6427ce4ace49f2d119910da763eb9113703f7dd63d94d6
+cce      cce_Latn  train/000_00000.parquet fd329b1ea706bc72b3b0067b4a83dd48fc7cb0e91f3d1d8a8dcb02111a40e4eb
+skg      skg_Latn  train/000_00000.parquet ad20fce9cfa2c994f0e4955bc7bc1e2f185c0eabe9ead035432498a57eefd700
+bss      bss_Latn  train/000_00000.parquet 3f654325b1208421151e464d8b2bbf8f1a86194124fb13631db32c442e556760
+men      men_Latn  train/000_00000.parquet 1be8dfea5f186a1f83813ce0213bffe5acc49299ac82968a04997c62480af58e
+lgg      lgg_Latn  train/000_00000.parquet 6a922c7664d0c947a97bc60661946048c6300c9632ffcde3fab2987eda530bba
+xon      xon_Latn  train/000_00000.parquet 711e658cc93616acb36cfe89d86aa0e060299d1e642ae540204fc0d1d270f980
+dnj      dnj_Latn  train/000_00000.parquet 7b25a2301a759b6abf62116184b8b3e995ff34b09c883f7b77cabbae695dd2d1
+gbo      gbo_Latn  train/000_00000.parquet 5a2268c58dfd871e604c5dd515876c8faec147d1afb4266af56cbaef31861aa6
+heh      heh_Latn  train/000_00000.parquet 4ed9210c64f3ec1c458968e2ddc86ee8d788c957ac772178e81b6d40ef082b4e
+gux      gux_Latn  train/000_00000.parquet ddefc494acc858243484de5e700e963f5e46eae52edc8254960c6f93774ba874
+gmv      gmv_Latn  train/000_00000.parquet 9a6e8f2d5a003c5be36724337f1cc8a0d1d9911f8f23d1b8946b101d5d4d3801
+suk      suk_Latn  train/000_00000.parquet 47443072e661da9162c75e765b0314016e016eaf0ec86a298887eb14618f28e0
+spp      spp_Latn  train/000_00000.parquet 6c952f4779248376dc257fb68080496582698a9215af4ff31ee5c101f2ff5e45
+bas      bas_Latn  train/000_00000.parquet c400794ade20f365bc0fe146c00ba457ce9fbb44b66b12e3647f6e6926cf7a3c
+hay      hay_Latn  train/000_00000.parquet 6d4c5097449fad61436bd8b370d12ad5b9649634ed299d694a512bba5e761264
+kbr      kbr_Latn  train/000_00000.parquet 966750a85622c019edbca183384add50909a8c610e705b7c230140fc4018477d
+ngl      ngl_Latn  train/000_00000.parquet 7cbca7f647156ddfdbf64cc150bbb0f1101c199370fef69f1f4805e2048fcb29
+gog      gog_Latn  train/000_00000.parquet 9d3902e5202f30dd653520111bd2a7148b573544fb5f1657827877e63d81dd7e
+chw      chw_Latn  train/000_00000.parquet e0ddcc8306d0f7c8500455a914073ae40a6975ca15a27c11324d81c3772b2181
+fat      fat_Latn  train/000_00000.parquet 98ffbca49f66c51fd9749d7e5ff5aad4973fc286fefc36f43d80d1f7e753a0b8
+tsc      tsc_Latn  train/000_00000.parquet 51d9f3ebbd2c1acfabb419f53a955225a07783d43c3801fd6f2d46be411b6d9a
+bud      bud_Latn  train/000_00000.parquet 560bc1cfe09609e34e73584a024b55ba19331895177faa2f64bea635b478f157
+kao      kao_Latn  train/000_00000.parquet 77bc082f6b89bdfffde00b23b0be9958cd12e13d34d434f62ab192eceec22f42
+gvl      gvl_Latn  train/000_00000.parquet ec751189d5446f869a505913f79b8410247a4061f838dc4be359bee9ee1bb2e6
+nnb      nnb_Latn  train/000_00000.parquet 0f7b41b4779042d2405595643b4a36249e9d9c84d44e862af3a58cab3b3bc0b1
+nyo      nyo_Latn  train/000_00000.parquet 684d0198d5f090c464df87f1123ce71e0e414891289ef18858ff1f9d02e7c894
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

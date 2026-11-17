@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**395 layouts**: 340 keyboard layouts (RTL: ar he fa + Urdu, Western
+**423 layouts**: 368 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 394 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **335 languages** carry a prediction
+keycaps. 422 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **363 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -288,6 +288,34 @@ but no model to match the glide against · `—` off
 | `hak` | `hak` | Hakka Hak-kâ-ngî | us + long-press â à á a̍ ê è… ṳ | LTR | **Full** (hak)⁷ | ✓ | — |
 | `ami` | `ami` | Amis Pangcah | us, ' key | LTR | **Full** (ami)⁷ | ✓ | — |
 | `za` | `za` | Zhuang Vahcuengh | us | LTR | **Full** (za)⁷ | ✓ | — |
+| `zne` | `zne` | Zande Pazande | us + long-press ã á ẽ ĩ í õ ũ ú | LTR | **Full** (zne)⁷ | ✓ | — |
+| `alz` | `alz` | Alur | us, ' key | LTR | **Full** (alz)⁷ | ✓ | — |
+| `cce` | `cce` | Chopi | us + long-press ñ | LTR | **Full** (cce)⁷ | ✓ | — |
+| `skg` | `skg` | Sakalava Malagasy Sakalava | us + long-press à è é ì ò | LTR | **Full** (skg)⁷ | ✓ | — |
+| `bss` | `bss` | Akoose | us + long-press á â ǎ ā é ɛ ɛ́ ē ê ə…, ʼ key | LTR | **Full** (bss)⁷ | ✓ | — |
+| `men` | `men` | Mende Mɛnde | us + long-press ɛ ɔ ŋ | LTR | **Full** (men)⁷ | ✓ | — |
+| `lgg` | `lgg` | Lugbara Lugbarati | us + long-press ᴜ ᴜ́ ú ɨ ɨ́ ɨ̀ í ì á à…, ' key | LTR | **Full** (lgg)⁷ | ✓ | — |
+| `xon` | `xon` | Konkomba | us + long-press ɔ ŋ | LTR | **Full** (xon)⁷ | ✓ | — |
+| `dnj` | `dnj` | Dan | us + long-press ë ɛ ö ɔ ü ʋ̈ ʋ ɩ | LTR | **Full** (dnj)⁷ | ✓ | — |
+| `gbo` | `gbo` | Northern Grebo Grebo | us + long-press à ǎ ä ɛ ě è ɛ̌ ɛ̀ ɛ̈ ǐ… | LTR | **Full** (gbo)⁷ | ✓ | — |
+| `heh` | `heh` | Hehe Kihehe | us | LTR | **Full** (heh)⁷ | ✓ | — |
+| `gux` | `gux` | Gourmanché Gulmancema | us + long-press ŋ ñ | LTR | **Full** (gux)⁷ | ✓ | — |
+| `gmv` | `gmv` | Gamo | us | LTR | **Full** (gmv)⁷ | ✓ | — |
+| `suk` | `suk` | Sukuma Kisukuma | us + long-press ī ū, ' key | LTR | **Full** (suk)⁷ | ✓ | — |
+| `spp` | `spp` | Supyire | us + long-press à á â ɛ è ɛ̀ é ê ɛ̂ ɛ́…, ' key | LTR | **Full** (spp)⁷ | ✓ | — |
+| `bas` | `bas` | Basaa | us + long-press é è ñ ô à | LTR | **Full** (bas)⁷ | ✓ | — |
+| `hay` | `hay` | Haya Ekihaya | us, ' key | LTR | **Full** (hay)⁷ | ✓ | — |
+| `kbr` | `kbr` | Kafa | us, ' key | LTR | **Full** (kbr)⁷ | ✓ | — |
+| `ngl` | `ngl` | Lomwe Elomwe | us + long-press á à ã é ó ò | LTR | **Full** (ngl)⁷ | ✓ | — |
+| `gog` | `gog` | Gogo Cigogo | us | LTR | **Full** (gog)⁷ | ✓ | — |
+| `chw` | `chw` | Chuwabu Echuwabo | us + long-press á ã ç é í ñ ó | LTR | **Full** (chw)⁷ | ✓ | — |
+| `fat` | `fat` | Fante Mfantse | us + long-press ɛ ɔ õ ã ũ | LTR | **Full** (fat)⁷ | ✓ | — |
+| `tsc` | `tsc` | Tswa Xitshwa | us | LTR | **Full** (tsc)⁷ | ✓ | — |
+| `bud` | `bud` | Ntcham Ncam | us + long-press á à ā b́ b̀ é è ē í ì… | LTR | **Full** (bud)⁷ | ✓ | — |
+| `kao` | `kao` | Xaasongaxango | us + long-press ɲ ŋ ń í é, ' key | LTR | **Full** (kao)⁷ | ✓ | — |
+| `gvl` | `gvl` | Gulay | us + long-press è é ê à á ɓ ɗ m̂ ɔ ò…, ' key | LTR | **Full** (gvl)⁷ | ✓ | — |
+| `nnb` | `nnb` | Nande Kinande | us + long-press ĩ í į ũ ú ų á é ó, ' key | LTR | **Full** (nnb)⁷ | ✓ | — |
+| `nyo` | `nyo` | Nyoro Runyoro | us, ' key | LTR | **Full** (nyo)⁷ | ✓ | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `kab` | `kab` | Kabyle | us | LTR | **Full** (kab) | ✓ | — |
@@ -804,7 +832,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These two hundred and forty-seven models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These two hundred and seventy-five models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1344,6 +1372,41 @@ but no model to match the glide against · `—` off
    right words changed (Amis'). Hakka capitalises each syllable of a
    place's name (Sî-Fî), and a capital after a hyphen cannot be
    foreseen: 89% of its words come out in the right case.
+   Twenty-eight of Africa's languages that FineWeb-2 has 0.4 to 0.9 MB
+   of learn from it whole (110 000 to 390 000 words each, the Bible's
+   and Jehovah's Witnesses' text in the main): Zande, Alur, Chopi,
+   Sakalava Malagasy, Akoose, Mende, Lugbara, Konkomba, Dan, Northern
+   Grebo, Hehe, Gourmanché, Gamo, Sukuma, Supyire, Basaa, Haya, Kafa,
+   Lomwe, Gogo, Chuwabu, Fante, Tswa, Ntcham, Xaasongaxango, Gulay, Nande
+   and Nyoro. A sentence of English is left out, and of the state's
+   language: French's (une pour dans avec…: not le, which several of
+   them write), Portuguese's beside Mozambique's four, and beside the
+   Bantu languages of East Africa Swahili's own words (katika kwamba
+   lakini…: not kwa ni wa ya, which they write too); every 10th document
+   is held out, their test splits holding a few hundred words. Letters
+   written for others are read as theirs: Fante's ͻ (a Greek look-alike)
+   ɑ ε as ɔ a ɛ, Lugbara's ʉ as the ᴜ its text writes forty times as
+   often, a scan's ﬁ as fi. They are typed on the US keys, each
+   language's letters first on the long presses, the commonest first,
+   with their tones where its text writes them (Akoose's ɛ ə ɔ ŋ and
+   seven tones between them, Northern Grebo's, Supyire's, Ntcham's on b
+   l m n too); the eleven that write an apostrophe in 3% to 11% of their
+   words (Sukuma's ng'wa, Gulay's le’n, Nande's n'abandu) have a key for it at the home
+   row's end, Akoose's typing its glottal stop, ʼ, which its text writes
+   and its words keep (`osk_data::words`, as Kʼicheʼ's do). Their
+   lexicons keep all their words (2 600 to 25 000). Keystroke savings on
+   their held-out text (5 700 to 15 500 words): Akoose 66.8%, Konkomba
+   62.4%, Supyire 62.0%, Sukuma 61.2%, Gogo 60.9%, Hehe 60.8%, Kafa
+   60.7%, Gamo 60.3%, Ntcham 59.6%, Northern Grebo 59.6%, Gourmanché
+   57.7%, Xaasongaxango 56.5%, Gulay 56.4%, Zande 54.1%, Haya 52.8%,
+   Chopi 52.0%, Tswa 51.8%, Lomwe 51.5%, Sakalava 51.2%, Mende 51.2%,
+   Basaa 50.1%, Nande 48.6%, Lugbara 48.2%, Alur 47.9%, Nyoro 44.8%, Dan
+   43.6%, Chuwabu 43.2%, Fante 43.0%; 54.3% on average, 50.5% with taps
+   astray, at most 0.52% of right words changed (Xaasongaxango's). The
+   long presses' letters weigh in the savings: a third of Akoose's and
+   Northern Grebo's letters are typed so, which the strip spares. Nyoro's,
+   Chuwabu's, Nande's and Haya's held-out words are 12% to 15% unknown,
+   their words of many parts, their text small.
    Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
@@ -1415,7 +1478,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **335 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **363 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1629,6 +1692,8 @@ are built on a `us`/`es` base and add theirs the same way:
 | `blk` Pa'O | its tones ꩻ and ႏ, keys of their own in place of Burmese's ဩ and ၏ (on Burmese's keys) | `blk` |
 | `nan` `hak` | their toned vowels first on the long presses, the commonest first: Southern Min's á â ā à a̍, o͘ in its five tones on o, ⁿ first on n; Hakka's â à á a̍, ṳ in its five tones on u | each its own |
 | `ami` Amis | ', the glottal stop, a key of its own at the home row's end (its text writes it ’, ˈ and ^ too) | `ami` |
+| `zne` `skg` `bss` `men` `lgg` `xon` `dnj` `gbo` `gux` `suk` `spp` `bas` `ngl` `chw` `fat` `bud` `kao` `gvl` `nnb` `cce` | each language's own letters first on the long presses, with their tones where its text writes them (Akoose's ɛ ə ɔ with seven tones between them, Northern Grebo's ɛ ɔ with three, Ntcham's on b l m n too) | each its own |
+| `alz` `bss` `lgg` `suk` `spp` `hay` `kbr` `kao` `gvl` `nnb` `nyo` | an apostrophe, a key of its own at the home row's end: they write one in 3% to 11% of their words (Sukuma's ng'wa, Gulay's le’n, Nande's n'abandu); Akoose's is its glottal stop, ʼ, as its text writes it | each its own |
 | `ksw` Sgaw Karen | Keyman's phone layout, one letter a key on the base view, the asat ် a key of its own at the home row's end; whole words on long presses (လီၤ on လ, ဒီး on ဒ) | `ksw` |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 
