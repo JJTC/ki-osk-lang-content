@@ -46,7 +46,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  sr-Latn gn ff ber kri \
                  bo dz \
                  kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
-                 min war nia mad
+                 min war nia mad \
+                 cor glv ext pcd sgs pnt vec vls lmo lld gag
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -141,7 +142,8 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
                  sr-Latn gn ff ber bo dz \
                  kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
-                 min war nia mad
+                 min war nia mad \
+                 cor glv ext pcd sgs pnt vec vls lmo lld gag
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -277,6 +279,9 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # twenty of Africa's and four of Southeast Asia's long tail, whose corpora
 # of 160 000 to 1.2 million words hold 6 000 to 84 000 kinds of word:
 # Nkore's alone more than 80 000, and at 120 000 it saves 0.2 points more.
+# And eleven of Europe's regional languages, whose corpora hold 255 000
+# (Pontic Greek) to 4.1 million words (Lombard, Ladin): Cornish and Gagauz
+# save no more at 120 000 (0.0 and 0.1 points).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -290,7 +295,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
                        sr-Latn gn ff ber kri bo dz \
                        kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
-                       min war nia mad
+                       min war nia mad \
+                       cor glv ext pcd sgs pnt vec vls lmo lld gag
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -324,12 +330,16 @@ PREDICT_LARGE_NGRAM ?= 90000
 # more at 120 000. And Cusco Quechua, which lacks 14.9%: 1.3 points more.
 # And Guaraní, Fula and Serbian in Latin letters, which lack 8.8%, 8.4%
 # and 2.9% at 80 000: at 120 000 7.7%, 7.3% and 2.0%, 0.5, 0.3 and 0.2
-# points more saved (1.0, 0.7 and 0.9 with taps astray).
+# points more saved (1.0, 0.7 and 0.9 with taps astray). And Picard,
+# Extremaduran, Venetian, Lombard and West Flemish, which lack 5.1%, 9.1%,
+# 6.7%, 11.2% and 10.0% at 80 000: at 120 000 4.5%, 8.4%, 5.5%, 9.5% and
+# 8.3%, 0.3 to 0.9 points more saved (0.3 to 2.1 with taps astray).
 PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb ilo ban \
                       nn gsw bar nds pfl ksh li hsb dsb nap scn sc lij ltg vro csb szl sco rue \
                       sah sme lg vep qu krl olo udm bxr mdf myv tyv kpv rn \
                       ab ady lbe krc kaa inh kiu azb tly diq nd kea quz \
-                      gn ff sr-Latn
+                      gn ff sr-Latn \
+                      pcd ext vec lmo vls
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a
@@ -348,7 +358,10 @@ PREDICT_WIDE_NGRAM ?= 90000
 # 200 000 17.5% and 18.3%, 1.4 and 1.0 points more saved. And Latin,
 # whose words take many forms: at 80 000 it lacks 15.2% of its held-out
 # words, at 200 000 8.7%, and saves 1.7 points more (4.6 with taps astray).
-PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la
+# And Samogitian, whose 620 000 words hold 126 500 kinds: at 80 000 it
+# lacks 18.1% of its held-out words, at 200 000 15.2%, and saves 0.8
+# points more (2.3 with taps astray; at 120 000 0.7 and 2.1).
+PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la sgs
 PREDICT_WIDER_VOCAB ?= 200000
 PREDICT_WIDER_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia

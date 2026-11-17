@@ -26,7 +26,10 @@
 # tsheg cuts; twenty of Africa's and four of Southeast Asia's that
 # FineWeb-2 has 1 to 2 MB of (Kabiye, Dagbani, Sena, Dangme…
 # Minangkabau, Waray, Nias, Madurese), Kabiye's, Minangkabau's and
-# Waray's beside GlotCC's; and
+# Waray's beside GlotCC's; eleven of Europe's regional languages
+# (Cornish, Manx, Extremaduran, Picard, Samogitian, Pontic Greek,
+# Venetian, West Flemish, Lombard, Ladin, Gagauz), Ladin's beside the
+# Ladin that FineWeb-2 files as Lombard; and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -527,6 +530,30 @@ nia      nia_Latn  train/000_00000.parquet 6de081d9b937029291097235aca868618dcc5
 nia      nia_Latn  test/000_00000.parquet  2956feb3038f9bd3dfddeb0241707d15de844dcdca352138682eeeca268e611f
 mad      mad_Latn  train/000_00000.parquet 895ed2845ef293d22d1f8af69822dfe7463d385920589fd5bd282797dc01a736
 mad      mad_Latn  test/000_00000.parquet  345ccf530f87cab0395c11504bbccc3c757b81c571649ffdba9ffbc4abb13961
+cor      cor_Latn  train/000_00000.parquet 67e8954fe65616a23cd62c44279ad6ee3e1581bbc9f501fe78b8d3bae8fc851b
+cor      cor_Latn  test/000_00000.parquet  58b3cd9f62a1ec9c569c73ce18e4a10f5c05d05d23f6c2f5d363db27e91eef79
+glv      glv_Latn  train/000_00000.parquet e53eb341152b2cc1c8d3c94cd20bdeb54986cff9fea047f4d7639a1b39d4858d
+glv      glv_Latn  test/000_00000.parquet  010cdbda990858de3371e03215fd94d1769f92bc1ba10f04d2eb224ab8e2ac19
+ext      ext_Latn  train/000_00000.parquet 7a5545dcd5496fcabba6cf95dfa996148579de1cc2febf055bd1e2730a382acf
+ext      ext_Latn  test/000_00000.parquet  729585b545437b467689e8e916f1a29bce1160db2335b397e8420e55e90904cc
+pcd      pcd_Latn  train/000_00000.parquet 9dee2619ce35b0b9306f9f11005c05dfb249341d3244c38d76c79c9c63730acc
+pcd      pcd_Latn  test/000_00000.parquet  3c7ee8e5d57f6a2432ca057a8d89cd756757d1d66e35ae2d6c67fd1e4a65e568
+sgs      sgs_Latn  train/000_00000.parquet b734bf6d119a73efe2009422faa6a8bf625899fabaf25331de33bba4576c7d38
+sgs      sgs_Latn  test/000_00000.parquet  d4770fda72a56b3b774eaa105245685bf448335334c91b8377ba20ce9c995b04
+pnt      pnt_Grek  train/000_00000.parquet 7d3878380adfc18c0e0ec33bc5462ee813ce74642369ed90de715e0ae5017da1
+pnt      pnt_Grek  test/000_00000.parquet  b05cf73a91d42a1615d2bbc087817fdf1aa75810511514bfb33786345e125823
+vec      vec_Latn  train/000_00000.parquet 00ff7a048052c45015937ec4a7b7d745d9511d169871ea5bc6bdf11d555e0c8a
+vec      vec_Latn  test/000_00000.parquet  b360d5be6d0e48cd43502f677b554cb61f722892e0b974fc1dd74091939a97b0
+vls      vls_Latn  train/000_00000.parquet 742e2df44a29c4b3e54c080a9694bda2bfad977c15b500224124a9520259a72c
+vls      vls_Latn  test/000_00000.parquet  09c9cab2e19a2147c24ac5d16ecfd3bbae064c02e262393fc5ccc67a6617eea3
+lmo      lmo_Latn  train/000_00000.parquet 4bdb28b9403d6933669d6e9a4c7d15fe39e07ce8aa811130cd351ec586911364
+lmo      lmo_Latn  test/000_00000.parquet  1f23c5af80043fc23bdf8eb80af77f5faf205e9f4a094f3890ebcaf330f95dbb
+lld      lld_Latn  train/000_00000.parquet 8d85518d8afc9cfcdb498a7294e7062b56d29058acf1edd95b07bdeae554b8b6
+lld      lld_Latn  test/000_00000.parquet  279ca836570044d29742181c808634dcdf8e12558ab697337ea4da1ddeaf8f01
+lld      lmo_Latn  train/000_00000.parquet 4bdb28b9403d6933669d6e9a4c7d15fe39e07ce8aa811130cd351ec586911364
+lld      lmo_Latn  test/000_00000.parquet  1f23c5af80043fc23bdf8eb80af77f5faf205e9f4a094f3890ebcaf330f95dbb
+gag      gag_Latn  train/000_00000.parquet 24c11b3f5c062ec5e9ce0ad630026cf16bdd42fb3557db4d1c421ab552a7ae6e
+gag      gag_Latn  test/000_00000.parquet  32839681729de5389e5cc2c5a07be1064cbefb164502b1c027eab207b55d9197
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

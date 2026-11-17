@@ -188,7 +188,7 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Two hundred and twenty-two models learn from FineWeb-2's web text alone: those of Bodo,
+Two hundred and thirty-three models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
@@ -230,8 +230,10 @@ more that had a keyboard and no model (Dzongkha, Fula, Guaraní, Serbian
 in Latin letters, Tamazight in Tifinagh and Tibetan), and of twenty-one
 of Africa's and Southeast Asia's long tail (Bulu, Dagbani, Dangme, Dinka,
 Edo, Farefare, Kamba, Kipsigis, Konzo, Koongo, Madurese, Makhuwa, Moba,
-Ndau, Nias, Nkore, Sena, Sidamo, Songe, Teso and Yao); and Assamese's from
-it beside its Tatoeba sentences, Magahi's beside its Incubator text, and
+Ndau, Nias, Nkore, Sena, Sidamo, Songe, Teso and Yao), and of eleven
+more of Europe's regional languages (Cornish, Extremaduran, Gagauz,
+Ladin, Lombard, Manx, Picard, Pontic Greek, Samogitian, Venetian and
+West Flemish); and Assamese's from it beside its Tatoeba sentences, Magahi's beside its Incubator text, and
 Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's beside GlotCC's
 (below).
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One

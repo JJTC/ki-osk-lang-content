@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**376 layouts**: 321 keyboard layouts (RTL: ar he fa + Urdu, Western
+**387 layouts**: 332 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 375 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **316 languages** carry a prediction
+keycaps. 386 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **327 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -255,6 +255,17 @@ but no model to match the glide against · `—` off
 | `war` | `war` | Waray Winaray | us | LTR | **Full** (war)⁷ | ✓ | — |
 | `nia` | `nia` | Nias Li Niha | us + long-press ö ŵ | LTR | **Full** (nia)⁷ | ✓ | — |
 | `mad` | `mad` | Madurese Basa Madhura | us + long-press â è é ḍ ṭ | LTR | **Full** (mad)⁷ | ✓ | — |
+| `cor` | `cor` | Cornish Kernewek | gb + long-press à â ê ë è î ò ô ù û ü ÿ | LTR | **Full** (cor)⁷ | ✓ | — |
+| `glv` | `glv` | Manx Gaelg | gb + long-press ç á é í ó ú | LTR | **Full** (glv)⁷ | ✓ | — |
+| `ext` | `ext` | Extremaduran Estremeñu | es + long-press ç | LTR | **Full** (ext)⁷ | ✓ | — |
+| `pcd` | `pcd` | Picard | fr-azerty + long-press ò | LTR | **Full** (pcd)⁷ | ✓ | — |
+| `sgs` | `sgs` | Samogitian Žemaitėška | lt + long-press ā ē ī ō | LTR | **Full** (sgs)⁷ | ✓ | — |
+| `pnt` | `pnt` | Pontic Greek Ποντιακά | el | LTR | **Full** (pnt)⁷ | — | — |
+| `vec` | `vec` | Venetian Vèneto | it + long-press ł | LTR | **Full** (vec)⁷ | ✓ | — |
+| `vls` | `vls` | West Flemish West-Vlams | nl + long-press ê è ë é ô | LTR | **Full** (vls)⁷ | ✓ | — |
+| `lmo` | `lmo` | Lombard Lumbard | it + long-press ò ö ó ü ù | LTR | **Full** (lmo)⁷ | ✓ | — |
+| `lld` | `lld` | Ladin | it + long-press ë é è ê ö ò ó ô ü ù ć à á ś | LTR | **Full** (lld)⁷ | ✓ | — |
+| `gag` | `gag` | Gagauz Gagauzça | tr + long-press ä ê ţ | LTR | **Full** (gag)⁷ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -785,7 +796,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These two hundred and twenty-eight models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These two hundred and thirty-nine models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -971,8 +982,8 @@ but no model to match the glide against · `—` off
    what a long press gives. FineWeb-2's Zeelandic (Middle Dutch from
    text archives), West Flemish (half Dutch Low Saxon's wiki), Picard (a
    dictionary's glosses in French), Lombard (half Ladin), Gagauz (Kazakh,
-   and Cyrillic letters for Latin ones) and Venetian (spam) are not used
-   yet.
+   and Cyrillic letters for Latin ones) and Venetian (spam) were not used
+   then; all but Zeelandic are since 0.42.0, their sites sorted (below).
    Sixteen of Russia's and the north's learn from FineWeb-2's text whole
    (Sakha's and Chuvash's every other row group): Sakha, Chuvash,
    Northern Sami, Meadow and Hill Mari, Udmurt, Tuvan, Buryat,
@@ -1200,6 +1211,59 @@ but no model to match the glide against · `—` off
    changed (Nkore's, 0.86% with every tap true, its words of many parts
    13.5% unknown). A third of Kabiye's letters are those its long presses
    type, as are a sixth of Dangme's and Dinka's.
+   Eleven of Europe's regional languages learn from FineWeb-2's text
+   whole, each typed on its national language's keys with its own
+   letters first on the long presses (the table above): Cornish, Manx,
+   Extremaduran, Picard, Samogitian, Pontic Greek, Venetian, West
+   Flemish, Lombard, Ladin and Gagauz. A sentence of English is left out,
+   and of the state's language by the words the regional one writes
+   otherwise (Spanish's como, pero, desde beside Extremaduran's comu,
+   peru, dendi; French's beside Picard's, Lithuanian's beside
+   Samogitian's, standard Greek's beside Pontic's, Italian's, Dutch's,
+   German's), and a wiki's table line. A third of what FineWeb-2 files as
+   Lombard is Ladin (La Usc di Ladins on issuu, the province's pages),
+   five times what it files as Ladin: a document is Ladin's where Ladin's
+   words (y dla dl ie nia tl…) are 2% of its words and more than
+   Lombard's (el del anca minga hinn…), Lombard's the other way round.
+   Two thirds of its Gagauz is Turkish typed with Cyrillic letters among
+   the Latin, Azerbaijani and Kyrgyz: a document is kept where Gagauz's
+   words (hem ani taa nicä deyni…) are 1% of its words and more than
+   theirs (ve vä menen dep üçün…), and a sentence with a Cyrillic letter
+   is left out. Sites in another tongue are left out: Cantabrian's,
+   Leonese's, Murcian's and A Fala's beside Extremaduran; a Voynich
+   manuscript's transcription and an English book's scan beside Manx;
+   Venetian's spam, song sites and old Italian; West Flemish's Low Saxon
+   and Brabantian sites and old Dutch; Picard's Norman; Lombard's other
+   Gallo-Italic tongues (Trentino's, Emilian's, Piedmont's Occitan).
+   Zeelandic's is Middle Dutch archives in the main: not used. Letters
+   written for others are read as theirs (Gagauz's ȇ ț as ê ţ,
+   Venetian's ƚ as ł, Pontic's ќ as κ, a scanned magazine's ﬁ ﬂ as fi
+   fl). Picard's elisions are cut as French's are (`osk_data::words`:
+   ch'est is ch' and est, d'nos d' and nos), a ninth of its words being
+   written so: keystroke savings 35.7% -> 40.3% at 80 000 words, 28.7%
+   -> 34.6% with taps astray. Cut as Italian's, Lombard's, Venetian's and
+   Ladin's saved a point at most and lost some with taps astray, their
+   clitics written two ways (gh'è, g'è) and corrected one to the other:
+   they stay whole. Gagauz reads Turkish's dotted and dotless i, which its
+   text writes (99% of the capitals of its i-words are İ), and since
+   0.42.0 so do Crimean Tatar, Zazaki and Talysh (94%, 80% and 81%;
+   generation 7): their sentences' first words were capitalised Ilk for
+   İlk, a word written with İ kept no case, and their savings are the
+   same (Zazaki's 0.1 points more). Kirmanjki writes I for 73% of them, as
+   Kurdish does, and keeps its rules. Pontic Greek ends a question with ;
+   as Greek does. Their lexicons keep 80 000 words (Manx's all its
+   59 800, Pontic's its 44 300), 120 000 for Picard, Extremaduran,
+   Venetian, Lombard and West Flemish, 200 000 for Samogitian (all its
+   126 500). Keystroke savings on their held-out text (4 900 to 14 100
+   words): Manx 51.6%, Ladin 44.5%, Gagauz 43.1%, Cornish 42.0%, Picard
+   40.6%, West Flemish 39.8%, Extremaduran 37.9%, Venetian 35.7%,
+   Lombard 31.1%, Samogitian 29.1%, Pontic Greek 27.6%; 31.6% on average
+   with taps astray, their words unknown 2.2% (Ladin's) to 20.6%
+   (Pontic's), at most 0.72% of right words changed (Lombard's). Each of
+   them writes as its writers speak, in several spellings (Cornish's
+   Kemmyn, Unified and Standard Written Form; Lombard's Milanese and
+   Eastern Lombard), and Pontic's and Samogitian's text is small: a fifth
+   and a sixth of their held-out words are unknown.
    Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
@@ -1271,7 +1335,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **316 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **327 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1295,7 +1359,8 @@ but no model to match the glide against · `—` off
   of Iran and the Caucasus **azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf**,
   of Africa **crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb**,
   of the Americas, the Pacific and the classical and constructed **la pap syr yua quc kek quz qug srn
-  gcf bi ia tpi gil tvl ho ch jam**, six more that had a keyboard and no model, **sr-Latn gn ff ber bo dz**, and of Africa's and Southeast Asia's long tail **kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik min war nia mad**
+  gcf bi ia tpi gil tvl ho ch jam**, six more that had a keyboard and no model, **sr-Latn gn ff ber bo dz**, of Africa's and Southeast Asia's long tail **kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik min war nia mad**,
+  and of Europe's regional languages **cor glv ext pcd sgs pnt vec vls lmo lld gag**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
@@ -1476,7 +1541,7 @@ are built on a `us`/`es` base and add theirs the same way:
 | `ace` Acehnese | é ë è ô ö | `ace` |
 | `ban` Balinese | é | `ban` |
 | `hil` `ilo` `bcl` `pag` `pam` `krj` `tet` | ñ (Hiligaynon, Iloko, Central Bikol, Pangasinan, Kapampangan, Kinaray-a, Tetum) | each its own |
-| `gsw` `bar` `li` `hsb` `dsb` `scn` `fur` `pms` `lij` `wa` `ltg` `vro` `csb` `szl` `crh` `rue` | each language's own letters first on its national layout's long presses (the language table above lists them: Upper Sorbian's ć č ě ł ń ó ř š ž ź on German's keys, Rusyn's ы ъ ё on Ukrainian's…) | each its own |
+| `gsw` `bar` `li` `hsb` `dsb` `scn` `fur` `pms` `lij` `wa` `ltg` `vro` `csb` `szl` `crh` `rue` `cor` `glv` `ext` `pcd` `sgs` `vec` `vls` `lmo` `lld` `gag` | each language's own letters first on its national layout's long presses (the language table above lists them: Upper Sorbian's ć č ě ł ń ó ř š ž ź on German's keys, Rusyn's ы ъ ё on Ukrainian's…) | each its own |
 | `haw` `sm` `to` `ty` | ʻ, the glottal stop, a key of its own at the home row's end | each its own |
 | `ce` `inh` `av` `kbd` `ady` `lez` `lbe` `tab` `dar` | Ӏ, the palochka, a key of its own at the home row's end (on Russian's keys) | each its own |
 | `yua` `quc` `kek` `quz` | ʼ, the glottal stop and ejective (Kʼicheʼ, kʼo), a key of its own at the home row's end | each its own |

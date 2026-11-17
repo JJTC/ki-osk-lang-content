@@ -70,7 +70,14 @@ long tail and four of Southeast Asia's are typed on them too: Kabiye's ɛ
 ɩ ɔ ʊ ɖ ɣ ŋ ñ, Dagbani's ɛ ɔ ŋ ɣ ʒ, Dangme's, Farefare's and Moba's ɛ ɔ
 (ŋ), Kamba's ĩ ũ, Bulu's é ô ñ, Edo's ẹ ọ, Teso's ŋ, Yao's ŵ, Dinka's ä ë ï
 ö ɛ ɔ ɛ̈ ɔ̈ ŋ ɣ, Nias' ö ŵ and Madurese's â è é ḍ ṭ first on the long
-presses, the others as they are. A letter only a long press types turns
+presses, the others as they are. Eleven more of Europe's regional
+languages are typed on their national language's keys, their own
+letters first on the long presses: Cornish (à â ê ë è î ò ô ù û ü ÿ) and
+Manx (ç á é í ó ú) on the UK's; Extremaduran on Spanish's (ç); Picard on
+French's (ò); Samogitian on Lithuanian's (ā ē ī ō); Pontic Greek on
+Greek's; Venetian (ł), Lombard (ò ö ó, ü ù) and Ladin (ë é è ê, ö ò ó ô,
+ü ù, ć, à á, ś) on Italian's; West Flemish on Dutch's (ê è ë é, ô); and
+Gagauz on Turkish's (ä ê ţ). A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -281,7 +288,17 @@ DERIVED = [
     ("min", "us", "Baso Minang", {}),
     ("war", "us", "Winaray", {}),
     ("nia", "us", "Li Niha", {"o": ["ö"], "w": ["ŵ"], "O": ["Ö"], "W": ["Ŵ"]}),
-    ("mad", "us", "Basa Madhura", {"a": ["â"], "e": ["è", "é"], "d": ["ḍ"], "t": ["ṭ"], "A": ["Â"], "E": ["È", "É"], "D": ["Ḍ"], "T": ["Ṭ"]}),
+    ("mad", "us", "Basa Madhura", {"a": ["â"], "e": ["è", "é"], "d": ["ḍ"], "t": ["ṭ"], "A": ["Â"], "E": ["È", "É"], "D": ["Ḍ"], "T": ["Ṭ"]}),    ("cor", "gb", "Kernewek", {"a": ["à", "â"], "e": ["ê", "ë", "è"], "i": ["î"], "o": ["ò", "ô"], "u": ["ù", "û", "ü"], "y": ["ÿ"], "A": ["À", "Â"], "E": ["Ê", "Ë", "È"], "I": ["Î"], "O": ["Ò", "Ô"], "U": ["Ù", "Û", "Ü"], "Y": ["Ÿ"]}),
+    ("glv", "gb", "Gaelg", {"c": ["ç"], "a": ["á"], "e": ["é"], "i": ["í"], "o": ["ó"], "u": ["ú"], "C": ["Ç"], "A": ["Á"], "E": ["É"], "I": ["Í"], "O": ["Ó"], "U": ["Ú"]}),
+    ("ext", "es", "Estremeñu", {"c": ["ç"], "C": ["Ç"]}),
+    ("pcd", "fr-azerty", "Picard", {"o": ["ò"], "O": ["Ò"]}),
+    ("sgs", "lt", "Žemaitėška", {"a": ["ā"], "e": ["ē"], "i": ["ī"], "o": ["ō"], "A": ["Ā"], "E": ["Ē"], "I": ["Ī"], "O": ["Ō"]}),
+    ("pnt", "el", "Ποντιακά", {}),
+    ("vec", "it", "Vèneto", {"l": ["ł"], "L": ["Ł"]}),
+    ("vls", "nl", "West-Vlams", {"e": ["ê", "è", "ë", "é"], "o": ["ô"], "E": ["Ê", "È", "Ë", "É"], "O": ["Ô"]}),
+    ("lmo", "it", "Lumbard", {"o": ["ò", "ö", "ó"], "u": ["ü", "ù"], "O": ["Ò", "Ö", "Ó"], "U": ["Ü", "Ù"]}),
+    ("lld", "it", "Ladin", {"e": ["ë", "é", "è", "ê"], "o": ["ö", "ò", "ó", "ô"], "u": ["ü", "ù"], "c": ["ć"], "a": ["à", "á"], "s": ["ś"], "E": ["Ë", "É", "È", "Ê"], "O": ["Ö", "Ò", "Ó", "Ô"], "U": ["Ü", "Ù"], "C": ["Ć"], "A": ["À", "Á"], "S": ["Ś"]}),
+    ("gag", "tr", "Gagauzça", {"a": ["ä"], "e": ["ê"], "t": ["ţ"], "A": ["Ä"], "E": ["Ê"], "T": ["Ţ"]}),
 ]
 
 

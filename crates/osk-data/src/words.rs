@@ -82,6 +82,12 @@ pub const GENERATION: u32 = 2;
 /// stop and ejective of Yucatec Maya, Kʼicheʼ, Qʼeqchiʼ and Cusco Quechua
 /// as ʼ (U+02BC), the letter their keyboards type: an apostrophe was read
 /// as U+0027, so the strip offered `k'iin` where the keys type `kʼ`.
+/// Generation 7 gave Crimean Tatar, Zazaki and Talysh Turkish's dotted and
+/// dotless i, which their texts write (94%, 80% and 81% of the capitals
+/// of their i-words are `İ`): `I` lower-cased to `i`, so `ılık` and `ilk`
+/// started sentences as `Ilık` and `Ilk`, and a word written with `İ` had
+/// no case to keep. Kirmanjki's text writes `I` for 73% of them, the
+/// Kurdish alphabet's way, and keeps its rules.
 pub const LATER_GENERATIONS: &[(&str, u32)] = &[
     ("sd", 3),
     ("ps", 4),
@@ -90,6 +96,9 @@ pub const LATER_GENERATIONS: &[(&str, u32)] = &[
     ("quc", 6),
     ("kek", 6),
     ("quz", 6),
+    ("crh", 7),
+    ("diq", 7),
+    ("tly", 7),
 ];
 
 /// The generation of the rules `lang`'s words are read by: [`GENERATION`],
@@ -141,10 +150,11 @@ pub struct Splitter {
     armenian: bool,
     /// Hebrew gershayim between letters.
     hebrew: bool,
-    /// `;` is a question mark (Greek), so it ends a sentence.
+    /// `;` is a question mark (Greek, Pontic Greek), so it ends a sentence.
     greek: bool,
-    /// Dotted and dotless i (Turkish, Azerbaijani): `I` lower-cases to
-    /// `ı`, `İ` to `i`, and `i` upper-cases to `İ`.
+    /// Dotted and dotless i (Turkish, Azerbaijani, Crimean Tatar, Gagauz,
+    /// Zazaki, Talysh): `I` lower-cases to `ı`, `İ` to `i`, and `i`
+    /// upper-cases to `İ`.
     turkic: bool,
     /// The script the language writes without spaces between words (Thai,
     /// Lao, Khmer, Burmese).
@@ -249,6 +259,13 @@ fn is_space(c: char) -> bool {
 /// Others stay whole: `aujourd'hui`, `quelqu'un`, `presqu'île`.
 const FRENCH_ELISIONS: &[&str] = &[
     "l", "d", "j", "m", "t", "s", "n", "c", "ç", "qu", "lorsqu", "puisqu", "jusqu", "quoiqu",
+];
+/// Picard's: French's, and its own `ch'` (`ch'est`), `ed'`, `éch'`,
+/// `ej'`, `em'`, the liaison's `z'` (`z'ont`) and `pasqu'`; `p'tit` and
+/// `r'venir`, a letter left out inside a word, stay whole.
+const PICARD_ELISIONS: &[&str] = &[
+    "l", "d", "j", "m", "t", "s", "n", "c", "ç", "qu", "ch", "z", "ed", "éd", "ech", "éch", "ej",
+    "éj", "em", "ém", "lorsqu", "puisqu", "jusqu", "dusqu", "quoiqu", "pasqu",
 ];
 /// Catalan's proclitic elisions; enclitics stay whole (`veure'l`).
 const CATALAN_ELISIONS: &[&str] = &["l", "d", "m", "t", "s", "n"];
@@ -479,6 +496,7 @@ impl Splitter {
         };
         match primary {
             "fr" => s.elide = Elide::After(FRENCH_ELISIONS),
+            "pcd" => s.elide = Elide::After(PICARD_ELISIONS),
             "it" => s.elide = Elide::AllBut(ITALIAN_APOCOPES),
             "ca" => {
                 s.elide = Elide::After(CATALAN_ELISIONS);
@@ -492,8 +510,8 @@ impl Splitter {
                 s.fold = Fold::Armenian;
             }
             "he" => s.hebrew = true,
-            "el" => s.greek = true,
-            "tr" | "az" => s.turkic = true,
+            "el" | "pnt" => s.greek = true,
+            "tr" | "az" | "crh" | "gag" | "diq" | "tly" => s.turkic = true,
             "kab" => {
                 s.hyphen_glues = true;
                 s.fold = Fold::Kabyle;
@@ -1357,6 +1375,12 @@ mod tests {
         assert_eq!(split("it", "c'è"), ["c'", "+è"]);
         assert_eq!(split("it", "po'"), ["po'"]);
         assert_eq!(split("it", "'menù'"), ["menù"]);
+        assert_eq!(split("pcd", "ch'est"), ["ch'", "+est"]);
+        assert_eq!(split("pcd", "éd'l'iau"), ["éd'", "+l'", "+iau"]);
+        assert_eq!(split("pcd", "p'tit"), ["p'tit"]);
+        // Lombard keeps its clitics whole: written gh'è and g'è both, cut
+        // off they were corrected one to the other.
+        assert_eq!(split("lmo", "gh'è"), ["gh'è"]);
         assert_eq!(split("ca", "l'escola"), ["l'", "+escola"]);
         assert_eq!(split("ca", "veure'l"), ["veure'l"]);
         assert_eq!(split("ca", "col·legi"), ["col·legi"]);
@@ -1407,6 +1431,16 @@ mod tests {
         assert_eq!(tr.normalize("Işık"), "ışık");
         assert_eq!(tr.normalize("İstanbul"), "istanbul");
         assert_eq!(tr.upper('i'), "\u{130}");
+        // So do the Turkic languages written with Turkish's i and ı.
+        let gag = Splitter::new("gag");
+        assert_eq!(gag.normalize("İlk"), "ilk");
+        assert_eq!(gag.normalize("Işık"), "ışık");
+        assert_eq!(Splitter::new("crh").upper('i'), "\u{130}");
+        assert_eq!(generation("crh"), 7);
+        // Kirmanjki writes I for i's capital, as Kurdish does.
+        assert_eq!(Splitter::new("kiu").normalize("In"), "in");
+        assert_eq!(generation("kiu"), GENERATION);
+        assert_eq!(generation("gag"), GENERATION);
         let en = Splitter::new("en");
         assert_eq!(en.normalize("Don\u{2019}t"), "don't");
         assert_eq!(en.normalize("I"), "i");
@@ -1549,6 +1583,7 @@ mod tests {
             ]
         );
         assert_eq!(read("el", "Τι; Ναι"), ["|τι", "|ναι"]);
+        assert_eq!(read("pnt", "Ντο; Ναι"), ["|ντο", "|ναι"]);
         assert_eq!(read("hy", "Այո: Ոչ"), ["|այո", "|ոչ"]);
         assert_eq!(read("en", "(see «this»,a)"), ["|~see", "~this_", "~a"]);
         assert_eq!(read("en", "end.The"), ["|end_", "|~the"]);

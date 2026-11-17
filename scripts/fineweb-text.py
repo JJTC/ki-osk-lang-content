@@ -255,6 +255,27 @@ as theirs (Kabiye's ʋ as ʊ, Moba's ɑ as a, Nias' õ as ö, Sidamo's ˈ as
 Dagbani's and Yao's test splits hold a hundred words each, so every 10th
 of their documents is held out instead.
 
+Eleven of Europe's regional languages are read whole too (Cornish,
+Manx, Extremaduran, Picard, Samogitian, Pontic Greek, Venetian, West
+Flemish, Lombard, Ladin, Gagauz): a sentence of English is left out, and
+of the state's language beside them by the words they write otherwise
+(Spanish's como pero desde, which Extremaduran writes comu peru dendi;
+French's, Lithuanian's, standard Greek's, Italian's, Dutch's, German's).
+A third of FineWeb-2's Lombard is Ladin, five times what it files as
+Ladin: a document is Ladin's where Ladin's words (y dla dl ie nia tl…)
+are 2% of its words and more than Lombard's (el del anca minga hinn…),
+Lombard's the other way round. Two thirds of its Gagauz is Turkish
+typed with Cyrillic letters among the Latin, Azerbaijani and Kyrgyz: a
+document is kept where Gagauz's words (hem ani taa nicä deyni…) are 1%
+of its words and more than theirs (ve vä menen dep üçün…), and a
+sentence with a Cyrillic letter is left out. Sites in another tongue are
+left out: Extremaduran's Cantabrian, Leonese, Murcian and A Fala's,
+Manx's Voynich manuscript and an English book's scan, Venetian's spam
+and old Italian, West Flemish's Low Saxon, Brabantian and old Dutch,
+Picard's Norman, Lombard's other Gallo-Italic tongues. Letters written
+for others are read as theirs: Gagauz's ȇ ț as ê ţ, Venetian's ƚ as ł,
+Pontic's ќ as κ, a scan's ﬁ ﬂ as fi fl.
+
 Each kept document is cut into sentences after a full stop, danda,
 shad, question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -532,10 +553,57 @@ LONG_TAIL_FOLD = {
     "kam": str.maketrans("īūĪŪ", "ĩũĨŨ"),
     "dag": str.maketrans("εΕ", "ɛƐ"),
     "yao": str.maketrans("ćĆǝƎ", "ŵŴŵŴ"),
+    "gag": str.maketrans("ȇȆțȚ", "êÊţŢ"),
+    "vec": str.maketrans("ƚȽ", "łŁ"),
+    "pnt": str.maketrans("ќЌ", "κΚ"),
+    # A scanned magazine's ligatures.
+    "lld": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
+    "lmo": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
 }
 SPAM_HOSTS = re.compile(r"ghanabuys|chegg|statoperator|lyrics")
 MOBA_OUT = re.compile(r"scribd|newspaperarchive|etudier|buenastareas")
 BOT_WIKI = re.compile(r"wikipedia\.org")
+# Europe's long tail. Ladin's words and Lombard's: FineWeb-2's Lombard
+# is a third Ladin (La Usc di Ladins on issuu, the province's pages).
+LADIN = set("y dla dl ie nia tl tla plu nce sce chësc chësta dles fova unì ince vën iel sciche pra danter "
+            "coche ova lingaz".split())
+LOMBARD = set("el del anca minga staa pussee hinn ona ghe gh quell chì faa ind soa dent tucc poeu sò alter "
+              "quand".split())
+# Lombard's sites in other Gallo-Italic tongues (Trentino's, Emilian's,
+# the Marche's, Piedmont's Occitan) and junk.
+LOMBARD_OUT = re.compile(r"prourbino|televignole|albarnardon|tuenetto|dialettando|chambradoc|"
+                         r"mapandwordsstartingwithf|docplayer")
+# Gagauz's words, and those of Turkish, Azerbaijani and Kyrgyz that it
+# does not write.
+GAGAUZ = set("hem ani taa nicä deyni lääzım onnar diil angısı angı bölä büük eni hepsi sora".split())
+GAGAUZ_RIVAL = set("ve vä və menen dep ele jana üçün bolup emes değil olarak ilə".split())
+# The state's language's words that the regional one writes otherwise:
+# standard Greek's beside Pontic's σο σην έν' κ' ντο, Lithuanian's beside
+# Samogitian's ėr īr ka bova, Spanish's beside Extremaduran's comu peru
+# esti pa mu tamién dendi, French's beside Picard's el in dins su aveuc.
+GREEK_ONLY = set("του της στο στην στη στον στα στις στους είναι δεν που αυτό αυτή όπως μπορεί πολύ".split())
+LITHUANIAN_ONLY = set("ir yra kad buvo su kaip taip jis jie kuris kuri apie labai arba".split())
+EXTREMADURAN_RIVAL = set("como pero todo este para muy también desde cuando porque donde otro mismo ellos puede "
+                         "sobre".split())
+PICARD_RIVAL = set("le une en je ce dans sur avec son sa elle cette être très aussi même bien rien".split())
+# Italian's, less the words Venetian and Lombard write as it does.
+VENETIAN_RIVAL = ITALIAN_ONLY - {"per", "del", "una"}
+# Sites in another tongue, or none: Cantabrian's, Leonese's, Asturian's,
+# Murcian's, Andalusian's and A Fala's (Galician-Portuguese), and
+# scans, beside Extremaduran; a Voynich
+# manuscript's transcription and an English book's scan beside Manx;
+# Norman beside Picard; spam, song sites, old Italian, Ligurian and
+# tables beside Venetian; the Netherlands' sites (Low Saxon, old Dutch),
+# Brabantian and the Dutch Low Saxon wiki beside West Flemish.
+EXTREMADURAN_OUT = re.compile(r"cantabria|iventia|cicuiro|cabreires|corienses|vivirasturias|murciano|"
+                              r"lalenguadeandalucia|sierradegatadigital|valverdidufresnu|scribd")
+MANX_OUT = re.compile(r"archive\.org|fmjlang")
+PICARD_OUT = re.compile(r"bmlisieux")
+VENETIAN_OUT = re.compile(r"cerveceria-victoria|eurekamovil|acornandoaktree|wanderlog|firstratetailgate|araldica|"
+                          r"classicitaliani|unipi|italytravelescape|open-closed|tripadvisor|easyviaggio|istat|"
+                          r"books\.google|lij\.wikisource|uni-giessen|radio\.uol|angolotesti|lyrics")
+FLEMISH_OUT = re.compile(r"^https?://[^/]*\.nl(?:[:/]|$)|nds-nl\.|dbnl|kuleuven|books\.google|docstoc|"
+                         r"bruxelloises|leveninleuven|seniorennet|aentwaereps")
 DZONGKHA = set("ཚུ ལུ ཨིན ཨིནམ ཡོདཔ འབད མེདཔ བཏུབ ནིའི འབདཝ".split())
 TIBETAN = set("ཚོ རེད འདུག བྱེད".split())
 # Arabic's words, after Sorani's letters are folded (فی for في), that
@@ -1020,6 +1088,32 @@ LANGS = {
     "kri": {"script": "LATIN", "neighbour": set(), "own": KRIO, "rival": KRIOL, "own_least": 0.03,
             "sentence_rival": ENGLISH_ONLY, "sentence_never": {"src", "trg"}, "normalize": krio,
             "brackets": True, "hold": 10},
+    "cor": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+            "letters_never": set("|"), "brackets": True},
+    "glv": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+            "letters_never": set("|"), "hosts_out": MANX_OUT, "brackets": True},
+    "ext": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | EXTREMADURAN_RIVAL,
+            "letters_never": set("|"), "hosts_out": EXTREMADURAN_OUT, "brackets": True},
+    "pcd": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PICARD_RIVAL,
+            "letters_never": set("|"), "hosts_out": PICARD_OUT, "brackets": True},
+    "sgs": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | LITHUANIAN_ONLY,
+            "letters_never": set("|"), "brackets": True},
+    "pnt": {"script": "GREEK", "neighbour": set(), "sentence_rival": GREEK_ONLY,
+            "letters_never": set("|"), "normalize": long_tail("pnt"), "brackets": True},
+    "vec": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | VENETIAN_RIVAL,
+            "letters_never": set("|"), "normalize": long_tail("vec"), "hosts_out": VENETIAN_OUT,
+            "brackets": True},
+    "vls": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_NOT_GERMANIC | DUTCH_ONLY,
+            "letters_never": set("|ſ"), "hosts_out": FLEMISH_OUT, "brackets": True},
+    "lmo": {"script": "LATIN", "neighbour": set(), "own": LOMBARD, "rival": LADIN,
+            "sentence_rival": ENGLISH_ONLY | VENETIAN_RIVAL, "letters_never": set("|"),
+            "normalize": long_tail("lmo"), "hosts_out": LOMBARD_OUT, "brackets": True},
+    "lld": {"script": "LATIN", "neighbour": set(), "own": LADIN, "rival": LOMBARD, "own_least": 0.02,
+            "sentence_rival": ENGLISH_ONLY | (ITALIAN_ONLY - {"per"}) | GERMAN_ONLY,
+            "letters_never": set("|"), "normalize": long_tail("lld"), "brackets": True},
+    "gag": {"script": "LATIN", "neighbour": set(), "own": GAGAUZ, "rival": GAGAUZ_RIVAL,
+            "sentence_rival": ENGLISH_ONLY | GAGAUZ_RIVAL, "letters_never": set("|") | CYRILLIC_LETTERS,
+            "normalize": long_tail("gag"), "brackets": True},
 }
 
 
