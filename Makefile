@@ -53,7 +53,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk \
                  spp bas hay kbr ngl gog chw fat tsc bud kao gvl nnb nyo \
                  niu hwc acf mrw nij guc ljp sas gor itv bku bpr \
-                 quh gcr tum tll guz kde nyy mas mnk mer dga
+                 quh gcr tum tll guz kde nyy mas mnk mer dga \
+                 cop lhu hrx crk csw otw tkl kne mqj liv abs ajg
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -127,7 +128,11 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # Patois, and of six more that had a keyboard and no model: Serbian in
 # Latin letters, Guaraní, Fula, Tamazight in Tifinagh, Tibetan and
 # Dzongkha, and of twenty of Africa's and four of Southeast Asia's that it
-# has 1 to 2 MB of, from Kabiye to Madurese
+# has 1 to 2 MB of, from Kabiye to Madurese, of eleven more of Europe's
+# regional languages, from Cornish to Gagauz, of four of Myanmar's, Shan,
+# Mon, Sgaw Karen and Pa'O, of four of East Asia's in Latin letters, of
+# fifty-one of the long tail, from Zande to Dagaare, and of twelve more:
+# Coptic, Lahu, and ten that it has 0.15 to 0.3 MB of, from Hunsrik to Aja
 # (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
@@ -155,7 +160,8 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk \
                  spp bas hay kbr ngl gog chw fat tsc bud kao gvl nnb nyo \
                  niu hwc acf mrw nij guc ljp sas gor itv bku bpr \
-                 quh gcr tum tll guz kde nyy mas mnk mer dga
+                 quh gcr tum tll guz kde nyy mas mnk mer dga \
+                 cop lhu hrx crk csw otw tkl kne mqj liv abs ajg
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -300,7 +306,8 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # 710 000 words, keep all their 8 400 to 34 000 kinds of word.
 # So do the twenty-eight of Africa's long tail with 0.4 to 0.9 MB of
 # FineWeb-2's text (2 600 to 25 000 kinds).
-# And the twenty-three after them (Niuean… Dagaare).
+# And the twenty-three after them (Niuean… Dagaare), and the twelve after
+# those (Coptic, Lahu, Hunsrik… Aja: 1 700 to 35 000 kinds).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -321,7 +328,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk \
                        spp bas hay kbr ngl gog chw fat tsc bud kao gvl nnb nyo \
                        niu hwc acf mrw nij guc ljp sas gor itv bku bpr \
-                       quh gcr tum tll guz kde nyy mas mnk mer dga
+                       quh gcr tum tll guz kde nyy mas mnk mer dga \
+                       cop lhu hrx crk csw otw tkl kne mqj liv abs ajg
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings

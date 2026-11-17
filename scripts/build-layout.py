@@ -160,6 +160,10 @@ LANGS = [
     # base plus its ten extra letters on long-press (DIACRITIC_LONGPRESS).
     ("syr", "ܣܘܪܝܝܐ", "sy", "syc", "syriac"),
     ("ber", "ⵜⴰⵎⴰⵣⵉⵖⵜ", "ma", "tifinagh", "tifinagh"),
+    # Coptic (Bohairic) on its keymap, eg(cop): Greek's arrangement, ϣ ϥ ϧ
+    # ϩ ϫ ϭ ϯ on the keys beside it; its jinkim on a key of its own
+    # (HOME_ROW_TEXT, LEFT_OUT). Needs Noto Sans Coptic.
+    ("cop", "Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ", "eg", "cop", "coptic"),
     ("kab", "Taqbaylit", "us", "", "latin"),
     # South American: Latin on the Spanish (`es`) base for ñ; Guaraní adds
     # its nasal vowels + g̃, Aymara its diaeresis vowels, on long-press.
@@ -373,6 +377,9 @@ DIACRITIC_LONGPRESS = {
     "fj": {"a": ["ā"], "e": ["ē"], "i": ["ī"], "o": ["ō"], "u": ["ū"]},
     "ty": {"a": ["ā"], "e": ["ē"], "i": ["ī"], "o": ["ō"], "u": ["ū"]},
     "nah": {"a": ["ā"], "e": ["ē"], "i": ["ī"], "o": ["ō"]},
+    # Coptic: the overline of the nomina sacra (Ⲓⲏ̅ⲥ̅, Ⲡⲭ̅ⲥ̅; in one word in
+    # forty-five) on the jinkim's key (HOME_ROW_TEXT).
+    "cop": {"\u0300": ["\u0305"]},
 }
 
 TEMPLATE = "us"  # universal base: letter grid + symbol views + control row
@@ -474,11 +481,21 @@ MODEL = {"sr-latn": "sr-Latn"}
 # letter in sixty of its text), and Dzongkha's tsheg, ་, which its keymap
 # types on the space bar (Tibetan's has a key for it), a key of its own at
 # the home row's end, in place of its spacers. Amis' glottal stop, written ’ or ' (in
-# one word in fifteen), has one too.
+# one word in fifteen), has one too; and Coptic one for its jinkim, the
+# grave (U+0300) over a letter that is a syllable of its own (ⲛ̀ⲧⲉ, in a
+# third of Bohairic's words), which its keymap types on Shift and the key
+# left of 1.
 HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ", "ami": "'",
                  **{lid: "Ӏ" for lid in ("ce", "inh", "av", "kbd", "ady", "lez", "lbe", "tab", "dar")},
                  **{lid: "ʼ" for lid in ("yua", "quc", "kek", "quz")}, "gn": "'",
-                 "dz": "\u0F0B"}
+                 "dz": "\u0F0B", "cop": "\u0300"}
+
+# Keycodes a layout leaves out of its keymap's letter rows: Coptic's dot
+# above (left of 1; its jinkim is the grave, the key at the home row's
+# end) and macron (beside Backspace; the nomina sacra's line is the
+# overline, on the jinkim's long press), and Akhmimic's ⳉ, which Bohairic
+# does not write.
+LEFT_OUT = {"cop": {40, 41, 43}}
 
 
 def is_letter_or_mark(g):
@@ -623,14 +640,18 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
             return key
 
         def text_key(g):
-            return {"width_units": 1, "label": g, "output": {"kind": "text", "text": g}}
+            key = {"width_units": 1, "label": g, "output": {"kind": "text", "text": g}}
+            if diac is not None and diac.get(g):
+                key["long_press"] = [{"kind": "text", "text": m} for m in diac[g]]
+            return key
 
-        r0 = kept_codes(BASE_ROWS[0], EXTRA_ROWS[0], chars, script)
-        r1 = kept_codes(BASE_ROWS[1], EXTRA_ROWS[1], chars, script)
-        r2 = kept_codes(BASE_ROWS[2], EXTRA_ROWS[2], chars, script)
+        left_out = LEFT_OUT.get(lid, set())
+        r0, r1, r2 = ([c for c in kept_codes(br, er, chars, script) if c not in left_out]
+                      for br, er in zip(BASE_ROWS, EXTRA_ROWS))
         rows[0]["keys"] = [kc(c) for c in r0]
         if lid in HOME_ROW_TEXT:
-            rows[1]["keys"] = [kc(c) for c in r1] + [text_key(HOME_ROW_TEXT[lid])]
+            home = HOME_ROW_TEXT[lid]
+            rows[1]["keys"] = [kc(c) for c in r1] + [text_key(g) for g in ([home] if isinstance(home, str) else home)]
         else:
             rows[1]["keys"] = [spacer()] + [kc(c) for c in r1] + [spacer()]
         rows[2]["keys"] = [shift_key] + [kc(c) for c in r2] + [backspace]
@@ -675,7 +696,8 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(layout, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    row0 = " ".join(base[c] for c in kept_codes(BASE_ROWS[0], EXTRA_ROWS[0], base, script))
+    row0 = " ".join(base[c] for c in kept_codes(BASE_ROWS[0], EXTRA_ROWS[0], base, script)
+                    if c not in LEFT_OUT.get(lid, set()))
     tops = [base[c] for c in extra_top] + shift_top
     tail = f"  +toprow=[{' '.join(tops)}]" if tops else ""
     return f"{lid:8} ({xlayout}/{xvariant or '-'}): row0=[{row0}]{tail}"

@@ -624,6 +624,15 @@ LONG_TAIL_FOLD = {
     "lgg": str.maketrans({"\u0289": "\u1D1C"}),
     # Meru's ĩ written as Greek's ῖ.
     "mer": str.maketrans("ῖ", "ĩ"),
+    # Plains Cree's long vowels, written with the macron fifteen times as
+    # often as with the circumflex, with it; the hyphen after its preverbs
+    # written as the non-breaking one (ē‑wī-). Livonian's ț written with the
+    # cedilla, Aja's ʒ as Cyrillic's ӡ.
+    "crk": str.maketrans({"â": "ā", "ê": "ē", "î": "ī", "ô": "ō", "Â": "Ā", "Ê": "Ē", "Î": "Ī", "Ô": "Ō",
+                          "‑": "-"}),
+    "csw": str.maketrans({"‑": "-"}),
+    "liv": str.maketrans("ţŢ", "țȚ"),
+    "ajg": str.maketrans("ӡӠ", "ʒƷ"),
     # A scanned magazine's ligatures.
     "skg": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
     "lld": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
@@ -771,6 +780,75 @@ SWAHILI_RIVAL = set("katika kwamba lakini pamoja baada sana hii yake".split())
 # Hawaiian Pidgin's English look-alikes: the LOLcat Bible and its kin.
 LOLCAT_HOSTS = re.compile(r"lolcat|catsrgreen|layonara")
 BOOK_PIRATES = re.compile(r"b-ok\.")
+
+
+# Coptic's letters (its own block's and the seven of the Greek block's,
+# ϣ to ϯ). Its jinkim, the grave over a letter that is a syllable of its
+# own (ⲛ̀ⲧⲉ), is written as Unicode writes it, after its letter: the
+# Bohairic New Testament on the web writes it ⳿ before the letter (⳿ⲛⲧⲉ),
+# others a backtick or a lone grave before it, or a dot over it; the
+# supralinear stroke (ⲛ̅, Ⲓⲏ̅ⲥ̅), the overline 300 times as often as the
+# macron, as the overline. A number written in letters under the stroke
+# (ⲁ̅, ⲓ̅ⲃ̅: the Bible's verses) is no word, and the full stop ⳾ is one.
+# The Bohairic New Testament's ⳪, the sign for ϭⲟⲓⲥ (Lord: Ⲡ⳪), is a
+# symbol to Unicode, which a word does not hold: it is read as the nomen
+# sacrum the others write, ϭ̅ⲥ̅.
+COPTIC_LETTERS = "\u2C80-\u2CE4\u03E2-\u03EF"
+JINKIM_BEFORE = re.compile(f"(?:[\u2CFF`]|(?<![{COPTIC_LETTERS}\u0300-\u036F])\u0300)([{COPTIC_LETTERS}])")
+DOT_JINKIM = re.compile(f"(?<=[{COPTIC_LETTERS}])\u0307")
+COPTIC_NUMBER = re.compile(f"(?<!\\S)(?:[{COPTIC_LETTERS}]\u0305)+(?!\\S)")
+# The Gospels' Bohairic and Sahidic side by side in a font's letters (Ǹ
+# for ⲛ̀), papyri's and dictionaries' text.
+COPTIC_OUT = re.compile(r"cld\.bz|papyri\.info|coptic-dictionary|cenob\.org|multipal")
+# Bohairic's own words (and, with, in, God) and Sahidic's, by which a
+# document is Bohairic's: Sahidic writes the words Bohairic does (ⲛ̀ⲧⲉ,
+# ⲛ̅ⲧⲉ) with its stroke where Bohairic writes the jinkim, and beside it
+# autocorrect changed one Bohairic word typed right in 27.
+BOHAIRIC = set("ⲟⲩⲟϩ ⲛⲉⲙ ϧⲉⲛ ⲫϯ ⲉⲑⲃⲉ ⲛⲓⲃⲉⲛ ⲛ̀ⲧⲉ ⲉ̀ⲃⲟⲗ ⲉⲃⲟⲗϧⲉⲛ".split())
+SAHIDIC = set("ⲁⲩⲱ ⲙⲛ ϩⲛ ϩⲙ ⲙⲛ̅ ϩⲛ̅ ϩⲙ̅ ⲡⲛⲟⲩⲧⲉ ⲉⲧⲃⲉ ⲛ̅ⲧⲉ".split())
+
+
+def coptic(text):
+    text = JINKIM_BEFORE.sub("\\1\u0300", unicodedata.normalize("NFC", text))
+    text = DOT_JINKIM.sub("\u0300", text).replace("\u0304", "\u0305").replace("\u2CFE", ".")
+    # A jinkim written both ways at once (`\u2C9B\u0300) is one.
+    text = re.sub("\u0300{2,}", "\u0300", text)
+    return COPTIC_NUMBER.sub(" ", text).replace("\u2CEA", "\u03ED\u0305\u2CA5\u0305")
+
+
+def coptic_letters(s):
+    """The Coptic letters of `s` in lower case: what a verse's copies on two
+    sites, or in two editions, share where their marks, spaces and numbers
+    differ."""
+    return "".join(c for c in s.lower() if c.isalpha() and "COPTIC" in unicodedata.name(c, ""))
+
+
+# Lahu's tones, written after a syllable as letters Unicode names
+# modifier letters (ˬ ˇ ˍ ˆ ˉ ꞈ), the low circumflex ꞈ as a caret, ‸, on
+# Bible.is (nine tenths of its text).
+LAHU_TONES = frozenset("\u02EC\u02C7\u02CD\u02C6\u02C9\uA788")
+
+
+def lahu(text):
+    return text.replace("\u2038", "\uA788")
+
+
+# The long tail's last: Hunsrik's word lists; FineWeb-2's "Livonian" from
+# a Kwak'wala prayer book and a Kurdish one; Ambonese Malay's song pages,
+# their chords between its words; Ewe's localisation of a browser beside
+# Aja.
+MEMRISE = re.compile(r"memrise")
+# Hunsrik is written two ways: in its standard spelling, ESCRITHU's
+# (fon, fer, tas, sayn, mënxe, ix), and in German's (von, unn, ich, schun),
+# a blog's; the standard's documents are read. Portuguese's sentences
+# among them are left out, by its words Hunsrik does not write.
+HUNSRIK = set("fon fer tas ti sayn wayl hon kot tuu woo uns aach keen nët ix".split())
+HUNSRIK_GERMAN = set("von unn nit sinn isch gewest schun nix schon ich sich mich dich nicht und".split())
+HUNSRIK_RIVAL = (PORTUGUESE_ONLY - {"do"}) | set("para com foi ao mas como era foram muito também ele ela eu "
+                                                  "meu nós você mais isso este esta".split())
+LIVONIAN_OUT = re.compile(r"anglican|wikibooks")
+CHORDS = re.compile(r"chord")
+MOZILLA = re.compile(r"mozilla")
 
 
 # Sgaw Karen's older fonts' letters, as Unicode writes them.
@@ -1319,6 +1397,35 @@ LANGS = {
        for lang, normalize, foreign, more in (
            ("shn", burmese, own_zawgyi, {}), ("mnw", mon, own_zawgyi, {}),
            ("ksw", karen, own_zawgyi, {}), ("blk", burmese, not_pao, {"hold": 10}))},
+    # Coptic, Bohairic's (the New Testament, the liturgy, the Fathers, a
+    # wiki): its runs of Coptic alone (the Arabic, English and French beside
+    # them left out), a sentence whose letters are those of one read before
+    # left out too (`same`: a verse's copies on other sites), every 10th
+    # document held out.
+    "cop": {"script": "COPTIC", "neighbour": set(), "own": BOHAIRIC, "rival": SAHIDIC,
+            "normalize": coptic, "script_only": True, "lines": True,
+            "same": coptic_letters, "letters_never": set("|"), "brackets": True, "hosts_out": COPTIC_OUT,
+            "hold": 10},
+    # Lahu, its tones letters of its words (`script_also`).
+    "lhu": {"script": "LATIN", "neighbour": set(), "normalize": lahu, "script_only": True,
+            "script_also": LAHU_TONES, "sentence_rival": ENGLISH_ONLY, "letters_never": set("|"),
+            "brackets": True, "hold": 10},
+    # The long tail's last, those with 0.15 to 0.3 MB of FineWeb-2's text
+    # (the Bible, Jehovah's Witnesses', Canada's and New Zealand's
+    # governments', Livonian's wiki and institute): the state's language's
+    # sentences left out, and Swampy Cree's syllabics; beside the Crees and
+    # Ottawa, English's sentences by its commonest words as well (in, is,
+    # of, on: none of theirs).
+    **{lang: {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | rival,
+              "letters_never": set("|"), "brackets": True, "hold": 10,
+              **({"normalize": long_tail(lang)} if lang in LONG_TAIL_FOLD else {}), **more}
+       for lang, rival, more in (
+           ("hrx", HUNSRIK_RIVAL | GERMAN_ONLY, {"own": HUNSRIK, "rival": HUNSRIK_GERMAN, "hosts_out": MEMRISE}),
+           ("crk", ENGLISH, {}), ("csw", ENGLISH, {"script_only": True}), ("otw", ENGLISH | FRENCH_ONLY, {}),
+           ("tkl", set(), {}),
+           ("kne", TAGALOG_ONLY, {}), ("mqj", INDONESIAN_ONLY, {}),
+           ("liv", (LATVIAN_ONLY - {"kā"}) | (ESTONIAN_ONLY - {"mis", "kui"}), {"hosts_out": LIVONIAN_OUT}),
+           ("abs", INDONESIAN_ONLY, {"hosts_out": CHORDS}), ("ajg", FRENCH_ONLY, {"hosts_out": MOZILLA}))},
 }
 
 
@@ -1469,10 +1576,13 @@ def main():
     opts = ap.parse_args()
     train, test = opts.train, opts.test or []
     conf = LANGS[opts.lang]
+    # What makes two sentences one: their text, or (`same`) what a
+    # language's copies of one share.
+    same = conf.get("same", lambda s: s)
     seen = set()
     for path in opts.exclude:
         with open(path, encoding="utf-8") as f:
-            seen.update(line.rstrip("\n") for line in f)
+            seen.update(same(line.rstrip("\n")) for line in f)
     excluded = len(seen)
     docs = dropped = 0
     held_docs = []
@@ -1486,15 +1596,15 @@ def main():
                 held_docs.append(text)
                 continue
             for s in sentences(text, conf):
-                if s not in seen:
-                    seen.add(s)
+                if same(s) not in seen:
+                    seen.add(same(s))
                     out.write(s + "\n")
     held = {}
     held_test = (t for t, url in documents(test)
                  if kept(t, conf) and not ("hosts_out" in conf and conf["hosts_out"].search(url)))
     for text in held_docs or held_test:
         for s in sentences(text, conf):
-            if s not in seen:
+            if same(s) not in seen:
                 held.setdefault(s, None)
     held = list(held)[: opts.eval]
     with open(opts.eval_out, "w", encoding="utf-8") as ev:

@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**446 layouts**: 391 keyboard layouts (RTL: ar he fa + Urdu, Western
+**458 layouts**: 403 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 445 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **386 languages** carry a prediction
+keycaps. 457 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **398 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -339,8 +339,20 @@ but no model to match the glide against · `—` off
 | `mnk` | `mnk` | Mandinka | us + long-press ŋ ñ ǹ ì à é m̀ | LTR | **Full** (mnk)⁷ | ✓ | — |
 | `mer` | `mer` | Meru Kĩmĩĩrũ | us + long-press ĩ ũ | LTR | **Full** (mer)⁷ | ✓ | — |
 | `dga` | `dga` | Dagaare | us + long-press ɛ ē é ɛ̃ ŋ ɔ õ ɔ̃ ã ŭ… | LTR | **Full** (dga)⁷ | ✓ | — |
+| `lhu` | `lhu` | Lahu Laˇhuˍ | us, its tones on keys: ˬ ˇ at the home row's end, ꞈ ' ˍ on q x z, long-press ˆ ˉ | LTR | **Full** (lhu)⁷ | ✓ | — |
+| `hrx` | `hrx` | Hunsrik | us + long-press ë ã á ó ç | LTR | **Full** (hrx)⁷ | ✓ | — |
+| `crk` | `crk` | Plains Cree nēhiyawēwin | us + long-press ā ē ī ō, ā ē keys | LTR | **Full** (crk)⁷ | ✓ | — |
+| `csw` | `csw` | Swampy Cree Ininîmowin | us + long-press â ê î ô š, â ê keys | LTR | **Full** (csw)⁷ | ✓ | — |
+| `otw` | `otw` | Ottawa Nishnaabemwin | us, ' key | LTR | **Full** (otw)⁷ | ✓ | — |
+| `tkl` | `tkl` | Tokelauan Gagana Tokelau | us + long-press ā ē ī ō ū | LTR | **Full** (tkl)⁷ | ✓ | — |
+| `kne` | `kne` | Kankanaey | us | LTR | **Full** (kne)⁷ | ✓ | — |
+| `mqj` | `mqj` | Mamasa | us, ' key | LTR | **Full** (mqj)⁷ | ✓ | — |
+| `liv` | `liv` | Livonian Līvõ kēļ | lv + long-press õ ō ȯ ȭ ȱ ä ǟ ḑ ț ŗ, õ key | LTR | **Full** (liv)⁷ | ✓ | — |
+| `abs` | `abs` | Ambonese Malay Bahasa Ambon | us | LTR | **Full** (abs)⁷ | ✓ | — |
+| `ajg` | `ajg` | Aja Ajagbe | us + long-press ɛ é è ɔ ó ɖ ŋ í ì ʒ…, ɔ ɛ keys | LTR | **Full** (ajg)⁷ | ✓ | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
+| `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
 | `kab` | `kab` | Kabyle | us | LTR | **Full** (kab) | ✓ | — |
 | `qu` | `qu` | Quechua | es | LTR | **Full** (qu)⁷ | ✓ | — |
 | `gn` | `gn` | Guaraní | es + long-press á ã é ẽ í ĩ ó õ ú ũ ý ỹ g̃, ' key | LTR | **Full** (gn)⁷ | ✓ | — |
@@ -855,7 +867,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These two hundred and ninety-eight models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and ten models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1462,8 +1474,60 @@ but no model to match the glide against · `—` off
    Gusii's and Maasai's 18%, and they save 22% to 29% with taps astray.
    Makassarese is not used: its Bible writes the glottal stop ' and its
    chronicles q, and it saved 27% (8% with taps astray), a third of its
-   held-out words unknown. Lahu, which writes its tones with five marks
-   after the syllable (awˬ, teˇ), waits for a keyboard with keys for them.
+   held-out words unknown.
+   Coptic learns from FineWeb-2's Bohairic, the dialect of the Coptic
+   Church's liturgy (207 000 words: the New Testament on several sites, the
+   liturgy as tasbeha.org's readers write it out, the Fathers on
+   Wikisource, its test wiki): its runs of Coptic alone, the Arabic,
+   English and French beside them left out. Its jinkim, the grave over a
+   letter that is a syllable of its own, written ⳿ before the letter
+   (⳿ⲛⲧⲉ), a backtick or a lone grave before it, or a dot over it, is read
+   as Unicode writes it, the grave after the letter (ⲛ̀ⲧⲉ); the nomina
+   sacra's ⳪ as ϭ̅ⲥ̅; a number in letters (ⲁ̅, ⲓ̅ⲃ̅: the verses') is no
+   word; and a sentence whose letters are those of one read before (a
+   verse's copy on another site) is left out. Sahidic is not used, a
+   document being Bohairic's by its words (ⲟⲩⲟϩ ⲛⲉⲙ ϧⲉⲛ against ⲁⲩⲱ ⲙⲛ̅
+   ϩⲛ̅): Sahidic writes Bohairic's words with its stroke where Bohairic
+   writes the jinkim (ⲛ̅ⲧⲉ, ⲛ̀ⲧⲉ), and beside it autocorrect changed one
+   Bohairic word typed right in 27 (0.15% without it); three editions of
+   its New Testament are a third of FineWeb-2's Coptic. Coptic is typed on
+   its keymap, eg(cop), with a key for the jinkim at the home row's end and
+   the overline of the nomina sacra (Ⲓⲏ̅ⲥ̅) on its long press. Lahu learns
+   from its Bible and Jehovah's Witnesses' pages (344 000 words), its tone
+   ꞈ written as a caret, ‸, on Bible.is, read as ꞈ; it is typed on the US
+   keys with its tones on keys: ˬ and ˇ (a fifth of its words end in each)
+   at the home row's end, ꞈ, its apostrophe and ˍ on q, x and z, which it
+   does not write, ˆ and ˉ on the long presses of ꞈ and ˍ. Ten more of the
+   long tail that FineWeb-2 has 0.15 to 0.3 MB of learn from its text
+   whole: Hunsrik (its standard spelling's, ESCRITHU's, documents,
+   Jehovah's Witnesses' and Brasil Alemanha's: a blog in German's spelling
+   is left out), Plains Cree (its long vowels, written with the macron
+   fifteen times as often as with the circumflex, with it), Swampy Cree
+   (its syllabics left out), Ottawa, Tokelauan (New Zealand's government's
+   pages), Kankanaey and Mamasa (the Bible), Livonian (its wiki and its
+   institute's pages: a Kwak'wala prayer book and a Kurdish book filed as
+   Livonian are left out), Ambonese Malay (its news, blogs and songs: sites
+   that write chords between its words are left out) and Aja (Jehovah's
+   Witnesses', its ʒ written ӡ read as ʒ; Ewe's localisation of a browser
+   left out): 31 000 (Swampy Cree) to 93 000 words (Tokelauan). A sentence
+   of English is left out (beside the Crees and Ottawa by its commonest
+   words, in, is, of, on, too), and of the state's language (Portuguese's,
+   Tagalog's, Indonesian's, Latvian's and Estonian's, French's own words).
+   They are typed on the US keys, Livonian on Latvian's, their letters
+   first on the long presses; the letters a fifth to a third of their words
+   write have keys of their own at the home row's end (Plains Cree's ā ē,
+   Swampy Cree's â ê, Livonian's õ, Aja's ɔ ɛ), and so does Ottawa's and
+   Mamasa's apostrophe. Their lexicons keep all their words (1 700 kinds,
+   Lahu's, to 35 000, Coptic's). Keystroke savings on their held-out text
+   (2 300 to 13 200 words): Lahu 66.7%, Mamasa 58.0%, Kankanaey 50.9%,
+   Tokelauan 49.5%, Hunsrik 49.5%, Aja 47.9%, Ambonese Malay 41.6%, Coptic
+   39.0%, Ottawa 33.3%, Plains Cree 31.4%, Livonian 29.0%, Swampy Cree
+   25.2%; 43.5% on average, 33.6% with taps astray, at most 0.26% of right
+   words changed (Ambonese Malay's). The Algonquian languages write words
+   of many parts, few of which so small a text holds: Plains Cree's,
+   Ottawa's and Swampy Cree's held-out words are 31% to 37% unknown, and
+   with taps astray they save 10% or less (Swampy Cree nothing); Livonian's
+   are 26% unknown, and it saves 18% with taps astray.
    Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
@@ -1535,7 +1599,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **386 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **398 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1560,7 +1624,11 @@ but no model to match the glide against · `—` off
   of Africa **crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb**,
   of the Americas, the Pacific and the classical and constructed **la pap syr yua quc kek quz qug srn
   gcf bi ia tpi gil tvl ho ch jam**, six more that had a keyboard and no model, **sr-Latn gn ff ber bo dz**, of Africa's and Southeast Asia's long tail **kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik min war nia mad**,
-  and of Europe's regional languages **cor glv ext pcd sgs pnt vec vls lmo lld gag**
+  of Europe's regional languages **cor glv ext pcd sgs pnt vec vls lmo lld gag**, of Myanmar's,
+  cut into syllables, **shn mnw ksw blk**, of East Asia's in Latin letters **nan hak ami za**, of the
+  long tail **zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk spp bas hay kbr ngl gog chw fat
+  tsc bud kao gvl nnb nyo niu hwc acf mrw nij guc ljp sas gor itv bku bpr quh gcr tum tll guz kde nyy
+  mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg**, and Coptic and Lahu **cop lhu**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
@@ -1601,6 +1669,7 @@ drives which face loads:
 | `cherokee` | Noto Sans Cherokee | `chr` (syllabary) |
 | `canadian_aboriginal` | Noto Sans Canadian Aboriginal | `iu` (UCAS syllabics) |
 | `meetei_mayek` | Noto Sans Meetei Mayek | `mni` (syllabary) |
+| `coptic` | Noto Sans Coptic | `cop` |
 
 Install the matching face or those caps render as tofu. See the full
 fonts table in ki-osk-wayland's `DEPLOY.md`.
@@ -1753,6 +1822,11 @@ are built on a `us`/`es` base and add theirs the same way:
 | `niu` `acf` `mrw` `guc` `sas` `bpr` `quh` `gcr` `tum` `tll` `kde` `nyy` `mas` `mnk` `mer` `dga` | each language's own letters first on the long presses (Niuean's macrons, Sasak's ẽ, Tumbuka's ŵ, Nyakyusa's ị ụ, Dagaare's ɛ ɔ ŋ and nasals…) | each its own |
 | `alz` `bss` `lgg` `suk` `spp` `hay` `kbr` `kao` `gvl` `nnb` `nyo` `gor` `tll` `guz` `quh` `guc` | an apostrophe, a key of its own at the home row's end: they write one in 3% to 11% of their words (Sukuma's ng'wa, Gulay's le’n, Nande's n'abandu, Gorontalo's nga'amila); Akoose's is its glottal stop and South Bolivian Quechua's its ejective, ʼ, as their texts write it; Wayuu's ü, in a third of its words, has one beside it | each its own |
 | `ksw` Sgaw Karen | Keyman's phone layout, one letter a key on the base view, the asat ် a key of its own at the home row's end; whole words on long presses (လီၤ on လ, ဒီး on ဒ) | `ksw` |
+| `hrx` `crk` `csw` `tkl` `liv` `ajg` | each language's own letters first on the long presses (Hunsrik's ë, the Crees' long vowels, Tokelauan's macrons, Livonian's õ ō ȯ ȭ ȱ ä ǟ ḑ ț ŗ on Latvian's keys, Aja's ɛ ɔ ɖ ŋ and tones) | each its own |
+| `crk` `csw` `liv` `ajg` | the letters a fifth to a third of their words write, keys of their own at the home row's end: Plains Cree's ā ē, Swampy Cree's â ê, Livonian's õ, Aja's ɔ ɛ | each its own |
+| `otw` `mqj` | an apostrophe, a key of its own at the home row's end (Ottawa's Mzin’igan, Mamasa's tae', in 4% and 9% of their words) | each its own |
+| `lhu` Lahu | its tones, written after the syllable, on keys: ˬ and ˇ (a fifth of its words end in each) at the home row's end, where its desktop keyboard has them; ꞈ, its apostrophe and ˍ on q, x and z, which it does not write; ˆ and ˉ on the long presses of ꞈ and ˍ | `lhu` |
+| `cop` Coptic | its jinkim (U+0300, ⲛ̀ⲧⲉ, in a third of Bohairic's words) a key of its own at the home row's end, in place of its keymap's dot above and macron; the overline of the nomina sacra (Ⲓⲏ̅ⲥ̅) on its long press | `cop` |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per

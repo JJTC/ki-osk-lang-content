@@ -35,7 +35,10 @@
 # Hakka, Amis, Zhuang); twenty-eight of Africa's that FineWeb-2 has 0.4
 # to 0.9 MB of (Zande, Alur, Chopi, Sakalava Malagasy, Akoose, Mende…);
 # twenty-three more of the long tail (Niuean, Hawaiian Pidgin, Wayuu,
-# Sasak… Tumbuka, Gusii, Maasai, Mandinka…); and
+# Sasak… Tumbuka, Gusii, Maasai, Mandinka…); Coptic and Lahu, with
+# keyboards of their own, and ten more of the long tail that FineWeb-2
+# has 0.15 to 0.3 MB of (Hunsrik, Plains and Swampy Cree, Ottawa,
+# Tokelauan, Kankanaey, Mamasa, Livonian, Ambonese Malay, Aja); and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -55,9 +58,9 @@
 # A language whose test split is too small to measure on (Dagbani's and
 # Yao's hold a hundred words each, Pa'O's 31 sentences, Hakka's, Amis'
 # and Zhuang's 1 300 to 4 200 words, the 28 of Africa's long tail with
-# 0.4 to 0.9 MB of text a few hundred, and the twenty-three after them)
-# has none pinned: every 10th document of its train split is held out
-# instead.
+# 0.4 to 0.9 MB of text a few hundred, the twenty-three after them, and
+# the twelve after those) has none pinned: every 10th document of its
+# train split is held out instead.
 #
 # Neither is committed: the text is the web's. The parquet files are kept
 # in $OUT/raw, and a kept one whose sha256 is right is not downloaded
@@ -626,6 +629,18 @@ mas      mas_Latn  train/000_00000.parquet 24aa28c6db36c7e56b240656ade6a81f33946
 mnk      mnk_Latn  train/000_00000.parquet 90eff75ea30916984be89e463962e4400f1405b84b3cfdee97694572ab4b76a7
 mer      mer_Latn  train/000_00000.parquet 6bb259b830af2c49b8ae8517843f17c9425f5938c39ec57c6b9917cd10a170b9
 dga      dga_Latn  train/000_00000.parquet 4d16933c505afa489343184ae11829c0edec35769cabb286c4c93cde3ef4e8e1
+cop      cop_Copt  train/000_00000.parquet 1a759af3cf6da245b2643438b3ef7240ccb00fc5b2daadf2ef6ebc7584d39bbc
+lhu      lhu_Latn  train/000_00000.parquet 9f010bb5d42e6a729710666e4de3663df8290076e13cccf7b1d542b17b26330b
+hrx      hrx_Latn  train/000_00000.parquet 0dced52dd771f50fb6dd01696eabc1a00d3c2bfa655b8c38115a3d20b5f2e93c
+crk      crk_Latn  train/000_00000.parquet cd315eef89f0bdfa07bd15dbba765ae7994b8c9fc0ba87e07db650652c6af1e8
+csw      csw_Latn  train/000_00000.parquet a47c61852cdf0581811f7679bd4031af37af25a14904bbdf16e2af7787140886
+otw      otw_Latn  train/000_00000.parquet c2018d9ea72924e9a9c7bc6099b5ec8e76f86b00ee2b98d52c6380d41bd92f2c
+tkl      tkl_Latn  train/000_00000.parquet aea1fcfc2f5ce23ef5ffa6d23c32a6de330f7c7e63d15223a70922e0c3746df1
+kne      kne_Latn  train/000_00000.parquet 710d8c41878ef2d47ab5989c529ae3b423eec368db8054a511aa40575a74b716
+mqj      mqj_Latn  train/000_00000.parquet fca8030b93a14ae240b47eecf283884d4bc2ac7d4f23aff215756424733ece55
+liv      liv_Latn  train/000_00000.parquet 413355ae15059e37f96bd46ea5e31e679048e918e739d57b9df15498409b0747
+abs      abs_Latn  train/000_00000.parquet 107e936901ec5c6e7c702c2755ccf3cf236021b10921190740ae53606b876737
+ajg      ajg_Latn  train/000_00000.parquet 9058caa7adee2422803a8e9f35eea8e99245ea9f4c07537cb77905d874e06bda
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

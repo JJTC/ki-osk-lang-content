@@ -83,8 +83,22 @@ of ဩ and ၏, which it hardly writes. Zhuang is typed on the US keys as they
 are; Southern Min (Pe̍h-ōe-jī) and Hakka (Pha̍k-fa-sṳ) on them with their
 toned vowels first on the long presses, the commonest first: Southern
 Min's á â ā à a̍…, o's ó ō o̍ ò ô and o͘ in its tones, ⁿ first on n;
-Hakka's â à á a̍…, and ṳ in its tones on u. A letter only a long press types
-turns the gesture on for the layout (`long_press_letters`). A layout's id is
+Hakka's â à á a̍…, and ṳ in its tones on u. Fifty-one of the long tail
+(Zande, Alur, Akoose… Wayuu, Sasak… Maasai, Dagaare) are typed on the US
+keys, their letters and tones first on the long presses, and those that
+write an apostrophe inside their words (Alur's ng'wa, Gusii's ng'a) or ʼ
+(Akoose's ʼɛ, South Bolivian Quechua's q'ala) with a key for it at the
+home row's end, Wayuu with ü beside it; and so are ten more, Livonian on
+Latvian's keys: Hunsrik, Plains and Swampy Cree, Ottawa, Tokelauan,
+Kankanaey, Mamasa, Ambonese Malay and Aja, the letters a fifth to a third
+of their words write with a key of its own (Plains Cree's ā ē, Swampy
+Cree's â ê, Livonian's õ, Aja's ɔ ɛ), Ottawa's and Mamasa's apostrophe
+too. Lahu writes a tone after most of its syllables (ˬ ˇ ꞈ ˍ ˆ ˉ: three
+words in four end in one) and no q, x or z: ꞈ, its apostrophe and ˍ are
+typed on those keys, ˆ and ˉ on the long presses of ꞈ and ˍ, and ˬ and ˇ,
+the commonest, at the home row's end, where its desktop keyboard has them
+(on ; and Shift+;). A letter only a long press types turns the gesture on
+for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
 
@@ -364,6 +378,24 @@ DERIVED = [
     ("mnk", "us", "Mandinka", {"n": ["ŋ", "ñ", "ǹ"], "N": ["Ŋ", "Ñ", "Ǹ"], "i": ["ì"], "I": ["Ì"], "a": ["à"], "A": ["À"], "e": ["é"], "E": ["É"], "m": ["m̀"], "M": ["M̀"]}),
     ("mer", "us", "Kĩmĩĩrũ", {"i": ["ĩ"], "I": ["Ĩ"], "u": ["ũ"], "U": ["Ũ"]}),
     ("dga", "us", "Dagaare", {"e": ["ɛ", "ē", "é", "ɛ̃"], "E": ["Ɛ", "Ē", "É", "Ɛ̃"], "n": ["ŋ"], "N": ["Ŋ"], "o": ["ɔ", "õ", "ɔ̃"], "O": ["Ɔ", "Õ", "Ɔ̃"], "a": ["ã"], "A": ["Ã"], "u": ["ŭ", "ū", "ũ"], "U": ["Ŭ", "Ū", "Ũ"]}),
+    ("lhu", "us", "Laˇhuˍ", {"ꞈ": ["ˆ"], "ˍ": ["ˉ"]},
+     {"swap": {"q": "ꞈ", "Q": "ꞈ", "x": "'", "X": "'", "z": "ˍ", "Z": "ˍ"}, "home": ["ˬ", "ˇ"]}),
+    ("hrx", "us", "Hunsrik", {"e": ["ë"], "E": ["Ë"], "a": ["ã", "á"], "A": ["Ã", "Á"], "o": ["ó"], "O": ["Ó"], "c": ["ç"], "C": ["Ç"]}),
+    ("crk", "us", "nēhiyawēwin", {"a": ["ā"], "A": ["Ā"], "e": ["ē"], "E": ["Ē"], "i": ["ī"], "I": ["Ī"], "o": ["ō"], "O": ["Ō"]},
+     {"home": ["ā", "ē"]}),
+    ("csw", "us", "Ininîmowin", {"a": ["â"], "A": ["Â"], "e": ["ê"], "E": ["Ê"], "i": ["î"], "I": ["Î"], "o": ["ô"], "O": ["Ô"],
+                                "s": ["š"], "S": ["Š"]}, {"home": ["â", "ê"]}),
+    ("otw", "us", "Nishnaabemwin", {}, {"home": "'"}),
+    ("tkl", "us", "Gagana Tokelau", {"a": ["ā"], "A": ["Ā"], "e": ["ē"], "E": ["Ē"], "i": ["ī"], "I": ["Ī"], "o": ["ō"], "O": ["Ō"],
+                                    "u": ["ū"], "U": ["Ū"]}),
+    ("kne", "us", "Kankanaey", {}),
+    ("mqj", "us", "Mamasa", {}, {"home": "'"}),
+    ("liv", "lv", "Līvõ kēļ", {"o": ["õ", "ō", "ȯ", "ȭ", "ȱ"], "O": ["Õ", "Ō", "Ȯ", "Ȭ", "Ȱ"], "a": ["ā", "ä", "ǟ"], "A": ["Ā", "Ä", "Ǟ"],
+                               "d": ["ḑ"], "D": ["Ḑ"], "t": ["ț"], "T": ["Ț"], "r": ["ŗ"], "R": ["Ŗ"]}, {"home": "õ"}),
+    ("abs", "us", "Bahasa Ambon", {}),
+    ("ajg", "us", "Ajagbe", {"e": ["ɛ", "é", "è"], "E": ["Ɛ", "É", "È"], "o": ["ɔ", "ó"], "O": ["Ɔ", "Ó"], "d": ["ɖ"], "D": ["Ɖ"],
+                             "n": ["ŋ"], "N": ["Ŋ"], "i": ["í", "ì"], "I": ["Í", "Ì"], "z": ["ʒ"], "Z": ["Ʒ"], "a": ["à", "á"],
+                             "A": ["À", "Á"]}, {"home": ["ɔ", "ɛ"]}),
 ]
 
 
