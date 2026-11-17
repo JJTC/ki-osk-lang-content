@@ -2,7 +2,8 @@
 # fetch-glotcc.sh — web text of languages whose wiki is mostly a bot's
 # stubs, from GlotCC (the Makefile's GLOTCC_LANGS): Newari, whose wiki is
 # half village stubs a bot wrote and whose web text is news; and of
-# Nigerian Pidgin, whose web text FineWeb-2 has too little of alone.
+# Nigerian Pidgin, Kabiye, Minangkabau and Waray, whose web text FineWeb-2
+# has too little of alone.
 #
 # GlotCC (cis-lmu/GlotCC-V1 at Hugging Face; Kargaran, Yvon and Schütze,
 # "GlotCC: An Open Broad-Coverage CommonCrawl Corpus and Pipeline for
@@ -40,8 +41,11 @@ BASE=https://huggingface.co/datasets/cis-lmu/GlotCC-V1/resolve/$REV
 FILES="
 new  v1.0/new-Deva/new-Deva_0.parquet  77ab27dc09914605ecc0d102f5acd56e9f4a6889fc9cd96fc51cf6c930360b68
 pcm  v1.0/pcm-Latn/pcm-Latn_0.parquet  490ffb1a6813455318b27b533bcfc6a634ba199f69eaea369ca07640c3795d73
+kbp  v1.0/kbp-Latn/kbp-Latn_0.parquet  4f71c1caba4d4aa31c194af7c555658dd0d37778e2e2f08b7b1ebc7808344bd8
+min  v1.0/min-Latn/min-Latn_0.parquet  ec8a071c038b1b94227932c167a4fec0d6fa8435d5cb9c5ca36aa105030fa3c7
+war  v1.0/war-Latn/war-Latn_0.parquet  cae7de07af7a0d7cfe83067f190b69bc6a44fb66e7777bc41ab3d21080f57f8d
 "
-ALSO_FINEWEB="pcm"
+ALSO_FINEWEB="pcm kbp min war"
 
 OUT=${OUT:-${TMPDIR:-/tmp}/ki-osk-sources/glotcc}
 EVAL_OUT=${EVAL_OUT:-$OUT/eval}

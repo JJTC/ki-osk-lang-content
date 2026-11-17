@@ -44,7 +44,9 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                  la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
                  sr-Latn gn ff ber kri \
-                 bo dz
+                 bo dz \
+                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
+                 min war nia mad
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -117,7 +119,8 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # Pacific's and the classical and constructed, from Latin to Jamaican
 # Patois, and of six more that had a keyboard and no model: Serbian in
 # Latin letters, Guaraní, Fula, Tamazight in Tifinagh, Tibetan and
-# Dzongkha
+# Dzongkha, and of twenty of Africa's and four of Southeast Asia's that it
+# has 1 to 2 MB of, from Kabiye to Madurese
 # (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
@@ -136,7 +139,9 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
                  crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                  la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
-                 sr-Latn gn ff ber bo dz
+                 sr-Latn gn ff ber bo dz \
+                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
+                 min war nia mad
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -161,12 +166,13 @@ MADLAD_DIR = $(SRC_DIR)/madlad
 # GlotCC's web text (scripts/fetch-glotcc.sh, its files at one revision
 # pinned by sha256; its packaging CC0 1.0, its text under Common Crawl's
 # Terms of Use), for languages whose wiki is mostly a bot's stubs: Newari,
-# beside its wiki's text (WEB_WEIGHT); and for Nigerian Pidgin beside
-# FineWeb-2's text, whose sentences it leaves out (fetch-fineweb first).
+# beside its wiki's text (WEB_WEIGHT); and for Nigerian Pidgin, Kabiye,
+# Minangkabau and Waray beside FineWeb-2's text, whose sentences it leaves
+# out (fetch-fineweb first).
 # scripts/fineweb-text.py keeps the documents that read as their language
 # and holds out every 20th, in $(GLOTCC_DIR)/eval; nothing of it is
 # committed. Reading parquet needs pyarrow (FINEWEB_PYTHON).
-GLOTCC_LANGS ?= new pcm
+GLOTCC_LANGS ?= new pcm kbp min war
 GLOTCC_DIR = $(SRC_DIR)/glotcc
 FINEWEB_PYTHON ?= python3
 
@@ -267,7 +273,10 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # Dzongkha. Tibetan's and Dzongkha's words are syllables, 49 300 and
 # 13 700 of them, so their n-grams do the work: 180 000 save 0.9 and 0.6
 # points more than 90 000, 300 000 1.6 and 1.0, for 1.5 and 3.4 MB more
-# each, more than a point a megabyte is worth: they keep 90 000.
+# each, more than a point a megabyte is worth: they keep 90 000. And
+# twenty of Africa's and four of Southeast Asia's long tail, whose corpora
+# of 160 000 to 1.2 million words hold 6 000 to 84 000 kinds of word:
+# Nkore's alone more than 80 000, and at 120 000 it saves 0.2 points more.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -279,7 +288,9 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
                        crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                        la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
-                       sr-Latn gn ff ber kri bo dz
+                       sr-Latn gn ff ber kri bo dz \
+                       kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
+                       min war nia mad
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings

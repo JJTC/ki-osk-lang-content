@@ -243,6 +243,18 @@ news sites'), so a document is kept where Dzongkha's own words, counted
 in syllables (ཚུ ལུ ཨིན ཨིནམ ཡོདཔ འབད), outnumber Tibetan's (ཚོ རེད འདུག
 བྱེད).
 
+Twenty of Africa's and four of Southeast Asia's that FineWeb-2 has 1 to
+2 MB of are read whole too, Kabiye's, Minangkabau's and Waray's GlotCC
+text beside it: a sentence of English is left out, and of French,
+Portuguese, Swahili, Indonesian or Tagalog beside those whose state
+writes it, and a wiki's table line (its cells between | and |); Waray's
+and Minangkabau's wikis, a bot's, are left out, and Dagbani's spam and
+Moba's Romanian and English pages; letters written for others are read
+as theirs (Kabiye's ʋ as ʊ, Moba's ɑ as a, Nias' õ as ö, Sidamo's ˈ as
+', Kamba's ī ū as ĩ ũ, Dagbani's ε as ɛ, a Yao font's Ć Ǝ as Ŵ);
+Dagbani's and Yao's test splits hold a hundred words each, so every 10th
+of their documents is held out instead.
+
 Each kept document is cut into sentences after a full stop, danda,
 shad, question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -502,6 +514,28 @@ KRIO_FOLD = str.maketrans("εΕכ", "ɛƐɔ")
 # a third of FineWeb-2's Dzongkha is (its Tibetan news sites); and the
 # non-breaking tsheg, read as the tsheg.
 SYLLABLE = re.compile("[\u0F40-\u0FBC]+")
+# Africa's and Southeast Asia's long tail. Letters written for others:
+# Kabiye's ʋ for its ʊ (its Wikipedia writes ʊ, jw.org ʋ), Moba's ɑ for a
+# (its Bibles write the same words with either: nba and nbɑ), Nias' õ for
+# ö, Sidamo's ˈ for its glottal stop ', Kamba's ī ū for ĩ ũ, Dagbani's ε for
+# ɛ, and a Yao font's Ć and Ǝ for Ŵ (achiĆalimu, achiŵalimu). Hosts whose
+# pages are another language's: Dagbani's spam, Moba's Romanian and
+# English documents; and the wikis a bot wrote, Waray's and
+# Minangkabau's, their species and places in one sentence each. A
+# table's line in a wiki's text (its cells between | and |) is no
+# sentence.
+LONG_TAIL_FOLD = {
+    "kbp": str.maketrans("ʋƲ", "ʊƱ"),
+    "mfq": str.maketrans("ɑⱭ", "aA"),
+    "nia": str.maketrans("õÕ", "öÖ"),
+    "sid": str.maketrans({"\u02C8": "'"}),
+    "kam": str.maketrans("īūĪŪ", "ĩũĨŨ"),
+    "dag": str.maketrans("εΕ", "ɛƐ"),
+    "yao": str.maketrans("ćĆǝƎ", "ŵŴŵŴ"),
+}
+SPAM_HOSTS = re.compile(r"ghanabuys|chegg|statoperator|lyrics")
+MOBA_OUT = re.compile(r"scribd|newspaperarchive|etudier|buenastareas")
+BOT_WIKI = re.compile(r"wikipedia\.org")
 DZONGKHA = set("ཚུ ལུ ཨིན ཨིནམ ཡོདཔ འབད མེདཔ བཏུབ ནིའི འབདཝ".split())
 TIBETAN = set("ཚོ རེད འདུག བྱེད".split())
 # Arabic's words, after Sorani's letters are folded (فی for في), that
@@ -602,6 +636,11 @@ def ejective(text):
 
 def syriac(text):
     return SYRIAC_POINTS.sub("", text)
+
+
+def long_tail(lang):
+    fold = LONG_TAIL_FOLD[lang]
+    return lambda text: text.translate(fold)
 
 
 def tibetan(text):
@@ -928,6 +967,56 @@ LANGS = {
     "dz": {"script": "TIBETAN", "neighbour": set(), "unspaced": True, "lines": True, "normalize": tibetan,
            "script_only": True, "syllables": True, "own": DZONGKHA, "rival": TIBETAN, "own_least": 0.005,
            "brackets": True},
+    "kbp": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET,
+           "letters_never": set("|"), "normalize": long_tail("kbp"), "brackets": True},
+    "dag": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+           "letters_never": set("|"), "normalize": long_tail("dag"), "hosts_out": SPAM_HOSTS,
+           "brackets": True, "hold": 10},
+    "seh": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY,
+           "letters_never": set("|"), "brackets": True},
+    "ada": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+           "letters_never": set("|"), "brackets": True},
+    "nyn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+           "letters_never": set("|"), "brackets": True},
+    "kwy": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY | FRENCH_SET,
+           "letters_never": set("|"), "brackets": True},
+    "sid": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+           "letters_never": set("|"), "normalize": long_tail("sid"), "brackets": True},
+    "koo": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET,
+           "letters_never": set("|"), "brackets": True},
+    "kam": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SWAHILI_ONLY,
+           "letters_never": set("|"), "normalize": long_tail("kam"), "brackets": True},
+    "sop": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET,
+           "letters_never": set("|"), "brackets": True},
+    "vmw": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY,
+           "letters_never": set("|"), "brackets": True},
+    "ndc": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY,
+           "letters_never": set("|"), "brackets": True},
+    "gur": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET,
+           "letters_never": set("|"), "brackets": True},
+    "bum": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET,
+           "letters_never": set("|"), "brackets": True},
+    "bin": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+           "letters_never": set("|"), "brackets": True},
+    "teo": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+           "letters_never": set("|"), "brackets": True},
+    "sgc": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SWAHILI_ONLY,
+           "letters_never": set("|"), "brackets": True},
+    "mfq": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET,
+           "letters_never": set("|"), "normalize": long_tail("mfq"), "hosts_out": MOBA_OUT, "brackets": True},
+    "yao": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY,
+           "letters_never": set("|"), "normalize": long_tail("yao"),
+           "brackets": True, "hold": 10},
+    "dik": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+           "letters_never": set("|"), "brackets": True},
+    "min": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY,
+           "letters_never": set("|"), "hosts_out": BOT_WIKI, "brackets": True},
+    "war": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | TAGALOG_ONLY,
+           "letters_never": set("|"), "hosts_out": BOT_WIKI, "brackets": True},
+    "nia": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY,
+           "letters_never": set("|"), "normalize": long_tail("nia"), "brackets": True},
+    "mad": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY,
+           "letters_never": set("|"), "brackets": True},
     "kri": {"script": "LATIN", "neighbour": set(), "own": KRIO, "rival": KRIOL, "own_least": 0.03,
             "sentence_rival": ENGLISH_ONLY, "sentence_never": {"src", "trg"}, "normalize": krio,
             "brackets": True, "hold": 10},

@@ -188,7 +188,7 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Two hundred and one models learn from FineWeb-2's web text alone: those of Bodo,
+Two hundred and twenty-two models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
@@ -227,9 +227,13 @@ Chamorro, Classical Syriac, Cusco Quechua, Guadeloupean Creole, Hiri Motu,
 Interlingua, Jamaican Patois, Kʼicheʼ, Kichwa, Kiribati, Latin, Papiamento,
 Qʼeqchiʼ, Sranan Tongo, Tok Pisin, Tuvaluan and Yucatec Maya), and of six
 more that had a keyboard and no model (Dzongkha, Fula, Guaraní, Serbian
-in Latin letters, Tamazight in Tifinagh and Tibetan); and Assamese's from
-it beside its Tatoeba sentences, Magahi's beside its
-Incubator text, and Nigerian Pidgin's beside GlotCC's (below).
+in Latin letters, Tamazight in Tifinagh and Tibetan), and of twenty-one
+of Africa's and Southeast Asia's long tail (Bulu, Dagbani, Dangme, Dinka,
+Edo, Farefare, Kamba, Kipsigis, Konzo, Koongo, Madurese, Makhuwa, Moba,
+Ndau, Nias, Nkore, Sena, Sidamo, Songe, Teso and Yao); and Assamese's from
+it beside its Tatoeba sentences, Magahi's beside its Incubator text, and
+Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's beside GlotCC's
+(below).
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
 Pipeline to Scale Them All", arXiv 2506.20920) is text from Common
 Crawl's crawls, sorted by language; **it is ODC-By 1.0, and its use is
@@ -261,8 +265,9 @@ model names MADLAD-400 among its sources, with that licence.
 ### GlotCC (web text)
 
 Newari's model learns from GlotCC's web text beside its wiki's, whose
-articles are half village stubs a bot wrote, and Nigerian Pidgin's
-beside FineWeb-2's, the sentences that lacks: GlotCC v1.0 (Kargaran, Yvon
+articles are half village stubs a bot wrote, and Nigerian Pidgin's,
+Kabiye's, Minangkabau's and Waray's beside FineWeb-2's, the sentences that
+lacks: GlotCC v1.0 (Kargaran, Yvon
 and Schütze, "GlotCC: An Open Broad-Coverage CommonCrawl Corpus and
 Pipeline for Minority Languages", NeurIPS 2024; at Hugging Face as
 `cis-lmu/GlotCC-V1`), text from Common Crawl sorted by language for a

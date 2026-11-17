@@ -65,7 +65,12 @@ Kwanyama, Tshiluba, Kikongo, Wolaytta, Dholuo, Bemba and Kimbundu as
 they are. The Americas' and the Pacific's, and Latin and Interlingua,
 are typed on the US keys too: Papiamentu's and Kichwa's ñ,
 Guadeloupean Creole's é è ò, Tuvaluan's macrons and Chamorro's å ñ first on
-the long presses; and Krio, its ɛ ɔ ŋ first on them. A letter only a long press types turns
+the long presses; and Krio, its ɛ ɔ ŋ first on them. Twenty of Africa's
+long tail and four of Southeast Asia's are typed on them too: Kabiye's ɛ
+ɩ ɔ ʊ ɖ ɣ ŋ ñ, Dagbani's ɛ ɔ ŋ ɣ ʒ, Dangme's, Farefare's and Moba's ɛ ɔ
+(ŋ), Kamba's ĩ ũ, Bulu's é ô ñ, Edo's ẹ ọ, Teso's ŋ, Yao's ŵ, Dinka's ä ë ï
+ö ɛ ɔ ɛ̈ ɔ̈ ŋ ɣ, Nias' ö ŵ and Madurese's â è é ḍ ṭ first on the long
+presses, the others as they are. A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -253,6 +258,30 @@ DERIVED = [
     ("ch", "us", "Finuʼ Chamoru", {"a": ["å"], "n": ["ñ"], "A": ["Å"], "N": ["Ñ"]}),
     ("jam", "us", "Patwa", {}),
     ("kri", "us", "Krio", {"e": ["ɛ"], "o": ["ɔ"], "n": ["ŋ"], "E": ["Ɛ"], "O": ["Ɔ"], "N": ["Ŋ"]}),
+    ("kbp", "us", "Kabɩyɛ", {"e": ["ɛ"], "i": ["ɩ"], "o": ["ɔ"], "u": ["ʊ"], "d": ["ɖ"], "g": ["ɣ"], "n": ["ŋ", "ñ"], "E": ["Ɛ"], "I": ["Ɩ"], "O": ["Ɔ"], "U": ["Ʊ"], "D": ["Ɖ"], "G": ["Ɣ"], "N": ["Ŋ", "Ñ"]}),
+    ("dag", "us", "Dagbanli", {"e": ["ɛ"], "o": ["ɔ"], "n": ["ŋ"], "g": ["ɣ"], "z": ["ʒ"], "E": ["Ɛ"], "O": ["Ɔ"], "N": ["Ŋ"], "G": ["Ɣ"], "Z": ["Ʒ"]}),
+    ("seh", "us", "Cisena", {}),
+    ("ada", "us", "Dangme", {"e": ["ɛ"], "o": ["ɔ"], "E": ["Ɛ"], "O": ["Ɔ"]}),
+    ("nyn", "us", "Runyankore", {}),
+    ("kwy", "us", "Kisikongo", {}),
+    ("sid", "us", "Sidaamu Afoo", {}),
+    ("koo", "us", "Olukonzo", {}),
+    ("kam", "us", "Kĩkamba", {"i": ["ĩ"], "u": ["ũ"], "I": ["Ĩ"], "U": ["Ũ"]}),
+    ("sop", "us", "Kisonge", {}),
+    ("vmw", "us", "Emakhuwa", {}),
+    ("ndc", "us", "ChiNdau", {}),
+    ("gur", "us", "Gurenɛ", {"e": ["ɛ"], "o": ["ɔ"], "n": ["ŋ"], "E": ["Ɛ"], "O": ["Ɔ"], "N": ["Ŋ"]}),
+    ("bum", "us", "Bulu", {"e": ["é"], "o": ["ô"], "n": ["ñ"], "E": ["É"], "O": ["Ô"], "N": ["Ñ"]}),
+    ("bin", "us", "Ẹdo", {"e": ["ẹ"], "o": ["ọ"], "E": ["Ẹ"], "O": ["Ọ"]}),
+    ("teo", "us", "Ateso", {"n": ["ŋ"], "N": ["Ŋ"]}),
+    ("sgc", "us", "Kipsigis", {}),
+    ("mfq", "us", "Moba", {"e": ["ɛ"], "o": ["ɔ"], "n": ["ŋ"], "E": ["Ɛ"], "O": ["Ɔ"], "N": ["Ŋ"]}),
+    ("yao", "us", "Chiyao", {"w": ["ŵ"], "W": ["Ŵ"]}),
+    ("dik", "us", "Thuɔŋjäŋ", {"a": ["ä"], "e": ["ë", "ɛ", "ɛ̈"], "i": ["ï"], "o": ["ö", "ɔ", "ɔ̈"], "n": ["ŋ"], "g": ["ɣ"], "A": ["Ä"], "E": ["Ë", "Ɛ", "Ɛ̈"], "I": ["Ï"], "O": ["Ö", "Ɔ", "Ɔ̈"], "N": ["Ŋ"], "G": ["Ɣ"]}),
+    ("min", "us", "Baso Minang", {}),
+    ("war", "us", "Winaray", {}),
+    ("nia", "us", "Li Niha", {"o": ["ö"], "w": ["ŵ"], "O": ["Ö"], "W": ["Ŵ"]}),
+    ("mad", "us", "Basa Madhura", {"a": ["â"], "e": ["è", "é"], "d": ["ḍ"], "t": ["ṭ"], "A": ["Â"], "E": ["È", "É"], "D": ["Ḍ"], "T": ["Ṭ"]}),
 ]
 
 

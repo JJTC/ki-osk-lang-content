@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**352 layouts**: 297 keyboard layouts (RTL: ar he fa + Urdu, Western
+**376 layouts**: 321 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 351 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **292 languages** carry a prediction
+keycaps. 375 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **316 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -231,6 +231,30 @@ but no model to match the glide against · `—` off
 | `ch` | `ch` | Chamorro Finuʼ Chamoru | us + long-press å ñ | LTR | **Full** (ch)⁷ | ✓ | — |
 | `jam` | `jam` | Jamaican Patois Patwa | us | LTR | **Full** (jam)⁷ | ✓ | — |
 | `kri` | `kri` | Krio | us + long-press ɛ ɔ ŋ | LTR | **Full** (kri)⁸ | ✓ | — |
+| `kbp` | `kbp` | Kabiye Kabɩyɛ | us + long-press ɛ ɩ ɔ ʊ ɖ ɣ ŋ ñ | LTR | **Full** (kbp)⁷ | ✓ | — |
+| `dag` | `dag` | Dagbani Dagbanli | us + long-press ɛ ɔ ŋ ɣ ʒ | LTR | **Full** (dag)⁷ | ✓ | — |
+| `seh` | `seh` | Sena Cisena | us | LTR | **Full** (seh)⁷ | ✓ | — |
+| `ada` | `ada` | Dangme | us + long-press ɛ ɔ | LTR | **Full** (ada)⁷ | ✓ | — |
+| `nyn` | `nyn` | Nkore Runyankore | us | LTR | **Full** (nyn)⁷ | ✓ | — |
+| `kwy` | `kwy` | Koongo Kisikongo | us | LTR | **Full** (kwy)⁷ | ✓ | — |
+| `sid` | `sid` | Sidamo Sidaamu Afoo | us | LTR | **Full** (sid)⁷ | ✓ | — |
+| `koo` | `koo` | Konzo Olukonzo | us | LTR | **Full** (koo)⁷ | ✓ | — |
+| `kam` | `kam` | Kamba Kĩkamba | us + long-press ĩ ũ | LTR | **Full** (kam)⁷ | ✓ | — |
+| `sop` | `sop` | Songe Kisonge | us | LTR | **Full** (sop)⁷ | ✓ | — |
+| `vmw` | `vmw` | Makhuwa Emakhuwa | us | LTR | **Full** (vmw)⁷ | ✓ | — |
+| `ndc` | `ndc` | Ndau ChiNdau | us | LTR | **Full** (ndc)⁷ | ✓ | — |
+| `gur` | `gur` | Farefare Gurenɛ | us + long-press ɛ ɔ ŋ | LTR | **Full** (gur)⁷ | ✓ | — |
+| `bum` | `bum` | Bulu | us + long-press é ô ñ | LTR | **Full** (bum)⁷ | ✓ | — |
+| `bin` | `bin` | Edo Ẹdo | us + long-press ẹ ọ | LTR | **Full** (bin)⁷ | ✓ | — |
+| `teo` | `teo` | Teso Ateso | us + long-press ŋ | LTR | **Full** (teo)⁷ | ✓ | — |
+| `sgc` | `sgc` | Kipsigis | us | LTR | **Full** (sgc)⁷ | ✓ | — |
+| `mfq` | `mfq` | Moba | us + long-press ɛ ɔ ŋ | LTR | **Full** (mfq)⁷ | ✓ | — |
+| `yao` | `yao` | Yao Chiyao | us + long-press ŵ | LTR | **Full** (yao)⁷ | ✓ | — |
+| `dik` | `dik` | Dinka Thuɔŋjäŋ | us + long-press ä ë ï ö ɛ ɔ ɛ̈ ɔ̈ ŋ ɣ | LTR | **Full** (dik)⁷ | ✓ | — |
+| `min` | `min` | Minangkabau Baso Minang | us | LTR | **Full** (min)⁷ | ✓ | — |
+| `war` | `war` | Waray Winaray | us | LTR | **Full** (war)⁷ | ✓ | — |
+| `nia` | `nia` | Nias Li Niha | us + long-press ö ŵ | LTR | **Full** (nia)⁷ | ✓ | — |
+| `mad` | `mad` | Madurese Basa Madhura | us + long-press â è é ḍ ṭ | LTR | **Full** (mad)⁷ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -761,7 +785,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These two hundred and four models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These two hundred and twenty-eight models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1146,6 +1170,36 @@ but no model to match the glide against · `—` off
    (Tibetan's); with taps astray much the same, a quarter of Dzongkha's
    characters and an eighth of Tibetan's (the tsheg, vowel signs and
    subjoined letters) typed exactly, as no letter key's.
+   Twenty of Africa's languages and four of Southeast Asia's, of which
+   FineWeb-2 has 1 to 2 MB, learn from its text whole, Kabiye's,
+   Minangkabau's and Waray's with GlotCC's beside it (note 7's Nigerian
+   Pidgin's way): Kabiye, Dagbani, Sena, Dangme, Nkore, Koongo, Sidamo,
+   Konzo, Kamba, Songe, Makhuwa, Ndau, Farefare, Bulu, Edo, Teso, Kipsigis,
+   Moba, Yao and Dinka, Minangkabau, Waray, Nias and Madurese, each typed
+   on the US keys with its letters first on the long presses (the table
+   above). A sentence of English is left out, and of French, Portuguese,
+   Swahili, Indonesian or Tagalog beside those whose state writes it, and a
+   wiki's table line. Most of their text is the Bible and Watchtower, as
+   Africa's twenty-four's is. Waray's and Minangkabau's wikis are a bot's,
+   a species or a place in a sentence each: their pages are left out, as
+   are Dagbani's spam pages and Moba's Romanian and English documents.
+   Letters written for others are read as theirs: Kabiye's ʋ (jw.org's) as
+   ʊ (its wiki's), Moba's ɑ as a (its Bibles write the same words with
+   either), Nias' õ as ö, Sidamo's ˈ as its glottal stop ', Kamba's ī ū as
+   ĩ ũ, a Yao font's Ć and Ǝ as Ŵ. FineWeb-2's test split of Dagbani and of
+   Yao holds a hundred words: every 10th of their documents is held out
+   instead; Maranao, which has none, is not used. Their lexicons keep every
+   word they read (Dangme's 6 000 to 80 000 of Nkore's 84 000). Keystroke
+   savings on their held-out text (1 800 to 10 800 words): Edo 60.7%,
+   Dangme 56.0%, Farefare 56.0%, Koongo 54.6%, Sena 54.5%, Bulu 54.1%, Nias
+   52.6%, Kabiye 51.5%, Ndau 51.1%, Waray 51.1%, Yao 50.8%, Kipsigis 49.5%,
+   Moba 49.2%, Songe 49.2%, Kamba 49.0%, Konzo 48.5%, Makhuwa 48.3%, Teso
+   46.3%, Dagbani 42.8%, Sidamo 42.0%, Minangkabau 41.5%, Nkore 41.5%,
+   Dinka 36.8%, Madurese 27.4%; 43.2% on average with taps astray, their
+   words unknown 0.5% to 24.3% (Madurese's), at most 1.06% of right words
+   changed (Nkore's, 0.86% with every tap true, its words of many parts
+   13.5% unknown). A third of Kabiye's letters are those its long presses
+   type, as are a sixth of Dangme's and Dinka's.
    Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
@@ -1217,7 +1271,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **292 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **316 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1241,8 +1295,8 @@ but no model to match the glide against · `—` off
   of Iran and the Caucasus **azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf**,
   of Africa **crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb**,
   of the Americas, the Pacific and the classical and constructed **la pap syr yua quc kek quz qug srn
-  gcf bi ia tpi gil tvl ho ch jam**, and six more that had a keyboard and no model, **sr-Latn gn ff ber bo dz**
-  (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
+  gcf bi ia tpi gil tvl ho ch jam**, six more that had a keyboard and no model, **sr-Latn gn ff ber bo dz**, and of Africa's and Southeast Asia's long tail **kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik min war nia mad**
+  (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.

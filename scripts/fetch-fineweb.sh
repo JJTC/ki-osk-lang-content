@@ -23,7 +23,10 @@
 # model: Serbian in Latin letters, Guaraní, Fula (Pular's, Maasina's and
 # the Fulfuldes' text together) and Tamazight in Tifinagh (Central Atlas'
 # and Standard Moroccan's); Tibetan and Dzongkha, whose syllables the
-# tsheg cuts; and
+# tsheg cuts; twenty of Africa's and four of Southeast Asia's that
+# FineWeb-2 has 1 to 2 MB of (Kabiye, Dagbani, Sena, Dangme…
+# Minangkabau, Waray, Nias, Madurese), Kabiye's, Minangkabau's and
+# Waray's beside GlotCC's; and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -39,6 +42,10 @@
 #                         corpus build-predict learns the model from
 #   $EVAL_OUT/<lang>.txt  the test split's, none the corpus has: what
 #                         eval-predict measures the model on
+#
+# A language whose test split is too small to measure on (Dagbani's and
+# Yao's hold a hundred words each) has none pinned: every 10th document of
+# its train split is held out instead.
 #
 # Neither is committed: the text is the web's. The parquet files are kept
 # in $OUT/raw, and a kept one whose sha256 is right is not downloaded
@@ -474,6 +481,52 @@ bo       bod_Tibt  train/000_00000.parquet f39d62711a6aef7a95cd3408d0efef0acf8d3
 bo       bod_Tibt  test/000_00000.parquet  dfe67b077dd81dd15175215ffadcfc456f829bbbefe0749e14f61bb32f237beb
 dz       dzo_Tibt  train/000_00000.parquet aaff8e669e874b644cdc775f6246bc7c09b188f1878c8fa9733b678867e89534
 dz       dzo_Tibt  test/000_00000.parquet  223e2ee745965d2dbaa947b95cdc233b663fecac59568e448699436de60747ae
+kbp      kbp_Latn  train/000_00000.parquet 3ac0a877e8f00c78bc5cf87db27cee5102577504abd5d06d85cca4881bec6754
+kbp      kbp_Latn  test/000_00000.parquet  3917c3bc5458f55df063e2fba4780a18cc42ecab1dada645fbac4c2f36f1f7be
+dag      dag_Latn  train/000_00000.parquet f42d1884effe5917c04994cfd5d836b2e8ef40dd20ccd423c40545016d5e11de
+seh      seh_Latn  train/000_00000.parquet 595ce3eff06a0b16556fada970325587d9510b81fc12cabc9f769a6b691335b7
+seh      seh_Latn  test/000_00000.parquet  e1debbef5f28ecbf154a6423ed526c04945b764f68587ee4d682f52541ccff39
+ada      ada_Latn  train/000_00000.parquet 94e7cca624395be5ee04e9102124cce67ffb7319780ab8b022f80d89cb42785f
+ada      ada_Latn  test/000_00000.parquet  28ef45ba15c9922f35857fbf2c517eb39ba7847eb1029d8c5d5dabbddd24d2fd
+nyn      nyn_Latn  train/000_00000.parquet 429b468f4923d49d906cb87d6628e28a71869cc7f9a1fe62a14693ecd6828aa1
+nyn      nyn_Latn  test/000_00000.parquet  2620366bd499810777d685de2faf7dd18861b27160a67db5e9879c94b5cf0a29
+kwy      kwy_Latn  train/000_00000.parquet 734f9e6d9773740734198dcac529c2982c2860193a34f8726ae0861d227d2345
+kwy      kwy_Latn  test/000_00000.parquet  7c95075509c4273c697eb74b1fa7967c95050c414ee419f27cc2904811492a78
+sid      sid_Latn  train/000_00000.parquet 1116823d67310ff510e34d57cee5543c33a99237298eb762d62c7bc6f6f36332
+sid      sid_Latn  test/000_00000.parquet  5aa5d4f7c906e650d7e849d0a4a27e2c87ed9012a1e07ca121f8063d97455fa3
+koo      koo_Latn  train/000_00000.parquet 4f076aae4857794dc2e8718c5ec2bf7123496654af4adae653513496ae499740
+koo      koo_Latn  test/000_00000.parquet  352396f2cfee33b03ed28a5d931f0d2d09f83b990b1efc59e97014d480539e3c
+kam      kam_Latn  train/000_00000.parquet 70236fa9c436ad7f294ff9f69511320aec94ae7518dba193505db0cc113107ca
+kam      kam_Latn  test/000_00000.parquet  8c410f094eea462a18059917ecb4479e2f95641ea4890ec8a34f56c216b7a007
+sop      sop_Latn  train/000_00000.parquet bfa8db90f47064f80f5f1c18267c6374e098b4d844d558d2b4860d98856f4c9e
+sop      sop_Latn  test/000_00000.parquet  4f9f2d25499134cfade77efc8d55ef941dce12abc164ba48d868f81e83f8a5a3
+vmw      vmw_Latn  train/000_00000.parquet f93db92fba2b1ee783e16e2a2b0bbb15f16da9e6a169d8c21759724764323e19
+vmw      vmw_Latn  test/000_00000.parquet  90aabc63cfc08be9f2d9ad0723fdd4d70579a75a20833fdb9ab76af3a395f71b
+ndc      ndc_Latn  train/000_00000.parquet dd844f79039d731bc4e2e9fcedbe3dc3df76ed91dd961a0fb12be98215d36ae2
+ndc      ndc_Latn  test/000_00000.parquet  0d80b1b19268eae200baf45473838ac8a821d4e8bc00728e49ff465ac8a2ba13
+gur      gur_Latn  train/000_00000.parquet d1af8eb042ff9d408d106a6d41291bbcc9d731a299b1be853aa8af06a1a6fa6c
+gur      gur_Latn  test/000_00000.parquet  4b8f1b4f15b419825f07a468c0449f0679e2f65d9ef1e1e0cb9d9240f55516f4
+bum      bum_Latn  train/000_00000.parquet 9c06ba5910df41737ccebf2972b7f7955eb076c51f4a476e361a456dc48c197e
+bum      bum_Latn  test/000_00000.parquet  9e5bbe49b8a0ec8903135c8e3b0b72b101344ace8083c8c6c0a334acdd57b90e
+bin      bin_Latn  train/000_00000.parquet 09673b42a3a4e7ce41e49b7df09e0e369f031b4cf8d65fdf9907ac0b74d6efda
+bin      bin_Latn  test/000_00000.parquet  3fcf79fd71cb1fe4a9edbd3aefec4c62daacbb5d1705a198306f2df9f2bd13a7
+teo      teo_Latn  train/000_00000.parquet b96eea5a961a2fd357c7b9774e86fb2a5f4acf4d2edf19705635fc06c8b057c6
+teo      teo_Latn  test/000_00000.parquet  291a139bc731296d01874ed48c81900fe85f20db24de084b3c94f1d8655449c8
+sgc      sgc_Latn  train/000_00000.parquet 4d7e5b8f01d9350c3c737299a826765f1e6d3262ca804f50ea6dff9bb259f8c8
+sgc      sgc_Latn  test/000_00000.parquet  c61ab4fce103d95b1f2848c752a435659dae983af805dc9d4b95da0245df8943
+mfq      mfq_Latn  train/000_00000.parquet 6cf237788440d72f0bd6f79232f4064fef7fca41dd3fda59b037c85e921795bd
+mfq      mfq_Latn  test/000_00000.parquet  622be86eca043566ca085049508e52afd7adf8b7dd385d567fdde0ec3d8b8622
+yao      yao_Latn  train/000_00000.parquet 12a6eff6920e31ec7cf974bebf068ed20748d1b01f65a61ece1482ed0766cab0
+dik      dik_Latn  train/000_00000.parquet 0f287bcc55f01ae319311d33a6070613002f08ed6d0c175b5a4743117fd31656
+dik      dik_Latn  test/000_00000.parquet  ed0d1f80cdea2f759f5776f84e134ca138ffdf4afb31bcdc17a40f82184c1817
+min      min_Latn  train/000_00000.parquet 5735110991505f44dbb7c9540f0c04e34cad4393ab376c11709d50f7404d2ea1
+min      min_Latn  test/000_00000.parquet  fd88f355eefa8a2c2b2b7edb8bd725cf1523607e8c6b03508ae7e746baeba1e0
+war      war_Latn  train/000_00000.parquet 84dfff740ac25aff95b3c67aae91cace836f229c1a5a494f5c9920f51e22f2df
+war      war_Latn  test/000_00000.parquet  ac1c3194ed0ff325ff5c4b56503cff0138620609349b09aabfae2b448e87136a
+nia      nia_Latn  train/000_00000.parquet 6de081d9b937029291097235aca868618dcc5bc7a5d827e61c953e74e5f3b2f3
+nia      nia_Latn  test/000_00000.parquet  2956feb3038f9bd3dfddeb0241707d15de844dcdca352138682eeeca268e611f
+mad      mad_Latn  train/000_00000.parquet 895ed2845ef293d22d1f8af69822dfe7463d385920589fd5bd282797dc01a736
+mad      mad_Latn  test/000_00000.parquet  345ccf530f87cab0395c11504bbccc3c757b81c571649ffdba9ffbc4abb13961
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)
@@ -508,8 +561,12 @@ for lang in $langs; do
 			test/*) test+=("$local_file") ;;
 		esac
 	done <<<"$rows"
+	# A language with no test split pinned holds out documents of its
+	# train split instead (fineweb-text.py's hold).
+	held=(--test "${test[@]}")
+	[ ${#test[@]} -gt 0 ] || held=()
 	"$PYTHON" -I "$HERE/fineweb-text.py" --lang "$lang" "$OUT/$lang.txt" "$EVAL_OUT/$lang.txt" \
-		--train "${train[@]}" --test "${test[@]}"
+		--train "${train[@]}" "${held[@]}"
 	if [ "${KEEP_RAW:-1}" = 0 ]; then
 		rm -f -- "${train[@]}" "${test[@]}"
 	fi
