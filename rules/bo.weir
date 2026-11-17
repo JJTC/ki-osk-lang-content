@@ -1,0 +1,14 @@
+# Text rules for Tibetan (rules/dz.weir has the same for Dzongkha, which writes it alike).
+
+# A syllable ends at its tsheg (་), and the keyboard types one after each
+# syllable from the strip; the last before a shad (། or ༎) has none, but
+# after ང, where it stays (ཁང་།): typed before a shad, the tsheg gives way.
+rule TshegGivesWay
+let message "The tsheg before a shad gives way to it, but after ང: རོལ། and ཁང་།."
+expr main (!"…ང" "་" ["།", "༎"])
+let becomes "$1$3"
+test "ཟས་རོལ་།" "ཟས་རོལ།"
+test "དེ་རེད་༎" "དེ་རེད༎"
+allows "ཁང་།"
+allows "ང་།"
+allows "རོལ།"

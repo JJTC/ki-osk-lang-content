@@ -13,7 +13,7 @@ Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hingl
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
 keycaps. 351 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **290 languages** carry a prediction
+table below is the complete list; **292 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -277,7 +277,7 @@ but no model to match the glide against · `—` off
 | `sa` | `sa` | Sanskrit संस्कृतम् | in + long-press ऽ ॐ | LTR | **Full** (sa)⁶ | — | — |
 | `awa` | `awa` | Awadhi अवधी | in | LTR | **Full** (awa)⁶ | — | — |
 | `as` | `as` | Assamese | in · ben (+ ৰ ৱ long-press) | LTR | **Full** (as)⁷ | — | — |
-| `bo` | `bo` | Tibetan བོད་ཡིག | cn · tib | LTR | — | — | — |
+| `bo` | `bo` | Tibetan བོད་ཡིག | cn · tib | LTR | **Full** (bo)⁷ | — | — |
 | `dv` | `dv` | Dhivehi ދިވެހި | mv | RTL | **Full** (dv)⁷ | — | — |
 | `sat` | `sat` | Santali ᱥᱟᱱᱛᱟᱲᱤ | in · sat | LTR | **Full** (sat)⁶ | — | — |
 | `cy` | `cy` | Welsh Cymraeg | us + long-press ŵ ŷ â ê î ô û | LTR | **Full** (cy)⁷ | ✓ | — |
@@ -326,7 +326,7 @@ but no model to match the glide against · `—` off
 | `iu` | `iu` | Inuktitut ᐃᓄᒃᑎᑐᑦ | ca · ike | LTR | **Full** (iu)⁷ | — | — |
 | `mni` | `mni` | Meitei ꯃꯤꯇꯩ ꯂꯣꯟ | in · mni | LTR | **Full** (mni)⁶ | — | — |
 | `mni-beng` | `mni-Beng` | Meitei মণিপুরী (Bengali script) | in · ben + long-press ৱ | LTR | **Full** (mni-Beng)⁷ | — | — |
-| `dz` | `dz` | Dzongkha རྫོང་ཁ | bt | LTR | — | — | — |
+| `dz` | `dz` | Dzongkha རྫོང་ཁ | bt (+ ་ key) | LTR | **Full** (dz)⁷ | — | — |
 | `cn-pinyin` | `zh-Hans` | Chinese 中文 (拼音) | — | LTR | IME | — | **Pinyin** (CC-CEDICT) |
 | `tw-zhuyin` | `zh-Hant` | Chinese 中文 (注音) | — | LTR | IME | — | **Zhuyin** Bopomofo → Traditional (CC-CEDICT) |
 | `yue-jyutping` | `yue` | Cantonese 粵語 (粵拼) | — | LTR | IME | — | **Jyutping** Latin → Traditional (CC-Canto) |
@@ -761,7 +761,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These two hundred and two models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These two hundred and four models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1121,6 +1121,31 @@ but no model to match the glide against · `—` off
    45.6%, Fula 40.9%, Serbian in Latin letters 39.7%, Tamazight 39.4%; with
    taps astray 38.9%, 34.9%, 36.7% and 33.8%, their words unknown 2.0%
    (Serbian's) to 8.0%, at most 0.38% of right words changed (Tamazight's).
+   Tibetan and Dzongkha, which had keyboards and no model, learn from
+   FineWeb-2's text whole (Tibetan's every 4th row group), a line or a
+   sentence ended by a shad (། ༎) each, a run of another script's words
+   (Latin, Chinese) cut out. They write no space between words: a syllable
+   ends at its tsheg (་), and the syllable is their models' word, kept with
+   its tsheg, so a syllable taken from the strip is typed with it and the
+   next starts right after, offered at once, as French's next word is after
+   l' (words.rs); the last syllable before a shad has none, and a tsheg
+   typed before a shad gives way to it, but after ང (rules/bo.weir,
+   rules/dz.weir: རོལ། but ཁང་།). Two fifths of FineWeb-2's Dzongkha is
+   Tibetan, its Tibetan news sites': a document is kept where Dzongkha's
+   own words, counted in syllables (its plural ཚུ, its dative ལུ, its
+   copulas ཨིན ཨིནམ, ཡོདཔ, འབད), outnumber Tibetan's (ཚོ, རེད, འདུག, བྱེད):
+   10 013 of 19 239, mostly Kuensel's. Dzongkha's keymap types the tsheg on
+   the space bar, which ki-osk's keyboards share: its keyboard gains a key
+   for it at the end of the home row, Tibetan's has one. Their lexicons
+   keep every syllable they read, with its tsheg and without (49 300 and
+   13 700), and 90 000 n-grams (180 000 save Tibetan 0.9 points more and
+   Dzongkha 0.6, 300 000 1.6 and 1.0, for 1.5 and 3.4 MB more each).
+   Keystroke savings on FineWeb-2's held-out text of each (12 400 and
+   21 500 syllables): Dzongkha 54.1%, Tibetan 46.5%, 0.2% and 0.02% of
+   their syllables unknown, at most 0.65% of right ones changed
+   (Tibetan's); with taps astray much the same, a quarter of Dzongkha's
+   characters and an eighth of Tibetan's (the tsheg, vowel signs and
+   subjoined letters) typed exactly, as no letter key's.
    Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
@@ -1192,7 +1217,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **290 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **292 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1216,19 +1241,18 @@ but no model to match the glide against · `—` off
   of Iran and the Caucasus **azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf**,
   of Africa **crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb**,
   of the Americas, the Pacific and the classical and constructed **la pap syr yua quc kek quz qug srn
-  gcf bi ia tpi gil tvl ho ch jam**, and four more that had a keyboard and no model, **sr-Latn gn ff ber**
+  gcf bi ia tpi gil tvl ho ch jam**, and six more that had a keyboard and no model, **sr-Latn gn ff ber bo dz**
   (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 4 layouts, Cherokee, whose
+- **Layout-only** — no bundled model yet: 2 layouts, Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
-  its wiki's and its New Testament), Nahuatl, whose is colonial
+  its wiki's and its New Testament), and Nahuatl, whose is colonial
   documents, its wiki and its varieties' Bibles, each spelled its own
-  way, and the two written without spaces
-  whose word lists ICU lacks (Tibetan, Dzongkha). The recognizer runs but
-  has no vocabulary for them. Sixty-six layout-only languages got their
-  models from FineWeb-2's web text (note 7).
+  way. The recognizer runs but has no vocabulary for them. Sixty-eight
+  layout-only languages got their models from FineWeb-2's web text
+  (note 7).
 - **IME dictionaries** — Pinyin (CC-CEDICT `pinyin/cedict.bin`),
   Japanese (`kana/mozc-kanji.bin`); Hangul is algorithmic and needs no
   dictionary.
@@ -1320,8 +1344,8 @@ record how each group was added and what it needs at runtime:
   `bo` (`cn`/`tib`; subjoined stacks compose via shaping), Dhivehi `dv`
   (`mv`, the Thaana script, **RTL**), and Santali `sat` (`in`/`sat`, the
   Ol Chiki alphabet). Each loads its own Noto Sans face on demand;
-  Santali predicts since its wiki's text gave it a model (note 6), the
-  others are layout-only pending corpora. Verified headless: Dhivehi renders
+  Santali predicts since its wiki's text gave it a model (note 6), Dhivehi
+  and Tibetan since FineWeb-2's did (note 7). Verified headless: Dhivehi renders
   RTL-mirrored, Santali in Ol Chiki, and Tibetan now renders too — proven
   on the test machine via `dz` Dzongkha (Tier H), which shares the `bo` face.
 - **Tier E — European minority / regional**: 14 more,
@@ -1402,6 +1426,7 @@ are built on a `us`/`es` base and add theirs the same way:
 | `haw` `sm` `to` `ty` | ʻ, the glottal stop, a key of its own at the home row's end | each its own |
 | `ce` `inh` `av` `kbd` `ady` `lez` `lbe` `tab` `dar` | Ӏ, the palochka, a key of its own at the home row's end (on Russian's keys) | each its own |
 | `yua` `quc` `kek` `quz` | ʼ, the glottal stop and ejective (Kʼicheʼ, kʼo), a key of its own at the home row's end | each its own |
+| `dz` Dzongkha | ་, the tsheg, a key of its own at the home row's end (its keymap types it on the space bar) | `dz` |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per

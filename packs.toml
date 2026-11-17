@@ -47,6 +47,7 @@ bi  = "Bislama"
 bjn = "Banjar"
 bm  = "Bambara"
 bn  = "Bengali"
+bo  = "Tibetan"
 br  = "Breton"
 brh = "Brahui"
 brx = "Bodo"
@@ -77,6 +78,7 @@ dtp = "Kadazandusun"
 dty = "Dotyali"
 dv  = "Dhivehi"
 dyu = "Jula (Dioula)"
+dz  = "Dzongkha"
 ee  = "Ewe"
 efi = "Efik"
 el  = "Greek"
@@ -799,9 +801,7 @@ zu      = ["zu"]
 # The languages with layouts and no model yet: each a pack of its layouts.
 [layouts.names]
 am  = "Amharic"
-bo  = "Tibetan"
 chr = "Cherokee"
-dz  = "Dzongkha"
 ko  = "Korean, Hangul input"
 nah = "Nahuatl"
 ti  = "Tigrinya"
@@ -818,9 +818,11 @@ id   = "rules"
 name = "Text rules, every language"
 components = [
   { kind = "rules", path = "rules/all.weir" },
+  { kind = "rules", path = "rules/bo.weir" },
   { kind = "rules", path = "rules/cs.weir" },
   { kind = "rules", path = "rules/da.weir" },
   { kind = "rules", path = "rules/de.weir" },
+  { kind = "rules", path = "rules/dz.weir" },
   { kind = "rules", path = "rules/fi.weir" },
   { kind = "rules", path = "rules/fr.weir" },
   { kind = "rules", path = "rules/is.weir" },

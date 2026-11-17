@@ -12,10 +12,11 @@
 # full stop, comma, colon, semicolon, question and exclamation marks and
 # the ellipsis; closing brackets, guillemets and the closing double quote;
 # the Arabic comma, semicolon and question mark, the Urdu full stop, the
-# dandas of Devanagari and Bengali, and the Armenian full stop and comma.
+# dandas of Devanagari and Bengali, the Armenian full stop and comma, and
+# the Tibetan shad and double shad.
 # Not the apostrophes and straight quotes, which open as often as they
 # close, nor the middle dot, which joins Catalan letters.
-expr closing [".", ",", ":", ";", "?", "!", "…", ")", "]", "}", "»", "›", "”", "\u{60C}", "\u{61B}", "\u{61F}", "\u{6D4}", "\u{964}", "\u{965}", "\u{589}", "\u{55D}"]
+expr closing [".", ",", ":", ";", "?", "!", "…", ")", "]", "}", "»", "›", "”", "\u{60C}", "\u{61B}", "\u{61F}", "\u{6D4}", "\u{964}", "\u{965}", "\u{589}", "\u{55D}", "\u{F0D}", "\u{F0E}"]
 
 rule SpaceGivesWay
 let message "The space a strip word or a glide typed after itself gives way to the closing punctuation typed next, and comes after it."
@@ -27,6 +28,7 @@ test "end.⎵”" "end.”⎵"
 test "word⎵)" "word)⎵"
 test "كتاب⎵؟" "كتاب؟⎵"
 test "शब्द⎵।" "शब्द।⎵"
+test "ཁབ⎵།" "ཁབ།⎵"
 allows "word ,"
 allows "word⎵("
 allows "word⎵\""

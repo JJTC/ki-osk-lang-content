@@ -468,11 +468,13 @@ MODEL = {"sr-latn": "sr-Latn"}
 # ʻeta), the Caucasus' palochka, Ӏ (U+04C0: Chechen's дӀа, Avar's
 # гьечӀо), and the Mayan and Quechuan glottal stop and ejective, ʼ
 # (U+02BC: Kʼicheʼ), and Guaraní's, the puso, written ' (mba'e, ñe'ẽ: one
-# letter in sixty of its text), a key of its own at the home row's end, in
-# place of its spacers.
+# letter in sixty of its text), and Dzongkha's tsheg, ་, which its keymap
+# types on the space bar (Tibetan's has a key for it), a key of its own at
+# the home row's end, in place of its spacers.
 HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ",
                  **{lid: "Ӏ" for lid in ("ce", "inh", "av", "kbd", "ady", "lez", "lbe", "tab", "dar")},
-                 **{lid: "ʼ" for lid in ("yua", "quc", "kek", "quz")}, "gn": "'"}
+                 **{lid: "ʼ" for lid in ("yua", "quc", "kek", "quz")}, "gn": "'",
+                 "dz": "\u0F0B"}
 
 
 def is_letter_or_mark(g):

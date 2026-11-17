@@ -43,7 +43,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
                  crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                  la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
-                 sr-Latn gn ff ber kri
+                 sr-Latn gn ff ber kri \
+                 bo dz
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -114,8 +115,9 @@ TATOEBA_WIKI_WEIGHT ?= 100
 # South Azerbaijani to Mingrelian, of twenty-four of Africa's, from
 # Seychellois Creole to Umbundu, of eighteen of the Americas', the
 # Pacific's and the classical and constructed, from Latin to Jamaican
-# Patois, and of four more that had a keyboard and no model: Serbian in
-# Latin letters, Guaraní, Fula and Tamazight in Tifinagh
+# Patois, and of six more that had a keyboard and no model: Serbian in
+# Latin letters, Guaraní, Fula, Tamazight in Tifinagh, Tibetan and
+# Dzongkha
 # (scripts/fetch-fineweb.sh, the dataset's parquet files at one revision
 # pinned by sha256; ODC-By 1.0, subject to Common Crawl's Terms of Use).
 # scripts/fineweb-text.py keeps the documents that read as their language;
@@ -134,7 +136,7 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
                  crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                  la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
-                 sr-Latn gn ff ber
+                 sr-Latn gn ff ber bo dz
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -261,7 +263,11 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # twenty-three more that had a keyboard and no model, Iran's and the
 # Caucasus' nineteen, Africa's twenty-four, the Americas', the Pacific's
 # and the classical and constructed eighteen, and Serbian in Latin
-# letters, Guaraní, Fula, Tamazight in Tifinagh and Krio.
+# letters, Guaraní, Fula, Tamazight in Tifinagh, Krio, Tibetan and
+# Dzongkha. Tibetan's and Dzongkha's words are syllables, 49 300 and
+# 13 700 of them, so their n-grams do the work: 180 000 save 0.9 and 0.6
+# points more than 90 000, 300 000 1.6 and 1.0, for 1.5 and 3.4 MB more
+# each, more than a point a megabyte is worth: they keep 90 000.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -273,7 +279,7 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf \
                        crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                        la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
-                       sr-Latn gn ff ber kri
+                       sr-Latn gn ff ber kri bo dz
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings

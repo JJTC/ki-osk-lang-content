@@ -123,6 +123,12 @@ pub struct Splitter {
     /// grave accent, ʼ and the others) belong to the word, and are that ʻ
     /// (U+02BB).
     uzbek: bool,
+    /// Tibetan and Dzongkha: a syllable ends at its tsheg (U+0F0B, and the
+    /// non-breaking U+0F0C written for it), which belongs to it, and the
+    /// next is glued on, as an elided word's is: `བོད་ཀྱི` is `བོད་` and
+    /// `ཀྱི`. A syllable is a word, as the keyboard offers it: with its
+    /// tsheg, so the next starts right after it.
+    tsheg: bool,
     /// The Mayan languages' and Cusco Quechua's glottal stop and ejective
     /// (Kʼicheʼ, Qʼeqchiʼ, chʼaki): ʼ (U+02BC), as their keyboards type it,
     /// and an apostrophe written after a letter is that letter (generation
@@ -272,6 +278,12 @@ fn is_apostrophe(c: char) -> bool {
     matches!(c, '\'' | '\u{2019}' | '\u{05F3}')
 }
 
+/// The Tibetan script's syllable mark, the tsheg, and its non-breaking
+/// form.
+fn is_tsheg(c: char) -> bool {
+    matches!(c, '\u{0F0B}' | '\u{0F0C}')
+}
+
 /// Characters that open or close a single quote when they belong to no
 /// word.
 fn is_single_quote(c: char) -> bool {
@@ -308,6 +320,8 @@ pub fn ends_sentence(c: char) -> bool {
             | '\u{964}'
             | '\u{965}'
             | '\u{589}'
+            | '\u{F0D}'
+            | '\u{F0E}'
             | '\u{61F}'
             | '\u{6D4}'
             | '\u{37E}'
@@ -454,6 +468,7 @@ impl Splitter {
             hyphen_glues: false,
             uzbek: false,
             ejective: false,
+            tsheg: false,
             middle_dot: false,
             armenian: false,
             hebrew: false,
@@ -490,6 +505,7 @@ impl Splitter {
             "ga" | "ber" => s.hyphen_glues = true,
             "uz" => s.uzbek = true,
             "yua" | "quc" | "kek" | "quz" => s.ejective = true,
+            "bo" | "dz" => s.tsheg = true,
             "os" => s.fold = Fold::Ossetian,
             "fa" => s.fold = Fold::Persian,
             "ar" | "ug" => s.fold = Fold::Arabic,
@@ -590,6 +606,7 @@ impl Splitter {
                 }
                 c if is_apostrophe(c) || c == '\u{02BC}' => mapped.push('\''),
                 c if is_hyphen(c) => mapped.push('-'),
+                '\u{0F0C}' if self.tsheg => mapped.push('\u{0F0B}'),
                 '\u{05F4}' => mapped.push('"'),
                 // Pashto's ي before another letter: its ی.
                 '\u{064A}'
@@ -760,6 +777,8 @@ impl Splitter {
                 self.hebrew && prev_in && next_letter
             } else if self.uzbek && matches!(c, '\u{2018}' | '`' | '\u{02BC}') {
                 prev_in && (next_letter || after_o_or_g(&cs, i))
+            } else if self.tsheg && is_tsheg(c) {
+                prev_in
             } else {
                 false
             };
@@ -777,12 +796,14 @@ impl Splitter {
                 continue;
             }
             // An elided word ends at its apostrophe, a Kabyle word before
-            // its clitics at the hyphen; the next is glued on.
-            if (is_apostrophe(c) || (self.hyphen_glues && is_hyphen(c)))
+            // its clitics at the hyphen, a Tibetan syllable at its tsheg;
+            // the next is glued on.
+            let tsheg = self.tsheg && is_tsheg(c);
+            if (is_apostrophe(c) || (self.hyphen_glues && is_hyphen(c)) || tsheg)
                 && prev_in
                 && next_letter
                 && let Some((start, glued)) = open
-                && (is_hyphen(c) || self.elides(&token[start..at]))
+                && (is_hyphen(c) || tsheg || self.elides(&token[start..at]))
             {
                 let end = at + c.len_utf8();
                 out.push(Piece {
@@ -1341,6 +1362,12 @@ mod tests {
         assert_eq!(split("ca", "col·legi"), ["col·legi"]);
         assert_eq!(split("oc", "qu'es"), ["qu'", "+es"]);
         assert_eq!(split("kab", "fell-i"), ["fell-", "+i"]);
+        // A Tibetan syllable ends at its tsheg, which it keeps, and glues
+        // the next on; the last before a shad has none.
+        assert_eq!(split("bo", "བོད་ཀྱི་རྒྱལ་ཁབ།"), ["བོད་", "+ཀྱི་", "+རྒྱལ་", "+ཁབ"]);
+        assert_eq!(split("dz", "ང་ཨིན།"), ["ང་", "+ཨིན"]);
+        // Elsewhere a tsheg is no letter of a word.
+        assert_eq!(split("en", "a་b"), ["a", "b"]);
         // Tamazight in Tifinagh glues its clitics on as Kabyle does.
         assert_eq!(split("ber", "ⴷ-ⵓⵙⵉⵖ"), ["ⴷ-", "+ⵓⵙⵉⵖ"]);
         assert_eq!(
@@ -1424,6 +1451,28 @@ mod tests {
         assert_eq!(Splitter::new("gn").normalize("mbaʼe"), "mba'e");
         // Elsewhere nothing folds.
         assert_eq!(Splitter::new("da").normalize("Æble"), "æble");
+    }
+
+    #[test]
+    fn a_tibetan_syllable_is_typed_with_its_tsheg_and_the_next_starts_after_it() {
+        let bo = Splitter::new("bo");
+        // A strip syllable is typed with its tsheg and no space after it.
+        assert!(bo.glues_on("བོད་"));
+        assert!(!bo.glues_on("ཁབ"));
+        // The non-breaking tsheg is the tsheg.
+        assert_eq!(bo.normalize("བོད\u{0F0C}"), "བོད་");
+        // After a tsheg typed, the next syllable starts: the strip offers
+        // what follows.
+        let t = bo.typing("བོད་", 2);
+        assert_eq!(t.caret, Caret::WordStart);
+        assert_eq!(t.context.last().map(String::as_str), Some("བོད་"));
+        let t = bo.typing("བོད་ཀྱ", 2);
+        assert_eq!(t.caret, Caret::InWord);
+        assert_eq!(t.word, "ཀྱ");
+        // A shad ends the sentence.
+        assert!(ends_sentence('།'));
+        let t = bo.typing("བོད་ཡིན། ", 2);
+        assert_eq!(t.context, [SENTENCE_START]);
     }
 
     #[test]

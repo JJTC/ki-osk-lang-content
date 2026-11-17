@@ -22,7 +22,8 @@
 # Classical Syriac, the Mayan languages…); four keyboards that had no
 # model: Serbian in Latin letters, Guaraní, Fula (Pular's, Maasina's and
 # the Fulfuldes' text together) and Tamazight in Tifinagh (Central Atlas'
-# and Standard Moroccan's); and
+# and Standard Moroccan's); Tibetan and Dzongkha, whose syllables the
+# tsheg cuts; and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -469,6 +470,10 @@ ff       fuv_Latn  train/000_00000.parquet cb773bf3bc23d096f425f0445cd6d77dada96
 ff       fuv_Latn  test/000_00000.parquet  66fadf9da6a631cc03617dab7dbd0651746c5b28dc792fca85b6fa544bf14f7f
 ff       fuh_Latn  train/000_00000.parquet 384f6275fb155195f004550708f94e84f9b17c4cc52e03b4931f497cff4da422
 ff       fuh_Latn  test/000_00000.parquet  700c97f5beb2d9f6566ab60153784aba4d28f2853edfe47d8615631a7ab9262d
+bo       bod_Tibt  train/000_00000.parquet f39d62711a6aef7a95cd3408d0efef0acf8d386da5fd0aa505a394bf9de81e75
+bo       bod_Tibt  test/000_00000.parquet  dfe67b077dd81dd15175215ffadcfc456f829bbbefe0749e14f61bb32f237beb
+dz       dzo_Tibt  train/000_00000.parquet aaff8e669e874b644cdc775f6246bc7c09b188f1878c8fa9733b678867e89534
+dz       dzo_Tibt  test/000_00000.parquet  223e2ee745965d2dbaa947b95cdc233b663fecac59568e448699436de60747ae
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

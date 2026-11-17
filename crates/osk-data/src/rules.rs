@@ -32,7 +32,9 @@
 //! width), the `AUTOSPACE` (the space a strip word or a glide typed after
 //! itself, when it is the last character before the caret), and every
 //! other character on its own. `"…"` matches its text (a word in any
-//! case), as does a bare literal without spaces or `()[],!@"*`; `(a b)` is
+//! case), as does a bare literal without spaces or `()[],!@"*`; a string
+//! that starts with an ellipsis, `"…ng"`, a word that ends with the rest
+//! (Tibetan's `"…ང"`, a syllable ending in ང); `(a b)` is
 //! a sequence, `[a, b]` either one, `!a` one token `a` does not match,
 //! `*` any one token, `@name` a named pattern.
 //!
@@ -172,6 +174,8 @@ fn tokenize(text: &[char], auto: Option<usize>) -> Vec<Tok> {
 enum Pat {
     /// Tokens with these texts, in order.
     Lit(Vec<Tok>),
+    /// A word that ends with this text, in any case.
+    Ending(String),
     Word,
     Space,
     Auto,
@@ -724,6 +728,12 @@ fn parse_unit(lex: &[Lex], at: &mut usize) -> Result<Pat, String> {
 }
 
 fn literal(text: &str) -> Pat {
+    if let Some(ending) = text.strip_prefix('…')
+        && !ending.is_empty()
+        && ending.chars().all(is_word_char)
+    {
+        return Pat::Ending(ending.to_lowercase());
+    }
     let cs: Vec<char> = text.chars().collect();
     Pat::Lit(tokenize(&cs, None))
 }
@@ -820,6 +830,9 @@ impl Rules {
                     Vec::new()
                 }
             }
+            Pat::Ending(e) => one(last.is_some_and(|t| {
+                t.kind == Kind::Word && t.text.to_lowercase().ends_with(e.as_str())
+            })),
             Pat::Word => one(last.is_some_and(|t| t.kind == Kind::Word)),
             Pat::Space => one(last.is_some_and(|t| t.kind == Kind::Space)),
             Pat::Auto => one(last.is_some_and(|t| t.kind == Kind::Auto)),
@@ -1092,6 +1105,33 @@ test "Quoi\u{202F}?⎵!" "Quoi\u{202F}?!⎵"
             r.typed("Bonjour ", true, ","),
             rules(&[ALL]).typed("Bonjour ", true, ",")
         );
+    }
+
+    #[test]
+    fn an_ellipsis_and_text_match_a_word_ending_in_it() {
+        let bo = r#"
+rule TshegGivesWay
+expr main (!"…ང" "་" ["།", "༎"])
+let becomes "$1$3"
+test "རོལ་།" "རོལ།"
+allows "ཁང་།"
+allows "ང་།"
+"#;
+        let r = rules(&[bo, ALL]);
+        assert_eq!(
+            r.typed("ཟས་རོལ་", false, "།"),
+            Some(Edit {
+                delete: 1,
+                insert: "།".into(),
+                auto_space: false
+            })
+        );
+        // A syllable ending in ང keeps its tsheg, in any word.
+        assert_eq!(r.typed("ཁང་", false, "།"), None);
+        assert!(r.failures().is_empty(), "{:?}", r.failures());
+        // The ellipsis alone, or before what no word holds, is itself.
+        assert!(matches!(literal("…"), Pat::Lit(_)));
+        assert!(matches!(literal("….a"), Pat::Lit(_)));
     }
 
     #[test]

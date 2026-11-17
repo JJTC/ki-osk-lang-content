@@ -235,8 +235,16 @@ French left out; and Tamazight in Tifinagh, Central Atlas and Standard
 Moroccan Tamazight's text, a run of another script's words cut out and a
 sentence with ⵧ ⴵ ⵒ, which its keyboard does not type, left out.
 
+Tibetan and Dzongkha are read whole too (Tibetan's every 4th row group),
+a line or a sentence ended by a shad (། ༎) each, a run of another
+script's words (Latin, Chinese) cut out, the non-breaking tsheg read as
+the tsheg; two fifths of FineWeb-2's Dzongkha is Tibetan (its Tibetan
+news sites'), so a document is kept where Dzongkha's own words, counted
+in syllables (ཚུ ལུ ཨིན ཨིནམ ཡོདཔ འབད), outnumber Tibetan's (ཚོ རེད འདུག
+བྱེད).
+
 Each kept document is cut into sentences after a full stop, danda,
-question or exclamation mark; a sentence of fewer than three words, of
+shad, question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
 letters are the language's script is left out, and each sentence is
 written once. The corpus is the `train` split's; the held-out text, at
@@ -276,7 +284,7 @@ import sys
 import unicodedata
 
 
-END = re.compile(r"(?<=[.!?।॥۔؟])\s+")
+END = re.compile(r"(?<=[.!?।॥۔؟།༎])\s+")
 # Khmer's and Burmese's ends of sentences, often with no space after them.
 UNSPACED_END = re.compile(r"(?<=[។៕။])\s*")
 # What marks Burmese text as Zawgyi's: ေ before its consonant, ္ ending a
@@ -486,6 +494,16 @@ FULA_FOLD = str.maketrans("åÅðÐňŇ", "ɓƁɗƊñÑ")
 KRIO = set("dɛn fɔ wetin gɛt bɔt nɔ ɛn pipul mɔ dɔn tɛl lɛ fɔs sɛf ɛvri bɛtɛ".split())
 KRIOL = set("langa blanga detlot garra olabat melabat imbin deibin yumob mela gudbala".split())
 KRIO_FOLD = str.maketrans("εΕכ", "ɛƐɔ")
+# Tibetan and Dzongkha: a syllable, the run of letters and marks between
+# its tsheg and the one before (what the own and rival words are counted
+# in); Dzongkha's own words that Tibetan writes otherwise (its plural ཚུ,
+# Tibetan's ཚོ; its dative ལུ, Tibetan's ལ; its copulas ཨིན ཨིནམ, Tibetan's
+# རེད; ཡོདཔ, Tibetan's ཡོད་པ; འབད, do, Tibetan's བྱེད), and Tibetan's, which
+# a third of FineWeb-2's Dzongkha is (its Tibetan news sites); and the
+# non-breaking tsheg, read as the tsheg.
+SYLLABLE = re.compile("[\u0F40-\u0FBC]+")
+DZONGKHA = set("ཚུ ལུ ཨིན ཨིནམ ཡོདཔ འབད མེདཔ བཏུབ ནིའི འབདཝ".split())
+TIBETAN = set("ཚོ རེད འདུག བྱེད".split())
 # Arabic's words, after Sorani's letters are folded (فی for في), that
 # Sorani does not write: what marks a sentence of Arabic in its text.
 ARABIC_ONLY = set("فی علی إلی الی الذی التی هذا هذه عن".split())
@@ -584,6 +602,10 @@ def ejective(text):
 
 def syriac(text):
     return SYRIAC_POINTS.sub("", text)
+
+
+def tibetan(text):
+    return text.replace("\u0F0C", "\u0F0B")
 
 
 def guarani(text):
@@ -901,6 +923,11 @@ LANGS = {
            "normalize": fula, "brackets": True},
     "ber": {"script": "TIFINAGH", "neighbour": set(), "script_only": True, "letters_never": set("ⵧⴵⵒ"),
             "brackets": True},
+    "bo": {"script": "TIBETAN", "neighbour": set(), "unspaced": True, "lines": True, "normalize": tibetan,
+           "script_only": True, "every": 4, "brackets": True},
+    "dz": {"script": "TIBETAN", "neighbour": set(), "unspaced": True, "lines": True, "normalize": tibetan,
+           "script_only": True, "syllables": True, "own": DZONGKHA, "rival": TIBETAN, "own_least": 0.005,
+           "brackets": True},
     "kri": {"script": "LATIN", "neighbour": set(), "own": KRIO, "rival": KRIOL, "own_least": 0.03,
             "sentence_rival": ENGLISH_ONLY, "sentence_never": {"src", "trg"}, "normalize": krio,
             "brackets": True, "hold": 10},
@@ -942,6 +969,8 @@ def kept(text, conf):
         if text.count(own) <= text.count(rival):
             return False
     if "own" in conf:
+        if conf.get("syllables"):
+            ws = SYLLABLE.findall(text)
         own = share(ws, conf["own"])
         if own < conf.get("own_least", 0.01) or own <= share(ws, conf["rival"]) + share(ws, conf["neighbour"]):
             return False
