@@ -104,6 +104,12 @@ LANGS = [
     ("lbe", "Лакку маз", "ru", "", "cyrillic"),
     ("tab", "Табасаран чӀал", "ru", "", "cyrillic"),
     ("dar", "Дарган мез", "ru", "", "cyrillic"),
+    # Mayan and Quechuan languages that write a glottal stop or ejective
+    # with ʼ (Kʼicheʼ, kʼo), on the US keys with a key for it.
+    ("yua", "Maaya tʼaan", "us", "", "latin"),
+    ("quc", "Kʼicheʼ", "us", "", "latin"),
+    ("kek", "Qʼeqchiʼ", "us", "", "latin"),
+    ("quz", "Qusqu runasimi", "us", "", "latin"),
     # --- Tier 3: complex Asian / Caucasus scripts (bundled Noto faces) ---
     # Alphabetic — fit the grid cleanly, no combining marks:
     ("ka", "ქართული", "ge", "", "georgian"),
@@ -314,6 +320,9 @@ DIACRITIC_LONGPRESS = {
     # Central Kurdish (Sorani): ێ ڵ ڕ, among its commonest letters, which
     # its keymap puts on shift, on the long presses of ی ل ر as well.
     "ckb": {"ی": ["ێ"], "ل": ["ڵ"], "ر": ["ڕ"]},
+    # Kʼicheʼ's ä, its schwa; Cusco Quechua's ñ.
+    "quc": {"a": ["ä"]},
+    "quz": {"n": ["ñ"]},
     # --- Tier E: European minority (letters beyond the inherited us menus) ---
     # Welsh: the circumflex ("to bach") set — incl. ŵ ŷ on the semivowels.
     "cy": {
@@ -450,11 +459,13 @@ LEVEL3_LONGPRESS = {"khmer"}
 # Layouts whose language writes a letter no key of its grid types and the
 # national keymap has none for: Polynesian's glottal stop, ʻ (U+02BB,
 # Hawaiian's ʻokina, Samoan's koma liliu, Tongan's fakauʻa, Tahitian's
-# ʻeta), and the Caucasus' palochka, Ӏ (U+04C0: Chechen's дӀа, Avar's
-# гьечӀо), a key of its own at the home row's end, in place of its
-# spacers.
+# ʻeta), the Caucasus' palochka, Ӏ (U+04C0: Chechen's дӀа, Avar's
+# гьечӀо), and the Mayan and Quechuan glottal stop and ejective, ʼ
+# (U+02BC: Kʼicheʼ), a key of its own at the home row's end, in place of
+# its spacers.
 HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ",
-                 **{lid: "Ӏ" for lid in ("ce", "inh", "av", "kbd", "ady", "lez", "lbe", "tab", "dar")}}
+                 **{lid: "Ӏ" for lid in ("ce", "inh", "av", "kbd", "ady", "lez", "lbe", "tab", "dar")},
+                 **{lid: "ʼ" for lid in ("yua", "quc", "kek", "quz")}}
 
 
 def is_letter_or_mark(g):

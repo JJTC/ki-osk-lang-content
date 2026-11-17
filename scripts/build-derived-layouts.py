@@ -62,7 +62,10 @@ Mossi's ã ẽ ɛ ɩ ʋ õ, Réunion Creole's é è, Tiv's ô é, Fon's ɔ ɛ ɖ
 tones, Acholi's ŋ, Baoulé's and Jula's ɛ ɔ ɲ, Kikuyu's ĩ ũ, Umbundu's
 nasal vowels and ñ; Seychellois Creole, Northern Ndebele, Ndonga,
 Kwanyama, Tshiluba, Kikongo, Wolaytta, Dholuo, Bemba and Kimbundu as
-they are. A letter only a long press types turns
+they are. The Americas' and the Pacific's, and Latin and Interlingua,
+are typed on the US keys too: Papiamentu's and Kichwa's ñ,
+Guadeloupean Creole's é è ò, Tuvaluan's macrons and Chamorro's å ñ first on
+the long presses. A letter only a long press types turns
 the gesture on for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -236,6 +239,19 @@ DERIVED = [
     ("ki", "us", "Gĩkũyũ", {"i": ["ĩ"], "u": ["ũ"], "I": ["Ĩ"], "U": ["Ũ"]}),
     ("kmb", "us", "Kimbundu", {}),
     ("umb", "us", "Umbundu", {"a": ["ã"], "e": ["ẽ"], "i": ["ĩ"], "u": ["ũ"], "o": ["õ"], "n": ["ñ"], "A": ["Ã"], "E": ["Ẽ"], "I": ["Ĩ"], "U": ["Ũ"], "O": ["Õ"], "N": ["Ñ"]}),
+    ("la", "us", "Latina", {}),
+    ("pap", "us", "Papiamentu", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("qug", "us", "Kichwa", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("srn", "us", "Sranantongo", {}),
+    ("gcf", "us", "Kréyòl gwadloupéyen", {"e": ["é", "è"], "o": ["ò"], "E": ["É", "È"], "O": ["Ò"]}),
+    ("bi", "us", "Bislama", {}),
+    ("ia", "us", "Interlingua", {}),
+    ("tpi", "us", "Tok Pisin", {}),
+    ("gil", "us", "Taetae ni Kiribati", {}),
+    ("tvl", "us", "Te Ggana Tuuvalu", {"a": ["ā"], "e": ["ē"], "i": ["ī"], "o": ["ō"], "u": ["ū"], "A": ["Ā"], "E": ["Ē"], "I": ["Ī"], "O": ["Ō"], "U": ["Ū"]}),
+    ("ho", "us", "Hiri Motu", {}),
+    ("ch", "us", "Finuʼ Chamoru", {"a": ["å"], "n": ["ñ"], "A": ["Å"], "N": ["Ñ"]}),
+    ("jam", "us", "Patwa", {}),
 ]
 
 

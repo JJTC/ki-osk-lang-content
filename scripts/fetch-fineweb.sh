@@ -17,7 +17,9 @@
 # twenty-three more that had a keyboard and no model (Udmurt, Greenlandic,
 # Oromo, Romansh, Kirundi…); nineteen of Iran's and the Caucasus' (South
 # Azerbaijani, Chechen, Avar, the Zazakis…); twenty-four of Africa's
-# (Seychellois Creole, Northern Ndebele, Ndonga, Efik, Sango…); and
+# (Seychellois Creole, Northern Ndebele, Ndonga, Efik, Sango…); nineteen
+# of the Americas', the Pacific's and the classical (Latin, Papiamento,
+# Classical Syriac, the Mayan languages…); and
 # Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
 # FINEWEB_PLUS_LANGS).
 #
@@ -412,6 +414,42 @@ kmb  kmb_Latn  train/000_00000.parquet  f5f207242a5ecf01674f0d0bec12d5727fd1f92f
 kmb  kmb_Latn  test/000_00000.parquet   09160aa5d89d524cfbf2bf7e38d1501d11552e204487b0d81b9cd9ca7d8c0151
 umb  umb_Latn  train/000_00000.parquet  bda81bb6135785d1c0732198997ffe9021602b28387e760c226b878479ab8a95
 umb  umb_Latn  test/000_00000.parquet   074a365a9045e10a455e44df8170c81749d384467474228af494a7f698352a83
+la   lat_Latn  train/000_00000.parquet  cf56cacb67a67c1090d40d7a759fa6caf4908daa21fb4599e94943bed61f659a
+la   lat_Latn  test/000_00000.parquet   aeb5f462bc823ffdb18e0e86b11429f46a23bc9d40c549fdf7508b104ab1ea66
+pap  pap_Latn  train/000_00000.parquet  8d2eec4ca490573b72a2d82f3b48b79936d8ddf04f23aee3f7abb1152c1e6a6b
+pap  pap_Latn  test/000_00000.parquet   1b02c1923eeb959e78b0f1b3cdd0ac38b0c69b8001c53f5faef49606bb3d033b
+syr  syc_Syrc  train/000_00000.parquet  45f2d492569c72bbdb50821768a63b86b92f77b6e3181f5e8eb9bc0d6fb12150
+syr  syc_Syrc  test/000_00000.parquet   22852b31ba5faebcb09f0579a3d18b56062cdc9debfc673afc9bf9929eb8d5de
+yua  yua_Latn  train/000_00000.parquet  4eac2d265113e44f7a5261f42f76fc323e41c3863e435313f2675923c4b8d208
+yua  yua_Latn  test/000_00000.parquet   457434a95e7a23de37cc3772dc524ffa6eecb648f3f1357d693050d8d7344d21
+quc  quc_Latn  train/000_00000.parquet  62e398820b3bfc722357a1b1207bb96633d4a235a3e99e56b6c03e137c0a2585
+quc  quc_Latn  test/000_00000.parquet   2b82c3fd89a90a0650f2aad83de5508e6485ffd8d02d267e7fd0fe3c1a1df919
+kek  kek_Latn  train/000_00000.parquet  1efb3380bb4580a3de89b7b911c799dc678898bdb6e4e67d7259f9660e441645
+kek  kek_Latn  test/000_00000.parquet   e100a783cd27e60cac1824f74df2fd5e1eb17aaa60ccf5006e5c78b807ab7cab
+quz  quz_Latn  train/000_00000.parquet  0c778a2127ea19465dc50e6c354e09a75e610cad7f29c8b90b04c3f44889c8f5
+quz  quz_Latn  test/000_00000.parquet   faaf7755fae2ddcd64146e16a8695fe12e044d80a2a6a77e723467c8f984970b
+qug  qug_Latn  train/000_00000.parquet  5887f8251e3c9deaafe7d1525a262bee46de013f20a4b1fffdc254df36654d0b
+qug  qug_Latn  test/000_00000.parquet   7bbf685af84f755f6303a14e25420a0213544dfe30b4d09f93028087d3d1c987
+srn  srn_Latn  train/000_00000.parquet  c611761a720934a18cefa4de4ccd726abac4c2fff5671ae953f0a1b9490bfd22
+srn  srn_Latn  test/000_00000.parquet   5c633b4ec6d2b9c7d2fd3bb111b82d224b5a43b582ea2faf6d75d2ac1998f867
+gcf  gcf_Latn  train/000_00000.parquet  0b75e4d34e5c7a1c8164c23cc68043f3e5b9ea8b8fc460622b9e1b8880aef047
+gcf  gcf_Latn  test/000_00000.parquet   e086b06938d5fab881b81c908c0137ce9472ed27cecbe708afdac12889e541b2
+bi   bis_Latn  train/000_00000.parquet  e6da61d7ed3099245f3623ebdbe13102b09052657f36ccab906cd4c7f28a0f8a
+bi   bis_Latn  test/000_00000.parquet   00e85bfb213295c0922657c7be122466dfbbaf2225ba123a9134baeca26b7de8
+ia   ina_Latn  train/000_00000.parquet  416ad63f000da3f070f249b42dce8043f58215ef5f172ef90926dfb579189c70
+ia   ina_Latn  test/000_00000.parquet   26dd9333dc0f9e5685916fdca6dfb909d8e751d873838b21c3b56a536adc8589
+tpi  tpi_Latn  train/000_00000.parquet  88a05b86cdaf47bd3cf426d3eddefb1230bc716ff032ea5643b45382d4ac2142
+tpi  tpi_Latn  test/000_00000.parquet   fc92e86325dda68876adca55632b54aeaa6e9f7eb2853ce75f46f4f585973a57
+gil  gil_Latn  train/000_00000.parquet  7153313177a978ca2b4b304169ccc3137c15e2da9b1ad3dd3f5f80a3387d3ebc
+gil  gil_Latn  test/000_00000.parquet   fb45da42c2063f0e95db29db7525ad4584237f3a1413f3dfca8ac3c4f2f8b880
+tvl  tvl_Latn  train/000_00000.parquet  a78b2c5c9dbf6a3e6a9710662e71f95626881db4693cf5e28aee5c0b48afb8a9
+tvl  tvl_Latn  test/000_00000.parquet   e85505f2f28be7ebabee70694c666ba7e75005b405ef2f702ff24e2c0a0673d9
+ho   hmo_Latn  train/000_00000.parquet  1ca5bfbe4d27f4c9336a6fbb13896e66f7e98cc81a1ef05ac14ed4ded4d0e619
+ho   hmo_Latn  test/000_00000.parquet   be011e96dcbd7ef3abd6f47551be926b74aa8e1e40d501c8eab42a685a75252f
+ch   cha_Latn  train/000_00000.parquet  3d8c0f604b2ec1a5fe97c9980bf9a69ef8b9df646103861e69cfe069ed8fc941
+ch   cha_Latn  test/000_00000.parquet   cae8c1193c9c14c2eb4cc0e9aeea888237c00deccd7349b3c4b7ac17de280a5f
+jam  jam_Latn  train/000_00000.parquet  a5c4750065003556f4f7e5d2e3e5b897e0aa647c2a70b3d15ef89c2dc2151a81
+jam  jam_Latn  test/000_00000.parquet   40bcc8b85f1858e3cd6aab64483fbe530cf91144e63ed9764e9c8ea0fe9334b6
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

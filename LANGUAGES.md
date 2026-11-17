@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**334 layouts**: 279 keyboard layouts (RTL: ar he fa + Urdu, Western
+**351 layouts**: 296 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 333 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **267 languages** carry a prediction
+keycaps. 350 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **285 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -213,6 +213,23 @@ but no model to match the glide against · `—` off
 | `ki` | `ki` | Kikuyu Gĩkũyũ | us + long-press ĩ ũ | LTR | **Full** (ki)⁷ | ✓ | — |
 | `kmb` | `kmb` | Kimbundu | us | LTR | **Full** (kmb)⁷ | ✓ | — |
 | `umb` | `umb` | Umbundu | us + long-press ã ẽ ĩ ũ õ ñ | LTR | **Full** (umb)⁷ | ✓ | — |
+| `la` | `la` | Latin Latina | us | LTR | **Full** (la)⁷ | ✓ | — |
+| `pap` | `pap` | Papiamento Papiamentu | us + long-press ñ | LTR | **Full** (pap)⁷ | ✓ | — |
+| `yua` | `yua` | Yucatec Maya Maaya tʼaan | us + key ʼ | LTR | **Full** (yua)⁷ | ✓ | — |
+| `quc` | `quc` | Kʼicheʼ | us + key ʼ + long-press ä | LTR | **Full** (quc)⁷ | ✓ | — |
+| `kek` | `kek` | Qʼeqchiʼ | us + key ʼ | LTR | **Full** (kek)⁷ | ✓ | — |
+| `quz` | `quz` | Cusco Quechua Qusqu runasimi | us + key ʼ + long-press ñ | LTR | **Full** (quz)⁷ | ✓ | — |
+| `qug` | `qug` | Kichwa (Chimborazo) Kichwa | us + long-press ñ | LTR | **Full** (qug)⁷ | ✓ | — |
+| `srn` | `srn` | Sranan Tongo Sranantongo | us | LTR | **Full** (srn)⁷ | ✓ | — |
+| `gcf` | `gcf` | Guadeloupean Creole Kréyòl gwadloupéyen | us + long-press é è ò | LTR | **Full** (gcf)⁷ | ✓ | — |
+| `bi` | `bi` | Bislama | us | LTR | **Full** (bi)⁷ | ✓ | — |
+| `ia` | `ia` | Interlingua | us | LTR | **Full** (ia)⁷ | ✓ | — |
+| `tpi` | `tpi` | Tok Pisin | us | LTR | **Full** (tpi)⁷ | ✓ | — |
+| `gil` | `gil` | Kiribati Taetae ni Kiribati | us | LTR | **Full** (gil)⁷ | ✓ | — |
+| `tvl` | `tvl` | Tuvaluan Te Ggana Tuuvalu | us + long-press ā ē ī ō ū | LTR | **Full** (tvl)⁷ | ✓ | — |
+| `ho` | `ho` | Hiri Motu | us | LTR | **Full** (ho)⁷ | ✓ | — |
+| `ch` | `ch` | Chamorro Finuʼ Chamoru | us + long-press å ñ | LTR | **Full** (ch)⁷ | ✓ | — |
+| `jam` | `jam` | Jamaican Patois Patwa | us | LTR | **Full** (jam)⁷ | ✓ | — |
 | `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
@@ -227,7 +244,7 @@ but no model to match the glide against · `—` off
 | `km` | `km` | Khmer | kh | LTR | **Full** (km)⁷ | — | — |
 | `lo` | `lo` | Lao | la | LTR | **Full** (lo)⁷ | — | — |
 | `my` | `my` | Burmese | mm | LTR | **Full** (my)⁷ | — | — |
-| `syr` | `syr` | Syriac | sy · syc | **RTL** | — | — | — |
+| `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | — | — | — |
 | `kab` | `kab` | Kabyle | us | LTR | **Full** (kab) | ✓ | — |
 | `qu` | `qu` | Quechua | es | LTR | **Full** (qu)⁷ | ✓ | — |
@@ -743,7 +760,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These one hundred and eighty models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These one hundred and ninety-eight models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1035,7 +1052,43 @@ but no model to match the glide against · `—` off
    as Portuguese, 10.4% of its words unknown); at most 0.59% of right
    words changed (Seychellois Creole's). FineWeb-2 has under 2 MB of the
    other Africa's languages Gboard has, mostly Bible pages, and none of
-   Krio, Kanuri, Mandinka or Tumbuka. Bodo's apostrophe, which
+   Krio, Kanuri, Mandinka or Tumbuka.
+   Eighteen of the Americas', the Pacific's and the classical and
+   constructed languages' learn from FineWeb-2's text whole (Latin's every
+   44th row group, Papiamento's every 5th): Latin, Papiamento, Syriac
+   (FineWeb-2's Classical Syriac, for the Syriac keyboard, which had no
+   model), Yucatec Maya, Kʼicheʼ, Qʼeqchiʼ, Cusco Quechua, Kichwa, Sranan
+   Tongo, Guadeloupean Creole, Bislama, Interlingua, Tok Pisin, Kiribati,
+   Tuvaluan, Hiri Motu, Chamorro and Jamaican Patois, each but Syriac typed
+   on the US keys with its letters first on the long presses (the table
+   above). A sentence of English is left out, of Spanish beside the Mayan
+   languages and the Quechuas, of Spanish and Dutch beside Papiamento, of
+   Dutch beside Sranan Tongo, of French beside Guadeloupean Creole. A third
+   of FineWeb-2's Latin is Lorem ipsum, web pages' placeholder: a document
+   holding it is left out. Yucatec Maya, Kʼicheʼ, Qʼeqchiʼ and Cusco
+   Quechua write a glottal stop or an ejective as ʼ, a letter, which a key
+   at the end of their home row types; an apostrophe, a quote or a saltillo
+   after a letter in their text (k'o, saˈ) is read as it. Syriac's vowel
+   points, which its Bibles write and few type, are left out. FineWeb-2's
+   Kichwa is a Bible site's pages, a dozen languages' verses among them: a
+   document is kept where Kichwa's own words (mana alli chai ima) are 3% of
+   its words, and a sentence where e and o are no more than a quarter of
+   its vowels (Kichwa writes a i u) and none of Twi's ɛ ɔ is written. Their
+   lexicons keep 80 000 words, Cusco Quechua's 120 000 and Latin's, whose
+   words take many forms, 200 000 (the held-out words it lacks 15.2% ->
+   8.7%). Keystroke savings on FineWeb-2's held-out text of each (2 500 to
+   14 900 words): Hiri Motu 66.1%, Tok Pisin 63.1%, Qʼeqchiʼ 60.8%, Bislama
+   58.6%, Sranan Tongo 58.4%, Kʼicheʼ 58.1%, Yucatec Maya 56.8%, Tuvaluan
+   53.3%, Kiribati 52.4%, Chamorro 50.3%, Interlingua 49.0%, Cusco Quechua
+   43.0%, Kichwa 42.9%, Guadeloupean Creole 42.1%, Papiamento 40.1%, Syriac
+   35.5%, Jamaican Patois 35.5%, Latin 26.8%; 45.6% on average with taps
+   astray, their words unknown 0.2% to 12.5%, at most 0.76% of right words
+   changed (Jamaican Patois's, whose held-out text is small: 2 500
+   words). FineWeb-2's Fiji Hindi is Hindi in Latin
+   letters, Hinglish's: not used. Nor is its Lojban, whose short words
+   differ by a letter (lo le la): autocorrect changed 1.5% of the words
+   typed right.
+   Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
    row group of its FineWeb-2 (856 000 sentences), each document's ৰ
@@ -1094,7 +1147,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **267 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **285 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1116,15 +1169,17 @@ but no model to match the glide against · `—` off
   mhr mrj udm tyv bxr kpv koi myv mdf xal krl olo vep**, and twenty-three more that had a
   keyboard and no model, **kl om rm rn lg ln fj ee ak ts nso tn to wo ty ve nr ay ss qu bm iu**,
   of Iran and the Caucasus **azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf**,
-  and of Africa **crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb**
+  of Africa **crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb**,
+  and of the Americas, the Pacific and the classical and constructed **la pap syr yua quc kek quz qug srn
+  gcf bi ia tpi gil tvl ho ch jam**
   (FineWeb-2's, Nigerian Pidgin's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 9 layouts, the languages
+- **Layout-only** — no bundled model yet: 8 layouts, the languages
   whose web text FineWeb-2 has little of (Fula, Guarani, Cherokee,
   Tamazight in Tifinagh) or only of one variety (Nahuatl's, Eastern
-  Huasteca's Bible; Syriac's, the classical language's), the ones
+  Huasteca's Bible), the ones
   written without spaces whose word lists ICU lacks (Tibetan, Dzongkha),
   and Serbian in Latin letters, Serbian's model reading Cyrillic. The
   recognizer runs but has no vocabulary for them. Sixty-one layout-only
@@ -1185,11 +1240,13 @@ record how each group was added and what it needs at runtime:
   prediction corpora — see
   [Complex-script rendering](#complex-script-rendering).
 - **Middle East / North Africa**: `syr` Syriac (RTL, its
-  own Noto Sans Syriac face) and `ber` Tamazight in Tifinagh (Noto Sans
-  Tifinagh) — both layout-only; `kab` Kabyle in Latin, which *does* carry a
+  own Noto Sans Syriac face; it predicts from FineWeb-2's Classical
+  Syriac, note 7) and `ber` Tamazight in Tifinagh (Noto Sans Tifinagh,
+  layout-only); `kab` Kabyle in Latin, which *does* carry a
   full prediction model (Tatoeba has ~790k Kabyle sentences).
 - **South America**: `qu` Quechua, `gn` Guaraní, `ay`
-  Aymara — Latin on the Spanish (`es`) base, layout-only (sparse corpora).
+  Aymara — Latin on the Spanish (`es`) base; Quechua and Aymara predict
+  from FineWeb-2's text (note 7), Guaraní is layout-only.
 - **African + more Asian**: a coverage batch the shaping engine unblocked
   (rendering is no longer the gate). Clean a–z — Swahili, Somali, Zulu,
   Xhosa, Afrikaans, Oromo; West-African letters on long-press — Hausa
@@ -1299,6 +1356,7 @@ are built on a `us`/`es` base and add theirs the same way:
 | `gsw` `bar` `li` `hsb` `dsb` `scn` `fur` `pms` `lij` `wa` `ltg` `vro` `csb` `szl` `crh` `rue` | each language's own letters first on its national layout's long presses (the language table above lists them: Upper Sorbian's ć č ě ł ń ó ř š ž ź on German's keys, Rusyn's ы ъ ё on Ukrainian's…) | each its own |
 | `haw` `sm` `to` `ty` | ʻ, the glottal stop, a key of its own at the home row's end | each its own |
 | `ce` `inh` `av` `kbd` `ady` `lez` `lbe` `tab` `dar` | Ӏ, the palochka, a key of its own at the home row's end (on Russian's keys) | each its own |
+| `yua` `quc` `kek` `quz` | ʼ, the glottal stop and ejective (Kʼicheʼ, kʼo), a key of its own at the home row's end | each its own |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per

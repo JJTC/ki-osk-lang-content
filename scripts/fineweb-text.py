@@ -198,6 +198,30 @@ their text is the Bible and Watchtower (Kiluba's, Isoko's and Efik's
 nearly all), Seychellois Creole's its National Assembly's records, and
 Kikuyu's Kenya's news.
 
+Eighteen of the Americas', the Pacific's, and the classical and
+constructed languages' are read whole (Latin's every 44th row group,
+Papiamento's every 5th): Latin, Papiamento, Classical Syriac (for the
+Syriac keyboard, whose keymap is its), Yucatec Maya, Kʼicheʼ, Qʼeqchiʼ,
+Cusco Quechua, Kichwa, Sranan Tongo, Guadeloupean Creole, Bislama,
+Interlingua, Tok Pisin, Kiribati, Tuvaluan, Hiri Motu, Chamorro and
+Jamaican Patois. A sentence of English is left out, of Spanish beside
+the Mayan languages and the Quechuas, of Spanish and Dutch beside
+Papiamento (not un no por su, which it writes too), of Dutch beside Sranan,
+of French beside Guadeloupean Creole. A third of FineWeb-2's Latin is Lorem
+ipsum, web pages' placeholder: a document holding it is left out. A Mayan
+or Quechuan glottal stop or ejective written as an apostrophe, a quote or
+the saltillo after a letter (k'o, saˈ) is read as ʼ, which their keyboards
+type; Syriac's vowel points, which its Bibles write and few type, are left
+out (not the seyame, which marks a plural). FineWeb-2's Kichwa is a Bible
+site's pages, a dozen languages' verses among them: a document is kept
+where Kichwa's own words (mana alli chai ima) are 3% of its words, and a
+sentence where e and o are no more than a quarter of its vowels (Kichwa
+writes a i u), none of Twi's ɛ ɔ is written, and the other languages'
+words are under 15%. FineWeb-2's Fiji Hindi is Hindi in Latin letters
+(Hinglish, hi-Latn's): not read. Nor is its Lojban, whose short words
+differ by a letter (lo le la, ku ke ka): the keyboard's autocorrect
+changed 1.5% of the words typed right, with every tap true.
+
 Each kept document is cut into sentences after a full stop, danda,
 question or exclamation mark; a sentence of fewer than three words, of
 more than 1 000 characters, with wiki markup, or fewer than half of whose
@@ -389,6 +413,31 @@ KARAKALPAK_OLD = re.compile("([aouginAOUGIN])['’ʼ‘`](?=[^\\W\\d_])(?!s\\b)"
 # Africa's: Spanish's words that Cape Verdean Creole does not write (not
 # es, its "they"), beside Portuguese's.
 CAPE_VERDE_RIVAL = PORTUGUESE_ONLY | set("el los las del con por una para que".split())
+# The Americas', the Pacific's and the classical languages': Spanish's
+# and Dutch's words that Papiamento writes its own for (y, el, que, het
+# for i, e, ku, e; not un no por su, which it writes too); Lorem ipsum,
+# which web pages hold for text to come, in FineWeb-2's Latin.
+PAPIAMENTO_RIVAL = set("y el los las del que con para una es het niet zijn een van voor".split())
+LOREM = set("lorem consectetur adipiscing eiusmod incididunt".split())
+# Kichwa's own words: FineWeb-2's Kichwa is a Bible site's pages, some of
+# them in other languages (Twi's, Swedish's, Portuguese's, Spanish's,
+# Swahili's),
+# which have none; a sentence with a letter Kichwa does not write (Twi's ɛ
+# ɔ), more than 15% the other languages' words, or e and o more than a
+# quarter of its vowels (Kichwa writes a i u: Italian's di che da) is
+# another's too.
+SWEDISH_ONLY = set("och att som det är jag inte för med på".split())
+SWAHILI_ONLY = set("kwa ni wa ya kuwa kama yake za hii".split())
+KICHWA = set("mana alli chai ima chashna shina cai ñuca pai tucui jatun taita shuc can cashpa nishpa".split())
+# A Mayan or Quechuan glottal stop or ejective written after a letter as
+# an apostrophe, a quote or the saltillo ꞌ (k'o, saˈ, ti’): one letter, ʼ
+# (U+02BC), which
+# the keyboard types.
+EJECTIVE = re.compile("(?<=[^\\W\\d_])['’ˈ‘`\uA78C]")
+# Syriac's vowel points and the marks beside them (U+0730 to U+074A), which
+# its Bibles write and few type; not the seyame (U+0308), which marks a
+# plural in unpointed text too.
+SYRIAC_POINTS = re.compile("[\u0730-\u074A]")
 # Arabic's words, after Sorani's letters are folded (فی for في), that
 # Sorani does not write: what marks a sentence of Arabic in its text.
 ARABIC_ONLY = set("فی علی إلی الی الذی التی هذا هذه عن".split())
@@ -460,6 +509,15 @@ def sorani(text):
     return FINAL_AE.sub("\u06D5", text.translate(SORANI_FOLD)).replace("\u0640", "")
 
 
+def three_vowels(s):
+    """Whether `s` reads as a language of three vowels, a i u (Kichwa's):
+    e and o, which only its Spanish loans write (dios), are not more than
+    a quarter of its vowels, as they are in Spanish's, Italian's,
+    Portuguese's and Swedish's sentences."""
+    vowels = [c for c in s.lower() if c in "aeiouáéíóú"]
+    return sum(c in "eoéó" for c in vowels) <= 0.25 * len(vowels)
+
+
 def palochka(text):
     return PALOCHKA.sub("\u04C0", text)
 
@@ -470,6 +528,20 @@ def karakalpak(text):
 
 def abkhaz(text):
     return text.translate(ABKHAZ_FOLD)
+
+
+def ejective(text):
+    return EJECTIVE.sub("\u02BC", text)
+
+
+def syriac(text):
+    return SYRIAC_POINTS.sub("", text)
+
+
+def lorem(text):
+    """A document holding Lorem ipsum, the placeholder Latin of web pages."""
+    lowered = text.lower()
+    return "lorem ipsum" in lowered or "consectetur adipiscing" in lowered
 
 
 def chuvash(text):
@@ -734,6 +806,26 @@ LANGS = {
     "ki": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
     "kmb": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY, "brackets": True},
     "umb": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PORTUGUESE_ONLY, "brackets": True},
+    "la": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 44, "foreign": lorem, "sentence_never": LOREM, "brackets": True},
+    "pap": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | PAPIAMENTO_RIVAL, "every": 5, "brackets": True},
+    "syr": {"script": "SYRIAC", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "normalize": syriac, "brackets": True},
+    "yua": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SPANISH_SET, "normalize": ejective, "brackets": True},
+    "quc": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SPANISH_SET, "normalize": ejective, "brackets": True},
+    "kek": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SPANISH_SET, "normalize": ejective, "brackets": True},
+    "quz": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SPANISH_SET, "normalize": ejective, "brackets": True},
+    "qug": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | SPANISH_SET | PORTUGUESE_ONLY | SWEDISH_ONLY | SWAHILI_ONLY,
+            "script_only": True, "brackets": True,
+            "own": KICHWA, "rival": set(), "own_least": 0.03, "letters_never": set("ɛɔĩũšž"), "three_vowels": True},
+    "srn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | DUTCH_ONLY, "brackets": True},
+    "gcf": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | FRENCH_SET, "brackets": True},
+    "bi": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "ia": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "tpi": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "gil": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "tvl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "ho": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "ch": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    "jam": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
 }
 
 
@@ -805,6 +897,10 @@ def sentences(text, conf):
                 if "sentence_rival" in conf and share(words(s.lower()), conf["sentence_rival"]) > 0.15:
                     continue
                 if "sentence_never" in conf and not conf["sentence_never"].isdisjoint(words(s.lower())):
+                    continue
+                if "letters_never" in conf and any(c in conf["letters_never"] for c in s):
+                    continue
+                if "three_vowels" in conf and not three_vowels(s):
                     continue
                 if len(s) <= 1000 and long_enough(s, conf) and not MARKUP.search(s) and in_script(s, script):
                     yield s
