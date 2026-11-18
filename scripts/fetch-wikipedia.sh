@@ -10,7 +10,10 @@
 # the text of the Wikimedia Incubator's test wikis of languages with no
 # Wikipedia yet: Magahi (beside its FineWeb-2 text), Adilabad Gondi, in
 # the Telugu script, Khowar, and Montenegrin, in Latin letters (its few
-# Cyrillic sentences left out).
+# Cyrillic sentences left out); Rinconada Bikol, Jambi, Makassar, Manado,
+# Palembang (Musi) and Kelantan-Pattani Malay, Makassarese, Pamona,
+# Ibibio and East Franconian, and Southern Kurdish and Western Balochi in
+# the Arabic script.
 #
 # The text comes from each wiki's CirrusSearch dump (Wikimedia's
 # cirrus_search_index, an article a JSON document whose "text" is its
@@ -22,16 +25,20 @@
 #   $OUT/<lang>.txt     its sentences, at most CAP: the corpus
 #                       build-predict learns the language's model from
 #                       (`make predict-assets`), which sources.lock records
-#   eval/<lang>.txt     the first EVAL_CAP sentences of every 20th article,
-#                       held out of the corpus: what eval-predict measures
-#                       the model on (committed)
+#   eval/<lang>.txt     the first EVAL_CAP sentences of every 20th article
+#                       (of the small test wikis', every 10th), held out
+#                       of the corpus: what eval-predict measures the
+#                       model on (committed)
 #
 # The Incubator's dump holds all its test wikis: a language's articles
 # are those whose title starts with its prefix (Wp/mag/), and with a
 # neighbour named, an article heavy with that neighbour's function words
 # is left out (wikipedia-text.py --neighbour): a test wiki's writers paste
-# their neighbour's articles in. The dumps are kept in $OUT/raw, and a
-# kept one whose sha256 is right is not downloaded again.
+# their neighbour's articles in (Indonesian's and English's beside the
+# Malays). The small wikis' bot-made stubs are left out but three of each
+# shape (--shapes: Rinconada Bikol's towns, Western Balochi's German
+# towns and calendar days). The dumps are kept in $OUT/raw, and a kept
+# one whose sha256 is right is not downloaded again.
 #
 #   scripts/fetch-wikipedia.sh            # every language
 #   scripts/fetch-wikipedia.sh ne or      # some
@@ -71,12 +78,27 @@ fa   fa   fawiki_content-20261108-00000.json.bz2   1c793a3006d5ed7f78e58cf3f1205
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1
-# language  prefix  script  neighbour (- for none)
+# language  prefix  script  neighbours (- for none)  [wikipedia-text.py's
+# options: the small wikis' every 10th article held out, at most three
+# sentences of a shape (--shapes, their bots' stubs), Southern Kurdish
+# read as Sorani's keys type it]
 INCUBATOR="
 mag  Wp/mag/  DEVANAGARI  hi
 wsg  Wp/wsg/  TELUGU      -
 khw  Wp/khw/  ARABIC      ur
 cnr  Wp/cnr/  LATIN       -
+bto  Wp/bto/  LATIN       en     --shapes 3 --holdout 10
+jax  Wp/jax/  LATIN       id,en  --shapes 3 --holdout 10
+mfp  Wp/mfp/  LATIN       id,en  --shapes 3 --holdout 10
+xmm  Wp/xmm/  LATIN       id,en  --shapes 3 --holdout 10
+mui  Wp/mui/  LATIN       id,en  --shapes 3 --holdout 10
+mak  Wp/mak/  LATIN       id,en  --shapes 3 --holdout 10
+pmf  Wp/pmf/  LATIN       -      --shapes 3 --holdout 10
+mfa  Wp/mfa/  LATIN       id,en  --shapes 3 --holdout 10
+ibb  Wp/ibb/  LATIN       en     --shapes 3 --holdout 10
+vmf  Wp/vmf/  LATIN       -      --shapes 3 --holdout 10
+sdh  Wp/sdh/  ARABIC      fa     --shapes 3 --holdout 10 --sorani
+bgn  Wp/bgn/  ARABIC      fa,ur  --shapes 3 --holdout 10
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)
@@ -97,10 +119,12 @@ for lang in $langs; do
 	else
 		row=$(echo "$INCUBATOR" | awk -v l="$lang" '$1 == l')
 		[ -n "$row" ] || { echo "fetch-wikipedia: no dump for $lang" >&2; exit 2; }
-		read -r _ prefix script neighbour <<<"$row"
+		read -r _ prefix script neighbour options <<<"$row"
 		wiki=incubator file=$INCUBATOR_FILE sha=$INCUBATOR_SHA
 		extra=(--prefix "$prefix")
 		[ "$neighbour" = - ] || extra+=(--neighbour "$neighbour")
+		# shellcheck disable=SC2206 # the options are words
+		[ -z "$options" ] || extra+=($options)
 	fi
 	dump="$OUT/raw/$file"
 	if [ ! -f "$dump" ] || [ "$(sha256sum "$dump" | cut -d' ' -f1)" != "$sha" ]; then

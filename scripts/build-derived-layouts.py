@@ -119,7 +119,15 @@ they hardly write (q and x on those keys' long presses), Kabiye's ʊ ɔ,
 Akoose's ɛ and glottal stop (which moves there from the home row's end),
 Grebo's ǒ ě and Nande's ũ. Montenegrin is typed on Serbian's Latin keys
 with ś ź first on the long presses of s z, and on its Cyrillic ones,
-with no model, with с́ з́ on с з. A key at the home row's end types its
+with no model, with с́ з́ on с з. Twelve of the Incubator's test wikis'
+languages: Rinconada Bikol (ñ), the Malays of Jambi, Makassar and Manado
+as the US keys are, Palembang's Musi (é è ó), Kelantan-Pattani Malay
+(è é ó ũ) and Ibibio (ọ ñ n̄ ị ẹ ụ ʌ) with their letters first on the
+long presses, Makassarese and Pamona with an apostrophe key for their
+glottal stop (se're, ince'emo: a seventh of Pamona's words); East
+Franconian on German's keys with â ô; Southern Kurdish on Sorani's, ۊ on
+و; and Western Balochi on Persian's, with Urdu's ے ں ٹ ڈ ڑ ہ ھ and
+Pashto's ګ on the long presses of ی ن ت د ر ه گ. A key at the home row's end types its
 capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
@@ -450,6 +458,19 @@ DERIVED = [
     ("gez", "am", "ግዕዝ", {}),
     ("cnr", "sr-latn", "Crnogorski", {"s": ["ś"], "S": ["Ś"], "z": ["ź"], "Z": ["Ź"]}),
     ("cnr-Cyrl", "sr", "Црногорски", {"с": ["с́"], "С": ["С́"], "з": ["з́"], "З": ["З́"]}, {"model": False}),
+    ("bto", "us", "Rinconada Bikol", {"n": ["ñ"], "N": ["Ñ"]}),
+    ("jax", "us", "Bahaso Jambi", {}),
+    ("mfp", "us", "Bahasa Melayu Makassar", {}),
+    ("xmm", "us", "Bahasa Manado", {}),
+    ("mui", "us", "Baso Pelémbang", {"e": ["é", "è"], "E": ["É", "È"], "o": ["ó"], "O": ["Ó"]}),
+    ("mak", "us", "Basa Mangkasarak", {}, {"home": "'"}),
+    ("pmf", "us", "Basa Pamona", {}, {"home": "'"}),
+    ("mfa", "us", "Kècèk Nnayu Klatae-Ttaning", {"e": ["è", "é"], "E": ["È", "É"], "o": ["ó"], "O": ["Ó"], "u": ["ũ"], "U": ["Ũ"]}),
+    ("ibb", "us", "Ibibio", {"o": ["ọ"], "O": ["Ọ"], "n": ["ñ", "n̄"], "N": ["Ñ", "N̄"], "i": ["ị"], "I": ["Ị"], "e": ["ẹ"], "E": ["Ẹ"],
+                            "u": ["ụ"], "U": ["Ụ"], "a": ["ʌ"], "A": ["Ʌ"]}),
+    ("vmf", "de", "Fränggisch", {"a": ["â"], "A": ["Â"], "o": ["ô"], "O": ["Ô"]}),
+    ("sdh", "ckb", "کوردی خوارین", {"و": ["ۊ"]}),
+    ("bgn", "fa", "بلوچی رخشانی", {"ی": ["ے"], "ن": ["ں"], "ت": ["ٹ"], "د": ["ڈ"], "ر": ["ڑ"], "ه": ["ہ", "ھ"], "گ": ["ګ"]}),
 ]
 
 
