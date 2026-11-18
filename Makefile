@@ -55,7 +55,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  niu hwc acf mrw nij guc ljp sas gor itv bku bpr \
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
                  cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
-                 yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc
+                 yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
+                 rmy rmn ojb
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -164,7 +165,8 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  niu hwc acf mrw nij guc ljp sas gor itv bku bpr \
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
                  cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
-                 yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc
+                 yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
+                 rmy rmn ojb
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -310,8 +312,10 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # So do the twenty-eight of Africa's long tail with 0.4 to 0.9 MB of
 # FineWeb-2's text (2 600 to 25 000 kinds).
 # And the twenty-three after them (Niuean… Dagaare), the twelve after
-# those (Coptic, Lahu, Hunsrik… Aja: 1 700 to 35 000 kinds) and the
-# thirteen after those (Nenets… Sassarese).
+# those (Coptic, Lahu, Hunsrik… Aja: 1 700 to 35 000 kinds), the
+# thirteen after those (Nenets… Sassarese), and the two Romanis and
+# Northwestern Ojibwe (29 000 to 88 000 kinds: Balkan Romani's saves 0.2
+# points more at 120 000).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -334,7 +338,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        niu hwc acf mrw nij guc ljp sas gor itv bku bpr \
                        quh gcr tum tll guz kde nyy mas mnk mer dga \
                        cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
-                       yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc
+                       yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
+                       rmy rmn ojb
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings

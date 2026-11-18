@@ -16,11 +16,17 @@
           "keys": [
             {
               "width_units": 1,
-              "label": "q",
+              "label": "ǒ",
               "output": {
-                "kind": "keycode",
-                "code": 16
-              }
+                "kind": "text",
+                "text": "ǒ"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "q"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -220,13 +226,6 @@
           "height_units": 1.0,
           "keys": [
             {
-              "width_units": 0.5,
-              "label": "",
-              "output": {
-                "kind": "none"
-              }
-            },
-            {
               "width_units": 1,
               "label": "a",
               "output": {
@@ -339,10 +338,19 @@
               }
             },
             {
-              "width_units": 0.5,
-              "label": "",
+              "width_units": 1,
+              "label": "ɛ",
               "output": {
-                "kind": "none"
+                "kind": "text",
+                "text": "ɛ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ɔ",
+              "output": {
+                "kind": "text",
+                "text": "ɔ"
               }
             }
           ]
@@ -368,11 +376,17 @@
             },
             {
               "width_units": 1,
-              "label": "x",
+              "label": "ě",
               "output": {
-                "kind": "keycode",
-                "code": 45
-              }
+                "kind": "text",
+                "text": "ě"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "x"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -499,11 +513,17 @@
           "keys": [
             {
               "width_units": 1,
-              "label": "Q",
+              "label": "Ǒ",
               "output": {
-                "kind": "keycode",
-                "code": 16
-              }
+                "kind": "text",
+                "text": "Ǒ"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "Q"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -663,13 +683,6 @@
           "height_units": 1.0,
           "keys": [
             {
-              "width_units": 0.5,
-              "label": "",
-              "output": {
-                "kind": "none"
-              }
-            },
-            {
               "width_units": 1,
               "label": "A",
               "output": {
@@ -756,10 +769,19 @@
               }
             },
             {
-              "width_units": 0.5,
-              "label": "",
+              "width_units": 1,
+              "label": "Ɛ",
               "output": {
-                "kind": "none"
+                "kind": "text",
+                "text": "Ɛ"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "Ɔ",
+              "output": {
+                "kind": "text",
+                "text": "Ɔ"
               }
             }
           ]
@@ -785,11 +807,17 @@
             },
             {
               "width_units": 1,
-              "label": "X",
+              "label": "Ě",
               "output": {
-                "kind": "keycode",
-                "code": 45
-              }
+                "kind": "text",
+                "text": "Ě"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "X"
+                }
+              ]
             },
             {
               "width_units": 1,

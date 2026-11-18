@@ -16,11 +16,17 @@
           "keys": [
             {
               "width_units": 1,
-              "label": "q",
+              "label": "ũ",
               "output": {
-                "kind": "keycode",
-                "code": 16
-              }
+                "kind": "text",
+                "text": "ũ"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "q"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -297,6 +303,14 @@
             },
             {
               "width_units": 1,
+              "label": "ĩ",
+              "output": {
+                "kind": "text",
+                "text": "ĩ"
+              }
+            },
+            {
+              "width_units": 1,
               "label": "'",
               "output": {
                 "kind": "text",
@@ -457,11 +471,17 @@
           "keys": [
             {
               "width_units": 1,
-              "label": "Q",
+              "label": "Ũ",
               "output": {
-                "kind": "keycode",
-                "code": 16
-              }
+                "kind": "text",
+                "text": "Ũ"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "Q"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -656,6 +676,14 @@
               "output": {
                 "kind": "keycode",
                 "code": 38
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "Ĩ",
+              "output": {
+                "kind": "text",
+                "text": "Ĩ"
               }
             },
             {

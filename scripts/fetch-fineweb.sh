@@ -41,8 +41,10 @@
 # Tokelauan, Kankanaey, Mamasa, Livonian, Ambonese Malay, Aja); thirteen
 # with 0.1 to 1.4 MB, its rest that reads as its language (Nenets, Dungan,
 # Tausug, Ewondo, Tooro, Makhuwa-Meetto, Kanuri, Giryama, Lango, Hanunoo,
-# Toraja-Sa'dan, Ledo Kaili, Sassarese); and Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
-# FINEWEB_PLUS_LANGS).
+# Toraja-Sa'dan, Ledo Kaili, Sassarese); Vlax and Balkan Romani, each
+# from both of FineWeb-2's Romani files (each holds the other's
+# documents), and Northwestern Ojibwe in syllabics; and Assamese, whose
+# Tatoeba corpus is small, beside it (the Makefile's FINEWEB_PLUS_LANGS).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
 # it is ODC-By 1.0, and its use subject to Common Crawl's Terms of Use.
@@ -61,9 +63,10 @@
 # Yao's hold a hundred words each, Pa'O's 31 sentences, Hakka's, Amis'
 # and Zhuang's 1 300 to 4 200 words, the 28 of Africa's long tail with
 # 0.4 to 0.9 MB of text a few hundred, the twenty-three after them, and
-# the twelve and thirteen after those) has none pinned: every 10th
-# document of its train split is held out instead (Lango's every 9th: its
-# 10th is two fifths of its text).
+# the twelve and thirteen after those, Ojibwe's) has none pinned: every
+# 10th document of its train split is held out instead (Lango's every
+# 9th: its 10th is two fifths of its text); nor do the Romanis, whose
+# test splits are mostly the spam and the Macedonian beside them.
 #
 # Neither is committed: the text is the web's. The parquet files are kept
 # in $OUT/raw, and a kept one whose sha256 is right is not downloaded
@@ -657,6 +660,11 @@ hnn      hnn_Latn  train/000_00000.parquet 177ef7ca6360de4f4affa9af3d508210d8257
 sda      sda_Latn  train/000_00000.parquet 45af0741453971824db20ad53e74e52f3d0bc2fe400ab2e375dc90463f9f4ffa
 lew      lew_Latn  train/000_00000.parquet 319f080a9b23fc89d56036c3f578b4f1bcc5e9701d5db9886cc5e2e39330c1f2
 sdc      sdc_Latn  train/000_00000.parquet dfbde4245bea78c73d28ca067a020eaebb2a04655f00ecebac3d0442e65c6ec6
+rmy      rmy_Latn  train/000_00000.parquet cc6b1dbf40e3806a9e6e7341d43da442989d8caa843894316c2912a572413638
+rmy      rmn_Latn  train/000_00000.parquet 417c119d46320f138fc90bb3650c9119761da26e5a159a0130061f346a30fbe4
+rmn      rmn_Latn  train/000_00000.parquet 417c119d46320f138fc90bb3650c9119761da26e5a159a0130061f346a30fbe4
+rmn      rmy_Latn  train/000_00000.parquet cc6b1dbf40e3806a9e6e7341d43da442989d8caa843894316c2912a572413638
+ojb      ojb_Cans  train/000_00000.parquet 77f60d8ac75afefab7c9d65595beedc5f2e4679f310c2d97490950574b3039a0
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

@@ -188,7 +188,7 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Three hundred and seventeen models learn from FineWeb-2's web text alone: those of Bodo,
+Three hundred and twenty models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
@@ -247,7 +247,8 @@ Tetela, Tumbuka and Wayuu), and of twelve more (Aja, Ambonese Malay,
 Coptic, Hunsrik, Kankanaey, Lahu, Livonian, Mamasa, Ottawa, Plains Cree,
 Swampy Cree and Tokelauan), and of thirteen more (Dungan, Ewondo, Giryama,
 Hanunoo, Kanuri, Lango, Ledo Kaili, Makhuwa-Meetto, Nenets, Sassarese,
-Tausug, Tooro and Toraja-Sa'dan); and Assamese's from it beside its Tatoeba sentences, Magahi's beside its Incubator text, and
+Tausug, Tooro and Toraja-Sa'dan), and of three more (Balkan Romani,
+Northwestern Ojibwe and Vlax Romani); and Assamese's from it beside its Tatoeba sentences, Magahi's beside its Incubator text, and
 Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's beside GlotCC's
 (below).
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
@@ -926,6 +927,39 @@ SOFTWARE.
 ```
 
 Source: https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_sgaw_karen
+
+`layouts/ojb.json`, Northwestern Ojibwe's, is **Keyman's fv_ojibwa**
+keyboard (10.1.1, FirstVoices, SIL Global and the First Peoples'
+Cultural Foundation), its touch layout's letter rows as its rules type
+them, each syllable's long vowel and w-dotted forms on its long press
+(`scripts/build-keyman-layouts.py`, its files pinned by sha256), under
+the MIT licence it carries:
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2015-2025 FirstVoices, SIL Global, 2015 First Peoples' Cultural Foundation
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+Source: https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/fv/fv_ojibwa
 
 ## Emoji
 

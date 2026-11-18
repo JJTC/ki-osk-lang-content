@@ -299,6 +299,7 @@ nyn = "Nkore"
 nyo = "Nyoro"
 nyy = "Nyakyusa"
 oc  = "Occitan"
+ojb = "Northwestern Ojibwe"
 olo = "Livvi-Karelian"
 om  = "Oromo"
 or  = "Odia"
@@ -325,6 +326,8 @@ qug = "Kichwa (Chimborazo)"
 quz = "Cusco Quechua"
 rcf = "Réunion Creole"
 rm  = "Romansh"
+rmn = "Balkan Romani"
+rmy = "Vlax Romani"
 rn  = "Kirundi"
 ro  = "Romanian"
 ru  = "Russian"
@@ -772,6 +775,7 @@ gmv     = ["gmv"]
 gn      = ["gn"]
 gbm     = ["gbm", "gbm-abc"]
 gcf     = ["gcf"]
+gez     = ["gez"]
 gil     = ["gil"]
 glv     = ["glv"]
 gog     = ["gog"]
@@ -939,6 +943,7 @@ nyn     = ["nyn"]
 nyo     = ["nyo"]
 nyy     = ["nyy"]
 oc      = ["oc"]
+ojb     = ["ojb"]
 olo     = ["olo"]
 om      = ["om"]
 or      = ["or", "or-abc"]
@@ -965,6 +970,8 @@ qug     = ["qug"]
 quz     = ["quz"]
 rcf     = ["rcf"]
 rm      = ["rm"]
+rmn     = ["rmn"]
+rmy     = ["rmy"]
 rn      = ["rn"]
 ro      = ["ro"]
 ru      = ["ru"]
@@ -1076,19 +1083,29 @@ zu      = ["zu"]
 [layouts.names]
 am  = "Amharic"
 chr = "Cherokee"
+gez = "Ge'ez"
 ko  = "Korean, Hangul input"
 nah = "Nahuatl"
 ti  = "Tigrinya"
 
 # The layouts made from another source than xkeyboard-config, and the
 # licence and source each adds to its pack: Sgaw Karen's, from Keyman's
-# sil_sgaw_karen (scripts/build-keyman-layouts.py).
+# sil_sgaw_karen, and Northwestern Ojibwe's, from Keyman's fv_ojibwa
+# (scripts/build-keyman-layouts.py).
 [layouts.added.ksw]
 licenses = [
   { name = "MIT (Keyman's sil_sgaw_karen, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_sgaw_karen/LICENSE.md", share_alike = false },
 ]
 sources = [
   { name = "Keyman's Sgaw Karen keyboard (sil_sgaw_karen 1.1.3), its touch layout", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_sgaw_karen" },
+]
+
+[layouts.added.ojb]
+licenses = [
+  { name = "MIT (Keyman's fv_ojibwa, FirstVoices, SIL Global, First Peoples' Cultural Foundation)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/fv/fv_ojibwa/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Ojibwe syllabics keyboard (fv_ojibwa 10.1.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/fv/fv_ojibwa" },
 ]
 
 # `lock`/`input` name the sources.lock entry and input whose recorded

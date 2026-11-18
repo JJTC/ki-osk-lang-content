@@ -13,3 +13,6 @@ predict/corpora/*.part
 # Cargo build output, and the pack manifests `make packs` writes.
 /target/
 /dist/
+
+# Python's bytecode, which importing a script writes beside it.
+__pycache__/

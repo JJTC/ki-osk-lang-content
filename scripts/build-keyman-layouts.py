@@ -16,10 +16,20 @@ Keyman's layout autocorrect changed one Karen word typed right in
 fifteen): the keys of a sign and the asat, ၣ် ာ် ၢ်, type the sign, and
 the asat, ်, the commonest of Karen's letters, has a key of its own at
 the home row's end; the shift view keeps Keyman's keys of two or three.
-The views of symbols and the control row are the US template's, as
-scripts/build-layout.py's layouts' are; every key types text, so no
-keymap is needed (xkb_layout names Burmese's, mm, for the keys the
-control row types by keycode).
+Northwestern Ojibwe's is FirstVoices' fv_ojibwa (MIT), its syllabics
+for a tablet: the i and a syllables of each consonant on the default
+layer, with the finals, and the e and o syllables on the shift layer.
+Keyman types a long vowel's syllable and a w-dotted one with keys of
+their own after or before the syllable (ᑭ˙ ᑮ, ᐧᑭ ᑶ), by rules with a
+context, which a key that types one letter has none of: on each
+syllable's long press are its long vowel and its w-dotted forms first,
+as Unicode names them (ᑭ's ᑮ ᑶ ᑸ, ᑫ's ᑴ), and on ᒃ's the final ᕽ
+(hk), which the keyboard lacks and one Ojibwe word in twenty writes; its
+full stop ᙮, which its shift layer has, is on the long press of the
+full stop. The views of symbols and the control row are the US
+template's, as scripts/build-layout.py's layouts' are; every key types
+text, so no keymap is needed (xkb_layout names the script's, Burmese's
+mm and Canada's ca, for the keys the control row types by keycode).
 
 Each keyboard's files are fetched from keymanapp/keyboards at a pinned
 commit and checked against their sha256 into $KEYMAN_DIR (default
@@ -36,6 +46,7 @@ import os
 import pathlib
 import re
 import sys
+import unicodedata
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -50,7 +61,18 @@ KEYBOARDS = [
         "source/sil_sgaw_karen.kmn": "915740a85216b9553abae0b7dec0bfa3ecbbc18d922e00bd9c3d1bf6212461bd",
         "LICENSE.md": "dbb1d1f49159d4713f308d293eb2d3a201ae495332600f729cea6f22453bf78a",
     }),
+    ("ojb", "ᐊᓂᔑᓇᐯᒧᐎᓐ", "release/fv/fv_ojibwa", "7225701d383cf8317f595bfd73481fcd87524f44", {
+        "source/fv_ojibwa.keyman-touch-layout": "79ff1490dee2a14f54472730ff6f762709e05970bb9b16d35df35c585ace723d",
+        "source/fv_ojibwa.kmn": "7b3a98522842d6061158ae8f6c05c6f3f1d6d62b998c55976c7a6e7e63e68764",
+        "LICENSE.md": "d0ca606a218e493ce0f0e8374e6972d35a783cbcd8aa15b0ef0f91998f56dca3",
+    }),
 ]
+
+# Each keyboard's touch platform, the keymap its control row types
+# through, and its script's font.
+PLATFORM = {"ksw": "phone", "ojb": "tablet"}
+XKB_LAYOUT = {"ksw": "mm", "ojb": "ca"}
+FONT_SCRIPT = {"ksw": "myanmar", "ojb": "canadian_aboriginal"}
 
 # Keys whose rule types other than their label, which type their label.
 TYPES_ITS_LABEL = {("ksw", "shift", "K_QUOTE")}
@@ -60,9 +82,18 @@ TYPES_ITS_LABEL = {("ksw", "shift", "K_QUOTE")}
 ONE_LETTER = {("ksw", "default")}
 HOME_ROW_END = {("ksw", "default"): "\u103A"}
 
-# A rule with no context: `+ [SHIFT K_X] > U+1062 U+103a`.
-RULE = re.compile(r"^\+ \[((?:SHIFT )?)(K_\w+)\] > ((?:U\+[0-9A-Fa-f]+\s*)+|nul)\s*$")
+# The keyboards whose syllables take their long vowel and w-dotted forms
+# on their long presses (syllabic_forms), the letters a key gains on its
+# long press, and the letter the control row's full stop gains on its.
+SYLLABICS = {"ojb"}
+LONG_PRESS_ADDED = {("ojb", "\u1483"): ["\u157D"]}
+FULL_STOP_LONG_PRESS = {"ojb": "\u166E"}
+
+# A rule with no context: `+ [SHIFT K_X] > U+1062 U+103a`, `+ [T_Q] > 'ᐃ'`.
+RULE = re.compile(r"^\+ \[((?:SHIFT )?)([KT]_\w+)\] > ((?:U\+[0-9A-Fa-f]+\s*)+|nul|'[^']+')\s*$")
 SPECIAL = {"K_SHIFT", "K_BKSP", "K_ENTER", "K_SPACE", "K_NUMLOCK", "K_LOPT", "K_LOWER"}
+# Touch keys that type nothing: Keyman's special keys and its spacers.
+NO_LETTER = {"1", "2", "10"}
 
 
 def fetch(path, commit, files):
@@ -91,9 +122,35 @@ def rules(kmn):
     for line in kmn.decode("utf-8-sig").splitlines():
         m = RULE.match(line.strip())
         if m:
-            text = "" if m.group(3) == "nul" else "".join(chr(int(u[2:], 16)) for u in m.group(3).split())
+            if m.group(3) == "nul":
+                text = ""
+            elif m.group(3).startswith("'"):
+                text = m.group(3)[1:-1]
+            else:
+                text = "".join(chr(int(u[2:], 16)) for u in m.group(3).split())
             out[(bool(m.group(1)), m.group(2))] = text
     return out
+
+
+def syllabic_forms(text):
+    """A syllable's long vowel and w-dotted forms, as Unicode's syllabics
+    block names them (ᑭ's ᑮ ᑶ ᑸ; ᑫ's ᑴ, e having no short vowel), which
+    Keyman types after its ˙ key and before its ᐧ: not the Extended
+    block's (ᓂ's ᣆ), which it does not type."""
+    m = re.fullmatch(r"(P|T|K|C|M|N|S|SH|Y)?(E|I|O|A)", unicodedata.name(text, "").removeprefix("CANADIAN SYLLABICS "))
+    if len(text) != 1 or not m:
+        return []
+    c, v = m.group(1) or "", m.group(2)
+    names = [c + "WE"] if v == "E" else [c + v + v, c + "W" + v, c + "W" + v + v]
+    forms = []
+    for n in names:
+        try:
+            form = unicodedata.lookup("CANADIAN SYLLABICS " + n)
+        except KeyError:
+            continue
+        if "\u1400" <= form <= "\u167F":
+            forms.append(form)
+    return forms
 
 
 def typed(lang, layer, key, kmn):
@@ -118,15 +175,17 @@ def letter_rows(lang, layer, kmn):
     for row in layer["row"][:3]:
         keys = []
         for k in row["key"]:
-            if k["id"] in SPECIAL or k.get("sp") in ("1", "2"):
+            if k["id"] in SPECIAL or str(k.get("sp")) in NO_LETTER:
                 continue
             text = typed(lang, layer["id"], k, kmn)
             label = k["text"]
             if (lang, layer["id"]) in ONE_LETTER:
                 text = label = text[0]
             key = {"width_units": 1, "label": label, "output": {"kind": "text", "text": text}}
-            if k.get("sk"):
-                key["long_press"] = [{"kind": "text", "text": typed(lang, layer["id"], s, kmn)} for s in k["sk"]]
+            long_press = (syllabic_forms(text) if lang in SYLLABICS else []) + LONG_PRESS_ADDED.get((lang, text), [])
+            long_press += [typed(lang, layer["id"], s, kmn) for s in k.get("sk", [])]
+            if long_press:
+                key["long_press"] = [{"kind": "text", "text": t} for t in long_press]
             keys.append(key)
         rows.append(keys)
     end = HOME_ROW_END.get((lang, layer["id"]))
@@ -139,11 +198,11 @@ def build(lang, name, path, commit, files):
     got = fetch(path, commit, files)
     touch = json.loads(next(v for k, v in got.items() if k.endswith(".keyman-touch-layout")).decode("utf-8-sig"))
     kmn = rules(next(v for k, v in got.items() if k.endswith(".kmn")))
-    layers = {layer["id"]: layer for layer in touch["phone"]["layer"]}
+    layers = {layer["id"]: layer for layer in touch[PLATFORM[lang]]["layer"]}
     layout = json.loads((ROOT / "layouts" / "us.json").read_text(encoding="utf-8"))
     layout["id"] = lang
     layout["name"] = name
-    layout["xkb_layout"] = "mm"
+    layout["xkb_layout"] = XKB_LAYOUT[lang]
     layout.pop("xkb_variant", None)
     layout["direction"] = "ltr"
     layout["swipe_enabled"] = False
@@ -153,7 +212,7 @@ def build(lang, name, path, commit, files):
     else:
         layout["prediction_enabled"] = False
         layout.pop("prediction_lang", None)
-    layout["font_script"] = "myanmar"
+    layout["font_script"] = FONT_SCRIPT[lang]
     for view in layout["views"]:
         layer = {"base": "default", "shift": "shift"}.get(view["id"])
         if layer is None:
@@ -164,6 +223,10 @@ def build(lang, name, path, commit, files):
         rows[0]["keys"] = r0
         rows[1]["keys"] = r1
         rows[2]["keys"] = [shift] + r2 + [backspace]
+        stop = FULL_STOP_LONG_PRESS.get(lang)
+        for key in rows[3]["keys"] if stop else []:
+            if key.get("output") == {"kind": "text", "text": "."}:
+                key["long_press"] = [{"kind": "text", "text": stop}] + key.get("long_press", [])
     # The template's keys first, then the layout's own fields as
     # build-layout.py writes them.
     return json.dumps(layout, ensure_ascii=False, indent=2) + "\n"

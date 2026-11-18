@@ -97,18 +97,28 @@ too. Lahu writes a tone after most of its syllables (ˬ ˇ ꞈ ˍ ˆ ˉ: three
 words in four end in one) and no q, x or z: ꞈ, its apostrophe and ˍ are
 typed on those keys, ˆ and ˉ on the long presses of ꞈ and ˍ, and ˬ and ˇ,
 the commonest, at the home row's end, where its desktop keyboard has them
-(on ; and Shift+;). Thirteen more of the long tail: Nenets on Russian's
-keys, ӈ in place of the ъ it hardly writes (ъ stays on ь's long press)
-and its two glottal stops, which nearly half its words write (поʼ,
-ненэцяˮ), at the home row's end: the apostrophe and ˮ; Dungan on them
-too, ә in place of ъ, җ at the home row's end and ү ў first on у;
-Tausug, Ewondo, Tooro, Makhuwa-Meetto, Kanuri, Giryama, Lango, Hanunoo,
-Toraja-Sa'dan and Ledo Kaili on the US keys and Sassarese on Italian's,
-their letters first on the long presses, with an apostrophe key for
-those whose words write one (Tausug's and Toraja-Sa'dan's glottal stop,
-Giryama's at'u) and Kanuri's ə, in a quarter of its words, at the home
-row's end. A key at the home row's end types its capital on the Shift
-view (Ā, Ɔ, Җ). A letter only a long press types turns the gesture on
+(on ; and Shift+;). Thirteen more of the long tail: Nenets on Russian's keys, ӈ in place of
+the ъ it hardly writes (ъ stays on ь's long press) and its two glottal
+stops, which nearly half its words write (поʼ, ненэцяˮ), at the home
+row's end: the apostrophe and ˮ; Dungan on them too, ә in place of ъ, җ
+at the home row's end and ү ў first on у; Tausug, Ewondo, Tooro,
+Makhuwa-Meetto, Kanuri, Giryama, Lango, Hanunoo, Toraja-Sa'dan and Ledo
+Kaili on the US keys and Sassarese on Italian's, their letters first on
+the long presses, with an apostrophe key for those whose words write one
+(Tausug's and Toraja-Sa'dan's glottal stop, Giryama's at'u) and Kanuri's
+ə, in a quarter of its words, at the home row's end. Vlax Romani is
+typed on the US keys, its č ć š ž đ first on the long presses of c s z
+d, and Balkan Romani on Serbian's Latin keys, which have them all; Ge'ez
+on Amharic's, its letters composed from Latin ones as Amharic's are,
+with no model. Kabiye, Akoose and Grebo, whose long presses typed more
+than a quarter of their letters, and Nande, whose long presses were in a
+quarter of its words, have keys for the letters their words write most
+of those: two at the home row's end (Kabiye's ɛ ɩ, Akoose's é á, Grebo's
+ɛ ɔ, Nande's ĩ beside its apostrophe), and in place of q and x, which
+they hardly write (q and x on those keys' long presses), Kabiye's ʊ ɔ,
+Akoose's ɛ and glottal stop (which moves there from the home row's end),
+Grebo's ǒ ě and Nande's ũ. A key at the home row's end types its capital
+on the Shift view (Ā, Ɔ, Җ). A letter only a long press types turns the gesture on
 for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
@@ -300,7 +310,9 @@ DERIVED = [
     ("ch", "us", "Finuʼ Chamoru", {"a": ["å"], "n": ["ñ"], "A": ["Å"], "N": ["Ñ"]}),
     ("jam", "us", "Patwa", {}),
     ("kri", "us", "Krio", {"e": ["ɛ"], "o": ["ɔ"], "n": ["ŋ"], "E": ["Ɛ"], "O": ["Ɔ"], "N": ["Ŋ"]}),
-    ("kbp", "us", "Kabɩyɛ", {"e": ["ɛ"], "i": ["ɩ"], "o": ["ɔ"], "u": ["ʊ"], "d": ["ɖ"], "g": ["ɣ"], "n": ["ŋ", "ñ"], "E": ["Ɛ"], "I": ["Ɩ"], "O": ["Ɔ"], "U": ["Ʊ"], "D": ["Ɖ"], "G": ["Ɣ"], "N": ["Ŋ", "Ñ"]}),
+    ("kbp", "us", "Kabɩyɛ", {"e": ["ɛ"], "i": ["ɩ"], "o": ["ɔ"], "u": ["ʊ"], "d": ["ɖ"], "g": ["ɣ"], "n": ["ŋ", "ñ"], "E": ["Ɛ"], "I": ["Ɩ"], "O": ["Ɔ"], "U": ["Ʊ"], "D": ["Ɖ"], "G": ["Ɣ"], "N": ["Ŋ", "Ñ"],
+                             "ʊ": ["q"], "Ʊ": ["Q"], "ɔ": ["x"], "Ɔ": ["X"]},
+     {"swap": {"q": "ʊ", "Q": "Ʊ", "x": "ɔ", "X": "Ɔ"}, "home": ["ɛ", "ɩ"]}),
     ("dag", "us", "Dagbanli", {"e": ["ɛ"], "o": ["ɔ"], "n": ["ŋ"], "g": ["ɣ"], "z": ["ʒ"], "E": ["Ɛ"], "O": ["Ɔ"], "N": ["Ŋ"], "G": ["Ɣ"], "Z": ["Ʒ"]}),
     ("seh", "us", "Cisena", {}),
     ("ada", "us", "Dangme", {"e": ["ɛ"], "o": ["ɔ"], "E": ["Ɛ"], "O": ["Ɔ"]}),
@@ -342,12 +354,16 @@ DERIVED = [
     ("alz", "us", "Alur", {}, {"home": "'"}),
     ("cce", "us", "Chopi", {"n": ["ñ"], "N": ["Ñ"]}),
     ("skg", "us", "Sakalava", {"a": ["à"], "A": ["À"], "e": ["è", "é"], "E": ["È", "É"], "i": ["ì"], "I": ["Ì"], "o": ["ò"], "O": ["Ò"]}),
-    ("bss", "us", "Akoose", {"a": ["á", "â", "ǎ", "ā"], "A": ["Á", "Â", "Ǎ", "Ā"], "e": ["é", "ɛ", "ɛ́", "ē", "ê", "ə", "ə́", "ě", "ə̄", "ɛ̄", "ɛ̂", "ɛ̌", "ə̌", "ə̂", "è"], "E": ["É", "Ɛ", "Ɛ́", "Ē", "Ê", "Ə", "Ə́", "Ě", "Ə̄", "Ɛ̄", "Ɛ̂", "Ɛ̌", "Ə̌", "Ə̂", "È"], "i": ["í", "ī", "ǐ", "î"], "I": ["Í", "Ī", "Ǐ", "Î"], "m": ["ḿ"], "M": ["Ḿ"], "n": ["ŋ", "ń"], "N": ["Ŋ", "Ń"], "o": ["ɔ́", "ó", "ɔ", "ǒ", "ō", "ɔ̄", "ô", "ɔ̂", "ɔ̌"], "O": ["Ɔ́", "Ó", "Ɔ", "Ǒ", "Ō", "Ɔ̄", "Ô", "Ɔ̂", "Ɔ̌"], "u": ["ú", "ū", "ǔ", "û"], "U": ["Ú", "Ū", "Ǔ", "Û"]}, {"home": "ʼ"}),
+    ("bss", "us", "Akoose", {"a": ["á", "â", "ǎ", "ā"], "A": ["Á", "Â", "Ǎ", "Ā"], "e": ["é", "ɛ", "ɛ́", "ē", "ê", "ə", "ə́", "ě", "ə̄", "ɛ̄", "ɛ̂", "ɛ̌", "ə̌", "ə̂", "è"], "E": ["É", "Ɛ", "Ɛ́", "Ē", "Ê", "Ə", "Ə́", "Ě", "Ə̄", "Ɛ̄", "Ɛ̂", "Ɛ̌", "Ə̌", "Ə̂", "È"], "i": ["í", "ī", "ǐ", "î"], "I": ["Í", "Ī", "Ǐ", "Î"], "m": ["ḿ"], "M": ["Ḿ"], "n": ["ŋ", "ń"], "N": ["Ŋ", "Ń"], "o": ["ɔ́", "ó", "ɔ", "ǒ", "ō", "ɔ̄", "ô", "ɔ̂", "ɔ̌"], "O": ["Ɔ́", "Ó", "Ɔ", "Ǒ", "Ō", "Ɔ̄", "Ô", "Ɔ̂", "Ɔ̌"], "u": ["ú", "ū", "ǔ", "û"], "U": ["Ú", "Ū", "Ǔ", "Û"],
+                            "ɛ": ["q"], "Ɛ": ["Q"], "ʼ": ["x", "X"]},
+     {"swap": {"q": "ɛ", "Q": "Ɛ", "x": "ʼ", "X": "ʼ"}, "home": ["é", "á"]}),
     ("men", "us", "Mɛnde", {"e": ["ɛ"], "E": ["Ɛ"], "o": ["ɔ"], "O": ["Ɔ"], "n": ["ŋ"], "N": ["Ŋ"]}),
     ("lgg", "us", "Lugbarati", {"u": ["ᴜ", "ᴜ́", "ú"], "U": ["Ú"], "i": ["ɨ", "ɨ́", "ɨ̀", "í", "ì"], "I": ["Ɨ", "Ɨ́", "Ɨ̀", "Í", "Ì"], "a": ["á", "à"], "A": ["Á", "À"], "e": ["è", "é"], "E": ["È", "É"], "o": ["ó", "ò"], "O": ["Ó", "Ò"]}, {"home": "'"}),
     ("xon", "us", "Konkomba", {"o": ["ɔ"], "O": ["Ɔ"], "n": ["ŋ"], "N": ["Ŋ"]}),
     ("dnj", "us", "Dan", {"e": ["ë", "ɛ"], "E": ["Ë", "Ɛ"], "o": ["ö", "ɔ"], "O": ["Ö", "Ɔ"], "u": ["ü"], "U": ["Ü"], "v": ["ʋ̈", "ʋ"], "V": ["Ʋ̈", "Ʋ"], "i": ["ɩ"], "I": ["Ɩ"]}),
-    ("gbo", "us", "Grebo", {"a": ["à", "ǎ", "ä"], "A": ["À", "Ǎ", "Ä"], "e": ["ɛ", "ě", "è", "ɛ̌", "ɛ̀", "ɛ̈"], "E": ["Ɛ", "Ě", "È", "Ɛ̌", "Ɛ̀", "Ɛ̈"], "i": ["ǐ", "ì", "ï"], "I": ["Ǐ", "Ì", "Ï"], "o": ["ɔ", "ǒ", "ò", "ɔ̀", "ɔ̌", "ɔ̈"], "O": ["Ɔ", "Ǒ", "Ò", "Ɔ̀", "Ɔ̌", "Ɔ̈"], "u": ["ù", "ǔ", "ü"], "U": ["Ù", "Ǔ", "Ü"]}),
+    ("gbo", "us", "Grebo", {"a": ["à", "ǎ", "ä"], "A": ["À", "Ǎ", "Ä"], "e": ["ɛ", "ě", "è", "ɛ̌", "ɛ̀", "ɛ̈"], "E": ["Ɛ", "Ě", "È", "Ɛ̌", "Ɛ̀", "Ɛ̈"], "i": ["ǐ", "ì", "ï"], "I": ["Ǐ", "Ì", "Ï"], "o": ["ɔ", "ǒ", "ò", "ɔ̀", "ɔ̌", "ɔ̈"], "O": ["Ɔ", "Ǒ", "Ò", "Ɔ̀", "Ɔ̌", "Ɔ̈"], "u": ["ù", "ǔ", "ü"], "U": ["Ù", "Ǔ", "Ü"],
+                           "ǒ": ["q"], "Ǒ": ["Q"], "ě": ["x"], "Ě": ["X"]},
+     {"swap": {"q": "ǒ", "Q": "Ǒ", "x": "ě", "X": "Ě"}, "home": ["ɛ", "ɔ"]}),
     ("heh", "us", "Kihehe", {}),
     ("gux", "us", "Gulmancema", {"n": ["ŋ", "ñ"], "N": ["Ŋ", "Ñ"]}),
     ("gmv", "us", "Gamo", {}),
@@ -364,7 +380,8 @@ DERIVED = [
     ("bud", "us", "Ncam", {"a": ["á", "à", "ā"], "A": ["Á", "À", "Ā"], "b": ["b́", "b̀"], "B": ["B́", "B̀"], "e": ["é", "è", "ē"], "E": ["É", "È", "Ē"], "i": ["í", "ì", "ī"], "I": ["Í", "Ì", "Ī"], "l": ["l̄", "l̀", "ĺ"], "L": ["L̄", "L̀", "Ĺ"], "m": ["ḿ", "m̀", "m̄"], "M": ["Ḿ", "M̀", "M̄"], "n": ["ŋ", "ǹ", "ń", "n̄"], "N": ["Ŋ", "Ǹ", "Ń", "N̄"], "o": ["ɔ", "ɔ́", "ò", "ɔ̃", "ɔ̄"], "O": ["Ɔ", "Ɔ́", "Ò", "Ɔ̃", "Ɔ̄"], "u": ["ú", "ū", "ù"], "U": ["Ú", "Ū", "Ù"]}),
     ("kao", "us", "Xaasongaxango", {"n": ["ɲ", "ŋ", "ń"], "N": ["Ɲ", "Ŋ", "Ń"], "i": ["í"], "I": ["Í"], "e": ["é"], "E": ["É"]}, {"home": "'"}),
     ("gvl", "us", "Gulay", {"e": ["è", "é", "ê"], "E": ["È", "É", "Ê"], "a": ["à", "á"], "A": ["À", "Á"], "b": ["ɓ"], "B": ["Ɓ"], "d": ["ɗ"], "D": ["Ɗ"], "m": ["m̂"], "M": ["M̂"], "o": ["ɔ", "ò", "ó"], "O": ["Ɔ", "Ò", "Ó"], "u": ["ú"], "U": ["Ú"]}, {"home": "'"}),
-    ("nnb", "us", "Kinande", {"i": ["ĩ", "í", "į"], "I": ["Ĩ", "Í", "Į"], "u": ["ũ", "ú", "ų"], "U": ["Ũ", "Ú", "Ų"], "a": ["á"], "A": ["Á"], "e": ["é"], "E": ["É"], "o": ["ó"], "O": ["Ó"]}, {"home": "'"}),
+    ("nnb", "us", "Kinande", {"i": ["ĩ", "í", "į"], "I": ["Ĩ", "Í", "Į"], "u": ["ũ", "ú", "ų"], "U": ["Ũ", "Ú", "Ų"], "a": ["á"], "A": ["Á"], "e": ["é"], "E": ["É"], "o": ["ó"], "O": ["Ó"], "ũ": ["q"], "Ũ": ["Q"]},
+     {"swap": {"q": "ũ", "Q": "Ũ"}, "home": ["ĩ", "'"]}),
     ("nyo", "us", "Runyoro", {}, {"home": "'"}),
     ("niu", "us", "Vagahau Niuē", {"a": ["ā"], "A": ["Ā"], "e": ["ē"], "E": ["Ē"], "o": ["ō"], "O": ["Ō"], "u": ["ū"], "U": ["Ū"]}),
     ("hwc", "us", "Pidgin", {}),
@@ -422,6 +439,10 @@ DERIVED = [
     ("sda", "us", "Basa Toraya", {}, {"home": "'"}),
     ("lew", "us", "Kaili Ledo", {}),
     ("sdc", "it", "Sassaresu", {}, {"home": "'"}),
+    ("rmy", "us", "Romani čhib (Vlax)", {"s": ["š"], "S": ["Š"], "c": ["č", "ć"], "C": ["Č", "Ć"], "z": ["ž"], "Z": ["Ž"],
+                                         "d": ["đ"], "D": ["Đ"]}),
+    ("rmn", "sr-latn", "Romani čhib (Balkan)", {}),
+    ("gez", "am", "ግዕዝ", {}),
 ]
 
 
@@ -450,7 +471,9 @@ def build(lang, base, name, extra, extras=None):
         out[k] = v
     out["id"] = lang.lower()
     out["name"] = name
-    out["prediction_lang"] = lang
+    # A layout with no model has no prediction language (Ge'ez, as Amharic).
+    if out.get("prediction_enabled", True):
+        out["prediction_lang"] = lang
     added = set()
     swapped = set()
     for view in out["views"]:

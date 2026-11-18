@@ -141,6 +141,22 @@ another tongue are left out: Tooro's magazine scans read by OCR,
 Kenyan radios' Kikuyu beside Giryama, another Mangyan language's
 recordings beside Hanunoo, Indonesian Wiktionary's Toraja-Sa'dan word
 list, English songs in Cyrillic letters beside Dungan.
+Vlax and Balkan Romani are each read from both of FineWeb-2's Romani
+files, for each holds the other's documents (a fifth of its Balkan
+Romani is Vlax) beside Spanish spam and Macedonian in Latin letters (two
+thirds and three fifths of their text). A document is the dialect whose
+own words it writes more of (`own` against `rival`: Vlax's sas naj ande
+kodo…, Balkan's sine taro hem isi…), the spam and the Macedonian writing
+neither, and is kept in the spelling of the international standard,
+which Serbia's, North Macedonia's and Sweden's Romani text writes, more
+of č š ž than of sh ch zh (`foreign`): not the digraphs of Sweden's
+radio (6 MB of Vlax) nor Romanian's, Hungarian's, German's or Albanian's
+letters, each a country's own; the national languages' sentences inside
+it are left out by their words. Northwestern Ojibwe is read in
+syllabics, mostly its Bible: a syllable's w-dot written apart before it
+(ᐧᐃ) and a syllable with the dot on its right (West Cree's ᐏ) are read
+as the one syllable with the dot on its left (ᐎ), as its keyboard types
+it and the Bible writes, and its full stop ᙮ ends a sentence.
 
 Thirty-eight languages that had a keyboard and no model, FineWeb-2 has
 hundreds of millions of characters of: Afrikaans, Albanian, Bashkir,
@@ -933,6 +949,72 @@ def dungan(text):
     return text.translate(DUNGAN_FOLD)
 
 
+# Romani's two, Vlax (rmy) and Balkan (rmn), are written in each country's
+# spelling: with č š ž (the international standard's, which Serbia's,
+# North Macedonia's and Sweden's Romani text writes), with digraphs as
+# English and Swedish spell (sh ch zh), with Romanian's, Hungarian's,
+# German's or Albanian's letters. A document is kept in the first: more
+# of č š ž than of sh, ch and zh. FineWeb-2's file of each holds the
+# other's documents too (Vlax Romani is a fifth of its Balkan Romani's),
+# so both files are read for each and a document is the dialect whose own
+# words it writes more of: Vlax's sas (was), naj (is not), ande ando andi
+# (in the), kodo kado kava (this); Balkan's sine (was), taro tari tare
+# (from the), hem (and), isi (there is), nane (is not), keda (when),
+# odova adava akava (this). The spam and the Macedonian beside them write
+# neither; the national languages' sentences inside a document are left
+# out by their words.
+ROMANI_VLAX = set("sas naj ande ando andi kodo kado kava".split())
+ROMANI_BALKAN = set("sine taro tari tare hem isi nane keda odova adava akava".split())
+ROMANI_CARONS = re.compile("[čšžČŠŽ]")
+ROMANI_DIGRAPHS = re.compile("(?i)sh|ch|zh")
+MACEDONIAN_LATIN = set("vo se za od deka kako toa gi go ili koj koja koi site mnogu tie ovaa kade što sum nie".split())
+SERBIAN_LATIN = set("je u kao koji što su biti bio nije sve".split())
+ROMANIAN_ONLY = set("și şi în cu să nu este sunt care pentru".split())
+SPANISH_SPAM = SPANISH_ONLY | set("el en los con para por que una prostitutas putas porno videos sexo gratis".split())
+ROMANI_RIVAL = (ENGLISH_ONLY | SWEDISH_ONLY | MACEDONIAN_LATIN | SERBIAN_LATIN | ROMANIAN_ONLY
+                | SPANISH_SPAM | GERMAN_ONLY)
+
+
+def romani_digraphs(text):
+    """A Romani document spelled otherwise than with č š ž."""
+    return len(ROMANI_CARONS.findall(text)) <= len(ROMANI_DIGRAPHS.findall(text))
+
+
+# Northwestern Ojibwe's syllabics (ojb_Cans: the Bible, most of it), each
+# syllable as one character, as its keyboard types it: the w-dot written
+# apart before its syllable (ᐧᐃ, U+1427) and a syllable with the dot on
+# its right (West Cree's ᐏ) read as the syllable with the dot on its
+# left (ᐎ), as the Bible writes; its full stop ᙮ ends a sentence, as a
+# full stop does.
+def _syllable(name):
+    try:
+        return unicodedata.lookup("CANADIAN SYLLABICS " + name)
+    except KeyError:
+        return None
+
+
+def _w_dotted():
+    dotted, west = {}, {}
+    for c in map(chr, range(0x1400, 0x1680)):
+        name = unicodedata.name(c, "").removeprefix("CANADIAN SYLLABICS ")
+        if name.startswith("WEST-CREE ") and _syllable(name.removeprefix("WEST-CREE ")):
+            west[c] = _syllable(name.removeprefix("WEST-CREE "))
+        m = re.fullmatch(r"(P|T|K|C|M|N|S|SH|Y|L|R)?(E|I|II|O|OO|A|AA)", name)
+        if m and _syllable((m.group(1) or "") + "W" + m.group(2)):
+            dotted["\u1427" + c] = _syllable((m.group(1) or "") + "W" + m.group(2))
+    return dotted, west
+
+
+OJIBWE_DOTTED, OJIBWE_WEST = _w_dotted()
+OJIBWE_DOT = re.compile("\u1427[\u1400-\u167F]")
+OJIBWE_WEST_FOLD = str.maketrans(OJIBWE_WEST)
+
+
+def ojibwe(text):
+    text = OJIBWE_DOT.sub(lambda m: OJIBWE_DOTTED.get(m.group(0), m.group(0)), text)
+    return text.translate(OJIBWE_WEST_FOLD).replace("\u166E", ".")
+
+
 # Pages in another tongue: Tooro's magazine scans read by OCR, Kenyan
 # radios' Kikuyu beside Giryama, another Mangyan language's recordings
 # and a Tagalog blog beside Hanunoo, Indonesian Wiktionary's word list of
@@ -1539,6 +1621,16 @@ LANGS = {
            ("laj", SWAHILI_RIVAL, {"hold": 9}), ("hnn", TAGALOG_ONLY, {"hosts_out": HANUNOO_OUT}),
            ("sda", BALINESE_RIVAL, {"hosts_out": WIKTIONARY}), ("lew", BALINESE_RIVAL, {}),
            ("sdc", ITALIAN_ONLY - {"una"}, {}))},
+    # Romani, Vlax and Balkan: each from both FineWeb-2 files, by its
+    # dialect's words and in č š ž.
+    **{lang: {"script": "LATIN", "neighbour": set(), "own": own, "rival": rival,
+              "foreign": romani_digraphs, "sentence_rival": ROMANI_RIVAL,
+              "letters_never": CYRILLIC_LETTERS | set("|"), "brackets": True, "hold": 10}
+       for lang, own, rival in (("rmy", ROMANI_VLAX, ROMANI_BALKAN), ("rmn", ROMANI_BALKAN, ROMANI_VLAX))},
+    # Northwestern Ojibwe in syllabics, a syllable a character; English's
+    # names cut out of its sentences.
+    "ojb": {"script": "CANADIAN SYLLABICS", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
+            "normalize": ojibwe, "script_only": True, "brackets": True, "hold": 10},
 }
 
 
