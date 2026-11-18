@@ -682,18 +682,18 @@
             },
             {
               "width_units": 1,
-              "label": "ɔ",
+              "label": "Ɔ",
               "output": {
                 "kind": "text",
-                "text": "ɔ"
+                "text": "Ɔ"
               }
             },
             {
               "width_units": 1,
-              "label": "ɛ",
+              "label": "Ɛ",
               "output": {
                 "kind": "text",
-                "text": "ɛ"
+                "text": "Ɛ"
               }
             }
           ]

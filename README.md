@@ -32,7 +32,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 | Path | What | Built by |
 |---|---|---|
-| `predict/<lang>.fst` | Prefix-completion lexicon (398 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
+| `predict/<lang>.fst` | Prefix-completion lexicon (411 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |

@@ -700,10 +700,10 @@
             },
             {
               "width_units": 1,
-              "label": "õ",
+              "label": "Õ",
               "output": {
                 "kind": "text",
-                "text": "õ"
+                "text": "Õ"
               }
             }
           ]

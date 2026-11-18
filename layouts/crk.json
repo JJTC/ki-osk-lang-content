@@ -646,18 +646,18 @@
             },
             {
               "width_units": 1,
-              "label": "ā",
+              "label": "Ā",
               "output": {
                 "kind": "text",
-                "text": "ā"
+                "text": "Ā"
               }
             },
             {
               "width_units": 1,
-              "label": "ē",
+              "label": "Ē",
               "output": {
                 "kind": "text",
-                "text": "ē"
+                "text": "Ē"
               }
             }
           ]

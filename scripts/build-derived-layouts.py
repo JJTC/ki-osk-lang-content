@@ -97,8 +97,19 @@ too. Lahu writes a tone after most of its syllables (ˬ ˇ ꞈ ˍ ˆ ˉ: three
 words in four end in one) and no q, x or z: ꞈ, its apostrophe and ˍ are
 typed on those keys, ˆ and ˉ on the long presses of ꞈ and ˍ, and ˬ and ˇ,
 the commonest, at the home row's end, where its desktop keyboard has them
-(on ; and Shift+;). A letter only a long press types turns the gesture on
-for the layout (`long_press_letters`). A layout's id is
+(on ; and Shift+;). Thirteen more of the long tail: Nenets on Russian's
+keys, ӈ in place of the ъ it hardly writes (ъ stays on ь's long press)
+and its glottal stop, the apostrophe nearly half its words write (по’,
+ненэця’’), at the home row's end; Dungan on them too, ә in place of ъ, җ
+at the home row's end and ү ў first on у; Tausug, Ewondo, Tooro,
+Makhuwa-Meetto, Kanuri, Giryama, Lango, Hanunoo, Toraja-Sa'dan and Ledo
+Kaili on the US keys and Sassarese on Italian's, their letters first on
+the long presses, with an apostrophe key for those whose words write one
+(Tausug's and Toraja-Sa'dan's glottal stop, Giryama's at'u) and Kanuri's
+ə, in a quarter of its words, at the home row's end. A key at the home
+row's end types its capital on the Shift view (Ā, Ɔ, Җ). A letter only a
+long press types turns the gesture on for the layout
+(`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
 
@@ -396,7 +407,30 @@ DERIVED = [
     ("ajg", "us", "Ajagbe", {"e": ["ɛ", "é", "è"], "E": ["Ɛ", "É", "È"], "o": ["ɔ", "ó"], "O": ["Ɔ", "Ó"], "d": ["ɖ"], "D": ["Ɖ"],
                              "n": ["ŋ"], "N": ["Ŋ"], "i": ["í", "ì"], "I": ["Í", "Ì"], "z": ["ʒ"], "Z": ["Ʒ"], "a": ["à", "á"],
                              "A": ["À", "Á"]}, {"home": ["ɔ", "ɛ"]}),
+    ("yrk", "ru", "Ненэцяʼ вада", {}, {"swap": {"ъ": "ӈ", "Ъ": "Ӈ"}, "home": "'"}),
+    ("dng", "ru", "Хуэйзў йүян", {"у": ["ү", "ў"], "У": ["Ү", "Ў"]}, {"swap": {"ъ": "ә", "Ъ": "Ә"}, "home": "җ"}),
+    ("tsg", "us", "Bahasa Sūg", {"i": ["ī"], "I": ["Ī"], "a": ["ā"], "A": ["Ā"], "u": ["ū"], "U": ["Ū"]}, {"home": "'"}),
+    ("ewo", "us", "Ewondo", {"e": ["é", "ë", "è", "ə", "ê"], "E": ["É", "Ë", "È", "Ə", "Ê"], "a": ["á", "à"], "A": ["Á", "À"],
+                             "o": ["ò", "ó", "ô", "ɔ"], "O": ["Ò", "Ó", "Ô", "Ɔ"], "i": ["í", "ï"], "I": ["Í", "Ï"],
+                             "u": ["ú"], "U": ["Ú"], "n": ["ñ", "ŋ", "ṅ"], "N": ["Ñ", "Ŋ", "Ṅ"]}),
+    ("ttj", "us", "Rutooro", {"n": ["ŋ"], "N": ["Ŋ"]}, {"home": "'"}),
+    ("mgh", "us", "Emeetto", {}),
+    ("knc", "us", "Kanuri", {"e": ["ə"], "E": ["Ə"]}, {"home": "ə"}),
+    ("nyf", "us", "Kigiryama", {"v": ["v̱"], "V": ["V̱"]}, {"home": "'"}),
+    ("laj", "us", "Lëblaŋo", {"n": ["ŋ"], "N": ["Ŋ"]}),
+    ("hnn", "us", "Hanunuo", {"e": ["ê"], "E": ["Ê"]}),
+    ("sda", "us", "Basa Toraya", {}, {"home": "'"}),
+    ("lew", "us", "Kaili Ledo", {}),
+    ("sdc", "it", "Sassaresu", {}, {"home": "'"}),
 ]
+
+
+def shifted(text):
+    """What a key typing `text` types on the Shift view: its capital (ā's
+    Ā, ɔ's Ɔ), or the same where it has none (an apostrophe, Lahu's
+    tones)."""
+    upper = text.upper()
+    return upper if len(upper) == len(text) else text
 
 
 def build(lang, base, name, extra, extras=None):
@@ -446,7 +480,8 @@ def build(lang, base, name, extra, extras=None):
                 sys.exit(f"{lang}: {base}'s home row has no spacers to give way")
             view["rows"][1]["keys"] = row[1:-1] + [
                 {"width_units": 1, "label": h, "output": {"kind": "text", "text": h}}
-                for h in ([home] if isinstance(home, str) else home)]
+                for h in (shifted(h) if view["id"] == "shift" else h
+                          for h in ([home] if isinstance(home, str) else home))]
     return json.dumps(out, ensure_ascii=False, indent=2) + "\n"
 
 

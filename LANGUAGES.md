@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**458 layouts**: 403 keyboard layouts (RTL: ar he fa + Urdu, Western
+**471 layouts**: 416 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 7 IMEs (5 CJK +
 Amharic/Tigrinya Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 457 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **398 languages** carry a prediction
+keycaps. 470 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **411 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -350,6 +350,19 @@ but no model to match the glide against · `—` off
 | `liv` | `liv` | Livonian Līvõ kēļ | lv + long-press õ ō ȯ ȭ ȱ ä ǟ ḑ ț ŗ, õ key | LTR | **Full** (liv)⁷ | ✓ | — |
 | `abs` | `abs` | Ambonese Malay Bahasa Ambon | us | LTR | **Full** (abs)⁷ | ✓ | — |
 | `ajg` | `ajg` | Aja Ajagbe | us + long-press ɛ é è ɔ ó ɖ ŋ í ì ʒ…, ɔ ɛ keys | LTR | **Full** (ajg)⁷ | ✓ | — |
+| `yrk` | `yrk` | Nenets Ненэцяˮ вада | ru, ӈ in place of ъ, ' ˮ keys | LTR | **Full** (yrk)⁷ | — | — |
+| `dng` | `dng` | Dungan Хуэйзў йүян | ru + long-press ү ў, ә in place of ъ, җ key | LTR | **Full** (dng)⁷ | — | — |
+| `tsg` | `tsg` | Tausug Bahasa Sūg | us + long-press ī ā ū, ' key | LTR | **Full** (tsg)⁷ | ✓ | — |
+| `ewo` | `ewo` | Ewondo | us + long-press é ë è ə ê á à ò ó ô ɔ í ï ú ñ ŋ ṅ | LTR | **Full** (ewo)⁷ | ✓ | — |
+| `ttj` | `ttj` | Tooro Rutooro | us + long-press ŋ, ' key | LTR | **Full** (ttj)⁷ | ✓ | — |
+| `mgh` | `mgh` | Makhuwa-Meetto Emeetto | us | LTR | **Full** (mgh)⁷ | ✓ | — |
+| `knc` | `knc` | Kanuri | us + long-press ə, ə key | LTR | **Full** (knc)⁷ | ✓ | — |
+| `nyf` | `nyf` | Giryama Kigiryama | us + long-press v̱, ' key | LTR | **Full** (nyf)⁷ | ✓ | — |
+| `laj` | `laj` | Lango Lëblaŋo | us + long-press ŋ | LTR | **Full** (laj)⁷ | ✓ | — |
+| `hnn` | `hnn` | Hanunoo Hanunuo | us + long-press ê | LTR | **Full** (hnn)⁷ | ✓ | — |
+| `sda` | `sda` | Toraja-Sa'dan Basa Toraya | us, ' key | LTR | **Full** (sda)⁷ | ✓ | — |
+| `lew` | `lew` | Ledo Kaili Kaili Ledo | us | LTR | **Full** (lew)⁷ | ✓ | — |
+| `sdc` | `sdc` | Sassarese Sassaresu | it, ' key | LTR | **Full** (sdc)⁷ | ✓ | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -867,7 +880,7 @@ but no model to match the glide against · `—` off
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
    fragments among them) is not used yet.
-7. These three hundred and ten models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and twenty-three models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1490,7 +1503,7 @@ but no model to match the glide against · `—` off
    ϩⲛ̅): Sahidic writes Bohairic's words with its stroke where Bohairic
    writes the jinkim (ⲛ̅ⲧⲉ, ⲛ̀ⲧⲉ), and beside it autocorrect changed one
    Bohairic word typed right in 27 (0.15% without it); three editions of
-   its New Testament are a third of FineWeb-2's Coptic. Coptic is typed on
+   its New Testament are half of FineWeb-2's Coptic. Coptic is typed on
    its keymap, eg(cop), with a key for the jinkim at the home row's end and
    the overline of the nomina sacra (Ⲓⲏ̅ⲥ̅) on its long press. Lahu learns
    from its Bible and Jehovah's Witnesses' pages (344 000 words), its tone
@@ -1527,7 +1540,53 @@ but no model to match the glide against · `—` off
    of many parts, few of which so small a text holds: Plains Cree's,
    Ottawa's and Swampy Cree's held-out words are 31% to 37% unknown, and
    with taps astray they save 10% or less (Swampy Cree nothing); Livonian's
-   are 26% unknown, and it saves 18% with taps astray.
+   are 26% unknown, and it saves 18% with taps astray. Thirteen more of the
+   long tail that FineWeb-2 has 0.1 to 1.4 MB of learn from its text whole:
+   Nenets (its newspaper's and Yamal's pages; the Russian translation the
+   newspaper puts after each article is left out, by Russian's words and by
+   its writing neither ӈ nor a glottal stop, one of which nearly every
+   Nenets sentence writes), Dungan (Kazakhstan's and Kyrgyzstan's Dungan
+   papers and its Incubator wiki: English songs written in Cyrillic letters
+   are left out), Tausug (the Bible, Ahmadiyya and Sufi pages: its Arabic
+   pages are left out by script), Ewondo (news, Jehovah's Witnesses'),
+   Tooro (the Bible, a church: magazine scans read by OCR are left out),
+   Makhuwa-Meetto (the Bible, Cabo Delgado's radio news), Kanuri (Dandal
+   Kura's radio news, its Incubator wiki), Giryama (the Bible: Kikuyu radio
+   pages are left out), Lango (the Bible, news), Hanunoo (the Bible:
+   another Mangyan language's recordings are left out), Toraja-Sa'dan (the
+   Bible, a culture blog: Indonesian Wiktionary's word list is left out),
+   Ledo Kaili (Palu's news) and Sassarese (news, stories): 26 000
+   (Toraja-Sa'dan) to 166 000 words (Nenets). Letters written for others
+   are read as theirs: Nenets' two glottal stops, written ’ and ’’ (and ʼ,
+   ʼʼ, ”), as ’ and ˮ, the letter its keyboard types for the second (two
+   apostrophes are one to the corrector, which puts back an apostrophe a
+   word was typed without: beside ’’ it changed one Nenets word typed right
+   in 80, ненэцие’ to ненэцие’’), and its ң as ӈ; Kanuri's ǝ and ә, and on
+   Dandal Kura's site the digit 3 beside a letter (d3, k3re), as ə;
+   Dungan's Latin ə and ǝ as ә; Tausug's saltillo ꞌ, the Bible's glottal
+   stop, as the ’ its other sites write; Ewondo's ǝ as ə. A sentence of
+   English is left out, and of the state's language (Russian's, Tagalog's,
+   French's, Portuguese's, Swahili's own words, Indonesian's, Italian's).
+   Nenets is typed on Russian's keys, ӈ in place of the ъ it hardly writes
+   and its glottal stops, the apostrophe and ˮ, at the home row's end;
+   Dungan on them too, ә in place of ъ, җ at the home row's end and ү ў on
+   у's long press; the rest on the US keys, Sassarese on Italian's, their
+   letters first on the long presses, with an apostrophe key for those
+   whose words write one (Tausug, Tooro, Giryama, Toraja-Sa'dan, Sassarese)
+   and a key for Kanuri's ə, which a quarter of its words write. Their
+   lexicons keep all their words (3 700 kinds, Hanunoo's, to 28 000,
+   Nenets'). Keystroke savings on their held-out text (1 900 to 9 700
+   words): Hanunoo 55.2%, Tausug 52.0%, Makhuwa-Meetto 49.2%, Giryama
+   43.6%, Ledo Kaili 42.9%, Nenets 42.6%, Ewondo 40.2%, Toraja-Sa'dan
+   37.8%, Dungan 34.5%, Kanuri 34.1%, Lango 33.8%, Tooro 27.4%, Sassarese
+   20.8%; 39.6% on average, 29.5% with taps astray, at most 0.58% of right
+   words changed (Sassarese's). Tooro's and Sassarese's texts are small for
+   how their words are made and spelled (Tooro's of many parts, Sassarese's
+   spelled several ways, th and dh, k and ch): a third of their held-out
+   words are unknown, and with taps astray they save 6% and 2%. Learning
+   from Nyoro's text too, which shares Tooro's written standard, Tooro
+   knew more of its words (29% unknown) but autocorrect changed 1.5% of
+   its right ones: it is not used.
    Bodo's apostrophe, which
    marks a vowel inside a word and at its end (बर'), stays in the word
    (बर' is among its lexicon's commonest). Assamese's text is every 6th
@@ -1599,7 +1658,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **398 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **411 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1628,7 +1687,8 @@ but no model to match the glide against · `—` off
   cut into syllables, **shn mnw ksw blk**, of East Asia's in Latin letters **nan hak ami za**, of the
   long tail **zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk spp bas hay kbr ngl gog chw fat
   tsc bud kao gvl nnb nyo niu hwc acf mrw nij guc ljp sas gor itv bku bpr quh gcr tum tll guz kde nyy
-  mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg**, and Coptic and Lahu **cop lhu**
+  mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
+  sdc**, and Coptic and Lahu **cop lhu**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
@@ -1827,6 +1887,11 @@ are built on a `us`/`es` base and add theirs the same way:
 | `otw` `mqj` | an apostrophe, a key of its own at the home row's end (Ottawa's Mzin’igan, Mamasa's tae', in 4% and 9% of their words) | each its own |
 | `lhu` Lahu | its tones, written after the syllable, on keys: ˬ and ˇ (a fifth of its words end in each) at the home row's end, where its desktop keyboard has them; ꞈ, its apostrophe and ˍ on q, x and z, which it does not write; ˆ and ˉ on the long presses of ꞈ and ˍ | `lhu` |
 | `cop` Coptic | its jinkim (U+0300, ⲛ̀ⲧⲉ, in a third of Bohairic's words) a key of its own at the home row's end, in place of its keymap's dot above and macron; the overline of the nomina sacra (Ⲓⲏ̅ⲥ̅) on its long press | `cop` |
+| `tsg` `ewo` `ttj` `knc` `nyf` `laj` `hnn` | each language's own letters first on the long presses (Tausug's macrons, Ewondo's é ë è ə and tones, Tooro's and Lango's ŋ, Kanuri's ə, Giryama's v̱, Hanunoo's ê) | each its own |
+| `tsg` `ttj` `nyf` `sda` `sdc` | an apostrophe, a key of its own at the home row's end: they write one in 3% to 16% of their words (Tausug's and Toraja-Sa'dan's glottal stop, di’ and tae’; Tooro's n’omu, Giryama's at'u, Sassarese's cu’) | each its own |
+| `knc` Kanuri | ə, which a quarter of its words write, a key of its own at the home row's end | `knc` |
+| `yrk` Nenets | on Russian's keys: ӈ in place of the ъ it hardly writes (ъ stays on ь's long press); its two glottal stops, the apostrophe and ˮ (поʼ, ненэцяˮ), keys of their own at the home row's end: nearly half its words write one | `yrk` |
+| `dng` Dungan | on Russian's keys: ә in place of ъ, which it does not write; җ, which a seventh of its words write, a key of its own at the home row's end; ү ў first on у's long press | `dng` |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per

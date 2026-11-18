@@ -646,10 +646,10 @@
             },
             {
               "width_units": 1,
-              "label": "ü",
+              "label": "Ü",
               "output": {
                 "kind": "text",
-                "text": "ü"
+                "text": "Ü"
               }
             },
             {

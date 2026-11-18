@@ -104,6 +104,43 @@ Tagalog's, Spanish's, French's, Portuguese's, Swahili's own words);
 Maranao's Arabic (sermons, the Quran) is left out by script, and so
 are the LOLcat Bible beside Hawaiian Pidgin and a book
 pirate's pages beside Itawit; Meru's ĩ written ῖ is read as ĩ.
+Coptic is read in Bohairic's documents, a document being Bohairic's
+where its own words (ⲟⲩⲟϩ ⲛⲉⲙ ϧⲉⲛ ⲫϯ…) are 1% of its words and more than
+Sahidic's (ⲁⲩⲱ ⲙⲛ̅ ϩⲛ̅…), which write Bohairic's words with the stroke
+where Bohairic writes the jinkim; its runs of Coptic letters alone, line
+by line (the Arabic, English and French beside them left out). Its
+jinkim, written ⳿ or ` or a lone grave before its letter or a dot over
+it, is read as the grave after it, its stroke written as the macron as
+the overline, ⳪ as ϭ̅ⲥ̅ and ⳾ as a full stop; a number written in letters
+under the stroke is left out, and so is a sentence whose Coptic letters
+are those of one read before (`same`: a verse's copies on other sites,
+in other editions). Lahu's tones are letters of its words
+(`script_also`: Unicode names them modifier letters), its ꞈ written as
+a caret, ‸, read as ꞈ. Ten more of the long tail with 0.15 to 0.3 MB
+(Hunsrik, Plains and Swampy Cree, Ottawa, Tokelauan, Kankanaey, Mamasa,
+Livonian, Ambonese Malay, Aja) are read as those before them, against
+English (beside the Crees and Ottawa its commonest words too) and their
+state's language; Hunsrik's documents in its standard spelling (fon fer
+tas…) and not German's; Plains Cree's long vowels written with the
+circumflex read with the macron; FineWeb-2's Livonian's Kwak'wala and
+Kurdish books, Ambonese Malay's chord sites and Aja's Ewe localisation
+of a browser left out.
+Thirteen more with 0.1 to 1.4 MB are read so too: Nenets and Dungan in
+Cyrillic letters, against Russian's sentences, and Tausug, Ewondo,
+Tooro, Makhuwa-Meetto, Kanuri, Giryama, Lango, Hanunoo, Toraja-Sa'dan,
+Ledo Kaili and Sassarese against English's and their state's language's
+(Tausug's Arabic pages left out by script). A Nenets sentence writes
+ӈ or a glottal stop (`letters_some`): its newspaper's Russian
+translations write neither. Nenets' glottal stops, written ’ and ’’
+(and ʼ, ʼʼ, ”), are read as ’ and ˮ, the letter its keyboard types for
+the second: two apostrophes are one to the corrector, which puts back
+an apostrophe a word was typed without. Kanuri's ǝ, ә and the digit 3
+beside a letter (a radio's site: d3, k3re) are read as ə, Dungan's
+Latin ə ǝ as ә, Tausug's saltillo ꞌ as ’, Ewondo's ǝ as ə. Sites in
+another tongue are left out: Tooro's magazine scans read by OCR,
+Kenyan radios' Kikuyu beside Giryama, another Mangyan language's
+recordings beside Hanunoo, Indonesian Wiktionary's Toraja-Sa'dan word
+list, English songs in Cyrillic letters beside Dungan.
 
 Thirty-eight languages that had a keyboard and no model, FineWeb-2 has
 hundreds of millions of characters of: Afrikaans, Albanian, Bashkir,
@@ -633,6 +670,10 @@ LONG_TAIL_FOLD = {
     "csw": str.maketrans({"‑": "-"}),
     "liv": str.maketrans("ţŢ", "țȚ"),
     "ajg": str.maketrans("ӡӠ", "ʒƷ"),
+    # Tausug's glottal stop, the Bible's saltillo ꞌ, as the ’ its other
+    # sites write; Ewondo's ə written as the turned e ǝ.
+    "tsg": str.maketrans("\uA78C\uA78B", "\u2019\u2019"),
+    "ewo": str.maketrans("\u01DD\u018E", "\u0259\u018F"),
     # A scanned magazine's ligatures.
     "skg": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
     "lld": str.maketrans({"\uFB01": "fi", "\uFB02": "fl"}),
@@ -849,6 +890,57 @@ HUNSRIK_RIVAL = (PORTUGUESE_ONLY - {"do"}) | set("para com foi ao mas como era f
 LIVONIAN_OUT = re.compile(r"anglican|wikibooks")
 CHORDS = re.compile(r"chord")
 MOZILLA = re.compile(r"mozilla")
+
+
+# The long tail's rest, those with 0.1 to 1.4 MB of FineWeb-2's text.
+# Nenets writes its two glottal stops after their letter, ʼ and ˮ (поʼ,
+# ненэцяˮ), mostly as ’ and ’’, and as ” too: read as ’ and ˮ, the
+# letter its keyboard types for the second (two apostrophes are one to
+# the corrector, which puts back an apostrophe a word was typed without:
+# beside ’’ it changed one Nenets word typed right in 80, ненэцие’ to
+# ненэцие’’). Its ӈ written as Kazakh's ң is read as ӈ. Its newspaper
+# puts a Russian translation after each article, left out by Russian's
+# words (not по: Nenets' по’, cut at its apostrophe, is one) and by its
+# writing neither ӈ nor a glottal stop; a news site writes its ӈ as ?,
+# and Forest Nenets' text (its ԓ) is another's.
+NENETS_STOPS = re.compile("(?<=[\u0400-\u04FF])(?:\u201D|[\u2019\u02BC']{2})")
+NENETS_FOLD = str.maketrans("\u04A3\u04A2", "\u04C8\u04C7")
+NENETS_OUT = re.compile(r"nao-news")
+# What nearly every Nenets sentence writes and Russian's never do: a
+# glottal stop or ӈ (a sentence with none is Russian 49 times in 50).
+NENETS_MARKS = frozenset("\u2019\u02EE\u04C8\u04C7")
+
+
+def nenets(text):
+    return NENETS_STOPS.sub("\u02EE", text).replace("\u02BC", "\u2019").translate(NENETS_FOLD)
+
+
+# Kanuri's ə, written as the turned e ǝ, Cyrillic's ә, and on a radio's
+# site as the digit 3 beside a letter (d3, k3re): as ə. Dungan's ә
+# written as Latin's ə or ǝ; a site's English songs written in Cyrillic
+# letters beside it.
+KANURI_THREE = re.compile("(?<=[A-Za-z\u0259\u01DD])3|3(?=[A-Za-z\u0259\u01DD])")
+KANURI_FOLD = str.maketrans("\u01DD\u018E\u04D9\u04D8", "\u0259\u018F\u0259\u018F")
+DUNGAN_FOLD = str.maketrans("\u0259\u01DD\u018F\u018E", "\u04D9\u04D9\u04D8\u04D8")
+SONG_SCRIPTS = re.compile(r"transkriptsiya")
+
+
+def kanuri(text):
+    return KANURI_THREE.sub("\u0259", text).translate(KANURI_FOLD)
+
+
+def dungan(text):
+    return text.translate(DUNGAN_FOLD)
+
+
+# Pages in another tongue: Tooro's magazine scans read by OCR, Kenyan
+# radios' Kikuyu beside Giryama, another Mangyan language's recordings
+# and a Tagalog blog beside Hanunoo, Indonesian Wiktionary's word list of
+# Toraja-Sa'dan.
+SCANS = re.compile(r"issuu")
+KENYAN_RADIOS = re.compile(r"radiokimuri|rmsradio")
+HANUNOO_OUT = re.compile(r"globalrecordings|stephencuyos")
+WIKTIONARY = re.compile(r"wiktionary")
 
 
 # Sgaw Karen's older fonts' letters, as Unicode writes them.
@@ -1426,6 +1518,27 @@ LANGS = {
            ("kne", TAGALOG_ONLY, {}), ("mqj", INDONESIAN_ONLY, {}),
            ("liv", (LATVIAN_ONLY - {"kā"}) | (ESTONIAN_ONLY - {"mis", "kui"}), {"hosts_out": LIVONIAN_OUT}),
            ("abs", INDONESIAN_ONLY, {"hosts_out": CHORDS}), ("ajg", FRENCH_ONLY, {"hosts_out": MOZILLA}))},
+    # The long tail's rest, with 0.1 to 1.4 MB of FineWeb-2's text: Nenets'
+    # and Dungan's in Cyrillic letters, Russian's sentences left out; of
+    # the others, English's and their state's language's (and Tausug's
+    # Arabic pages, by script). Lango holds out every 9th document: its
+    # 10th, the Gospel of John, is two fifths of its text.
+    "yrk": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY - {"по"},
+            "normalize": nenets, "letters_never": set("|ԓԒ"), "letters_some": NENETS_MARKS,
+            "hosts_out": NENETS_OUT, "brackets": True, "hold": 10},
+    "dng": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY,
+            "normalize": dungan, "letters_never": set("|"), "hosts_out": SONG_SCRIPTS, "brackets": True,
+            "hold": 10},
+    **{lang: {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | rival,
+              "letters_never": set("|"), "brackets": True, "hold": 10,
+              **({"normalize": long_tail(lang)} if lang in LONG_TAIL_FOLD else {}), **more}
+       for lang, rival, more in (
+           ("tsg", TAGALOG_ONLY, {"script_only": True}), ("ewo", FRENCH_SET, {}),
+           ("ttj", set(), {"hosts_out": SCANS}), ("mgh", PORTUGUESE_ONLY, {}),
+           ("knc", set(), {"normalize": kanuri}), ("nyf", SWAHILI_RIVAL, {"hosts_out": KENYAN_RADIOS}),
+           ("laj", SWAHILI_RIVAL, {"hold": 9}), ("hnn", TAGALOG_ONLY, {"hosts_out": HANUNOO_OUT}),
+           ("sda", BALINESE_RIVAL, {"hosts_out": WIKTIONARY}), ("lew", BALINESE_RIVAL, {}),
+           ("sdc", ITALIAN_ONLY - {"una"}, {}))},
 }
 
 
@@ -1509,6 +1622,8 @@ def sentences(text, conf):
                 if "sentence_never" in conf and not conf["sentence_never"].isdisjoint(words(s.lower())):
                     continue
                 if "letters_never" in conf and any(c in conf["letters_never"] for c in s):
+                    continue
+                if "letters_some" in conf and conf["letters_some"].isdisjoint(s):
                     continue
                 if "three_vowels" in conf and not three_vowels(s):
                     continue
