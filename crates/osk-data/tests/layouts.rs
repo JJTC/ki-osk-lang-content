@@ -105,9 +105,10 @@ fn the_emoji_picker_puts_backspace_on_the_right() {
 #[test]
 fn letters_on_long_presses_are_the_languages_own() {
     // What a tap types (a label or a text output) and what a long press
-    // offers, on every view.
+    // offers, on every view: each offer whole too, as a letter and its
+    // marks are one (Montenegrin's с́, с and an acute).
     let reach = |def: &LayoutDef| {
-        let (mut tap, mut held) = (String::new(), String::new());
+        let (mut tap, mut held, mut offers) = (String::new(), String::new(), Vec::new());
         for v in &def.views {
             for k in v.rows.iter().flat_map(|r| r.keys.iter()) {
                 tap.push_str(&k.label);
@@ -117,11 +118,12 @@ fn letters_on_long_presses_are_the_languages_own() {
                 for o in &k.long_press {
                     if let KeyOutput::Text { text } = o {
                         held.push_str(text);
+                        offers.push(text.clone());
                     }
                 }
             }
         }
-        (tap, held)
+        (tap, held, offers)
     };
     for (id, letters) in [
         ("es", "áéíóúü"),
@@ -153,7 +155,7 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {
         let def = load(id);
-        let (tap, held) = reach(&def);
+        let (tap, held, _) = reach(&def);
         for c in letters.chars() {
             assert!(
                 tap.contains(c) || held.contains(c),
@@ -168,9 +170,11 @@ fn letters_on_long_presses_are_the_languages_own() {
     // A layout that says so has a letter only a long press types.
     for (_, def) in layouts() {
         if def.long_press_letters {
-            let (tap, held) = reach(&def);
+            let (tap, _, offers) = reach(&def);
             assert!(
-                held.chars().any(|c| c.is_alphabetic() && !tap.contains(c)),
+                offers
+                    .iter()
+                    .any(|t| t.chars().any(char::is_alphabetic) && !tap.contains(t.as_str())),
                 "{} says its letters are on long presses, but taps type them all",
                 def.id
             );

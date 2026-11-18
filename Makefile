@@ -56,7 +56,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
                  cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
-                 rmy rmn ojb
+                 rmy rmn ojb \
+                 cnr
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -92,9 +93,10 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # Awadhi, Saraiki and Tulu (scripts/fetch-wikipedia.sh, the wikis'
 # CirrusSearch dumps pinned by sha256, CC BY-SA 4.0), every 20th article
 # held out for eval/<lang>.txt. And the Wikimedia Incubator's test wikis
-# of languages with no Wikipedia yet: Adilabad Gondi's and Khowar's, their
-# whole corpus, and Magahi's, beside its FineWeb-2 text.
-WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw
+# of languages with no Wikipedia yet: Adilabad Gondi's, Khowar's and
+# Montenegrin's, their whole corpus, and Magahi's, beside its FineWeb-2
+# text.
+WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences
@@ -315,7 +317,8 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # those (Coptic, Lahu, Hunsrik… Aja: 1 700 to 35 000 kinds), the
 # thirteen after those (Nenets… Sassarese), and the two Romanis and
 # Northwestern Ojibwe (29 000 to 88 000 kinds: Balkan Romani's saves 0.2
-# points more at 120 000).
+# points more at 120 000). And Montenegrin, from its Incubator test wiki
+# (900 000 words, 106 000 kinds), which is WIDE.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -339,7 +342,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        quh gcr tum tll guz kde nyy mas mnk mer dga \
                        cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
                        yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
-                       rmy rmn ojb
+                       rmy rmn ojb \
+                       cnr
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -377,12 +381,15 @@ PREDICT_LARGE_NGRAM ?= 90000
 # Extremaduran, Venetian, Lombard and West Flemish, which lack 5.1%, 9.1%,
 # 6.7%, 11.2% and 10.0% at 80 000: at 120 000 4.5%, 8.4%, 5.5%, 9.5% and
 # 8.3%, 0.3 to 0.9 points more saved (0.3 to 2.1 with taps astray).
+# And Montenegrin, which lacks 10.4% at 80 000: at 120 000 8.6%, 0.4
+# points more saved (1.0 with taps astray).
 PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb ilo ban \
                       nn gsw bar nds pfl ksh li hsb dsb nap scn sc lij ltg vro csb szl sco rue \
                       sah sme lg vep qu krl olo udm bxr mdf myv tyv kpv rn \
                       ab ady lbe krc kaa inh kiu azb tly diq nd kea quz \
                       gn ff sr-Latn \
-                      pcd ext vec lmo vls
+                      pcd ext vec lmo vls \
+                      cnr
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a
@@ -474,6 +481,7 @@ help:
 	@echo "                   (after fetch-dakshina; writes nothing)"
 	@echo "  translit-layouts write layouts/<lang>-abc.json for translit/<lang>.txt"
 	@echo "  derived-layouts  write the layouts made from another language's keys"
+	@echo "  exemplar-layouts write the layouts made from CLDR's exemplar characters"
 	@echo "  hinglish-assets  rebuild predict/hi-Latn.* (Hindi typed in Latin letters)"
 	@echo "                   from Hindi's corpora respelled (after fetch-dakshina)"
 	@echo "  english-assets   rebuild translit/<lang>.english.txt, the English words"
@@ -1085,6 +1093,13 @@ derived-layouts:
 .PHONY: keyman-layouts
 keyman-layouts:
 	$(PYTHON) scripts/build-keyman-layouts.py
+
+# The layouts of languages no text here predicts, their letters from
+# CLDR's exemplar characters (layouts/nv.json, Navajo's): each language's
+# CLDR file fetched at the release-49 commit, sha256-checked.
+.PHONY: exemplar-layouts
+exemplar-layouts:
+	$(PYTHON) scripts/build-exemplar-layouts.py
 
 .PHONY: check
 check:

@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**475 layouts**: 419 keyboard layouts (RTL: ar he fa + Urdu, Western
+**507 layouts**: 451 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central Kurdish, South Azerbaijani, Mazandarani, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 8 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 474 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **414 languages** carry a prediction
+keycaps. 506 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **415 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -366,6 +366,38 @@ but no model to match the glide against · `—` off
 | `rmy` | `rmy` | Vlax Romani Romani čhib (Vlax) | us + long-press š č ć ž đ | LTR | **Full** (rmy)⁷ | ✓ | — |
 | `rmn` | `rmn` | Balkan Romani Romani čhib (Balkan) | rs · latin | LTR | **Full** (rmn)⁷ | ✓ | — |
 | `ojb` | `ojb` | Northwestern Ojibwe ᐊᓂᔑᓇᐯᒧᐎᓐ | Keyman's fv_ojibwa, long-press its long vowels and w-dots | LTR | **Full** (ojb)⁷ | — | — |
+| `cnr` | `cnr` | Montenegrin Crnogorski | rs · latin + long-press ś ź | LTR | **Full** (cnr)⁶ | ✓ | — |
+| `cnr-cyrl` | `cnr` | Montenegrin Црногорски (Cyrillic) | rs + long-press с́ з́ | LTR | — | — | — |
+| `tbw` | `tbw` | Aborlan Tagbanwa Tagbanwa | us, ꞌ key | LTR | —⁹ | — | — |
+| `aa` | `aa` | Afar Qafar | us | LTR | —⁹ | — | — |
+| `bom` | `bom` | Berom | us + long-press ɛ é è ê ē ě ɛ́ ɛ̀ ɛ̂ ɛ̄ ɔ ó ò ô ō ɔ́ ɔ̀ ɔ̂ á à â ā í î ī û | LTR | —⁹ | — | — |
+| `bew` | `bew` | Betawi | us + long-press é è ĕ, ' key | LTR | —⁹ | — | — |
+| `sef` | `sef` | Cebaara Senoufo Cebaara | us + long-press ɛ ŋ ɔ, ˀ key | LTR | —⁹ | — | — |
+| `cbk` | `cbk` | Chavacano | us + long-press ñ á é í ó ú | LTR | —⁹ | — | — |
+| `cho` | `cho` | Choctaw Chahta | us + long-press a̱ á i̱ í o̱ ó ʋ u̱ | LTR | —⁹ | — | — |
+| `dzg` | `dzg` | Dazaga | us + long-press ẹ ə ɛ ŋ ọ ɔ š | LTR | —⁹ | — | — |
+| `mvp` | `mvp` | Duri | us, ' key | LTR | —⁹ | — | — |
+| `igb` | `igb` | Ebira | us + long-press á à â ā é è ê ē ẹ ệ í ì î ī ị ó ò ô ō ọ ộ ú ù û ū ụ | LTR | —⁹ | — | — |
+| `fan` | `fan` | Fang | us + long-press ñ ŋ ɔ ô ò é è ê â à î ï | LTR | —⁹ | — | — |
+| `gqr` | `gqr` | Gor | us + long-press ɓ ɗ ə ɨ ɔ, ɨ ' keys, ə ɔ on q x | LTR | —⁹ | — | — |
+| `pov` | `pov` | Guinea-Bissau Creole Kriol | us + long-press á â ã é ê í ñ ŋ ó ô õ ŝ ú ẑ ç | LTR | —⁹ | — | — |
+| `cgg` | `cgg` | Kiga Rukiga | us, ' key | LTR | —⁹ | — | — |
+| `mkw` | `mkw` | Kituba | us | LTR | —⁹ | — | — |
+| `lkt` | `lkt` | Lakota Lakȟólʼiyapi | us + long-press á č ʼ é ǧ ȟ í ŋ ó š ú ž, ŋ á keys, č é on q x | LTR | —⁹ | — | — |
+| `las` | `las` | Lama | us + long-press ɖ ǝ ɛ ɨ ɩ ñ ŋ ɔ ʋ | LTR | —⁹ | — | — |
+| `led` | `led` | Lendu | us + long-press ɨ ø ʉ, ʼ key | LTR | —⁹ | — | — |
+| `jbo` | `jbo` | Lojban | us, ' key | LTR | —⁹ | — | — |
+| `mnb` | `mnb` | Muna | us, ꞌ key | LTR | —⁹ | — | — |
+| `mua` | `mua` | Mundang Mundaŋ | us + long-press ã ɓ ɗ ë ǝ ẽ ĩ ŋ õ ṽ, ǝ ' keys | LTR | —⁹ | — | — |
+| `nv` | `nv` | Navajo Diné Bizaad | us + long-press á ą ą́ é ę ę́ í į į́ ł ó ǫ ǫ́ ń, ʼ í keys, á é on q x | LTR | —⁹ | — | — |
+| `sba` | `sba` | Ngambay | us + long-press ɛ ə é è ḛ ɔ ó o̰ ə́ ə̰ ɓ ɗ ŋ á à a̰ í ḭ, ə ' keys, é ɔ on q x | LTR | —⁹ | — | — |
+| `nup` | `nup` | Nupe | us | LTR | —⁹ | — | — |
+| `pmy` | `pmy` | Papuan Malay Melayu Papua | us | LTR | —⁹ | — | — |
+| `srr` | `srr` | Serer Seereer | us + long-press ɓ ƈ ɗ ñ ŋ ƥ ƭ ƴ é, ' key | LTR | —⁹ | — | — |
+| `xog` | `xog` | Soga Olusoga | us, ' key | LTR | —⁹ | — | — |
+| `snk` | `snk` | Soninke Sooninkanxanne | us + long-press ŋ | LTR | —⁹ | — | — |
+| `tem` | `tem` | Temne | us + long-press ə ɛ ŋ ɔ ʌ ȧ å, ɔ ŋ keys, ə ɛ on q x | LTR | —⁹ | — | — |
+| `dje` | `dje` | Zarma Zarmaciine | us + long-press ã ẽ ɲ ŋ õ š ž, ' key | LTR | —⁹ | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -868,18 +900,24 @@ but no model to match the glide against · `—` off
    Languages with no Wikipedia yet have test wikis in the Wikimedia
    Incubator, whose dump (the same date's, CC BY-SA 4.0) holds them all,
    each article's title starting with its wiki's prefix (`Wp/mag/`).
-   Three are read: Adilabad Gondi's, in the Telugu script (2 301
+   Four are read: Adilabad Gondi's, in the Telugu script (2 301
    sentences from 355 articles, a lexicon of 12 803 words: keystroke
    savings 29.8% on 1 592 held-out words, 27.8% of them unknown),
    Khowar's (6 268 sentences from 2 482 articles, 21 670 words: 40.4% on
-   3 085, 13.2% unknown) and Magahi's (33 341 sentences, beside its
-   FineWeb-2 text: note 7). A test wiki's writers paste their
+   3 085, 13.2% unknown), Montenegrin's, in Latin letters, its few
+   Cyrillic sentences left out (54 399 sentences from 1 948 articles,
+   900 000 words, a lexicon of 106 217: 36.9% on 9 384, 30.7% with taps
+   astray, 8.6% unknown; WIDE, as its lexicon lacks 10.4% of them at
+   80 000, where it saves 0.4 points fewer) and Magahi's (33 341
+   sentences, beside its FineWeb-2 text: note 7). A test wiki's writers paste their
    neighbour's articles in: an article more than 6% of whose words are
    Urdu's or Hindi's own function words is left out (257 of Khowar's,
    77 of Magahi's), and a sentence more than 15% so. Khowar is typed on
    Urdu's keys with its own letters on the long presses of those that
    sound nearest (ځ ݮ on ج, څ ݯ on چ, ݰ on ش, ݱ on ز), Gondi on
-   Telugu's. Haryanvi's test wiki is in the Urdu script and mostly lists
+   Telugu's, Montenegrin on Serbian's Latin keys with ś ź on the long
+   presses of s z and on its Cyrillic ones (with no model) with с́ з́ on
+   с з. Haryanvi's test wiki is in the Urdu script and mostly lists
    of names, Pahari-Pothwari's mostly a script page, Chakma's 267
    sentences and Marwari's empty: none is used. Rangpuri's (2 118
    sentences once 196 in standard Bengali are left out, with infobox
@@ -1694,10 +1732,44 @@ but no model to match the glide against · `—` off
    with taps astray, 0.6% of their words unknown, the text much like what
    it read.
 
+9. Thirty keyboards of languages no text here predicts take their
+   letters from CLDR's exemplar characters (Unicode License v3; release
+   49, `scripts/build-exemplar-layouts.py`): ten from CLDR's own locales
+   (Afar, Betawi, Kiga, Choctaw, Zarma, Lojban, Lakota, Mundang, Navajo,
+   Soga) and twenty from its exemplars directory, unconfirmed (Berom,
+   Chavacano, Dazaga, Fang, Gor, Ebira, Lama, Lendu, Kituba, Muna, Duri,
+   Nupe, Papuan Malay, Guinea-Bissau Creole, Ngambay, Cebaara Senoufo,
+   Soninke, Serer, Aborlan Tagbanwa, Temne). Each is typed on the US
+   keys, every letter they lack first on the long press of the one it is
+   made from: by its decomposition (ą́ on a), by its Unicode name (ɓ on b,
+   ɨ on i, ʋ on v), or by the vowel or consonant it writes (ɛ ə on e, ɔ on
+   o, ŋ on n, ʌ on a); its capital on the Shift view's. A glottal stop
+   written as a letter (Aborlan's and Muna's ꞌ, Lendu's ʼ, Cebaara's ˀ)
+   is a key of its own at the home row's end. Where a language's text
+   could be read, FineWeb-2's or its Incubator test wiki's (900 to 41 000
+   words, too few for a model), it decided what the list could not: the
+   letters it writes that the list lacks (Ngambay's ə ɓ ɗ ŋ, its tones
+   and its creaky vowels ḛ ḭ a̰ o̰; Fang's é è ô, as its Bible's and the
+   Jehovah's Witnesses' pages spell; Berom's tones; Mundang's ẽ;
+   Choctaw's u̱), an apostrophe key for the ten whose words write one
+   (Duri's in a fifth of its words, Gor's, Ngambay's, Soga's…), Navajo's
+   ʼ (its text's, not the list's ’), and keys for the letters its words
+   write most of those only a long press would type: at the home row's
+   end those a fifth of its words write, and where long presses would
+   still be in a quarter of its words, the next most written there and
+   in place of q and x, which it hardly writes (q and x on those keys'
+   long presses). The words a long press is needed in: Navajo's 78.5% ->
+   37.1% (ʼ í at the home row's end, á é on q x), Lakota's 71.4% -> 37.6%
+   (ŋ á, č é; its ʼ on the full stop's long press), Temne's 61.4% ->
+   18.3% (ɔ ŋ, ə ɛ), Gor's 60.4% -> 2.0% (ɨ and its apostrophe, ə ɔ),
+   Ngambay's 59.2% -> 29.3% (ə and its apostrophe, é ɔ) and Mundang's
+   29.8% -> 20.0% (ǝ and its apostrophe). None has a model: neither
+   suggestions nor glides.
+
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **414 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **415 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -1709,7 +1781,7 @@ but no model to match the glide against · `—` off
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp
   new** (Newari with GlotCC's news too), **hy fa** beside Tatoeba's, and
-  the Incubator's test wikis: **wsg khw** (note 6) ·
+  the Incubator's test wikis: **wsg khw cnr** (note 6) ·
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my**, and of
   thirty-eight languages that had a keyboard and no model, **sw af sl zu sq kk uz bs
   ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba xh fo ceb mi su co ny sm sn ig st
@@ -1732,11 +1804,13 @@ but no model to match the glide against · `—` off
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 2 layouts, Cherokee, whose
+- **Layout-only** — no bundled model yet: 33 layouts, Montenegrin's in
+  Cyrillic, the thirty whose letters are CLDR's exemplar characters (note
+  9), and Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
   its wiki's and its New Testament), and Nahuatl, whose is colonial
   documents, its wiki and its varieties' Bibles, each spelled its own
-  way. The recognizer runs but has no vocabulary for them. Sixty-eight
+  way. Nahuatl's glides find no word to match; the others have them off. Sixty-eight
   layout-only languages got their models from FineWeb-2's web text
   (note 7).
 - **IME dictionaries** — Pinyin (CC-CEDICT `pinyin/cedict.bin`),
@@ -1935,6 +2009,8 @@ are built on a `us`/`es` base and add theirs the same way:
 | `rmy` Vlax Romani | its č ć š ž đ first on the long presses of c s z d (on the US keys; Balkan Romani's are keys of their own on Serbian's Latin keys) | `rmy` |
 | `kbp` `bss` `gbo` `nnb` | keys for the letters their words write most of those only a long press typed (more than a quarter of Kabiye's, Akoose's and Grebo's letters; in a quarter of Nande's words): two at the home row's end, Kabiye's ɛ ɩ, Akoose's é á, Grebo's ɛ ɔ and Nande's ĩ beside its apostrophe; and in place of q and x, which they hardly write (q and x on those keys' long presses), Kabiye's ʊ ɔ, Akoose's ɛ and glottal stop ʼ, Grebo's ǒ ě and Nande's ũ. The words a long press is needed in: Kabiye's 76% → 24%, Akoose's 85% → 52%, Grebo's 70% → 40%, Nande's 26% → 1% | each its own |
 | `ojb` Northwestern Ojibwe | Keyman's fv_ojibwa, a syllable a key: the i and a syllables and the finals on the base view, the e and o syllables on Shift; each syllable's long vowel and w-dotted forms first on its long press (ᑭ's ᑮ ᑶ ᑸ), which Keyman types with keys of their own (˙ after a syllable, ᐧ before it) by rules a key of one letter has not; the final ᕽ on ᒃ's, the full stop ᙮ on the full stop's | `ojb` |
+| `cnr` `cnr-cyrl` Montenegrin | ś ź on the long presses of s z (on Serbian's Latin keys), с́ з́ on с з (on its Cyrillic ones) | `cnr` |
+| `aa` `bew` `bom` `cbk` `cgg` `cho` `dje` `dzg` `fan` `gqr` `igb` `jbo` `las` `led` `lkt` `mkw` `mnb` `mua` `mvp` `nup` `nv` `pmy` `pov` `sba` `sef` `snk` `srr` `tbw` `tem` `xog` | their letters CLDR's exemplar characters, first on the long presses of the letters they are made from (note 9); a glottal stop written as a letter, and an apostrophe their words write, keys of their own at the home row's end; keys for the letters their words write most of those: Navajo's ʼ í at the home row's end and á é on q x, Lakota's ŋ á and č é, Temne's ɔ ŋ and ə ɛ, Gor's ɨ and apostrophe and ə ɔ, Ngambay's ə and apostrophe and é ɔ, Mundang's ǝ and apostrophe | each its own |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per

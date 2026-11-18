@@ -77,6 +77,7 @@ ch  = "Chamorro"
 chw = "Chuwabu"
 ckb = "Central Kurdish (Sorani)"
 cnh = "Hakha Chin"
+cnr = "Montenegrin"
 co  = "Corsican"
 cop = "Coptic"
 cor = "Cornish"
@@ -654,6 +655,7 @@ source  = { name = "xkeyboard-config, read through libxkbcommon", url = "https:/
 # method's pack listed below, or a pack of its layouts alone, named in
 # [layouts.names]. make-packs refuses a layout no pack takes.
 [layouts.packs]
+aa      = ["aa"]
 ab      = ["ab"]
 abs     = ["abs"]
 ace     = ["ace"]
@@ -687,6 +689,7 @@ bcl     = ["bcl"]
 be      = ["be"]
 bem     = ["bem"]
 ber     = ["ber"]
+bew     = ["bew"]
 bg      = ["bg"]
 bho     = ["bho", "bho-abc"]
 bi      = ["bi"]
@@ -697,6 +700,7 @@ blk     = ["blk"]
 bm      = ["bm"]
 bn      = ["bn", "bn-abc"]
 bo      = ["bo"]
+bom     = ["bom"]
 bpr     = ["bpr"]
 br      = ["br"]
 brh     = ["brh", "brh-abc"]
@@ -709,14 +713,18 @@ bud     = ["bud"]
 bum     = ["bum"]
 bxr     = ["bxr"]
 ca      = ["ca"]
+cbk     = ["cbk"]
 cce     = ["cce"]
 ce      = ["ce"]
 ceb     = ["ceb"]
+cgg     = ["cgg"]
 ch      = ["ch"]
+cho     = ["cho"]
 chr     = ["chr"]
 chw     = ["chw"]
 ckb     = ["ckb"]
 cnh     = ["cnh"]
+cnr     = ["cnr", "cnr-cyrl"]
 co      = ["co"]
 cop     = ["cop"]
 cor     = ["cor"]
@@ -735,6 +743,7 @@ de      = ["de"]
 dga     = ["dga"]
 dik     = ["dik"]
 diq     = ["diq"]
+dje     = ["dje"]
 dng     = ["dng"]
 dnj     = ["dnj"]
 doi     = ["doi", "doi-abc"]
@@ -744,6 +753,7 @@ dty     = ["dty", "dty-abc"]
 dv      = ["dv"]
 dyu     = ["dyu"]
 dz      = ["dz"]
+dzg     = ["dzg"]
 ee      = ["ee"]
 efi     = ["efi"]
 el      = ["el", "el-abc"]
@@ -755,6 +765,7 @@ eu      = ["eu"]
 ewo     = ["ewo"]
 ext     = ["ext"]
 fa      = ["fa", "fa-abc"]
+fan     = ["fan"]
 fat     = ["fat"]
 ff      = ["ff"]
 fi      = ["fi"]
@@ -780,6 +791,7 @@ gil     = ["gil"]
 glv     = ["glv"]
 gog     = ["gog"]
 gor     = ["gor"]
+gqr     = ["gqr"]
 gsw     = ["gsw"]
 gu      = ["gu", "gu-abc"]
 guc     = ["guc"]
@@ -810,6 +822,7 @@ ia      = ["ia"]
 iba     = ["iba"]
 id      = ["id"]
 ig      = ["ig"]
+igb     = ["igb"]
 ilo     = ["ilo"]
 inh     = ["inh"]
 is      = ["is"]
@@ -820,6 +833,7 @@ iu      = ["iu"]
 ium     = ["ium"]
 ja      = ["jp-romaji"]
 jam     = ["jam"]
+jbo     = ["jbo"]
 jv      = ["jv"]
 ka      = ["ka"]
 kaa     = ["kaa"]
@@ -865,8 +879,10 @@ ky      = ["ky"]
 la      = ["la"]
 lad     = ["lad"]
 laj     = ["laj"]
+las     = ["las"]
 lb      = ["lb"]
 lbe     = ["lbe"]
+led     = ["led"]
 lew     = ["lew"]
 lez     = ["lez"]
 lg      = ["lg"]
@@ -876,6 +892,7 @@ li      = ["li"]
 lij     = ["lij"]
 liv     = ["liv"]
 ljp     = ["ljp"]
+lkt     = ["lkt"]
 lld     = ["lld"]
 lmo     = ["lmo"]
 ln      = ["ln"]
@@ -901,8 +918,10 @@ mhr     = ["mhr"]
 mi      = ["mi"]
 min     = ["min"]
 mk      = ["mk"]
+mkw     = ["mkw"]
 ml      = ["ml", "ml-abc"]
 mn      = ["mn", "mn-abc"]
+mnb     = ["mnb"]
 mni     = ["mni", "mni-abc"]
 mni-Beng = ["mni-beng", "mni-beng-abc"]
 mnk     = ["mnk"]
@@ -914,6 +933,8 @@ mrj     = ["mrj"]
 mrw     = ["mrw"]
 ms      = ["ms"]
 mt      = ["mt"]
+mua     = ["mua"]
+mvp     = ["mvp"]
 mww     = ["mww"]
 my      = ["my"]
 myv     = ["myv"]
@@ -937,6 +958,8 @@ nnb     = ["nnb"]
 no      = ["no"]
 nr      = ["nr"]
 nso     = ["nso"]
+nup     = ["nup"]
+nv      = ["nv"]
 ny      = ["ny"]
 nyf     = ["nyf"]
 nyn     = ["nyn"]
@@ -958,8 +981,10 @@ pcm     = ["pcm"]
 pfl     = ["pfl"]
 pl      = ["pl"]
 pms     = ["pms"]
+pmy     = ["pmy"]
 pnb     = ["pnb", "pnb-abc"]
 pnt     = ["pnt"]
+pov     = ["pov"]
 ps      = ["ps", "ps-abc"]
 pt      = ["pt-br", "pt"]
 quh     = ["quh"]
@@ -981,6 +1006,7 @@ sa      = ["sa", "sa-abc"]
 sah     = ["sah"]
 sas     = ["sas"]
 sat     = ["sat", "sat-abc"]
+sba     = ["sba"]
 sc      = ["sc"]
 scn     = ["scn"]
 sco     = ["sco"]
@@ -988,6 +1014,7 @@ sd      = ["sd", "sd-abc"]
 sd-Deva = ["sd-deva", "sd-deva-abc"]
 sda     = ["sda"]
 sdc     = ["sdc"]
+sef     = ["sef"]
 seh     = ["seh"]
 sg      = ["sg"]
 sgc     = ["sgc"]
@@ -1002,6 +1029,7 @@ sl      = ["sl"]
 sm      = ["sm"]
 sme     = ["sme"]
 sn      = ["sn"]
+snk     = ["snk"]
 so      = ["so"]
 sop     = ["sop"]
 spp     = ["spp"]
@@ -1009,6 +1037,7 @@ sq      = ["sq"]
 sr      = ["sr"]
 sr-Latn = ["sr-latn"]
 srn     = ["srn"]
+srr     = ["srr"]
 ss      = ["ss"]
 st      = ["st"]
 su      = ["su"]
@@ -1019,8 +1048,10 @@ syr     = ["syr"]
 szl     = ["szl"]
 ta      = ["ta", "ta-abc"]
 tab     = ["tab"]
+tbw     = ["tbw"]
 tcy     = ["tcy", "tcy-abc"]
 te      = ["te", "te-abc"]
+tem     = ["tem"]
 teo     = ["teo"]
 tet     = ["tet"]
 tg      = ["tg"]
@@ -1066,6 +1097,7 @@ wo      = ["wo"]
 xal     = ["xal"]
 xh      = ["xh"]
 xmf     = ["xmf"]
+xog     = ["xog"]
 xon     = ["xon"]
 yao     = ["yao"]
 yi      = ["yi", "yi-abc"]
@@ -1081,17 +1113,49 @@ zu      = ["zu"]
 
 # The languages with layouts and no model yet: each a pack of its layouts.
 [layouts.names]
+aa  = "Afar"
 am  = "Amharic"
+bew = "Betawi"
+bom = "Berom"
+cbk = "Chavacano"
+cgg = "Kiga"
+cho = "Choctaw"
 chr = "Cherokee"
+dje = "Zarma"
+dzg = "Dazaga"
+fan = "Fang"
 gez = "Ge'ez"
+gqr = "Gor"
+igb = "Ebira"
+jbo = "Lojban"
 ko  = "Korean, Hangul input"
+las = "Lama"
+led = "Lendu"
+lkt = "Lakota"
+mkw = "Kituba"
+mnb = "Muna"
+mua = "Mundang"
+mvp = "Duri"
 nah = "Nahuatl"
+nup = "Nupe"
+nv  = "Navajo"
+pmy = "Papuan Malay"
+pov = "Guinea-Bissau Creole"
+sba = "Ngambay"
+sef = "Cebaara Senoufo"
+snk = "Soninke"
+srr = "Serer"
+tbw = "Aborlan Tagbanwa"
+tem = "Temne"
 ti  = "Tigrinya"
+xog = "Soga"
 
 # The layouts made from another source than xkeyboard-config, and the
 # licence and source each adds to its pack: Sgaw Karen's, from Keyman's
 # sil_sgaw_karen, and Northwestern Ojibwe's, from Keyman's fv_ojibwa
-# (scripts/build-keyman-layouts.py).
+# (scripts/build-keyman-layouts.py); and the thirty whose letters are
+# CLDR's exemplar characters, Afar's to Zarma's
+# (scripts/build-exemplar-layouts.py).
 [layouts.added.ksw]
 licenses = [
   { name = "MIT (Keyman's sil_sgaw_karen, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_sgaw_karen/LICENSE.md", share_alike = false },
@@ -1106,6 +1170,246 @@ licenses = [
 ]
 sources = [
   { name = "Keyman's Ojibwe syllabics keyboard (fv_ojibwa 10.1.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/fv/fv_ojibwa" },
+]
+
+[layouts.added.aa]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Afar (common/main/aa.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/aa.xml" },
+]
+
+[layouts.added.bew]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Betawi (common/main/bew.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/bew.xml" },
+]
+
+[layouts.added.bom]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Berom (exemplars/main/bom.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/bom.xml" },
+]
+
+[layouts.added.cbk]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Chavacano (exemplars/main/cbk.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/cbk.xml" },
+]
+
+[layouts.added.cgg]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Kiga (common/main/cgg.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/cgg.xml" },
+]
+
+[layouts.added.cho]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Choctaw (common/main/cho.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/cho.xml" },
+]
+
+[layouts.added.dje]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Zarma (common/main/dje.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/dje.xml" },
+]
+
+[layouts.added.dzg]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Dazaga (exemplars/main/dzg.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/dzg.xml" },
+]
+
+[layouts.added.fan]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Fang (exemplars/main/fan.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/fan.xml" },
+]
+
+[layouts.added.gqr]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Gor (exemplars/main/gqr.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/gqr.xml" },
+]
+
+[layouts.added.igb]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Ebira (exemplars/main/igb.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/igb.xml" },
+]
+
+[layouts.added.jbo]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Lojban (common/main/jbo.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/jbo.xml" },
+]
+
+[layouts.added.las]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Lama (exemplars/main/las.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/las.xml" },
+]
+
+[layouts.added.led]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Lendu (exemplars/main/led.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/led.xml" },
+]
+
+[layouts.added.lkt]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Lakota (common/main/lkt.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/lkt.xml" },
+]
+
+[layouts.added.mkw]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Kituba (exemplars/main/mkw.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/mkw.xml" },
+]
+
+[layouts.added.mnb]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Muna (exemplars/main/mnb.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/mnb.xml" },
+]
+
+[layouts.added.mua]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Mundang (common/main/mua.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/mua.xml" },
+]
+
+[layouts.added.mvp]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Duri (exemplars/main/mvp.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/mvp.xml" },
+]
+
+[layouts.added.nup]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Nupe (exemplars/main/nup.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/nup.xml" },
+]
+
+[layouts.added.nv]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Navajo (common/main/nv.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/nv.xml" },
+]
+
+[layouts.added.pmy]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Papuan Malay (exemplars/main/pmy.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/pmy.xml" },
+]
+
+[layouts.added.pov]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Guinea-Bissau Creole (exemplars/main/pov.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/pov.xml" },
+]
+
+[layouts.added.sba]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Ngambay (exemplars/main/sba.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/sba.xml" },
+]
+
+[layouts.added.sef]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Cebaara Senoufo (exemplars/main/sef.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/sef.xml" },
+]
+
+[layouts.added.snk]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Soninke (exemplars/main/snk.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/snk.xml" },
+]
+
+[layouts.added.srr]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Serer (exemplars/main/srr.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/srr.xml" },
+]
+
+[layouts.added.tbw]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Aborlan Tagbanwa (exemplars/main/tbw.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/tbw.xml" },
+]
+
+[layouts.added.tem]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Temne (exemplars/main/tem.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/tem.xml" },
+]
+
+[layouts.added.xog]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Soga (common/main/xog.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/xog.xml" },
 ]
 
 # `lock`/`input` name the sources.lock entry and input whose recorded

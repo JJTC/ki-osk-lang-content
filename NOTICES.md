@@ -173,13 +173,14 @@ sentences by `scripts/wikipedia-text.py`, and where a word in another
 script stands, that word left out (the references' and English
 passages' Latin): at most 400 000 a language.
 Every 20th article is held out of it, and the first 500 sentences of
-those are `eval/<lang>.txt`. Three more learn from the Wikimedia
+those are `eval/<lang>.txt`. Four more learn from the Wikimedia
 Incubator's test wikis, in its dump of the same date (each article's
-title starting with its wiki's prefix, `Wp/mag/`): Adilabad Gondi's and
-Khowar's alone, Magahi's beside its FineWeb-2 text; an article or
+title starting with its wiki's prefix, `Wp/mag/`): Adilabad Gondi's,
+Khowar's and Montenegrin's alone (Montenegrin's Latin sentences, its few
+Cyrillic ones left out), Magahi's beside its FineWeb-2 text; an article or
 sentence heavy with Hindi's or Urdu's own words is left out. **Wikipedia's
 text, and the Incubator's, is CC BY-SA 4.0**, share-alike: the packs of
-those twenty-four languages, their models and that held-out text carry those
+those twenty-five languages, their models and that held-out text carry those
 terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 
@@ -1015,6 +1016,16 @@ authorization of the copyright holder.
 
 Sources: https://unicode.org/Public/emoji/16.0/emoji-test.txt,
 https://github.com/unicode-org/cldr
+
+## Keyboards from CLDR's exemplar characters
+
+Thirty layouts, Afar's to Zarma's (`layouts/aa.json` … `layouts/xog.json`,
+made by `scripts/build-exemplar-layouts.py`), take their letters from the
+**CLDR**'s exemplar characters, release 49 (`common/main/<lang>.xml`, and
+`exemplars/main/<lang>.xml` for the languages below its basic coverage),
+under the Unicode License v3, whose notice is above.
+
+Source: https://github.com/unicode-org/cldr/tree/96e54b273d2da4ec6fbad350ba19ff23fa24a588
 
 ## Offensive-word lists
 

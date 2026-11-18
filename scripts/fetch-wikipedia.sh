@@ -9,7 +9,8 @@
 # WIKIPEDIA_PLUS_LANGS, whose held-out text goes elsewhere: EVAL_OUT); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
 # Wikipedia yet: Magahi (beside its FineWeb-2 text), Adilabad Gondi, in
-# the Telugu script, and Khowar.
+# the Telugu script, Khowar, and Montenegrin, in Latin letters (its few
+# Cyrillic sentences left out).
 #
 # The text comes from each wiki's CirrusSearch dump (Wikimedia's
 # cirrus_search_index, an article a JSON document whose "text" is its
@@ -75,6 +76,7 @@ INCUBATOR="
 mag  Wp/mag/  DEVANAGARI  hi
 wsg  Wp/wsg/  TELUGU      -
 khw  Wp/khw/  ARABIC      ur
+cnr  Wp/cnr/  LATIN       -
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

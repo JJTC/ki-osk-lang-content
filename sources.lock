@@ -1678,6 +1678,23 @@
         "words": "2"
       }
     },
+    "predict/cnr": {
+      "encoder": "f03ca0a9e826-dirty",
+      "inputs": {
+        "wikipedia/cnr.txt": "67487d34fef0d85129fbe2c620d6f3cc6ce5a728b11f1c10ee45ca2ca73d7701"
+      },
+      "outputs": {
+        "predict/cnr.forms.fst": "35380ce5a5561f3309db744be42ed5703ef3391d461bfd4a6cbc411e7cf7633f",
+        "predict/cnr.fst": "a57962325a50e26d0ec1c4aae0dc6a6f3e4e323d1666c055d20ffb0487c3b10e",
+        "predict/cnr.ngram.bin": "ba5578c7375fc2a8f2b3a88d1b8b514023ffd29f29fbd6309abe52f43dbc9019"
+      },
+      "recipe": {
+        "ngram_keep": "90000",
+        "start_keep": "5000",
+        "vocab_size": "120000",
+        "words": "2"
+      }
+    },
     "predict/co": {
       "encoder": "f3f9377d8755-dirty",
       "inputs": {

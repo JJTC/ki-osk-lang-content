@@ -117,9 +117,14 @@ of those: two at the home row's end (Kabiye's ɛ ɩ, Akoose's é á, Grebo's
 ɛ ɔ, Nande's ĩ beside its apostrophe), and in place of q and x, which
 they hardly write (q and x on those keys' long presses), Kabiye's ʊ ɔ,
 Akoose's ɛ and glottal stop (which moves there from the home row's end),
-Grebo's ǒ ě and Nande's ũ. A key at the home row's end types its capital
-on the Shift view (Ā, Ɔ, Җ). A letter only a long press types turns the gesture on
-for the layout (`long_press_letters`). A layout's id is
+Grebo's ǒ ě and Nande's ũ. Montenegrin is typed on Serbian's Latin keys
+with ś ź first on the long presses of s z, and on its Cyrillic ones,
+with no model, with с́ з́ on с з. A key at the home row's end types its
+capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
+given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
+gesture on for the layout (`long_press_letters`). A layout said to have no
+model (build-exemplar-layouts.py's, which build them through this) has
+neither suggestions nor glides. A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
 
@@ -139,7 +144,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # ("swap": a key's label → the letter), or keys at the home row's end
 # in place of its spacers ("home": what one types, the apostrophe many of
 # Africa's languages write inside their words, or a list: Wayuu's ü and
-# its apostrophe).
+# its apostrophe), and "model": False for a language with none.
 DERIVED = [
     ("bho", "hi", "भोजपुरी", {}),
     ("mai", "hi", "मैथिली", {}),
@@ -443,6 +448,8 @@ DERIVED = [
                                          "d": ["đ"], "D": ["Đ"]}),
     ("rmn", "sr-latn", "Romani čhib (Balkan)", {}),
     ("gez", "am", "ግዕዝ", {}),
+    ("cnr", "sr-latn", "Crnogorski", {"s": ["ś"], "S": ["Ś"], "z": ["ź"], "Z": ["Ź"]}),
+    ("cnr-Cyrl", "sr", "Црногорски", {"с": ["с́"], "С": ["С́"], "з": ["з́"], "З": ["З́"]}, {"model": False}),
 ]
 
 
@@ -471,9 +478,16 @@ def build(lang, base, name, extra, extras=None):
         out[k] = v
     out["id"] = lang.lower()
     out["name"] = name
+    # A language no text predicts (build-exemplar-layouts.py's) has neither
+    # suggestions nor glides, which would find no word.
+    if extras.get("model") is False:
+        out["prediction_enabled"] = False
+        out["swipe_enabled"] = False
+        out.pop("prediction_lang", None)
     # A layout with no model has no prediction language (Ge'ez, as Amharic).
     if out.get("prediction_enabled", True):
         out["prediction_lang"] = lang
+    homes = [] if not home else [home] if isinstance(home, str) else home
     added = set()
     swapped = set()
     for view in out["views"]:
@@ -489,10 +503,13 @@ def build(lang, base, name, extra, extras=None):
                     rest = [k for k in key.get("long_press", []) if k.get("text") not in letters]
                     key["long_press"] = [{"kind": "text", "text": t} for t in letters] + rest
                     added.add(key.get("label"))
+    # A key at the home row's end has the long press its letter is given
+    # (Ngambay's ə, ə́ on its).
+    added |= set(homes) | {shifted(h) for h in homes}
     missing = (set(extra) - added) | (set(swap) - swapped)
     if missing:
         sys.exit(f"{lang}: no key {' '.join(sorted(missing))} on {base}'s layout")
-    if home:
+    if homes:
         # The home row (the second of letters), its spacers out and the
         # key at its end, on the base and Shift views alike.
         for view in out["views"]:
@@ -501,10 +518,13 @@ def build(lang, base, name, extra, extras=None):
             row = view["rows"][1]["keys"]
             if row[0].get("output", {}).get("kind") != "none" or row[-1].get("output", {}).get("kind") != "none":
                 sys.exit(f"{lang}: {base}'s home row has no spacers to give way")
-            view["rows"][1]["keys"] = row[1:-1] + [
-                {"width_units": 1, "label": h, "output": {"kind": "text", "text": h}}
-                for h in (shifted(h) if view["id"] == "shift" else h
-                          for h in ([home] if isinstance(home, str) else home))]
+            keys = []
+            for h in (shifted(h) if view["id"] == "shift" else h for h in homes):
+                key = {"width_units": 1, "label": h, "output": {"kind": "text", "text": h}}
+                if extra.get(h):
+                    key["long_press"] = [{"kind": "text", "text": t} for t in extra[h]]
+                keys.append(key)
+            view["rows"][1]["keys"] = row[1:-1] + keys
     return json.dumps(out, ensure_ascii=False, indent=2) + "\n"
 
 
