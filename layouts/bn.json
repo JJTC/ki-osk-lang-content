@@ -6,6 +6,9 @@
   "swipe_enabled": false,
   "prediction_enabled": true,
   "prediction_lang": "bn",
+  "xkb_variant": "ben",
+  "font_script": "bengali",
+  "long_press_letters": true,
   "views": [
     {
       "id": "base",
@@ -218,7 +221,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 38
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ৎ"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -262,7 +271,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 45
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ঃ"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -1417,7 +1432,5 @@
         }
       ]
     }
-  ],
-  "xkb_variant": "ben",
-  "font_script": "bengali"
+  ]
 }

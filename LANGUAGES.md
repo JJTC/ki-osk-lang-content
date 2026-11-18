@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**519 layouts**: 463 keyboard layouts (RTL: ar he fa + Urdu, Western
+**544 layouts**: 488 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish; Hinglish, Kokborok) · 8 IMEs (5 CJK +
+Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri and Maba; Hinglish, Kokborok) · 8 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 518 are here; the numeric keypad is built into ki-osk. The
+keycaps. 543 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **427 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -266,7 +266,7 @@ but no model to match the glide against · `—` off
 | `lmo` | `lmo` | Lombard Lumbard | it + long-press ò ö ó ü ù | LTR | **Full** (lmo)⁷ | ✓ | — |
 | `lld` | `lld` | Ladin | it + long-press ë é è ê ö ò ó ô ü ù ć à á ś | LTR | **Full** (lld)⁷ | ✓ | — |
 | `gag` | `gag` | Gagauz Gagauzça | tr + long-press ä ê ţ | LTR | **Full** (gag)⁷ | ✓ | — |
-| `bn` | `bn` | Bengali | in · ben | LTR | **Full** (bn)³ | — | — |
+| `bn` | `bn` | Bengali | in · ben + long-press ৎ ঃ | LTR | **Full** (bn)³ | — | — |
 | `ta` | `ta` | Tamil | in · tam | LTR | **Full** (ta)³ | — | — |
 | `te` | `te` | Telugu | in · tel | LTR | **Full** (te)³ | — | — |
 | `kn` | `kn` | Kannada | in · kan | LTR | **Full** (kn)³ | — | — |
@@ -410,6 +410,31 @@ but no model to match the glide against · `—` off
 | `snk` | `snk` | Soninke Sooninkanxanne | us + long-press ŋ | LTR | —⁹ | — | — |
 | `tem` | `tem` | Temne | us + long-press ə ɛ ŋ ɔ ʌ ȧ å, ɔ ŋ keys, ə ɛ on q x | LTR | —⁹ | — | — |
 | `dje` | `dje` | Zarma Zarmaciine | us + long-press ã ẽ ɲ ŋ õ š ž, ' key | LTR | —⁹ | — | — |
+| `bft` | `bft` | Balti بلتی | pk + long-press ڃ ڇ ڗ ݜ ݨ ݩ | **RTL** | —⁹ | — | — |
+| `gju` | `gju` | Gujari گوجری | pk + long-press څ ڵ ݩ | **RTL** | —⁹ | — | — |
+| `mvy` | `mvy` | Indus Kohistani کوہستانی | pk + long-press ڇ څ ڙ ݜ ݨ | **RTL** | —⁹ | — | — |
+| `gwc` | `gwc` | Kalam Kohistani گاؤری | pk + long-press ٞ ڄ څ ݫ ݭ ݪ | **RTL** | —⁹ | — | — |
+| `hno` | `hno` | Northern Hindko ہندکو | pk | **RTL** | —⁹ | — | — |
+| `phr` | `phr` | Pahari-Pothwari پوٹھواری | pk + long-press ؐ ؑ ؓ ؔ ة ݨ ه ي | **RTL** | —⁹ | — | — |
+| `scl` | `scl` | Shina شینا | pk + long-press ࣿ ڇ څ ڙ ݜ ݨ | **RTL** | —⁹ | — | — |
+| `trw` | `trw` | Torwali توروالی | pk + long-press ٶ ڇ څ ݲ ڙ ݜ | **RTL** | —⁹ | — | — |
+| `bal` | `bal` | Balochi بلۆچی | pk + long-press ۆ ه ێ | **RTL** | —⁹ | — | — |
+| `haz` | `haz` | Hazaragi هزارگی | pk + long-press ه ي | **RTL** | —⁹ | — | — |
+| `mki` | `mki` | Dhatki ڍاٽڪي | pk · snd + long-press ۯ | **RTL** | —⁹ | — | — |
+| `kvx` | `kvx` | Parkari Koli پارڪري | pk · snd + long-press ٰ ؤ ۮ ۯ ۿ | **RTL** | —⁹ | — | — |
+| `bqi` | `bqi` | Bakhtiari لوری بختیاری | ir | **RTL** | —⁹ | — | — |
+| `glk` | `glk` | Gilaki گیلکی | ir + long-press ٚ ۊ ى | **RTL** | —⁹ | — | — |
+| `lrc` | `lrc` | Northern Luri لۊری شومالی | iq · ku_ara + long-press ٙ ٛ ھ ۉ ۊ ؽ | **RTL** | —⁹ | — | — |
+| `mde` | `mde` | Maba Bura Mabang | ara + long-press ٚ ٛ پ ڃ چ ڊ ڔ ڗ ژ ڠ ݦ ݧ | **RTL** | —⁹ | — | — |
+| `bfy` | `bfy` | Bagheli बघेली | in | LTR | —⁹ | — | — |
+| `bgq` | `bgq` | Bagri बागड़ी | in | LTR | —⁹ | — | — |
+| `taj` | `taj` | Eastern Tamang तामाङ | in | LTR | —⁹ | — | — |
+| `bgc` | `bgc` | Haryanvi हरियाणवी | in + long-press ॅ | LTR | —⁹ | — | — |
+| `xnr` | `xnr` | Kangri कांगड़ी | in + long-press ॐ ऍ ऽ ॅ | LTR | —⁹ | — | — |
+| `lif` | `lif` | Limbu लिम्बू | in + long-press ॽ | LTR | —⁹ | — | — |
+| `xsr` | `xsr` | Sherpa शेर्पा | in | LTR | —⁹ | — | — |
+| `sgj` | `sgj` | Surgujia सरगुजिया | in | LTR | —⁹ | — | — |
+| `syl` | `syl` | Sylheti সিলেটি (Bengali script) | in · ben + long-press ঃ ৎ ৗ ʼ | LTR | —⁹ | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -491,7 +516,7 @@ but no model to match the glide against · `—` off
 | `chr` | `chr` | Cherokee ᏣᎳᎩ | us · chr | LTR | — | — | — |
 | `iu` | `iu` | Inuktitut ᐃᓄᒃᑎᑐᑦ | ca · ike | LTR | **Full** (iu)⁷ | — | — |
 | `mni` | `mni` | Meitei ꯃꯤꯇꯩ ꯂꯣꯟ | in · mni | LTR | **Full** (mni)⁶ | — | — |
-| `mni-beng` | `mni-Beng` | Meitei মণিপুরী (Bengali script) | in · ben + long-press ৱ | LTR | **Full** (mni-Beng)⁷ | — | — |
+| `mni-beng` | `mni-Beng` | Meitei মণিপুরী (Bengali script) | in · ben + long-press ৱ ৎ ঃ | LTR | **Full** (mni-Beng)⁷ | — | — |
 | `dz` | `dz` | Dzongkha རྫོང་ཁ | bt (+ ་ key) | LTR | **Full** (dz)⁷ | — | — |
 | `cn-pinyin` | `zh-Hans` | Chinese 中文 (拼音) | — | LTR | IME | — | **Pinyin** (CC-CEDICT) |
 | `tw-zhuyin` | `zh-Hant` | Chinese 中文 (注音) | — | LTR | IME | — | **Zhuyin** Bopomofo → Traditional (CC-CEDICT) |
@@ -1816,6 +1841,34 @@ but no model to match the glide against · `—` off
    Ngambay's 59.2% -> 29.3% (ə and its apostrophe, é ɔ) and Mundang's
    29.8% -> 20.0% (ǝ and its apostrophe). None has a model: neither
    suggestions nor glides.
+   Twenty-five more, in other scripts, are typed on their script's keys
+   the same way, the letters those lack on a long press (six from CLDR's
+   own locales: Torwali, Balochi, Bakhtiari, Northern Luri, Haryanvi and
+   Kangri, which name themselves; eighteen from its exemplars directory).
+   In the Arabic script, on whichever keys lack fewest of a language's
+   letters: Urdu's for Balti, Gujari, Indus and Kalam Kohistani, Northern
+   Hindko, Pahari-Pothwari, Shina, Torwali, Balochi and Hazaragi; Sindhi's
+   for Dhatki and Parkari Koli; Persian's for Bakhtiari and Gilaki;
+   Sorani's for Northern Luri; Arabic's for Maba. A letter is on the key of
+   the one its Unicode name says it is made from (ڗ, REH WITH TWO DOTS
+   ABOVE, on ر; ݨ ݩ on ن; څ on ح), or the one it is drawn from (ڇ on چ,
+   ڃ ڄ on ج); Arabic's ي ك and Urdu's ه as the keys' ی ک ہ; a vowel or
+   honorific mark the keys lack on the full stop's long press, where
+   Persian's keys have theirs (Pothwari's ؐ ؑ ؓ ؔ, Northern Luri's ٙ ٛ).
+   In Devanagari, on Hindi's InScript keys, which have them all (the
+   candra ॅ ऍ on their long presses, first for Haryanvi and Kangri) but
+   Kangri's ॐ (on ओ) and avagraha ऽ and Limbu's glottal stop ॽ (on the
+   visarga ः, as Sanskrit's ऽ is): Bagheli, Bagri, Eastern Tamang,
+   Haryanvi, Kangri, Limbu (its Devanagari spelling; Limbu's own script
+   needs a keyboard), Sherpa and Surgujia. A letter typed as the letters
+   and marks it is made of (ड़ as ड and the nukta, کٔ as ک and the hamza
+   above) needs no key of its own. Eastern Tamang's, Bagheli's, Bagri's,
+   Sherpa's, Surgujia's, Northern Hindko's and Bakhtiari's letters are all
+   on their keys already: their keyboards are those keys, in their name.
+   Sylheti, in the Bengali script (its own Syloti Nagri needs a keyboard),
+   on Bengali's keys: their ঃ and ৎ, the au length mark ৗ on ৌ, and its
+   glottal stop ʼ on the full stop's long press (Bengali's keys, a row of
+   letters above their home row, leave no room for a key at its end).
 
 ## Prediction model tiers
 
@@ -1855,9 +1908,10 @@ but no model to match the glide against · `—` off
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 33 layouts, Montenegrin's in
-  Cyrillic, the thirty whose letters are CLDR's exemplar characters (note
-  9), and Cherokee, whose
+- **Layout-only** — no bundled model yet: 58 layouts, Montenegrin's in
+  Cyrillic, the fifty-five whose letters are CLDR's exemplar characters
+  (note 9: thirty in Latin letters, twenty-five in the Arabic script,
+  Devanagari and Bengali), and Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
   its wiki's and its New Testament), and Nahuatl, whose is colonial
   documents, its wiki and its varieties' Bibles, each spelled its own
@@ -2016,7 +2070,12 @@ view). All DejaVu-drawable, no extra font:
 **long-press menu** on a related base key (the mobile convention) rather
 than their own keycode. Latvian's letters compose through an xkb dead key
 (`'` + `a` → `ā`) the keycode reader can't see; the ME/NA/SA Latin layouts
-are built on a `us`/`es` base and add theirs the same way:
+are built on a `us`/`es` base and add theirs the same way. A layout with a
+letter only a long press types says so (`long_press_letters`), which turns
+the menu on for it where long-press menus are otherwise off, as on a kiosk
+by default; until data 0.52.0 thirty-one of these (Yoruba, Hausa, Igbo,
+Welsh, Turkmen, Wolof, Māori, Akan…) did not, and there their letters
+could not be typed, nor could Bengali's ৎ ঃ, on no key until then:
 
 | Layout | Long-press letters | Feature |
 |---|---|---|
@@ -2029,6 +2088,7 @@ are built on a `us`/`es` base and add theirs the same way:
 | `ig` Igbo | ị ọ ụ ṅ | `ig` |
 | `uz` Uzbek | oʻ gʻ (turned comma) | `uz` |
 | `tk` Turkmen | ä ç ž ň ö ş ü ý | `tk` |
+| `bn` Bengali | ৎ ঃ (on ত ং), which its keymap has on no level the keys show | `bn` |
 | `as` Assamese | ৰ ৱ (on Bengali র/ব) | `as` |
 | `ckb` Central Kurdish | ێ ڵ ڕ (on ی ل ر; on Shift too) | `ckb` |
 | `cnh` Hakha Chin | ṭ | `cnh` |
@@ -2064,6 +2124,7 @@ are built on a `us`/`es` base and add theirs the same way:
 | `aa` `bew` `bom` `cbk` `cgg` `cho` `dje` `dzg` `fan` `gqr` `igb` `jbo` `las` `led` `lkt` `mkw` `mnb` `mua` `mvp` `nup` `nv` `pmy` `pov` `sba` `sef` `snk` `srr` `tbw` `tem` `xog` | their letters CLDR's exemplar characters, first on the long presses of the letters they are made from (note 9); a glottal stop written as a letter, and an apostrophe their words write, keys of their own at the home row's end; keys for the letters their words write most of those: Navajo's ʼ í at the home row's end and á é on q x, Lakota's ŋ á and č é, Temne's ɔ ŋ and ə ɛ, Gor's ɨ and apostrophe and ə ɔ, Ngambay's ə and apostrophe and é ɔ, Mundang's ǝ and apostrophe | each its own |
 | `bto` `mui` `mfa` `ibb` `vmf` `sdh` `bgn` | the letters of the Incubator wikis' languages first on the long presses of those they are made from: Rinconada Bikol's ñ, Musi's é è ó, Kelantan-Pattani Malay's è é ó ũ, Ibibio's ọ ñ n̄ ị ẹ ụ ʌ (on the US keys); East Franconian's â ô (on German's); Southern Kurdish's ۊ on و (on Sorani's); Western Balochi's ے ں ٹ ڈ ڑ ہ ھ ګ on ی ن ت د ر ه گ (on Persian's) | each its own |
 | `mak` `pmf` | an apostrophe, a key of its own at the home row's end, for their glottal stop: Makassarese's se're, Pamona's ince'emo (a seventh of Pamona's words) | each its own |
+| `bft` `gju` `mvy` `gwc` `phr` `scl` `trw` `bal` `haz` `mki` `kvx` `glk` `lrc` `mde` `bgc` `xnr` `lif` `syl` | their letters CLDR's exemplar characters, on their script's keys (Urdu's, Sindhi's, Persian's, Sorani's, Arabic's, Hindi's, Bengali's): those the keys lack first on the long press of the one they are made or drawn from (Balti's ڗ on ر, ݨ ݩ on ن; Shina's ݜ on س; Dhatki's ۯ on ر; Kangri's ॐ on ओ, ऽ on ः), a mark the keys lack on the full stop's (note 9) | each its own |
 | `cv` `sah` `kpv` `koi` `mhr` `mrj` `tyv` `bxr` `xal` `ab` | their letters on the long presses of the Russian letters they are made from (Chuvash's ӑ ӗ ҫ ӳ on а е с у, Abkhaz's ә on а…) | each its own |
 
 Devanagari serves Hindi and, unchanged, Marathi/Nepali; one layout per

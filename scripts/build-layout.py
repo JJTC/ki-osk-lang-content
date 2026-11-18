@@ -322,6 +322,10 @@ DIACRITIC_LONGPRESS = {
         "a": ["ä"], "c": ["ç"], "z": ["ž"], "n": ["ň"], "o": ["ö"],
         "s": ["ş"], "u": ["ü"], "y": ["ý"],
     },
+    # Bengali: khanda ta ৎ (উৎসব, হঠাৎ) and the visarga ঃ (দুঃখ), which
+    # its keymap has on no level the keys show, on the long presses of
+    # ta ত and the anusvara ং.
+    "bn": {"ত": ["ৎ"], "ং": ["ঃ"]},
     # Assamese: the two letters that distinguish it from Bengali — Assamese
     # ra ৰ (long-press Bengali ra র) and wa ৱ (long-press Bengali ba ব).
     "as": {"র": ["ৰ"], "ব": ["ৱ"]},
@@ -537,6 +541,19 @@ def kept_codes(base_codes, extra_codes, chars, script):
     return [c for c in base_codes if keep(c)] + [c for c in extra_codes if keep(c)]
 
 
+def long_press_only(layout):
+    """Whether a long press offers a letter no tap types."""
+    taps, held = set(), set()
+    for view in layout["views"]:
+        for row in view["rows"]:
+            for key in row["keys"]:
+                taps.add(key.get("label", ""))
+                if key.get("output", {}).get("kind") == "text":
+                    taps.add(key["output"].get("text", ""))
+                held |= {o.get("text", "") for o in key.get("long_press", []) if o.get("kind") == "text"}
+    return any(h not in taps and any(c.isalpha() for c in h) for h in held)
+
+
 def build(base_dir, lid, name, xlayout, xvariant, script):
     base, shift, alt = maps_for(xlayout, xvariant)
 
@@ -691,6 +708,14 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
         for view in layout["views"]:
             for r in view["rows"]:
                 r["keys"].reverse()
+
+    # A national letter only a long press types turns the gesture on for
+    # the layout (`long_press_letters`), as build-derived-layouts.py's
+    # layouts have it: without it a kiosk, whose long-press menus are off
+    # by default, could not type Yoruba's ẹ or Bengali's ৎ at all.
+    if lid in DIACRITIC_LONGPRESS and long_press_only(layout):
+        layout = {**{k: v for k, v in layout.items() if k != "views"},
+                  "long_press_letters": True, "views": layout["views"]}
 
     path = f"{base_dir}/{lid}.json"
     with open(path, "w", encoding="utf-8") as f:

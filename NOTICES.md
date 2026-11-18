@@ -1024,11 +1024,14 @@ https://github.com/unicode-org/cldr
 
 ## Keyboards from CLDR's exemplar characters
 
-Thirty layouts, Afar's to Zarma's (`layouts/aa.json` … `layouts/xog.json`,
-made by `scripts/build-exemplar-layouts.py`), take their letters from the
-**CLDR**'s exemplar characters, release 49 (`common/main/<lang>.xml`, and
-`exemplars/main/<lang>.xml` for the languages below its basic coverage),
-under the Unicode License v3, whose notice is above.
+Fifty-five layouts (made by `scripts/build-exemplar-layouts.py`) take
+their letters from the **CLDR**'s exemplar characters, release 49
+(`common/main/<lang>.xml`, and `exemplars/main/<lang>.xml` for the
+languages below its basic coverage), under the Unicode License v3, whose
+notice is above: thirty in Latin letters, Afar's to Zarma's
+(`layouts/aa.json` … `layouts/xog.json`), and twenty-five on the Arabic
+script's, Devanagari's and Bengali's keys, Balti's to Sylheti's
+(`layouts/bft.json` … `layouts/syl.json`).
 
 Source: https://github.com/unicode-org/cldr/tree/96e54b273d2da4ec6fbad350ba19ff23fa24a588
 

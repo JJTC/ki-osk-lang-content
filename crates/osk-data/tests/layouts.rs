@@ -154,6 +154,22 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("ibb", "ọñịẹụʌỌÑỊẸỤɅ"),
         ("sdh", "ۊ"),
         ("bgn", "ےںٹڈڑہھګ"),
+        ("bft", "ڃڇڗݜݨݩ"),
+        ("xnr", "ॐऽ"),
+        ("lif", "ॽ"),
+        // National letters on long presses only (scripts/build-layout.py's
+        // DIACRITIC_LONGPRESS), whose layouts once did not say so: on a
+        // kiosk, its menus off by default, they could not be typed.
+        ("yo", "ẹọṣ"),
+        ("ha", "ɓɗƙƴ"),
+        ("ig", "ịọụṅ"),
+        ("cy", "ŵŷ"),
+        ("tk", "äçňöşüýž"),
+        ("wo", "ëñŋ"),
+        ("mi", "āēīōū"),
+        ("ak", "ɛɔ"),
+        ("bn", "ৎঃ"),
+        ("syl", "ৎঃৗʼ"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {

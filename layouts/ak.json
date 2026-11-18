@@ -6,6 +6,7 @@
   "swipe_enabled": true,
   "prediction_enabled": true,
   "prediction_lang": "ak",
+  "long_press_letters": true,
   "views": [
     {
       "id": "base",

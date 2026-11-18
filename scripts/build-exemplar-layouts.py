@@ -37,6 +37,30 @@ Temne's ɔ ŋ, ə ɛ (61.4%, 18.3%), Gor's ɨ and apostrophe, ə ɔ (60.4%,
 apostrophe (29.8%, 20.0%). None has a model: suggestions and glides are
 off.
 
+Languages in another script are typed on its keys as they are, with the
+letters those lack on a long press the same way: in the Arabic script on
+Urdu's (Balti, Gujari, the Kohistanis, Hindko, Pothwari, Shina, Torwali,
+Balochi, Hazaragi), Sindhi's (Dhatki, Parkari Koli), Persian's
+(Bakhtiari, Gilaki), Sorani's (Northern Luri) or Arabic's (Maba),
+whichever lacks fewest of its letters; in Devanagari on Hindi's
+(Bagheli, Bagri, Eastern Tamang, Haryanvi, Kangri, Limbu, Sherpa,
+Surgujia); Sylheti in the Bengali script on Bengali's, its glottal stop
+ʼ on the full stop's long press: a key at the home row's end goes in the
+second row, whose spacers give it room, and Bengali's second row (it has
+a row of letters above) has none. What both the base
+and the Shift view of those keys type is typed (Urdu's and Persian's
+vowel marks, Hindi's nukta), and so is a letter typed as the letters it
+is made of, one by one (ड़ as ड and the nukta, {کٔ} as ک and hamza); a
+letter the keys have on a long press stays there, first. An Arabic letter
+is on the key of the one its Unicode name says it is made from (ARABIC
+LETTER REH WITH TWO DOTS ABOVE, ڗ, on ر), else of the one it is drawn from
+(Urdu's ٹ ڈ ڑ on ت د ر, Sindhi's ٻ ڀ on ب, ڻ on ن), Arabic's yeh and kaf
+being Persian's and Urdu's ی and ک; a vowel or honorific mark the keys
+lack is on the full stop's long press, where Persian's keys have theirs.
+Devanagari's ॐ is on ओ, and its avagraha ऽ and glottal stop ॽ on the
+visarga ः, as Sanskrit's are; Bengali's au length mark ৗ is on ৌ. The
+joiners (ZWJ, ZWNJ) need no key.
+
 Each language's CLDR file is fetched from unicode-org/cldr at the
 release-49 commit and checked against its sha256 into $CLDR_DIR (default
 $TMPDIR/ki-osk-sources/cldr); a layout's id is its language's tag.
@@ -114,16 +138,62 @@ LANGS = [
     ("tem", EXEMPLARS, "f36e539e83ba41b2fd75075d0f898bc9988ac142fd62a1cc3c932dcbcf7bd9db", {
         "name": "Temne", "also": ["ȧ", "å"], "home": ["ɔ", "ŋ"], "swap": {"q": "ə", "x": "ɛ"}}),
     ("xog", COMMON, "6ba4b7c0c0c17310f4d42958d91e3ecb98d5e477314983e3495b47a846a078e9", {"home": ["'"]}),
+    # In other scripts, on their keys: the Arabic script's on Urdu's,
+    # Sindhi's, Persian's, Sorani's or Arabic's, whichever lacks fewest
+    # of its letters; Devanagari's on Hindi's; Sylheti's Bengali on
+    # Bengali's.
+    ("bft", EXEMPLARS, "2d43de987d29cf6246fae8d8733a3a875a0f4dca8562e1cb08b4e8372bfbd431", {"base": "ur", "name": "بلتی"}),
+    ("gju", EXEMPLARS, "853b5c5f32aead70b2ce77a226d1b07c45dea4baeaf60c3cf7b692c901ecd61d", {"base": "ur", "name": "گوجری"}),
+    ("mvy", EXEMPLARS, "7fe9aa1384aac4bc2e7a1c9b9959523c91e397d6595f01c47ce736cf19bdaf84", {"base": "ur", "name": "کوہستانی"}),
+    ("gwc", EXEMPLARS, "1b9e70d76570bf84a5b4d974c4107d080cac219b45cf067c43477ba0c86222f1", {"base": "ur", "name": "گاؤری"}),
+    ("hno", EXEMPLARS, "a6630ff6023353cdb5e2bf594cb903ceddef13e98a65933cdc99d262e8856778", {"base": "ur", "name": "ہندکو"}),
+    ("phr", EXEMPLARS, "301de48233d60e08714455d3dca845f60b32a4ad53c99ce7c7a7ed4a6f319d0f", {"base": "ur", "name": "پوٹھواری"}),
+    ("scl", EXEMPLARS, "e7a1a96e53a7166ea577b03974ff74d7d600025f7d07c87d8f69e9e43e4d7759", {"base": "ur", "name": "شینا"}),
+    ("trw", COMMON, "654e920a883f45731389af8f219bd09440e086d4949ccdc1c71ff982678e4083", {"base": "ur"}),
+    ("bal", COMMON, "d69ef9db4bde994fa33e4a64fb4aadb8076263121fd8bf4d628ceb0f870dea60", {"base": "ur"}),
+    ("haz", EXEMPLARS, "419d1ed33b30bfbd575ddef4bbf882982b4316842506e62060af584067a0486f", {"base": "ur", "name": "هزارگی"}),
+    ("mki", EXEMPLARS, "994e3127e10da6d8e25031383269f32a6a59724beb153e21937964246b98ea3f", {"base": "sd", "name": "ڍاٽڪي"}),
+    ("kvx", EXEMPLARS, "44529ce51b59ce32af4c80958692d1287a5e344a0d601d2784b0962dd1dda8d2", {"base": "sd", "name": "پارڪري"}),
+    ("bqi", COMMON, "d6d5834f709b446a6f984aab800188e40ae90198c975fe47c74b0d6124135e9d", {"base": "fa"}),
+    ("glk", EXEMPLARS, "6e135b3506819e3939e45c0f80b48c0602ebe1414098ec6565f71dd3547890c1", {"base": "fa", "name": "گیلکی"}),
+    ("lrc", COMMON, "7a86da9dd0fd4d3136e93baffdcff51fdd0df387771b7d69f9f797b80d0a30a5", {"base": "ckb"}),
+    ("mde", EXEMPLARS, "22ddea51c12dfbcd403971eb071e586de049ce0af9543011911877df92345561", {"base": "ar", "name": "Bura Mabang"}),
+    ("bfy", EXEMPLARS, "a9fef7fdef1337c1643ab965418ae9ab96d9fd852d80c94b3771cc657524aa49", {"base": "hi", "name": "बघेली"}),
+    ("bgq", EXEMPLARS, "834a604ba53edd6183182dd3fe947614f12b9336b79f91ec2e61bc704b26f23e", {"base": "hi", "name": "बागड़ी"}),
+    ("taj", EXEMPLARS, "8b2b78525b823529795a8c209c6c3c0a9b848175fda5444bcb70f7f8fe140663", {"base": "hi", "name": "तामाङ"}),
+    ("bgc", COMMON, "b5b360cbd7d33e30a539b012e270dad1efe82882edfb27d451e9dcd97b259781", {"base": "hi"}),
+    ("xnr", COMMON, "c07a73a6b701f664350134d23fbf2b2875477b8d7913e9617f5d3ac9c59548f9", {"base": "hi"}),
+    ("lif", EXEMPLARS, "a01d29b299c2056844405160d52fae098c1a29c28ddcc11023ecee32c8e0e942", {"base": "hi", "name": "लिम्बू"}),
+    ("xsr", EXEMPLARS, "8d6c82e3180063b8815245d56cf18ccdf05a969263a3c1a4d68b9aec77db8e37", {"base": "hi", "name": "शेर्पा"}),
+    ("sgj", EXEMPLARS, "4bc9f71b927b41d1f7033e35cee343e3fc028ef5c0a2f37721f467ba63cabd0b", {"base": "hi", "name": "सरगुजिया"}),
+    ("syl", EXEMPLARS, "1d889490a2c3938d795ea110d92814f93b509a48b06dd1212967b652081cdfa8", {"base": "bn", "name": "সিলেটি"}),
 ]
 
 # The letters no letter with a mark is made from, on the key of the
-# vowel or consonant they write.
+# vowel or consonant they write; the Arabic script's on the letter they
+# are drawn from; Devanagari's as Sanskrit's are; Bengali's au length
+# mark on its au.
 NEAREST = {"ɛ": "e", "ə": "e", "ǝ": "e", "ɔ": "o", "ŋ": "n", "ɩ": "i", "ʊ": "u", "ʉ": "u",
-           "ʌ": "a", "ɣ": "g", "ʒ": "z", "ʃ": "s"}
+           "ʌ": "a", "ɣ": "g", "ʒ": "z", "ʃ": "s",
+           "ٹ": "ت", "ٺ": "ت", "ٿ": "ت", "ڈ": "د", "ڌ": "د", "ڍ": "د", "ڑ": "ر",
+           "ٻ": "ب", "ڀ": "ب", "ڃ": "ج", "ڄ": "ج", "ڇ": "چ", "ڦ": "ف", "ڤ": "ف",
+           "ڪ": "ک", "ڱ": "گ", "ڳ": "گ", "ں": "ن", "ڻ": "ن", "ے": "ی", "ھ": "ه",
+           "ہ": "ه", "ە": "ه", "ۆ": "و", "ۉ": "و", "ٶ": "و",
+           "\u08ff": "\u0658", "\u065a": "\u064e", "\u065b": "\u064e",
+           "ॐ": "ओ", "ऽ": "ः", "ॽ": "ः", "ৗ": "ৌ"}
+# Arabic's yeh, alef maksura and kaf as Persian's and Urdu's keys type
+# them, and its heh and teh marbuta as Urdu's.
+SAME = {"ي": "ی", "ى": "ی", "ك": "ک", "ه": "ہ", "ة": "ۃ"}
+# The joiners, which shaping needs and no key shows.
+JOINERS = {"\u200c", "\u200d"}
 # A glottal stop or apostrophe written as a letter.
 APOSTROPHES = {"'", "’", "ʼ", "ꞌ", "ˀ", "ʔ"}
-# Where an apostrophe-like letter goes when the home row has no room.
+# Where an apostrophe-like letter goes when the home row has no room,
+# and a mark the keys lack (Persian's keys have their vowel marks there).
 FULL_STOP = "."
+# Combining marks any script's letters take (Latin's accents), which a
+# set may list apart from their letter: those join the member before.
+NEUTRAL_MARKS = re.compile("[\u0300-\u036f\u1ab0-\u1aff\u1dc0-\u1dff\u20d0-\u20ff\ufe20-\ufe2f]")
 
 
 def fetch(lang, where, sha):
@@ -171,10 +241,11 @@ def unicode_set(text):
         else:
             out.append(c)
             i += 1
-    # A letter and its marks are one member ({ą́}, or a̱ written out).
+    # A letter and its marks are one member ({ą́}, or a̱ written out); a
+    # script's own marks (Urdu's zabar, Hindi's vowel signs) are members.
     merged = []
     for m in (unicodedata.normalize("NFC", m) for m in out):
-        if merged and unicodedata.category(m[0]).startswith("M"):
+        if merged and NEUTRAL_MARKS.match(m):
             merged[-1] = unicodedata.normalize("NFC", merged[-1] + m)
         else:
             merged.append(m)
@@ -194,21 +265,50 @@ def exemplars(lang, xml):
     return unicode_set(main[0]), name
 
 
-def host(letter, keys):
+def base_keys(base):
+    """What the base layout's taps type, on its letters' view and its Shift
+    view (letters and marks), the key whose long press offers each letter
+    it offers so, its keys' labels, and whether its home row (the second)
+    has spacers at its ends to give a key of its own room."""
+    layout = json.loads((ROOT / "layouts" / f"{base}.json").read_text(encoding="utf-8"))
+    home_row = layout["views"][0]["rows"][1]["keys"]
+    room = all((k.get("output") or {}).get("kind") == "none" for k in (home_row[0], home_row[-1]))
+    keys, held, labels = set(), {}, set()
+    for view in layout["views"]:
+        if view["id"] not in ("base", "shift"):
+            continue
+        for row in view["rows"]:
+            for k in row["keys"]:
+                labels.add(k.get("label", ""))
+                out = k.get("output") or {}
+                for t in (k.get("label", ""), out.get("text", "") if out.get("kind") == "text" else ""):
+                    if len(t) == 1 and unicodedata.category(t)[0] in "LM":
+                        keys.add(t)
+                for o in k.get("long_press", []):
+                    if o.get("kind") == "text":
+                        held.setdefault(o["text"], k.get("label"))
+    return keys, held, labels, room
+
+
+def host(letter, keys, held=None, labels=()):
     """The key whose long press types `letter`: the letter it is made from."""
     base = unicodedata.normalize("NFD", letter)[0]
     if base in keys:
         return base
-    m = re.match(r"(LATIN (?:SMALL|CAPITAL) LETTER \w+) WITH ", unicodedata.name(base, ""))
+    if held and held.get(letter) in keys:
+        return held[letter]
+    made_from = None
+    m = re.match(r"(LATIN (?:SMALL|CAPITAL) LETTER \w+|ARABIC (?:LETTER )?[\w ]+?) WITH ", unicodedata.name(base, ""))
     if m:
         try:
             made_from = unicodedata.lookup(m.group(1))
         except KeyError:
             made_from = None
-        if made_from in keys:
-            return made_from
-    if base in NEAREST:
-        return NEAREST[base]
+    for c in (made_from, SAME.get(made_from), NEAREST.get(base), SAME.get(NEAREST.get(base)), SAME.get(base)):
+        if c and c in keys:
+            return c
+    if unicodedata.category(base) == "Mn" and FULL_STOP in labels:
+        return FULL_STOP
     sys.exit(f"no key for {letter!r} ({unicodedata.name(base, '?')})")
 
 
@@ -223,16 +323,20 @@ def plan(lang, where, sha, options):
     name = options.get("name") or cldr_name
     if not name:
         sys.exit(f"{lang}: CLDR gives no name; name it")
-    base = json.loads((ROOT / "layouts" / "us.json").read_text(encoding="utf-8"))
-    keys = {k["label"] for r in base["views"][0]["rows"][:3] for k in r["keys"]
-            if len(k.get("label", "")) == 1 and k["label"].isalpha()}
+    keys, held, labels, room = base_keys(options.get("base", "us"))
     apostrophe = options.get("apostrophe")
     wanted = []
     for m in letters + list(options.get("also", [])):
+        # A letter typed as the letters and marks it is made of, one by one
+        # (ड़ as ड and the nukta), needs no key; nor do the joiners.
+        if m in JOINERS or all(c in keys for c in unicodedata.normalize("NFD", m)):
+            continue
         # A run of letters typed one by one (Lakota's čh, Navajo's kʼ):
-        # only its apostrophe, which is typed alone, may need a key.
+        # only its apostrophe, or a mark the keys lack (Shina's ࣿ in its
+        # {اےࣿ}), which is typed alone, may need a key.
         run = len(m) > 1 and not unicodedata.category(m[1]).startswith("M")
-        for c in ([c for c in m if c in APOSTROPHES] if run else [m]):
+        for c in ([c for c in m if c in APOSTROPHES or (unicodedata.category(c) == "Mn" and c not in keys)]
+                  if run else [m]):
             if apostrophe and c in APOSTROPHES:
                 c = apostrophe
             if c not in keys and c not in wanted:
@@ -241,7 +345,7 @@ def plan(lang, where, sha, options):
     swap = dict(options.get("swap", {}))
     own = set(home) | set(swap.values())
     for m in wanted:
-        if m in APOSTROPHES and m not in own and len(home) < 2:
+        if m in APOSTROPHES and m not in own and room and len(home) < 2:
             home.append(m)
             own.add(m)
     extra = {}
@@ -258,11 +362,11 @@ def plan(lang, where, sha, options):
         elif m in own:
             # A letter with a key of its own stays on the long press of the
             # one it is made from too (Navajo's á on a).
-            put(host(m, keys), m)
+            put(host(m, keys, held, labels), m)
         else:
             # Made from a letter with a key of its own, on that key (Ngambay's
             # ə́ on ə).
-            put(host(m, keys | own), m)
+            put(host(m, keys | own, held, labels), m)
     # The letters q and x typed, on the long press of the keys in their place.
     full_swap = {}
     for k, letter in swap.items():
@@ -276,7 +380,7 @@ def plan(lang, where, sha, options):
 
 def build(lang, where, sha, options):
     name, extra, home, swap = plan(lang, where, sha, options)
-    return derived.build(lang, "us", name, extra, {"home": home, "swap": swap, "model": False})
+    return derived.build(lang, options.get("base", "us"), name, extra, {"home": home, "swap": swap, "model": False})
 
 
 def main():
