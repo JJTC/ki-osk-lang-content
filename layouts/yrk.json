@@ -1,6 +1,6 @@
 {
   "id": "yrk",
-  "name": "Ненэцяʼ вада",
+  "name": "Ненэцяˮ вада",
   "xkb_layout": "ru",
   "direction": "ltr",
   "swipe_enabled": false,
@@ -215,6 +215,14 @@
               "output": {
                 "kind": "text",
                 "text": "'"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ˮ",
+              "output": {
+                "kind": "text",
+                "text": "ˮ"
               }
             }
           ]
@@ -592,6 +600,14 @@
               "output": {
                 "kind": "text",
                 "text": "'"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "ˮ",
+              "output": {
+                "kind": "text",
+                "text": "ˮ"
               }
             }
           ]

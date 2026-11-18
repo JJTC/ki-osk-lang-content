@@ -99,17 +99,17 @@ typed on those keys, ˆ and ˉ on the long presses of ꞈ and ˍ, and ˬ and ˇ,
 the commonest, at the home row's end, where its desktop keyboard has them
 (on ; and Shift+;). Thirteen more of the long tail: Nenets on Russian's
 keys, ӈ in place of the ъ it hardly writes (ъ stays on ь's long press)
-and its glottal stop, the apostrophe nearly half its words write (по’,
-ненэця’’), at the home row's end; Dungan on them too, ә in place of ъ, җ
-at the home row's end and ү ў first on у; Tausug, Ewondo, Tooro,
-Makhuwa-Meetto, Kanuri, Giryama, Lango, Hanunoo, Toraja-Sa'dan and Ledo
-Kaili on the US keys and Sassarese on Italian's, their letters first on
-the long presses, with an apostrophe key for those whose words write one
-(Tausug's and Toraja-Sa'dan's glottal stop, Giryama's at'u) and Kanuri's
-ə, in a quarter of its words, at the home row's end. A key at the home
-row's end types its capital on the Shift view (Ā, Ɔ, Җ). A letter only a
-long press types turns the gesture on for the layout
-(`long_press_letters`). A layout's id is
+and its two glottal stops, which nearly half its words write (поʼ,
+ненэцяˮ), at the home row's end: the apostrophe and ˮ; Dungan on them
+too, ә in place of ъ, җ at the home row's end and ү ў first on у;
+Tausug, Ewondo, Tooro, Makhuwa-Meetto, Kanuri, Giryama, Lango, Hanunoo,
+Toraja-Sa'dan and Ledo Kaili on the US keys and Sassarese on Italian's,
+their letters first on the long presses, with an apostrophe key for
+those whose words write one (Tausug's and Toraja-Sa'dan's glottal stop,
+Giryama's at'u) and Kanuri's ə, in a quarter of its words, at the home
+row's end. A key at the home row's end types its capital on the Shift
+view (Ā, Ɔ, Җ). A letter only a long press types turns the gesture on
+for the layout (`long_press_letters`). A layout's id is
 its language's tag in lower case (sd-deva), its prediction language the
 tag.
 
@@ -407,7 +407,7 @@ DERIVED = [
     ("ajg", "us", "Ajagbe", {"e": ["ɛ", "é", "è"], "E": ["Ɛ", "É", "È"], "o": ["ɔ", "ó"], "O": ["Ɔ", "Ó"], "d": ["ɖ"], "D": ["Ɖ"],
                              "n": ["ŋ"], "N": ["Ŋ"], "i": ["í", "ì"], "I": ["Í", "Ì"], "z": ["ʒ"], "Z": ["Ʒ"], "a": ["à", "á"],
                              "A": ["À", "Á"]}, {"home": ["ɔ", "ɛ"]}),
-    ("yrk", "ru", "Ненэцяʼ вада", {}, {"swap": {"ъ": "ӈ", "Ъ": "Ӈ"}, "home": "'"}),
+    ("yrk", "ru", "Ненэцяˮ вада", {}, {"swap": {"ъ": "ӈ", "Ъ": "Ӈ"}, "home": ["'", "ˮ"]}),
     ("dng", "ru", "Хуэйзў йүян", {"у": ["ү", "ў"], "У": ["Ү", "Ў"]}, {"swap": {"ъ": "ә", "Ъ": "Ә"}, "home": "җ"}),
     ("tsg", "us", "Bahasa Sūg", {"i": ["ī"], "I": ["Ī"], "a": ["ā"], "A": ["Ā"], "u": ["ū"], "U": ["Ū"]}, {"home": "'"}),
     ("ewo", "us", "Ewondo", {"e": ["é", "ë", "è", "ə", "ê"], "E": ["É", "Ë", "È", "Ə", "Ê"], "a": ["á", "à"], "A": ["Á", "À"],
