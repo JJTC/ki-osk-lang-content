@@ -129,7 +129,8 @@ pub struct Splitter {
     fold: Fold,
     /// A hyphen between letters ends a word, which keeps it, and glues the
     /// next one on (Kabyle `fell-i`, Maltese `il-kelb`, Tamazight in
-    /// Tifinagh `ⴷ-ⵓⵙⵉⵖ`; Southern Min's and Hakka's syllables, `chhin-chhiūⁿ`).
+    /// Tifinagh `ⴷ-ⵓⵙⵉⵖ`; Southern Min's, Hakka's and Eastern Min's
+    /// syllables, `chhin-chhiūⁿ`, `Mìng-dĕ̤ng-ngṳ̄`).
     hyphen_glues: bool,
     /// Uzbek: the apostrophes its texts write for the ʻ of oʻ and gʻ (‘, the
     /// grave accent, ʼ and the others) belong to the word, and are that ʻ
@@ -524,7 +525,7 @@ impl Splitter {
                 s.hyphen_glues = true;
                 s.elide = Elide::After(MALTESE_ELISIONS);
             }
-            "ga" | "ber" | "nan" | "hak" => s.hyphen_glues = true,
+            "ga" | "ber" | "nan" | "hak" | "cdo" => s.hyphen_glues = true,
             "uz" => s.uzbek = true,
             "yua" | "quc" | "kek" | "quz" | "quh" | "bss" => s.ejective = true,
             "bo" | "dz" => s.tsheg = true,
@@ -1409,6 +1410,12 @@ mod tests {
         assert_eq!(split("nan", "hō\u{358}"), ["hō\u{358}"]);
         assert_eq!(split("hak", "Hak-kâ-ngî"), ["Hak-", "+kâ-", "+ngî"]);
         assert_eq!(split("hak", "ṳ\u{302}"), ["ṳ\u{302}"]);
+        // Eastern Min (Bàng-uâ-cê) so too, its vowels' diaeresis below
+        // (U+0324) a letter of them.
+        assert_eq!(
+            split("cdo", "Mìng-dĕ\u{324}ng-ngṳ̄"),
+            ["Mìng-", "+dĕ\u{324}ng-", "+ngṳ̄"]
+        );
         // English never elides this way, nor Russian at a hyphen.
         assert_eq!(split("en", "o'clock"), ["o'clock"]);
         assert_eq!(split("ru", "кто-нибудь"), ["кто-нибудь"]);

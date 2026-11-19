@@ -62,10 +62,25 @@ or more kept: the Persian and Armenian wikis' references write
 tenth of the 80 000 commonest words, none of them typed on those
 languages' keys.
 
+With --own, a sentence none of whose words is one of the language's own
+function words is left out: the Fiji Hindi wiki's references are
+English (`The Oxford Dictionary of Opera, OUP, 1992.`, 13 700 of its
+46 000 sentences), and its sentences write hae, ke, aur, rahaa.
+
+With --letters, a sentence that writes none of these letters is left
+out: a third of the Abron test wiki's sentences are English, its
+references among them, and its own write ɛ and ɔ.
+
+With --emilian, the Emilian–Romagnol wiki's articles are read as
+Emilian: the dialect each names before its text (` Miranduléś`,
+` Carpśàn`, `Artìcol in dialët piaṡintëin`) is left out of it, and the
+articles in Romagnol, a language of its own, are left out.
+
     wikipedia-text.py [--cap N] [--eval N] [--holdout K] [--script NAME]
                       [--script-only] [--prefix P]
                       [--neighbour hi|ur|fa|id|en[,…]] [--shapes K]
-                      [--sorani] OUT EVAL DUMP...
+                      [--sorani] [--own hif] [--letters ɛɔ] [--emilian]
+                      OUT EVAL DUMP...
 
 The dumps are read in the order given, the articles in dump order, so
 the same dumps always give the same files.
@@ -90,6 +105,16 @@ NEIGHBOURS = {
     "id": set("dengan untuk tidak adalah akan bahwa bahawa oleh kepada tersebut".split()),
     "en": set("the and that for with was are by this from which have".split()),
 }
+# A language's own function words, one of which its sentences write.
+OWN = {
+    "hif": set("hae hai rahaa rahin rahe ke ki ka ko se aur ek ii uu jon jiske jisme uske iske gais bhais"
+               " kare karis hoe jaae bhi baad nai log jab jaada lekin talak waala".split()),
+}
+# The Emilian–Romagnol wiki's dialect marks: names after a no-break
+# space, or "Artìcol in dialët …", before an article's text.
+EMILIAN_NAMES = re.compile(r"\A(?:\s*\u00a0(\S+))+\s*")
+EMILIAN_ARTICLE = re.compile(r"\A\s*Art\w*col in dial\w* (\w+)\s*")
+ROMAGNOL = {"rumagnòl", "rumagnôl"}
 WORDS = re.compile(r"[\s.,;:!?।॥۔؟،\"'()\[\]{}<>«»“”‘’\-–—/|*#@&%$+=~`^]+")
 DIGITS = re.compile(r"\d+")
 # Sorani's letters as Arabic and Persian keyboards typed them, and a
@@ -135,10 +160,29 @@ def script_runs(s, script):
     return runs
 
 
-def sentences(text, script, neighbour=None, script_only=False):
+def emilian(text):
+    """An Emilian–Romagnol article's dialects, lower-cased, and its text
+    without their names."""
+    names = []
+    m = EMILIAN_NAMES.match(text)
+    if m:
+        names = re.findall(r"\u00a0(\S+)", m.group(0))
+        text = text[m.end():]
+    m = EMILIAN_ARTICLE.match(text)
+    if m:
+        names.append(m.group(1))
+        text = text[m.end():]
+    return [n.lower() for n in names], text
+
+
+def sentences(text, script, neighbour=None, script_only=False, own=None, letters=None):
     for s in END.split(STEERING.sub("", text)):
         s = " ".join(s.split())
         if MARKUP.search(s) or (neighbour and neighbourly(s, neighbour, 0.15)):
+            continue
+        if own and not any(w.lower() in own for w in WORDS.split(s)):
+            continue
+        if letters and not any(c in letters for c in s.lower()):
             continue
         for s in script_runs(s, script) if script_only and script else [s]:
             if len(s) <= 1000 and len(s.split()) >= 3 and (not script or in_script(s, script)):
@@ -157,6 +201,10 @@ def main():
     ap.add_argument("--neighbour", help="leave out articles heavy with its words (several: id,en)")
     ap.add_argument("--shapes", type=int, help="at most K sentences of one shape (a bot's stubs)")
     ap.add_argument("--sorani", action="store_true", help="read Kurdish as Sorani's keyboard types it")
+    ap.add_argument("--own", choices=sorted(OWN), help="keep only sentences with one of the language's own words")
+    ap.add_argument("--letters", help="keep only sentences that write one of these letters (Abron's ɛɔ)")
+    ap.add_argument("--emilian", action="store_true",
+                    help="read the Emilian–Romagnol wiki as Emilian: its dialect marks and Romagnol out")
     ap.add_argument("out")
     ap.add_argument("eval_out")
     ap.add_argument("dumps", nargs="+")
@@ -164,8 +212,9 @@ def main():
     seen = set()  # the corpus's sentences
     held = {}  # the held-out articles' sentences, in order, each once
     shaped = collections.Counter()  # sentences kept of each shape
-    corpus = articles = neighbours = stubs = 0
+    corpus = articles = neighbours = stubs = romagnol = 0
     neighbour = None
+    own = OWN[opts.own] if opts.own else None
     if opts.neighbour:
         names = opts.neighbour.split(",")
         unknown = [n for n in names if n not in NEIGHBOURS]
@@ -204,13 +253,18 @@ def main():
                         continue
                     if opts.sorani:
                         text = sorani(text)
+                    if opts.emilian:
+                        dialects, text = emilian(text)
+                        if ROMAGNOL.intersection(dialects):
+                            romagnol += 1
+                            continue
                     articles += 1
                     if articles % opts.holdout == 0:
-                        for s in sentences(text, opts.script, neighbour, opts.script_only):
+                        for s in sentences(text, opts.script, neighbour, opts.script_only, own, opts.letters):
                             if s not in held and fresh(s):
                                 held[s] = None
                         continue
-                    for s in sentences(text, opts.script, neighbour, opts.script_only):
+                    for s in sentences(text, opts.script, neighbour, opts.script_only, own, opts.letters):
                         if corpus < opts.cap and s not in seen and fresh(s):
                             seen.add(s)
                             out.write(s + "\n")
@@ -225,6 +279,7 @@ def main():
         sys.exit(f"wikipedia-text: {opts.dumps}: no text")
     left = f", {neighbours} more left out as the neighbour's" if neighbour else ""
     left += f", {stubs} sentences left out as stubs" if opts.shapes else ""
+    left += f", {romagnol} Romagnol articles left out" if opts.emilian else ""
     print(f"{opts.out}: {corpus} sentences from {articles} articles{left}, {len(kept)} held out")
 
 

@@ -59,7 +59,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  rmy rmn ojb \
                  cnr \
                  bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn \
-                 rkt
+                 rkt \
+                 cdo hif egl abr
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -102,9 +103,15 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # Rinconada Bikol, five Malays (Jambi, Makassar, Manado, Palembang's
 # Musi, Kelantan-Pattani), Makassarese, Pamona, Ibibio, East Franconian,
 # Southern Kurdish and Western Balochi; and Rangpuri's, the same way
-# (27 000 words, in the Bengali script as Assamese writes it, ৰ for র).
+# (27 000 words, in the Bengali script as Assamese writes it, ৰ for র),
+# and Abron's (18 000 words, its sentences that write ɛ or ɔ: a third
+# of its wiki's are English). And three wikis no model learned from
+# before: Eastern Min's, in Bàng-uâ-cê (170 000 words, its Han left
+# out), Fiji Hindi's (620 000, its English references left out) and the
+# Emilian–Romagnol wiki's Emilian (2.2 million, its Romagnol left out),
+# their bots' stubs left out as the small wikis' are.
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
-                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt
+                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences
@@ -326,7 +333,10 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # thirteen after those (Nenets… Sassarese), and the two Romanis and
 # Northwestern Ojibwe (29 000 to 88 000 kinds: Balkan Romani's saves 0.2
 # points more at 120 000). And Montenegrin, from its Incubator test wiki
-# (900 000 words, 106 000 kinds), which is WIDE.
+# (900 000 words, 106 000 kinds), which is WIDE. And Eastern Min, Fiji
+# Hindi and Emilian, from their wikis (Eastern Min's syllables, as
+# Southern Min's; Fiji Hindi's 55 000 kinds; Emilian's 144 000, its
+# dialects each spelled their own way).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -351,7 +361,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
                        yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                        rmy rmn ojb \
-                       cnr
+                       cnr \
+                       cdo hif egl
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings

@@ -17,6 +17,7 @@ source  = { name = "Tatoeba", url = "https://tatoeba.org/" }
 
 [prediction.names]
 ab  = "Abkhaz"
+abr = "Abron"
 abs = "Ambonese Malay"
 ace = "Acehnese"
 acf = "Saint Lucian Creole"
@@ -73,6 +74,7 @@ bum = "Bulu"
 bxr = "Buryat"
 ca  = "Catalan"
 cce = "Chopi"
+cdo = "Eastern Min"
 ce  = "Chechen"
 ceb = "Cebuano"
 ch  = "Chamorro"
@@ -109,6 +111,7 @@ dyu = "Jula (Dioula)"
 dz  = "Dzongkha"
 ee  = "Ewe"
 efi = "Efik"
+egl = "Emilian"
 el  = "Greek"
 en  = "English"
 eo  = "Esperanto"
@@ -157,6 +160,7 @@ he  = "Hebrew"
 heh = "Hehe"
 hi  = "Hindi"
 hi-Latn = "Hinglish (Hindi in Latin letters)"
+hif = "Fiji Hindi"
 hil = "Hiligaynon"
 hne = "Chhattisgarhi"
 hnn = "Hanunoo"
@@ -573,8 +577,8 @@ source  = { name = "The Dakshina dataset v1.0 (Google Research): Wikipedia text"
 # The wikis' own text (scripts/fetch-wikipedia.sh: their CirrusSearch
 # dumps, plain text, pinned by sha256): the whole corpus of the languages
 # that script names, the Wikimedia Incubator's test wikis among them
-# (Gondi's, Khowar's, Montenegrin's, thirteen small ones' from Rinconada
-# Bikol's to Rangpuri's, and Magahi's beside its FineWeb-2 text).
+# (Gondi's, Khowar's, Montenegrin's, fourteen small ones' from Rinconada
+# Bikol's to Abron's, and Magahi's beside its FineWeb-2 text).
 [prediction.wikipedia]
 license = { name = "CC BY-SA 4.0 (Wikipedia)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
 source  = { name = "Wikipedia and the Wikimedia Incubator's test wikis, their CirrusSearch dumps of 2026-11-08", url = "https://dumps.wikimedia.org/other/cirrus_search_index/20261108/" }
@@ -690,6 +694,7 @@ source  = { name = "xkeyboard-config, read through libxkbcommon", url = "https:/
 [layouts.packs]
 aa      = ["aa"]
 ab      = ["ab"]
+abr     = ["abr"]
 abs     = ["abs"]
 ace     = ["ace"]
 acf     = ["acf"]
@@ -720,6 +725,8 @@ bar     = ["bar"]
 bas     = ["bas"]
 bax     = ["bax"]
 bbc     = ["bbc"]
+bbj     = ["bbj"]
+bcc     = ["bcc"]
 bci     = ["bci"]
 bcl     = ["bcl"]
 bcq     = ["bcq-latn"]
@@ -755,12 +762,14 @@ bto     = ["bto"]
 bts     = ["bts"]
 btx     = ["btx"]
 bud     = ["bud"]
+bug     = ["bug"]
 bum     = ["bum"]
 bxr     = ["bxr"]
 ca      = ["ca"]
 cbk     = ["cbk"]
 cce     = ["cce"]
 ccp     = ["ccp"]
+cdo     = ["cdo"]
 ce      = ["ce"]
 ceb     = ["ceb"]
 cgg     = ["cgg"]
@@ -776,6 +785,7 @@ cnr     = ["cnr", "cnr-cyrl"]
 co      = ["co"]
 cop     = ["cop"]
 cor     = ["cor"]
+cps     = ["cps"]
 crh     = ["crh"]
 crk     = ["crk"]
 crs     = ["crs"]
@@ -805,6 +815,7 @@ dz      = ["dz"]
 dzg     = ["dzg"]
 ee      = ["ee"]
 efi     = ["efi"]
+egl     = ["egl"]
 el      = ["el", "el-abc"]
 en      = ["gb", "us-intl", "us"]
 eo      = ["eo"]
@@ -863,6 +874,7 @@ he      = ["he"]
 heh     = ["heh"]
 hi      = ["hi", "hi-abc"]
 hi-Latn = ["hi-latn"]
+hif     = ["hif"]
 hil     = ["hil"]
 hnd     = ["hnd"]
 hne     = ["hne", "hne-abc"]
@@ -965,6 +977,7 @@ lij     = ["lij"]
 lis     = ["lis"]
 liv     = ["liv"]
 ljp     = ["ljp"]
+lki     = ["lki"]
 lkt     = ["lkt"]
 lld     = ["lld"]
 lmo     = ["lmo"]
@@ -985,7 +998,9 @@ mak     = ["mak"]
 mas     = ["mas"]
 mde     = ["mde"]
 mdf     = ["mdf"]
+mdh     = ["mdh"]
 men     = ["men"]
+meo     = ["meo"]
 mer     = ["mer"]
 mfa     = ["mfa"]
 mfp     = ["mfp"]
@@ -1004,6 +1019,7 @@ mnb     = ["mnb"]
 mni     = ["mni", "mni-abc"]
 mni-Beng = ["mni-beng", "mni-beng-abc"]
 mnk     = ["mnk"]
+mnp     = ["mnp"]
 mnw     = ["mnw"]
 mos     = ["mos"]
 mqj     = ["mqj"]
@@ -1074,12 +1090,14 @@ ps      = ["ps", "ps-abc"]
 psi     = ["psi"]
 pt      = ["pt-br", "pt"]
 quh     = ["quh"]
+qxq     = ["qxq"]
 raj     = ["raj", "raj-abc"]
 qu      = ["qu"]
 quc     = ["quc"]
 qug     = ["qug"]
 quz     = ["quz"]
 rcf     = ["rcf"]
+rej     = ["rej"]
 rhg     = ["rhg"]
 rkt     = ["rkt"]
 rm      = ["rm"]
@@ -1134,6 +1152,7 @@ srr     = ["srr"]
 ss      = ["ss"]
 st      = ["st"]
 stv     = ["stv"]
+sty     = ["sty"]
 su      = ["su"]
 suk     = ["suk"]
 sv      = ["se"]
@@ -1170,6 +1189,7 @@ tsc     = ["tsc"]
 tsg     = ["tsg"]
 tt      = ["tt"]
 ttj     = ["ttj"]
+tts     = ["tts"]
 tum     = ["tum"]
 tvl     = ["tvl"]
 ty      = ["ty"]
@@ -1222,6 +1242,8 @@ adx = "Amdo Tibetan"
 am  = "Amharic"
 bal = "Balochi"
 bax = "Bamum"
+bbj = "Ghomala'"
+bcc = "Southern Balochi"
 bcq = "Bench"
 bew = "Betawi"
 bft = "Balti"
@@ -1231,6 +1253,7 @@ bgq = "Bagri"
 blt = "Tai Dam"
 bom = "Berom"
 bqi = "Bakhtiari"
+bug = "Buginese"
 cbk = "Chavacano"
 ccp = "Chakma"
 cgg = "Kiga"
@@ -1238,6 +1261,7 @@ cho = "Choctaw"
 chr = "Cherokee"
 cjm = "Eastern Cham"
 cld = "Chaldean Neo-Aramaic"
+cps = "Capiznon"
 dje = "Zarma"
 drs = "Gedeo"
 dzg = "Dazaga"
@@ -1271,12 +1295,16 @@ led = "Lendu"
 lep = "Lepcha"
 lif = "Limbu"
 lis = "Lisu"
+lki = "Laki"
 lkt = "Lakota"
 lrc = "Northern Luri"
 mde = "Maba"
+mdh = "Maguindanao"
+meo = "Kedah Malay"
 mki = "Dhatki"
 mkw = "Kituba"
 mnb = "Muna"
+mnp = "Northern Min"
 mua = "Mundang"
 mvp = "Duri"
 mvy = "Indus Kohistani"
@@ -1289,6 +1317,8 @@ phr = "Pahari-Pothwari"
 pmy = "Papuan Malay"
 pov = "Guinea-Bissau Creole"
 psi = "Southeastern Pashayi"
+qxq = "Qashqai"
+rej = "Rejang"
 rhg = "Rohingya"
 saz = "Saurashtra"
 sba = "Ngambay"
@@ -1299,6 +1329,7 @@ sgj = "Surgujia"
 snk = "Soninke"
 srr = "Serer"
 stv = "Silt'e"
+sty = "Siberian Tatar"
 syl = "Sylheti"
 taj = "Eastern Tamang"
 tbw = "Aborlan Tagbanwa"
@@ -1306,6 +1337,7 @@ tdd = "Tai Nuea"
 tem = "Temne"
 ti  = "Tigrinya"
 trw = "Torwali"
+tts = "Isan"
 tyz = "Tày"
 vai = "Vai"
 xnr = "Kangri"
@@ -1323,7 +1355,8 @@ xsr = "Sherpa"
 # whose letters are CLDR's exemplar characters
 # (scripts/build-exemplar-layouts.py): thirty-two in Latin letters, Afar's
 # to Zarma's and Adamawa Fulfulde's and Bench's, and twenty-five on the
-# Arabic script's, Devanagari's and Bengali's keys, Balti's to Sylheti's.
+# Arabic script's, Devanagari's and Bengali's keys, Balti's to Sylheti's;
+# and Southern Balochi's, made from Balochi's.
 [layouts.added.ksw]
 licenses = [
   { name = "MIT (Keyman's sil_sgaw_karen, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_sgaw_karen/LICENSE.md", share_alike = false },
@@ -1826,6 +1859,14 @@ licenses = [
 ]
 sources = [
   { name = "CLDR 49's exemplar characters for Balochi (common/main/bal.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/bal.xml" },
+]
+
+[layouts.added.bcc]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Balochi (common/main/bal.xml), Southern Balochi's keys made from Balochi's", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/bal.xml" },
 ]
 
 [layouts.added.haz]

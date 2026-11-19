@@ -130,7 +130,26 @@ long presses, Makassarese and Pamona with an apostrophe key for their
 glottal stop (se're, ince'emo: a seventh of Pamona's words); East
 Franconian on German's keys with â ô; Southern Kurdish on Sorani's, ۊ on
 و; and Western Balochi on Persian's, with Urdu's ے ں ٹ ڈ ڑ ہ ھ and
-Pashto's ګ on the long presses of ی ن ت د ر ه گ. A key at the home row's end types its
+Pashto's ګ on the long presses of ی ن ت د ر ه گ. Rangpuri is typed on
+Assamese's keys, Bengali's digits on the symbol view's, and Abron on
+Akan's; Eastern Min (Bàng-uâ-cê) on the US keys with its toned vowels
+first on the long presses, the commonest first, as Southern Min's (á â ă
+ā à, then those with the diaeresis below: ā̤ â̤…), Fiji Hindi on them as
+they are, and Emilian on Italian's, its dialects' letters first on the
+long presses (ś ṡ ş ṣ, ṅ, ō ē ū, ć ṿ ł ǵ ż). With no model: Amdo and
+Khams Tibetan on Tibetan's keys, Sadri on Hindi's, Maharashtrian Konkani
+on Marathi's, Northern Thai in the Thai script on Thai's, Kutchi on
+Gujarati's, Tày on Vietnamese's with the macron below and the double
+grave first on each vowel's long press, and Eastern Pwo Karen on
+Burmese's, ႋ ၜ ၠ in place of ဩ ၏ ၒ, its letters on long presses; and
+with the letters their test wikis write, Northern Min (Kienning) on the
+US keys with its toned vowels, the double overline its seventh tone,
+Siberian Tatar on Bashkir's with ё on е, Isan on Thai's, Maguindanao,
+Capiznon, Buginese and Rejang (ê first on e) on the US keys, Kedah Malay
+on Malay's, Qashqai on South Azerbaijani's with ێ on ی, Ghomala' on the
+US keys with ə ɛ ɔ ʉ ŋ ƴ and its tones on the long presses, Laki on
+Sorani's, and Southern Balochi on Balochi's, ۏ ݔ ګ on و ی گ. A key at
+the home row's end types its
 capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
@@ -149,6 +168,11 @@ import sys
 import unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+def with_capitals(extra):
+    """`extra` and its capitals': a's á ā… and A's Á Ā…."""
+    return {**extra, **{k.upper(): [unicodedata.normalize("NFC", t.upper()) for t in v] for k, v in extra.items()}}
+
 
 # The layout made, the one it is made from, its name, and what its keys
 # gain on a long press (a key's label → the letters, first in its menu),
@@ -495,6 +519,41 @@ DERIVED = [
       "1": ["၁"], "2": ["၂"], "3": ["၃"], "4": ["၄"], "5": ["၅"], "6": ["၆"], "7": ["၇"], "8": ["၈"], "9": ["၉"],
       "0": ["၀"]},
      {"swap": {"ဩ": "ႋ", "၏": "ၜ", "ၒ": "ၠ"}, "model": False}),
+    ("cdo", "us", "Mìng-dĕ̤ng-ngṳ̄",
+     with_capitals({"a": ["á", "â", "ă", "ā", "à", "ā̤", "â̤", "à̤", "ă̤", "á̤", "a̤"],
+                    "e": ["ê", "é", "è", "ĕ", "ē", "e̤", "è̤", "é̤", "ĕ̤", "ê̤", "ē̤"],
+                    "i": ["ì", "ĭ", "ī"],
+                    "o": ["ŏ", "ó", "ô", "ò", "ō", "ó̤", "ô̤", "ò̤", "ō̤", "ŏ̤", "o̤"],
+                    "u": ["ŭ", "ṳ̄", "ṳ̆", "ū", "ù", "ṳ", "ṳ̀"]})),
+    ("hif", "us", "Fiji Hindi", {}),
+    ("abr", "ak", "Bono", {}),
+    ("egl", "it", "Emilian",
+     with_capitals({"e": ["è", "é", "ê", "ē", "ë"], "a": ["à", "â", "ä", "å", "á"], "o": ["ò", "ó", "ō", "ô", "ö"],
+                    "i": ["ì", "î", "í", "ī"], "u": ["ù", "û", "ū", "ü", "ú"], "s": ["ś", "ṡ", "ş", "ṣ"],
+                    "n": ["ṅ"], "c": ["ć"], "v": ["ṿ"], "l": ["ł"], "g": ["ǵ"], "z": ["ż"]})),
+    ("mnp", "us", "Mâing-bă̤-ngṳ̌",
+     with_capitals({"a": ["â̤", "á", "a̿", "ă", "ǎ", "ā", "â", "à", "ă̤", "ǎ̤", "à̤", "ā̤"],
+                    "e": ["ê", "ě", "é", "ē", "ě̤", "è", "e̿", "ĕ", "é̤", "ê̤", "e̤̿", "ē̤", "è̤", "ĕ̤"],
+                    "i": ["ī", "ǐ", "i̿", "ì", "í", "ĭ", "î"],
+                    "o": ["ŏ̤", "ŏ", "ó̤", "ō", "ó", "ò̤", "ǒ", "ô̤", "ǒ̤", "ō̤", "o̿", "o̤̿", "ò", "ô"],
+                    "u": ["ǔ", "ú", "u̿", "ṳ̌", "ṳ̂", "ū", "ŭ", "ṳ̄", "ṳ̀", "ṳ", "ṳ́", "ù", "ṳ̆", "ṳ̿", "û"]}),
+     {"model": False}),
+    ("sty", "ba", "Себер татар", {"е": ["ё"], "Е": ["Ё"]}, {"model": False}),
+    ("tts", "th", "อีสาน", {}, {"model": False}),
+    ("mdh", "us", "Magindanawn", {}, {"model": False}),
+    ("cps", "us", "Capiznon", {}, {"model": False}),
+    ("meo", "ms", "Kedah Malay", {}, {"model": False}),
+    ("qxq", "azb", "قشقایی", {"ی": ["ێ"]}, {"model": False}),
+    ("rej", "us", "Baso Jang", {"e": ["ê"], "E": ["Ê"]}, {"model": False}),
+    ("bbj", "us", "Ghomala'",
+     with_capitals({"e": ["é", "ə", "ə́", "è", "ə̂", "ê", "ɛ́", "ə̌", "ə̀", "ɛ̂", "ɛ̀", "ɛ", "ě", "ɛ̌"],
+                    "a": ["à", "á", "â", "ǎ"], "o": ["ɔ", "ɔ́", "ǒ", "ó", "ô", "ɔ̌", "ò", "ɔ̂", "ɔ̀"],
+                    "u": ["ú", "ʉ́", "ù", "ʉ", "û", "ǔ", "ʉ̂"], "i": ["í", "î", "ï", "ì", "ǐ"],
+                    "n": ["ŋ", "ŋ́"], "y": ["ƴ"]}),
+     {"model": False}),
+    ("bug", "us", "Basa Ugi", {}, {"model": False}),
+    ("lki", "ckb", "لەکی", {}, {"model": False}),
+    ("bcc", "bal", "بلۏچی", {"و": ["ۏ"], "ی": ["ݔ"], "گ": ["ګ"]}, {"model": False}),
 ]
 
 

@@ -4,7 +4,10 @@
 # WIKIPEDIA_LANGS): Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
 # Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the Goan wiki's
 # Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki, Tulu, Dotyali,
-# Angika and Newari (beside its web text, scripts/fetch-glotcc.sh); of
+# Angika and Newari (beside its web text, scripts/fetch-glotcc.sh),
+# Eastern Min (in Bàng-uâ-cê, the Han its sentences write beside left
+# out), Fiji Hindi (its references, English, left out: --own) and
+# Emilian (the Emilian–Romagnol wiki's, its Romagnol left out); of
 # Armenian and Persian beside their Tatoeba sentences (the Makefile's
 # WIKIPEDIA_PLUS_LANGS, whose held-out text goes elsewhere: EVAL_OUT); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
@@ -12,8 +15,9 @@
 # the Telugu script, Khowar, and Montenegrin, in Latin letters (its few
 # Cyrillic sentences left out); Rinconada Bikol, Jambi, Makassar, Manado,
 # Palembang (Musi) and Kelantan-Pattani Malay, Makassarese, Pamona,
-# Ibibio and East Franconian, and Southern Kurdish and Western Balochi in
-# the Arabic script.
+# Ibibio and East Franconian, Southern Kurdish and Western Balochi in the
+# Arabic script, Rangpuri in the Bengali script, and Abron (the sentences
+# that write its ɛ or ɔ: a third of its wiki's are English).
 #
 # The text comes from each wiki's CirrusSearch dump (Wikimedia's
 # cirrus_search_index, an article a JSON document whose "text" is its
@@ -52,7 +56,8 @@ BASE=https://dumps.wikimedia.org/other/cirrus_search_index/$DATE
 # language  wiki  dump file  sha256  script (its Unicode name, _ for a
 # space; - keeps every sentence)  [wikipedia-text.py's options: a
 # neighbour whose articles and sentences are left out, as the
-# Incubator's below; --script-only]
+# Incubator's below; --script-only; --shapes, its bots' stubs; --own,
+# --emilian]
 DUMPS="
 bho  bh   bhwiki_content-20261108-00000.json.bz2   e1becbc89778d7994831288afa94b9c1cce69d1b6b65a485d3500b34a5e822cc  DEVANAGARI  --script-only
 mai  mai  maiwiki_content-20261108-00000.json.bz2  1119ae395e8ca315a20422db6d09d5280e01e7d2530d301ebfb486212fcb5f4c  DEVANAGARI  --script-only
@@ -75,13 +80,17 @@ anp  anp  anpwiki_content-20261108-00000.json.bz2  19363d8660dd1a8d540fcd7253851
 new  new  newwiki_content-20261108-00000.json.bz2  c8d5a485491d164b541fed44b20f4af5d185cdf13d0544d151d02b233e2f7e73  DEVANAGARI
 hy   hy   hywiki_content-20261108-00000.json.bz2   66aa04cde62eb5d4f16317e0bd00dfffca8b5c4def9bb9f86a2f673f3f220ea8  ARMENIAN  --script-only
 fa   fa   fawiki_content-20261108-00000.json.bz2   1c793a3006d5ed7f78e58cf3f12059fe423c6fd30efbff1fe696a53c7e240ae1  ARABIC  --script-only
+cdo  cdo  cdowiki_content-20261108-00000.json.bz2  b087ff5764e512a440b6f2486288a9523b891bb9c2c676987f3230324c4c443a  LATIN  --script-only --shapes 3
+hif  hif  hifwiki_content-20261108-00000.json.bz2  1490558966f73af1384d677456499fb15cc084db754d350fd03dd2475da45ae7  LATIN  --own hif --shapes 3
+egl  eml  emlwiki_content-20261108-00000.json.bz2  d9123a8b5d3fd5cf83bc0283bb34d44b791a021cfe2d82d2e72360687dc8971a  LATIN  --emilian --shapes 3
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1
 # language  prefix  script  neighbours (- for none)  [wikipedia-text.py's
 # options: the small wikis' every 10th article held out, at most three
 # sentences of a shape (--shapes, their bots' stubs), Southern Kurdish
-# read as Sorani's keys type it]
+# read as Sorani's keys type it, Abron's sentences those that write its
+# ɛ or ɔ (--letters)]
 INCUBATOR="
 mag  Wp/mag/  DEVANAGARI  hi
 wsg  Wp/wsg/  TELUGU      -
@@ -100,6 +109,7 @@ vmf  Wp/vmf/  LATIN       -      --shapes 3 --holdout 10
 sdh  Wp/sdh/  ARABIC      fa     --shapes 3 --holdout 10 --sorani
 bgn  Wp/bgn/  ARABIC      fa,ur  --shapes 3 --holdout 10
 rkt  Wp/rkt/  BENGALI     -      --shapes 3 --holdout 10
+abr  Wp/abr/  LATIN       -      --shapes 3 --holdout 10 --letters ɛɔ
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)
