@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**561 layouts**: 501 keyboard layouts (RTL: ar he fa + Urdu, Western
+**563 layouts**: 501 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 12 IMEs (5 CJK +
-Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez) · 46 transliteration layouts (Latin letters →
+Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 14 IMEs (5 CJK +
+Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 560 are here; the numeric keypad is built into ki-osk. The
+keycaps. 562 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **427 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -543,6 +543,8 @@ but no model to match the glide against · `—` off
 | `hdy` | `hdy` | Hadiyya (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
 | `ktb` | `ktb` | Kambaata (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its ኧ as A) |
 | `stv` | `stv` | Silt'e (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its -wa forms ሏ ሟ ቧ…) |
+| `vai` | `vai` | Vai ꕙꔤ | — | LTR | IME¹¹ | — | **Translit** Latin → Vai syllables, as Keyman's athinkra_vai types them (ka ꕪ, ka~ ꕫ); ɛ ɔ ~ keys, long-press ŋ þ ð ʒ ꘌ |
+| `ii` | `ii` | Nuosu ꆈꌠꉙ (Yi) | — | LTR | IME¹¹ | — | **Translit** Yi pinyin → syllables, as Keyman's sil_yi types them (bit ꀖ); Space adds no space; ， 。 keys |
 | `hi-abc` | `hi` | Hindi हिन्दी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hi lexicon choosing |
 | `bn-abc` | `bn` | Bengali বাংলা (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali, the bn lexicon choosing |
 | `mr-abc` | `mr` | Marathi मराठी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the mr lexicon choosing |
@@ -1912,7 +1914,33 @@ but no model to match the glide against · `—` off
    is named so (Chakma, Rohingya, Tai Dam, Osage), the others in English.
    Their scripts' Noto faces draw every key. None has a model: neither
    suggestions nor glides. Vai's and Nuosu's Keyman keyboards type their
-   syllables from Latin letters, as a composer would: they wait for one.
+   syllables from Latin letters, as a composer does: note 11.
+11. Vai's and Nuosu's Keyman keyboards (Athinkra's athinkra_vai and
+   SIL's sil_yi, MIT) type each syllable as Latin letters, so their
+   layouts type through the transliteration composer: their tables
+   (`translit/vai.txt`, `translit/ii.txt`, `scripts/build-keyman-composers.py`,
+   the keyboards' files pinned by sha256) are what each syllable is typed
+   as, found by running the keyboards' rules, and a word is read as the
+   fewest syllables its letters spell. Vai's (ka ꕪ, ka~ the nasal ꕫ, s h
+   a ꕣ) reads Keyman's capitals as ɛ ɔ ŋ þ ð ʒ too, which its keys type:
+   ɛ in q's place, ɔ at the home row's end and the nasal ~ in Shift's
+   (Vai's ɛ is in 12% of its syllables, its ɔ in 10%, its nasals in 5%),
+   the others on the long presses of n t d j and the lengthener ꘌ on x's;
+   it has no Shift view, for a capital is a letter of its own (T is THA,
+   t TA). It types every syllable of CLDR's exemplar characters, main and
+   auxiliary: Keyman's hE and hE~, which type HEN and WE, a place past,
+   read as HE and HEN, and the Ndole forms its keyboard lacks typed as
+   its others are (-ma ꘪ). Every word of Vai's Incubator wiki, spelled
+   so, reads back as written. Nuosu's is Yi pinyin (bit ꀖ, nuosuhxop
+   ꆈꌠꉙ), all 1 165 syllables, and writes no space between words: Space
+   takes the syllables typed without one. Where a tone letter could end
+   a syllable or begin the next (bita), it begins the next, as Nuosu
+   writes more often: of its Incubator wiki's words typed whole, 96.7%
+   read back as written (75% the other way); typed a syllable and Space
+   at a time, as Keyman's keyboard has them typed, all of them. Its ， and
+   。 are keys, its other punctuation fullwidth, as Keyman's rules type it.
+   Neither has a model: the strip offers the reading and the letters as
+   typed.
 
 ## Prediction model tiers
 
@@ -1952,11 +1980,12 @@ but no model to match the glide against · `—` off
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 71 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 73 layouts, Montenegrin's in
   Cyrillic, the fifty-five whose letters are CLDR's exemplar characters
   (note 9: thirty in Latin letters, twenty-five in the Arabic script,
   Devanagari and Bengali), the thirteen of a script of their own from
-  Keyman (note 10: Chakma to Osage), and Cherokee, whose
+  Keyman (note 10: Chakma to Osage), Vai's and Nuosu's, whose composers
+  read their tables alone (note 11), and Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
   its wiki's and its New Testament), and Nahuatl, whose is colonial
   documents, its wiki and its varieties' Bibles, each spelled its own
@@ -1994,6 +2023,7 @@ drives which face loads:
 | `meetei_mayek` | Noto Sans Meetei Mayek | `mni` (syllabary) |
 | `coptic` | Noto Sans Coptic | `cop` |
 | `chakma` `hanifi_rohingya` `tai_viet` `kayah_li` `lisu` `lepcha` `saurashtra` `bamum` `cham` `tai_le` `new_tai_lue` `osage` | Noto Sans Chakma, Hanifi Rohingya, Tai Viet, Kayah Li, Lisu, Lepcha, Saurashtra, Bamum, Cham, Tai Le, New Tai Lue, Osage | `ccp rhg blt kyu lis lep saz bax cjm tdd khb osa` (Keyman's; `kjg` draws with Lao's) |
+| `vai` `yi` | Noto Sans Vai, Noto Sans Yi | `vai ii` (the composer's syllables on the strip and the preedit) |
 
 Install the matching face or those caps render as tofu. See the full
 fonts table in ki-osk-wayland's `DEPLOY.md`.
@@ -2186,6 +2216,7 @@ syllables:
 | `kbp` `bss` `gbo` `nnb` | keys for the letters their words write most of those only a long press typed (more than a quarter of Kabiye's, Akoose's and Grebo's letters; in a quarter of Nande's words): two at the home row's end, Kabiye's ɛ ɩ, Akoose's é á, Grebo's ɛ ɔ and Nande's ĩ beside its apostrophe; and in place of q and x, which they hardly write (q and x on those keys' long presses), Kabiye's ʊ ɔ, Akoose's ɛ and glottal stop ʼ, Grebo's ǒ ě and Nande's ũ. The words a long press is needed in: Kabiye's 76% → 24%, Akoose's 85% → 52%, Grebo's 70% → 40%, Nande's 26% → 1% | each its own |
 | `ojb` Northwestern Ojibwe | Keyman's fv_ojibwa, a syllable a key: the i and a syllables and the finals on the base view, the e and o syllables on Shift; each syllable's long vowel and w-dotted forms first on its long press (ᑭ's ᑮ ᑶ ᑸ), which Keyman types with keys of their own (˙ after a syllable, ᐧ before it) by rules a key of one letter has not; the final ᕽ on ᒃ's, the full stop ᙮ on the full stop's | `ojb` |
 | `ccp` `rhg` `blt` `kyu` `lis` `lep` `kjg` `saz` `bax` `cjm` `tdd` `khb` `osa` | Keyman's keyboards for their scripts, their rows and places kept (note 10): what Keyman types after another key on a long press (Tai Dam's ꪂ on ꪀ, Lepcha's ᰂ ᰁ on ᰀ), and what it types under AltGr (Cham's ꨒ on ꨗ); Rohingya's 𐴗 on 𐴖; Bamum's two marks and Osage's acute and double acute beside the space bar; the digits no letter key has on the long presses of the symbol view's, their stops (Saurashtra's dandas ꣎ ꣏, Bamum's ꛳ ꛵…) on the full stop's | each its own |
+| `vai` Vai | its letters Keyman's capitals type, which its composer reads (note 11): ɛ in q's place, ɔ at the home row's end, the nasal ~ in Shift's; ŋ þ ð ʒ on the long presses of n t d j, the lengthener ꘌ on x's; Vai's comma, full stop and question mark on those of , . ? | `vai` |
 | `cnr` `cnr-cyrl` Montenegrin | ś ź on the long presses of s z (on Serbian's Latin keys), с́ з́ on с з (on its Cyrillic ones) | `cnr` |
 | `aa` `bew` `bom` `cbk` `cgg` `cho` `dje` `dzg` `fan` `gqr` `igb` `jbo` `las` `led` `lkt` `mkw` `mnb` `mua` `mvp` `nup` `nv` `pmy` `pov` `sba` `sef` `snk` `srr` `tbw` `tem` `xog` | their letters CLDR's exemplar characters, first on the long presses of the letters they are made from (note 9); a glottal stop written as a letter, and an apostrophe their words write, keys of their own at the home row's end; keys for the letters their words write most of those: Navajo's ʼ í at the home row's end and á é on q x, Lakota's ŋ á and č é, Temne's ɔ ŋ and ə ɛ, Gor's ɨ and apostrophe and ə ɔ, Ngambay's ə and apostrophe and é ɔ, Mundang's ǝ and apostrophe | each its own |
 | `bto` `mui` `mfa` `ibb` `vmf` `sdh` `bgn` | the letters of the Incubator wikis' languages first on the long presses of those they are made from: Rinconada Bikol's ñ, Musi's é è ó, Kelantan-Pattani Malay's è é ó ũ, Ibibio's ọ ñ n̄ ị ẹ ụ ʌ (on the US keys); East Franconian's â ô (on German's); Southern Kurdish's ۊ on و (on Sorani's); Western Balochi's ے ں ٹ ڈ ڑ ہ ھ ګ on ی ن ت د ر ه گ (on Persian's) | each its own |

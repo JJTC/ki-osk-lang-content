@@ -16,7 +16,9 @@ it can do.
 `LICENSE` (MIT) covers the code and tooling only, and the text rules and
 transliteration tables, which were written here (thirty tables' costs
 then fitted to the Dakshina and Aksharantar datasets' romanizations, and
-Gondi's and Angika's taken from Telugu's and Hindi's: `NOTICES.md`). The
+Gondi's and Angika's taken from Telugu's and Hindi's: `NOTICES.md`), but
+Vai's and Nuosu's, made from Keyman's keyboards' rules, under their MIT
+notices. The
 English words each table's language writes (`translit/<lang>.english.txt`)
 are made from CMUdict, under its BSD-2-Clause-style notice, and the
 language's lexicon. The data keeps the
@@ -38,7 +40,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
 | `wordbreak/<lang>.txt` | The word list of a language written without spaces between words (Thai, Lao, Khmer, Burmese; Shan, Mon, Sgaw Karen, Pa'O), which cuts its text into words in the trainer, the keyboard and `eval-predict`: ICU's word-break dictionary, as ICU has it; for Shan, Mon, Sgaw Karen and Pa'O, which have none, the syllables their FineWeb-2 text writes, each a word | `make word-lists`; `make syllable-lists` |
 | `rules/all.weir`, `rules/<lang>.weir` | Text rules: what typing a key does to the text before the caret beyond typing it (the space after a strip word giving way to punctuation, French spacing, the Tibetan tsheg giving way to the shad), and where autocorrect acts besides space, Weir-style, with their tests | by hand |
-| `translit/<lang>.txt` | Transliteration tables (46: Sindhi's and Meitei's for both their scripts): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand, the costs of the Dakshina languages', of seven of the Aksharantar languages' and of thirteen related languages' (on the words they share with Hindi, Urdu or Kannada) then fitted to those datasets' romanizations (`make fit-translit`); `make eval-translit` measures them |
+| `translit/<lang>.txt` | Transliteration tables (48: Sindhi's and Meitei's for both their scripts; Vai's and Nuosu's their syllables): every way each Latin letter or group typed may be written in the language's script, at a cost, for its composer to read and its lexicon to choose among (`osk_data::translit`) | by hand, the costs of the Dakshina languages', of seven of the Aksharantar languages' and of thirteen related languages' (on the words they share with Hindi, Urdu or Kannada) then fitted to those datasets' romanizations (`make fit-translit`); `make eval-translit` measures them; Vai's and Nuosu's what Keyman's keyboards type each syllable as (`make keyman-composers`) |
 | `translit/<lang>.english.txt` | The English words each table's language writes in its script (40: college कॉलेज, police পুলিশ), which people type as English spells them: read with the table, each typed whole read as its words too, and from three letters the words they begin offered (`osk_data::translit::Scheme::with_english`) | CMUdict's pronunciations spelled in Latin letters as the language's sounds are typed, read by the table, the likeliest reading the lexicon has kept (`make english-assets`, after `make fetch-cmudict`) |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `$SRC_DIR/dakshina/` | Wikipedia text and romanizations of 12 South Asian languages (the Dakshina dataset) — **not committed** | `make fetch-dakshina` |
@@ -57,7 +59,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `sources.lock` | What each output was built from | every build target |
 | `pinyin/syllables.txt` | The 413 Mandarin syllables in toneless Pinyin | by hand |
 | `pinyin/double-pinyin.json` | The six double-Pinyin schemes: which key carries which initial and finals | by hand |
-| `layouts/<id>.json` | Keyboard layouts (560): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps (those of Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi, Magahi, Sindhi in Devanagari, Konkani, Tulu, Meitei in the Bengali script, Western Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Garhwali, Rajasthani, Angika, Dotyali, Newari, Adilabad Gondi, Yiddish, Mizo and Khasi another language's, renamed; Sgaw Karen's, Northwestern Ojibwe's and thirteen in scripts of their own, Chakma's to Osage's, Keyman's; fifty-five with the letters of CLDR's exemplar characters, thirty on the US keys, Afar's to Zarma's, and twenty-five on the Arabic script's, Devanagari's and Bengali's, Balti's to Sylheti's), the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make derived-layouts`; `make translit-layouts`; `scripts/build-keyman-layouts.py`; `make exemplar-layouts` |
+| `layouts/<id>.json` | Keyboard layouts (562): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps (those of Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi, Magahi, Sindhi in Devanagari, Konkani, Tulu, Meitei in the Bengali script, Western Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Garhwali, Rajasthani, Angika, Dotyali, Newari, Adilabad Gondi, Yiddish, Mizo and Khasi another language's, renamed; Sgaw Karen's, Northwestern Ojibwe's and thirteen in scripts of their own, Chakma's to Osage's, Keyman's, and Vai's and Nuosu's the Latin letters Keyman's keyboards type their syllables with, typing into a composer; fifty-five with the letters of CLDR's exemplar characters, thirty on the US keys, Afar's to Zarma's, and twenty-five on the Arabic script's, Devanagari's and Bengali's, Balti's to Sylheti's), the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make derived-layouts`; `make translit-layouts`; `scripts/build-keyman-layouts.py`; `make keyman-composers`; `make exemplar-layouts` |
 | `emoji/catalogue.json` | Every fully-qualified emoji with its CLDR name and keywords: the emoji search | `scripts/build-emoji.py` |
 | `offensive/<lang>.txt` | Words a keyboard can keep off its strip (LDNOOBW, AOSP) | by hand |
 | `seeds/` | Tiny Pinyin, Jyutping and kana seeds (offline fallback) | by hand |
@@ -72,12 +74,13 @@ sight rather than mis-decoded.
 ## Packs and releases
 
 A pack is one language's files: its keyboard layouts, and an `.fst`
-lexicon and an `.ngram.bin` table for each of the 139 prediction
+lexicon and an `.ngram.bin` table for each of the 427 prediction
 languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's, Lao's, Khmer's, Burmese's, Shan's, Mon's, Sgaw Karen's and Pa'O's with their word lists, forty-six with a transliteration
 table and the layout that types through it); `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
 (kana–kanji) and `ko` (Hangul) with their layouts; and a pack of its
-layouts alone for each of the 73 other languages with a layout and no
-model yet. Three packs every language shares: `rules`, the text rules,
+layouts alone for each of the 82 other languages with a layout and no
+model yet (Vai's and Nuosu's with the transliteration table their
+layouts type through). Three packs every language shares: `rules`, the text rules,
 which are written by hand, Weir-style (after the rule language of the
 Harper grammar checker): each rule a pattern over the end of the text
 before the caret, what it becomes, and its tests, in the same file

@@ -389,7 +389,11 @@ Wiktionary's words and their romanizations as kaikki.org extracts them
 to measure.
 Their layouts, `layouts/<lang>-abc.json`, are the US layout's keys
 (`scripts/build-translit-layouts.py`), under the keyboard layouts'
-notices below.
+notices below. Vai's and Nuosu's tables, `translit/vai.txt` and
+`translit/ii.txt`, were not written here: they are what Keyman's
+keyboards for the two languages type each syllable as, found by running
+the keyboards' rules, under the keyboards' notices (with the keyboard
+layouts, below), and the two languages' own layouts type through them.
 
 ### English words (CMUdict)
 
@@ -699,7 +703,8 @@ Yiddish's Hebrew's, renamed, with the letters each language adds on long
 presses (`scripts/build-derived-layouts.py`); Pa'O's is Burmese's, its
 tones ꩻ and ႏ in place of ဩ and ၏. Sgaw Karen's, Northwestern Ojibwe's
 and the thirteen of a script of their own, Chakma's to Osage's, are
-Keyman's (below).
+Keyman's (below), and Vai's and Nuosu's the Latin letters Keyman's
+keyboards type their syllables with.
 xkeyboard-config's copyright and permission notices, which go with every
 copy (its `COPYING`, as xkeyboard-config 2.48 ships it):
 
@@ -1006,6 +1011,46 @@ Copyright © 2024-2025 SIL Global
 Copyright (c) 2016-2023 Sai Ai Wong
 Copyright (c) 2015-2019 SIL International
 Copyright (c) 2018-2023 Osage Nation
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+Vai's and Nuosu's keyboards, `layouts/vai.json` and `layouts/ii.json`,
+and their transliteration tables, `translit/vai.txt` and
+`translit/ii.txt`, are made from **Keyman's keyboards** that type the two
+scripts' syllables as Latin letters (`scripts/build-keyman-composers.py`,
+their files pinned by sha256): each table what each syllable is typed as,
+found by running the keyboard's rules; each layout the Latin letters
+they read and, Nuosu's, the punctuation its rules type. Each is under
+the MIT licence its keyboard carries: the same text, each with its own
+copyright line.
+
+| Files | Keyman keyboard | Copyright | Source |
+|---|---|---|---|
+| `layouts/vai.json` and `translit/vai.txt`, Vai's | athinkra_vai 1.3 | Copyright © 2008-2024 Athinkra, LLC | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/athinkra/athinkra_vai |
+| `layouts/ii.json` and `translit/ii.txt`, Nuosu's | sil_yi 1.3.1 | Copyright (C) 2000-2022 SIL International | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_yi |
+
+```text
+The MIT License (MIT)
+
+Copyright © 2008-2024 Athinkra, LLC
+Copyright (C) 2000-2022 SIL International
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

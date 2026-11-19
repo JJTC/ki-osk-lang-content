@@ -405,7 +405,8 @@ impl osk_data::translit::Lexicon for FstLexicon {
 }
 
 /// Each transliteration table parses, has the layout that types through it,
-/// and reads everyday words of its language first with its lexicon.
+/// and reads everyday words of its language first with its lexicon, or
+/// alone where no model predicts the language (Vai, Nuosu).
 /// `scheme`, reading the English words `lang` writes, where it has them
 /// (`translit/<lang>.english.txt`), as the keyboard reads them.
 fn with_english(scheme: osk_data::translit::Scheme, lang: &str) -> osk_data::translit::Scheme {
@@ -488,7 +489,7 @@ fn every_english_word_list_reads_with_its_table() {
 
 #[test]
 fn every_translit_table_reads_its_language() {
-    use osk_data::layout::{ImeKind, LayoutDef};
+    use osk_data::layout::{ImeKind, KeyOutput, LayoutDef, ViewId};
     use osk_data::translit::Scheme;
 
     let words: &[(&str, &[(&str, &str)])] = &[
@@ -714,6 +715,28 @@ fn every_translit_table_reads_its_language() {
         ),
         ("anp", &[("chhai", "छै"), ("aaru", "आरू"), ("kerau", "केरौ")]),
         ("new", &[("khah", "खः"), ("thwa", "थ्व"), ("yahgu", "याःगु")]),
+        // Read by the table alone: no model.
+        (
+            "vai",
+            &[
+                ("vai", "ꕙꔤ"),
+                ("kɔ", "ꗛ"),
+                ("kpɔ", "ꗅ"),
+                ("hɛ", "ꗤ"),
+                ("nga", "ꕋ"),
+                ("ka~", "ꕫ"),
+                ("x", "ꘋ"),
+            ],
+        ),
+        (
+            "ii",
+            &[
+                ("nuosuhxop", "ꆈꌠꉙ"),
+                ("bit", "ꀖ"),
+                ("bita", "ꀘꄣ"),
+                ("w", "ꀕ"),
+            ],
+        ),
     ];
     let tables: Vec<_> = files("translit", ".txt")
         .into_iter()
@@ -724,6 +747,12 @@ fn every_translit_table_reads_its_language() {
         words.len(),
         "a table without words to read here"
     );
+    let layout = |id: &str| -> LayoutDef {
+        serde_json::from_str(
+            &std::fs::read_to_string(root().join(format!("layouts/{id}.json"))).unwrap(),
+        )
+        .unwrap()
+    };
     for p in tables {
         let lang = p.file_stem().unwrap().to_string_lossy().to_string();
         let text = std::fs::read_to_string(&p).unwrap();
@@ -731,17 +760,36 @@ fn every_translit_table_reads_its_language() {
             Scheme::parse(&text).unwrap_or_else(|e| panic!("{}: {e}", name(&p))),
             &lang,
         );
-        let layout: LayoutDef = serde_json::from_str(
-            &std::fs::read_to_string(
-                root().join(format!("layouts/{}-abc.json", lang.to_lowercase())),
-            )
-            .unwrap(),
-        )
-        .unwrap();
+        let (_, expected) = words.iter().find(|(l, _)| *l == lang).expect("words");
+        // A language whose own layout types through its table (Vai's,
+        // Nuosu's, which no model predicts): the table alone reads.
+        let own = layout(&lang.to_lowercase());
+        if own.ime == Some(ImeKind::Translit) {
+            assert!(!own.prediction_enabled, "{lang}");
+            // No Shift view: a capital is a letter of its own to Vai's
+            // table (T is THA, t TA), and a field's first letter would be
+            // one. Every Latin letter its keys type, the table reads (the
+            // script's own, Vai's lengthener, are typed as they are).
+            assert!(own.view(ViewId::Shift).is_none(), "{lang} has a Shift view");
+            let base = own.view(ViewId::Base).expect("a base view");
+            for k in base.rows.iter().flat_map(|r| r.keys.iter()) {
+                for out in std::iter::once(&k.output).chain(&k.long_press) {
+                    if let KeyOutput::Text { text } = out {
+                        for c in text.chars().filter(|c| c.is_lowercase()) {
+                            assert!(scheme.reads(c), "{lang}: the table does not read {c}");
+                        }
+                    }
+                }
+            }
+            for (latin, word) in *expected {
+                assert_eq!(scheme.literal(latin), *word, "{lang}: {latin}");
+            }
+            continue;
+        }
+        let layout = layout(&format!("{}-abc", lang.to_lowercase()));
         assert_eq!(layout.ime, Some(ImeKind::Translit), "{lang}-abc");
         assert_eq!(layout.prediction_lang.as_deref(), Some(lang.as_str()));
         let lexicon = FstLexicon::open(&root().join(format!("predict/{lang}.fst")));
-        let (_, expected) = words.iter().find(|(l, _)| *l == lang).expect("words");
         for (latin, word) in *expected {
             let got = scheme.candidates(latin, &lexicon, 3);
             assert_eq!(

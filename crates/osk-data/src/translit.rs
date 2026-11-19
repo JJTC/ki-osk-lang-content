@@ -31,6 +31,9 @@
 //!   (`avan`, அவன்).
 //! - `vowels aeiou`: the Latin letters a rule's `>v` means; `>c` means
 //!   every other letter.
+//! - `unspaced`: the script writes no space between its words (Nuosu's
+//!   Yi, as Chinese): Space, and a word taken from the strip, end the word
+//!   without one ([`Scheme::unspaced`]).
 //!
 //! Then the rules, in the sections `[consonants]`, `[vowels]` and
 //! `[other]`. A rule is the Latin it reads, then each way of writing it,
@@ -380,6 +383,8 @@ pub struct Scheme {
     /// Whether the script has capitals (Greek, Armenian), which a capital
     /// typed first then gives the word.
     cased: bool,
+    /// Whether the script writes no space between its words (`unspaced`).
+    unspaced: bool,
     /// How many ways the rules give, all told: where the settings' places
     /// in [`Scheme::costs`] start.
     ways: u32,
@@ -664,6 +669,7 @@ impl Scheme {
         let mut acronym = ACRONYM_COST;
         let mut english_cost = ENGLISH_COST;
         let mut vowels: Vec<char> = "aeiou".chars().collect();
+        let mut unspaced = false;
         let mut part = Part::Settings;
         let mut rules: Vec<Rule> = Vec::new();
         let mut letters: HashMap<char, String> = HashMap::new();
@@ -768,6 +774,8 @@ impl Scheme {
                     "vowels" => {
                         vowels = one(&rest)?.chars().collect();
                     }
+                    "unspaced" if rest.is_empty() => unspaced = true,
+                    "unspaced" => return Err(err("`unspaced` takes no value".into())),
                     other => return Err(err(format!("no setting `{other}`"))),
                 }
                 continue;
@@ -828,6 +836,7 @@ impl Scheme {
             by_first,
             reads,
             cased,
+            unspaced,
             ways,
             letters,
             acronym,
@@ -1027,6 +1036,13 @@ impl Scheme {
     #[must_use]
     pub fn script(&self) -> Script {
         self.script
+    }
+
+    /// Whether the script writes no space between its words (`unspaced`):
+    /// a word is ended without one.
+    #[must_use]
+    pub fn unspaced(&self) -> bool {
+        self.unspaced
     }
 
     /// Whether some rule reads `c` (in either case): a letter that goes on
@@ -2392,6 +2408,21 @@ mod tests {
         let mut second = ways[1].1.to_vec();
         second.sort_unstable();
         assert_eq!(second, [0, 1]);
+    }
+
+    #[test]
+    fn a_syllabary_reads_the_fewest_syllables_and_may_write_no_spaces() {
+        let s = Scheme::parse(
+            "script alphabet\nunspaced\n[consonants]\nbi  ꀘ\nbit  ꀖ\nta  ꄤ\n[vowels]\na  ꀊ:0.1\n",
+        )
+        .expect("table");
+        assert!(s.unspaced());
+        assert_eq!(s.literal("bit"), "ꀖ");
+        // A tone letter that could end a syllable or begin the next: the
+        // vowel alone costs more, so it begins the next.
+        assert_eq!(s.literal("bita"), "ꀘꄤ");
+        assert!(!hindi().unspaced());
+        assert!(Scheme::parse("script alphabet\nunspaced 1\n[consonants]\nk  κ\n").is_err());
     }
 
     #[test]

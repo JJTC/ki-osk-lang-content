@@ -488,6 +488,9 @@ help:
 	@echo "  translit-layouts write layouts/<lang>-abc.json for translit/<lang>.txt"
 	@echo "  derived-layouts  write the layouts made from another language's keys"
 	@echo "  exemplar-layouts write the layouts made from CLDR's exemplar characters"
+	@echo "  keyman-layouts   write the layouts made from Keyman's touch keyboards"
+	@echo "  keyman-composers write Vai's and Nuosu's tables and layouts, from Keyman's"
+	@echo "                   keyboards' rules"
 	@echo "  hinglish-assets  rebuild predict/hi-Latn.* (Hindi typed in Latin letters)"
 	@echo "                   from Hindi's corpora respelled (after fetch-dakshina)"
 	@echo "  english-assets   rebuild translit/<lang>.english.txt, the English words"
@@ -910,8 +913,9 @@ hinglish-assets:
 # or the tool changed, so after predict-assets; after `make fetch-cmudict`.
 # Not Greek's, Persian's, Armenian's, Mongolian's, Santali's or Yiddish's:
 # their measures (Greeklish, Wiktionary's headwords) hold no English words
-# to gain on, and lost up to 0.8 points to the readings they added.
-ENGLISH_NOT_LANGS ?= el fa hy mn sat yi
+# to gain on, and lost up to 0.8 points to the readings they added. Nor
+# Vai's or Nuosu's, which have no lexicon to keep a reading.
+ENGLISH_NOT_LANGS ?= el fa hy mn sat yi vai ii
 ENGLISH_LANGS ?= $(filter-out $(ENGLISH_NOT_LANGS),$(sort $(patsubst translit/%.txt,%,$(filter-out %.english.txt,$(wildcard translit/*.txt)))))
 .PHONY: english-assets
 english-assets:
@@ -1101,6 +1105,16 @@ derived-layouts:
 .PHONY: keyman-layouts
 keyman-layouts:
 	$(PYTHON) scripts/build-keyman-layouts.py
+
+# Vai's and Nuosu's keyboards, whose Keyman keyboards type each syllable
+# as Latin letters: their transliteration tables (translit/vai.txt,
+# translit/ii.txt), what each syllable is typed as, found by running the
+# keyboards' rules, and the layouts that type through them
+# (layouts/vai.json, ii.json); the files fetched at a pinned commit,
+# sha256-checked.
+.PHONY: keyman-composers
+keyman-composers:
+	$(PYTHON) scripts/build-keyman-composers.py
 
 # The layouts of languages no text here predicts, their letters from
 # CLDR's exemplar characters (layouts/nv.json, Navajo's): each language's

@@ -187,6 +187,9 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("rhg", "𐴗𐴙𐴣"),
         ("osa", "𐓠𐓳𐓴𐓙𐓫𐓭𐓚𐓱𐓥𐓹𐓞"),
         ("kjg", "ຯໆ"),
+        // Vai's letters Keyman's keyboard types with capitals, which its
+        // composer reads, and the lengthener.
+        ("vai", "ŋþðʒꘌ"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {

@@ -616,6 +616,25 @@ source  = { name = "GlotCC v1.0 (cis-lmu/GlotCC-V1 at Hugging Face): web text fr
 license = { name = "MIT (the transliteration tables)", url = "https://opensource.org/license/mit", share_alike = false }
 source  = { name = "ki-osk-lang-content's transliteration tables", url = "https://github.com/jjtc/ki-osk-lang-content/tree/main/translit" }
 
+# The tables made from a Keyman keyboard's rules, what each syllable is
+# typed as (scripts/build-keyman-composers.py), and the keyboard's licence
+# and source in place of the above: Vai's and Nuosu's.
+[translit.added.vai]
+licenses = [
+  { name = "MIT (Keyman's athinkra_vai, Athinkra)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/athinkra/athinkra_vai/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Vai keyboard (athinkra_vai 1.3): its rules, what each syllable is typed as", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/athinkra/athinkra_vai" },
+]
+
+[translit.added.ii]
+licenses = [
+  { name = "MIT (Keyman's sil_yi, SIL International)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_yi/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Yi keyboard (sil_yi 1.3.1): its rules, what each syllable is typed as", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_yi" },
+]
+
 # The tables whose costs `make fit-translit` fitted to how people
 # romanized a dataset's words, and that dataset: their packs name it for
 # that too. Dakshina's training words (Gujarati's and Kannada's tables
@@ -856,6 +875,7 @@ ibb     = ["ibb"]
 id      = ["id"]
 ig      = ["ig"]
 igb     = ["igb"]
+ii      = ["ii"]
 ilo     = ["ilo"]
 inh     = ["inh"]
 is      = ["is"]
@@ -1145,6 +1165,7 @@ uk      = ["uk"]
 umb     = ["umb"]
 ur      = ["ur", "ur-abc"]
 uz      = ["uz"]
+vai     = ["vai"]
 ve      = ["ve"]
 vec     = ["vec"]
 vep     = ["vep"]
@@ -1211,6 +1232,7 @@ haz = "Hazaragi"
 hdy = "Hadiyya"
 hno = "Northern Hindko"
 igb = "Ebira"
+ii  = "Nuosu"
 jbo = "Lojban"
 khb = "Tai Lue"
 kjg = "Khmu"
@@ -1255,6 +1277,7 @@ tdd = "Tai Nuea"
 tem = "Temne"
 ti  = "Tigrinya"
 trw = "Torwali"
+vai = "Vai"
 xnr = "Kangri"
 xog = "Soga"
 xsr = "Sherpa"
@@ -1263,7 +1286,9 @@ xsr = "Sherpa"
 # licence and source each adds to its pack: Sgaw Karen's, from Keyman's
 # sil_sgaw_karen, Northwestern Ojibwe's, from Keyman's fv_ojibwa, and the
 # thirteen of a script of their own from Keyman's, Chakma's to Osage's
-# (scripts/build-keyman-layouts.py); and the fifty-five whose letters are
+# (scripts/build-keyman-layouts.py), and Vai's and Nuosu's, the Latin
+# letters Keyman's athinkra_vai and sil_yi type their syllables with
+# (scripts/build-keyman-composers.py); and the fifty-five whose letters are
 # CLDR's exemplar characters (scripts/build-exemplar-layouts.py): thirty
 # in Latin letters, Afar's to Zarma's, and twenty-five on the Arabic
 # script's, Devanagari's and Bengali's keys, Balti's to Sylheti's.
@@ -1385,6 +1410,22 @@ licenses = [
 ]
 sources = [
   { name = "Keyman's Osage keyboard (osage_nation 1.2.4), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/o/osage_nation" },
+]
+
+[layouts.added.vai]
+licenses = [
+  { name = "MIT (Keyman's athinkra_vai, Athinkra)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/athinkra/athinkra_vai/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Vai keyboard (athinkra_vai 1.3), the letters its rules type Vai's syllables with", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/athinkra/athinkra_vai" },
+]
+
+[layouts.added.ii]
+licenses = [
+  { name = "MIT (Keyman's sil_yi, SIL International)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_yi/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Yi keyboard (sil_yi 1.3.1), the letters its rules type Nuosu's syllables with, and its punctuation", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_yi" },
 ]
 
 [layouts.added.aa]

@@ -16,10 +16,13 @@ strip's words in that layout's font.
 Writes layouts/<lang>-abc.json for every table in translit/ (not the
 English words beside some, translit/<lang>.english.txt), each
 language having a layout of its own (scripts/build-derived-layouts.py
-makes those of the languages typed on another's keys); a table of a
-language in a second script (translit/sd-Deva.txt) is its tag's, and its
-layouts' ids are the tag in lower case (sd-deva, sd-deva-abc). --check
-fails if a written file would differ, as a test of the tree.
+makes those of the languages typed on another's keys), but those whose
+own layout types through the table (Vai's and Nuosu's, whose keyboards
+type syllables of Latin letters: scripts/build-keyman-composers.py); a
+table of a language in a second script (translit/sd-Deva.txt) is its
+tag's, and its layouts' ids are the tag in lower case (sd-deva,
+sd-deva-abc). --check fails if a written file would differ, as a test
+of the tree.
 
 It writes the layouts of the languages typed in Latin letters and left in
 them too, so with no composer but the US layout as it is (its keys, its
@@ -94,6 +97,9 @@ def main():
     # The tables, not the English words some languages' have beside them
     # (translit/<lang>.english.txt).
     tables = [t for t in sorted((ROOT / "translit").glob("*.txt")) if not t.name.endswith(".english.txt")]
+    # Not those whose language's own layout composes through the table.
+    tables = [t for t in tables if json.loads((ROOT / "layouts" / f"{t.stem.lower()}.json")
+                                              .read_text(encoding="utf-8")).get("ime") != "translit"]
     outputs = [(f"{t.stem.lower()}-abc", build(t.stem, us)) for t in tables]
     outputs += [(layout_id, latin(us, layout_id, name, lang)) for layout_id, name, lang in LATIN]
     for name, text in outputs:

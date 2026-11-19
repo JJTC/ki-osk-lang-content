@@ -21,9 +21,11 @@
 //! layout made from another source than xkeyboard-config's (Keyman's) adds
 //! that source's licence to its pack, as `[layouts.added]` says.
 //! A language's transliteration table (`translit/<lang>.txt`) joins the
-//! pack of the same id, with `[translit]`'s licence and source, and those
-//! of each `[[translit.fitted]]` naming it, whose dataset's romanizations
-//! its costs were fitted to (`make fit-translit`).
+//! pack of the same id, with `[translit]`'s licence and source, or, for a
+//! table made from another's work (a Keyman keyboard's rules), those
+//! `[translit.added]` gives it, and those of each `[[translit.fitted]]`
+//! naming it, whose dataset's romanizations its costs were fitted to
+//! (`make fit-translit`).
 //!
 //! A prediction pack names the corpora its model was built from as
 //! `sources.lock` records them: Tatoeba's (`corpora/<lang>.txt`), the
@@ -37,7 +39,7 @@
 //! - a prediction language with files but no name in `packs.toml`, or a
 //!   name with no files, or a model `sources.lock` records no corpus of;
 //! - a transliteration table no pack of its language takes, or a fitted
-//!   one that is not there;
+//!   or added one that is not there;
 //! - layouts given to a pack that does not exist and has no name, or a
 //!   name for a pack that has no layouts or exists already;
 //! - a component that is missing or whose path climbs out of the tree;
@@ -109,13 +111,16 @@ struct Packs {
 }
 
 /// The transliteration tables: the licence and source each adds to its
-/// pack, those each dataset their costs were fitted to adds, and those the
-/// English words a language writes in its script add
+/// pack, or those of the work a table was made from in their place
+/// (`added`, by language), those each dataset their costs were fitted to
+/// adds, and those the English words a language writes in its script add
 /// (`translit/<lang>.english.txt`).
 #[derive(Deserialize)]
 struct Translit {
     license: License,
     source: SourceDef,
+    #[serde(default)]
+    added: BTreeMap<String, AddedDef>,
     #[serde(default)]
     fitted: Vec<Fitted>,
     english: Option<Added>,
@@ -750,24 +755,38 @@ fn add_translit(
             kind::TRANSLIT,
             &format!("translit/{name}"),
         )?);
+        // The table's own licence and source: this repository's, or those
+        // of the work it was made from.
+        let (licenses, sources): (Vec<&License>, Vec<&SourceDef>) = match t.added.get(lang) {
+            Some(a) => (a.licenses.iter().collect(), a.sources.iter().collect()),
+            None => (vec![&t.license], vec![&t.source]),
+        };
         let fitted = t
             .fitted
             .iter()
             .filter(|f| f.langs.iter().any(|l| l == lang));
-        let added = std::iter::once((Some(&t.license), &t.source))
-            .chain(fitted.map(|f| (f.license.as_ref(), &f.source)));
-        for (license, source) in added {
-            if let Some(license) = license
-                && !m.licenses.contains(license)
-            {
+        let licenses = licenses
+            .into_iter()
+            .chain(fitted.clone().filter_map(|f| f.license.as_ref()));
+        for license in licenses {
+            if !m.licenses.contains(license) {
                 m.licenses.push(license.clone());
             }
+        }
+        for source in sources.into_iter().chain(fitted.map(|f| &f.source)) {
             m.sources.push(Source {
                 name: source.name.clone(),
                 url: source.url.clone(),
                 sha256: None,
             });
         }
+    }
+    if let Some(lang) = t
+        .added
+        .keys()
+        .find(|l| !root.join(format!("translit/{l}.txt")).is_file())
+    {
+        bail!("packs.toml: [translit.added] names {lang}, which has no table");
     }
     if let Some(lang) = t
         .fitted
