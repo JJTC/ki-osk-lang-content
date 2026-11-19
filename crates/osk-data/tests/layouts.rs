@@ -201,6 +201,39 @@ fn letters_on_long_presses_are_the_languages_own() {
     }
 }
 
+/// The Ethiopic layouts type through Amharic's composer, which reads a
+/// capital as the key with Shift: the ejectives ጠ ጨ ጰ ጸ are T C P S, ዸ is
+/// D, the 5th order E and ኧ A. Each has a Shift view with those, and
+/// Ethiopic's full stop and comma on its letters' view.
+#[test]
+fn the_ethiopic_layouts_have_capitals_and_ethiopic_punctuation() {
+    for id in ["am", "ti", "gez", "drs", "hdy", "ktb", "stv"] {
+        let def = load(id);
+        let labels = |view: ViewId| -> Vec<String> {
+            def.views
+                .iter()
+                .filter(|v| v.id == view)
+                .flat_map(|v| v.rows.iter().flat_map(|r| r.keys.iter()))
+                .map(|k| k.label.clone())
+                .collect()
+        };
+        let shift = labels(ViewId::Shift);
+        for c in ["T", "C", "P", "S", "D", "E", "A"] {
+            assert!(
+                shift.iter().any(|l| l == c),
+                "{id}: no {c} on its Shift view"
+            );
+        }
+        let base = labels(ViewId::Base);
+        for c in ["።", "፣"] {
+            assert!(
+                base.iter().any(|l| l == c),
+                "{id}: no {c} on its letters' view"
+            );
+        }
+    }
+}
+
 /// A layout's `dialect` is one of its prediction language's varieties: a
 /// misspelt one would quietly leave the language as its lexicon has it.
 #[test]

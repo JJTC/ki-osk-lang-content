@@ -110,7 +110,10 @@ the long presses, with an apostrophe key for those whose words write one
 typed on the US keys, its č ć š ž đ first on the long presses of c s z
 d, and Balkan Romani on Serbian's Latin keys, which have them all; Ge'ez
 on Amharic's, its letters composed from Latin ones as Amharic's are,
-with no model. Kabiye, Akoose and Grebo, whose long presses typed more
+with no model; and so are Gedeo, Hadiyya, Kambaata and Silt'e, whose
+letters CLDR's exemplar characters list in the Ethiopic script and
+Amharic's composer now types (its ejectives ጠ ጨ ጰ as T C P, ዸ as D, the
+-wa forms, ኧ), named in Latin letters, as they also write their names. Kabiye, Akoose and Grebo, whose long presses typed more
 than a quarter of their letters, and Nande, whose long presses were in a
 quarter of its words, have keys for the letters their words write most
 of those: two at the home row's end (Kabiye's ɛ ɩ, Akoose's é á, Grebo's
@@ -456,6 +459,10 @@ DERIVED = [
                                          "d": ["đ"], "D": ["Đ"]}),
     ("rmn", "sr-latn", "Romani čhib (Balkan)", {}),
     ("gez", "am", "ግዕዝ", {}),
+    ("drs", "am", "Gedeo", {}),
+    ("hdy", "am", "Hadiyya", {}),
+    ("ktb", "am", "Kambaata", {}),
+    ("stv", "am", "Silt'e", {}),
     ("cnr", "sr-latn", "Crnogorski", {"s": ["ś"], "S": ["Ś"], "z": ["ź"], "Z": ["Ź"]}),
     ("cnr-Cyrl", "sr", "Црногорски", {"с": ["с́"], "С": ["С́"], "з": ["з́"], "З": ["З́"]}, {"model": False}),
     ("bto", "us", "Rinconada Bikol", {"n": ["ñ"], "N": ["Ñ"]}),

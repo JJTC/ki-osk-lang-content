@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**544 layouts**: 488 keyboard layouts (RTL: ar he fa + Urdu, Western
+**548 layouts**: 488 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri and Maba; Hinglish, Kokborok) · 8 IMEs (5 CJK +
-Amharic/Tigrinya/Ge'ez Ge'ez) · 46 transliteration layouts (Latin letters →
+Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri and Maba; Hinglish, Kokborok) · 12 IMEs (5 CJK +
+Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 543 are here; the numeric keypad is built into ki-osk. The
+keycaps. 547 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **427 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -523,9 +523,13 @@ but no model to match the glide against · `—` off
 | `yue-jyutping` | `yue` | Cantonese 粵語 (粵拼) | — | LTR | IME | — | **Jyutping** Latin → Traditional (CC-Canto) |
 | `jp-romaji` | `ja` | Japanese 日本語 | — | LTR | IME | — | **Kana→Kanji** (mozc, connection-cost lattice) |
 | `kr-2set` | `ko` | Korean 한국어 (두벌식) | — | LTR | IME | — | **Hangul** (algorithmic) |
-| `am` | `am` | Amharic አማርኛ | — | LTR | IME | — | **Ge'ez** (phonetic Latin→fidel + homophone candidate bar) |
+| `am` | `am` | Amharic አማርኛ | — | LTR | IME | — | **Ge'ez** (phonetic Latin→fidel + homophone candidate bar; capitals on the Shift view for the ejectives ጠ ጨ ጰ ጸ and ዸ and the 5th order; ። ፣ keys) |
 | `ti` | `ti` | Tigrinya ትግርኛ | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
 | `gez` | `gez` | Ge'ez ግዕዝ | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
+| `drs` | `drs` | Gedeo (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its ዸ as D) |
+| `hdy` | `hdy` | Hadiyya (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
+| `ktb` | `ktb` | Kambaata (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its ኧ as A) |
+| `stv` | `stv` | Silt'e (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its -wa forms ሏ ሟ ቧ…) |
 | `hi-abc` | `hi` | Hindi हिन्दी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hi lexicon choosing |
 | `bn-abc` | `bn` | Bengali বাংলা (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali, the bn lexicon choosing |
 | `mr-abc` | `mr` | Marathi मराठी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the mr lexicon choosing |
@@ -1940,7 +1944,7 @@ drives which face loads:
 | `devanagari`…`myanmar` | `NotoSans<Script>-Regular.ttf` | the 15 Tier-3 layouts |
 | `syriac` | Noto Sans Syriac | `syr` (RTL) |
 | `tifinagh` | Noto Sans Tifinagh | `ber` |
-| `ethiopic` | Noto Sans Ethiopic | `am ti gez` (Ge'ez fidel preedit) |
+| `ethiopic` | Noto Sans Ethiopic | `am ti gez drs hdy ktb stv` (Ge'ez fidel preedit) |
 | `tibetan` | Noto Sans Tibetan | `bo dz` (stacking via shaping) |
 | `thaana` | Noto Sans Thaana | `dv` (RTL) |
 | `olchiki` | Noto Sans Ol Chiki | `sat` |
@@ -2002,10 +2006,25 @@ record how each group was added and what it needs at runtime:
   ts's" ጸ ፀ, the glottal/pharyngeal አ ዐ) surface as a **candidate bar** —
   the composer offers the same syllable in each family member and a tap
   swaps it, so any word can be spelled with its correct fidel. Labiovelars
-  (`Cʷ`) compose via `Cw` + vowel (`kwa` → ኳ). Tigrinya (`ti`, same
+  (`Cʷ`) compose via `Cw` + vowel (`kwa` → ኳ), and the -wa forms of the
+  other consonants whose rows have them likewise (`lwa` → ሏ, `bwa` → ቧ,
+  `Twat` → ጧት). Tigrinya (`ti`, same
   composer) reaches its distinctive fidels via digraphs (`hh` ሐ, `qh` ቐ,
-  `x` ኸ). Ge'ez (`gez`, layout-only: FineWeb-2 has no text of it) is
-  Amharic's keys and composer, named for it.
+  `x` ኸ; `qhw` ቘ and `xw` ዀ their labiovelars). Since data 0.53.0 the
+  keys have a Shift view of capitals, which the composer reads as SERA
+  does: `T` ጠ, `C` ጨ, `P` ጰ, `S` ጸ (the ejectives, which until then no
+  key typed; with the -wa forms, 45 of the 282 syllables CLDR lists for
+  Amharic), `D` ዸ, `E`
+  the 5th order (until then out of reach on screen: only a physical
+  keyboard's Shift gave it), and `A` alone ኧ; the punctuation keys are
+  Ethiopic's ። and ፣, and the symbol views every other layout has hold the
+  digits, ፤ ፥ ፦ ፧ and Latin's punctuation. Ge'ez (`gez`, layout-only:
+  FineWeb-2 has no text of it) is Amharic's keys and composer, named for
+  it, and so are Gedeo, Hadiyya, Kambaata and Silt'e, the four whose
+  syllables, as CLDR's exemplar characters list them, the composer types
+  all of (Kambaata's ኧ as `A`); Bench's and Sebat Bet Gurage's
+  need syllables of the Ethiopic Supplement and Extended blocks it does
+  not key yet (ⶡ, ᎀ).
 - **Additional scripts**: three minority scripts the
   shaping engine now renders, generated from their xkb layouts — Tibetan
   `bo` (`cn`/`tib`; subjoined stacks compose via shaping), Dhivehi `dv`
