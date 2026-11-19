@@ -5,6 +5,7 @@
   "direction": "ltr",
   "swipe_enabled": false,
   "prediction_enabled": false,
+  "long_press_letters": true,
   "views": [
     {
       "id": "base",
@@ -186,6 +187,10 @@
               "long_press": [
                 {
                   "kind": "text",
+                  "text": "å"
+                },
+                {
+                  "kind": "text",
                   "text": "á"
                 },
                 {
@@ -203,10 +208,6 @@
                 {
                   "kind": "text",
                   "text": "ã"
-                },
-                {
-                  "kind": "text",
-                  "text": "å"
                 },
                 {
                   "kind": "text",
@@ -541,7 +542,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 30
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "Å"
+                }
+              ]
             },
             {
               "width_units": 1,

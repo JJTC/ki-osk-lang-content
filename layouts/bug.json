@@ -5,6 +5,7 @@
   "direction": "ltr",
   "swipe_enabled": false,
   "prediction_enabled": false,
+  "long_press_letters": true,
   "views": [
     {
       "id": "base",
@@ -465,7 +466,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 18
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "É"
+                }
+              ]
             },
             {
               "width_units": 1,

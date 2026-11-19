@@ -6,8 +6,10 @@
 # Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki, Tulu, Dotyali,
 # Angika and Newari (beside its web text, scripts/fetch-glotcc.sh),
 # Eastern Min (in Bàng-uâ-cê, the Han its sentences write beside left
-# out), Fiji Hindi (its references, English, left out: --own) and
-# Emilian (the Emilian–Romagnol wiki's, its Romagnol left out); of
+# out), Fiji Hindi (its references, English, left out: --own), Emilian
+# (the Emilian–Romagnol wiki's, its Romagnol left out) and Church
+# Slavonic (its sentences that write a letter of its own, ѣ є ꙑ ѥ…: its
+# references are Russian); of
 # Armenian and Persian beside their Tatoeba sentences (the Makefile's
 # WIKIPEDIA_PLUS_LANGS, whose held-out text goes elsewhere: EVAL_OUT); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
@@ -57,7 +59,7 @@ BASE=https://dumps.wikimedia.org/other/cirrus_search_index/$DATE
 # space; - keeps every sentence)  [wikipedia-text.py's options: a
 # neighbour whose articles and sentences are left out, as the
 # Incubator's below; --script-only; --shapes, its bots' stubs; --own,
-# --emilian]
+# --letters, --emilian]
 DUMPS="
 bho  bh   bhwiki_content-20261108-00000.json.bz2   e1becbc89778d7994831288afa94b9c1cce69d1b6b65a485d3500b34a5e822cc  DEVANAGARI  --script-only
 mai  mai  maiwiki_content-20261108-00000.json.bz2  1119ae395e8ca315a20422db6d09d5280e01e7d2530d301ebfb486212fcb5f4c  DEVANAGARI  --script-only
@@ -83,6 +85,7 @@ fa   fa   fawiki_content-20261108-00000.json.bz2   1c793a3006d5ed7f78e58cf3f1205
 cdo  cdo  cdowiki_content-20261108-00000.json.bz2  b087ff5764e512a440b6f2486288a9523b891bb9c2c676987f3230324c4c443a  LATIN  --script-only --shapes 3
 hif  hif  hifwiki_content-20261108-00000.json.bz2  1490558966f73af1384d677456499fb15cc084db754d350fd03dd2475da45ae7  LATIN  --own hif --shapes 3
 egl  eml  emlwiki_content-20261108-00000.json.bz2  d9123a8b5d3fd5cf83bc0283bb34d44b791a021cfe2d82d2e72360687dc8971a  LATIN  --emilian --shapes 3
+cu   cu   cuwiki_content-20261108-00000.json.bz2   12aac7a8422656a861bcc6756d47ef540c68ecdbc7db316b94c6cb0a9eca68c5  CYRILLIC  --script-only --shapes 3 --letters єѣꙑѥїꙁꙗѧѫѩѡіѭѵѷѳꙋѯѱѿѻѕѹ
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1

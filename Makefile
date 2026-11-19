@@ -60,7 +60,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  cnr \
                  bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn \
                  rkt \
-                 cdo hif egl abr
+                 cdo hif egl abr cu
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -109,9 +109,10 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # before: Eastern Min's, in Bàng-uâ-cê (170 000 words, its Han left
 # out), Fiji Hindi's (620 000, its English references left out) and the
 # Emilian–Romagnol wiki's Emilian (2.2 million, its Romagnol left out),
-# their bots' stubs left out as the small wikis' are.
+# their bots' stubs left out as the small wikis' are; and Church
+# Slavonic's (60 000 words, the sentences that write its own letters).
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
-                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl
+                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences

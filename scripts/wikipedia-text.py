@@ -69,7 +69,9 @@ English (`The Oxford Dictionary of Opera, OUP, 1992.`, 13 700 of its
 
 With --letters, a sentence that writes none of these letters is left
 out: a third of the Abron test wiki's sentences are English, its
-references among them, and its own write ɛ and ɔ.
+references among them, and its own write ɛ and ɔ; the Church Slavonic
+wiki's references are Russian (333 of its sentences), and its own write
+ѣ є ꙑ ѥ ѧ ѫ….
 
 With --emilian, the Emilian–Romagnol wiki's articles are read as
 Emilian: the dialect each names before its text (` Miranduléś`,

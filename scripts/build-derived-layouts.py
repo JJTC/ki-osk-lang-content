@@ -145,10 +145,21 @@ Burmese's, ႋ ၜ ၠ in place of ဩ ၏ ၒ, its letters on long presses; and
 with the letters their test wikis write, Northern Min (Kienning) on the
 US keys with its toned vowels, the double overline its seventh tone,
 Siberian Tatar on Bashkir's with ё on е, Isan on Thai's, Maguindanao,
-Capiznon, Buginese and Rejang (ê first on e) on the US keys, Kedah Malay
-on Malay's, Qashqai on South Azerbaijani's with ێ on ی, Ghomala' on the
+Capiznon, Buginese (é first on e) and Rejang (ê first on e) on the US
+keys, Kedah Malay on Malay's (å first on a), Qashqai on South Azerbaijani's with ێ on ی, Ghomala' on the
 US keys with ə ɛ ɔ ʉ ŋ ƴ and its tones on the long presses, Laki on
-Sorani's, and Southern Balochi on Balochi's, ۏ ݔ ګ on و ی گ. A key at
+Sorani's, and Southern Balochi on Balochi's, ۏ ݔ ګ on و ی گ; from smaller
+test wikis still and FineWeb-2's few pages, Ahirani on Marathi's keys,
+Harauti and Kannauji on Hindi's, Chittagonian on Bengali's with ৱ ৰ on ব
+র, Khorasani Turkic on South Azerbaijani's, Northern Khmer in the Thai
+script on Thai's, and Hani, Nandi (ñ ā ē ĩ ō, an apostrophe key), North
+Moluccan Malay (its accented vowels), Bangka Malay, Banggai, Cuyonon
+(ñ), Youjiang Zhuang, Mongondow (ḷ ḻ, an apostrophe key), Pokot,
+Manggarai (é first, a ’ key) and Ma'anyan on the US keys. Church
+Slavonic, with its model, is typed on Russian's keys with є ѣ ꙑ ꙁ ꙗ in
+place of the е э ы з я it hardly writes, ѥ and its accent marks at the
+home row's end, the rest of its letters on long presses, and Noto
+Sans's Cyrillic for the Extended-B letters DejaVu Sans lacks. A key at
 the home row's end types its
 capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
@@ -180,7 +191,9 @@ def with_capitals(extra):
 # ("swap": a key's label → the letter), or keys at the home row's end
 # in place of its spacers ("home": what one types, the apostrophe many of
 # Africa's languages write inside their words, or a list: Wayuu's ü and
-# its apostrophe), and "model": False for a language with none.
+# its apostrophe), "font_script" for one whose letters the default face
+# lacks (Church Slavonic's ꙁ ꙃ ꙋ: Noto Sans's Cyrillic), and "model":
+# False for a language with none.
 DERIVED = [
     ("bho", "hi", "भोजपुरी", {}),
     ("mai", "hi", "मैथिली", {}),
@@ -542,7 +555,7 @@ DERIVED = [
     ("tts", "th", "อีสาน", {}, {"model": False}),
     ("mdh", "us", "Magindanawn", {}, {"model": False}),
     ("cps", "us", "Capiznon", {}, {"model": False}),
-    ("meo", "ms", "Kedah Malay", {}, {"model": False}),
+    ("meo", "ms", "Kedah Malay", {"a": ["å"], "A": ["Å"]}, {"model": False}),
     ("qxq", "azb", "قشقایی", {"ی": ["ێ"]}, {"model": False}),
     ("rej", "us", "Baso Jang", {"e": ["ê"], "E": ["Ê"]}, {"model": False}),
     ("bbj", "us", "Ghomala'",
@@ -551,9 +564,35 @@ DERIVED = [
                     "u": ["ú", "ʉ́", "ù", "ʉ", "û", "ǔ", "ʉ̂"], "i": ["í", "î", "ï", "ì", "ǐ"],
                     "n": ["ŋ", "ŋ́"], "y": ["ƴ"]}),
      {"model": False}),
-    ("bug", "us", "Basa Ugi", {}, {"model": False}),
+    ("bug", "us", "Basa Ugi", {"e": ["é"], "E": ["É"]}, {"model": False}),
     ("lki", "ckb", "لەکی", {}, {"model": False}),
     ("bcc", "bal", "بلۏچی", {"و": ["ۏ"], "ی": ["ݔ"], "گ": ["ګ"]}, {"model": False}),
+    ("ahr", "mr", "अहिराणी", {}, {"model": False}),
+    ("hoj", "hi", "हाड़ौती", {}, {"model": False}),
+    ("bjj", "hi", "कन्नौजी", {}, {"model": False}),
+    ("ctg", "bn", "চাটগাঁইয়া", {"ব": ["ৱ"], "র": ["ৰ"]}, {"model": False}),
+    ("hni", "us", "Haqniqdoq", {}, {"model": False}),
+    ("niq", "us", "Nandi", with_capitals({"n": ["ñ"], "a": ["ā"], "e": ["ē"], "i": ["ĩ"], "o": ["ō"]}),
+     {"home": "'", "model": False}),
+    ("max", "us", "North Moluccan Malay",
+     with_capitals({"a": ["à", "á"], "e": ["é", "è"], "i": ["í"], "o": ["ò", "ó"], "u": ["ù", "ú", "ŭ"]}), {"model": False}),
+    ("mfb", "us", "Bangka Malay", {}, {"model": False}),
+    ("bgz", "us", "Banggai", {}, {"model": False}),
+    ("cyo", "us", "Cuyonon", {"n": ["ñ"], "N": ["Ñ"]}, {"model": False}),
+    ("zyj", "us", "Youjiang Zhuang", {}, {"model": False}),
+    ("mog", "us", "Mongondow", with_capitals({"l": ["ḷ", "ḻ"]}), {"home": "'", "model": False}),
+    ("pko", "us", "Pokot", {}, {"model": False}),
+    ("kmz", "azb", "Khorasani Turkic", {}, {"model": False}),
+    ("kxm", "th", "Northern Khmer (Thai script)", {}, {"model": False}),
+    ("mqy", "us", "Manggarai", {"e": ["é"], "E": ["É"]}, {"home": "’", "model": False}),
+    ("mhy", "us", "Ma'anyan", {}, {"model": False}),
+    ("cu", "ru", "Словѣньскъ",
+     {**with_capitals({"є": ["е"], "ѣ": ["э"], "ꙑ": ["ы"], "ꙁ": ["з", "ѕ", "ꙃ"], "ꙗ": ["я", "ѧ", "ѩ"],
+                       "и": ["ї", "і", "ѵ", "ѷ"], "у": ["ѫ", "ꙋ", "ѹ", "ў"], "ю": ["ѭ"], "о": ["ѡ", "ѻ", "ѿ"],
+                       "ф": ["ѳ"], "к": ["ѯ"], "п": ["ѱ"]}),
+      "\u0301": ["\u0483", "\u0484", "\u0486", "\u0300", "\u0311"]},
+     {"swap": {"е": "є", "Е": "Є", "э": "ѣ", "Э": "Ѣ", "ы": "ꙑ", "Ы": "Ꙑ", "з": "ꙁ", "З": "Ꙁ", "я": "ꙗ", "Я": "Ꙗ"},
+      "home": ["ѥ", "\u0301"], "font_script": "cyrillic"}),
 ]
 
 
@@ -582,6 +621,8 @@ def build(lang, base, name, extra, extras=None):
         out[k] = v
     out["id"] = lang.lower()
     out["name"] = name
+    if extras.get("font_script"):
+        out["font_script"] = extras["font_script"]
     # A language no text predicts (build-exemplar-layouts.py's) has neither
     # suggestions nor glides, which would find no word.
     if extras.get("model") is False:

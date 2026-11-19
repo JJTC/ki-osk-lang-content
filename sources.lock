@@ -1916,6 +1916,23 @@
         "words": "2"
       }
     },
+    "predict/cu": {
+      "encoder": "ccd3cae58499-dirty",
+      "inputs": {
+        "wikipedia/cu.txt": "86067e0d24a080903f5a156fc58067d674e793eeb98f9d491bb4aa42f6de84bc"
+      },
+      "outputs": {
+        "predict/cu.forms.fst": "04e8179f6c19df8bf68b6de0052e8223ff0f3b194c452f26b9c93326b7ccde6a",
+        "predict/cu.fst": "bd5ac9d634a3b7231a352bbe77b25906279ed51d3070d988efb54b8b8982c736",
+        "predict/cu.ngram.bin": "b0ccac475e8202b5ef6d7a61d7c7aa0b625227c2118b89448199ffde01713afe"
+      },
+      "recipe": {
+        "ngram_keep": "60000",
+        "start_keep": "5000",
+        "vocab_size": "20000",
+        "words": "2"
+      }
+    },
     "predict/cv": {
       "encoder": "575990c89282-dirty",
       "inputs": {
