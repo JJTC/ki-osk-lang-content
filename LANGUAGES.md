@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**613 layouts**: 551 keyboard layouts (RTL: ar he fa + Urdu, Western
+**634 layouts**: 572 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 14 IMEs (5 CJK +
+Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 14 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 612 are here; the numeric keypad is built into ki-osk. The
+keycaps. 633 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **433 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -498,6 +498,27 @@ but no model to match the glide against · `—` off
 | `kxm` | `kxm` | Northern Khmer (Thai script) | th, Thai's keys | LTR | —¹² | — | — |
 | `mqy` | `mqy` | Manggarai | us + long-press é, ’ key | LTR | —¹² | — | — |
 | `mhy` | `mhy` | Ma'anyan | us | LTR | —¹² | — | — |
+| `prs` | `prs` | Dari دری | ir, Persian's keys + long-press ټ ځ څ ډ ړ ږ ښ ګ ڼ ى | **RTL** | —¹² | — | — |
+| `ca-valencia` | `ca-valencia` | Valencian Valencià | es · cat, Catalan's keys | LTR | —¹² | — | — |
+| `bhb` | `bhb` | Bhili (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `kfy` | `kfy` | Kumaoni (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `kru` | `kru` | Kurukh (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `mtr` | `mtr` | Mewari (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `noe` | `noe` | Nimadi (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `swv` | `swv` | Shekhawati (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `wbr` | `wbr` | Wagdi (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `unr` | `unr` | Mundari (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `bns` | `bns` | Bundeli (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `dhd` | `dhd` | Dhundhari (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `kfq` | `kfq` | Korku (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `mup` | `mup` | Malvi (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `wry` | `wry` | Merwari (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `bfz` | `bfz` | Mahasu Pahari (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `hlb` | `hlb` | Halbi (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `lmn` | `lmn` | Lambadi (Telugu script) | in · tel, Telugu's keys | LTR | —¹² | — | — |
+| `sou` | `sou` | Southern Thai | th, Thai's keys | LTR | —¹² | — | — |
+| `dcc` | `dcc` | Dakhini (Urdu script) | pk, Urdu's keys | **RTL** | —¹² | — | — |
+| `bpy` | `bpy` | Bishnupriya Manipuri বিষ্ণুপ্রিয়া মণিপুরী | in · ben, Bengali's keys + long-press ৱ | LTR | —¹² | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -2062,7 +2083,7 @@ but no model to match the glide against · `—` off
    。 are keys, its other punctuation fullwidth, as Keyman's rules type it.
    Neither has a model: the strip offers the reading and the letters as
    typed.
-12. Thirty-seven keyboards of languages no text here predicts are another
+12. Fifty-eight keyboards of languages no text here predicts are another
    language's keys in their name, as they write with those letters:
    Amdo and Khams Tibetan on Tibetan's, in its spelling (Keyman's
    Tibetan keyboards name them among their languages); Sadri on Hindi's
@@ -2119,7 +2140,26 @@ but no model to match the glide against · `—` off
    are named in English, the twelve as their wikis name them, Kedah Malay
    but in English, and the seventeen as theirs write their names where
    they do (अहिराणी, हाड़ौती, कन्नौजी, চাটগাঁইয়া, Haqniqdoq), in English
-   otherwise. None has a model: neither suggestions nor glides.
+   otherwise. Twenty-one more have no text here to take letters from, but
+   a source that names their script, whose national keys type all of it:
+   Dari, a pack of its own, on Persian's keys, with the Pashto letters
+   CLDR's Dari (fa_AF) lists among its auxiliary ones (ټ ځ څ ډ ړ ږ ښ ګ ڼ,
+   and ى) on the long presses of the letters they are made from, named
+   دری, as CLDR's Persian names it; Valencian on Catalan's keys, its
+   letters Catalan's (CLDR's ca_ES_VALENCIA), named valencià; the
+   languages CLDR's language data (supplementalData's languageData) says
+   are written in Devanagari, Bhili, Kumaoni, Kurukh, Mewari, Nimadi,
+   Shekhawati and Wagdi, and Mundari (Bengali or Devanagari), on Hindi's
+   keys; Lambadi, in the Telugu script by it, on Telugu's; Southern Thai
+   on Thai's; Dakhini, in the Arabic script, on Urdu's; Bishnupriya
+   Manipuri, in the Bengali script, on Bengali's, with the ৱ its wiki
+   writes (0.4% of its words) on ব's long press; and those Wikidata's
+   "writing system" (P282) gives Devanagari, Bundeli, Dhundhari, Korku,
+   Malvi, Merwari, Mahasu Pahari and Halbi, on Hindi's keys (Mandeali,
+   Takri alone there, and Wanetsi, "Arabic alphabet", are not). These
+   are named in English but Dari, Valencian and Bishnupriya Manipuri
+   (as its wiki writes it). None has a model: neither suggestions nor
+   glides.
 
 ## Prediction model tiers
 
@@ -2159,17 +2199,18 @@ but no model to match the glide against · `—` off
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 117 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 138 layouts, Montenegrin's in
   Cyrillic, the fifty-seven whose letters are CLDR's exemplar characters
   (note 9: thirty-two in Latin letters, twenty-five in the Arabic script,
   Devanagari and Bengali), the eighteen from Keyman's (note 10: thirteen
   of a script of their own, Chakma to Osage, and Gorani, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
-  Tham), the thirty-seven on another language's keys (note 12: Northern
+  Tham), the fifty-eight on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian
   Konkani, Kutchi, Tày and Eastern Pwo Karen, twelve whose letters their
   wikis give, Northern Min to Southern Balochi, and seventeen from smaller
-  wikis and FineWeb-2's few pages, Ahirani to Ma'anyan), Vai's and Nuosu's, whose composers
+  wikis and FineWeb-2's few pages, Ahirani to Ma'anyan, and twenty-one
+  whose script CLDR's or Wikidata's data names, Dari to Halbi), Vai's and Nuosu's, whose composers
   read their tables alone (note 11), and Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
   its wiki's and its New Testament), and Nahuatl, whose is colonial
@@ -2194,7 +2235,7 @@ drives which face loads:
 | `font_script` | Face | Layouts |
 |---|---|---|
 | `cjk` | a glyf Han/Kana/Hangul face (wqy-zenhei, Droid, …) | the 5 CJK IMEs |
-| `thai` | Noto Sans Thai | `th nod-thai tts kxm` |
+| `thai` | Noto Sans Thai | `th nod-thai tts kxm sou` |
 | `arabic` | Noto Sans Arabic | `ur ps sd ug` (ar/he/fa use DejaVu) |
 | `devanagari`…`myanmar` | `NotoSans<Script>-Regular.ttf` | the 15 Tier-3 layouts |
 | `syriac` | Noto Sans Syriac | `syr cld` (RTL) |
@@ -2414,6 +2455,8 @@ syllables:
 | `cu` Church Slavonic | on Russian's keys: є ѣ ꙑ ꙁ ꙗ in place of е э ы з я, which are on their long presses; ѥ and its accent marks (́, then ҃ ҄ ҆ ̀ ̑ on its long press) keys of their own at the home row's end; ѧ ѩ on ꙗ, ѫ ꙋ ѹ on у, ѭ on ю, ѡ ѻ ѿ on о, ї і ѵ ѷ on и, ѳ ѯ ѱ on ф к п, ѕ ꙃ on ꙁ | `cu` |
 | `ctg` `niq` `max` `cyo` `mog` `mqy` `bug` `meo` | Chittagonian's ৱ ৰ on ব র (on Bengali's keys); Nandi's ñ ā ē ĩ ō, North Moluccan Malay's accented vowels, Cuyonon's ñ, Mongondow's ḷ ḻ, Manggarai's and Buginese's é and Kedah Malay's å first on the long presses (on the US and Malay's keys; note 12) | each its own |
 | `niq` `mog` `mqy` | an apostrophe, a key of its own at the home row's end: Nandi's ' (para'ab), Mongondow's glottal stop ' (lopi'), Manggarai's ’ (Pu’ung) | each its own |
+| `prs` Dari | the Pashto letters CLDR's Dari lists, ټ on ت, ځ څ on ح, ډ on د, ړ ږ on ر, ښ on س, ګ on گ, ڼ on ن, and ى after ئ ي on ی (on Persian's keys; note 12) | `prs` |
+| `bpy` Bishnupriya Manipuri | ৱ on ব (on Bengali's keys; note 12) | `bpy` |
 | `vai` Vai | its letters Keyman's capitals type, which its composer reads (note 11): ɛ in q's place, ɔ at the home row's end, the nasal ~ in Shift's; ŋ þ ð ʒ on the long presses of n t d j, the lengthener ꘌ on x's; Vai's comma, full stop and question mark on those of , . ? | `vai` |
 | `cnr` `cnr-cyrl` Montenegrin | ś ź on the long presses of s z (on Serbian's Latin keys), с́ з́ on с з (on its Cyrillic ones) | `cnr` |
 | `aa` `bew` `bom` `cbk` `cgg` `cho` `dje` `dzg` `fan` `gqr` `igb` `jbo` `las` `led` `lkt` `mkw` `mnb` `mua` `mvp` `nup` `nv` `pmy` `pov` `sba` `sef` `snk` `srr` `tbw` `tem` `xog` `fub-latn` `bcq-latn` | their letters CLDR's exemplar characters, first on the long presses of the letters they are made from (note 9); a glottal stop written as a letter, and an apostrophe their words write, keys of their own at the home row's end; keys for the letters their words write most of those: Navajo's ʼ í at the home row's end and á é on q x, Lakota's ŋ á and č é, Temne's ɔ ŋ and ə ɛ, Gor's ɨ and apostrophe and ə ɔ, Ngambay's ə and apostrophe and é ɔ, Mundang's ǝ and apostrophe | each its own |

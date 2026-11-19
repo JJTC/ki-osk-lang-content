@@ -1191,7 +1191,10 @@ notice is above: thirty-two in Latin letters, Afar's to Zarma's
 Bench's (`layouts/fub-latn.json`, `layouts/bcq-latn.json`, from their
 Latin sets, `exemplars/main/fub_Latn.xml` and `bcq_Latn.xml`), and twenty-five on the Arabic
 script's, Devanagari's and Bengali's keys, Balti's to Sylheti's
-(`layouts/bft.json` … `layouts/syl.json`).
+(`layouts/bft.json` … `layouts/syl.json`). Southern Balochi's
+(`layouts/bcc.json`) is Balochi's with three letters more, and Dari's
+(`layouts/prs.json`) Persian's keys with the Pashto letters CLDR's Dari
+(`common/main/fa_AF.xml`) lists among its auxiliary exemplar characters.
 
 Source: https://github.com/unicode-org/cldr/tree/96e54b273d2da4ec6fbad350ba19ff23fa24a588
 

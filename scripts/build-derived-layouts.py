@@ -159,8 +159,16 @@ Manggarai (é first, a ’ key) and Ma'anyan on the US keys. Church
 Slavonic, with its model, is typed on Russian's keys with є ѣ ꙑ ꙁ ꙗ in
 place of the е э ы з я it hardly writes, ѥ and its accent marks at the
 home row's end, the rest of its letters on long presses, and Noto
-Sans's Cyrillic for the Extended-B letters DejaVu Sans lacks. A key at
-the home row's end types its
+Sans's Cyrillic for the Extended-B letters DejaVu Sans lacks. And, with
+no text to take letters from but a source naming their script, whose
+national keys type all of it: Dari on Persian's keys with the Pashto
+letters CLDR's Dari (fa_AF) adds on long presses, Valencian on
+Catalan's, the Devanagari languages CLDR's language data or Wikidata's
+writing systems name (Bhili, Kumaoni, Kurukh, Mewari, Nimadi,
+Shekhawati, Wagdi, Mundari; Bundeli, Dhundhari, Korku, Malvi, Merwari,
+Mahasu Pahari, Halbi) on Hindi's, Lambadi on Telugu's, Southern Thai on
+Thai's, Dakhini on Urdu's, and Bishnupriya Manipuri on Bengali's with
+ৱ on ব. A key at the home row's end types its
 capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
@@ -593,6 +601,28 @@ DERIVED = [
       "\u0301": ["\u0483", "\u0484", "\u0486", "\u0300", "\u0311"]},
      {"swap": {"е": "є", "Е": "Є", "э": "ѣ", "Э": "Ѣ", "ы": "ꙑ", "Ы": "Ꙑ", "з": "ꙁ", "З": "Ꙁ", "я": "ꙗ", "Я": "Ꙗ"},
       "home": ["ѥ", "\u0301"], "font_script": "cyrillic"}),
+    ("prs", "fa", "دری", {"ت": ["ټ"], "ح": ["ځ", "څ"], "د": ["ډ"], "ر": ["ړ", "ږ"], "س": ["ښ"], "گ": ["ګ"], "ن": ["ڼ"],
+                          "ی": ["ئ", "ي", "ى"]}, {"model": False}),
+    ("bhb", "hi", "Bhili", {}, {"model": False}),
+    ("kfy", "hi", "Kumaoni", {}, {"model": False}),
+    ("kru", "hi", "Kurukh", {}, {"model": False}),
+    ("mtr", "hi", "Mewari", {}, {"model": False}),
+    ("noe", "hi", "Nimadi", {}, {"model": False}),
+    ("swv", "hi", "Shekhawati", {}, {"model": False}),
+    ("wbr", "hi", "Wagdi", {}, {"model": False}),
+    ("unr", "hi", "Mundari", {}, {"model": False}),
+    ("lmn", "te", "Lambadi", {}, {"model": False}),
+    ("sou", "th", "Southern Thai", {}, {"model": False}),
+    ("dcc", "ur", "Dakhini", {}, {"model": False}),
+    ("bpy", "bn", "বিষ্ণুপ্রিয়া মণিপুরী", {"ব": ["ৱ"]}, {"model": False}),
+    ("bns", "hi", "Bundeli", {}, {"model": False}),
+    ("dhd", "hi", "Dhundhari", {}, {"model": False}),
+    ("kfq", "hi", "Korku", {}, {"model": False}),
+    ("mup", "hi", "Malvi", {}, {"model": False}),
+    ("wry", "hi", "Merwari", {}, {"model": False}),
+    ("bfz", "hi", "Mahasu Pahari", {}, {"model": False}),
+    ("hlb", "hi", "Halbi", {}, {"model": False}),
+    ("ca-valencia", "ca", "Valencià", {}, {"model": False}),
 ]
 
 
