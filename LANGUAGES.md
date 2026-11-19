@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**548 layouts**: 488 keyboard layouts (RTL: ar he fa + Urdu, Western
+**561 layouts**: 501 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri and Maba; Hinglish, Kokborok) · 12 IMEs (5 CJK +
+Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 12 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 547 are here; the numeric keypad is built into ki-osk. The
+keycaps. 560 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **427 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -435,6 +435,19 @@ but no model to match the glide against · `—` off
 | `xsr` | `xsr` | Sherpa शेर्पा | in | LTR | —⁹ | — | — |
 | `sgj` | `sgj` | Surgujia सरगुजिया | in | LTR | —⁹ | — | — |
 | `syl` | `syl` | Sylheti সিলেটি (Bengali script) | in · ben + long-press ঃ ৎ ৗ ʼ | LTR | —⁹ | — | — |
+| `ccp` | `ccp` | Chakma 𑄌𑄋𑄴𑄟𑄳𑄦 | Keyman's easy_chakma | LTR | —¹⁰ | — | — |
+| `rhg` | `rhg` | Rohingya 𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝 (Hanifi script) | Keyman's hanifi_rohingya, long-press 𐴗 on 𐴖 | **RTL** | —¹⁰ | — | — |
+| `blt` | `blt` | Tai Dam ꪼꪕꪒꪾ | Keyman's sil_tai_dam, long-press its second taps (ꪂ on ꪀ) | LTR | —¹⁰ | — | — |
+| `kyu` | `kyu` | Western Kayah (Kayah Li script) | Keyman's sil_kayah_kali | LTR | —¹⁰ | — | — |
+| `lis` | `lis` | Lisu (Fraser script) | Keyman's sil_lisu_standard | LTR | —¹⁰ | — | — |
+| `lep` | `lep` | Lepcha | Keyman's sil_lepcha, long-press its aspirates and l clusters (ᰂ ᰁ on ᰀ) | LTR | —¹⁰ | — | — |
+| `kjg` | `kjg` | Khmu (Lao script) | Keyman's sil_kmhmu | LTR | —¹⁰ | — | — |
+| `saz` | `saz` | Saurashtra | Keyman's saurashtra_inscript | LTR | —¹⁰ | — | — |
+| `bax` | `bax` | Bamum | Keyman's bamum, its two marks beside the space bar | LTR | —¹⁰ | — | — |
+| `cjm` | `cjm` | Eastern Cham (Cham script) | Keyman's sil_cham_phonetic, long-press its AltGr letters | LTR | —¹⁰ | — | — |
+| `tdd` | `tdd` | Tai Nuea (Tai Le script) | Keyman's tainua | LTR | —¹⁰ | — | — |
+| `khb` | `khb` | Tai Lue (New Tai Lue script) | Keyman's ntl_onekey | LTR | —¹⁰ | — | — |
+| `osa` | `osa` | Osage 𐓏𐓘𐓻𐓘𐓻𐓟 | Keyman's osage_nation, its acute and double acute beside the space bar | LTR | —¹⁰ | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -1873,6 +1886,33 @@ but no model to match the glide against · `—` off
    on Bengali's keys: their ঃ and ৎ, the au length mark ৗ on ৌ, and its
    glottal stop ʼ on the full stop's long press (Bengali's keys, a row of
    letters above their home row, leave no room for a key at its end).
+10. Thirteen keyboards of languages no text here predicts, each in a
+   script of its own, are Keyman's (MIT; `scripts/build-keyman-layouts.py`,
+   their files pinned by sha256): Chakma's easy_chakma, Rohingya's
+   hanifi_rohingya (in the Hanifi script, right to left), Tai Dam's
+   sil_tai_dam, Western Kayah's sil_kayah_kali (in Kayah Li), Lisu's
+   sil_lisu_standard, Lepcha's sil_lepcha, Khmu's sil_kmhmu (in the Lao
+   script), Saurashtra's saurashtra_inscript, Bamum's bamum, Eastern
+   Cham's sil_cham_phonetic, Tai Nuea's tainua (in Tai Le), Tai Lue's
+   ntl_onekey (in New Tai Lue) and Osage's osage_nation. Their keys keep
+   Keyman's rows and places, a key that types nothing of the script a gap.
+   What Keyman types by a rule with a context, which a key of one letter
+   has none of, is on a long press: Tai Dam's second taps (ꪂ, ꪀ tapped
+   twice, on ꪀ), Lepcha's aspirates and l clusters (ᰂ, ᰀ then h, and ᰁ,
+   ᰀ then l, on ᰀ), and Cham's AltGr letters (ꨒ on ꨗ). Rohingya's kinna
+   wa 𐴗, in its own name, which Keyman's phone layout has no key for, is
+   on wa's (𐴖) long press. They type every letter of CLDR's exemplar
+   characters where it has them (Chakma, Rohingya, Tai Dam, Western Kayah,
+   Osage), and everywhere every letter Keyman's keyboard types: all of
+   their Unicode blocks' letters, marks and digits but for Khmu, which
+   writes those of Lao's letters it needs, Saurashtra's ꢟ and Rohingya's
+   va 𐴜, which their Keyman keyboards do not type. Digits no letter key
+   has (Rohingya's, Saurashtra's, Bamum's, Tai Lue's, Khmu's Lao ones)
+   are on the long presses of the symbol view's. A language CLDR names in its own script
+   is named so (Chakma, Rohingya, Tai Dam, Osage), the others in English.
+   Their scripts' Noto faces draw every key. None has a model: neither
+   suggestions nor glides. Vai's and Nuosu's Keyman keyboards type their
+   syllables from Latin letters, as a composer would: they wait for one.
 
 ## Prediction model tiers
 
@@ -1912,10 +1952,11 @@ but no model to match the glide against · `—` off
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 58 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 71 layouts, Montenegrin's in
   Cyrillic, the fifty-five whose letters are CLDR's exemplar characters
   (note 9: thirty in Latin letters, twenty-five in the Arabic script,
-  Devanagari and Bengali), and Cherokee, whose
+  Devanagari and Bengali), the thirteen of a script of their own from
+  Keyman (note 10: Chakma to Osage), and Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
   its wiki's and its New Testament), and Nahuatl, whose is colonial
   documents, its wiki and its varieties' Bibles, each spelled its own
@@ -1952,6 +1993,7 @@ drives which face loads:
 | `canadian_aboriginal` | Noto Sans Canadian Aboriginal | `iu ojb` (UCAS syllabics) |
 | `meetei_mayek` | Noto Sans Meetei Mayek | `mni` (syllabary) |
 | `coptic` | Noto Sans Coptic | `cop` |
+| `chakma` `hanifi_rohingya` `tai_viet` `kayah_li` `lisu` `lepcha` `saurashtra` `bamum` `cham` `tai_le` `new_tai_lue` `osage` | Noto Sans Chakma, Hanifi Rohingya, Tai Viet, Kayah Li, Lisu, Lepcha, Saurashtra, Bamum, Cham, Tai Le, New Tai Lue, Osage | `ccp rhg blt kyu lis lep saz bax cjm tdd khb osa` (Keyman's; `kjg` draws with Lao's) |
 
 Install the matching face or those caps render as tofu. See the full
 fonts table in ki-osk-wayland's `DEPLOY.md`.
@@ -2094,7 +2136,11 @@ letter only a long press types says so (`long_press_letters`), which turns
 the menu on for it where long-press menus are otherwise off, as on a kiosk
 by default; until data 0.52.0 thirty-one of these (Yoruba, Hausa, Igbo,
 Welsh, Turkmen, Wolof, Māori, Akan…) did not, and there their letters
-could not be typed, nor could Bengali's ৎ ঃ, on no key until then:
+could not be typed, nor could Bengali's ৎ ঃ, on no key until then; nor,
+until data 0.54.0, Ukrainian's ґ, Khmer's independent vowels (ឱ ឯ ឫ…,
+on AltGr in its keymap), Hindi's ऍ (and so the thirteen layouts on
+Hindi's keys) and Northwestern Ojibwe's long vowels and w-dotted
+syllables:
 
 | Layout | Long-press letters | Feature |
 |---|---|---|
@@ -2139,6 +2185,7 @@ could not be typed, nor could Bengali's ৎ ঃ, on no key until then:
 | `rmy` Vlax Romani | its č ć š ž đ first on the long presses of c s z d (on the US keys; Balkan Romani's are keys of their own on Serbian's Latin keys) | `rmy` |
 | `kbp` `bss` `gbo` `nnb` | keys for the letters their words write most of those only a long press typed (more than a quarter of Kabiye's, Akoose's and Grebo's letters; in a quarter of Nande's words): two at the home row's end, Kabiye's ɛ ɩ, Akoose's é á, Grebo's ɛ ɔ and Nande's ĩ beside its apostrophe; and in place of q and x, which they hardly write (q and x on those keys' long presses), Kabiye's ʊ ɔ, Akoose's ɛ and glottal stop ʼ, Grebo's ǒ ě and Nande's ũ. The words a long press is needed in: Kabiye's 76% → 24%, Akoose's 85% → 52%, Grebo's 70% → 40%, Nande's 26% → 1% | each its own |
 | `ojb` Northwestern Ojibwe | Keyman's fv_ojibwa, a syllable a key: the i and a syllables and the finals on the base view, the e and o syllables on Shift; each syllable's long vowel and w-dotted forms first on its long press (ᑭ's ᑮ ᑶ ᑸ), which Keyman types with keys of their own (˙ after a syllable, ᐧ before it) by rules a key of one letter has not; the final ᕽ on ᒃ's, the full stop ᙮ on the full stop's | `ojb` |
+| `ccp` `rhg` `blt` `kyu` `lis` `lep` `kjg` `saz` `bax` `cjm` `tdd` `khb` `osa` | Keyman's keyboards for their scripts, their rows and places kept (note 10): what Keyman types after another key on a long press (Tai Dam's ꪂ on ꪀ, Lepcha's ᰂ ᰁ on ᰀ), and what it types under AltGr (Cham's ꨒ on ꨗ); Rohingya's 𐴗 on 𐴖; Bamum's two marks and Osage's acute and double acute beside the space bar; the digits no letter key has on the long presses of the symbol view's, their stops (Saurashtra's dandas ꣎ ꣏, Bamum's ꛳ ꛵…) on the full stop's | each its own |
 | `cnr` `cnr-cyrl` Montenegrin | ś ź on the long presses of s z (on Serbian's Latin keys), с́ з́ on с з (on its Cyrillic ones) | `cnr` |
 | `aa` `bew` `bom` `cbk` `cgg` `cho` `dje` `dzg` `fan` `gqr` `igb` `jbo` `las` `led` `lkt` `mkw` `mnb` `mua` `mvp` `nup` `nv` `pmy` `pov` `sba` `sef` `snk` `srr` `tbw` `tem` `xog` | their letters CLDR's exemplar characters, first on the long presses of the letters they are made from (note 9); a glottal stop written as a letter, and an apostrophe their words write, keys of their own at the home row's end; keys for the letters their words write most of those: Navajo's ʼ í at the home row's end and á é on q x, Lakota's ŋ á and č é, Temne's ɔ ŋ and ə ɛ, Gor's ɨ and apostrophe and ə ɔ, Ngambay's ə and apostrophe and é ɔ, Mundang's ǝ and apostrophe | each its own |
 | `bto` `mui` `mfa` `ibb` `vmf` `sdh` `bgn` | the letters of the Incubator wikis' languages first on the long presses of those they are made from: Rinconada Bikol's ñ, Musi's é è ó, Kelantan-Pattani Malay's è é ó ũ, Ibibio's ọ ñ n̄ ị ẹ ụ ʌ (on the US keys); East Franconian's â ô (on German's); Southern Kurdish's ۊ on و (on Sorani's); Western Balochi's ے ں ٹ ڈ ڑ ہ ھ ګ on ی ن ت د ر ه گ (on Persian's) | each its own |

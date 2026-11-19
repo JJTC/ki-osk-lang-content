@@ -170,6 +170,23 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("ak", "ɛɔ"),
         ("bn", "ৎঃ"),
         ("syl", "ৎঃৗʼ"),
+        // Ukrainian's ґ, Khmer's independent vowels (its keymap's AltGr
+        // letters), Hindi's candra e and Ojibwe's long vowels and w-dotted
+        // syllables, whose layouts did not say so either.
+        ("uk", "ґҐ"),
+        ("km", "ឦឩឫឯឰឱឳ"),
+        ("hi", "ऍ"),
+        ("ojb", "ᐄᐎᑮᑶᑸ"),
+        // What Keyman's keyboards type after another key or under AltGr:
+        // Tai Dam's second taps, Lepcha's aspirates and l clusters, Cham's
+        // AltGr letters; Rohingya's kinna wa, Osage's variants, the Lao
+        // ellipsis and repetition mark Khmu's symbol layer has.
+        ("blt", "ꪂꪃꪆꪇꪌꪍꪞꪟꪦꪧ"),
+        ("lep", "ᰁᰂᰅᰇᰉᰋᰏᰐᰒᰔᰖᰘᰞᰡ"),
+        ("cjm", "ꨒꨰꩉꩈꨲꨫꨮꨛꩋꨙꩃꨊꩍꩊꨡꨋꩌ"),
+        ("rhg", "𐴗𐴙𐴣"),
+        ("osa", "𐓠𐓳𐓴𐓙𐓫𐓭𐓚𐓱𐓥𐓹𐓞"),
+        ("kjg", "ຯໆ"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {

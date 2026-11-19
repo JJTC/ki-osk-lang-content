@@ -1094,8 +1094,10 @@ derived-layouts:
 	$(PYTHON) scripts/build-derived-layouts.py
 
 # The layouts made from Keyman's touch keyboards, for the languages
-# xkeyboard-config has no keymap of (layouts/ksw.json, Sgaw Karen's): the
-# keyboards' files fetched at a pinned commit, sha256-checked.
+# xkeyboard-config has no keymap of (layouts/ksw.json, Sgaw Karen's;
+# ojb.json, Northwestern Ojibwe's; and thirteen of a script of their own,
+# ccp.json to osa.json): the keyboards' files fetched at a pinned commit,
+# sha256-checked.
 .PHONY: keyman-layouts
 keyman-layouts:
 	$(PYTHON) scripts/build-keyman-layouts.py

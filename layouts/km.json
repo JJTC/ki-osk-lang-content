@@ -6,6 +6,8 @@
   "swipe_enabled": false,
   "prediction_enabled": true,
   "prediction_lang": "km",
+  "font_script": "khmer",
+  "long_press_letters": true,
   "views": [
     {
       "id": "base",
@@ -1705,6 +1707,5 @@
         }
       ]
     }
-  ],
-  "font_script": "khmer"
+  ]
 }

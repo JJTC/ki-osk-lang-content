@@ -5,6 +5,7 @@
   "direction": "ltr",
   "swipe_enabled": false,
   "prediction_enabled": false,
+  "long_press_letters": true,
   "views": [
     {
       "id": "base",

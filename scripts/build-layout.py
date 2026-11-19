@@ -712,8 +712,9 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
     # A national letter only a long press types turns the gesture on for
     # the layout (`long_press_letters`), as build-derived-layouts.py's
     # layouts have it: without it a kiosk, whose long-press menus are off
-    # by default, could not type Yoruba's ẹ or Bengali's ৎ at all.
-    if lid in DIACRITIC_LONGPRESS and long_press_only(layout):
+    # by default, could not type Yoruba's ẹ or Bengali's ৎ at all, nor
+    # Khmer's independent vowels, which its keymap has on AltGr (ឱ, ឯ).
+    if (lid in DIACRITIC_LONGPRESS or script in LEVEL3_LONGPRESS) and long_press_only(layout):
         layout = {**{k: v for k, v in layout.items() if k != "views"},
                   "long_press_letters": True, "views": layout["views"]}
 

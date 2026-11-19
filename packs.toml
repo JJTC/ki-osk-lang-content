@@ -697,6 +697,7 @@ bal     = ["bal"]
 ban     = ["ban"]
 bar     = ["bar"]
 bas     = ["bas"]
+bax     = ["bax"]
 bbc     = ["bbc"]
 bci     = ["bci"]
 bcl     = ["bcl"]
@@ -716,6 +717,7 @@ bin     = ["bin"]
 bjn     = ["bjn"]
 bku     = ["bku"]
 blk     = ["blk"]
+blt     = ["blt"]
 bm      = ["bm"]
 bn      = ["bn", "bn-abc"]
 bo      = ["bo"]
@@ -736,6 +738,7 @@ bxr     = ["bxr"]
 ca      = ["ca"]
 cbk     = ["cbk"]
 cce     = ["cce"]
+ccp     = ["ccp"]
 ce      = ["ce"]
 ceb     = ["ceb"]
 cgg     = ["cgg"]
@@ -743,6 +746,7 @@ ch      = ["ch"]
 cho     = ["cho"]
 chr     = ["chr"]
 chw     = ["chw"]
+cjm     = ["cjm"]
 ckb     = ["ckb"]
 cnh     = ["cnh"]
 cnr     = ["cnr", "cnr-cyrl"]
@@ -879,10 +883,12 @@ kea     = ["kea"]
 kek     = ["kek"]
 kg      = ["kg"]
 kha     = ["kha"]
+khb     = ["khb"]
 khw     = ["khw", "khw-abc"]
 ki      = ["ki"]
 kiu     = ["kiu"]
 kj      = ["kj"]
+kjg     = ["kjg"]
 kk      = ["kk"]
 kl      = ["kl"]
 km      = ["km"]
@@ -908,6 +914,7 @@ kum     = ["kum"]
 kvx     = ["kvx"]
 kwy     = ["kwy"]
 ky      = ["ky"]
+kyu     = ["kyu"]
 la      = ["la"]
 lad     = ["lad"]
 laj     = ["laj"]
@@ -915,6 +922,7 @@ las     = ["las"]
 lb      = ["lb"]
 lbe     = ["lbe"]
 led     = ["led"]
+lep     = ["lep"]
 lew     = ["lew"]
 lez     = ["lez"]
 lg      = ["lg"]
@@ -923,6 +931,7 @@ lhu     = ["lhu"]
 li      = ["li"]
 lif     = ["lif"]
 lij     = ["lij"]
+lis     = ["lis"]
 liv     = ["liv"]
 ljp     = ["ljp"]
 lkt     = ["lkt"]
@@ -1012,6 +1021,7 @@ olo     = ["olo"]
 om      = ["om"]
 or      = ["or", "or-abc"]
 os      = ["os"]
+osa     = ["osa"]
 otw     = ["otw"]
 pa      = ["pa", "pa-abc"]
 pag     = ["pag"]
@@ -1037,6 +1047,7 @@ quc     = ["quc"]
 qug     = ["qug"]
 quz     = ["quz"]
 rcf     = ["rcf"]
+rhg     = ["rhg"]
 rm      = ["rm"]
 rmn     = ["rmn"]
 rmy     = ["rmy"]
@@ -1049,6 +1060,7 @@ sa      = ["sa", "sa-abc"]
 sah     = ["sah"]
 sas     = ["sas"]
 sat     = ["sat", "sat-abc"]
+saz     = ["saz"]
 sba     = ["sba"]
 sc      = ["sc"]
 scl     = ["scl"]
@@ -1099,6 +1111,7 @@ tab     = ["tab"]
 taj     = ["taj"]
 tbw     = ["tbw"]
 tcy     = ["tcy", "tcy-abc"]
+tdd     = ["tdd"]
 te      = ["te", "te-abc"]
 tem     = ["tem"]
 teo     = ["teo"]
@@ -1170,17 +1183,21 @@ zu      = ["zu"]
 aa  = "Afar"
 am  = "Amharic"
 bal = "Balochi"
+bax = "Bamum"
 bew = "Betawi"
 bft = "Balti"
 bfy = "Bagheli"
 bgc = "Haryanvi"
 bgq = "Bagri"
+blt = "Tai Dam"
 bom = "Berom"
 bqi = "Bakhtiari"
 cbk = "Chavacano"
+ccp = "Chakma"
 cgg = "Kiga"
 cho = "Choctaw"
 chr = "Cherokee"
+cjm = "Eastern Cham"
 dje = "Zarma"
 drs = "Gedeo"
 dzg = "Dazaga"
@@ -1195,12 +1212,17 @@ hdy = "Hadiyya"
 hno = "Northern Hindko"
 igb = "Ebira"
 jbo = "Lojban"
+khb = "Tai Lue"
+kjg = "Khmu"
 ko  = "Korean, Hangul input"
 ktb = "Kambaata"
 kvx = "Parkari Koli"
+kyu = "Western Kayah"
 las = "Lama"
 led = "Lendu"
+lep = "Lepcha"
 lif = "Limbu"
+lis = "Lisu"
 lkt = "Lakota"
 lrc = "Northern Luri"
 mde = "Maba"
@@ -1213,9 +1235,12 @@ mvy = "Indus Kohistani"
 nah = "Nahuatl"
 nup = "Nupe"
 nv  = "Navajo"
+osa = "Osage"
 phr = "Pahari-Pothwari"
 pmy = "Papuan Malay"
 pov = "Guinea-Bissau Creole"
+rhg = "Rohingya"
+saz = "Saurashtra"
 sba = "Ngambay"
 scl = "Shina"
 sef = "Cebaara Senoufo"
@@ -1226,6 +1251,7 @@ stv = "Silt'e"
 syl = "Sylheti"
 taj = "Eastern Tamang"
 tbw = "Aborlan Tagbanwa"
+tdd = "Tai Nuea"
 tem = "Temne"
 ti  = "Tigrinya"
 trw = "Torwali"
@@ -1235,7 +1261,8 @@ xsr = "Sherpa"
 
 # The layouts made from another source than xkeyboard-config, and the
 # licence and source each adds to its pack: Sgaw Karen's, from Keyman's
-# sil_sgaw_karen, and Northwestern Ojibwe's, from Keyman's fv_ojibwa
+# sil_sgaw_karen, Northwestern Ojibwe's, from Keyman's fv_ojibwa, and the
+# thirteen of a script of their own from Keyman's, Chakma's to Osage's
 # (scripts/build-keyman-layouts.py); and the fifty-five whose letters are
 # CLDR's exemplar characters (scripts/build-exemplar-layouts.py): thirty
 # in Latin letters, Afar's to Zarma's, and twenty-five on the Arabic
@@ -1254,6 +1281,110 @@ licenses = [
 ]
 sources = [
   { name = "Keyman's Ojibwe syllabics keyboard (fv_ojibwa 10.1.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/fv/fv_ojibwa" },
+]
+
+[layouts.added.ccp]
+licenses = [
+  { name = "MIT (Keyman's easy_chakma, Bivuti Chakma)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/e/easy_chakma/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Chakma keyboard (easy_chakma 2.0.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/e/easy_chakma" },
+]
+
+[layouts.added.rhg]
+licenses = [
+  { name = "MIT (Keyman's hanifi_rohingya, SIL International)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/h/hanifi_rohingya/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Hanifi Rohingya keyboard (hanifi_rohingya 1.0), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/h/hanifi_rohingya" },
+]
+
+[layouts.added.blt]
+licenses = [
+  { name = "MIT (Keyman's sil_tai_dam, SIL International)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_tai_dam/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Tai Dam keyboard (sil_tai_dam 2.3), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_tai_dam" },
+]
+
+[layouts.added.kyu]
+licenses = [
+  { name = "MIT (Keyman's sil_kayah_kali, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_kayah_kali/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Kayah Li keyboard (sil_kayah_kali 1.3.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_kayah_kali" },
+]
+
+[layouts.added.lis]
+licenses = [
+  { name = "MIT (Keyman's sil_lisu_standard, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_lisu_standard/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Lisu keyboard (sil_lisu_standard 1.1.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_lisu_standard" },
+]
+
+[layouts.added.lep]
+licenses = [
+  { name = "MIT (Keyman's sil_lepcha, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_lepcha/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Lepcha keyboard (sil_lepcha 1.1.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_lepcha" },
+]
+
+[layouts.added.kjg]
+licenses = [
+  { name = "MIT (Keyman's sil_kmhmu, SIL International)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_kmhmu/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Khmu (Lao script) keyboard (sil_kmhmu 1.8), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_kmhmu" },
+]
+
+[layouts.added.saz]
+licenses = [
+  { name = "MIT (Keyman's saurashtra_inscript, SIL International)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/s/saurashtra_inscript/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Saurashtra keyboard (saurashtra_inscript 1.0), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/s/saurashtra_inscript" },
+]
+
+[layouts.added.bax]
+licenses = [
+  { name = "MIT (Keyman's bamum, SIL International)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/b/bamum/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Bamum keyboard (bamum 1.0), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/b/bamum" },
+]
+
+[layouts.added.cjm]
+licenses = [
+  { name = "MIT (Keyman's sil_cham_phonetic, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_cham_phonetic/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Cham keyboard (sil_cham_phonetic 1.3), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_cham_phonetic" },
+]
+
+[layouts.added.tdd]
+licenses = [
+  { name = "MIT (Keyman's tainua, Sai Ai Wong)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/t/tainua/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Tai Le keyboard (tainua 1.0.5), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/t/tainua" },
+]
+
+[layouts.added.khb]
+licenses = [
+  { name = "MIT (Keyman's ntl_onekey, SIL International)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/n/ntl_onekey/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's New Tai Lue keyboard (ntl_onekey 1.4), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/n/ntl_onekey" },
+]
+
+[layouts.added.osa]
+licenses = [
+  { name = "MIT (Keyman's osage_nation, Osage Nation)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/o/osage_nation/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Osage keyboard (osage_nation 1.2.4), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/o/osage_nation" },
 ]
 
 [layouts.added.aa]

@@ -697,8 +697,9 @@ Marathi's, Tulu's Kannada's, Meitei's in the Bengali script Bengali's,
 Western Punjabi's, Saraiki's, Kashmiri's and Brahui's Urdu's and
 Yiddish's Hebrew's, renamed, with the letters each language adds on long
 presses (`scripts/build-derived-layouts.py`); Pa'O's is Burmese's, its
-tones ꩻ and ႏ in place of ဩ and ၏. Sgaw Karen's layout is Keyman's
-(below).
+tones ꩻ and ႏ in place of ဩ and ၏. Sgaw Karen's, Northwestern Ojibwe's
+and the thirteen of a script of their own, Chakma's to Osage's, are
+Keyman's (below).
 xkeyboard-config's copyright and permission notices, which go with every
 copy (its `COPYING`, as xkeyboard-config 2.48 ships it):
 
@@ -966,6 +967,64 @@ SOFTWARE.
 ```
 
 Source: https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/fv/fv_ojibwa
+
+Thirteen layouts of a script of their own, Chakma's to Osage's, are
+**Keyman's keyboards** for them, their touch layouts' rows of letters as
+their rules type them (`scripts/build-keyman-layouts.py`, their files
+pinned by sha256), each under the MIT licence it carries: the same text,
+each with its own copyright line.
+
+| Layout | Keyman keyboard | Copyright | Source |
+|---|---|---|---|
+| `layouts/ccp.json`, Chakma's | easy_chakma 2.0.1 | Copyright (c) 2015-2025 Bivuti Chakma | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/e/easy_chakma |
+| `layouts/rhg.json`, Rohingya's | hanifi_rohingya 1.0 | Copyright © 2024 SIL International | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/h/hanifi_rohingya |
+| `layouts/blt.json`, Tai Dam's | sil_tai_dam 2.3 | Copyright (c) 2007-2024 SIL International | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_tai_dam |
+| `layouts/kyu.json`, Western Kayah's | sil_kayah_kali 1.3.1 | Copyright (c) 2007-2025 SIL Global | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_kayah_kali |
+| `layouts/lis.json`, Lisu's | sil_lisu_standard 1.1.1 | Copyright (c) 2018-2024 SIL Global | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_lisu_standard |
+| `layouts/lep.json`, Lepcha's | sil_lepcha 1.1.1 | Copyright (c) 2010-2025 SIL Global | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_lepcha |
+| `layouts/kjg.json`, Khmu's | sil_kmhmu 1.8 | Copyright (c) 2008-2021 SIL International | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_kmhmu |
+| `layouts/saz.json`, Saurashtra's | saurashtra_inscript 1.0 | Copyright © 2024 SIL International | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/s/saurashtra_inscript |
+| `layouts/bax.json`, Bamum's | bamum 1.0 | Copyright © 2024 SIL International | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/b/bamum |
+| `layouts/cjm.json`, Eastern Cham's | sil_cham_phonetic 1.3 | Copyright © 2024-2025 SIL Global | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_cham_phonetic |
+| `layouts/tdd.json`, Tai Nuea's | tainua 1.0.5 | Copyright (c) 2016-2023 Sai Ai Wong | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/t/tainua |
+| `layouts/khb.json`, Tai Lue's | ntl_onekey 1.4 | Copyright (c) 2015-2019 SIL International | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/n/ntl_onekey |
+| `layouts/osa.json`, Osage's | osage_nation 1.2.4 | Copyright (c) 2018-2023 Osage Nation | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/o/osage_nation |
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2015-2025 Bivuti Chakma
+Copyright © 2024 SIL International
+Copyright (c) 2007-2024 SIL International
+Copyright (c) 2007-2025 SIL Global
+Copyright (c) 2018-2024 SIL Global
+Copyright (c) 2010-2025 SIL Global
+Copyright (c) 2008-2021 SIL International
+Copyright © 2024 SIL International
+Copyright © 2024 SIL International
+Copyright © 2024-2025 SIL Global
+Copyright (c) 2016-2023 Sai Ai Wong
+Copyright (c) 2015-2019 SIL International
+Copyright (c) 2018-2023 Osage Nation
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ## Emoji
 
