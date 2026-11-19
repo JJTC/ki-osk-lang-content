@@ -730,8 +730,10 @@ def build(base_dir, lid, name, xlayout, xvariant, script):
 
 # Laid out by hand now, each as its language's phone keyboard (AOSP's
 # arrangement) with every letter on a key: regenerating them would cut
-# them back to the US grid, as these scripts first made them.
-HAND_MADE = {"hi"}
+# them back to the US grid, as these scripts first made them. And
+# Assamese's, whose ৰ has a key of its own, র on its long press, and whose
+# ৎ and ঃ are on the long presses of ত and ং, as Bengali's are.
+HAND_MADE = {"hi", "as"}
 
 
 def main():

@@ -335,6 +335,7 @@ quc = "K'iche'"
 qug = "Kichwa (Chimborazo)"
 quz = "Cusco Quechua"
 rcf = "Réunion Creole"
+rkt = "Rangpuri"
 rm  = "Romansh"
 rmn = "Balkan Romani"
 rmy = "Vlax Romani"
@@ -572,8 +573,8 @@ source  = { name = "The Dakshina dataset v1.0 (Google Research): Wikipedia text"
 # The wikis' own text (scripts/fetch-wikipedia.sh: their CirrusSearch
 # dumps, plain text, pinned by sha256): the whole corpus of the languages
 # that script names, the Wikimedia Incubator's test wikis among them
-# (Gondi's, Khowar's, Montenegrin's, twelve small ones' from Rinconada
-# Bikol's to Western Balochi's, and Magahi's beside its FineWeb-2 text).
+# (Gondi's, Khowar's, Montenegrin's, thirteen small ones' from Rinconada
+# Bikol's to Rangpuri's, and Magahi's beside its FineWeb-2 text).
 [prediction.wikipedia]
 license = { name = "CC BY-SA 4.0 (Wikipedia)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
 source  = { name = "Wikipedia and the Wikimedia Incubator's test wikis, their CirrusSearch dumps of 2026-11-08", url = "https://dumps.wikimedia.org/other/cirrus_search_index/20261108/" }
@@ -694,6 +695,7 @@ ace     = ["ace"]
 acf     = ["acf"]
 ach     = ["ach"]
 ada     = ["ada"]
+adx     = ["adx"]
 ady     = ["ady"]
 af      = ["af"]
 ajg     = ["ajg"]
@@ -720,6 +722,7 @@ bax     = ["bax"]
 bbc     = ["bbc"]
 bci     = ["bci"]
 bcl     = ["bcl"]
+bcq     = ["bcq-latn"]
 be      = ["be"]
 bem     = ["bem"]
 ber     = ["ber"]
@@ -767,6 +770,7 @@ chr     = ["chr"]
 chw     = ["chw"]
 cjm     = ["cjm"]
 ckb     = ["ckb"]
+cld     = ["cld"]
 cnh     = ["cnh"]
 cnr     = ["cnr", "cnr-cyrl"]
 co      = ["co"]
@@ -819,6 +823,7 @@ fj      = ["fj"]
 fo      = ["fo"]
 fon     = ["fon"]
 fr      = ["fr-azerty"]
+fub     = ["fub-latn"]
 fur     = ["fur"]
 fy      = ["fy"]
 ga      = ["ga"]
@@ -848,6 +853,7 @@ guz     = ["guz"]
 gvl     = ["gvl"]
 gwc     = ["gwc"]
 ha      = ["ha"]
+hac     = ["hac"]
 hak     = ["hak"]
 haw     = ["haw"]
 hay     = ["hay"]
@@ -858,6 +864,7 @@ heh     = ["heh"]
 hi      = ["hi", "hi-abc"]
 hi-Latn = ["hi-latn"]
 hil     = ["hil"]
+hnd     = ["hnd"]
 hne     = ["hne", "hne-abc"]
 hnn     = ["hnn"]
 hno     = ["hno"]
@@ -901,14 +908,17 @@ kbr     = ["kbr"]
 kde     = ["kde"]
 kea     = ["kea"]
 kek     = ["kek"]
+kfr     = ["kfr"]
 kg      = ["kg"]
 kha     = ["kha"]
 khb     = ["khb"]
+khg     = ["khg"]
 khw     = ["khw", "khw-abc"]
 ki      = ["ki"]
 kiu     = ["kiu"]
 kj      = ["kj"]
 kjg     = ["kjg"]
+kjp     = ["kjp"]
 kk      = ["kk"]
 kl      = ["kl"]
 km      = ["km"]
@@ -916,6 +926,7 @@ kmb     = ["kmb"]
 kn      = ["kn", "kn-abc"]
 knc     = ["knc"]
 kne     = ["kne"]
+knn     = ["knn"]
 ko      = ["kr-2set"]
 koi     = ["koi"]
 kok     = ["kok", "kok-abc"]
@@ -1026,6 +1037,7 @@ nl      = ["nl"]
 nn      = ["nn"]
 nnb     = ["nnb"]
 no      = ["no"]
+nod     = ["nod", "nod-thai"]
 nr      = ["nr"]
 nso     = ["nso"]
 nup     = ["nup"]
@@ -1059,6 +1071,7 @@ pnb     = ["pnb", "pnb-abc"]
 pnt     = ["pnt"]
 pov     = ["pov"]
 ps      = ["ps", "ps-abc"]
+psi     = ["psi"]
 pt      = ["pt-br", "pt"]
 quh     = ["quh"]
 raj     = ["raj", "raj-abc"]
@@ -1068,6 +1081,7 @@ qug     = ["qug"]
 quz     = ["quz"]
 rcf     = ["rcf"]
 rhg     = ["rhg"]
+rkt     = ["rkt"]
 rm      = ["rm"]
 rmn     = ["rmn"]
 rmy     = ["rmy"]
@@ -1083,6 +1097,7 @@ sat     = ["sat", "sat-abc"]
 saz     = ["saz"]
 sba     = ["sba"]
 sc      = ["sc"]
+sck     = ["sck"]
 scl     = ["scl"]
 scn     = ["scn"]
 sco     = ["sco"]
@@ -1159,6 +1174,7 @@ tum     = ["tum"]
 tvl     = ["tvl"]
 ty      = ["ty"]
 tyv     = ["tyv"]
+tyz     = ["tyz"]
 udm     = ["udm"]
 ug      = ["ug"]
 uk      = ["uk"]
@@ -1202,9 +1218,11 @@ zu      = ["zu"]
 # The languages with layouts and no model yet: each a pack of its layouts.
 [layouts.names]
 aa  = "Afar"
+adx = "Amdo Tibetan"
 am  = "Amharic"
 bal = "Balochi"
 bax = "Bamum"
+bcq = "Bench"
 bew = "Betawi"
 bft = "Balti"
 bfy = "Bagheli"
@@ -1219,23 +1237,31 @@ cgg = "Kiga"
 cho = "Choctaw"
 chr = "Cherokee"
 cjm = "Eastern Cham"
+cld = "Chaldean Neo-Aramaic"
 dje = "Zarma"
 drs = "Gedeo"
 dzg = "Dazaga"
 fan = "Fang"
+fub = "Adamawa Fulfulde"
 gez = "Ge'ez"
 gju = "Gujari"
 glk = "Gilaki"
 gqr = "Gor"
 gwc = "Kalam Kohistani"
+hac = "Gorani"
 haz = "Hazaragi"
 hdy = "Hadiyya"
+hnd = "Southern Hindko"
 hno = "Northern Hindko"
 igb = "Ebira"
 ii  = "Nuosu"
 jbo = "Lojban"
+kfr = "Kutchi"
 khb = "Tai Lue"
+khg = "Khams Tibetan"
 kjg = "Khmu"
+kjp = "Eastern Pwo Karen"
+knn = "Maharashtrian Konkani"
 ko  = "Korean, Hangul input"
 ktb = "Kambaata"
 kvx = "Parkari Koli"
@@ -1255,15 +1281,18 @@ mua = "Mundang"
 mvp = "Duri"
 mvy = "Indus Kohistani"
 nah = "Nahuatl"
+nod = "Northern Thai"
 nup = "Nupe"
 nv  = "Navajo"
 osa = "Osage"
 phr = "Pahari-Pothwari"
 pmy = "Papuan Malay"
 pov = "Guinea-Bissau Creole"
+psi = "Southeastern Pashayi"
 rhg = "Rohingya"
 saz = "Saurashtra"
 sba = "Ngambay"
+sck = "Sadri"
 scl = "Shina"
 sef = "Cebaara Senoufo"
 sgj = "Surgujia"
@@ -1277,6 +1306,7 @@ tdd = "Tai Nuea"
 tem = "Temne"
 ti  = "Tigrinya"
 trw = "Torwali"
+tyz = "Tày"
 vai = "Vai"
 xnr = "Kangri"
 xog = "Soga"
@@ -1284,14 +1314,16 @@ xsr = "Sherpa"
 
 # The layouts made from another source than xkeyboard-config, and the
 # licence and source each adds to its pack: Sgaw Karen's, from Keyman's
-# sil_sgaw_karen, Northwestern Ojibwe's, from Keyman's fv_ojibwa, and the
-# thirteen of a script of their own from Keyman's, Chakma's to Osage's
-# (scripts/build-keyman-layouts.py), and Vai's and Nuosu's, the Latin
-# letters Keyman's athinkra_vai and sil_yi type their syllables with
-# (scripts/build-keyman-composers.py); and the fifty-five whose letters are
-# CLDR's exemplar characters (scripts/build-exemplar-layouts.py): thirty
-# in Latin letters, Afar's to Zarma's, and twenty-five on the Arabic
-# script's, Devanagari's and Bengali's keys, Balti's to Sylheti's.
+# sil_sgaw_karen, Northwestern Ojibwe's, from Keyman's fv_ojibwa, the
+# thirteen of a script of their own from Keyman's, Chakma's to Osage's,
+# and five more from Keyman's at a later commit, Gorani's to Northern
+# Thai's in Tai Tham (scripts/build-keyman-layouts.py), and Vai's and
+# Nuosu's, the Latin letters Keyman's athinkra_vai and sil_yi type their
+# syllables with (scripts/build-keyman-composers.py); and the fifty-seven
+# whose letters are CLDR's exemplar characters
+# (scripts/build-exemplar-layouts.py): thirty-two in Latin letters, Afar's
+# to Zarma's and Adamawa Fulfulde's and Bench's, and twenty-five on the
+# Arabic script's, Devanagari's and Bengali's keys, Balti's to Sylheti's.
 [layouts.added.ksw]
 licenses = [
   { name = "MIT (Keyman's sil_sgaw_karen, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_sgaw_karen/LICENSE.md", share_alike = false },
@@ -1410,6 +1442,46 @@ licenses = [
 ]
 sources = [
   { name = "Keyman's Osage keyboard (osage_nation 1.2.4), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/o/osage_nation" },
+]
+
+[layouts.added.hac]
+licenses = [
+  { name = "MIT (Keyman's horami, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/h/horami/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Gorani keyboard (horami 2.0.2), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/h/horami" },
+]
+
+[layouts.added.psi]
+licenses = [
+  { name = "MIT (Keyman's pashai, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/p/pashai/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Southeast Pashai keyboard (pashai 1.1.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/p/pashai" },
+]
+
+[layouts.added.hnd]
+licenses = [
+  { name = "MIT (Keyman's rac_hindko, Rehmat Aziz Chitrali)", url = "https://github.com/keymanapp/keyboards/blob/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/rac/rac_hindko/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Southern Hindko keyboard (rac_hindko 1.0.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/rac/rac_hindko" },
+]
+
+[layouts.added.cld]
+licenses = [
+  { name = "MIT (Keyman's east_syriac_qwerty, Esho Marcus)", url = "https://github.com/keymanapp/keyboards/blob/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/e/east_syriac_qwerty/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's East Syriac keyboard (east_syriac_qwerty 2.0), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/e/east_syriac_qwerty" },
+]
+
+[layouts.added.nod]
+licenses = [
+  { name = "MIT (Keyman's tai_lanna_thai, Jayasiri Jayasāro Bhikkhu)", url = "https://github.com/keymanapp/keyboards/blob/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/experimental/t/tai_lanna_thai/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Tham Lanna keyboard (tai_lanna_thai 1.1, experimental), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/experimental/t/tai_lanna_thai" },
 ]
 
 [layouts.added.vai]
@@ -1666,6 +1738,22 @@ licenses = [
 ]
 sources = [
   { name = "CLDR 49's exemplar characters for Soga (common/main/xog.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/xog.xml" },
+]
+
+[layouts.added.fub-latn]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Adamawa Fulfulde in Latin letters (exemplars/main/fub_Latn.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/fub_Latn.xml" },
+]
+
+[layouts.added.bcq-latn]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Bench in Latin letters (exemplars/main/bcq_Latn.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/bcq_Latn.xml" },
 ]
 
 [layouts.added.bft]

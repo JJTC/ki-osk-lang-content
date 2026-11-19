@@ -146,6 +146,7 @@ tag.
 import json
 import pathlib
 import sys
+import unicodedata
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -478,6 +479,22 @@ DERIVED = [
     ("vmf", "de", "Fränggisch", {"a": ["â"], "A": ["Â"], "o": ["ô"], "O": ["Ô"]}),
     ("sdh", "ckb", "کوردی خوارین", {"و": ["ۊ"]}),
     ("bgn", "fa", "بلوچی رخشانی", {"ی": ["ے"], "ن": ["ں"], "ت": ["ٹ"], "د": ["ڈ"], "ر": ["ڑ"], "ه": ["ہ", "ھ"], "گ": ["ګ"]}),
+    ("adx", "bo", "Amdo Tibetan", {}, {"model": False}),
+    ("khg", "bo", "Khams Tibetan", {}, {"model": False}),
+    ("sck", "hi", "Sadri", {}, {"model": False}),
+    ("knn", "mr", "Maharashtrian Konkani", {}, {"model": False}),
+    ("nod-Thai", "th", "Northern Thai (Thai)", {}, {"model": False}),
+    ("kfr", "gu", "Kutchi", {}, {"model": False}),
+    ("tyz", "vi", "Tày",
+     {v: [unicodedata.normalize("NFC", v + "\u0331"), unicodedata.normalize("NFC", v + "\u030F")]
+      for v in "aăâeêioôơuưyAĂÂEÊIOÔƠUƯY"},
+     {"model": False}),
+    ("rkt", "as", "Rangpuri", {str(d): [chr(0x09E6 + d)] for d in range(10)}),
+    ("kjp", "my", "Eastern Pwo Karen",
+     {"ဏ": ["ၮ"], "ယ": ["ၯ"], "ဃ": ["ၰ"], "န": ["ၞ"], "မ": ["ၟ"], "င": ["ၚ"], "ု": ["ဴ"], "ႋ": ["ႉ"],
+      "1": ["၁"], "2": ["၂"], "3": ["၃"], "4": ["၄"], "5": ["၅"], "6": ["၆"], "7": ["၇"], "8": ["၈"], "9": ["၉"],
+      "0": ["၀"]},
+     {"swap": {"ဩ": "ႋ", "၏": "ၜ", "ၒ": "ၠ"}, "model": False}),
 ]
 
 

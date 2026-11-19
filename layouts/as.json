@@ -231,7 +231,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 38
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ৎ"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -275,7 +281,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 45
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ঃ"
+                }
+              ]
             },
             {
               "width_units": 1,

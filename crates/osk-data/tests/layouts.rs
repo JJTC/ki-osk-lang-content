@@ -138,7 +138,7 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("is", "áéíóúý"),
         ("el", "άέήίϊόύώ"),
         ("vi", "àáảãạđ"),
-        ("as", "ৰৱ"),
+        ("as", "ৰৱৎঃ"),
         ("pnb", "ݨ"),
         ("sa", "ऽॐ"),
         ("skr", "ٻڄݙڳݨ"),
@@ -190,6 +190,18 @@ fn letters_on_long_presses_are_the_languages_own() {
         // Vai's letters Keyman's keyboard types with capitals, which its
         // composer reads, and the lengthener.
         ("vai", "ŋþðʒꘌ"),
+        // Hindko's retroflex nasal on noon's; Tai Tham's high ya, which its
+        // keyboard lacks, and its AltGr letters; Pashayi's AltGr letters.
+        ("hnd", "ݨ"),
+        ("nod", "ᩀᩕᩏᩐ"),
+        ("psi", "ڰك"),
+        // Eastern Pwo Karen's letters Burmese's keys lack, Rangpuri's as
+        // Assamese's, Tày's two tones Vietnamese lacks, Adamawa
+        // Fulfulde's hooked letters.
+        ("kjp", "ၮၯၰၞၟၚ"),
+        ("rkt", "ৰৱৎঃ"),
+        ("tyz", "\u{331}\u{30f}ȁȅ"),
+        ("fub-latn", "ɓɗŋƴ"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {

@@ -99,6 +99,7 @@ ibb  Wp/ibb/  LATIN       en     --shapes 3 --holdout 10
 vmf  Wp/vmf/  LATIN       -      --shapes 3 --holdout 10
 sdh  Wp/sdh/  ARABIC      fa     --shapes 3 --holdout 10 --sorani
 bgn  Wp/bgn/  ARABIC      fa,ur  --shapes 3 --holdout 10
+rkt  Wp/rkt/  BENGALI     -      --shapes 3 --holdout 10
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

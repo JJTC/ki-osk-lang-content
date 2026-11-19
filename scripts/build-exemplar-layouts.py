@@ -138,6 +138,13 @@ LANGS = [
     ("tem", EXEMPLARS, "f36e539e83ba41b2fd75075d0f898bc9988ac142fd62a1cc3c932dcbcf7bd9db", {
         "name": "Temne", "also": ["ȧ", "å"], "home": ["ɔ", "ŋ"], "swap": {"q": "ə", "x": "ɛ"}}),
     ("xog", COMMON, "6ba4b7c0c0c17310f4d42958d91e3ecb98d5e477314983e3495b47a846a078e9", {"home": ["'"]}),
+    # In Latin letters, as Gboard's keyboards for them are, where CLDR's
+    # file of the language is of another script (Adamawa Fulfulde's of
+    # Ajami, Bench's of Ethiopic); Adamawa Fulfulde's text writes its
+    # glottal stop as ’ (wi’i), eight times as often as '.
+    ("fub-Latn", EXEMPLARS, "51dd21f289b0376b098cc64f7f488b87e682b551ab154574c379a08bbf29b207", {
+        "name": "Adamawa Fulfulde", "apostrophe": "’"}),
+    ("bcq-Latn", EXEMPLARS, "3d973ab03a19a5bedbca4c6904e32d6e102d72fe8dad609c3859f73ec0fbc1c9", {"name": "Bench"}),
     # In other scripts, on their keys: the Arabic script's on Urdu's,
     # Sindhi's, Persian's, Sorani's or Arabic's, whichever lacks fewest
     # of its letters; Devanagari's on Hindi's; Sylheti's Bengali on
@@ -200,15 +207,17 @@ def fetch(lang, where, sha):
     """The language's CLDR file, fetched where it is not kept, checked."""
     cache = pathlib.Path(os.environ.get("CLDR_DIR")
                          or pathlib.Path(os.environ.get("TMPDIR", "/tmp")) / "ki-osk-sources" / "cldr")
-    local = cache / COMMIT / where / f"{lang}.xml"
+    # A tag with a script (fub-Latn) names its file with an underscore.
+    file = lang.replace("-", "_")
+    local = cache / COMMIT / where / f"{file}.xml"
     if not local.exists() or hashlib.sha256(local.read_bytes()).hexdigest() != sha:
         local.parent.mkdir(parents=True, exist_ok=True)
-        req = urllib.request.Request(f"{REPO}/{COMMIT}/{where}/{lang}.xml", headers={"User-Agent": "ki-osk-lang-content"})
+        req = urllib.request.Request(f"{REPO}/{COMMIT}/{where}/{file}.xml", headers={"User-Agent": "ki-osk-lang-content"})
         with urllib.request.urlopen(req) as r:
             data = r.read()
         got = hashlib.sha256(data).hexdigest()
         if got != sha:
-            sys.exit(f"{where}/{lang}.xml: sha256 {got}, not {sha}")
+            sys.exit(f"{where}/{file}.xml: sha256 {got}, not {sha}")
         local.write_bytes(data)
     return local.read_bytes()
 
@@ -260,7 +269,7 @@ def exemplars(lang, xml):
         sys.exit(f"{lang}: {len(main)} main exemplar sets")
     name = None
     for e in root.iter("language"):
-        if e.get("type") == lang and not e.get("alt"):
+        if e.get("type") == lang.split("-")[0] and not e.get("alt"):
             name = e.text
     return unicode_set(main[0]), name
 
@@ -388,7 +397,7 @@ def main():
     stale = []
     for lang, where, sha, options in LANGS:
         text = build(lang, where, sha, options)
-        out = ROOT / "layouts" / f"{lang}.json"
+        out = ROOT / "layouts" / f"{lang.lower()}.json"
         if check:
             if not out.exists() or out.read_text(encoding="utf-8") != text:
                 stale.append(out.name)

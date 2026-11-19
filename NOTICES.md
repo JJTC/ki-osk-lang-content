@@ -173,19 +173,19 @@ sentences by `scripts/wikipedia-text.py`, and where a word in another
 script stands, that word left out (the references' and English
 passages' Latin): at most 400 000 a language.
 Every 20th article is held out of it, and the first 500 sentences of
-those are `eval/<lang>.txt`. Sixteen more learn from the Wikimedia
+those are `eval/<lang>.txt`. Seventeen more learn from the Wikimedia
 Incubator's test wikis, in its dump of the same date (each article's
 title starting with its wiki's prefix, `Wp/mag/`): Adilabad Gondi's,
 Khowar's and Montenegrin's alone (Montenegrin's Latin sentences, its few
-Cyrillic ones left out), and twelve small wikis' alone, every 10th of
+Cyrillic ones left out), and thirteen small wikis' alone, every 10th of
 their articles held out and their bots' stubs left out but three of a
 shape (Rinconada Bikol's; Jambi, Makassar, Manado, Palembang and
 Kelantan-Pattani Malay's; Makassarese's, Pamona's, Ibibio's, East
-Franconian's, Southern Kurdish's and Western Balochi's), Magahi's beside
+Franconian's, Southern Kurdish's, Western Balochi's and Rangpuri's), Magahi's beside
 its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
 Persian's, Indonesian's or English's own words is left out.
 **Wikipedia's text, and the Incubator's, is CC BY-SA 4.0**, share-alike:
-the packs of those thirty-seven languages, their models and that held-out
+the packs of those thirty-eight languages, their models and that held-out
 text carry those terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 
@@ -701,10 +701,14 @@ Marathi's, Tulu's Kannada's, Meitei's in the Bengali script Bengali's,
 Western Punjabi's, Saraiki's, Kashmiri's and Brahui's Urdu's and
 Yiddish's Hebrew's, renamed, with the letters each language adds on long
 presses (`scripts/build-derived-layouts.py`); Pa'O's is Burmese's, its
-tones ꩻ and ႏ in place of ဩ and ၏. Sgaw Karen's, Northwestern Ojibwe's
-and the thirteen of a script of their own, Chakma's to Osage's, are
-Keyman's (below), and Vai's and Nuosu's the Latin letters Keyman's
-keyboards type their syllables with.
+tones ꩻ and ႏ in place of ဩ and ၏, and Eastern Pwo Karen's too, its
+ႋ ၜ ၠ in place of ဩ ၏ ၒ; Rangpuri's is Assamese's, Amdo and Khams
+Tibetan's Tibetan's, Sadri's Hindi's, Maharashtrian Konkani's Marathi's,
+Kutchi's Gujarati's, Tày's Vietnamese's and Northern Thai's in the Thai
+script Thai's. Sgaw Karen's, Northwestern Ojibwe's, the thirteen of a
+script of their own, Chakma's to Osage's, and five more, Gorani's to
+Northern Thai's in Tai Tham, are Keyman's (below), and Vai's and Nuosu's
+the Latin letters Keyman's keyboards type their syllables with.
 xkeyboard-config's copyright and permission notices, which go with every
 copy (its `COPYING`, as xkeyboard-config 2.48 ships it):
 
@@ -1031,6 +1035,48 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+Five more layouts are **Keyman's keyboards** read at a later commit, the
+same way (`scripts/build-keyman-layouts.py`, their files pinned by
+sha256), each under the MIT licence it carries: the same text, each with
+its own copyright line. Northern Thai's is in Keyman's experimental
+keyboards, which its maintainers have not reviewed.
+
+| Layout | Keyman keyboard | Copyright | Source |
+|---|---|---|---|
+| `layouts/hac.json`, Gorani's | horami 2.0.2 | Copyright © 2024-2026 SIL Global | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/h/horami |
+| `layouts/psi.json`, Southeastern Pashayi's | pashai 1.1.1 | Copyright © 2024-2026 SIL Global | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/p/pashai |
+| `layouts/hnd.json`, Southern Hindko's | rac_hindko 1.0.1 | Copyright (c) 2018-2026 Rehmat Aziz Chitrali | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/rac/rac_hindko |
+| `layouts/cld.json`, Chaldean Neo-Aramaic's | east_syriac_qwerty 2.0 | Copyright © 2025 Esho Marcus | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/e/east_syriac_qwerty |
+| `layouts/nod.json`, Northern Thai's | tai_lanna_thai 1.1 | Copyright © 2025-2026 Jayasiri Jayasāro Bhikkhu | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/experimental/t/tai_lanna_thai |
+
+```text
+The MIT License (MIT)
+
+Copyright © 2024-2026 SIL Global
+Copyright © 2024-2026 SIL Global
+Copyright (c) 2018-2026 Rehmat Aziz Chitrali
+Copyright © 2025 Esho Marcus
+Copyright © 2025-2026 Jayasiri Jayasāro Bhikkhu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
 Vai's and Nuosu's keyboards, `layouts/vai.json` and `layouts/ii.json`,
 and their transliteration tables, `translit/vai.txt` and
 `translit/ii.txt`, are made from **Keyman's keyboards** that type the two
@@ -1128,12 +1174,14 @@ https://github.com/unicode-org/cldr
 
 ## Keyboards from CLDR's exemplar characters
 
-Fifty-five layouts (made by `scripts/build-exemplar-layouts.py`) take
+Fifty-seven layouts (made by `scripts/build-exemplar-layouts.py`) take
 their letters from the **CLDR**'s exemplar characters, release 49
 (`common/main/<lang>.xml`, and `exemplars/main/<lang>.xml` for the
 languages below its basic coverage), under the Unicode License v3, whose
-notice is above: thirty in Latin letters, Afar's to Zarma's
-(`layouts/aa.json` … `layouts/xog.json`), and twenty-five on the Arabic
+notice is above: thirty-two in Latin letters, Afar's to Zarma's
+(`layouts/aa.json` … `layouts/xog.json`) and Adamawa Fulfulde's and
+Bench's (`layouts/fub-latn.json`, `layouts/bcq-latn.json`, from their
+Latin sets, `exemplars/main/fub_Latn.xml` and `bcq_Latn.xml`), and twenty-five on the Arabic
 script's, Devanagari's and Bengali's keys, Balti's to Sylheti's
 (`layouts/bft.json` … `layouts/syl.json`).
 

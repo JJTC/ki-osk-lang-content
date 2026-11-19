@@ -82,6 +82,9 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 REPO = "https://raw.githubusercontent.com/keymanapp/keyboards"
 COMMIT = "7225701d383cf8317f595bfd73481fcd87524f44"
+# The keyboards added since are read at a later commit (2026-11-17), each
+# pinned as it is.
+LATER = "c9a2da84df94cc0acb5b0a684615e5e91ca95a0a"
 
 # The layout made, its name, the keyboard (its path in keymanapp/keyboards
 # and the commit), and the sha256 of its touch layout, rules and licence.
@@ -164,19 +167,52 @@ KEYBOARDS = [
         "source/osage_nation.kmn": "ae199fd0401d0f63711a68f787099f15f18a5ef688e7cab7e2fce2a195e6729c",
         "LICENSE.md": "ab1714c0b4775087a6a8bcebf28913557704d1105d54993dd8fb2a7aec27d052",
     }),
+    # In English, as CLDR's files of them name none.
+    ("hac", "Gorani", "release/h/horami", LATER, {
+        "source/horami.keyman-touch-layout": "391280eaf8f08fefeb4755ee9e39a81b2890566d6c7be348e2a5aa08299cdabf",
+        "source/horami.kmn": "09395069fb2afd85d9eba4fca4de343212fe8a42b77d0a84ac880d2306a21846",
+        "LICENSE.md": "81d375a5237167bac4afe074c26f77b1ba01c88a5385c42195ce3ac4cf597fb1",
+    }),
+    ("psi", "Southeastern Pashayi", "release/p/pashai", LATER, {
+        "source/pashai.keyman-touch-layout": "a7616312262ff5468015e15f8ba31169a4211b10109e76bec3b19dfb7dda21ed",
+        "source/pashai.kmn": "576a9c3460d42f75c99e23414c449513b05ef79391deba4ca5176c54735fa77d",
+        "LICENSE.md": "bda30053d5709bc4c750bd7ace4e734f3747498d65e0af1f0d9d5b3ec26444b9",
+    }),
+    ("hnd", "Southern Hindko", "release/rac/rac_hindko", LATER, {
+        "source/rac_hindko.keyman-touch-layout": "7eac5c11e53da5d4364b97e0d3ca34b1aabc596629043fd81ecc21627157d6c1",
+        "source/rac_hindko.kmn": "de04d79e73b3643b1485cc5bf0af45505dead0dd2b8d1079c78cb3c83ca4ecd9",
+        "LICENSE.md": "47252b585b03e63562dea34963c52edb8944a2b78b15f06f1689d4496098113c",
+    }),
+    ("cld", "Chaldean Neo-Aramaic", "release/e/east_syriac_qwerty", LATER, {
+        "source/east_syriac_qwerty.keyman-touch-layout":
+            "4635aa584ba7b0697338da15cb5d63b9dca12545c8e63f1ddaaa929804f931f9",
+        "source/east_syriac_qwerty.kmn": "d51b1c130caff5f69d87085a3623fe7d9263d9ba4ae1ea15fa6a9cf7d75d6cf6",
+        "LICENSE.md": "5d40eccf69f560666b8428d786a1da70e336e8b8d2ee0b3ee64ea15a1f053d44",
+    }),
+    ("nod", "Northern Thai", "experimental/t/tai_lanna_thai", LATER, {
+        "source/tai_lanna_thai.keyman-touch-layout": "7e5178041d9a3d1d3f0b51b45106ffa01d43035f5c6997113a4e3b5e9e59762a",
+        "source/tai_lanna_thai.kmn": "06241564b16f0fd214b37a4f12b235d8a11eee3d8f07ef436712b08e87e32590",
+        "LICENSE.md": "6e391bf5b8db2d0a31e1b4227e4edb92dc314253389fd21ca7ab1dbfe8322d14",
+    }),
 ]
 
 # Each keyboard's touch platform, the keymap its control row types
 # through (none for a script with no keymap), and its script's font.
 PLATFORM = {"ksw": "phone", "ojb": "tablet", "ccp": "tablet", "rhg": "phone", "blt": "tablet", "kyu": "tablet",
             "lis": "tablet", "lep": "tablet", "kjg": "tablet", "saz": "phone", "bax": "phone", "cjm": "tablet",
-            "tdd": "phone", "khb": "phone", "osa": "phone"}
-XKB_LAYOUT = {"ksw": "mm", "ojb": "ca", "kjg": "la"}
+            "tdd": "phone", "khb": "phone", "osa": "phone", "hac": "phone", "psi": "tablet", "hnd": "tablet",
+            "cld": "phone", "nod": "tablet"}
+XKB_LAYOUT = {"ksw": "mm", "ojb": "ca", "kjg": "la", "hac": "iq", "psi": "af", "hnd": "pk", "cld": "sy"}
 FONT_SCRIPT = {"ksw": "myanmar", "ojb": "canadian_aboriginal", "ccp": "chakma", "rhg": "hanifi_rohingya",
                "blt": "tai_viet", "kyu": "kayah_li", "lis": "lisu", "lep": "lepcha", "kjg": "lao",
                "saz": "saurashtra", "bax": "bamum", "cjm": "cham", "tdd": "tai_le", "khb": "new_tai_lue",
-               "osa": "osage"}
-RTL = {"rhg"}
+               "osa": "osage", "hac": "arabic", "psi": "arabic", "hnd": "arabic", "cld": "syriac",
+               "nod": "tai_tham"}
+RTL = {"rhg", "hac", "psi", "hnd", "cld"}
+
+# The layer a keyboard's Shift key turns to, where it is not `shift`:
+# East Syriac's vowel points and marks.
+SHIFT_LAYER = {"cld": "ES-diac"}
 
 # The keyboards laid out as Keyman's rows and places are (see above): the
 # others, Sgaw Karen's and Ojibwe's, take their first three rows of keys
@@ -198,8 +234,17 @@ SYLLABICS = {"ojb"}
 LONG_PRESS_ADDED = {("ojb", "\u1483"): ["\u157D"],
                     # Rohingya's kinna wa, in its own name and on no key of
                     # Keyman's phone layout, as kinna ya is on a long press.
-                    ("rhg", "\U00010D16"): ["\U00010D17"]}
+                    ("rhg", "\U00010D16"): ["\U00010D17"],
+                    # Hindko's retroflex nasal, which its keyboard types on a
+                    # layer of symbols, on noon's, as Punjabi's and Saraiki's.
+                    ("hnd", "\u0646"): ["\u0768"],
+                    # Tai Tham's high ya, which CLDR's exemplar characters
+                    # list and the keyboard lacks, on low ya's.
+                    ("nod", "\u1A3F"): ["\u1A40"]}
 FULL_STOP_LONG_PRESS = {"ojb": "\u166E"}
+# Layers a keyboard has that the language does not write with: East
+# Syriac's keyboard's West Syriac vowels, which Chaldean does not use.
+UNUSED_LAYERS = {("cld", "WS-diac")}
 
 SPECIAL = {"K_SHIFT", "K_BKSP", "K_ENTER", "K_SPACE", "K_NUMLOCK", "K_LOPT", "K_LOWER", "K_ROPT", "K_TAB", "K_CAPS"}
 # Touch keys that type nothing: Keyman's special keys and its spacers.
@@ -224,7 +269,10 @@ for _a, _b, _k in [("`", "~", "K_BKQUOTE"), ("-", "_", "K_HYPHEN"), ("=", "+", "
     US[_b] = ("SHIFT", _k)
 
 # A touch layer's modifiers, as its rules name them.
-LAYER_MODS = {"default": "", "shift": "SHIFT", "rightalt": "RALT", "rightalt-shift": "RALT SHIFT"}
+LAYER_MODS = {"default": "", "shift": "SHIFT", "rightalt": "RALT", "rightalt-shift": "RALT SHIFT",
+              # East Syriac's layer of marks, whose keys type as with none
+              # (its K_1, labelled ◌ܲ, as + [K_1] > U+0732 types).
+              "ES-diac": ""}
 
 TOKEN = re.compile(r"""
     '(?P<sq>[^']*)' | "(?P<dq>[^"]*)"
@@ -490,12 +538,12 @@ def own_text(layer, key, rules):
     return None
 
 
-def placed_rows(layers, rules):
+def placed_rows(layers, rules, shift_layer="shift"):
     """The base and shift views' letter rows, Keyman's places kept: each
     a list of cells, a key typing the script's (its text, its long
     presses) or a gap (None); and the letters of the bottom row."""
     views = {}
-    for view, layer_id in (("base", "default"), ("shift", "shift")):
+    for view, layer_id in (("base", "default"), ("shift", shift_layer)):
         # A keyboard of one layer of letters (Khmu's) has the same on Shift.
         layer_id = layer_id if layer_id in layers else "default"
         layer = layers[layer_id]
@@ -527,10 +575,11 @@ def placed_rows(layers, rules):
 def build_placed(lang, layout, layers, rules):
     """The base and shift views' letter rows for a keyboard laid out as
     Keyman's rows and places are; the letters on no tap."""
-    views = placed_rows(layers, rules)
+    views = placed_rows(layers, rules, SHIFT_LAYER.get(lang, "shift"))
     base_rows, base_bottom = views["base"]
     shift_rows, shift_bottom = views["shift"]
-    # AltGr's letters first on the long press of the key in its place.
+    # AltGr's letters first on the long press of the key in its place; its
+    # digits (Tai Tham's Hora digits) on the symbol view's, as below.
     for alt_layer, rows in (("rightalt", base_rows), ("rightalt-shift", shift_rows)):
         if alt_layer not in layers:
             continue
@@ -539,6 +588,8 @@ def build_placed(lang, layout, layers, rules):
             for k in row["key"]:
                 text = own_text(alt_layer, k, rules)
                 cell = by_id.get(k.get("id"))
+                if text and all(unicodedata.category(c) == "Nd" for c in text):
+                    continue
                 if text and cell and text != cell[0] and text not in cell[1]:
                     cell[1].insert(0, text)
     # A row of gaps on one view takes the other's; on both it goes.
@@ -630,10 +681,13 @@ def offers_untapped(layout):
                for c in held)
 
 
-def everything_typed(layers, rules):
-    """Every text a key or a long press of the keyboard types, any layer."""
+def everything_typed(lang, layers, rules):
+    """Every text a key or a long press of the keyboard types, any layer
+    the language writes with."""
     out = []
     for layer in layers.values():
+        if (lang, layer["id"]) in UNUSED_LAYERS:
+            continue
         for row in layer["row"]:
             for k in row["key"]:
                 for key in [k] + k.get("sk", []):
@@ -686,7 +740,7 @@ def build(lang, name, path, commit, files):
                     if key.get("output", {}).get("kind") == "text":
                         tapped.add(key["output"]["text"])
                     tapped.update(o.get("text") for o in key.get("long_press", []))
-        everything = everything_typed(layers, rules)
+        everything = everything_typed(lang, layers, rules)
         # The script's digits on the long presses of the symbol view's.
         digits = {}
         for text in everything:

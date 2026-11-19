@@ -6091,6 +6091,23 @@
         "words": "2"
       }
     },
+    "predict/rkt": {
+      "encoder": "bca43c1ad413-dirty",
+      "inputs": {
+        "wikipedia/rkt.txt": "f3190cf4e315c927aec6b958d33c8a6dec2fbe1fb06960e95e40db1d80e36ab3"
+      },
+      "outputs": {
+        "predict/rkt.forms.fst": "1852a8c2cfae25fdc8ae1dcbd45e4d018d0fcbb4b2d67073bcc13cdd6a5e666c",
+        "predict/rkt.fst": "7ed42b9bb5f09bff41fe8d637fae9ec140ad51eff4fe3382772383ed72a7ec91",
+        "predict/rkt.ngram.bin": "ffc3064e10fd40bcc966011581e1cae95d14f161f1fba7e2679bb2d7d1846092"
+      },
+      "recipe": {
+        "ngram_keep": "60000",
+        "start_keep": "5000",
+        "vocab_size": "20000",
+        "words": "2"
+      }
+    },
     "predict/rm": {
       "encoder": "575990c89282-dirty",
       "inputs": {

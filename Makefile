@@ -58,7 +58,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                  rmy rmn ojb \
                  cnr \
-                 bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn
+                 bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn \
+                 rkt
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -100,9 +101,10 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # corpus, every 10th article held out and their bots' stubs left out:
 # Rinconada Bikol, five Malays (Jambi, Makassar, Manado, Palembang's
 # Musi, Kelantan-Pattani), Makassarese, Pamona, Ibibio, East Franconian,
-# Southern Kurdish and Western Balochi.
+# Southern Kurdish and Western Balochi; and Rangpuri's, the same way
+# (27 000 words, in the Bengali script as Assamese writes it, ৰ for র).
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
-                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn
+                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences
@@ -1099,9 +1101,9 @@ derived-layouts:
 
 # The layouts made from Keyman's touch keyboards, for the languages
 # xkeyboard-config has no keymap of (layouts/ksw.json, Sgaw Karen's;
-# ojb.json, Northwestern Ojibwe's; and thirteen of a script of their own,
-# ccp.json to osa.json): the keyboards' files fetched at a pinned commit,
-# sha256-checked.
+# ojb.json, Northwestern Ojibwe's; thirteen of a script of their own,
+# ccp.json to osa.json; and hac.json to nod.json, Gorani's to Northern
+# Thai's): the keyboards' files fetched at a pinned commit, sha256-checked.
 .PHONY: keyman-layouts
 keyman-layouts:
 	$(PYTHON) scripts/build-keyman-layouts.py
