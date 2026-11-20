@@ -1,4 +1,4 @@
-# The syllables of `blk`'s text, as osk_data::wordbreak cuts it: the 3066 of 4126 seen 2 times or more, the commonest first (build-syllables).
+# The syllables of `blk`'s text, as osk_data::wordbreak cuts it: the 3065 of 4124 seen 2 times or more, the commonest first (build-syllables).
 အ
 နဝ်ꩻ
 တ
@@ -2279,7 +2279,6 @@
 အဲဥ်ႏ
 အꩻ
 ဥုံ
-၏
 ကတ်သ်
 ကိုး
 ကုတ်

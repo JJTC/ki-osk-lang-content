@@ -1121,7 +1121,7 @@ but no model to match the glide against · `—` off
    805 of Igala's: `--markup`); Arakanese's, in the Myanmar script
    (79 817 sentences, cut after its full stop ။, their Latin words and
    stray zero-width joiners left out), cut into syllables as Pa'O's are,
-   its word list the 3 994 syllables its text writes twice or more
+   its word list the 3 979 syllables its words write twice or more
    (`wordbreak/rki.txt`); and Veluws', the 1 018 articles the Dutch Low
    Saxon wiki files as written in West or East Veluws (13 215 sentences,
    229 000 words: `--category`), whose words keep the apostrophe Dutch's
@@ -1695,7 +1695,9 @@ but no model to match the glide against · `—` off
    million characters, Mon's 8.4, Karen's 5.8, Pa'O's 0.8), cut into
    syllables, as Tibetan is: no list of their words is to be had, so each
    one's word list is the syllables its text writes twice or more (`make
-   syllable-lists`, 2 200 to 8 800 of them; `osk_data::wordbreak`), and
+   syllable-lists`, 2 200 to 8 800 of them; `osk_data::wordbreak`), its
+   words' as the keyboard reads them, so not the symbols ၌ ၍ ၎ ၏, which
+   end a word as punctuation does (since data 0.63.1), and
    the keyboard types no space after a syllable from the strip. A
    syllable starts on a letter, but not on a sign, nor on a consonant
    stacked under another, nor on one the asat after it ends a syllable

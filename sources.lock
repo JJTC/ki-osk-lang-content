@@ -1319,10 +1319,10 @@
       }
     },
     "predict/blk": {
-      "encoder": "c67a55da779b-dirty",
+      "encoder": "28c54781b8d5-dirty",
       "inputs": {
         "fineweb/blk.txt": "f2414bde80a01c65bff45ee2eb1d3800e12f46a2b2f904b41b332bba4d5c8236",
-        "wordbreak/blk.txt": "1a9d1e24342502db08d78eee9488746f66ebd713166445f0838d3925dd2657c6"
+        "wordbreak/blk.txt": "02d5b1ce327523e58f347f3ea23ef622dfe25b084fa03cb13961ed25c2ba89a3"
       },
       "outputs": {
         "predict/blk.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
@@ -4261,10 +4261,10 @@
       }
     },
     "predict/ksw": {
-      "encoder": "c67a55da779b-dirty",
+      "encoder": "28c54781b8d5-dirty",
       "inputs": {
         "fineweb/ksw.txt": "d13afdfc6f23d9ddfe43693958ba552adb21a226d99e08bd329a8fdca55576c4",
-        "wordbreak/ksw.txt": "e9845c4e4ce0d50e462e1960cc55822572769cc8b759f800483e1b39097d424a"
+        "wordbreak/ksw.txt": "693685db1a6ba5a713014d9ee1db385b7fc6e4eacd281d0d8f6cbfff9f37f363"
       },
       "outputs": {
         "predict/ksw.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
@@ -5167,10 +5167,10 @@
       }
     },
     "predict/mnw": {
-      "encoder": "c67a55da779b-dirty",
+      "encoder": "28c54781b8d5-dirty",
       "inputs": {
         "fineweb/mnw.txt": "74db6e4a378261cd34ca5160a5f8298bc71ac48f6ef0da652338a1a79da5418d",
-        "wordbreak/mnw.txt": "8cc5f17d36dfb2faa1f6c95a1159730099f8b6e64d5e40c61aca2b89e29411a7"
+        "wordbreak/mnw.txt": "445c55aa429a34d8afbd29010417525ee39bfb15c08e4c96a147ae1b840f159b"
       },
       "outputs": {
         "predict/mnw.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
@@ -6279,10 +6279,10 @@
       }
     },
     "predict/rki": {
-      "encoder": "7174e72c1486-dirty",
+      "encoder": "28c54781b8d5-dirty",
       "inputs": {
         "wikipedia/rki.txt": "6da9ff07a44074240098c7ff7479d21ddd6e2c57426d3d0ee1e448d72946d2fe",
-        "wordbreak/rki.txt": "9bf3bc82327ed15af99f1a9d2c8c03199f8ab90bf8c193f444813ae793f2c770"
+        "wordbreak/rki.txt": "7bbd1970bd9f503c5d860a5724e767e48b1369266cacf95d2d915bbb2d1f58d3"
       },
       "outputs": {
         "predict/rki.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
@@ -6722,10 +6722,10 @@
       }
     },
     "predict/shn": {
-      "encoder": "c67a55da779b-dirty",
+      "encoder": "28c54781b8d5-dirty",
       "inputs": {
         "fineweb/shn.txt": "21ee365d6c4706e63153799455b48c8176362981d378ab44318585d34a34d9be",
-        "wordbreak/shn.txt": "b6727ddc676c3a02fc9aba7e31b56655c2b927db85dee33ac26cf1dd753a54ad"
+        "wordbreak/shn.txt": "d217a1aef9695689b4dd6f3baaf2dad01d00c7d106312454e6fa464e62a37815"
       },
       "outputs": {
         "predict/shn.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
