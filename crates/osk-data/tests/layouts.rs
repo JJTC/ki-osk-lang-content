@@ -225,6 +225,8 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("quy", "áé"),
         ("yaf", "áéíóú"),
         ("und-fonipa", "ɑəʃŋɾʰʷ\u{2d0}\u{2c8}\u{303}\u{325}"),
+        ("zea", "êôèëòÊÔ'"),
+        ("mtq", "ảổẳờểõđ"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {
@@ -251,6 +253,37 @@ fn letters_on_long_presses_are_the_languages_own() {
                     .any(|t| t.chars().any(char::is_alphabetic) && !tap.contains(t.as_str())),
                 "{} says its letters are on long presses, but taps type them all",
                 def.id
+            );
+        }
+    }
+}
+
+/// A key a layout puts where its home row's spacers were
+/// (scripts/build-derived-layouts.py's "home") types its letter with a tap,
+/// on the base view and the Shift view: Garo's raised dot, Kui's overline,
+/// the apostrophe Maay, Nyamwezi and Zeelandic write inside their words.
+#[test]
+fn keys_at_the_home_rows_end_type_their_letters() {
+    for (id, letter) in [
+        ("grt", "·"),
+        ("kxu", "\u{b55}"),
+        ("ymm", "'"),
+        ("nym", "'"),
+        ("zea", "'"),
+    ] {
+        let def = load(id);
+        for view in [ViewId::Base, ViewId::Shift] {
+            let v = def
+                .views
+                .iter()
+                .find(|v| v.id == view)
+                .unwrap_or_else(|| panic!("{id}: no {view:?} view"));
+            assert!(
+                v.rows[1]
+                    .keys
+                    .iter()
+                    .any(|k| matches!(&k.output, KeyOutput::Text { text } if text == letter)),
+                "{id}: no key on the {view:?} view's home row types {letter}"
             );
         }
     }

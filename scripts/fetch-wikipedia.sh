@@ -7,9 +7,10 @@
 # Angika and Newari (beside its web text, scripts/fetch-glotcc.sh),
 # Eastern Min (in Bàng-uâ-cê, the Han its sentences write beside left
 # out), Fiji Hindi (its references, English, left out: --own), Emilian
-# (the Emilian–Romagnol wiki's, its Romagnol left out) and Church
-# Slavonic (its sentences that write a letter of its own, ѣ є ꙑ ѥ…: its
-# references are Russian); of
+# (the Emilian–Romagnol wiki's, its Romagnol left out), Church Slavonic
+# (its sentences that write a letter of its own, ѣ є ꙑ ѥ…: its
+# references are Russian) and Zeelandic (its bots' French communes and
+# calendar days left out); of
 # Armenian and Persian beside their Tatoeba sentences (the Makefile's
 # WIKIPEDIA_PLUS_LANGS, whose held-out text goes elsewhere: EVAL_OUT); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
@@ -86,6 +87,7 @@ cdo  cdo  cdowiki_content-20261108-00000.json.bz2  b087ff5764e512a440b6f2486288a
 hif  hif  hifwiki_content-20261108-00000.json.bz2  1490558966f73af1384d677456499fb15cc084db754d350fd03dd2475da45ae7  LATIN  --own hif --shapes 3
 egl  eml  emlwiki_content-20261108-00000.json.bz2  d9123a8b5d3fd5cf83bc0283bb34d44b791a021cfe2d82d2e72360687dc8971a  LATIN  --emilian --shapes 3
 cu   cu   cuwiki_content-20261108-00000.json.bz2   12aac7a8422656a861bcc6756d47ef540c68ecdbc7db316b94c6cb0a9eca68c5  CYRILLIC  --script-only --shapes 3 --letters єѣꙑѥїꙁꙗѧѫѩѡіѭѵѷѳꙋѯѱѿѻѕѹ
+zea  zea  zeawiki_content-20261108-00000.json.bz2  25f44b4a3d2d9de7f626493df4d725c736e783e5b611f93faaa3d6ff2a904edc  LATIN  --shapes 3
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1

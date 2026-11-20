@@ -61,7 +61,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn \
                  rkt \
                  cdo hif egl abr cu \
-                 tdx hvn ktu quy
+                 tdx hvn ktu quy \
+                 zea
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -111,9 +112,11 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # out), Fiji Hindi's (620 000, its English references left out) and the
 # Emilian–Romagnol wiki's Emilian (2.2 million, its Romagnol left out),
 # their bots' stubs left out as the small wikis' are; and Church
-# Slavonic's (60 000 words, the sentences that write its own letters).
+# Slavonic's (60 000 words, the sentences that write its own letters);
+# and Zeelandic's (460 000 words, its bots' French communes and calendar
+# days left out).
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
-                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu
+                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu zea
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences
@@ -339,10 +342,11 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # Northwestern Ojibwe (29 000 to 88 000 kinds: Balkan Romani's saves 0.2
 # points more at 120 000). And Montenegrin, from its Incubator test wiki
 # (900 000 words, 106 000 kinds), which is WIDE. And Eastern Min, Fiji
-# Hindi and Emilian, from their wikis (Eastern Min's syllables, as
-# Southern Min's; Fiji Hindi's 55 000 kinds; Emilian's 144 000, its
-# dialects each spelled their own way). And MADLAD-400's Tandroy-Mahafaly
-# Malagasy, Hawu, Kituba and Ayacucho Quechua.
+# Hindi, Emilian and Zeelandic, from their wikis (Eastern Min's
+# syllables, as Southern Min's; Fiji Hindi's 55 000 kinds; Emilian's
+# 144 000 and Zeelandic's 60 000, their dialects each spelled their own
+# way). And MADLAD-400's Tandroy-Mahafaly Malagasy, Hawu, Kituba and
+# Ayacucho Quechua.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -368,7 +372,7 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                        rmy rmn ojb \
                        cnr \
-                       cdo hif egl \
+                       cdo hif egl zea \
                        tdx hvn ktu quy
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000

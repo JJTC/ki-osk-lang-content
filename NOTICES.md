@@ -160,16 +160,17 @@ learns from leaves out.
 
 ### Wikipedia text (the wikis' own)
 
-Twenty-two languages' models learn from their own Wikipedia alone:
+Twenty-three languages' models learn from their own Wikipedia alone:
 Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto,
 Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki,
 Tulu, Dotyali, Angika, Eastern Min (in Bàng-uâ-cê, the Han its sentences
 write beside left out), Fiji Hindi (its sentences that write its own
 function words: its references are English) and Emilian (the
 Emilian–Romagnol wiki's, its Romagnol articles left out, each article
-without the name of its dialect) and Church Slavonic (its sentences that
-write a letter of its own, ѣ є ꙑ ѥ…: its references are Russian), the
-last four's bots' stubs left out but three of a shape; Newari's from its
+without the name of its dialect), Church Slavonic (its sentences that
+write a letter of its own, ѣ є ꙑ ѥ…: its references are Russian) and
+Zeelandic, the last five's bots' stubs left out but three of a shape;
+Newari's from its
 own beside its news
 (GlotCC's, below); and Armenian's and Persian's from theirs beside their
 Tatoeba sentences, the first 400 000 sentences of each, whose held-out
@@ -193,7 +194,7 @@ Abron's, its sentences that write its ɛ or ɔ), Magahi's beside
 its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
 Persian's, Indonesian's or English's own words is left out.
 **Wikipedia's text, and the Incubator's, is CC BY-SA 4.0**, share-alike:
-the packs of those forty-three languages, their models and that held-out
+the packs of those forty-four languages, their models and that held-out
 text carry those terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 

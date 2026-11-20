@@ -186,7 +186,9 @@ enum Lead {
     Never,
     /// When the letters after it are one of these words.
     Words(&'static [&'static str]),
-    /// Always.
+    /// Always: Breton's (`'zo`), and Zeelandic's, which writes Dutch's
+    /// clipped words and drops h and ge- the same way (`'oôdstad`,
+    /// `'ebouwd`).
     Always,
 }
 
@@ -508,7 +510,7 @@ impl Splitter {
                 s.middle_dot = true;
             }
             "oc" => s.elide = Elide::After(OCCITAN_ELISIONS),
-            "br" => s.lead = Lead::Always,
+            "br" | "zea" => s.lead = Lead::Always,
             "nl" => s.lead = Lead::Words(DUTCH_CLIPPED),
             "hy" => {
                 s.armenian = true;
@@ -1440,6 +1442,9 @@ mod tests {
         assert_eq!(split("nl", "'s"), ["'s"]);
         assert_eq!(split("nl", "'Hallo'"), ["Hallo"]);
         assert_eq!(split("br", "'zo"), ["'zo"]);
+        assert_eq!(split("zea", "'oôdstad"), ["'oôdstad"]);
+        assert_eq!(split("zea", "'t"), ["'t"]);
+        assert_eq!(split("zea", "d'r"), ["d'r"]);
         assert_eq!(split("fr", "'maison'"), ["maison"]);
     }
 

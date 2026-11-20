@@ -8066,6 +8066,23 @@
         "words": "2"
       }
     },
+    "predict/zea": {
+      "encoder": "a64e3d940e6c-dirty",
+      "inputs": {
+        "wikipedia/zea.txt": "a19210e895eaf6cbad38b2905b91ff75fdf6d363581bcedc8cefc97ed5aa965a"
+      },
+      "outputs": {
+        "predict/zea.forms.fst": "d80796f45e2b881e3772201352d2dd7eded84f6d548afe65dfa10e3f0ff4c721",
+        "predict/zea.fst": "4011857b8a51025b12db7d3cfcf8ec888d63167ac00a40402e226fe784cf9cdc",
+        "predict/zea.ngram.bin": "46af218ea63f149eeb8811c9ad90e480ff5de86588424b1a34a8df67cc3c0b6c"
+      },
+      "recipe": {
+        "ngram_keep": "90000",
+        "start_keep": "5000",
+        "vocab_size": "80000",
+        "words": "2"
+      }
+    },
     "predict/zne": {
       "encoder": "3d80723da488-dirty",
       "inputs": {

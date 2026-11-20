@@ -175,7 +175,21 @@ Kituba on them as they are, and Ayacucho Quechua on Quechua's with á é
 first. From the Bibles eBible.org has of them: Southern Oromo (Guji) on
 Oromo's keys with an apostrophe key, its glottal stop (in 8% of its
 words), and Yaka on the US keys with its high tones á é í ó ú first on
-the long presses. A key at the home row's end types its
+the long presses. Zeelandic, with its model, from its Wikipedia, is
+typed on Dutch's keys with ê ô first on the long presses of e and o and
+an apostrophe key (its 't and 'n and the words it drops an h or ge-
+from, 'Olland, 'ebouwd: one word in sixteen). With no model, from the
+Universal Declaration of Human Rights in their languages: Maay on
+Somali's keys and Nyamwezi on the US keys, each with an apostrophe key
+(two words in a hundred write one), and Chokwe and Northern Qiandong
+Miao, whose tones are letters, on the US keys as they are; from
+Wiktionary's entries: Garo on them with a key for its raised dot
+(A·chik: a quarter of its words), and in the Bengali script, which
+CLDR's language data names for it, on Bengali's keys; Mandar and Bouyei
+on them as they are, Muong on Vietnamese's keys, and Kui on Odia's with
+the overline Unicode encodes for it (U+0B55) at the home row's end; and
+from their Incubator test wikis, Central Malay, Komering and Kutai Malay
+on the US keys as they are. A key at the home row's end types its
 capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
@@ -636,6 +650,20 @@ DERIVED = [
     ("quy", "qu", "Runa Simi (Ayacucho)", with_capitals({"a": ["á"], "e": ["é"]})),
     ("gax", "om", "Southern Oromo", {}, {"home": "'", "model": False}),
     ("yaf", "us", "Yaka", with_capitals({"a": ["á"], "e": ["é"], "i": ["í"], "o": ["ó"], "u": ["ú"]}), {"model": False}),
+    ("zea", "nl", "Zeêuws", with_capitals({"e": ["ê", "è", "ë", "é"], "o": ["ô", "ò", "ó", "ö"]}), {"home": "'"}),
+    ("ymm", "so", "Maay", {}, {"home": "'", "model": False}),
+    ("nym", "us", "Kinyamwezi", {}, {"home": "'", "model": False}),
+    ("cjk", "us", "Chokwe", {}, {"model": False}),
+    ("hea", "us", "Hmu", {}, {"model": False}),
+    ("grt", "us", "A·chik", {}, {"home": "·", "model": False}),
+    ("grt-Beng", "bn", "গারো", {}, {"model": False}),
+    ("mdr", "us", "Mandar", {}, {"model": False}),
+    ("pcc", "us", "Haausqyaix", {}, {"model": False}),
+    ("mtq", "vi", "Thiểng Mường", {}, {"model": False}),
+    ("kxu", "or", "Kui", {}, {"home": "୕", "model": False}),
+    ("pse", "us", "Baso Melayu Tenga", {}, {"model": False}),
+    ("kge", "us", "Basa Kumoring", {}, {"model": False}),
+    ("vkt", "us", "Kutai Malay", {}, {"model": False}),
 ]
 
 
