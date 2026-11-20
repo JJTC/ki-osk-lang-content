@@ -153,6 +153,10 @@ jobs:
           make fetch-fineweb SRC_DIR="$RUNNER_TEMP/sources" FINEWEB_PYTHON="$RUNNER_TEMP/pyenv/bin/python"
       - name: MADLAD-400's text
         run: make fetch-madlad SRC_DIR="$RUNNER_TEMP/sources"
+      # Two languages learn from the African Storybook's stories: its
+      # database's archive at one commit, pinned by sha256.
+      - name: The African Storybook's stories
+        run: make fetch-storybooks SRC_DIR="$RUNNER_TEMP/sources"
       - name: GlotCC's text
         run: make fetch-glotcc SRC_DIR="$RUNNER_TEMP/sources" FINEWEB_PYTHON="$RUNNER_TEMP/pyenv/bin/python"
       - name: Prediction models

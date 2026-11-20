@@ -300,6 +300,27 @@ language. As with FineWeb-2, the models made from it are what this
 repository and its packs hold, never the text; each pack with such a
 model names MADLAD-400 among its sources, with that licence.
 
+### The African Storybook (stories)
+
+Masaaba's and Turkana's models learn from the African Storybook's
+stories alone, which no wiki or web text here has of them: picture books
+for children written and translated by teachers and writers across
+Africa and published at [africanstorybook.org](https://www.africanstorybook.org/)
+(an initiative of Saide), each under a Creative Commons licence. They
+are read as the Global African Storybook Project's
+[asp-raw-db](https://github.com/global-asp/asp-raw-db) keeps them, its
+archive at one commit pinned by sha256 in `scripts/fetch-storybooks.sh`,
+and only the stories under **CC BY 3.0 or CC BY 4.0** are read (those
+under CC BY-NC are left out): 90 of Masaaba's (Lumasaaba) and 151 of
+Turkana's (Ng'aturkana). Each story's author (who wrote or translated
+it) and illustrator are named in its file there and on its page at
+africanstorybook.org, with its licence. The models made from them
+(word lists and the counts of words and word pairs and triples) are what
+this repository and its packs hold, never the stories; each pack with
+such a model names the African Storybook among its sources, with those
+licences. Bukusu's and Malawi Lomwe's keyboards take their letters from
+their CC BY stories there (11 and 19).
+
 ### GlotCC (web text)
 
 Newari's model learns from GlotCC's web text beside its wiki's, whose

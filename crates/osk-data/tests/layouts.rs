@@ -227,10 +227,12 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("und-fonipa", "ɑəʃŋɾʰʷ\u{2d0}\u{2c8}\u{303}\u{325}"),
         ("zea", "êôèëòÊÔ'"),
         ("mtq", "ảổẳờểõđ"),
-        // Igala's dotted vowels and tones, Veluws' ö ä å ü, Urum's ӧ ӱ ґ.
+        // Igala's dotted vowels and tones, Veluws' ö ä å ü, Urum's ӧ ӱ ґ,
+        // Masaaba's ŋ.
         ("igl", "ẹọéóíàñẸỌ\u{301}\u{300}"),
         ("vel", "öäåüÖ'"),
         ("uum", "ӧӱґӦӰʼ"),
+        ("myx", "ŋŊ'"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {
@@ -265,8 +267,8 @@ fn letters_on_long_presses_are_the_languages_own() {
 /// A key a layout puts where its home row's spacers were
 /// (scripts/build-derived-layouts.py's "home") types its letter with a tap,
 /// on the base view and the Shift view: Garo's raised dot, Kui's overline,
-/// the apostrophe Maay, Nyamwezi, Zeelandic, Igala and Veluws write inside
-/// their words, and Urum's ʼ.
+/// the apostrophe Maay, Nyamwezi, Zeelandic, Igala, Veluws, Masaaba,
+/// Turkana, Bukusu and Malawi Lomwe write inside their words, and Urum's ʼ.
 #[test]
 fn keys_at_the_home_rows_end_type_their_letters() {
     for (id, letter) in [
@@ -278,6 +280,10 @@ fn keys_at_the_home_rows_end_type_their_letters() {
         ("igl", "'"),
         ("vel", "'"),
         ("uum", "ʼ"),
+        ("myx", "'"),
+        ("tuv", "'"),
+        ("bxk", "'"),
+        ("lon", "'"),
     ] {
         let def = load(id);
         for view in [ViewId::Base, ViewId::Shift] {

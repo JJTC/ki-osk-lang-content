@@ -63,7 +63,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  cdo hif egl abr cu \
                  tdx hvn ktu quy \
                  zea \
-                 btm gpe igl rki vel
+                 btm gpe igl rki vel \
+                 myx tuv
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -220,6 +221,16 @@ FINEWEB_DIR = $(SRC_DIR)/fineweb
 MADLAD_LANGS ?= gbm raj kri tdx hvn ktu quy
 MADLAD_DIR = $(SRC_DIR)/madlad
 
+# The African Storybook's stories (scripts/fetch-storybooks.sh, the
+# asp-raw-db repository's archive at one commit pinned by sha256; each
+# story CC BY 3.0 or 4.0, the CC BY-NC ones left out), the whole corpus of
+# languages that no web text or wiki has: Masaaba and Turkana (20 000 and
+# 23 000 words). scripts/storybook-text.py leaves out the pages another
+# language's and holds out every 10th story, in $(STORYBOOK_DIR)/eval;
+# nothing of it is committed.
+STORYBOOK_LANGS ?= myx tuv
+STORYBOOK_DIR = $(SRC_DIR)/storybooks
+
 # GlotCC's web text (scripts/fetch-glotcc.sh, its files at one revision
 # pinned by sha256; its packaging CC0 1.0, its text under Common Crawl's
 # Terms of Use), for languages whose wiki is mostly a bot's stubs: Newari,
@@ -356,7 +367,9 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # Ayacucho Quechua. And Batak Mandailing, Igala and Veluws from their
 # wikis, which keep all their 21 000 to 37 000 kinds of word, Arakanese's
 # syllables, and Ghanaian Pidgin's, 80 000 of its 113 000 kinds (98.7% of
-# its words written; the rest its articles' names, most of them).
+# its words written; the rest its articles' names, most of them). And
+# Masaaba and Turkana from the African Storybook's stories, which keep all
+# their kinds of word.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -384,7 +397,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        cnr \
                        cdo hif egl zea \
                        tdx hvn ktu quy \
-                       btm gpe igl rki vel
+                       btm gpe igl rki vel \
+                       myx tuv
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -498,6 +512,8 @@ help:
 	@echo "  fetch-fineweb    FineWeb-2's web text, for FINEWEB_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  fetch-madlad     MADLAD-400's web text, for MADLAD_LANGS, into SRC_DIR"
+	@echo "  fetch-storybooks  the African Storybook's stories, for STORYBOOK_LANGS,"
+	@echo "                   into SRC_DIR"
 	@echo "  fetch-glotcc     GlotCC's web text, for GLOTCC_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
@@ -546,7 +562,7 @@ help:
 # only what the lock says is out of date, then refuses a result that
 # lost a file or shrank one.
 .PHONY: refresh
-refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad fetch-glotcc fetch-cmudict
+refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad fetch-storybooks fetch-glotcc fetch-cmudict
 	$(MAKE) predict-assets hinglish-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) english-assets ONLY_STALE=1
 	$(MAKE) check
@@ -587,6 +603,10 @@ fetch-cmudict:
 .PHONY: fetch-madlad
 fetch-madlad:
 	OUT=$(MADLAD_DIR) ./scripts/fetch-madlad.sh $(MADLAD_LANGS)
+
+.PHONY: fetch-storybooks
+fetch-storybooks:
+	OUT=$(STORYBOOK_DIR) ./scripts/fetch-storybooks.sh $(STORYBOOK_LANGS)
 
 .PHONY: fetch-glotcc
 fetch-glotcc:
@@ -642,7 +662,7 @@ predict-assets:
 			*" $$lang "*) vocab=$(PREDICT_WIDER_VOCAB); ngram=$(PREDICT_WIDER_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
-		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(GLOTCC_LANGS) " in \
+		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(STORYBOOK_LANGS) $(GLOTCC_LANGS) " in \
 			*" $$lang "*) ;; \
 			*) tw=$(TATOEBA_WEIGHT); case " $(TATOEBA_LIGHT_LANGS) " in \
 				*" $$lang "*) tw=$(TATOEBA_LIGHT_WEIGHT) ;; \
@@ -677,6 +697,10 @@ predict-assets:
 		case " $(MADLAD_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(MADLAD_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input madlad/$$lang.txt=$(MADLAD_DIR)/$$lang.txt" ;; \
+		esac; \
+		case " $(STORYBOOK_LANGS) " in \
+			*" $$lang "*) corpus="$$corpus --corpus $(STORYBOOK_DIR)/$$lang.txt"; \
+			              corpus_in="$$corpus_in --input storybooks/$$lang.txt=$(STORYBOOK_DIR)/$$lang.txt" ;; \
 		esac; \
 		case " $(GLOTCC_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $$fw$(GLOTCC_DIR)/$$lang.txt"; \

@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**668 layouts**: 606 keyboard layouts (RTL: ar he fa + Urdu, Western
+**672 layouts**: 610 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 14 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 667 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **443 languages** carry a prediction
+keycaps. 671 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **445 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -235,6 +235,8 @@ but no model to match the glide against · `—` off
 | `hvn` | `hvn` | Hawu | us + long-press è, ꞌ key | LTR | **Full** (hvn)⁸ | ✓ | — |
 | `ktu` | `ktu` | Kituba | us | LTR | **Full** (ktu)⁸ | ✓ | — |
 | `quy` | `quy` | Ayacucho Quechua Runa Simi | Quechua's keys (ñ) + long-press á é | LTR | **Full** (quy)⁸ | ✓ | — |
+| `myx` | `myx` | Masaaba Lumasaaba | us + long-press ŋ, ' key | LTR | **Full** (myx)¹³ | ✓ | — |
+| `tuv` | `tuv` | Turkana Ng’aturkana | us, ' key | LTR | **Full** (tuv)¹³ | ✓ | — |
 | `kbp` | `kbp` | Kabiye Kabɩyɛ | us + long-press ɛ ɩ ɔ ʊ ɖ ɣ ŋ ñ, ɛ ɩ keys, ʊ ɔ on q x | LTR | **Full** (kbp)⁷ | ✓ | — |
 | `dag` | `dag` | Dagbani Dagbanli | us + long-press ɛ ɔ ŋ ɣ ʒ | LTR | **Full** (dag)⁷ | ✓ | — |
 | `seh` | `seh` | Sena Cisena | us | LTR | **Full** (seh)⁷ | ✓ | — |
@@ -553,6 +555,8 @@ but no model to match the glide against · `—` off
 | `vas-gujr` | `vas` | Vasavi વસાવી (Gujarati script) | in · guj, Gujarati's keys | LTR | —¹² | — | — |
 | `gjk` | `gjk` | Kachi Koli કચ્છી કોળી (Gujarati script) | in · guj, Gujarati's keys | LTR | —¹² | — | — |
 | `uum` | `uum` | Urum Урум | ru + long-press ӧ ӱ ґ, ʼ key | LTR | —¹² | — | — |
+| `bxk` | `bxk` | Bukusu Lubukusu | us, ' key | LTR | —¹³ | — | — |
+| `lon` | `lon` | Malawi Lomwe Ellomwe | us, ' key | LTR | —¹³ | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -2335,10 +2339,44 @@ but no model to match the glide against · `—` off
    वऱ्हाडी, वासवी and વસાવી, કચ્છી કોળી, Урум). None has a model:
    neither suggestions nor glides.
 
+13. These two models learn from the African Storybook's stories
+   (africanstorybook.org, an initiative of Saide: picture books for
+   children written and translated by teachers and writers across
+   Africa), as the Global African Storybook Project's asp-raw-db keeps
+   them (`scripts/fetch-storybooks.sh`, its archive at one commit pinned
+   by sha256): Masaaba's and Turkana's, which no wiki or web text here
+   has. Only the stories under CC BY 3.0 or 4.0 are read, 90 of
+   Masaaba's 102 and 151 of Turkana's 175, each one's author and
+   illustrator named in its file there (NOTICES.md). A page is left out
+   where English's or Swahili's own words are two of its words and 3%
+   or more (18 and 16 pages: one Masaaba story holds a Swahili story's
+   pages and an English one's), an apostrophe inside a word written ’
+   is read as the ' its keyboard types, and every 10th story is held
+   out (`scripts/storybook-text.py`): 2 079 and 3 054 sentences, 20 000
+   and 23 000 words, all of whose 6 700 and 5 700 kinds of word the
+   lexicons keep. Keystroke savings on the held-out stories (1 400 and
+   2 400 words), with taps astray and the words unknown: Turkana 33.0%,
+   19.5%, 23.7%; Masaaba 27.2%, 10.2%, 36.0%, so little text leaving a
+   third of its words unknown. Of Turkana's words typed right,
+   autocorrect changed 1.2%, most of them by putting back the apostrophe
+   a held-out story left out (ngesi, ngina for ng'esi, ng'ina). Turkana
+   writes an apostrophe in a sixth of its words (ng'esi, ng'olo) and
+   Masaaba in one word in a hundred and twenty (n'aaba, s'unyala): both
+   are typed on the US keys with a key for it at the home row's end,
+   Masaaba with ŋ on n's long press, which a few of its stories write
+   (liŋaasa). And two keyboards of languages too little of whose text is
+   CC BY to learn from take their letters from their stories there:
+   Bukusu's (11 stories, 1 700 words) and Malawi Lomwe's (19, 3 200),
+   on the US keys as they are, with an apostrophe key at the home row's
+   end for the ng' they write (Bukusu's chiisang'i, in one word in
+   forty; Malawi Lomwe's eng'ombe, fewer). These four are named as the
+   stories write their names: Lumasaaba, Ng’aturkana, Lubukusu,
+   Ellomwe.
+
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **443 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **445 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2370,10 +2408,10 @@ but no model to match the glide against · `—` off
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
   sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn** and Northwestern Ojibwe **ojb**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
-  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8). Built by
+  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 162 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 164 layouts, Montenegrin's in
   Cyrillic, the fifty-seven whose letters are CLDR's exemplar characters
   (note 9: thirty-two in Latin letters, twenty-five in the Arabic script,
   Devanagari and Bengali), the nineteen from Keyman's (note 10: thirteen
@@ -2389,8 +2427,10 @@ but no model to match the glide against · `—` off
   Universal Declaration of Human Rights, Maay to Northern Qiandong Miao,
   six Wiktionary's entries, Garo's two to Kui, three their test
   wikis, Central Malay, Komering and Kutai Malay, and eight whose script
-  LinguaMeta names, Godwari to Urum), Vai's and Nuosu's, whose composers
-  read their tables alone (note 11), and Cherokee, whose
+  LinguaMeta names, Godwari to Urum), the two whose letters the African
+  Storybook's stories give, Bukusu and Malawi Lomwe (note 13), Vai's and
+  Nuosu's, whose composers read their tables alone (note 11), and
+  Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
   its wiki's and its New Testament), and Nahuatl, whose is colonial
   documents, its wiki and its varieties' Bibles, each spelled its own
@@ -2637,6 +2677,7 @@ syllables:
 | `igl` Igala | ọ ẹ first on the long presses of o and e, the tones its writers mark after them (ó ò ọ́ ọ̀, é è ẹ́ ẹ̀) and on i a u (í ì î, á à, ú ù), ñ ń on n, and an apostrophe key at the home row's end (on the US keys; note 6) | `igl` |
 | `vel` Veluws | ö first on Dutch's long press of o, ä å on a's, ü on u's, and an apostrophe key at the home row's end (note 6) | `vel` |
 | `uum` Urum | on Russian's keys: ӧ ӱ ґ on the long presses of о у г, and a key at the home row's end for the ʼ it writes where Russian writes ь (note 12) | `uum` |
+| `myx` `tuv` `bxk` `lon` | an apostrophe, a key of its own at the home row's end, for the ng' and elisions they write (Turkana's ng'esi, in a sixth of its words; Bukusu's chiisang'i; Malawi Lomwe's eng'ombe; Masaaba's n'aaba), and Masaaba's ŋ on n's long press (on the US keys; note 13) | each its own |
 | `cu` Church Slavonic | on Russian's keys: є ѣ ꙑ ꙁ ꙗ in place of е э ы з я, which are on their long presses; ѥ and its accent marks (́, then ҃ ҄ ҆ ̀ ̑ on its long press) keys of their own at the home row's end; ѧ ѩ on ꙗ, ѫ ꙋ ѹ on у, ѭ on ю, ѡ ѻ ѿ on о, ї і ѵ ѷ on и, ѳ ѯ ѱ on ф к п, ѕ ꙃ on ꙁ | `cu` |
 | `ctg` `niq` `max` `cyo` `mog` `mqy` `bug` `meo` | Chittagonian's ৱ ৰ on ব র (on Bengali's keys); Nandi's ñ ā ē ĩ ō, North Moluccan Malay's accented vowels, Cuyonon's ñ, Mongondow's ḷ ḻ, Manggarai's and Buginese's é and Kedah Malay's å first on the long presses (on the US and Malay's keys; note 12) | each its own |
 | `niq` `mog` `mqy` | an apostrophe, a key of its own at the home row's end: Nandi's ' (para'ab), Mongondow's glottal stop ' (lopi'), Manggarai's ’ (Pu’ung) | each its own |

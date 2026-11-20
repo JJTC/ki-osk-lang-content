@@ -692,6 +692,10 @@ DERIVED = [
     ("vas-Gujr", "gu", "વસાવી", {}, {"model": False}),
     ("gjk", "gu", "કચ્છી કોળી", {}, {"model": False}),
     ("uum", "ru", "Урум", with_capitals({"о": ["ӧ"], "у": ["ӱ"], "г": ["ґ"]}), {"home": "ʼ", "model": False}),
+    ("myx", "us", "Lumasaaba", with_capitals({"n": ["ŋ"]}), {"home": "'"}),
+    ("tuv", "us", "Ng’aturkana", {}, {"home": "'"}),
+    ("bxk", "us", "Lubukusu", {}, {"home": "'", "model": False}),
+    ("lon", "us", "Ellomwe", {}, {"home": "'", "model": False}),
 ]
 
 

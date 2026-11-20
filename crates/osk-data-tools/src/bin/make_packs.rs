@@ -31,8 +31,9 @@
 //! `sources.lock` records them: Tatoeba's (`corpora/<lang>.txt`), the
 //! Dakshina dataset's Wikipedia text (`dakshina/<lang>.txt`), the wikis'
 //! own (`wikipedia/<lang>.txt`), FineWeb-2's web text (`fineweb/<lang>.txt`),
-//! MADLAD-400's (`madlad/<lang>.txt`), GlotCC's (`glotcc/<lang>.txt`),
-//! with their licences.
+//! MADLAD-400's (`madlad/<lang>.txt`), the African Storybook's stories
+//! (`storybooks/<lang>.txt`), GlotCC's (`glotcc/<lang>.txt`), with their
+//! licences.
 //!
 //! It refuses rather than guesses:
 //! - a committed data file that no pack claims, or that two packs claim;
@@ -185,6 +186,9 @@ struct Prediction {
     /// MADLAD-400's web text: the licence and source of the models built
     /// from it.
     madlad: Added,
+    /// The African Storybook's stories: the licence and source of the
+    /// models built from them.
+    storybooks: Added,
     /// GlotCC's web text: the licence and source of the models built from
     /// it.
     glotcc: Added,
@@ -327,6 +331,7 @@ fn main() -> anyhow::Result<()> {
             ("wikipedia", &p.wikipedia.license, &p.wikipedia.source),
             ("fineweb", &p.fineweb.license, &p.fineweb.source),
             ("madlad", &p.madlad.license, &p.madlad.source),
+            ("storybooks", &p.storybooks.license, &p.storybooks.source),
             ("glotcc", &p.glotcc.license, &p.glotcc.source),
         ] {
             let sha = recorded(&entry, &format!("{dir}/{lang}.txt"))
@@ -342,7 +347,7 @@ fn main() -> anyhow::Result<()> {
         }
         ensure!(
             !sources.is_empty(),
-            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/, fineweb/, madlad/ or glotcc/, {lang}.txt or {primary}.txt)"
+            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/, fineweb/, madlad/, storybooks/ or glotcc/, {lang}.txt or {primary}.txt)"
         );
         // Dialect flags and word lists carry their own sources' licences
         // into the pack.
