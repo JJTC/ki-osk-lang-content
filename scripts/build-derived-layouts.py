@@ -168,7 +168,11 @@ writing systems name (Bhili, Kumaoni, Kurukh, Mewari, Nimadi,
 Shekhawati, Wagdi, Mundari; Bundeli, Dhundhari, Korku, Malvi, Merwari,
 Mahasu Pahari, Halbi) on Hindi's, Lambadi on Telugu's, Southern Thai on
 Thai's, Dakhini on Urdu's, and Bishnupriya Manipuri on Bengali's with
-ৱ on ব. A key at the home row's end types its
+ৱ on ব. MADLAD-400's four, with their models: Tandroy-Mahafaly Malagasy
+on Malagasy's keys with à è é ò ì ỳ first on the long presses, Hawu on
+the US keys with è first on e and its saltillo ꞌ at the home row's end,
+Kituba on them as they are, and Ayacucho Quechua on Quechua's with á é
+first. A key at the home row's end types its
 capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
@@ -623,6 +627,10 @@ DERIVED = [
     ("bfz", "hi", "Mahasu Pahari", {}, {"model": False}),
     ("hlb", "hi", "Halbi", {}, {"model": False}),
     ("ca-valencia", "ca", "Valencià", {}, {"model": False}),
+    ("tdx", "mg", "Tandroy", with_capitals({"a": ["à"], "e": ["è", "é"], "o": ["ò"], "i": ["ì"], "y": ["ỳ"]})),
+    ("hvn", "us", "Hawu", with_capitals({"e": ["è"]}), {"home": "\ua78c"}),
+    ("ktu", "us", "Kituba", {}),
+    ("quy", "qu", "Runa Simi (Ayacucho)", with_capitals({"a": ["á"], "e": ["é"]})),
 ]
 
 

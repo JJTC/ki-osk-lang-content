@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # fetch-madlad.sh — web text of languages neither Wikipedia nor FineWeb-2
 # has enough of, from MADLAD-400 (the Makefile's MADLAD_LANGS): Garhwali
-# and Rajasthani, and Krio, which FineWeb-2 has none of.
+# and Rajasthani, and Krio, Tandroy-Mahafaly Malagasy, Hawu, Kituba and
+# Ayacucho Quechua, which FineWeb-2 has none of (the last four's mostly
+# their Bibles and Jehovah's Witnesses' pages).
 #
 # MADLAD-400 (Google, at Hugging Face as allenai/MADLAD-400) is Common
 # Crawl's text sorted by language and audited by hand; its card releases
@@ -36,6 +38,14 @@ raj  raj/raj_clean_0000.jsonl.gz  4fe8eec12497caabb7bdfa55fa0561c90ed6f2a6215588
 raj  raj/raj_noisy_0000.jsonl.gz  7128d2555a00acb7f003efed15de90b12ded0afcf8ae4b0affa7a45c7d8464bc
 kri  kri/kri_clean_0000.jsonl.gz  d43f4956831b87d7b321e834baa781e61082367cd0c69e3641631c9a409a8f6a
 kri  kri/kri_noisy_0000.jsonl.gz  b5d08191ceb2cf066d742f89e43ca7ea3ce99c7fc2944888659c8abc96dee97f
+tdx  tdx/tdx_clean_0000.jsonl.gz  6e7fb8e756a56c3a1b78704dacad679cc0aca3b6213a975bd2b6438b28cb9332
+tdx  tdx/tdx_noisy_0000.jsonl.gz  d16de4aecdecda2d3bb4e5b36e25b36edb16e755b9476e1b7062d82ce5cc4c04
+hvn  hvn/hvn_clean_0000.jsonl.gz  f712e84c18f482f60573ed1fb801b1f7f199abb0d97c88e41774c901cf28dc7c
+hvn  hvn/hvn_noisy_0000.jsonl.gz  46b8652f70ef3e080eaf7eee743744c85a30a71c27b87234be5785586e5aec45
+ktu  ktu/ktu_clean_0000.jsonl.gz  d3a5b2b4f0c54211708d75a716613bf041d4d1008b2c3483b570ab0fdcf4c88b
+ktu  ktu/ktu_noisy_0000.jsonl.gz  9912a21db01cdbaea72ab1f26a6f96e27dd1aff043a5b5d60b3c9b69e9038786
+quy  quy/quy_clean_0000.jsonl.gz  1d76304123b1a0014d2df1dcc2571cfd476601c327950d0ee785bdb08945ac57
+quy  quy/quy_noisy_0000.jsonl.gz  aff55ff1a543b2b8b544ab6e0e619f405062a0cf551bc225b89c9432151223bf
 "
 
 OUT=${OUT:-${TMPDIR:-/tmp}/ki-osk-sources/madlad}

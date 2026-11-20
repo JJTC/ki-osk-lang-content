@@ -642,6 +642,22 @@ FULA_FOLD = str.maketrans("åÅðÐňŇ", "ɓƁɗƊñÑ")
 KRIO = set("dɛn fɔ wetin gɛt bɔt nɔ ɛn pipul mɔ dɔn tɛl lɛ fɔs sɛf ɛvri bɛtɛ".split())
 KRIOL = set("langa blanga detlot garra olabat melabat imbin deibin yumob mela gudbala".split())
 KRIO_FOLD = str.maketrans("εΕכ", "ɛƐɔ")
+# MADLAD-400's Tandroy-Mahafaly Malagasy, Hawu, Kituba and Ayacucho
+# Quechua: their Bibles and Jehovah's Witnesses' pages, and in their noisy
+# files as much spam and English. A document is kept where its own words
+# are a share of its words: Tandroy's ty amy zay laha lafa (standard
+# Malagasy's ny amin'ny izay raha rehefa), Hawu's do nga ri ddau dhara,
+# Kituba's yandi mono yina mpi sambu (Lingala's ezali mpe oyo bato kasi),
+# Ayacucho Quechua's mana chay hinaspa nispa (with no ejective, which it
+# does not write). Hawu's glottal stop is the saltillo ꞌ (U+A78C), which
+# its Bible writes; an apostrophe written between letters is read as it.
+TANDROY = set("ty amy tamy zay laha lafa olo avao baka iaby".split())
+MALAGASY_STANDARD = set("ny amin'ny tamin'ny izay raha rehefa olona avy rehetra ireo".split())
+HAWU = set("do nga ri ddau dhara jhe dhèu harre dènge lii lua".split())
+KITUBA = set("yandi mono yina mpi sambu beno nde vandaka ikele kele bantu ntangu yonso kansi".split())
+LINGALA = set("ezali mpe oyo bato kasi lokola elongo nyonso".split())
+AYACUCHO = set("mana chay hinaspa nispa manam allin nirqa ichaqa kay tukuy chaymi hina huk kaq".split())
+SALTILLO = re.compile(r"(?<=\w)['’](?=\w)")
 # Tibetan and Dzongkha: a syllable, the run of letters and marks between
 # its tsheg and the one before (what the own and rival words are counted
 # in); Dzongkha's own words that Tibetan writes otherwise (its plural ཚུ,
@@ -1130,6 +1146,10 @@ def fula(text):
     return text.translate(FULA_FOLD)
 
 
+def hawu(text):
+    return SALTILLO.sub("\uA78C", text)
+
+
 def krio(text):
     return text.translate(KRIO_FOLD)
 
@@ -1495,6 +1515,15 @@ LANGS = {
     "kri": {"script": "LATIN", "neighbour": set(), "own": KRIO, "rival": KRIOL, "own_least": 0.03,
             "sentence_rival": ENGLISH_ONLY, "sentence_never": {"src", "trg"}, "normalize": krio,
             "brackets": True, "hold": 10},
+    "tdx": {"script": "LATIN", "neighbour": set(), "own": TANDROY, "rival": MALAGASY_STANDARD, "own_least": 0.05,
+            "sentence_rival": ENGLISH_ONLY | FRENCH_ONLY, "brackets": True},
+    "hvn": {"script": "LATIN", "neighbour": set(), "own": HAWU, "rival": INDONESIAN_ONLY, "own_least": 0.05,
+            "sentence_rival": ENGLISH_ONLY | INDONESIAN_ONLY, "normalize": hawu, "brackets": True,
+            "hold": 10},
+    "ktu": {"script": "LATIN", "neighbour": set(), "own": KITUBA, "rival": LINGALA | FRENCH_ONLY, "own_least": 0.05,
+            "sentence_rival": ENGLISH_ONLY | FRENCH_ONLY, "brackets": True},
+    "quy": {"script": "LATIN", "neighbour": set(), "own": AYACUCHO, "rival": set(), "own_least": 0.03,
+            "sentence_rival": ENGLISH_ONLY | SPANISH_SET, "brackets": True},
     "cor": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,
             "letters_never": set("|"), "brackets": True},
     "glv": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY,

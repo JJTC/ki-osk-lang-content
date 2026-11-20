@@ -171,6 +171,7 @@ hrx = "Hunsrik"
 hsb = "Upper Sorbian"
 ht  = "Haitian Creole"
 hu  = "Hungarian"
+hvn = "Hawu"
 hwc = "Hawaiian Pidgin"
 hy  = "Armenian"
 ia  = "Interlingua"
@@ -225,6 +226,7 @@ krl = "Karelian"
 ks  = "Kashmiri"
 ksh = "Kölsch"
 ksw = "Sgaw Karen"
+ktu = "Kituba"
 ku  = "Kurdish (Kurmanji)"
 kum = "Kumyk"
 kwy = "Koongo"
@@ -333,6 +335,7 @@ pnb = "Western Punjabi (Shahmukhi)"
 pnt = "Pontic Greek"
 ps  = "Pashto"
 quh = "South Bolivian Quechua"
+quy = "Ayacucho Quechua"
 raj = "Rajasthani (Marwari)"
 pt  = "Portuguese"
 qu  = "Quechua"
@@ -393,6 +396,7 @@ szl = "Silesian"
 ta  = "Tamil"
 tab = "Tabasaran"
 tcy = "Tulu"
+tdx = "Tandroy-Mahafaly Malagasy"
 te  = "Telugu"
 teo = "Teso"
 tet = "Tetum"
@@ -598,7 +602,8 @@ source  = { name = "FineWeb-2 (Hugging Face): web text from Common Crawl, revisi
 # MADLAD-400's web text (scripts/fetch-madlad.sh: its files at one
 # revision, pinned by sha256; scripts/fineweb-text.py keeps the documents
 # that read as their language): the whole corpus of Garhwali and
-# Rajasthani. Its card releases it under CC BY 4.0 (its metadata says
+# Rajasthani, Krio, Tandroy-Mahafaly Malagasy, Hawu, Kituba and Ayacucho
+# Quechua. Its card releases it under CC BY 4.0 (its metadata says
 # ODC-By); either asks that what is made from it say so.
 [prediction.madlad]
 license = { name = "CC BY 4.0 (MADLAD-400)", url = "https://creativecommons.org/licenses/by/4.0/", share_alike = false }
@@ -903,6 +908,7 @@ hrx     = ["hrx"]
 hsb     = ["hsb"]
 ht      = ["ht"]
 hu      = ["hu"]
+hvn     = ["hvn"]
 hwc     = ["hwc"]
 hy      = ["hy", "hy-abc"]
 ia      = ["ia"]
@@ -973,6 +979,7 @@ ks      = ["ks", "ks-abc"]
 ksh     = ["ksh"]
 ksw     = ["ksw"]
 ktb     = ["ktb"]
+ktu     = ["ktu"]
 ku      = ["ku"]
 kum     = ["kum"]
 kvx     = ["kvx"]
@@ -1124,6 +1131,7 @@ ps      = ["ps", "ps-abc"]
 psi     = ["psi"]
 pt      = ["pt-br", "pt"]
 quh     = ["quh"]
+quy     = ["quy"]
 qxq     = ["qxq"]
 raj     = ["raj", "raj-abc"]
 qu      = ["qu"]
@@ -1202,6 +1210,7 @@ taj     = ["taj"]
 tbw     = ["tbw"]
 tcy     = ["tcy", "tcy-abc"]
 tdd     = ["tdd"]
+tdx     = ["tdx"]
 te      = ["te", "te-abc"]
 tem     = ["tem"]
 teo     = ["teo"]

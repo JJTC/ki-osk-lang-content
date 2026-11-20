@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**634 layouts**: 572 keyboard layouts (RTL: ar he fa + Urdu, Western
+**638 layouts**: 576 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 14 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 633 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **433 languages** carry a prediction
+keycaps. 637 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **437 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -231,6 +231,10 @@ but no model to match the glide against · `—` off
 | `ch` | `ch` | Chamorro Finuʼ Chamoru | us + long-press å ñ | LTR | **Full** (ch)⁷ | ✓ | — |
 | `jam` | `jam` | Jamaican Patois Patwa | us | LTR | **Full** (jam)⁷ | ✓ | — |
 | `kri` | `kri` | Krio | us + long-press ɛ ɔ ŋ | LTR | **Full** (kri)⁸ | ✓ | — |
+| `tdx` | `tdx` | Tandroy-Mahafaly Malagasy | mg + long-press à è é ò ì ỳ | LTR | **Full** (tdx)⁸ | ✓ | — |
+| `hvn` | `hvn` | Hawu | us + long-press è, ꞌ key | LTR | **Full** (hvn)⁸ | ✓ | — |
+| `ktu` | `ktu` | Kituba | us | LTR | **Full** (ktu)⁸ | ✓ | — |
+| `quy` | `quy` | Ayacucho Quechua Runa Simi | Quechua's keys (ñ) + long-press á é | LTR | **Full** (quy)⁸ | ✓ | — |
 | `kbp` | `kbp` | Kabiye Kabɩyɛ | us + long-press ɛ ɩ ɔ ʊ ɖ ɣ ŋ ñ, ɛ ɩ keys, ʊ ɔ on q x | LTR | **Full** (kbp)⁷ | ✓ | — |
 | `dag` | `dag` | Dagbani Dagbanli | us + long-press ɛ ɔ ŋ ɣ ʒ | LTR | **Full** (dag)⁷ | ✓ | — |
 | `seh` | `seh` | Sena Cisena | us | LTR | **Full** (seh)⁷ | ✓ | — |
@@ -1917,7 +1921,7 @@ but no model to match the glide against · `—` off
    the 76 sentences of its four test documents (1 806 words, 15.8% of
    them unknown). MADLAD-400's Kokborok is not used: it is mostly Thai
    dating and download spam, and Garo news.
-8. These three models learn from web text, MADLAD-400's (Google; CC BY 4.0
+8. These seven models learn from web text, MADLAD-400's (Google; CC BY 4.0
    by its card, whose metadata says ODC-By; subject to Common Crawl's
    Terms of Use; `scripts/fetch-madlad.sh`, its files at one revision
    pinned by sha256): Garhwali and Rajasthani, which neither Wikipedia nor
@@ -1947,6 +1951,34 @@ but no model to match the glide against · `—` off
    Keystroke savings on the held-out documents (9 300 words): 57.2%, 56.0%
    with taps astray, 0.6% of their words unknown, the text much like what
    it read.
+   Tandroy-Mahafaly Malagasy's, Hawu's, Kituba's and Ayacucho Quechua's
+   are MADLAD-400's too, mostly their Bibles and the Jehovah's Witnesses'
+   pages, and in their noisy files as much spam and English: a document
+   is kept where its own words are 5% of its words (Ayacucho Quechua's
+   3%) and more than its rival's, Tandroy's ty amy zay laha lafa against
+   standard Malagasy's ny amin'ny izay raha rehefa, Hawu's do nga ri
+   ddau dhara against Indonesian's, Kituba's yandi mono yina mpi sambu
+   against Lingala's (ezali mpe oyo) and French's, and Ayacucho
+   Quechua's mana chay hinaspa nispa (its text writes no ejective, as
+   Cusco's would); Hawu's apostrophe between letters is read as the
+   saltillo ꞌ its Bible writes. Kept: Tandroy 834 of 1 950 documents
+   (23 417 sentences, 327 000 words), Hawu 405 of 937 (10 675, 245 000,
+   every 10th held out), Kituba 2 325 of 3 467 (102 802, 2.4 million),
+   Ayacucho Quechua 586 of 666 (31 324, 332 000). Keystroke savings on
+   the held-out documents, with taps astray and the words unknown:
+   Kituba 60.8%, 60.0%, 0.3%; Hawu 57.3%, 55.5%, 1.5%; Tandroy 52.8%,
+   49.6%, 2.6%; Ayacucho Quechua 42.3%, 35.1%, 9.0%; flattered, as
+   Krio's are, by a Bible's held-out chapters being much like the ones
+   it read. Tandroy is typed on Malagasy's keys with à è é ò ì ỳ first on
+   the long presses, Hawu on the US keys with è first on e and a key for
+   its saltillo at the home row's end, Kituba on them as they are, and
+   Ayacucho Quechua on Quechua's, with á é first on the long presses.
+   MADLAD-400's Hmong is White Hmong in the RPA's letters (lawv, Hmoob),
+   much of it machine-translated pages: Gboard's Hmong beside its Hmong
+   Daw is the language the Hmong Daw pack (note 7) types and predicts.
+   Its Eastern Balochi is Roman Urdu, its Sabah Malay Peninsular Malay's
+   blogs, its Nung Vietnamese spam and its Takestani Persian: none is
+   used.
 
 9. Thirty keyboards of languages no text here predicts take their
    letters from CLDR's exemplar characters (Unicode License v3; release
@@ -2164,7 +2196,7 @@ but no model to match the glide against · `—` off
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **433 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **437 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2196,7 +2228,7 @@ but no model to match the glide against · `—` off
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
   sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn** and Northwestern Ojibwe **ojb**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
-  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri** (MADLAD-400's; note 8). Built by
+  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet: 138 layouts, Montenegrin's in
@@ -2457,6 +2489,7 @@ syllables:
 | `niq` `mog` `mqy` | an apostrophe, a key of its own at the home row's end: Nandi's ' (para'ab), Mongondow's glottal stop ' (lopi'), Manggarai's ’ (Pu’ung) | each its own |
 | `prs` Dari | the Pashto letters CLDR's Dari lists, ټ on ت, ځ څ on ح, ډ on د, ړ ږ on ر, ښ on س, ګ on گ, ڼ on ن, and ى after ئ ي on ی (on Persian's keys; note 12) | `prs` |
 | `bpy` Bishnupriya Manipuri | ৱ on ব (on Bengali's keys; note 12) | `bpy` |
+| `tdx` `hvn` `quy` | Tandroy-Mahafaly Malagasy's à è é ò ì ỳ (on Malagasy's keys), Hawu's è (on the US keys) and Ayacucho Quechua's á é (on Quechua's) first on the long presses; Hawu's saltillo ꞌ, its glottal stop, a key of its own at the home row's end (note 8) | each its own |
 | `vai` Vai | its letters Keyman's capitals type, which its composer reads (note 11): ɛ in q's place, ɔ at the home row's end, the nasal ~ in Shift's; ŋ þ ð ʒ on the long presses of n t d j, the lengthener ꘌ on x's; Vai's comma, full stop and question mark on those of , . ? | `vai` |
 | `cnr` `cnr-cyrl` Montenegrin | ś ź on the long presses of s z (on Serbian's Latin keys), с́ з́ on с з (on its Cyrillic ones) | `cnr` |
 | `aa` `bew` `bom` `cbk` `cgg` `cho` `dje` `dzg` `fan` `gqr` `igb` `jbo` `las` `led` `lkt` `mkw` `mnb` `mua` `mvp` `nup` `nv` `pmy` `pov` `sba` `sef` `snk` `srr` `tbw` `tem` `xog` `fub-latn` `bcq-latn` | their letters CLDR's exemplar characters, first on the long presses of the letters they are made from (note 9); a glottal stop written as a letter, and an apostrophe their words write, keys of their own at the home row's end; keys for the letters their words write most of those: Navajo's ʼ í at the home row's end and á é on q x, Lakota's ŋ á and č é, Temne's ɔ ŋ and ə ɛ, Gor's ɨ and apostrophe and ə ɔ, Ngambay's ə and apostrophe and é ɔ, Mundang's ǝ and apostrophe | each its own |

@@ -220,6 +220,9 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("cu", "єѣꙑѥꙁꙗѧѫѩїіѡ\u{301}\u{483}"),
         ("prs", "ټځڅډړږښګڼ"),
         ("bpy", "ৱ"),
+        ("tdx", "àèòìỳ"),
+        ("hvn", "èꞌ"),
+        ("quy", "áé"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {

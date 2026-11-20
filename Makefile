@@ -60,7 +60,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  cnr \
                  bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn \
                  rkt \
-                 cdo hif egl abr cu
+                 cdo hif egl abr cu \
+                 tdx hvn ktu quy
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -200,10 +201,13 @@ FINEWEB_DIR = $(SRC_DIR)/fineweb
 # MADLAD-400's web text (scripts/fetch-madlad.sh, its files at one revision
 # pinned by sha256; CC BY 4.0 by its card, subject to Common Crawl's Terms
 # of Use), the whole corpus of languages neither Wikipedia nor FineWeb-2
-# has: Garhwali, Rajasthani and Krio. scripts/fineweb-text.py keeps the
-# documents that read as their language and holds out every 20th (Krio's
-# every 10th), in $(MADLAD_DIR)/eval; nothing of it is committed.
-MADLAD_LANGS ?= gbm raj kri
+# has: Garhwali, Rajasthani and Krio, and Tandroy-Mahafaly Malagasy,
+# Hawu, Kituba and Ayacucho Quechua (their Bibles and Jehovah's
+# Witnesses' pages, a document kept where its own words are 3-5% of its
+# words). scripts/fineweb-text.py keeps the documents that read as their
+# language and holds out every 20th (Krio's and Hawu's every 10th), in
+# $(MADLAD_DIR)/eval; nothing of it is committed.
+MADLAD_LANGS ?= gbm raj kri tdx hvn ktu quy
 MADLAD_DIR = $(SRC_DIR)/madlad
 
 # GlotCC's web text (scripts/fetch-glotcc.sh, its files at one revision
@@ -337,7 +341,8 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # (900 000 words, 106 000 kinds), which is WIDE. And Eastern Min, Fiji
 # Hindi and Emilian, from their wikis (Eastern Min's syllables, as
 # Southern Min's; Fiji Hindi's 55 000 kinds; Emilian's 144 000, its
-# dialects each spelled their own way).
+# dialects each spelled their own way). And MADLAD-400's Tandroy-Mahafaly
+# Malagasy, Hawu, Kituba and Ayacucho Quechua.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -363,7 +368,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                        rmy rmn ojb \
                        cnr \
-                       cdo hif egl
+                       cdo hif egl \
+                       tdx hvn ktu quy
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings

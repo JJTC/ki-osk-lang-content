@@ -280,8 +280,9 @@ sources, with this licence, as ODC-By asks of what is made from it.
 
 ### MADLAD-400 (web text)
 
-Garhwali's, Rajasthani's and Krio's models learn from MADLAD-400's web
-text alone, which neither Wikipedia nor FineWeb-2 has of them: MADLAD-400
+Garhwali's, Rajasthani's, Krio's, Tandroy-Mahafaly Malagasy's, Hawu's,
+Kituba's and Ayacucho Quechua's models learn from MADLAD-400's web text
+alone, which neither Wikipedia nor FineWeb-2 has of them: MADLAD-400
 (Google; Kudugunta et al., "MADLAD-400: A Multilingual And
 Document-Level Large Audited Dataset", arXiv 2309.04662; at Hugging Face
 as `allenai/MADLAD-400`), text from Common Crawl sorted by language and
