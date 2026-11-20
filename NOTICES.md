@@ -1044,11 +1044,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-Five more layouts are **Keyman's keyboards** read at a later commit, the
+Six more layouts are **Keyman's keyboards** read at a later commit, the
 same way (`scripts/build-keyman-layouts.py`, their files pinned by
 sha256), each under the MIT licence it carries: the same text, each with
 its own copyright line. Northern Thai's is in Keyman's experimental
-keyboards, which its maintainers have not reviewed.
+keyboards, which its maintainers have not reviewed; the International
+Phonetic Alphabet's is laid out on the US keys, its long presses and
+symbol views Keyman's.
 
 | Layout | Keyman keyboard | Copyright | Source |
 |---|---|---|---|
@@ -1057,6 +1059,7 @@ keyboards, which its maintainers have not reviewed.
 | `layouts/hnd.json`, Southern Hindko's | rac_hindko 1.0.1 | Copyright (c) 2018-2026 Rehmat Aziz Chitrali | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/rac/rac_hindko |
 | `layouts/cld.json`, Chaldean Neo-Aramaic's | east_syriac_qwerty 2.0 | Copyright © 2025 Esho Marcus | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/e/east_syriac_qwerty |
 | `layouts/nod.json`, Northern Thai's | tai_lanna_thai 1.1 | Copyright © 2025-2026 Jayasiri Jayasāro Bhikkhu | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/experimental/t/tai_lanna_thai |
+| `layouts/und-fonipa.json`, the International Phonetic Alphabet's | sil_ipa 2.0.2 | Copyright (c) 2002-2025 SIL Global | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/sil/sil_ipa |
 
 ```text
 The MIT License (MIT)
@@ -1066,6 +1069,7 @@ Copyright © 2024-2026 SIL Global
 Copyright (c) 2018-2026 Rehmat Aziz Chitrali
 Copyright © 2025 Esho Marcus
 Copyright © 2025-2026 Jayasiri Jayasāro Bhikkhu
+Copyright (c) 2002-2025 SIL Global
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -858,6 +858,7 @@ fur     = ["fur"]
 fy      = ["fy"]
 ga      = ["ga"]
 gag     = ["gag"]
+gax     = ["gax"]
 gbo     = ["gbo"]
 gcr     = ["gcr"]
 gd      = ["gd"]
@@ -1244,6 +1245,7 @@ udm     = ["udm"]
 ug      = ["ug"]
 uk      = ["uk"]
 umb     = ["umb"]
+und-fonipa = ["und-fonipa"]
 unr     = ["unr"]
 ur      = ["ur", "ur-abc"]
 uz      = ["uz"]
@@ -1271,6 +1273,7 @@ xnr     = ["xnr"]
 xog     = ["xog"]
 xon     = ["xon"]
 xsr     = ["xsr"]
+yaf     = ["yaf"]
 yao     = ["yao"]
 yi      = ["yi", "yi-abc"]
 yo      = ["yo"]
@@ -1328,6 +1331,7 @@ drs = "Gedeo"
 dzg = "Dazaga"
 fan = "Fang"
 fub = "Adamawa Fulfulde"
+gax = "Southern Oromo"
 gez = "Ge'ez"
 gju = "Gujari"
 glk = "Gilaki"
@@ -1422,6 +1426,7 @@ ti  = "Tigrinya"
 trw = "Torwali"
 tts = "Isan"
 tyz = "Tày"
+und-fonipa = "International Phonetic Alphabet"
 unr = "Mundari"
 vai = "Vai"
 wbr = "Wagdi"
@@ -1429,6 +1434,7 @@ wry = "Merwari"
 xnr = "Kangri"
 xog = "Soga"
 xsr = "Sherpa"
+yaf = "Yaka"
 zyj = "Youjiang Zhuang"
 
 # The layouts made from another source than xkeyboard-config, and the
@@ -1436,7 +1442,8 @@ zyj = "Youjiang Zhuang"
 # sil_sgaw_karen, Northwestern Ojibwe's, from Keyman's fv_ojibwa, the
 # thirteen of a script of their own from Keyman's, Chakma's to Osage's,
 # and five more from Keyman's at a later commit, Gorani's to Northern
-# Thai's in Tai Tham (scripts/build-keyman-layouts.py), and Vai's and
+# Thai's in Tai Tham, and the IPA's, SIL's sil_ipa on the US keys
+# (scripts/build-keyman-layouts.py), and Vai's and
 # Nuosu's, the Latin letters Keyman's athinkra_vai and sil_yi type their
 # syllables with (scripts/build-keyman-composers.py); and the fifty-seven
 # whose letters are CLDR's exemplar characters
@@ -1603,6 +1610,14 @@ licenses = [
 ]
 sources = [
   { name = "Keyman's Tham Lanna keyboard (tai_lanna_thai 1.1, experimental), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/experimental/t/tai_lanna_thai" },
+]
+
+[layouts.added.und-fonipa]
+licenses = [
+  { name = "MIT (Keyman's sil_ipa, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/sil/sil_ipa/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's IPA (SIL) keyboard (sil_ipa), its touch layout", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/sil/sil_ipa" },
 ]
 
 [layouts.added.vai]

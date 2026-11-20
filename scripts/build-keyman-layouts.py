@@ -55,6 +55,22 @@ on for the layout (`long_press_letters`): on a kiosk, whose long-press
 menus are off by default, Ojibwe's long vowels could not be typed
 without it.
 
+The International Phonetic Alphabet's is SIL's sil_ipa (MIT), on the US
+keys (`und-fonipa`, as BCP 47 tags a phonetic transcription): its letters
+are the US keys' letters, so it is laid out on them, not as the scripts
+above are, and each letter's long press is Keyman's for that key (e's ɘ
+ə ɛ ɜ œ…; Shift's small capitals, E's ᴇ ɶ), then the modifier letters its
+super- and subscript layer has in that key's place (h's ʰ ʱ ᶣ…, the full
+stop's ⁻ ⁼ ⁽ ⁾). Its numeric layer is the first symbol view's keys (the
+digits, their super- and subscripts on their long presses, and ː ˈ ˌ ʼ ‿
+ꜝ ‖), and its diacritic layer the second's: its combining marks, each on
+a dotted circle (◌̃), and its tone letters and arrows (˧ ˩˥ ↗); the
+combining grapheme joiner, a key of its own there, is left out. Its
+letters of Unicode's Phonetic Extensions Supplement and Latin
+Extended-F (ᶒ ᵲ, 𐞥), which DejaVu Sans lacks, draw with Noto Sans
+(font_script latin). Every character its five layers type is on the
+layout.
+
 The views of symbols and the control row are the US template's, as
 scripts/build-layout.py's layouts' are; every key types text, so no
 keymap is needed (xkb_layout names the script's, Burmese's mm and
@@ -194,6 +210,11 @@ KEYBOARDS = [
         "source/tai_lanna_thai.kmn": "06241564b16f0fd214b37a4f12b235d8a11eee3d8f07ef436712b08e87e32590",
         "LICENSE.md": "6e391bf5b8db2d0a31e1b4227e4edb92dc314253389fd21ca7ab1dbfe8322d14",
     }),
+    ("und-fonipa", "IPA", "release/sil/sil_ipa", LATER, {
+        "source/sil_ipa.keyman-touch-layout": "b9087256bd9b15ca30fd0bfa67b43581fbaa657bb79eff432a439e5a86597dac",
+        "source/sil_ipa.kmn": "253bfea5744239588091420019a4227e843d3516dcbfc0c34d530e3b55563824",
+        "LICENSE.md": "a6e9a9027e5026335f4586239aaf55ec0eab98c2b63455e4a7441615f8b639d8",
+    }),
 ]
 
 # Each keyboard's touch platform, the keymap its control row types
@@ -201,7 +222,7 @@ KEYBOARDS = [
 PLATFORM = {"ksw": "phone", "ojb": "tablet", "ccp": "tablet", "rhg": "phone", "blt": "tablet", "kyu": "tablet",
             "lis": "tablet", "lep": "tablet", "kjg": "tablet", "saz": "phone", "bax": "phone", "cjm": "tablet",
             "tdd": "phone", "khb": "phone", "osa": "phone", "hac": "phone", "psi": "tablet", "hnd": "tablet",
-            "cld": "phone", "nod": "tablet"}
+            "cld": "phone", "nod": "tablet", "und-fonipa": "tablet"}
 XKB_LAYOUT = {"ksw": "mm", "ojb": "ca", "kjg": "la", "hac": "iq", "psi": "af", "hnd": "pk", "cld": "sy"}
 FONT_SCRIPT = {"ksw": "myanmar", "ojb": "canadian_aboriginal", "ccp": "chakma", "rhg": "hanifi_rohingya",
                "blt": "tai_viet", "kyu": "kayah_li", "lis": "lisu", "lep": "lepcha", "kjg": "lao",
@@ -213,6 +234,14 @@ RTL = {"rhg", "hac", "psi", "hnd", "cld"}
 # The layer a keyboard's Shift key turns to, where it is not `shift`:
 # East Syriac's vowel points and marks.
 SHIFT_LAYER = {"cld": "ES-diac"}
+
+# The keyboards whose letters are the US keys' (the IPA's), laid out on
+# them: the layer whose keys are the letters' long presses after their
+# own, in their places, and the layers that are the symbol views.
+ON_US = {"und-fonipa": {"long_press": "supersub", "symbol1": "numeric", "symbol2": "diacritic"}}
+# Keys an ON_US keyboard's layers have that type nothing to show: the
+# combining grapheme joiner.
+ON_US_LEFT_OUT = {"\u034f"}
 
 # The keyboards laid out as Keyman's rows and places are (see above): the
 # others, Sgaw Karen's and Ojibwe's, take their first three rows of keys
@@ -702,9 +731,119 @@ def everything_typed(lang, layers, rules):
     return out
 
 
+def code_points(kid):
+    """The text a key's id names (U_0251's ɑ, T_02e9_02e5's ˩˥), or None
+    (a K_ id's is its keymap's)."""
+    if kid[:2] in ("U_", "T_"):
+        parts = kid[2:].split("_")
+        if parts and all(re.fullmatch("[0-9A-Fa-f]{4,6}", p) for p in parts):
+            return "".join(chr(int(p, 16)) for p in parts)
+    return None
+
+
+def on_us_text(key):
+    """What an ON_US keyboard's key types: its id's text, else its label."""
+    return code_points(key["id"]) or key.get("text", "").strip()
+
+
+def mark_label(text):
+    """A key's label: a combining mark on a dotted circle (◌̃)."""
+    return "\u25cc" + text if unicodedata.combining(text[0]) else text
+
+
+def on_us_key(key):
+    """A text key typing what a Keyman key types, its long presses its own."""
+    text = on_us_text(key)
+    held = [t for t in (on_us_text(k) for k in key.get("sk", [])) if t and t != text]
+    out = {"width_units": 1, "label": mark_label(text), "output": {"kind": "text", "text": text}}
+    if held:
+        out["long_press"] = [{"kind": "text", "text": t} for t in held]
+    return out
+
+
+def on_us_row(layer, i):
+    """A layer's i-th row of keys that type, its gaps and its shift,
+    backspace and layer keys left out."""
+    return [k for k in layer["row"][i]["key"]
+            if k.get("id") not in SPECIAL and str(k.get("sp")) not in ("1", "2", "9", "10")
+            and on_us_text(k) and on_us_text(k) not in ON_US_LEFT_OUT]
+
+
+def build_on_us(lang, name, layers):
+    """A keyboard whose letters are the US keys' (ON_US), laid out on them."""
+    spec = ON_US[lang]
+    template = json.loads((ROOT / "layouts" / "us.json").read_text(encoding="utf-8"))
+    views = {view["id"]: view for view in template["views"]}
+    # Each letter's long press: Keyman's for its key, then what the long
+    # press layer has in that key's place and that key's own long presses.
+    place = {k["id"]: (i, j) for i, row in enumerate(layers["default"]["row"]) for j, k in enumerate(row["key"])}
+    extra = layers[spec["long_press"]]["row"]
+    by_id = {k["id"]: k for layer_id in ("default", "shift") for row in layers[layer_id]["row"] for k in row["key"]
+             if layer_id == "default" or k["id"] not in place}
+    shift_keys = {k["id"]: k for row in layers["shift"]["row"] for k in row["key"]}
+    for view_id, keys in (("base", by_id), ("shift", shift_keys)):
+        for row in views[view_id]["rows"]:
+            for key in row["keys"]:
+                label = key.get("label", "")
+                kid = "K_PERIOD" if label == "." and view_id == "base" else f"K_{label.upper()}"
+                if not (label.isascii() and (label.isalpha() or label == ".")) or kid not in keys:
+                    continue
+                k = keys[kid]
+                held = [t for t in (on_us_text(s) for s in k.get("sk", [])) if t and not t.isascii()]
+                if view_id == "base" and kid in place:
+                    i, j = place[kid]
+                    if i < len(extra) and j < len(extra[i]["key"]):
+                        e = extra[i]["key"][j]
+                        held += [t for t in [on_us_text(e)] + [on_us_text(s) for s in e.get("sk", [])]
+                                 if t and not t.isascii()]
+                held = list(dict.fromkeys(held))
+                if held:
+                    key["long_press"] = [{"kind": "text", "text": t} for t in held]
+                else:
+                    key.pop("long_press", None)
+    # The symbol views: the numeric and diacritic layers' three rows, in
+    # the template's places (a row of nine between half gaps; the third
+    # between its view and backspace keys, narrower where it holds eight).
+    for view_id in ("symbol1", "symbol2"):
+        layer = layers[spec[view_id]]
+        rows = views[view_id]["rows"]
+        for i in range(3):
+            keys = [on_us_key(k) for k in on_us_row(layer, i)]
+            if i < 2:
+                rows[i]["keys"] = keys if len(keys) == 10 else [gap(0.5)] + keys + [gap(0.5)] if len(keys) == 9 else keys
+            else:
+                first, last = rows[i]["keys"][0], rows[i]["keys"][-1]
+                side = (10 - len(keys)) / 2
+                rows[i]["keys"] = [dict(first, width_units=side)] + keys + [dict(last, width_units=side)]
+    # Every character its layers type is on the layout.
+    on = set()
+    for view in template["views"]:
+        for row in view["rows"]:
+            for key in row["keys"]:
+                if key.get("output", {}).get("kind") == "text":
+                    on.add(key["output"]["text"])
+                on.update(o.get("text") for o in key.get("long_press", []))
+        for row in view["rows"]:
+            for key in row["keys"]:
+                if key.get("output", {}).get("kind") == "keycode":
+                    on.add(key.get("label", ""))
+    typed = {on_us_text(k) for layer in layers.values() for row in layer["row"] for kk in row["key"]
+             for k in [kk] + kk.get("sk", []) if k.get("id") not in SPECIAL}
+    missing = sorted(t for t in typed if t and not t.isascii() and t not in on and t not in ON_US_LEFT_OUT
+                     and any(own(c) for c in t))
+    if missing:
+        sys.exit(f"{lang}: not on the layout: {' '.join(missing)}")
+    layout = {"id": lang, "name": name, "xkb_layout": "us", "direction": "ltr", "swipe_enabled": False,
+              "prediction_enabled": False, "font_script": "latin", "long_press_letters": True,
+              "views": template["views"]}
+    return json.dumps(layout, ensure_ascii=False, indent=2) + "\n"
+
+
 def build(lang, name, path, commit, files):
     got = fetch(path, commit, files)
     touch = json.loads(next(v for k, v in got.items() if k.endswith(".keyman-touch-layout")).decode("utf-8-sig"))
+    if lang in ON_US:
+        return build_on_us(lang, name, {layer["id"]: layer for layer in touch[PLATFORM[lang]]["layer"]})
     rules = Rules(next(v for k, v in got.items() if k.endswith(".kmn")))
     layers = {layer["id"]: layer for layer in touch[PLATFORM[lang]]["layer"]}
     layout = json.loads((ROOT / "layouts" / "us.json").read_text(encoding="utf-8"))

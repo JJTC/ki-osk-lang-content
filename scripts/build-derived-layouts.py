@@ -172,7 +172,10 @@ Thai's, Dakhini on Urdu's, and Bishnupriya Manipuri on Bengali's with
 on Malagasy's keys with à è é ò ì ỳ first on the long presses, Hawu on
 the US keys with è first on e and its saltillo ꞌ at the home row's end,
 Kituba on them as they are, and Ayacucho Quechua on Quechua's with á é
-first. A key at the home row's end types its
+first. From the Bibles eBible.org has of them: Southern Oromo (Guji) on
+Oromo's keys with an apostrophe key, its glottal stop (in 8% of its
+words), and Yaka on the US keys with its high tones á é í ó ú first on
+the long presses. A key at the home row's end types its
 capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
@@ -631,6 +634,8 @@ DERIVED = [
     ("hvn", "us", "Hawu", with_capitals({"e": ["è"]}), {"home": "\ua78c"}),
     ("ktu", "us", "Kituba", {}),
     ("quy", "qu", "Runa Simi (Ayacucho)", with_capitals({"a": ["á"], "e": ["é"]})),
+    ("gax", "om", "Southern Oromo", {}, {"home": "'", "model": False}),
+    ("yaf", "us", "Yaka", with_capitals({"a": ["á"], "e": ["é"], "i": ["í"], "o": ["ó"], "u": ["ú"]}), {"model": False}),
 ]
 
 

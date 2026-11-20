@@ -1,0 +1,2854 @@
+{
+  "id": "und-fonipa",
+  "name": "IPA",
+  "xkb_layout": "us",
+  "direction": "ltr",
+  "swipe_enabled": false,
+  "prediction_enabled": false,
+  "font_script": "latin",
+  "long_press_letters": true,
+  "views": [
+    {
+      "id": "base",
+      "rows": [
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "q",
+              "output": {
+                "kind": "keycode",
+                "code": 16
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʔ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʕ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʡ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʢ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʠ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞥"
+                },
+                {
+                  "kind": "text",
+                  "text": "ˀ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ˤ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞳"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞴"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "w",
+              "output": {
+                "kind": "keycode",
+                "code": 17
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ⱳ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɰ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʍ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʷ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶭ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ꭩ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "e",
+              "output": {
+                "kind": "keycode",
+                "code": 18
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɘ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ə"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɛ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɜ"
+                },
+                {
+                  "kind": "text",
+                  "text": "œ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʚ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶒ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶓ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶔ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶕ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵉ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵊ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵋ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶟ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ꟹ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞎"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞣"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "r",
+              "output": {
+                "kind": "keycode",
+                "code": 19
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɹ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɻ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɽ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɾ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɿ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵲ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵳ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶉ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʳ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʴ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʵ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʶ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞦"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞨"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞩"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞪"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "t",
+              "output": {
+                "kind": "keycode",
+                "code": 20
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ȶ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ƭ"
+                },
+                {
+                  "kind": "text",
+                  "text": "θ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʇ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʈ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵵ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵗ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶿ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞯"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "y",
+              "output": {
+                "kind": "keycode",
+                "code": 21
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʮ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʯ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʸ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞲"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "u",
+              "output": {
+                "kind": "keycode",
+                "code": 22
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɯ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʉ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʊ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʌ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɷ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶙ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵘ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶶ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵚ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶷ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶺ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞤"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "i",
+              "output": {
+                "kind": "keycode",
+                "code": 23
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɨ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɩ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵼ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶖ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ⁱ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶤ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶥ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶦ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶧ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "o",
+              "output": {
+                "kind": "keycode",
+                "code": 24
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ø"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɔ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɵ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɤ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɞ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶗ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵒ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵓ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶱ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞢"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞑"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞏"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "p",
+              "output": {
+                "kind": "keycode",
+                "code": 25
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ƥ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵱ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶈ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʘ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ǀ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ǁ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ǂ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ǃ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵖ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞵"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞶"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞷"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞸"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 0.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "a",
+              "output": {
+                "kind": "keycode",
+                "code": 30
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "æ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɐ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɑ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᴂ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɒ"
+                },
+                {
+                  "kind": "text",
+                  "text": "α"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶏ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶐ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵃ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵄ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵅ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵆ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶛ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞃"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "s",
+              "output": {
+                "kind": "keycode",
+                "code": 31
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʂ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʃ"
+                },
+                {
+                  "kind": "text",
+                  "text": "σ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʅ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵴ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶊ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶋ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶘ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ˢ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶳ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶴ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "d",
+              "output": {
+                "kind": "keycode",
+                "code": 32
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ð"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɗ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɖ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ȡ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵭ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶁ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶑ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵈ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶞ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞋"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞌"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "f",
+              "output": {
+                "kind": "keycode",
+                "code": 33
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɸ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵮ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶂ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶠ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶲ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "g",
+              "output": {
+                "kind": "keycode",
+                "code": 34
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɡ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɠ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɣ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶃ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵍ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ˠ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶢ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞓"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞒"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞔"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "h",
+              "output": {
+                "kind": "keycode",
+                "code": 35
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ħ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɥ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɦ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɧ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ђ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʰ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʱ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶣ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞕"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞗"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞖"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "j",
+              "output": {
+                "kind": "keycode",
+                "code": 36
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɟ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʄ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʝ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʲ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶡ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶨ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞘"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "k",
+              "output": {
+                "kind": "keycode",
+                "code": 37
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ƙ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶄ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵏ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "l",
+              "output": {
+                "kind": "keycode",
+                "code": 38
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɫ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɬ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɭ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɮ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɺ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʎ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ȴ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶅ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ˡ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶩ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶫ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞠"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞛"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞞"
+                }
+              ]
+            },
+            {
+              "width_units": 0.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1.5,
+              "label": "⇧",
+              "output": {
+                "kind": "none"
+              },
+              "action": "shift"
+            },
+            {
+              "width_units": 1,
+              "label": "z",
+              "output": {
+                "kind": "keycode",
+                "code": 44
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʐ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʑ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʒ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵶ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶎ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶚ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶻ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶼ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶽ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶾ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "x",
+              "output": {
+                "kind": "keycode",
+                "code": 45
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "χ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶍ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ˣ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵡ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "c",
+              "output": {
+                "kind": "keycode",
+                "code": 46
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ç"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɕ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ƈ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶜ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶝ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "v",
+              "output": {
+                "kind": "keycode",
+                "code": 47
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʋ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ⱱ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶌ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵛ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶹ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "b",
+              "output": {
+                "kind": "keycode",
+                "code": 48
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɓ"
+                },
+                {
+                  "kind": "text",
+                  "text": "β"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵬ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶀ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵇ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵝ"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞅"
+                },
+                {
+                  "kind": "text",
+                  "text": "𐞄"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "n",
+              "output": {
+                "kind": "keycode",
+                "code": 49
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ŋ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɲ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɳ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ȵ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵰ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶇ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ⁿ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵑ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶮ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶯ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶰ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "m",
+              "output": {
+                "kind": "keycode",
+                "code": 50
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɱ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵯ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶆ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵐ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᶬ"
+                }
+              ]
+            },
+            {
+              "width_units": 1.5,
+              "label": "⌫",
+              "output": {
+                "kind": "none"
+              },
+              "action": "backspace"
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1.5,
+              "label": "?123",
+              "output": {
+                "kind": "none"
+              },
+              "action": {
+                "switch_view": "symbol1"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": ",",
+              "output": {
+                "kind": "text",
+                "text": ","
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "⌨",
+              "output": {
+                "kind": "none"
+              },
+              "action": "globe"
+            },
+            {
+              "width_units": 4,
+              "label": "space",
+              "output": {
+                "kind": "keycode",
+                "code": 57
+              },
+              "action": "space"
+            },
+            {
+              "width_units": 1,
+              "label": "☺",
+              "output": {
+                "kind": "none"
+              },
+              "action": "emoji"
+            },
+            {
+              "width_units": 1,
+              "label": ".",
+              "output": {
+                "kind": "text",
+                "text": "."
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁻"
+                },
+                {
+                  "kind": "text",
+                  "text": "⁼"
+                },
+                {
+                  "kind": "text",
+                  "text": "⁽"
+                },
+                {
+                  "kind": "text",
+                  "text": "⁾"
+                }
+              ]
+            },
+            {
+              "width_units": 1.5,
+              "label": "⏎",
+              "output": {
+                "kind": "keycode",
+                "code": 28
+              },
+              "action": "enter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shift",
+      "rows": [
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "Q",
+              "output": {
+                "kind": "keycode",
+                "code": 16
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "W",
+              "output": {
+                "kind": "keycode",
+                "code": 17
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "E",
+              "output": {
+                "kind": "keycode",
+                "code": 18
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ᴇ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ɶ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "R",
+              "output": {
+                "kind": "keycode",
+                "code": 19
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʀ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʁ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "T",
+              "output": {
+                "kind": "keycode",
+                "code": 20
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "Y",
+              "output": {
+                "kind": "keycode",
+                "code": 21
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʏ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "U",
+              "output": {
+                "kind": "keycode",
+                "code": 22
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ᵾ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "I",
+              "output": {
+                "kind": "keycode",
+                "code": 23
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɪ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ᵻ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "O",
+              "output": {
+                "kind": "keycode",
+                "code": 24
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "P",
+              "output": {
+                "kind": "keycode",
+                "code": 25
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 0.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "A",
+              "output": {
+                "kind": "keycode",
+                "code": 30
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ᴀ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "S",
+              "output": {
+                "kind": "keycode",
+                "code": 31
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "D",
+              "output": {
+                "kind": "keycode",
+                "code": 32
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "F",
+              "output": {
+                "kind": "keycode",
+                "code": 33
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "G",
+              "output": {
+                "kind": "keycode",
+                "code": 34
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɢ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʛ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "H",
+              "output": {
+                "kind": "keycode",
+                "code": 35
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʜ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "J",
+              "output": {
+                "kind": "keycode",
+                "code": 36
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "K",
+              "output": {
+                "kind": "keycode",
+                "code": 37
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "L",
+              "output": {
+                "kind": "keycode",
+                "code": 38
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʟ"
+                }
+              ]
+            },
+            {
+              "width_units": 0.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1.5,
+              "label": "⇧",
+              "output": {
+                "kind": "none"
+              },
+              "action": "shift"
+            },
+            {
+              "width_units": 1,
+              "label": "Z",
+              "output": {
+                "kind": "keycode",
+                "code": 44
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "X",
+              "output": {
+                "kind": "keycode",
+                "code": 45
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "C",
+              "output": {
+                "kind": "keycode",
+                "code": 46
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "V",
+              "output": {
+                "kind": "keycode",
+                "code": 47
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "B",
+              "output": {
+                "kind": "keycode",
+                "code": 48
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʙ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "N",
+              "output": {
+                "kind": "keycode",
+                "code": 49
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ɴ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "M",
+              "output": {
+                "kind": "keycode",
+                "code": 50
+              }
+            },
+            {
+              "width_units": 1.5,
+              "label": "⌫",
+              "output": {
+                "kind": "none"
+              },
+              "action": "backspace"
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1.5,
+              "label": "?123",
+              "output": {
+                "kind": "none"
+              },
+              "action": {
+                "switch_view": "symbol1"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "!",
+              "output": {
+                "kind": "text",
+                "text": "!"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "⌨",
+              "output": {
+                "kind": "none"
+              },
+              "action": "globe"
+            },
+            {
+              "width_units": 4,
+              "label": "space",
+              "output": {
+                "kind": "keycode",
+                "code": 57
+              },
+              "action": "space"
+            },
+            {
+              "width_units": 1,
+              "label": "☺",
+              "output": {
+                "kind": "none"
+              },
+              "action": "emoji"
+            },
+            {
+              "width_units": 1,
+              "label": "?",
+              "output": {
+                "kind": "text",
+                "text": "?"
+              }
+            },
+            {
+              "width_units": 1.5,
+              "label": "⏎",
+              "output": {
+                "kind": "keycode",
+                "code": 28
+              },
+              "action": "enter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "symbol1",
+      "rows": [
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "1",
+              "output": {
+                "kind": "text",
+                "text": "1"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "¹"
+                },
+                {
+                  "kind": "text",
+                  "text": "₁"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "2",
+              "output": {
+                "kind": "text",
+                "text": "2"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "²"
+                },
+                {
+                  "kind": "text",
+                  "text": "₂"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "3",
+              "output": {
+                "kind": "text",
+                "text": "3"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "³"
+                },
+                {
+                  "kind": "text",
+                  "text": "₃"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "4",
+              "output": {
+                "kind": "text",
+                "text": "4"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁴"
+                },
+                {
+                  "kind": "text",
+                  "text": "₄"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "5",
+              "output": {
+                "kind": "text",
+                "text": "5"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁵"
+                },
+                {
+                  "kind": "text",
+                  "text": "₅"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "6",
+              "output": {
+                "kind": "text",
+                "text": "6"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁶"
+                },
+                {
+                  "kind": "text",
+                  "text": "₆"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "7",
+              "output": {
+                "kind": "text",
+                "text": "7"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁷"
+                },
+                {
+                  "kind": "text",
+                  "text": "₇"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "8",
+              "output": {
+                "kind": "text",
+                "text": "8"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁸"
+                },
+                {
+                  "kind": "text",
+                  "text": "₈"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "9",
+              "output": {
+                "kind": "text",
+                "text": "9"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁹"
+                },
+                {
+                  "kind": "text",
+                  "text": "₉"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "0",
+              "output": {
+                "kind": "text",
+                "text": "0"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁰"
+                },
+                {
+                  "kind": "text",
+                  "text": "₀"
+                },
+                {
+                  "kind": "text",
+                  "text": "∅"
+                },
+                {
+                  "kind": "text",
+                  "text": "◌"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 0.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "@",
+              "output": {
+                "kind": "text",
+                "text": "@"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "#",
+              "output": {
+                "kind": "text",
+                "text": "#"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "&",
+              "output": {
+                "kind": "text",
+                "text": "&"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "%"
+                },
+                {
+                  "kind": "text",
+                  "text": "$"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "-",
+              "output": {
+                "kind": "text",
+                "text": "-"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁻"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "=",
+              "output": {
+                "kind": "text",
+                "text": "="
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁼"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "|",
+              "output": {
+                "kind": "text",
+                "text": "|"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "‖"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "ː",
+              "output": {
+                "kind": "text",
+                "text": "ː"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ˑ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "ʼ",
+              "output": {
+                "kind": "text",
+                "text": "ʼ"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ʽ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ʻ"
+                },
+                {
+                  "kind": "text",
+                  "text": "̚"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "ꜝ",
+              "output": {
+                "kind": "text",
+                "text": "ꜝ"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ꜞ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ꜟ"
+                }
+              ]
+            },
+            {
+              "width_units": 0.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1.0,
+              "label": "=<",
+              "output": {
+                "kind": "none"
+              },
+              "action": {
+                "switch_view": "symbol2"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "[",
+              "output": {
+                "kind": "text",
+                "text": "["
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "«"
+                },
+                {
+                  "kind": "text",
+                  "text": "<"
+                },
+                {
+                  "kind": "text",
+                  "text": "{"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "(",
+              "output": {
+                "kind": "text",
+                "text": "("
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁽"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": ")",
+              "output": {
+                "kind": "text",
+                "text": ")"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁾"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "]",
+              "output": {
+                "kind": "text",
+                "text": "]"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "»"
+                },
+                {
+                  "kind": "text",
+                  "text": ">"
+                },
+                {
+                  "kind": "text",
+                  "text": "}"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "+",
+              "output": {
+                "kind": "text",
+                "text": "+"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "⁺"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "ˈ",
+              "output": {
+                "kind": "text",
+                "text": "ˈ"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ˌ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "*",
+              "output": {
+                "kind": "text",
+                "text": "*"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "‿",
+              "output": {
+                "kind": "text",
+                "text": "‿"
+              }
+            },
+            {
+              "width_units": 1.0,
+              "label": "⌫",
+              "output": {
+                "kind": "none"
+              },
+              "action": "backspace"
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1.5,
+              "label": "ABC",
+              "output": {
+                "kind": "none"
+              },
+              "action": {
+                "switch_view": "base"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": ",",
+              "output": {
+                "kind": "text",
+                "text": ","
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "⌨",
+              "output": {
+                "kind": "none"
+              },
+              "action": "globe"
+            },
+            {
+              "width_units": 4,
+              "label": "space",
+              "output": {
+                "kind": "keycode",
+                "code": 57
+              },
+              "action": "space"
+            },
+            {
+              "width_units": 1,
+              "label": "☺",
+              "output": {
+                "kind": "none"
+              },
+              "action": "emoji"
+            },
+            {
+              "width_units": 1,
+              "label": ".",
+              "output": {
+                "kind": "text",
+                "text": "."
+              }
+            },
+            {
+              "width_units": 1.5,
+              "label": "⏎",
+              "output": {
+                "kind": "keycode",
+                "code": 28
+              },
+              "action": "enter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "symbol2",
+      "rows": [
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1,
+              "label": "◌̀",
+              "output": {
+                "kind": "text",
+                "text": "̀"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̏"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌́",
+              "output": {
+                "kind": "text",
+                "text": "́"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̋"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̂",
+              "output": {
+                "kind": "text",
+                "text": "̂"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "◌̃",
+              "output": {
+                "kind": "text",
+                "text": "̃"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̰"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̄",
+              "output": {
+                "kind": "text",
+                "text": "̄"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̠"
+                },
+                {
+                  "kind": "text",
+                  "text": "̱"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̆",
+              "output": {
+                "kind": "text",
+                "text": "̆"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̯"
+                },
+                {
+                  "kind": "text",
+                  "text": "̹"
+                },
+                {
+                  "kind": "text",
+                  "text": "̜"
+                },
+                {
+                  "kind": "text",
+                  "text": "̐"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̇",
+              "output": {
+                "kind": "text",
+                "text": "̇"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̣"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̈",
+              "output": {
+                "kind": "text",
+                "text": "̈"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̤"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̊",
+              "output": {
+                "kind": "text",
+                "text": "̊"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̥"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̧",
+              "output": {
+                "kind": "text",
+                "text": "̧"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 0.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "◌̌",
+              "output": {
+                "kind": "text",
+                "text": "̌"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̬"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̍",
+              "output": {
+                "kind": "text",
+                "text": "̍"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̩"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̽",
+              "output": {
+                "kind": "text",
+                "text": "̽"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "◌̘",
+              "output": {
+                "kind": "text",
+                "text": "̘"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̙"
+                },
+                {
+                  "kind": "text",
+                  "text": "̝"
+                },
+                {
+                  "kind": "text",
+                  "text": "̞"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̻",
+              "output": {
+                "kind": "text",
+                "text": "̻"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "̪"
+                },
+                {
+                  "kind": "text",
+                  "text": "̺"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌̟",
+              "output": {
+                "kind": "text",
+                "text": "̟"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "◌̼",
+              "output": {
+                "kind": "text",
+                "text": "̼"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "◌᷂",
+              "output": {
+                "kind": "text",
+                "text": "᷂"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "◌͈",
+              "output": {
+                "kind": "text",
+                "text": "͈"
+              }
+            },
+            {
+              "width_units": 0.5,
+              "label": "",
+              "output": {
+                "kind": "none"
+              }
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1.5,
+              "label": "?123",
+              "output": {
+                "kind": "none"
+              },
+              "action": {
+                "switch_view": "symbol1"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "↗",
+              "output": {
+                "kind": "text",
+                "text": "↗"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "↘"
+                },
+                {
+                  "kind": "text",
+                  "text": "→"
+                },
+                {
+                  "kind": "text",
+                  "text": "ꜛ"
+                },
+                {
+                  "kind": "text",
+                  "text": "ꜜ"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "˧",
+              "output": {
+                "kind": "text",
+                "text": "˧"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "˥"
+                },
+                {
+                  "kind": "text",
+                  "text": "˦"
+                },
+                {
+                  "kind": "text",
+                  "text": "˨"
+                },
+                {
+                  "kind": "text",
+                  "text": "˩"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "˩˥",
+              "output": {
+                "kind": "text",
+                "text": "˩˥"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "˥˩"
+                },
+                {
+                  "kind": "text",
+                  "text": "˧˥"
+                },
+                {
+                  "kind": "text",
+                  "text": "˧˩"
+                },
+                {
+                  "kind": "text",
+                  "text": "˨˥˨"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "꜔",
+              "output": {
+                "kind": "text",
+                "text": "꜔"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "꜒"
+                },
+                {
+                  "kind": "text",
+                  "text": "꜓"
+                },
+                {
+                  "kind": "text",
+                  "text": "꜕"
+                },
+                {
+                  "kind": "text",
+                  "text": "꜖"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "◌᷄",
+              "output": {
+                "kind": "text",
+                "text": "᷄"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "᷅"
+                },
+                {
+                  "kind": "text",
+                  "text": "᷆"
+                },
+                {
+                  "kind": "text",
+                  "text": "᷇"
+                },
+                {
+                  "kind": "text",
+                  "text": "᷈"
+                },
+                {
+                  "kind": "text",
+                  "text": "᷉"
+                }
+              ]
+            },
+            {
+              "width_units": 1,
+              "label": "˞",
+              "output": {
+                "kind": "text",
+                "text": "˞"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "◌͡",
+              "output": {
+                "kind": "text",
+                "text": "͡"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "͜"
+                }
+              ]
+            },
+            {
+              "width_units": 1.5,
+              "label": "⌫",
+              "output": {
+                "kind": "none"
+              },
+              "action": "backspace"
+            }
+          ]
+        },
+        {
+          "height_units": 1.0,
+          "keys": [
+            {
+              "width_units": 1.5,
+              "label": "ABC",
+              "output": {
+                "kind": "none"
+              },
+              "action": {
+                "switch_view": "base"
+              }
+            },
+            {
+              "width_units": 1,
+              "label": ",",
+              "output": {
+                "kind": "text",
+                "text": ","
+              }
+            },
+            {
+              "width_units": 1,
+              "label": "⌨",
+              "output": {
+                "kind": "none"
+              },
+              "action": "globe"
+            },
+            {
+              "width_units": 4,
+              "label": "space",
+              "output": {
+                "kind": "keycode",
+                "code": 57
+              },
+              "action": "space"
+            },
+            {
+              "width_units": 1,
+              "label": "☺",
+              "output": {
+                "kind": "none"
+              },
+              "action": "emoji"
+            },
+            {
+              "width_units": 1,
+              "label": ".",
+              "output": {
+                "kind": "text",
+                "text": "."
+              }
+            },
+            {
+              "width_units": 1.5,
+              "label": "⏎",
+              "output": {
+                "kind": "keycode",
+                "code": 28
+              },
+              "action": "enter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

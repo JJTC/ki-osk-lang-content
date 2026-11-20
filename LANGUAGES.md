@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**638 layouts**: 576 keyboard layouts (RTL: ar he fa + Urdu, Western
+**641 layouts**: 579 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 14 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 637 are here; the numeric keypad is built into ki-osk. The
+keycaps. 640 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **437 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -465,6 +465,7 @@ but no model to match the glide against · `—` off
 | `hnd` | `hnd` | Southern Hindko | Keyman's rac_hindko, long-press ݨ | **RTL** | —¹⁰ | — | — |
 | `cld` | `cld` | Chaldean Neo-Aramaic (Syriac script) | Keyman's east_syriac_qwerty, its vowel points and marks on Shift | **RTL** | —¹⁰ | — | — |
 | `nod` | `nod` | Northern Thai (Tai Tham script) | Keyman's tai_lanna_thai (experimental), long-press its AltGr letters and ᩀ | LTR | —¹⁰ | — | — |
+| `und-fonipa` | `und-fonipa` | International Phonetic Alphabet (IPA) | us + Keyman's sil_ipa: IPA letters and modifier letters on long presses, ː ˈ ˌ and diacritics on the symbol views | LTR | —¹⁰ | — | — |
 | `nod-thai` | `nod` | Northern Thai (Thai script) | th, Thai's keys | LTR | —¹² | — | — |
 | `adx` | `adx` | Amdo Tibetan (Tibetan script) | cn · tib, Tibetan's keys | LTR | —¹² | — | — |
 | `khg` | `khg` | Khams Tibetan (Tibetan script) | cn · tib, Tibetan's keys | LTR | —¹² | — | — |
@@ -523,6 +524,8 @@ but no model to match the glide against · `—` off
 | `sou` | `sou` | Southern Thai | th, Thai's keys | LTR | —¹² | — | — |
 | `dcc` | `dcc` | Dakhini (Urdu script) | pk, Urdu's keys | **RTL** | —¹² | — | — |
 | `bpy` | `bpy` | Bishnupriya Manipuri বিষ্ণুপ্রিয়া মণিপুরী | in · ben, Bengali's keys + long-press ৱ | LTR | —¹² | — | — |
+| `gax` | `gax` | Southern Oromo | us, Oromo's keys, ' key | LTR | —¹² | — | — |
+| `yaf` | `yaf` | Yaka | us + long-press á é í ó ú | LTR | —¹² | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -2089,6 +2092,18 @@ but no model to match the glide against · `—` off
    every letter its Keyman keyboard types, and Northern Thai's every
    letter of CLDR's exemplar characters; Noto Sans Arabic, Syriac and Tai
    Tham draw them. Named in English, as CLDR names none of them.
+   The International Phonetic Alphabet's is SIL's sil_ipa too, laid out
+   on the US keys (`und-fonipa`, as BCP 47 tags a phonetic
+   transcription): each letter's long press is Keyman's for that key, its
+   IPA letters (e's ɘ ə ɛ ɜ œ…), then the modifier letters its super- and
+   subscript layer has in that key's place (h's ʰ ʱ ᶣ…); Shift's small
+   capitals (ᴇ ɶ, ʀ ʁ, ɢ ʛ) on the capitals'; its numeric layer the first
+   symbol view (the digits with their super- and subscripts, ː ˑ ˈ ˌ ʼ ‿
+   ꜝ ‖) and its diacritic layer the second (its combining marks, each on
+   a dotted circle, ◌̃ ◌̥ ◌̪…, its tone letters ˧ ˩˥ ꜔ and arrows ↗);
+   every character its five layers type is on it. Its letters of
+   Unicode's Phonetic Extensions Supplement and Latin Extended-F (ᶒ ᵲ,
+   𐞥), which DejaVu Sans lacks, draw with Noto Sans.
 11. Vai's and Nuosu's Keyman keyboards (Athinkra's athinkra_vai and
    SIL's sil_yi, MIT) type each syllable as Latin letters, so their
    layouts type through the transliteration composer: their tables
@@ -2115,7 +2130,7 @@ but no model to match the glide against · `—` off
    。 are keys, its other punctuation fullwidth, as Keyman's rules type it.
    Neither has a model: the strip offers the reading and the letters as
    typed.
-12. Fifty-eight keyboards of languages no text here predicts are another
+12. Sixty keyboards of languages no text here predicts are another
    language's keys in their name, as they write with those letters:
    Amdo and Khams Tibetan on Tibetan's, in its spelling (Keyman's
    Tibetan keyboards name them among their languages); Sadri on Hindi's
@@ -2190,8 +2205,13 @@ but no model to match the glide against · `—` off
    Malvi, Merwari, Mahasu Pahari and Halbi, on Hindi's keys (Mandeali,
    Takri alone there, and Wanetsi, "Arabic alphabet", are not). These
    are named in English but Dari, Valencian and Bishnupriya Manipuri
-   (as its wiki writes it). None has a model: neither suggestions nor
-   glides.
+   (as its wiki writes it). Two take their letters from the Bibles
+   eBible.org has of them, the only ones of the languages left it has:
+   Southern Oromo (its Guji) on Oromo's keys, with a key for the
+   apostrophe that is its glottal stop (in 8% of its words), and Yaka
+   on the US keys with its high tones á é í ó ú first on the long
+   presses (á in 4.4% of its words). None has a model: neither
+   suggestions nor glides.
 
 ## Prediction model tiers
 
@@ -2231,18 +2251,19 @@ but no model to match the glide against · `—` off
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 138 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 141 layouts, Montenegrin's in
   Cyrillic, the fifty-seven whose letters are CLDR's exemplar characters
   (note 9: thirty-two in Latin letters, twenty-five in the Arabic script,
-  Devanagari and Bengali), the eighteen from Keyman's (note 10: thirteen
-  of a script of their own, Chakma to Osage, and Gorani, Southeastern
+  Devanagari and Bengali), the nineteen from Keyman's (note 10: thirteen
+  of a script of their own, Chakma to Osage, Gorani, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
-  Tham), the fifty-eight on another language's keys (note 12: Northern
+  Tham, and the International Phonetic Alphabet's), the sixty on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian
   Konkani, Kutchi, Tày and Eastern Pwo Karen, twelve whose letters their
   wikis give, Northern Min to Southern Balochi, and seventeen from smaller
-  wikis and FineWeb-2's few pages, Ahirani to Ma'anyan, and twenty-one
-  whose script CLDR's or Wikidata's data names, Dari to Halbi), Vai's and Nuosu's, whose composers
+  wikis and FineWeb-2's few pages, Ahirani to Ma'anyan, twenty-one
+  whose script CLDR's or Wikidata's data names, Dari to Halbi, and two
+  whose Bibles give their letters, Southern Oromo and Yaka), Vai's and Nuosu's, whose composers
   read their tables alone (note 11), and Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
   its wiki's and its New Testament), and Nahuatl, whose is colonial
@@ -2284,6 +2305,7 @@ drives which face loads:
 | `vai` `yi` | Noto Sans Vai, Noto Sans Yi | `vai ii` (the composer's syllables on the strip and the preedit) |
 | `tai_tham` | Noto Sans Tai Tham | `nod` (Keyman's) |
 | `cyrillic` | Noto Sans | `cu` (its Cyrillic Extended-B letters, ꙁ ꙃ ꙋ, which DejaVu Sans lacks) |
+| `latin` | Noto Sans | `und-fonipa` (the IPA's phonetic letters DejaVu Sans lacks: ᶒ ᵲ, Latin Extended-F's 𐞥) |
 
 Install the matching face or those caps render as tofu. See the full
 fonts table in ki-osk-wayland's `DEPLOY.md`.
@@ -2478,6 +2500,7 @@ syllables:
 | `ojb` Northwestern Ojibwe | Keyman's fv_ojibwa, a syllable a key: the i and a syllables and the finals on the base view, the e and o syllables on Shift; each syllable's long vowel and w-dotted forms first on its long press (ᑭ's ᑮ ᑶ ᑸ), which Keyman types with keys of their own (˙ after a syllable, ᐧ before it) by rules a key of one letter has not; the final ᕽ on ᒃ's, the full stop ᙮ on the full stop's | `ojb` |
 | `ccp` `rhg` `blt` `kyu` `lis` `lep` `kjg` `saz` `bax` `cjm` `tdd` `khb` `osa` | Keyman's keyboards for their scripts, their rows and places kept (note 10): what Keyman types after another key on a long press (Tai Dam's ꪂ on ꪀ, Lepcha's ᰂ ᰁ on ᰀ), and what it types under AltGr (Cham's ꨒ on ꨗ); Rohingya's 𐴗 on 𐴖; Bamum's two marks and Osage's acute and double acute beside the space bar; the digits no letter key has on the long presses of the symbol view's, their stops (Saurashtra's dandas ꣎ ꣏, Bamum's ꛳ ꛵…) on the full stop's | each its own |
 | `hac` `psi` `hnd` `cld` `nod` | Keyman's keyboards read at a later commit (note 10), their rows and places kept: what a key types under AltGr on its long press (Pashayi's ك ڰ, Tai Tham's), Hindko's ݨ on ن, Tai Tham's ᩀ on ᨿ; Chaldean's East Syriac vowel points and marks its Shift view | each its own |
+| `und-fonipa` IPA | Keyman's sil_ipa on the US keys (note 10): each letter's IPA letters and then its modifier letters on its long press (e's ɘ ə ɛ ɜ œ… ᵉ ᵊ, h's ħ ɥ ɦ ɧ… ʰ ʱ), Shift's small capitals on the capitals'; ː ˈ ˌ ʼ ‿ and the super- and subscript digits on the first symbol view, the combining diacritics and tone letters on the second | `und-fonipa` |
 | `kjp` Eastern Pwo Karen | its tone ႋ and ၜ ၠ keys of their own in place of Burmese's ဩ ၏ ၒ; ၮ ၯ ၰ ၞ ၟ ၚ ဴ on the long presses of ဏ ယ ဃ န မ င ု (on Burmese's keys; note 12) | `kjp` |
 | `tyz` Tày | the macron below and the double grave, the two tones Vietnamese lacks, first on each vowel's long press (a̱ ȁ; on Vietnamese's keys; note 12) | `tyz` |
 | `cdo` `mnp` | their toned vowels first on the long presses, the commonest first, as Southern Min's and Hakka's: Eastern Min's á â ă ā à, those with the diaeresis below after (ā̤ â̤…; ṳ̄ ṳ̆ on u); Northern Min's â̤ á a̿ ă ǎ…, its seventh tone the double overline (note 12) | each its own |

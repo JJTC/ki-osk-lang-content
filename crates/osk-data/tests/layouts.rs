@@ -223,6 +223,8 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("tdx", "àèòìỳ"),
         ("hvn", "èꞌ"),
         ("quy", "áé"),
+        ("yaf", "áéíóú"),
+        ("und-fonipa", "ɑəʃŋɾʰʷ\u{2d0}\u{2c8}\u{303}\u{325}"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {
