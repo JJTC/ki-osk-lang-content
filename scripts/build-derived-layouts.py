@@ -189,7 +189,20 @@ CLDR's language data names for it, on Bengali's keys; Mandar and Bouyei
 on them as they are, Muong on Vietnamese's keys, and Kui on Odia's with
 the overline Unicode encodes for it (U+0B55) at the home row's end; and
 from their Incubator test wikis, Central Malay, Komering and Kutai Malay
-on the US keys as they are. A key at the home row's end types its
+on the US keys as they are. From the wikis no round had used, Batak
+Mandailing and Ghanaian Pidgin on the US keys as they are; Igala on them
+with ọ and ẹ first on o's and e's long presses (each in one word in
+twenty), its tones after them and on the other vowels, ñ on n's, and an
+apostrophe key (ny’ẹ́yọ́, l'amẹnwu: two words in a hundred); Arakanese on
+Burmese's keys; and Veluws on Dutch's, ö first on o, ä å on a and ü on u,
+and an apostrophe key (its 't and 'n: two words in a hundred). With no
+model, Godwari, Mandeali and Surjapuri on Hindi's keys, Varhadi on
+Marathi's, Vasavi on Hindi's and Gujarati's and Kachi Koli on
+Gujarati's: the scripts LinguaMeta names for them, each named in its
+own words as LinguaMeta writes them; and Urum in Cyrillic, which
+LinguaMeta names, on Russian's keys, the ӧ ӱ ґ Wiktionary's entries
+write on о's, у's and г's long presses and a key for the ʼ it writes
+where Russian writes ь (one entry in thirteen). A key at the home row's end types its
 capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
@@ -664,6 +677,21 @@ DERIVED = [
     ("pse", "us", "Baso Melayu Tenga", {}, {"model": False}),
     ("kge", "us", "Basa Kumoring", {}, {"model": False}),
     ("vkt", "us", "Kutai Malay", {}, {"model": False}),
+    ("btm", "us", "Saro Mandailing", {}),
+    ("gpe", "us", "Ghanaian Pidgin", {}),
+    ("igl", "us", "Igala", with_capitals({"e": ["ẹ", "é", "è", "ẹ́", "ẹ̀"], "o": ["ọ", "ó", "ò", "ọ́", "ọ̀"],
+                                         "i": ["í", "ì", "î"], "a": ["á", "à"], "u": ["ú", "ù"], "n": ["ñ", "ń"]}),
+     {"home": "'"}),
+    ("rki", "my", "ရခိုင်", {}),
+    ("vel", "nl", "Veluws", with_capitals({"o": ["ö"], "a": ["ä", "å"], "u": ["ü"]}), {"home": "'"}),
+    ("gdx", "hi", "गोड़वाड़ी", {}, {"model": False}),
+    ("mjl", "hi", "मंडयाली", {}, {"model": False}),
+    ("sjp", "hi", "सुरजापुरी", {}, {"model": False}),
+    ("vah", "mr", "वऱ्हाडी", {}, {"model": False}),
+    ("vas", "hi", "वासवी", {}, {"model": False}),
+    ("vas-Gujr", "gu", "વસાવી", {}, {"model": False}),
+    ("gjk", "gu", "કચ્છી કોળી", {}, {"model": False}),
+    ("uum", "ru", "Урум", with_capitals({"о": ["ӧ"], "у": ["ӱ"], "г": ["ґ"]}), {"home": "ʼ", "model": False}),
 ]
 
 

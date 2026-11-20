@@ -1,5 +1,6 @@
 //! Word lists for the languages written without spaces between words,
-//! Thai, Lao, Khmer and Burmese, and Shan, Mon, Sgaw Karen and Pa'O: what
+//! Thai, Lao, Khmer and Burmese, and Shan, Mon, Sgaw Karen, Pa'O and
+//! Arakanese: what
 //! [`crate::words::Splitter`] cuts their runs of letters into words with,
 //! the same way in the trainer, the keyboard and the measure.
 //!
@@ -17,10 +18,11 @@
 //! last of the syllable before. Lao's letters written two ways
 //! ([`lao_fold`]) are one in the list and in what is looked up in it.
 //!
-//! Shan, Mon, Sgaw Karen and Pa'O, written in the Myanmar script, have no
-//! word list of their own to be had: theirs is the syllables their text
-//! writes ([`Script::syllables`], made by `build-syllables`), so each
-//! syllable is a word, as each of Tibetan's is.
+//! Shan, Mon, Sgaw Karen, Pa'O and Arakanese, written in the Myanmar
+//! script, have no word list of their own to be had: theirs is the
+//! syllables their text writes ([`Script::syllables`], made by
+//! `build-syllables`), so each syllable is a word, as each of Tibetan's
+//! is.
 
 use std::borrow::Cow;
 use std::fmt;
@@ -41,7 +43,7 @@ pub enum Script {
     Khmer,
     /// Myanmar, U+1000 to U+109F: Burmese.
     Myanmar,
-    /// Myanmar as Shan, Mon and Pa'O write it, cut into syllables:
+    /// Myanmar as Shan, Mon, Pa'O and Arakanese write it, cut into syllables:
     /// Myanmar Extended-A's and -B's letters and signs too (Pa'O's tone
     /// ꩻ), and a consonant stacked over the next starts one, as Mon's
     /// minor syllables do (ပ္ဍဲ).
@@ -69,7 +71,7 @@ impl Script {
             "lo" => Some(Self::Lao),
             "km" => Some(Self::Khmer),
             "my" => Some(Self::Myanmar),
-            "shn" | "mnw" | "blk" => Some(Self::MyanmarSyllables),
+            "shn" | "mnw" | "blk" | "rki" => Some(Self::MyanmarSyllables),
             "ksw" => Some(Self::KarenSyllables),
             _ => None,
         }
@@ -205,8 +207,8 @@ impl Script {
     /// The syllables of `run`, a run of this script's characters
     /// ([`Self::holds`]): what lies between the places a word may start,
     /// as byte ranges of it, in order. The word list of a language cut
-    /// into syllables (Shan, Mon, Sgaw Karen, Pa'O) is those its text
-    /// writes.
+    /// into syllables (Shan, Mon, Sgaw Karen, Pa'O, Arakanese) is those its
+    /// text writes.
     #[must_use]
     pub fn syllables(self, run: &str) -> Vec<Range<usize>> {
         self.bounds(run).windows(2).map(|w| w[0]..w[1]).collect()
@@ -648,7 +650,10 @@ mod tests {
         assert_eq!(syllables(Script::Myanmar, "ဍုၚ်ပ္ဍဲ"), ["ဍုၚ်ပ္ဍဲ"]);
         assert!(!Script::Myanmar.holds('ꩻ'));
         assert_eq!(s.syllables(""), []);
-        for lang in ["shn", "mnw", "blk"] {
+        // Arakanese writes Burmese's letters, its Pali stacked as Pa'O's is.
+        assert_eq!(syllables(s, "ရခိုင်ဘာသာ"), ["ရ", "ခိုင်", "ဘာ", "သာ"]);
+        assert_eq!(syllables(s, "ကမ္ဘာ"), ["က", "မ္ဘာ"]);
+        for lang in ["shn", "mnw", "blk", "rki"] {
             assert_eq!(Script::of_lang(lang), Some(s), "{lang}");
         }
         assert_eq!(Script::of_lang("ksw"), Some(k));

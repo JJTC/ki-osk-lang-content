@@ -9,8 +9,13 @@
 # out), Fiji Hindi (its references, English, left out: --own), Emilian
 # (the Emilian–Romagnol wiki's, its Romagnol left out), Church Slavonic
 # (its sentences that write a letter of its own, ѣ є ꙑ ѥ…: its
-# references are Russian) and Zeelandic (its bots' French communes and
-# calendar days left out); of
+# references are Russian), Zeelandic (its bots' French communes and
+# calendar days left out), Batak Mandailing, Ghanaian Pidgin and Igala
+# (their sentences that write their own words: their references are
+# English, a few of Batak Mandailing's Indonesian; and where a template
+# failed, its name left out), Arakanese, in the Myanmar script (its
+# sentences end in ။, their Latin words left out), and Veluws (the Dutch
+# Low Saxon wiki's articles it files as written in Veluws); of
 # Armenian and Persian beside their Tatoeba sentences (the Makefile's
 # WIKIPEDIA_PLUS_LANGS, whose held-out text goes elsewhere: EVAL_OUT); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
@@ -60,7 +65,8 @@ BASE=https://dumps.wikimedia.org/other/cirrus_search_index/$DATE
 # space; - keeps every sentence)  [wikipedia-text.py's options: a
 # neighbour whose articles and sentences are left out, as the
 # Incubator's below; --script-only; --shapes, its bots' stubs; --own,
-# --letters, --emilian]
+# --letters, --emilian; --markup, a failed template's mark; --category,
+# the articles filed so]
 DUMPS="
 bho  bh   bhwiki_content-20261108-00000.json.bz2   e1becbc89778d7994831288afa94b9c1cce69d1b6b65a485d3500b34a5e822cc  DEVANAGARI  --script-only
 mai  mai  maiwiki_content-20261108-00000.json.bz2  1119ae395e8ca315a20422db6d09d5280e01e7d2530d301ebfb486212fcb5f4c  DEVANAGARI  --script-only
@@ -88,6 +94,11 @@ hif  hif  hifwiki_content-20261108-00000.json.bz2  1490558966f73af1384d677456499
 egl  eml  emlwiki_content-20261108-00000.json.bz2  d9123a8b5d3fd5cf83bc0283bb34d44b791a021cfe2d82d2e72360687dc8971a  LATIN  --emilian --shapes 3
 cu   cu   cuwiki_content-20261108-00000.json.bz2   12aac7a8422656a861bcc6756d47ef540c68ecdbc7db316b94c6cb0a9eca68c5  CYRILLIC  --script-only --shapes 3 --letters єѣꙑѥїꙁꙗѧѫѩѡіѭѵѷѳꙋѯѱѿѻѕѹ
 zea  zea  zeawiki_content-20261108-00000.json.bz2  25f44b4a3d2d9de7f626493df4d725c736e783e5b611f93faaa3d6ff2a904edc  LATIN  --shapes 3
+btm  btm  btmwiki_content-20261108-00000.json.bz2  5cfcf9f522ab6347cb618be739fd0c7127560af6038dd108d2e7567a87493e2a  LATIN  --own btm --markup Templat: --neighbour id,en --shapes 3 --holdout 10
+gpe  gpe  gpewiki_content-20261108-00000.json.bz2  ea4f1bc341022235e93b0167feb91fc5b0a18286f25c604ca2800cd513d2bac0  LATIN  --own gpe --markup Template: --shapes 3
+igl  igl  iglwiki_content-20261108-00000.json.bz2  7fe3be3cf8c83d25666651ccaaadb5d56510e55d761be49694c37f145e9cbbb9  LATIN  --own igl --markup Éwn_malábó: --shapes 3
+rki  rki  rkiwiki_content-20261108-00000.json.bz2  33629ae723c9cb6dbf49c1216179e2d19a240147a699331fe7043537da8b5f8d  MYANMAR  --script-only --shapes 3
+vel  nds_nl  nds_nlwiki_content-20261108-00000.json.bz2  55ea2bd8fda153718b569cc31de7589b65466f0a56855564dcc53ffd52372450  LATIN  --category West-Veluws_artikel,Oost-Veluws_artikel --shapes 3
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1

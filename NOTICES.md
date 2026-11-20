@@ -160,7 +160,7 @@ learns from leaves out.
 
 ### Wikipedia text (the wikis' own)
 
-Twenty-three languages' models learn from their own Wikipedia alone:
+Twenty-eight languages' models learn from their own Wikipedia alone:
 Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto,
 Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki,
 Tulu, Dotyali, Angika, Eastern Min (in Bàng-uâ-cê, the Han its sentences
@@ -168,8 +168,13 @@ write beside left out), Fiji Hindi (its sentences that write its own
 function words: its references are English) and Emilian (the
 Emilian–Romagnol wiki's, its Romagnol articles left out, each article
 without the name of its dialect), Church Slavonic (its sentences that
-write a letter of its own, ѣ є ꙑ ѥ…: its references are Russian) and
-Zeelandic, the last five's bots' stubs left out but three of a shape;
+write a letter of its own, ѣ є ꙑ ѥ…: its references are Russian),
+Zeelandic, Batak Mandailing, Ghanaian Pidgin and Igala (their sentences
+that write their own words: their references are English; and those
+that show a failed template's name), Arakanese (in the Myanmar script,
+cut into syllables) and Veluws (the Dutch Low Saxon wiki's articles it
+files as written in Veluws), the last ten's bots' stubs left out but
+three of a shape;
 Newari's from its
 own beside its news
 (GlotCC's, below); and Armenian's and Persian's from theirs beside their
@@ -194,7 +199,7 @@ Abron's, its sentences that write its ɛ or ɔ), Magahi's beside
 its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
 Persian's, Indonesian's or English's own words is left out.
 **Wikipedia's text, and the Incubator's, is CC BY-SA 4.0**, share-alike:
-the packs of those forty-four languages, their models and that held-out
+the packs of those forty-nine languages, their models and that held-out
 text carry those terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 
@@ -650,7 +655,10 @@ Source: https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/data/b
 Mon, Sgaw Karen and Pa'O text, have no list of words behind them: each is
 the syllables its language's FineWeb-2 text writes twice or more,
 listed by `build-syllables` (`make syllable-lists`). They are made from
-FineWeb-2, under its ODC-By 1.0 as above.
+FineWeb-2, under its ODC-By 1.0 as above. `wordbreak/rki.txt`, which
+cuts Arakanese text, is the syllables its Wikipedia's text writes twice
+or more, listed the same way: it is made from that text, under its
+CC BY-SA 4.0 as above, share-alike.
 
 ## Dialect flags
 

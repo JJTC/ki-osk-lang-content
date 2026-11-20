@@ -6,7 +6,12 @@ The input is the wiki's CirrusSearch dump (`<wiki>_content-*.json.bz2`:
 Elasticsearch bulk lines, for each article an index line and a document
 line whose "text" is the article's plain text, no markup). Each
 article's text is cut into sentences after a full stop, danda, question
-or exclamation mark (Latin, Devanagari, Arabic, Ol Chiki, Meetei Mayek);
+or exclamation mark (Latin, Devanagari, Arabic, Ol Chiki, Meetei Mayek),
+and with --script MYANMAR after the Myanmar script's full stop ။, which
+the Arakanese wiki ends its sentences with (the other wikis' few ။ stay
+inside their sentences: ten in the Western Punjabi wiki's), its
+zero-width joiners and non-joiners dropped (strays: no Myanmar spelling
+writes one, and 644 of the Arakanese wiki's sentences do);
 a sentence of fewer than three words, a run of more than 1 000
 characters (a list, a table), or one with wiki markup in it
 ([[ ]] {{ }}, where a template failed: 9 000 of the Sanskrit wiki's
@@ -65,7 +70,12 @@ languages' keys.
 With --own, a sentence none of whose words is one of the language's own
 function words is left out: the Fiji Hindi wiki's references are
 English (`The Oxford Dictionary of Opera, OUP, 1992.`, 13 700 of its
-46 000 sentences), and its sentences write hae, ke, aur, rahaa.
+46 000 sentences), and its sentences write hae, ke, aur, rahaa. So are
+the Ghanaian Pidgin wiki's (245 000 of its 383 000 sentences, `Retrieved
+2 August 2025.`), whose own write dey, wey, insyd, ein; the Igala wiki's,
+English and a few Igbo, whose own write ma, ki, efu, kpai, ọdọ; and the
+Batak Mandailing wiki's, English and Indonesian, whose own write ima,
+dohot, sian, adong.
 
 With --letters, a sentence that writes none of these letters is left
 out: a third of the Abron test wiki's sentences are English, its
@@ -78,11 +88,24 @@ Emilian: the dialect each names before its text (` Miranduléś`,
 ` Carpśàn`, `Artìcol in dialët piaṡintëin`) is left out of it, and the
 articles in Romagnol, a language of its own, are left out.
 
+With --markup, a sentence that writes this text is left out too, as one
+with [[ or {{ is: where a template failed, its name shows after the
+wiki's own word for template (`Éwn malábó:Infobox football biography`,
+805 of the Igala wiki's sentences; `Templat:` 62 of Batak Mandailing's,
+`Template:` 11 of Ghanaian Pidgin's). An underscore stands for a space,
+and several are named with commas between.
+
+With --category, only the articles filed in one of these categories are
+read (an underscore for a space, several with commas between): the Dutch
+Low Saxon wiki files its articles by the dialect they are written in, a
+thousand of them `West-Veluws artikel` and `Oost-Veluws artikel`.
+
     wikipedia-text.py [--cap N] [--eval N] [--holdout K] [--script NAME]
-                      [--script-only] [--prefix P]
+                      [--script-only] [--prefix P] [--category C[,…]]
+                      [--markup T[,…]]
                       [--neighbour hi|ur|fa|id|en[,…]] [--shapes K]
-                      [--sorani] [--own hif] [--letters ɛɔ] [--emilian]
-                      OUT EVAL DUMP...
+                      [--sorani] [--own hif|gpe|igl|btm] [--letters ɛɔ]
+                      [--emilian] OUT EVAL DUMP...
 
 The dumps are read in the order given, the articles in dump order, so
 the same dumps always give the same files.
@@ -97,6 +120,10 @@ import sys
 import unicodedata
 
 END = re.compile(r"(?<=[.!?।॥۔؟᱾᱿꯫])\s+")
+# And the Myanmar script's full stop, for the wikis in it alone, whose
+# zero-width joiners are strays.
+END_MYANMAR = re.compile(r"(?<=[.!?।॥۔؟᱾᱿꯫။])\s+")
+JOINERS = re.compile("[\u200c\u200d]")
 STEERING = re.compile("[\u200e\u200f\u202a-\u202e\u2066-\u2069\ufeff]")
 MARKUP = re.compile(r"\[\[|\]\]|\{\{|\}\}")
 # A big neighbour's own function words: scripts/fineweb-text.py's.
@@ -111,6 +138,11 @@ NEIGHBOURS = {
 OWN = {
     "hif": set("hae hai rahaa rahin rahe ke ki ka ko se aur ek ii uu jon jiske jisme uske iske gais bhais"
                " kare karis hoe jaae bhi baad nai log jab jaada lekin talak waala".split()),
+    "gpe": set("de den dey wey ein insyd outsyd dem dese dis dat sef wetin sabi pikin chale plenti cam fi".split()),
+    "igl": set("ma ki chi chí kí efu ọdọ kpai che nwu ñwu lẹ eyi ẹyi abo ku du ami ukọlọ ọjọ ojanẹ amonẹ onu"
+               " ẹgwa ugbo gwaji ẹñwu ọmọ alu ẹkọ".split()),
+    "btm": set("ima dohot dot ni na tu ma sian tingon adong manjadi nai nia sangape alak halak inda juo"
+               " mambaen idokon ibaen anso alai godang mandung".split()),
 }
 # The Emilian–Romagnol wiki's dialect marks: names after a no-break
 # space, or "Artìcol in dialët …", before an article's text.
@@ -177,10 +209,13 @@ def emilian(text):
     return [n.lower() for n in names], text
 
 
-def sentences(text, script, neighbour=None, script_only=False, own=None, letters=None):
-    for s in END.split(STEERING.sub("", text)):
+def sentences(text, script, neighbour=None, script_only=False, own=None, letters=None, markup=()):
+    end = END
+    if script == "MYANMAR":
+        end, text = END_MYANMAR, JOINERS.sub("", text)
+    for s in end.split(STEERING.sub("", text)):
         s = " ".join(s.split())
-        if MARKUP.search(s) or (neighbour and neighbourly(s, neighbour, 0.15)):
+        if MARKUP.search(s) or any(m in s for m in markup) or (neighbour and neighbourly(s, neighbour, 0.15)):
             continue
         if own and not any(w.lower() in own for w in WORDS.split(s)):
             continue
@@ -200,6 +235,8 @@ def main():
     ap.add_argument("--script-only", action="store_true",
                     help="with --script, cut a sentence where another script's word stands")
     ap.add_argument("--prefix", help="read only the articles whose title starts so (the Incubator's Wp/mag/)")
+    ap.add_argument("--category", help="read only the articles in one of these categories (_ for a space; A,B)")
+    ap.add_argument("--markup", help="leave out the sentences that write this text, a failed template (_ for a space)")
     ap.add_argument("--neighbour", help="leave out articles heavy with its words (several: id,en)")
     ap.add_argument("--shapes", type=int, help="at most K sentences of one shape (a bot's stubs)")
     ap.add_argument("--sorani", action="store_true", help="read Kurdish as Sorani's keyboard types it")
@@ -217,6 +254,8 @@ def main():
     corpus = articles = neighbours = stubs = romagnol = 0
     neighbour = None
     own = OWN[opts.own] if opts.own else None
+    categories = {c.replace("_", " ") for c in opts.category.split(",")} if opts.category else None
+    markup = tuple(m.replace("_", " ") for m in opts.markup.split(",")) if opts.markup else ()
     if opts.neighbour:
         names = opts.neighbour.split(",")
         unknown = [n for n in names if n not in NEIGHBOURS]
@@ -250,6 +289,8 @@ def main():
                         continue
                     if opts.prefix and not doc.get("title", "").startswith(opts.prefix):
                         continue
+                    if categories and not categories.intersection(doc.get("category", [])):
+                        continue
                     if neighbour and neighbourly(text, neighbour):
                         neighbours += 1
                         continue
@@ -262,11 +303,11 @@ def main():
                             continue
                     articles += 1
                     if articles % opts.holdout == 0:
-                        for s in sentences(text, opts.script, neighbour, opts.script_only, own, opts.letters):
+                        for s in sentences(text, opts.script, neighbour, opts.script_only, own, opts.letters, markup):
                             if s not in held and fresh(s):
                                 held[s] = None
                         continue
-                    for s in sentences(text, opts.script, neighbour, opts.script_only, own, opts.letters):
+                    for s in sentences(text, opts.script, neighbour, opts.script_only, own, opts.letters, markup):
                         if corpus < opts.cap and s not in seen and fresh(s):
                             seen.add(s)
                             out.write(s + "\n")

@@ -35,12 +35,12 @@
 //! - Per language: Catalan's middle dot (`col·legi`), Armenian's question,
 //!   emphasis and exclamation marks, written on a word's stressed vowel
 //!   (`Ի՞նչ`), Hebrew's gershayim in acronyms (`לחו"ל`), a leading
-//!   apostrophe in Breton (`'zo`) and in Dutch's `'s`, `'t`, `'n`, `'k` and
-//!   `'m`.
+//!   apostrophe in Breton (`'zo`) and in Dutch's and Veluws' `'s`, `'t`,
+//!   `'n`, `'k` and `'m`.
 //! - Thai, Lao, Khmer and Burmese are written without spaces between
-//!   words, and so are Shan, Mon, Sgaw Karen and Pa'O: a run of their
-//!   letters is cut into the words of the language's word list (the
-//!   syllables, for the last four)
+//!   words, and so are Shan, Mon, Sgaw Karen, Pa'O and Arakanese: a run of
+//!   their letters is cut into the words of the language's word list (the
+//!   syllables, for the last five)
 //!   ([`crate::wordbreak`], given with [`Splitter::with_word_list`]), each
 //!   after the first glued to the one before, as `homme` is to `l'`; so a
 //!   keyboard types no space after a Thai, Lao, Khmer or Burmese word. A
@@ -162,7 +162,7 @@ pub struct Splitter {
     /// upper-cases to `İ`.
     turkic: bool,
     /// The script the language writes without spaces between words (Thai,
-    /// Lao, Khmer, Burmese; Shan, Mon, Sgaw Karen, Pa'O).
+    /// Lao, Khmer, Burmese; Shan, Mon, Sgaw Karen, Pa'O, Arakanese).
     script: Option<Script>,
     /// The words its runs are cut into.
     word_list: Option<Arc<WordList>>,
@@ -286,7 +286,8 @@ const MALTESE_ELISIONS: &[&str] = &["b", "f", "x", "m", "s", "l", "t"];
 const ITALIAN_APOCOPES: &[&str] = &[
     "po", "di", "fa", "va", "sta", "da", "be", "mo", "to", "ve", "ca", "pie",
 ];
-/// Dutch's clipped words (`'s avonds`, `'t is`, `'n huis`).
+/// Dutch's clipped words (`'s avonds`, `'t is`, `'n huis`), which Veluws
+/// writes too (`'t Boerenklokjen`).
 const DUTCH_CLIPPED: &[&str] = &["s", "t", "n", "k", "m"];
 
 /// Apostrophes: ASCII, the typographic right single quote, and the Hebrew
@@ -511,7 +512,7 @@ impl Splitter {
             }
             "oc" => s.elide = Elide::After(OCCITAN_ELISIONS),
             "br" | "zea" => s.lead = Lead::Always,
-            "nl" => s.lead = Lead::Words(DUTCH_CLIPPED),
+            "nl" | "vel" => s.lead = Lead::Words(DUTCH_CLIPPED),
             "hy" => {
                 s.armenian = true;
                 s.fold = Fold::Armenian;
@@ -547,7 +548,7 @@ impl Splitter {
 
     /// Whether the language is written without spaces between words, so
     /// that its words are found with a word list ([`Self::with_word_list`]):
-    /// Thai, Lao, Khmer, Burmese; Shan, Mon, Sgaw Karen, Pa'O.
+    /// Thai, Lao, Khmer, Burmese; Shan, Mon, Sgaw Karen, Pa'O, Arakanese.
     #[must_use]
     pub fn wants_word_list(&self) -> bool {
         self.script.is_some()
@@ -1445,6 +1446,8 @@ mod tests {
         assert_eq!(split("zea", "'oôdstad"), ["'oôdstad"]);
         assert_eq!(split("zea", "'t"), ["'t"]);
         assert_eq!(split("zea", "d'r"), ["d'r"]);
+        assert_eq!(split("vel", "'t"), ["'t"]);
+        assert_eq!(split("vel", "'Hallo'"), ["Hallo"]);
         assert_eq!(split("fr", "'maison'"), ["maison"]);
     }
 

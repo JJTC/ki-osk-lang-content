@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**655 layouts**: 593 keyboard layouts (RTL: ar he fa + Urdu, Western
+**668 layouts**: 606 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 14 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 654 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **438 languages** carry a prediction
+keycaps. 667 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **443 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -391,6 +391,11 @@ but no model to match the glide against · `—` off
 | `egl` | `egl` | Emilian | it + long-press ś ṡ ṅ ō ē ū ć ṿ ł ǵ ż | LTR | **Full** (egl)⁶ | ✓ | — |
 | `cu` | `cu` | Church Slavonic Словѣньскъ | ru, є ѣ ꙑ ꙁ ꙗ for е э ы з я, keys for ѥ and its accent marks + long-press ѧ ѫ ѡ ї і ѵ… | LTR | **Full** (cu)⁶ | — | — |
 | `zea` | `zea` | Zeelandic Zeêuws | nl + long-press ê ô first, ' key | LTR | **Full** (zea)⁶ | ✓ | — |
+| `btm` | `btm` | Batak Mandailing Saro Mandailing | us | LTR | **Full** (btm)⁶ | ✓ | — |
+| `gpe` | `gpe` | Ghanaian Pidgin | us | LTR | **Full** (gpe)⁶ | ✓ | — |
+| `igl` | `igl` | Igala | us + long-press ẹ ọ first, é è ó ò í ì á à ú ù, ñ, ' key | LTR | **Full** (igl)⁶ | ✓ | — |
+| `rki` | `rki` | Arakanese ရခိုင် | mm, Burmese's keys | LTR | **Full** (rki)⁶ | — | — |
+| `vel` | `vel` | Veluws | nl + long-press ö ä å ü first, ' key | LTR | **Full** (vel)⁶ | ✓ | — |
 | `tbw` | `tbw` | Aborlan Tagbanwa Tagbanwa | us, ꞌ key | LTR | —⁹ | — | — |
 | `aa` | `aa` | Afar Qafar | us | LTR | —⁹ | — | — |
 | `bom` | `bom` | Berom | us + long-press ɛ é è ê ē ě ɛ́ ɛ̀ ɛ̂ ɛ̄ ɔ ó ò ô ō ɔ́ ɔ̀ ɔ̂ á à â ā í î ī û | LTR | —⁹ | — | — |
@@ -540,6 +545,14 @@ but no model to match the glide against · `—` off
 | `pse` | `pse` | Central Malay Baso Melayu Tenga | us | LTR | —¹² | — | — |
 | `kge` | `kge` | Komering Basa Kumoring | us | LTR | —¹² | — | — |
 | `vkt` | `vkt` | Kutai Malay | us | LTR | —¹² | — | — |
+| `gdx` | `gdx` | Godwari गोड़वाड़ी | in, Hindi's keys | LTR | —¹² | — | — |
+| `mjl` | `mjl` | Mandeali मंडयाली | in, Hindi's keys | LTR | —¹² | — | — |
+| `sjp` | `sjp` | Surjapuri सुरजापुरी | in, Hindi's keys | LTR | —¹² | — | — |
+| `vah` | `vah` | Varhadi वऱ्हाडी | in · marathi, Marathi's keys | LTR | —¹² | — | — |
+| `vas` | `vas` | Vasavi वासवी (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `vas-gujr` | `vas` | Vasavi વસાવી (Gujarati script) | in · guj, Gujarati's keys | LTR | —¹² | — | — |
+| `gjk` | `gjk` | Kachi Koli કચ્છી કોળી (Gujarati script) | in · guj, Gujarati's keys | LTR | —¹² | — | — |
+| `uum` | `uum` | Urum Урум | ru + long-press ӧ ӱ ґ, ʼ key | LTR | —¹² | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -967,13 +980,14 @@ but no model to match the glide against · `—` off
    as their writers spelled them, 13.4% of whose words the lexicon (60 000
    words) lacks: no two writers spell alike. For the same reason
    autocorrect changes 2.2% of right words, more than elsewhere.
-6. These twenty-six models learn from their own Wikipedia (CC BY-SA 4.0,
+6. These thirty-one models learn from their own Wikipedia (CC BY-SA 4.0,
    share-alike; `scripts/fetch-wikipedia.sh`, the wikis' CirrusSearch
    dumps of 2026-11-08): Bhojpuri, Maithili, Mongolian, Nepali, Odia,
    Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the
    Goan wiki's Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki,
    Tulu, and Dotyali, Angika, Newari, Armenian, Persian, Eastern Min,
-   Fiji Hindi, Emilian, Church Slavonic and Zeelandic (below).
+   Fiji Hindi, Emilian, Church Slavonic, Zeelandic, Batak Mandailing,
+   Ghanaian Pidgin, Igala, Arakanese and Veluws (below).
    Keystroke savings on
    held-out articles of the first sixteen: Santali 50.2%, Kashmiri
    48.7%, Meitei 43.2%, Bhojpuri 43.0%, Maithili 42.1%, Pashto 41.3%,
@@ -1094,6 +1108,40 @@ but no model to match the glide against · `—` off
    is typed on Dutch's keys with ê ô first on the long presses of e o (in
    2.8% and 2.1% of its words; è ë ò after them) and an apostrophe key at
    the home row's end.
+   Five more wikis no round had read came after it: Batak Mandailing's
+   (6 080 sentences from 1 417 articles, 146 000 words), Ghanaian
+   Pidgin's (115 304 sentences, 2.6 million words) and Igala's (13 626
+   sentences, 331 000 words), each the sentences that write one of its
+   own words (ima, dohot, sian, adong; dey, wey, insyd, ein; ma, ki, efu,
+   kpai, ọdọ: `wikipedia-text.py --own`), their references English (two
+   thirds of Ghanaian Pidgin's sentences, `Retrieved 2 August 2025.`)
+   and Batak Mandailing's articles heavy with Indonesian's words left
+   out, and, where a template failed, the sentence that shows its name
+   after the wiki's word for template left out (`Éwn malábó:Infobox …`,
+   805 of Igala's: `--markup`); Arakanese's, in the Myanmar script
+   (79 817 sentences, cut after its full stop ။, their Latin words and
+   stray zero-width joiners left out), cut into syllables as Pa'O's are,
+   its word list the 3 994 syllables its text writes twice or more
+   (`wordbreak/rki.txt`); and Veluws', the 1 018 articles the Dutch Low
+   Saxon wiki files as written in West or East Veluws (13 215 sentences,
+   229 000 words: `--category`), whose words keep the apostrophe Dutch's
+   clipped 't 'n 's do (3 090 of them). Their bots' stubs are left out
+   but three of a shape, and every 20th article is held out (Batak
+   Mandailing's every 10th). Keystroke savings on about 3 000 held-out
+   words (Arakanese's 12 824 syllables): Ghanaian Pidgin 49.8% (45.9%
+   with taps astray, 3.4% unknown), Batak Mandailing 41.5% (33.0%,
+   12.8%), Igala 41.2% (36.2%, 10.7%), Arakanese 38.2% (37.9%, 0.1%) and
+   Veluws 32.7% (19.4%, 19.8% unknown: each writer spells their own
+   dialect). Batak Mandailing, Igala and Veluws keep all their 21 000 to
+   37 000 kinds of word, Ghanaian Pidgin 80 000 of its 113 000. Batak
+   Mandailing and Ghanaian Pidgin are typed on the US keys as they are;
+   Igala on them with ọ and ẹ first on the long presses of o and e (each
+   in one word in twenty), the tones its writers mark after them and on
+   the other vowels (í in 4% of its words, é ó á in 2%), ñ on n's, and an
+   apostrophe key at the home row's end (ny’ẹ́yọ́, l'amẹnwu: two words in a
+   hundred); Arakanese on Burmese's keys; and Veluws on Dutch's, ö first
+   on o's long press (in 1.5% of its words), ä å on a's and ü on u's,
+   and an apostrophe key.
    Languages with no Wikipedia yet have test wikis in the Wikimedia
    Incubator, whose dump (the same date's, CC BY-SA 4.0) holds them all,
    each article's title starting with its wiki's prefix (`Wp/mag/`).
@@ -1170,8 +1218,8 @@ but no model to match the glide against · `—` off
    Southern Luri's writes two spellings, one with letters of its own (ݖ
    ۿ ڍ ڲ), and Eastern Balochi's is half a garbled transliteration: not
    used. Rakhine's and Sylheti's hold only Wiktionary, Wikivoyage or
-   Wikinews pages, as Zeelandic's does (its Wikipedia is a wiki of its
-   own: above), and Komering's and Kutai Malay's give their keyboards
+   Wikinews pages, as Zeelandic's does (Zeelandic's and Rakhine's
+   Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
    their letters (note 12); Vai, Northern Thai and
    Eastern Pwo Karen have keyboards (notes 10 to 12) and no model yet.
 7. These three hundred and twenty-six models learn from web text, FineWeb-2's (ODC-By 1.0,
@@ -2159,7 +2207,7 @@ but no model to match the glide against · `—` off
    。 are keys, its other punctuation fullwidth, as Keyman's rules type it.
    Neither has a model: the strip offers the reading and the letters as
    typed.
-12. Seventy-three keyboards of languages no text here predicts are another
+12. Eighty-one keyboards of languages no text here predicts are another
    language's keys in their name, as they write with those letters:
    Amdo and Khams Tibetan on Tibetan's, in its spelling (Keyman's
    Tibetan keyboards name them among their languages); Sadri on Hindi's
@@ -2232,7 +2280,8 @@ but no model to match the glide against · `—` off
    writes (0.4% of its words) on ব's long press; and those Wikidata's
    "writing system" (P282) gives Devanagari, Bundeli, Dhundhari, Korku,
    Malvi, Merwari, Mahasu Pahari and Halbi, on Hindi's keys (Mandeali,
-   Takri alone there, and Wanetsi, "Arabic alphabet", are not). These
+   Takri alone there, came later, below; Wanetsi, "Arabic alphabet", has
+   not). These
    are named in English but Dari, Valencian and Bishnupriya Manipuri
    (as its wiki writes it). Two take their letters from the Bibles
    eBible.org has of them, the only ones of the languages left it has:
@@ -2268,13 +2317,26 @@ but no model to match the glide against · `—` off
    US keys as they are. These are named as their texts write their names
    (A·chik and গারো, Kinyamwezi, Haausqyaix, Thiểng Mường, Baso Melayu
    Tenga, Basa Kumoring), in English otherwise (Maay, Chokwe, Hmu,
-   Mandar, Kui, Kutai Malay). None has a model: neither suggestions nor
-   glides.
+   Mandar, Kui, Kutai Malay). And eight have a script LinguaMeta (Google
+   Research's language metadata, CC BY 4.0) names for them, whose
+   national keys type all of it: Godwari, Mandeali and Surjapuri, in
+   Devanagari, on Hindi's keys; Varhadi on Marathi's (its name, वऱ्हाडी,
+   writes Marathi's eyelash ra ऱ); Vasavi, in Devanagari and in the
+   Gujarati script, on Hindi's keys and on Gujarati's, both in Vasavi's
+   pack; Kachi Koli, in the Gujarati script, on Gujarati's (LinguaMeta
+   names the Arabic script for it too, whose letters no source here
+   gives); and Urum, in Cyrillic, which settles the script of
+   Wiktionary's 147 entries (ӧ ӱ ґ, and ʼ where Russian writes ь), on
+   Russian's keys with ӧ ӱ ґ on the long presses of о у г and a key at
+   the home row's end for its ʼ (in one entry in thirteen). These are
+   named as LinguaMeta writes their names (गोड़वाड़ी, मंडयाली, सुरजापुरी,
+   वऱ्हाडी, वासवी and વસાવી, કચ્છી કોળી, Урум). None has a model:
+   neither suggestions nor glides.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **438 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **443 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2285,7 +2347,7 @@ but no model to match the glide against · `—` off
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp
-  new cdo hif egl cu zea** (Newari with GlotCC's news too), **hy fa** beside Tatoeba's, and
+  new cdo hif egl cu zea btm gpe igl rki vel** (Newari with GlotCC's news too; Arakanese cut into syllables), **hy fa** beside Tatoeba's, and
   the Incubator's test wikis: **wsg khw cnr bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr** (note 6) ·
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my**, and of
   thirty-eight languages that had a keyboard and no model, **sw af sl zu sq kk uz bs
@@ -2309,13 +2371,13 @@ but no model to match the glide against · `—` off
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 154 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 162 layouts, Montenegrin's in
   Cyrillic, the fifty-seven whose letters are CLDR's exemplar characters
   (note 9: thirty-two in Latin letters, twenty-five in the Arabic script,
   Devanagari and Bengali), the nineteen from Keyman's (note 10: thirteen
   of a script of their own, Chakma to Osage, Gorani, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
-  Tham, and the International Phonetic Alphabet's), the seventy-three on another language's keys (note 12: Northern
+  Tham, and the International Phonetic Alphabet's), the eighty-one on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian
   Konkani, Kutchi, Tày and Eastern Pwo Karen, twelve whose letters their
   wikis give, Northern Min to Southern Balochi, and seventeen from smaller
@@ -2323,8 +2385,9 @@ but no model to match the glide against · `—` off
   whose script CLDR's or Wikidata's data names, Dari to Halbi, two
   whose Bibles give their letters, Southern Oromo and Yaka, four the
   Universal Declaration of Human Rights, Maay to Northern Qiandong Miao,
-  six Wiktionary's entries, Garo's two to Kui, and three their test
-  wikis, Central Malay, Komering and Kutai Malay), Vai's and Nuosu's, whose composers
+  six Wiktionary's entries, Garo's two to Kui, three their test
+  wikis, Central Malay, Komering and Kutai Malay, and eight whose script
+  LinguaMeta names, Godwari to Urum), Vai's and Nuosu's, whose composers
   read their tables alone (note 11), and Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
   its wiki's and its New Testament), and Nahuatl, whose is colonial
@@ -2569,6 +2632,9 @@ syllables:
 | `bbj` Ghomala' | ə ɛ and their tones on e, ɔ and its tones on o, ʉ on u, ŋ on n, ƴ on y, its vowels' tones first (é ə ə́ è…; on the US keys; note 12) | `bbj` |
 | `sty` `qxq` `rej` `bcc` | Siberian Tatar's ё on е (on Bashkir's keys), Qashqai's ێ on ی (on South Azerbaijani's), Rejang's ê first on e (on the US keys), Southern Balochi's ۏ ݔ ګ on و ی گ (on Balochi's; note 12) | each its own |
 | `zea` Zeelandic | ê ô first on Dutch's long presses of e and o (è ë ò after them), and an apostrophe key at the home row's end (note 6) | `zea` |
+| `igl` Igala | ọ ẹ first on the long presses of o and e, the tones its writers mark after them (ó ò ọ́ ọ̀, é è ẹ́ ẹ̀) and on i a u (í ì î, á à, ú ù), ñ ń on n, and an apostrophe key at the home row's end (on the US keys; note 6) | `igl` |
+| `vel` Veluws | ö first on Dutch's long press of o, ä å on a's, ü on u's, and an apostrophe key at the home row's end (note 6) | `vel` |
+| `uum` Urum | on Russian's keys: ӧ ӱ ґ on the long presses of о у г, and a key at the home row's end for the ʼ it writes where Russian writes ь (note 12) | `uum` |
 | `cu` Church Slavonic | on Russian's keys: є ѣ ꙑ ꙁ ꙗ in place of е э ы з я, which are on their long presses; ѥ and its accent marks (́, then ҃ ҄ ҆ ̀ ̑ on its long press) keys of their own at the home row's end; ѧ ѩ on ꙗ, ѫ ꙋ ѹ on у, ѭ on ю, ѡ ѻ ѿ on о, ї і ѵ ѷ on и, ѳ ѯ ѱ on ф к п, ѕ ꙃ on ꙁ | `cu` |
 | `ctg` `niq` `max` `cyo` `mog` `mqy` `bug` `meo` | Chittagonian's ৱ ৰ on ব র (on Bengali's keys); Nandi's ñ ā ē ĩ ō, North Moluccan Malay's accented vowels, Cuyonon's ñ, Mongondow's ḷ ḻ, Manggarai's and Buginese's é and Kedah Malay's å first on the long presses (on the US and Malay's keys; note 12) | each its own |
 | `niq` `mog` `mqy` | an apostrophe, a key of its own at the home row's end: Nandi's ' (para'ab), Mongondow's glottal stop ' (lopi'), Manggarai's ’ (Pu’ung) | each its own |

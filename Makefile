@@ -62,7 +62,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  rkt \
                  cdo hif egl abr cu \
                  tdx hvn ktu quy \
-                 zea
+                 zea \
+                 btm gpe igl rki vel
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -114,9 +115,15 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # their bots' stubs left out as the small wikis' are; and Church
 # Slavonic's (60 000 words, the sentences that write its own letters);
 # and Zeelandic's (460 000 words, its bots' French communes and calendar
-# days left out).
+# days left out). And five more no round had used: Batak Mandailing's
+# (146 000 words), Ghanaian Pidgin's (2.6 million) and Igala's (330 000),
+# the sentences that write their own words (their references English,
+# some Indonesian), Arakanese's, in the Myanmar script (680 000 words
+# between its spaces, cut into syllables as Pa'O's are), and Veluws',
+# the Dutch Low Saxon wiki's articles in it (229 000).
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
-                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu zea
+                   bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu zea \
+                   btm gpe igl rki vel
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences
@@ -346,7 +353,10 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # syllables, as Southern Min's; Fiji Hindi's 55 000 kinds; Emilian's
 # 144 000 and Zeelandic's 60 000, their dialects each spelled their own
 # way). And MADLAD-400's Tandroy-Mahafaly Malagasy, Hawu, Kituba and
-# Ayacucho Quechua.
+# Ayacucho Quechua. And Batak Mandailing, Igala and Veluws from their
+# wikis, which keep all their 21 000 to 37 000 kinds of word, Arakanese's
+# syllables, and Ghanaian Pidgin's, 80 000 of its 113 000 kinds (98.7% of
+# its words written; the rest its articles' names, most of them).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -373,7 +383,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        rmy rmn ojb \
                        cnr \
                        cdo hif egl zea \
-                       tdx hvn ktu quy
+                       tdx hvn ktu quy \
+                       btm gpe igl rki vel
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -590,16 +601,20 @@ word-lists:
 	./scripts/fetch-word-lists.sh
 
 # The languages cut into syllables (osk_data::wordbreak), no list of whose
-# words is to be had: Shan, Mon, Sgaw Karen and Pa'O. Their word lists
-# (wordbreak/<lang>.txt, committed) are the syllables their FineWeb-2
-# text writes twice or more, made from it (fetch-fineweb) before their
-# models are.
-SYLLABLE_LANGS ?= shn mnw ksw blk
+# words is to be had: Shan, Mon, Sgaw Karen, Pa'O and Arakanese. Their
+# word lists (wordbreak/<lang>.txt, committed) are the syllables their
+# FineWeb-2 text writes twice or more (Arakanese's, its wiki's:
+# SYLLABLE_WIKI_LANGS), made from it (fetch-fineweb, fetch-wikipedia)
+# before their models are.
+SYLLABLE_LANGS ?= shn mnw ksw blk rki
+SYLLABLE_WIKI_LANGS ?= rki
 
 .PHONY: syllable-lists
 syllable-lists:
 	@for lang in $(SYLLABLE_LANGS); do \
-		$(TOOLS) build-syllables -- --lang $$lang --corpus $(FINEWEB_DIR)/$$lang.txt \
+		dir=$(FINEWEB_DIR); \
+		case " $(SYLLABLE_WIKI_LANGS) " in *" $$lang "*) dir=$(WIKIPEDIA_DIR) ;; esac; \
+		$(TOOLS) build-syllables -- --lang $$lang --corpus $$dir/$$lang.txt \
 			--out $(CURDIR)/wordbreak/$$lang.txt || exit 1; \
 	done
 

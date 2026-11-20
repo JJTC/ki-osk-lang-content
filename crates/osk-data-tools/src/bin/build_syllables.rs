@@ -1,7 +1,8 @@
 //! `build-syllables` — the word list of a language cut into syllables
-//! (Shan, Mon, Sgaw Karen, Pa'O: `osk_data::wordbreak::Script::syllables`),
-//! which has no list of its words to be had: the syllables its text
-//! writes, each seen `--min` times or more, the commonest first.
+//! (Shan, Mon, Sgaw Karen, Pa'O, Arakanese:
+//! `osk_data::wordbreak::Script::syllables`), which has no list of its
+//! words to be had: the syllables its text writes, each seen `--min`
+//! times or more, the commonest first.
 //!
 //! Usage:
 //!   build-syllables --lang shn --corpus shn.txt --out wordbreak/shn.txt
@@ -23,7 +24,7 @@ use unicode_normalization::UnicodeNormalization;
 #[derive(Parser)]
 #[command(name = "build-syllables")]
 struct Args {
-    /// The language: one cut into syllables (`shn`, `mnw`, `ksw`, `blk`).
+    /// The language: one cut into syllables (`shn`, `mnw`, `ksw`, `blk`, `rki`).
     #[arg(long)]
     lang: String,
     /// Its text, plain UTF-8. Repeat for several.
