@@ -13,7 +13,7 @@ Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, G
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
 keycaps. 673 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **463 languages** carry a prediction
+table below is the complete list; **465 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -646,8 +646,8 @@ but no model to match the glide against · `—` off
 | `yue-jyutping` | `yue` | Cantonese 粵語 (粵拼) | — | LTR | IME | — | **Jyutping** Latin → Traditional (CC-Canto) |
 | `jp-romaji` | `ja` | Japanese 日本語 | — | LTR | IME | — | **Kana→Kanji** (mozc, connection-cost lattice) |
 | `kr-2set` | `ko` | Korean 한국어 (두벌식) | — | LTR | IME | — | **Hangul** (algorithmic) |
-| `am` | `am` | Amharic አማርኛ | — | LTR | IME | — | **Ge'ez** (phonetic Latin→fidel + homophone candidate bar; capitals on the Shift view for the ejectives ጠ ጨ ጰ ጸ and ዸ, the 5th order and the 6th (I: እ alone); ። ፣ keys) |
-| `ti` | `ti` | Tigrinya ትግርኛ | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
+| `am` | `am` | Amharic አማርኛ | — | LTR | **Full** (am)⁷ | — | **Ge'ez** (phonetic Latin→fidel, its words on the strip¹⁶ and the last syllable's homophones in its last slot; capitals on the Shift view for the ejectives ጠ ጨ ጰ ጸ and ዸ, the 5th order and the 6th (I: እ alone); ። ፣ keys) |
+| `ti` | `ti` | Tigrinya ትግርኛ | — | LTR | **Full** (ti)⁷ | — | **Ge'ez** (shares the Amharic composer; its words on the strip¹⁶) |
 | `gez` | `gez` | Ge'ez ግዕዝ | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
 | `drs` | `drs` | Gedeo (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its ዸ as D) |
 | `hdy` | `hdy` | Hadiyya (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
@@ -1250,7 +1250,7 @@ but no model to match the glide against · `—` off
    Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
    their letters (note 12); Vai, Northern Thai and
    Eastern Pwo Karen have keyboards (notes 10 to 12) and no model yet.
-7. These three hundred and twenty-six models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and twenty-eight models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -2031,6 +2031,16 @@ but no model to match the glide against · `—` off
    the 76 sentences of its four test documents (1 806 words, 15.8% of
    them unknown). MADLAD-400's Kokborok is not used: it is mostly Thai
    dating and download spam, and Garo news.
+   Amharic and Tigrinya, which FineWeb-2's classifier mistakes for each
+   other, learn from the documents whose own function words (Amharic's
+   ነው እና ላይ ውስጥ, Tigrinya's እዩ ኣብ ናይ ምስ) outnumber the other's: every
+   12th of Amharic's 429 row groups (35 538 of 36 000 documents, 833 304
+   sentences, 14.6 million words) and every 2nd of Tigrinya's 73 (35 784
+   of 36 033 documents, 678 831 sentences, 13.0 million words), their
+   words cut at the Ethiopic wordspace and punctuation and their
+   sentences ended at its full stop ። and question mark ፧ as well. Their
+   keyboards type through the Ge'ez composer, whose strip offers their
+   words (note 16).
 8. These seven models learn from web text, MADLAD-400's (Google; CC BY 4.0
    by its card, whose metadata says ODC-By; subject to Common Crawl's
    Terms of Use; `scripts/fetch-madlad.sh`, its files at one revision
@@ -2479,10 +2489,31 @@ but no model to match the glide against · `—` off
    which none of them could type before, and after a consonant its bare
    form before a vowel of its own (sIIl ስእል).
 
+16. Amharic's and Tigrinya's keyboards type through the Ge'ez composer
+   (Latin letters composing fidel, as SERA writes them), which since data
+   0.67.0 offers their models' words on the strip, as the transliteration
+   keyboards offer their readings: the words the syllables typed begin,
+   likeliest first, in whichever of their homophones' rows the lexicon
+   spells them (`sa` offers words in ሳ and in ሣ alike), with the pending
+   consonant at any of its orders (`sel` offers ሰላም), ranked after the
+   word before by the n-grams. A pick types the word and a space. Where
+   the last syllable has homophones, the strip's last slot cycles it
+   through them (ሃ → ሓ → ኃ), two words beside it; Space types the word
+   as composed. Keystroke savings in taps, each held-out word's keys
+   typed as SERA writes them (a capital two taps, Shift and its key, and
+   a tap on the last slot for each syllable in a homophone's row) until
+   the strip offers it, which a tap takes: Amharic 34.2%, Tigrinya 32.7%
+   (`eval-predict`, 3 000 words of FineWeb-2's held-out text each; 7.5%
+   and 9.0% of the words unknown to their 200 000-word lexicons, and
+   0.3% and 0.9%, Latin or with digits, left out). No next word is
+   offered before the first letter yet. Ge'ez's, Gedeo's, Hadiyya's,
+   Kambaata's, Silt'e's and Sebat Bet Gurage's keyboards, Amharic's keys,
+   name no model and offer none.
+
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **463 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **465 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2512,7 +2543,7 @@ but no model to match the glide against · `—` off
   long tail **zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk spp bas hay kbr ngl gog chw fat
   tsc bud kao gvl nnb nyo niu hwc acf mrw nij guc ljp sas gor itv bku bpr quh gcr tum tll guz kde nyy
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
-  sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn** and Northwestern Ojibwe **ojb**
+  sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, and Amharic and Tigrinya **am ti**, whose words the Ge'ez composer offers (note 16)
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14). Built by
   `make fetch-corpora` + `make predict-assets` in the
@@ -2650,7 +2681,9 @@ record how each group was added and what it needs at runtime:
   FineWeb-2 has no text of it) is Amharic's keys and composer, named for
   it, and so are Gedeo, Hadiyya, Kambaata and Silt'e, the four whose
   syllables, as CLDR's exemplar characters list them, the composer types
-  all of (Kambaata's ኧ as `A`); and since data 0.66.0 Sebat Bet Gurage,
+  all of (Kambaata's ኧ as `A`). Since data 0.67.0 Amharic's and
+  Tigrinya's composers offer their models' words on the strip (note 16).
+  And since data 0.66.0 Sebat Bet Gurage,
   whose labialised and palatalised syllables (Ethiopic Supplement's ᎀ…,
   Extended's ⷀ…) its keyboard's ʷ and ʸ keys type (note 15), and `I`
   types the 6th order (alone, the carrier's እ, which no key typed

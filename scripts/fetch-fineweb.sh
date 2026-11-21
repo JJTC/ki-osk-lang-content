@@ -43,7 +43,8 @@
 # Tausug, Ewondo, Tooro, Makhuwa-Meetto, Kanuri, Giryama, Lango, Hanunoo,
 # Toraja-Sa'dan, Ledo Kaili, Sassarese); Vlax and Balkan Romani, each
 # from both of FineWeb-2's Romani files (each holds the other's
-# documents), and Northwestern Ojibwe in syllabics; and Assamese, whose
+# documents), and Northwestern Ojibwe in syllabics; Amharic and Tigrinya,
+# whose models the Ge'ez composer offers the words of; and Assamese, whose
 # Tatoeba corpus is small, beside it (the Makefile's FINEWEB_PLUS_LANGS).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
@@ -665,6 +666,10 @@ rmy      rmn_Latn  train/000_00000.parquet 417c119d46320f138fc90bb3650c9119761da
 rmn      rmn_Latn  train/000_00000.parquet 417c119d46320f138fc90bb3650c9119761da26e5a159a0130061f346a30fbe4
 rmn      rmy_Latn  train/000_00000.parquet cc6b1dbf40e3806a9e6e7341d43da442989d8caa843894316c2912a572413638
 ojb      ojb_Cans  train/000_00000.parquet 77f60d8ac75afefab7c9d65595beedc5f2e4679f310c2d97490950574b3039a0
+am   amh_Ethi  train/000_00000.parquet  aa96a88315917d984ff35827559aa4802c08c3069a89a58d603d3f3ed6fc48f4
+am   amh_Ethi  test/000_00000.parquet   1cdc29ca3de5b2ee8add5b507d919ce738ebb486a0e2ec7e86e37aa1e08f2534
+ti   tir_Ethi  train/000_00000.parquet  11200d3ec9c3579e61396852bf43a5bb0b1c1ce4b44c1049cf6ae949e7a9c909
+ti   tir_Ethi  test/000_00000.parquet   8439941b7735beff1b178d9a30f41cd87e039adb2418b61925eb9270942cad68
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

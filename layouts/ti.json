@@ -5,6 +5,7 @@
   "font_script": "ethiopic",
   "swipe_enabled": false,
   "prediction_enabled": false,
+  "prediction_lang": "ti",
   "views": [
     {
       "id": "base",

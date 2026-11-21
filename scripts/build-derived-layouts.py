@@ -752,9 +752,12 @@ def build(lang, base, name, extra, extras=None):
         out["prediction_enabled"] = False
         out["swipe_enabled"] = False
         out.pop("prediction_lang", None)
-    # A layout with no model has no prediction language (Ge'ez, as Amharic).
+    # A layout with no model has no prediction language: not its base's,
+    # whose composer may read one (Amharic's: Ge'ez, Gedeo… have none).
     if out.get("prediction_enabled", True):
         out["prediction_lang"] = lang
+    elif out.get("prediction_lang") != lang:
+        out.pop("prediction_lang", None)
     homes = [] if not home else [home] if isinstance(home, str) else home
     added = set()
     swapped = set()

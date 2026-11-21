@@ -56,6 +56,13 @@ is one whose Zawgyi was read as Unicode (ျ for ်, ွ for ြ: ငျ, which
 Burmese never writes, twice or more; 3% of the text kept before); and
 the digit ၀ written for the letter ဝ, which older text does, is read as
 ဝ where a letter or a sign follows it and no digit comes before it.
+Amharic and Tigrinya, which GlotLID mistakes for each other, have each
+the other's own function words against it (Amharic's ነው እና ላይ, Tigrinya's
+እዩ ኣብ ናይ), their words cut at the Ethiopic wordspace and punctuation
+too (`words`) and their sentences ended at the Ethiopic full stop ። and
+question mark ፧ or the two wordspaces ፡፡ older text writes for the stop,
+a space after them or not (`ends`); every 12th of Amharic's row groups is
+read (75 million characters kept) and every 2nd of Tigrinya's (63).
 Shan, Mon, Sgaw Karen and Pa'O are written in the Myanmar script too,
 with no spaces between words, and read whole as Burmese is (Shan's 48
 million characters, Mon's 10, Karen's 8, Pa'O's 1.7), their ၀ for ဝ
@@ -1213,6 +1220,24 @@ def sindhi(text):
     return text.replace("\u0952", "")
 
 
+# Amharic's and Tigrinya's words end at the Ethiopic wordspace and
+# punctuation too (፡ ። ፣ ፤ ፥ ፦ ፧ ፨), and their sentences at its full stop
+# and question mark, or the two wordspaces older text writes for the stop,
+# a space after them or not.
+ETHIOPIC_WORDS = re.compile(r"[\s\u1361-\u1368.,;:!?\"'()\[\]{}<>«»“”‘’\-–—/|*#@&%$+=~`^]+")
+ETHIOPIC_END = re.compile(r"(?<=[።፧፨])\s*|(?<=፡፡)\s*")
+
+
+def ethiopic_words(text):
+    return [w for w in ETHIOPIC_WORDS.split(text) if w]
+
+
+# Amharic's own function words and Tigrinya's, which the other does not
+# write (Amharic's ነው "is", እና "and", ላይ "on"; Tigrinya's እዩ "is", ኣብ
+# "in", ናይ "of").
+AMHARIC = set("ነው እና ላይ ውስጥ ወደ ግን ይህ ነበር ጋር ብቻ ደግሞ ናቸው እንደ ሲሆን ይሆናል".split())
+TIGRINYA = set("እዩ ኣብ ናይ ምስ ከም እዚ ኢዩ ኣሎ እዮም ነይሩ ኣይ ብዙሕ ኢዮም እያ እዩ".split())
+
 # Each language: its script (Unicode's name for it), the neighbour whose
 # function words mark a document as not its own, for a language that a
 # rival is mistaken for, its own words and the rival's (or its own letter
@@ -1363,6 +1388,13 @@ LANGS = {
     "vep": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
     "kl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | DANISH_ONLY, "brackets": True},
     "om": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
+    # Amharic and Tigrinya, which FineWeb-2's classifier mistakes for each
+    # other, each against the other's own words; every 12th of Amharic's
+    # row groups (75 million characters kept), every 2nd of Tigrinya's (63).
+    "am": {"script": "ETHIOPIC", "neighbour": set(), "own": AMHARIC, "rival": TIGRINYA,
+           "words": ethiopic_words, "ends": ETHIOPIC_END, "every": 12},
+    "ti": {"script": "ETHIOPIC", "neighbour": set(), "own": TIGRINYA, "rival": AMHARIC,
+           "words": ethiopic_words, "ends": ETHIOPIC_END, "every": 2},
     "rm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | GERMAN_ONLY, "brackets": True},
     "rn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
     "lg": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
@@ -1686,7 +1718,7 @@ def junk(text, ws, script):
 
 def kept(text, conf):
     # In lower case: Latin's function words start sentences too.
-    ws = words(text.lower())
+    ws = conf.get("words", words)(text.lower())
     if junk(text, ws, conf["script"]):
         return False
     if "foreign" in conf and conf["foreign"](text):
@@ -1733,7 +1765,10 @@ def sentences(text, conf):
         text = conf["normalize"](text)
     pieces = text.split("\n") if conf.get("lines") else [text]
     for piece in pieces:
-        ends = UNSPACED_END.split(piece) if conf.get("unspaced") else [piece]
+        if conf.get("unspaced"):
+            ends = UNSPACED_END.split(piece)
+        else:
+            ends = conf["ends"].split(piece) if "ends" in conf else [piece]
         for s in (s for e in ends for s in END.split(e)):
             for s in (script_runs(s, script, conf.get("script_also", frozenset())) if conf.get("script_only")
                       else [" ".join(s.split())]):

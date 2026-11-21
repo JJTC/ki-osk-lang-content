@@ -65,6 +65,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  zea \
                  btm gpe igl rki vel \
                  bew nup glk bpy \
+                 am ti \
                  myx tuv \
                  ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
 
@@ -202,7 +203,9 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
                  cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
-                 rmy rmn ojb
+                 rmy rmn ojb \
+                 am ti
+# (Amharic's and Tigrinya's: what the Ge'ez composer offers words from.)
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -484,8 +487,12 @@ PREDICT_WIDE_NGRAM ?= 90000
 # words, at 200 000 8.7%, and saves 1.7 points more (4.6 with taps astray).
 # And Samogitian, whose 620 000 words hold 126 500 kinds: at 80 000 it
 # lacks 18.1% of its held-out words, at 200 000 15.2%, and saves 0.8
-# points more (2.3 with taps astray; at 120 000 0.7 and 2.1).
-PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la sgs
+# points more (2.3 with taps astray; at 120 000 0.7 and 2.1). And
+# Amharic and Tigrinya, whose words take their prefixes and suffixes with
+# them: at 120 000 they lack 9.3% and 11.4% of their held-out words, at
+# 200 000 7.5% and 9.0%, and the Ge'ez composer's strip saves 0.5 and 0.6
+# points more of their taps (1.6 MB each, from 1.0).
+PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la sgs am ti
 PREDICT_WIDER_VOCAB ?= 200000
 PREDICT_WIDER_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
