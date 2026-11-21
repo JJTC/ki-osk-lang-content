@@ -235,6 +235,14 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("myx", "ŋŊ'"),
         ("fuc", "ñŋɓɗƴÑŊƁƊƳ"),
         ("noe", "ऽ"),
+        // The letters of FineWeb-2's pages of their Bibles: Northwest
+        // Gbaya's ɛ ɔ, its nasal vowels' cedilla and tones, Sar's ə ɔ and
+        // its tone marks, Masana's, Marba's and Kinyaturu's.
+        ("gya", "ɛɔŋɓɗáíúƐƆŊ\u{327}\u{301}\u{300}'"),
+        ("mwm", "əɔɓƏƆƁ\u{304}\u{301}\u{330}"),
+        ("mcn", "ɗŋɓɦƊŊƁꞪ'"),
+        ("mpg", "âîáïêäôûÂÎ’"),
+        ("rim", "ëüËÜ'"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {
@@ -270,7 +278,9 @@ fn letters_on_long_presses_are_the_languages_own() {
 /// (scripts/build-derived-layouts.py's "home") types its letter with a tap,
 /// on the base view and the Shift view: Garo's raised dot, Kui's overline,
 /// the apostrophe Maay, Nyamwezi, Zeelandic, Igala, Veluws, Masaaba,
-/// Turkana, Bukusu and Malawi Lomwe write inside their words, and Urum's ʼ.
+/// Turkana, Bukusu, Malawi Lomwe, Northwest Gbaya, Masana, Marba,
+/// Kinyaturu and Eastern Oromo write inside their words, Urum's ʼ, and
+/// Sar's tone marks, the macron and the acute.
 #[test]
 fn keys_at_the_home_rows_end_type_their_letters() {
     for (id, letter) in [
@@ -286,6 +296,13 @@ fn keys_at_the_home_rows_end_type_their_letters() {
         ("tuv", "'"),
         ("bxk", "'"),
         ("lon", "'"),
+        ("gya", "'"),
+        ("mcn", "'"),
+        ("mpg", "’"),
+        ("rim", "'"),
+        ("hae", "’"),
+        ("mwm", "\u{304}"),
+        ("mwm", "\u{301}"),
     ] {
         let def = load(id);
         for view in [ViewId::Base, ViewId::Shift] {

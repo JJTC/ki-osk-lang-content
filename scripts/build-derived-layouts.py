@@ -222,7 +222,21 @@ Sanskrit's. StoryWeaver's stories have given models to two more, Halbi
 and Korku, on Hindi's keys; Kui, with no model, has Odia's keys and
 their long presses (ୟ on ଯ, ୱ on ଵ). Pulaar, with no model, is typed on Fula's keys with ñ first
 on n's long press: the letters SMOL's Pulaar translations write, as
-CLDR's Fula, whose name for itself is Pulaar, lists them. A key at the
+CLDR's Fula, whose name for itself is Pulaar, lists them. With no
+model, from the letters of FineWeb-2's few pages of their Bibles, six
+more on the US keys: Northwest Gbaya with ɛ, in a quarter of its words,
+and an apostrophe at the home row's end, ɔ in place of x and the
+cedilla its nasal vowels write (a̧ ɔ̧, in an eighth of its words) in
+place of q, its tones first on the vowels' long presses (ɛ́ ɛ̀ on ɛ's),
+ŋ ɓ ɗ on n b d (long presses had been in 58% of its words, now 26%);
+Sar with ə and ɔ in place of q and x and its tones' marks, the macron
+and the acute (in two words in five and a third), at the home row's end,
+the tilde below on the acute's long press, ɓ on b's (77% → 9%); Masana
+with ɗ ŋ ɓ ɦ first on d n b h and an apostrophe key (di'e, kulo'o);
+Marba with â î á ï ê ä ô û first on the vowels' and a ’ key, its
+implosive d’ (in a ninth of its words); Kinyaturu with ë, in more than
+a quarter of its words, and an apostrophe (ng') at the home row's end,
+ü first on u; and Eastern Oromo on Oromo's keys with a ’ key. A key at the
 home row's end types its capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
@@ -720,6 +734,19 @@ DERIVED = [
     ("lon", "us", "Ellomwe", {}, {"home": "'", "model": False}),
     ("fuc", "ff", "Pulaar", with_capitals({"n": ["ñ"]}), {"model": False}),
     ("sgw", "am", "ሰባት ቤት ጉራጌ", {}, {"swap": {"v": "ʷ", "V": "ʷ", "-": "ʸ"}, "composer_model": True}),
+    ("gya", "us", "Northwest Gbaya",
+     {**with_capitals({"a": ["á", "à"], "e": ["ɛ", "é"], "i": ["í", "ì"], "o": ["ɔ", "ó", "ò"], "u": ["ú", "ù"],
+                       "n": ["ŋ"], "b": ["ɓ"], "d": ["ɗ"], "ɛ": ["ɛ́", "ɛ̀"], "ɔ": ["ɔ́", "ɔ̀", "x"]}),
+      "̧": ["q"]},
+     {"swap": {"x": "ɔ", "X": "Ɔ", "q": "̧", "Q": "̧"}, "home": ["ɛ", "'"], "model": False}),
+    ("mwm", "us", "Sar", {**with_capitals({"b": ["ɓ"], "ə": ["q"], "ɔ": ["x"]}), "́": ["̰"]},
+     {"swap": {"q": "ə", "Q": "Ə", "x": "ɔ", "X": "Ɔ"}, "home": ["̄", "́"], "model": False}),
+    ("mcn", "us", "Masana", with_capitals({"d": ["ɗ"], "n": ["ŋ"], "b": ["ɓ"], "h": ["ɦ"]}), {"home": "'", "model": False}),
+    ("mpg", "us", "Marba",
+     with_capitals({"a": ["â", "á", "ä", "à"], "i": ["î", "ï", "ì"], "e": ["ê"], "o": ["ô"], "u": ["û"]}),
+     {"home": "’", "model": False}),
+    ("rim", "us", "Kinyaturu", with_capitals({"e": ["ë"], "u": ["ü"]}), {"home": ["ë", "'"], "model": False}),
+    ("hae", "om", "Eastern Oromo", {}, {"home": "’", "model": False}),
 ]
 
 
