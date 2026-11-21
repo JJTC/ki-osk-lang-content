@@ -134,6 +134,7 @@ fa  = "Persian"
 fat = "Fante"
 ff  = "Fula"
 fi  = "Finnish"
+gax = "Southern Oromo"
 gbm = "Garhwali"
 fil = "Filipino"
 fj  = "Fijian"
@@ -291,6 +292,7 @@ mi  = "Māori"
 min = "Minangkabau"
 mjl = "Mandeali"
 mk  = "Macedonian"
+mkw = "Kituba"
 ml  = "Malayalam"
 mn  = "Mongolian"
 mni = "Meitei"
@@ -478,6 +480,7 @@ xmf = "Mingrelian"
 xmm = "Manado Malay"
 xnr = "Kangri"
 xon = "Konkomba"
+yaf = "Yaka"
 yao = "Yao"
 yi  = "Yiddish"
 yo  = "Yoruba"
@@ -689,6 +692,20 @@ source  = { name = "SMOL (Google Research; google/smol at Hugging Face): profess
 [prediction.glotcc]
 license = { name = "CC0 1.0 (GlotCC's packaging; the text under Common Crawl's Terms of Use)", url = "https://creativecommons.org/publicdomain/zero/1.0/", share_alike = false }
 source  = { name = "GlotCC v1.0 (cis-lmu/GlotCC-V1 at Hugging Face): web text from Common Crawl, revision 9ad140b", url = "https://huggingface.co/datasets/cis-lmu/GlotCC-V1" }
+
+# eBible.org's Bibles (scripts/fetch-ebible.sh: each translation's verses
+# pinned by sha256; scripts/ebible-text.py cuts them into sentences): the
+# whole corpus of the languages that script names. Each is under its own
+# copyright and CC BY-SA 4.0, as its about page says, which asks that what
+# is made from it name its holders and its source and be shared alike:
+# each pack names its Bible, below, and NOTICES.md what was done to it.
+[prediction.ebible]
+license = { name = "CC BY-SA 4.0 (each Bible's)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
+
+[prediction.ebible.bibles]
+gax = { name = "Kitaaba Woyyuu, the Bible in Oromo, Borana-Arsi-Guji: copyright © 2025 The Word for the World International (contributor: Bible Society of Ethiopia), from eBible.org", url = "https://ebible.org/find/details.php?id=gax" }
+mkw = { name = "Mambu ya Nzambi, the Bible in Kituba of the Congo Republic: copyright © 2025 Wycliffe Bible Translators, Inc. (contributor: Wycliffe USA), from eBible.org", url = "https://ebible.org/find/details.php?id=mkw" }
+yaf = { name = "Yaka NT, the New Testament in Yaka of the Democratic Republic of the Congo: copyright © 2022 The Seed Company in coordination with Forum Communautaire des Traducteurs de la Bible et Alphabétisation, from eBible.org", url = "https://ebible.org/find/details.php?id=yaf" }
 
 # Transliteration tables (translit/<lang>.txt, osk_data::translit): how the
 # Latin letters typed for a language become its script, written for this
@@ -1107,6 +1124,7 @@ lu      = ["lu"]
 lua     = ["lua"]
 luo     = ["luo"]
 lus     = ["lus"]
+luz     = ["luz"]
 lv      = ["lv"]
 mad     = ["mad"]
 mag     = ["mag", "mag-abc"]
@@ -1434,7 +1452,6 @@ dzg = "Dazaga"
 fan = "Fang"
 fub = "Adamawa Fulfulde"
 fuc = "Pulaar"
-gax = "Southern Oromo"
 gdx = "Godwari"
 gez = "Ge'ez"
 gjk = "Kachi Koli"
@@ -1478,6 +1495,7 @@ lkt = "Lakota"
 lmn = "Lambadi"
 lon = "Malawi Lomwe"
 lrc = "Northern Luri"
+luz = "Southern Luri"
 max = "North Moluccan Malay"
 mcn = "Masana"
 mde = "Maba"
@@ -1487,7 +1505,6 @@ meo = "Kedah Malay"
 mfb = "Bangka Malay"
 mhy = "Ma'anyan"
 mki = "Dhatki"
-mkw = "Kituba"
 mnb = "Muna"
 mnp = "Northern Min"
 mog = "Mongondow"
@@ -1544,7 +1561,6 @@ wbr = "Wagdi"
 wry = "Merwari"
 xog = "Soga"
 xsr = "Sherpa"
-yaf = "Yaka"
 ymm = "Maay"
 zyj = "Youjiang Zhuang"
 

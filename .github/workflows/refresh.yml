@@ -170,6 +170,11 @@ jobs:
       # revision, pinned by sha256.
       - name: SMOL's translations
         run: make fetch-smol SRC_DIR="$RUNNER_TEMP/sources"
+      # Three learn from eBible.org's Bibles: each translation's verses,
+      # pinned by sha256. One changed since its pin is not read, and its
+      # language keeps its model.
+      - name: eBible.org's Bibles
+        run: make fetch-ebible SRC_DIR="$RUNNER_TEMP/sources"
       - name: GlotCC's text
         run: make fetch-glotcc SRC_DIR="$RUNNER_TEMP/sources" FINEWEB_PYTHON="$RUNNER_TEMP/pyenv/bin/python"
       - name: Prediction models

@@ -369,6 +369,39 @@ such a model names SMOL among its sources, with that licence. Pulaar's
 keyboard takes its letters from SMOL's Pulaar sentences, as CLDR's Fula
 lists them.
 
+### eBible.org (Bibles)
+
+Three models learn from Bible translations alone, which no wiki or web
+text here has of them, each read from [eBible.org](https://ebible.org/)
+and each **made available by its holders under the [Creative Commons
+Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+licence**, as its about page says:
+
+- Southern Oromo's: *Kitaaba Woyyuu*, the Bible in Oromo,
+  Borana-Arsi-Guji, copyright © 2025 The Word for the World
+  International; contributor: Bible Society of Ethiopia
+  ([eBible.org: gax](https://ebible.org/find/details.php?id=gax)).
+- Kituba's, of the Congo Republic: *Mambu ya Nzambi*, the Bible in
+  Kituba, copyright © 2025 Wycliffe Bible Translators, Inc.; contributor:
+  Wycliffe USA ([eBible.org: mkw](https://ebible.org/find/details.php?id=mkw)).
+- Yaka's: *Yaka NT*, the New Testament in the Yaka language of the
+  Democratic Republic of the Congo, copyright © 2022 The Seed Company in
+  coordination with Forum Communautaire des Traducteurs de la Bible et
+  Alphabétisation ([eBible.org: yaf](https://ebible.org/find/details.php?id=yaf)).
+
+Each translation's verses (`<id>_vpl.txt`) are pinned by sha256 in
+`scripts/fetch-ebible.sh`. **What was done to them** (`scripts/ebible-text.py`):
+each chapter's verses read as running text, without their references,
+the footnote marks and brackets left out; cut into sentences;
+normalized to NFC, an apostrophe written ’ or ‘ between letters read as
+'; every 10th chapter held out to measure the model on. The models made
+from them (word lists and the counts of words and word pairs and
+triples) are what this repository and its packs hold, never the text;
+the holders endorse neither the models nor this repository. **The packs
+of those three languages, their models, carry the same licence,
+share-alike**, and each names its Bible and its holders among its
+sources.
+
 ### GlotCC (web text)
 
 Newari's model learns from GlotCC's web text beside its wiki's, whose

@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**680 layouts**: 617 keyboard layouts (RTL: ar he fa + Urdu, Western
+**681 layouts**: 618 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
+Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 679 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **471 languages** carry a prediction
+keycaps. 680 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **474 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -411,7 +411,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `gqr` | `gqr` | Gor | us + long-press ɓ ɗ ə ɨ ɔ, ɨ ' keys, ə ɔ on q x | LTR | —⁹ | — | — |
 | `pov` | `pov` | Guinea-Bissau Creole Kriol | us + long-press á â ã é ê í ñ ŋ ó ô õ ŝ ú ẑ ç | LTR | —⁹ | — | — |
 | `cgg` | `cgg` | Kiga Rukiga | us, ' key | LTR | —⁹ | — | — |
-| `mkw` | `mkw` | Kituba | us | LTR | —⁹ | — | — |
+| `mkw` | `mkw` | Kituba | us⁹ | LTR | **Full** (mkw)¹⁸ | ✓ | — |
 | `lkt` | `lkt` | Lakota Lakȟólʼiyapi | us + long-press á č ʼ é ǧ ȟ í ŋ ó š ú ž, ŋ á keys, č é on q x | LTR | —⁹ | — | — |
 | `las` | `las` | Lama | us + long-press ɖ ǝ ɛ ɨ ɩ ñ ŋ ɔ ʋ | LTR | —⁹ | — | — |
 | `led` | `led` | Lendu | us + long-press ɨ ø ʉ, ʼ key | LTR | —⁹ | — | — |
@@ -531,8 +531,8 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `sou` | `sou` | Southern Thai | th, Thai's keys | LTR | —¹² | — | — |
 | `dcc` | `dcc` | Dakhini (Urdu script) | pk, Urdu's keys | **RTL** | —¹² | — | — |
 | `bpy` | `bpy` | Bishnupriya Manipuri বিষ্ণুপ্রিয়া মণিপুরী | in · ben, Bengali's keys + long-press ৱ | LTR | **Full** (bpy)⁶ | — | — |
-| `gax` | `gax` | Southern Oromo | us, Oromo's keys, ' key | LTR | —¹² | — | — |
-| `yaf` | `yaf` | Yaka | us + long-press á é í ó ú | LTR | —¹² | — | — |
+| `gax` | `gax` | Southern Oromo | us, Oromo's keys, ' key¹² | LTR | **Full** (gax)¹⁸ | ✓ | — |
+| `yaf` | `yaf` | Yaka | us + long-press á é í ó ú¹² | LTR | **Full** (yaf)¹⁸ | ✓ | — |
 | `ymm` | `ymm` | Maay | us, Somali's keys, ' key | LTR | —¹² | — | — |
 | `nym` | `nym` | Nyamwezi Kinyamwezi | us, ' key | LTR | —¹² | — | — |
 | `cjk` | `cjk` | Chokwe | us | LTR | —¹² | — | — |
@@ -563,6 +563,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `mpg` | `mpg` | Marba | us + long-press â á ä à î ï ì ê ô û, ’ key | LTR | —¹² | — | — |
 | `rim` | `rim` | Nyaturu Kinyaturu | us + long-press ë ü, ë ' keys | LTR | —¹² | — | — |
 | `hae` | `hae` | Eastern Oromo | us, Oromo's keys, ’ key | LTR | —¹² | — | — |
+| `luz` | `luz` | Southern Luri | ir, Persian's keys, ة ە ݖ ۿ keys in place of ث ذ ظ ض + long-press ۊ ۋ ۏ ڤ ڍ ڌ ڲ ݩ ھ ٛ | **RTL** | —¹² | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -2137,7 +2138,8 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Soga) and twenty from its exemplars directory, unconfirmed (Berom,
    Chavacano, Dazaga, Fang, Gor, Ebira, Lama, Lendu, Kituba, Muna, Duri,
    Nupe, Papuan Malay, Guinea-Bissau Creole, Ngambay, Cebaara Senoufo,
-   Soninke, Serer, Aborlan Tagbanwa, Temne), and two in Latin letters
+   Soninke, Serer, Aborlan Tagbanwa, Temne; Kituba's has a model now, its
+   Bible's, note 18), and two in Latin letters
    whose CLDR file is of another script, the Latin set in a file of its
    own there: Adamawa Fulfulde (`fub_Latn`; its main file's set is Ajami)
    and Bench (`bcq_Latn`; its main file's is Ethiopic). Each is typed on the US
@@ -2284,7 +2286,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    first, and the words they begin, then the letters as typed; and with
    nothing composed, the words likeliest next. Nuosu's has none: the
    strip offers the reading and the letters as typed.
-12. Eighty-seven keyboards of languages no text here predicts are another
+12. Eighty-eight keyboards of languages no text here predicts are another
    language's keys in their name, as they write with those letters:
    Amdo and Khams Tibetan on Tibetan's, in its spelling (Keyman's
    Tibetan keyboards name them among their languages); Sadri on Hindi's
@@ -2365,7 +2367,8 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Southern Oromo (its Guji) on Oromo's keys, with a key for the
    apostrophe that is its glottal stop (in 8% of its words), and Yaka
    on the US keys with its high tones á é í ó ú first on the long
-   presses (á in 4.4% of its words). Four take theirs from the Universal
+   presses (á in 4.4% of its words); both have models from those Bibles
+   now (note 18). Four take theirs from the Universal
    Declaration of Human Rights in their languages (the UDHR in Unicode
    project's texts, 1 255 to 2 724 words each): Maay on Somali's keys and
    Nyamwezi on the US keys, each with an apostrophe key (Bani’aadynky,
@@ -2430,7 +2433,20 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Oromo in its eastern spelling (keeysa, tahe), Oromo's keys with a ’
    key (je’e: 1.8% of its words). They are named in English, Nyaturu as
    its Gospel of John names it, Kinyaturu. None had a model:
-   neither suggestions nor glides. Nine of this note's keyboards now
+   neither suggestions nor glides. Southern Luri's test wiki (1 070
+   words, 860 of them in the Arabic script) writes two spellings:
+   Persian's (184 words), and one that writes every vowel (673): ة for a
+   (in 43% of all its words), ە for e and ݖ (in a fifth each), with ۿ for
+   h (17%), ي for y and ی for i, ۊ for u and ڍ ڲ for its soft d and g. It
+   is typed on Persian's keys, its zero-width non-joiner among them (in a
+   fifth of its words), with ة ە ݖ ۿ in place of ث ذ ظ ض, which it hardly
+   writes (in 0.1% of its words at most) and which their long presses
+   keep, ۊ ۋ ۏ first on و's long press, ڤ on ف's, ڍ ڌ on د's, ڲ on
+   گ's, ݩ on ن's, ھ on ه's and the mark ٛ on the full stop's: a long
+   press in a quarter of its words (in half on Persian's keys as they
+   are). Noto Sans Arabic draws every key (DejaVu Sans lacks ݖ ۿ ۊ ٛ ݩ
+   ۏ). It has no model: its wiki is too small, and Eastern Balochi's,
+   half of it Latin transliteration, is not used. Nine of this note's keyboards now
    have models from SMOL's translations (note 14): Ahirani's, Bundeli's,
    Kumaoni's, Kurukh's, Nimadi's, Mundari's, Garo's in Latin letters,
    Mandeali's and Surjapuri's; Bishnupriya Manipuri's has one from its
@@ -2621,11 +2637,44 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    bold beneath the Odia (11 000: 26.7%, 13.0%, but 1.0% of its right
    words changed), Sadri's 54 (10 000: 20.2% on 300 held-out words) and
    Rukiga's 29 (1 100 words).
+18. These three models learn from eBible.org's Bibles, each under its
+   own copyright and CC BY-SA 4.0, as its about page says (share-alike;
+   each pack names its Bible and holders, and NOTICES.md what was done
+   to it), which no wiki or web text here has of them: Southern Oromo's,
+   Kitaaba Woyyuu, the Bible in Borana-Arsi-Guji Oromo (The Word for the
+   World International, 2025), Kituba of the Congo Republic's, Mambu ya
+   Nzambi (Wycliffe Bible Translators, 2025), and Yaka's New Testament
+   (The Seed Company and the Forum Communautaire des Traducteurs de la
+   Bible et Alphabétisation, 2022); of the keyboards here with no model
+   only these three have a Bible there under a licence that allows a
+   model (Chavacano's, Limbu's and Eastern Tamang's forbid derived
+   works; Mahasu Pahari's, Haryanvi's and Rohingya's are in Latin letters,
+   which their keyboards are not). A translation's verses
+   (`<id>_vpl.txt`) are pinned by sha256 (`scripts/fetch-ebible.sh`; one
+   changed since, which the archive's address names no version of, is
+   not read, and its model kept), each chapter read as running text, cut
+   into sentences, NFC (Yaka's Bible writes its tones' accents as
+   combining marks, its keys type them precomposed), and every 10th
+   chapter held out (`scripts/ebible-text.py`): 33 518, 49 524 and 8 105
+   sentences, 542 000, 803 000 and 127 000 words, all of whose 36 000,
+   6 600 and 12 000 kinds of word the lexicons keep. Keystroke savings on
+   3 000 held-out words, with taps astray and the words unknown: Kituba
+   60.9%, 59.0%, 0.7%; Yaka 57.2%, 54.4%, 3.7%; Southern Oromo 50.0%,
+   45.4%, 4.4%; autocorrect changes at most 0.22% of the words typed
+   right (Kituba's). With whole books held out instead (every 10th) they
+   save 60.9%, 50.9% (on 3 000 words of its two short books) and 51.7%.
+   Measured on their own Bibles, these overstate what a typist saves on
+   everyday text, whose words a Bible lacks: Southern Oromo's model saves
+   12.6% of the keystrokes of Oromo's held-out web text (note 7), 58% of
+   its words unknown, and Kituba's 31.6% of the Kituba of the
+   Democratic Republic of the Congo's (note 8), 36% unknown, varieties
+   of their own that spell otherwise. Their keyboards are as they were
+   (notes 9 and 12), with suggestions and glides now.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **471 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **474 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2657,27 +2706,27 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
   sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, and Amharic, Tigrinya and Sebat Bet Gurage **am ti sgw**, whose words the Ge'ez composer offers (note 16)
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
-  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14). Built by
+  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 148 layouts, Montenegrin's in
-  Cyrillic, the forty-nine whose letters are CLDR's exemplar characters
-  (note 9: twenty-nine in Latin letters, twenty in the Arabic script,
+- **Layout-only** — no bundled model yet: 146 layouts, Montenegrin's in
+  Cyrillic, the forty-eight whose letters are CLDR's exemplar characters
+  (note 9: twenty-eight in Latin letters, twenty in the Arabic script,
   Devanagari and Bengali), the eighteen from Keyman's (note 10: twelve
   of a script of their own, Chakma to Osage, Gorani, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
-  Tham, and the International Phonetic Alphabet's), the seventy-five on another language's keys (note 12: Northern
+  Tham, and the International Phonetic Alphabet's), the seventy-four on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian
   Konkani, Kutchi, Tày and Eastern Pwo Karen, twelve whose letters their
   wikis give, Northern Min to Southern Balochi, and sixteen from smaller
   wikis and FineWeb-2's few pages, Harauti to Ma'anyan, thirteen
-  whose script CLDR's or Wikidata's data names, Dari to Mahasu Pahari, two
-  whose Bibles give their letters, Southern Oromo and Yaka, four the
+  whose script CLDR's or Wikidata's data names, Dari to Mahasu Pahari, four the
   Universal Declaration of Human Rights, Maay to Northern Qiandong Miao,
   five Wiktionary's entries, Garo's in the Bengali script to Kui, three their test
   wikis, Central Malay, Komering and Kutai Malay, six whose script
-  LinguaMeta names, Godwari to Urum, and six whose letters FineWeb-2's few
-  pages give, Northwest Gbaya to Eastern Oromo), the two whose letters the African
+  LinguaMeta names, Godwari to Urum, six whose letters FineWeb-2's few
+  pages give, Northwest Gbaya to Eastern Oromo, and Southern Luri, whose
+  test wiki's two spellings give its letters), the two whose letters the African
   Storybook's stories give, Bukusu and Malawi Lomwe (note 13), Pulaar's,
   on Fula's keys with the letters SMOL's Pulaar translations write
   (note 14),
@@ -2705,7 +2754,7 @@ drives which face loads:
 |---|---|---|
 | `cjk` | a glyf Han/Kana/Hangul face (wqy-zenhei, Droid, …) | the 5 CJK IMEs |
 | `thai` | Noto Sans Thai | `th nod-thai tts kxm sou` |
-| `arabic` | Noto Sans Arabic | `ur ps sd ug` (ar/he/fa use DejaVu) |
+| `arabic` | Noto Sans Arabic | `ur ps sd ug` and 35 more, Southern Luri's (`luz`) among them, whose letters DejaVu Sans lacks (ar/he/fa use DejaVu) |
 | `devanagari`…`myanmar` | `NotoSans<Script>-Regular.ttf` | the 15 Tier-3 layouts |
 | `syriac` | Noto Sans Syriac | `syr cld` (RTL) |
 | `tifinagh` | Noto Sans Tifinagh | `ber` |
@@ -2941,6 +2990,7 @@ keys):
 | `ctg` `niq` `max` `cyo` `mog` `mqy` `bug` `meo` | Chittagonian's ৱ ৰ on ব র (on Bengali's keys); Nandi's ñ ā ē ĩ ō, North Moluccan Malay's accented vowels, Cuyonon's ñ, Mongondow's ḷ ḻ, Manggarai's and Buginese's é and Kedah Malay's å first on the long presses (on the US and Malay's keys; note 12) | each its own |
 | `niq` `mog` `mqy` | an apostrophe, a key of its own at the home row's end: Nandi's ' (para'ab), Mongondow's glottal stop ' (lopi'), Manggarai's ’ (Pu’ung) | each its own |
 | `gya` `mwm` `mcn` `mpg` `rim` `hae` | keys for the letters their words write most, from FineWeb-2's pages of them (note 12): Northwest Gbaya's ɛ and apostrophe at the home row's end, ɔ and the cedilla of its nasal vowels in place of x and q, its tones and ŋ ɓ ɗ first on the long presses; Sar's tone marks, the macron and the acute (the tilde below on its long press), at the home row's end, ə ɔ in place of q x, ɓ on b; Masana's ɗ ŋ ɓ ɦ on d n b h and an apostrophe key; Marba's â á ä à î ï ì ê ô û and a ’ key (its implosive d’); Nyaturu's ë and apostrophe keys, ü on u; Eastern Oromo's ’ key (on Oromo's keys) | each its own |
+| `luz` Southern Luri | the letters its test wiki's spelling of every vowel writes most, ة ە ݖ ۿ, keys of their own in place of ث ذ ظ ض (on their long presses); ۊ ۋ ۏ on و, ڤ on ف, ڍ ڌ on د, ڲ on گ, ݩ on ن, ھ on ه and the mark ٛ on the full stop (on Persian's keys; note 12) | `luz` |
 | `prs` Dari | the Pashto letters CLDR's Dari lists, ټ on ت, ځ څ on ح, ډ on د, ړ ږ on ر, ښ on س, ګ on گ, ڼ on ن, and ى after ئ ي on ی (on Persian's keys; note 12) | `prs` |
 | `bpy` Bishnupriya Manipuri | ৱ on ব (on Bengali's keys; note 12) | `bpy` |
 | `tdx` `hvn` `quy` | Tandroy-Mahafaly Malagasy's à è é ò ì ỳ (on Malagasy's keys), Hawu's è (on the US keys) and Ayacucho Quechua's á é (on Quechua's) first on the long presses; Hawu's saltillo ꞌ, its glottal stop, a key of its own at the home row's end (note 8) | each its own |

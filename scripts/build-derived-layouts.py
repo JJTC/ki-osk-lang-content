@@ -177,10 +177,10 @@ Thai's, Dakhini on Urdu's, and Bishnupriya Manipuri on Bengali's with
 on Malagasy's keys with à è é ò ì ỳ first on the long presses, Hawu on
 the US keys with è first on e and its saltillo ꞌ at the home row's end,
 Kituba on them as they are, and Ayacucho Quechua on Quechua's with á é
-first. From the Bibles eBible.org has of them: Southern Oromo (Guji) on
-Oromo's keys with an apostrophe key, its glottal stop (in 8% of its
-words), and Yaka on the US keys with its high tones á é í ó ú first on
-the long presses. Zeelandic, with its model, from its Wikipedia, is
+first. From the Bibles eBible.org has of them, which have given them
+models since: Southern Oromo (Guji) on Oromo's keys with an apostrophe
+key, its glottal stop (in 8% of its words), and Yaka on the US keys with
+its high tones á é í ó ú first on the long presses. Zeelandic, with its model, from its Wikipedia, is
 typed on Dutch's keys with ê ô first on the long presses of e and o and
 an apostrophe key (its 't and 'n and the words it drops an h or ge-
 from, 'Olland, 'ebouwd: one word in sixteen). With no model, from the
@@ -236,7 +236,15 @@ with ɗ ŋ ɓ ɦ first on d n b h and an apostrophe key (di'e, kulo'o);
 Marba with â î á ï ê ä ô û first on the vowels' and a ’ key, its
 implosive d’ (in a ninth of its words); Kinyaturu with ë, in more than
 a quarter of its words, and an apostrophe (ng') at the home row's end,
-ü first on u; and Eastern Oromo on Oromo's keys with a ’ key. A key at the
+ü first on u; and Eastern Oromo on Oromo's keys with a ’ key. Southern
+Luri, with no model, is typed on Persian's keys with the letters of its
+test wiki's two spellings, Persian's and one that writes every vowel (ة
+for a, in two words in five, ە ݖ, and ۿ for h): those four in place of
+ث ذ ظ ض, which it hardly writes (each on its letter's long press: ة's ث),
+ۊ and ڤ first on و and ف (each in a tenth of its words), ڍ ڌ on د, ڲ on
+گ, ݩ on ن, ھ on ه and the mark ٛ on the full stop's (long presses had
+been in half its words, now a quarter); Noto Sans Arabic draws them, which
+DejaVu Sans does not all. A key at the
 home row's end types its capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
@@ -697,8 +705,8 @@ DERIVED = [
     ("hvn", "us", "Hawu", with_capitals({"e": ["è"]}), {"home": "\ua78c"}),
     ("ktu", "us", "Kituba", {}),
     ("quy", "qu", "Runa Simi (Ayacucho)", with_capitals({"a": ["á"], "e": ["é"]})),
-    ("gax", "om", "Southern Oromo", {}, {"home": "'", "model": False}),
-    ("yaf", "us", "Yaka", with_capitals({"a": ["á"], "e": ["é"], "i": ["í"], "o": ["ó"], "u": ["ú"]}), {"model": False}),
+    ("gax", "om", "Southern Oromo", {}, {"home": "'"}),
+    ("yaf", "us", "Yaka", with_capitals({"a": ["á"], "e": ["é"], "i": ["í"], "o": ["ó"], "u": ["ú"]})),
     ("zea", "nl", "Zeêuws", with_capitals({"e": ["ê", "è", "ë", "é"], "o": ["ô", "ò", "ó", "ö"]}), {"home": "'"}),
     ("ymm", "so", "Maay", {}, {"home": "'", "model": False}),
     ("nym", "us", "Kinyamwezi", {}, {"home": "'", "model": False}),
@@ -747,6 +755,10 @@ DERIVED = [
      {"home": "’", "model": False}),
     ("rim", "us", "Kinyaturu", with_capitals({"e": ["ë"], "u": ["ü"]}), {"home": ["ë", "'"], "model": False}),
     ("hae", "om", "Eastern Oromo", {}, {"home": "’", "model": False}),
+    ("luz", "fa", "Southern Luri",
+     {"ة": ["ث"], "ە": ["ذ"], "ݖ": ["ظ"], "ۿ": ["ض"], "و": ["ۊ", "ۋ", "ۏ"], "ف": ["ڤ"], "د": ["ڍ", "ڌ"],
+      "گ": ["ڲ"], "ن": ["ݩ"], "ه": ["ھ"], ".": ["\u065b"]},
+     {"swap": {"ث": "ة", "ذ": "ە", "ظ": "ݖ", "ض": "ۿ"}, "model": False, "font_script": "arabic"}),
 ]
 
 

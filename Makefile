@@ -69,7 +69,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  myx tuv \
                  hlb kfq nah \
                  ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
-                 vai tdd
+                 vai tdd \
+                 gax mkw yaf
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -271,6 +272,17 @@ STORYWEAVER_DIR = $(SRC_DIR)/storyweaver
 SMOL_LANGS ?= ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
 SMOL_DIR = $(SRC_DIR)/smol
 
+# eBible.org's Bibles (scripts/fetch-ebible.sh, each translation's verses
+# pinned by sha256; CC BY-SA 4.0, each under its own copyright), the whole
+# corpus of languages whose keyboards have no other open text: Southern
+# Oromo's (Guji's Bible, 542 000 words), Kituba of the Congo Republic's
+# (803 000) and Yaka's (its New Testament, 127 000). scripts/ebible-text.py
+# holds out every 10th chapter, in $(EBIBLE_DIR)/eval; nothing of it is
+# committed. A translation changed since its pin is not read, and
+# predict-assets keeps its language's model.
+EBIBLE_LANGS ?= gax mkw yaf
+EBIBLE_DIR = $(SRC_DIR)/ebible
+
 # GlotCC's web text (scripts/fetch-glotcc.sh, its files at one revision
 # pinned by sha256; its packaging CC0 1.0, its text under Common Crawl's
 # Terms of Use), for languages whose wiki is mostly a bot's stubs: Newari,
@@ -409,8 +421,10 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # syllables, and Ghanaian Pidgin's, 80 000 of its 113 000 kinds (98.7% of
 # its words written; the rest its articles' names, most of them). And
 # Masaaba and Turkana from the African Storybook's stories, which keep all
-# their kinds of word, as do Halbi, Korku and Nahuatl from StoryWeaver's
-# and the fourteen from SMOL's translations.
+# their kinds of word, as do Halbi, Korku and Nahuatl from StoryWeaver's,
+# the fourteen from SMOL's translations and the three from eBible.org's
+# Bibles (Southern Oromo's 36 000 kinds; 20 000 would hold 97.0% of its
+# words).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -442,7 +456,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        bew nup glk bpy \
                        myx tuv \
                        hlb kfq nah \
-                       ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
+                       ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
+                       gax mkw yaf
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -566,6 +581,7 @@ help:
 	@echo "                   SRC_DIR (STORYWEAVER_EMAIL, STORYWEAVER_PASSWORD: an"
 	@echo "                   account, for stories not read before)"
 	@echo "  fetch-smol       SMOL's translations, for SMOL_LANGS, into SRC_DIR"
+	@echo "  fetch-ebible     eBible.org's Bibles, for EBIBLE_LANGS, into SRC_DIR"
 	@echo "  fetch-glotcc     GlotCC's web text, for GLOTCC_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
@@ -614,7 +630,7 @@ help:
 # only what the lock says is out of date, then refuses a result that
 # lost a file or shrank one.
 .PHONY: refresh
-refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad fetch-storybooks fetch-storyweaver fetch-smol fetch-glotcc fetch-cmudict
+refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad fetch-storybooks fetch-storyweaver fetch-smol fetch-ebible fetch-glotcc fetch-cmudict
 	$(MAKE) predict-assets hinglish-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) english-assets ONLY_STALE=1
 	$(MAKE) check
@@ -667,6 +683,10 @@ fetch-storyweaver:
 .PHONY: fetch-smol
 fetch-smol:
 	OUT=$(SMOL_DIR) ./scripts/fetch-smol.sh $(SMOL_LANGS)
+
+.PHONY: fetch-ebible
+fetch-ebible:
+	OUT=$(EBIBLE_DIR) ./scripts/fetch-ebible.sh $(EBIBLE_LANGS)
 
 .PHONY: fetch-glotcc
 fetch-glotcc:
@@ -722,7 +742,7 @@ predict-assets:
 			*" $$lang "*) vocab=$(PREDICT_WIDER_VOCAB); ngram=$(PREDICT_WIDER_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
-		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(STORYBOOK_LANGS) $(STORYWEAVER_LANGS) $(SMOL_LANGS) $(GLOTCC_LANGS) " in \
+		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(STORYBOOK_LANGS) $(STORYWEAVER_LANGS) $(SMOL_LANGS) $(EBIBLE_LANGS) $(GLOTCC_LANGS) " in \
 			*" $$lang "*) ;; \
 			*) tw=$(TATOEBA_WEIGHT); case " $(TATOEBA_LIGHT_LANGS) " in \
 				*" $$lang "*) tw=$(TATOEBA_LIGHT_WEIGHT) ;; \
@@ -773,6 +793,14 @@ predict-assets:
 		case " $(SMOL_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(SMOL_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input smol/$$lang.txt=$(SMOL_DIR)/$$lang.txt" ;; \
+		esac; \
+		case " $(EBIBLE_LANGS) " in \
+			*" $$lang "*) if [ ! -f $(EBIBLE_DIR)/$$lang.txt ]; then \
+			                  echo "predict $$lang: keeps its model (its Bible not read: fetch-ebible)"; \
+			                  continue; \
+			              fi; \
+			              corpus="$$corpus --corpus $(EBIBLE_DIR)/$$lang.txt"; \
+			              corpus_in="$$corpus_in --input ebible/$$lang.txt=$(EBIBLE_DIR)/$$lang.txt" ;; \
 		esac; \
 		case " $(GLOTCC_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $$fw$(GLOTCC_DIR)/$$lang.txt"; \

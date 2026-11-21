@@ -34,7 +34,9 @@
 //! MADLAD-400's (`madlad/<lang>.txt`), the African Storybook's stories
 //! (`storybooks/<lang>.txt`), StoryWeaver's (`storyweaver/<lang>.txt`),
 //! SMOL's translations (`smol/<lang>.txt`), GlotCC's (`glotcc/<lang>.txt`),
-//! with their licences.
+//! with their licences; and eBible.org's Bibles (`ebible/<lang>.txt`), each
+//! under its own copyright, which `[prediction.ebible.bibles]` names as its
+//! language's source.
 //!
 //! It refuses rather than guesses:
 //! - a committed data file that no pack claims, or that two packs claim;
@@ -199,6 +201,18 @@ struct Prediction {
     /// GlotCC's web text: the licence and source of the models built from
     /// it.
     glotcc: Added,
+    /// eBible.org's Bibles: the licence of the models built from them, and
+    /// each language's Bible.
+    ebible: Bibles,
+}
+
+/// eBible.org's Bibles, each under its own copyright: the licence they
+/// share, and each language's Bible, named with its holders, as its
+/// model's source.
+#[derive(Deserialize)]
+struct Bibles {
+    license: License,
+    bibles: BTreeMap<String, SourceDef>,
 }
 
 /// What a file beside a language's model adds to its pack.
@@ -354,9 +368,22 @@ fn main() -> anyhow::Result<()> {
                 });
             }
         }
+        // A Bible's model names that Bible and its holders.
+        if let Some(sha256) = recorded(&entry, &format!("ebible/{lang}.txt")) {
+            let bible =
+                p.ebible.bibles.get(lang).with_context(|| {
+                    format!("[prediction.ebible.bibles] names no Bible of {lang}")
+                })?;
+            licenses.push(p.ebible.license.clone());
+            sources.push(Source {
+                name: bible.name.clone(),
+                url: bible.url.clone(),
+                sha256: Some(sha256),
+            });
+        }
         ensure!(
             !sources.is_empty(),
-            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/, fineweb/, madlad/, storybooks/, storyweaver/, smol/ or glotcc/, {lang}.txt or {primary}.txt)"
+            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/, fineweb/, madlad/, storybooks/, storyweaver/, smol/, glotcc/ or ebible/, {lang}.txt or {primary}.txt)"
         );
         // Dialect flags and word lists carry their own sources' licences
         // into the pack.

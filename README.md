@@ -2,7 +2,7 @@
 
 Keyboard layouts, dictionaries, prediction models and input-method tables
 for [ki-osk](https://github.com/jjtc/ki-osk), an on-screen keyboard, as
-language packs: one per language, 625 in all, and three every language
+language packs: one per language, 626 in all, and three every language
 shares: the text rules, the emoji picker and the offensive-word lists.
 Everything ki-osk knows about a language is here; ki-osk itself is code.
 Beside the data are the builders that produce it
@@ -25,8 +25,9 @@ language's lexicon. The data keeps the
 licences of the datasets it was built from, listed in `NOTICES.md`, and
 **several are share-alike** (CC BY-SA): the Chinese and Cantonese
 dictionaries, the Portuguese and Spanish dialect flags, and the models of
-the forty-nine languages that learn from Wikipedia text (the Dakshina
-dataset's, or the wikis' own, Hinglish's from Hindi's). Whoever redistributes those files, or anything
+the sixty-eight languages that learn from Wikipedia text (the Dakshina
+dataset's, or the wikis' own, Hinglish's from Hindi's) and of the three
+that learn from eBible.org's Bibles. Whoever redistributes those files, or anything
 built from them, takes on those terms. The layouts carry
 xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
@@ -34,7 +35,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 | Path | What | Built by |
 |---|---|---|
-| `predict/<lang>.fst` | Prefix-completion lexicon (471 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
+| `predict/<lang>.fst` | Prefix-completion lexicon (474 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
@@ -52,6 +53,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `$SRC_DIR/storybooks/` | The African Storybook's stories of Masaaba and Turkana, which no wiki or web text has, the CC BY ones (3.0 and 4.0), their pages in another language left out, every 10th story held out — **not committed** | `make fetch-storybooks` |
 | `$SRC_DIR/storyweaver/` | StoryWeaver's stories (Pratham Books, CC BY 4.0) of Halbi, Korku and Nahuatl, which no wiki or web text has, read through its reader with an account (`STORYWEAVER_EMAIL`, `STORYWEAVER_PASSWORD`; without one, and the stories not read before, their models are kept as they are), those `scripts/storyweaver-stories.tsv` names, each pinned by its text's sha256, their pages in another language left out, every 10th story held out — **not committed** | `make fetch-storyweaver` |
 | `$SRC_DIR/smol/` | SMOL's professional translations (Google Research, CC BY 4.0) of twelve of India's languages in Devanagari (Ahirani, Bagheli, Bagri, Bundeli, Kumaoni, Kurukh, Mandeali, Nimadi, Surgujia, Surjapuri, Mundari, Kangri), of Garo in Latin letters and of Zarma, which no wiki or web text has, read as their keyboards type them, every 10th document held out — **not committed** | `make fetch-smol` |
+| `$SRC_DIR/ebible/` | eBible.org's Bibles (each under its own copyright, CC BY-SA 4.0) in Southern Oromo (Guji's), Kituba of the Congo Republic and Yaka (its New Testament), which no wiki or web text has, each translation's verses pinned by sha256, cut into sentences, every 10th chapter held out — **not committed** | `make fetch-ebible` |
 | `$SRC_DIR/glotcc/` | GlotCC's web text of Newari (its news), whose wiki is half a bot's village stubs, and of Nigerian Pidgin, Kabiye, Minangkabau and Waray, the sentences FineWeb-2's text lacks (`make fetch-fineweb` first), the documents that read as their language, every 20th held out — **not committed**: the text is the web's | `make fetch-glotcc` (needs pyarrow: `FINEWEB_PYTHON`) |
 | `eval/<lang>.txt` | Held-out text no model is trained on (Tatoeba's, or the Wikipedia text of the languages that learn from it alone, Dakshina's or the wikis' own): what keystroke savings are measured on | `make fetch-corpora`, `make fetch-dakshina`, `make fetch-wikipedia` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |
@@ -62,7 +64,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `sources.lock` | What each output was built from | every build target |
 | `pinyin/syllables.txt` | The 413 Mandarin syllables in toneless Pinyin | by hand |
 | `pinyin/double-pinyin.json` | The six double-Pinyin schemes: which key carries which initial and finals | by hand |
-| `layouts/<id>.json` | Keyboard layouts (679): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps (those of Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi, Magahi, Sindhi in Devanagari, Konkani, Tulu, Meitei in the Bengali script, Western Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Garhwali, Rajasthani, Angika, Dotyali, Newari, Adilabad Gondi, Yiddish, Mizo, Khasi, Rangpuri, Amdo and Khams Tibetan, Sadri, Maharashtrian Konkani, Kutchi, Tày, Eastern Pwo Karen, Northern Thai in the Thai script, Abron, Eastern Min, Fiji Hindi, Emilian, Northern Min, Siberian Tatar, Isan, Maguindanao, Capiznon, Kedah Malay, Qashqai, Rejang, Ghomala', Buginese, Laki, Southern Balochi, Church Slavonic, Ahirani, Harauti, Kannauji, Chittagonian, Hani, Nandi, North Moluccan Malay, Bangka Malay, Banggai, Cuyonon, Youjiang Zhuang, Mongondow, Pokot, Khorasani Turkic, Northern Khmer, Manggarai, Ma'anyan, Dari, Valencian, Bhili, Kumaoni, Kurukh, Mewari, Nimadi, Shekhawati, Wagdi, Mundari, Bundeli, Dhundhari, Korku, Malvi, Merwari, Mahasu Pahari, Halbi, Lambadi, Southern Thai, Dakhini, Bishnupriya Manipuri, Tandroy-Mahafaly Malagasy, Hawu, Kituba, Ayacucho Quechua, Southern Oromo, Yaka, Zeelandic, Maay, Nyamwezi, Chokwe, Northern Qiandong Miao, Garo (in Latin letters and in the Bengali script), Mandar, Bouyei, Muong, Kui, Central Malay, Komering, Kutai Malay, Batak Mandailing, Ghanaian Pidgin, Igala, Arakanese, Veluws, Godwari, Mandeali, Surjapuri, Varhadi, Vasavi (in Devanagari and in the Gujarati script), Kachi Koli, Urum, Masaaba, Turkana, Bukusu, Malawi Lomwe, Pulaar, Northwest Gbaya, Sar, Masana, Marba, Nyaturu and Eastern Oromo another language's, renamed; Sgaw Karen's, Northwestern Ojibwe's, thirteen in scripts of their own, Chakma's to Osage's, and Gorani's, Southeastern Pashayi's, Southern Hindko's, Chaldean Neo-Aramaic's and Northern Thai's in Tai Tham Keyman's, and the International Phonetic Alphabet's Keyman's sil_ipa on the US keys, and Vai's and Nuosu's the Latin letters Keyman's keyboards type their syllables with, typing into a composer; fifty-seven with the letters of CLDR's exemplar characters, thirty-two on the US keys, Afar's to Zarma's and Adamawa Fulfulde's and Bench's, and twenty-five on the Arabic script's, Devanagari's and Bengali's, Balti's to Sylheti's), the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make derived-layouts`; `make translit-layouts`; `scripts/build-keyman-layouts.py`; `make keyman-composers`; `make exemplar-layouts` |
+| `layouts/<id>.json` | Keyboard layouts (680): the keys of each and what each types, the national ones read from xkeyboard-config's keymaps (those of Bhojpuri, Maithili, Sanskrit, Awadhi, Bodo, Dogri, Chhattisgarhi, Magahi, Sindhi in Devanagari, Konkani, Tulu, Meitei in the Bengali script, Western Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Garhwali, Rajasthani, Angika, Dotyali, Newari, Adilabad Gondi, Yiddish, Mizo, Khasi, Rangpuri, Amdo and Khams Tibetan, Sadri, Maharashtrian Konkani, Kutchi, Tày, Eastern Pwo Karen, Northern Thai in the Thai script, Abron, Eastern Min, Fiji Hindi, Emilian, Northern Min, Siberian Tatar, Isan, Maguindanao, Capiznon, Kedah Malay, Qashqai, Rejang, Ghomala', Buginese, Laki, Southern Balochi, Church Slavonic, Ahirani, Harauti, Kannauji, Chittagonian, Hani, Nandi, North Moluccan Malay, Bangka Malay, Banggai, Cuyonon, Youjiang Zhuang, Mongondow, Pokot, Khorasani Turkic, Northern Khmer, Manggarai, Ma'anyan, Dari, Valencian, Bhili, Kumaoni, Kurukh, Mewari, Nimadi, Shekhawati, Wagdi, Mundari, Bundeli, Dhundhari, Korku, Malvi, Merwari, Mahasu Pahari, Halbi, Lambadi, Southern Thai, Dakhini, Bishnupriya Manipuri, Tandroy-Mahafaly Malagasy, Hawu, Kituba, Ayacucho Quechua, Southern Oromo, Yaka, Zeelandic, Maay, Nyamwezi, Chokwe, Northern Qiandong Miao, Garo (in Latin letters and in the Bengali script), Mandar, Bouyei, Muong, Kui, Central Malay, Komering, Kutai Malay, Batak Mandailing, Ghanaian Pidgin, Igala, Arakanese, Veluws, Godwari, Mandeali, Surjapuri, Varhadi, Vasavi (in Devanagari and in the Gujarati script), Kachi Koli, Urum, Masaaba, Turkana, Bukusu, Malawi Lomwe, Pulaar, Northwest Gbaya, Sar, Masana, Marba, Nyaturu, Eastern Oromo and Southern Luri another language's, renamed; Sgaw Karen's, Northwestern Ojibwe's, thirteen in scripts of their own, Chakma's to Osage's, and Gorani's, Southeastern Pashayi's, Southern Hindko's, Chaldean Neo-Aramaic's and Northern Thai's in Tai Tham Keyman's, and the International Phonetic Alphabet's Keyman's sil_ipa on the US keys, and Vai's and Nuosu's the Latin letters Keyman's keyboards type their syllables with, typing into a composer; fifty-seven with the letters of CLDR's exemplar characters, thirty-two on the US keys, Afar's to Zarma's and Adamawa Fulfulde's and Bench's, and twenty-five on the Arabic script's, Devanagari's and Bengali's, Balti's to Sylheti's), the transliteration ones (`<lang>-abc`) the US layout typing into a composer | `scripts/build-layout.py` and the relabel scripts; `make derived-layouts`; `make translit-layouts`; `scripts/build-keyman-layouts.py`; `make keyman-composers`; `make exemplar-layouts` |
 | `emoji/catalogue.json` | Every fully-qualified emoji with its CLDR name and keywords: the emoji search | `scripts/build-emoji.py` |
 | `offensive/<lang>.txt` | Words a keyboard can keep off its strip (LDNOOBW, AOSP) | by hand |
 | `seeds/` | Tiny Pinyin, Jyutping and kana seeds (offline fallback) | by hand |
@@ -77,12 +79,12 @@ sight rather than mis-decoded.
 ## Packs and releases
 
 A pack is one language's files: its keyboard layouts, and an `.fst`
-lexicon and an `.ngram.bin` table for each of the 471 prediction
+lexicon and an `.ngram.bin` table for each of the 474 prediction
 languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's, Lao's, Khmer's, Burmese's, Shan's, Mon's, Sgaw Karen's, Pa'O's and Arakanese's with their word lists, forty-six with a transliteration
 table and the layout that types through it, and Vai's with the table its own keyboard types
 through); `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
 (kana–kanji) and `ko` (Hangul) with their layouts; and a pack of its
-layouts alone for each of the 149 other languages with a layout and no
+layouts alone for each of the 147 other languages with a layout and no
 model yet (Nuosu's with the transliteration table its layout types
 through). Three packs every language shares: `rules`, the text rules,
 which are written by hand, Weir-style (after the rule language of the

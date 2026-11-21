@@ -35,9 +35,10 @@ Navajo's ʼ í at the home row's end and á é on q and x (long presses in
 Temne's ɔ ŋ, ə ɛ (61.4%, 18.3%), Gor's ɨ and apostrophe, ə ɔ (60.4%,
 2.0%), Ngambay's ə and apostrophe, é ɔ (59.2%, 29.3%) and Mundang's ǝ and
 apostrophe (29.8%, 20.0%). Suggestions and glides are off, as they have
-no model, but for those SMOL's translations or their wikis gave one
-("model"): Zarma, Betawi and Nupe here, and Gilaki in the Arabic script
-and Bagheli, Bagri, Kangri and Surgujia in Devanagari, below.
+no model, but for those SMOL's translations, their wikis or their Bibles
+gave one ("model"): Zarma, Betawi, Nupe and Kituba of the Congo Republic
+here, and Gilaki in the Arabic script and Bagheli, Bagri, Kangri and
+Surgujia in Devanagari, below.
 
 Languages in another script are typed on its keys as they are, with the
 letters those lack on a long press the same way: in the Arabic script on
@@ -119,7 +120,7 @@ LANGS = [
     ("led", EXEMPLARS, "525e16aa2a48a3c198ef52fabcb5e686daefbffe5a15208fa2d54486b4cebb45", {"name": "Lendu"}),
     ("lkt", COMMON, "b9856438b70066d5a5476b8d8e601682c72e6a8b7a0430128cc3eab727fb0797", {
         "home": ["ŋ", "á"], "swap": {"q": "č", "x": "é"}}),
-    ("mkw", EXEMPLARS, "970f38106d733771b8af0298cff28b50a1c78b94cf53ec638938dd1f451adfb0", {"name": "Kituba"}),
+    ("mkw", EXEMPLARS, "970f38106d733771b8af0298cff28b50a1c78b94cf53ec638938dd1f451adfb0", {"name": "Kituba", "model": True}),
     ("mnb", EXEMPLARS, "d108db60c852d6c13adf49c11fc55c569ba68ef5747f11a1080b57ca906773e1", {"name": "Muna"}),
     ("mua", COMMON, "9279d796249e709becdefb6de27f8ee9314c5aadfe562bd062cc8aa41cfb1e2f", {
         "name": "Mundaŋ", "also": ["ẽ"], "home": ["ǝ", "'"]}),

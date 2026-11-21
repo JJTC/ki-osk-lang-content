@@ -243,6 +243,10 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("mcn", "ɗŋɓɦƊŊƁꞪ'"),
         ("mpg", "âîáïêäôûÂÎ’"),
         ("rim", "ëüËÜ'"),
+        // Southern Luri's, its test wiki's two spellings' (Persian's, and
+        // one that writes every vowel: ة ە ݖ, and ۿ for h, keys in place
+        // of ث ذ ظ ض, which are on their long presses), and the mark ٛ.
+        ("luz", "ةەݖۿثذظضۊۋۏڤڍڌڲݩھ\u{65b}"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {
@@ -271,6 +275,33 @@ fn letters_on_long_presses_are_the_languages_own() {
                 def.id
             );
         }
+    }
+}
+
+/// Southern Luri's keyboard is Persian's with keys for the letters its
+/// test wiki's spelling of every vowel writes most, in place of four
+/// letters it hardly writes, which their long presses keep.
+#[test]
+fn southern_luris_keyboard_taps_its_vowels() {
+    let def = load("luz");
+    let base = def
+        .views
+        .iter()
+        .find(|v| v.id == ViewId::Base)
+        .expect("a base view");
+    for (letter, kept) in [("ة", "ث"), ("ە", "ذ"), ("ݖ", "ظ"), ("ۿ", "ض")] {
+        let key = base
+            .rows
+            .iter()
+            .flat_map(|r| r.keys.iter())
+            .find(|k| matches!(&k.output, KeyOutput::Text { text } if text == letter))
+            .unwrap_or_else(|| panic!("luz: no key types {letter}"));
+        assert!(
+            key.long_press
+                .iter()
+                .any(|o| matches!(o, KeyOutput::Text { text } if text == kept)),
+            "luz: {letter}'s long press lacks {kept}"
+        );
     }
 }
 
