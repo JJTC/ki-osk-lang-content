@@ -64,7 +64,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  tdx hvn ktu quy \
                  zea \
                  btm gpe igl rki vel \
-                 myx tuv
+                 myx tuv \
+                 ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -231,6 +232,17 @@ MADLAD_DIR = $(SRC_DIR)/madlad
 STORYBOOK_LANGS ?= myx tuv
 STORYBOOK_DIR = $(SRC_DIR)/storybooks
 
+# SMOL's professional translations (scripts/fetch-smol.sh, google/smol's
+# files at one revision pinned by sha256; CC BY 4.0, Google Research), the
+# whole corpus of languages no web text or wiki has: twelve of India's in
+# Devanagari (Ahirani, Bagheli, Bagri, Bundeli, Kumaoni, Kurukh,
+# Mandeali, Nimadi, Surgujia, Surjapuri, Mundari, Kangri), Garo in Latin
+# letters and Zarma (55 000 to 93 000 words each, Zarma's 35 000).
+# scripts/smol-text.py holds out every 10th document, in $(SMOL_DIR)/eval;
+# nothing of it is committed.
+SMOL_LANGS ?= ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
+SMOL_DIR = $(SRC_DIR)/smol
+
 # GlotCC's web text (scripts/fetch-glotcc.sh, its files at one revision
 # pinned by sha256; its packaging CC0 1.0, its text under Common Crawl's
 # Terms of Use), for languages whose wiki is mostly a bot's stubs: Newari,
@@ -369,7 +381,7 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # syllables, and Ghanaian Pidgin's, 80 000 of its 113 000 kinds (98.7% of
 # its words written; the rest its articles' names, most of them). And
 # Masaaba and Turkana from the African Storybook's stories, which keep all
-# their kinds of word.
+# their kinds of word, as do the fourteen from SMOL's translations.
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -398,7 +410,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        cdo hif egl zea \
                        tdx hvn ktu quy \
                        btm gpe igl rki vel \
-                       myx tuv
+                       myx tuv \
+                       ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -514,6 +527,7 @@ help:
 	@echo "  fetch-madlad     MADLAD-400's web text, for MADLAD_LANGS, into SRC_DIR"
 	@echo "  fetch-storybooks  the African Storybook's stories, for STORYBOOK_LANGS,"
 	@echo "                   into SRC_DIR"
+	@echo "  fetch-smol       SMOL's translations, for SMOL_LANGS, into SRC_DIR"
 	@echo "  fetch-glotcc     GlotCC's web text, for GLOTCC_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
 	@echo "  word-lists       check (or fetch) ICU's word lists in wordbreak/"
@@ -562,7 +576,7 @@ help:
 # only what the lock says is out of date, then refuses a result that
 # lost a file or shrank one.
 .PHONY: refresh
-refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad fetch-storybooks fetch-glotcc fetch-cmudict
+refresh: fetch-corpora fetch-dakshina fetch-wikipedia fetch-fineweb fetch-madlad fetch-storybooks fetch-smol fetch-glotcc fetch-cmudict
 	$(MAKE) predict-assets hinglish-assets cjk-assets dialect-assets ONLY_STALE=1
 	$(MAKE) english-assets ONLY_STALE=1
 	$(MAKE) check
@@ -607,6 +621,10 @@ fetch-madlad:
 .PHONY: fetch-storybooks
 fetch-storybooks:
 	OUT=$(STORYBOOK_DIR) ./scripts/fetch-storybooks.sh $(STORYBOOK_LANGS)
+
+.PHONY: fetch-smol
+fetch-smol:
+	OUT=$(SMOL_DIR) ./scripts/fetch-smol.sh $(SMOL_LANGS)
 
 .PHONY: fetch-glotcc
 fetch-glotcc:
@@ -662,7 +680,7 @@ predict-assets:
 			*" $$lang "*) vocab=$(PREDICT_WIDER_VOCAB); ngram=$(PREDICT_WIDER_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
-		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(STORYBOOK_LANGS) $(GLOTCC_LANGS) " in \
+		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(STORYBOOK_LANGS) $(SMOL_LANGS) $(GLOTCC_LANGS) " in \
 			*" $$lang "*) ;; \
 			*) tw=$(TATOEBA_WEIGHT); case " $(TATOEBA_LIGHT_LANGS) " in \
 				*" $$lang "*) tw=$(TATOEBA_LIGHT_WEIGHT) ;; \
@@ -701,6 +719,10 @@ predict-assets:
 		case " $(STORYBOOK_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(STORYBOOK_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input storybooks/$$lang.txt=$(STORYBOOK_DIR)/$$lang.txt" ;; \
+		esac; \
+		case " $(SMOL_LANGS) " in \
+			*" $$lang "*) corpus="$$corpus --corpus $(SMOL_DIR)/$$lang.txt"; \
+			              corpus_in="$$corpus_in --input smol/$$lang.txt=$(SMOL_DIR)/$$lang.txt" ;; \
 		esac; \
 		case " $(GLOTCC_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $$fw$(GLOTCC_DIR)/$$lang.txt"; \

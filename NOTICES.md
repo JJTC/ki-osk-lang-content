@@ -321,6 +321,25 @@ such a model names the African Storybook among its sources, with those
 licences. Bukusu's and Malawi Lomwe's keyboards take their letters from
 their CC BY stories there (11 and 19).
 
+### SMOL (translations)
+
+Fourteen models learn from SMOL's translations alone, which no wiki or
+web text here has of them: Ahirani's, Bagheli's, Bagri's, Bundeli's,
+Kumaoni's, Kurukh's, Mandeali's, Nimadi's, Surgujia's, Surjapuri's,
+Mundari's and Kangri's, in Devanagari, Garo's in Latin letters, and
+Zarma's. SMOL (Caswell et al., "SMOL: Professionally translated parallel
+data for 115 under-represented languages", 2025; at Hugging Face as
+[google/smol](https://huggingface.co/datasets/google/smol)) is English
+text translated by professional translators, a document a sentence at
+a time (SmolDoc) and single sentences (SmolSent), **released by Google
+Research under CC BY 4.0**. Its files are read at one revision, pinned
+by sha256 in `scripts/fetch-smol.sh`. The models made from them (word
+lists and the counts of words and word pairs and triples) are what this
+repository and its packs hold, never the translations; each pack with
+such a model names SMOL among its sources, with that licence. Pulaar's
+keyboard takes its letters from SMOL's Pulaar sentences, as CLDR's Fula
+lists them.
+
 ### GlotCC (web text)
 
 Newari's model learns from GlotCC's web text beside its wiki's, whose

@@ -34,8 +34,9 @@ Navajo's ʼ í at the home row's end and á é on q and x (long presses in
 78.5% of its words, then 37.1%), Lakota's ŋ á, č é (71.4%, 37.6%),
 Temne's ɔ ŋ, ə ɛ (61.4%, 18.3%), Gor's ɨ and apostrophe, ə ɔ (60.4%,
 2.0%), Ngambay's ə and apostrophe, é ɔ (59.2%, 29.3%) and Mundang's ǝ and
-apostrophe (29.8%, 20.0%). None has a model: suggestions and glides are
-off.
+apostrophe (29.8%, 20.0%). Suggestions and glides are off, as they have
+no model, but for those SMOL's translations gave one ("model"): Zarma
+here, and Bagheli, Bagri, Kangri and Surgujia in Devanagari, below.
 
 Languages in another script are typed on its keys as they are, with the
 letters those lack on a long press the same way: in the Arabic script on
@@ -105,7 +106,7 @@ LANGS = [
         "name": "Chavacano", "also": "á é í ó ú".split()}),
     ("cgg", COMMON, "0fa08540a9df2cfba8c6aa0810f71a70e712e2d6cb6fa625a8088fce5e036f32", {"home": ["'"]}),
     ("cho", COMMON, "f320ba041fcb6513fc490f7dc843453b77a99c4290a0a634e7ce601f06f3478c", {"also": "u̱ á í ó".split()}),
-    ("dje", COMMON, "8ea46dafca04001146dbbbd9b1e55b3b5109ab8a3b5476b0c75edc4622351e95", {"home": ["'"]}),
+    ("dje", COMMON, "8ea46dafca04001146dbbbd9b1e55b3b5109ab8a3b5476b0c75edc4622351e95", {"home": ["'"], "model": True}),
     ("dzg", EXEMPLARS, "2253992d6d58d2eecf1bdcb27745f2f3be7d4bbd77f2d937b3ced28a3d1967aa", {"name": "Dazaga"}),
     ("fan", EXEMPLARS, "d23e151f45a32909aac36f39133281341f1bb2856fbc3f39d22b14e183e62655", {
         "name": "Fang", "also": "é è ê ô ò â à î ï".split()}),
@@ -165,14 +166,14 @@ LANGS = [
     ("glk", EXEMPLARS, "6e135b3506819e3939e45c0f80b48c0602ebe1414098ec6565f71dd3547890c1", {"base": "fa", "name": "گیلکی"}),
     ("lrc", COMMON, "7a86da9dd0fd4d3136e93baffdcff51fdd0df387771b7d69f9f797b80d0a30a5", {"base": "ckb"}),
     ("mde", EXEMPLARS, "22ddea51c12dfbcd403971eb071e586de049ce0af9543011911877df92345561", {"base": "ar", "name": "Bura Mabang"}),
-    ("bfy", EXEMPLARS, "a9fef7fdef1337c1643ab965418ae9ab96d9fd852d80c94b3771cc657524aa49", {"base": "hi", "name": "बघेली"}),
-    ("bgq", EXEMPLARS, "834a604ba53edd6183182dd3fe947614f12b9336b79f91ec2e61bc704b26f23e", {"base": "hi", "name": "बागड़ी"}),
+    ("bfy", EXEMPLARS, "a9fef7fdef1337c1643ab965418ae9ab96d9fd852d80c94b3771cc657524aa49", {"base": "hi", "name": "बघेली", "model": True}),
+    ("bgq", EXEMPLARS, "834a604ba53edd6183182dd3fe947614f12b9336b79f91ec2e61bc704b26f23e", {"base": "hi", "name": "बागड़ी", "model": True}),
     ("taj", EXEMPLARS, "8b2b78525b823529795a8c209c6c3c0a9b848175fda5444bcb70f7f8fe140663", {"base": "hi", "name": "तामाङ"}),
     ("bgc", COMMON, "b5b360cbd7d33e30a539b012e270dad1efe82882edfb27d451e9dcd97b259781", {"base": "hi"}),
-    ("xnr", COMMON, "c07a73a6b701f664350134d23fbf2b2875477b8d7913e9617f5d3ac9c59548f9", {"base": "hi"}),
+    ("xnr", COMMON, "c07a73a6b701f664350134d23fbf2b2875477b8d7913e9617f5d3ac9c59548f9", {"base": "hi", "model": True}),
     ("lif", EXEMPLARS, "a01d29b299c2056844405160d52fae098c1a29c28ddcc11023ecee32c8e0e942", {"base": "hi", "name": "लिम्बू"}),
     ("xsr", EXEMPLARS, "8d6c82e3180063b8815245d56cf18ccdf05a969263a3c1a4d68b9aec77db8e37", {"base": "hi", "name": "शेर्पा"}),
-    ("sgj", EXEMPLARS, "4bc9f71b927b41d1f7033e35cee343e3fc028ef5c0a2f37721f467ba63cabd0b", {"base": "hi", "name": "सरगुजिया"}),
+    ("sgj", EXEMPLARS, "4bc9f71b927b41d1f7033e35cee343e3fc028ef5c0a2f37721f467ba63cabd0b", {"base": "hi", "name": "सरगुजिया", "model": True}),
     ("syl", EXEMPLARS, "1d889490a2c3938d795ea110d92814f93b509a48b06dd1212967b652081cdfa8", {"base": "bn", "name": "সিলেটি"}),
 ]
 
@@ -389,7 +390,8 @@ def plan(lang, where, sha, options):
 
 def build(lang, where, sha, options):
     name, extra, home, swap = plan(lang, where, sha, options)
-    return derived.build(lang, options.get("base", "us"), name, extra, {"home": home, "swap": swap, "model": False})
+    return derived.build(lang, options.get("base", "us"), name, extra,
+                         {"home": home, "swap": swap, "model": options.get("model", False)})
 
 
 def main():

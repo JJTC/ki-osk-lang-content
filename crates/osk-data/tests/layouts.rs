@@ -228,11 +228,13 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("zea", "êôèëòÊÔ'"),
         ("mtq", "ảổẳờểõđ"),
         // Igala's dotted vowels and tones, Veluws' ö ä å ü, Urum's ӧ ӱ ґ,
-        // Masaaba's ŋ.
+        // Masaaba's ŋ, Pulaar's ñ ŋ ɓ ɗ ƴ and Nimadi's avagraha.
         ("igl", "ẹọéóíàñẸỌ\u{301}\u{300}"),
         ("vel", "öäåüÖ'"),
         ("uum", "ӧӱґӦӰʼ"),
         ("myx", "ŋŊ'"),
+        ("fuc", "ñŋɓɗƴÑŊƁƊƳ"),
+        ("noe", "ऽ"),
         // The ligatures, and patah, qamats, dagesh and rafe.
         ("yi", "װױײ\u{5b7}\u{5b8}\u{5bc}\u{5bf}"),
     ] {
@@ -301,6 +303,30 @@ fn keys_at_the_home_rows_end_type_their_letters() {
             );
         }
     }
+}
+
+/// An apostrophe a language on Hindi's keys writes inside its words
+/// (Kurukh's र'ईर, one word in twenty-six) is first on the long press of
+/// its full stop: Hindi's home row has no spacers to give a key of its
+/// own.
+#[test]
+fn an_apostrophe_inside_hindi_keys_words_is_on_the_full_stops_long_press() {
+    let def = load("kru");
+    let base = def
+        .views
+        .iter()
+        .find(|v| v.id == ViewId::Base)
+        .expect("kru: no base view");
+    let stop = base
+        .rows
+        .iter()
+        .flat_map(|r| r.keys.iter())
+        .find(|k| k.label == "।")
+        .expect("kru: no full stop");
+    assert!(
+        matches!(stop.long_press.first(), Some(KeyOutput::Text { text }) if text == "'"),
+        "kru: ' is not first on the full stop's long press"
+    );
 }
 
 /// The Ethiopic layouts type through Amharic's composer, which reads a

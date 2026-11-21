@@ -202,8 +202,21 @@ Gujarati's: the scripts LinguaMeta names for them, each named in its
 own words as LinguaMeta writes them; and Urum in Cyrillic, which
 LinguaMeta names, on Russian's keys, the ӧ ӱ ґ Wiktionary's entries
 write on о's, у's and г's long presses and a key for the ʼ it writes
-where Russian writes ь (one entry in thirteen). A key at the home row's end types its
-capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
+where Russian writes ь (one entry in thirteen). From the African
+Storybook's stories, Masaaba and Turkana, with their models, on the US
+keys with an apostrophe key (Turkana's ng' is in a sixth of its words),
+Masaaba's ŋ first on n's long press, and from their letters there,
+Bukusu and Malawi Lomwe, with no model, the same way. SMOL's
+translations have given models to fourteen of these, on the keys they
+had: Ahirani, Bundeli, Kumaoni, Kurukh, Mandeali, Nimadi, Surjapuri,
+Mundari and Garo here, and Bagheli, Bagri, Kangri, Surgujia and Zarma,
+build-exemplar-layouts.py's; Kurukh with ' first on its full stop's long
+press (र'ईर: one word in twenty-six), Hindi's home row having no spacers,
+and Nimadi with its avagraha ऽ on ः's (करनऽ: one word in twenty), as
+Sanskrit's. Pulaar, with no model, is typed on Fula's keys with ñ first
+on n's long press: the letters SMOL's Pulaar translations write, as
+CLDR's Fula, whose name for itself is Pulaar, lists them. A key at the
+home row's end types its capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
 given (Ngambay's ə, ə́ on its). A letter only a long press types turns the
 gesture on for the layout (`long_press_letters`). A layout said to have no
 model (build-exemplar-layouts.py's, which build them through this) has
@@ -609,7 +622,7 @@ DERIVED = [
     ("bug", "us", "Basa Ugi", {"e": ["é"], "E": ["É"]}, {"model": False}),
     ("lki", "ckb", "لەکی", {}, {"model": False}),
     ("bcc", "bal", "بلۏچی", {"و": ["ۏ"], "ی": ["ݔ"], "گ": ["ګ"]}, {"model": False}),
-    ("ahr", "mr", "अहिराणी", {}, {"model": False}),
+    ("ahr", "mr", "अहिराणी", {}),
     ("hoj", "hi", "हाड़ौती", {}, {"model": False}),
     ("bjj", "hi", "कन्नौजी", {}, {"model": False}),
     ("ctg", "bn", "চাটগাঁইয়া", {"ব": ["ৱ"], "র": ["ৰ"]}, {"model": False}),
@@ -638,18 +651,18 @@ DERIVED = [
     ("prs", "fa", "دری", {"ت": ["ټ"], "ح": ["ځ", "څ"], "د": ["ډ"], "ر": ["ړ", "ږ"], "س": ["ښ"], "گ": ["ګ"], "ن": ["ڼ"],
                           "ی": ["ئ", "ي", "ى"]}, {"model": False}),
     ("bhb", "hi", "Bhili", {}, {"model": False}),
-    ("kfy", "hi", "Kumaoni", {}, {"model": False}),
-    ("kru", "hi", "Kurukh", {}, {"model": False}),
+    ("kfy", "hi", "Kumaoni", {}),
+    ("kru", "hi", "Kurukh", {"।": ["'"]}),
     ("mtr", "hi", "Mewari", {}, {"model": False}),
-    ("noe", "hi", "Nimadi", {}, {"model": False}),
+    ("noe", "hi", "Nimadi", {"ः": ["ऽ"]}),
     ("swv", "hi", "Shekhawati", {}, {"model": False}),
     ("wbr", "hi", "Wagdi", {}, {"model": False}),
-    ("unr", "hi", "Mundari", {}, {"model": False}),
+    ("unr", "hi", "Mundari", {}),
     ("lmn", "te", "Lambadi", {}, {"model": False}),
     ("sou", "th", "Southern Thai", {}, {"model": False}),
     ("dcc", "ur", "Dakhini", {}, {"model": False}),
     ("bpy", "bn", "বিষ্ণুপ্রিয়া মণিপুরী", {"ব": ["ৱ"]}, {"model": False}),
-    ("bns", "hi", "Bundeli", {}, {"model": False}),
+    ("bns", "hi", "Bundeli", {}),
     ("dhd", "hi", "Dhundhari", {}, {"model": False}),
     ("kfq", "hi", "Korku", {}, {"model": False}),
     ("mup", "hi", "Malvi", {}, {"model": False}),
@@ -668,7 +681,7 @@ DERIVED = [
     ("nym", "us", "Kinyamwezi", {}, {"home": "'", "model": False}),
     ("cjk", "us", "Chokwe", {}, {"model": False}),
     ("hea", "us", "Hmu", {}, {"model": False}),
-    ("grt", "us", "A·chik", {}, {"home": "·", "model": False}),
+    ("grt", "us", "A·chik", {}, {"home": "·"}),
     ("grt-Beng", "bn", "গারো", {}, {"model": False}),
     ("mdr", "us", "Mandar", {}, {"model": False}),
     ("pcc", "us", "Haausqyaix", {}, {"model": False}),
@@ -685,8 +698,8 @@ DERIVED = [
     ("rki", "my", "ရခိုင်", {}),
     ("vel", "nl", "Veluws", with_capitals({"o": ["ö"], "a": ["ä", "å"], "u": ["ü"]}), {"home": "'"}),
     ("gdx", "hi", "गोड़वाड़ी", {}, {"model": False}),
-    ("mjl", "hi", "मंडयाली", {}, {"model": False}),
-    ("sjp", "hi", "सुरजापुरी", {}, {"model": False}),
+    ("mjl", "hi", "मंडयाली", {}),
+    ("sjp", "hi", "सुरजापुरी", {}),
     ("vah", "mr", "वऱ्हाडी", {}, {"model": False}),
     ("vas", "hi", "वासवी", {}, {"model": False}),
     ("vas-Gujr", "gu", "વસાવી", {}, {"model": False}),
@@ -696,6 +709,7 @@ DERIVED = [
     ("tuv", "us", "Ng’aturkana", {}, {"home": "'"}),
     ("bxk", "us", "Lubukusu", {}, {"home": "'", "model": False}),
     ("lon", "us", "Ellomwe", {}, {"home": "'", "model": False}),
+    ("fuc", "ff", "Pulaar", with_capitals({"n": ["ñ"]}), {"model": False}),
 ]
 
 

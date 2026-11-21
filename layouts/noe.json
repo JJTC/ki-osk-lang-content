@@ -4,7 +4,8 @@
   "xkb_layout": "in",
   "direction": "ltr",
   "swipe_enabled": false,
-  "prediction_enabled": false,
+  "prediction_enabled": true,
+  "prediction_lang": "noe",
   "long_press_letters": true,
   "views": [
     {
@@ -674,7 +675,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 12
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ऽ"
+                }
+              ]
             },
             {
               "width_units": 1,

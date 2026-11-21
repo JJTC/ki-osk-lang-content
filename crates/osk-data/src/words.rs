@@ -32,7 +32,8 @@
 //!   and Southern Min and Hakka at the hyphens between a word's syllables
 //!   (`chhin-` and `chhiūⁿ`, `Hak-` and `kâ`).
 //!   Uzbek's apostrophes for the ʻ of oʻ and gʻ are that letter.
-//! - Per language: Catalan's middle dot (`col·legi`), Armenian's question,
+//! - Per language: Catalan's middle dot (`col·legi`) and Garo's, its
+//!   glottal stop (`A·chik`), Armenian's question,
 //!   emphasis and exclamation marks, written on a word's stressed vowel
 //!   (`Ի՞նչ`), Hebrew's gershayim in acronyms (`לחו"ל`), a leading
 //!   apostrophe in Breton (`'zo`) and in Dutch's and Veluws' `'s`, `'t`,
@@ -148,7 +149,8 @@ pub struct Splitter {
     /// (U+02BC), as their keyboards type it, and an apostrophe written
     /// after a letter is that letter (generation 6).
     ejective: bool,
-    /// U+00B7 between letters (Catalan `l·l`).
+    /// U+00B7 between letters (Catalan `l·l`, Garo's glottal stop in
+    /// `A·chik`).
     middle_dot: bool,
     /// Armenian: marks written on a word's vowel, and `:` written for the
     /// full stop `։`.
@@ -510,6 +512,7 @@ impl Splitter {
                 s.elide = Elide::After(CATALAN_ELISIONS);
                 s.middle_dot = true;
             }
+            "grt" => s.middle_dot = true,
             "oc" => s.elide = Elide::After(OCCITAN_ELISIONS),
             "br" | "zea" => s.lead = Lead::Always,
             "nl" | "vel" => s.lead = Lead::Words(DUTCH_CLIPPED),
@@ -1392,6 +1395,11 @@ mod tests {
         assert_eq!(split("ca", "l'escola"), ["l'", "+escola"]);
         assert_eq!(split("ca", "veure'l"), ["veure'l"]);
         assert_eq!(split("ca", "col·legi"), ["col·legi"]);
+        // Garo's glottal stop is a letter of its words; a dot ending one
+        // is not.
+        assert_eq!(split("grt", "A·chikku"), ["A·chikku"]);
+        assert_eq!(split("grt", "an·chingni ong·a."), ["an·chingni", "ong·a"]);
+        assert_eq!(split("grt", "A· chik"), ["A", "chik"]);
         assert_eq!(split("oc", "qu'es"), ["qu'", "+es"]);
         assert_eq!(split("kab", "fell-i"), ["fell-", "+i"]);
         // A Tibetan syllable ends at its tsheg, which it keeps, and glues
