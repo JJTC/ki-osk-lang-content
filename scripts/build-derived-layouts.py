@@ -252,8 +252,10 @@ def with_capitals(extra):
 # in place of its spacers ("home": what one types, the apostrophe many of
 # Africa's languages write inside their words, or a list: Wayuu's ü and
 # its apostrophe), "font_script" for one whose letters the default face
-# lacks (Church Slavonic's ꙁ ꙃ ꙋ: Noto Sans's Cyrillic), and "model":
-# False for a language with none.
+# lacks (Church Slavonic's ꙁ ꙃ ꙋ: Noto Sans's Cyrillic), "model": False
+# for a language with none, and "composer_model" for one whose composer
+# offers its model's words where the base predicts nothing itself (Sebat
+# Bet Gurage's, through Amharic's Ge'ez composer).
 DERIVED = [
     ("bho", "hi", "भोजपुरी", {}),
     ("mai", "hi", "मैथिली", {}),
@@ -715,7 +717,7 @@ DERIVED = [
     ("bxk", "us", "Lubukusu", {}, {"home": "'", "model": False}),
     ("lon", "us", "Ellomwe", {}, {"home": "'", "model": False}),
     ("fuc", "ff", "Pulaar", with_capitals({"n": ["ñ"]}), {"model": False}),
-    ("sgw", "am", "ሰባት ቤት ጉራጌ", {}, {"swap": {"v": "ʷ", "V": "ʷ", "-": "ʸ"}}),
+    ("sgw", "am", "ሰባት ቤት ጉራጌ", {}, {"swap": {"v": "ʷ", "V": "ʷ", "-": "ʸ"}, "composer_model": True}),
 ]
 
 
@@ -753,8 +755,9 @@ def build(lang, base, name, extra, extras=None):
         out["swipe_enabled"] = False
         out.pop("prediction_lang", None)
     # A layout with no model has no prediction language: not its base's,
-    # whose composer may read one (Amharic's: Ge'ez, Gedeo… have none).
-    if out.get("prediction_enabled", True):
+    # whose composer may read one (Amharic's: Ge'ez, Gedeo… have none). One
+    # whose composer reads its own language's (Sebat Bet Gurage's) names it.
+    if out.get("prediction_enabled", True) or extras.get("composer_model"):
         out["prediction_lang"] = lang
     elif out.get("prediction_lang") != lang:
         out.pop("prediction_lang", None)

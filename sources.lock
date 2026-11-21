@@ -7010,6 +7010,23 @@
         "words": "2"
       }
     },
+    "predict/sgw": {
+      "encoder": "4efbc139a1a7-dirty",
+      "inputs": {
+        "fineweb/sgw.txt": "87e46df9301dc068b2352c20f5f10e673dc0446ee6db19838d4bf5f061cb851b"
+      },
+      "outputs": {
+        "predict/sgw.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/sgw.fst": "9afb99d6259dffd3c17de2ea33a1c88d3707dfed381531740554feac5545f793",
+        "predict/sgw.ngram.bin": "474a9e47e53be742c06e56ab40b565e3d9c386f387525fb200bf65ed8ad14c95"
+      },
+      "recipe": {
+        "ngram_keep": "60000",
+        "start_keep": "5000",
+        "vocab_size": "20000",
+        "words": "2"
+      }
+    },
     "predict/shn": {
       "encoder": "28c54781b8d5-dirty",
       "inputs": {

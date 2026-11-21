@@ -65,7 +65,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  zea \
                  btm gpe igl rki vel \
                  bew nup glk bpy \
-                 am ti \
+                 am ti sgw \
                  myx tuv \
                  ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
 
@@ -204,8 +204,9 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                  rmy rmn ojb \
-                 am ti
-# (Amharic's and Tigrinya's: what the Ge'ez composer offers words from.)
+                 am ti sgw
+# (Amharic's, Tigrinya's and Sebat Bet Gurage's: what the Ge'ez composer
+# offers words from.)
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads

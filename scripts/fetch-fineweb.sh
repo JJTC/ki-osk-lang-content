@@ -43,9 +43,10 @@
 # Tausug, Ewondo, Tooro, Makhuwa-Meetto, Kanuri, Giryama, Lango, Hanunoo,
 # Toraja-Sa'dan, Ledo Kaili, Sassarese); Vlax and Balkan Romani, each
 # from both of FineWeb-2's Romani files (each holds the other's
-# documents), and Northwestern Ojibwe in syllabics; Amharic and Tigrinya,
-# whose models the Ge'ez composer offers the words of; and Assamese, whose
-# Tatoeba corpus is small, beside it (the Makefile's FINEWEB_PLUS_LANGS).
+# documents), and Northwestern Ojibwe in syllabics; Amharic, Tigrinya and
+# Sebat Bet Gurage, whose models the Ge'ez composer offers the words of;
+# and Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
+# FINEWEB_PLUS_LANGS).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
 # it is ODC-By 1.0, and its use subject to Common Crawl's Terms of Use.
@@ -64,10 +65,11 @@
 # Yao's hold a hundred words each, Pa'O's 31 sentences, Hakka's, Amis'
 # and Zhuang's 1 300 to 4 200 words, the 28 of Africa's long tail with
 # 0.4 to 0.9 MB of text a few hundred, the twenty-three after them, and
-# the twelve and thirteen after those, Ojibwe's) has none pinned: every
-# 10th document of its train split is held out instead (Lango's every
-# 9th: its 10th is two fifths of its text); nor do the Romanis, whose
-# test splits are mostly the spam and the Macedonian beside them.
+# the twelve and thirteen after those, Ojibwe's, Sebat Bet Gurage's five
+# documents) has none pinned: every 10th document of its train split is
+# held out instead (Lango's every 9th: its 10th is two fifths of its
+# text); nor do the Romanis, whose test splits are mostly the spam and the
+# Macedonian beside them.
 #
 # Neither is committed: the text is the web's. The parquet files are kept
 # in $OUT/raw, and a kept one whose sha256 is right is not downloaded
@@ -670,6 +672,7 @@ am   amh_Ethi  train/000_00000.parquet  aa96a88315917d984ff35827559aa4802c08c306
 am   amh_Ethi  test/000_00000.parquet   1cdc29ca3de5b2ee8add5b507d919ce738ebb486a0e2ec7e86e37aa1e08f2534
 ti   tir_Ethi  train/000_00000.parquet  11200d3ec9c3579e61396852bf43a5bb0b1c1ce4b44c1049cf6ae949e7a9c909
 ti   tir_Ethi  test/000_00000.parquet   8439941b7735beff1b178d9a30f41cd87e039adb2418b61925eb9270942cad68
+sgw  sgw_Ethi  train/000_00000.parquet  d8c07190d157a26f3c5e2373b7fda7c5a87bf883008ef00245444dedf0032814
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

@@ -63,6 +63,10 @@ too (`words`) and their sentences ended at the Ethiopic full stop ። and
 question mark ፧ or the two wordspaces ፡፡ older text writes for the stop,
 a space after them or not (`ends`); every 12th of Amharic's row groups is
 read (75 million characters kept) and every 2nd of Tigrinya's (63).
+Sebat Bet Gurage's is read so too, whole, against Amharic's function
+words (its own ሰብ "person", ኸማ "as", ዝኽ "this"…): its New Testament
+(bible.is), a story and a few articles, and an Amharic page, which goes;
+its test split is five documents, so every 10th document is held out.
 Shan, Mon, Sgaw Karen and Pa'O are written in the Myanmar script too,
 with no spaces between words, and read whole as Burmese is (Shan's 48
 million characters, Mon's 10, Karen's 8, Pa'O's 1.7), their ၀ for ဝ
@@ -1237,6 +1241,9 @@ def ethiopic_words(text):
 # "in", ናይ "of").
 AMHARIC = set("ነው እና ላይ ውስጥ ወደ ግን ይህ ነበር ጋር ብቻ ደግሞ ናቸው እንደ ሲሆን ይሆናል".split())
 TIGRINYA = set("እዩ ኣብ ናይ ምስ ከም እዚ ኢዩ ኣሎ እዮም ነይሩ ኣይ ብዙሕ ኢዮም እያ እዩ".split())
+# Sebat Bet Gurage's, which Amharic writes otherwise (ሰብ "person", Amharic's
+# ሰው; ኸማ "as", እንደ; ዝኽ "this", ይህ; ቃር "word", ቃል).
+GURAGE = set("ሰብ ኸማ ዝኽ ቃር በኽ ዝም ኽኖም ቢኸርም".split())
 
 # Each language: its script (Unicode's name for it), the neighbour whose
 # function words mark a document as not its own, for a language that a
@@ -1395,6 +1402,10 @@ LANGS = {
            "words": ethiopic_words, "ends": ETHIOPIC_END, "every": 12},
     "ti": {"script": "ETHIOPIC", "neighbour": set(), "own": TIGRINYA, "rival": AMHARIC,
            "words": ethiopic_words, "ends": ETHIOPIC_END, "every": 2},
+    # Sebat Bet Gurage, against Amharic's words, read whole; its test split
+    # is five documents: every 10th is held out.
+    "sgw": {"script": "ETHIOPIC", "neighbour": set(), "own": GURAGE, "rival": AMHARIC,
+            "words": ethiopic_words, "ends": ETHIOPIC_END, "hold": 10},
     "rm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | GERMAN_ONLY, "brackets": True},
     "rn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
     "lg": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},

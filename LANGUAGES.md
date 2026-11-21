@@ -13,7 +13,7 @@ Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, G
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
 keycaps. 673 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **465 languages** carry a prediction
+table below is the complete list; **466 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -653,7 +653,7 @@ but no model to match the glide against · `—` off
 | `hdy` | `hdy` | Hadiyya (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
 | `ktb` | `ktb` | Kambaata (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its ኧ as A) |
 | `stv` | `stv` | Silt'e (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its -wa forms ሏ ሟ ቧ…) |
-| `sgw` | `sgw` | Sebat Bet Gurage ሰባት ቤት ጉራጌ | — | LTR | IME¹⁵ | — | **Ge'ez** (shares the Amharic composer; ʷ and ʸ keys for its labialised bilabials ᎀ ᎄ ᎈ ᎌ and palatalised velars ⷀ ⷈ ⷐ ⷘ, in place of v and the hyphen) |
+| `sgw` | `sgw` | Sebat Bet Gurage ሰባት ቤት ጉራጌ | — | LTR | **Full** (sgw)⁷ | — | **Ge'ez** (shares the Amharic composer; its words on the strip¹⁶; ʷ and ʸ keys for its labialised bilabials ᎀ ᎄ ᎈ ᎌ and palatalised velars ⷀ ⷈ ⷐ ⷘ, in place of v and the hyphen¹⁵) |
 | `vai` | `vai` | Vai ꕙꔤ | — | LTR | IME¹¹ | — | **Translit** Latin → Vai syllables, as Keyman's athinkra_vai types them (ka ꕪ, ka~ ꕫ); ɛ ɔ ~ keys, long-press ŋ þ ð ʒ ꘌ |
 | `ii` | `ii` | Nuosu ꆈꌠꉙ (Yi) | — | LTR | IME¹¹ | — | **Translit** Yi pinyin → syllables, as Keyman's sil_yi types them (bit ꀖ); Space adds no space; ， 。 keys |
 | `hi-abc` | `hi` | Hindi हिन्दी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hi lexicon choosing |
@@ -1250,7 +1250,7 @@ but no model to match the glide against · `—` off
    Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
    their letters (note 12); Vai, Northern Thai and
    Eastern Pwo Karen have keyboards (notes 10 to 12) and no model yet.
-7. These three hundred and twenty-eight models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and twenty-nine models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -2040,7 +2040,13 @@ but no model to match the glide against · `—` off
    words cut at the Ethiopic wordspace and punctuation and their
    sentences ended at its full stop ። and question mark ፧ as well. Their
    keyboards type through the Ge'ez composer, whose strip offers their
-   words (note 16).
+   words (note 16). Sebat Bet Gurage's (since data 0.68.0) is read so too,
+   whole, against Amharic's function words (its own ሰብ ኸማ ዝኽ ቃር, which
+   Amharic writes ሰው እንደ ይህ ቃል): 259 of its 260 documents, the 260th an
+   Amharic page; its text is its New Testament from bible.is (the Bible
+   Society of Ethiopia's translation), a story by Sahle Selassie and a
+   few articles, 7 399 sentences and 105 000 words, every 10th document
+   held out (its test split is five).
 8. These seven models learn from web text, MADLAD-400's (Google; CC BY 4.0
    by its card, whose metadata says ODC-By; subject to Common Crawl's
    Terms of Use; `scripts/fetch-madlad.sh`, its files at one revision
@@ -2483,37 +2489,49 @@ but no model to match the glide against · `—` off
    neither key: its mwe stays ምወ and its kya ክያ. Its letters are those
    SIL's Locale Data Repository lists for it (SLDR, MIT: `sldr/s/sgw.xml`),
    all of which it types, ፀ's row from the candidate bar (ts or S, then
-   ፀ, as on Amharic's), and it is named as SLDR names it, ሰባት ቤት ጉራጌ. No
-   text here predicts it: no model. Every Ge'ez keyboard now types the
+   ፀ, as on Amharic's), and it is named as SLDR names it, ሰባት ቤት ጉራጌ. Since
+   data 0.68.0 its composer offers its model's words (note 16). Every
+   Ge'ez keyboard now types the
    6th order as I, as SERA writes it: alone, the carrier's እ (InE እኔ),
    which none of them could type before, and after a consonant its bare
    form before a vowel of its own (sIIl ስእል).
 
-16. Amharic's and Tigrinya's keyboards type through the Ge'ez composer
-   (Latin letters composing fidel, as SERA writes them), which since data
-   0.67.0 offers their models' words on the strip, as the transliteration
-   keyboards offer their readings: the words the syllables typed begin,
-   likeliest first, in whichever of their homophones' rows the lexicon
-   spells them (`sa` offers words in ሳ and in ሣ alike), with the pending
-   consonant at any of its orders (`sel` offers ሰላም), ranked after the
-   word before by the n-grams. A pick types the word and a space. Where
-   the last syllable has homophones, the strip's last slot cycles it
-   through them (ሃ → ሓ → ኃ), two words beside it; Space types the word
-   as composed. Keystroke savings in taps, each held-out word's keys
-   typed as SERA writes them (a capital two taps, Shift and its key, and
-   a tap on the last slot for each syllable in a homophone's row) until
-   the strip offers it, which a tap takes: Amharic 34.2%, Tigrinya 32.7%
-   (`eval-predict`, 3 000 words of FineWeb-2's held-out text each; 7.5%
-   and 9.0% of the words unknown to their 200 000-word lexicons, and
-   0.3% and 0.9%, Latin or with digits, left out). No next word is
-   offered before the first letter yet. Ge'ez's, Gedeo's, Hadiyya's,
-   Kambaata's, Silt'e's and Sebat Bet Gurage's keyboards, Amharic's keys,
-   name no model and offer none.
+16. Amharic's, Tigrinya's and Sebat Bet Gurage's keyboards type through
+   the Ge'ez composer (Latin letters composing fidel, as SERA writes
+   them), which since data 0.67.0 offers their models' words on the
+   strip, as the transliteration keyboards offer their readings: the
+   words the syllables typed begin, likeliest first, in whichever of
+   their homophones' rows the lexicon spells them (`sa` offers words in
+   ሳ and in ሣ alike), with the pending consonant at any of its orders
+   (`sel` offers ሰላም), ranked after the words before by the n-grams. A
+   pick types the word and a space. Where the last syllable has
+   homophones, the strip's last slot cycles it through them (ሃ → ሓ → ኃ),
+   two words beside it; Space types the word as composed. Since data
+   0.68.0 (ki-osk's composers), once a word is done with a space, the
+   strip offers the words likeliest next before a key, as a keyboard
+   without a composer does, and after a sentence's end and its space the
+   words that start sentences; a pick types one and a space, and offers
+   again; Backspace with nothing composed takes the offers away, and
+   while composing takes the last fidel shown. The transliteration
+   keyboards with a model offer the next word so too. Keystroke savings
+   in taps, each held-out word's keys typed as SERA writes them (a
+   capital two taps, Shift and its key, and a tap on the last slot for
+   each syllable in a homophone's row) until the strip offers it, which
+   a tap takes, before its first key too: Amharic 36.5%, Tigrinya 35.3%,
+   their next word on the strip before its first key 11.0% and 11.3% of
+   the time (34.2% and 32.7% without; `eval-predict`, 3 000 words of
+   FineWeb-2's held-out text each; 7.5% and 9.0% of the words unknown to
+   their 200 000-word lexicons, and 0.3% and 0.9%, Latin or with digits,
+   left out); Sebat Bet Gurage 34.9% (14.0%; 32.2% without), on 3 000
+   words of chapters held out of the same New Testament its model learns
+   from (17.6% unknown to its 20 000-word lexicon), which everyday text
+   will not match. Ge'ez's, Gedeo's, Hadiyya's, Kambaata's and Silt'e's
+   keyboards, Amharic's keys, name no model and offer none.
 
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **465 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **466 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2543,7 +2561,7 @@ but no model to match the glide against · `—` off
   long tail **zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk spp bas hay kbr ngl gog chw fat
   tsc bud kao gvl nnb nyo niu hwc acf mrw nij guc ljp sas gor itv bku bpr quh gcr tum tll guz kde nyy
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
-  sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, and Amharic and Tigrinya **am ti**, whose words the Ge'ez composer offers (note 16)
+  sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, and Amharic, Tigrinya and Sebat Bet Gurage **am ti sgw**, whose words the Ge'ez composer offers (note 16)
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14). Built by
   `make fetch-corpora` + `make predict-assets` in the
@@ -2682,7 +2700,8 @@ record how each group was added and what it needs at runtime:
   it, and so are Gedeo, Hadiyya, Kambaata and Silt'e, the four whose
   syllables, as CLDR's exemplar characters list them, the composer types
   all of (Kambaata's ኧ as `A`). Since data 0.67.0 Amharic's and
-  Tigrinya's composers offer their models' words on the strip (note 16).
+  Tigrinya's composers offer their models' words on the strip, and since
+  0.68.0 Sebat Bet Gurage's too, and the next word (note 16).
   And since data 0.66.0 Sebat Bet Gurage,
   whose labialised and palatalised syllables (Ethiopic Supplement's ᎀ…,
   Extended's ⷀ…) its keyboard's ʷ and ʸ keys type (note 15), and `I`
