@@ -175,6 +175,7 @@ hi  = "Hindi"
 hi-Latn = "Hinglish (Hindi in Latin letters)"
 hif = "Fiji Hindi"
 hil = "Hiligaynon"
+hlb = "Halbi"
 hne = "Chhattisgarhi"
 hnn = "Hanunoo"
 ho  = "Hiri Motu"
@@ -215,6 +216,7 @@ kbr = "Kafa"
 kde = "Makonde"
 kea = "Cape Verdean Creole"
 kek = "Q'eqchi'"
+kfq = "Korku"
 kfy = "Kumaoni"
 kg  = "Kongo"
 kha = "Khasi"
@@ -308,6 +310,7 @@ my  = "Burmese"
 myx = "Masaaba"
 myv = "Erzya"
 mzn = "Mazandarani"
+nah = "Nahuatl"
 nan = "Southern Min"
 nap = "Neapolitan"
 nd  = "Northern Ndebele"
@@ -654,6 +657,17 @@ source  = { name = "MADLAD-400 (Google; allenai/MADLAD-400 at Hugging Face): web
 [prediction.storybooks]
 license = { name = "CC BY 4.0 (the African Storybook's stories, each CC BY 3.0 or 4.0)", url = "https://creativecommons.org/licenses/by/4.0/", share_alike = false }
 source  = { name = "The African Storybook (africanstorybook.org, Saide): its stories as the Global African Storybook Project's asp-raw-db keeps them, commit 096a27f", url = "https://github.com/global-asp/asp-raw-db" }
+
+# StoryWeaver's stories (scripts/fetch-storyweaver.sh: the stories named
+# in scripts/storyweaver-stories.tsv, each pinned by the sha256 of its
+# text, read through the site's reader with an account;
+# scripts/storyweaver-text.py reads them): the whole corpus of the
+# languages in the Makefile's STORYWEAVER_LANGS. Each story is CC BY 4.0,
+# its author, translator, illustrator and publisher named on its page
+# there; NOTICES.md says so.
+[prediction.storyweaver]
+license = { name = "CC BY 4.0 (StoryWeaver's stories)", url = "https://creativecommons.org/licenses/by/4.0/", share_alike = false }
+source  = { name = "StoryWeaver (storyweaver.org.in, Pratham Books): its stories, those scripts/storyweaver-stories.tsv names", url = "https://storyweaver.org.in/" }
 
 # SMOL's translations (scripts/fetch-smol.sh: google/smol's files at one
 # revision, pinned by sha256; scripts/smol-text.py reads them): the whole
@@ -1423,7 +1437,6 @@ hac = "Gorani"
 haz = "Hazaragi"
 hdy = "Hadiyya"
 hea = "Northern Qiandong Miao"
-hlb = "Halbi"
 hnd = "Southern Hindko"
 hni = "Hani"
 hno = "Northern Hindko"
@@ -1431,7 +1444,6 @@ hoj = "Harauti"
 igb = "Ebira"
 ii  = "Nuosu"
 jbo = "Lojban"
-kfq = "Korku"
 kfr = "Kutchi"
 kge = "Komering"
 khb = "Tai Lue"
@@ -1475,7 +1487,6 @@ mua = "Mundang"
 mup = "Malvi"
 mvp = "Duri"
 mvy = "Indus Kohistani"
-nah = "Nahuatl"
 niq = "Nandi"
 nod = "Northern Thai"
 nv  = "Navajo"

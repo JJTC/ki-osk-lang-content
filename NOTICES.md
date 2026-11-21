@@ -327,6 +327,27 @@ such a model names the African Storybook among its sources, with those
 licences. Bukusu's and Malawi Lomwe's keyboards take their letters from
 their CC BY stories there (11 and 19).
 
+### StoryWeaver (stories)
+
+Halbi's, Korku's and Nahuatl's models learn from StoryWeaver's stories
+alone, which no wiki or web text here has of them: picture books for
+children in hundreds of languages, written, translated and illustrated
+by its community and by publishers, and published at
+[storyweaver.org.in](https://storyweaver.org.in/) by Pratham Books,
+**each under CC BY 4.0** (its terms of use; the Read Along videos alone
+are under CC BY-NC-ND, and none is read here). Its reader shows a
+story's pages to a signed-in account, and they were read through it: the
+stories each model learns from are named in
+`scripts/storyweaver-stories.tsv` by their id and slug, each pinned by
+the sha256 of its text, and every one's attribution page says CC BY 4.0
+(177 of Halbi's, 105 of Korku's, 419 of Nahuatl's). Each story's page,
+`https://storyweaver.org.in/en/stories/<slug>`, names its author,
+translator, illustrator and publisher, the story it was translated
+from, and its licence. The models made from them (word lists and the
+counts of words and word pairs and triples) are what this repository
+and its packs hold, never the stories; each pack with such a model names
+StoryWeaver among its sources, with that licence.
+
 ### SMOL (translations)
 
 Fourteen models learn from SMOL's translations alone, which no wiki or

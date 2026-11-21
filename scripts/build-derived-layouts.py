@@ -218,7 +218,9 @@ Mundari and Garo here, and Bagheli, Bagri, Kangri, Surgujia and Zarma,
 build-exemplar-layouts.py's; Kurukh with ' first on its full stop's long
 press (र'ईर: one word in twenty-six), Hindi's home row having no spacers,
 and Nimadi with its avagraha ऽ on ः's (करनऽ: one word in twenty), as
-Sanskrit's. Pulaar, with no model, is typed on Fula's keys with ñ first
+Sanskrit's. StoryWeaver's stories have given models to two more, Halbi
+and Korku, on Hindi's keys; Kui, with no model, has Odia's keys and
+their long presses (ୟ on ଯ, ୱ on ଵ). Pulaar, with no model, is typed on Fula's keys with ñ first
 on n's long press: the letters SMOL's Pulaar translations write, as
 CLDR's Fula, whose name for itself is Pulaar, lists them. A key at the
 home row's end types its capital on the Shift view (Ā, Ɔ, Җ), and has the long press its letter is
@@ -671,11 +673,11 @@ DERIVED = [
     ("bpy", "bn", "বিষ্ণুপ্রিয়া মণিপুরী", {"ব": ["ৱ"]}),
     ("bns", "hi", "Bundeli", {}),
     ("dhd", "hi", "Dhundhari", {}, {"model": False}),
-    ("kfq", "hi", "Korku", {}, {"model": False}),
+    ("kfq", "hi", "Korku", {}),
     ("mup", "hi", "Malvi", {}, {"model": False}),
     ("wry", "hi", "Merwari", {}, {"model": False}),
     ("bfz", "hi", "Mahasu Pahari", {}, {"model": False}),
-    ("hlb", "hi", "Halbi", {}, {"model": False}),
+    ("hlb", "hi", "Halbi", {}),
     ("ca-valencia", "ca", "Valencià", {}, {"model": False}),
     ("tdx", "mg", "Tandroy", with_capitals({"a": ["à"], "e": ["è", "é"], "o": ["ò"], "i": ["ì"], "y": ["ỳ"]})),
     ("hvn", "us", "Hawu", with_capitals({"e": ["è"]}), {"home": "\ua78c"}),

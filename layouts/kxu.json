@@ -5,6 +5,9 @@
   "direction": "ltr",
   "swipe_enabled": false,
   "prediction_enabled": false,
+  "xkb_variant": "ori",
+  "font_script": "oriya",
+  "long_press_letters": true,
   "views": [
     {
       "id": "base",
@@ -252,7 +255,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 48
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ୱ"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -276,7 +285,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 53
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ୟ"
+                }
+              ]
             },
             {
               "width_units": 1.5,
@@ -601,7 +616,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 48
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ୱ"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -1342,7 +1363,5 @@
         }
       ]
     }
-  ],
-  "xkb_variant": "ori",
-  "font_script": "oriya"
+  ]
 }

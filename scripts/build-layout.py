@@ -326,6 +326,11 @@ DIACRITIC_LONGPRESS = {
     # its keymap has on no level the keys show, on the long presses of
     # ta ত and the anusvara ং.
     "bn": {"ত": ["ৎ"], "ং": ["ঃ"]},
+    # Odia: yya ୟ (ସମୟ, ବିଷୟ: in one word in eleven of its Wikipedia's text)
+    # and wa ୱ (ୱେବସାଇଟ: one in fifty), which its keymap has on no level
+    # (InScript's Shift+/ ୟ is @ there), on the long presses of ya ଯ and
+    # va ଵ.
+    "or": {"ଯ": ["ୟ"], "ଵ": ["ୱ"]},
     # Assamese: the two letters that distinguish it from Bengali — Assamese
     # ra ৰ (long-press Bengali ra র) and wa ৱ (long-press Bengali ba ব).
     "as": {"র": ["ৰ"], "ব": ["ৱ"]},

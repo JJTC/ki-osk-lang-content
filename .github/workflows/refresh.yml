@@ -157,6 +157,15 @@ jobs:
       # database's archive at one commit, pinned by sha256.
       - name: The African Storybook's stories
         run: make fetch-storybooks SRC_DIR="$RUNNER_TEMP/sources"
+      # Three learn from StoryWeaver's stories, which its reader shows a
+      # signed-in account: those scripts/storyweaver-stories.tsv names,
+      # each pinned by the sha256 of its text. With no account given here
+      # none is read, and the three keep their models.
+      - name: StoryWeaver's stories
+        env:
+          STORYWEAVER_EMAIL: ${{ secrets.STORYWEAVER_EMAIL }}
+          STORYWEAVER_PASSWORD: ${{ secrets.STORYWEAVER_PASSWORD }}
+        run: make fetch-storyweaver SRC_DIR="$RUNNER_TEMP/sources"
       # Fourteen learn from SMOL's translations: google/smol's files at one
       # revision, pinned by sha256.
       - name: SMOL's translations

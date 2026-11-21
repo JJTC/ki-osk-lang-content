@@ -3355,6 +3355,23 @@
         "words": "2"
       }
     },
+    "predict/hlb": {
+      "encoder": "8319a02af470-dirty",
+      "inputs": {
+        "storyweaver/hlb.txt": "33c1c65ee278a52b880679c76d448ae15ea11137ef9d1f1a7f3ec7bd9535ea1a"
+      },
+      "outputs": {
+        "predict/hlb.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/hlb.fst": "54eddacfe554b907c34d39f01c2e047893cb512dcbef378829acc1f6d75f5952",
+        "predict/hlb.ngram.bin": "a060c82e5ee6246da989d06c10f8c0b338585baca0ca73c935e1c87bde2fae36"
+      },
+      "recipe": {
+        "ngram_keep": "90000",
+        "start_keep": "5000",
+        "vocab_size": "80000",
+        "words": "2"
+      }
+    },
     "predict/hne": {
       "encoder": "d4ddf79e7627-dirty",
       "inputs": {
@@ -4036,6 +4053,23 @@
         "start_keep": "5000",
         "vocab_size": "80000",
         "words": "6"
+      }
+    },
+    "predict/kfq": {
+      "encoder": "8319a02af470-dirty",
+      "inputs": {
+        "storyweaver/kfq.txt": "5f54b28191e28071f21a2ea1e1cdc4ea2306af0f724d260309eec01ae7588590"
+      },
+      "outputs": {
+        "predict/kfq.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/kfq.fst": "30f5166d01111af54824fdabb482c04da99828cd961658eb3a51a823e7c80261",
+        "predict/kfq.ngram.bin": "33b3bf61c666c33694ec5460a5b115f457db8014949264924b0eb24a45294168"
+      },
+      "recipe": {
+        "ngram_keep": "90000",
+        "start_keep": "5000",
+        "vocab_size": "80000",
+        "words": "2"
       }
     },
     "predict/kfy": {
@@ -5621,6 +5655,23 @@
         "predict/mzn.forms.fst": "03471716987cbe7c6ae7db17c2ba457e81c6cc19da056d5a07d9670440a936c5",
         "predict/mzn.fst": "f33c2f4204df8a17290e6f80f20d1810ff06c8c238f714ba52544ca3cd4de923",
         "predict/mzn.ngram.bin": "0a63cc06d0bb43abe7c2b9247e97c4c2018e582b0fa7d1d73b2217f5dc048d4d"
+      },
+      "recipe": {
+        "ngram_keep": "90000",
+        "start_keep": "5000",
+        "vocab_size": "80000",
+        "words": "2"
+      }
+    },
+    "predict/nah": {
+      "encoder": "8319a02af470-dirty",
+      "inputs": {
+        "storyweaver/nah.txt": "70feb3d197376762018fd1d56151db574bd61126d4c048ad5c2e4639aa7f0caa"
+      },
+      "outputs": {
+        "predict/nah.forms.fst": "7bf7d3fef63b5c34cdad7859619151b6f66eea1f9b68d403fd7aceb5d96034d7",
+        "predict/nah.fst": "20c3d7f15792772047ef8833f32a95a42001150988438da316028f52dcc019fe",
+        "predict/nah.ngram.bin": "5d1ef69307d52198b3db107cf60c1a7c51606ff36a6434e2f548546f5375f238"
       },
       "recipe": {
         "ngram_keep": "90000",

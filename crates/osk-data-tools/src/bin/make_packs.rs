@@ -32,8 +32,9 @@
 //! Dakshina dataset's Wikipedia text (`dakshina/<lang>.txt`), the wikis'
 //! own (`wikipedia/<lang>.txt`), FineWeb-2's web text (`fineweb/<lang>.txt`),
 //! MADLAD-400's (`madlad/<lang>.txt`), the African Storybook's stories
-//! (`storybooks/<lang>.txt`), SMOL's translations (`smol/<lang>.txt`),
-//! GlotCC's (`glotcc/<lang>.txt`), with their licences.
+//! (`storybooks/<lang>.txt`), StoryWeaver's (`storyweaver/<lang>.txt`),
+//! SMOL's translations (`smol/<lang>.txt`), GlotCC's (`glotcc/<lang>.txt`),
+//! with their licences.
 //!
 //! It refuses rather than guesses:
 //! - a committed data file that no pack claims, or that two packs claim;
@@ -189,6 +190,9 @@ struct Prediction {
     /// The African Storybook's stories: the licence and source of the
     /// models built from them.
     storybooks: Added,
+    /// StoryWeaver's stories: the licence and source of the models built
+    /// from them.
+    storyweaver: Added,
     /// SMOL's translations: the licence and source of the models built
     /// from them.
     smol: Added,
@@ -335,6 +339,7 @@ fn main() -> anyhow::Result<()> {
             ("fineweb", &p.fineweb.license, &p.fineweb.source),
             ("madlad", &p.madlad.license, &p.madlad.source),
             ("storybooks", &p.storybooks.license, &p.storybooks.source),
+            ("storyweaver", &p.storyweaver.license, &p.storyweaver.source),
             ("smol", &p.smol.license, &p.smol.source),
             ("glotcc", &p.glotcc.license, &p.glotcc.source),
         ] {
@@ -351,7 +356,7 @@ fn main() -> anyhow::Result<()> {
         }
         ensure!(
             !sources.is_empty(),
-            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/, fineweb/, madlad/, storybooks/, smol/ or glotcc/, {lang}.txt or {primary}.txt)"
+            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/, fineweb/, madlad/, storybooks/, storyweaver/, smol/ or glotcc/, {lang}.txt or {primary}.txt)"
         );
         // Dialect flags and word lists carry their own sources' licences
         // into the pack.

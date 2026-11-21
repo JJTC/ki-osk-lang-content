@@ -13,7 +13,7 @@ Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, G
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
 keycaps. 673 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **466 languages** carry a prediction
+table below is the complete list; **469 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -24,9 +24,8 @@ runtime fonts load lazily on first use.
 
 Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 (no suggestions) · `IME` = candidate bar.
-**Swipe**: `✓` Latin + full dictionary · `~` Latin layout, gesture on
-but no model to match the glide against · `—` off
-(non-Latin scripts, IMEs, emoji/numeric).
+**Swipe**: `✓` Latin + full dictionary · `—` off
+(no model, non-Latin scripts, IMEs, emoji/numeric).
 
 | Layout (id) | Pack | Language | Keymap (xkb) | Dir | Prediction | Swipe¹ | IME / composer |
 |---|---|---|---|---|---|---|---|
@@ -281,7 +280,7 @@ but no model to match the glide against · `—` off
 | `ml` | `ml` | Malayalam | in · mal | LTR | **Full** (ml)³ | — | — |
 | `gu` | `gu` | Gujarati | in · guj | LTR | **Full** (gu)³ | — | — |
 | `pa` | `pa` | Punjabi | in · guru | LTR | **Full** (pa)³ | — | — |
-| `or` | `or` | Odia | in · ori | LTR | **Full** (or)⁶ | — | — |
+| `or` | `or` | Odia | in · ori + long-press ୟ ୱ | LTR | **Full** (or)⁶ | — | — |
 | `si` | `si` | Sinhala | lk · sin_phonetic | LTR | **Full** (si)³ | — | — |
 | `km` | `km` | Khmer | kh | LTR | **Full** (km)⁷ | — | — |
 | `lo` | `lo` | Lao | la | LTR | **Full** (lo)⁷ | — | — |
@@ -523,11 +522,11 @@ but no model to match the glide against · `—` off
 | `unr` | `unr` | Mundari (Devanagari) | in, Hindi's keys | LTR | **Full** (unr)¹⁴ | — | — |
 | `bns` | `bns` | Bundeli (Devanagari) | in, Hindi's keys | LTR | **Full** (bns)¹⁴ | — | — |
 | `dhd` | `dhd` | Dhundhari (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
-| `kfq` | `kfq` | Korku (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `kfq` | `kfq` | Korku (Devanagari) | in, Hindi's keys | LTR | **Full** (kfq)¹⁷ | — | — |
 | `mup` | `mup` | Malvi (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
 | `wry` | `wry` | Merwari (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
 | `bfz` | `bfz` | Mahasu Pahari (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
-| `hlb` | `hlb` | Halbi (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
+| `hlb` | `hlb` | Halbi (Devanagari) | in, Hindi's keys | LTR | **Full** (hlb)¹⁷ | — | — |
 | `lmn` | `lmn` | Lambadi (Telugu script) | in · tel, Telugu's keys | LTR | —¹² | — | — |
 | `sou` | `sou` | Southern Thai | th, Thai's keys | LTR | —¹² | — | — |
 | `dcc` | `dcc` | Dakhini (Urdu script) | pk, Urdu's keys | **RTL** | —¹² | — | — |
@@ -543,7 +542,7 @@ but no model to match the glide against · `—` off
 | `mdr` | `mdr` | Mandar | us | LTR | —¹² | — | — |
 | `pcc` | `pcc` | Bouyei Haausqyaix | us | LTR | —¹² | — | — |
 | `mtq` | `mtq` | Muong Thiểng Mường | vn, Vietnamese's keys | LTR | —¹² | — | — |
-| `kxu` | `kxu` | Kui (Odia script) | in · ori, Odia's keys, ୕ key | LTR | —¹² | — | — |
+| `kxu` | `kxu` | Kui (Odia script) | in · ori, Odia's keys (+ long-press ୟ ୱ), ୕ key | LTR | —¹² | — | — |
 | `pse` | `pse` | Central Malay Baso Melayu Tenga | us | LTR | —¹² | — | — |
 | `kge` | `kge` | Komering Basa Kumoring | us | LTR | —¹² | — | — |
 | `vkt` | `vkt` | Kutai Malay | us | LTR | —¹² | — | — |
@@ -634,7 +633,7 @@ but no model to match the glide against · `—` off
 | `fj` | `fj` | Fijian Vosa Vakaviti | us + long-press ā ē ī ō ū | LTR | **Full** (fj)⁷ | ✓ | — |
 | `ty` | `ty` | Tahitian Reo Tahiti | us + key ʻ + long-press ā ē ī ō ū | LTR | **Full** (ty)⁷ | ✓ | — |
 | `ht` | `ht` | Haitian Creole Kreyòl | us | LTR | **Full** (ht)⁷ | ✓ | — |
-| `nah` | `nah` | Nahuatl Nāhuatl | us + long-press ā ē ī ō | LTR | — | ~ | — |
+| `nah` | `nah` | Nahuatl Nāhuatl | us + long-press ā ē ī ō | LTR | **Full** (nah)¹⁷ | ✓ | — |
 | `kl` | `kl` | Greenlandic Kalaallisut | us | LTR | **Full** (kl)⁷ | ✓ | — |
 | `chr` | `chr` | Cherokee ᏣᎳᎩ | us · chr | LTR | — | — | — |
 | `iu` | `iu` | Inuktitut ᐃᓄᒃᑎᑐᑦ | ca · ike | LTR | **Full** (iu)⁷ | — | — |
@@ -2383,8 +2382,11 @@ but no model to match the glide against · `—` off
    neither suggestions nor glides. Nine of this note's keyboards now
    have models from SMOL's translations (note 14): Ahirani's, Bundeli's,
    Kumaoni's, Kurukh's, Nimadi's, Mundari's, Garo's in Latin letters,
-   Mandeali's and Surjapuri's; and Bishnupriya Manipuri's has one from
-   its wiki (note 6).
+   Mandeali's and Surjapuri's; Bishnupriya Manipuri's has one from its
+   wiki (note 6); and Halbi's and Korku's, since data 0.69.0, from
+   StoryWeaver's stories (note 17). Kui's, on Odia's keys, types the ୟ
+   and ୱ their long presses now give (1.2% and 0.7% of the letters of
+   its StoryWeaver books' Kui).
 
 13. These two models learn from the African Storybook's stories
    (africanstorybook.org, an initiative of Saide: picture books for
@@ -2528,10 +2530,51 @@ but no model to match the glide against · `—` off
    will not match. Ge'ez's, Gedeo's, Hadiyya's, Kambaata's and Silt'e's
    keyboards, Amharic's keys, name no model and offer none.
 
+17. These three models learn from StoryWeaver's stories
+   (storyweaver.org.in, Pratham Books: picture books for children,
+   written, translated and illustrated by its community and by
+   publishers, each under CC BY 4.0), which no wiki or web text here has
+   of them: Halbi's (177 stories, most of them translated by
+   Shiksharth), Korku's (105, most of them Unnati ISEC's) and Nahuatl's
+   (419, filed there under Nahuatl and Nawatl, written by its speakers
+   in today's spellings, Huasteca's and others', uan, wan and iwan
+   alike: not the classical spelling with the macrons its keyboard has
+   on long presses, nor its wiki's or colonial documents', note 7).
+   StoryWeaver's reader shows a story's pages to a signed-in account,
+   and they are read through it (`scripts/fetch-storyweaver.sh`, the
+   account's sign-in from the environment; without one, and the stories
+   not read before, the models are kept as they are), the stories named
+   in `scripts/storyweaver-stories.tsv`, each pinned by the sha256 of
+   its text; every one's attribution page says CC BY 4.0, and one of
+   Nahuatl's 420 the reader would not serve. A page is left out where
+   another language's function words are two of its words and 3% or
+   more (English's, and for Nahuatl Spanish's), or where fewer than nine
+   in ten of its letters are its script's (Korku's sound effects typed
+   with Latin s's, वँsssssss: 19 pages), and so is a story most of whose
+   pages are (two of Nahuatl's, in Spanish); a line that ends no
+   sentence goes on in the next, where the reader broke a picture
+   book's line; a danda typed | is read as ।; a sentence set in
+   capitals (a fifth of Nahuatl's stories) is read in lower case, its
+   first letter a capital; and every 10th story is held out
+   (`scripts/storyweaver-text.py`): 4 037, 4 181 and 6 733 sentences,
+   33 000, 30 000 and 40 000 words, all of whose 6 700, 6 300 and
+   12 300 kinds of word the lexicons keep. Keystroke savings on the
+   held-out stories (3 000, 1 500 and 3 000 words), with taps astray and
+   the words unknown: Korku 33.1%, 22.9%, 18.5%; Halbi 29.0%, 20.6%,
+   17.6%; Nahuatl 28.7%, 8.9%, 28.2%, its varieties' words each spelled
+   their own way (autocorrect changed 0.20% of its words typed right).
+   Not used, too little text or too little saved: Lusoga's 242 stories
+   (33 000 words, a third of the held-out ones unknown: 21.7%, 2.5% with
+   taps astray), Wagdi's 52 (filed as Vagadi; 21 000 words: 18.4%),
+   Haryanvi's 78 (11 000: 18.1%), Kui's in 87 Odia-Kui books, Kui in
+   bold beneath the Odia (11 000: 26.7%, 13.0%, but 1.0% of its right
+   words changed), Sadri's 54 (10 000: 20.2% on 300 held-out words) and
+   Rukiga's 29 (1 100 words).
+
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **466 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **469 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2563,21 +2606,21 @@ but no model to match the glide against · `—` off
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
   sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, and Amharic, Tigrinya and Sebat Bet Gurage **am ti sgw**, whose words the Ge'ez composer offers (note 16)
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
-  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14). Built by
+  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 147 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 144 layouts, Montenegrin's in
   Cyrillic, the forty-nine whose letters are CLDR's exemplar characters
   (note 9: twenty-nine in Latin letters, twenty in the Arabic script,
   Devanagari and Bengali), the nineteen from Keyman's (note 10: thirteen
   of a script of their own, Chakma to Osage, Gorani, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
-  Tham, and the International Phonetic Alphabet's), the seventy-one on another language's keys (note 12: Northern
+  Tham, and the International Phonetic Alphabet's), the sixty-nine on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian
   Konkani, Kutchi, Tày and Eastern Pwo Karen, twelve whose letters their
   wikis give, Northern Min to Southern Balochi, and sixteen from smaller
-  wikis and FineWeb-2's few pages, Harauti to Ma'anyan, fifteen
-  whose script CLDR's or Wikidata's data names, Dari to Halbi, two
+  wikis and FineWeb-2's few pages, Harauti to Ma'anyan, thirteen
+  whose script CLDR's or Wikidata's data names, Dari to Mahasu Pahari, two
   whose Bibles give their letters, Southern Oromo and Yaka, four the
   Universal Declaration of Human Rights, Maay to Northern Qiandong Miao,
   five Wiktionary's entries, Garo's in the Bengali script to Kui, three their test
@@ -2589,9 +2632,7 @@ but no model to match the glide against · `—` off
   Nuosu's, whose composers read their tables alone (note 11), and
   Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
-  its wiki's and its New Testament), and Nahuatl, whose is colonial
-  documents, its wiki and its varieties' Bibles, each spelled its own
-  way. Nahuatl's glides find no word to match; the others have them off. Sixty-eight
+  its wiki's and its New Testament). They have their glides off. Sixty-eight
   layout-only languages got their models from FineWeb-2's web text
   (note 7).
 - **IME dictionaries** — Pinyin (CC-CEDICT `pinyin/cedict.bin`),
@@ -2781,7 +2822,8 @@ could not be typed, nor could Bengali's ৎ ঃ, on no key until then; nor,
 until data 0.54.0, Ukrainian's ґ, Khmer's independent vowels (ឱ ឯ ឫ…,
 on AltGr in its keymap), Hindi's ऍ (and so the thirteen layouts on
 Hindi's keys) and Northwestern Ojibwe's long vowels and w-dotted
-syllables:
+syllables; nor, until data 0.69.0, Odia's ୟ and ୱ (nor Kui's, on its
+keys):
 
 | Layout | Long-press letters | Feature |
 |---|---|---|
@@ -2795,6 +2837,7 @@ syllables:
 | `uz` Uzbek | oʻ gʻ (turned comma) | `uz` |
 | `tk` Turkmen | ä ç ž ň ö ş ü ý | `tk` |
 | `bn` Bengali | ৎ ঃ (on ত ং), which its keymap has on no level the keys show | `bn` |
+| `or` Odia | ୟ ୱ (on ଯ ଵ), which its keymap has on no level (InScript's Shift+/ ୟ is @ there): ୟ in one word in eleven of its Wikipedia's text (ସମୟ, ବିଷୟ), ୱ in one in fifty | `or` |
 | `as` Assamese | ৰ ৱ (on Bengali র/ব); ৎ ঃ (on ত ং), as Bengali's | `as` |
 | `rkt` Rangpuri | Assamese's (ৰ a key, র on its long press; ৱ ৎ ঃ on ব ত ং), Bengali's digits on the symbol view's | `rkt` |
 | `ckb` Central Kurdish | ێ ڵ ڕ (on ی ل ر; on Shift too) | `ckb` |
