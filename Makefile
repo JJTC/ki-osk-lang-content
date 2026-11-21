@@ -64,6 +64,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  tdx hvn ktu quy \
                  zea \
                  btm gpe igl rki vel \
+                 bew nup glk bpy \
                  myx tuv \
                  ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
 
@@ -122,10 +123,14 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # the sentences that write their own words (their references English,
 # some Indonesian), Arakanese's, in the Myanmar script (680 000 words
 # between its spaces, cut into syllables as Pa'O's are), and Veluws',
-# the Dutch Low Saxon wiki's articles in it (229 000).
+# the Dutch Low Saxon wiki's articles in it (229 000). And four whose
+# keyboards had no model: Betawi's (270 000 words), Nupe's (115 000) and
+# Gilaki's (271 000, read as Persian's keys type it), the sentences that
+# write their own words, and Bishnupriya Manipuri's (103 000), their
+# bots' stubs left out.
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
                    bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu zea \
-                   btm gpe igl rki vel
+                   btm gpe igl rki vel bew nup glk bpy
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences
@@ -410,6 +415,7 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        cdo hif egl zea \
                        tdx hvn ktu quy \
                        btm gpe igl rki vel \
+                       bew nup glk bpy \
                        myx tuv \
                        ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
 PREDICT_LARGE_VOCAB ?= 80000

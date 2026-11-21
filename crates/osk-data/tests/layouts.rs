@@ -331,11 +331,11 @@ fn an_apostrophe_inside_hindi_keys_words_is_on_the_full_stops_long_press() {
 
 /// The Ethiopic layouts type through Amharic's composer, which reads a
 /// capital as the key with Shift: the ejectives ጠ ጨ ጰ ጸ are T C P S, ዸ is
-/// D, the 5th order E and ኧ A. Each has a Shift view with those, and
-/// Ethiopic's full stop and comma on its letters' view.
+/// D, the 5th order E, the 6th I (alone, እ) and ኧ A. Each has a Shift view
+/// with those, and Ethiopic's full stop and comma on its letters' view.
 #[test]
 fn the_ethiopic_layouts_have_capitals_and_ethiopic_punctuation() {
-    for id in ["am", "ti", "gez", "drs", "hdy", "ktb", "stv"] {
+    for id in ["am", "ti", "gez", "drs", "hdy", "ktb", "stv", "sgw"] {
         let def = load(id);
         let labels = |view: ViewId| -> Vec<String> {
             def.views
@@ -346,7 +346,7 @@ fn the_ethiopic_layouts_have_capitals_and_ethiopic_punctuation() {
                 .collect()
         };
         let shift = labels(ViewId::Shift);
-        for c in ["T", "C", "P", "S", "D", "E", "A"] {
+        for c in ["T", "C", "P", "S", "D", "E", "I", "A"] {
             assert!(
                 shift.iter().any(|l| l == c),
                 "{id}: no {c} on its Shift view"
@@ -360,6 +360,36 @@ fn the_ethiopic_layouts_have_capitals_and_ethiopic_punctuation() {
             );
         }
     }
+}
+
+/// Sebat Bet Gurage's keyboard is Amharic's with ʷ and ʸ in place of the v
+/// it does not write and the hyphen, on both its letters' views: the
+/// composer reads them after m b f p and q k x g as its labialised and
+/// palatalised syllables (ᎀ, ⷀ). The hyphen stays on ?123.
+#[test]
+fn sebat_bet_gurages_keyboard_has_keys_for_its_labialised_and_palatalised_consonants() {
+    let def = load("sgw");
+    let labels = |view: ViewId| -> Vec<String> {
+        def.views
+            .iter()
+            .filter(|v| v.id == view)
+            .flat_map(|v| v.rows.iter().flat_map(|r| r.keys.iter()))
+            .map(|k| k.label.clone())
+            .collect()
+    };
+    for view in [ViewId::Base, ViewId::Shift] {
+        let keys = labels(view);
+        for c in ["ʷ", "ʸ"] {
+            assert!(keys.iter().any(|l| l == c), "sgw: no {c} on {view:?}");
+        }
+        for c in ["v", "V", "-"] {
+            assert!(!keys.iter().any(|l| l == c), "sgw: {c} on {view:?}");
+        }
+    }
+    assert!(
+        labels(ViewId::Symbol1).iter().any(|l| l == "-"),
+        "sgw: no hyphen on ?123"
+    );
 }
 
 /// A layout's `dialect` is one of its prediction language's varieties: a

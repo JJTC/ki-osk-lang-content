@@ -58,7 +58,10 @@ kaf and yeh, alef maksura and the doachashmee heh as ک ی ی ه, and a
 word's last ه as ە but after ا (شاه) and in الله; and ە where the old
 keyboards wrote ه and a zero-width non-joiner, U+200C (لە and جەنگ
 written so: a tenth of the Southern Kurdish wiki's sentences), which
-marks it.
+marks it. With --persian, the Arabic script is read as Persian's keys
+type it: Arabic's kaf and yeh and alef maksura as ک ی ی (the Gilaki
+wiki writes ي in its words beside ی, ايسه beside ایسه, and Persian's
+keys type ی, ي on a long press).
 
 With --script-only, a sentence is cut where a word with letters of
 another script stands, the word left out, and each piece of three words
@@ -75,7 +78,11 @@ the Ghanaian Pidgin wiki's (245 000 of its 383 000 sentences, `Retrieved
 2 August 2025.`), whose own write dey, wey, insyd, ein; the Igala wiki's,
 English and a few Igbo, whose own write ma, ki, efu, kpai, ọdọ; and the
 Batak Mandailing wiki's, English and Indonesian, whose own write ima,
-dohot, sian, adong.
+dohot, sian, adong. So, too, are a few of the Betawi wiki's, English
+and Indonesian (its own write nyang, entu, atawa, deri, kaga), and the
+Nupe wiki's, English (nan, nyan, wun, eya); and the Gilaki wiki's are
+Persian, among them its villages' articles (`… یکی از روستاهای …`), and
+its own write ٚ, ایسه, مئن, جه.
 
 With --letters, a sentence that writes none of these letters is left
 out: a third of the Abron test wiki's sentences are English, its
@@ -104,7 +111,7 @@ thousand of them `West-Veluws artikel` and `Oost-Veluws artikel`.
                       [--script-only] [--prefix P] [--category C[,…]]
                       [--markup T[,…]]
                       [--neighbour hi|ur|fa|id|en[,…]] [--shapes K]
-                      [--sorani] [--own hif|gpe|igl|btm] [--letters ɛɔ]
+                      [--sorani] [--persian] [--own hif|gpe|igl|btm|bew|nup|glk] [--letters ɛɔ]
                       [--emilian] OUT EVAL DUMP...
 
 The dumps are read in the order given, the articles in dump order, so
@@ -143,6 +150,13 @@ OWN = {
                " ẹgwa ugbo gwaji ẹñwu ọmọ alu ẹkọ".split()),
     "btm": set("ima dohot dot ni na tu ma sian tingon adong manjadi nai nia sangape alak halak inda juo"
                " mambaen idokon ibaen anso alai godang mandung".split()),
+    "bew": set("nyang nyeng entu ntu enni atawa ama èn deri atu dalem kaga kagak ampé gableg mah cuman"
+               " tahon dengen laèn gedé ièlah lantaran sebagé liwat masup lebi".split()),
+    "nup": set("nan nyan wun yi chi zhi eya bo gan wuncin eza eka mini dagan gwata edzo enan jin nyin bolu"
+               " kezhe ela sunsun dana yesan".split()),
+    # Gilaki's as --persian reads them (ی, not ي).
+    "glk": set("\u065a ایسه هیسه مئن میئن جه اۊن ایته ایتا أمرأ امره همرأ خۊ دۊرۊن دورون بۊ بؤ"
+               " بۊبؤسته بوبوسته دأره ویشتر وأسی پسی".split()),
 }
 # The Emilian–Romagnol wiki's dialect marks: names after a no-break
 # space, or "Artìcol in dialët …", before an article's text.
@@ -155,6 +169,10 @@ DIGITS = re.compile(r"\d+")
 # word's last ه: scripts/fineweb-text.py's SORANI_FOLD and FINAL_AE.
 SORANI_FOLD = str.maketrans({"\u0643": "\u06A9", "\u064A": "\u06CC", "\u0649": "\u06CC", "\u06BE": "\u0647"})
 FINAL_AE = re.compile("(?<=[\u0620-\u06FF])(?<!\u0627)(?<!\u0627\u0644\u0644)\u0647(?![\u0600-\u06FF])")
+
+
+# Arabic's kaf, yeh and alef maksura as Persian's keys type them.
+PERSIAN_FOLD = str.maketrans({"\u0643": "\u06A9", "\u064A": "\u06CC", "\u0649": "\u06CC"})
 
 
 def sorani(text):
@@ -240,6 +258,7 @@ def main():
     ap.add_argument("--neighbour", help="leave out articles heavy with its words (several: id,en)")
     ap.add_argument("--shapes", type=int, help="at most K sentences of one shape (a bot's stubs)")
     ap.add_argument("--sorani", action="store_true", help="read Kurdish as Sorani's keyboard types it")
+    ap.add_argument("--persian", action="store_true", help="read the Arabic script as Persian's keys type it")
     ap.add_argument("--own", choices=sorted(OWN), help="keep only sentences with one of the language's own words")
     ap.add_argument("--letters", help="keep only sentences that write one of these letters (Abron's ɛɔ)")
     ap.add_argument("--emilian", action="store_true",
@@ -296,6 +315,8 @@ def main():
                         continue
                     if opts.sorani:
                         text = sorani(text)
+                    if opts.persian:
+                        text = text.translate(PERSIAN_FOLD)
                     if opts.emilian:
                         dialects, text = emilian(text)
                         if ROMAGNOL.intersection(dialects):

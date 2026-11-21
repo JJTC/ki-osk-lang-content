@@ -160,7 +160,7 @@ learns from leaves out.
 
 ### Wikipedia text (the wikis' own)
 
-Twenty-eight languages' models learn from their own Wikipedia alone:
+Thirty-two languages' models learn from their own Wikipedia alone:
 Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto,
 Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki,
 Tulu, Dotyali, Angika, Eastern Min (in Bàng-uâ-cê, the Han its sentences
@@ -172,9 +172,12 @@ write a letter of its own, ѣ є ꙑ ѥ…: its references are Russian),
 Zeelandic, Batak Mandailing, Ghanaian Pidgin and Igala (their sentences
 that write their own words: their references are English; and those
 that show a failed template's name), Arakanese (in the Myanmar script,
-cut into syllables) and Veluws (the Dutch Low Saxon wiki's articles it
-files as written in Veluws), the last ten's bots' stubs left out but
-three of a shape;
+cut into syllables), Veluws (the Dutch Low Saxon wiki's articles it
+files as written in Veluws), Betawi, Nupe and Gilaki (their sentences
+that write their own words: their references are English, some of
+Betawi's Indonesian, Gilaki's village articles Persian; Gilaki's read
+as Persian's keys type it) and Bishnupriya Manipuri, the last fourteen's
+bots' stubs left out but three of a shape;
 Newari's from its
 own beside its news
 (GlotCC's, below); and Armenian's and Persian's from theirs beside their
@@ -199,7 +202,7 @@ Abron's, its sentences that write its ɛ or ɔ), Magahi's beside
 its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
 Persian's, Indonesian's or English's own words is left out.
 **Wikipedia's text, and the Incubator's, is CC BY-SA 4.0**, share-alike:
-the packs of those forty-nine languages, their models and that held-out
+the packs of those fifty-three languages, their models and that held-out
 text carry those terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 
@@ -763,7 +766,11 @@ tones ꩻ and ႏ in place of ဩ and ၏, and Eastern Pwo Karen's too, its
 ႋ ၜ ၠ in place of ဩ ၏ ၒ; Rangpuri's is Assamese's, Amdo and Khams
 Tibetan's Tibetan's, Sadri's Hindi's, Maharashtrian Konkani's Marathi's,
 Kutchi's Gujarati's, Tày's Vietnamese's and Northern Thai's in the Thai
-script Thai's. Sgaw Karen's, Northwestern Ojibwe's, the thirteen of a
+script Thai's; and Sebat Bet Gurage's is Amharic's, ʷ and ʸ in place of
+v and the hyphen, its letters (which the Ge'ez composer types) and its
+name those SIL's Locale Data Repository lists for it (SLDR,
+`sldr/s/sgw.xml`, https://github.com/silnrsi/sldr, under the MIT
+License: Copyright (c) 2014-2023 SIL International). Sgaw Karen's, Northwestern Ojibwe's, the thirteen of a
 script of their own, Chakma's to Osage's, and five more, Gorani's to
 Northern Thai's in Tai Tham, are Keyman's (below), and Vai's and Nuosu's
 the Latin letters Keyman's keyboards type their syllables with.
@@ -1159,6 +1166,35 @@ The MIT License (MIT)
 
 Copyright © 2008-2024 Athinkra, LLC
 Copyright (C) 2000-2022 SIL International
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+Sebat Bet Gurage's keyboard (`layouts/sgw.json`, above) takes its letters
+and its name from SIL's Locale Data Repository, `sldr/s/sgw.xml` at
+https://github.com/silnrsi/sldr/tree/6ce8c0702dc61f395ada7a0dd098d420e59ec07d,
+whose notice (its `LICENSE`) is:
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2014-2023 SIL International
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

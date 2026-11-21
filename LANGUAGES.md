@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**673 layouts**: 611 keyboard layouts (RTL: ar he fa + Urdu, Western
+**674 layouts**: 611 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Gilaki, Northern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 14 IMEs (5 CJK +
-Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
+Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
+Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 672 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **459 languages** carry a prediction
+keycaps. 673 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **463 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -401,7 +401,7 @@ but no model to match the glide against · `—` off
 | `tbw` | `tbw` | Aborlan Tagbanwa Tagbanwa | us, ꞌ key | LTR | —⁹ | — | — |
 | `aa` | `aa` | Afar Qafar | us | LTR | —⁹ | — | — |
 | `bom` | `bom` | Berom | us + long-press ɛ é è ê ē ě ɛ́ ɛ̀ ɛ̂ ɛ̄ ɔ ó ò ô ō ɔ́ ɔ̀ ɔ̂ á à â ā í î ī û | LTR | —⁹ | — | — |
-| `bew` | `bew` | Betawi | us + long-press é è ĕ, ' key | LTR | —⁹ | — | — |
+| `bew` | `bew` | Betawi | us + long-press é è ĕ, ' key | LTR | **Full** (bew)⁶ | ✓ | — |
 | `sef` | `sef` | Cebaara Senoufo Cebaara | us + long-press ɛ ŋ ɔ, ˀ key | LTR | —⁹ | — | — |
 | `cbk` | `cbk` | Chavacano | us + long-press ñ á é í ó ú | LTR | —⁹ | — | — |
 | `cho` | `cho` | Choctaw Chahta | us + long-press a̱ á i̱ í o̱ ó ʋ u̱ | LTR | —⁹ | — | — |
@@ -421,7 +421,7 @@ but no model to match the glide against · `—` off
 | `mua` | `mua` | Mundang Mundaŋ | us + long-press ã ɓ ɗ ë ǝ ẽ ĩ ŋ õ ṽ, ǝ ' keys | LTR | —⁹ | — | — |
 | `nv` | `nv` | Navajo Diné Bizaad | us + long-press á ą ą́ é ę ę́ í į į́ ł ó ǫ ǫ́ ń, ʼ í keys, á é on q x | LTR | —⁹ | — | — |
 | `sba` | `sba` | Ngambay | us + long-press ɛ ə é è ḛ ɔ ó o̰ ə́ ə̰ ɓ ɗ ŋ á à a̰ í ḭ, ə ' keys, é ɔ on q x | LTR | —⁹ | — | — |
-| `nup` | `nup` | Nupe | us | LTR | —⁹ | — | — |
+| `nup` | `nup` | Nupe | us | LTR | **Full** (nup)⁶ | ✓ | — |
 | `pmy` | `pmy` | Papuan Malay Melayu Papua | us | LTR | —⁹ | — | — |
 | `srr` | `srr` | Serer Seereer | us + long-press ɓ ƈ ɗ ñ ŋ ƥ ƭ ƴ é, ' key | LTR | —⁹ | — | — |
 | `xog` | `xog` | Soga Olusoga | us, ' key | LTR | —⁹ | — | — |
@@ -443,7 +443,7 @@ but no model to match the glide against · `—` off
 | `mki` | `mki` | Dhatki ڍاٽڪي | pk · snd + long-press ۯ | **RTL** | —⁹ | — | — |
 | `kvx` | `kvx` | Parkari Koli پارڪري | pk · snd + long-press ٰ ؤ ۮ ۯ ۿ | **RTL** | —⁹ | — | — |
 | `bqi` | `bqi` | Bakhtiari لوری بختیاری | ir | **RTL** | —⁹ | — | — |
-| `glk` | `glk` | Gilaki گیلکی | ir + long-press ٚ ۊ ى | **RTL** | —⁹ | — | — |
+| `glk` | `glk` | Gilaki گیلکی | ir + long-press ٚ ۊ ى | **RTL** | **Full** (glk)⁶ | — | — |
 | `lrc` | `lrc` | Northern Luri لۊری شومالی | iq · ku_ara + long-press ٙ ٛ ھ ۉ ۊ ؽ | **RTL** | —⁹ | — | — |
 | `mde` | `mde` | Maba Bura Mabang | ara + long-press ٚ ٛ پ ڃ چ ڊ ڔ ڗ ژ ڠ ݦ ݧ | **RTL** | —⁹ | — | — |
 | `bfy` | `bfy` | Bagheli बघेली | in | LTR | **Full** (bfy)¹⁴ | — | — |
@@ -531,7 +531,7 @@ but no model to match the glide against · `—` off
 | `lmn` | `lmn` | Lambadi (Telugu script) | in · tel, Telugu's keys | LTR | —¹² | — | — |
 | `sou` | `sou` | Southern Thai | th, Thai's keys | LTR | —¹² | — | — |
 | `dcc` | `dcc` | Dakhini (Urdu script) | pk, Urdu's keys | **RTL** | —¹² | — | — |
-| `bpy` | `bpy` | Bishnupriya Manipuri বিষ্ণুপ্রিয়া মণিপুরী | in · ben, Bengali's keys + long-press ৱ | LTR | —¹² | — | — |
+| `bpy` | `bpy` | Bishnupriya Manipuri বিষ্ণুপ্রিয়া মণিপুরী | in · ben, Bengali's keys + long-press ৱ | LTR | **Full** (bpy)⁶ | — | — |
 | `gax` | `gax` | Southern Oromo | us, Oromo's keys, ' key | LTR | —¹² | — | — |
 | `yaf` | `yaf` | Yaka | us + long-press á é í ó ú | LTR | —¹² | — | — |
 | `ymm` | `ymm` | Maay | us, Somali's keys, ' key | LTR | —¹² | — | — |
@@ -646,13 +646,14 @@ but no model to match the glide against · `—` off
 | `yue-jyutping` | `yue` | Cantonese 粵語 (粵拼) | — | LTR | IME | — | **Jyutping** Latin → Traditional (CC-Canto) |
 | `jp-romaji` | `ja` | Japanese 日本語 | — | LTR | IME | — | **Kana→Kanji** (mozc, connection-cost lattice) |
 | `kr-2set` | `ko` | Korean 한국어 (두벌식) | — | LTR | IME | — | **Hangul** (algorithmic) |
-| `am` | `am` | Amharic አማርኛ | — | LTR | IME | — | **Ge'ez** (phonetic Latin→fidel + homophone candidate bar; capitals on the Shift view for the ejectives ጠ ጨ ጰ ጸ and ዸ and the 5th order; ። ፣ keys) |
+| `am` | `am` | Amharic አማርኛ | — | LTR | IME | — | **Ge'ez** (phonetic Latin→fidel + homophone candidate bar; capitals on the Shift view for the ejectives ጠ ጨ ጰ ጸ and ዸ, the 5th order and the 6th (I: እ alone); ። ፣ keys) |
 | `ti` | `ti` | Tigrinya ትግርኛ | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
 | `gez` | `gez` | Ge'ez ግዕዝ | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
 | `drs` | `drs` | Gedeo (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its ዸ as D) |
 | `hdy` | `hdy` | Hadiyya (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
 | `ktb` | `ktb` | Kambaata (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its ኧ as A) |
 | `stv` | `stv` | Silt'e (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its -wa forms ሏ ሟ ቧ…) |
+| `sgw` | `sgw` | Sebat Bet Gurage ሰባት ቤት ጉራጌ | — | LTR | IME¹⁵ | — | **Ge'ez** (shares the Amharic composer; ʷ and ʸ keys for its labialised bilabials ᎀ ᎄ ᎈ ᎌ and palatalised velars ⷀ ⷈ ⷐ ⷘ, in place of v and the hyphen) |
 | `vai` | `vai` | Vai ꕙꔤ | — | LTR | IME¹¹ | — | **Translit** Latin → Vai syllables, as Keyman's athinkra_vai types them (ka ꕪ, ka~ ꕫ); ɛ ɔ ~ keys, long-press ŋ þ ð ʒ ꘌ |
 | `ii` | `ii` | Nuosu ꆈꌠꉙ (Yi) | — | LTR | IME¹¹ | — | **Translit** Yi pinyin → syllables, as Keyman's sil_yi types them (bit ꀖ); Space adds no space; ， 。 keys |
 | `hi-abc` | `hi` | Hindi हिन्दी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hi lexicon choosing |
@@ -985,14 +986,15 @@ but no model to match the glide against · `—` off
    as their writers spelled them, 13.4% of whose words the lexicon (60 000
    words) lacks: no two writers spell alike. For the same reason
    autocorrect changes 2.2% of right words, more than elsewhere.
-6. These thirty-one models learn from their own Wikipedia (CC BY-SA 4.0,
+6. These thirty-five models learn from their own Wikipedia (CC BY-SA 4.0,
    share-alike; `scripts/fetch-wikipedia.sh`, the wikis' CirrusSearch
    dumps of 2026-11-08): Bhojpuri, Maithili, Mongolian, Nepali, Odia,
    Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the
    Goan wiki's Devanagari articles), Kashmiri, Meitei, Awadhi, Saraiki,
    Tulu, and Dotyali, Angika, Newari, Armenian, Persian, Eastern Min,
    Fiji Hindi, Emilian, Church Slavonic, Zeelandic, Batak Mandailing,
-   Ghanaian Pidgin, Igala, Arakanese and Veluws (below).
+   Ghanaian Pidgin, Igala, Arakanese, Veluws, Betawi, Nupe, Gilaki and
+   Bishnupriya Manipuri (below).
    Keystroke savings on
    held-out articles of the first sixteen: Santali 50.2%, Kashmiri
    48.7%, Meitei 43.2%, Bhojpuri 43.0%, Maithili 42.1%, Pashto 41.3%,
@@ -1030,9 +1032,10 @@ but no model to match the glide against · `—` off
    Marathi's, Tulu on Kannada's, Western Punjabi, Saraiki and Kashmiri
    on Urdu's with their own letters, Yiddish on Hebrew's with its
    pointed letters and ligatures (`scripts/build-derived-layouts.py`).
-   Bishnupriya Manipuri's wiki is not used: nearly all of it is town
+   Bishnupriya Manipuri's wiki was not used at first: nearly all of it is
    stubs a bot wrote (98% of its sentences fit 2 000 templates), and so is
-   GlotCC's Bishnupriya (copies of it). Three wikis came later: Dotyali's
+   GlotCC's Bishnupriya (copies of it); with three of a shape kept, its
+   own sentences came to teach a model later (below). Three wikis came later: Dotyali's
    (34 827 sentences from 4 129 articles: keystroke savings 34.8% on its
    held-out articles, 15.9% of the words unknown), Angika's (9 717
    sentences, 497 articles heavy with Hindi's own words left out: 45.2%,
@@ -1147,6 +1150,26 @@ but no model to match the glide against · `—` off
    hundred); Arakanese on Burmese's keys; and Veluws on Dutch's, ö first
    on o's long press (in 1.5% of its words), ä å on a's and ü on u's,
    and an apostrophe key.
+   Four more wikis, of languages whose keyboards had no model, came after
+   those: Betawi's (17 444 sentences, 270 000 words), Nupe's (5 157,
+   115 000) and Gilaki's (18 511, 271 000), the sentences that write their
+   own words (`--own`: nyang, entu, atawa, deri; nan, nyan, wun, eya; ٚ,
+   ایسه, مئن, جه), their references English, some of Betawi's
+   Indonesian and Gilaki's articles on its villages Persian; Gilaki's
+   read as Persian's keys type it (`--persian`: ي ك ى as ی ک ی, the wiki
+   writing ايسه beside ایسه); and Bishnupriya Manipuri's (11 785
+   sentences, 103 000 words), in the Bengali script, 182 682 of its
+   sentences its bots' stubs of years left out (Gilaki's 130 097, its
+   American towns). Every 20th article is held out (Nupe's every 10th).
+   Keystroke savings on about 3 000 held-out words: Betawi 49.0% (42.7%
+   with taps astray, 9.6% unknown), Bishnupriya Manipuri 45.0% (35.0%,
+   16.1%), Nupe 42.0% (34.3%, 11.8%) and Gilaki 37.3% (29.6%, 11.9%: read
+   as typed, 36.0% and 27.9% before); autocorrect changes at most 0.40%
+   of the words typed right (Gilaki's). They keep all their 10 000 to
+   23 000 kinds of word, and their keyboards are as they were (notes 9
+   and 12), with suggestions now, and glides on Betawi's and Nupe's.
+   Sylheti's Wikipedia is written in the Syloti Nagri script, its
+   keyboard here in the Bengali script: not used.
    Languages with no Wikipedia yet have test wikis in the Wikimedia
    Incubator, whose dump (the same date's, CC BY-SA 4.0) holds them all,
    each article's title starting with its wiki's prefix (`Wp/mag/`).
@@ -2104,7 +2127,7 @@ but no model to match the glide against · `—` off
    Ngambay's 59.2% -> 29.3% (ə and its apostrophe, é ɔ) and Mundang's
    29.8% -> 20.0% (ǝ and its apostrophe). None had a model: neither
    suggestions nor glides; Zarma's now learns from SMOL's translations
-   (note 14).
+   (note 14), and Betawi's and Nupe's from their wikis (note 6).
    Twenty-five more, in other scripts, are typed on their script's keys
    the same way, the letters those lack on a long press (six from CLDR's
    own locales: Torwali, Balochi, Bakhtiari, Northern Luri, Haryanvi and
@@ -2130,7 +2153,7 @@ but no model to match the glide against · `—` off
    Sherpa's, Surgujia's, Northern Hindko's and Bakhtiari's letters are all
    on their keys already: their keyboards are those keys, in their name.
    Bagheli's, Bagri's, Kangri's and Surgujia's models now learn from
-   SMOL's translations (note 14).
+   SMOL's translations (note 14), and Gilaki's from its wiki (note 6).
    Sylheti, in the Bengali script (its own Syloti Nagri needs a keyboard),
    on Bengali's keys: their ঃ and ৎ, the au length mark ৗ on ৌ, and its
    glottal stop ʼ on the full stop's long press (Bengali's keys, a row of
@@ -2344,7 +2367,8 @@ but no model to match the glide against · `—` off
    neither suggestions nor glides. Nine of this note's keyboards now
    have models from SMOL's translations (note 14): Ahirani's, Bundeli's,
    Kumaoni's, Kurukh's, Nimadi's, Mundari's, Garo's in Latin letters,
-   Mandeali's and Surjapuri's.
+   Mandeali's and Surjapuri's; and Bishnupriya Manipuri's has one from
+   its wiki (note 6).
 
 13. These two models learn from the African Storybook's stories
    (africanstorybook.org, an initiative of Saide: picture books for
@@ -2438,10 +2462,27 @@ but no model to match the glide against · `—` off
    whose name for itself is Pulaar, lists, and ñ the commonest of n's
    (100 to ŋ's 18).
 
+15. Sebat Bet Gurage's keyboard is Amharic's keys, the Ge'ez composer
+   typing its syllables from Latin letters as Amharic's does, with two
+   keys of its own on both its letters' views: ʷ in place of the v it
+   does not write and ʸ in place of the hyphen (on ?123 still). After m
+   b f p, ʷ is their labialised syllable, Ethiopic Supplement's
+   Sebatbeit row (mʷe ᎀ, mʷi ᎁ, mʷE ᎂ, mʷ ᎃ; mʷa ሟ, as mwa is); after q k
+   x g, ʸ is their palatalised one, Ethiopic Extended's seven-order row
+   (kʸa ⷋ); anywhere else they are w and y. Amharic's keyboard has
+   neither key: its mwe stays ምወ and its kya ክያ. Its letters are those
+   SIL's Locale Data Repository lists for it (SLDR, MIT: `sldr/s/sgw.xml`),
+   all of which it types, ፀ's row from the candidate bar (ts or S, then
+   ፀ, as on Amharic's), and it is named as SLDR names it, ሰባት ቤት ጉራጌ. No
+   text here predicts it: no model. Every Ge'ez keyboard now types the
+   6th order as I, as SERA writes it: alone, the carrier's እ (InE እኔ),
+   which none of them could type before, and after a consonant its bare
+   form before a vowel of its own (sIIl ስእል).
+
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **459 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **463 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2452,7 +2493,7 @@ but no model to match the glide against · `—` off
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp
-  new cdo hif egl cu zea btm gpe igl rki vel** (Newari with GlotCC's news too; Arakanese cut into syllables), **hy fa** beside Tatoeba's, and
+  new cdo hif egl cu zea btm gpe igl rki vel bew nup glk bpy** (Newari with GlotCC's news too; Arakanese cut into syllables), **hy fa** beside Tatoeba's, and
   the Incubator's test wikis: **wsg khw cnr bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr** (note 6) ·
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my**, and of
   thirty-eight languages that had a keyboard and no model, **sw af sl zu sq kk uz bs
@@ -2476,17 +2517,17 @@ but no model to match the glide against · `—` off
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 151 layouts, Montenegrin's in
-  Cyrillic, the fifty-two whose letters are CLDR's exemplar characters
-  (note 9: thirty-one in Latin letters, twenty-one in the Arabic script,
+- **Layout-only** — no bundled model yet: 147 layouts, Montenegrin's in
+  Cyrillic, the forty-nine whose letters are CLDR's exemplar characters
+  (note 9: twenty-nine in Latin letters, twenty in the Arabic script,
   Devanagari and Bengali), the nineteen from Keyman's (note 10: thirteen
   of a script of their own, Chakma to Osage, Gorani, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
-  Tham, and the International Phonetic Alphabet's), the seventy-two on another language's keys (note 12: Northern
+  Tham, and the International Phonetic Alphabet's), the seventy-one on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian
   Konkani, Kutchi, Tày and Eastern Pwo Karen, twelve whose letters their
   wikis give, Northern Min to Southern Balochi, and sixteen from smaller
-  wikis and FineWeb-2's few pages, Harauti to Ma'anyan, sixteen
+  wikis and FineWeb-2's few pages, Harauti to Ma'anyan, fifteen
   whose script CLDR's or Wikidata's data names, Dari to Halbi, two
   whose Bibles give their letters, Southern Oromo and Yaka, four the
   Universal Declaration of Human Rights, Maay to Northern Qiandong Miao,
@@ -2526,7 +2567,7 @@ drives which face loads:
 | `devanagari`…`myanmar` | `NotoSans<Script>-Regular.ttf` | the 15 Tier-3 layouts |
 | `syriac` | Noto Sans Syriac | `syr cld` (RTL) |
 | `tifinagh` | Noto Sans Tifinagh | `ber` |
-| `ethiopic` | Noto Sans Ethiopic | `am ti gez drs hdy ktb stv` (Ge'ez fidel preedit) |
+| `ethiopic` | Noto Sans Ethiopic | `am ti gez drs hdy ktb stv sgw` (Ge'ez fidel preedit) |
 | `tibetan` | Noto Sans Tibetan | `bo dz adx khg` (stacking via shaping) |
 | `thaana` | Noto Sans Thaana | `dv` (RTL) |
 | `olchiki` | Noto Sans Ol Chiki | `sat` |
@@ -2609,9 +2650,12 @@ record how each group was added and what it needs at runtime:
   FineWeb-2 has no text of it) is Amharic's keys and composer, named for
   it, and so are Gedeo, Hadiyya, Kambaata and Silt'e, the four whose
   syllables, as CLDR's exemplar characters list them, the composer types
-  all of (Kambaata's ኧ as `A`); Bench's and Sebat Bet Gurage's
-  need syllables of the Ethiopic Supplement and Extended blocks it does
-  not key yet (ⶡ, ᎀ).
+  all of (Kambaata's ኧ as `A`); and since data 0.66.0 Sebat Bet Gurage,
+  whose labialised and palatalised syllables (Ethiopic Supplement's ᎀ…,
+  Extended's ⷀ…) its keyboard's ʷ and ʸ keys type (note 15), and `I`
+  types the 6th order (alone, the carrier's እ, which no key typed
+  before). Bench's Ethiopic Extended syllables (ⶡ) are not keyed yet: its
+  keyboard is in Latin letters.
 - **Additional scripts**: three minority scripts the
   shaping engine now renders, generated from their xkb layouts — Tibetan
   `bo` (`cn`/`tib`; subjoined stacks compose via shaping), Dhivehi `dv`

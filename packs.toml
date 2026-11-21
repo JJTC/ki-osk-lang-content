@@ -50,6 +50,7 @@ bcl = "Central Bikol"
 be  = "Belarusian"
 bem = "Bemba"
 ber = "Tamazight (Tifinagh)"
+bew = "Betawi"
 bfy = "Bagheli"
 bg  = "Bulgarian"
 bgn = "Western Balochi"
@@ -65,6 +66,7 @@ bn  = "Bengali"
 bns = "Bundeli"
 bo  = "Tibetan"
 bpr = "Koronadal Blaan"
+bpy = "Bishnupriya Manipuri"
 br  = "Breton"
 brh = "Brahui"
 brx = "Bodo"
@@ -147,6 +149,7 @@ gcr = "Guianan Creole"
 gd  = "Scottish Gaelic"
 gil = "Kiribati (Gilbertese)"
 gl  = "Galician"
+glk = "Gilaki"
 glv = "Manx"
 gmv = "Gamo"
 gn  = "Guarani"
@@ -323,6 +326,7 @@ no  = "Norwegian (Bokmål)"
 noe = "Nimadi"
 nr  = "Southern Ndebele"
 nso = "Northern Sotho"
+nup = "Nupe"
 ny  = "Chichewa"
 nyf = "Giryama"
 nyn = "Nkore"
@@ -1242,6 +1246,7 @@ sg      = ["sg"]
 sgc     = ["sgc"]
 sgj     = ["sgj"]
 sgs     = ["sgs"]
+sgw     = ["sgw"]
 shn     = ["shn"]
 si      = ["si", "si-abc"]
 sid     = ["sid"]
@@ -1375,7 +1380,6 @@ bax = "Bamum"
 bbj = "Ghomala'"
 bcc = "Southern Balochi"
 bcq = "Bench"
-bew = "Betawi"
 bft = "Balti"
 bfz = "Mahasu Pahari"
 bgc = "Haryanvi"
@@ -1384,7 +1388,6 @@ bhb = "Bhili"
 bjj = "Kannauji"
 blt = "Tai Dam"
 bom = "Berom"
-bpy = "Bishnupriya Manipuri"
 bqi = "Bakhtiari"
 bug = "Buginese"
 bxk = "Bukusu"
@@ -1412,7 +1415,6 @@ gdx = "Godwari"
 gez = "Ge'ez"
 gjk = "Kachi Koli"
 gju = "Gujari"
-glk = "Gilaki"
 gqr = "Gor"
 gwc = "Kalam Kohistani"
 hac = "Gorani"
@@ -1474,7 +1476,6 @@ mvy = "Indus Kohistani"
 nah = "Nahuatl"
 niq = "Nandi"
 nod = "Northern Thai"
-nup = "Nupe"
 nv  = "Navajo"
 nym = "Nyamwezi"
 osa = "Osage"
@@ -1494,6 +1495,7 @@ sba = "Ngambay"
 sck = "Sadri"
 scl = "Shina"
 sef = "Cebaara Senoufo"
+sgw = "Sebat Bet Gurage"
 snk = "Soninke"
 sou = "Southern Thai"
 srr = "Serer"
@@ -2192,6 +2194,17 @@ licenses = [
 ]
 sources = [
   { name = "CLDR 49's exemplar characters for Sylheti (exemplars/main/syl.xml)", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/syl.xml" },
+]
+
+# Sebat Bet Gurage's, Amharic's keys with ʷ and ʸ, which the Ge'ez composer
+# reads as its labialised and palatalised consonants: its letters and its
+# name are those SIL's SLDR lists for it.
+[layouts.added.sgw]
+licenses = [
+  { name = "MIT (SIL's SLDR, SIL International)", url = "https://github.com/silnrsi/sldr/blob/6ce8c0702dc61f395ada7a0dd098d420e59ec07d/LICENSE", share_alike = false },
+]
+sources = [
+  { name = "SIL's Locale Data Repository (SLDR): Sebat Bet Gurage's exemplar characters and name (sldr/s/sgw.xml)", url = "https://github.com/silnrsi/sldr/blob/6ce8c0702dc61f395ada7a0dd098d420e59ec07d/sldr/s/sgw.xml" },
 ]
 
 # `lock`/`input` name the sources.lock entry and input whose recorded

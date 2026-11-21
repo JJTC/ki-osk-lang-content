@@ -14,8 +14,12 @@
 # (their sentences that write their own words: their references are
 # English, a few of Batak Mandailing's Indonesian; and where a template
 # failed, its name left out), Arakanese, in the Myanmar script (its
-# sentences end in ။, their Latin words left out), and Veluws (the Dutch
-# Low Saxon wiki's articles it files as written in Veluws); of
+# sentences end in ။, their Latin words left out), Veluws (the Dutch
+# Low Saxon wiki's articles it files as written in Veluws), Betawi, Nupe
+# and Gilaki (their sentences that write their own words: their
+# references are English, some of Betawi's Indonesian, Gilaki's village
+# articles Persian; Gilaki's read as Persian's keys type it), and
+# Bishnupriya Manipuri (its bots' stubs of years left out); of
 # Armenian and Persian beside their Tatoeba sentences (the Makefile's
 # WIKIPEDIA_PLUS_LANGS, whose held-out text goes elsewhere: EVAL_OUT); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
@@ -99,6 +103,10 @@ gpe  gpe  gpewiki_content-20261108-00000.json.bz2  ea4f1bc341022235e93b0167feb91
 igl  igl  iglwiki_content-20261108-00000.json.bz2  7fe3be3cf8c83d25666651ccaaadb5d56510e55d761be49694c37f145e9cbbb9  LATIN  --own igl --markup Éwn_malábó: --shapes 3
 rki  rki  rkiwiki_content-20261108-00000.json.bz2  33629ae723c9cb6dbf49c1216179e2d19a240147a699331fe7043537da8b5f8d  MYANMAR  --script-only --shapes 3
 vel  nds_nl  nds_nlwiki_content-20261108-00000.json.bz2  55ea2bd8fda153718b569cc31de7589b65466f0a56855564dcc53ffd52372450  LATIN  --category West-Veluws_artikel,Oost-Veluws_artikel --shapes 3
+bew  bew  bewwiki_content-20261108-00000.json.bz2  9bbf34ab24f069bf46a5017285fc390e348585882344ffb5ca345291aa8b3b15  LATIN  --script-only --own bew --neighbour id,en --shapes 3
+nup  nup  nupwiki_content-20261108-00000.json.bz2  c199460ef62c456ccbdb141b3c5f0ced6cf9d03b910295b97932598defa91da6  LATIN  --script-only --own nup --neighbour en --shapes 3 --holdout 10
+glk  glk  glkwiki_content-20261108-00000.json.bz2  739f3a3bee1e8788d8fac9a357f943e7df862ddb8761ac9e2b5e7f93ead273d2  ARABIC  --script-only --persian --own glk --neighbour fa --shapes 3
+bpy  bpy  bpywiki_content-20261108-00000.json.bz2  d9f491ea5e081f05e371f22282940fdbe4839221112b85a2e273e031c1b9eb1e  BENGALI  --script-only --shapes 3
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1

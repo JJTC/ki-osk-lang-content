@@ -113,7 +113,12 @@ on Amharic's, its letters composed from Latin ones as Amharic's are,
 with no model; and so are Gedeo, Hadiyya, Kambaata and Silt'e, whose
 letters CLDR's exemplar characters list in the Ethiopic script and
 Amharic's composer now types (its ejectives ጠ ጨ ጰ as T C P, ዸ as D, the
--wa forms, ኧ), named in Latin letters, as they also write their names. Kabiye, Akoose and Grebo, whose long presses typed more
+-wa forms, ኧ), named in Latin letters, as they also write their names;
+and Sebat Bet Gurage, whose letters SIL's SLDR lists, with ʷ in place of
+the v it does not write and ʸ in place of the hyphen (on ?123 still),
+which the composer reads after m b f p as their labialised syllables
+(Ethiopic Supplement's ᎀ…) and after q k x g as their palatalised ones
+(Ethiopic Extended's ⷀ…), named in its script, as SLDR names it. Kabiye, Akoose and Grebo, whose long presses typed more
 than a quarter of their letters, and Nande, whose long presses were in a
 quarter of its words, have keys for the letters their words write most
 of those: two at the home row's end (Kabiye's ɛ ɩ, Akoose's é á, Grebo's
@@ -168,7 +173,7 @@ writing systems name (Bhili, Kumaoni, Kurukh, Mewari, Nimadi,
 Shekhawati, Wagdi, Mundari; Bundeli, Dhundhari, Korku, Malvi, Merwari,
 Mahasu Pahari, Halbi) on Hindi's, Lambadi on Telugu's, Southern Thai on
 Thai's, Dakhini on Urdu's, and Bishnupriya Manipuri on Bengali's with
-ৱ on ব. MADLAD-400's four, with their models: Tandroy-Mahafaly Malagasy
+ৱ on ব (its wiki has given it a model since). MADLAD-400's four, with their models: Tandroy-Mahafaly Malagasy
 on Malagasy's keys with à è é ò ì ỳ first on the long presses, Hawu on
 the US keys with è first on e and its saltillo ꞌ at the home row's end,
 Kituba on them as they are, and Ayacucho Quechua on Quechua's with á é
@@ -661,7 +666,7 @@ DERIVED = [
     ("lmn", "te", "Lambadi", {}, {"model": False}),
     ("sou", "th", "Southern Thai", {}, {"model": False}),
     ("dcc", "ur", "Dakhini", {}, {"model": False}),
-    ("bpy", "bn", "বিষ্ণুপ্রিয়া মণিপুরী", {"ব": ["ৱ"]}, {"model": False}),
+    ("bpy", "bn", "বিষ্ণুপ্রিয়া মণিপুরী", {"ব": ["ৱ"]}),
     ("bns", "hi", "Bundeli", {}),
     ("dhd", "hi", "Dhundhari", {}, {"model": False}),
     ("kfq", "hi", "Korku", {}, {"model": False}),
@@ -710,6 +715,7 @@ DERIVED = [
     ("bxk", "us", "Lubukusu", {}, {"home": "'", "model": False}),
     ("lon", "us", "Ellomwe", {}, {"home": "'", "model": False}),
     ("fuc", "ff", "Pulaar", with_capitals({"n": ["ñ"]}), {"model": False}),
+    ("sgw", "am", "ሰባት ቤት ጉራጌ", {}, {"swap": {"v": "ʷ", "V": "ʷ", "-": "ʸ"}}),
 ]
 
 
@@ -755,7 +761,9 @@ def build(lang, base, name, extra, extras=None):
     for view in out["views"]:
         for row in view["rows"]:
             for i, key in enumerate(row["keys"]):
-                if key.get("label") in swap:
+                # A swap is a letter's: the symbol views keep their keys
+                # (Amharic's hyphen, which Sebat Bet Gurage's ʸ takes).
+                if key.get("label") in swap and not view["id"].startswith("symbol"):
                     letter = swap[key["label"]]
                     swapped.add(key["label"])
                     row["keys"][i] = key = {"width_units": key["width_units"], "label": letter,

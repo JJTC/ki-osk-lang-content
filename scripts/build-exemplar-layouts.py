@@ -35,8 +35,9 @@ Navajo's ʼ í at the home row's end and á é on q and x (long presses in
 Temne's ɔ ŋ, ə ɛ (61.4%, 18.3%), Gor's ɨ and apostrophe, ə ɔ (60.4%,
 2.0%), Ngambay's ə and apostrophe, é ɔ (59.2%, 29.3%) and Mundang's ǝ and
 apostrophe (29.8%, 20.0%). Suggestions and glides are off, as they have
-no model, but for those SMOL's translations gave one ("model"): Zarma
-here, and Bagheli, Bagri, Kangri and Surgujia in Devanagari, below.
+no model, but for those SMOL's translations or their wikis gave one
+("model"): Zarma, Betawi and Nupe here, and Gilaki in the Arabic script
+and Bagheli, Bagri, Kangri and Surgujia in Devanagari, below.
 
 Languages in another script are typed on its keys as they are, with the
 letters those lack on a long press the same way: in the Arabic script on
@@ -99,7 +100,7 @@ COMMON, EXEMPLARS = "common/main", "exemplars/main"
 # those in place of q and x ("swap").
 LANGS = [
     ("aa", COMMON, "29f534a799a1eab1a85a3011cdbe6a3713d037667be8cdebc6c77fc1f40de281", {}),
-    ("bew", COMMON, "3b5410451427220daf07103db75af0097a451ba0cfea9d5c7816f1fd15fd4d20", {"home": ["'"]}),
+    ("bew", COMMON, "3b5410451427220daf07103db75af0097a451ba0cfea9d5c7816f1fd15fd4d20", {"home": ["'"], "model": True}),
     ("bom", EXEMPLARS, "cf19accebdff85b00f8e91b30a1591f42c5838c7bf1892c25b40dd42193c3291", {
         "name": "Berom", "also": "é è ê ē ě á à â ā í î ī ó ò ô ō û ɛ́ ɛ̀ ɛ̂ ɛ̄ ɔ́ ɔ̀ ɔ̂".split()}),
     ("cbk", EXEMPLARS, "8ec668d2e1fc32cf3c680a9bdab7e9bc928a12ee9857e8a9c7df250566882a26", {
@@ -123,7 +124,7 @@ LANGS = [
     ("mua", COMMON, "9279d796249e709becdefb6de27f8ee9314c5aadfe562bd062cc8aa41cfb1e2f", {
         "name": "Mundaŋ", "also": ["ẽ"], "home": ["ǝ", "'"]}),
     ("mvp", EXEMPLARS, "ebcdfa6022e798e58d36cd4cdcee195ef80c186791367a1446c7fb43d7bd12ac", {"name": "Duri", "home": ["'"]}),
-    ("nup", EXEMPLARS, "ae1678809e9bb5b106b1b39502daffad14a9572141ea09205c1ee365fda8894a", {"name": "Nupe"}),
+    ("nup", EXEMPLARS, "ae1678809e9bb5b106b1b39502daffad14a9572141ea09205c1ee365fda8894a", {"name": "Nupe", "model": True}),
     ("nv", COMMON, "70582769bccb4bb3d90cc66e4a3565f173771c85578b36b2975b304d52f58988", {
         "apostrophe": "ʼ", "also": ["ń"], "home": ["ʼ", "í"], "swap": {"q": "á", "x": "é"}}),
     ("pmy", EXEMPLARS, "025a901e5884b1507a08d66993449b54b4b687c7f06e73d15357f1fb7cf42380", {"name": "Melayu Papua"}),
@@ -163,7 +164,7 @@ LANGS = [
     ("mki", EXEMPLARS, "994e3127e10da6d8e25031383269f32a6a59724beb153e21937964246b98ea3f", {"base": "sd", "name": "ڍاٽڪي"}),
     ("kvx", EXEMPLARS, "44529ce51b59ce32af4c80958692d1287a5e344a0d601d2784b0962dd1dda8d2", {"base": "sd", "name": "پارڪري"}),
     ("bqi", COMMON, "d6d5834f709b446a6f984aab800188e40ae90198c975fe47c74b0d6124135e9d", {"base": "fa"}),
-    ("glk", EXEMPLARS, "6e135b3506819e3939e45c0f80b48c0602ebe1414098ec6565f71dd3547890c1", {"base": "fa", "name": "گیلکی"}),
+    ("glk", EXEMPLARS, "6e135b3506819e3939e45c0f80b48c0602ebe1414098ec6565f71dd3547890c1", {"base": "fa", "name": "گیلکی", "model": True}),
     ("lrc", COMMON, "7a86da9dd0fd4d3136e93baffdcff51fdd0df387771b7d69f9f797b80d0a30a5", {"base": "ckb"}),
     ("mde", EXEMPLARS, "22ddea51c12dfbcd403971eb071e586de049ce0af9543011911877df92345561", {"base": "ar", "name": "Bura Mabang"}),
     ("bfy", EXEMPLARS, "a9fef7fdef1337c1643ab965418ae9ab96d9fd852d80c94b3771cc657524aa49", {"base": "hi", "name": "बघेली", "model": True}),
