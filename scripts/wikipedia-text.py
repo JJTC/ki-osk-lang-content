@@ -11,7 +11,10 @@ and with --script MYANMAR after the Myanmar script's full stop ။, which
 the Arakanese wiki ends its sentences with (the other wikis' few ။ stay
 inside their sentences: ten in the Western Punjabi wiki's), its
 zero-width joiners and non-joiners dropped (strays: no Myanmar spelling
-writes one, and 644 of the Arakanese wiki's sentences do);
+writes one, and 644 of the Arakanese wiki's sentences do); with
+--script "TAI LE" after ။ too, and after Chinese's full stop and marks
+(。？！, no space after them), as the Tai Le wiki ends a third of its
+sentences;
 a sentence of fewer than three words, a run of more than 1 000
 characters (a list, a table), or one with wiki markup in it
 ([[ ]] {{ }}, where a template failed: 9 000 of the Sanskrit wiki's
@@ -130,6 +133,9 @@ END = re.compile(r"(?<=[.!?।॥۔؟᱾᱿꯫])\s+")
 # And the Myanmar script's full stop, for the wikis in it alone, whose
 # zero-width joiners are strays.
 END_MYANMAR = re.compile(r"(?<=[.!?।॥۔؟᱾᱿꯫။])\s+")
+# And the Tai Le wiki's, which ends its sentences with ။ and with
+# Chinese's marks too, no space after those.
+END_TAI_LE = re.compile(r"(?<=[.!?။])\s+|(?<=[。？！])\s*")
 JOINERS = re.compile("[\u200c\u200d]")
 STEERING = re.compile("[\u200e\u200f\u202a-\u202e\u2066-\u2069\ufeff]")
 MARKUP = re.compile(r"\[\[|\]\]|\{\{|\}\}")
@@ -231,6 +237,8 @@ def sentences(text, script, neighbour=None, script_only=False, own=None, letters
     end = END
     if script == "MYANMAR":
         end, text = END_MYANMAR, JOINERS.sub("", text)
+    elif script == "TAI LE":
+        end = END_TAI_LE
     for s in end.split(STEERING.sub("", text)):
         s = " ".join(s.split())
         if MARKUP.search(s) or any(m in s for m in markup) or (neighbour and neighbourly(s, neighbour, 0.15)):

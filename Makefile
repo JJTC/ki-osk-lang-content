@@ -68,7 +68,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  am ti sgw \
                  myx tuv \
                  hlb kfq nah \
-                 ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
+                 ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
+                 vai tdd
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -129,10 +130,14 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # keyboards had no model: Betawi's (270 000 words), Nupe's (115 000) and
 # Gilaki's (271 000, read as Persian's keys type it), the sentences that
 # write their own words, and Bishnupriya Manipuri's (103 000), their
-# bots' stubs left out.
+# bots' stubs left out. And the Incubator's Vai, in its own script, its
+# Latin words left out (200 000 words), whose keyboard offers the model's
+# words through its transliteration table, and Tai Nüa's, in Tai Le (87 000
+# words, its Chinese and Latin words left out, every 10th article held
+# out).
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
                    bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu zea \
-                   btm gpe igl rki vel bew nup glk bpy
+                   btm gpe igl rki vel bew nup glk bpy vai tdd
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences

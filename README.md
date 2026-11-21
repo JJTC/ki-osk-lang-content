@@ -34,7 +34,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 
 | Path | What | Built by |
 |---|---|---|
-| `predict/<lang>.fst` | Prefix-completion lexicon (469 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
+| `predict/<lang>.fst` | Prefix-completion lexicon (471 languages, Hinglish's by `make hinglish-assets`) | `make predict-assets` |
 | `predict/<lang>.ngram.bin` | Bigram/trigram scores, with those of the words that start sentences (after `<s>`, `osk_data::words::SENTENCE_START`) kept apart | `make predict-assets` |
 | `predict/<lang>.forms.fst` | Each word's usual capitals, where it is not written in lower case (`Haus`, `I`, `E-Mail`) | `make predict-assets` |
 | `predict/<lang>.dialects.bin` | Dialect flags, where a source has them (English, Portuguese, Spanish): which varieties use a word, and its spellings across them (`color` and `colour`, `fato` and `facto`) | `make dialect-assets` |
@@ -44,7 +44,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `translit/<lang>.english.txt` | The English words each table's language writes in its script (40: college कॉलेज, police পুলিশ), which people type as English spells them: read with the table, each typed whole read as its words too, and from three letters the words they begin offered (`osk_data::translit::Scheme::with_english`) | CMUdict's pronunciations spelled in Latin letters as the language's sounds are typed, read by the table, the likeliest reading the lexicon has kept (`make english-assets`, after `make fetch-cmudict`) |
 | `predict/corpora/<lang>.txt` | Training text (Tatoeba) — **not committed** | `make fetch-corpora` |
 | `$SRC_DIR/dakshina/` | Wikipedia text and romanizations of 12 South Asian languages (the Dakshina dataset) — **not committed** | `make fetch-dakshina` |
-| `$SRC_DIR/wikipedia/` | The text of thirty-five wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki, Tulu, Dotyali, Angika, Newari, Eastern Min, Fiji Hindi, Emilian, Church Slavonic, Zeelandic, Batak Mandailing, Ghanaian Pidgin, Igala, Arakanese, Veluws (the Dutch Low Saxon wiki's articles in it), Betawi, Nupe, Gilaki, Bishnupriya Manipuri, and Armenian and Persian beside their Tatoeba sentences) and of eighteen of the Wikimedia Incubator's test wikis (Magahi, Adilabad Gondi, Khowar, Montenegrin, and fourteen small ones, Rinconada Bikol's to Abron's), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
+| `$SRC_DIR/wikipedia/` | The text of thirty-six wikis (Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki, Tulu, Dotyali, Angika, Newari, Eastern Min, Fiji Hindi, Emilian, Church Slavonic, Zeelandic, Batak Mandailing, Ghanaian Pidgin, Igala, Arakanese, Veluws (the Dutch Low Saxon wiki's articles in it), Betawi, Nupe, Gilaki, Bishnupriya Manipuri, Tai Nuea, and Armenian and Persian beside their Tatoeba sentences) and of nineteen of the Wikimedia Incubator's test wikis (Magahi, Adilabad Gondi, Khowar, Montenegrin, Vai, and fourteen small ones, Rinconada Bikol's to Abron's), from their CirrusSearch dumps — **not committed** | `make fetch-wikipedia` |
 | `$SRC_DIR/greeklish/` | Greek typed in Latin letters, from AUEB's real-world Greeklish test set (forum comments and chat messages, each written out in Greek by several people; Apache-2.0): what `make eval-translit` measures Greek's table on — **not committed** | `make fetch-greeklish` |
 | `$SRC_DIR/aksharantar/` | Words people romanized, from the test split of AI4Bharat's Aksharantar dataset (Assamese, Maithili, Nepali, Odia, Sanskrit, Konkani, Kashmiri, Meitei, Bodo, Dogri): what `make eval-translit` measures those tables on, and the words of its train and valid splits romanized by hand and Wikidata's names, what `make fit-translit` fits their costs to — **not committed** | `make fetch-aksharantar` |
 | `$SRC_DIR/fineweb/` | FineWeb-2's web text of eight languages with no Wikipedia of their own (Bodo, Dogri, Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo, Khasi), of Sindhi in Devanagari and Meitei in the Bengali script, of Lao, Khmer and Burmese (Burmese's Zawgyi-encoded documents left out), of thirty-eight languages that had a keyboard and no model (Swahili, Slovenian, Kazakh, Zulu…), of Central Kurdish (Sorani; its documents in the old Arabic-keyboard spelling left out) and Nigerian Pidgin, of nineteen languages of Southeast Asia (Hmong Daw, Hakha Chin, Hiligaynon, Iloko, Iban…), of twenty-six of Europe's regional languages (Nynorsk, Asturian, Low German, Neapolitan, the Sorbians…), of fifteen of Russia's and the north's (Sakha, Chuvash, Northern Sami, the Maris…), of twenty-three more that had a keyboard and no model (Udmurt, Greenlandic, Oromo, Romansh, Kirundi…), of nineteen of Iran's and the Caucasus' (South Azerbaijani, Chechen, Avar, the Zazakis…), of twenty-four of Africa's (Seychellois Creole, Northern Ndebele, Ndonga, Efik, Sango…), of eighteen of the Americas', the Pacific's and the classical (Latin, Papiamento, Classical Syriac, the Mayan languages…), of six more that had a keyboard and no model (Serbian in Latin letters, Guaraní, Fula, Tamazight in Tifinagh, Tibetan, Dzongkha), of twenty of Africa's and four of Southeast Asia's long tail (Kabiye, Dagbani, Sena, Dangme… Minangkabau, Waray, Nias, Madurese; Dagbani's and Yao's every 10th document held out, their test splits being too small), of eleven of Europe's regional languages (Cornish, Manx, Extremaduran, Picard, Samogitian, Pontic Greek, Venetian, West Flemish, Lombard, Ladin, Gagauz; Ladin's beside the Ladin that FineWeb-2 files as Lombard), of four of Myanmar's (Shan, Mon, Sgaw Karen, Pa'O; Pa'O's every 10th document held out, its Zawgyi-encoded and Burmese documents left out), of four of East Asia's (Southern Min, Hakka, Amis, Zhuang; Hakka's, Amis' and Zhuang's every 10th document held out), of twenty-eight more of Africa's long tail that FineWeb-2 has 0.4 to 0.9 MB of (Zande, Alur, Chopi, Sakalava Malagasy, Akoose, Mende…; every 10th document held out), of twenty-three more of the long tail (Niuean, Hawaiian Pidgin, Wayuu, Sasak… Tumbuka, Gusii, Maasai, Mandinka…; every 10th document held out), of Amharic and Tigrinya (each document whose own words outnumber the other's) and of Sebat Bet Gurage (its own against Amharic's), and of Assamese beside its Tatoeba sentences, the documents that read as their language, and its held-out test text — **not committed**: the text is the web's | `make fetch-fineweb` (needs pyarrow: `FINEWEB_PYTHON`) |
@@ -77,13 +77,14 @@ sight rather than mis-decoded.
 ## Packs and releases
 
 A pack is one language's files: its keyboard layouts, and an `.fst`
-lexicon and an `.ngram.bin` table for each of the 469 prediction
+lexicon and an `.ngram.bin` table for each of the 471 prediction
 languages, Hinglish (`hi-Latn`, Hindi typed in Latin letters) among them (Thai's, Lao's, Khmer's, Burmese's, Shan's, Mon's, Sgaw Karen's, Pa'O's and Arakanese's with their word lists, forty-six with a transliteration
-table and the layout that types through it); `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
+table and the layout that types through it, and Vai's with the table its own keyboard types
+through); `zh-Hans` (Pinyin), `zh-Hant` (Zhuyin), `yue` (Jyutping), `ja`
 (kana–kanji) and `ko` (Hangul) with their layouts; and a pack of its
-layouts alone for each of the 151 other languages with a layout and no
-model yet (Vai's and Nuosu's with the transliteration table their
-layouts type through). Three packs every language shares: `rules`, the text rules,
+layouts alone for each of the 149 other languages with a layout and no
+model yet (Nuosu's with the transliteration table its layout types
+through). Three packs every language shares: `rules`, the text rules,
 which are written by hand, Weir-style (after the rule language of the
 Harper grammar checker): each rule a pattern over the end of the text
 before the caret, what it becomes, and its tests, in the same file
@@ -129,7 +130,7 @@ The builders need only this repository and its pinned toolchain.
 ```sh
 make fetch-corpora     # Tatoeba -> predict/corpora/ and eval/
 make fetch-dakshina    # Dakshina's Wikipedia text and romanizations -> SRC_DIR
-make fetch-wikipedia   # thirty-five wikis' own text -> SRC_DIR
+make fetch-wikipedia   # thirty-six wikis' own text -> SRC_DIR
 make predict-assets    # corpora -> predict/*.fst + *.ngram.bin
 make hinglish-assets   # Hindi's corpora respelled in Latin -> predict/hi-Latn.*
 make fit-translit      # the tables' costs, fitted to Dakshina's and Aksharantar's romanizations

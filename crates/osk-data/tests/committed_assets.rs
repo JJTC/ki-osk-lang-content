@@ -762,7 +762,8 @@ fn every_translit_table_reads_its_language() {
         );
         let (_, expected) = words.iter().find(|(l, _)| *l == lang).expect("words");
         // A language whose own layout types through its table (Vai's,
-        // Nuosu's, which no model predicts): the table alone reads.
+        // Nuosu's): the table alone reads, and where a model predicts the
+        // language (Vai's), its lexicon finds the same words first.
         let own = layout(&lang.to_lowercase());
         if own.ime == Some(ImeKind::Translit) {
             assert!(!own.prediction_enabled, "{lang}");
@@ -772,17 +773,54 @@ fn every_translit_table_reads_its_language() {
             // script's own, Vai's lengthener, are typed as they are).
             assert!(own.view(ViewId::Shift).is_none(), "{lang} has a Shift view");
             let base = own.view(ViewId::Base).expect("a base view");
+            // What typing each character costs: a tap on its key, two for
+            // a long press.
+            let mut taps: std::collections::HashMap<char, u32> = std::collections::HashMap::new();
             for k in base.rows.iter().flat_map(|r| r.keys.iter()) {
-                for out in std::iter::once(&k.output).chain(&k.long_press) {
+                let outs =
+                    std::iter::once((&k.output, 1)).chain(k.long_press.iter().map(|o| (o, 2)));
+                for (out, cost) in outs {
                     if let KeyOutput::Text { text } = out {
                         for c in text.chars().filter(|c| c.is_lowercase()) {
                             assert!(scheme.reads(c), "{lang}: the table does not read {c}");
+                        }
+                        let mut chars = text.chars();
+                        if let (Some(c), None) = (chars.next(), chars.next()) {
+                            let t = taps.entry(c).or_insert(cost);
+                            *t = (*t).min(cost);
                         }
                     }
                 }
             }
             for (latin, word) in *expected {
                 assert_eq!(scheme.literal(latin), *word, "{lang}: {latin}");
+                // The layout's keys spell it (what eval-predict types it
+                // as), in as few taps as the letters given.
+                let spelled = scheme
+                    .spelling(word, |c| taps.get(&c).copied())
+                    .unwrap_or_else(|| panic!("{lang}: no keys spell {word}"));
+                let cost = |s: &str| {
+                    s.chars()
+                        .map(|c| taps.get(&c).copied().unwrap_or(9))
+                        .sum::<u32>()
+                };
+                assert!(
+                    cost(&spelled) <= cost(latin),
+                    "{lang}: {word} spelled {spelled}"
+                );
+            }
+            let fst = root().join(format!("predict/{lang}.fst"));
+            if fst.exists() {
+                let lexicon = FstLexicon::open(&fst);
+                for (latin, word) in *expected {
+                    let got = scheme.candidates(latin, &lexicon, 3);
+                    assert_eq!(
+                        got.first().map(|c| c.text.as_str()),
+                        Some(*word),
+                        "{lang}: {latin} offers {:?}",
+                        got.iter().map(|c| &c.text).collect::<Vec<_>>()
+                    );
+                }
             }
             continue;
         }

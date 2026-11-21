@@ -18,8 +18,10 @@
 # Low Saxon wiki's articles it files as written in Veluws), Betawi, Nupe
 # and Gilaki (their sentences that write their own words: their
 # references are English, some of Betawi's Indonesian, Gilaki's village
-# articles Persian; Gilaki's read as Persian's keys type it), and
-# Bishnupriya Manipuri (its bots' stubs of years left out); of
+# articles Persian; Gilaki's read as Persian's keys type it),
+# Bishnupriya Manipuri (its bots' stubs of years left out), and Tai Nüa,
+# in Tai Le (its Chinese and Latin words left out, every 10th article
+# held out); of
 # Armenian and Persian beside their Tatoeba sentences (the Makefile's
 # WIKIPEDIA_PLUS_LANGS, whose held-out text goes elsewhere: EVAL_OUT); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
@@ -28,8 +30,10 @@
 # Cyrillic sentences left out); Rinconada Bikol, Jambi, Makassar, Manado,
 # Palembang (Musi) and Kelantan-Pattani Malay, Makassarese, Pamona,
 # Ibibio and East Franconian, Southern Kurdish and Western Balochi in the
-# Arabic script, Rangpuri in the Bengali script, and Abron (the sentences
-# that write its ɛ or ɔ: a third of its wiki's are English).
+# Arabic script, Rangpuri in the Bengali script, Abron (the sentences
+# that write its ɛ or ɔ: a third of its wiki's are English), and Vai, in
+# its own script (its Latin words left out), whose keyboard types it
+# through its transliteration table.
 #
 # The text comes from each wiki's CirrusSearch dump (Wikimedia's
 # cirrus_search_index, an article a JSON document whose "text" is its
@@ -107,6 +111,7 @@ bew  bew  bewwiki_content-20261108-00000.json.bz2  9bbf34ab24f069bf46a5017285fc3
 nup  nup  nupwiki_content-20261108-00000.json.bz2  c199460ef62c456ccbdb141b3c5f0ced6cf9d03b910295b97932598defa91da6  LATIN  --script-only --own nup --neighbour en --shapes 3 --holdout 10
 glk  glk  glkwiki_content-20261108-00000.json.bz2  739f3a3bee1e8788d8fac9a357f943e7df862ddb8761ac9e2b5e7f93ead273d2  ARABIC  --script-only --persian --own glk --neighbour fa --shapes 3
 bpy  bpy  bpywiki_content-20261108-00000.json.bz2  d9f491ea5e081f05e371f22282940fdbe4839221112b85a2e273e031c1b9eb1e  BENGALI  --script-only --shapes 3
+tdd  tdd  tddwiki_content-20261108-00000.json.bz2  0a0b31d2e62bd6bd92c2a27f9440ea28bb5a8abd7084b55d2c96dc40cb0af60f  TAI_LE  --script-only --shapes 3 --holdout 10
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1
@@ -114,7 +119,8 @@ INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1
 # options: the small wikis' every 10th article held out, at most three
 # sentences of a shape (--shapes, their bots' stubs), Southern Kurdish
 # read as Sorani's keys type it, Abron's sentences those that write its
-# ɛ or ɔ (--letters)]
+# ɛ or ɔ (--letters), Vai's cut where a word in Latin letters stands
+# (--script-only)]
 INCUBATOR="
 mag  Wp/mag/  DEVANAGARI  hi
 wsg  Wp/wsg/  TELUGU      -
@@ -134,6 +140,7 @@ sdh  Wp/sdh/  ARABIC      fa     --shapes 3 --holdout 10 --sorani
 bgn  Wp/bgn/  ARABIC      fa,ur  --shapes 3 --holdout 10
 rkt  Wp/rkt/  BENGALI     -      --shapes 3 --holdout 10
 abr  Wp/abr/  LATIN       -      --shapes 3 --holdout 10 --letters ɛɔ
+vai  Wp/vai/  VAI         -      --shapes 3 --holdout 10 --script-only
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

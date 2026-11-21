@@ -1061,6 +1061,66 @@ impl Scheme {
         Self::cap(cheapest.text, capital)
     }
 
+    /// The Latin letters that type `word`, a word in the script: of the
+    /// rules whose ways write its letters one after another, the letters
+    /// that take the fewest taps (`taps`: what typing a letter costs, `None`
+    /// for one no key types), then the cheapest ways, checked by reading
+    /// them back ([`Scheme::literal`]). What eval-predict types a held-out
+    /// word as, to measure a model offered through the table (Vai's).
+    /// `None` for a word no ways write so, or whose letters read otherwise;
+    /// and for an abugida's table, whose joined consonants and vowel signs
+    /// this does not undo.
+    #[must_use]
+    pub fn spelling(&self, word: &str, taps: impl Fn(char) -> Option<u32>) -> Option<String> {
+        if self.script == Script::Abugida || word.is_empty() {
+            return None;
+        }
+        // What typing each rule's letters takes, where keys type them.
+        let rule_taps: Vec<Option<u32>> = self
+            .rules
+            .iter()
+            .map(|r| r.latin.iter().map(|&c| taps(c)).sum())
+            .collect();
+        // At each of the word's character boundaries: the fewest taps, then
+        // the cheapest ways, that type the word so far, and their letters.
+        let mut best: Vec<Option<(u32, f32, String)>> = vec![None; word.len() + 1];
+        best[0] = Some((0, 0.0, String::new()));
+        for (at, _) in word.char_indices() {
+            let Some((spent, cost, typed)) = best[at].clone() else {
+                continue;
+            };
+            let rest = &word[at..];
+            for (rule, rule_taps) in self.rules.iter().zip(&rule_taps) {
+                let Some(rule_taps) = *rule_taps else {
+                    continue;
+                };
+                if rule.ahead.is_some() || (rule.start && at > 0) {
+                    continue;
+                }
+                for way in &rule.ways {
+                    if way.sign.is_some() || way.letter.is_empty() || !rest.starts_with(&way.letter)
+                    {
+                        continue;
+                    }
+                    let to = at + way.letter.len();
+                    if rule.end && to < word.len() {
+                        continue;
+                    }
+                    let (taps_to, cost_to) = (spent + rule_taps, cost + way.cost);
+                    let fewer = best[to]
+                        .as_ref()
+                        .is_none_or(|(t, c, _)| taps_to.cmp(t).then(cost_to.total_cmp(c)).is_lt());
+                    if fewer {
+                        let letters = typed.chars().chain(rule.latin.iter().copied()).collect();
+                        best[to] = Some((taps_to, cost_to, letters));
+                    }
+                }
+            }
+        }
+        let (_, _, typed) = best[word.len()].take()?;
+        (self.literal(&typed) == word).then_some(typed)
+    }
+
     /// What `latin` may be, at most `limit`: first its likeliest reading
     /// (what Space takes), of its readings that are words of `lexicon`
     /// and its cheapest reading of all; then the others and the words its
@@ -2423,6 +2483,48 @@ mod tests {
         assert_eq!(s.literal("bita"), "ꀘꄤ");
         assert!(!hindi().unspaced());
         assert!(Scheme::parse("script alphabet\nunspaced 1\n[consonants]\nk  κ\n").is_err());
+    }
+
+    /// Taps on a keyboard of small letters with þ and ŋ on long presses,
+    /// and no Shift.
+    fn small_letters(c: char) -> Option<u32> {
+        match c {
+            'a'..='z' => Some(1),
+            'þ' | 'ŋ' => Some(2),
+            _ => None,
+        }
+    }
+
+    #[test]
+    fn a_word_is_spelled_in_the_fewest_taps_that_read_it_back() {
+        // Vai's syllables, as its table types them.
+        let vai = Scheme::parse(
+            "script alphabet\n[consonants]\nka  ꕪ\nTa  ꕛ\nþa  ꕛ\nnga  ꕋ\nŋa  ꕋ\nmbe  ꔈ\n\
+             [vowels]\na  ꕉ\ne  ꔀ\n",
+        )
+        .expect("table");
+        // No Shift: THA is þa, not Ta.
+        assert_eq!(vai.spelling("ꕛꕉ", small_letters).as_deref(), Some("þaa"));
+        assert_eq!(
+            vai.spelling("ꕛ", |c| small_letters(c).or(Some(2)))
+                .as_deref(),
+            Some("Ta"),
+            "as few taps, the table's first"
+        );
+        // As few taps either way: the table's first.
+        assert_eq!(vai.spelling("ꕋꔈ", small_letters).as_deref(), Some("ngambe"));
+        // A letter no rule writes, and nothing.
+        assert_eq!(vai.spelling("ꕪb", small_letters), None);
+        assert_eq!(vai.spelling("", small_letters), None);
+        // Letters that read otherwise: bit then a is bi then ta.
+        let yi = Scheme::parse(
+            "script alphabet\nunspaced\n[consonants]\nbi  ꀘ\nbit  ꀖ\nta  ꄤ\n[vowels]\na  ꀊ:0.1\n",
+        )
+        .expect("table");
+        assert_eq!(yi.spelling("ꀘꄤ", small_letters).as_deref(), Some("bita"));
+        assert_eq!(yi.spelling("ꀖꀊ", small_letters), None);
+        // An abugida's vowel signs and joined consonants are not undone.
+        assert_eq!(hindi().spelling("तक", small_letters), None);
     }
 
     #[test]

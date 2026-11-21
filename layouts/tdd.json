@@ -3,7 +3,8 @@
   "name": "Tai Nuea",
   "direction": "ltr",
   "swipe_enabled": false,
-  "prediction_enabled": false,
+  "prediction_enabled": true,
+  "prediction_lang": "tdd",
   "views": [
     {
       "id": "base",

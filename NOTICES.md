@@ -160,7 +160,7 @@ learns from leaves out.
 
 ### Wikipedia text (the wikis' own)
 
-Thirty-two languages' models learn from their own Wikipedia alone:
+Thirty-three languages' models learn from their own Wikipedia alone:
 Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto,
 Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki,
 Tulu, Dotyali, Angika, Eastern Min (in Bàng-uâ-cê, the Han its sentences
@@ -176,8 +176,9 @@ cut into syllables), Veluws (the Dutch Low Saxon wiki's articles it
 files as written in Veluws), Betawi, Nupe and Gilaki (their sentences
 that write their own words: their references are English, some of
 Betawi's Indonesian, Gilaki's village articles Persian; Gilaki's read
-as Persian's keys type it) and Bishnupriya Manipuri, the last fourteen's
-bots' stubs left out but three of a shape;
+as Persian's keys type it), Bishnupriya Manipuri and Tai Nuea (in Tai
+Le, its Chinese and Latin words left out, every 10th article held
+out), the last fifteen's bots' stubs left out but three of a shape;
 Newari's from its
 own beside its news
 (GlotCC's, below); and Armenian's and Persian's from theirs beside their
@@ -189,7 +190,7 @@ sentences by `scripts/wikipedia-text.py`, and where a word in another
 script stands, that word left out (the references' and English
 passages' Latin): at most 400 000 a language.
 Every 20th article is held out of it, and the first 500 sentences of
-those are `eval/<lang>.txt`. Eighteen more learn from the Wikimedia
+those are `eval/<lang>.txt`. Nineteen more learn from the Wikimedia
 Incubator's test wikis, in its dump of the same date (each article's
 title starting with its wiki's prefix, `Wp/mag/`): Adilabad Gondi's,
 Khowar's and Montenegrin's alone (Montenegrin's Latin sentences, its few
@@ -198,11 +199,12 @@ their articles held out and their bots' stubs left out but three of a
 shape (Rinconada Bikol's; Jambi, Makassar, Manado, Palembang and
 Kelantan-Pattani Malay's; Makassarese's, Pamona's, Ibibio's, East
 Franconian's, Southern Kurdish's, Western Balochi's, Rangpuri's and
-Abron's, its sentences that write its ɛ or ɔ), Magahi's beside
-its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
+Abron's, its sentences that write its ɛ or ɔ), Vai's, in its own
+script, its Latin words left out and every 10th article held out,
+Magahi's beside its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
 Persian's, Indonesian's or English's own words is left out.
 **Wikipedia's text, and the Incubator's, is CC BY-SA 4.0**, share-alike:
-the packs of those fifty-three languages, their models and that held-out
+the packs of those fifty-five languages, their models and that held-out
 text carry those terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 

@@ -422,6 +422,7 @@ szl = "Silesian"
 ta  = "Tamil"
 tab = "Tabasaran"
 tcy = "Tulu"
+tdd = "Tai Nuea"
 tdx = "Tandroy-Mahafaly Malagasy"
 te  = "Telugu"
 teo = "Teso"
@@ -456,6 +457,7 @@ umb = "Umbundu"
 unr = "Mundari"
 ur  = "Urdu"
 uz  = "Uzbek"
+vai = "Vai"
 ve  = "Venda"
 vec = "Venetian"
 vel = "Veluws"
@@ -623,7 +625,7 @@ source  = { name = "The Dakshina dataset v1.0 (Google Research): Wikipedia text"
 # dumps, plain text, pinned by sha256): the whole corpus of the languages
 # that script names, the Wikimedia Incubator's test wikis among them
 # (Gondi's, Khowar's, Montenegrin's, fourteen small ones' from Rinconada
-# Bikol's to Abron's, and Magahi's beside its FineWeb-2 text).
+# Bikol's to Abron's, Vai's, and Magahi's beside its FineWeb-2 text).
 [prediction.wikipedia]
 license = { name = "CC BY-SA 4.0 (Wikipedia)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
 source  = { name = "Wikipedia and the Wikimedia Incubator's test wikis, their CirrusSearch dumps of 2026-11-08", url = "https://dumps.wikimedia.org/other/cirrus_search_index/20261108/" }
@@ -1529,7 +1531,6 @@ swv = "Shekhawati"
 syl = "Sylheti"
 taj = "Eastern Tamang"
 tbw = "Aborlan Tagbanwa"
-tdd = "Tai Nuea"
 tem = "Temne"
 trw = "Torwali"
 tts = "Isan"
@@ -1537,7 +1538,6 @@ tyz = "Tày"
 und-fonipa = "International Phonetic Alphabet"
 uum = "Urum"
 vah = "Varhadi"
-vai = "Vai"
 vas = "Vasavi"
 vkt = "Kutai Malay"
 wbr = "Wagdi"
