@@ -47,7 +47,10 @@
 # Sebat Bet Gurage, whose models the Ge'ez composer offers the words of;
 # Sylheti in Syloti Nagri, a news site's pages beside its wiki's text;
 # Gorani (Hawrami), the documents of FineWeb-2's mostly Sorani, Badini and
-# Persian hac_Arab its own function words lead; and Assamese, whose
+# Persian hac_Arab its own function words lead; Nuosu, the pages of
+# FineWeb-2's und_Yiii (Yi, its language undetermined) that read as Nuosu
+# (People's Daily's Yi pages, Liangshan's, yizuren.com's, a Bible
+# dictionary's), beside its Incubator wiki's text; and Assamese, whose
 # Tatoeba corpus is small, beside it (the Makefile's FINEWEB_PLUS_LANGS).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
@@ -678,6 +681,7 @@ ti   tir_Ethi  test/000_00000.parquet   8439941b7735beff1b178d9a30f41cd87e039adb
 sgw  sgw_Ethi  train/000_00000.parquet  d8c07190d157a26f3c5e2373b7fda7c5a87bf883008ef00245444dedf0032814
 syl-Sylo  und_Sylo  train/000_00000.parquet  3b0b8741d77c0ec35ded1054c25efdd1b6b95241f34bee70320c1e09e0a92916
 hac  hac_Arab  train/000_00000.parquet  42533466ee55619abd141d8b5dbbefb6940c943c3c636e413fdcbe5d6fbafcd6
+ii  und_Yiii  train/000_00000.parquet  0e8288936852d60dcff3e258c36f1007702cea0a156a16c2931b887a077266a3
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

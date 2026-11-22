@@ -3697,6 +3697,25 @@
         "words": "2"
       }
     },
+    "predict/ii": {
+      "encoder": "167e14a194a9-dirty",
+      "inputs": {
+        "fineweb/ii.txt": "9101b701ec51b385e33cbb27bfd464e3c0750d38d2feba353cea546144f491e4",
+        "wikipedia/ii.txt": "3c890b2fc901146949574988a44f8a6f39c9cc5f36bbd4d060a274a13acea468"
+      },
+      "outputs": {
+        "predict/ii.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/ii.fst": "4e7059a829ac6864d8169fb790c6900affb6ae6988558715d00a6680b59139af",
+        "predict/ii.ngram.bin": "1e1b3cd9ae31aa42358732340297877bc735bd91650a7b02cf9d39ff1cc46e49"
+      },
+      "recipe": {
+        "ngram_keep": "60000",
+        "start_keep": "5000",
+        "vocab_size": "20000",
+        "web_weight": "1",
+        "words": "8"
+      }
+    },
     "predict/ilo": {
       "encoder": "976000ba2977-dirty",
       "inputs": {

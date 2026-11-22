@@ -191,7 +191,7 @@ sentences by `scripts/wikipedia-text.py`, and where a word in another
 script stands, that word left out (the references' and English
 passages' Latin): at most 400 000 a language.
 Every 20th article is held out of it, and the first 500 sentences of
-those are `eval/<lang>.txt`. Nineteen more learn from the Wikimedia
+those are `eval/<lang>.txt`. Twenty more learn from the Wikimedia
 Incubator's test wikis, in its dump of the same date (each article's
 title starting with its wiki's prefix, `Wp/mag/`): Adilabad Gondi's,
 Khowar's and Montenegrin's alone (Montenegrin's Latin sentences, its few
@@ -202,10 +202,12 @@ Kelantan-Pattani Malay's; Makassarese's, Pamona's, Ibibio's, East
 Franconian's, Southern Kurdish's, Western Balochi's, Rangpuri's and
 Abron's, its sentences that write its ɛ or ɔ), Vai's, in its own
 script, its Latin words left out and every 10th article held out,
-Magahi's beside its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
+Nuosu's, in Yi, each syllable a word, its lists of links and its bots'
+stubs left out and every 10th article held out, beside its FineWeb-2
+text, and Magahi's beside its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
 Persian's, Indonesian's or English's own words is left out.
 **Wikipedia's text, and the Incubator's, is CC BY-SA 4.0**, share-alike:
-the packs of those fifty-six languages, their models and that held-out
+the packs of those fifty-seven languages, their models and that held-out
 text carry those terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 
@@ -281,7 +283,9 @@ of Ethiopia's translation as bible.is gives it), and of Gorani (the
 Hawrami among its Gorani, the rest Sorani, Badini and Persian); and
 Assamese's from it beside its Tatoeba sentences, Magahi's beside its
 Incubator text, Sylheti's in Syloti Nagri (a news site's pages) beside
-its wiki's, and
+its wiki's, Nuosu's (the pages of its Yi that write its commonest
+syllables, the web's tables of the script left out) beside its Incubator
+text, and
 Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's beside GlotCC's
 (below).
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One

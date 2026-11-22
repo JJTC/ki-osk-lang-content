@@ -1124,8 +1124,9 @@ impl Scheme {
     /// What `latin` may be, at most `limit`: first its likeliest reading
     /// (what Space takes), of its readings that are words of `lexicon`
     /// and its cheapest reading of all; then the others and the words its
-    /// likeliest readings begin, the likeliest first
-    /// ([`Candidate::score`]).
+    /// likeliest readings begin (of a table written with no spaces, the
+    /// syllables its letters begin too: [`Scheme::syllables_begun`]), the
+    /// likeliest first ([`Candidate::score`]).
     #[must_use]
     pub fn candidates(&self, latin: &str, lexicon: &dyn Lexicon, limit: usize) -> Vec<Candidate> {
         let (mut readings, more, capital) = self.gather(latin, lexicon);
@@ -1240,7 +1241,62 @@ impl Scheme {
         let mut more = Self::completions(ends, lexicon, &spelled);
         let english = self.english_completions(&typed, lexicon, &spelled, &more);
         more.extend(english);
+        if self.unspaced {
+            for c in self.syllables_begun(&input, lexicon) {
+                if !spelled.contains(&c.text.as_str()) && !more.iter().any(|m| m.text == c.text) {
+                    more.push(c);
+                }
+            }
+        }
         (readings, more, capital)
+    }
+
+    /// Of a table whose script writes no space between its words (Nuosu's,
+    /// each of whose rules writes a syllable), the syllables of `lexicon`
+    /// whose letters the letters typed begin, from the word's start: `n`
+    /// may be ꆈ (nuo) or ꆀ (nip), `nuo` ꆇ (nuox) or ꆉ (nuop), each at its way's
+    /// cost and [`COMPLETION_COST`], so that the syllable likeliest after
+    /// the one before is offered from its first letter, as a word is. A
+    /// syllable typed after another is read as the rules read it.
+    fn syllables_begun(&self, input: &[char], lexicon: &dyn Lexicon) -> Vec<Candidate> {
+        let Some(&first) = input.first() else {
+            return Vec::new();
+        };
+        let mut best: BTreeMap<&str, f32> = BTreeMap::new();
+        for &i in self
+            .by_first
+            .get(&lower(first))
+            .map_or(&[][..], Vec::as_slice)
+        {
+            let r = &self.rules[i];
+            let begun = r.ahead.is_none()
+                && r.latin.len() > input.len()
+                && input
+                    .iter()
+                    .zip(&r.latin)
+                    .all(|(&typed, &c)| typed == c || (r.folds && lower(typed) == c));
+            if !begun {
+                continue;
+            }
+            for w in &r.ways {
+                if w.sign.is_some() || w.letter.is_empty() {
+                    continue;
+                }
+                let cost = w.cost + STEP + COMPLETION_COST;
+                let slot = best.entry(w.letter.as_str()).or_insert(cost);
+                *slot = slot.min(cost);
+            }
+        }
+        best.into_iter()
+            .filter_map(|(text, cost)| {
+                Some(Candidate {
+                    log_prob: Some(lexicon.log_prob(text)?),
+                    text: text.to_string(),
+                    cost,
+                    completes: true,
+                })
+            })
+            .collect()
     }
 
     /// The words of `typed` read as an English word and what the language
@@ -2483,6 +2539,42 @@ mod tests {
         assert_eq!(s.literal("bita"), "ꀘꄤ");
         assert!(!hindi().unspaced());
         assert!(Scheme::parse("script alphabet\nunspaced 1\n[consonants]\nk  κ\n").is_err());
+    }
+
+    #[test]
+    fn a_syllabary_written_without_spaces_offers_the_syllables_its_letters_begin() {
+        let yi = Scheme::parse(
+            "script alphabet\nunspaced\n[consonants]\nbi  ꀘ\nbit  ꀖ\nbix  ꀗ\nbo  ꀧ\nta  ꄤ\n\
+             [vowels]\na  ꀊ:0.1\n",
+        )
+        .expect("table");
+        let lexicon = Words::of(&[("ꀘ", 1), ("ꀖ", 8), ("ꀗ", 3), ("ꀧ", 2), ("ꄤ", 5)]);
+        let texts = |latin: &str| -> Vec<String> {
+            yi.candidates(latin, &lexicon, 6)
+                .into_iter()
+                .filter(|c| c.log_prob.is_some())
+                .map(|c| c.text)
+                .collect()
+        };
+        // b: its syllables, the likeliest first; none of t's.
+        assert_eq!(texts("b"), ["ꀖ", "ꀗ", "ꀧ", "ꀘ"]);
+        // bi is ꀘ, Space's; then the syllables bi begins.
+        assert_eq!(texts("bi"), ["ꀘ", "ꀖ", "ꀗ"]);
+        assert!(yi.candidates("bi", &lexicon, 6)[1].completes);
+        // A syllable typed after another is read as the rules read it.
+        assert_eq!(texts("tab"), Vec::<String>::new());
+        // A table written with spaces offers no syllable its letters begin.
+        let spaced = Scheme::parse(
+            "script alphabet\n[consonants]\nbi  ꀘ\nbit  ꀖ\nbix  ꀗ\nbo  ꀧ\nta  ꄤ\n[vowels]\na  ꀊ:0.1\n",
+        )
+        .expect("table");
+        let spaced_texts: Vec<String> = spaced
+            .candidates("b", &lexicon, 6)
+            .into_iter()
+            .filter(|c| c.log_prob.is_some())
+            .map(|c| c.text)
+            .collect();
+        assert_eq!(spaced_texts, Vec::<String>::new());
     }
 
     /// Taps on a keyboard of small letters with þ and ŋ on long presses,

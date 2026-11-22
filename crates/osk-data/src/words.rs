@@ -91,7 +91,9 @@ pub const GENERATION: u32 = 2;
 /// of their i-words are `İ`): `I` lower-cased to `i`, so `ılık` and `ilk`
 /// started sentences as `Ilık` and `Ilk`, and a word written with `İ` had
 /// no case to keep. Kirmanjki's text writes `I` for 73% of them, the
-/// Kurdish alphabet's way, and keeps its rules.
+/// Kurdish alphabet's way, and keeps its rules. Generation 8 cut Nuosu's
+/// Yi, which writes no space between its words, into its syllables, each
+/// letter a word ([`Script::Yi`]): a run of them was one word.
 pub const LATER_GENERATIONS: &[(&str, u32)] = &[
     ("sd", 3),
     ("ps", 4),
@@ -103,6 +105,7 @@ pub const LATER_GENERATIONS: &[(&str, u32)] = &[
     ("crh", 7),
     ("diq", 7),
     ("tly", 7),
+    ("ii", 8),
 ];
 
 /// The generation of the rules `lang`'s words are read by: [`GENERATION`],
@@ -502,7 +505,10 @@ impl Splitter {
             greek: false,
             turkic: false,
             script: Script::of_lang(primary),
-            word_list: None,
+            // A script cut with no list (Yi) has its empty one.
+            word_list: Script::of_lang(primary)
+                .filter(|s| s.needs_no_list())
+                .map(|_| Arc::new(WordList::from_words(std::iter::empty::<&str>()))),
         };
         match primary {
             "fr" => s.elide = Elide::After(FRENCH_ELISIONS),
@@ -552,17 +558,19 @@ impl Splitter {
     /// Whether the language is written without spaces between words, so
     /// that its words are found with a word list ([`Self::with_word_list`]):
     /// Thai, Lao, Khmer, Burmese; Shan, Mon, Sgaw Karen, Pa'O, Arakanese.
+    /// Not Nuosu, whose Yi is cut into its syllables with no list.
     #[must_use]
     pub fn wants_word_list(&self) -> bool {
-        self.script.is_some()
+        self.script.is_some_and(|s| !s.needs_no_list())
     }
 
     /// This splitter, cutting the runs of letters of a language written
     /// without spaces between words into the words of `list`. A language
-    /// written with spaces ignores it.
+    /// written with spaces ignores it, and so does one cut into its
+    /// syllables with no list (Nuosu's Yi).
     #[must_use]
     pub fn with_word_list(mut self, list: Arc<WordList>) -> Self {
-        if self.script.is_some() {
+        if self.wants_word_list() {
             self.word_list = Some(list);
         }
         self
@@ -1766,6 +1774,30 @@ mod tests {
         assert_eq!(read_with(&en, "ฉันรักภาษาไทย"), ["|ฉันรักภาษาไทย"]);
         assert!(thai().wants_word_list());
         assert!(!en.wants_word_list());
+    }
+
+    #[test]
+    fn nuosu_s_yi_is_cut_into_its_syllables_with_no_list() {
+        // ꆈꌠꉙ (nuosuhxop): three syllables, each a word glued on; its
+        // iteration mark ꀕ a syllable too. Its comma, written with no
+        // space after it, parts the runs of one token.
+        assert_eq!(
+            read("ii", "ꆈꌠꉙꀕ，ꉬꌠ。"),
+            ["|ꆈ_", "+ꌠ_", "+ꉙ_", "+ꀕ_", "~ꉬ_", "+ꌠ"]
+        );
+        let ii = Splitter::new("ii");
+        assert!(!ii.wants_word_list());
+        assert!(ii.glues_on("ꆈ"));
+        // A list given changes nothing.
+        let listed = Splitter::new("ii").with_word_list(Arc::new(WordList::from_words(["ꆈꌠ"])));
+        assert_eq!(read_with(&listed, "ꆈꌠ"), ["|ꆈ_", "+ꌠ"]);
+        // The syllable at the caret is the one being typed.
+        let t = ii.typing("ꆈꌠ", 2);
+        assert_eq!(
+            (t.context, t.word, t.caret),
+            (ws(&["<s>", "ꆈ"]), "ꌠ".into(), Caret::InWord)
+        );
+        assert_eq!(generation("ii"), 8);
     }
 
     #[test]

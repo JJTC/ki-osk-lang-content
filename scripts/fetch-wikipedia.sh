@@ -34,7 +34,9 @@
 # Arabic script, Rangpuri in the Bengali script, Abron (the sentences
 # that write its ɛ or ɔ: a third of its wiki's are English), and Vai, in
 # its own script (its Latin words left out), whose keyboard types it
-# through its transliteration table.
+# through its transliteration table, as Nuosu's does, in Yi (beside its
+# FineWeb-2 text; its lists of links and its bots' stubs left out, each
+# syllable a word).
 #
 # The text comes from each wiki's CirrusSearch dump (Wikimedia's
 # cirrus_search_index, an article a JSON document whose "text" is its
@@ -121,8 +123,8 @@ INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1
 # options: the small wikis' every 10th article held out, at most three
 # sentences of a shape (--shapes, their bots' stubs), Southern Kurdish
 # read as Sorani's keys type it, Abron's sentences those that write its
-# ɛ or ɔ (--letters), Vai's cut where a word in Latin letters stands
-# (--script-only)]
+# ɛ or ɔ (--letters), Vai's and Nuosu's cut where a word in Latin letters
+# stands (--script-only)]
 INCUBATOR="
 mag  Wp/mag/  DEVANAGARI  hi
 wsg  Wp/wsg/  TELUGU      -
@@ -143,6 +145,7 @@ bgn  Wp/bgn/  ARABIC      fa,ur  --shapes 3 --holdout 10
 rkt  Wp/rkt/  BENGALI     -      --shapes 3 --holdout 10
 abr  Wp/abr/  LATIN       -      --shapes 3 --holdout 10 --letters ɛɔ
 vai  Wp/vai/  VAI         -      --shapes 3 --holdout 10 --script-only
+ii   Wp/ii/   YI          -      --shapes 3 --holdout 10 --script-only
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

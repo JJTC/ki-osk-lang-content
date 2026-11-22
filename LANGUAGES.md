@@ -13,7 +13,7 @@ Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, G
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
 keycaps. 681 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **476 languages** carry a prediction
+table below is the complete list; **477 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -662,7 +662,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `stv` | `stv` | Silt'e (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its -wa forms ሏ ሟ ቧ…) |
 | `sgw` | `sgw` | Sebat Bet Gurage ሰባት ቤት ጉራጌ | — | LTR | **Full** (sgw)⁷ | — | **Ge'ez** (shares the Amharic composer; its words on the strip¹⁶; ʷ and ʸ keys for its labialised bilabials ᎀ ᎄ ᎈ ᎌ and palatalised velars ⷀ ⷈ ⷐ ⷘ, in place of v and the hyphen¹⁵) |
 | `vai` | `vai` | Vai ꕙꔤ | — | LTR | **Full** (vai)⁶ | — | **Translit** Latin → Vai syllables, as Keyman's athinkra_vai types them (ka ꕪ, ka~ ꕫ), its words on the strip¹¹; ɛ ɔ ~ keys, long-press ŋ þ ð ʒ ꘌ |
-| `ii` | `ii` | Nuosu ꆈꌠꉙ (Yi) | — | LTR | IME¹¹ | — | **Translit** Yi pinyin → syllables, as Keyman's sil_yi types them (bit ꀖ); Space adds no space; ， 。 keys |
+| `ii` | `ii` | Nuosu ꆈꌠꉙ (Yi) | — | LTR | **Full** (ii)⁶ ⁷ | — | **Translit** Yi pinyin → syllables, as Keyman's sil_yi types them (bit ꀖ), the syllables its letters begin on the strip¹¹; Space adds no space; ， 。 keys |
 | `hi-abc` | `hi` | Hindi हिन्दी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hi lexicon choosing |
 | `bn-abc` | `bn` | Bengali বাংলা (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali, the bn lexicon choosing |
 | `mr-abc` | `mr` | Marathi मराठी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the mr lexicon choosing |
@@ -1197,7 +1197,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Languages with no Wikipedia yet have test wikis in the Wikimedia
    Incubator, whose dump (the same date's, CC BY-SA 4.0) holds them all,
    each article's title starting with its wiki's prefix (`Wp/mag/`).
-   Nineteen are read: Adilabad Gondi's, in the Telugu script (2 301
+   Twenty are read: Adilabad Gondi's, in the Telugu script (2 301
    sentences from 355 articles, a lexicon of 12 803 words: keystroke
    savings 29.8% on 1 592 held-out words, 27.8% of them unknown),
    Khowar's (6 268 sentences from 2 482 articles, 21 670 words: 40.4% on
@@ -1234,7 +1234,22 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    letter no key types, an accent, and are left out). FineWeb-2's pages
    in the Vai script are tables of its letters (1 038 of its 1 391
    keyboard.cool's) and copies of the Universal Declaration of Human
-   Rights: not used. A bot's stubs are left out but three
+   Rights: not used. And Nuosu's, in Yi (since data 0.75.0; 2 691
+   sentences, 84 000 syllables, every 10th article held out), beside
+   FineWeb-2's text of it (note 7), which its keyboard types through its
+   transliteration table too (note 11). Yi writes no space between its
+   words and has no list of them to be had, so each syllable is a word, as
+   each of Tibetan's is (`osk_data::wordbreak`; the words' generation 8),
+   and a sentence is three syllables or more, cut after Chinese's full
+   stop and marks (。！？), as its wiki writes them; its lists of links
+   (three quarters of its pieces: a bar between links, an Incubator title)
+   and its bots' stubs (1 939 sentences: places' areas and peoples,
+   Japan's eras) are left out. Typed through the composer, each
+   held-out syllable as the fewest taps that the table reads back as it
+   and Space, as Keyman's keyboard has them typed, it saves 38.5% of the
+   taps of 16 587 syllables (33.8% offered before the first key, 56.7%
+   after one letter, 67.5% after two: the strip offers the syllables the
+   letters begin; 0.1% unknown). A bot's stubs are left out but three
    of each shape (`wikipedia-text.py --shapes`: a sentence whose four
    words after the first, or last four, digits aside, three kept
    sentences had), which a model would learn and its eval measure as the
@@ -1285,7 +1300,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
    their letters (note 12); Northern Thai and
    Eastern Pwo Karen have keyboards (notes 10 and 12) and no model yet.
-7. These three hundred and thirty-one models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and thirty-two models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -2112,6 +2127,21 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    beside the wiki's (WEB_EVEN_LANGS: at 5, as Magahi's web text counts,
    the wiki's held-out articles were saved 27.7%, its right words changed
    0.73%).
+   And Nuosu's in Yi (since data 0.75.0), beside its Incubator wiki's text
+   (note 6): FineWeb-2's und_Yiii (Yi, its language undetermined, 3 878
+   documents) is mostly the web's tables of the script's characters
+   (keyboard.cool's 2 381 pages, unicode-table.com's, the fancy-text
+   sites') and pages of syllables strung at random. A page is read when a
+   tenth of its syllables are Nuosu's twelve commonest (ꃅ ꌠ ꇬ ꆀ ꄉ ꏦ ꇩ ꂷ
+   ꀋ ꆏ ꅉ ꍏ: 21 to 26% of People's Daily's Yi pages', 12 to 30% of the
+   Incubator's, 1 to 3% of the tables'), the Incubator's copies of its
+   wiki left out: 323 documents (People's Daily's Yi edition, Liangshan's
+   government, yizuren.com, a Bible dictionary), their lines and sentences
+   of three syllables or more, 2 711 of them, 38 850 syllables. Counted
+   once beside the wiki's (WEB_EVEN_LANGS), the wiki's held-out articles
+   are saved 38.5% of their taps (37.2% at 5); its own held-out documents'
+   sentences are eight, most of their pages' lines being the corpus's
+   already (39.8% on them).
 8. These seven models learn from web text, MADLAD-400's (Google; CC BY 4.0
    by its card, whose metadata says ODC-By; subject to Common Crawl's
    Terms of Use; `scripts/fetch-madlad.sh`, its files at one revision
@@ -2338,8 +2368,13 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Vai's has its Incubator wiki's model (note 6): the strip offers the
    readings that are its words, the likeliest after the word before
    first, and the words they begin, then the letters as typed; and with
-   nothing composed, the words likeliest next. Nuosu's has none: the
-   strip offers the reading and the letters as typed.
+   nothing composed, the words likeliest next. Nuosu's has its Incubator
+   wiki's and FineWeb-2's model (notes 6 and 7), each syllable a word:
+   with nothing composed the strip offers the syllables likeliest next,
+   and from a syllable's first letter the syllables its letters begin, the
+   likeliest after the one before first (n: ꆈ nuo, ꆀ nip…; nuo: ꆈ, then
+   ꆇ nuox and ꆉ nuop, its other tones), then the letters as typed. Without them it saved
+   20.3% of the taps (the next syllable alone), with them 38.5%.
 12. Eighty-eight keyboards of languages no text here predicts are another
    language's keys in their name, as they write with those letters:
    Amdo and Khams Tibetan on Tibetan's, in its spelling (Keyman's
@@ -2728,7 +2763,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **476 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **477 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2740,7 +2775,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp
   new cdo hif egl cu zea btm gpe igl rki vel bew nup glk bpy tdd syl-Sylo** (Newari with GlotCC's news too; Arakanese cut into syllables), **hy fa** beside Tatoeba's, and
-  the Incubator's test wikis: **wsg khw cnr bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr vai** (note 6; Vai's words offered through its transliteration table, note 11) ·
+  the Incubator's test wikis: **wsg khw cnr bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr vai ii** (note 6; Vai's words and Nuosu's syllables offered through their transliteration tables, note 11; Nuosu's beside FineWeb-2's text, note 7) ·
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my**, and of
   thirty-eight languages that had a keyboard and no model, **sw af sl zu sq kk uz bs
   ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba xh fo ceb mi su co ny sm sn ig st
@@ -2763,7 +2798,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 145 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 144 layouts, Montenegrin's in
   Cyrillic, the forty-eight whose letters are CLDR's exemplar characters
   (note 9: twenty-eight in Latin letters, twenty in the Arabic script,
   Devanagari and Bengali), the seventeen from Keyman's (note 10: twelve
@@ -2783,8 +2818,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   test wiki's two spellings give its letters), the two whose letters the African
   Storybook's stories give, Bukusu and Malawi Lomwe (note 13), Pulaar's,
   on Fula's keys with the letters SMOL's Pulaar translations write
-  (note 14),
-  Nuosu's, whose composer reads its table alone (note 11), and
+  (note 14), and
   Cherokee, whose
   text the web has little of (MADLAD-400's clean text, 190 000 words, is
   its wiki's and its New Testament). They have their glides off. Sixty-eight

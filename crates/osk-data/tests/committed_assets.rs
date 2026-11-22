@@ -65,10 +65,19 @@ fn every_prediction_pair_decodes() {
         lexicons.len()
     );
 
+    use osk_data::wordbreak::Script;
     for p in &lexicons {
         let bytes = std::fs::read(p).unwrap();
         let map = fst::Map::new(bytes).unwrap_or_else(|e| panic!("{}: {e}", name(p)));
-        assert!(map.len() > 1000, "{}: only {} words", name(p), map.len());
+        // A language whose words are its script's syllables, each letter
+        // one, has fewer: Nuosu's Yi has 1 165.
+        let lang = p.file_stem().unwrap().to_string_lossy().to_string();
+        let least = if Script::of_lang(&lang).is_some_and(Script::needs_no_list) {
+            500
+        } else {
+            1000
+        };
+        assert!(map.len() > least, "{}: only {} words", name(p), map.len());
     }
     for p in &forms {
         fst::Map::new(std::fs::read(p).unwrap()).unwrap_or_else(|e| panic!("{}: {e}", name(p)));

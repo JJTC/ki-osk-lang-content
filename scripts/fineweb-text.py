@@ -891,6 +891,17 @@ COPTIC_OUT = re.compile(r"cld\.bz|papyri\.info|coptic-dictionary|cenob\.org|mult
 # character tables beside them: those left out. Its sentences end with ⁕
 # and its poetry marks as well as the danda.
 SYLOTI_OUT = re.compile(r"wikimedia\.org|unicode|keyboard\.cool|forvo")
+# Nuosu's Yi: its stops, Chinese's (no space after them); a syllable, each
+# a word as osk_data::wordbreak cuts it; and its commonest syllables, of
+# the twenty commonest in both its Incubator wiki's text and People's
+# Daily's Yi pages. A page of the web's character tables (keyboard.cool,
+# unicode-table.com, the fancy-text sites) or of syllables strung at
+# random writes 1 to 3% of its syllables with them, a page of Nuosu 15 to
+# 30% (People's Daily's 21 to 26%). The Incubator's pages are its wiki's
+# copies, whose held-out articles they would leak.
+YI_END = re.compile(r"(?<=[。！？])\s*")
+YI_SYLLABLE = re.compile("[\ua000-\ua48c]")
+NUOSU = set("ꃅ ꌠ ꇬ ꆀ ꄉ ꏦ ꇩ ꂷ ꀋ ꆏ ꅉ ꍏ".split())
 SYLOTI_END = re.compile(r"(?<=[⁕꠨꠩꠪꠫])\s*")
 # Bohairic's own words (and, with, in, God) and Sahidic's, by which a
 # document is Bohairic's: Sahidic writes the words Bohairic does (ⲛ̀ⲧⲉ,
@@ -1139,6 +1150,11 @@ def hawrami(text):
     A sentence in another spelling, whose vowels its keys do not type (ٙ ٚ
     ۍ ې: a twentieth of its words), is left out (`letters_never`)."""
     return text.replace("\u062f\u0658", "\u068e").replace("\u06ca", "\u06c9").translate(SORANI_FOLD).replace("\u0640", "")
+
+
+def yi_syllables(text):
+    """`text`'s Yi syllables, which a sentence is counted in."""
+    return YI_SYLLABLE.findall(text)
 
 
 def three_vowels(s):
@@ -1445,6 +1461,12 @@ LANGS = {
     # test split: every 20th document is held out.
     "syl-Sylo": {"script": "SYLOTI NAGRI", "neighbour": set(), "script_only": True, "ends": SYLOTI_END,
                  "hosts_out": SYLOTI_OUT, "brackets": True},
+    # Nuosu, in Yi, which writes no space between its words: a page whose
+    # syllables are a tenth its commonest, its lines and sentences of
+    # three syllables or more, the Incubator's pages left out.
+    "ii": {"script": "YI", "neighbour": set(), "units": yi_syllables, "own": NUOSU, "rival": set(),
+           "own_least": 0.1, "least": 3, "script_only": True, "lines": True, "ends": YI_END,
+           "hosts_out": re.compile(r"wikimedia\.org"), "brackets": True},
     "rm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | GERMAN_ONLY, "brackets": True},
     "rn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
     "lg": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
@@ -1782,6 +1804,8 @@ def kept(text, conf):
     if "own" in conf:
         if conf.get("syllables"):
             ws = SYLLABLE.findall(text)
+        elif "units" in conf:
+            ws = conf["units"](text)
         own = share(ws, conf["own"])
         if own < conf.get("own_least", 0.01) or own <= share(ws, conf["rival"]) + share(ws, conf["neighbour"]):
             return False
@@ -1801,6 +1825,8 @@ def in_script(s, script):
 
 
 def long_enough(s, conf):
+    if "least" in conf:
+        return len(units(s, conf)) >= conf["least"]
     if conf.get("unspaced"):
         return sum(c.isalpha() for c in s) >= 15
     return len(s.split()) >= 3

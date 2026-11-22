@@ -16,8 +16,12 @@ writes one, and 644 of the Arakanese wiki's sentences do); with
 (。？！, no space after them), as the Tai Le wiki ends a third of its
 sentences; and with --script "SYLOTI NAGRI" after ⁕ and the poetry marks
 ꠨ ꠩ ꠪ ꠫ too, which the Sylheti wiki ends two of three of its sentences
-with;
-a sentence of fewer than three words, a run of more than 1 000
+with; and with --script YI after Chinese's full stop and marks (。！？,
+no space after them), as the Nuosu wiki ends its sentences, its lists of
+links left out (a piece cut at a bar between links, or holding an
+Incubator title, Wp/ii/…: three quarters of its pieces);
+a sentence of fewer than three words (of Yi's, which writes no space
+between its words, three syllables), a run of more than 1 000
 characters (a list, a table), or one with wiki markup in it
 ([[ ]] {{ }}, where a template failed: 9 000 of the Sanskrit wiki's
 sentences) is left out, and with --script, one of whose letters fewer
@@ -51,7 +55,7 @@ are named with commas between (`id,en`), their words counted together.
 
 With --shapes K, a sentence is left out once K sentences of its shape
 were kept, held out ones too: its four words after the first, or its
-last four, digits aside, which a bot's stubs share (three in four of
+last four, digits aside (of Yi's, its syllables), which a bot's stubs share (three in four of
 the Rinconada Bikol wiki's sentences are its towns' "A … usad na
 ikatlung klaseng banwaan sa probinsya kan …", "… agko di ragang 74.88
 kilometro kwadrado"), and which a model would learn and an eval measure
@@ -141,6 +145,10 @@ END_TAI_LE = re.compile(r"(?<=[.!?။])\s+|(?<=[。？！])\s*")
 # And the Sylheti wiki's, in Syloti Nagri, which ends its sentences with
 # ⁕ and its poetry marks as well as the danda.
 END_SYLOTI_NAGRI = re.compile(r"(?<=[.!?।॥⁕꠨꠩꠪꠫])\s+")
+# Yi's stops, Chinese's and Latin's, and the bars between links.
+END_YI = re.compile(r"(?<=[.!?。！？|])\s*")
+# A Yi syllable, each a word as osk_data::wordbreak cuts Nuosu's.
+YI_SYLLABLE = re.compile("[\ua000-\ua48c]")
 JOINERS = re.compile("[\u200c\u200d]")
 STEERING = re.compile("[\u200e\u200f\u202a-\u202e\u2066-\u2069\ufeff]")
 MARKUP = re.compile(r"\[\[|\]\]|\{\{|\}\}")
@@ -191,9 +199,12 @@ def sorani(text):
     return FINAL_AE.sub("\u06D5", text.replace("\u0647\u200c", "\u06D5").translate(SORANI_FOLD))
 
 
-def shapes(s):
+def shapes(s, yi=False):
     """A sentence's shapes: its four words after the first, and its last
-    four, each digit run one 0."""
+    four, each digit run one 0; with `yi`, its syllables'."""
+    if yi:
+        ys = YI_SYLLABLE.findall(s)
+        return "".join(ys[1:5]), "".join(ys[-4:])
     ws = DIGITS.sub("0", s).split()
     return " ".join(ws[1:5]), " ".join(ws[-4:])
 
@@ -238,6 +249,13 @@ def emilian(text):
     return [n.lower() for n in names], text
 
 
+def long_enough(s, script):
+    """Three words or more; of Yi, three syllables."""
+    if script == "YI":
+        return len(YI_SYLLABLE.findall(s)) >= 3
+    return len(s.split()) >= 3
+
+
 def sentences(text, script, neighbour=None, script_only=False, own=None, letters=None, markup=()):
     end = END
     if script == "MYANMAR":
@@ -246,8 +264,12 @@ def sentences(text, script, neighbour=None, script_only=False, own=None, letters
         end = END_TAI_LE
     elif script == "SYLOTI NAGRI":
         end = END_SYLOTI_NAGRI
+    elif script == "YI":
+        end = END_YI
     for s in end.split(STEERING.sub("", text)):
         s = " ".join(s.split())
+        if script == "YI" and ("|" in s or "Wp/" in s):
+            continue
         if MARKUP.search(s) or any(m in s for m in markup) or (neighbour and neighbourly(s, neighbour, 0.15)):
             continue
         if own and not any(w.lower() in own for w in WORDS.split(s)):
@@ -255,7 +277,7 @@ def sentences(text, script, neighbour=None, script_only=False, own=None, letters
         if letters and not any(c in letters for c in s.lower()):
             continue
         for s in script_runs(s, script) if script_only and script else [s]:
-            if len(s) <= 1000 and len(s.split()) >= 3 and (not script or in_script(s, script)):
+            if len(s) <= 1000 and long_enough(s, script) and (not script or in_script(s, script)):
                 yield s
 
 
@@ -306,7 +328,7 @@ def main():
         nonlocal stubs
         if not opts.shapes:
             return True
-        keys = shapes(s)
+        keys = shapes(s, opts.script == "YI")
         if any(shaped[k] >= opts.shapes for k in keys):
             stubs += 1
             return False

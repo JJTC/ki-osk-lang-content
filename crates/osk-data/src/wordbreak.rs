@@ -22,7 +22,8 @@
 //! script, have no word list of their own to be had: theirs is the
 //! syllables their text writes ([`Script::syllables`], made by
 //! `build-syllables`), so each syllable is a word, as each of Tibetan's
-//! is.
+//! is. Nuosu's Yi, whose every letter is a syllable, needs no list at all:
+//! each letter is a word ([`Script::Yi`]).
 
 use std::borrow::Cow;
 use std::fmt;
@@ -52,6 +53,10 @@ pub enum Script {
     /// but its asat a tone, which ends no consonant: ဒ် (like) is a
     /// syllable of its own, as Karen's syllables end in a vowel.
     KarenSyllables,
+    /// Yi, U+A000 to U+A48C, as Nuosu writes it: each letter a syllable,
+    /// each syllable a word, with no list (its iteration mark ꀕ too, a
+    /// syllable that repeats the one before).
+    Yi,
 }
 
 /// Khmer's coeng, which writes the consonant after it below the one before.
@@ -73,6 +78,7 @@ impl Script {
             "my" => Some(Self::Myanmar),
             "shn" | "mnw" | "blk" | "rki" => Some(Self::MyanmarSyllables),
             "ksw" => Some(Self::KarenSyllables),
+            "ii" => Some(Self::Yi),
             _ => None,
         }
     }
@@ -114,6 +120,7 @@ impl Script {
                     || (('\u{A9E0}'..='\u{A9FF}').contains(&c)
                         && !('\u{A9F0}'..='\u{A9F9}').contains(&c))
             }
+            Self::Yi => ('\u{A000}'..='\u{A48C}').contains(&c),
         }
     }
 
@@ -162,11 +169,14 @@ impl Script {
             Self::KarenSyllables => {
                 !is_combining_mark(c) && before != MYANMAR_VIRAMA && !is_joiner(c)
             }
+            // Every letter a syllable.
+            Self::Yi => true,
         }
     }
 
     /// Whether `c` alone is a word, though no list holds it: the
-    /// repetition mark ๆ (ໆ), written after the word it repeats.
+    /// repetition mark ๆ (ໆ), written after the word it repeats; and every
+    /// syllable of Yi.
     fn is_word_alone(self, c: char) -> bool {
         match self {
             Self::Thai => c == '\u{0E46}',
@@ -175,7 +185,15 @@ impl Script {
             Self::Myanmar | Self::MyanmarSyllables | Self::KarenSyllables => {
                 ('\u{104C}'..='\u{104F}').contains(&c)
             }
+            Self::Yi => true,
         }
+    }
+
+    /// Whether the script is cut with no list at all, each of its letters
+    /// a word alone: Yi.
+    #[must_use]
+    pub fn needs_no_list(self) -> bool {
+        self == Self::Yi
     }
 
     /// Whether the script's word lists are its syllables

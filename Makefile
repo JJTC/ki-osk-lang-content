@@ -71,7 +71,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
                  vai tdd \
                  gax mkw yaf \
-                 syl-Sylo hac
+                 syl-Sylo hac ii
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -138,10 +138,14 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # words, its Chinese and Latin words left out, every 10th article held
 # out). And Sylheti's, in Syloti Nagri (85 000 words; syl-Sylo, as
 # Sylheti's keyboard in the Bengali script has no model), every 10th
-# article held out.
+# article held out. And the Incubator's Nuosu, in Yi (84 000 syllables,
+# each a word: Yi writes no space between its words), its lists of links
+# and its bots' stubs left out, every 10th article held out, beside its
+# FineWeb-2 text; its keyboard offers the model's syllables through its
+# transliteration table, as Vai's does.
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
                    bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu zea \
-                   btm gpe igl rki vel bew nup glk bpy vai tdd syl-Sylo
+                   btm gpe igl rki vel bew nup glk bpy vai tdd syl-Sylo ii
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences
@@ -215,11 +219,12 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                  rmy rmn ojb \
                  am ti sgw \
-                 syl-Sylo hac
+                 syl-Sylo hac ii
 # (Amharic's, Tigrinya's and Sebat Bet Gurage's: what the Ge'ez composer
 # offers words from. And Sylheti's in Syloti Nagri, a news site's pages,
 # beside its wiki's text, and Gorani's, the Hawrami among FineWeb-2's
-# hac_Arab, whose keyboard had no model.)
+# hac_Arab, whose keyboard had no model. And Nuosu's, the pages of
+# FineWeb-2's und_Yiii that read as Nuosu, beside its wiki's text.)
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -231,8 +236,10 @@ WEB_WEIGHT ?= 5
 # stubs, counts its news site's pages once (WEB_EVEN_LANGS): at 1 its
 # wiki's held-out articles are saved 29.8% of their keystrokes (30.1%
 # with the wiki alone, 27.7% at 5, its right words changed 0.73%) and its
-# news's 49.8% (24.3% with the wiki alone; 51.8% at 2 and 5).
-WEB_EVEN_LANGS ?= syl-Sylo
+# news's 49.8% (24.3% with the wiki alone; 51.8% at 2 and 5). So does
+# Nuosu's, whose web text is half its wiki's: its wiki's held-out articles
+# are saved 38.5% of their keystrokes at 1, 37.2% at 5.
+WEB_EVEN_LANGS ?= syl-Sylo ii
 # And beside a small Tatoeba corpus, counted TATOEBA_WEIGHT times as
 # Hindi's is beside Dakshina's text: Assamese (14 000 sentences).
 FINEWEB_PLUS_LANGS ?= as
