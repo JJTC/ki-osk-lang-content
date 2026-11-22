@@ -191,7 +191,7 @@ sentences by `scripts/wikipedia-text.py`, and where a word in another
 script stands, that word left out (the references' and English
 passages' Latin): at most 400 000 a language.
 Every 20th article is held out of it, and the first 500 sentences of
-those are `eval/<lang>.txt`. Twenty more learn from the Wikimedia
+those are `eval/<lang>.txt`. Twenty-one more learn from the Wikimedia
 Incubator's test wikis, in its dump of the same date (each article's
 title starting with its wiki's prefix, `Wp/mag/`): Adilabad Gondi's,
 Khowar's and Montenegrin's alone (Montenegrin's Latin sentences, its few
@@ -204,10 +204,12 @@ Abron's, its sentences that write its ɛ or ɔ), Vai's, in its own
 script, its Latin words left out and every 10th article held out,
 Nuosu's, in Yi, each syllable a word, its lists of links and its bots'
 stubs left out and every 10th article held out, beside its FineWeb-2
-text, and Magahi's beside its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
+text, Eastern Pwo Karen's, in the Myanmar script, cut into syllables,
+its Latin words left out and every 10th article held out, and Magahi's
+beside its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
 Persian's, Indonesian's or English's own words is left out.
 **Wikipedia's text, and the Incubator's, is CC BY-SA 4.0**, share-alike:
-the packs of those fifty-seven languages, their models and that held-out
+the packs of those fifty-eight languages, their models and that held-out
 text carry those terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 
@@ -768,8 +770,9 @@ the syllables its language's FineWeb-2 text writes twice or more,
 listed by `build-syllables` (`make syllable-lists`). They are made from
 FineWeb-2, under its ODC-By 1.0 as above. `wordbreak/rki.txt`, which
 cuts Arakanese text, is the syllables its Wikipedia's text writes twice
-or more, listed the same way: it is made from that text, under its
-CC BY-SA 4.0 as above, share-alike.
+or more, listed the same way, and `wordbreak/kjp.txt`, which cuts
+Eastern Pwo Karen text, those its Incubator wiki's text writes: each is
+made from that text, under its CC BY-SA 4.0 as above, share-alike.
 
 ## Dialect flags
 

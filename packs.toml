@@ -227,6 +227,7 @@ khw = "Khowar"
 ki  = "Kikuyu"
 kiu = "Kirmanjki (Northern Zazaki)"
 kj  = "Kwanyama"
+kjp = "Eastern Pwo Karen"
 kk  = "Kazakh"
 kl  = "Greenlandic"
 km  = "Khmer"
@@ -574,7 +575,8 @@ sources = [
 # Shan's, Mon's, Sgaw Karen's and Pa'O's are their syllables, those their
 # FineWeb-2 text writes twice or more (build-syllables, `make
 # syllable-lists`): no list of their words is to be had, so each syllable
-# is a word to the trainer, the keyboard and the measure.
+# is a word to the trainer, the keyboard and the measure. Arakanese's and
+# Eastern Pwo Karen's are those their wikis write.
 [prediction.wordbreak.shn]
 licenses = [
   { name = "ODC-By 1.0 (FineWeb-2)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false },
@@ -613,6 +615,14 @@ licenses = [
 ]
 sources = [
   { name = "Arakanese's syllables in its Wikipedia's text (the CirrusSearch dump of 2026-11-08), as build-syllables lists them", url = "https://dumps.wikimedia.org/other/cirrus_search_index/20261108/", lock = "predict/rki", input = "wordbreak/rki.txt" },
+]
+
+[prediction.wordbreak.kjp]
+licenses = [
+  { name = "CC BY-SA 4.0 (Wikipedia)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true },
+]
+sources = [
+  { name = "Eastern Pwo Karen's syllables in its Wikimedia Incubator test wiki's text (the CirrusSearch dump of 2026-11-08), as build-syllables lists them", url = "https://dumps.wikimedia.org/other/cirrus_search_index/20261108/", lock = "predict/kjp", input = "wordbreak/kjp.txt" },
 ]
 
 # Wikipedia text of twelve South Asian languages, as the Dakshina dataset
@@ -1478,7 +1488,6 @@ kge = "Komering"
 khb = "Tai Lue"
 khg = "Khams Tibetan"
 kjg = "Khmu"
-kjp = "Eastern Pwo Karen"
 kmz = "Khorasani Turkic"
 knn = "Maharashtrian Konkani"
 ko  = "Korean, Hangul input"

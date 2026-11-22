@@ -13,7 +13,7 @@ Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, G
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
 keycaps. 681 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **477 languages** carry a prediction
+table below is the complete list; **478 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -480,7 +480,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `sck` | `sck` | Sadri (Devanagari) | in, Hindi's keys | LTR | —¹² | — | — |
 | `knn` | `knn` | Maharashtrian Konkani (Devanagari) | in · marathi, Marathi's keys | LTR | —¹² | — | — |
 | `kfr` | `kfr` | Kutchi (Gujarati script) | in · guj, Gujarati's keys | LTR | —¹² | — | — |
-| `kjp` | `kjp` | Eastern Pwo Karen (Myanmar script) | mm, ႋ ၜ ၠ for ဩ ၏ ၒ + long-press ၮ ၯ ၰ ၞ ၟ ၚ ဴ | LTR | —¹² | — | — |
+| `kjp` | `kjp` | Eastern Pwo Karen (Myanmar script) | mm, ႋ ၜ ၠ for ဩ ၏ ၒ + long-press ၮ ၯ ၰ ၞ ၟ ၚ ဴ¹² | LTR | **Full** (kjp)⁶ | — | — |
 | `tyz` | `tyz` | Tày | vn + long-press its two tones Vietnamese lacks (a̱ ȁ, e̱ ȅ…) | LTR | —¹² | — | — |
 | `mnp` | `mnp` | Northern Min Mâing-bă̤-ngṳ̌ | us + long-press â̤ á a̿ ă ǎ…, ṳ in its tones | LTR | —¹² | — | — |
 | `sty` | `sty` | Siberian Tatar Себер татар | ru · bak, Bashkir's keys + long-press ё | LTR | —¹² | — | — |
@@ -1197,7 +1197,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Languages with no Wikipedia yet have test wikis in the Wikimedia
    Incubator, whose dump (the same date's, CC BY-SA 4.0) holds them all,
    each article's title starting with its wiki's prefix (`Wp/mag/`).
-   Twenty are read: Adilabad Gondi's, in the Telugu script (2 301
+   Twenty-one are read: Adilabad Gondi's, in the Telugu script (2 301
    sentences from 355 articles, a lexicon of 12 803 words: keystroke
    savings 29.8% on 1 592 held-out words, 27.8% of them unknown),
    Khowar's (6 268 sentences from 2 482 articles, 21 670 words: 40.4% on
@@ -1249,7 +1249,21 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    and Space, as Keyman's keyboard has them typed, it saves 38.5% of the
    taps of 16 587 syllables (33.8% offered before the first key, 56.7%
    after one letter, 67.5% after two: the strip offers the syllables the
-   letters begin; 0.1% unknown). A bot's stubs are left out but three
+   letters begin; 0.1% unknown). And Eastern Pwo Karen's, in the Myanmar
+   script (since data 0.76.0; 1 411 sentences, 194 000 characters, their
+   Latin words left out, every 10th article held out), whose keyboard is
+   Burmese's keys with its own letters (note 12), cut into syllables as
+   Arakanese's is, its word list the 1 522 syllables its wiki writes twice
+   or more (`wordbreak/kjp.txt`). It writes the asat after an initial too,
+   before the syllable's vowel sign or medial (လ်ု, ဆ်ု, လ်ှ, သှ်ေ: 7 600
+   times), where Shan's and Burmese's asat ends a syllable (ဖိုင်, ထာင်,
+   25 000 times), so a consonant ends the syllable before only where its
+   asat, past its tones (ဝ့်), has no vowel sign or medial after it:
+   its three commonest syllables, လ်ု အ်ု ဆ်ု, would otherwise be glued
+   to the one before. Keystroke savings 41.7% on 8 005 held-out syllables
+   (40.8% with taps astray, 4.2% unknown, 0.53% of right syllables
+   changed); 3.2% of its letters are on long presses (ၮ ၯ ႉ, the digits).
+   A bot's stubs are left out but three
    of each shape (`wikipedia-text.py --shapes`: a sentence whose four
    words after the first, or last four, digits aside, three kept
    sentences had), which a model would learn and its eval measure as the
@@ -1298,8 +1312,8 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    used. Rakhine's and Sylheti's hold only Wiktionary, Wikivoyage or
    Wikinews pages, as Zeelandic's does (Zeelandic's and Rakhine's
    Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
-   their letters (note 12); Northern Thai and
-   Eastern Pwo Karen have keyboards (notes 10 and 12) and no model yet.
+   their letters (note 12); Northern Thai has keyboards (notes 10 and 12)
+   and no model yet, and Eastern Pwo Karen a model now (above).
 7. These three hundred and thirty-two models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
@@ -2375,8 +2389,9 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    likeliest after the one before first (n: ꆈ nuo, ꆀ nip…; nuo: ꆈ, then
    ꆇ nuox and ꆉ nuop, its other tones), then the letters as typed. Without them it saved
    20.3% of the taps (the next syllable alone), with them 38.5%.
-12. Eighty-eight keyboards of languages no text here predicts are another
-   language's keys in their name, as they write with those letters:
+12. Eighty-seven keyboards of languages no text here predicts, and Eastern
+   Pwo Karen's, which its wiki's text does since data 0.76.0 (note 6), are
+   another language's keys in their name, as they write with those letters:
    Amdo and Khams Tibetan on Tibetan's, in its spelling (Keyman's
    Tibetan keyboards name them among their languages); Sadri on Hindi's
    and Maharashtrian Konkani on Marathi's (Keyman's Devanagari keyboard
@@ -2763,7 +2778,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **477 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **478 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2775,7 +2790,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp
   new cdo hif egl cu zea btm gpe igl rki vel bew nup glk bpy tdd syl-Sylo** (Newari with GlotCC's news too; Arakanese cut into syllables), **hy fa** beside Tatoeba's, and
-  the Incubator's test wikis: **wsg khw cnr bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr vai ii** (note 6; Vai's words and Nuosu's syllables offered through their transliteration tables, note 11; Nuosu's beside FineWeb-2's text, note 7) ·
+  the Incubator's test wikis: **wsg khw cnr bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr vai ii kjp** (note 6; Vai's words and Nuosu's syllables offered through their transliteration tables, note 11; Nuosu's beside FineWeb-2's text, note 7; Eastern Pwo Karen's cut into syllables) ·
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my**, and of
   thirty-eight languages that had a keyboard and no model, **sw af sl zu sq kk uz bs
   ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba xh fo ceb mi su co ny sm sn ig st
@@ -2798,15 +2813,15 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 144 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 143 layouts, Montenegrin's in
   Cyrillic, the forty-eight whose letters are CLDR's exemplar characters
   (note 9: twenty-eight in Latin letters, twenty in the Arabic script,
   Devanagari and Bengali), the seventeen from Keyman's (note 10: twelve
   of a script of their own, Chakma to Osage, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
-  Tham, and the International Phonetic Alphabet's), the seventy-four on another language's keys (note 12: Northern
+  Tham, and the International Phonetic Alphabet's), the seventy-three on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian
-  Konkani, Kutchi, Tày and Eastern Pwo Karen, twelve whose letters their
+  Konkani, Kutchi and Tày, twelve whose letters their
   wikis give, Northern Min to Southern Balochi, and sixteen from smaller
   wikis and FineWeb-2's few pages, Harauti to Ma'anyan, thirteen
   whose script CLDR's or Wikidata's data names, Dari to Mahasu Pahari, four the

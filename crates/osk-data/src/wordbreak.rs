@@ -1,6 +1,6 @@
 //! Word lists for the languages written without spaces between words,
-//! Thai, Lao, Khmer and Burmese, and Shan, Mon, Sgaw Karen, Pa'O and
-//! Arakanese: what
+//! Thai, Lao, Khmer and Burmese, and Shan, Mon, Sgaw Karen, Pa'O,
+//! Arakanese and Eastern Pwo Karen: what
 //! [`crate::words::Splitter`] cuts their runs of letters into words with,
 //! the same way in the trainer, the keyboard and the measure.
 //!
@@ -18,9 +18,9 @@
 //! last of the syllable before. Lao's letters written two ways
 //! ([`lao_fold`]) are one in the list and in what is looked up in it.
 //!
-//! Shan, Mon, Sgaw Karen, Pa'O and Arakanese, written in the Myanmar
-//! script, have no word list of their own to be had: theirs is the
-//! syllables their text writes ([`Script::syllables`], made by
+//! Shan, Mon, Sgaw Karen, Pa'O, Arakanese and Eastern Pwo Karen, written
+//! in the Myanmar script, have no word list of their own to be had: theirs
+//! is the syllables their text writes ([`Script::syllables`], made by
 //! `build-syllables`), so each syllable is a word, as each of Tibetan's
 //! is. Nuosu's Yi, whose every letter is a syllable, needs no list at all:
 //! each letter is a word ([`Script::Yi`]).
@@ -53,6 +53,12 @@ pub enum Script {
     /// but its asat a tone, which ends no consonant: ဒ် (like) is a
     /// syllable of its own, as Karen's syllables end in a vowel.
     KarenSyllables,
+    /// Myanmar as Eastern Pwo Karen writes it, cut into syllables as Shan's
+    /// are, but its asat after an initial too, before the syllable's vowel
+    /// sign or medial (လ်ု, သှ်ေ): a consonant ends the syllable before only
+    /// where its asat ends it, past its tones (ဖိုင်, ဝ့်), no vowel sign
+    /// or medial after that asat ([`pwo_final`]).
+    PwoKarenSyllables,
     /// Yi, U+A000 to U+A48C, as Nuosu writes it: each letter a syllable,
     /// each syllable a word, with no list (its iteration mark ꀕ too, a
     /// syllable that repeats the one before).
@@ -78,6 +84,7 @@ impl Script {
             "my" => Some(Self::Myanmar),
             "shn" | "mnw" | "blk" | "rki" => Some(Self::MyanmarSyllables),
             "ksw" => Some(Self::KarenSyllables),
+            "kjp" => Some(Self::PwoKarenSyllables),
             "ii" => Some(Self::Yi),
             _ => None,
         }
@@ -114,7 +121,7 @@ impl Script {
                     || matches!(c, '\u{200C}' | '\u{200D}')
             }
             // Extended-A, and Extended-B but its Tai Laing digits.
-            Self::MyanmarSyllables | Self::KarenSyllables => {
+            Self::MyanmarSyllables | Self::KarenSyllables | Self::PwoKarenSyllables => {
                 Self::Myanmar.holds(c)
                     || ('\u{AA60}'..='\u{AA7F}').contains(&c)
                     || (('\u{A9E0}'..='\u{A9FF}').contains(&c)
@@ -134,8 +141,11 @@ impl Script {
     /// syllable (the န of ကန်, the မ of the kinzi's own). Shan's, Mon's,
     /// Karen's and Pa'O's syllables start on a consonant stacked over the
     /// next (the ပ of Mon's ပ္ဍဲ), though, but for Karen's, whose asat is a
-    /// tone, not on one the asat ends a syllable with.
-    fn may_start(self, before: char, c: char, after: Option<char>) -> bool {
+    /// tone, not on one the asat ends a syllable with; Eastern Pwo Karen's
+    /// on one whose asat an initial's vowel sign follows (the လ of လ်ု).
+    /// `rest` is what follows `c` in its run.
+    fn may_start(self, before: char, c: char, rest: &str) -> bool {
+        let after = rest.chars().next();
         match self {
             Self::Thai => {
                 !is_combining_mark(c)
@@ -169,6 +179,12 @@ impl Script {
             Self::KarenSyllables => {
                 !is_combining_mark(c) && before != MYANMAR_VIRAMA && !is_joiner(c)
             }
+            Self::PwoKarenSyllables => {
+                !is_combining_mark(c)
+                    && before != MYANMAR_VIRAMA
+                    && !is_joiner(c)
+                    && !pwo_final(rest)
+            }
             // Every letter a syllable.
             Self::Yi => true,
         }
@@ -182,9 +198,10 @@ impl Script {
             Self::Thai => c == '\u{0E46}',
             Self::Lao => c == '\u{0EC6}',
             Self::Khmer => c == '\u{17D7}',
-            Self::Myanmar | Self::MyanmarSyllables | Self::KarenSyllables => {
-                ('\u{104C}'..='\u{104F}').contains(&c)
-            }
+            Self::Myanmar
+            | Self::MyanmarSyllables
+            | Self::KarenSyllables
+            | Self::PwoKarenSyllables => ('\u{104C}'..='\u{104F}').contains(&c),
             Self::Yi => true,
         }
     }
@@ -197,10 +214,14 @@ impl Script {
     }
 
     /// Whether the script's word lists are its syllables
-    /// ([`Self::syllables`]): Shan's, Mon's, Sgaw Karen's, Pa'O's.
+    /// ([`Self::syllables`]): Shan's, Mon's, Sgaw Karen's, Pa'O's,
+    /// Arakanese's, Eastern Pwo Karen's.
     #[must_use]
     pub fn cut_into_syllables(self) -> bool {
-        matches!(self, Self::MyanmarSyllables | Self::KarenSyllables)
+        matches!(
+            self,
+            Self::MyanmarSyllables | Self::KarenSyllables | Self::PwoKarenSyllables
+        )
     }
 
     /// Where in `run` a word may start ([`Self::may_start`]), in order,
@@ -208,10 +229,9 @@ impl Script {
     fn bounds(self, run: &str) -> Vec<usize> {
         let mut bounds = Vec::new();
         let mut before = None;
-        let mut chars = run.char_indices().peekable();
-        while let Some((at, c)) = chars.next() {
-            let after = chars.peek().map(|&(_, a)| a);
-            if before.is_none_or(|b| self.may_start(b, c, after)) {
+        for (at, c) in run.char_indices() {
+            let rest = &run[at + c.len_utf8()..];
+            if before.is_none_or(|b| self.may_start(b, c, rest)) {
                 bounds.push(at);
             }
             before = Some(c);
@@ -225,12 +245,43 @@ impl Script {
     /// The syllables of `run`, a run of this script's characters
     /// ([`Self::holds`]): what lies between the places a word may start,
     /// as byte ranges of it, in order. The word list of a language cut
-    /// into syllables (Shan, Mon, Sgaw Karen, Pa'O, Arakanese) is those its
-    /// text writes.
+    /// into syllables (Shan, Mon, Sgaw Karen, Pa'O, Arakanese, Eastern Pwo
+    /// Karen) is those its text writes.
     #[must_use]
     pub fn syllables(self, run: &str) -> Vec<Range<usize>> {
         self.bounds(run).windows(2).map(|w| w[0]..w[1]).collect()
     }
+}
+
+/// Whether the consonant `rest` follows ends the syllable before, as
+/// Eastern Pwo Karen writes it: the marks after it reach an asat past its
+/// tones alone (the င of ဖိုင်, the ဝ of ခဝ့်), and no vowel sign or medial
+/// follows that asat, as one follows an initial's (the လ of လ်ု, the
+/// ဆ of ဆ်ု, the လ of လ်ှ). A virama after it is a kinzi's, which ends the
+/// syllable before too (မင်္ဂလာ).
+fn pwo_final(rest: &str) -> bool {
+    let mut marks = rest.chars().take_while(|&c| is_combining_mark(c));
+    loop {
+        match marks.next() {
+            Some(ASAT) => break,
+            Some(m) if is_myanmar_tone(m) => {}
+            _ => return false,
+        }
+    }
+    marks
+        .next()
+        .is_none_or(|m| m == MYANMAR_VIRAMA || m == ASAT || is_myanmar_tone(m))
+}
+
+/// The Myanmar script's tone marks, which follow a syllable's vowel and
+/// final: Burmese's dot below and visarga, Sgaw and Western Pwo Karen's,
+/// Shan's and Eastern Pwo Karen's council tones (ႋ ႉ ႇ), Khamti's, Aiton's
+/// and Pa'O's (ꩻ).
+fn is_myanmar_tone(c: char) -> bool {
+    matches!(c,
+        '\u{1037}' | '\u{1038}' | '\u{1063}' | '\u{1064}' | '\u{1069}'..='\u{106D}'
+        | '\u{1087}'..='\u{108D}' | '\u{108F}' | '\u{109A}' | '\u{109B}'
+        | '\u{AA7B}'..='\u{AA7D}')
 }
 
 /// The zero-width joiner or non-joiner, which joins or parts the letters
@@ -675,6 +726,19 @@ mod tests {
             assert_eq!(Script::of_lang(lang), Some(s), "{lang}");
         }
         assert_eq!(Script::of_lang("ksw"), Some(k));
+        // Eastern Pwo Karen: a final's asat, past its tone (ဝ့်), ends no
+        // syllable; an initial's, before its vowel sign or medial, starts
+        // one (လ်ု, ဆ်ု, လ်ှ, သှ်ေ); one after a vowel is its tone (ဍါ်).
+        let p = Script::PwoKarenSyllables;
+        assert_eq!(Script::of_lang("kjp"), Some(p));
+        assert_eq!(syllables(p, "ဖိုင်ဏှ်"), ["ဖိုင်", "ဏှ်"]);
+        assert_eq!(syllables(p, "ဍောဟ်လ်ုထုင်း"), ["ဍောဟ်", "လ်ု", "ထုင်း"]);
+        assert_eq!(syllables(p, "ခဝ့်ဆ်ုသှ်ေ"), ["ခဝ့်", "ဆ်ု", "သှ်ေ"]);
+        assert_eq!(syllables(p, "ဏံင်းအ်ှဍါ်"), ["ဏံင်း", "အ်ှ", "ဍါ်"]);
+        assert_eq!(syllables(p, "မင်္ဂလာ"), ["မင်္ဂ", "လာ"]);
+        // Shan's rule glues the initial on to the syllable before.
+        assert_eq!(syllables(s, "ဍောဟ်လ်ု"), ["ဍောဟ်လ်ု"]);
+        assert!(p.cut_into_syllables() && p.holds('ၮ') && !p.holds('။'));
         // Their word lists are their syllables: a syllable no list holds
         // runs on with the next unknown one, as a word does.
         let list = WordList::from_words(["ၵႂၢမ်း", "တႆး"]);

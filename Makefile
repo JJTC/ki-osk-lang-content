@@ -71,7 +71,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
                  vai tdd \
                  gax mkw yaf \
-                 syl-Sylo hac ii
+                 syl-Sylo hac ii kjp
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -142,10 +142,12 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # each a word: Yi writes no space between its words), its lists of links
 # and its bots' stubs left out, every 10th article held out, beside its
 # FineWeb-2 text; its keyboard offers the model's syllables through its
-# transliteration table, as Vai's does.
+# transliteration table, as Vai's does. And the Incubator's Eastern Pwo
+# Karen, in the Myanmar script (194 000 characters), cut into syllables
+# with the asat its initials write too (လ်ု), every 10th article held out.
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
                    bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu zea \
-                   btm gpe igl rki vel bew nup glk bpy vai tdd syl-Sylo ii
+                   btm gpe igl rki vel bew nup glk bpy vai tdd syl-Sylo ii kjp
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences
@@ -725,13 +727,13 @@ word-lists:
 	./scripts/fetch-word-lists.sh
 
 # The languages cut into syllables (osk_data::wordbreak), no list of whose
-# words is to be had: Shan, Mon, Sgaw Karen, Pa'O and Arakanese. Their
-# word lists (wordbreak/<lang>.txt, committed) are the syllables their
-# FineWeb-2 text writes twice or more (Arakanese's, its wiki's:
-# SYLLABLE_WIKI_LANGS), made from it (fetch-fineweb, fetch-wikipedia)
-# before their models are.
-SYLLABLE_LANGS ?= shn mnw ksw blk rki
-SYLLABLE_WIKI_LANGS ?= rki
+# words is to be had: Shan, Mon, Sgaw Karen, Pa'O, Arakanese and Eastern
+# Pwo Karen. Their word lists (wordbreak/<lang>.txt, committed) are the
+# syllables their FineWeb-2 text writes twice or more (Arakanese's and
+# Eastern Pwo Karen's, their wikis': SYLLABLE_WIKI_LANGS), made from it
+# (fetch-fineweb, fetch-wikipedia) before their models are.
+SYLLABLE_LANGS ?= shn mnw ksw blk rki kjp
+SYLLABLE_WIKI_LANGS ?= rki kjp
 
 .PHONY: syllable-lists
 syllable-lists:

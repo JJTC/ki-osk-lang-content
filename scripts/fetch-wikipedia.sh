@@ -36,7 +36,8 @@
 # its own script (its Latin words left out), whose keyboard types it
 # through its transliteration table, as Nuosu's does, in Yi (beside its
 # FineWeb-2 text; its lists of links and its bots' stubs left out, each
-# syllable a word).
+# syllable a word), and Eastern Pwo Karen, in the Myanmar script (its
+# Latin words left out, cut into syllables).
 #
 # The text comes from each wiki's CirrusSearch dump (Wikimedia's
 # cirrus_search_index, an article a JSON document whose "text" is its
@@ -146,6 +147,7 @@ rkt  Wp/rkt/  BENGALI     -      --shapes 3 --holdout 10
 abr  Wp/abr/  LATIN       -      --shapes 3 --holdout 10 --letters ɛɔ
 vai  Wp/vai/  VAI         -      --shapes 3 --holdout 10 --script-only
 ii   Wp/ii/   YI          -      --shapes 3 --holdout 10 --script-only
+kjp  Wp/kjp/  MYANMAR     -      --shapes 3 --holdout 10 --script-only
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

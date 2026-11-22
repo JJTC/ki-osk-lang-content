@@ -4244,6 +4244,24 @@
         "words": "2"
       }
     },
+    "predict/kjp": {
+      "encoder": "525f0277cc19-dirty",
+      "inputs": {
+        "wikipedia/kjp.txt": "78bec96b84337bca1b07279ad53bb572425354c13c0ff453f6c13aff27c610e6",
+        "wordbreak/kjp.txt": "391d3c891a26accbfd67dd5cd507eec288a132c7206cb699a2898341859294c6"
+      },
+      "outputs": {
+        "predict/kjp.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/kjp.fst": "39f26decf5e44264ed7ff49a2fa5ee2360bbe9337572bbb789e7a65883aaa33d",
+        "predict/kjp.ngram.bin": "b9acc88b138198f85549047c9e0c9c8019990d52f711a922e48c390472862ba7"
+      },
+      "recipe": {
+        "ngram_keep": "60000",
+        "start_keep": "5000",
+        "vocab_size": "20000",
+        "words": "2"
+      }
+    },
     "predict/kk": {
       "encoder": "f3f9377d8755-dirty",
       "inputs": {
