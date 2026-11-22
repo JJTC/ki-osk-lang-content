@@ -353,12 +353,15 @@ fn southern_luris_keyboard_taps_its_vowels() {
 }
 
 /// The letters the keyboards of Gboard's languages that had none take
-/// from Wiktionary's entries and their test wikis are first on their
-/// keys' long presses (scripts/build-derived-layouts.py): Nauruan's ñ,
-/// Izon's dotted vowels and its tones (on Igbo's keys), Gayo's ö, Parauk's
-/// tones.
+/// from their texts (Wiktionary's entries, their test wikis, Wikipedia's
+/// articles) are first on their keys' long presses
+/// (scripts/build-derived-layouts.py): Nauruan's ñ, Izon's dotted vowels
+/// and its tones (on Igbo's keys), Gayo's ö, Parauk's tones; Kohistani
+/// Shina's ڦ ڱ and its rising tone's ٗ (on Shina's keys, ٗ on the Shift
+/// view's damma), Kuhmareyi's ڌ ۊ ٱ ێ (on Persian's), Wanetsi's ۀ ں (on
+/// Pashto's), Bangala's ɓ and á (on Lingala's) and Western Cham's â ă.
 #[test]
-fn letters_from_wiktionary_lead_their_long_presses() {
+fn letters_their_texts_write_lead_their_long_presses() {
     for (id, key, first) in [
         ("nau", "n", "ñ"),
         ("nau", "a", "â"),
@@ -369,17 +372,27 @@ fn letters_from_wiktionary_lead_their_long_presses() {
         ("gay", "o", "ö"),
         ("gay", "e", "é"),
         ("prk", "i", "í"),
+        ("plk", "ف", "ڦ"),
+        ("plk", "گ", "ڱ"),
+        ("plk", "\u{64f}", "\u{657}"),
+        ("fay", "د", "ڌ"),
+        ("fay", "و", "ۊ"),
+        ("fay", "ا", "ٱ"),
+        ("fay", "ی", "ێ"),
+        ("wne", "ه", "ۀ"),
+        ("wne", "ن", "ں"),
+        ("bxg", "b", "ɓ"),
+        ("bxg", "a", "á"),
+        ("cja-latn", "a", "â"),
+        ("cja-latn", "A", "Â"),
     ] {
         let def = load(id);
-        let base = def
+        // The key on the first view that has it: a letter's on the base
+        // view, a vowel mark's on the Shift view.
+        let k = def
             .views
             .iter()
-            .find(|v| v.id == ViewId::Base)
-            .expect("a base view");
-        let k = base
-            .rows
-            .iter()
-            .flat_map(|r| r.keys.iter())
+            .flat_map(|v| v.rows.iter().flat_map(|r| r.keys.iter()))
             .find(|k| k.label == key)
             .unwrap_or_else(|| panic!("{id}: no {key} key"));
         assert!(

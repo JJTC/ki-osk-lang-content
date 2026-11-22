@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**692 layouts**: 629 keyboard layouts (RTL: ar he fa + Urdu, Western
+**708 layouts**: 645 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Gorani, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Lari, Maba, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
+Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Gorani, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Kohistani Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Lari, Kuhmareyi, Takestani, Maba, Mehri, Southeastern and Southwestern Pashayi, Wanetsi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern and Eastern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 691 are here; the numeric keypad is built into ki-osk. The
+keycaps. 707 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **478 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -575,6 +575,22 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `bgx` | `bgx` | Balkan Gagauz Turkish Rumelice | tr, Turkish's keys | LTR | —¹² | — | — |
 | `lrl` | `lrl` | Lari اچمی | ir, Persian's keys | **RTL** | —¹² | — | — |
 | `btz` | `btz` | Batak Alas-Kluet | id, Indonesian's keys | LTR | —¹² | — | — |
+| `nut` | `nut` | Nung Nùng | vn, Vietnamese's keys | LTR | —¹² | — | — |
+| `plk` | `plk` | Kohistani Shina ݜݨیاٗ کستِین٘و | pk, Shina's keys + long-press ڦ ڱ ٗ first | **RTL** | —¹² | — | — |
+| `fay` | `fay` | Kuhmareyi کوهمَره‌ای (Southwestern Fars) | ir, Persian's keys + long-press ڌ ۊ ۆ ۉ ٱ ێ ؽ ݩ ٛ first | **RTL** | —¹² | — | — |
+| `wne` | `wne` | Wanetsi وڼېڅي | af · ps, Pashto's keys + long-press ۀ ں first | **RTL** | —¹² | — | — |
+| `gdq` | `gdq` | Mehri مهريّت | ara, Arabic's keys | **RTL** | —¹² | — | — |
+| `tks` | `tks` | Takestani تاتی | ir, Persian's keys | **RTL** | —¹² | — | — |
+| `bgp` | `bgp` | Eastern Balochi بلوچی | pk, Balochi's keys | **RTL** | —¹² | — | — |
+| `psh` | `psh` | Southwestern Pashayi | Southeastern Pashayi's keys (Keyman's pashai) | **RTL** | —¹² | — | — |
+| `cja` | `cja` | Western Cham ꨌꩌ ꨚꨭꩉ (Cham script) | Eastern Cham's keys (Keyman's sil_cham_phonetic) | LTR | —¹² | — | — |
+| `cja-latn` | `cja` | Western Cham Cam pur (Latin letters) | us + long-press â ă first | LTR | —¹² | — | — |
+| `mmr` | `mmr` | Xong Dut Xongb | us | LTR | —¹² | — | — |
+| `wes` | `wes` | Cameroon Pidgin Kamtok | us | LTR | —¹² | — | — |
+| `bah` | `bah` | Bahamian Creole Bahamian | us | LTR | —¹² | — | — |
+| `trf` | `trf` | Trinidadian Creole | us | LTR | —¹² | — | — |
+| `sxu` | `sxu` | Upper Saxon Obersächsisch | de, German's keys | LTR | —¹² | — | — |
+| `bxg` | `bxg` | Bangala Ngala | us, Lingala's keys + long-press á ɓ first | LTR | —¹² | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -2399,7 +2415,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    likeliest after the one before first (n: ꆈ nuo, ꆀ nip…; nuo: ꆈ, then
    ꆇ nuox and ꆉ nuop, its other tones), then the letters as typed. Without them it saved
    20.3% of the taps (the next syllable alone), with them 38.5%.
-12. Ninety-seven keyboards of languages no text here predicts, and Eastern
+12. A hundred and thirteen keyboards of languages no text here predicts, and Eastern
    Pwo Karen's, which its wiki's text does since data 0.76.0 (note 6), are
    another language's keys in their name, as they write with those letters:
    Amdo and Khams Tibetan on Tibetan's, in its spelling (Keyman's
@@ -2559,8 +2575,9 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    گ's, ݩ on ن's, ھ on ه's and the mark ٛ on the full stop's: a long
    press in a quarter of its words (in half on Persian's keys as they
    are). Noto Sans Arabic draws every key (DejaVu Sans lacks ݖ ۿ ۊ ٛ ݩ
-   ۏ). It has no model: its wiki is too small, and Eastern Balochi's,
-   half of it Latin transliteration, is not used. And ten of Gboard's
+   ۏ). It has no model: its wiki is too small, as is Eastern Balochi's,
+   half of it Latin transliteration, whose words in the Arabic script give
+   Eastern Balochi's keyboard its letters (below). And ten of Gboard's
    languages that had no keyboard here (since data 0.77.0) take their
    letters from Wiktionary's entries (en.wiktionary.org's lemmas) and their
    Incubator test wikis' few pages, too little text to learn from: Nauruan
@@ -2583,13 +2600,51 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    long press); and Batak Alas-Kluet on Indonesian's keys as they are,
    whose letters its test wiki's articles write. They are named as their
    texts write their names (Dorerin Naoero, Creolese, Lox Vax, Gayo, Ịzọn,
-   Rumelice, اچمی), in English otherwise. Not made: Western Cham, whose
-   entries and test wiki write it in three scripts (Latin, the Arabic
-   script, Cham's), not settling which its keyboard is; Mehri, whose
-   entries are a scholar's transcription (ə ḥ ṭ ʕ), not how it is written;
-   Bahamian and Trinidadian Creole, Bangala and Anaang (two, none, six
-   and three entries); Upper Saxon, Mehri's and Kohistani Shina's test
-   wikis hold no text of theirs. Nine of this note's keyboards now
+   Rumelice, اچمی), in English otherwise. And fifteen more of Gboard's
+   (since data 0.78.0), on sixteen keyboards, take their letters from
+   what their texts write, too little to learn from: Nung, in SIL's
+   spelling of Nùng Phạn Slinh (Wiktionary's 55 entries: chéht, slíhp), on
+   Vietnamese's keys as they are; Kohistani Shina, whose 316 entries in
+   the Arabic script and Wikipedia's article on its alphabet write ڦ and
+   ڱ, its own letters, and the inverted damma ٗ of its rising tone (in 37
+   entries), on Shina's keys with ڦ ڱ first on the long presses of ف and
+   گ and ٗ on the Shift view's damma's; Southwestern Fars (Kuhmareyi, as
+   Gboard names its keyboard), whose 115 entries write Persian's letters
+   and whose Kuhmareyi forms in Persian Wikipedia's article write ڌ ۊ ٱ ٛ
+   (in 112 of its 406 words, ڌ and ۊ 27 times each) and ۆ ێ ؽ ݩ ۉ, on
+   Persian's keys with those first on the long presses of د و ا ی ن and
+   ٛ on the full stop's, as Southern Luri's are; Wanetsi, whose poem and
+   sentences in Wikipedia's article (547 words) are in the Pashto
+   alphabet with ۀ (نۀ, ماندۀ) and ں for its nasal vowels (بويں), on
+   Pashto's keys with ۀ first on ه's long press and ں on ن's; Mehri on
+   Arabic's keys as they are, the unmodified Arabic alphabet being the
+   commonest way it is written (Wikipedia's article); Takestani on
+   Persian's keys as they are, as Persian Wikipedia's article writes its
+   words (بُن, تیج, خوآکه); Eastern Balochi on Balochi's keys as they
+   are, which type all 243 words of its test wiki in the Arabic script
+   (ث ذ its dental fricatives: بیث, سیاذی); Southwestern Pashayi on
+   Southeastern Pashayi's keys, the one alphabet drawn up for the Pashai
+   languages since 2003 (Persian Wikipedia's article on them), no text of
+   its own being found; Western Cham, as Gboard has it, in the Cham
+   script, which Wikipedia writes its name in (ꨌꩌ ꨚꨭꩉ, Cam pur), on
+   Eastern Cham's keys, and in Latin letters on the US keys with â ă
+   first on a's long press, as its 30 Latin entries write (anâk, hlăk),
+   both in Western Cham's pack; Xong on the US keys as they are, its 1956
+   alphabet's letters, its tones written with letters (b x d l t s), as
+   Wikipedia's article and its entries write; Cameroon Pidgin (22 entries,
+   and the spellings Wikipedia's article describes: ey ow, ch j ny ng),
+   Bahamian Creole (das ya book?) and Trinidadian Creole (allyuh) on the
+   US keys as they are; Upper Saxon on German's keys, as German
+   Wikipedia's article writes its words (bäse, Biehne); and Bangala,
+   Lingala's sister language, on Lingala's keys with á (makilá, sánza)
+   and ɓ (Wikipedia's ɓisu) first on the long presses of a and b. They are
+   named as Wikipedia's articles (ݜݨیاٗ کستِین٘و, کوهمَره‌ای, وڼېڅي,
+   مهريّت, ꨌꩌ ꨚꨭꩉ, Cam pur) and LinguaMeta (Nùng, تاتی, بلوچی, Dut
+   Xongb, Kamtok, Bahamian, Trinidadian Creole, Obersächsisch, Ngala)
+   write their names, Southwestern Pashayi in English, as Southeastern
+   Pashayi's keys are. Not made: Anaang (three entries), Ha, and Northern
+   and Southern Betsimisaraka Malagasy, whose letters no source here
+   gives. Nine of this note's keyboards now
    have models from SMOL's translations (note 14): Ahirani's, Bundeli's,
    Kumaoni's, Kurukh's, Nimadi's, Mundari's, Garo's in Latin letters,
    Mandeali's and Surjapuri's; Bishnupriya Manipuri's has one from its
@@ -2852,13 +2907,13 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 153 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 169 layouts, Montenegrin's in
   Cyrillic, the forty-eight whose letters are CLDR's exemplar characters
   (note 9: twenty-eight in Latin letters, twenty in the Arabic script,
   Devanagari and Bengali), the seventeen from Keyman's (note 10: twelve
   of a script of their own, Chakma to Osage, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
-  Tham, and the International Phonetic Alphabet's), the eighty-three on another language's keys (note 12: Northern
+  Tham, and the International Phonetic Alphabet's), the ninety-nine on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian
   Konkani, Kutchi and Tày, twelve whose letters their
   wikis give, Northern Min to Southern Balochi, and sixteen from smaller
@@ -2869,9 +2924,11 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   wikis, Central Malay, Komering and Kutai Malay, six whose script
   LinguaMeta names, Godwari to Urum, six whose letters FineWeb-2's few
   pages give, Northwest Gbaya to Eastern Oromo, Southern Luri, whose
-  test wiki's two spellings give its letters, and ten of Gboard's that
-  had none, Nauruan to Batak Alas-Kluet, whose Wiktionary entries and
-  test wikis give theirs), the two whose letters the African
+  test wiki's two spellings give its letters, ten of Gboard's that had
+  none, Nauruan to Batak Alas-Kluet, whose Wiktionary entries and test
+  wikis give theirs, and sixteen for fifteen more of them, Nung to
+  Bangala, whose Wiktionary entries, Wikipedia's articles and Eastern
+  Balochi's test wiki give theirs), the two whose letters the African
   Storybook's stories give, Bukusu and Malawi Lomwe (note 13), Pulaar's,
   on Fula's keys with the letters SMOL's Pulaar translations write
   (note 14), and
@@ -2898,7 +2955,7 @@ drives which face loads:
 |---|---|---|
 | `cjk` | a glyf Han/Kana/Hangul face (wqy-zenhei, Droid, …) | the 5 CJK IMEs |
 | `thai` | Noto Sans Thai | `th nod-thai tts kxm sou` |
-| `arabic` | Noto Sans Arabic | `ur ps sd ug` and 35 more, Southern Luri's (`luz`) among them, whose letters DejaVu Sans lacks (ar/he/fa use DejaVu) |
+| `arabic` | Noto Sans Arabic | `ur ps sd ug` and 40 more, Southern Luri's (`luz`) and Kuhmareyi's (`fay`) among them, whose letters DejaVu Sans lacks (ar/he/fa use DejaVu) |
 | `devanagari`…`myanmar` | `NotoSans<Script>-Regular.ttf` | the 15 Tier-3 layouts |
 | `syriac` | Noto Sans Syriac | `syr cld` (RTL) |
 | `tifinagh` | Noto Sans Tifinagh | `ber` |
@@ -2910,7 +2967,7 @@ drives which face loads:
 | `canadian_aboriginal` | Noto Sans Canadian Aboriginal | `iu ojb` (UCAS syllabics) |
 | `meetei_mayek` | Noto Sans Meetei Mayek | `mni` (syllabary) |
 | `coptic` | Noto Sans Coptic | `cop` |
-| `chakma` `hanifi_rohingya` `tai_viet` `kayah_li` `lisu` `lepcha` `saurashtra` `bamum` `cham` `tai_le` `new_tai_lue` `osage` | Noto Sans Chakma, Hanifi Rohingya, Tai Viet, Kayah Li, Lisu, Lepcha, Saurashtra, Bamum, Cham, Tai Le, New Tai Lue, Osage | `ccp rhg blt kyu lis lep saz bax cjm tdd khb osa` (Keyman's; `kjg` draws with Lao's) |
+| `chakma` `hanifi_rohingya` `tai_viet` `kayah_li` `lisu` `lepcha` `saurashtra` `bamum` `cham` `tai_le` `new_tai_lue` `osage` | Noto Sans Chakma, Hanifi Rohingya, Tai Viet, Kayah Li, Lisu, Lepcha, Saurashtra, Bamum, Cham, Tai Le, New Tai Lue, Osage | `ccp rhg blt kyu lis lep saz bax cjm tdd khb osa` (Keyman's; `kjg` draws with Lao's), and `cja`, Western Cham's on Eastern Cham's keys |
 | `vai` `yi` | Noto Sans Vai, Noto Sans Yi | `vai ii` (the composer's syllables on the strip and the preedit) |
 | `tai_tham` | Noto Sans Tai Tham | `nod` (Keyman's) |
 | `syloti_nagri` | Noto Sans Syloti Nagri | `syl-sylo` (Keyman's) |
@@ -3137,6 +3194,7 @@ keys):
 | `gya` `mwm` `mcn` `mpg` `rim` `hae` | keys for the letters their words write most, from FineWeb-2's pages of them (note 12): Northwest Gbaya's ɛ and apostrophe at the home row's end, ɔ and the cedilla of its nasal vowels in place of x and q, its tones and ŋ ɓ ɗ first on the long presses; Sar's tone marks, the macron and the acute (the tilde below on its long press), at the home row's end, ə ɔ in place of q x, ɓ on b; Masana's ɗ ŋ ɓ ɦ on d n b h and an apostrophe key; Marba's â á ä à î ï ì ê ô û and a ’ key (its implosive d’); Nyaturu's ë and apostrophe keys, ü on u; Eastern Oromo's ’ key (on Oromo's keys) | each its own |
 | `luz` Southern Luri | the letters its test wiki's spelling of every vowel writes most, ة ە ݖ ۿ, keys of their own in place of ث ذ ظ ض (on their long presses); ۊ ۋ ۏ on و, ڤ on ف, ڍ ڌ on د, ڲ on گ, ݩ on ن, ھ on ه and the mark ٛ on the full stop (on Persian's keys; note 12) | `luz` |
 | `nau` `prk` `gay` `ijc` | Nauruan's â and ñ on the long presses of a and n (on the US keys); Parauk's tones, á ā é ē í ī ó ō ú ū first on its vowels', and a key at the home row's end for the colon it writes inside its words (cia:, Ye:sux); Gayo's é è first on e's and ö on o's (on Indonesian's keys); Izon's ẹ first on e's and the acute and grave tones on every vowel's (on Igbo's keys, ị ọ ụ first on theirs) (note 12) | `nau` `prk` `gay` `ijc` |
+| `plk` `fay` `wne` `cja-latn` `bxg` | Kohistani Shina's ڦ ڱ first on the long presses of ف and گ and its rising tone's ٗ on the Shift view's damma (on Shina's keys); Kuhmareyi's ڌ on د, ۊ ۆ ۉ on و, ٱ on ا, ێ ؽ on ی, ݩ on ن and the mark ٛ on the full stop (on Persian's keys); Wanetsi's ۀ on ه and ں on ن (on Pashto's keys); Western Cham's â ă on a (on the US keys); Bangala's á on a and ɓ on b (on Lingala's keys) (note 12) | `plk` `fay` `wne` `cja` `bxg` |
 | `prs` Dari | the Pashto letters CLDR's Dari lists, ټ on ت, ځ څ on ح, ډ on د, ړ ږ on ر, ښ on س, ګ on گ, ڼ on ن, and ى after ئ ي on ی (on Persian's keys; note 12) | `prs` |
 | `bpy` Bishnupriya Manipuri | ৱ on ব (on Bengali's keys; note 12) | `bpy` |
 | `tdx` `hvn` `quy` | Tandroy-Mahafaly Malagasy's à è é ò ì ỳ (on Malagasy's keys), Hawu's è (on the US keys) and Ayacucho Quechua's á é (on Quechua's) first on the long presses; Hawu's saltillo ꞌ, its glottal stop, a key of its own at the home row's end (note 8) | each its own |

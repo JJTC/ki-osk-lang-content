@@ -744,6 +744,43 @@ DERIVED = [
     ("bgx", "tr", "Rumelice", {}, {"model": False}),
     ("lrl", "fa", "اچمی", {}, {"model": False}),
     ("btz", "id", "Batak Alas-Kluet", {}, {"model": False}),
+    # Fifteen more of Gboard's languages that had no keyboard, on the keys
+    # of the language whose letters they write, their own letters first on
+    # the long presses, as their texts write them: Wiktionary's entries
+    # (Nung's 55, in SIL's Vietnamese-letter spelling, chéht, slíhp;
+    # Kohistani Shina's 316 in the Arabic script, ڦ ڱ and the rising tone's
+    # ٗ among them; Southwestern Fars' 115, Persian's letters; Cameroon
+    # Pidgin's 22; Western Cham's 30 in Latin letters, â ă; Xong's, its
+    # tones letters), Wikipedia's articles (Kohistani Shina's alphabet, ڦ
+    # and ڱ its own; Wanetsi's poem and sentences in the Pashto alphabet,
+    # ۀ, and ں for its nasal vowels; Kuhmareyi's forms in Persian
+    # Wikipedia's, ڌ ۊ ٱ ٛ ۆ ێ ؽ ݩ ۉ; Takestani's ten words in Persian
+    # Wikipedia's; Mehri's unmodified Arabic alphabet, the commonest way to
+    # write it; Xong's 1956 alphabet; Western Cham's name in the Cham
+    # script, ꨌꩌ ꨚꨭꩉ; Bangala's bangála, ɓisu; Upper Saxon's German
+    # spellings; Pashai's one alphabet, drawn up since 2003), and Eastern
+    # Balochi's test wiki (243 words in the Arabic script, all on Balochi's
+    # keys). Named as Wikipedia's articles and LinguaMeta (Google
+    # Research's language metadata) write their names, in English
+    # otherwise (Southwestern Pashayi, as Southeastern Pashayi's keys are).
+    ("nut", "vi", "Nùng", {}, {"model": False}),
+    ("plk", "scl", "ݜݨیاٗ کستِین٘و", {"ف": ["ڦ"], "گ": ["ڱ"], "ُ": ["ٗ"]}, {"model": False}),
+    ("fay", "fa", "کوهمَره‌ای",
+     {"د": ["ڌ"], "و": ["ۊ", "ۆ", "ۉ"], "ا": ["ٱ"], "ی": ["ێ", "ؽ"], "ن": ["ݩ"], ".": ["ٛ"]},
+     {"model": False, "font_script": "arabic"}),
+    ("wne", "ps", "وڼېڅي", {"ه": ["ۀ"], "ن": ["ں"]}, {"model": False}),
+    ("gdq", "ar", "مهريّت", {}, {"model": False}),
+    ("tks", "fa", "تاتی", {}, {"model": False}),
+    ("bgp", "bal", "بلوچی", {}, {"model": False}),
+    ("psh", "psi", "Southwestern Pashayi", {}, {"model": False}),
+    ("cja", "cjm", "ꨌꩌ ꨚꨭꩉ", {}, {"model": False}),
+    ("cja-Latn", "us", "Cam pur", with_capitals({"a": ["â", "ă"]}), {"model": False}),
+    ("mmr", "us", "Dut Xongb", {}, {"model": False}),
+    ("wes", "us", "Kamtok", {}, {"model": False}),
+    ("bah", "us", "Bahamian", {}, {"model": False}),
+    ("trf", "us", "Trinidadian Creole", {}, {"model": False}),
+    ("sxu", "de", "Obersächsisch", {}, {"model": False}),
+    ("bxg", "ln", "Ngala", with_capitals({"a": ["á"], "b": ["ɓ"]}), {"model": False}),
     ("pse", "us", "Baso Melayu Tenga", {}, {"model": False}),
     ("kge", "us", "Basa Kumoring", {}, {"model": False}),
     ("vkt", "us", "Kutai Malay", {}, {"model": False}),

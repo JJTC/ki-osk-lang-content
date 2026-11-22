@@ -1135,6 +1135,9 @@ each with its own copyright line.
 | `layouts/khb.json`, Tai Lue's | ntl_onekey 1.4 | Copyright (c) 2015-2019 SIL International | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/n/ntl_onekey |
 | `layouts/osa.json`, Osage's | osage_nation 1.2.4 | Copyright (c) 2018-2023 Osage Nation | https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/o/osage_nation |
 
+Western Cham's in the Cham script (`layouts/cja.json`) is Eastern
+Cham's keys, the same keyboard's, renamed.
+
 ```text
 The MIT License (MIT)
 
@@ -1188,6 +1191,9 @@ symbol views Keyman's.
 | `layouts/nod.json`, Northern Thai's | tai_lanna_thai 1.1 | Copyright © 2025-2026 Jayasiri Jayasāro Bhikkhu | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/experimental/t/tai_lanna_thai |
 | `layouts/syl-sylo.json`, Sylheti's in Syloti Nagri | sylheti_nagri 1.1.1 | Copyright © 2019-2023 Sylheti Translation And Research | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/s/sylheti_nagri |
 | `layouts/und-fonipa.json`, the International Phonetic Alphabet's | sil_ipa 2.0.2 | Copyright (c) 2002-2025 SIL Global | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/sil/sil_ipa |
+
+Southwestern Pashayi's (`layouts/psh.json`) is Southeastern Pashayi's
+keys, the same keyboard's, renamed.
 
 ```text
 The MIT License (MIT)
@@ -1355,7 +1361,9 @@ Bench's (`layouts/fub-latn.json`, `layouts/bcq-latn.json`, from their
 Latin sets, `exemplars/main/fub_Latn.xml` and `bcq_Latn.xml`), and twenty-five on the Arabic
 script's, Devanagari's and Bengali's keys, Balti's to Sylheti's
 (`layouts/bft.json` … `layouts/syl.json`). Southern Balochi's
-(`layouts/bcc.json`) is Balochi's with three letters more, and Dari's
+(`layouts/bcc.json`) is Balochi's with three letters more, Eastern
+Balochi's (`layouts/bgp.json`) Balochi's as they are, Kohistani Shina's
+(`layouts/plk.json`) Shina's with ڦ ڱ and ٗ more, and Dari's
 (`layouts/prs.json`) Persian's keys with the Pashto letters CLDR's Dari
 (`common/main/fa_AF.xml`) lists among its auxiliary exemplar characters.
 

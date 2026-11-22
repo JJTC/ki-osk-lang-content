@@ -827,6 +827,7 @@ ay      = ["ay"]
 az      = ["az"]
 azb     = ["azb"]
 ba      = ["ba"]
+bah     = ["bah"]
 bal     = ["bal"]
 ban     = ["ban"]
 bar     = ["bar"]
@@ -848,6 +849,7 @@ bfz     = ["bfz"]
 bg      = ["bg"]
 bgc     = ["bgc"]
 bgn     = ["bgn"]
+bgp     = ["bgp"]
 bgq     = ["bgq"]
 bgx     = ["bgx"]
 bgz     = ["bgz"]
@@ -881,6 +883,7 @@ btz     = ["btz"]
 bud     = ["bud"]
 bug     = ["bug"]
 bum     = ["bum"]
+bxg     = ["bxg"]
 bxk     = ["bxk"]
 bxr     = ["bxr"]
 ca      = ["ca"]
@@ -896,6 +899,7 @@ ch      = ["ch"]
 cho     = ["cho"]
 chr     = ["chr"]
 chw     = ["chw"]
+cja     = ["cja", "cja-latn"]
 cjk     = ["cjk"]
 cjm     = ["cjm"]
 ckb     = ["ckb"]
@@ -952,6 +956,7 @@ ext     = ["ext"]
 fa      = ["fa", "fa-abc"]
 fan     = ["fan"]
 fat     = ["fat"]
+fay     = ["fay"]
 ff      = ["ff"]
 fi      = ["fi"]
 fil     = ["fil"]
@@ -970,6 +975,7 @@ gay     = ["gay"]
 gbo     = ["gbo"]
 gcr     = ["gcr"]
 gd      = ["gd"]
+gdq     = ["gdq"]
 gju     = ["gju"]
 gl      = ["gl"]
 glk     = ["glk"]
@@ -1175,6 +1181,7 @@ mk      = ["mk"]
 mki     = ["mki"]
 mkw     = ["mkw"]
 ml      = ["ml", "ml-abc"]
+mmr     = ["mmr"]
 mn      = ["mn", "mn-abc"]
 mnb     = ["mnb"]
 mni     = ["mni", "mni-abc"]
@@ -1230,6 +1237,7 @@ noe     = ["noe"]
 nr      = ["nr"]
 nso     = ["nso"]
 nup     = ["nup"]
+nut     = ["nut"]
 nv      = ["nv"]
 ny      = ["ny"]
 nyf     = ["nyf"]
@@ -1256,6 +1264,7 @@ pfl     = ["pfl"]
 phr     = ["phr"]
 pko     = ["pko"]
 pl      = ["pl"]
+plk     = ["plk"]
 pmf     = ["pmf"]
 pms     = ["pms"]
 pmy     = ["pmy"]
@@ -1266,6 +1275,7 @@ prk     = ["prk"]
 prs     = ["prs"]
 ps      = ["ps", "ps-abc"]
 pse     = ["pse"]
+psh     = ["psh"]
 psi     = ["psi"]
 pt      = ["pt-br", "pt"]
 quh     = ["quh"]
@@ -1343,6 +1353,7 @@ suk     = ["suk"]
 sv      = ["se"]
 sw      = ["sw"]
 swv     = ["swv"]
+sxu     = ["sxu"]
 syl     = ["syl"]
 syl-Sylo = ["syl-sylo"]
 syr     = ["syr"]
@@ -1364,12 +1375,14 @@ ti      = ["ti"]
 tiv     = ["tiv"]
 tk      = ["tk"]
 tkl     = ["tkl"]
+tks     = ["tks"]
 tll     = ["tll"]
 tly     = ["tly"]
 tn      = ["tn"]
 to      = ["to"]
 tpi     = ["tpi"]
 tr      = ["tr"]
+trf     = ["trf"]
 trp     = ["trp"]
 trw     = ["trw"]
 ts      = ["ts"]
@@ -1410,6 +1423,8 @@ wa      = ["wa"]
 wal     = ["wal"]
 war     = ["war"]
 wbr     = ["wbr"]
+wes     = ["wes"]
+wne     = ["wne"]
 wry     = ["wry"]
 wsg     = ["wsg", "wsg-abc"]
 wo      = ["wo"]
@@ -1441,6 +1456,7 @@ zyj     = ["zyj"]
 [layouts.names]
 aa  = "Afar"
 adx = "Amdo Tibetan"
+bah = "Bahamian Creole"
 bal = "Balochi"
 bax = "Bamum"
 bbj = "Ghomala'"
@@ -1449,6 +1465,7 @@ bcq = "Bench"
 bft = "Balti"
 bfz = "Mahasu Pahari"
 bgc = "Haryanvi"
+bgp = "Eastern Balochi"
 bgx = "Balkan Gagauz Turkish"
 bgz = "Banggai"
 bhb = "Bhili"
@@ -1458,6 +1475,7 @@ bom = "Berom"
 bqi = "Bakhtiari"
 btz = "Batak Alas-Kluet"
 bug = "Buginese"
+bxg = "Bangala"
 bxk = "Bukusu"
 ca-valencia = "Valencian"
 cbk = "Chavacano"
@@ -1465,6 +1483,7 @@ ccp = "Chakma"
 cgg = "Kiga"
 cho = "Choctaw"
 chr = "Cherokee"
+cja = "Western Cham"
 cjk = "Chokwe"
 cjm = "Eastern Cham"
 cld = "Chaldean Neo-Aramaic"
@@ -1476,9 +1495,11 @@ dhd = "Dhundhari"
 drs = "Gedeo"
 dzg = "Dazaga"
 fan = "Fang"
+fay = "Kuhmareyi"
 fub = "Adamawa Fulfulde"
 fuc = "Pulaar"
 gay = "Gayo"
+gdq = "Mehri"
 gdx = "Godwari"
 gez = "Ge'ez"
 gjk = "Kachi Koli"
@@ -1533,6 +1554,7 @@ meo = "Kedah Malay"
 mfb = "Bangka Malay"
 mhy = "Ma'anyan"
 mki = "Dhatki"
+mmr = "Xong"
 mnb = "Muna"
 mnp = "Northern Min"
 mog = "Mongondow"
@@ -1549,17 +1571,20 @@ mwm = "Sar"
 nau = "Nauruan"
 niq = "Nandi"
 nod = "Northern Thai"
+nut = "Nung"
 nv  = "Navajo"
 nym = "Nyamwezi"
 osa = "Osage"
 pcc = "Bouyei"
 phr = "Pahari-Pothwari"
 pko = "Pokot"
+plk = "Kohistani Shina"
 pmy = "Papuan Malay"
 pov = "Guinea-Bissau Creole"
 prk = "Parauk"
 prs = "Dari"
 pse = "Central Malay"
+psh = "Southwestern Pashayi"
 psi = "Southeastern Pashayi"
 qxq = "Qashqai"
 rej = "Rejang"
@@ -1576,10 +1601,13 @@ srr = "Serer"
 stv = "Silt'e"
 sty = "Siberian Tatar"
 swv = "Shekhawati"
+sxu = "Upper Saxon"
 syl = "Sylheti"
 taj = "Eastern Tamang"
 tbw = "Aborlan Tagbanwa"
 tem = "Temne"
+tks = "Takestani"
+trf = "Trinidadian Creole"
 trw = "Torwali"
 tts = "Isan"
 tyz = "Tày"
@@ -1589,6 +1617,8 @@ vah = "Varhadi"
 vas = "Vasavi"
 vkt = "Kutai Malay"
 wbr = "Wagdi"
+wes = "Cameroon Pidgin"
+wne = "Wanetsi"
 wry = "Merwari"
 xog = "Soga"
 xsr = "Sherpa"
@@ -2284,6 +2314,38 @@ licenses = [
 ]
 sources = [
   { name = "SIL's Locale Data Repository (SLDR): Sebat Bet Gurage's exemplar characters and name (sldr/s/sgw.xml)", url = "https://github.com/silnrsi/sldr/blob/6ce8c0702dc61f395ada7a0dd098d420e59ec07d/sldr/s/sgw.xml" },
+]
+
+[layouts.added.plk]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Shina (exemplars/main/scl.xml), Kohistani Shina's keys made from Shina's", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/exemplars/main/scl.xml" },
+]
+
+[layouts.added.bgp]
+licenses = [
+  { name = "Unicode License v3", url = "https://www.unicode.org/license.txt", share_alike = false },
+]
+sources = [
+  { name = "CLDR 49's exemplar characters for Balochi (common/main/bal.xml), Eastern Balochi's keys made from Balochi's", url = "https://github.com/unicode-org/cldr/blob/96e54b273d2da4ec6fbad350ba19ff23fa24a588/common/main/bal.xml" },
+]
+
+[layouts.added.cja]
+licenses = [
+  { name = "MIT (Keyman's sil_cham_phonetic, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_cham_phonetic/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Cham keyboard (sil_cham_phonetic 1.3), its touch layout and rules: Western Cham's keys in the Cham script made from Eastern Cham's", url = "https://github.com/keymanapp/keyboards/tree/7225701d383cf8317f595bfd73481fcd87524f44/release/sil/sil_cham_phonetic" },
+]
+
+[layouts.added.psh]
+licenses = [
+  { name = "MIT (Keyman's pashai, SIL Global)", url = "https://github.com/keymanapp/keyboards/blob/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/p/pashai/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Southeast Pashai keyboard (pashai 1.1.1), its touch layout and rules: Southwestern Pashayi's keys made from Southeastern Pashayi's", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/p/pashai" },
 ]
 
 # `lock`/`input` name the sources.lock entry and input whose recorded
