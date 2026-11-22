@@ -70,7 +70,8 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  hlb kfq nah \
                  ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
                  vai tdd \
-                 gax mkw yaf
+                 gax mkw yaf \
+                 syl-Sylo
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -135,10 +136,12 @@ TATOEBA_LIGHT_WEIGHT ?= 10
 # Latin words left out (200 000 words), whose keyboard offers the model's
 # words through its transliteration table, and Tai Nüa's, in Tai Le (87 000
 # words, its Chinese and Latin words left out, every 10th article held
-# out).
+# out). And Sylheti's, in Syloti Nagri (85 000 words; syl-Sylo, as
+# Sylheti's keyboard in the Bengali script has no model), every 10th
+# article held out.
 WIKIPEDIA_LANGS ?= bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp new mag wsg khw cnr \
                    bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr cdo hif egl cu zea \
-                   btm gpe igl rki vel bew nup glk bpy vai tdd
+                   btm gpe igl rki vel bew nup glk bpy vai tdd syl-Sylo
 WIKIPEDIA_DIR = $(SRC_DIR)/wikipedia
 # And beside a Tatoeba corpus: Armenian and Persian, whose lexicons lacked
 # four fifths and half of Wiktionary's words, the first 400 000 sentences
@@ -424,7 +427,8 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # their kinds of word, as do Halbi, Korku and Nahuatl from StoryWeaver's,
 # the fourteen from SMOL's translations and the three from eBible.org's
 # Bibles (Southern Oromo's 36 000 kinds; 20 000 would hold 97.0% of its
-# words).
+# words). And Sylheti's in Syloti Nagri, from its wiki: all its 21 000
+# kinds, 30.1% of its held-out keystrokes saved (29.6% at 20 000).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -457,7 +461,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        myx tuv \
                        hlb kfq nah \
                        ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
-                       gax mkw yaf
+                       gax mkw yaf \
+                       syl-Sylo
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings

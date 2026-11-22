@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**681 layouts**: 618 keyboard layouts (RTL: ar he fa + Urdu, Western
+**682 layouts**: 619 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 680 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **474 languages** carry a prediction
+keycaps. 681 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **475 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -454,6 +454,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `xsr` | `xsr` | Sherpa शेर्पा | in | LTR | —⁹ | — | — |
 | `sgj` | `sgj` | Surgujia सरगुजिया | in | LTR | **Full** (sgj)¹⁴ | — | — |
 | `syl` | `syl` | Sylheti সিলেটি (Bengali script) | in · ben + long-press ঃ ৎ ৗ ʼ | LTR | —⁹ | — | — |
+| `syl-sylo` | `syl-Sylo` | Sylheti ꠍꠤꠟꠐꠤ (Syloti Nagri) | Keyman's sylheti_nagri¹⁰ | LTR | **Full** (syl-Sylo)⁶ | — | — |
 | `ccp` | `ccp` | Chakma 𑄌𑄋𑄴𑄟𑄳𑄦 | Keyman's easy_chakma | LTR | —¹⁰ | — | — |
 | `rhg` | `rhg` | Rohingya 𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝 (Hanifi script) | Keyman's hanifi_rohingya, long-press 𐴗 on 𐴖 | **RTL** | —¹⁰ | — | — |
 | `blt` | `blt` | Tai Dam ꪼꪕꪒꪾ | Keyman's sil_tai_dam, long-press its second taps (ꪂ on ꪀ) | LTR | —¹⁰ | — | — |
@@ -992,7 +993,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    as their writers spelled them, 13.4% of whose words the lexicon (60 000
    words) lacks: no two writers spell alike. For the same reason
    autocorrect changes 2.2% of right words, more than elsewhere.
-6. These thirty-six models learn from their own Wikipedia (CC BY-SA 4.0,
+6. These thirty-seven models learn from their own Wikipedia (CC BY-SA 4.0,
    share-alike; `scripts/fetch-wikipedia.sh`, the wikis' CirrusSearch
    dumps of 2026-11-08): Bhojpuri, Maithili, Mongolian, Nepali, Odia,
    Western Punjabi, Pashto, Sanskrit, Santali, Yiddish, Konkani (the
@@ -1000,7 +1001,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Tulu, and Dotyali, Angika, Newari, Armenian, Persian, Eastern Min,
    Fiji Hindi, Emilian, Church Slavonic, Zeelandic, Batak Mandailing,
    Ghanaian Pidgin, Igala, Arakanese, Veluws, Betawi, Nupe, Gilaki,
-   Bishnupriya Manipuri and Tai Nuea (below).
+   Bishnupriya Manipuri, Tai Nuea and Sylheti in Syloti Nagri (below).
    Keystroke savings on
    held-out articles of the first sixteen: Santali 50.2%, Kashmiri
    48.7%, Meitei 43.2%, Bhojpuri 43.0%, Maithili 42.1%, Pashto 41.3%,
@@ -1182,8 +1183,14 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    the words typed right, a word for one that differs in its tone letter
    (Mon's and Sgaw Karen's change up to 0.96%). It keeps all its 4 883
    kinds of word, and its keyboard (note 10) has suggestions now.
-   Sylheti's Wikipedia is written in the Syloti Nagri script, its
-   keyboard here in the Bengali script: not used.
+   Sylheti's Wikipedia is written in the Syloti Nagri script, and its
+   keyboard here in the Bengali script has no model; since its keyboard in
+   Syloti Nagri came (note 10), the wiki teaches that one's (`syl-Sylo`):
+   8 027 sentences, 85 000 words, cut after ⁕ and the poetry marks ꠨ ꠩ ꠪
+   ꠫ too (two of three of its sentences end with ⁕), every 10th article
+   held out, all its 21 000 kinds of word kept. Keystroke savings 30.1%
+   on 3 006 held-out words (16.8% with taps astray, 21.5% unknown;
+   autocorrect changes 0.23% of the words typed right).
    Languages with no Wikipedia yet have test wikis in the Wikimedia
    Incubator, whose dump (the same date's, CC BY-SA 4.0) holds them all,
    each article's title starting with its wiki's prefix (`Wp/mag/`).
@@ -2228,7 +2235,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Nuea's has its Wikipedia's now (note 6), suggestions and no glides.
    Vai's and Nuosu's Keyman keyboards type their
    syllables from Latin letters, as a composer does: note 11.
-   Five more are Keyman's at a later commit (2026-11-17), each pinned as
+   Six more are Keyman's at a later commit (2026-11-17), each pinned as
    it is: Gorani's horami and Southeastern Pashayi's pashai (SIL's),
    Southern Hindko's rac_hindko and Chaldean Neo-Aramaic's
    east_syriac_qwerty, right to left, and Northern Thai's tai_lanna_thai,
@@ -2244,7 +2251,18 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    characters list and its keyboard lacks, on low ya's (ᨿ). Each types
    every letter its Keyman keyboard types, and Northern Thai's every
    letter of CLDR's exemplar characters; Noto Sans Arabic, Syriac and Tai
-   Tham draw them. Named in English, as CLDR names none of them.
+   Tham draw them. Named in English, as CLDR names none of them. And
+   Sylheti's in its own script, Syloti Nagri, is Sylheti Translation And
+   Research's sylheti_nagri, for a tablet (`syl-sylo`; its other keyboard
+   is in the Bengali script, note 9): its five rows of letters and signs,
+   the hasanta's clusters on the long presses (ꠘ꠆; ꠇ's ꠬, as its rules
+   type, its label ꠇ꠆ aside), Bengali's digits, which Sylheti writes, on
+   the symbol view's, and its full stop key the danda, as Keyman's bottom
+   row and Hindi's layout have it, with on its long press the ⁕ its
+   writers end two of three sentences with, its poetry marks ꠨ ꠩ ꠪ ꠫, ॥
+   and the Latin full stop. It types every letter and sign of the
+   script's block, which Noto Sans Syloti Nagri draws; it is named as its
+   wiki writes Sylheti, ꠍꠤꠟꠐꠤ, and has that wiki's model (note 6).
    The International Phonetic Alphabet's is SIL's sil_ipa too, laid out
    on the US keys (`und-fonipa`, as BCP 47 tags a phonetic
    transcription): each letter's long press is Keyman's for that key, its
@@ -2674,7 +2692,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **474 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **475 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2685,7 +2703,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   them) · **Wikipedia text: gu kn ml pa sd si ta te ur** (the Dakshina
   dataset's, which hi bn mr also learn from; note 3) · **the wikis' own
   text: bho mai mn ne or pnb ps sa sat yi kok ks mni awa skr tcy dty anp
-  new cdo hif egl cu zea btm gpe igl rki vel bew nup glk bpy tdd** (Newari with GlotCC's news too; Arakanese cut into syllables), **hy fa** beside Tatoeba's, and
+  new cdo hif egl cu zea btm gpe igl rki vel bew nup glk bpy tdd syl-Sylo** (Newari with GlotCC's news too; Arakanese cut into syllables), **hy fa** beside Tatoeba's, and
   the Incubator's test wikis: **wsg khw cnr bto jax mfp xmm mui mak pmf mfa ibb vmf sdh bgn rkt abr vai** (note 6; Vai's words offered through its transliteration table, note 11) ·
   **web text: brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my**, and of
   thirty-eight languages that had a keyboard and no model, **sw af sl zu sq kk uz bs
@@ -2769,6 +2787,7 @@ drives which face loads:
 | `chakma` `hanifi_rohingya` `tai_viet` `kayah_li` `lisu` `lepcha` `saurashtra` `bamum` `cham` `tai_le` `new_tai_lue` `osage` | Noto Sans Chakma, Hanifi Rohingya, Tai Viet, Kayah Li, Lisu, Lepcha, Saurashtra, Bamum, Cham, Tai Le, New Tai Lue, Osage | `ccp rhg blt kyu lis lep saz bax cjm tdd khb osa` (Keyman's; `kjg` draws with Lao's) |
 | `vai` `yi` | Noto Sans Vai, Noto Sans Yi | `vai ii` (the composer's syllables on the strip and the preedit) |
 | `tai_tham` | Noto Sans Tai Tham | `nod` (Keyman's) |
+| `syloti_nagri` | Noto Sans Syloti Nagri | `syl-sylo` (Keyman's) |
 | `cyrillic` | Noto Sans | `cu` (its Cyrillic Extended-B letters, ꙁ ꙃ ꙋ, which DejaVu Sans lacks) |
 | `latin` | Noto Sans | `und-fonipa` (the IPA's phonetic letters DejaVu Sans lacks: ᶒ ᵲ, Latin Extended-F's 𐞥) |
 
@@ -2972,7 +2991,7 @@ keys):
 | `kbp` `bss` `gbo` `nnb` | keys for the letters their words write most of those only a long press typed (more than a quarter of Kabiye's, Akoose's and Grebo's letters; in a quarter of Nande's words): two at the home row's end, Kabiye's ɛ ɩ, Akoose's é á, Grebo's ɛ ɔ and Nande's ĩ beside its apostrophe; and in place of q and x, which they hardly write (q and x on those keys' long presses), Kabiye's ʊ ɔ, Akoose's ɛ and glottal stop ʼ, Grebo's ǒ ě and Nande's ũ. The words a long press is needed in: Kabiye's 76% → 24%, Akoose's 85% → 52%, Grebo's 70% → 40%, Nande's 26% → 1% | each its own |
 | `ojb` Northwestern Ojibwe | Keyman's fv_ojibwa, a syllable a key: the i and a syllables and the finals on the base view, the e and o syllables on Shift; each syllable's long vowel and w-dotted forms first on its long press (ᑭ's ᑮ ᑶ ᑸ), which Keyman types with keys of their own (˙ after a syllable, ᐧ before it) by rules a key of one letter has not; the final ᕽ on ᒃ's, the full stop ᙮ on the full stop's | `ojb` |
 | `ccp` `rhg` `blt` `kyu` `lis` `lep` `kjg` `saz` `bax` `cjm` `tdd` `khb` `osa` | Keyman's keyboards for their scripts, their rows and places kept (note 10): what Keyman types after another key on a long press (Tai Dam's ꪂ on ꪀ, Lepcha's ᰂ ᰁ on ᰀ), and what it types under AltGr (Cham's ꨒ on ꨗ); Rohingya's 𐴗 on 𐴖; Bamum's two marks and Osage's acute and double acute beside the space bar; the digits no letter key has on the long presses of the symbol view's, their stops (Saurashtra's dandas ꣎ ꣏, Bamum's ꛳ ꛵…) on the full stop's | each its own |
-| `hac` `psi` `hnd` `cld` `nod` | Keyman's keyboards read at a later commit (note 10), their rows and places kept: what a key types under AltGr on its long press (Pashayi's ك ڰ, Tai Tham's), Hindko's ݨ on ن, Tai Tham's ᩀ on ᨿ; Chaldean's East Syriac vowel points and marks its Shift view | each its own |
+| `hac` `psi` `hnd` `cld` `nod` `syl-sylo` | Keyman's keyboards read at a later commit (note 10), their rows and places kept: what a key types under AltGr on its long press (Pashayi's ك ڰ, Tai Tham's), Hindko's ݨ on ن, Tai Tham's ᩀ on ᨿ; Chaldean's East Syriac vowel points and marks its Shift view; Syloti Nagri's hasanta clusters (ꠘ꠆) on their letters, and ⁕ ꠨ ꠩ ꠪ ꠫ ॥ . on its danda key's | each its own |
 | `und-fonipa` IPA | Keyman's sil_ipa on the US keys (note 10): each letter's IPA letters and then its modifier letters on its long press (e's ɘ ə ɛ ɜ œ… ᵉ ᵊ, h's ħ ɥ ɦ ɧ… ʰ ʱ), Shift's small capitals on the capitals'; ː ˈ ˌ ʼ ‿ and the super- and subscript digits on the first symbol view, the combining diacritics and tone letters on the second | `und-fonipa` |
 | `kjp` Eastern Pwo Karen | its tone ႋ and ၜ ၠ keys of their own in place of Burmese's ဩ ၏ ၒ; ၮ ၯ ၰ ၞ ၟ ၚ ဴ on the long presses of ဏ ယ ဃ န မ င ု (on Burmese's keys; note 12) | `kjp` |
 | `tyz` Tày | the macron below and the double grave, the two tones Vietnamese lacks, first on each vowel's long press (a̱ ȁ; on Vietnamese's keys; note 12) | `tyz` |

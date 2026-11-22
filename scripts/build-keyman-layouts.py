@@ -55,6 +55,17 @@ on for the layout (`long_press_letters`): on a kiosk, whose long-press
 menus are off by default, Ojibwe's long vowels could not be typed
 without it.
 
+Sylheti's in its own script, Syloti Nagri, is Sylheti Translation And
+Research's sylheti_nagri (MIT), at a later commit, made the same way: its
+five rows of letters and signs, the hasanta's clusters (ꠘ꠆) on the long
+presses (ꠇ's ꠬, as its rules type, its label ꠇ꠆ aside), and Bengali's
+digits, which it writes, on the long presses of the symbol view's. Its
+full stop key types the danda, as Keyman's bottom row and Hindi's layout
+do, and its long press the ⁕ its writers end sentences with (two of three
+in its wiki), its poetry marks ꠨ ꠩ ꠪ ꠫, ॥ and the Latin full stop. Its layout's id is
+its tag in lower case (`syl-sylo`), and its model's the tag
+(`syl-Sylo`): Sylheti's other keyboard is in the Bengali script.
+
 The International Phonetic Alphabet's is SIL's sil_ipa (MIT), on the US
 keys (`und-fonipa`, as BCP 47 tags a phonetic transcription): its letters
 are the US keys' letters, so it is laid out on them, not as the scripts
@@ -79,7 +90,8 @@ with no keymap name none, as Amharic's layout).
 
 Each keyboard's files are fetched from keymanapp/keyboards at a pinned
 commit and checked against their sha256 into $KEYMAN_DIR (default
-$TMPDIR/ki-osk-sources/keyman); a layout's id is its language's tag.
+$TMPDIR/ki-osk-sources/keyman); a layout's id is its language's tag in
+lower case.
 
     scripts/build-keyman-layouts.py [--check]
 
@@ -205,6 +217,11 @@ KEYBOARDS = [
         "source/east_syriac_qwerty.kmn": "d51b1c130caff5f69d87085a3623fe7d9263d9ba4ae1ea15fa6a9cf7d75d6cf6",
         "LICENSE.md": "5d40eccf69f560666b8428d786a1da70e336e8b8d2ee0b3ee64ea15a1f053d44",
     }),
+    ("syl-Sylo", "ꠍꠤꠟꠐꠤ", "release/s/sylheti_nagri", LATER, {
+        "source/sylheti_nagri.keyman-touch-layout": "95801ff7502bbe58503efc68b670eb5de337edbf393a4b20bfe540db0da45892",
+        "source/sylheti_nagri.kmn": "bbeb494b7e278677df921ef2a24469dd4c0a6621f14aee51d5d5b2cc7726008a",
+        "LICENSE.md": "967284b05e166ea0cab69da3fc2c02de1bf7782f21f8b4b87727ee598b3bb913",
+    }),
     ("nod", "Northern Thai", "experimental/t/tai_lanna_thai", LATER, {
         "source/tai_lanna_thai.keyman-touch-layout": "7e5178041d9a3d1d3f0b51b45106ffa01d43035f5c6997113a4e3b5e9e59762a",
         "source/tai_lanna_thai.kmn": "06241564b16f0fd214b37a4f12b235d8a11eee3d8f07ef436712b08e87e32590",
@@ -222,13 +239,13 @@ KEYBOARDS = [
 PLATFORM = {"ksw": "phone", "ojb": "tablet", "ccp": "tablet", "rhg": "phone", "blt": "tablet", "kyu": "tablet",
             "lis": "tablet", "lep": "tablet", "kjg": "tablet", "saz": "phone", "bax": "phone", "cjm": "tablet",
             "tdd": "phone", "khb": "phone", "osa": "phone", "hac": "phone", "psi": "tablet", "hnd": "tablet",
-            "cld": "phone", "nod": "tablet", "und-fonipa": "tablet"}
+            "cld": "phone", "nod": "tablet", "und-fonipa": "tablet", "syl-Sylo": "tablet"}
 XKB_LAYOUT = {"ksw": "mm", "ojb": "ca", "kjg": "la", "hac": "iq", "psi": "af", "hnd": "pk", "cld": "sy"}
 FONT_SCRIPT = {"ksw": "myanmar", "ojb": "canadian_aboriginal", "ccp": "chakma", "rhg": "hanifi_rohingya",
                "blt": "tai_viet", "kyu": "kayah_li", "lis": "lisu", "lep": "lepcha", "kjg": "lao",
                "saz": "saurashtra", "bax": "bamum", "cjm": "cham", "tdd": "tai_le", "khb": "new_tai_lue",
                "osa": "osage", "hac": "arabic", "psi": "arabic", "hnd": "arabic", "cld": "syriac",
-               "nod": "tai_tham"}
+               "nod": "tai_tham", "syl-Sylo": "syloti_nagri"}
 RTL = {"rhg", "hac", "psi", "hnd", "cld"}
 
 # The layer a keyboard's Shift key turns to, where it is not `shift`:
@@ -271,6 +288,15 @@ LONG_PRESS_ADDED = {("ojb", "\u1483"): ["\u157D"],
                     # list and the keyboard lacks, on low ya's.
                     ("nod", "\u1A3F"): ["\u1A40"]}
 FULL_STOP_LONG_PRESS = {"ojb": "\u166E"}
+# The stops a keyboard's writers end sentences with that its keys keep on
+# a symbol layer of their own, outside the script's block or symbols of
+# it, first on the full stop's long press: Sylheti's ⁕ and its poetry
+# marks ꠨ ꠩ ꠪ ꠫.
+EXTRA_STOPS = {"syl-Sylo": ["\u2055", "\ua828", "\ua829", "\ua82a", "\ua82b"]}
+# A keyboard whose full stop is its script's, as its bottom row has it
+# (Sylheti's danda, as Hindi's layout types it): the full stop key types
+# it, the other stops and the Latin full stop on its long press.
+STOP_KEY = {"syl-Sylo": "\u0964"}
 # Layers a keyboard has that the language does not write with: East
 # Syriac's keyboard's West Syriac vowels, which Chaldean does not use.
 UNUSED_LAYERS = {("cld", "WS-diac")}
@@ -847,7 +873,7 @@ def build(lang, name, path, commit, files):
     rules = Rules(next(v for k, v in got.items() if k.endswith(".kmn")))
     layers = {layer["id"]: layer for layer in touch[PLATFORM[lang]]["layer"]}
     layout = json.loads((ROOT / "layouts" / "us.json").read_text(encoding="utf-8"))
-    layout["id"] = lang
+    layout["id"] = lang.lower()
     layout["name"] = name
     if lang in XKB_LAYOUT:
         layout["xkb_layout"] = XKB_LAYOUT[lang]
@@ -895,13 +921,18 @@ def build(lang, name, path, commit, files):
                     tapped.update(digits[int(t)])
         # Its stops and commas no key keeps on the full stop's, and the
         # letters only its symbol layer has (Lao's ຯ and ໆ).
-        marks = []
+        marks = list(EXTRA_STOPS.get(lang, []))
         for text in everything:
             if len(text) == 1 and unicodedata.category(text)[0] in "PLM" and unicodedata.category(text) not in \
                     ("Ps", "Pe", "Pi", "Pf", "Pd", "Pc") and own(text) and text not in tapped and text not in marks:
                 marks.append(text)
-        for key in views["base"]["rows"][-1]["keys"] if marks else []:
+        stop_key = STOP_KEY.get(lang)
+        for key in views["base"]["rows"][-1]["keys"] if marks or stop_key else []:
             if key.get("output") == {"kind": "text", "text": "."}:
+                if stop_key:
+                    key["label"] = stop_key
+                    key["output"] = {"kind": "text", "text": stop_key}
+                    marks = [m for m in marks if m != stop_key] + ["."]
                 key["long_press"] = [{"kind": "text", "text": m} for m in marks]
     else:
         for view in layout["views"]:
@@ -946,7 +977,7 @@ def main():
         if only and lang not in only:
             continue
         text = build(lang, name, path, commit, files)
-        out = ROOT / "layouts" / f"{lang}.json"
+        out = ROOT / "layouts" / f"{lang.lower()}.json"
         if check:
             if not out.exists() or out.read_text(encoding="utf-8") != text:
                 stale.append(out.name)

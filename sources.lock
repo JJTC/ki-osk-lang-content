@@ -7521,6 +7521,23 @@
         "words": "2"
       }
     },
+    "predict/syl-Sylo": {
+      "encoder": "dd969b2b5f92-dirty",
+      "inputs": {
+        "wikipedia/syl-Sylo.txt": "28b9ba2644b5f637eb636b27ad22dbbf352e92844c960f1c04a5d6b0707fb903"
+      },
+      "outputs": {
+        "predict/syl-Sylo.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/syl-Sylo.fst": "3927ee1435bb715f6109915e74243eb8c2e644c9ddbf6cbe04c60dd648476b2f",
+        "predict/syl-Sylo.ngram.bin": "7163e24319f376ccc65738d500ff1f8f6d1ff70bbd4da5a8d36b22fe621b8afd"
+      },
+      "recipe": {
+        "ngram_keep": "90000",
+        "start_keep": "5000",
+        "vocab_size": "80000",
+        "words": "2"
+      }
+    },
     "predict/syr": {
       "encoder": "da317838d661-dirty",
       "inputs": {

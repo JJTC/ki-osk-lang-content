@@ -278,6 +278,53 @@ fn letters_on_long_presses_are_the_languages_own() {
     }
 }
 
+/// Sylheti's keyboard in Syloti Nagri (Keyman's sylheti_nagri) types every
+/// letter and sign of the script's block, and its full stop key the danda,
+/// with the ⁕ its writers end sentences with on its long press.
+#[test]
+fn sylhetis_syloti_nagri_keyboard_types_its_whole_block() {
+    let def = load("syl-sylo");
+    let mut typed = String::new();
+    for v in &def.views {
+        for k in v.rows.iter().flat_map(|r| r.keys.iter()) {
+            if let KeyOutput::Text { text } = &k.output {
+                typed.push_str(text);
+            }
+            for o in &k.long_press {
+                if let KeyOutput::Text { text } = o {
+                    typed.push_str(text);
+                }
+            }
+        }
+    }
+    let missing: Vec<String> = ('\u{a800}'..='\u{a82c}')
+        .filter(|c| !typed.contains(*c))
+        .map(|c| format!("U+{:04X}", u32::from(c)))
+        .collect();
+    assert!(
+        missing.is_empty(),
+        "syl-sylo: no key types {}",
+        missing.join(" ")
+    );
+    let stop = def
+        .views
+        .iter()
+        .find(|v| v.id == ViewId::Base)
+        .and_then(|v| v.rows.last())
+        .and_then(|r| {
+            r.keys
+                .iter()
+                .find(|k| matches!(&k.output, KeyOutput::Text { text } if text == "।"))
+        })
+        .expect("syl-sylo: a danda key");
+    assert!(
+        stop.long_press
+            .iter()
+            .any(|o| matches!(o, KeyOutput::Text { text } if text == "⁕")),
+        "syl-sylo: no ⁕ on the danda's long press"
+    );
+}
+
 /// Southern Luri's keyboard is Persian's with keys for the letters its
 /// test wiki's spelling of every vowel writes most, in place of four
 /// letters it hardly writes, which their long presses keep.

@@ -160,7 +160,7 @@ learns from leaves out.
 
 ### Wikipedia text (the wikis' own)
 
-Thirty-three languages' models learn from their own Wikipedia alone:
+Thirty-four languages' models learn from their own Wikipedia alone:
 Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western Punjabi, Pashto,
 Sanskrit, Santali, Yiddish, Konkani, Kashmiri, Meitei, Awadhi, Saraiki,
 Tulu, Dotyali, Angika, Eastern Min (in Bàng-uâ-cê, the Han its sentences
@@ -176,9 +176,10 @@ cut into syllables), Veluws (the Dutch Low Saxon wiki's articles it
 files as written in Veluws), Betawi, Nupe and Gilaki (their sentences
 that write their own words: their references are English, some of
 Betawi's Indonesian, Gilaki's village articles Persian; Gilaki's read
-as Persian's keys type it), Bishnupriya Manipuri and Tai Nuea (in Tai
+as Persian's keys type it), Bishnupriya Manipuri, Tai Nuea (in Tai
 Le, its Chinese and Latin words left out, every 10th article held
-out), the last fifteen's bots' stubs left out but three of a shape;
+out) and Sylheti in Syloti Nagri (every 10th article held out), the
+last sixteen's bots' stubs left out but three of a shape;
 Newari's from its
 own beside its news
 (GlotCC's, below); and Armenian's and Persian's from theirs beside their
@@ -204,7 +205,7 @@ script, its Latin words left out and every 10th article held out,
 Magahi's beside its FineWeb-2 text; an article or sentence heavy with Hindi's, Urdu's,
 Persian's, Indonesian's or English's own words is left out.
 **Wikipedia's text, and the Incubator's, is CC BY-SA 4.0**, share-alike:
-the packs of those fifty-five languages, their models and that held-out
+the packs of those fifty-six languages, their models and that held-out
 text carry those terms, with attribution to the wikis' contributors (each article's
 history, at its wiki, names them).
 
@@ -1159,7 +1160,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-Six more layouts are **Keyman's keyboards** read at a later commit, the
+Seven more layouts are **Keyman's keyboards** read at a later commit, the
 same way (`scripts/build-keyman-layouts.py`, their files pinned by
 sha256), each under the MIT licence it carries: the same text, each with
 its own copyright line. Northern Thai's is in Keyman's experimental
@@ -1174,6 +1175,7 @@ symbol views Keyman's.
 | `layouts/hnd.json`, Southern Hindko's | rac_hindko 1.0.1 | Copyright (c) 2018-2026 Rehmat Aziz Chitrali | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/rac/rac_hindko |
 | `layouts/cld.json`, Chaldean Neo-Aramaic's | east_syriac_qwerty 2.0 | Copyright © 2025 Esho Marcus | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/e/east_syriac_qwerty |
 | `layouts/nod.json`, Northern Thai's | tai_lanna_thai 1.1 | Copyright © 2025-2026 Jayasiri Jayasāro Bhikkhu | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/experimental/t/tai_lanna_thai |
+| `layouts/syl-sylo.json`, Sylheti's in Syloti Nagri | sylheti_nagri 1.1.1 | Copyright © 2019-2023 Sylheti Translation And Research | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/s/sylheti_nagri |
 | `layouts/und-fonipa.json`, the International Phonetic Alphabet's | sil_ipa 2.0.2 | Copyright (c) 2002-2025 SIL Global | https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/sil/sil_ipa |
 
 ```text
@@ -1184,6 +1186,7 @@ Copyright © 2024-2026 SIL Global
 Copyright (c) 2018-2026 Rehmat Aziz Chitrali
 Copyright © 2025 Esho Marcus
 Copyright © 2025-2026 Jayasiri Jayasāro Bhikkhu
+Copyright © 2019-2023 Sylheti Translation And Research
 Copyright (c) 2002-2025 SIL Global
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -419,6 +419,7 @@ su  = "Sundanese"
 suk = "Sukuma"
 sv  = "Swedish"
 sw  = "Swahili"
+syl-Sylo = "Sylheti (Syloti Nagri)"
 syr = "Syriac"
 szl = "Silesian"
 ta  = "Tamil"
@@ -1321,6 +1322,7 @@ sv      = ["se"]
 sw      = ["sw"]
 swv     = ["swv"]
 syl     = ["syl"]
+syl-Sylo = ["syl-sylo"]
 syr     = ["syr"]
 szl     = ["szl"]
 ta      = ["ta", "ta-abc"]
@@ -1568,8 +1570,9 @@ zyj = "Youjiang Zhuang"
 # licence and source each adds to its pack: Sgaw Karen's, from Keyman's
 # sil_sgaw_karen, Northwestern Ojibwe's, from Keyman's fv_ojibwa, the
 # thirteen of a script of their own from Keyman's, Chakma's to Osage's,
-# and five more from Keyman's at a later commit, Gorani's to Northern
-# Thai's in Tai Tham, and the IPA's, SIL's sil_ipa on the US keys
+# and six more from Keyman's at a later commit, Gorani's to Northern
+# Thai's in Tai Tham and Sylheti's in Syloti Nagri, and the IPA's, SIL's
+# sil_ipa on the US keys
 # (scripts/build-keyman-layouts.py), and Vai's and
 # Nuosu's, the Latin letters Keyman's athinkra_vai and sil_yi type their
 # syllables with (scripts/build-keyman-composers.py); and the fifty-seven
@@ -1737,6 +1740,14 @@ licenses = [
 ]
 sources = [
   { name = "Keyman's Tham Lanna keyboard (tai_lanna_thai 1.1, experimental), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/experimental/t/tai_lanna_thai" },
+]
+
+[layouts.added.syl-sylo]
+licenses = [
+  { name = "MIT (Keyman's sylheti_nagri, Sylheti Translation And Research)", url = "https://github.com/keymanapp/keyboards/blob/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/s/sylheti_nagri/LICENSE.md", share_alike = false },
+]
+sources = [
+  { name = "Keyman's Sylheti keyboard in Syloti Nagri (sylheti_nagri 1.1.1), its touch layout and rules", url = "https://github.com/keymanapp/keyboards/tree/c9a2da84df94cc0acb5b0a684615e5e91ca95a0a/release/s/sylheti_nagri" },
 ]
 
 [layouts.added.und-fonipa]

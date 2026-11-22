@@ -19,9 +19,10 @@
 # and Gilaki (their sentences that write their own words: their
 # references are English, some of Betawi's Indonesian, Gilaki's village
 # articles Persian; Gilaki's read as Persian's keys type it),
-# Bishnupriya Manipuri (its bots' stubs of years left out), and Tai Nüa,
+# Bishnupriya Manipuri (its bots' stubs of years left out), Tai Nüa,
 # in Tai Le (its Chinese and Latin words left out, every 10th article
-# held out); of
+# held out), and Sylheti, in Syloti Nagri (`syl-Sylo`: its keyboard here
+# in the Bengali script has none; every 10th article held out); of
 # Armenian and Persian beside their Tatoeba sentences (the Makefile's
 # WIKIPEDIA_PLUS_LANGS, whose held-out text goes elsewhere: EVAL_OUT); and
 # the text of the Wikimedia Incubator's test wikis of languages with no
@@ -112,6 +113,7 @@ nup  nup  nupwiki_content-20261108-00000.json.bz2  c199460ef62c456ccbdb141b3c5f0
 glk  glk  glkwiki_content-20261108-00000.json.bz2  739f3a3bee1e8788d8fac9a357f943e7df862ddb8761ac9e2b5e7f93ead273d2  ARABIC  --script-only --persian --own glk --neighbour fa --shapes 3
 bpy  bpy  bpywiki_content-20261108-00000.json.bz2  d9f491ea5e081f05e371f22282940fdbe4839221112b85a2e273e031c1b9eb1e  BENGALI  --script-only --shapes 3
 tdd  tdd  tddwiki_content-20261108-00000.json.bz2  0a0b31d2e62bd6bd92c2a27f9440ea28bb5a8abd7084b55d2c96dc40cb0af60f  TAI_LE  --script-only --shapes 3 --holdout 10
+syl-Sylo  syl  sylwiki_content-20261108-00000.json.bz2  a8a611cad7386213523469c6599e2db06210dbcf7f9eeca4262e076beeb8f91a  SYLOTI_NAGRI  --script-only --shapes 3 --holdout 10
 "
 INCUBATOR_FILE=incubatorwiki_content-20261108-00000.json.bz2
 INCUBATOR_SHA=e5c0f801331e14919436a737a4b71dd31fb8b792d77392992173435e14cc52d1
