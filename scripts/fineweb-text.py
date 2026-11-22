@@ -884,6 +884,14 @@ COPTIC_NUMBER = re.compile(f"(?<!\\S)(?:[{COPTIC_LETTERS}]\u0305)+(?!\\S)")
 # The Gospels' Bohairic and Sahidic side by side in a font's letters (Ǹ
 # for ⲛ̀), papyri's and dictionaries' text.
 COPTIC_OUT = re.compile(r"cld\.bz|papyri\.info|coptic-dictionary|cenob\.org|multipal")
+# Sylheti in Syloti Nagri: FineWeb-2 files it as und_Sylo, a news site's
+# pages (surmafarorkhobor.com, 3 404 of its 4 881 documents) and the
+# Incubator's copies of the Sylheti wiki, whose own text its model learns
+# from already (and whose held-out articles they would leak), and the
+# character tables beside them: those left out. Its sentences end with ⁕
+# and its poetry marks as well as the danda.
+SYLOTI_OUT = re.compile(r"wikimedia\.org|unicode|keyboard\.cool|forvo")
+SYLOTI_END = re.compile(r"(?<=[⁕꠨꠩꠪꠫])\s*")
 # Bohairic's own words (and, with, in, God) and Sahidic's, by which a
 # document is Bohairic's: Sahidic writes the words Bohairic does (ⲛ̀ⲧⲉ,
 # ⲛ̅ⲧⲉ) with its stroke where Bohairic writes the jinkim, and beside it
@@ -1109,6 +1117,28 @@ def sorani(text):
     parts = SENTENCE_GAP.split(text)
     text = "".join("" if i % 2 == 0 and old_start(p) else p for i, p in enumerate(parts))
     return FINAL_AE.sub("\u06D5", text.translate(SORANI_FOLD)).replace("\u0640", "")
+
+
+# Gorani (Hawrami): FineWeb-2's hac_Arab is mostly Sorani and Badini
+# Kurdish and Persian; a document is Hawrami where its own function
+# words, those its sites' pages write and Sorani's do not (hewraman.net,
+# horam.info, hawramannews.com and ANF's Hawrami pages against Sorani
+# news: جە in 93% of them and 26%, پەی 73% and 18%, ئی 60% and 13%),
+# outnumber Sorani's, Badini's and Persian's (لە in 77% of Sorani's
+# pages and 6% of Hawrami's).
+HAWRAMI = set("جە پەی چەنی ئی بیەن پەنە دماو فرە وێش کەردەن ئانەی لاو".split())
+SORANI_WORDS = set("لە لەسەر لەو ئەم بۆ دەکات دەکرێت بوو دەبێت لەگەڵ".split())
+BADINI_WORDS = set("ل ژ د دا ب یێ ئەڤ ڤێ ژی هەیە".split())
+
+
+def hawrami(text):
+    """Hawrami as Keyman's horami keyboard types it: the soft d written
+    with a ghunna mark (د٘) as ڎ, as most of its pages write it; ۊ as ۉ,
+    the keyboard's (its pages write ۊ 18 times as often); and Arabic's kaf,
+    yeh, alef maksura and heh doachashmee as Kurdish keyboards type them.
+    A sentence in another spelling, whose vowels its keys do not type (ٙ ٚ
+    ۍ ې: a twentieth of its words), is left out (`letters_never`)."""
+    return text.replace("\u062f\u0658", "\u068e").replace("\u06ca", "\u06c9").translate(SORANI_FOLD).replace("\u0640", "")
 
 
 def three_vowels(s):
@@ -1406,6 +1436,15 @@ LANGS = {
     # is five documents: every 10th is held out.
     "sgw": {"script": "ETHIOPIC", "neighbour": set(), "own": GURAGE, "rival": AMHARIC,
             "words": ethiopic_words, "ends": ETHIOPIC_END, "hold": 10},
+    # Gorani (Hawrami), against Sorani's, Badini's and Persian's words.
+    "hac": {"script": "ARABIC", "neighbour": set(), "own": HAWRAMI,
+            "rival": SORANI_WORDS | BADINI_WORDS | PERSIAN_ONLY, "normalize": hawrami, "brackets": True,
+            "script_only": True, "letters_never": set("\u0659\u065a\u06cd\u06d0")},
+    # Sylheti in Syloti Nagri: its news site's pages, beside its wiki's text
+    # (SYLOTI_OUT); its Latin words (the site's menus) cut out. It has no
+    # test split: every 20th document is held out.
+    "syl-Sylo": {"script": "SYLOTI NAGRI", "neighbour": set(), "script_only": True, "ends": SYLOTI_END,
+                 "hosts_out": SYLOTI_OUT, "brackets": True},
     "rm": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY | GERMAN_ONLY, "brackets": True},
     "rn": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},
     "lg": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "brackets": True},

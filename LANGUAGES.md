@@ -9,11 +9,11 @@ prediction and composer data.
 
 **682 layouts**: 619 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
-Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Maba, Gorani, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
+Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Gorani, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Maba, Southeastern Pashayi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
 keycaps. 681 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **475 languages** carry a prediction
+table below is the complete list; **476 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -454,7 +454,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `xsr` | `xsr` | Sherpa शेर्पा | in | LTR | —⁹ | — | — |
 | `sgj` | `sgj` | Surgujia सरगुजिया | in | LTR | **Full** (sgj)¹⁴ | — | — |
 | `syl` | `syl` | Sylheti সিলেটি (Bengali script) | in · ben + long-press ঃ ৎ ৗ ʼ | LTR | —⁹ | — | — |
-| `syl-sylo` | `syl-Sylo` | Sylheti ꠍꠤꠟꠐꠤ (Syloti Nagri) | Keyman's sylheti_nagri¹⁰ | LTR | **Full** (syl-Sylo)⁶ | — | — |
+| `syl-sylo` | `syl-Sylo` | Sylheti ꠍꠤꠟꠐꠤ (Syloti Nagri) | Keyman's sylheti_nagri¹⁰ | LTR | **Full** (syl-Sylo)⁶ ⁷ | — | — |
 | `ccp` | `ccp` | Chakma 𑄌𑄋𑄴𑄟𑄳𑄦 | Keyman's easy_chakma | LTR | —¹⁰ | — | — |
 | `rhg` | `rhg` | Rohingya 𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝 (Hanifi script) | Keyman's hanifi_rohingya, long-press 𐴗 on 𐴖 | **RTL** | —¹⁰ | — | — |
 | `blt` | `blt` | Tai Dam ꪼꪕꪒꪾ | Keyman's sil_tai_dam, long-press its second taps (ꪂ on ꪀ) | LTR | —¹⁰ | — | — |
@@ -468,7 +468,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `tdd` | `tdd` | Tai Nuea (Tai Le script) | Keyman's tainua¹⁰ | LTR | **Full** (tdd)⁶ | — | — |
 | `khb` | `khb` | Tai Lue (New Tai Lue script) | Keyman's ntl_onekey | LTR | —¹⁰ | — | — |
 | `osa` | `osa` | Osage 𐓏𐓘𐓻𐓘𐓻𐓟 | Keyman's osage_nation, its acute and double acute beside the space bar | LTR | —¹⁰ | — | — |
-| `hac` | `hac` | Gorani | Keyman's horami | **RTL** | —¹⁰ | — | — |
+| `hac` | `hac` | Gorani | Keyman's horami¹⁰ | **RTL** | **Full** (hac)⁷ | — | — |
 | `psi` | `psi` | Southeastern Pashayi | Keyman's pashai, long-press its AltGr letters | **RTL** | —¹⁰ | — | — |
 | `hnd` | `hnd` | Southern Hindko | Keyman's rac_hindko, long-press ݨ | **RTL** | —¹⁰ | — | — |
 | `cld` | `cld` | Chaldean Neo-Aramaic (Syriac script) | Keyman's east_syriac_qwerty, its vowel points and marks on Shift | **RTL** | —¹⁰ | — | — |
@@ -1188,9 +1188,12 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Syloti Nagri came (note 10), the wiki teaches that one's (`syl-Sylo`):
    8 027 sentences, 85 000 words, cut after ⁕ and the poetry marks ꠨ ꠩ ꠪
    ꠫ too (two of three of its sentences end with ⁕), every 10th article
-   held out, all its 21 000 kinds of word kept. Keystroke savings 30.1%
-   on 3 006 held-out words (16.8% with taps astray, 21.5% unknown;
-   autocorrect changes 0.23% of the words typed right).
+   held out. Since data 0.74.0 a news site's pages in it join the wiki's
+   text, counted once (note 7): keystroke savings on 3 006 of the wiki's
+   held-out words 29.8% (17.4% with taps astray; 30.1% and 16.8% from the
+   wiki alone), 18.4% of them unknown (21.5%), and on the news's 49.8%
+   (44.4%; 24.3% and 11.6% from the wiki alone); autocorrect changes 0.38%
+   of the words typed right.
    Languages with no Wikipedia yet have test wikis in the Wikimedia
    Incubator, whose dump (the same date's, CC BY-SA 4.0) holds them all,
    each article's title starting with its wiki's prefix (`Wp/mag/`).
@@ -1282,7 +1285,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
    their letters (note 12); Northern Thai and
    Eastern Pwo Karen have keyboards (notes 10 and 12) and no model yet.
-7. These three hundred and twenty-nine models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and thirty-one models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1549,7 +1552,8 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    4.6% to 18.3%, at most 0.56% of right words changed (Mazandarani's).
    Tabasaran's and Mazandarani's held-out text is small (2 500 and 2 200
    words). FineWeb-2's Southern Kurdish is Sorani's news, its Gilaki
-   Persian shops' spam and its Gorani mostly Sorani: none is used.
+   Persian shops' spam and its Gorani mostly Sorani: neither of the first
+   two is used, and of Gorani's only its Hawrami (below).
    Twenty-four of Africa's learn from FineWeb-2's text whole, those it has
    2 MB or more of: Seychellois Creole, Northern Ndebele, Ndonga, Efik,
    Sango, Kwanyama, Tshiluba, Kiluba, Cape Verdean Creole, Mossi, Réunion
@@ -2079,6 +2083,35 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Society of Ethiopia's translation), a story by Sahle Selassie and a
    few articles, 7 399 sentences and 105 000 words, every 10th document
    held out (its test split is five).
+   Gorani's keyboard (Keyman's, note 10) had no model: FineWeb-2's Gorani
+   (hac_Arab, 16 201 documents, 38 MB) is mostly Sorani, Badini and
+   Persian, and its Hawrami is read alone (since data 0.74.0): a document
+   whose own function words (جە, پەی, ئی, چەنی…, found on the Hawrami
+   sites' pages and not on Sorani's: جە on 93% of hewraman.net's,
+   horam.info's, hawramannews.com's and ANF's Hawrami pages, on 26% of
+   Sorani news') outnumber Sorani's, Badini's and Persian's (لە, on 77% of
+   Sorani's pages and 6% of Hawrami's), 2 878 of them; read as Keyman's
+   horami types it (the soft d written د٘ as ڎ, as most of its pages
+   write it, ۊ as the keyboard's ۉ, Arabic's kaf, yeh, alef maksura and
+   heh doachashmee as Kurdish keyboards type them), its sentences in
+   another spelling, whose vowels its keys do not type (ٙ ٚ ۍ ې), left
+   out, and its Latin words cut out: 34 270 sentences, 771 000 words,
+   146 000 kinds of word, all kept (WIDER: at 80 000, 12.6% of its
+   held-out words unknown, 10.3% at 200 000). Its test split's Hawrami is
+   26 documents, two of them half its sentences, so every 20th document
+   of its train split is held out instead: keystroke savings 41.3% on
+   3 018 words (30.9% with taps astray, 10.3% unknown, 0.23% of right
+   words changed); on the test split's it saves 22.3%, one of those two
+   documents in the old spelling that writes ە as ه (نهوروز for نەورۆز).
+   And Sylheti's in Syloti Nagri (since data 0.74.0), FineWeb-2's und_Sylo:
+   a news site's pages (surmafarorkhobor.com, 3 404 of its 4 881
+   documents) beside the Sylheti wiki's text (note 6), the Incubator's
+   copies of that wiki and the character tables left out, its sentences
+   ended at ⁕ and the poetry marks too: 8 380 sentences, 116 000 words,
+   every 20th document held out (it has no test split), counted once
+   beside the wiki's (WEB_EVEN_LANGS: at 5, as Magahi's web text counts,
+   the wiki's held-out articles were saved 27.7%, its right words changed
+   0.73%).
 8. These seven models learn from web text, MADLAD-400's (Google; CC BY 4.0
    by its card, whose metadata says ODC-By; subject to Common Crawl's
    Terms of Use; `scripts/fetch-madlad.sh`, its files at one revision
@@ -2236,7 +2269,8 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Vai's and Nuosu's Keyman keyboards type their
    syllables from Latin letters, as a composer does: note 11.
    Six more are Keyman's at a later commit (2026-11-17), each pinned as
-   it is: Gorani's horami and Southeastern Pashayi's pashai (SIL's),
+   it is: Gorani's horami (with a model now, its Hawrami web text's, note
+   7) and Southeastern Pashayi's pashai (SIL's),
    Southern Hindko's rac_hindko and Chaldean Neo-Aramaic's
    east_syriac_qwerty, right to left, and Northern Thai's tai_lanna_thai,
    in Tai Tham, its letters in Thai's keys' places, the one from
@@ -2261,7 +2295,9 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    row and Hindi's layout have it, with on its long press the ⁕ its
    writers end two of three sentences with, its poetry marks ꠨ ꠩ ꠪ ꠫, ॥
    and the Latin full stop. It types every letter and sign of the
-   script's block, which Noto Sans Syloti Nagri draws; it is named as its
+   script's block, which Noto Sans Syloti Nagri draws (its alternate
+   hasanta ꠬ only Noto's current one: older copies, Android's among them,
+   lack it); it is named as its
    wiki writes Sylheti, ꠍꠤꠟꠐꠤ, and has that wiki's model (note 6).
    The International Phonetic Alphabet's is SIL's sil_ipa too, laid out
    on the US keys (`und-fonipa`, as BCP 47 tags a phonetic
@@ -2692,7 +2728,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **475 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **476 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2722,16 +2758,16 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   long tail **zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk spp bas hay kbr ngl gog chw fat
   tsc bud kao gvl nnb nyo niu hwc acf mrw nij guc ljp sas gor itv bku bpr quh gcr tum tll guz kde nyy
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
-  sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, and Amharic, Tigrinya and Sebat Bet Gurage **am ti sgw**, whose words the Ge'ez composer offers (note 16)
+  sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, Amharic, Tigrinya and Sebat Bet Gurage **am ti sgw**, whose words the Ge'ez composer offers (note 16), and Gorani's Hawrami **hac**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 146 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 145 layouts, Montenegrin's in
   Cyrillic, the forty-eight whose letters are CLDR's exemplar characters
   (note 9: twenty-eight in Latin letters, twenty in the Arabic script,
-  Devanagari and Bengali), the eighteen from Keyman's (note 10: twelve
-  of a script of their own, Chakma to Osage, Gorani, Southeastern
+  Devanagari and Bengali), the seventeen from Keyman's (note 10: twelve
+  of a script of their own, Chakma to Osage, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
   Tham, and the International Phonetic Alphabet's), the seventy-four on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian

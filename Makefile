@@ -71,7 +71,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
                  vai tdd \
                  gax mkw yaf \
-                 syl-Sylo
+                 syl-Sylo hac
 
 PREDICT_CORPORA_DIR = predict/corpora
 PREDICT_OUT_DIR = predict
@@ -214,9 +214,12 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                  rmy rmn ojb \
-                 am ti sgw
+                 am ti sgw \
+                 syl-Sylo hac
 # (Amharic's, Tigrinya's and Sebat Bet Gurage's: what the Ge'ez composer
-# offers words from.)
+# offers words from. And Sylheti's in Syloti Nagri, a news site's pages,
+# beside its wiki's text, and Gorani's, the Hawrami among FineWeb-2's
+# hac_Arab, whose keyboard had no model.)
 # A language with web text and a wiki's (Magahi, whose Incubator text is
 # twice its FineWeb-2 text; Newari, below) counts the web's WEB_WEIGHT
 # times: the web's text, nearer what is typed than a wiki's stubs, leads
@@ -224,6 +227,12 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
 # are as before (31.4%), on its Incubator's held-out articles 38.7% (from
 # 17.8%); at 1, 29.8% and 42.4%.
 WEB_WEIGHT ?= 5
+# But Sylheti's in Syloti Nagri, whose wiki's articles are prose, not
+# stubs, counts its news site's pages once (WEB_EVEN_LANGS): at 1 its
+# wiki's held-out articles are saved 29.8% of their keystrokes (30.1%
+# with the wiki alone, 27.7% at 5, its right words changed 0.73%) and its
+# news's 49.8% (24.3% with the wiki alone; 51.8% at 2 and 5).
+WEB_EVEN_LANGS ?= syl-Sylo
 # And beside a small Tatoeba corpus, counted TATOEBA_WEIGHT times as
 # Hindi's is beside Dakshina's text: Assamese (14 000 sentences).
 FINEWEB_PLUS_LANGS ?= as
@@ -533,8 +542,11 @@ PREDICT_WIDE_NGRAM ?= 90000
 # Amharic and Tigrinya, whose words take their prefixes and suffixes with
 # them: at 120 000 they lack 9.3% and 11.4% of their held-out words, at
 # 200 000 7.5% and 9.0%, and the Ge'ez composer's strip saves 0.5 and 0.6
-# points more of their taps (1.6 MB each, from 1.0).
-PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la sgs am ti
+# points more of their taps (1.6 MB each, from 1.0). And Gorani
+# (Hawrami), whose 770 000 words have 146 000 kinds: at 80 000 it lacks
+# 12.6% of its held-out words, at 200 000 10.3%, and saves 0.5 points
+# more (1.4 with taps astray; 1.2 MB, from 0.65).
+PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la sgs am ti hac
 PREDICT_WIDER_VOCAB ?= 200000
 PREDICT_WIDER_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
@@ -772,7 +784,8 @@ predict-assets:
 		esac; \
 		fw=; case " $(WIKIPEDIA_LANGS) " in \
 			*" $$lang "*) case " $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS) $(GLOTCC_LANGS) " in \
-				*" $$lang "*) fw="$(WEB_WEIGHT):"; weight="$$weight --recipe web_weight=$(WEB_WEIGHT)" ;; \
+				*" $$lang "*) ww=$(WEB_WEIGHT); case " $(WEB_EVEN_LANGS) " in *" $$lang "*) ww=1 ;; esac; \
+				              fw="$$ww:"; weight="$$weight --recipe web_weight=$$ww" ;; \
 			   esac ;; \
 		esac; \
 		case " $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS) " in \

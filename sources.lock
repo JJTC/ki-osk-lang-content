@@ -3210,6 +3210,23 @@
         "words": "2"
       }
     },
+    "predict/hac": {
+      "encoder": "ee5673c0e3e5-dirty",
+      "inputs": {
+        "fineweb/hac.txt": "c9ccf13716ce13d11ddced3be2f6709653e578ce08e85f43d8886be6dfc3dd82"
+      },
+      "outputs": {
+        "predict/hac.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
+        "predict/hac.fst": "0fbf1da950350215035a0e47609a7ce01e157bae6e6d39044c23e5e6025d36bc",
+        "predict/hac.ngram.bin": "ab2e681c1598062b08897c381c66d1d8ea5286fadc246cc39752545409a6f42c"
+      },
+      "recipe": {
+        "ngram_keep": "90000",
+        "start_keep": "5000",
+        "vocab_size": "200000",
+        "words": "2"
+      }
+    },
     "predict/hak": {
       "encoder": "c427be62eb69-dirty",
       "inputs": {
@@ -7522,19 +7539,21 @@
       }
     },
     "predict/syl-Sylo": {
-      "encoder": "dd969b2b5f92-dirty",
+      "encoder": "ee5673c0e3e5-dirty",
       "inputs": {
+        "fineweb/syl-Sylo.txt": "c1753c5853fc975ebd97e44ceda1b724378b9598de15fa064c5afd47f4b85c17",
         "wikipedia/syl-Sylo.txt": "28b9ba2644b5f637eb636b27ad22dbbf352e92844c960f1c04a5d6b0707fb903"
       },
       "outputs": {
         "predict/syl-Sylo.forms.fst": "037bb2d762b9fe609608d11f8c665ab3aad3dcb3936ead915e6618c7c82d48f9",
-        "predict/syl-Sylo.fst": "3927ee1435bb715f6109915e74243eb8c2e644c9ddbf6cbe04c60dd648476b2f",
-        "predict/syl-Sylo.ngram.bin": "7163e24319f376ccc65738d500ff1f8f6d1ff70bbd4da5a8d36b22fe621b8afd"
+        "predict/syl-Sylo.fst": "c9efca3683e66e9feb58926e62522357e726ffebaaf8152977b231ef0ce76933",
+        "predict/syl-Sylo.ngram.bin": "01da2afa5c2df3be120ff94c1982cc87282d3b45d2421c4674f0f6fab41f3dcc"
       },
       "recipe": {
         "ngram_keep": "90000",
         "start_keep": "5000",
         "vocab_size": "80000",
+        "web_weight": "1",
         "words": "2"
       }
     },

@@ -45,8 +45,10 @@
 # from both of FineWeb-2's Romani files (each holds the other's
 # documents), and Northwestern Ojibwe in syllabics; Amharic, Tigrinya and
 # Sebat Bet Gurage, whose models the Ge'ez composer offers the words of;
-# and Assamese, whose Tatoeba corpus is small, beside it (the Makefile's
-# FINEWEB_PLUS_LANGS).
+# Sylheti in Syloti Nagri, a news site's pages beside its wiki's text;
+# Gorani (Hawrami), the documents of FineWeb-2's mostly Sorani, Badini and
+# Persian hac_Arab its own function words lead; and Assamese, whose
+# Tatoeba corpus is small, beside it (the Makefile's FINEWEB_PLUS_LANGS).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
 # it is ODC-By 1.0, and its use subject to Common Crawl's Terms of Use.
@@ -68,7 +70,8 @@
 # the twelve and thirteen after those, Ojibwe's, Sebat Bet Gurage's five
 # documents) has none pinned: every 10th document of its train split is
 # held out instead (Lango's every 9th: its 10th is two fifths of its
-# text); nor do the Romanis, whose test splits are mostly the spam and the
+# text; Gorani's every 20th, as its test split's Hawrami is 26 documents,
+# two of them half its sentences); nor do the Romanis, whose test splits are mostly the spam and the
 # Macedonian beside them.
 #
 # Neither is committed: the text is the web's. The parquet files are kept
@@ -673,6 +676,8 @@ am   amh_Ethi  test/000_00000.parquet   1cdc29ca3de5b2ee8add5b507d919ce738ebb486
 ti   tir_Ethi  train/000_00000.parquet  11200d3ec9c3579e61396852bf43a5bb0b1c1ce4b44c1049cf6ae949e7a9c909
 ti   tir_Ethi  test/000_00000.parquet   8439941b7735beff1b178d9a30f41cd87e039adb2418b61925eb9270942cad68
 sgw  sgw_Ethi  train/000_00000.parquet  d8c07190d157a26f3c5e2373b7fda7c5a87bf883008ef00245444dedf0032814
+syl-Sylo  und_Sylo  train/000_00000.parquet  3b0b8741d77c0ec35ded1054c25efdd1b6b95241f34bee70320c1e09e0a92916
+hac  hac_Arab  train/000_00000.parquet  42533466ee55619abd141d8b5dbbefb6940c943c3c636e413fdcbe5d6fbafcd6
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)
