@@ -493,8 +493,13 @@ MODEL = {"sr-latn": "sr-Latn"}
 # one word in fifteen), has one too; and Coptic one for its jinkim, the
 # grave (U+0300) over a letter that is a syllable of its own (ⲛ̀ⲧⲉ, in a
 # third of Bohairic's words), which its keymap types on Shift and the key
-# left of 1.
-HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ", "ami": "'",
+# left of 1. So have Malagasy, for the apostrophe a word ending in -na,
+# -ka or -tra writes before the next (amin'ny, zon'olombelona: one word in
+# thirteen of the UDHR's), and Oromo, for its glottal stop, the hudhaa
+# (ta'e, danda'a: one word in twenty of the UDHR's), which the keyboards
+# made from theirs keep (build-derived-layouts.py: Tandroy, the
+# Betsimisarakas, Southern and Eastern Oromo).
+HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ", "ami": "'", "mg": "'", "om": "'",
                  **{lid: "Ӏ" for lid in ("ce", "inh", "av", "kbd", "ady", "lez", "lbe", "tab", "dar")},
                  **{lid: "ʼ" for lid in ("yua", "quc", "kek", "quz")}, "gn": "'",
                  "dz": "\u0F0B", "cop": "\u0300"}

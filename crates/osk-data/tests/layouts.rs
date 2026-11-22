@@ -243,6 +243,12 @@ fn letters_on_long_presses_are_the_languages_own() {
         ("mcn", "ɗŋɓɦƊŊƁꞪ'"),
         ("mpg", "âîáïêäôûÂÎ’"),
         ("rim", "ëüËÜ'"),
+        // Anaang's alphabet's ñ ö ü, and what JW.org's brochures in Northern
+        // and Southern Betsimisaraka write (n̈'s diaeresis, ỳ à ê ì ï; à é ỳ
+        // ì), each with Malagasy's ô and its apostrophe; Ha's apostrophe.
+        ("anw", "ñöüÑÖÜ"),
+        ("bmm", "\u{308}ỳàêìïôỲÀ'"),
+        ("bzc", "àéỳìôÀÉ'"),
         // Southern Luri's, its test wiki's two spellings' (Persian's, and
         // one that writes every vowel: ة ە ݖ, and ۿ for h, keys in place
         // of ث ذ ظ ض, which are on their long presses), and the mark ٛ.
@@ -359,7 +365,9 @@ fn southern_luris_keyboard_taps_its_vowels() {
 /// and its tones (on Igbo's keys), Gayo's ö, Parauk's tones; Kohistani
 /// Shina's ڦ ڱ and its rising tone's ٗ (on Shina's keys, ٗ on the Shift
 /// view's damma), Kuhmareyi's ڌ ۊ ٱ ێ (on Persian's), Wanetsi's ۀ ں (on
-/// Pashto's), Bangala's ɓ and á (on Lingala's) and Western Cham's â ă.
+/// Pashto's), Bangala's ɓ and á (on Lingala's), Western Cham's â ă,
+/// Anaang's ñ ö ü, and Northern Betsimisaraka's n̈ (before Malagasy's ñ)
+/// and ỳ and Southern Betsimisaraka's à é ỳ (on Malagasy's keys).
 #[test]
 fn letters_their_texts_write_lead_their_long_presses() {
     for (id, key, first) in [
@@ -385,6 +393,16 @@ fn letters_their_texts_write_lead_their_long_presses() {
         ("bxg", "a", "á"),
         ("cja-latn", "a", "â"),
         ("cja-latn", "A", "Â"),
+        ("anw", "n", "ñ"),
+        ("anw", "o", "ö"),
+        ("anw", "u", "ü"),
+        ("anw", "O", "Ö"),
+        ("bmm", "n", "n\u{308}"),
+        ("bmm", "N", "N\u{308}"),
+        ("bmm", "y", "ỳ"),
+        ("bzc", "a", "à"),
+        ("bzc", "e", "é"),
+        ("bzc", "y", "ỳ"),
     ] {
         let def = load(id);
         // The key on the first view that has it: a letter's on the base
@@ -403,13 +421,15 @@ fn letters_their_texts_write_lead_their_long_presses() {
 }
 
 /// A key a layout puts where its home row's spacers were
-/// (scripts/build-derived-layouts.py's "home") types its letter with a tap,
-/// on the base view and the Shift view: Garo's raised dot, Kui's overline,
-/// the apostrophe Maay, Nyamwezi, Zeelandic, Igala, Veluws, Masaaba,
-/// Turkana, Bukusu, Malawi Lomwe, Northwest Gbaya, Masana, Marba,
-/// Kinyaturu and Eastern Oromo write inside their words, Urum's ʼ,
-/// Sar's tone marks, the macron and the acute, and the colon Parauk writes
-/// inside its words (cia:).
+/// (scripts/build-derived-layouts.py's "home", build-layout.py's
+/// HOME_ROW_TEXT) types its letter with a tap, on the base view and the
+/// Shift view: Garo's raised dot, Kui's overline, the apostrophe Maay,
+/// Nyamwezi, Zeelandic, Igala, Veluws, Masaaba, Turkana, Bukusu, Malawi
+/// Lomwe, Northwest Gbaya, Masana, Marba, Kinyaturu, Eastern Oromo and Ha
+/// write inside their words, Malagasy's and Oromo's, which the keyboards
+/// on their keys keep (Tandroy's, the Betsimisarakas', Southern Oromo's),
+/// Urum's ʼ, Sar's tone marks, the macron and the acute, and the colon
+/// Parauk writes inside its words (cia:).
 #[test]
 fn keys_at_the_home_rows_end_type_their_letters() {
     for (id, letter) in [
@@ -430,6 +450,13 @@ fn keys_at_the_home_rows_end_type_their_letters() {
         ("mpg", "’"),
         ("rim", "'"),
         ("hae", "’"),
+        ("haq", "'"),
+        ("mg", "'"),
+        ("tdx", "'"),
+        ("bmm", "'"),
+        ("bzc", "'"),
+        ("om", "'"),
+        ("gax", "'"),
         ("mwm", "\u{304}"),
         ("mwm", "\u{301}"),
         ("prk", ":"),

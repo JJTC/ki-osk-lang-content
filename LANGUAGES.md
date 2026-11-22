@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**708 layouts**: 645 keyboard layouts (RTL: ar he fa + Urdu, Western
+**712 layouts**: 649 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Gorani, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Kohistani Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Lari, Kuhmareyi, Takestani, Maba, Mehri, Southeastern and Southwestern Pashayi, Wanetsi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern and Eastern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 707 are here; the numeric keypad is built into ki-osk. The
+keycaps. 711 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **478 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -230,7 +230,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `ch` | `ch` | Chamorro Finuʼ Chamoru | us + long-press å ñ | LTR | **Full** (ch)⁷ | ✓ | — |
 | `jam` | `jam` | Jamaican Patois Patwa | us | LTR | **Full** (jam)⁷ | ✓ | — |
 | `kri` | `kri` | Krio | us + long-press ɛ ɔ ŋ | LTR | **Full** (kri)⁸ | ✓ | — |
-| `tdx` | `tdx` | Tandroy-Mahafaly Malagasy | mg + long-press à è é ò ì ỳ | LTR | **Full** (tdx)⁸ | ✓ | — |
+| `tdx` | `tdx` | Tandroy-Mahafaly Malagasy | mg + long-press à è é ò ì ỳ, ' key | LTR | **Full** (tdx)⁸ | ✓ | — |
 | `hvn` | `hvn` | Hawu | us + long-press è, ꞌ key | LTR | **Full** (hvn)⁸ | ✓ | — |
 | `ktu` | `ktu` | Kituba | us | LTR | **Full** (ktu)⁸ | ✓ | — |
 | `quy` | `quy` | Ayacucho Quechua Runa Simi | Quechua's keys (ñ) + long-press á é | LTR | **Full** (quy)⁸ | ✓ | — |
@@ -591,6 +591,10 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `trf` | `trf` | Trinidadian Creole | us | LTR | —¹² | — | — |
 | `sxu` | `sxu` | Upper Saxon Obersächsisch | de, German's keys | LTR | —¹² | — | — |
 | `bxg` | `bxg` | Bangala Ngala | us, Lingala's keys + long-press á ɓ first | LTR | —¹² | — | — |
+| `anw` | `anw` | Anaang Anaañ | us + long-press ñ ö ü first | LTR | —¹² | — | — |
+| `haq` | `haq` | Ha Igiha | us, ' key | LTR | —¹² | — | — |
+| `bmm` | `bmm` | Northern Betsimisaraka Malagasy Betsimisaraka Avaratra | us, Malagasy's keys + long-press n̈ ỳ à ê ì ï first, ' key | LTR | —¹² | — | — |
+| `bzc` | `bzc` | Southern Betsimisaraka Malagasy Betsimisaraka Atsimo | us, Malagasy's keys + long-press à é ỳ ì first, ' key | LTR | —¹² | — | — |
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
@@ -606,7 +610,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `af` | `af` | Afrikaans | us | LTR | **Full** (af)⁷ | ✓ | — |
 | `jv` | `jv` | Javanese | us | LTR | **Full** (jv)⁷ | ✓ | — |
 | `su` | `su` | Sundanese | us | LTR | **Full** (su)⁷ | ✓ | — |
-| `om` | `om` | Oromo | us | LTR | **Full** (om)⁷ | ✓ | — |
+| `om` | `om` | Oromo | us, ' key | LTR | **Full** (om)⁷ | ✓ | — |
 | `ceb` | `ceb` | Cebuano | es | LTR | **Full** (ceb)⁷ | ✓ | — |
 | `ha` | `ha` | Hausa | us + long-press ɓ ɗ ƙ ƴ | LTR | **Full** (ha)⁷ | ✓ | — |
 | `yo` | `yo` | Yoruba | us + long-press dot/tone | LTR | **Full** (yo)⁷ | ✓ | — |
@@ -647,7 +651,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `rn` | `rn` | Kirundi | us | LTR | **Full** (rn)⁷ | ✓ | — |
 | `sn` | `sn` | Shona chiShona | us | LTR | **Full** (sn)⁷ | ✓ | — |
 | `ny` | `ny` | Chichewa | us + long-press ŵ | LTR | **Full** (ny)⁷ | ✓ | — |
-| `mg` | `mg` | Malagasy | us + long-press ñ ô | LTR | **Full** (mg)⁷ | ✓ | — |
+| `mg` | `mg` | Malagasy | us + long-press ñ ô, ' key | LTR | **Full** (mg)⁷ | ✓ | — |
 | `st` | `st` | Sesotho | us | LTR | **Full** (st)⁷ | ✓ | — |
 | `tn` | `tn` | Setswana | us + long-press š | LTR | **Full** (tn)⁷ | ✓ | — |
 | `nso` | `nso` | Sepedi | us + long-press š ê ô | LTR | **Full** (nso)⁷ | ✓ | — |
@@ -2415,7 +2419,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    likeliest after the one before first (n: ꆈ nuo, ꆀ nip…; nuo: ꆈ, then
    ꆇ nuox and ꆉ nuop, its other tones), then the letters as typed. Without them it saved
    20.3% of the taps (the next syllable alone), with them 38.5%.
-12. A hundred and thirteen keyboards of languages no text here predicts, and Eastern
+12. A hundred and seventeen keyboards of languages no text here predicts, and Eastern
    Pwo Karen's, which its wiki's text does since data 0.76.0 (note 6), are
    another language's keys in their name, as they write with those letters:
    Amdo and Khams Tibetan on Tibetan's, in its spelling (Keyman's
@@ -2642,9 +2646,26 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    مهريّت, ꨌꩌ ꨚꨭꩉ, Cam pur) and LinguaMeta (Nùng, تاتی, بلوچی, Dut
    Xongb, Kamtok, Bahamian, Trinidadian Creole, Obersächsisch, Ngala)
    write their names, Southwestern Pashayi in English, as Southeastern
-   Pashayi's keys are. Not made: Anaang (three entries), Ha, and Northern
-   and Southern Betsimisaraka Malagasy, whose letters no source here
-   gives. Nine of this note's keyboards now
+   Pashayi's keys are. The last four of Gboard's languages that had none
+   have keyboards since data 0.79.0: Anaang on the US keys with ñ ö ü
+   first on the long presses of n, o and u, the letters its alphabet has
+   besides the 26 (with the digraphs ch gh gw kp kw ny ñw, its long vowels
+   written double), as Owulette's Annang–English dictionary (2019, which
+   French Wikipedia's article cites), Omniglot's chart and the thirty
+   letters of Michael and Ijioma's pronouncing dictionary (2019) list
+   them; Ha on the US keys with an apostrophe key, for the vowel it drops
+   before the next word (nʼumunsi, chʼamanza), as PanLex's 1,684 entries
+   (CC0) write it, with bh ch sh, and l beside r; and Northern and
+   Southern Betsimisaraka Malagasy on Malagasy's keys, its apostrophe key
+   among them (amin’ny: one word in seventeen of each), as JW.org's
+   brochure Good News From God! in each writes them (6,300 words each):
+   Northern's velar nasal n̈ (zain̈y, ten̈a: nearly one word in five) first
+   on n's long press, before ñ, and ỳ à ê ì ï (Vakỳ, lalàn̈a, marìny);
+   Southern's à é ỳ ì (koà, maé, tatỳ), its velar nasal gn (fôgn), as
+   Wikipedia's articles' tables write both (agnaragnanazy, etoagna). They
+   are named as they name themselves, Anaañ, and Igiha (as Kirundi is
+   Ikirundi), and as JW.org and Wikipedia name the Betsimisarakas,
+   Betsimisaraka Avaratra and Atsimo. Nine of this note's keyboards now
    have models from SMOL's translations (note 14): Ahirani's, Bundeli's,
    Kumaoni's, Kurukh's, Nimadi's, Mundari's, Garo's in Latin letters,
    Mandeali's and Surjapuri's; Bishnupriya Manipuri's has one from its
@@ -2907,13 +2928,13 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
-- **Layout-only** — no bundled model yet: 169 layouts, Montenegrin's in
+- **Layout-only** — no bundled model yet: 173 layouts, Montenegrin's in
   Cyrillic, the forty-eight whose letters are CLDR's exemplar characters
   (note 9: twenty-eight in Latin letters, twenty in the Arabic script,
   Devanagari and Bengali), the seventeen from Keyman's (note 10: twelve
   of a script of their own, Chakma to Osage, Southeastern
   Pashayi, Southern Hindko, Chaldean Neo-Aramaic and Northern Thai in Tai
-  Tham, and the International Phonetic Alphabet's), the ninety-nine on another language's keys (note 12: Northern
+  Tham, and the International Phonetic Alphabet's), the hundred and three on another language's keys (note 12: Northern
   Thai in the Thai script, Amdo and Khams Tibetan, Sadri, Maharashtrian
   Konkani, Kutchi and Tày, twelve whose letters their
   wikis give, Northern Min to Southern Balochi, and sixteen from smaller
@@ -2926,9 +2947,11 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   pages give, Northwest Gbaya to Eastern Oromo, Southern Luri, whose
   test wiki's two spellings give its letters, ten of Gboard's that had
   none, Nauruan to Batak Alas-Kluet, whose Wiktionary entries and test
-  wikis give theirs, and sixteen for fifteen more of them, Nung to
+  wikis give theirs, sixteen for fifteen more of them, Nung to
   Bangala, whose Wiktionary entries, Wikipedia's articles and Eastern
-  Balochi's test wiki give theirs), the two whose letters the African
+  Balochi's test wiki give theirs, and the last four, Anaang to Southern
+  Betsimisaraka Malagasy, whose alphabet, PanLex's entries and JW.org's
+  brochures give theirs), the two whose letters the African
   Storybook's stories give, Bukusu and Malawi Lomwe (note 13), Pulaar's,
   on Fula's keys with the letters SMOL's Pulaar translations write
   (note 14), and
@@ -3156,6 +3179,8 @@ keys):
 | `blk` Pa'O | its tones ꩻ and ႏ, keys of their own in place of Burmese's ဩ and ၏ (on Burmese's keys) | `blk` |
 | `nan` `hak` | their toned vowels first on the long presses, the commonest first: Southern Min's á â ā à a̍, o͘ in its five tones on o, ⁿ first on n; Hakka's â à á a̍, ṳ in its five tones on u | each its own |
 | `ami` Amis | ', the glottal stop, a key of its own at the home row's end (its text writes it ’, ˈ and ^ too) | `ami` |
+| `mg` Malagasy | ñ ô on n o; ', the apostrophe a word writes before the next (amin'ny: one word in thirteen of the UDHR's), a key of its own at the home row's end, which Tandroy-Mahafaly's and the Betsimisarakas' keyboards keep | `mg` |
+| `om` Oromo | ', its glottal stop, the hudhaa (ta'e, danda'a: one word in twenty of the UDHR's), a key of its own at the home row's end, which Southern and Eastern Oromo's keyboards keep (Eastern's typing ’) | `om` |
 | `zne` `skg` `bss` `men` `lgg` `xon` `dnj` `gbo` `gux` `suk` `spp` `bas` `ngl` `chw` `fat` `bud` `kao` `gvl` `nnb` `cce` | each language's own letters first on the long presses, with their tones where its text writes them (Akoose's ɛ ə ɔ with seven tones between them, Northern Grebo's ɛ ɔ with three, Ntcham's on b l m n too) | each its own |
 | `niu` `acf` `mrw` `guc` `sas` `bpr` `quh` `gcr` `tum` `tll` `kde` `nyy` `mas` `mnk` `mer` `dga` | each language's own letters first on the long presses (Niuean's macrons, Sasak's ẽ, Tumbuka's ŵ, Nyakyusa's ị ụ, Dagaare's ɛ ɔ ŋ and nasals…) | each its own |
 | `alz` `lgg` `suk` `spp` `hay` `kbr` `kao` `gvl` `nnb` `nyo` `gor` `tll` `guz` `quh` `guc` | an apostrophe, a key of its own at the home row's end: they write one in 3% to 11% of their words (Sukuma's ng'wa, Gulay's le’n, Nande's n'abandu, Gorontalo's nga'amila); South Bolivian Quechua's is its ejective, ʼ, as its text writes it; Wayuu's ü, in a third of its words, has one beside it (Akoose's glottal stop ʼ was one too, until it moved to x: below) | each its own |
@@ -3195,6 +3220,7 @@ keys):
 | `luz` Southern Luri | the letters its test wiki's spelling of every vowel writes most, ة ە ݖ ۿ, keys of their own in place of ث ذ ظ ض (on their long presses); ۊ ۋ ۏ on و, ڤ on ف, ڍ ڌ on د, ڲ on گ, ݩ on ن, ھ on ه and the mark ٛ on the full stop (on Persian's keys; note 12) | `luz` |
 | `nau` `prk` `gay` `ijc` | Nauruan's â and ñ on the long presses of a and n (on the US keys); Parauk's tones, á ā é ē í ī ó ō ú ū first on its vowels', and a key at the home row's end for the colon it writes inside its words (cia:, Ye:sux); Gayo's é è first on e's and ö on o's (on Indonesian's keys); Izon's ẹ first on e's and the acute and grave tones on every vowel's (on Igbo's keys, ị ọ ụ first on theirs) (note 12) | `nau` `prk` `gay` `ijc` |
 | `plk` `fay` `wne` `cja-latn` `bxg` | Kohistani Shina's ڦ ڱ first on the long presses of ف and گ and its rising tone's ٗ on the Shift view's damma (on Shina's keys); Kuhmareyi's ڌ on د, ۊ ۆ ۉ on و, ٱ on ا, ێ ؽ on ی, ݩ on ن and the mark ٛ on the full stop (on Persian's keys); Wanetsi's ۀ on ه and ں on ن (on Pashto's keys); Western Cham's â ă on a (on the US keys); Bangala's á on a and ɓ on b (on Lingala's keys) (note 12) | `plk` `fay` `wne` `cja` `bxg` |
+| `anw` `haq` `bmm` `bzc` | Anaang's ñ ö ü on the long presses of n, o and u (on the US keys); Ha's apostrophe, for the vowel it drops before the next word (nʼumunsi), a key of its own at the home row's end; Northern Betsimisaraka Malagasy's n̈ first on n's, before Malagasy's ñ, and ỳ à ê ì ï on y a e i, Southern's à é ỳ ì on a e y i (on Malagasy's keys, its apostrophe key among them) (note 12) | each its own |
 | `prs` Dari | the Pashto letters CLDR's Dari lists, ټ on ت, ځ څ on ح, ډ on د, ړ ږ on ر, ښ on س, ګ on گ, ڼ on ن, and ى after ئ ي on ی (on Persian's keys; note 12) | `prs` |
 | `bpy` Bishnupriya Manipuri | ৱ on ব (on Bengali's keys; note 12) | `bpy` |
 | `tdx` `hvn` `quy` | Tandroy-Mahafaly Malagasy's à è é ò ì ỳ (on Malagasy's keys), Hawu's è (on the US keys) and Ayacucho Quechua's á é (on Quechua's) first on the long presses; Hawu's saltillo ꞌ, its glottal stop, a key of its own at the home row's end (note 8) | each its own |

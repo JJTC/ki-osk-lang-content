@@ -178,8 +178,8 @@ on Malagasy's keys with à è é ò ì ỳ first on the long presses, Hawu on
 the US keys with è first on e and its saltillo ꞌ at the home row's end,
 Kituba on them as they are, and Ayacucho Quechua on Quechua's with á é
 first. From the Bibles eBible.org has of them, which have given them
-models since: Southern Oromo (Guji) on Oromo's keys with an apostrophe
-key, its glottal stop (in 8% of its words), and Yaka on the US keys with
+models since: Southern Oromo (Guji) on Oromo's keys, whose apostrophe
+key types its glottal stop (in 8% of its words), and Yaka on the US keys with
 its high tones á é í ó ú first on the long presses. Zeelandic, with its model, from its Wikipedia, is
 typed on Dutch's keys with ê ô first on the long presses of e and o and
 an apostrophe key (its 't and 'n and the words it drops an h or ge-
@@ -236,7 +236,8 @@ with ɗ ŋ ɓ ɦ first on d n b h and an apostrophe key (di'e, kulo'o);
 Marba with â î á ï ê ä ô û first on the vowels' and a ’ key, its
 implosive d’ (in a ninth of its words); Kinyaturu with ë, in more than
 a quarter of its words, and an apostrophe (ng') at the home row's end,
-ü first on u; and Eastern Oromo on Oromo's keys with a ’ key. Southern
+ü first on u; and Eastern Oromo on Oromo's keys, its apostrophe key
+typing ’. Southern
 Luri, with no model, is typed on Persian's keys with the letters of its
 test wiki's two spellings, Persian's and one that writes every vowel (ة
 for a, in two words in five, ە ݖ, and ۿ for h): those four in place of
@@ -705,7 +706,7 @@ DERIVED = [
     ("hvn", "us", "Hawu", with_capitals({"e": ["è"]}), {"home": "\ua78c"}),
     ("ktu", "us", "Kituba", {}),
     ("quy", "qu", "Runa Simi (Ayacucho)", with_capitals({"a": ["á"], "e": ["é"]})),
-    ("gax", "om", "Southern Oromo", {}, {"home": "'"}),
+    ("gax", "om", "Southern Oromo", {}),
     ("yaf", "us", "Yaka", with_capitals({"a": ["á"], "e": ["é"], "i": ["í"], "o": ["ó"], "u": ["ú"]})),
     ("zea", "nl", "Zeêuws", with_capitals({"e": ["ê", "è", "ë", "é"], "o": ["ô", "ò", "ó", "ö"]}), {"home": "'"}),
     ("ymm", "so", "Maay", {}, {"home": "'", "model": False}),
@@ -781,6 +782,31 @@ DERIVED = [
     ("trf", "us", "Trinidadian Creole", {}, {"model": False}),
     ("sxu", "de", "Obersächsisch", {}, {"model": False}),
     ("bxg", "ln", "Ngala", with_capitals({"a": ["á"], "b": ["ɓ"]}), {"model": False}),
+    # The last four of Gboard's languages that had no keyboard. Anaang on
+    # the US keys with ñ ö ü first on n's, o's and u's long presses: the
+    # letters of its alphabet besides the 26 (and the digraphs ch gh gw kp
+    # kw ny ñw, doubled vowels long), as Owulette's Annang-English
+    # dictionary (2019, French Wikipedia's article), Omniglot's chart and
+    # the 30 letters of Michael and Ijioma's pronouncing dictionary (2019)
+    # list them; named Anaañ, as it calls itself. Ha on the US keys with an
+    # apostrophe key, for the vowel it drops before the next word
+    # (nʼumunsi, chʼamanza), as PanLex's 1,684 entries (CC0) write it, with
+    # bh ch sh and l beside r; named Igiha, as Kirundi's keyboard is
+    # Ikirundi. Northern and Southern Betsimisaraka Malagasy on Malagasy's
+    # keys, its apostrophe key among them (amin’ny: one word in seventeen of
+    # each), as JW.org's brochure in each writes them (6,300 words each):
+    # Northern's velar nasal n̈ (zain̈y, ten̈a: nearly one word in five)
+    # first on n's long press, before ñ, and ỳ à ê ì ï (Vakỳ, lalàn̈a,
+    # folêra, marìny, naïvan̈a); Southern's à é ỳ ì (koà, maé, tatỳ,
+    # fanìny), its velar nasal gn (fôgn), as Wikipedia's articles' tables
+    # write both dialects' (agnaragnanazy, etoagna); named as JW.org and
+    # Wikipedia name them.
+    ("anw", "us", "Anaañ", with_capitals({"n": ["ñ"], "o": ["ö"], "u": ["ü"]}), {"model": False}),
+    ("haq", "us", "Igiha", {}, {"home": "'", "model": False}),
+    ("bmm", "mg", "Betsimisaraka Avaratra",
+     with_capitals({"n": ["n̈"], "y": ["ỳ"], "a": ["à"], "e": ["ê"], "i": ["ì", "ï"]}), {"model": False}),
+    ("bzc", "mg", "Betsimisaraka Atsimo", with_capitals({"a": ["à"], "e": ["é"], "y": ["ỳ"], "i": ["ì"]}),
+     {"model": False}),
     ("pse", "us", "Baso Melayu Tenga", {}, {"model": False}),
     ("kge", "us", "Basa Kumoring", {}, {"model": False}),
     ("vkt", "us", "Kutai Malay", {}, {"model": False}),
@@ -817,7 +843,7 @@ DERIVED = [
      with_capitals({"a": ["â", "á", "ä", "à"], "i": ["î", "ï", "ì"], "e": ["ê"], "o": ["ô"], "u": ["û"]}),
      {"home": "’", "model": False}),
     ("rim", "us", "Kinyaturu", with_capitals({"e": ["ë"], "u": ["ü"]}), {"home": ["ë", "'"], "model": False}),
-    ("hae", "om", "Eastern Oromo", {}, {"home": "’", "model": False}),
+    ("hae", "om", "Eastern Oromo", {}, {"swap": {"'": "’"}, "model": False}),
     ("luz", "fa", "Southern Luri",
      {"ة": ["ث"], "ە": ["ذ"], "ݖ": ["ظ"], "ۿ": ["ض"], "و": ["ۊ", "ۋ", "ۏ"], "ف": ["ڤ"], "د": ["ڍ", "ڌ"],
       "گ": ["ڲ"], "ن": ["ݩ"], "ه": ["ھ"], ".": ["\u065b"]},
