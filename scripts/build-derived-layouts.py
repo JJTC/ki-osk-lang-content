@@ -718,6 +718,32 @@ DERIVED = [
     ("pcc", "us", "Haausqyaix", {}, {"model": False}),
     ("mtq", "vi", "Thiểng Mường", {}, {"model": False}),
     ("kxu", "or", "Kui", {}, {"home": "୕", "model": False}),
+    # Ten of Gboard's languages that had no keyboard, their letters those
+    # Wiktionary's entries (en.wiktionary.org's lemmas) and their Incubator
+    # test wikis' few pages write: Nauruan (127 entries: â and ñ, one each),
+    # Central Melanau (76) and Sabah Malay (19) on Malay's keys as they are,
+    # Guyanese Creole (36, and its wiki's Creolese) as they are, Parauk
+    # (its wiki writes the colon inside 18 of its 115 words, cia:, cao:;
+    # Wiktionary's entries tones on its vowels, í ó á é ī ā ē), Gayo (é è
+    # ö: its wiki's 492 words, Wiktionary's unggör), Izon on Igbo's keys
+    # (its name Ịzọn, its entries' tones bení, kúkúndùkú), Balkan Gagauz
+    # Turkish on Turkish's (its wiki's Rumelice), Lari in the Arabic script
+    # on Persian's (its wiki's اچمی) and Batak Alas-Kluet on Indonesian's.
+    ("nau", "us", "Dorerin Naoero", with_capitals({"a": ["â"], "n": ["ñ"]}), {"model": False}),
+    ("mel", "ms", "Central Melanau", {}, {"model": False}),
+    ("msi", "ms", "Sabah Malay", {}, {"model": False}),
+    ("gyn", "us", "Creolese", {}, {"model": False}),
+    ("prk", "us", "Lox Vax",
+     with_capitals({"a": ["á", "ā"], "e": ["é", "ē"], "i": ["í", "ī"], "o": ["ó", "ō"], "u": ["ú", "ū"]}),
+     {"home": ":", "model": False}),
+    ("gay", "id", "Gayo", with_capitals({"e": ["é", "è"], "o": ["ö"]}), {"model": False}),
+    ("ijc", "ig", "Ịzọn",
+     with_capitals({"a": ["á", "à"], "e": ["ẹ", "é", "è"], "i": ["ị", "í", "ì"], "o": ["ọ", "ó", "ò"],
+                    "u": ["ụ", "ú", "ù"]}),
+     {"model": False}),
+    ("bgx", "tr", "Rumelice", {}, {"model": False}),
+    ("lrl", "fa", "اچمی", {}, {"model": False}),
+    ("btz", "id", "Batak Alas-Kluet", {}, {"model": False}),
     ("pse", "us", "Baso Melayu Tenga", {}, {"model": False}),
     ("kge", "us", "Basa Kumoring", {}, {"model": False}),
     ("vkt", "us", "Kutai Malay", {}, {"model": False}),

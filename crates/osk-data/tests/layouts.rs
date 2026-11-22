@@ -352,13 +352,51 @@ fn southern_luris_keyboard_taps_its_vowels() {
     }
 }
 
+/// The letters the keyboards of Gboard's languages that had none take
+/// from Wiktionary's entries and their test wikis are first on their
+/// keys' long presses (scripts/build-derived-layouts.py): Nauruan's ñ,
+/// Izon's dotted vowels and its tones (on Igbo's keys), Gayo's ö, Parauk's
+/// tones.
+#[test]
+fn letters_from_wiktionary_lead_their_long_presses() {
+    for (id, key, first) in [
+        ("nau", "n", "ñ"),
+        ("nau", "a", "â"),
+        ("ijc", "e", "ẹ"),
+        ("ijc", "i", "ị"),
+        ("ijc", "o", "ọ"),
+        ("ijc", "u", "ụ"),
+        ("gay", "o", "ö"),
+        ("gay", "e", "é"),
+        ("prk", "i", "í"),
+    ] {
+        let def = load(id);
+        let base = def
+            .views
+            .iter()
+            .find(|v| v.id == ViewId::Base)
+            .expect("a base view");
+        let k = base
+            .rows
+            .iter()
+            .flat_map(|r| r.keys.iter())
+            .find(|k| k.label == key)
+            .unwrap_or_else(|| panic!("{id}: no {key} key"));
+        assert!(
+            matches!(k.long_press.first(), Some(KeyOutput::Text { text }) if text == first),
+            "{id}: {key}'s long press does not start with {first}"
+        );
+    }
+}
+
 /// A key a layout puts where its home row's spacers were
 /// (scripts/build-derived-layouts.py's "home") types its letter with a tap,
 /// on the base view and the Shift view: Garo's raised dot, Kui's overline,
 /// the apostrophe Maay, Nyamwezi, Zeelandic, Igala, Veluws, Masaaba,
 /// Turkana, Bukusu, Malawi Lomwe, Northwest Gbaya, Masana, Marba,
-/// Kinyaturu and Eastern Oromo write inside their words, Urum's ʼ, and
-/// Sar's tone marks, the macron and the acute.
+/// Kinyaturu and Eastern Oromo write inside their words, Urum's ʼ,
+/// Sar's tone marks, the macron and the acute, and the colon Parauk writes
+/// inside its words (cia:).
 #[test]
 fn keys_at_the_home_rows_end_type_their_letters() {
     for (id, letter) in [
@@ -381,6 +419,7 @@ fn keys_at_the_home_rows_end_type_their_letters() {
         ("hae", "’"),
         ("mwm", "\u{304}"),
         ("mwm", "\u{301}"),
+        ("prk", ":"),
     ] {
         let def = load(id);
         for view in [ViewId::Base, ViewId::Shift] {
