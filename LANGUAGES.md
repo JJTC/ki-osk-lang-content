@@ -2978,7 +2978,7 @@ drives which face loads:
 |---|---|---|
 | `cjk` | a glyf Han/Kana/Hangul face (wqy-zenhei, Droid, …) | the 5 CJK IMEs |
 | `thai` | Noto Sans Thai | `th nod-thai tts kxm sou` |
-| `arabic` | Noto Sans Arabic | `ur ps sd ug` and 40 more, Southern Luri's (`luz`) and Kuhmareyi's (`fay`) among them, whose letters DejaVu Sans lacks (ar/he/fa use DejaVu) |
+| `arabic` | Noto Sans Arabic | `ur ps sd ug` and 43 more, Southern Luri's (`luz`), Kuhmareyi's (`fay`), Western Balochi's (`bgn`: ہ ے), Gilaki's (`glk`: ۊ) and Maba's (`mde`: ٛ ݦ ݧ) among them, whose letters DejaVu Sans lacks (ar/he/fa use DejaVu) |
 | `devanagari`…`myanmar` | `NotoSans<Script>-Regular.ttf` | the 15 Tier-3 layouts |
 | `syriac` | Noto Sans Syriac | `syr cld` (RTL) |
 | `tifinagh` | Noto Sans Tifinagh | `ber` |
@@ -2995,10 +2995,13 @@ drives which face loads:
 | `tai_tham` | Noto Sans Tai Tham | `nod` (Keyman's) |
 | `syloti_nagri` | Noto Sans Syloti Nagri | `syl-sylo` (Keyman's) |
 | `cyrillic` | Noto Sans | `cu` (its Cyrillic Extended-B letters, ꙁ ꙃ ꙋ, which DejaVu Sans lacks) |
-| `latin` | Noto Sans | `und-fonipa` (the IPA's phonetic letters DejaVu Sans lacks: ᶒ ᵲ, Latin Extended-F's 𐞥) |
+| `latin` | Noto Sans | `und-fonipa` (the IPA's phonetic letters DejaVu Sans lacks: ᶒ ᵲ, Latin Extended-F's 𐞥), `lhu` (Lahu's tone letter ꞈ) |
 
 Install the matching face or those caps render as tofu. See the full
-fonts table in ki-osk-wayland's `DEPLOY.md`.
+fonts table in ki-osk-wayland's `DEPLOY.md`. A layout that names no
+`font_script` holds only what DejaVu Sans 2.37 draws
+(`crates/osk-data/tests/dejavu-sans.txt`, its character map), as
+`tests/layouts.rs` checks.
 
 ## Expansion layouts
 

@@ -172,9 +172,10 @@ LANGS = [
     # of its Wikipedia's letters), in place of ذ and ظ, which it hardly
     # writes (0.07% and 0.09%), each on its new key's long press.
     ("glk", EXEMPLARS, "6e135b3506819e3939e45c0f80b48c0602ebe1414098ec6565f71dd3547890c1",
-     {"base": "fa", "name": "گیلکی", "model": True, "swap": {"ذ": "ۊ", "ظ": "ؤ"}}),
+     {"base": "fa", "name": "گیلکی", "model": True, "swap": {"ذ": "ۊ", "ظ": "ؤ"},
+      "font_script": "arabic"}),
     ("lrc", COMMON, "7a86da9dd0fd4d3136e93baffdcff51fdd0df387771b7d69f9f797b80d0a30a5", {"base": "ckb"}),
-    ("mde", EXEMPLARS, "22ddea51c12dfbcd403971eb071e586de049ce0af9543011911877df92345561", {"base": "ar", "name": "Bura Mabang"}),
+    ("mde", EXEMPLARS, "22ddea51c12dfbcd403971eb071e586de049ce0af9543011911877df92345561", {"base": "ar", "name": "Bura Mabang", "font_script": "arabic"}),
     ("bfy", EXEMPLARS, "a9fef7fdef1337c1643ab965418ae9ab96d9fd852d80c94b3771cc657524aa49", {"base": "hi", "name": "बघेली", "model": True}),
     ("bgq", EXEMPLARS, "834a604ba53edd6183182dd3fe947614f12b9336b79f91ec2e61bc704b26f23e", {"base": "hi", "name": "बागड़ी", "model": True}),
     ("taj", EXEMPLARS, "8b2b78525b823529795a8c209c6c3c0a9b848175fda5444bcb70f7f8fe140663", {"base": "hi", "name": "तामाङ"}),
@@ -400,7 +401,8 @@ def plan(lang, where, sha, options):
 def build(lang, where, sha, options):
     name, extra, home, swap = plan(lang, where, sha, options)
     return derived.build(lang, options.get("base", "us"), name, extra,
-                         {"home": home, "swap": swap, "model": options.get("model", False)})
+                         {"home": home, "swap": swap, "model": options.get("model", False),
+                          "font_script": options.get("font_script")})
 
 
 def main():

@@ -451,6 +451,70 @@ fn gilakis_vowel_letters_are_keys() {
     }
 }
 
+/// The characters `DejaVu` Sans draws (tests/dejavu-sans.txt), as ranges.
+fn dejavu_sans() -> Vec<(u32, u32)> {
+    include_str!("dejavu-sans.txt")
+        .lines()
+        .filter(|l| !l.is_empty() && !l.starts_with('#'))
+        .map(|l| {
+            let (a, b) = l.split_once('-').unwrap_or((l, l));
+            let hex = |s: &str| u32::from_str_radix(s, 16).unwrap_or_else(|e| panic!("{l}: {e}"));
+            (hex(a), hex(b))
+        })
+        .collect()
+}
+
+/// A layout that names no `font_script` is drawn with `DejaVu` Sans, the
+/// keyboard's UI face, alone: every character its keys show or type is
+/// one that face draws, or it shows as an empty box. Not spaces, joiners
+/// and other characters that draw nothing, nor emoji, which the emoji face
+/// draws. Western Balochi's ہ and ے, Gilaki's ۊ and Maba's ٛ ݦ ݧ needed
+/// Noto Sans Arabic, and Lahu's ꞈ Noto Sans.
+#[test]
+fn a_layout_with_no_font_script_has_only_what_dejavu_draws() {
+    let ranges = dejavu_sans();
+    let drawn = |c: char| {
+        let cp = u32::from(c);
+        ranges.iter().any(|&(a, b)| (a..=b).contains(&cp))
+            || c.is_whitespace()
+            || matches!(
+                c,
+                '\u{200B}'..='\u{200F}' | '\u{2060}' | '\u{FE0E}' | '\u{FE0F}' | '\u{61C}'
+            )
+            || cp >= 0x1F000
+    };
+    let mut bad = Vec::new();
+    for (_, def) in layouts() {
+        if def.font_script.is_some() || def.ime.is_some() || def.id == "emoji" {
+            continue;
+        }
+        let mut missing = BTreeSet::new();
+        for key in def.views.iter().flat_map(|v| &v.rows).flat_map(|r| &r.keys) {
+            let mut texts = vec![key.label.clone()];
+            for out in std::iter::once(&key.output).chain(&key.long_press) {
+                match out {
+                    KeyOutput::Text { text } => texts.push(text.clone()),
+                    KeyOutput::DeadKey { mark } => texts.push(mark.to_string()),
+                    _ => {}
+                }
+            }
+            missing.extend(texts.iter().flat_map(|t| t.chars()).filter(|&c| !drawn(c)));
+        }
+        if !missing.is_empty() {
+            let chars: Vec<String> = missing
+                .iter()
+                .map(|&c| format!("U+{:04X} {c}", u32::from(c)))
+                .collect();
+            bad.push(format!("{}: {}", def.id, chars.join(", ")));
+        }
+    }
+    assert!(
+        bad.is_empty(),
+        "layouts with no font_script whose keys DejaVu Sans does not draw (name the font script \
+         that does): {bad:#?}"
+    );
+}
+
 /// A key a layout puts where its home row's spacers were
 /// (scripts/build-derived-layouts.py's "home", build-layout.py's
 /// HOME_ROW_TEXT) types its letter with a tap, on the base view and the
