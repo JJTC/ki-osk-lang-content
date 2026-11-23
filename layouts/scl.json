@@ -404,7 +404,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 25
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ٗ"
+                }
+              ]
             },
             {
               "width_units": 1,

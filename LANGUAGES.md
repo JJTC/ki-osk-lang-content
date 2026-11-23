@@ -85,7 +85,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `pnb` | `pnb` | Western Punjabi پنجابی | pk + long-press ݨ | **RTL** | **Full** (pnb)⁶ | — | — |
 | `skr` | `skr` | Saraiki سرائیکی | pk + long-press ٻ ڄ ݙ ڳ ݨ | **RTL** | **Full** (skr)⁶ | — | — |
 | `ks` | `ks` | Kashmiri کٲشُر | pk + long-press ٲ ۄ ۆ ؠ ۍ and the vowel marks ٕ ٟ ٖ ٗ ٚ ٛ | **RTL** | **Full** (ks)⁶ | — | — |
-| `ps` | `ps` | Pashto | af · ps | **RTL** | **Full** (ps)⁶ | — | — |
+| `ps` | `ps` | Pashto | af · ps + long-press ۀ | **RTL** | **Full** (ps)⁶ | — | — |
 | `sd` | `sd` | Sindhi | pk · snd | **RTL** | **Full** (sd)³ | — | — |
 | `sd-deva` | `sd-Deva` | Sindhi सिंधी (Devanagari) | in + long-press ॻ ॼ ॾ ॿ | LTR | **Full** (sd-Deva)⁷ | — | — |
 | `ug` | `ug` | Uyghur | cn · ug | **RTL** | **Full** (ug) | — | — |
@@ -435,14 +435,14 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `gwc` | `gwc` | Kalam Kohistani گاؤری | pk + long-press ٞ ڄ څ ݫ ݭ ݪ | **RTL** | —⁹ | — | — |
 | `hno` | `hno` | Northern Hindko ہندکو | pk | **RTL** | —⁹ | — | — |
 | `phr` | `phr` | Pahari-Pothwari پوٹھواری | pk + long-press ؐ ؑ ؓ ؔ ة ݨ ه ي | **RTL** | —⁹ | — | — |
-| `scl` | `scl` | Shina شینا | pk + long-press ࣿ ڇ څ ڙ ݜ ݨ | **RTL** | —⁹ | — | — |
+| `scl` | `scl` | Shina شینا | pk + long-press ࣿ ٗ ڇ څ ڙ ݜ ݨ | **RTL** | —⁹ | — | — |
 | `trw` | `trw` | Torwali توروالی | pk + long-press ٶ ڇ څ ݲ ڙ ݜ | **RTL** | —⁹ | — | — |
 | `bal` | `bal` | Balochi بلۆچی | pk + long-press ۆ ه ێ | **RTL** | —⁹ | — | — |
 | `haz` | `haz` | Hazaragi هزارگی | pk + long-press ه ي | **RTL** | —⁹ | — | — |
 | `mki` | `mki` | Dhatki ڍاٽڪي | pk · snd + long-press ۯ | **RTL** | —⁹ | — | — |
 | `kvx` | `kvx` | Parkari Koli پارڪري | pk · snd + long-press ٰ ؤ ۮ ۯ ۿ | **RTL** | —⁹ | — | — |
 | `bqi` | `bqi` | Bakhtiari لوری بختیاری | ir | **RTL** | —⁹ | — | — |
-| `glk` | `glk` | Gilaki گیلکی | ir + long-press ٚ ۊ ى | **RTL** | **Full** (glk)⁶ | — | — |
+| `glk` | `glk` | Gilaki گیلکی | ir, ۊ ؤ keys in place of ذ ظ + long-press ٚ ى ذ ظ | **RTL** | **Full** (glk)⁶ | — | — |
 | `lrc` | `lrc` | Northern Luri لۊری شومالی | iq · ku_ara + long-press ٙ ٛ ھ ۉ ۊ ؽ | **RTL** | —⁹ | — | — |
 | `mde` | `mde` | Maba Bura Mabang | ara + long-press ٚ ٛ پ ڃ چ ڊ ڔ ڗ ژ ڠ ݦ ݧ | **RTL** | —⁹ | — | — |
 | `bfy` | `bfy` | Bagheli बघेली | in | LTR | **Full** (bfy)¹⁴ | — | — |
@@ -647,11 +647,11 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `udm` | `udm` | Udmurt Удмурт | ru · udm | LTR | **Full** (udm)⁷ | — | — |
 | `wo` | `wo` | Wolof | us + long-press ñ ŋ ë ó | LTR | **Full** (wo)⁷ | ✓ | — |
 | `ln` | `ln` | Lingala Lingála | us + long-press ɛ ɔ | LTR | **Full** (ln)⁷ | ✓ | — |
-| `rw` | `rw` | Kinyarwanda | us | LTR | **Full** (rw)⁷ | ✓ | — |
-| `rn` | `rn` | Kirundi | us | LTR | **Full** (rn)⁷ | ✓ | — |
+| `rw` | `rw` | Kinyarwanda | us, ' key | LTR | **Full** (rw)⁷ | ✓ | — |
+| `rn` | `rn` | Kirundi | us, ' key | LTR | **Full** (rn)⁷ | ✓ | — |
 | `sn` | `sn` | Shona chiShona | us | LTR | **Full** (sn)⁷ | ✓ | — |
 | `ny` | `ny` | Chichewa | us + long-press ŵ | LTR | **Full** (ny)⁷ | ✓ | — |
-| `mg` | `mg` | Malagasy | us + long-press ñ ô, ' key | LTR | **Full** (mg)⁷ | ✓ | — |
+| `mg` | `mg` | Malagasy | us + long-press ñ ô à ì, ' key | LTR | **Full** (mg)⁷ | ✓ | — |
 | `st` | `st` | Sesotho | us | LTR | **Full** (st)⁷ | ✓ | — |
 | `tn` | `tn` | Setswana | us + long-press š | LTR | **Full** (tn)⁷ | ✓ | — |
 | `nso` | `nso` | Sepedi | us + long-press š ê ô | LTR | **Full** (nso)⁷ | ✓ | — |
@@ -3179,7 +3179,11 @@ keys):
 | `blk` Pa'O | its tones ꩻ and ႏ, keys of their own in place of Burmese's ဩ and ၏ (on Burmese's keys) | `blk` |
 | `nan` `hak` | their toned vowels first on the long presses, the commonest first: Southern Min's á â ā à a̍, o͘ in its five tones on o, ⁿ first on n; Hakka's â à á a̍, ṳ in its five tones on u | each its own |
 | `ami` Amis | ', the glottal stop, a key of its own at the home row's end (its text writes it ’, ˈ and ^ too) | `ami` |
-| `mg` Malagasy | ñ ô on n o; ', the apostrophe a word writes before the next (amin'ny: one word in thirteen of the UDHR's), a key of its own at the home row's end, which Tandroy-Mahafaly's and the Betsimisarakas' keyboards keep | `mg` |
+| `mg` Malagasy | ñ ô à ì on n o a i (à for the stress that tells words apart, tanàna, alàlana: in 0.6% of its web text's words); ', the apostrophe a word writes before the next (amin'ny: one word in thirteen of the UDHR's), a key of its own at the home row's end, which Tandroy-Mahafaly's and the Betsimisarakas' keyboards keep | `mg` |
+| `rn` `rw` Kirundi, Kinyarwanda | ', for the vowel a word drops before the next (n'umwe, y'igihugu: one word in eleven of each one's UDHR, 8.1% and 6.6% of their web text's), a key of its own at the home row's end | each its own |
+| `ps` Pashto | ۀ on ه (نۀ, پۀ: Pakistan's spelling of the final ə), which xkb's keymap lacks | `ps` |
+| `glk` Gilaki | ۊ and ؤ, in nearly a tenth of its words each (2.8% and 2.6% of its Wikipedia's letters), keys of their own in place of ذ and ظ (0.07% and 0.09%), which are on their long presses | `glk` |
+| `scl` Shina | the inverted damma ٗ, its rising tone (as the superscript alef ٰ its falling one), on the Shift view's damma, which CLDR's exemplars lack | `scl` |
 | `om` Oromo | ', its glottal stop, the hudhaa (ta'e, danda'a: one word in twenty of the UDHR's), a key of its own at the home row's end, which Southern and Eastern Oromo's keyboards keep (Eastern's typing ’) | `om` |
 | `zne` `skg` `bss` `men` `lgg` `xon` `dnj` `gbo` `gux` `suk` `spp` `bas` `ngl` `chw` `fat` `bud` `kao` `gvl` `nnb` `cce` | each language's own letters first on the long presses, with their tones where its text writes them (Akoose's ɛ ə ɔ with seven tones between them, Northern Grebo's ɛ ɔ with three, Ntcham's on b l m n too) | each its own |
 | `niu` `acf` `mrw` `guc` `sas` `bpr` `quh` `gcr` `tum` `tll` `kde` `nyy` `mas` `mnk` `mer` `dga` | each language's own letters first on the long presses (Niuean's macrons, Sasak's ẽ, Tumbuka's ŵ, Nyakyusa's ị ụ, Dagaare's ɛ ɔ ŋ and nasals…) | each its own |

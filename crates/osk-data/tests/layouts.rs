@@ -403,6 +403,12 @@ fn letters_their_texts_write_lead_their_long_presses() {
         ("bzc", "a", "à"),
         ("bzc", "e", "é"),
         ("bzc", "y", "ỳ"),
+        // Malagasy's à and ì, Pashto's ۀ and Shina's rising tone, the
+        // inverted damma, on the Shift view's damma.
+        ("mg", "a", "à"),
+        ("mg", "i", "ì"),
+        ("ps", "ه", "ۀ"),
+        ("scl", "\u{64f}", "\u{657}"),
     ] {
         let def = load(id);
         // The key on the first view that has it: a letter's on the base
@@ -416,6 +422,31 @@ fn letters_their_texts_write_lead_their_long_presses() {
         assert!(
             matches!(k.long_press.first(), Some(KeyOutput::Text { text }) if text == first),
             "{id}: {key}'s long press does not start with {first}"
+        );
+    }
+}
+
+/// Gilaki's ۊ and ؤ, in nearly a tenth of its words each, are taps on its
+/// keys, in place of ذ and ظ, which it hardly writes and which are on
+/// their long presses (scripts/build-exemplar-layouts.py's swap).
+#[test]
+fn gilakis_vowel_letters_are_keys() {
+    let def = load("glk");
+    let base = def
+        .views
+        .iter()
+        .find(|v| v.id == ViewId::Base)
+        .expect("base view");
+    for (letter, moved) in [("ۊ", "ذ"), ("ؤ", "ظ")] {
+        let key = base
+            .rows
+            .iter()
+            .flat_map(|r| r.keys.iter())
+            .find(|k| k.label == letter)
+            .unwrap_or_else(|| panic!("glk: no {letter} key"));
+        assert!(
+            matches!(key.long_press.first(), Some(KeyOutput::Text { text }) if text == moved),
+            "glk: {letter}'s long press does not start with {moved}"
         );
     }
 }
@@ -457,6 +488,8 @@ fn keys_at_the_home_rows_end_type_their_letters() {
         ("bzc", "'"),
         ("om", "'"),
         ("gax", "'"),
+        ("rn", "'"),
+        ("rw", "'"),
         ("mwm", "\u{304}"),
         ("mwm", "\u{301}"),
         ("prk", ":"),

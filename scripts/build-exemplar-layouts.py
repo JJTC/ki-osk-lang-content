@@ -158,14 +158,21 @@ LANGS = [
     ("gwc", EXEMPLARS, "1b9e70d76570bf84a5b4d974c4107d080cac219b45cf067c43477ba0c86222f1", {"base": "ur", "name": "گاؤری"}),
     ("hno", EXEMPLARS, "a6630ff6023353cdb5e2bf594cb903ceddef13e98a65933cdc99d262e8856778", {"base": "ur", "name": "ہندکو"}),
     ("phr", EXEMPLARS, "301de48233d60e08714455d3dca845f60b32a4ad53c99ce7c7a7ed4a6f319d0f", {"base": "ur", "name": "پوٹھواری"}),
-    ("scl", EXEMPLARS, "e7a1a96e53a7166ea577b03974ff74d7d600025f7d07c87d8f69e9e43e4d7759", {"base": "ur", "name": "شینا"}),
+    # Shina's rising tone, the inverted damma (Wikipedia's article: ٗ and ٰ
+    # for the rising and the falling tone, وَزِیٗ), which CLDR's list lacks.
+    ("scl", EXEMPLARS, "e7a1a96e53a7166ea577b03974ff74d7d600025f7d07c87d8f69e9e43e4d7759",
+     {"base": "ur", "name": "شینا", "also": ["\u0657"]}),
     ("trw", COMMON, "654e920a883f45731389af8f219bd09440e086d4949ccdc1c71ff982678e4083", {"base": "ur"}),
     ("bal", COMMON, "d69ef9db4bde994fa33e4a64fb4aadb8076263121fd8bf4d628ceb0f870dea60", {"base": "ur"}),
     ("haz", EXEMPLARS, "419d1ed33b30bfbd575ddef4bbf882982b4316842506e62060af584067a0486f", {"base": "ur", "name": "هزارگی"}),
     ("mki", EXEMPLARS, "994e3127e10da6d8e25031383269f32a6a59724beb153e21937964246b98ea3f", {"base": "sd", "name": "ڍاٽڪي"}),
     ("kvx", EXEMPLARS, "44529ce51b59ce32af4c80958692d1287a5e344a0d601d2784b0962dd1dda8d2", {"base": "sd", "name": "پارڪري"}),
     ("bqi", COMMON, "d6d5834f709b446a6f984aab800188e40ae90198c975fe47c74b0d6124135e9d", {"base": "fa"}),
-    ("glk", EXEMPLARS, "6e135b3506819e3939e45c0f80b48c0602ebe1414098ec6565f71dd3547890c1", {"base": "fa", "name": "گیلکی", "model": True}),
+    # Gilaki's ۊ and ؤ, in nearly a tenth of its words each (2.8% and 2.6%
+    # of its Wikipedia's letters), in place of ذ and ظ, which it hardly
+    # writes (0.07% and 0.09%), each on its new key's long press.
+    ("glk", EXEMPLARS, "6e135b3506819e3939e45c0f80b48c0602ebe1414098ec6565f71dd3547890c1",
+     {"base": "fa", "name": "گیلکی", "model": True, "swap": {"ذ": "ۊ", "ظ": "ؤ"}}),
     ("lrc", COMMON, "7a86da9dd0fd4d3136e93baffdcff51fdd0df387771b7d69f9f797b80d0a30a5", {"base": "ckb"}),
     ("mde", EXEMPLARS, "22ddea51c12dfbcd403971eb071e586de049ce0af9543011911877df92345561", {"base": "ar", "name": "Bura Mabang"}),
     ("bfy", EXEMPLARS, "a9fef7fdef1337c1643ab965418ae9ab96d9fd852d80c94b3771cc657524aa49", {"base": "hi", "name": "बघेली", "model": True}),
@@ -189,7 +196,7 @@ NEAREST = {"ɛ": "e", "ə": "e", "ǝ": "e", "ɔ": "o", "ŋ": "n", "ɩ": "i", "ʊ
            "ٻ": "ب", "ڀ": "ب", "ڃ": "ج", "ڄ": "ج", "ڇ": "چ", "ڦ": "ف", "ڤ": "ف",
            "ڪ": "ک", "ڱ": "گ", "ڳ": "گ", "ں": "ن", "ڻ": "ن", "ے": "ی", "ھ": "ه",
            "ہ": "ه", "ە": "ه", "ۆ": "و", "ۉ": "و", "ٶ": "و",
-           "\u08ff": "\u0658", "\u065a": "\u064e", "\u065b": "\u064e",
+           "\u08ff": "\u0658", "\u065a": "\u064e", "\u065b": "\u064e", "\u0657": "\u064f",
            "ॐ": "ओ", "ऽ": "ः", "ॽ": "ः", "ৗ": "ৌ"}
 # Arabic's yeh, alef maksura and kaf as Persian's and Urdu's keys type
 # them, and its heh and teh marbuta as Urdu's.

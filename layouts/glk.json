@@ -306,11 +306,17 @@
             },
             {
               "width_units": 1,
-              "label": "ذ",
+              "label": "ۊ",
               "output": {
-                "kind": "keycode",
-                "code": 48
-              }
+                "kind": "text",
+                "text": "ۊ"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ذ"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -346,11 +352,17 @@
             },
             {
               "width_units": 1,
-              "label": "ظ",
+              "label": "ؤ",
               "output": {
-                "kind": "keycode",
-                "code": 44
-              }
+                "kind": "text",
+                "text": "ؤ"
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ظ"
+                }
+              ]
             },
             {
               "width_units": 1.5,
@@ -692,7 +704,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 30
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ظ"
+                }
+              ]
             }
           ]
         },

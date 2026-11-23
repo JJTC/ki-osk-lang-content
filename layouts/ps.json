@@ -6,6 +6,9 @@
   "swipe_enabled": false,
   "prediction_enabled": true,
   "prediction_lang": "ps",
+  "xkb_variant": "ps",
+  "font_script": "arabic",
+  "long_press_letters": true,
   "views": [
     {
       "id": "base",
@@ -51,7 +54,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 23
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ۀ"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -1355,7 +1364,5 @@
         }
       ]
     }
-  ],
-  "xkb_variant": "ps",
-  "font_script": "arabic"
+  ]
 }

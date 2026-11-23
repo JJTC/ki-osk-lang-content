@@ -76,7 +76,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 23
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "ì"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -111,7 +117,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 30
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "à"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -405,7 +417,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 23
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "Ì"
+                }
+              ]
             },
             {
               "width_units": 1,
@@ -440,7 +458,13 @@
               "output": {
                 "kind": "keycode",
                 "code": 30
-              }
+              },
+              "long_press": [
+                {
+                  "kind": "text",
+                  "text": "À"
+                }
+              ]
             },
             {
               "width_units": 1,

@@ -366,7 +366,10 @@ DIACRITIC_LONGPRESS = {
     "wo": {"a": ["à"], "e": ["é", "ë"], "n": ["ñ", "ŋ"], "o": ["ó"]},
     "ln": {"e": ["ɛ"], "o": ["ɔ"]},
     "ny": {"w": ["ŵ"]},
-    "mg": {"n": ["ñ"], "o": ["ô"]},
+    # Malagasy: à and ì too, which its web text writes for the stress that
+    # tells words apart (tanàna, alàlana: à in 0.6% of FineWeb-2's words,
+    # six times ô; tsipìka).
+    "mg": {"n": ["ñ"], "o": ["ô"], "a": ["à"], "i": ["ì"]},
     "tn": {"s": ["š"]},
     "nso": {"s": ["š"], "e": ["ê"], "o": ["ô"]},
     "lg": {"n": ["ŋ", "ɲ"]},
@@ -377,6 +380,9 @@ DIACRITIC_LONGPRESS = {
     },
     "bm": {"e": ["ɛ"], "o": ["ɔ"], "n": ["ɲ", "ŋ"]},
     "ff": {"b": ["ɓ"], "d": ["ɗ"], "y": ["ƴ"], "n": ["ŋ", "ñ", "ɲ"]},
+    # Pashto: ۀ, which xkb's keymap lacks, on the heh it is written with
+    # (نۀ, پۀ: Pakistan's spelling; 2 186 words of its Wikipedia's).
+    "ps": {"ه": ["ۀ"]},
     "ve": {"d": ["ḓ"], "l": ["ḽ"], "n": ["ṋ"], "t": ["ṱ"]},
     # --- Tier G: Pacific macron long vowels + Nahuatl macrons ---
     "mi": {"a": ["ā"], "e": ["ē"], "i": ["ī"], "o": ["ō"], "u": ["ū"]},
@@ -498,8 +504,12 @@ MODEL = {"sr-latn": "sr-Latn"}
 # thirteen of the UDHR's), and Oromo, for its glottal stop, the hudhaa
 # (ta'e, danda'a: one word in twenty of the UDHR's), which the keyboards
 # made from theirs keep (build-derived-layouts.py: Tandroy, the
-# Betsimisarakas, Southern and Eastern Oromo).
+# Betsimisarakas, Southern and Eastern Oromo); and Kirundi and
+# Kinyarwanda, for the vowel a word drops before the next (n'umwe,
+# y'igihugu: one word in eleven of each one's UDHR, 8.1% and 6.6% of the
+# words of their web text, FineWeb-2's, their models').
 HOME_ROW_TEXT = {"haw": "ʻ", "sm": "ʻ", "to": "ʻ", "ty": "ʻ", "ami": "'", "mg": "'", "om": "'",
+                 "rn": "'", "rw": "'",
                  **{lid: "Ӏ" for lid in ("ce", "inh", "av", "kbd", "ady", "lez", "lbe", "tab", "dar")},
                  **{lid: "ʼ" for lid in ("yua", "quc", "kek", "quz")}, "gn": "'",
                  "dz": "\u0F0B", "cop": "\u0300"}

@@ -5,6 +5,8 @@
   "direction": "rtl",
   "swipe_enabled": false,
   "prediction_enabled": false,
+  "xkb_variant": "ps",
+  "font_script": "arabic",
   "long_press_letters": true,
   "views": [
     {
@@ -1367,7 +1369,5 @@
         }
       ]
     }
-  ],
-  "xkb_variant": "ps",
-  "font_script": "arabic"
+  ]
 }
