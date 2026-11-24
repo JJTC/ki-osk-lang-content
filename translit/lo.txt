@@ -1,0 +1,115 @@
+# Lao from Latin letters, as Lao is typed in Latin: kh th ph for the
+# aspirates (ຂ ຄ, ຖ ທ, ຜ ພ), ny for ຍ, x or s for ຊ, ch or j for ຈ, a
+# syllable's last k t p for ກ ດ ບ; a long vowel typed short or doubled
+# (aa, ee, oo), ae for ແ, eu for ຶ ື, oe or er for ເ◌ີ, o for ໂ, ◌ົ and
+# the open o ◌ອ ◌ໍ. A vowel's first part is written before its consonant
+# (◌: ke is ເກ, kao ເກົາ), and a vowel no consonant carries is carried
+# by ອ (ai: ອ້າຍ). The high consonants Lao writes before a low one (ໜ ໝ
+# ຫລ ຫງ ຫຍ ຫວ) and the tone marks are nothing typed: the reading takes
+# them where the lexicon has a word so written (kao: ເກົ້າ). Lao writes
+# no space between its words. The lexicon chooses.
+
+script abugida
+virama -
+cluster 0
+schwa 3
+final 0
+final-virama 0
+tones ່ ້ ໊ ໋
+tone 0
+carrier ອ
+unspaced
+
+[consonants]
+k     ກ
+kh    ຂ  ຄ
+g     ກ:0.5  ຄ:1.5
+ng    ງ  ຫງ:1.2
+ch    ຈ  ຊ:1.5
+j     ຈ  ຢ:2
+c     ຈ:0.5  ກ:1.5
+s     ສ  ຊ:0.3
+x     ຊ  ສ:0.5
+z     ຊ:0.5  ສ:1
+ny    ຍ  ຫຍ:1.2
+gn    ຍ:0.5
+d     ດ
+t     ຕ  ທ:1.5
+t$    ດ:0.2  ຕ:2
+t>c   ດ:0.3  ຕ:0.5
+th    ທ  ຖ:0.3
+n     ນ  ໜ:1  ຫນ:1.8
+b     ບ
+p     ປ  ພ:2
+p$    ບ:0.2  ປ:2
+p>c   ບ:0.4  ປ:0.5
+ph    ພ  ຜ:0.3
+f     ຟ  ຝ:0.5
+m     ມ  ໝ:1  ຫມ:1.8
+y     ຢ  ຍ:0.3
+y$    ຍ
+r     ຣ  ລ:0.5  ຫຼ:2
+l     ລ  ຫຼ:1.2  ຫລ:1.4
+w     ວ  ຫວ:1.2
+v     ວ  ຫວ:1.2
+w$    ວ
+h     ຫ  ຮ:0.3
+q     ກ:1
+k$    ກ
+kw    ກວ:0.8
+khw   ຂວ:0.5  ຄວ:0.5
+
+[vowels]
+a     ອະ/ະ:0.6  ອັ/ັ:0.7  ອາ/າ:0.3
+a$    ອະ/ະ:0.3  ອາ/າ:0.3
+a>c   ອັ/ັ:0.2  ອາ/າ:0.6  ອະ/ະ:1
+aa    ອາ/າ
+i     ອິ/ິ:0.3  ອີ/ີ:0.3
+i>c   ອີ/ີ:0.3  ອິ/ິ:0.3
+i$    ອີ/ີ  ອິ/ິ:0.6
+ee    ອີ/ີ:0.5  ເອ/ເ◌:0.3
+ii    ອີ/ີ
+u     ອຸ/ຸ:0.3  ອູ/ູ:0.4  ອົວ/ົວ:2  ອື/ື:2
+uu    ອູ/ູ
+oo    ອູ/ູ:0.4  ໂອ/ໂ◌:0.4
+ou    ອູ/ູ  ອຸ/ຸ:0.5
+eu    ອຶ/ຶ:0.3  ອື/ື:0.3  ເອີ/ເ◌ີ:1.5
+ue    ອຶ/ຶ:0.4  ອື/ື:0.4  ອົວ/ົວ:1.2
+e     ເອ/ເ◌:0.3  ເອະ/ເ◌ະ:0.6  ແອ/ແ◌:1.5
+e>c   ເອັ/ເ◌ັ:0.4  ເອ/ເ◌:0.4  ແອ/ແ◌:1.5  ເອະ/ເ◌ະ:1
+ae    ແອ/ແ◌  ແອະ/ແ◌ະ:0.8
+ae>c  ແອັ/ແ◌ັ:0.5  ແອ/ແ◌:0.3  ແອະ/ແ◌ະ:1
+o     ໂອ/ໂ◌:0.4  ອໍ/ໍ:0.8  ໂອະ/ໂ◌ະ:1  ເອາະ/ເ◌າະ:1  ອົ/ົ:1.2
+o>c   ອົ/ົ:0.4  ໂອ/ໂ◌:0.6  ອອ/ອ:0.7  ໂອະ/ໂ◌ະ:1  ອໍ/ໍ:1  ເອາະ/ເ◌າະ:1.5
+or    ອໍ/ໍ  ອອ/ອ:0.3
+aw    ອໍ/ໍ:0.5  ອອ/ອ:0.5  ອາວ/າວ:1
+oe    ເອີ/ເ◌ີ:0.3  ເອິ/ເ◌ິ:0.6
+er    ເອີ/ເ◌ີ:0.3  ເອິ/ເ◌ິ:0.6
+ia    ເອຍ/ເ◌ຍ:0.4  ເອັຍ/ເ◌ັຍ:0.8  ອຽ/ຽ:0.5
+ie    ເອຍ/ເ◌ຍ:0.5  ອຽ/ຽ:0.5
+ia>c  ອຽ/ຽ:0.2  ເອຍ/ເ◌ຍ:1.5
+ua    ອົວ/ົວ:0.3  ອວ/ວ:0.6
+ua>c  ອວ/ວ:0.2  ອົວ/ົວ:1
+uea   ເອືອ/ເ◌ືອ:0.2  ເອຶອ/ເ◌ຶອ:1
+eua   ເອືອ/ເ◌ືອ:0.2
+ai    ໄອ/ໄ◌:0.3  ໃອ/ໃ◌:1.2  ອາຍ/າຍ:0.6  ອັຍ/ັຍ:2
+ay    ໄອ/ໄ◌:0.5  ອາຍ/າຍ:0.5
+aai   ອາຍ/າຍ
+ao    ເອົາ/ເ◌ົາ:0.3  ອາວ/າວ:0.4
+au    ເອົາ/ເ◌ົາ:0.4  ອາວ/າວ:0.4
+am    ອຳ/ຳ:0.4
+am$   ອຳ/ຳ:0.2  ອາມ/າມ:0.6
+oi    ອອຍ/ອຍ:0.4  ໂອຍ/ໂ◌ຍ:0.6
+oy    ອອຍ/ອຍ:0.4  ໂອຍ/ໂ◌ຍ:0.6
+ui    ອຸຍ/ຸຍ:0.4  ອູຍ/ູຍ:0.8
+uy    ອຸຍ/ຸຍ:0.4
+iu    ອິວ/ິວ:0.3
+ew    ເອວ/ເ◌ວ:0.4  ແອວ/ແ◌ວ:0.8
+eo    ເອວ/ເ◌ວ:0.4  ແອວ/ແ◌ວ:0.8
+aew   ແອວ/ແ◌ວ
+aeu   ແອວ/ແ◌ວ
+uai   ອວາຍ/ວາຍ:0.2  ອົວອີ/ົວອີ:2
+uay   ອວາຍ/ວາຍ:0.2
+euy   ເອືອຍ/ເ◌ືອຍ:0.3
+iao   ອຽວ/ຽວ:0.2
+iaw   ອຽວ/ຽວ:0.2

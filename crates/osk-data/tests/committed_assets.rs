@@ -725,6 +725,19 @@ fn every_translit_table_reads_its_language() {
         ),
         ("anp", &[("chhai", "छै"), ("aaru", "आरू"), ("kerau", "केरौ")]),
         ("new", &[("khah", "खः"), ("thwa", "थ्व"), ("yahgu", "याःगु")]),
+        // Lao: a vowel's first part before its consonant (ເປັນ, ເມືອງ), and
+        // tones nothing typed says, where the lexicon's word has one
+        // (ເຈົ້າ, ຂ້ອຍ); its words written without spaces (ສະບາຍດີ).
+        (
+            "lo",
+            &[
+                ("sabaidee", "ສະບາຍດີ"),
+                ("pen", "ເປັນ"),
+                ("meuang", "ເມືອງ"),
+                ("chao", "ເຈົ້າ"),
+                ("khoy", "ຂ້ອຍ"),
+            ],
+        ),
         ("ahr", &[("aani", "आणि"), ("she", "शे"), ("madat", "मदत")]),
         (
             "bfy",

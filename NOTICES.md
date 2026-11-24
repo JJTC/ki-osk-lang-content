@@ -518,7 +518,7 @@ Greek AUEB's real-world Greeklish (Toumazatos, Pavlopoulos,
 Androutsopoulos and Vassos, "Still All Greeklish to Me: Greeklish to
 Greek Transliteration", LREC-COLING 2024; github.com/nlpaueb/greeklish,
 Apache-2.0), which `scripts/fetch-greeklish.sh` downloads to measure,
-and for Yiddish, Armenian, Persian, Pashto, Mongolian and Santali
+and for Yiddish, Armenian, Persian, Pashto, Mongolian, Santali and Lao
 Wiktionary's words and their romanizations as kaikki.org extracts them
 (CC BY-SA 4.0), which `scripts/fetch-wiktionary-romanized.sh` downloads
 to measure.

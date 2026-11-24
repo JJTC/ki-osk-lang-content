@@ -21,7 +21,8 @@
 //! - `script abugida`, `script alphabet` or `script abjad`: how the script
 //!   writes. Only an abugida's consonants are joined (below).
 //! - `virama ्`: an abugida's sign that takes a consonant's vowel away and
-//!   joins it to the next.
+//!   joins it to the next; `virama -` for a script that writes consonants
+//!   side by side with none (Lao).
 //! - `cluster 0` and `schwa 1.5`: an abugida's costs of the two ways of
 //!   writing two consonants typed with no vowel between them: joined by the
 //!   virama (`namaste`, नमस्ते), or each with its own vowel, the one
@@ -34,6 +35,13 @@
 //! - `unspaced`: the script writes no space between its words (Nuosu's
 //!   Yi, as Chinese): Space, and a word taken from the strip, end the word
 //!   without one ([`Scheme::unspaced`]).
+//! - `tones ່ ້` and `tone 1`: marks an abugida writes on a syllable that
+//!   nothing typed says (Lao's tone marks), and what writing one costs
+//!   ([`TONE_COST`] without it): each is read after the syllable's
+//!   consonant and the signs above or below it, where its vowel is read,
+//!   only as far as the lexicon has a word so written (ເກົ້າ from `kao`).
+//! - `carrier ອ`: the letter that carries a vowel no consonant does, in
+//!   the vowels' letters (Lao's ອ: ອ້າຍ), after which a tone is read too.
 //!
 //! Then the rules, in the sections `[consonants]`, `[vowels]` and
 //! `[other]`. A rule is the Latin it reads, then each way of writing it,
@@ -50,7 +58,11 @@
 //! is taken to be e (2.7) times rarer than a way of cost 0 of the same
 //! letters. `-` writes nothing. An abugida's vowel is written as
 //! `letter/sign`: the letter at a word's start and after a vowel, the sign
-//! after a consonant (`-` for the vowel a consonant carries unwritten).
+//! after a consonant (`-` for the vowel a consonant carries unwritten). A
+//! sign with `◌` (U+25CC) in it is written around the consonant: what is
+//! before the `◌` before it, what is after it after (Lao's `ເ◌ົາ`: ເກົາ),
+//! the consonant being what the last rule of `[consonants]` wrote (so a
+//! cluster written after a vowel's first part is one rule: `khw ຂວ`).
 //! The Latin may start with `^`, read only at a word's start, and end with
 //! `$`, read only at its end, or with `>c` or `>v`, read only before a
 //! consonant letter or a vowel letter, which it leaves to the next rule. A
@@ -392,6 +404,14 @@ pub struct Scheme {
     /// lower case, and what reading letters as them costs.
     letters: HashMap<char, String>,
     acronym: f32,
+    /// The marks written on a syllable that nothing typed says (`tones`),
+    /// what each costs, and the letter that carries a vowel alone.
+    tones: Vec<String>,
+    tone: f32,
+    carrier: Option<String>,
+    /// What the vowels' signs with `◌` write before their consonant, each
+    /// once: a reading that ends on a consonant may yet take one there.
+    before_onset: Vec<String>,
     /// How its readings are ranked, when it has learned to (`[ranker]`).
     ranker: Option<Ranker>,
     /// The English words it was given ([`Scheme::with_english`]), each
@@ -415,11 +435,19 @@ const SCHWA: u32 = 1;
 const FINAL: u32 = 2;
 const FINAL_VIRAMA: u32 = 3;
 const ACRONYM: u32 = 4;
-const SETTINGS: usize = 5;
+const TONE: u32 = 5;
+const SETTINGS: usize = 6;
 
 /// What reading letters typed as the Latin letters' names costs, where
 /// the table does not say (`acronym`).
 pub const ACRONYM_COST: f32 = 1.0;
+
+/// What writing a tone mark nothing typed costs, where the table does not
+/// say (`tone`).
+pub const TONE_COST: f32 = 1.0;
+
+/// Where a vowel's sign puts the consonant it is written around.
+const AROUND: char = '\u{25CC}';
 
 /// What joining two consonants with a zero-width non-joiner costs beyond
 /// joining them without one: the joiner keeps apart two letters the script
@@ -542,9 +570,16 @@ impl std::error::Error for TranslitError {}
 struct State<T = ()> {
     text: String,
     prev: Class,
+    /// Where in `text` what the last consonant rule wrote begins: what a
+    /// vowel's sign with `◌` is written around.
+    onset: usize,
     cost: f32,
     trace: T,
 }
+
+/// What tells readings apart for the search: their text, the kind of
+/// the rule that read last, and where its consonant begins.
+type Key = (String, Class, usize);
 
 /// What a reading keeps of how it was read: nothing, as the keyboard
 /// reads (`()`), or its cheapest ways ([`Paths`], for
@@ -667,6 +702,9 @@ impl Scheme {
         let mut final_bare = 0.0;
         let mut final_virama = 3.0;
         let mut acronym = ACRONYM_COST;
+        let mut tone = TONE_COST;
+        let mut tones: Vec<String> = Vec::new();
+        let mut carrier: Option<String> = None;
         let mut english_cost = ENGLISH_COST;
         let mut vowels: Vec<char> = "aeiou".chars().collect();
         let mut unspaced = false;
@@ -764,7 +802,20 @@ impl Scheme {
                             other => return Err(err(format!("no script kind `{other}`"))),
                         });
                     }
-                    "virama" => virama = Some(one(&rest)?.nfc().collect::<String>()),
+                    "virama" => {
+                        let v = one(&rest)?;
+                        virama = Some(if v == "-" {
+                            String::new()
+                        } else {
+                            v.nfc().collect::<String>()
+                        });
+                    }
+                    "tones" if !rest.is_empty() => {
+                        tones = rest.iter().map(|m| m.nfc().collect()).collect();
+                    }
+                    "tones" => return Err(err("`tones` takes the marks".into())),
+                    "tone" => tone = cost(&rest)?,
+                    "carrier" => carrier = Some(one(&rest)?.nfc().collect()),
                     "cluster" => cluster = cost(&rest)?,
                     "schwa" => schwa = cost(&rest)?,
                     "final" => final_bare = cost(&rest)?,
@@ -811,6 +862,15 @@ impl Scheme {
                 ways += 1;
             }
         }
+        let mut before_onset: Vec<String> = Vec::new();
+        for w in rules.iter().flat_map(|r| &r.ways) {
+            if let Some((before, _)) = w.sign.as_deref().and_then(|s| s.split_once(AROUND))
+                && !before.is_empty()
+                && !before_onset.iter().any(|b| b == before)
+            {
+                before_onset.push(before.to_string());
+            }
+        }
         let mut by_first: HashMap<char, Vec<usize>> = HashMap::new();
         let mut reads = HashSet::new();
         let mut cased = false;
@@ -840,6 +900,10 @@ impl Scheme {
             ways,
             letters,
             acronym,
+            tones,
+            tone,
+            carrier,
+            before_onset,
             ranker,
             english: BTreeMap::new(),
             english_cost,
@@ -906,8 +970,8 @@ impl Scheme {
     /// The costs the table sets, each at its place: every rule's ways, the
     /// rules in the table's order and a rule's ways in its line's, then
     /// `cluster`, `schwa`, `final` and `final-virama` (which only an
-    /// abugida charges) and `acronym` (which only a table that names its
-    /// letters does).
+    /// abugida charges), `acronym` (which only a table that names its
+    /// letters does) and `tone` (which only one with `tones` does).
     #[must_use]
     pub fn costs(&self) -> Vec<f32> {
         let mut costs: Vec<f32> = self
@@ -921,6 +985,7 @@ impl Scheme {
             self.final_bare,
             self.final_virama,
             self.acronym,
+            self.tone,
         ]);
         costs
     }
@@ -952,6 +1017,7 @@ impl Scheme {
         self.final_bare = at(FINAL);
         self.final_virama = at(FINAL_VIRAMA);
         self.acronym = at(ACRONYM);
+        self.tone = at(TONE);
         Ok(())
     }
 
@@ -1327,6 +1393,7 @@ impl Scheme {
                 let start = State {
                     text: w.clone(),
                     prev: Class::Consonant,
+                    onset: w.len() - w.chars().next_back().map_or(0, char::len_utf8),
                     cost,
                     trace: T::default(),
                 };
@@ -1443,6 +1510,7 @@ impl Scheme {
             return vec![literal];
         };
         let acronym = State {
+            onset: names.len(),
             text: names,
             prev: Class::Other,
             cost: self.acronym,
@@ -1522,6 +1590,7 @@ impl Scheme {
         let start = State {
             text: String::new(),
             prev: Class::Start,
+            onset: 0,
             cost: 0.0,
             trace: T::default(),
         };
@@ -1537,11 +1606,15 @@ impl Scheme {
         lexicon: &dyn Lexicon,
     ) -> Vec<State<T>> {
         let n = input.len();
-        let mut at: Vec<HashMap<(String, Class), (f32, T)>> = vec![HashMap::new(); n + 1];
-        at[from].insert((start.text, start.prev), (start.cost, start.trace));
-        let state = |((text, prev), (cost, trace)): ((String, Class), (f32, T))| State {
+        let mut at: Vec<HashMap<Key, (f32, T)>> = vec![HashMap::new(); n + 1];
+        at[from].insert(
+            (start.text, start.prev, start.onset),
+            (start.cost, start.trace),
+        );
+        let state = |((text, prev, onset), (cost, trace)): (Key, (f32, T))| State {
             text,
             prev,
+            onset,
             cost,
             trace,
         };
@@ -1555,17 +1628,34 @@ impl Scheme {
                     .total_cmp(&b.cost)
                     .then_with(|| a.text.cmp(&b.text))
                     .then_with(|| a.prev.cmp(&b.prev))
+                    .then_with(|| a.onset.cmp(&b.onset))
             });
             states.truncate(BEAM);
             for s in &states {
                 self.expand(input, pos, s, &mut |next, s| {
-                    if lexicon.has_prefix(&s.text) {
-                        keep(&mut at[next], (s.text, s.prev), s.cost, s.trace);
+                    if self.may_begin(&s, lexicon) {
+                        keep(&mut at[next], (s.text, s.prev, s.onset), s.cost, s.trace);
                     }
                 });
             }
         }
         std::mem::take(&mut at[n]).into_iter().map(state).collect()
+    }
+
+    /// Whether reading `s` may yet be read on to a word of `lexicon`: it
+    /// begins one, or, ending on a consonant, it does with a vowel's first
+    /// part written before that consonant, as a vowel read next may write
+    /// it (Lao's ເ: `ke` is ເກ).
+    fn may_begin<T>(&self, s: &State<T>, lexicon: &dyn Lexicon) -> bool {
+        lexicon.has_prefix(&s.text)
+            || (s.prev == Class::Consonant
+                && self.before_onset.iter().any(|before| {
+                    lexicon.has_prefix(&format!(
+                        "{}{before}{}",
+                        &s.text[..s.onset],
+                        &s.text[s.onset..]
+                    ))
+                }))
     }
 
     /// The readings of `ends` (as [`Scheme::search`] leaves them) that are
@@ -1602,6 +1692,7 @@ impl Scheme {
         let start = State {
             text: String::new(),
             prev: Class::Start,
+            onset: 0,
             cost: 0.0,
             trace: T::default(),
         };
@@ -1672,19 +1763,23 @@ impl Scheme {
                 let abugida = self.script == Script::Abugida;
                 match r.class {
                     Class::Consonant if abugida && s.prev == Class::Consonant => {
+                        let joined = format!("{}{}", s.text, self.virama);
                         put(
                             next,
                             State {
-                                text: format!("{}{}{}", s.text, self.virama, w.letter),
+                                onset: joined.len(),
+                                text: format!("{joined}{}", w.letter),
                                 prev: Class::Consonant,
                                 cost: cost + self.cluster,
                                 trace: trace.and(self.ways + CLUSTER),
                             },
                         );
+                        let apart = format!("{joined}{ZWNJ}");
                         put(
                             next,
                             State {
-                                text: format!("{}{}{ZWNJ}{}", s.text, self.virama, w.letter),
+                                onset: apart.len(),
+                                text: format!("{apart}{}", w.letter),
                                 prev: Class::Consonant,
                                 cost: cost + self.cluster + ZWNJ_JOIN,
                                 trace: trace.and(self.ways + CLUSTER),
@@ -1693,6 +1788,7 @@ impl Scheme {
                         put(
                             next,
                             State {
+                                onset: s.text.len(),
                                 text: format!("{}{}", s.text, w.letter),
                                 prev: Class::Consonant,
                                 cost: cost + self.schwa,
@@ -1704,6 +1800,7 @@ impl Scheme {
                         put(
                             next,
                             State {
+                                onset: s.text.len(),
                                 text: format!("{}{}", s.text, w.letter),
                                 prev: Class::Consonant,
                                 cost,
@@ -1713,6 +1810,7 @@ impl Scheme {
                         put(
                             next,
                             State {
+                                onset: s.text.len() + ZWNJ.len_utf8(),
                                 text: format!("{}{ZWNJ}{}", s.text, w.letter),
                                 prev: Class::Consonant,
                                 cost: cost + ZWNJ_JOIN,
@@ -1722,11 +1820,32 @@ impl Scheme {
                     }
                     Class::Vowel if abugida && s.prev == Class::Consonant => {
                         let sign = w.sign.as_deref().unwrap_or(&w.letter);
+                        let (text, mark_at) = around(&s.text, s.onset, sign);
+                        self.toned(next, &text, Some(mark_at), s.onset, cost, &trace, put);
                         put(
                             next,
                             State {
-                                text: format!("{}{sign}", s.text),
+                                text,
                                 prev: Class::Vowel,
+                                onset: s.onset,
+                                cost,
+                                trace,
+                            },
+                        );
+                    }
+                    Class::Vowel if abugida => {
+                        let text = format!("{}{}", s.text, w.letter);
+                        let mark_at = self.carrier.as_deref().and_then(|c| {
+                            let at = s.text.len() + w.letter.find(c)? + c.len();
+                            Some(at + marks_after(&text[at..]))
+                        });
+                        self.toned(next, &text, mark_at, s.text.len(), cost, &trace, put);
+                        put(
+                            next,
+                            State {
+                                text,
+                                prev: Class::Vowel,
+                                onset: s.text.len(),
                                 cost,
                                 trace,
                             },
@@ -1735,6 +1854,7 @@ impl Scheme {
                     class => put(
                         next,
                         State {
+                            onset: s.text.len(),
                             text: format!("{}{}", s.text, w.letter),
                             prev: class,
                             cost,
@@ -1748,10 +1868,42 @@ impl Scheme {
             put(
                 pos + 1,
                 State {
+                    onset: s.text.len(),
                     text: format!("{}{}", s.text, input[pos]),
                     prev: Class::Other,
                     cost: s.cost + UNREAD,
                     trace: s.trace.clone(),
+                },
+            );
+        }
+    }
+
+    /// `text` with each of the table's tones written at `mark_at` (where a
+    /// vowel was just read), each at the setting `tone`'s cost, handed to
+    /// `put` as read up to `next`.
+    #[allow(clippy::too_many_arguments)] // a reading's parts, as `expand` has them
+    fn toned<T: Trace>(
+        &self,
+        next: usize,
+        text: &str,
+        mark_at: Option<usize>,
+        onset: usize,
+        cost: f32,
+        trace: &T,
+        put: &mut dyn FnMut(usize, State<T>),
+    ) {
+        let Some(at) = mark_at else {
+            return;
+        };
+        for mark in &self.tones {
+            put(
+                next,
+                State {
+                    text: format!("{}{mark}{}", &text[..at], &text[at..]),
+                    prev: Class::Vowel,
+                    onset,
+                    cost: cost + self.tone,
+                    trace: trace.and(self.ways + TONE),
                 },
             );
         }
@@ -1791,6 +1943,7 @@ impl Scheme {
             let with = State {
                 text: format!("{}{}", s.text, self.virama),
                 prev: s.prev,
+                onset: s.onset,
                 cost: s.cost + self.final_virama,
                 trace: s.trace.and(self.ways + FINAL_VIRAMA),
             };
@@ -1928,6 +2081,29 @@ fn chillu_consonant(c: char) -> Option<char> {
 /// Whether `c` is a combining mark (a vowel sign, a nasal sign).
 fn is_mark(c: char) -> bool {
     unicode_normalization::char::is_combining_mark(c)
+}
+
+/// How many bytes of combining marks `text` starts with.
+fn marks_after(text: &str) -> usize {
+    text.chars()
+        .take_while(|&c| is_mark(c))
+        .map(char::len_utf8)
+        .sum()
+}
+
+/// `text`, its consonant from `onset` on, with a vowel's `sign` written
+/// after it, or around it where the sign has `◌` in it; and where in what
+/// it gives a tone is written: after the consonant and the marks the sign
+/// puts right after it.
+fn around(text: &str, onset: usize, sign: &str) -> (String, usize) {
+    match sign.split_once(AROUND) {
+        Some((before, after)) => {
+            let out = format!("{}{before}{}{after}", &text[..onset], &text[onset..]);
+            let at = text.len() + before.len();
+            (out, at + marks_after(after))
+        }
+        None => (format!("{text}{sign}"), text.len() + marks_after(sign)),
+    }
 }
 
 fn lower(c: char) -> char {
@@ -2428,7 +2604,7 @@ mod tests {
             HINDI.replace("schwa 1.5", "schwa 1.5\n        acronym 0.4")
         ))
         .expect("table");
-        assert_eq!(s.costs()[s.costs().len() - 1], 0.4);
+        assert_eq!(s.costs()[s.costs().len() - 2], 0.4);
     }
 
     #[test]
@@ -2619,6 +2795,44 @@ mod tests {
         assert_eq!(hindi().spelling("तक", small_letters), None);
     }
 
+    /// Lao's way: a vowel written around its consonant (ເ◌ົາ), a cluster
+    /// read as one consonant, no virama, and a tone nothing typed read
+    /// where the lexicon has it, after the consonant and the signs above
+    /// it, and after the letter that carries a vowel alone.
+    #[test]
+    fn a_vowel_written_around_its_consonant_and_an_untyped_tone() {
+        let lao = Scheme::parse(
+            "script abugida\nvirama -\ntones ່ ້\ntone 1.5\ncarrier ອ\n\
+             [consonants]\nk  ກ\nn  ນ\nkhw  ຂວ\n\
+             [vowels]\na  ອະ/ະ  ອັ/ັ  ອາ/າ:0.5\nao  ເອົາ/ເ◌ົາ\ne  ເອ/ເ◌\ni  ອິ/ິ\nai  ອ້າຍ/◌າຍ\n",
+        )
+        .expect("table");
+        let words = Words::of(&[("ເກົ້າ", 10), ("ກັນເກ", 5), ("ເຂວ", 3), ("ອ້າຍ", 4), ("ກີ", 1)]);
+        let first = |latin: &str| {
+            lao.candidates(latin, &words, 4)
+                .into_iter()
+                .next()
+                .map(|c| c.text)
+        };
+        // The vowel's first part before the consonant, the tone after the
+        // consonant and the sign above it.
+        assert_eq!(first("kao").as_deref(), Some("ເກົ້າ"));
+        // After a closed syllable, the vowel goes around the next
+        // consonant only.
+        assert_eq!(first("kanke").as_deref(), Some("ກັນເກ"));
+        // Around a cluster read as one rule.
+        assert_eq!(first("khwe").as_deref(), Some("ເຂວ"));
+        // A tone the carrier takes, a vowel alone.
+        assert_eq!(first("ai").as_deref(), Some("ອ້າຍ"));
+        // No tone where no word has one.
+        assert_eq!(lao.literal("ki"), "ກິ");
+        // The tone's cost is a setting, fitted with the others.
+        assert_eq!(lao.costs()[lao.costs().len() - 1], 1.5);
+        let reading = lao.readings("kao", &words);
+        let toned = reading.iter().find(|r| r.text == "ເກົ້າ").expect("ເກົ້າ");
+        assert!(toned.paths[0].charges.contains(&(lao.ways + TONE)));
+    }
+
     #[test]
     fn costs_set_anew_read_anew() {
         let mut s = hindi();
@@ -2626,10 +2840,10 @@ mod tests {
         // k, kh, then t's two ways, त and ट:0.5.
         assert_eq!(costs[2..4], [0.0, 0.5]);
         // The settings last: cluster, schwa 1.5, final, final-virama 4,
-        // acronym.
+        // acronym, tone.
         assert_eq!(
             costs[costs.len() - SETTINGS..],
-            [0.0, 1.5, 0.0, 4.0, ACRONYM_COST]
+            [0.0, 1.5, 0.0, 4.0, ACRONYM_COST, TONE_COST]
         );
         assert_eq!(s.literal("tak"), "तक");
         costs[2] = 1.0;

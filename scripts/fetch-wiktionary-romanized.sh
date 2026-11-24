@@ -3,7 +3,7 @@
 # Wiktionary as kaikki.org extracts it, to measure the transliteration
 # tables of languages with no romanizations people typed in open data:
 # Yiddish, whose Wiktionary romanization (YIVO's) is the one people type
-# (sholem: שלום), and Armenian, Persian, Pashto, Mongolian and Santali,
+# (sholem: שלום), and Armenian, Persian, Pashto, Mongolian, Santali and Lao,
 # whose scholarly romanizations scripts/wiktionary-romanized.py folds to
 # the letters their tables read (Armenian's ġ is gh, Persian's x kh). Only
 # `make eval-translit` reads them: nothing of them is committed or shipped
@@ -34,6 +34,7 @@ fa   Persian    --fold fa --headword --last --script ARABIC
 ps   Pashto     --fold ps --headword --script ARABIC
 mn   Mongolian  --fold mn --headword --script CYRILLIC
 sat  Santali    --fold sat --headword --script OL_CHIKI
+lo   Lao        --fold lo --headword --script LAO
 "
 
 HERE=$(cd "$(dirname "$0")" && pwd)

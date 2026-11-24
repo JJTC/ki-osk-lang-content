@@ -51,7 +51,7 @@ use std::path::PathBuf;
 
 use anyhow::{Context, bail};
 use clap::Parser;
-use osk_data::translit::{ACRONYM_COST, Lexicon, Scheme, UNKNOWN_BELOW_RAREST};
+use osk_data::translit::{ACRONYM_COST, Lexicon, Scheme, TONE_COST, UNKNOWN_BELOW_RAREST};
 use osk_data::words::Splitter;
 use osk_data_tools::lexicon::FstLexicon;
 
@@ -480,8 +480,15 @@ struct Places {
     last_setting: usize,
 }
 
-const SETTING_NAMES: [&str; 5] = ["cluster", "schwa", "final", "final-virama", "acronym"];
-const SETTING_DEFAULTS: [f32; 5] = [0.0, 2.0, 0.0, 3.0, ACRONYM_COST];
+const SETTING_NAMES: [&str; 6] = [
+    "cluster",
+    "schwa",
+    "final",
+    "final-virama",
+    "acronym",
+    "tone",
+];
+const SETTING_DEFAULTS: [f32; 6] = [0.0, 2.0, 0.0, 3.0, ACRONYM_COST, TONE_COST];
 
 /// The whitespace-separated tokens of `code`, with their byte ranges.
 fn tokens(code: &str) -> Vec<(std::ops::Range<usize>, &str)> {
@@ -762,8 +769,8 @@ mod tests {
         let scheme = Scheme::parse(TABLE).unwrap();
         let mut costs = scheme.costs();
         // t: त ट, k: क, a: अ आ; then cluster, schwa, final, final-virama,
-        // acronym; the letters' names cost nothing of their own.
-        assert_eq!(costs.len(), 5 + 5);
+        // acronym, tone; the letters' names cost nothing of their own.
+        assert_eq!(costs.len(), 5 + 6);
         costs[0] = 0.3;
         costs[1] = 0.0;
         costs[3] = 0.25;
@@ -771,10 +778,11 @@ mod tests {
         costs[6] = 2.0;
         costs[8] = 3.5;
         costs[9] = 0.5;
+        costs[10] = 1.5;
         let text = rewrite(TABLE, &costs);
         assert_eq!(
             text,
-            "# a table\nscript abugida\nvirama ्\nschwa 2\nfinal-virama 3.5\nacronym 0.5\n\n[consonants]\nt    त:0.3  ट       # two\nk    क\n\n[vowels]\na    अ/-:0.25  आ/ा:1.4\n\n[letters]\nt  टी\nk  के\n"
+            "# a table\nscript abugida\nvirama ्\nschwa 2\nfinal-virama 3.5\nacronym 0.5\ntone 1.5\n\n[consonants]\nt    त:0.3  ट       # two\nk    क\n\n[vowels]\na    अ/-:0.25  आ/ा:1.4\n\n[letters]\nt  टी\nk  के\n"
         );
         assert_eq!(Scheme::parse(&text).unwrap().costs(), costs);
     }

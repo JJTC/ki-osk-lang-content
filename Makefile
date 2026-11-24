@@ -346,7 +346,7 @@ GREEKLISH_DIR = $(SRC_DIR)/greeklish
 # how often the table and lexicon find a word spelled as the table
 # expects, not how people spell it. kaikki.org keeps only its latest
 # extract, so the measure moves with it. Never committed or shipped.
-WIKTIONARY_ROMANIZED_LANGS ?= yi hy fa ps mn sat
+WIKTIONARY_ROMANIZED_LANGS ?= yi hy fa ps mn sat lo
 WIKTIONARY_ROMANIZED_DIR = $(SRC_DIR)/wiktionary
 
 # CMUdict, how American English says its words (scripts/fetch-cmudict.sh,
@@ -1114,9 +1114,11 @@ hinglish-assets:
 # or the tool changed, so after predict-assets; after `make fetch-cmudict`.
 # Not Greek's, Persian's, Armenian's, Mongolian's, Santali's or Yiddish's:
 # their measures (Greeklish, Wiktionary's headwords) hold no English words
-# to gain on, and lost up to 0.8 points to the readings they added. Nor
+# to gain on, and lost up to 0.8 points to the readings they added; nor
+# Lao's, whose measure holds none either and whose reading of English
+# sounds no one has looked at. Nor
 # Vai's or Nuosu's, which have no lexicon to keep a reading.
-ENGLISH_NOT_LANGS ?= el fa hy mn sat yi vai ii
+ENGLISH_NOT_LANGS ?= el fa hy mn sat yi vai ii lo
 ENGLISH_LANGS ?= $(filter-out $(ENGLISH_NOT_LANGS),$(sort $(patsubst translit/%.txt,%,$(filter-out %.english.txt,$(wildcard translit/*.txt)))))
 .PHONY: english-assets
 english-assets:

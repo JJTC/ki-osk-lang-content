@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**725 layouts**: 649 keyboard layouts (RTL: ar he fa + Urdu, Western
+**726 layouts**: 649 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Gorani, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Kohistani Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Lari, Kuhmareyi, Takestani, Maba, Mehri, Southeastern and Southwestern Pashayi, Wanetsi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern and Eastern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
-Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 59 transliteration layouts (Latin letters →
+Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 60 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 724 are here; the numeric keypad is built into ki-osk. The
+keycaps. 725 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **478 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -752,6 +752,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `sjp-abc` | `sjp` | Surjapuri सुरजापुरी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the sjp lexicon choosing |
 | `rkt-abc` | `rkt` | Rangpuri (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the rkt lexicon choosing |
 | `bpy-abc` | `bpy` | Bishnupriya Manipuri বিষ্ণুপ্রিয়া মণিপুরী (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the bpy lexicon choosing |
+| `lo-abc` | `lo` | Lao ລາວ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Lao, the lo lexicon choosing; vowels before their consonant, tones untyped |
 | `emoji` | `emoji` | Emoji picker | — | — | — | — | Unicode 16 — categories, search, skin-tone, recents |
 | `numeric` | — (ki-osk) | Numeric keypad | — | — | — | — | — |
 
@@ -981,9 +982,19 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    reads a consonant typed twice, as Wiktionary writes a doubled one, as
    the script writes it, once (mosallam: مسلم; from 75.4% with its old
    lexicon to 79.0%), and Pashto's writes ی for i and y inside a word,
-   where ي and ی are one letter (73.3% to 75.1%). Meitei in the Bengali
-   script has no such measure (Wiktionary has three of its words); its
-   tests read everyday words. Of the 51 checked in the seven tables new with
+   where ي and ی are one letter (73.3% to 75.1%). Lao's (`lo-abc`) is
+   measured so too, on Wiktionary's 1 239 Lao words, their macrons and
+   tones dropped and their syllables run together as Lao writes them
+   (sā bāi dī: sabaidi): of the 88% its lexicon has, 56.2% first (69.6%
+   among the strip's two). Its table writes a vowel's first part before
+   its consonant (ເ◌ົາ: kao is ເກົາ), the high consonant Lao writes
+   unspoken (ໝາ) and the tone marks nothing typed says where its lexicon
+   has a word so written (chao: ເຈົ້າ); most of what it misses is what Lao
+   spelled in Latin cannot tell apart, which the lexicon decides by how
+   often each is written: a vowel's length (pa: ປະ, ປາ), the class of a
+   consonant (s: ສ, ຊ), the unspoken ຫ (ma: ມາ, ໝາ) and the tone (pa:
+   ປາ, ປ່າ). Meitei in the Bengali script has no such measure
+   (Wiktionary has three of its words); its tests read everyday words. Of the 51 checked in the seven tables new with
    Wikipedia's text, 48 come first and 49 are on the strip;
    Kathmandu's and Lahore's English spellings are not, and Pashto's da
    comes after ده. Sanskrit's, Santali's and Yiddish's tables put first

@@ -19,7 +19,7 @@ Yiddish's romanization is YIVO's, the one people type. The others'
 romanizations are scholarly, with letters no keyboard has: --fold maps
 them to the Latin letters the language's table (translit/<lang>.txt)
 reads, as its header says they are typed (Armenian's ղ, ġ, is gh;
-Persian's x, kh; Mongolian's ж, ž, is j). The pairs then measure the
+Persian's x, kh; Mongolian's ж, ž, is j; Lao's long ā, a). The pairs then measure the
 table on Wiktionary's words spelled as the table expects, the folds'
 choices among them, not as people spell them: how often the table and
 the lexicon find a word, not whether people type it so.
@@ -63,6 +63,11 @@ FOLDS = {
     # Santali (ô ᱚ, ă ᱟᱹ, ’ a checked consonant, ṅ ᱝ, ñ ᱧ, the retroflexes
     # with a dot, a tilde for nasalization) to o a ' ng ny, the tilde as n.
     "sat": [("’", "'"), ("ṅ", "ng"), ("ñ", "ny"), ("̃", "n")],
+    # Lao (a macron for a long vowel, æ ແ, œ ເ◌ີ, ư ◌ຶ ◌ື, an ogonek for
+    # the open o ◌ອ ◌ໍ, ʼ the glottal start ອ carries, a space between
+    # syllables) to ae oe eu, the vowels typed short, the syllables run
+    # together as Lao writes its words.
+    "lo": [("æ", "ae"), ("œ", "oe"), ("u\u031b", "eu"), ("ʼ", ""), (" ", ""), ("-", "")],
 }
 OK = re.compile(r"[a-z']+")
 
