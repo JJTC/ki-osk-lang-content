@@ -1,0 +1,129 @@
+# Surjapuri (Devanagari) from Latin letters, as Surjapuri is typed in
+# Latin: Hindi's ways, which its writers follow; o also as ाॅ, the way
+# some write ॉ. English words as English spells them. The lexicon chooses.
+# Its costs are Hindi's: fitting them to how people romanized the words
+# Surjapuri shares with Hindi (the Dakshina dataset's; make fit-translit,
+# FIT_BORROWED) gained nothing.
+
+script abugida
+virama ्
+cluster 0.8
+schwa 0.8
+final 0.4
+final-virama 4
+acronym 0.5
+
+[consonants]
+k    क:0.2  क़:2.5
+kh   ख  ख़:2
+q    क़  क:0.5
+g    ग:0.2  ग़:2.5
+gh   घ  ग़:2
+ch   च  छ:1
+chh  छ  च्छ:0.8
+cch  च्छ
+c    च:0.4  क:1.2
+c>v  च:0.8  स:1.8  क:0.9
+ck   क:0.5  च्क:1
+sch  स्क:0.5  श:1.5
+j    ज  ज़:1.6  झ:3
+jh   झ
+z    ज़      ज:0.3
+t    त:0.3  ट:0.4
+tt   ट:0.5  त्त:0.5  ट्ट:0.8
+th   थ:0.2  ठ:0.2  त:1.9
+d    द:0.6  ड:0.7  ड़:0.7
+dd   ड:0.5  द्द:0.3  ड्ड:1
+dh   ध:0.1  ढ:0.8  ढ़:1.3  द:2.4  द्ध:1.2
+n    न:0.5  ण:0.9
+p    प:0.1
+ph   फ  फ़:0.7
+f    फ़:0.6  फ
+b    ब:0.1
+bh   भ
+m    म:0.3
+y    य:0.1
+r    र:0.4  ड़:2.2
+rh   ढ़:0.9
+l    ल
+v    व
+w    व
+sh   श      ष:0.6  स:3.1
+s    स  श:1.9  ष:3
+h    ह:0.3
+x    क्स  क्ष:1
+ksh  क्ष
+gy   ज्ञ:1.5
+
+[vowels]
+a     अ/-:0.4  आ/ा:0.4
+^a    अ/-:0.1  आ/ा:0.7
+a$    आ/ा  अ/-:3    आँ/ाँ:2
+aa    आ/ा
+^aa   आ/ा  अ/-:2.2
+aa$   आ/ा  आँ/ाँ:1.5  आं/ां:2
+i     इ/ि:0.3  ई/ी:0.9
+i$    ई/ी  इ/ि:0.6  ईं/ीं:1.5
+ee    ई/ी  इ/ि:2
+ee$   ई/ी  ईं/ीं:1.5
+ii    ई/ी
+u     उ/ु:0.2  ऊ/ू:0.6  अ/-:2.4  यू/्यू:1.8  ओ/ो:2.9
+u$    उ/ु:0.2  ऊ/ू:0.3  ऊँ/ूँ:1.5
+oo    ऊ/ू  ओ/ो:2
+uu    ऊ/ू
+e     ए/े:0.3  ऐ/ै:1.5  अ/-:2.2  इ/ि:2.8
+e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:3.3
+ai    ऐ/ै:0.2  ए/े:1.5  आई/ाई:1.2
+ai$   ऐ/ै  ऐं/ैं:0.6  ए/े:1.9  आई/ाई:1.2  अय/य:1.8
+ae    ऐ/ै:0.5  ए/े:1.2
+ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
+ye    ए/े:0.4
+yi    ई/ी:0.6
+o     ओ/ो  ओं/ों:1.2  ऑ/ॉ:0.6  औ/ौ:1.7  अ/-:3.2  आॅ/ाॅ:1.2
+o$    ओ/ो  ओं/ों:1.7  औ/ौ:2
+au    औ/ौ  ओ/ो:2.2
+ou    औ/ौ  ओ/ो:1.5  ऊ/ू:2
+ri    ऋ/ृ:2
+ru    ऋ/ृ:2.3
+
+[other]
+er$   र:1.3
+or$   र:2
+le$   ल:2.3
+y$    ी:1.9
+tion  शन:1  ्शन:1
+n>c   ं:0.7
+m>c   ं:1.2
+n$    ं:0.7  ँ:1.9
+m$    ं:1
+ngh   ंह:0.5
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: टीवी), as the language's Wikipedia writes them.
+[letters]
+a  ए
+b  बी
+c  सी
+d  डी
+e  ई
+f  एफ
+g  जी
+h  एच
+i  आई
+j  जे
+k  के
+l  एल
+m  एम
+n  एन
+o  ओ
+p  पी
+q  क्यू
+r  आर
+s  एस
+t  टी
+u  यू
+v  वी
+w  डब्ल्यू
+x  एक्स
+y  वाई
+z  ज़ेड

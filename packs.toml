@@ -751,7 +751,9 @@ sources = [
 # romanized a dataset's words, and that dataset: their packs name it for
 # that too. Dakshina's training words (Gujarati's and Kannada's tables
 # stayed as written); Aksharantar's words romanized by hand and
-# Wikidata's names (Assamese's, Nepali's and Odia's stayed as written).
+# Wikidata's names (Assamese's, Nepali's and Odia's stayed as written;
+# Meitei's in the Bengali script on its Meetei Mayek words respelled,
+# make aksharantar-respelled).
 [[translit.fitted]]
 license = { name = "CC BY-SA 4.0 (the Dakshina dataset)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
 source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons, the transliteration table's costs fitted to them", url = "https://github.com/google-research-datasets/dakshina" }
@@ -760,19 +762,20 @@ langs   = ["bn", "hi", "ml", "mr", "pa", "sd", "si", "ta", "te", "ur"]
 [[translit.fitted]]
 license = { name = "CC BY (Aksharantar's manually collected data)", url = "https://huggingface.co/datasets/ai4bharat/Aksharantar#licensing-information", share_alike = false }
 source  = { name = "The Aksharantar dataset (AI4Bharat): words romanized by hand and Wikidata's names, the transliteration table's costs fitted to them", url = "https://huggingface.co/datasets/ai4bharat/Aksharantar" }
-langs   = ["brx", "doi", "kok", "ks", "mai", "mni", "sa"]
+langs   = ["brx", "doi", "kok", "ks", "mai", "mni", "mni-Beng", "sa"]
 
 # The tables of languages neither dataset has, fitted to Dakshina's
-# romanizations of the words they share with Hindi, Urdu, Kannada or
-# Telugu (make fit-translit's FIT_BORROWED; Sindhi's in Devanagari
+# romanizations of the words they share with Hindi, Urdu, Kannada,
+# Telugu, Marathi or Bengali (make fit-translit's FIT_BORROWED; Sindhi's
+# in Devanagari, Bagri's, Mandeali's, Surjapuri's and Bishnupriya's
 # stayed as written, Gondi's at Telugu's fitted costs, Angika's at
 # Hindi's). Named, and no
 # licence added: the tables hold the numbers learned, none of the
 # dataset's words, and Chhattisgarhi's, Brahui's, Garhwali's and
 # Rajasthani's packs are not otherwise share-alike.
 [[translit.fitted]]
-source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons of Hindi, Urdu, Kannada or Telugu, the transliteration table's costs fitted to the words they share with this language", url = "https://github.com/google-research-datasets/dakshina" }
-langs   = ["anp", "awa", "bho", "brh", "dty", "gbm", "hne", "khw", "mag", "new", "pnb", "raj", "skr", "tcy", "wsg"]
+source  = { name = "The Dakshina dataset v1.0 (Google Research): romanization lexicons of Hindi, Urdu, Kannada, Telugu, Marathi or Bengali, the transliteration table's costs fitted to the words they share with this language", url = "https://github.com/google-research-datasets/dakshina" }
+langs   = ["ahr", "anp", "awa", "bfy", "bgq", "bho", "bns", "bpy", "brh", "dty", "gbm", "hlb", "hne", "kfq", "kfy", "khw", "kru", "mag", "mjl", "new", "noe", "pnb", "raj", "rkt", "sjp", "skr", "tcy", "wsg"]
 
 # The English words a language with a table writes in its script, which
 # people type as English spells them (translit/<lang>.english.txt, `make
@@ -810,7 +813,7 @@ ada     = ["ada"]
 adx     = ["adx"]
 ady     = ["ady"]
 af      = ["af"]
-ahr     = ["ahr"]
+ahr     = ["ahr", "ahr-abc"]
 ajg     = ["ajg"]
 ak      = ["ak"]
 alz     = ["alz"]
@@ -845,13 +848,13 @@ bem     = ["bem"]
 ber     = ["ber"]
 bew     = ["bew"]
 bft     = ["bft"]
-bfy     = ["bfy"]
+bfy     = ["bfy", "bfy-abc"]
 bfz     = ["bfz"]
 bg      = ["bg"]
 bgc     = ["bgc"]
 bgn     = ["bgn"]
 bgp     = ["bgp"]
-bgq     = ["bgq"]
+bgq     = ["bgq", "bgq-abc"]
 bgx     = ["bgx"]
 bgz     = ["bgz"]
 bhb     = ["bhb"]
@@ -866,11 +869,11 @@ blt     = ["blt"]
 bm      = ["bm"]
 bmm     = ["bmm"]
 bn      = ["bn", "bn-abc"]
-bns     = ["bns"]
+bns     = ["bns", "bns-abc"]
 bo      = ["bo"]
 bom     = ["bom"]
 bpr     = ["bpr"]
-bpy     = ["bpy"]
+bpy     = ["bpy", "bpy-abc"]
 bqi     = ["bqi"]
 br      = ["br"]
 brh     = ["brh", "brh-abc"]
@@ -1022,7 +1025,7 @@ hi      = ["hi", "hi-abc"]
 hi-Latn = ["hi-latn"]
 hif     = ["hif"]
 hil     = ["hil"]
-hlb     = ["hlb"]
+hlb     = ["hlb", "hlb-abc"]
 hnd     = ["hnd"]
 hne     = ["hne", "hne-abc"]
 hni     = ["hni"]
@@ -1072,9 +1075,9 @@ kbr     = ["kbr"]
 kde     = ["kde"]
 kea     = ["kea"]
 kek     = ["kek"]
-kfq     = ["kfq"]
+kfq     = ["kfq", "kfq-abc"]
 kfr     = ["kfr"]
-kfy     = ["kfy"]
+kfy     = ["kfy", "kfy-abc"]
 kg      = ["kg"]
 kge     = ["kge"]
 kha     = ["kha"]
@@ -1104,7 +1107,7 @@ krc     = ["krc"]
 kri     = ["kri"]
 krj     = ["krj"]
 krl     = ["krl"]
-kru     = ["kru"]
+kru     = ["kru", "kru-abc"]
 ks      = ["ks", "ks-abc"]
 ksh     = ["ksh"]
 ksw     = ["ksw"]
@@ -1180,7 +1183,7 @@ mhr     = ["mhr"]
 mhy     = ["mhy"]
 mi      = ["mi"]
 min     = ["min"]
-mjl     = ["mjl"]
+mjl     = ["mjl", "mjl-abc"]
 mk      = ["mk"]
 mki     = ["mki"]
 mkw     = ["mkw"]
@@ -1237,7 +1240,7 @@ nn      = ["nn"]
 nnb     = ["nnb"]
 no      = ["no"]
 nod     = ["nod", "nod-thai"]
-noe     = ["noe"]
+noe     = ["noe", "noe-abc"]
 nr      = ["nr"]
 nso     = ["nso"]
 nup     = ["nup"]
@@ -1295,7 +1298,7 @@ rej     = ["rej"]
 rhg     = ["rhg"]
 rim     = ["rim"]
 rki     = ["rki"]
-rkt     = ["rkt"]
+rkt     = ["rkt", "rkt-abc"]
 rm      = ["rm"]
 rmn     = ["rmn"]
 rmy     = ["rmy"]
@@ -1330,7 +1333,7 @@ sgw     = ["sgw"]
 shn     = ["shn"]
 si      = ["si", "si-abc"]
 sid     = ["sid"]
-sjp     = ["sjp"]
+sjp     = ["sjp", "sjp-abc"]
 sk      = ["sk"]
 skg     = ["skg"]
 skr     = ["skr", "skr-abc"]

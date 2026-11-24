@@ -7,12 +7,12 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**712 layouts**: 649 keyboard layouts (RTL: ar he fa + Urdu, Western
+**725 layouts**: 649 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Gorani, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Kohistani Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Lari, Kuhmareyi, Takestani, Maba, Mehri, Southeastern and Southwestern Pashayi, Wanetsi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern and Eastern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
-Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 46 transliteration layouts (Latin letters →
+Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 59 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 711 are here; the numeric keypad is built into ki-osk. The
+keycaps. 724 are here; the numeric keypad is built into ki-osk. The
 table below is the complete list; **478 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
@@ -739,6 +739,19 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `raj-abc` | `raj` | Rajasthani राजस्थानी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the raj lexicon choosing |
 | `khw-abc` | `khw` | Khowar کھوار (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Perso-Arabic, the khw lexicon choosing |
 | `wsg-abc` | `wsg` | Gondi గోండి (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Telugu script, the wsg lexicon choosing |
+| `ahr-abc` | `ahr` | Ahirani अहिराणी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the ahr lexicon choosing |
+| `bfy-abc` | `bfy` | Bagheli बघेली (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the bfy lexicon choosing |
+| `bgq-abc` | `bgq` | Bagri बागड़ी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the bgq lexicon choosing |
+| `bns-abc` | `bns` | Bundeli (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the bns lexicon choosing |
+| `hlb-abc` | `hlb` | Halbi (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hlb lexicon choosing |
+| `kfq-abc` | `kfq` | Korku (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the kfq lexicon choosing |
+| `kfy-abc` | `kfy` | Kumaoni (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the kfy lexicon choosing |
+| `kru-abc` | `kru` | Kurukh (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the kru lexicon choosing |
+| `mjl-abc` | `mjl` | Mandeali मंडयाली (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the mjl lexicon choosing |
+| `noe-abc` | `noe` | Nimadi (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the noe lexicon choosing |
+| `sjp-abc` | `sjp` | Surjapuri सुरजापुरी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the sjp lexicon choosing |
+| `rkt-abc` | `rkt` | Rangpuri (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the rkt lexicon choosing |
+| `bpy-abc` | `bpy` | Bishnupriya Manipuri বিষ্ণুপ্রিয়া মণিপুরী (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the bpy lexicon choosing |
 | `emoji` | `emoji` | Emoji picker | — | — | — | — | Unicode 16 — categories, search, skin-tone, recents |
 | `numeric` | — (ki-osk) | Numeric keypad | — | — | — | — | — |
 
@@ -872,7 +885,14 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Dogri 1.2, Maithili 0.8, Konkani 0.4, Sanskrit 0.1 and Bodo none, and
    of all their test words, names too, Konkani 4.1, Dogri 2.6, Meitei 2.2,
    Bodo 2.0, Sanskrit 1.8, Kashmiri 0.8 and Maithili 0.6; Assamese's,
-   Nepali's and Odia's stayed as written. The tables read what those
+   Nepali's and Odia's stayed as written. Meitei in the Bengali script,
+   which nothing romanizes, is measured on Aksharantar's Meitei words
+   respelled in that script as its FineWeb-2 text spells them (a quarter
+   of them have a spelling the text writes at least three times: 1 212
+   test words; `make aksharantar-respelled`): of those its lexicon has,
+   84.1% first (88.1% among the strip's two), 73.8% of all, its costs
+   fitted to the respelled training words as the others' were (from 83.0%
+   and 72.7%). The tables read what those
    romanizations do: the visarga said again after its vowel (ramaha:
    रामः), Assamese's khy for ক্ষ, Nepali's and Maithili's ँ, Odia's ଙ୍କ
    and ର୍ତ୍ତ, Konkani's dh for ड and ie for ई, Meitei's e for a first ꯏ,
@@ -902,7 +922,25 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Western Punjabi 82.3% (90.8%), Chhattisgarhi 81.0% (93.9%), Dotyali
    80.5% (89.5%), Khowar 80.2% (88.2%), Magahi 79.9% (91.2%), Saraiki
    79.5% (87.8%) and Brahui 70.4% (85.0%), the English words their tables
-   read (below) among them. Gondi's is Telugu's table and
+   read (below) among them. Thirteen more, of languages whose models came
+   later, are measured the same way, Ahirani's on Marathi's words,
+   Rangpuri's and Bishnupriya's on Bengali's: first, Bagri 91.0% (95.8%),
+   Bundeli 91.0% (96.1%), Ahirani 90.5% (93.5%), Korku 90.4% (94.7%),
+   Kumaoni 90.4% (96.0%), Bagheli 90.1% (96.1%), Surjapuri 89.0% (96.4%),
+   Halbi 86.6% (92.9%), Bishnupriya 86.5% (89.9%), Mandeali 85.2% (93.8%),
+   Kurukh 81.7% (89.6%), Nimadi 74.9% (80.6%) and Rangpuri 74.7% (90.5%):
+   Nimadi's lowest where its own form comes first (क where Hindi writes
+   के, हई for है), Rangpuri's where its ৰ meets Bengali's র. Each is
+   Hindi's table, Rajasthani's (Bagri's), Garhwali's (Kumaoni's),
+   Marathi's (Ahirani's) or Bengali's (Rangpuri's, with ৰ for r, and
+   Bishnupriya's, with ৱ for w) with what its text writes: Nimadi's
+   avagraha for a word's last spoken a (karna: करनऽ), Kurukh's visarga
+   after a long vowel (आःद), its ङ (tanga: तङआ) and the apostrophe in one
+   word in twenty-six (ra'i: र'ई), Korku's and Nimadi's ळ, Ahirani's and
+   Korku's ऱ (rhas: ऱ्हास), Halbi's and Kumaoni's ङ, a word's last h as ः,
+   English words' a as ॅ (madam: मॅडम) and ॉ as some write it, ाॅ
+   (डाॅक्टर).
+   Gondi's is Telugu's table and
    costs, Angika's Hindi's, Khowar's Urdu's with its own letters (ݯ ݮ ݰ ݱ
    beside چ ج ش ژ, څ ځ for ts and dz), Dotyali's and Newari's Nepali's,
    Dotyali's with the avagraha it writes after a long last vowel (rahya:

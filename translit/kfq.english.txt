@@ -1,0 +1,4396 @@
+# The English words kfq writes in its script, as its table reads them (make english-assets): from CMUdict (cmusphinx/cmudict; its notice in NOTICES.md) and predict/kfq.fst.
+aachen ओकोन
+aaker आकार
+ababa बाबा
+aback बाईकू
+abash बस
+abba आबा
+abbas बस
+abbett बॅट
+abed बिड
+abee बी
+abella बला
+abend बंद
+abet बॅट
+abhor आभार
+abor बार
+abott बॅट
+abreu ब्रो
+abut बॅट
+abuzz बाजू
+abyss बीस बस
+accompany कंपनी
+accor आकार
+accrued अक्रोड
+ace एस
+acerra आसरा सेर
+acey एस
+achee छी ची
+achenes किंज
+achieva चिव
+achieve चिव
+acker आकार
+ackley एकली
+adah आदा
+adak डईकू
+adalah आदला
+adapter दप्तर
+adaptor दप्तर
+adding आदीन
+addis आदेश
+adena आदीन
+adger इजर
+adhere धीर
+adheres धीरज
+adieu डो
+adley इडली
+ado डो
+aerie अरे
+afar इफार
+affair आफिर इफिर
+affect फक्त
+afoot फूट फुट
+aga ओंगो
+again गेन
+agana गाना
+age इज
+agenda जिंदा
+aggrey अगर आगर
+aglo ग्लो
+aglow ग्लो
+ago ओंगो
+agoura उगूरा
+ahah अहा
+ahh ओ ए
+ahl आलू ओल
+ahlen ओलेन आलेन
+ahlin ओलेन आलेन
+ahmann आमेन
+ahn अनू अं
+ahr आरु आर
+ahs आजू आस
+ailor इलार
+aim अं
+aims इंज
+aine इन अनू
+ainge इंज
+ainu अनू
+airey अरे
+airy अरे
+ajar औजार इजर
+akai कई के
+akaka काका
+akana ओकोन
+akao काव कावू
+akel कल
+akella एकला कला
+aker आकार
+akey की कि
+akin केन
+akins किंज
+akre आकार
+alair लियर
+alana ओलेन आलेन
+alane ओलेन आलेन
+alann आलेन
+alanna आळानी
+alar इलार
+alayne ओलेन आलेन
+alda ओलडा
+aleda ओलडा
+aledo उळीदो
+ali आले
+alie आले
+alig अलग
+align ओलेन आलेन
+aline ओलेन आलेन
+alissa आळसा आलसा
+all ओल आलू
+alla आले आला
+allah आले आला
+allain ओलेन आलेन
+allais आले
+allar इलार
+allay आले
+allee आले
+alley आले
+alleyne आलेन
+alli आले
+allie आले
+allin ओलेन आलेन
+alling ओलेन
+allot लाट
+allow ओलाऊ
+allure इलूर
+ally आले
+allyn आलेन
+aloka ओलका
+alon लान
+aloni ओळनी
+alot लाट
+altay ओळटे ओलटे
+alumbaugh लांबा
+alyssa आळसा आलसा
+amal मालू माळू
+aman आमेन
+amana आमेन मैना
+amanda मेंडा
+amano मानो
+amassed मस्त
+ambs इंज
+ameen मिनू मीनू
+ames इंज
+amgen आंजेन इंजेन
+amid मेड
+amman मान मोनू
+ammeen मिनू मीनू
+among मंगू मन
+amrein आमराईन
+ams इंज
+ander इंदार
+andorra आंदरा
+ane अनू इन
+anette नितू
+anew अनू नु
+ang अनू आं
+ange इंज
+anger अंगार
+ankh इंकू
+ann अनू अं
+anna आना
+annan आनान
+anne अनू अं
+anneal नील निलू
+annen आनान
+annett नितू
+annette नितू
+annie इनी
+annis इनीज
+annoy नोय
+anny इनी
+anon आनान
+anova नवा
+anthes अंदाज
+anti आंटे
+any इनी
+apopa पोपा
+arata आराटे
+are आरु आर
+array अरे
+arrieta आरीटे
+asay से
+ascend शेंड
+asch एस आस
+asche एस आस
+ash एस
+ashame शिम
+ashamed शेंड शेंडू
+asharah इशारा
+ashe एस आस
+ashore ओसोर
+asia इज
+ass एस आस
+assad सोडू
+assert शर्ट
+assign शेन
+assira शिरा
+assure सूर सुरु
+aten इटान
+atoll टोल
+aton इटान
+atop टापू टॉप
+attack टक तक
+attain ओटेन टेन
+attali टाली ताली
+aube आबू
+audi आदी आडी
+audis आदेश
+audit आदत
+auel ओल ओळ
+auge आजू
+auger आगर अगर
+aught ओट
+augur आगर अगर
+auker आकार
+auletta ओळटे ओलटे
+aull ओल आलू
+auman आमेन
+aumann आमेन
+aung आं अनू
+auntie आंटे
+aura आरा आरी
+auth ओट
+auton ओटेन
+aux ओ
+avon इवान
+awan इवान
+awe ओ ए
+awed ओड
+awry अरे
+aycock अक्कू
+aydt अट
+aye आई
+ayes एस
+ayesha एस
+ayler इलार
+aylor इलार
+ayn इन अनू
+aynes इंज
+azar औजार
+azhar औजार
+azura आसरा
+azure इजर
+azzato जाटो
+baars बरस
+baas बाजू बस
+baasch बस
+baccarat बाकरा
+bacchi बाकी
+bachera बाकरा
+back बाईकू
+backe बाईकू
+backer बेकार
+bad बिड
+bada बोंडा
+bade बिड
+badge बाजू
+baecker बेकार
+baek बाईकू
+baeten बटन
+baeza बीस
+bag बगू
+bagg बगू
+bagge बगू
+baggie बागे
+baggy बागे
+baghli बिगळी
+bagley बिगळी
+bah बा बो
+bahn बान
+bahr बार
+bahrain बारेन
+bahre बार
+baht बॅट
+baig बगू
+bailey बिली
+bailie बिली
+baillie बिली
+bailly बिली
+baily बिली
+baines बिंज
+bains बिंज
+baise बस
+bait बॅट
+baize बस
+bak बाईकू
+baker बेकार
+bakke बाईकू
+bakker बेकार
+baku बोको
+baley बिली
+bali बोली
+balky बाकी
+balli बिली
+ballon बालान
+ballou बुलू
+bally बिली
+balms बांजू
+balon बालान
+banes बिंज
+bang बान
+bange बिंज बांजू
+banged बंद
+bangs बिंज
+banh बान
+bann बान
+banned बंद
+bans बिंज बांजू
+bao बो
+barabar बराबोर
+barack बारीक
+baraff बरफ
+barak बारीक
+barasch बरस बारास
+barich बारीक
+barked बरकत
+barkett बरकत
+baron बेरान
+barr बार
+barra बारी बार
+barrasso बारसो
+barraza बारास
+barre बार
+barren बेरान
+barres बरस
+barrick बारीक
+barrie बारी
+barring बारेन
+barris बरस
+barron बेरान
+barros बरस
+barroso बारसो
+barrows बरस
+barrs बरस
+barrus बरस बारास
+barry बारी
+barsch बरस
+barz बरस
+basch बस
+bashing बशीन
+bass बस
+bassa बस
+basse बस
+bassin बशीन
+basten बस्तीन
+bastian बशीन
+basting बस्तीन
+bataan बटन
+bath बॅट
+bathe बिड
+bathed बिड
+batra बेटरी
+battelle बॉटल
+battery बेटरी
+battey बाटे बईटे
+battin बाटेन बटन
+batty बाटे बईटे
+baugh बा बो
+baughan बईन
+baugher बार
+baughn बान
+baun बान
+baur बार
+baus बाजू बस
+bawden बादोन
+bawer बार
+bay बे
+bayed बिड
+bayes बस
+bayh बी बे
+baying बेन बईन
+baylee बिली
+bayley बिली
+bayly बिली
+bayne बेन
+baynes बिंज
+bays बस
+bayse बस
+baytree बेटरी
+bayus बीस बस
+baz बस बाजू
+baze बस
+bazhan बजन
+bea बी
+beacher बिचार
+bead बिड
+beady बिडे
+beagley बिगळी
+beamer बिमार
+beams बिंज बींज
+beans बिंज बींज
+beara बेरा
+bearce बरस
+bears बरस
+bearse बरस
+bearss बरस
+bearup बरप
+beas बीस
+beau बो
+beauce बस
+beaucoup बोको
+beaudry बद्री
+beaux बो
+beavis बिवास
+bec बाईकू
+becca बईका
+becher बेकार
+beck बाईकू
+becker बेकार
+becki बईके
+beckie बईके
+becky बईके
+becor बेकार
+bedolla बेदला
+beecher बिचार
+beedie बिडे
+beedy बिडे
+beeghly बिगळी
+beemer बिमार
+been बान
+beens बिंज बींज
+beers बरस
+beg बगू
+begg बगू
+begley बिगळी
+behmer बिमार
+behn बेन बईन
+behne बेन बईन
+beighley बिगळी
+being बईन
+beit बॅट
+bekaa बोको बाका
+beker बेकार
+bekker बेकार
+bekki बईके
+belie बिलाई
+bellah बला
+belli बिली
+belly बिली
+ben बईन
+benet बान
+benge बिंज
+benn बेन बईन
+benne बेन बईन
+benotti बिनती
+bens बिंज
+benz बांजू
+beron बेरान
+berra बेरा
+berres बरस
+berrong बेरान
+bersch बरस
+besch बस
+bess बस
+besse बस
+besting बस्तीन
+betcher बिचार
+beth बॅट
+bethann बटन
+bethanne बटन
+beu बो
+beula बला बुळ
+beury बारी
+beymer बिमार
+bhatia बाटे
+bhatti बाटे
+bhutan बटन
+bhutto बोटो
+bicker बेकार
+biddie बिडे
+biddy बिडे
+bieda बिडे बिड
+biela बिली
+bierce बरस
+big बगू
+bihn बेन
+bijan बजन
+bike बाईकू बायकू
+biker बेकार
+bila बिली
+billie बिली
+billup बलप
+billy बिली
+bilotti बलटी
+bin बेन
+binetti बिनती
+bing बेन
+binge बिंज बींज
+binn बेन
+binns बिंज बींज
+bins बिंज बींज
+bir बार
+birkett बरकत
+biron बेरान
+birr बार
+birren बेरान बारेन
+birth बर्थ
+bisch बीस
+biss बीस बस
+bit बॅट
+bitten बटन
+bitton बटन
+biz बीस बस
+blah बला
+blip बलप
+boa बो बई
+boar बार
+boase बस
+bocce बोको
+bodden बादोन
+boeh बो
+boer बार
+boers बरस
+boes बस
+boese बस
+bog बगू
+bogue बगू
+bohr बार
+bohren बारेन
+bola बोली
+bollen बालान
+bolly बोली
+bolting बोलटेन
+bolton बोलटेन
+bomar बिमार
+bomba बोम्बो
+bombed बंद
+bombs बांजू
+bon बान
+bonde बंद
+boned बंद
+bong बान
+bongo बांगो
+bonn बान
+bonne बान
+bonnes बांजू
+booee बई
+boole बुळ बुलू
+boomed बंद
+booras बरस बरास
+boors बरस
+boos बस
+boose बस
+booten बटन
+booton बटन
+booz बस
+booze बस
+bop बाप
+bopp बाप
+borah बारी बोरे
+borak बारीक
+bore बार
+borek बारीक
+boren बारेन
+boric बारीक
+borin बारेन
+boring बारेन
+borja बारी बोरे
+boroughs बरस
+borras बरस बरास
+borre बार
+borrows बरस
+borruso बारसो
+boruch बारीक
+boruff बरफ
+boss बस
+bosse बस
+bostian बशीन
+botha बोटो बाटा
+bothell बॉटल
+bothun बटन
+botin बाटेन बटन
+boton बटन
+bott बॅट
+botta बाटे बोटो
+botting बाटेन
+boudin बुडीन
+bough बो
+bought बॅट
+boughten बाटेन बटन
+bouie बई
+boulais बुळ
+boulden बुडीन
+boule बुळ बुलू
+boulton बोलटेन
+bourassa बरास
+bourse बरस
+boutin बटन
+bow बो
+bowe बो
+bowes बस
+bowie बई
+bowley बोली
+bows बस
+bowse बस
+boy बई
+boye बई बी
+boyne बईन
+boze बस
+bozza बाजू बाजी
+bozzi बाजी
+bra ब्रो
+braasch बरस बरास
+brac ब्रेक
+bracht बरकत
+brack ब्रेक
+brackett बरकत
+braff बरफ
+braise बरस
+brake ब्रेक
+braked बरकत
+brakke ब्रेक
+braque ब्रेक
+brasch बरस बरास
+brass बरस बरास
+brause बरास बरस
+braz बरस बरास
+break ब्रेक
+breau ब्रो
+breault ब्रो
+breaux ब्रो
+brecht बरकत
+brekke ब्रेक
+bress बरस
+bresse बरस
+brew ब्रो
+brews बरस
+bric ब्रेक
+brick ब्रेक
+broce बरस
+brockett बरकत
+brosch बरास
+bross बरास बरस
+brosz बरस बरास
+brough ब्रो
+brow ब्रो
+browe ब्रो
+broz बरस बरास
+bruff बरफ
+brugh बरा
+bruise बरस
+brush बरास
+bruss बरस बरास
+bryk ब्रेक
+brys बरस
+bubba बाबा
+bucco बोको
+buckey बाकी
+bucky बाकी
+budden बादोन
+budding बुडीन
+budge बाजू
+budging बजन
+budick बदक
+budlong बादळान बादलान
+buetow बोटो
+bug बगू
+bugeye बागे
+bugg बगू
+bugge बगू
+buggy बागे
+buis बीस बस
+bukkake बोकोके
+bulen बालान
+bull बुळ बुलू
+bully बोली
+bumbaugh बोम्बो
+bummed बंद
+bums बांजू
+bun बान
+bung बान
+bunge बांजू
+bunn बान
+buns बांजू
+bunyan बानयेन
+buoy बई
+bupp बाप
+bur बार
+burkett बरकत
+burkitt बरकत
+burr बार
+burres बरस
+burress बरस बरास
+burris बरस
+burros बरस
+burroughs बरस
+burrous बरस बरास
+burrowes बरस
+burrows बरस
+burrus बरस बरास
+burruss बरस बरास
+burry बारी
+bursch बरस
+busche बस
+busey बस
+busha बस
+busing बशीन
+buss बस
+bussa बस
+busse बस
+bussen बशीन
+bussey बस
+bussi बस
+bussie बस
+bussing बशीन
+busta बस्ती
+busting बस्तीन
+but बॅट
+buthan बटन
+butt बॅट
+buttery बॅटरी
+butting बाटेन बटन
+button बाटेन
+buttrey बॅटरी
+buttry बॅटरी
+buus बस
+buy बई बाई
+buzz बस बाजू
+buzze बस बाजू
+buzzing बजन बशीन
+buzzy बाजी
+bye बई बाई
+bygone बईगोन
+byker बेकार
+byron बेरान
+caan कोन कों
+cab काबू
+cabbage काबेज
+cabbie काबी
+cabby काबी
+caccia काचा
+cache कासू
+cada कोड
+caddick कडक
+cadiz कुडीज
+cahasa खास
+cahn केन
+cahoon खून खुण
+cail कल
+caines किंज
+cake केक
+calais केळे कल
+calgene कालजीन
+calia कालीया
+calise कालेज
+calk काकू
+call काल कालू
+callais केळे कल
+calle कल
+caller कालार
+calley केळे केळी
+calling कोलीन कोळेन
+callow किलो
+cally केळे केळी
+calm काम कोम
+calmed कंदू
+calor कालार
+caluzzi कालजी
+came कम
+camel कमाल
+camm काम कम
+cammie केमी कमी
+cammy केमी कमी
+can केन कोन
+cana केन
+canaday केंडे
+canas केनेज
+candy कांडी
+cane केन
+caned कंदू
+canes किंज
+cann केन
+cannaday केंडे
+canned कंदू
+cannes केन
+cans किंज
+canuck कोनकू
+capper कापार
+captain केप्टान
+car कार
+carin कारन कारण
+caro कोरो
+caronna केरान कारान
+carr कार कर
+carra कोरा कोरो
+carre कार कर
+carretta कारटे
+carro कोरो
+carron केरान कारान
+carrozza कारजो
+cars कासू
+carta कारटे
+carty कारटे
+caryn कारन कारण
+cash कासू
+cashen कासान
+cashew कासू
+cashon कासान
+cason कासान
+cass कासू
+casson कासान
+cat काटू
+catt काटू
+caughey कई
+caughlin कोलीन कोळेन
+caughron कोरान कारान
+caught काटू
+caul काल कल
+caulk काकू
+cause कासू
+caution कासान
+cautious कोशिस कोशिश
+cayer कर
+cayne केन
+cea से
+ceara सेर शिरा
+cech शक
+cejka चक
+celia शिळी
+celli चले
+censer संसार
+censor संसार
+cerra सर सेर
+cert शर्ट
+chachi चोची
+chad चिड
+chadd चिड
+chafete चाफिट
+chalet शाल साले
+chalk चक
+challis शिळी साली
+chapp चाप
+charette शेरेट
+charon केरान
+charren चिरेन
+charrette शेरेट
+charron केरान
+chateau साटो
+chateaux साटो
+chattin छातीन चिटीन
+chatting छातीन
+chau सो
+chawla चाले चौळा
+che छी ची
+chea छी ची
+cheating चिटीन
+cheely चिले
+cheering चिरेन
+cheese चीज
+cheesy चीज
+cheetah चिता चिटी
+cheetan चिटीन
+chemed कंदू
+chemel कमल
+chemi केमी कमी
+chennai चिनाय
+cheque चक
+cher शेर
+chevy चेव
+chews च्यूज
+cheyenne शायेन
+chez से
+chia छी ची
+chick चक
+chili चिले
+chilly चिले
+chink चिंकू
+chinnock चिंकू
+chintung चिंतान
+choat छोटू
+choate छोटू
+chocolat चाकलेट
+chocolate चाकलेट
+choi ची
+cholera कालार
+cholla चालू चाले
+choong छून छुन
+choose च्यूज
+chop चाप
+chopp चाप
+choppy चाप
+choric कोरकू
+chua कू
+chubb चाबू
+chuck चक
+chuckie चक
+chui कई कू
+chul चालू
+chula चले
+chung छून छुन
+chunn छून छुन
+chupp चाप चूप
+chuse च्योज च्युज
+chute सूट सुटू
+ciera शिरा
+cilley शिळी
+ciocca चक
+ciotti छोटी
+cira सारा सर
+circa सारका सरके
+city शिटी
+ciucci चुची चोची
+ciulla चले
+claw कला
+clay कल
+cleah की
+coad कोड
+coal कल
+coale कल
+coan कोन कों
+coar कार कर
+cob काबू
+cobaugh कोंबो कोंबा
+cobb काबू
+cobble काबूल
+cock काकू
+cockey काकी
+cocky काकी
+cocoon काकून
+coday कोड
+coed कोड
+coeur कुर कर
+coey कई
+coffee कोफी
+coffey कोफी
+cohee काही
+cohen कोन कों
+cohn कोन कों
+cohoon खून खुण
+cohr कार कर
+cohron कारान कोरान
+coia कोयो कोय
+cola कल कला
+colaw कला
+coletta कोलेटे
+coletti कोलेटे
+coll काल कल
+collar कालार
+colle कल
+colledge कालेज
+college कालेज
+coller कालार
+colletta कोलेटे
+colletti कोलेटे
+colley काल
+collie काल
+colling कोलीन कोळेन
+collom कोलोम
+collomb कोलोम
+collor कालार
+collum कोलोम
+colly काल
+colomb कोलोम
+colon कोळेन कोलीन
+color कालार
+colour कालार
+column कोलोम
+com काम
+coma कों
+comb कोम कों
+combe कोम कों
+come काम कम
+comedy कांडी
+comella कोमल
+comm काम कोम
+commie कमी
+commitee कमती कामती
+committee कमती कमटी
+compagnie कंपनी
+con कों
+conaty कोनटे
+conch कोनकू
+conde कंदू
+condie कांडी
+cone कोन कों
+coney कोने
+cong कोन कों
+conic कोनकू
+conk कोनकू
+conn कोन कों
+conned कंदू
+connick कोनकू
+connie कोने
+conning कोनेन
+conny कोने
+conti कोंटे
+cooed कोड
+cookie कूके
+cool कल
+coole कल
+coolidge कुलेज
+cooling कोलीन कोळेन
+coombe कोम कों
+coonan कोनेन
+coosa कुसी
+copper कापार
+corda कार्डा
+core कार
+coren कोरान कारान
+corinn कारन कारण
+cork कोरकू
+corn कारन कारण
+corne कारन कारण
+corps कार कर
+corr कार कर
+corrao कोरो
+corrick कोरकू
+corrin कारन कारण
+corron केरान कारान
+corroon कोरोन कारन
+corrow कोरो
+corsa कासा
+corzo कारजो
+cos कासू
+coss कासू
+cossa कासा
+cot काटू
+cotham काथोम काठोम
+cott काटू
+coty कोंटे
+couey कई
+could कोड
+coulon कोळेन कोलीन
+coup कू कु
+couper कुर कर
+coups कू कु
+couric कोरकू
+cousin कासान
+cousy कुसी
+cowan कोन कों
+cowed कोड
+cowen कोन कों
+cowling कोलीन कोळेन
+coy की
+coz कासू
+crane क्रेन
+cray कर
+crayne क्रेन
+csar सरू सर
+cub काबू
+cubbage काबेज
+cuckoo काकू
+cuffee कोफी
+cull कल काल
+culler कालार
+culley कल
+cullom कोलोम
+cullum कोलोम
+cully कल
+culpa काळपा
+curragh कर कोरा
+curran केरान कारान
+curren केरान कारान
+currin कारन कारण
+curro कोरो
+cus कासू
+cush कासू
+cushey कुसी
+cuss कासू
+cusson कासान
+cut काटू
+cutshaw काचा
+cutting कुटेन
+cycle सेकल
+cymbal शिम्बील
+cynara किनारा
+cynic सैनिक
+cyr सर सेर
+cyran केरान
+czar सरू सर
+czech चक
+czyz चीज
+daas दोस दोष
+dabah डाबा डाईबा
+dabble दबल डबल
+dabhol डाबोल दबल
+dac डिकू डईकू
+dack डिकू डईकू
+dad डाडू
+daddona डोडोन
+dady डेडे
+dagan डेगेन
+dagata डागाटे
+daggy डेगे
+dagon डेगेन
+dague डोगू डोंग
+dah डा
+dahm दामू दाम
+dahn डान
+daiei डाये
+dais डिज
+daise डिज
+daiwa देवी दिवा
+dak डिकू डईकू
+dalian डेलीयेन डेलियेन
+dam दामू
+damm दामू दाम
+damme दामू दाम
+damn दामू दाम
+dang डान
+dani डोने
+dann डान
+danna डान दाना
+dannen दानान
+dao डो डाऊ
+daoud डोडू
+das दोस दोष
+dasa देसो डोसा
+dase डिज
+dassow देसो
+data डेटो डेटे
+dating डेटेन
+daughney डोने
+daughton डोटेन डाटेन
+daum दामू दाम
+daun डान
+davey देवी
+davie देवी
+davin डावेन
+davy देवी
+dawes दोस दोष
+dawn डान
+daws दोस दोष
+dawsey दोसी
+day डे दे
+days डिज
+dayton डेटेन
+daze डिज
+dazs दोस दोष
+dazzo देसो
+dea डी
+deacon डिकून डीकून
+deacons डीकिंज
+deaden डेडेन
+deady डेडे
+deak डिकू डीकू
+deakins डिकिंज डीकिंज
+dean दिन
+deane दिन
+deas डिज
+deason डिजेन डीजेन
+dec डिकू डईकू
+decay डिके
+decca डिकू डिका
+dech डिकू डईकू
+deck डिकू डईकू
+deehan दिन
+dees डिज
+deese डिज
+defeat डिफिट
+defore डिफार डीफार
+degas डेगा
+dehn डेन दिन
+dehne डेन दिन
+deighan डेगेन
+deighton डेटेन
+deign डेन दिन
+deike डिकू डीकू
+deis डिज
+dekay डोके डाके
+deleon डेलीयेन डेलियेन
+demarais डेमारे
+demaray डेमारे
+den दिन
+dengue डिंग
+denn डेन दिन
+denne डेन दिन
+dennen दिनेन
+dennin दिनेन
+deridder देरेदार
+des डी
+desha देसो
+deshane देसोन
+deshaw देसो
+deshong देसोन
+design डिजेन डिजाईन
+detty डेटे
+deuce दोस दोष
+deuss दोस दोष
+deux डो
+devine डावेन डोवेन
+dew डो
+dewan डोवेन
+dewine डावेन डोवेन
+dews दोस
+deyton डेटेन
+dhein डेन डायन
+dhia डी
+dhows दोस
+dia डी
+diahann डेयेन
+diane डेयेन
+dianne डेयेन
+dibble दबल डबल
+diboll दबल डबल
+dic डिकू डीकू
+dick डिकू डीकू
+dicken डिकून डीकून
+dickens डिकिंज
+dickey डिके
+dickie डिके
+dicky डिके
+diction दक्षिण
+die डई डाय
+dieck डिकू डीकू
+differ डिफार डीफार
+digga डेगा
+digging डेगेन
+dinah डेन
+dinan दिनेन
+dine डेन डायन
+dinh दिन
+dinning दिनेन
+disa देसो
+dishaw देसो
+dishon देसोन
+dishong देसोन
+dison देसोन
+disown देसोन
+ditto डेटो
+ditton डेटेन
+divvy देवी
+dizon डिजेन
+doanna डोने
+docker डाकार
+docking डाकेन डोकेन
+doctrine डाक्टरेन
+dodd डाडू डोडू
+doeden डोडोन
+does डिज
+dog डोगू
+doggie डोगे
+dogging डागेन
+doggy डोगे
+doh डो
+dohm दामू दाम
+dohn डान
+dohse दोस दोष
+doi डोय
+dokken डाकेन
+dom दामू दाम
+don डान
+dona डोने
+donais डान दिन
+done डान
+doney डोने
+donn डान
+donna डान दाना
+donnan दानान डानुनू
+donnay डान
+donne डान
+donnie डोने
+donny डोने
+doozy दोसी
+dorothy दोराटे
+dosch दोष दोस
+dose दोष
+dosia दोसी
+doss दोस दोष
+dossey दोसी
+dossier दोसी
+dotan डोटेन
+doting डोटेन
+dottie डोटे डाटे
+dotting डाटेन डोटेन
+dotty डोटे डाटे
+doty डोटे
+double दबल डबल
+douche दोष दोस
+doud डोडू
+doug डुगू डूगु
+dough डो
+doughten डोटेन डाटेन
+doughtie डोटे डाटे
+doughty डोटे डाटे
+doughy डई
+douwe डो
+dov डाव
+dove डाव
+dovey डाव
+dow डो डाऊ
+dowd डोडू
+dowda डोडो
+dowe डो डाऊ
+dowse दोस दोष
+doyenne डोयेन
+doze दोस दोष
+drina दिन
+ducey दोसी
+ducker डाकार
+ducking डाकेन
+dud डाडू
+duda डोडो
+dudd डाडू
+dude डोडू
+duell जुलू झुळ
+duena डोवेन
+dues दोस
+duey डई
+dufur डिफार डीफार
+dug डुगू डूगु
+dugan डागेन
+dugas डोगेज
+duggan डागेन
+duggin डागेन
+duguay डोगे
+duh डा
+dum दामू दाम
+dumais दाम
+dumb दामू दाम
+dumm दामू दाम
+dun डान
+duna डोने
+dunay डान
+dundee दांडी
+dungan डांगोन
+dunham दुनूम
+dunja डोने
+dunn डान
+dunnam दुनूम
+dunne डान
+duquesne डोकेन
+durrah दोरा
+dusch दोष
+dussault देसो
+dusseau देसो
+dusseault देसो
+dusza दोष
+dutton डाटेन
+duwayne डोवेन
+dyck डईकू
+dye डई डाय
+dyk डिकू डीकू
+dyke डईकू
+dysan देसोन
+dyson देसोन
+eames इंज
+eanes इंज
+earth अर्थ
+eartha अर्था अर्थ
+ease इज
+eaten इटान
+eaton इटान
+eau ओ
+eaux ओ
+edge इज
+edger इजर
+edina आदीन
+edley इडली
+effect फक्त
+effete इफीट
+ege इज
+egger अगर
+ehler इलार
+eight अट
+eighth इठू अट
+einon आयनान
+elaine ओलेन आलेन
+eller इलार
+emge इंज
+emma एम अं
+emme एम अं
+ender इंदार
+eng इन अनू
+enge इंज
+engen इंगान
+enger अंगार
+engh इन अनू
+engine इंजेन इंजिन
+ennes इंज
+enns इंज
+enoch इनकू इंकू
+eon इन
+epa इपी
+era अरे
+err आर
+erra अरे
+esch एस
+esche एस
+ess एस
+essa एस असा
+essay एस
+esse एस
+essie एस
+esta एसटी
+ethan इटान
+eton इटान
+eure आर
+evon इवान
+evonne इवान
+ewe यू यो
+ewes यस
+eye आय आई
+eyes एस
+eyler इलार
+eyrie अरे
+eyton इटान
+faal फल
+facteau फक्तो फ्क्तो
+fahl फल
+fahr फार
+fail फल
+faile फल
+failla फल फळा
+fain फण
+fait फट
+faith फट
+faked फक्त
+faker फिकर फिकेर
+falin फाळेन
+fall फल
+falla फल फळा
+fallaw फळा
+fallen फाळेन फळान
+fallin फाळेन
+fallon फळान
+falynn फाळेन
+fan फाण
+fang फाण फण
+fann फाण फण
+fanned फांडू
+farah फेरा
+farai फार
+farouk फरक
+farr फार
+farra फार
+farrah फेरा
+fatah फट
+fateh फट
+fath फट
+faughn फोन फाण
+faught फट
+faul फल
+faull फल
+faure फार
+fauth फट
+favale फावळी
+favela फावळी
+fawn फोन फाण
+fayne फण
+fecher फिकर फिकेर
+fecht फक्त
+fecteau फक्तो
+fehl फल
+fehn फण
+feight फट
+feign फण
+fein फण
+fell फल
+fella फल फळा
+felon फळान
+feng फण
+fenn फण
+fer फार
+ferch फरक
+ferra फेरा
+feur फार
+ficarra फिकर
+fichera फिकेर फिकर
+fifth फट
+fighter फायटर
+fil फल
+filet फल
+fill फल
+filla पहिला फल
+fillet फल फुल
+fin फण
+fine फण
+finn फण
+finne फण
+fir फार
+fiser फेजेर
+fit फट
+fithe फट
+fitt फट
+fizer फेजेर
+flann फळान
+flanna फळान
+flaugh फळा
+flaw फळा
+flawn फळान
+flay फल
+flung फळान
+foal फल
+foale फल
+focht फक्त
+fohl फल
+follin फाळेन
+fond फांडू
+fonda फांदी फांडू
+fondue फांडू
+fong फोन फाण
+fool फुल फल
+foong फोन फण
+foor फुर
+foot फुट
+football फुटबॉल
+for फार
+fora फार
+foray फार
+fore फार
+forr फार
+foth फट
+fought फट
+foundation फाऊन्डेशन
+four फार
+frech फरक
+frick फरक
+fricke फरक
+fucked फक्त
+fuhr फुर
+full फुल फल
+fullen फळान
+fun फाण
+fund फांडू
+funded फांडू
+fung फण फाण
+fur फार
+furr फार
+furrh फार
+gadding गाडीन
+gahli गाल
+gahn गेन
+gahr गार
+gait गट
+galane गालेन
+gale गेल
+galey गेली
+gali गाल
+galie गेली
+galin गालेन
+gall गोल गाल
+galla गेल गाल
+galle गेल गाल
+gallen गालेन
+gallet गलत
+galletti गलती गलटी
+gallia गेली
+galling गालेन
+galloped गेलपट
+gamez गोमेज
+gan गेन
+ganda गेंडा
+gang गेन
+gangi गेंजी गंजी
+gann गेन
+gannett गेणीत
+gannon गानान
+garay गेर गार
+gari गौरी
+garr गेर गार
+garroz गरज
+gars गरज
+gate गेट
+gath गट गेट
+gatt गेट
+gattis गिटीज
+gaudier गाडी गादी
+gaudy गाडी गादी
+gaugh गा
+gaughan गोयन गोयेन
+gaul गाल
+gaulan गालेन
+gaulle गोल गाल
+gault गलत
+gaus गोजू
+gause गोजू
+gaut गट
+gauze गोजू
+gavin गावेन
+gawne गोन
+gayer गेर
+gayle गेल
+gaz गोजू
+gaza गासा
+gean झीं
+gear गेर
+gears गरज
+geck जॅक
+gee जी जे
+geeing झीं
+geeting गीटेन
+gehl गेल
+gehr जेर
+gemma जमा
+gene झीं
+geng जेन
+genna जेन
+gerais जेर
+gerda गर्दी गेर्दी
+get गट
+getting गीटेन
+gettys गिटीज
+geyer गेर
+ghada गाडा गाडी
+ghali गाल
+ghitis गिटीज गीटीज
+ghose गोजू
+ghoul गोल गोलू
+giang जान
+gibb जब
+gick जॅक
+gide जिडू
+giel जीलू
+gier जेर
+giere जेर
+gil गेल
+gile गेल
+gill गेल
+gille गेल
+gilles जीलू
+gilley गेली
+gillie गेली
+gillott गलत
+gilly गेली
+gilt गलत
+gin जेन झीं
+gina झीं
+ging जेन झीं
+ginn जेन झीं
+gioia जय
+gire गेर
+giren झिरान
+giron झिरान
+git गेट गट
+githa जिडू जिता
+glatt गलत
+glawe ग्लो गला
+glew ग्लो
+gloat गलत
+glow ग्लो
+gnat नितू
+gnaw ना
+gnu नु
+goa गई
+goad गोडू
+goal गोल गोलू
+goalie गोल
+goan गोन
+goar गार
+goat गट
+god गोडू
+goda गोडे गोडू
+godden गाडान गाडीन
+godding गाडीन
+godoy गादी
+goedde गोडू
+goede गोडू
+goen गोन
+goes गोजू
+goethe गट
+goette गेट गट
+goga गोगो
+goghs गोजू
+gohl गोल गोलू
+gohn गोन
+gohr गार
+goin गोयन
+golay गोल गाल
+golen गालेन
+goley गोल
+goll गोल गाल
+golla गोल गाल
+golle गोल गाल
+gollum गालाम
+golomb गालाम
+gomes गोमेज
+gong गोन
+gonna गाना गोन
+good गोडू
+gooda गोडे गोडू
+gooey गुई
+googe गोजू
+gooley गुली
+goos गोजू
+gootee गुटी
+gora गार गौरी
+gore गार
+gores गरज
+gorge गरज
+gorr गार
+gose गोजू
+goth गट
+gotta गटा
+gouge गोजू
+goulet गलत
+gov गाव
+gowan गोन
+gowen गोन
+gown गोन
+goy गई
+goza गोजू
+grage गरज
+grays गरज
+griz गरज
+groeger गरगर
+groos गरज
+grose गरज
+grows गरज
+grudge गरज
+guel गेल
+guenna गेन
+guerre गेर
+guhl गाल गालू
+guier गेर
+guile गेल
+guill गेल
+guilt गलत
+guilty गलती गलटी
+guin गेन
+guindon गेंडान
+guinn गेन
+guire गेर
+gull गाल गालू
+gulla गाल गला
+gullah गाल गला
+gullatt गलत
+gullet गलत
+gullette गलत
+gullible गळबळ गाळबोळ
+gullion गालेन
+gunn गोन
+gurka गेरके
+gurr गेर गार
+guth गट
+guy गाई गई
+guyer गेर
+guynn गेन
+gway जीव
+gym झीं
+gyn गेन
+gyr जेर
+haapala होपळा
+hach हेच
+hack हेकू
+hacke हेकू
+hag हेग
+hage हेज
+hagee हाजे
+hagey हाजे
+hagg हेग
+hagge हेग
+hagin हाजेन
+hague हेग
+hah हा हो
+hahl हाल
+hahm हं हां
+hahn हां हं
+hahne हेन
+haigh हे हें
+haight हेट
+haik हेकू
+hainan हेंं हेंन
+haircut हरकत
+hairy हरी
+haith हेट
+hajj हेज हाज
+hake हेकू
+hakko हाको
+hall हाल
+halle हाल
+hallow हॅलो
+halm हां हं
+halve हाव
+ham हां
+hama हां हं
+hamal हिमोलू
+haman हेंं हेंन
+hamm हं हां
+hamman हेंं हेंन
+hammann हेंं हेंन
+hamme हं हां
+hammen हेंं हेंन
+hammon हेंं हेंन
+hamon हेंं हेंन
+hana हेन हं
+hanan हेंं हेंन
+hane हेन
+hang हेन हं
+hann हेन हं
+hanna हेन हं
+hannah हेन हं
+hannam हेंं
+hannan हेंं हेंन
+hannay हेन
+hannen हेंं हेंन
+hannon हेंं हेंन
+hannum हेंं
+hao हो
+haq हेकू
+hara हरी हिरा
+haran हेरान
+haren हेरान
+hargett हारजीत
+harrah हिरा
+harren हेरान
+harron हेरान
+harry हरी
+has हेज हाज
+hase हेज
+hat हेट
+hata हाटी हाटो
+hatch हेच
+hate हेट
+hath हेट
+haton इटान
+hatt हेट
+hauge हाज
+haugh हा हो
+haughn हां होन
+haughton हाटीन
+haughty हाटी
+haul हाल
+haury हरी
+havemann हवामान
+haven हवान
+hawes हाज
+hawn हां होन
+haws हाज
+hay हे हें
+hayek हेकू
+hayen हेन
+hayes हेज
+haying हेन
+hayman हेंं हेंन
+haymon हेंं हेंन
+hayn हेन
+hayne हेन
+hays हेज
+hayse हेज
+haze हेज
+hearon हेरान
+heaven हवान
+heck हेकू
+hedge हेज
+hedged हेजडू
+heeren हेरान
+hegg हेग
+hegge हेग
+heh हे हें
+hehman हेंं हेंन
+hehn हेन
+heick हेकू
+height हेट
+heighth हेट
+heiman हेंं हेंन
+heimann हेंं हेंन
+heinen हेंं हेंन
+hello हॅलो
+helluva हलवा
+helmut हेल्मेट
+hemann हेंं हेंन
+hemel हिमोलू
+hemme हं हेमू
+hemmen हेंं हेंन
+heng हेन
+henkin हेंकेन
+hennan हेंं हेंन
+hennen हेंं हेंन
+hennon हेंं हेंन
+henri आरी
+heron हेरान
+herre हरी
+herren हेरान
+herrick हरेक
+herron हेरान
+heth हेट
+hey हे हें
+heye हाय हे
+heyen हेन
+heying हेन
+heyman हेंं हेंन
+heymann हेंं हेंन
+heyn हेन
+heyne हेन
+heys हेज
+hick हेकू
+hiett हेट
+high हाय हे
+highman हेंं हेंन
+highs हेज
+hight हेट
+higuera हिगरा
+hike हेकू
+hilke हलका
+hilla हेला
+him एम
+himalaya हिमालये
+himel हिमोलू
+himmel हिमोलू
+hine हेन
+hing हेन
+hinn हेन
+his हेज
+hise हेज
+hit हेट
+hitch हेच
+hite हेट
+hitt हेट
+hmm हं
+hmmm हं
+hmong मान मोनू
+hoang होन हं
+hoary हरी
+hodder होंदार
+hoddur होंदार
+hodge हाज
+hodgen हाजेन
+hodgin हाजेन
+hoehn होन हं
+hoehne होन हं
+hoen होन हं
+hoene हेन
+hoh हो
+hohn हां हं
+hoi ही
+holl हाल
+holle हाल
+holley हाल
+hollie हाल
+hollo हॅलो
+hollow हॅलो
+holly हाल
+holm होम हं
+home हं
+homme हां हं
+hong हां होन
+honn हां हं
+hooley हुली
+hoonah होना
+hooser हुशार
+hooven हवान
+hopp होप
+hoppa होप
+hoppe होप
+hopton हप्तान
+hora हरी
+horak हारेक
+hors आरु आर
+hougham होम
+houghton हाटीन
+houx हु हो
+houy होंये
+hoven हवान
+how हो
+howdy होडी
+howe हो
+hren रेन
+hsia सा सो
+hsiao सो
+hsu शु
+hua हवा हो
+huan हवान
+huang हवान
+huckaba हाकोबा
+huda होडी
+huddie होडी
+hugh यू यो
+hughes यस
+hughs यस
+huh हा हु
+huhn हं हां
+hui हु
+hula हुली
+huldie होडी
+hull हाल
+hum हां
+humm हं हां
+hums हुंजू हुंजु
+hundley हांदळी हांडळी
+hung हं हां
+hunn हं हां
+hupp हूप हुप
+hurray हरी
+hurri हरी
+hurry हरी
+hussar हुशार
+husser हुशार
+hutton हाटीन
+huyck हेकू
+huynh हेन
+hwang हवान
+hyche हेच
+hyman हेंं हेंन
+hymen हेंं हेंन
+hymn हिम हं
+ian इन
+ice एस
+idea आईडिया
+ifill इफील
+igor अगर
+ilg अलग
+illg अलग
+image इंज
+imm एम अं
+imogen इंगान
+imogene इंजिन
+inaki इनके
+inc इंकू इनकू
+indoor इंदार
+ing इन
+inge इंज
+inger अंगार
+ink इंकू इनकू
+inky इंके
+inn इन
+inns इंज
+ins इंज
+ione आयनी
+isay एस
+isch एस
+ise एस
+ish एस
+issa एस असा
+issah एस असा
+isty एसटी
+ithaca इटाका
+itoh इटो
+ivanna ईवान इवान
+iwen ईवान इवान
+jabah जेबा
+jabbar जबर
+jabbour जबर
+jacki जिकी जेके
+jackie जिकी जेके
+jackoby जेकाबी
+jacky जिकी जेके
+jacque जॅक
+jacques जॅक
+jacquet जेके जिके
+jade जिडू
+jaded जिडू
+jahn जान जेन
+jakie जिकी जेके
+jamb जाम
+jammu जुमू
+jan जेन
+janda जिंदा
+jane जेन
+jang जान जेन
+jann जान जेन
+janna जेन जान
+jarrod जेर झारा
+jaw जो जा
+jawed जादू
+jay जे
+jayne जेन
+jean झीं
+jeana झीं
+jeane झीं
+jeanne झीं
+jech जॅक
+jed जिडू
+jenn जेन
+jenna जेन
+jenne जेन
+jeong जेन
+jerr जेर
+jew जू जु
+jewel जुलू झुळ
+jewkes जोक्स
+jha जा जो
+jheel जीलू
+jia जी जे
+jian झीं
+jiang जान
+jiawen जीवन
+jib जब
+jil जीलू
+jill जीलू
+jima झीं
+jing जेन झीं
+jiron झिरान
+joann जवान
+joanne जवान
+joao जू
+job जाबू
+jobber जबर
+jobe जब
+jock जॅक
+joh जो
+john जान
+jokes जोक्स
+jolla होंये
+jolley जाळी झाली
+jollie जाळी झाली
+jolly जाळी झाली
+jon जान
+jong जान
+jonn जान
+joong जून जुनू
+joule जुलू झुळ
+joy जी
+jua जू
+juan हवान
+juana हवान
+juang जवान
+jubb जब जाबू
+judah जोडा
+judd जादू
+juel जुलू झुळ
+juhl जुलू झुळ
+juju जोजो
+jukes जोक्स
+juki जुके
+julia जोळया
+julian जुलयेन
+juliann जुलयेन
+july जाले जिले
+jumbo जांबो
+jun जान
+june जुनू
+junge जान जून
+junine जानेन
+jus जू जु
+kaas कासू
+kabbah कोंबा कूबा
+kael कल
+kah का
+kahl काल कल
+kahle काल कल
+kahler कालार
+kahley काल
+kahn कोन कों
+kahng कोन कों
+kahr कार कर
+kahre कार कर
+kahuna खून
+kail कल
+kaim कम
+kainz किंज
+kalal कल्लू
+kalas कालेज
+kaley केळे केळी
+kali काल
+kalil कल्लू
+kalk काकू
+kall काल कालू
+kallal कल्लू
+kallay केळे
+kalo किलो
+kalok किळाकू
+kamm काम कम
+kan केन
+kana केन
+kanai कोने
+kanda केंडे
+kane केन
+kang केन कोन
+kann केन
+kanne केन
+kanz किंज
+kaolin कोलीन कोळेन
+kapper कापार
+kapton केप्टान
+kapur कापार
+karch कोरकू
+karen केरान
+karoun कारन कारण
+karow कोरो
+karr कार कर
+karren केरान कारान
+karyn कारन कारण
+kasch कासू
+kash कासू
+kass कासू
+kassa कासा
+kassan कासान
+kassen कासान
+kasson कासान
+kasza कासा कासू
+kat काटू
+kath काटू
+kathan केठीन
+katt काटू
+katzen केटजेन
+kauk काकू
+kaul काल कालू
+kaunda कांडी
+kaus कासू
+kauth काटू
+kawa कावू
+kay के
+kaylie केळे केळी
+kayne केन
+kazoo कासू
+kea की कि
+kear कर
+kearn कारन कारण
+keay की
+keehan कियान
+keeran केरान
+keevil किवाळ
+kehl कल
+kehm कम
+kehn केन
+kehne केन
+kehr कर
+keir कर
+kelcey केळशी
+kell कल
+kelley केळे केळी
+kelli केळे केळी
+kellie केळे केळी
+kellough किलो
+kellow किलो
+kelly केळे केळी
+kelsey केळशी
+kenn केन
+kenna केन
+kern कारन कारण
+kerr कर कार
+ketou काटू काटो
+key कि
+keye कई काय
+keynes किंज
+khaki काकी
+khalil कल्लू
+khan कोन कों
+khanna केन
+khe के
+khem कम
+khoo कू कु
+khuu कू कु
+kian कियान
+kick केक
+kier कर
+kihn केन
+kika केका केक
+kile कायल
+kiley केळे केळी
+kill कल
+kille कल
+killey केळे केळी
+killough किलो
+kim कम
+kimel कमल कमाल
+kimm कम
+kimmel कमल कमाल
+kimmell कमल कमाल
+kimmey किमी केमी
+kims किंज
+kin केन
+kinase केनेज
+kinda केंडे
+king केन
+kings किंज
+kinn केन
+kinne केन
+kir कर
+kira केरा
+kirn कारन कारण
+klay कल
+kley कल
+klugh कला कल
+knarr नेर
+kneale नील निलू
+knee नी
+kneel नील निलू
+kneeling निळेन
+kneer नेर
+knell नल निलू
+knerr नेर
+knew नु
+knill निलू नील
+knit नितू
+knoell नल
+knoll नल
+knoy नोय नी
+koala कौवळा
+kochan काकून
+kock काकू
+koehl कल
+koehn कोन कों
+koehne कोन कों
+koehnen कोनेन
+koelle कल
+koelling कोलीन कोळेन
+koen कोन कों
+koenen कोनेन
+koh कों
+kohen कोन कों
+kohl कल
+kohn कोन कों
+kohne कोन कों
+kohnen कोनेन
+kohnke कोनकू
+kohr कार कर
+kok काकू
+koll काल कल
+kollar कालार
+kolle काल कल
+koller कालार
+kolli काल
+kolling कोलीन कोळेन
+kolm कोम कों
+kong कोन कों
+koning कोनेन
+kooi कई
+kooky कूके
+kool कल
+kooning कोनेन
+kopper कापार
+korda कार्डा
+koren कोरान कारान
+korn कारन कारण
+kos कासू
+kosch कासू
+kosh कासू
+koss कासू
+kot काटू
+koth काटू
+kothe कोड
+kott काटू
+kovalik क्वालीकू
+krah कर
+krahn क्रेन
+krajina क्रेन
+krane क्रेन
+kray कर
+kreh कर
+krenn क्रेन
+krey कर
+kring क्रेन
+kroupa कृपा
+krugh कर
+kruppa कृपा
+kuala क्वाली
+kuc काकू
+kuck काकू
+kuehl कल
+kuehn कोन कों
+kuehne कोन कों
+kuennen कोनेन
+kuhar कुर कर
+kuhl कल काल
+kuhn कोन कों
+kuhne कोन कों
+kuhr कर कार
+kujala कायल
+kuk काकू
+kukje कूके
+kull कल काल
+kully कल
+kulon कुलान
+kulpa काळपा
+kumm काम कम
+kunda कंदू कांडी
+kunde कंदू
+kung कों
+kupper कापार
+kus कासू
+kusa कुसी
+kusch कासू
+kuss कासू
+kut काटू
+kyl कायल
+kyle कायल
+kylie केळे केळी
+kyllo किलो
+kym कम
+kyna केन
+kyne केन
+kyra केरा
+kyron केरान
+laas लाज
+lacana लाकेन
+lagow लागो
+lahn लान लेन
+lahti लाटे
+lain लेन
+laing लाईन
+lair लियर
+lait ले ल
+lakin लाकेन
+lalla लाळा
+lambda लांडा
+lambs लिंज
+landen लांडान
+landon लांडान
+lane लेन
+lanes लिंज
+lang लान लेन
+lange लान लेन
+langer लेंगेर
+lann लान लेन
+lanna लान लेन
+lanz लिंज
+lare लियर
+later लिटर
+lath लाट
+lathan लाटान
+lathon लाटान
+latin लाटान
+laton लाटान
+latour लुतूर
+latter लिटर
+latty लाटे
+laud लोंडू
+laude लोंडू
+laughton लाटान
+laun लान
+laut लाट
+lauth लाट
+lavelle लेवल
+law ला
+lawes लाज
+lawing लाईन
+lawn लान
+laws लाज
+lawton लाटान
+lay ले ल
+layah ले ल
+laye ले ल
+layer लियर
+laying लेन लईन
+lea ले ल
+leah ले
+leann लियेन लीयेन
+leans लींज लिंज
+lear लियर
+leavelle लेवल
+lee ल
+legato लागाटो
+leh ले ल
+lehn लेन लाईन
+lehne लेन लाईन
+lehr लियर
+leigh ले ल
+leins लींज लिंज
+leng लेन लाईन
+lens लिंज
+leong लेन लाईन
+leora लियर
+les ले ल
+levalley लेवल
+levell लेवल
+lewin लईन
+ley ले ल
+leya ले ल
+leyh ले ल
+lia ले
+liane लियेन लीयेन
+liang लेन
+lianne लियेन लीयेन
+lie ले
+liens लींज लिंज
+limas लींज लिंज
+limbs लिंज लींज
+lin लेन
+line लाईन लईन
+ling लेन
+linger लेंगेर
+lings लिंज लींज
+linh लेन
+linn लेन
+linne लेन
+lins लिंज लींज
+lira लियर
+lire लियर
+llana लान लेन
+llanes लिंज
+load लोंडू
+loaned लोंडू
+loathe लोंडू
+loathed लोंडू लड्डू
+locking लाकेन
+lode लोंडू
+lodge लाज
+lodging लाजेन
+lohn लान
+lomba लांबा
+lon लान
+london लांडान
+long लान
+longed लोंडू
+loomed लोंडू
+loosen लुसून
+loot लुट
+lopata लोपोट
+lot लाट
+loth लाट
+lott लाट
+lotta लाटा लाटो
+lotte लाट
+lottie लाटे
+lotto लाटो
+lotty लाटे
+lucking लाकेन
+luckyn लाकेन
+luczak लचक
+lueth लुट
+luhn लान
+lukach लाक्कू
+lun लान
+lunden लांडान
+lung लान
+lunn लान
+lupa लोपो
+luth लुट
+luthy लाटे
+lutton लाटान
+luz लाज
+lwin लईन
+lyanne लियेन लीयेन
+lying लाईन
+lyn लेन
+lyne लाईन लईन
+lyng लेन
+lynn लेन
+lynna लाईना लाईन
+lynne लेन
+lyonnais लीयेन
+lysne लाईन लईन
+maahs मोज
+maas मोज
+macaw माका मका
+machen मकान माकान
+machine मशीन मशिन
+macken मकान माकान
+mackinaw माकाना
+macon मकान
+mad मेड
+madam मेडोम
+madame मेडोम
+madan मेडेन
+madd मेड
+madden मेडेन
+made मेड
+maden मेडेन
+madyun मेडेन
+mah म
+mahan मेन मिनू
+mahannah महिना
+mahen मेन मिनू
+mahl मालू माळू
+mahlum मालूम
+mahn मन मान
+mahon मेन मिनू
+mai माय
+mailloux मेलो
+main मन
+maiti मेटे
+maiziere मेजर
+majer मेजर
+majeure मेजर
+majka मेका
+major मेजर
+malec मालीकू
+malick मालीकू
+malik मालीकू
+mall मालू माळू
+malle मालू माळू
+mallek मालीकू
+mallick मालीकू
+mallow मेलो
+malloy मलई
+maloy मलई
+mamma मामा मामी
+man मान
+mancha मानका
+manda मेंडा
+mandich मांडीक
+manet मान मन
+maney मिनी
+mang मंगू मन
+mann मन मान
+manna मेना मैना
+manne मन मान
+mannen मेनेन
+manney मिनी
+manni मिनी
+mannie मिनी
+mannion मेनेन
+manno मानो
+mannon मेनेन
+manny मिनी
+manta मेंटो
+mantei मेंटे
+manthei मांडे
+many मिनी
+margittai मार्जीटे
+mari मारे
+marie मारे
+marohn मारेन
+marra मारे मारा
+marren मारेन
+marrin मारेन
+marring मारेन
+marron मेरान
+marya मारे
+mas मोज
+maseng मशिन
+maser मेजर
+mashed मस्त
+massed मस्त
+massing मशिन
+mat मेट
+mate मेट
+matejka मेटेका
+matey मेटे
+math मेट
+mathie मेटे
+mathy मेटे
+mation मशिन मशीन
+matott मेट
+matt मेट मत
+matte मेट मत
+mattei मेटे
+mattie मेटे
+matty मेटे
+mauer मोवार मोआर
+maul मालू माळू
+maule मालू माळू
+maull मालू माळू
+mauna मान मोनू
+maune मान मोनू
+maung मान मोनू
+maura मारे मारा
+mauri मारे
+maurie मारे
+maurin मारेन
+maury मारे
+mauss माउस
+maust मस्त
+maute मोटू मत
+mawr मोआर
+may म मी
+mayda मेड मैदा
+mayday मेड
+mayde मेड
+mayden मेडेन
+mayhan मेन मिनू
+mayne मेन मन
+maz मोज
+mazer मेजर
+mazur मेजर
+mazza मजा
+mccaa माका मका
+mccahan मकान माकान
+mccain मुकेन
+mccan मकान माकान
+mccane मुकेन
+mccann मकान माकान
+mccanna माकाना मकान
+mccaughan मकान माकान
+mccaw माका मका
+mcconn मकान माकान
+mcculla मोकला
+mccullah मोकला
+mcculloh मोकला
+mccullough मोकला
+mcgann मुगेन
+mcginn मुगेन
+mcguinn मुगेन
+mchan मकान माकान
+mckain मुकेन
+mckanna माकाना मकान
+mckenna मुकेन
+mea मी मि
+mean मिनू मीनू
+meaney मिनी मीनी
+meany मिनी मीनी
+meara मीरा
+measure मेजर
+meat मितू
+meath मितू
+mecca मेका मका
+meddaugh मैदा
+meehan मिनू मीनू
+meekins मिकिंज
+meenan मिनून
+meet मितू
+mehran मेरान
+mehta मेटे मेट
+meighan मिनू मीनू
+meiner मायनर
+mekong मकान
+mella मेलो
+mello मेलो
+mellow मेलो
+men मन
+meng मेन मंगू
+menia मिनी मीनी
+menn मेन मन
+menna मेना मेन
+mennan मेनेन
+menne मेन मन
+mennen मेनेन
+menning मेनेन
+merengue मारेन
+meshing मशिन मशीन
+messed मस्त
+meta मितू
+methot मेट
+meyn मेन मन
+mia मी
+mica मेका
+micah मेका
+micka मेका मका
+mickens मिकिंज
+mid मेड
+middaugh मैदा
+midday मेड
+midst मस्त
+mien मिनू मीनू
+miera मीरा
+might मेट
+mihn मिनू मेन
+mila मेलो
+millau मेलो
+milo मेलो
+miltie मेटे
+min मिनू मेन
+mina मिनू मिनी
+minar मायनर
+minc मिंकू
+minda मेंडा
+mine मेन
+mineer मायनर
+miner मायनर
+ming मिनू मेन
+minh मिनू मेन
+mini मीनी
+minion मेनेन
+mink मिंकू
+minke मिंकू
+minna मिनू मिनी
+minney मिनी मीनी
+minnie मिनी मीनी
+minny मिनी मीनी
+minor मायनर
+minta मेंटो मिंटो
+mintha मिंटो
+miron मेरान
+mirra मीरा मेरा
+mirren मेरान
+miser मेजर
+missed मस्त
+missett मस्त
+mist मस्त
+misty मस्ती
+mit मेट
+mita मितू
+mite मेट
+miti मेटे
+mitt मेट
+mizar मेजर
+mizer मेजर
+moan मोनू मन
+moat मोटू मत
+mocha मोका मका
+moehring मारेन
+moen मोनू मन
+moes मोज
+mof माफ
+moffa माफ
+mohn मान मन
+mohring मारेन
+mol मालू माळू
+moll मालू माळू
+molle मालू माळू
+mollica मालीको मालीकू
+molloy मलई
+molock मालीकू
+momma मामा मामी
+mommy मामी
+mona मोनू
+monda मांडी
+monday मांडी
+mondy मांडी
+mong मान मोनू
+mongeau मुंगो
+monger मांगर
+monica मानका
+monn मान मन
+monnin मानेन
+moog मुगू
+moon मन मोनू
+moone मन मोनू
+moos मोज
+moosa मुसा
+moot मत मोटू
+mora मारे मारा
+morain मारेन
+moraine मारेन
+morais मारे
+moran मारेन
+moray मारे
+moree मारे
+moren मारेन
+morena मारेन
+morey मारे
+morga मार्ग
+morgue मार्ग
+mori मारे
+morin मारेन
+moring मारेन
+morra मारे मारा
+morren मारेन
+morrie मारे
+morrin मारेन
+morry मारे
+mory मारे
+mos माउस
+mose मोज
+moss माउस
+mostow मस्तो मास्तो
+mote मोटू मत
+moth मोटू
+mott मत मोटू
+motte मत मोटू
+mouse माउस
+moussa माउस
+mouth मोटू
+mover मोवार
+mowat मोटू मत
+mowatt मोटू मत
+mowen मोनू
+mower मोवार मोआर
+mowrey मारे
+mowry मारे
+mows माउस मोज
+moye मी
+much मुचू
+mucha मुचू
+mucking मुकेन
+mudge मोज
+muegge मुगू
+muff माफ
+mug मुगू
+mugging मुगेन
+muhl मालू माळू
+mui मू
+muise मोज
+mull मालू माळू
+mullah मालू माळू
+mulloy मलई
+mumma मामा मामी
+mummey मामी
+mummy मामी
+munden मांडीन
+mundi मांडी
+mundie मांडी
+mundy मांडी
+munger मांगर
+munn मन मान
+munyan मानेन
+munyon मानेन
+murray मारे
+murree मारे
+murren मेरान मारेन
+murrey मारे
+murrie मारे
+murrin मारेन
+murry मारे
+musson मशिन मशीन
+mutch मुचू
+mutsch मुचू
+mutt मत
+myhren मेरान
+myla मेलो
+myna मैना मेना
+myra मेरा
+myren मेरान
+myron मेरान
+myth मेट
+nadia नाडी
+nadja नाडी
+nagao नागो
+nah ना
+nahm नेम
+nail नल निलू
+naill नल निलू
+nakama नाकां
+nall नल
+nalley नाली
+nally नाली
+nam नेम
+name नेम
+nara नारी
+naser नजर
+nason निसान
+nassau नाशा
+nat नितू
+nate नितू
+nath नितू
+naw ना
+nay न
+neal नील निलू
+neala नीला निला
+neale नील निलू
+neall नील निलू
+nealon निळेन
+near नेर
+neat नितू
+neeson निसान
+neet नितू
+neher नेर
+neigh नी न
+neilan निळेन
+neill नील निलू
+nej नी न
+nell नल निलू
+nella निला नळा
+nelle नल निलू
+nelon निळेन
+nessen निसान
+net नितू
+neth नितू
+neto नाईटो नईटो
+nett नितू
+netta नाईटो नईटो
+netto नाईटो नईटो
+neu नोय नी
+new नु
+neyer नेर
+neylon निळेन
+ngai गाई गई
+ngor अंगार
+niel नील निलू
+niesen निसान
+nil निलू
+nill निलू नील
+nir नेर
+nissan निसान
+nissen निसान
+nit नितू
+nita नितू
+nitta नितू
+noa नवा
+noaa नवा
+noah नवा
+noell नल
+nohl नल
+nolen नालीन
+nolie नाली
+noll नल
+nolla नळा नल
+nollan नालीन
+nolley नाली
+none नुनू नून
+noon नुनू
+nora नारी
+norah नारी
+norell नारेल
+norrell नारेल
+norrie नारी
+norry नारी
+nosair नजर
+nowell नल
+nuhn नुनू नून
+null नल
+nun नुनू
+nunn नुनू नून
+nunnery नानारी
+nurr नेर
+nurre नेर
+nylen निळेन
+oana ओने
+oanh अनू अं
+oar आरु आर
+oat ओट
+oath ओट
+obar बार
+obese बीस
+obscene बशीन
+obtain बटन
+occur आकार कर
+ocker आकार
+oda ओडे
+oday ओडे
+oddi आदी आडी
+oddity ओडटे आदत
+oddy आदी आडी
+odin ओडेन
+oehme अं
+oeser औजार
+oetting ओटेन
+ofer ओफार
+off आफ ऑफ
+offer ओफार आफिर
+ogre अगर
+ohba ओबा
+ohh ओ
+ohl ओल ओळ
+ohlin ओलेन
+ohm अं
+ohr आरु आर
+oie ओय
+oja ओय ओया
+olague अलग
+olah ला ओला
+olathe ओळटे ओलटे
+olay ओले ओल
+olea ओले ओल
+oley ओले ओल
+olin ओलेन
+olley आले
+ollie आले
+olly आले
+oma अं
+omelet आमलेट
+ommen आमेन
+ona आना ना
+ondaatje आंडाटे
+oney ओने
+ong आं अनू
+onnen आनान
+onni आणि ओने
+ooh यू ओ
+oohs उज उजू
+ooley ओले
+oona ओने अनू
+oooh यू ओ
+ooohs उज उजू
+ooze उज उजू
+opalka पालक
+oppression प्रशन
+oppressor परिसर
+ora आरा आरी
+ore आरु आर
+ori आरी
+orr आरु आर
+orsay रस
+ory आरी
+osh आस
+oss आस
+ossa आस असा
+osuch अशोक
+otey ओटे
+otha डो आथा
+otting ओटेन
+ought ओट
+oughta ओटा ओट
+our आरु आर
+outing ओटेन
+owe ओ
+owed ओड
+owen अं
+owl ओल ओळ
+own अनू अं
+ozaki ओजोकी ओजोके
+ozora आसरा
+ozzie आजी
+ozzy आजी
+paca पैकी पईकी
+paco पिको
+padden पेडेन
+paden पेडेन
+paean पीन पिन
+paighton पेटीन
+paign पेन
+pain पेन
+palen पालान पेळेन
+palin पेळेन पेलेन
+pall पाउल पाऊल
+paluch पालक
+pan पेन
+pane पेन
+pang पेन पान
+pankey पेनके
+panny पेनी
+pao पो
+papa पोपा
+papaw पोपा
+paper पेपर
+parade पिरेड
+parc पारकू
+parekh पारकू
+parikh पारकू
+park पारकू
+parker परकार
+parkey पारके
+parquet पारके
+parr पार
+parra पार
+parrack पारकू
+parris पॅरीस
+parry पाईरी
+paschen पसन
+passion पसन
+passon पसन
+pataki पोटाके
+patane पेटीन
+patel पेटेल
+patella पतला पटला
+patey पेटी
+patin पेटीन
+patina पेटीन
+paton पेटीन
+patron पत्रान
+patten पेटीन
+pattin पेटीन
+patting पेटीन
+patton पेटीन
+patty पेटी
+paty पेटी
+paugh पो
+paul पाऊल
+paula पाला
+pauley पाळी
+pauli पाळी
+paulick पालक
+paulie पाळी
+paulik पालक
+paulin पाऊलेन
+pauling पाऊलेन
+paulk पालक
+paull पाउल पाऊल
+paullin पाऊलेन
+pauly पाळी
+paw पो
+pawing पाईन पायेंग
+pawlak पालक
+pawley पाळी
+pawlik पालक
+pawling पाऊलेन
+pawn पान
+pawson पसन पासानू
+payan पेन पीन
+payco पिको
+paye पी
+payee पी
+paying पेन पीन
+payna पेन पेनी
+payne पेन
+payola पेयला
+payson पसन
+payton पेटीन
+pea पी
+peaden पेडेन
+pearcy पारके
+peay पी
+peeing पीन
+pelon पेळेन पेलेन
+pen पाईन
+pencil पेन्सिल
+peng पेन पाईन
+penh पेन पाईन
+penn पेन पाईन
+penney पेनी
+pennie पेनी
+penny पेनी
+pensyl पेन्सील पेन्सिल
+peon पीन पिन
+pepper पेपर
+per पार
+peras पॅरीस
+perc पारकू
+pere पार
+perk पारकू
+perkey पारके
+perky पारके
+perry पाईरी
+petal पेटेल
+pethel पेटेल
+pethtel पेटेल
+petit पेटी
+petting पेटीन
+peyton पेटीन
+pfahl फल
+pfarr फार
+pfizer फेजेर
+pfohl फल
+pfund फांडू
+pharr फार
+phil फल
+philon फळान
+phone फॉन
+phung फण फाण
+pia पी
+pica पैकी पईकी
+picchi पैकी
+picco पिको
+picky पैकी
+picture पिक्चर
+piela पिला
+pih पी
+piling पेळेन पेलेन
+pilla पिला
+pillage पेळेज
+pilling पेळेन पेलेन
+pillion पेळेन पेलेन
+pin पेन
+pincher पंचार
+pine पाईन पेन
+ping पेन पिन
+pinn पेन पिन
+pinney पेनी
+piny पेनी
+piper पेपर
+pipp पीप
+pippenger पिपिंजार पीपिंजर
+pirkey पारके
+pithy पेटी
+pitting पेटीन
+pittle पेटेल
+pity पेटी
+pleas प्लीज
+please प्लीज
+plese प्लीज
+poet पूट
+poh पो
+pol पाउल पाऊल
+polich पालक
+polity पालाटे
+pollack पालक
+pollak पालक
+pollan पालान
+pollen पालान
+polley पाळी
+pollick पालक
+pollock पालक
+polloi पाळी
+pollok पालक
+polly पाळी
+poly पाळी
+pon पान
+pong पान
+pooh पो
+pooley पुळी
+pooling पुळीन
+poppa पोपा
+poppen पोपान
+por पार
+pore पार
+pork पारकू
+porky पारके
+porr पार
+porreca पारका
+porta पार्टी
+portee पार्टी
+pough पो
+pour पार
+pousson पसन
+pow पो
+powe पो
+powell पाउल पाऊल
+presser परिसर
+prieta परीटे
+protean प्रोटीन
+provus प्रवास
+prussian प्रशन प्रश्न
+psalms सांस संजू
+psi से साई
+ptak टक तक
+pty टे
+pucci पुची
+puerto पार्टी
+puett पूट
+pullam पुलूम
+pullan पुळीन
+pullen पुळीन
+pulley पुळी
+pullin पुळीन
+pulling पुळीन
+pullum पुलूम
+pun पान
+pung पान
+pur पार
+purk पारकू
+purkey पारके
+purr पार
+purtee पार्टी
+puth पूट
+pyka पिको पैकी
+pyne पाईन पेन
+pyper पेपर
+pytel पेटेल
+qaeda कायदा
+qana कोन कों
+qawi काव
+qian जेन कियान
+qin केन
+qing केन
+quaeda किडा
+quai की के
+qualley क्वाली
+quay की के
+quaye के
+raad रोड
+raasch रस
+rad रेडू
+rada रोड
+radde रेडू
+radha रोड
+rady रेडे
+rahm राम रामू
+rahn रेन
+raia राई
+raid रेडू
+rais रस
+raisa रस
+raise रस
+raissa रस
+raj राजू रोज
+ram रामू
+ramm राम रामू
+ran रेन
+rana रेन
+rang रेन
+ranh रेन
+rann रेन
+ranney रानी
+rasch रस
+rasche रस
+rathe रेडू
+ratty रेती रिती
+ratu राटो
+raum राम रामू
+rawdon रडण
+ray रे
+raya रे
+raye रे
+rayed रेडू
+rayne रेन
+rayon रेन
+rays रस
+raz राजू
+raze रस
+razo रोजो
+rea रे
+read रेडू
+reade रेडू
+ready रेडे
+reamy रीमे
+reay रे
+red रेडू
+reda रेडू रेडे
+redd रेडू
+reddy रेडे
+redeye रेडे
+redi रेडे
+reeh रे
+reh रे राई
+rehn रेन
+reign रेन
+renn रेन
+renna रेन
+renne रेन
+ress रस
+ressa रस
+reta रेती रिती
+reuss रस
+rey रे
+reyna रेन
+rhea रे
+rhee रे
+rhein रेन
+rheta रिती रिटो
+rhin रेन
+rhine रेन
+rhoad रोड
+rhoda रोड
+rhode रोड
+rhoden रडण
+rhude रोड
+rhyne रेन
+ria रे
+rid रेडू
+ridden रेडून रडण
+ride रेडू
+righty रेती
+rihn रेन
+rima रीमे
+rine रेन
+ring रेन
+ringe रेन
+ringen रिंगोन
+rinn रेन
+rinne रेन
+riss रस
+risse रस
+rita रिती रिटो
+riz रस
+road रोड
+robben राबान राबन
+robbin राबन
+robbing राबन
+robin राबान राबन
+robyn राबन
+rocca रोका
+rocha रोका
+rocket रोकाट
+roden रडण
+rodge राजू रोज
+roed रोड
+roes रोज
+roese रस
+roget रोज
+rohde रोड
+rohs रोज
+rom राम रामू
+romm राम रामू
+ronna रानी
+ronnie रानी
+ronny रानी
+roode रोड
+rook रुकू
+rooke रुकू
+roos रोज रस
+roosa रस
+roose रोज रस
+rosa रोजो रोज
+rose रोज
+rosin राजून
+ross रस
+rossa रस
+rosse रस
+rothe रोड
+rotten राटोन
+rouge रोज
+rougeau रोजो
+rouse रोज
+rowden रडण
+rowed रोड
+rowes रोज
+rows रोज
+rowse रस
+rozen राजून
+ruck रुकू
+ruda रोड
+rude रोड
+rudge राजू
+rues रोज रस
+ruess रस
+ruge रोज
+ruhr रुरु रुरू
+rum राम रामू
+rummel रुमाल
+rummell रुमाल
+runny रानी
+rusch रस
+rusche रस
+russ रस
+russa रस
+russe रस
+russey रस
+russia रस
+ruttan राटोन
+rutten राटोन
+ruud रोड
+ruzzo रोजो
+rye राई
+rys रस
+ryton रितीन
+saab साबू साबु
+saad सोडू
+saar सरू सर
+sabah साबू साबा
+sabb साबू साबु
+sada साडे
+sadeh साडे
+sadie शेडी
+saehan शेन सण
+saenz शिंज
+sag सागू
+sagas सागेज
+sahara शेर शिरा
+sahl साल शाल
+sahli साली साले
+saia साया साये
+sainz संजू
+saitta शिटा
+sakal सेकल
+salah साला साल
+salameh सलाम
+salek सालेकू
+salem सलाम
+salick सालेकू
+salk शक
+sall साल शाल
+sallee साली साईली
+salleh साले साल
+salley साली साईली
+sallie साली साईली
+sally साली साईली
+salman सामान
+salmon सामान
+salo सोळो
+salute सुलूट सुलुट
+same शिम
+sames संजू
+samina सामना
+sammon सामान
+samms संजू सांस
+san शेन
+sand शेंड शेंडू
+sanda शेंडा
+sande शेंड शेंडू
+sandra शेंद्रा
+sandt शांत
+sane शेन
+sang सण शेन
+sanna साना शेने
+sannes संजू सांस
+santa साना शेने
+santia शांती
+sanz संजू सांस
+sao सो
+sarah सर सेर
+saran सेरेन
+sarette शेरेट
+sarra सारा
+sarratt शेरेट
+sarrett शेरेट
+sass सास
+sasse सास
+satay साटे
+satoh साटो
+satya साटे
+sauce सास
+saud सोडू
+saudi साडे
+sauey साई सई
+sauk शक
+saul साल शाल
+saur सर सरू
+saus सास
+sause सास
+saute साटे
+savanna सावेन
+savannah सावेन
+savin सावेन
+saw सा सो
+sawdey साडे
+sawdy साडे
+sawed सोडू
+sawka साका
+saws सास
+say से
+sayer सेर सर
+saying शेन
+sayre सर सेर
+sazama साजोम
+scammed स्कंदू
+scanned स्कंदू
+scenes शिंज
+schaab साबू साबु
+schaack शक
+schaar सरू सर
+schab साबू साबु
+schacher शिकार
+schaecher शिकार
+schaja साजा सजा
+schalk शक
+schall शाल साल
+schanz सांस
+schar सरू सर
+schardt शर्ट
+scharr सरू सर
+schau सो
+schaub साबू साबु
+schear शेर
+scheckel सेकल
+schemm शिम
+scherr शेर
+schey से
+schick शक
+schicker शिकार
+schier शेर
+schieren शिरान
+schoch शक
+schoeck शक
+schoen सोनू
+schoene शेन
+scholl शाल साल
+schon शानू
+schone सोनू
+schons सांस
+schoo शु
+schook शक
+schooling स्कुलेन
+schor सर शहर
+schorr सर शहर
+schou शु
+schow सो
+schtick स्टिक
+schuch शक
+schug सागू
+schuh शु
+schur शेर सर
+schurr शेर सर
+schut सूट
+schuth सूट
+schutt सूट
+schuur सूर सुरु
+sci से
+scianna सोना
+sciara सारा
+scilla शिळी
+scinta शेंटे
+scire सेर शेर
+scull स्कूल
+scullin स्कुलेन
+scullion स्कुलेन
+scylla शिळी
+sea से
+sealey शिळी
+sealy शिळी
+seam सीम
+seams शिंज
+sean शानू सोनू
+sear सर सेर
+searing सेरेन
+seaton शिटान
+seay से
+seeker शिकार
+seeley शिळी
+seems शिंज
+seesaw सिसा
+seeton शिटान
+seine शेन सण
+sejm शिम
+sela साईली
+seley शिळी
+selie साईली
+selin साईलीन
+sella साईली
+sellen साईलीन
+selley साईली
+sellin साईलीन
+selling साईलीन
+sellon साईलीन
+sema सीमा सीम
+semmes संजू
+send शेंडू
+seng शेन सण
+senn शेन सण
+senna शेने शेन
+sens संजू
+sensor संसार
+seraw सारा
+serpa सरपो
+serr सर सेर
+serra सर सेर
+serrate शेरेट
+sessa सिसा
+seton शिटान
+seuss सुसू
+seve सवय
+sew सो
+sewed सोडू
+sewer सूर सर
+sewn सोनू सण
+seyer सेर सर
+shaak शक
+shabazz शाबाश साबास
+shackle सेकल
+shady शेडी
+shag सागू
+shah सा सो
+shaik शक
+shaikh शक
+shaker शिकार
+shall शाल साल
+sham शिम
+shame शिम
+shamed शेंड शेंडू
+shames शिंज
+shand शेंड शेंडू
+shanna शेने शेन
+shao सो
+share शेर
+sharell सुरेल
+sharon शिरान सेरेन
+sharrett शेरेट
+sharron शिरान
+shaub साबू साबु
+shaul शाल साल
+shaull शाल साल
+shaun शानू सोनू
+shaw सा सो
+shawl शाल साल
+shawley साली
+shawmut शांत
+shawn शानू सोनू
+shawna सोना
+shawnee सानी
+shawnut शांत
+shayne शेन
+shea से
+shealey शिळी
+shealy शिळी
+shear शेर
+shearon शिरान
+sheela शिळी
+sheelah शिळी
+sheens शिंज
+sheila शिळी
+sheilah शिळी
+shelia शिळी
+shelley शिळी साईली
+shelly शिळी साईली
+sheng शेन
+shenzhen शिंजेन
+sherin सेरेन
+sherr शेर
+sherrin सेरेन
+sherrit शेरेट
+sherritt शेरेट
+sherron शिरान सेरेन
+shew शु
+shh शु
+shick शक
+shiela साईली
+shier शेर
+shin शेन
+shine शेन
+shined शेंड शेंडू
+shing शेन
+shinn शेन
+shiny शेने
+shir शेर सर
+shirah शिरा
+shire शेर
+shirin शिरान
+shirr शेर सर
+shirt शर्ट
+shiu शु
+shoe शु
+sholl शाल साल
+sholly साली शाल
+shone सोनू
+shook शक
+shoot सुटू
+shooter सुटार
+shore सर शहर
+shoreham सोरोम
+shorr सर शहर
+shough सो
+show सो
+showa सो
+showed सोडू
+shown सोनू
+shuey सुई
+shull शाल साल
+shun शानू
+shuns संजू
+shunt शांत
+shurr शेर सर
+shute सूट सुटू
+shy से साई
+shyly साईली
+shyne शेन
+siang शेन शानू
+sic शक
+sichel सेकल
+sick शक
+sickel सेकल
+sicker शिकार
+sickle सेकल
+sidey शेडी
+sidi शेडी
+sidra शेद्रा
+sie से
+sieh से
+sieja से
+siem सीम
+siems शिंज
+siew सो शु
+sigh से साई
+sign शेन
+signage सायनेज
+sikora शिकार
+silica शिळीके शिळीकू
+sillier शिलीर
+silly शिळी
+simm सीम शिम
+simms शिंज
+simona समोना
+sims शिंज
+sin शेन सण
+sinay शेने
+sind शेंड
+sine शेन
+sing शेन सण
+singe शिंज
+singh शेन सण
+sings शिंज
+sinn शेन
+sinned शेंड
+sins शिंज
+sioux सो शु
+sir सर सेर
+sircy सरके
+sire सेर
+siren सेरेन
+sirena सेरेन
+siron शिरान
+sitton शिटान
+skull स्कूल
+slum सलाम
+smithee समती
+smithey समती
+smitty समती
+smutty समती
+snay सण
+sneh सण
+soak शक
+soar सर सरू
+sob साबू साबु
+sobbed शब्द
+sobotta सोबती
+sod सोडू
+soda सोडू
+soens संजू
+soggy सागे
+sohn सण सोनू
+sohns सांस संजू
+sojka सोयका
+sol साल शाल
+sola सोळो
+solemn सलाम
+soll साल शाल
+solley साली साले
+sollie साली साले
+solly साली साले
+solow सोळो
+solum सलाम
+somes संजू सांस
+somoza समोसा सामोसा
+sonat शांत
+sones संजू
+song सोनू शानू
+soni सोने
+sonn सण सोनू
+sonne सण सोनू
+sonnen सणाण
+sonnett शांत
+sonny सानी
+sons संजू सांस
+sony सोने
+sonya सोने
+sood सोडू
+soon सोनू सण
+soong सोनू सण
+soos सुसू
+sooter सुटार
+soothe सोडू
+soothed सोडू
+sooy सुई सई
+sorcha सारका सरके
+sore सरू
+soroka सारका
+soss सास
+sough सो
+souk शक
+sous सुसू
+sousa सजा
+soutar सुटार
+souter सुटार
+souza सजा
+sovine सावेन
+sow सो
+sowa सो
+sowata सूट
+sowed सोडू
+sower सर
+sown सोनू सण
+soy सई
+spartz स्पोर्ट्स
+spaugh सपा
+spaw सपा
+sta एसटी
+stac स्टिक
+stack स्टिक
+stake स्टिक
+staude सताड
+steak स्टिक
+stech स्टिक
+stud सताड
+sub साबू साबु
+subbed शब्द
+succumb साकोम
+succumbed स्कंदू
+suckling सुकळीन
+suda सोडू
+sue सो
+sued सोडू
+suen सोनू सण
+sues सुसू
+suey सुई सई
+sugg सागू
+suh सा
+suhre सूर सुरु
+suire सूर सुरु
+suit सूट सुटू
+suitcase सूटकेस
+suiter सुटार
+suitor सुटार
+suitt सूट सुटू
+sul साल शाल
+sullie साली साले
+sullo सोळो
+sully साली साले
+summit शांत
+summon सामोन सामान
+sums संजू सांस
+sundt शांत
+sung सण
+sunny सानी
+suns संजू सांस
+suppa सोपा सपा
+supports स्पोर्ट्स
+sure सुरु
+surf सिर्फ
+surrette शेरेट
+sus सास
+susa सुसू
+suss सास
+susser सुसर
+suter सुटार
+sutor सुटार
+sutter सुटार
+sutton साटेन सातेन
+suu सो शु
+sycara शिकार
+sykora शिकार
+sylla शिळी
+sym सीम शिम
+symbol शिम्बील
+symmes शिंज
+symms शिंज
+syms शिंज
+syn शेन सण
+syna शेने शेन
+syring सेरेन
+syringe शिरींज
+syron सेरेन
+szalay साले
+szczech शक
+sze से
+szoke शक
+szuba सोबा
+tabb तब
+tabby तबी
+table टेबल
+tack तक
+tacking टाकीन
+taher तर
+taibi तबी
+taima टेमो
+takach टकाक टक्क
+take तक
+takei टॉक टक
+talk टॉक टाक
+talkin टाकीन
+talking टाकीन
+tall ताल टोल
+talley टाली ताली
+tallie टाली ताली
+tallon तालान टालान
+tally टाली ताली
+talon तालान टालान
+tam टईं
+tambs टईंज टइंज
+tami टिमी
+tamm टईं
+tammen टेमोन
+tammie टिमी
+tammo टेमो
+tammy टिमी
+tampa टेंपा
+tan टेन टईं
+tanen टईंन
+tang टेन टईं
+tange टईंज टइंज
+tangen टेंगेन टंगान
+tangs टईंज टइंज
+tann टेन टईं
+tannen टईंन
+tans टईंज टइंज
+tao डो टाउ
+tap टापू
+tapering टपरीन
+tapp टप टापू
+tappan टापान
+tappe टप टापू
+tappen टापान
+tarr तर
+tasso टासो
+tata तोतो
+tatar टोटोर
+tatu तोतो
+taube तब
+tayman टेमोन
+tea टी
+teac टीक
+teahan टीन
+teak टीक
+tear तर
+teare तर
+tebbe तब
+tech टक तक
+teehan टीन
+teeing टीन
+tehan टेन टीन
+temme टईं
+teng टेन
+tenn टेन
+tens टईंज टइंज
+terre तर
+teta टिटे
+tew टू टो
+tewes च्यूज
+tews च्यूज
+thada थोडा
+thai टे
+thain टेन
+thaine टेन
+thalassa थोळासा
+thall ताल टोल
+thames टईंज टइंज
+than डान दिन
+thane टेन
+thang टेन टईं
+thanh टेन टईं
+thao डो डाऊ
+that थेट
+thaw टाउ टो
+thayer थर तर
+thayne टेन
+the डो डी
+thee डी
+thein टेन टईं
+their थर तर
+them दामू दाम
+then डेन दिन
+there तर
+theroux थारू
+these डिज
+thew टू टो
+they डे दे
+thi टी
+thick टीक
+thicken ठिकान
+thicket टिकीट
+thien टीन
+thieve टीव
+thigh टे थाय
+thin टीन टेन
+thine डेन डायन
+thing टीन टेन
+thingy थेंगी
+think टिंकू
+thobe तब
+thoele टोल
+thole टोल
+tholen तालान थाळेन
+tholl ताल टोल
+thong टाऊन टऊन
+those दोस दोष
+thou डो डाऊ
+though डो
+thous दोस
+thul ताल
+thull ताल
+thum ठाम
+thumb ठाम
+thumm ठाम
+thumma ठाम
+thus दोस
+thuy टू टो
+thy डई डाय
+thyme टईं
+tia टी
+tibbie तबी
+tibby तबी
+tibi तबी
+tibia तबी
+ticket टिकीट
+tie टे
+tiein टईं टायेन
+tien टेन
+tier तर
+tigon टीगेन टिगेन
+tiki टीके
+timan टेमोन टईंन
+time टईं
+times टईंज टइंज
+timken टिंकून
+timmie टिमी
+timmy टिमी
+timon टेमोन टईंन
+tin टेन
+tines टईंज टइंज
+ting टीन टेन
+tip टप
+tipp टिप टप
+tippie टिपे
+tippy टिपे
+tita टीटे टिटे
+toa टू टो
+toal टोल
+tobe तब
+tobia तबी
+toda टोडे
+today टोडे
+toe तो
+toelle टोल
+tokkin टाकीन
+toll टोल
+tolle ताल टोल
+tolley टाली ताली
+tolly टोले
+tong टाऊन टऊन
+too टो
+toohey टईं
+took टक तक
+tooke टक तक
+tooley टूले टुले
+tootal टोटोल
+tootle टोटोल
+top टप टापू
+topic टपक
+topp टप टापू
+torah तर
+tore तर
+torr तर
+torre तर
+tota तोतो
+total टोटोल
+totten तोतोन
+totton तोतोन
+touting टाउटेन
+tow टो तो
+towe टो तो
+towel टोल
+towle टोल
+town टाऊन टऊन
+towne टाऊन टऊन
+toye टी
+tray तर
+trey तर
+tri टराई
+trick ट्रक
+trie टराई
+try टराई
+tsai से साई
+tsang सण शेन
+tsao सो
+tsar सरू सर
+tschopp चाप
+tse से
+tseng शेन सण
+tso सो
+tsuda सोडू
+tsui सुई सई
+tubb तब
+tubby तबी
+tuckey तक
+tucking टाकीन
+tuel टोल
+tuell टोल
+tull ताल
+tulley टूले टुले
+tulloch टोलकू
+tullock टोलकू
+tully टाली ताली
+tulsa तुलसी
+tuohy टईं
+tuttle टुटूल
+tutton तोतोन
+tutu तोतो
+tuyle टोल
+two टू टो
+tynan टईंन
+tyne टेन टईं
+tynes टईंज टइंज
+ubben आबून आबुन
+uday ओडे
+uddin आदीन
+uecker उकार
+uehling ओलेन
+uhde ओडे ओड
+uhh ए यू
+uhl आलू
+uhle ओल ओळ
+umm आम
+una ओने अनू
+undone आंडान
+unease इनीज
+ung अनू अं
+unger अंगार आंगर
+untie आंटे
+upon पान
+upping आपेन
+use यस
+utah यटो
+uthe अट उठू
+uwe यू यो
+uzi उजे
+uzzle उजाळ
+valet वळे
+vallee वळे
+vallely वळे
+valley वळे
+valli वळे
+vana विणा
+vanna विणा
+vari वार
+vaugh वा
+vega वयगा
+veiga वयगा
+vela वळे
+vella वळे
+ver वार
+vicious विशेष
+vie वय
+virga वर्गा वर्ग
+volley वळे
+vora वार
+vore वार
+waah वा
+wah वा
+wala वळे
+warr वार
+waugh वा
+waylay वळे
+wei वय
+weigh वय
+were वार
+whalley वळे
+whan हवान
+whang हवान
+who हु हो
+whoa हो
+wholey हाल
+whom हं होम
+whopper वापर
+why वय
+winnowed विनोद
+woehr वार
+wola वळे
+wops वापस
+wor वार
+wore वार
+wray रे
+wren रेन
+wrenn रेन
+wring रेन
+writhing रितीन
+written रितीन
+wruck रुकू
+wry राई रे
+wrye राई रे
+xan शानू
+xene झीं
+xiao जो
+xie जी जे
+xing शेन
+xio जो जा
+xoma जमा
+xuan जवान
+xue जू जु
+xus सास
+yackley एकली
+yadda यादो यादी
+yaden येडेन
+yadon येडेन
+yah यो
+yahn येन
+yahr यार
+yam एम
+yan येन
+yaney येने
+yang येन
+yanni येने
+yannone येनेन
+yao यो
+yaron येरेन
+yass यस एस
+yaw यो
+yay ये ए
+yea ये ए
+yeadon येडेन
+yeah ये ए
+yeargain येगेन
+yeas एस यस
+yedda येडे
+yeh ये ए
+yer यार
+yes यस
+yetta येटो
+yew यू यो
+yim एम
+yin येन
+ying येन
+yockey याक
+yoes यस
+yoh यो
+yoos यस
+yore यार
+yoss यस
+you यू
+your यार
+yous यस
+youse यस
+yow यो
+yucca याक
+yuck याक
+yuk याक
+yvonne ईवान इवान
+zach जॅक शक
+zadeh साडे
+zag सागू
+zagha जागा
+zaher जेर
+zahm जाम
+zahn जान जेन
+zaid जिडू
+zalm जाम
+zand शेंड
+zandt शांत
+zang जेन
+zani सानी
+zant शांत
+zara जेर झारा
+zarah जेर झारा
+zarr सरू सर
+zarre सरू सर
+zaugg सागू
+zaun जान सोनू
+zayre जेर सर
+zea जी जे
+zeal जीलू
+zecca जेका
+zech जॅक शक
+zed जिडू
+zeh जे से
+zehr जेर सर
+zelda जल्दी
+zelem सलाम
+zelie साईली
+zen शेन
+zeng जेन शेन
+zenna जेन
+zens संजू
+zenz संजू
+zepa सपा
+zerr जेर सर
+zeus सुसू
+zewe जीव
+zhambu जांबू जांबो
+zhan जान सण
+zhang जान
+zhao जो
+zheng जेन शेन
+zhou जू जु
+zhu जू जु
+zick जॅक
+ziehl जीलू
+ziehm सीम झीं
+ziel जीलू
+zier जेर सर
+zika जेका जिके
+zil जीलू
+zill जीलू
+zilla जिले जीलू
+zillah जिले जीलू
+zim सीम झीं
+zima सीमा सीम
+zine जेन शेन
+zing जेन
+zinn जेन शेन
+zins शिंज
+ziwei जीव
+zoch जॅक शक
+zoey सई
+zogg सागू
+zoh जो सो
+zohn सोनू सण
+zoll साल शाल
+zollo सोळो
+zon जान सोनू
+zona सोना
+zone सोनू सण
+zoo जु
+zooey सई
+zook झुक
+zoom जुमू
+zora झोरा झारा
+zorah झोरा झारा
+zoran झोरान
+zoss सास
+zschau जो
+zuck जॅक शक
+zug सागू
+zuk जॅक शक
+zullo सोळो
+zurcher सरकार
+zuzu जोजो
+zycher शिकार
+zyla जिले जीलू
+zynda जिंदा

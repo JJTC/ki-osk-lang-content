@@ -11,9 +11,9 @@ files carries their terms.
 The code here — the Makefile, the Cargo workspace and `crates/`, the
 scripts, the workflows and `packs.toml` — is MIT licensed (`LICENSE`), as
 are the text rules in `rules/` and the transliteration tables in
-`translit/`, which were written here (thirty tables' costs then fitted
-to the Dakshina and Aksharantar datasets' romanizations, and Gondi's and
-Angika's taken from Telugu's and Hindi's, below).
+`translit/`, which were written here (forty tables' costs then fitted
+to the Dakshina and Aksharantar datasets' romanizations, and six kept at
+the costs of the tables they were made from, below).
 The data keeps its original licence, below. That includes the seeds in
 `seeds/`, which are excerpts of the datasets they are listed under. Add an entry here whenever a
 new dataset is pulled in.
@@ -489,16 +489,23 @@ The costs of the ten AI4Bharat's Aksharantar dataset measures (below)
 were fitted the same way, to four fifths of the words its train and
 valid splits romanized by hand and of the names it took from Wikidata,
 chosen by the other fifth, its test words left out; seven moved
-(Assamese's, Nepali's and Odia's stayed as written), and their packs
-name it (its card: the manually collected data CC BY, the mined and
-existing data CC0; `packs.toml`'s `[[translit.fitted]]`). And thirteen
-tables of languages neither dataset has (Awadhi, Bhojpuri, Brahui,
-Chhattisgarhi, Dotyali, Garhwali, Khowar, Magahi, Newari, Rajasthani,
-Western Punjabi, Saraiki, Tulu) were fitted to Dakshina's romanizations
-of the words their lexicons share with Hindi's, Urdu's or Kannada's, and
-are measured so; Adilabad Gondi's and Angika's are Telugu's and Hindi's
-tables and fitted costs, measured on the words their lexicons share with
-Telugu's and Hindi's. Their packs name the dataset,
+(Assamese's, Nepali's and Odia's stayed as written), and so did the
+table of Meitei in the Bengali script, on its Meetei Mayek words
+respelled as that script's text spells them (`make
+aksharantar-respelled`; nothing of the text or the words in the table);
+their packs name it (its card: the manually collected data CC BY, the
+mined and existing data CC0; `packs.toml`'s `[[translit.fitted]]`). And
+twenty-two tables of languages neither dataset has (Ahirani, Awadhi,
+Bagheli, Bhojpuri, Brahui, Bundeli, Chhattisgarhi, Dotyali, Garhwali,
+Halbi, Khowar, Korku, Kumaoni, Kurukh, Magahi, Newari, Nimadi,
+Rajasthani, Rangpuri, Western Punjabi, Saraiki, Tulu) were fitted to
+Dakshina's romanizations of the words their lexicons share with Hindi's,
+Urdu's, Kannada's, Marathi's or Bengali's, and are measured so; Adilabad
+Gondi's and Angika's are Telugu's and Hindi's tables and fitted costs,
+and Bagri's, Mandeali's, Surjapuri's and Bishnupriya's keep Rajasthani's,
+Hindi's and Bengali's (fitting them gained nothing), measured on the
+words their lexicons share with Telugu's, Hindi's or Bengali's. Their
+packs name the dataset,
 adding no licence (Chhattisgarhi's, Brahui's, Garhwali's and
 Rajasthani's models are not otherwise share-alike).
 The tables

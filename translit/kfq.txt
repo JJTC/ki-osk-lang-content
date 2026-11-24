@@ -1,0 +1,130 @@
+# Korku (Devanagari) from Latin letters, as Korku is typed in Latin:
+# Hindi's ways, which its writers follow; l is ल or ळ, which Korku writes
+# often (sālub: साळूब), so at a small cost, r also ऱ before y and h
+# (rhayan: ऱ्हायन), and English words' a and e also ॲ/ॅ (madam: मॅडम).
+# English words as English spells them. The lexicon chooses. Its costs are
+# fitted to how people romanized the words Korku shares with Hindi (the
+# Dakshina dataset's; make fit-translit, FIT_BORROWED).
+
+script abugida
+virama ्
+cluster 0.7
+schwa 0.9
+final 0.2
+final-virama 4
+acronym 0.5
+
+[consonants]
+k    क:0.2  क़:2.5
+kh   ख  ख़:2
+q    क़  क:0.5
+g    ग:0.2  ग़:2.5
+gh   घ  ग़:2
+ch   च  छ:1
+chh  छ  च्छ:0.8
+cch  च्छ
+c    च:0.4  क:1.2
+c>v  च:0.8  स:1.8  क:0.8
+ck   क:0.5  च्क:1
+sch  स्क:0.5  श:1.5
+j    ज  ज़:1.6  झ:3
+jh   झ
+z    ज़      ज:0.3
+t    त:0.1  ट:0.6
+tt   ट:0.5  त्त:0.5  ट्ट:0.7
+th   थ:0.2  ठ:0.2  त:1.9
+d    द:0.1  ड:1.1  ड़:0.7
+dd   ड:0.5  द्द:0.3  ड्ड:1
+dh   ध:0.1  ढ:0.8  ढ़:1.3  द:2.4  द्ध:1.2
+n    न:0.6  ण:0.8
+p    प:0.1
+ph   फ  फ़:0.7
+f    फ़:0.6  फ
+b    ब:0.1
+bh   भ
+m    म:0.5
+y    य:0.1
+r    र:0.3  ड़:2.2  ऱ:2
+rh   ढ़:0.9
+l    ल  ळ:0.3
+v    व
+w    व
+sh   श      ष:0.6  स:3.2
+s    स  श:2    ष:3
+h    ह:0.3
+x    क्स  क्ष:1
+ksh  क्ष
+gy   ज्ञ:1.5
+
+[vowels]
+a     अ/-      आ/ा:0.7  ॲ/ॅ:2.5
+^a    अ/-:0.1  आ/ा:0.7
+a$    आ/ा:0.2  अ/-:2.8  आँ/ाँ:2
+aa    आ/ा
+^aa   आ/ा  अ/-:2.2
+aa$   आ/ा  आँ/ाँ:1.5  आं/ां:2
+i     इ/ि:0.4  ई/ी:0.8
+i$    ई/ी:0.2  इ/ि:0.3  ईं/ीं:1.5
+ee    ई/ी  इ/ि:2
+ee$   ई/ी  ईं/ीं:1.5
+ii    ई/ी
+u     उ/ु:0.4  ऊ/ू:0.3  अ/-:2.5  यू/्यू:1.8  ओ/ो:2.9
+u$    उ/ु:0.1  ऊ/ू:0.4  ऊँ/ूँ:1.5
+oo    ऊ/ू  ओ/ो:2
+uu    ऊ/ू
+e     ए/े:0.1  ऐ/ै:1.5  अ/-:2.2  इ/ि:2.9  ॲ/ॅ:2.5
+e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:3.2
+ai    ऐ/ै:0.1  ए/े:1.5  आई/ाई:1.2
+ai$   ऐ/ै  ऐं/ैं:0.6  ए/े:2    आई/ाई:1.2  अय/य:1.8
+ae    ऐ/ै:0.5  ए/े:1.2
+ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
+ye    ए/े:0.4
+yi    ई/ी:0.6
+o     ओ/ो  ओं/ों:1.2  ऑ/ॉ:0.6  औ/ौ:1.7  अ/-:3.3
+o$    ओ/ो  ओं/ों:1.7  औ/ौ:2
+au    औ/ौ  ओ/ो:2.2
+ou    औ/ौ  ओ/ो:1.5  ऊ/ू:2
+ri    ऋ/ृ:2
+ru    ऋ/ृ:2.3
+
+[other]
+er$   र:1.3
+or$   र:2
+le$   ल:2.3
+y$    ी:1.9
+tion  शन:1  ्शन:1
+n>c   ं:0.8
+m>c   ं:1.2
+n$    ं:0.7  ँ:1.9
+m$    ं:1
+ngh   ंह:0.5
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: टीवी), as the language's Wikipedia writes them.
+[letters]
+a  ए
+b  बी
+c  सी
+d  डी
+e  ई
+f  एफ
+g  जी
+h  एच
+i  आई
+j  जे
+k  के
+l  एल
+m  एम
+n  एन
+o  ओ
+p  पी
+q  क्यू
+r  आर
+s  एस
+t  टी
+u  यू
+v  वी
+w  डब्ल्यू
+x  एक्स
+y  वाई
+z  ज़ेड

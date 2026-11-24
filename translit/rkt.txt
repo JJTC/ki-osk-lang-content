@@ -1,0 +1,127 @@
+# Rangpuri (Bengali script) from Latin letters, as Rangpuri is typed in
+# Latin: Bengali's ways, which its writers follow; but r is ৰ, as
+# Rangpuri's Wikipedia writes it (র too), and w ৱ as well. English words
+# as English spells them. The lexicon chooses. Its costs are fitted to how
+# people romanized the words Rangpuri shares with Bengali (the Dakshina
+# dataset's; make fit-translit, FIT_BORROWED).
+
+script abugida
+virama ্
+cluster 0.1
+schwa 0.7
+final 0.1
+final-virama 4
+acronym 0.8
+
+[consonants]
+k    ক:0.1
+kh   খ:0.2  ক্ষ:1.9
+g    গ:0.2
+gh   ঘ
+ng   ঙ:1.3  ঙ্গ:0.9
+ch   চ:0.1  ছ:0.7
+chh  ছ  চ্ছ:0.8
+c    চ:0.2  ক:1.4
+c>v  চ:0.3  স:2  ক:1.2
+ck   ক:0.5
+sch  স্ক:0.5
+j    জ      য:0.5  ঝ:2.5
+jh   ঝ
+z    জ  য:0.8
+t    ত:0.2  ট:0.3
+tt   ট:0.5  ত্ত:0.4  ট্ট:1  ত্য:0.8  ত্ব:1
+tty  ত্য:0.3  ত্ত্য:1
+th   থ  ঠ:0.4  ত:1.9
+d    দ:0.1  ড:0.4  ড়:1.5
+dd   ড:0.5  দ্দ:0.3  ড্ড:1
+dh   ধ  ঢ:1  ঢ়:1.5  দ:2.3
+ddh  দ্ধ:0.3  ধ্য:0.3  ধ:0.5
+nch  ঞ্চ:0.5
+nj   ঞ্জ:0.6
+n    ন:0.4  ণ:1.3
+nn   ন্ন  ন্য:0.5
+p    প
+ph   ফ
+f    ফ
+b    ব
+bh   ভ
+v    ভ  ব:0.9
+w    ব:0.3  ওয়:0.5  ও:1  য়:1.5  ৱ:0.5
+m    ম
+y    য়:0.5  য:0.3
+r    ৰ  র      ড়:2
+rh   ঢ়:1  ড়:1
+l    ল
+ll   ল্ল  ল্য:0.5
+sh   শ:0.3  ষ:0.5  স:1.2
+s    স:0.9  শ:1.1  ষ:1.8
+h    হ:0.7
+x    ক্স  ক্ষ:1
+ksh  ক্ষ
+kkh  ক্ষ:0.5
+
+[vowels]
+a     আ/া:0.1  অ/-:0.6  আঁ/াঁ:1.4
+^a    আ/া:0.1  অ/-:0.5  এ/ে:1.1
+a$    আ/া:0.1  অ/-:2
+aa    আ/া  আঁ/াঁ:1
+o     অ/-:0.2  ও/ো:0.4
+o$    ও/ো:0.1  অ/-:0.7
+oo    উ/ু  ও/ো:0.7  ঊ/ূ:1.2
+i     ই/ি:0.2  ঈ/ী:1.1
+ee    ঈ/ী:0.1  ই/ি:0.5
+ii    ঈ/ী
+u     উ/ু  ঊ/ূ:0.5  আ/া:3
+uu    ঊ/ূ
+e     এ/ে:0.3  অ্যা/্যা:2.6
+ai    ঐ/ৈ:0.4  আই/াই:0.6  এই/েই:1.1
+oi    ঐ/ৈ:0.5  অই/ই:1
+ou    ঔ/ৌ  ও/ো:1  অউ/উ:1
+au    ঔ/ৌ  আউ/াউ:0.7
+ri    ঋ/ৃ:1.4
+
+-e    এ/ে:0.5
+-a    আ/া:0.5
+-o    ও/ো:0.5
+-i    ই/ি:0.5
+
+[other]
+-     -:0.5
+er$   ার:1.8
+y$    ি:2
+tion  শন:1  ্শন:1
+n>c   ং:0.8
+ng    ং:0.4
+n$    ং:2  ঁ:2
+t$    ৎ:1
+t>c   ৎ:0.5
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: টিভি), as the language's Wikipedia writes them.
+[letters]
+a  এ
+b  বি
+c  সি
+d  ডি
+e  ই
+f  এফ
+g  জি
+h  এইচ
+i  আই
+j  জে
+k  কে
+l  এল
+m  এম
+n  এন
+o  ও
+p  পি
+q  কিউ
+r  আৰ
+s  এস
+t  টি
+u  ইউ
+v  ভি
+w  ডব্লিউ
+x  এক্স
+y  ওয়াই
+z  জেড

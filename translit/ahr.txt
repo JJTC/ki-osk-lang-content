@@ -1,0 +1,127 @@
+# Ahirani (Devanagari) from Latin letters, as Ahirani is typed in Latin:
+# Marathi's ways, which its writers follow; r is र, or the eyelash ऱ
+# Ahirani writes before y and h as Marathi does (rhas: ऱ्हास), at a cost;
+# English words' a and e also ॲ/ॅ (fashion: फॅशन); and h at a word's end ः
+# (swatah: स्वतः). English words as English spells them. The lexicon
+# chooses. Its costs are fitted to how people romanized the words Ahirani
+# shares with Marathi (the Dakshina dataset's; make fit-translit,
+# FIT_BORROWED).
+
+script abugida
+virama ्
+cluster 0.4
+schwa 1.1
+final 0
+final-virama 4
+
+[consonants]
+k    क
+kh   ख
+q    क
+g    ग
+gh   घ
+ch   च  छ:1
+chh  छ  च्छ:0.8
+cch  च्छ
+c    च  क:1.5
+c>v  च:0.4  स:2  क:1.1
+ck   क:0.5  च्क:1
+sch  स्क:0.5  श:1.5
+j    ज  झ:2
+jh   झ
+z    झ  ज:0.7  ज़:2
+t    त:0.2  ट:0.5
+tt   ट:0.5  त्त:0.3  ट्ट:1
+th   थ:0.2  ठ:0.2  त:1.9
+d    द:0.3  ड:0.3
+dd   ड:0.5  द्द:0.3  ड्ड:1
+dh   ध  ढ:0.7  द:2.4  द्ध:1.2
+n    न:0.5  ण:0.3
+p    प
+ph   फ
+f    फ  फ़:1.5
+b    ब
+bh   भ
+m    म
+y    य
+r    र:0.4  ऱ:1.9
+l    ल:0.1  ळ:0.4
+v    व
+w    व
+sh   श:0.3  ष:0.5  स:2.8
+s    स  श:1.9  ष:3
+h    ह:0.1
+x    क्स  क्ष:1
+ksh  क्ष
+dny  ज्ञ:0.5
+gy   ज्ञ:1.5
+
+[vowels]
+a     अ/-:0.6  आ/ा:0.6  ॲ/ॅ:2.3
+^a    अ/-  आ/ा:1.1
+a$    आ/ा  अ/-:2.6
+aa    आ/ा
+^aa   आ/ा  अ/-:2
+aa$   आ/ा  आं/ां:1.5
+i     इ/ि:0.5  ई/ी:0.4
+i$    ई/ी  इ/ि:0.5
+ee    ई/ी:0.1  इ/ि:1.7
+ii    ई/ी
+u     उ/ु:0.2  ऊ/ू:0.4  अ/-:2.9  यू/्यू:2
+u$    उ/ु  ऊ/ू:0.5
+oo    ऊ/ू  ओ/ो:2
+uu    ऊ/ू
+e     ए/े      ऐ/ै:1.5  ॲ/ॅ:2.5
+e$    ए/े  ऐ/ै:1.2  एं/ें:1.5  -/-:4.1
+ai    ऐ/ै  ए/े:1.8  आई/ाई:1.2
+ae    ऐ/ै:0.5  ए/े:1
+ei    ए/े:0.5  ई/ी:0.8  ऐ/ै:1.2
+ye    ए/े:0.5
+o     ओ/ो  ऑ/ॉ:1.3  औ/ौ:1.5
+au    औ/ौ  ओ/ो:2
+ou    औ/ौ  ओ/ो:1.5
+ri    ऋ/ृ:2
+ru    ऋ/ृ:2.2
+
+[other]
+er$   र:1.5
+or$   र:2.1
+le$   ल:2.3
+y$    ी:2.1
+tion  शन:1  ्शन:1
+n>c   ं:0.6
+m>c   ं:1.2
+n$    ं:1.3
+m$    ं:0.8
+h$    ः:1.5
+h>c   ः:2
+
+# The Latin letters' names, for abbreviations typed letter by letter
+# (tv: टीव्ही), as the language's Wikipedia writes them.
+[letters]
+a  ए
+b  बी
+c  सी
+d  डी
+e  ई
+f  एफ
+g  जी
+h  एच
+i  आय
+j  जे
+k  के
+l  एल
+m  एम
+n  एन
+o  ओ
+p  पी
+q  क्यू
+r  आर
+s  एस
+t  टी
+u  यू
+v  व्ही
+w  डब्ल्यू
+x  एक्स
+y  वाय
+z  झेड

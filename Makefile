@@ -323,6 +323,13 @@ FINEWEB_PYTHON ?= python3
 # committed or shipped.
 AKSHARANTAR_LANGS ?= as mai ne or sa kok ks mni brx doi
 AKSHARANTAR_DIR = $(SRC_DIR)/aksharantar
+# Meitei's words in the Bengali script, for its table there
+# (translit/mni-Beng.txt), which no open data romanizes: Aksharantar's
+# Meetei Mayek words respelled in the Bengali script as its FineWeb-2 text
+# spells them (scripts/meetei-to-bengali.py; make aksharantar-respelled,
+# after fetch-aksharantar and fetch-fineweb), a quarter of them; measured
+# and fitted as the others. Never committed or shipped.
+AKSHARANTAR_RESPELLED ?= mni-Beng
 
 # Greek typed in Latin letters ("Greeklish"), word by word: AUEB's
 # real-world test set (scripts/fetch-greeklish.sh, its files pinned by
@@ -677,6 +684,10 @@ fetch-wikipedia:
 .PHONY: fetch-aksharantar
 fetch-aksharantar:
 	OUT=$(AKSHARANTAR_DIR) ./scripts/fetch-aksharantar.sh $(AKSHARANTAR_LANGS)
+
+.PHONY: aksharantar-respelled
+aksharantar-respelled:
+	$(PYTHON) -I scripts/meetei-to-bengali.py $(AKSHARANTAR_DIR) $(FINEWEB_DIR)/mni-Beng.txt
 
 .PHONY: fetch-greeklish
 fetch-greeklish:
@@ -1179,9 +1190,9 @@ eval-translit:
 			--lexicon predict/$$lang.fst --pairs $$d/lexicons/$$from.translit.sampled.test.tsv \
 			| tail -n 1 || exit 1; \
 	done
-	@for lang in $(AKSHARANTAR_LANGS); do \
+	@for lang in $(AKSHARANTAR_LANGS) $(AKSHARANTAR_RESPELLED); do \
 		p=$(AKSHARANTAR_DIR)/$$lang.tsv; \
-		test -f $$p || { echo "no $$p: run make fetch-aksharantar"; exit 1; }; \
+		test -f $$p || { echo "no $$p: run make fetch-aksharantar (and aksharantar-respelled)"; exit 1; }; \
 		echo "$$lang, Aksharantar's words:"; \
 		$(TOOLS) eval-translit -- --table translit/$$lang.txt $(TRANSLIT_ENGLISH) --lexicon predict/$$lang.fst \
 			--pairs $$p | tail -n 1 || exit 1; \
@@ -1215,8 +1226,9 @@ eval-translit:
 # left out. After `make fetch-dakshina` and `make fetch-aksharantar`. A
 # table fitted before starts from its fitted costs.
 FIT_TRANSLIT_LANGS ?= $(DAKSHINA_LANGS)
-FIT_AKSHARANTAR_LANGS ?= $(AKSHARANTAR_LANGS)
-FIT_BORROWED ?= bho:hi awa:hi mag:hi hne:hi sd-Deva:hi gbm:hi raj:hi anp:hi dty:hi new:hi pnb:ur skr:ur brh:ur khw:ur tcy:kn wsg:te
+FIT_AKSHARANTAR_LANGS ?= $(AKSHARANTAR_LANGS) $(AKSHARANTAR_RESPELLED)
+FIT_BORROWED ?= bho:hi awa:hi mag:hi hne:hi sd-Deva:hi gbm:hi raj:hi anp:hi dty:hi new:hi pnb:ur skr:ur brh:ur khw:ur tcy:kn wsg:te \
+	ahr:mr bfy:hi bgq:hi bns:hi hlb:hi kfq:hi kfy:hi kru:hi mjl:hi noe:hi sjp:hi rkt:bn bpy:bn
 DAKSHINA_DEV = romanized/$$lang.romanized.rejoined.aligned.cased_nopunct.dev.tsv
 .PHONY: fit-translit
 fit-translit:
@@ -1231,7 +1243,7 @@ fit-translit:
 	done
 	@for lang in $(FIT_AKSHARANTAR_LANGS); do \
 		p=$(AKSHARANTAR_DIR)/$$lang; \
-		test -f $$p.fit.tsv || { echo "no $$p.fit.tsv: run make fetch-aksharantar"; exit 1; }; \
+		test -f $$p.fit.tsv || { echo "no $$p.fit.tsv: run make fetch-aksharantar (and aksharantar-respelled)"; exit 1; }; \
 		$(TOOLS) fit-translit -- --table translit/$$lang.txt --lexicon predict/$$lang.fst \
 			--train $$p.fit.tsv --dev $$p.choose.tsv --write || exit 1; \
 	done

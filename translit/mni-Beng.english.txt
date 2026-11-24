@@ -1,12 +1,12 @@
 # The English words mni-Beng writes in its script, as its table reads them (make english-assets): from CMUdict (cmusphinx/cmudict; its notice in NOTICES.md) and predict/mni-Beng.fst.
 aamodt অমোৎ অমিত
 aasen অসিন
-ababa বাবা বাব
+ababa বাব বাবা
 aback বেক
 abad বাদ বদ
 abair বের
 abashed বেস্ত বেষ্ট
-abba অইবা অব
+abba অব অইবী
 abbado বোদো বাদ
 abbas অবস বস
 abbe অইবী অবে
@@ -45,7 +45,7 @@ abuzz অবস
 abyss বেস
 acacia কেস কেশ
 academic একাদেমিক
-acaena অসিনা
+acaena অসিনা অসিনি
 accel এক্সেল
 access এক্সেস
 acclaim ক্লেম
@@ -69,7 +69,7 @@ ached এক্ত এক্ট
 achee চহি চহী
 aches এক্স
 achille কিলি
-achoa অচৌবা অচৌ
+achoa অচৌ অচৌব
 achor একর
 achord একোর্দ
 ack এক
@@ -92,7 +92,7 @@ actor এক্তর এক্টর
 acts এক্স
 acuff কফ
 adage এদজ
-adah ঐদ অদো
+adah ঐদ এদা
 adamo অদোম
 adaptation এদাপ্তেসন এদাপ্টেসন
 adas এদজ
@@ -101,12 +101,12 @@ add অদু
 added এদেদ এডেড
 addeo ওদিও
 adder অদর
-addie ঐদি অদি
+addie ঐদি আইদি
 addison এদিসন
 addition ইদিসন এদিসন
 address এদ্রেস
 adds এদজ
-addy ঐদি অদি
+addy ঐদি আইদি
 ade ঐদ এদ
 ades এদজ
 adey ঐদি ঐদী
@@ -159,13 +159,13 @@ agent এজেন্ত এজেন্ট
 aggie ঐগী এগী
 aggrieve গরীব গরিব
 aggy ঐগী এগী
-aghast গেস্ত অগস্ত
+aghast গেস্ত আগস্ট
 agie ঐগী এগী
 agildo গিল্ড
 aging এজিং
 aglo গ্লো
 aglow গ্লো
-ago গো জিও
+ago জিও গো
 agony ঐগীনি
 agree এগ্রি গ্রী
 agreed গ্রিদ গ্রীদ
@@ -205,7 +205,7 @@ airbus ঐরবসু
 aircraft এয়রক্রাফ্ত
 airforce এয়রফোর্স
 airline এয়রলাইন
-airport এয়রপোর্ত এয়র্পোর্ত
+airport এয়রপোর্ত এয়ারপোর্ত
 airway এয়রৱে
 airways এয়রৱেজ
 aix এক্স
@@ -242,8 +242,8 @@ alene লিন
 aleph ওলাফ
 alert এলর্ট
 alessi লৈসি
-aleve লিব লিভ
-alie অলি আলী
+aleve লিভ লিব
+alie আলী অলি
 alight লাইত লাইৎ
 align লাইন
 aligning লাইনিং লাইনীং
@@ -259,14 +259,14 @@ allais লৈ
 allardt এলর্ট
 allay লৈ
 allayed লেদ
-allee অলি আলী
+allee আলী অলি
 allege লাইজ
 allelic লাইলিক
 allenbaugh লৈনবা
 allert এলর্ট
-alley অলি আলী
-alli অলি আলী
-allie অলি আলী
+alley আলী অলি
+alli আলী অলি
+allie আলী অলি
 allied এলাইদ
 allies লাইজ
 allin লেন লিন
@@ -276,16 +276,16 @@ allured লোর্দ
 ally লৈ লাই
 almond অমেন্দ
 alms অমসু
-aloe এল অল
+aloe এল
 aloka লোক
 alon লান লোন
-alone লোন লন
+alone লোন
 along লোং লাং
 alonso লান্স
 although ওল্দ ওল্ড
 alum লম
 alumbaugh লম্বা লাম্বা
-alumna লমন লাম্না
+alumna লমন
 alvare অলৱার
 amadou অমদু অমদো
 amal মোল
@@ -302,23 +302,23 @@ ame এম
 amend এমেন্দ
 ameri মেরি মেরী
 america আমেরিকা
-american আমেরিকান
+american অমেরিকান
 ames এম্স এমস
 amid মেদ
 amiga মীগা
 aminta মিনট
 amison এমিসন
 amiss মিস মীসু
-amman মন
+amman মন মান
 ammo এম
 amok অমুক
-among মন উমং
+among মন মাং
 amore ওমোর অমর
 amoss অমসু মাস
 amount মাউন্ত এমাউন্ট
 amour ওমোর
 amraam অমরোম
-amre অমর আমরা
+amre অমর
 amuck অমুক
 anable এনেবল
 analyze এনালাইজ
@@ -376,7 +376,7 @@ apacs এপেক্স
 apart পোর্ত পার্ত
 ape এপ
 apex এপেক্স
-apiece পিস পীস
+apiece পীস পিস
 apollo পোলো উপাল
 apopa পোপ
 app এপ অপ
@@ -397,7 +397,7 @@ approach এপ্রোচ
 approve এপ্রুভ এপ্রুব
 april এপ্রিল
 apso এপসো
-aqaba কাবা কবা
+aqaba কাবা
 aquatic এক্বাতিক
 arabs ঐরবসু
 aravind অর্বিন্দ
@@ -415,7 +415,7 @@ aren অরান অরোন
 argon ওর্গান
 argonne ওর্গান
 aria ওরিয়া
-armed আর্ম্দ আর্মদ
+armed আর্মদ আর্ম্দ
 armey আর্মী আর্মি
 army আর্মী আর্মি
 arocha আরকে
@@ -437,7 +437,7 @@ arve অরব
 arwen অর্বান আর্বান
 asahi শাহী শহি
 asarco সার্ক সরক
-asay অসে সে
+asay ঈশৈ অসে
 ascent সেন্ত সেন্ট
 asch এস
 asche এস
@@ -450,7 +450,7 @@ ashame শেম
 ashbaugh সব
 ashe এস
 ashey অসি
-ashore সর সহর
+ashore সর শহর
 ashy অসি
 asia এজ
 aside সাইদ
@@ -482,7 +482,7 @@ asus এসেস
 atari তারি
 ate এত এট
 atek এতেক এটেক
-atha অতা এত
+atha এত এট
 athas এদজ
 athena থীনা থিনা
 athletics এথলেতিক্স
@@ -493,7 +493,7 @@ atom আইতেম আত্ম
 aton তোন তান
 atone তোন তন
 atop তোপ
-atta অতা এত
+atta এত এট
 attach এটেচ
 attack তেক এতেক
 attacked তেক্ত এতেক্ত
@@ -523,7 +523,7 @@ auge আজ অজ
 aught ওৎ আউৎ
 augmentation ওগমেন্তেসন
 august ওগস্ত আগস্ট
-augusta ওগস্ত অগস্ত
+augusta ওগস্ত আগস্ট
 auguste ওগস্ত আগস্ট
 augusto ওগস্ত আগস্ট
 aul ওল অল
@@ -539,7 +539,7 @@ aurum আর্ম অরুম
 aussie অসি
 auth ওৎ আউৎ
 authenticate ওথেন্টিকেট
-auto ওতো
+auto ওতো ওটো
 automatic ওতোমেতিক
 automation ওতোমেসন
 automobile ওতোমোবিল
@@ -549,7 +549,7 @@ autumn আত্ম
 aux ও
 auzenne ওসিন ওসীন
 avail ভেলু ৱেল
-avasso অৱাস অবস
+avasso অৱাস আৱাস
 avella ৱেল বেল
 avert ভারত
 averts ভারতসু
@@ -567,7 +567,7 @@ away ৱে অবে
 awe ও এ
 awed অদু
 aweida বেদ
-awesome আসাম অসম
+awesome আসাম অসাম
 awol এবল
 axa এক্স
 axe এক্স
@@ -667,7 +667,7 @@ bangalor বেঙ্গলোর বাঙ্গলার
 bangalore বেঙ্গলোর বাঙ্গলার
 banged বেন্দ
 bangkok বেঙ্কোক
-bangle বেঙ্গল বঙ্গাল
+bangle বেঙ্গল বেঙ্গাল
 banh বন বেন
 bank বেঙ্ক
 banke বেঙ্ক
@@ -678,7 +678,7 @@ bann বন বেন
 banned বেন্দ
 banque বেঙ্ক
 baptize বাপ্টাইজ
-bar বার বোর
+bar বোর
 barach বরাক বারাক
 barack বরাক বারাক
 barden বর্দন
@@ -694,8 +694,8 @@ barred বোর্দ বর্দ
 barren বর্ন
 barro বোরো বার
 barron বর্ন
-barrow বের বর
-barten বার্তন বর্তন
+barrow বের বার
+barten বার্তন বার্তোন
 basal বেসেল
 basch বস বেস
 base বেস
@@ -709,7 +709,7 @@ basic বেসিক
 basin বেসিন
 basing বেসিন
 basis বেসিস
-basista বেসিস্তা বেসিসতা
+basista বেসিসতা বেসিস্তা
 bass বস বেস
 bassa বস বেস
 basse বস বেস
@@ -734,9 +734,9 @@ baucus বোক্স
 baud বাদ বদ
 baugh বা
 baughman বামোন
-baughn বন বোন
+baughn বোন বন
 baum বোম
-baun বন বোন
+baun বোন বন
 baur বোর বার
 baus বোস বস
 bawd বাদ বদ
@@ -758,7 +758,7 @@ bayuk বেক
 bayul বিল বীল
 bayus বেস
 baz বেজ বস
-bazaar বাজার
+bazaar বজার
 baze বেজ
 bazooka বাসোক
 bea বি
@@ -832,9 +832,9 @@ bere বীর বির
 bern বর্ন
 berne বর্ন
 berra বের
-berth বর্থ বার্থ
-bertha বর্থ বার্থ
-berton বর্তন বার্তন
+berth বার্থ বর্থ
+bertha বার্থ বর্থ
+berton বার্তন বর্তন
 besch বেস
 bess বেস
 besse বেস
@@ -878,10 +878,10 @@ bien বিন
 bier বীর বির
 big বেগ
 biggie বিগী
-bihl বিল
+bihl বিল বীল
 bihn বিন বেন
 bildt বেল্ট
-bill বিল
+bill বিল বীল
 billet বেল্ট
 billow বিল বিলো
 bilow বিল বিলো
@@ -898,9 +898,9 @@ biopic বাইওপিক
 biotech বাইওতেক
 bird বর্দ
 birden বর্দন
-birr বর বার
+birr বার বর
 birren বর্ন
-birth বর্থ বার্থ
+birth বার্থ বর্থ
 bis বেস
 bisch বেস
 bischel বেসেল
@@ -914,7 +914,7 @@ bisson বেসিন বিষ্ণু
 bitch বীচ
 bitty বেতি বেতী
 bivalve বাইবলবু
-bizarre বজার বাজার
+bizarre বাজার বজার
 black ব্লেক ব্লক
 bladow ব্লদ
 blair ব্লেয়র
@@ -941,7 +941,7 @@ blue ব্লু
 blueprint ব্লুপ্রিন্ত
 boa বু
 boal বোল
-boan বন বোন
+boan বোন বন
 boar বোর বার
 board বোর্দ বোর্ড
 boarda বোর্দ বোর্ড
@@ -961,20 +961,20 @@ boehl বোল
 boehlke বল্ক
 boehm বোম
 boehme বোম
-boehne বন বোন
-boen বন বোন
+boehne বোন বন
+boen বোন বন
 boer বোর বার
 boes বোস বস
 boesch বোস বস
 boese বোস বস
-boesky বোসকী বসকী
+boesky বোসকী
 bog বাগ
-bohen বন বোন
+bohen বোন বন
 bohl বোল
 bohlke বল্ক
 bohm বোম
-bohn বন বোন
-bohne বন বোন
+bohn বোন বন
+bohne বোন বন
 bohr বোর বার
 bohren বোর্ন বর্ন
 bokassa বিকাস বিকাশ
@@ -983,16 +983,16 @@ bolla বাল বোল
 bolle বাল বোল
 bomb বোম
 bombay বোম্বে
-bon বোন
-bonadonna বন্দন বন্দনা
-bone বন বোন
+bon বন
+bonadonna বন্দন
+bone বোন বন
 boned বোন্দ
 bones বোনস বনস
 bong বন বোন
 bonker বঙ্কর
 bonn বন বোন
 bonne বন বোন
-bonneau বন বোনো
+bonneau বোনো বন
 bonnes বোনস বনস
 bonney বানী
 bonnie বানী
@@ -1022,17 +1022,17 @@ bored বোর্দ বোর্ড
 boren বোর্ন বর্ন
 born বর্ন
 borne বোর্ন বর্ন
-borough বর বার
+borough বার বর
 borre বোর বার
 borris বোরিস
 borrow বোরো বার
-borten বার্তন বর্তন
-boruch বরাক বারাক
+borten বার্তন বার্তোন
+boruch বারাক বরাক
 borys বোরিস
 bosch বোস বস
 bose বোস বস
 boser বজার
-boss বস বোস
+boss বোস বস
 bosse বস বোস
 bosso বোস বস
 bot বাত
@@ -1061,11 +1061,11 @@ bout বাউট
 boutin বুটন
 bouza বোস
 bowed বদ
-bowen বন বোন
+bowen বোন বন
 bowes বোস বস
 bowl বোল
-bown বন বোন
-bowne বন বোন
+bown বোন বন
+bowne বোন বন
 bowron বোর্ন বর্ন
 bows বোস বস
 bowse বোস বস
@@ -1134,7 +1134,7 @@ brin ব্রেন
 bring ব্রেন
 brinn ব্রেন
 bristow ব্রেস্ত
-british ব্রিটিশ
+british বৃটিশ
 broad ব্রোদ
 broadband ব্রোদবেন্দ ব্রোডবেন্দ
 broadcast ব্রোদকাস্ত
@@ -1157,7 +1157,7 @@ bryn ব্রেন
 bryna ব্রেন
 bub বাবু বাব
 bubb বাবু বাব
-bubba বাবা বাব
+bubba বাব বাবু
 bucco বুক
 buchs বুক্স
 buck বুক
@@ -1177,7 +1177,7 @@ bug বাগ
 bugg বাগ
 bugge বাগ
 buhman বামোন
-buhrow বোরো বোর
+buhrow বোরো
 bui বি
 buice বেস
 builders বিল্ডার্স
@@ -1205,8 +1205,8 @@ bunnie বানী
 bunny বানী
 buns বনস
 buol বোল
-bupp বপ বাপু
-bur বর বার
+bupp বাপু বপ
+bur বার বর
 burd বর্দ
 burda বোর্দ বোর্ড
 burden বর্দন
@@ -1219,13 +1219,13 @@ burmah বর্মা
 burn বর্ন
 burne বর্ন
 burow ব্যুরো
-burr বর বার
-burro বর বার
-burrough বর বার
-burrow বর বার
+burr বার বর
+burro বার বর
+burrough বার বর
+burrow বার বর
 burrus বোরিস
 burruss বোরিস
-burton বর্তন বার্তন
+burton বার্তন বর্তন
 bus বস
 busch বোস
 busche বস
@@ -1251,7 +1251,7 @@ buus বোস
 buy বাই
 buzz বস
 buzze বস
-buzzer বজার বাজার
+buzzer বাজার বজার
 bye বাই
 bynoe বিন বেন
 bypass বাইপাস
@@ -1278,10 +1278,10 @@ cahn কেন কায়ন
 cahoon খুন
 cahoot খুৎ
 cahoots খুৎশু
-cahora খরা খর
+cahora খর
 cahouet খুৎ
 caine কেন
-caire কেয়র
+caire কেয়র কেয়ার
 caisse কেস কেশ
 calandro কেলেন্দর
 calcium কেলসিয়ম
@@ -1289,7 +1289,7 @@ caleca কোলেক
 calf কফ
 calk কোক
 call কোল কাল
-calla কাল কলা
+calla কাল
 callace কাইলাশ কৈলাশ
 callas কাইলাশ কৈলাশ
 called কোল্দ
@@ -1300,18 +1300,17 @@ callie কালি
 calling কালেন
 callous কাইলাশ কৈলাশ
 callow কাল
-callum কলম কলাম
+callum কলাম কলম
 callus কাইলাশ কৈলাশ
 cally কালি
 calm কোম কাম
 calming কামেং
 calny কালনি
 caltha কালদা
-cambodia কম্বোদিয়া
 camel কমল
 camp কেম্প
 campa কেম্প
-campaign কেম্পেন
+campaign কেম্পেন কেমপেন
 campaigned কেম্পেন্দ
 campeau কেম্প
 campen কেম্পন
@@ -1320,7 +1319,7 @@ campos কেম্পস
 camps কেম্পস
 campus কেম্পস
 can কুন কেন
-cana কনা কাইনা
+cana কেন কাইনা
 canada কানাদা
 canal কেনেল
 cancer কেন্সর
@@ -1351,20 +1350,20 @@ capture কেপচর
 car কোর
 carbaugh কারবা
 carbon কার্বন
-carbone কার্বোন কার্বন
+carbone কার্বোন
 carbonneau কার্বোন কার্বন
 carby কার্বী কার্বি
 cardiac কার্দিয়াক
 cardosa কার্দসু
 cards কার্দসু
-care কেয়র
+care কেয়র কেয়ার
 career কেরিয়র করিয়র
 carena কেরীনা
 cares কেয়র্স
 carew কাইরো করো
 cargill কার্গিল
-caris করিসু
-carissa করিসু
+caris করিসু করিশু
+carissa করিসু করিশু
 carnal কর্নেল করনেল
 carnaud কোরনা কোর্ন
 carne কোর্ন
@@ -1373,18 +1372,18 @@ carnell কর্নেল করনেল
 carner কোর্নর
 carney করনী
 caronna করোনা
-carow কার কাইরো
+carow কাইরো কার
 carpet কার্পেট
 carr কার কোর
-carra করি কার
+carra কার করি
 carrara করোর
 carre কার কোর
 carrier কেরিয়র করিয়র
 carriero করিয়র
 carrino করিনো
-carris করিসু
+carris করিসু করিশু
 carro কার কোর
-carrow কার কাইরো
+carrow কাইরো কার
 carry করি
 cars কোর্স কাজু
 carse কোর্স
@@ -1393,7 +1392,7 @@ carte কোর্ত কোর্ট
 carver কারবার কার্বার
 carvey কার্বী কার্বি
 cas কেস কেশ
-casa কাশী কাসি
+casa কাশী কাশি
 casal কৌশল কৌশাল
 casbah কেশব
 case কেস কেশ
@@ -1402,12 +1401,12 @@ cashed কাস্ত কাষ্ট
 casher কেসর
 cashew কেশো কৈসু
 caskey কেসকী
-caso কোস কোশ
+caso কোশ কোস
 casola কৌশল
 cass কেস কেশ
 cassar কেসর
 casseb কেশব
-cassie কাশী কাসি
+cassie কাশী কাশি
 casso কেস কেশো
 cast কাষ্ট
 caste কাস্ত কাষ্ট
@@ -1431,15 +1430,15 @@ caul কাল কোল
 cauley কালি
 caulk কোক
 causal কৌশাল
-cause কাজু কোস
-causey কোসি কোসী
+cause কাজু কোশ
+causey কোসী কোসি
 causing কাশিং কৌজেং
 cave কেব
 cavenaugh কবিনা
 cawley কালি
 cawsl কৌশল কৌশাল
 cayce কেস কেশ
-cayer কেয়র
+cayer কেয়র কেয়ার
 cayes কেস কেশ
 cayne কেন
 cea সি সী
@@ -1454,7 +1453,7 @@ cejka চেক
 cel শেল সেল
 cela শেল সেল
 cele শিল সিল
-celebrate সেলেব্রেত সেলেব্রেৎ
+celebrate সেলেব্রেৎ সেলেব্রেত
 celebration সেলেব্রেশন সেলেব্রেসন
 celina সোলীনা
 cell শেল সেল
@@ -1468,16 +1467,16 @@ cement সিমেন্ত
 census সেন্সস সাইন্সেস
 cent সেন্ত সেন্ট
 centaur সেন্তর সেন্টার
-centaurs সেন্তর্স সেন্তরসু
+centaurs সেন্তরসু সেন্তর্স
 center সেন্তর
 centerre সেন্তর
-centers সেন্তর্স সেন্তরসু
+centers সেন্তরসু সেন্তর্স
 central সেন্ত্রেল
 centrale সেন্ট্রাল
 centralize সেন্ত্রেলাইজ
 centre সেন্তর
 centrella সেন্ত্রেল
-centres সেন্তর্স সেন্তরসু
+centres সেন্তরসু সেন্তর্স
 centro সেন্তর
 cents সাইন্স সেন্স
 cera শেয়র সেয়র
@@ -1496,13 +1495,13 @@ ceta সেত সেৎ
 chabot সব শিব
 chace চেস
 chacko চেক চাক
-chae চাই চৈ
+chae চাই চায়
 chaff চফু
 chain চেন
 chair চেয়র চেয়ার
 chairman চেয়রমেন চেয়ারমেন
 chairmen চেয়রমেন চেয়ারমেন
-chairperson চেয়রপর্সন চেয়ারপার্সন
+chairperson চেয়ারপার্সন চেয়রপর্সন
 chaise সেস
 chalk চাক
 chaloux সোলো
@@ -1525,7 +1524,7 @@ character কেরেক্টর
 charen চারোন চরন
 charge চার্জ
 chargit চৌরজিৎ
-charissa করিসু
+charissa করিসু করিশু
 charry চেরী চারি
 chart চার্ট
 charter চার্তর
@@ -1537,7 +1536,7 @@ chasing চেশিং চৈশিং
 chasm কৈশাম
 chasse চেস
 chateau সাইত সেত
-chateaux সিত সত
+chateaux সিত সীত
 chattel চৎলু
 chaunce চাংসু
 chauvin সভান
@@ -1576,15 +1575,15 @@ chess চেস
 chevy চাইবী চৈবী
 chew চু চো
 cheyne চেন
-chez শে চেস
+chez শে সে
 chia চহি চহী
 chiang চাং চেং
-chiaro কিয়র কিয়ার
+chiaro কিয়ার কিয়র
 chick চেক
 chief চীফ চিফ
 chien চেন
 chiesa কিস
-child চাইল্ড চাইল্দ
+child চাইল্ড চাইলদ
 chile চিলি
 chilly চিলি
 chin চেন
@@ -1601,12 +1600,12 @@ choate ছত
 chock চাক
 choe চো চ
 choice চোইস
-choke চোক চক
+choke চোক চৌক
 cholera কলর
 cholla চলো
 chon চনু চান
 chopp চপ
-chorba কার্বি কার্বী
+chorba কার্বী কার্বি
 chord কার্দ
 chords কার্দসু
 chore চার চরু
@@ -1617,8 +1616,8 @@ chow চাউ ছাউ
 choy চই
 choyce চোইস
 chrest ক্রেস্ট
-chris করিসু
-chriss করিসু
+chris করিসু করিশু
+chriss করিসু করিশু
 chrissie কৃশি কৃষি
 chrissy কৃশি কৃষি
 christa ক্রেস্ট
@@ -1627,7 +1626,7 @@ chrome করম ক্রম
 chronic ক্রোনিক
 chryst ক্রেস্ট
 chseing চেং চেন
-chua কো কবা
+chua কবা কো
 chuah চুবা
 chuang চাং চেং
 chubb চাব
@@ -1650,14 +1649,14 @@ cie সি সী
 ciel শিল সিল
 ciera শিয়র সিয়র
 cillo শেল সেল
-cinema সিনাম সিনেমা
-ciocca চোক চক
-cira সর
-circa সার্ক সরক
+cinema সিনাম
+ciocca চোক চৌক
+cira সর সার
+circa সরক সার্ক
 circle সর্কল সার্কল
 circuit সর্কিৎ সর্কিত
 circular সর্ক্যুলর
-cirque সার্ক সরক
+cirque সরক সার্ক
 cissna সেসন
 citation সাইতেসন সাইটেসন
 cite সাইত সাইৎ
@@ -1672,7 +1671,7 @@ claddagh কলাদা
 claes কলেজ
 claeys কলেজ
 claim ক্লেম
-clam ক্লেম কলাম
+clam ক্লেম
 class ক্লাস
 classic ক্লাসিক
 classroom ক্লাসরুম
@@ -1688,7 +1687,7 @@ clays কলেজ
 cleah কী কি
 clean ক্লিন ক্লীন
 clear ক্লিয়র
-clearance ক্লিয়রেন্স ক্লিয়ারেন্স
+clearance ক্লিয়ারেন্স ক্লিয়রেন্স
 cleere ক্লিয়র
 clews ক্লোজ ক্লোস
 click ক্লিক
@@ -1706,15 +1705,14 @@ clothes ক্লোজ ক্লোস
 cloture কলচর
 cloud ক্লাউদ
 clove ক্লব
-club ক্লব ক্লাব
-clubb ক্লব ক্লাব
+club ক্লাব ক্লব
+clubb ক্লাব ক্লব
 clubs ক্লাবস
 clue ক্লু
 clues ক্লোজ ক্লোস
 cluj ক্লোজ
-clum কলম কলাম
+clum কলাম কলম
 cluster ক্লস্তর
-clusters ক্লষ্টরস
 coach কোচ
 coaching কোচিং কোচিন
 coad কোদ কোড
@@ -1750,7 +1748,7 @@ coehlo কোল
 coen কোৱিন কোইন
 coerce কবরসু
 coeur কোর কুরু
-coey কৌই কবি
+coey কৌই কোই
 coffee কোফি কোফী
 coffey কোফি কোফী
 cohen কুন কোৱিন
@@ -1762,13 +1760,12 @@ cohrs কোর্স
 coia কয়া কোয়া
 cointreau কাউন্তর
 coke কোক
-cola কলা
 colaw কোল কলা
 cole কোল
 coler কলর
 coleson কোলিসন
 coll কাল কোল
-colla কোল কলা
+colla কোল
 collar কলর
 collection কলেক্সন কলেকসন
 collective কলেক্তিব
@@ -1784,17 +1781,17 @@ collie কালি
 collin কালেন
 colling কালেন
 collison কোলিসন
-collom কলম কলাম
+collom কলাম কলম
 collomb কলাম কলম
 collor কলর
-collum কলম কলাম
+collum কলাম কলম
 colly কালি
-colomb কলম কলাম
+colomb কলাম কলম
 colonel কর্নেল করনেল
 colonna কোলোনী
 colony কালনি
 colour কলর
-column কলম কলাম
+column কলাম কলম
 com কাম
 coma কম
 comb কোম কম
@@ -1824,33 +1821,31 @@ committee কমিতী কমিটি
 common কমন
 commonwealth কমনৱেল্থ
 community কম্যুনিতি কম্যুনিতী
-compagnie কম্পনী কম্পনি
-company কম্পনী কম্পনি
+compagnie কম্পনী কম্পেনী
+company কম্পনী কম্পেনী
 compeau কেম্প
 compensation কম্পেন্সেসন
 compete কম্পিত
 complaint কমপ্লেন্ট
 complementary কমপ্লিমেন্তরী
 complex কম্প্লেক্স
-complexes কম্প্লেক্সসু
 complexity কমপ্লেক্সিতী
 component কম্পোনেন্ট
 compound কম্পাউন্দ
 comprehensive কম্প্রিহেন্সিব কমপ্রিহেন্সিব
-compress কম্প্রেস কমপ্রেস
+compress কমপ্রেস কম্প্রেস
 compromise কম্প্রোমাইজ
 computer কম্প্যুতর কম্প্যুটর
 computerize কম্প্যুটরাইজ
 computing কম্প্যুতিং
 conan কন্ন
 conaty কান্তি
-concept কন্সেপ্ত কন্সেপ্ট
+concept কন্সেপ্ত কনসেপ্ত
 conclave কনক্লেব
 concrete কনক্রিত
 condemn কন্দেম
 condition কন্দিসন
-condom কন্দেম
-conduct কন্দক্ত
+conduct কন্দক্ত কন্ডাক্ট
 cone কোন
 conery কৌনরি
 conference কনফরেন্স কনফ্রেন্স
@@ -1874,12 +1869,12 @@ conry কৌনরি
 constable কন্সতেবল
 construction কন্সত্রক্সন কনস্ত্রক্সন
 constructive কনস্ত্রক্তিব কন্সত্রক্তিব
-consultancy কন্সলটেন্সি
 contac কন্টেক
 contact কন্তেক্ত কন্টেক্ট
 container কন্তেনর
 containment কন্তেনমেন্ত
 contant কন্তেন্ত
+content কন্টেন্ট
 conti কান্তি
 contra কন্ত্রী
 contract কন্ত্রেক্ত
@@ -1887,7 +1882,7 @@ contradiction কন্ত্রাদিক্সন
 contribute কন্ত্রিব্যুত কন্ত্রিব্যুট
 contributor কন্ত্রিব্যুতর
 conus কনাসু
-convention কনভেন্সন
+convention কনভেন্সন কনভেনসন
 convergence কনভর্জেন্স
 converted কন্ভর্তেদ
 conviction কনভিক্সন
@@ -1907,9 +1902,10 @@ coombe কুম কোম
 coomer কুমার
 coote কুট কোৎ
 coover কোভর
-cop কপ কাপ
-cope কপ কোপ
-copp কপ কাপ
+cop কাপ কপ
+cope কোপ কপ
+copp কাপ কপ
+coppa কোপি কোপ
 coppee কোপি কোপী
 coppel কপিল
 copple কপিল
@@ -1932,8 +1928,8 @@ corgi কারগী
 coria কোরিয়া
 corier করিয়র
 corinna করিনো
-corinto করেন্ত করেন্ট
-corissa করিসু
+corinto করেন্ত
+corissa করিসু করিশু
 cornall কর্নেল করনেল
 corne কোর্ন
 cornell কর্নেল করনেল
@@ -1942,7 +1938,7 @@ corner কোর্নর
 corney করনী
 cornie করনী
 corny করনী
-corolla কেরলা কেরালা
+corolla কেরালা
 coroner কোর্নর
 corpse কোর্পস
 corpus কোর্পস
@@ -1962,24 +1958,24 @@ corum করম কারাম
 corva কারবা
 cory করি
 corzo কোর্স
-cose কোস কোশ
-cosey কোসি কোসী
-coss কোস কোশ
-cossa কাশী কোসি
+cose কোশ কোস
+cosey কোসী কোসি
+coss কোশ কোস
+cossa কাশী কোশ
 cossack কৌশিক
 cosset কোস্ত কাস্ত
-cossey কাশী কাসি
+cossey কাশী কাশি
 cost কাস্ত
 coste কোস্ত
 costella কোস্তেল
 costello কোস্তেল
 costilla কোস্তেল
 costilow কোস্তেল
-cosy কোসি কোসী
+cosy কোসী কোসি
 cot কত
 cote কোৎ কত
 cott কোৎ কত
-cotta কোতা কত
+cotta কোৎ কত
 cottage কোতেজ
 cottee কোতি কোতী
 cotter কাতার
@@ -1989,11 +1985,11 @@ coty কোতি কোতী
 couey কোই
 cough কফ
 could কোদ কোড
-council কাউন্সিল
+council কাউন্সিল কাউন্সেল
 councilor কাউন্সেলর কাউন্সিলর
-counsel কাউন্সিল
+counsel কাউন্সিল কাউন্সেল
 counseling কাউন্সেলিং
-counsell কাউন্সিল
+counsell কাউন্সিল কাউন্সেল
 counsellor কাউন্সেলর কাউন্সিলর
 counselor কাউন্সেলর কাউন্সিলর
 counter কাউন্তর
@@ -2001,7 +1997,7 @@ country কন্ত্রী
 coup কো
 coupe কোপ
 couple কপিল
-coups কো কোস
+coups কো কোশ
 cour কোর কুরু
 courier করিয়র
 course কোর্স
@@ -2009,7 +2005,7 @@ court কোর্ত কোর্ট
 courtesy কর্টেসি
 coury করি
 cousteau কোস্ত
-cousy কোসি কোসী
+cousy কোসী কোসি
 coutee কোতি কোতী
 coutu কুচু
 covas কবিসু
@@ -2031,8 +2027,8 @@ cowie কৌই কৌবী
 coy কৌই কোই
 coye কৌই কোই
 coyne কোইন
-coz কাজু কোস
-cozy কোসি কোসী
+coz কাজু কোশ
+cozy কোসী কোসি
 crack ক্রক
 crafts ক্রাফস
 cram ক্রাইম
@@ -2050,7 +2046,7 @@ cray করে
 crea করি
 cream ক্রিম
 crear করিয়র
-crease করিসু
+crease করিসু করিশু
 creasey কৃশি কৃষি
 creasy কৃশি কৃষি
 create ক্রিয়েৎ
@@ -2062,7 +2058,7 @@ credibility ক্রেদিবিলিতী
 credit ক্রেদিত
 creecy কৃশি কৃষি
 creer করিয়র
-crees করিসু
+crees করিসু করিশু
 creme ক্রিম
 crepeau কৃপো
 cress ক্রইস
@@ -2077,12 +2073,12 @@ cricket ক্রিকেৎ ক্রিকেত
 cries ক্রইস
 crime ক্রাইম
 crimm ক্রিম
-cris করিসু
+cris করিসু করিশু
 crisci কৃশি কৃষি
 crise ক্রইস
 crises ক্রাইসিস
 crisis ক্রাইসিস
-criss করিসু
+criss করিসু করিশু
 crissey কৃশি কৃষি
 crist ক্রেস্ট
 crista ক্রেস্ট
@@ -2115,10 +2111,10 @@ cruce ক্রোস ক্রোশ
 crude ক্রুদ
 cruise ক্রুজ ক্রোস
 cruising ক্রোসিং
-crum করম ক্রম
-crumb করম ক্রম
-crumbaugh করম্বা
-crumm করম ক্রম
+crum করম করাম
+crumb করম করাম
+crumbaugh করম্বা করমবা
+crumm করম করাম
 cruse ক্রুজ ক্রোস
 crusoe ক্রোস ক্রোশ
 cruze ক্রুজ ক্রোস
@@ -2126,7 +2122,7 @@ csar সর সার
 cubbies কবিসু
 cucchi কুকি কুকী
 cucci কোচি
-cuccia কোচ কোচি
+cuccia কোচ কুছ
 cuco কোক
 cue ক্যু কয়ো
 cuff কফ
@@ -2138,15 +2134,15 @@ culler কলর
 culley কালি
 cullin কালেন
 culling কালেন
-cullom কলম কলাম
-cullum কলম কলাম
+cullom কলাম কলম
+cullum কলাম কলম
 cully কালি
-cultural কলচরল কালচারাল
+cultural কালচারাল কলচরল
 culture কলচর কালচার
 cumbie কুম্বী
 cumby কুম্বী
 cumming কামেং
-cunha কুন কোন
+cunha কুন কুনগী
 cunnane কন্ন
 cuoco কবোক
 cup কপ কাপ
@@ -2161,13 +2157,13 @@ currey করি
 currie করি
 currier করিয়র
 curry করি
-currys করিসু
+currys করিসু করিশু
 curto কোর্ত কোর্ট
 curvy কার্বী কার্বি
 cush কোশ কোস
-cushey কোসি কোসী
-cushy কোসি কোসী
-cuso কোস কোশ
+cushey কোসী কোসি
+cushy কোসী কোসি
+cuso কোশ কোস
 cussed কাস্ত কাষ্ট
 cussing কাশিং
 custom কস্তম
@@ -2195,7 +2191,7 @@ czapla চপল
 czar সর সার
 czars জর্জ
 czech চেক
-czyz চেস চীজ
+czyz চীজ চেস
 daane দান দোন
 dab দেব
 dabah দেব
@@ -2208,11 +2204,11 @@ daddy দদি
 dae দে ডে
 daewoo দেবো
 daggy দগী দেগী
-dah দা
+dah দা দ
 dahl দল
 dahle দয়াল দল
 dahler দোলর
-dahm দাম
+dahm দাম দেমু
 dahman দামন
 dahmen দোমেন
 dahn দান দোন
@@ -2233,24 +2229,25 @@ dallara ডলার
 dalley দেলি
 dally দেলি
 daly দেলি
+dam দেমু
 dame দেমু
-damm দাম
+damm দাম দেমু
 damman দামন
 dammann দামন
 damme দাম দেমু
 dammen দামন
-damn দাম
+damn দাম দেমু
 damone দামন
 dan দেন
 dance দান্স ডান্স
-dandy দান্দী দন্দি
+dandy দান্দী দান্দি
 dane দেন
 danek দৈনিক
 daney দেনি
 danica দৈনিক
 danish দেনিশ দেনিস
 dann দান দেন
-danna দান দেনা
+danna দান দেন
 dannie দেনি
 danny দেনি
 danz দান্স ডান্স
@@ -2268,8 +2265,8 @@ dashnaw দাসনা
 dass দাস দসু
 dassow দাস দেশ
 dat দাইত দাইট
-data দেতা দাইত
-date দেত দেৎ
+data দাইত দেত
+date দেৎ দেত
 daughter দোতর
 daul দল
 daum দাম
@@ -2311,7 +2308,7 @@ dean দীন দিন
 deane দীন দিন
 deary দেরী
 deasy ডিসি
-death দেথ দেত
+death দেথ দেৎ
 debate দিবেৎ
 debbie দেবী দেবি
 debby দেবী দেবি
@@ -2321,9 +2318,9 @@ deboe দেব দেবো
 debose দেবোস
 debow দেব দেবো
 debrosse দাইবর্স
-debt দেত দেৎ
+debt দেৎ দেত
 decade দেকেদ
-decayed দিকেদ
+decayed দিকেদ দেকেদ
 december দিসেম্বর ডিসেম্বর
 decentralize দিসেন্ত্রেলাইজ
 decision দিসিজন
@@ -2336,7 +2333,7 @@ defect দিফেক্ত
 defence দিফেন্স
 defense দিফেন্স
 define দিফাইন
-degas দেগী দেগা
+degas দেগী
 degennaro দিজাইনার
 degraded দিগ্রেদেদ
 degree দিগ্রী দিগ্রি
@@ -2388,8 +2385,8 @@ dental দেন্তেল
 denys দেনিশ দেনিস
 department দিপার্তমেন্ত দিপার্ত্মেন্ত
 deploy দিপ্লোই
-depo দীপো দীপ
-depot দীপো দীপ
+depo দীপো দিপো
+depot দীপো দিপো
 depression দিপ্রেসন
 deputy দেপ্যুতী
 derk দার্ক
@@ -2408,7 +2405,7 @@ destination দেস্তিনেসন
 detergent দিটরজেন্ট
 deuel দুএল
 deux দু দো
-devalle দিৱালী দিৱালি
+devalle দিৱালী দীৱালী
 devane দেবেন
 devaughn দেৱান
 devault দেব দেবো
@@ -2424,7 +2421,7 @@ devine দিভাইন
 devise দিভাইস
 devitt দিবেৎ দেবিট
 devoe দেব দেবো
-devon দেবেন দেৱান
+devon দেৱান দেবেন
 devoss দিৱস দিবস
 dew দু দো
 dewaele দুএল
@@ -2489,7 +2486,7 @@ disclaimer দিসক্লেমর
 disease দিজিজ
 dish দেশ
 dishaw দেশ
-display দিস্প্লে দিসপ্লে
+display দিসপ্লে দিস্প্লে
 disposal দিস্পোজেল
 dispose দিস্পোজ
 diss দেশ
@@ -2497,7 +2494,7 @@ distance দিস্তেন্স
 distancing দিস্তেন্সিং
 distribution দিস্ত্রিব্যুসন দিস্ত্রীব্যুসন
 district দিস্ত্রীক্ত
-dith দেথ দেত
+dith দেথ দেৎ
 ditto দেত দেট
 divad দিভাইদ
 divan দিভাইন দেবেন
@@ -2508,7 +2505,6 @@ divide দিভাইদ
 divine দিভাইন
 division দিভিজন দিবিজন
 divita দেবিট
-divito দেবিট
 divvied দেবিদ
 divvy দেবী দেবি
 dizzy ডিসি
@@ -2516,7 +2512,7 @@ doak দোক
 doan দোন
 doane দোন
 doanh দোন
-doanna দোন দনা
+doanna দোন
 dobbie দাবী দাবি
 dobey দাবী দাবি
 dobie দাবী দাবি
@@ -2533,7 +2529,7 @@ doe দ দো
 doege দোজ
 doehring দোরেন
 doell দল
-does দসু দাস
+does দাস দসু
 doge দোজ
 doggie দগী
 doggies দগীসু
@@ -2625,14 +2621,13 @@ drina দীন দিন
 dring দ্রেন
 drinking দ্রিঙ্কিং
 drive দ্রাইব দ্রাইভ
-driven দ্রিবন দ্রিভন
+driven দ্রিভন দ্রিবন
 driver দ্রাইভর দ্রাইবর
 driving দ্রাইভিং দ্রাইবিং
 drogue দ্রগ
 drohan দ্রোন
 drone দ্রোন
 drover দরবার
-droves দ্রব্য
 dru দ্রো
 druck দ্রুক
 drucker দরকার
@@ -2653,7 +2648,7 @@ due দু দো
 duell জুল
 duenow দোন
 dues দোজ
-duh দা
+duh দা দ
 duke দোক
 dull দল
 dulle দল
@@ -2666,7 +2661,7 @@ dumm দাম
 dumond দিমান্দ
 dun দান
 duna দোন
-dundee দন্দি দান্দী
+dundee দান্দী দন্দি
 dune দোন
 dung দান দাং
 dunja দোনয়ি
@@ -2676,29 +2671,28 @@ dunno দান দিন
 duns দান্স ডান্স
 duque দোক
 duquette দিকেৎ দিকেত
-dusch দসু দাস
-dush দসু দাস
+dusch দাস দসু
+dush দাস দসু
 dussault দাস দেশ
 dusseau দাস দেশ
 dusseault দাস দেশ
-dusza দসু দাস
+dusza দাস দসু
 duthie দুতি
 dutra দোতর
 dutt দুত
 duty দ্যুতী দুতি
-duva দ্যুবা
 dymond দাইমন্দ
 dynamic দাইনামিক
 dynamism দাইনামিজম
 dynastic দাইনাস্তিক
 eachan ইচিন
-eade ইদ ঈদ
+eade ঈদ ইদ
 eadie ঐদি আইদি
 eaken ইকোন
 eap ইপু
 ear ইয়র ইয়ার
-earth আর্ত অর্থ
-eartha আর্ত অর্থ
+earth আর্ত আর্থ
+eartha আর্ত আর্থ
 earths আর্তস আর্টস
 earthy আর্তী আর্তি
 eary ইরি
@@ -2716,7 +2710,7 @@ eaux ও
 eba ইবা
 ebaugh অইবা
 ebb ঐবু
-ebba অইবা ঐবু
+ebba ঐবু অইবী
 ebby অইবী
 ebel এবল
 ebey অইবী
@@ -2727,13 +2721,13 @@ eck এক
 ecker একর
 eckes এক্স
 econ ইকোন
-economic ইকনোমিক ইকনমিক
+economic ইকনোমিক
 economy ইকনোমী
 ecosystem ইকোসিস্তেম ইকোসীস্তেম
 eddie ঐদি আইদি
 edds এদজ
 eddy ঐদি আইদি
-ede ইদ ঈদ
+ede ঈদ ইদ
 edge এজ
 edging এজিং
 edie ঐদি আইদি
@@ -2743,7 +2737,7 @@ edithe এদেদ এডেড
 edition ইদিসন এদিসন
 editor এদিটর
 edmisten এদমিসন
-edo ইদ ঈদ
+edo ঈদ ইদ
 edye ঐদি আইদি
 edyth এদিট
 eerie ইরি
@@ -2766,7 +2760,7 @@ ekco এক
 elaine লেন
 elan ইলন
 elderly এলদরলি
-election ইলেক্সন
+election ইলেক্সন ইলেকসন
 electric ইলেক্ত্রিক
 electrical ইলেক্ত্রিকেল ইলেক্ট্রিকেল
 electricity ইলেক্ত্রিসিতী ইলেক্ত্রিসিতি
@@ -2781,7 +2775,7 @@ ellert এলর্ট
 elna ইলন
 email ইমেল
 embedded এম্বেদেদ
-emergency ইমর্জেন্সী ইমর্জেন্সি
+emergency ইমর্জেন্সী ইমার্জেন্সী
 emerging ইমর্জিং
 emission ইমিসন এমিসন
 emma এম
@@ -2793,7 +2787,7 @@ empie এমপি
 employee ইমপ্লোয়ি
 employees ইমপ্লোয়িজ
 employer ইমপ্লোয়র
-employment এমপ্লোইমেন্ত ইম্প্লোইমেন্ত
+employment এমপ্লোইমেন্ত ইমপ্লোয়মেন্ট
 enable এনেবল
 enasa ঐনসু
 end এন্ড
@@ -2834,7 +2828,7 @@ eppel এপল
 epple এপল
 equal ইক্বেল
 equipment ইক্বিপমেন্ত
-era এয়র ইরি
+era এয়র এয়ার
 erb অরব
 erbe অরব
 erbes ঐরবসু
@@ -2850,10 +2844,10 @@ err আর এয়র
 erra এয়র এয়ার
 erria এরিয়া
 erte আর্ত আর্ট
-ertha অর্থ আর্থ
+ertha আর্থ অর্থ
 ertz আর্তস আর্টস
 erven অর্বান আর্বান
-esau ইশা ইস
+esau ইশা
 esch এস
 esche এস
 eschen এশিন
@@ -2869,7 +2863,7 @@ essen এশিন
 esses এসেস
 esso এস
 esson এশিন
-estate ইস্তেত ইস্তেৎ
+estate ইস্তেৎ ইস্তেত
 esteem স্তীম
 estey এসটি
 estimation এস্তিমেসন
@@ -2885,7 +2879,7 @@ euro য়োর য়ুরো
 europa য়ুরোপ
 europe য়ুরোপ
 european য়ুরোপিয়ন য়ুরোপিয়ান
-eva ইবা ঐবু
+eva ঐবু ইবা
 evel এবল
 event ইভেন্ত ইভেন্ট
 evered এৱার্দ
@@ -2940,14 +2934,14 @@ facile ফসল
 facility ফেসিলিতী
 factor ফেক্তর ফেক্টর
 factory ফেক্তরী
-faculty ফেকল্তী ফেকলতী
+faculty ফেকলতী ফেকল্তী
 fae ফৈ ফাই
 faeth ফিৎ ফিত
-fahl ফল
+fahl ফল ফোল
 fahr ফোর
 fahs ফেস
 fair ফেয়র
-faire ফেয়র ফায়র
+faire ফায়র ফেয়র
 fairey ফেরী
 fairy ফেরী
 faison ফেশন ফেসন
@@ -2968,20 +2962,20 @@ fannie ফেনি
 fanny ফেনি
 far ফোর
 farabaugh ফরবা ফারবা
-farah ফেয়র ফায়র
-farai ফরে ফারে
+farah ফেরী ফায়র
+farai ফারে ফরে
 farce ফোর্স
-fare ফেয়র ফায়র
-farm ফোর্ম
+fare ফায়র ফেয়র
+farm ফোর্ম ফোরম
 farmer ফার্মর ফোর্মার
 farmers ফার্মর্স ফার্মরস
 farr ফোর
 farra ফোর
-farrah ফেয়র ফায়র
+farrah ফেরী ফায়র
 farran ফাইরেন
 farrey ফেরী ফারি
 farro ফোর
-farrow ফেয়র ফায়র
+farrow ফায়র ফেয়র
 farry ফেরী ফারি
 fart ফোর্ত
 fashion ফেশন ফেসন
@@ -3026,7 +3020,7 @@ feazell ফিজোল
 fechter ফেক্তর ফেক্টর
 federal ফেদরেল
 federation ফেদরেসন ফেদারেসন
-fedora ফিদর ফীদর
+fedora ফীদর ফিদর
 fee ফী
 feedback ফীদবেক ফিদবেক
 feeder ফীদর ফিদর
@@ -3035,7 +3029,7 @@ feger ফিগর
 fehl ফাইল
 fehn ফাইন ফেন
 fehnel ফাইনাল
-fehr ফেয়র ফায়র
+fehr ফায়র ফেয়র
 feight ফেট
 feign ফেন
 feild ফিল্দ ফীল্দ
@@ -3055,17 +3049,17 @@ fennel ফাইনাল
 fennell ফাইনাল
 fenney ফেনি
 fenno ফাইন ফেন
-fer ফর ফেয়র
-fera ফেয়র ফায়র
+fer ফর ফায়র
+fera ফেরী ফায়র
 ferm ফার্ম
-fero ফেয়র ফায়র
-ferra ফেয়র ফায়র
-ferre ফেয়র ফায়র
+fero ফায়র ফেয়র
+ferra ফেরী ফায়র
+ferre ফায়র ফেয়র
 ferree ফেরী ফারি
 ferri ফেরী
 ferrie ফেরী
 ferrin ফাইরেন
-ferro ফেয়র ফায়র
+ferro ফায়র ফেয়র
 ferry ফেরী
 fery ফেরী
 fess ফেস
@@ -3083,7 +3077,7 @@ fibre ফাইবর
 fichter ফেক্তর ফেক্টর
 fickes ফিক্স
 fiction ফিক্সন
-fidder ফিদর ফীদর
+fidder ফীদর ফিদর
 fidget ফিজেৎ
 fie ফি ফী
 fiechter ফেক্তর ফেক্টর
@@ -3097,7 +3091,7 @@ figgie ফিগী
 fighter ফাইতর
 fila ফাইল
 file ফাইল
-filled ফিল্দ ফিল্ড
+filled ফিল্দ ফীল্দ
 fillet ফুলে
 filling ফীলিং
 filter ফিল্টর
@@ -3106,7 +3100,7 @@ final ফাইনেল ফাইনাল
 finalize ফাইনেলাইজ
 finance ফাইনান্স
 financing ফাইনান্সিং
-fine ফাইন ফিনা
+fine ফাইন ফেন
 finger ফিঙ্গর
 fingerprint ফিঙ্গরপ্রিন্ট
 finn ফেন
@@ -3114,10 +3108,10 @@ finne ফেন
 finney ফেনি
 finnie ফেনি
 fir ফর
-fire ফায়র
+fire ফায়র ফায়ার
 firing ফাইরেন
 firm ফার্ম
-firma ফার্ম ফার্মা
+firma ফার্ম
 firmer ফার্মর
 firming ফার্মিং
 first ফর্স্ত ফার্স্ত
@@ -3194,7 +3188,7 @@ footwall ফুতবোল ফুৎবোল
 foran ফোরেন
 foray ফারে ফরে
 force ফোর্স
-forced ফার্স্ত ফর্স্ত
+forced ফার্স্ত ফার্সত
 fore ফোর
 foree ফারি পহারি
 foreign ফোরেন
@@ -3219,7 +3213,7 @@ forte ফোর্ত
 forth ফোর্ত
 fortified ফোর্টিফাইদ
 fortify ফোর্তিফাই
-forum ফোরম ফোরাম
+forum ফোরাম ফোরম
 forza ফোর্স
 fossel ফসল
 fossil ফসল
@@ -3316,7 +3310,7 @@ gael গেল
 gaeta গীতা
 gage গেজ
 gahm গেম
-gahn গন গেন
+gahn গেন গন
 gahr গারু
 gaier গীর
 gaige গেজ
@@ -3336,15 +3330,15 @@ gallo গেল
 gallow গেল
 galosh গ্লাস
 game গেম
-games গেম্স গেমস
-gameshow গেম্স গেমস
+games গেমস গেম্স
+gameshow গেমস গেম্স
 gaming গেমিং
 gamm গেম
 gamma গেম
-gang গন গেন
+gang গেন গন
 ganis গনেশ গনেস
-gann গন গেন
-ganoe গন গেন
+gann গেন গন
+ganoe গেন গন
 gaona গুন
 gap গেপ
 gape গেপ
@@ -3380,18 +3374,18 @@ gatt গেৎ গেট
 gatti গতি
 gatty গতি
 gatz গেৎস
-gau গো জিও
+gau জিও গো
 gauge গেজ
-gaugh গা গো
+gaugh গা জিও
 gaul গোল
 gaulding গোল্ডেন
 gaulle গোল
 gauna গন
-gaus গজ গোজ
-gause গজ গোজ
+gaus গোজ গজ
+gause গোজ গজ
 gauvreau গোবর
-gauze গজ গোজ
-gaw গা গো
+gauze গোজ গজ
+gaw গা জিও
 gawel গোয়ল
 gawne গন
 gayer গীর
@@ -3421,7 +3415,7 @@ gender জেন্দর
 gendreau জেন্দর
 gene জেএন
 general জেনরেল
-generale জেনরেল জেনারেল
+generale জেনারেল জেনরেল
 generate জেনরেৎ জেনেরেট
 generating জেনেরেটিং
 generation জেনরেসন জেনেরেসন
@@ -3447,15 +3441,15 @@ germany জর্মনী জর্মনি
 gero জেরো
 gerow জেরো
 get গেট
-getaway গেতৱে গেৎৱে
+getaway গেৎৱে গেতৱে
 getts গেৎস
 getz গেৎস
 geyer গীর
-ghada গোদ গৌদা
-ghana গন গেন
+ghada গোদ
+ghana গেন গন
 ghetto গেট
 ghez গেজ গেস
-ghose গজ গোজ
+ghose গোজ গজ
 ghoul গোল
 giacco জোকো
 giaimo জেম
@@ -3474,7 +3468,7 @@ gift গিফত
 gil গেল
 gill গেল
 gin জেন
-gina জীনা জিনা
+gina জেএন জীনা
 ging জেন
 ginn জেন
 ginnie জিনি
@@ -3511,7 +3505,7 @@ gnawed নাদু নাদ
 gnaws নসু
 gnome নম
 gnu ন্যু নো
-goa গোৱা গো
+goa জিও গো
 goad গোদ
 goal গোল
 goan গন
@@ -3522,17 +3516,17 @@ gober গোবর
 goddeau গোদ
 godot গুদ গোদ
 godown গোদাউন
-goe গো জিও
+goe জিও গো
 goedde গোদ
 goede গোদ
 goen গন
 goer গোবর
-goes গজ গোজ
+goes গোজ গজ
 goette গেৎ গেট
 goetz গেৎস
-gogh গো জিও
-goghs গজ গোজ
-goh গো জিও
+gogh জিও গো
+goghs গোজ গজ
+goh জিও গো
 gohl গোল
 gohn গন
 gohr গারু
@@ -3549,11 +3543,11 @@ gone গন
 gong গন
 gonna গন
 goode গুদ
-goods গুদস
+goods গুদ্স
 googe গোজ
 google গুগল
 goos গোজ
-gora গারি গারী
+gora গারী গারি
 gorda গার্দ
 gordan গার্দেন
 gordana গার্দেন
@@ -3569,7 +3563,7 @@ goria গৌরিয়া
 gorr গারু
 gorrid গার্দ
 gory গারী গারি
-gose গজ গোজ
+gose গোজ গজ
 gotham গৌতম
 gotta গতি
 gotti গতি
@@ -3603,11 +3597,11 @@ grantz গ্রান্টস
 granz গ্রান্টস
 grassroot গ্রাসরুত গ্রাসরুৎ
 grate গ্রেত
-grater গ্রেতর
+grater গ্রেতর গ্রেটার
 grauman গ্রামিন গ্রামীন
 graumann গ্রামিন গ্রামীন
 great গ্রেত
-greater গ্রেতর
+greater গ্রেতর গ্রেটার
 greave গরীব গরিব
 grebe গরীব গরিব
 grede গ্রিদ গ্রীদ
@@ -3627,7 +3621,7 @@ grieve গরীব গরিব
 grin গ্রিন
 gring গ্রীন গ্রিন
 grit গ্রেত
-gritter গ্রেতর
+gritter গ্রেতর গ্রেটার
 groce গ্রোস
 grohs গ্রোস
 grom গ্রাম
@@ -3743,7 +3737,6 @@ halo হেলো
 halve হব
 halved হায়বদু
 hama হোম
-hamada হোমদা
 han হায়ন হৌন
 hana হায়না
 hanan হেন্ন
@@ -3782,22 +3775,22 @@ hanshew হায়নসু
 hanvey হৈনবী
 happily হাপলি
 haque হেক হক
-hara হায়র হেরা
+hara হায়র
 harassing হারশীং
 harbaugh হৌরবা
 hardt হার্ত হার্ট
 hare হায়র
 harmonie হার্মোনী
 harmony হার্মোনী
-harr হার হর
+harr হার হায়র
 harra হার হর
 harrah হায়রি হার
 harral হৈরোল
-harre হার হর
+harre হার হায়র
 harrel হৈরোল
 harrell হৈরোল
 harrill হৈরোল
-harrow হার হর
+harrow হার হায়র
 harry হায়রি
 harsch হর্শ হোর্স
 harsh হোর্স
@@ -3847,7 +3840,7 @@ headline হেদলাইন
 headquarter হেদক্বার্তর
 heady হায়দি
 heal হিল
-heals হিল্স হিলস
+heals হিলস হিল্স
 health হেল্থ হেলথ
 healthcare হেল্থকেয়র হেলথকেয়র
 heard হার্দ
@@ -3868,7 +3861,7 @@ heddy হায়দি
 hedging হায়জিন হাইজিন
 hedi হায়দি
 hee হি
-heels হিলস
+heels হিল্স
 heesch হিস
 heese হিজ হিস
 hege হিজ
@@ -3877,7 +3870,7 @@ heh হায় হে
 hehn হায়ন
 hehr হায়র
 heidi হায়দি
-heier হাইয়র হায়র
+heier হায়র হাইয়র
 heiko হেক
 hein হায়ন
 heine হায়ন
@@ -3888,7 +3881,7 @@ heinz হায়নসু
 heinze হায়নসু
 heir এয়র এয়ার
 helicopter হেলিকোপ্তর
-hello হোল হেলো
+hello হেলো হোল
 hemani হুমনি
 hen হায়ন
 hence হায়নসু
@@ -3910,7 +3903,7 @@ hensch হায়নসু
 hense হায়নসু
 henze হায়নসু
 hepper হাইপর
-her হর হার
+her হার হর
 herb অরব
 herbal হর্বেল
 herbel হর্বেল
@@ -3920,7 +3913,7 @@ herdt হার্ত হার্ট
 heritage হেরিতেজ
 hero হিরো
 herr হায়র
-herre হরি হায়র
+herre হায়র হরি
 herrell হৈরোল
 herrle হৈরোল
 herro হায়র
@@ -3942,18 +3935,18 @@ heyen হায়ন
 hick হেক
 hid হেদ হেড
 hidy হায়দি
-hier হাইয়র হায়র
+hier হায়র হাইয়র
 high হায় হাই
-higher হাইয়র হায়র
+higher হায়র হাইয়র
 highness হায়নসু হাইনেস
 highway হাইৱে হায়ৱে
-highways হাইৱেজ হায়ৱেজ
+highways হায়ৱেজ হাইৱেজ
 hiked হৈকৎ
 hill হিল
 hilla হিল হেলো
 hillas হিলস হিল্স
 hille হিল
-hills হিল্স হিলস
+hills হিলস হিল্স
 him এম
 hinde হিন্দ হিন্দু
 hindle হেন্দল
@@ -3982,7 +3975,7 @@ hoard হার্দ
 hoare হার হর
 hoarse হোর্স হর্শ
 hoary হৌরি হরি
-hobaugh হব হাবা
+hobaugh হাবা হৌবা
 hoch হক
 hock হক
 hockey হোকী
@@ -4047,7 +4040,6 @@ hoole হোল
 hooley হোলি হোলী
 hoonah হুনা
 horace হোর্স হর্শ
-horatia হৌরসি
 hord হার্দ
 horde হার্দ
 horr হার হর
@@ -4062,6 +4054,7 @@ horus হোর্স হর্শ
 hosch হাউস
 hose হজ
 hosing হোসেন
+hospital হোসপিতাল
 hossain হোসেন
 hossein হোসেন
 hotel হোটেল
@@ -4108,7 +4101,7 @@ hughy য়োই
 hugo য়োগ য়ুগ
 huh হু হ
 huie য়োই
-hula হোল হোলি
+hula হোল
 human হ্যুমেন
 humana হ্যুমেন
 humane হ্যুমেন
@@ -4118,9 +4111,9 @@ humann হ্যুমেন
 humm হুম
 humming হুমেন
 hundred হন্দ্রেদ
-hunley হংলি হাংলি
+hunley হাংলি হংলি
 hunza হন্সা
-hur হর হার
+hur হার হর
 hurd হার্দ
 hurray হৌরে হরে
 hurri হরি
@@ -4140,7 +4133,7 @@ hybrid হাইব্রিদ হায়ব্রিদ
 hydra হাইদ্রো হায়দ্রো
 hydro হাইদ্রো হায়দ্রো
 hye হায় হাই
-hyer হাইয়র হায়র
+hyer হায়র হাইয়র
 hygiene হায়জিন হাইজিন
 hynd হিন্দ হিন্দু
 hynes হায়নসু
@@ -4159,7 +4152,7 @@ ide ঐদ
 idea আইদিয়া
 identity আইদেন্তিতী আইদেন্টিটি
 ihde ঐদ ইদ
-iida ইদ ঈদ
+iida ঈদ ইদ
 ill এল
 image ইমেজ
 imagery ইমেজরি
@@ -4176,7 +4169,7 @@ implementing ইমপ্লিমেন্টিং ইমপ্লিমেন
 import ইমপোর্ত
 importer ইম্পোর্তর
 ince ঐনসু
-incentive ইন্সেন্তিব ইন্সেন্টিভ
+incentive ইন্সেন্তিব ইনসেন্তিব
 inclusion ইনক্লুজন
 inclusive ইনক্লুসিব ইনক্লুসিভ
 income ইনকম
@@ -4195,12 +4188,12 @@ indie ঐনদি
 indigenous ইন্দিজিনস
 induct ইন্দক্ত
 indus ইন্দস
-industri ইন্দস্ত্রী ইন্দস্ত্রি
+industri ইন্দস্ত্রী
 industrial ইন্দস্ত্রীয়েল ইন্দস্ত্রিয়েল
-industrie ইন্দস্ত্রী ইন্দস্ত্রি
+industrie ইন্দস্ত্রী
 industrielle ইন্দস্ত্রীয়েল ইন্দস্ত্রিএল
 industries ইন্দস্ত্রীজ ইন্দস্ত্রীসু
-industry ইন্দস্ত্রী ইন্দস্ত্রি
+industry ইন্দস্ত্রী
 indy ঐনদি
 infant ইনফেন্ট
 infection ইনফেক্সন ইনফেকশন
@@ -4210,8 +4203,7 @@ inflation ইনফ্লেসন
 informal ইনফোর্মেল ইনফোরমেল
 informatic ইনফোর্মেটিক
 information ইনফোর্মেসন ইনফোর্মেশন
-infrastructure ইনফ্রাস্ত্রকচর ইনফ্রস্ত্রকচর
-infrastructures ইনফ্রাস্ত্রকচরসু
+infrastructure ইনফ্রাস্ত্রকচর
 ingle এঙ্গল
 ingot ইঙ্গিৎ
 inland ইনলেন্দ ইংলেন্দ
@@ -4256,7 +4248,7 @@ investment ইনবেস্তমেন্ত
 investments ইনভেস্তমেন্তসু
 investors ইনবেস্তর্স
 iny ঈনি ঐনি
-ipock ইপাক ইপোক
+ipock ইপাক ঈপাক
 iqbal ইক্বেল
 iran আইরন
 irick ইরিক ঈরিক
@@ -4272,13 +4264,13 @@ island আইলেন্দ
 isolation আইসোলেসন
 ison ইশান এশিন
 israel ইজরেল
-issa এস ইসু
-issah এস ইসু
+issa এস
+issah এস
 issam ইশম
 issing ঈশিং ঈশীং
 issue ইসু ইশু
 issuer ইসুঅর
-istat ইস্তেত ইস্তেৎ
+istat ইস্তেৎ ইস্তেত
 istre ইস্তর
 isty এসটি
 ita আইট
@@ -4330,7 +4322,7 @@ jayne জেন জৈন
 jayroe জেরো
 jazz জজ
 jean জেএন
-jeana জীনা জিনা
+jeana জেএন জীনা
 jeane জেএন
 jeaney জিনি
 jeanie জিনি
@@ -4393,6 +4385,7 @@ johnny জনি
 johnsey ঝান্সী ঝান্সি
 johnta জনতা
 johny জনি
+joint জোইন্ট
 jolie জোলী
 jolla জল
 jolley জোলী
@@ -4456,8 +4449,8 @@ jutting জতিন
 juul জুল
 juve জোব যুব
 juvenile জুভেনাইল জুবেনাইল
-kaas কোস কোশ
-kabbah কৌবা কাবা
+kaas কোশ কোস
+kabbah কেব কাবা
 kabbalah কেবল
 kabel কেবল কৈবুল
 kable কেবল কৈবুল
@@ -4488,8 +4481,8 @@ kalas কলেজ
 kalin কালেন
 kalk কোক
 kall কোল কাল
-kalla কাল কলা
-kallam কলম কলাম
+kalla কাল
+kallam কলাম কলম
 kallas কাইলাশ কৈলাশ
 kallen কালেন
 kallus কাইলাশ কৈলাশ
@@ -4508,7 +4501,7 @@ kanawha কানহু
 kandel কেন্দল
 kandt কেন্ত
 kane কেন
-kaneb কনাবু কাংবু
+kaneb কাংবু কনাবু
 kanell কেনেল
 kannan কন্ন
 kano কোন
@@ -4530,7 +4523,7 @@ karsh কোর্স
 kasch কেস কেশ
 kase কেস কেশ
 kaser কেসর
-kasey কাশী কাসি
+kasey কাশী কাশি
 kash কেস কেশ
 kasha কাশী কাশি
 kasick কৌশিক
@@ -4550,10 +4543,10 @@ katt কত
 kauk কোক
 kaul কোল কাল
 kaunda কান্দা
-kaup কাপ কপ
-kaupp কাপ কপ
+kaup কাপ কোপ
+kaupp কাপ কোপ
 kauppi কোপি কোপী
-kaus কোস কোশ
+kaus কোশ কোস
 kauth কোৎ কত
 kaveney কবিনি
 kawa কবি
@@ -4563,7 +4556,7 @@ kayes কেস কেশ
 kayne কেন
 kays কেস কেশ
 kayser কেসর
-kazee কাশী কাসি
+kazee কাশী কাশি
 kazen কাইজেন
 kea কী কি
 keach কেঐচ
@@ -4582,7 +4575,7 @@ keetch কেঐচ
 keeth কিৎ কিত
 kehn কেন কায়ন
 kehne কেন কায়ন
-kehr কেয়র
+kehr কেয়র কেয়ার
 kehres কেয়র্স
 keim কিম
 keir কিয়র কিয়ার
@@ -4597,14 +4590,14 @@ kendall কেন্দল
 kendell কেন্দল
 kendle কেন্দল
 kenn কেন কায়ন
-kenna কাইনা কেন
+kenna কেন কাইনা
 kennedy কেনেদি
 kennel কেনেল
 kennell কেনেল
 kennett কেন্ত
 kepp কেপ
 ker কার কর
-kera কেয়র
+kera কেয়র কেয়ার
 kerber কারবার করবার
 kerby কার্বী কার্বি
 kernel কর্নেল করনেল
@@ -4627,9 +4620,9 @@ khoury কৌরি
 kia কিয়র কিয়ার
 kiam কিম
 kibbe কেব
-kibbel কেবল
-kibble কেবল
-kibell কেবল
+kibbel কেবল কৈবুল
+kibble কেবল কৈবুল
+kibell কেবল কৈবুল
 kida কিদে
 kidder কেদর কেদার
 kidney কিদনী কিদনি
@@ -4642,8 +4635,8 @@ kiesow কিস
 kiess কিস
 kihn কেন
 killey কিলি
-kilometer কিলোমিতর কিলোমীতর
-kilometre কিলোমিতর কিলোমীতর
+kilometer কিলোমীতর কিলোমিতর
+kilometre কিলোমীতর কিলোমিতর
 kilowatt কিলোৱাত কিলোৱাট
 kimm কিম
 kimmey কিমি
@@ -4672,7 +4665,7 @@ kira কিয়র কিয়ার
 kirby কার্বী কার্বি
 kirin কিরেন
 kirven কার্বোন কার্বন
-kirwan কার্বোন কার্বন
+kirwan কার্বোন
 kisch কেস কেশ
 kise কৈসু
 kishore কিশোর
@@ -4700,7 +4693,7 @@ kloss ক্লাস
 kloster ক্লস্তর
 kluge ক্লোজ
 klugh কলা ক্লু
-klumb কলম কলাম
+klumb কলাম কলম
 klus ক্লাস
 klym ক্লেম
 knaack নাক নোক
@@ -4718,7 +4711,7 @@ knaus নসু
 knauss নসু
 kneale নীল
 knebel নেবেল
-knee নি
+knee নি নী
 kneel নীল
 kneer নীর
 knew ন্যু নো
@@ -4779,9 +4772,9 @@ koelle কোল
 koeller কলর
 koen কোন
 koenen কন্ন
-koep কপ কোপ
-koepp কপ কোপ
-koeppe কপ কোপ
+koep কোপ কপ
+koepp কোপ কপ
+koeppe কোপ কপ
 koeppel কপিল
 koerber কারবার কার্বার
 koerner কোর্নর
@@ -4815,19 +4808,19 @@ konzi কাংশি
 kooky কুকি কুকী
 koone কুন কোন
 kooy কোই
-kope কপ কোপ
+kope কোপ কপ
 kopel কপিল
-kopp কপ কাপ
-koppe কপ কাপ
+kopp কাপ কপ
+koppe কাপ কপ
 koppel কপিল
 koppell কপিল
 kopple কপিল
 kopy কোপি কোপী
-korba কার্বি কার্বী
+korba কার্বী কার্বি
 korber কারবার কার্বার
 korby কার্বী কার্বি
 korda কার্দ
-korea করি কোরিয়া
+korea করি
 korean কোরিয়ন কোরিয়ান
 koren কোর্ন
 koret কোর্ত কোর্ট
@@ -4844,9 +4837,9 @@ kosak কৌশিক
 kosch কোশ কোস
 kosel কৌশল কৌশাল
 koslow কৌশল
-koss কোস কোশ
-kossow কোস কোশ
-kosy কোসি কোসী
+koss কোশ কোস
+kossow কোশ কোস
+kosy কোসী কোসি
 kotas কোতেজ
 kote কোৎ কত
 koth কোৎ কত
@@ -4864,10 +4857,11 @@ koven কোৱিন
 kover কোভর কবর
 kowalke কবোক
 kowtow কত
-koza কোস কোশ
+koza কোশ কোস
 kozel কৌশল কৌশাল
 kozik কৌশিক
-kozo কোস কোশ
+kozlow কৌশল
+kozo কোশ কোস
 kozol কৌশল কৌশাল
 krack ক্রক
 kracke ক্রক
@@ -4880,19 +4874,19 @@ krause ক্রোস ক্রোশ
 krausse ক্রোস ক্রোশ
 kray করে
 kreh করে
-kreis করিসু
+kreis করিসু করিশু
 kreiss ক্রইস
 kress ক্রইস
 kresse ক্রইস
 krey করে
-kriese করিসু
-kris করিসু
+kriese করিসু করিশু
+kris করিসু করিশু
 krisch করিসু করিশু
 krise ক্রইস
-kriss করিসু
+kriss করিসু করিশু
 krist ক্রেস্ট
 krista ক্রেস্ট
-kriz করিসু
+kriz করিসু করিশু
 krock ক্রক
 kroeber করবার
 kroes ক্রোস ক্রোশ
@@ -4902,22 +4896,22 @@ krogh করো কর
 kroh করো কর
 krome করম ক্রম
 kromm করম করাম
-krone করোনা
+krone করোনা করনী
 kronick ক্রোনিক
 kropp ক্রোপ
 kross ক্রোস ক্রোশ
 kroupa ক্রোপ
 krowe করো কর
 kruck ক্রক
-krugh কর করা
+krugh কর
 kruk ক্রক
-krum করম ক্রম
-krumm করম ক্রম
-krumme করম ক্রম
+krum করম করাম
+krumm করম করাম
+krumme করম করাম
 krupa ক্রোপ
 kruse ক্রুজ ক্রোস
 kubala কেবল
-kubena কবিনা ক্বীন
+kubena ক্বীন কবিনা
 kuchera কাছার
 kueck কোক
 kuehl কোল কুল
@@ -4928,21 +4922,21 @@ kuhle কোল কুল
 kuhn কুন কোন
 kuhne কুন
 kuhr কার কর
-kujala কয়লা কোয়লা
+kujala কয়লা
 kulaga কোলগী
-kulka কাল্কি কালকি
+kulka কালকি কাল্কি
 kull কাল
-kulla কাল কলা
+kulla কাল
 kully কালি
 kumm কম কাম
 kummer কুমার
 kumouri কুমারী কুমারি
-kunda কান্দা কুন্দো
+kunda কুন্দো কান্দা
 kung কাং কুন
 kupka কাপকী
 kurd কার্দ
 kurds কার্দসু
-kusa কোসি কোস
+kusa কোশ কোস
 kush কোশ কোস
 kutch কুছ কুচু
 kutcher কাছার
@@ -4954,7 +4948,7 @@ kyes কৈসু
 kyi কী কি
 kyllo কিলো
 kym কিম
-kyna কেন কেনা
+kyna কেন
 kyne কায়ন
 kyowa ক্যু কয়ো
 kyra কাইরো
@@ -4967,7 +4961,6 @@ laake লোক লাক
 laas লোস
 lab লেব লাইব
 labar লেবর
-labauve লৈববু
 labbe লেব লাইব
 labe লেব
 labeau লেব লিব
@@ -4976,7 +4969,6 @@ labell লেবেল
 labella লেবেল
 labelle লেবেল
 laber লেবর
-laboda লৌবদা
 labor লেবর
 labore লেবর
 labour লেবর
@@ -5003,7 +4995,7 @@ lafoy লফোই
 lagan লৈগনু
 lagana লোগইন
 lagle লেগেল
-lago লোগো লোগ
+lago লোগো
 lague লোগ
 lahm লম
 lahman লমন
@@ -5026,14 +5018,14 @@ lalone লোলনি
 lamb লম
 lambda লমদা
 lambe লম
-lambie লম্বী লম্বি
+lambie লম্বী
 lambing লাইমিং
-lamby লম্বী লম্বি
+lamby লম্বী
 lamina লমন
 lamm লম
 lamme লম
 lammon লমন
-lance লাইন্স লান্স
+lance লাইন্স লাইনসু
 lancing লাইনশিং লনশিং
 land লেন্দ
 landay লৈনদে
@@ -5062,7 +5054,7 @@ lansing লাইনশিং
 lansky লংসকী
 lanum লৈনম
 lanyon লেংয়ান
-lanz লাইন্স লান্স
+lanz লাইন্স লাইনসু
 lanza লাইন্স
 lanzo লাইন্স লান্স
 laos লোস
@@ -5117,7 +5109,6 @@ laurey লৌরি
 laurie লৌরি
 laury লৌরি
 laux লাক্ষ
-lava লৌবা
 lave লেব
 laveau লেব লাভ
 lavelle লেভেল লেবেল
@@ -5125,7 +5116,7 @@ laver লেবর
 lavey লৈবী
 lavi লৈবী
 lavie লৈবী
-lavoro লেবর লৱার
+lavoro লৱার লিভর
 lavy লৈবী
 law লো লৌ
 lawes লোস
@@ -5133,7 +5124,7 @@ lawing লায়েং লোয়ন
 lawless লোলসু
 lawman লমন
 lawn লোন লান
-lawns লান্স লোনসু
+lawns লোনসু লান্স
 lawrie লৌরি
 lawry লৌরি
 laws লোস
@@ -5156,15 +5147,15 @@ leabo লিব লীব
 leached লীচৎ লিচৎ
 leaching লিচিং
 lead লেদ লীদ
-leader লিদর লীদর
+leader লীদর লিদর
 leaders লীদর্স
-leadership লীদর্শিপ লীদরশিপ
+leadership লীদরশিপ লীদর্শিপ
 league লীগ
 leah লী লি
 leak লীক লিক
 leakage লীকেজ
 leake লীক লিক
-leala লীলা লিলা
+leala লীলা লিলি
 lealie লিলি
 lean লিন
 leana লিন
@@ -5176,7 +5167,7 @@ leasing লিশিং
 least লিস্ত
 leasure লেজর
 leathem লৈতেম
-leave লিব লিভ
+leave লিভ লিব
 leavelle লেভেল লেবেল
 leaver লিভর
 leaving লিভিং লিবিং
@@ -5191,7 +5182,7 @@ leddy লেদী
 ledge লাইজ
 ledger লেজর
 lee লি
-leeder লিদর লীদর
+leeder লীদর লিদর
 leery লৈরি লিরি
 leeuwen লোন
 leever লিভর
@@ -5205,7 +5196,7 @@ leger লেজর
 leggy লাইগী লৈগী
 legislation লেজিস্লেসন
 legislative লেজিস্লেতিব লেজিসলেটিব
-legislature লেজিস্লেচর লেজিসলেচর
+legislature লেজিসলেচর লেজিস্লেচর
 lehn লাইন লেন
 lehne লাইন লেন
 lehrke লৈরক
@@ -5213,7 +5204,7 @@ leicht লৈকৎ
 leick লীক লিক
 leigh লী লি
 leight লৈত
-leila লীলা লিলা
+leila লীলা লিলি
 leilani লোলনি
 lein লিন
 leis লেস
@@ -5222,7 +5213,7 @@ leisure লেজর
 leitha লীদ
 leja লৈ
 lekas লীকেজ
-lela লীলা লিলা
+lela লীলা লিলি
 leming লাইমিং
 lemma লৈমা
 lemme লৈমা
@@ -5247,7 +5238,7 @@ leprosy লেপ্রোসী
 lerach লৈরক
 lerch লৈরক
 lesch লাইশু লেস
-less লেস লাইশু
+less লাইশু লেস
 lessee লৈসি
 lessen লাইশোন
 lessing লাইশিং লৈশিং
@@ -5263,7 +5254,7 @@ leu লু লো
 leuck লোক লুক
 leung লোন লোং
 levangie লৈবনি
-leve লিব লিভ
+leve লিভ লিব
 level লেবেল
 levell লেভেল লেবেল
 lever লেবর লিভর
@@ -5299,9 +5290,9 @@ liddy লেদী
 lie লৈ লাই
 lieb লিব লীব
 liebe লিব লীব
-lieder লিদর লীদর
+lieder লীদর লিদর
 lien লিন
-lienau লোন লান
+lienau লান লোন
 lies লাইজ লাইশু
 lieu লু লো
 life লাইফ
@@ -5312,9 +5303,9 @@ lighthouse লাইতহাউস
 lighting লাইতিং লাইটিং
 ligon লৈগনু
 liked লৈকৎ
-lilah লীলা লিলা
+lilah লীলা লিলি
 liley লিলি
-lilla লীলা লিলা
+lilla লীলা লিলি
 lilley লিলি
 lilli লিলি
 lillie লিলি
@@ -5339,7 +5330,6 @@ line লাইন
 lines লাইন্স লাইনসু
 ling লেন লেং
 lingg লেং
-lingua লিংবা
 linh লেন লিন
 lining লাইনিং লাইনীং
 link লিঙ্ক
@@ -5364,14 +5354,14 @@ lit লৈত
 lite লাইত লাইৎ
 litem লৈতেম
 liter লিতর লিটর
-literary লিতরেরি লিটরেরি
+literary লিতরেরি লিতরেরী
 litt লৈত
 litter লিতর লিটর
 live লেব লাইভ
 livelihood লাইবলিহুদ
 liver লেবর লিভর
-lives লৈবসু লেবস
-livestock লাইবস্তোক
+lives লেবস লৈবসু
+livestock লাইবস্তোক লাইভষ্টোক
 living লিবিং
 livvie লৈবী
 liz লেস
@@ -5388,7 +5378,7 @@ load লোদ
 loaf লফু
 loam লম লোম
 loamy লৌমী
-loan লোন লন
+loan লোন
 loans লোনসু
 loathe লোদ
 loaves লৌবসু
@@ -5475,7 +5465,7 @@ loss লোস
 lossing লৌশিং লোশিং
 lost লাস্ত
 lotta লাতা লতা
-louanna লৌবনা লৌবনি
+louanna লৌবনি
 louche লোস
 lough লৌ
 loughrey লৌরি
@@ -5496,7 +5486,7 @@ lover লৱার
 low লো
 lowe লো লৌ
 lowell লোল
-lowen লোন লন
+lowen লোন
 lower লোৱর লৱার
 lowes লোস
 lowey লৌই লোই
@@ -5508,8 +5498,8 @@ lowry লৌরি
 lows লোস
 lowy লৌই লোই
 lox লাক্ষ
-loy লৌই লোই
-loye লৌই লোই
+loy লোই লৌই
+loye লোই লৌই
 loza লোস লৌজৈ
 ltd লিমিতেদ লিমিটেদ
 lua লু লো
@@ -5530,7 +5520,7 @@ luepke লুপকী লূপকী
 lueth লুত লুৎ
 luff লফু
 lugi লোগী
-lugo লোগো লোগ
+lugo লোগো
 luhman লমন
 luhmann লমন
 luhn লান লন
@@ -5580,14 +5570,14 @@ lynes লাইন্স লাইনসু
 lyng লেন লেং
 lynk লিঙ্ক
 lynn লেন লিন
-lynna লাইন লাইনা
+lynna লাইন
 lynne লেন লিন
 lyra লৈরি লৈরে
 lysaght লৈশাৎ
 lysne লাইন
 lysol লাইশোল
 lyssy লৈসি
-maack মক মোক
+maack মোক মক
 maahs মাস মাসু
 maariv মরীবু মরিবু
 maass মাস মাসু
@@ -5598,27 +5588,27 @@ mabelle মোবাইল
 mabie মাইবী
 mac মেক
 macaw মকা মেক
-mach মক মোক
+mach মোক মক
 machel মচল
 macher মেকর মকর
 machines মশিংসু মসিনসু
 machuga মচুগী
-mack মেক মক
+mack মেক
 mackall মাইকেল
 mackay মকৈ
-macke মেক মক
+macke মেক
 mackel মাইকেল
-macko মেক মক
+macko মেক
 mad মদু মেদ
 madd মদু মেদ
-madden মদন
-madder মাদর মাদার
+madden মদন মৈদান
+madder মাদার মাদর
 made মেদ
 madel মেদল
 madella মোদেল মেদেল
 madelle মোদেল মেদেল
 maden মৈদান
-madere মাদর মাদার
+madere মাদার মাদর
 madge মেজ
 madl মেদল
 madole মেদল মিদল
@@ -5632,13 +5622,11 @@ mafia মাফিয়া
 magaw মেগা
 magazine মেগাজিন
 maggie মাগী মৈগী
-magistrate মেজিষ্ট্রেট
 mah মা ম
 mahalah মহল
 mahan মেন
 mahaney মহৈনি
-mahannah মহৈনি মহৈনা
-mahayana মহয়নি
+mahannah মহৈনি
 mahdi মোদী
 mahen মেন
 maher মরু
@@ -5662,7 +5650,7 @@ maine মেন
 maines মেন্স
 mains মেন্স
 mainz মেন্স
-maiolo ময়োল মায়োল
+maiolo মায়োল ময়োল
 mair মেয়র
 maire মেয়র
 mais মৈসু
@@ -5689,11 +5677,11 @@ mallo মোল
 mallow মাইল মেল
 malnutrition মেলন্যুত্রিসন
 malo মোল
-malta মল্তি মলতি
+malta মলতি মালতী
 mame মেমু
 mamie মেমী
 mamis মমিসু
-mamma মমা মমি
+mamma মমি মমা
 mammal মমল
 mamone মোমোন
 man মেন
@@ -5710,8 +5698,8 @@ mane মেন
 manes মেন্স
 mangel মৈঙাল
 mangen মঙান
-mangle মঙ্গল
-mangual মঙাল মঙ্গল
+mangle মঙ্গল মৈঙাল
+mangual মঙাল
 manilla মনিল
 manilow মনিল
 mann মন মেন
@@ -5758,20 +5746,20 @@ maresh মরিসু মরীসু
 marett মেরিট
 margaux মার্গ
 margot মার্গ
-mari মরী
+mari মরি
 marice মরিসু মরীসু
 marich মরিক মরীক
 marie মরী মরি
 marien মেরিন
 marilla মরিল মরেল
 marin মেরিন
-marina মরীনা মেরিন
+marina মেরিন মরীনা
 marine মেরিন
 marineau মেরিন
 marino মেরিন
 marisa মরিসু মরীসু
 marissa মরিসু মরীসু
-maritime মেরিতাইম
+maritime মেরিতাইম মেরীতাইম
 mark মার্ক
 marke মার্ক মরক
 marked মরক্ত
@@ -5788,13 +5776,13 @@ marooney মরুনি
 marque মার্ক মরক
 marquette মার্কেৎ মার্কেত
 marr মরু
-marra মরু মরি
+marra মরু মরী
 marrett মেরিট
 marrin মেরিন
 marring মরিং মরেং
 marris মরিসু মরীসু
 marro মোর মার
-marrocco মরক মোরোক
+marrocco মোরোক মরক
 marron মেরিন
 marrou মরু
 marrow মেয়র
@@ -5810,23 +5798,23 @@ marullo মরোল
 marver মারৱার
 mary মেরি মেরী
 maryse মরীসু মরিসু
-masao মাসু মসু
+masao মাসু মশু
 masch মাস মশু
-maschke মশক মাস্ক
+maschke মশক
 masci মসি
 mase মেজ
 masella মশেল
 maseng মশিং মশীং
 maser মেজর
-mashaw মশা
+mashaw মশা মৈশা
 masin মশেন
 mask মাস্ক
 maslow মসল
 masone মিসন মিশন
-mass মাস মসু
-massa মশা মাস
+mass মাস মাসু
+massa মাস মশা
 massage মসাজ
-masse মাস মসু
+masse মাস মাসু
 masses মেসেজ মসাজ
 massey মসি
 massi মসি
@@ -5851,7 +5839,7 @@ math মত
 mathe মেদ
 mathea মেদিয়া
 mathematics মেথমেতিক্স
-mather মাদর মাদার
+mather মাদার মাদর
 mathey মাথি
 mathie মাথি মতি
 mathy মাথি মতি
@@ -5860,15 +5848,15 @@ matos মতৌসু
 matra মেত্রো
 matsch মচু মেচ
 matt মত মতু
-matta মত মাতা
+matta মত মৈতৈ
 matte মত মতু
-mattea মশা মাস
+mattea মাস মশা
 mattei মৈতৈ মতাই
 mattel মেতেল
 mattera মোতেরা
 matthau মথৌ
 mattias মসাজ
-mattick মতিক
+mattick মতিক মতীক
 mattie মতি
 matting মতেং মতিং
 mattoon মতোন
@@ -5886,12 +5874,12 @@ mauk মোক মক
 maul মোল
 maule মোল
 maull মোল
-mauna মন মনা
+mauna মন
 maune মন
 mauney মনি মনী
 maung মাং মন
 maupin মপান
-maura মরু মরি
+maura মরু মরী
 mauri মরী মরি
 maurice মরিসু মরীসু
 maurie মরী মরি
@@ -5908,7 +5896,7 @@ mauzey মসি
 mauzy মসি
 mav মাবু মৌ
 maw মা মউ
-mawson মোসন
+mawson মোসন মশেন
 may মৈ মে
 mayde মেদ
 mayden মৈদান
@@ -5927,14 +5915,14 @@ mayr মেয়র
 mays মেজ
 mayse মেজ
 maz মাস মাসু
-maza মাস মশা
+maza মাস
 maze মেজ
 mazel মসল
 mazer মেজর
 mazo মাস
 mazola মসল
 mazur মেজর
-mazza মেজ মৈশা
+mazza মেজ
 mazzo মেজ মাস
 mazzolla মসল
 mccaa মকা মেক
@@ -5970,9 +5958,9 @@ meara মীরা
 mease মিস মীসু
 measles মিজলস
 measure মেজর
-meat মীৎ মিৎ
-meath মীৎ মিৎ
-meaux ম মো
+meat মীৎ মীত
+meath মীৎ মীত
+meaux মো ম
 meave মীবু
 mecca মেক মাইকৈ
 mechanic মেকানিক
@@ -5991,14 +5979,14 @@ medil মোদেল মেদেল
 medina মোদীনা
 meditation মেদিতেসন
 medium মীদিয়ম মিদিয়ম
-medulla মিদল মেদল
+medulla মেদল মিদল
 medusa মদুসু
 meece মিস মীসু
 meehl মিল মীল
 meese মিস মীসু
 meester মিস্তর
-meet মিৎ
-meeting মিতিং মীতিন
+meet মীত
+meeting মীতিন মিতিং
 megawatt মেগাৱাৎ মেগাৱাত
 mehall মহল
 mehl মেল মাইল
@@ -6016,7 +6004,7 @@ meiss মৈসু
 mele মিল মীল
 melinda মিলিন্দ
 mell মেল মাইল
-mella মেলা মেল
+mella মেল মাইল
 melle মেল মাইল
 mello মেল মাইল
 mellow মেল মাইল
@@ -6030,7 +6018,7 @@ meng মেন
 mengel মৈঙাল
 mengele মৈঙাল
 menn মেন
-menna মেন মৈনা
+menna মেন
 menne মেন
 menning মাইনিং
 menor মাইনর
@@ -6069,7 +6057,7 @@ merry মেরি মেরী
 mesch মৈসু
 mesh মৈসু
 mess মৈসু
-messa মৈশা মৈসু
+messa মৈসু মৈশা
 message মেসেজ
 messes মেসেজ মেসেস
 messina মেসিনা
@@ -6101,18 +6089,18 @@ michaud মিস
 michaux মিস
 micheal মাইকেল
 micheaux মিস
-michel মিসাইল মাইকেল
+michel মাইকেল মিসাইল
 michele মিসাইল
 michelle মিসাইল
-michon মেছিন মেচিন
+michon মীচান মেছিন
 mick মেক
 micka মেক
 micke মেক
 mickus মিক্স
 micro মাইক্রো
 mid মেদ
-middaugh মেদ মীদা
-middle মিদল মেদল
+middaugh মীদা মেদ
+middle মেদল মিদল
 middleman মিদলমেন
 middlemen মিদলমেন
 midge মেজ
@@ -6167,7 +6155,7 @@ minnow মেন
 minns মেন্স
 minny মিনি মীনি
 minor মাইনর
-minority মাইনোরিতী
+minority মাইনোরিতী মাইনোরিটি
 minoso মানস
 minott মিনিৎ মিনিত
 minow মেন
@@ -6188,7 +6176,7 @@ miss মিস মীসু
 misses মেসেজ মেসেস
 missey মীশি
 missie মীশি
-missing মীশিং মিসিং
+missing মীশিং মীশীং
 mission মিসন মিশন
 missis মেসেজ মেসেস
 missus মেসেজ মেসেস
@@ -6197,7 +6185,7 @@ mister মিস্তর
 mit মিৎ
 mitch মেচ
 mitcham মীচম
-mitchen মেছিন মেচিন
+mitchen মীচান মেছিন
 mitchum মীচম
 mitigation মিতিগেসন মিটিগেসন
 mitsch মেচ
@@ -6218,9 +6206,9 @@ mob মাবু
 mobbs মবস
 mobility মোবিলিতী
 mobilize মোবিলাইজ
-moccia মচা মচু
-moch মক মোক
-mock মক মোক
+moccia মচু মচি
+moch মোক মক
+mock মোক মক
 modal মোদেল
 mode মদু মোদ
 modell মোদেল
@@ -6231,13 +6219,13 @@ modernize মোদর্নাইজ
 modrow মাদর মদর
 modus মদুসু
 mody মোদী
-moe ম মো
+moe মো ম
 moede মদু মোদ
 moehle মহল
 moehring মরিং মরেং
 moen মন
 moerke মার্ক মরক
-moes মসু মশু
+moes মশু মসু
 moesch মশু মসু
 moffa মফ মফি
 mogan মগুন
@@ -6256,23 +6244,22 @@ mollo মোল
 moman মোমোন
 momayez মমিসু
 momentum মোমেন্তম
-momma মমা মমি
+momma মমি মমা
 mommies মমিসু
 mommy মমি মমী
-mona মনা
 monagene মাংজিন
 monash মানস মনাসু
 monceaux মেন্স মানস
-monda মাংদা
+monda মাংদা মান্দে
 mondallo মন্দল
-monday মন্দি মন্দী
+monday মন্দি মান্দে
 mondy মন্দি মন্দী
 mone মন
 monell মনিল
 money মনি মনী
-mongeau মঙ মঙো
+mongeau মঙো মঙ
 mongeon মাংজিন
-monger মঙ্গর মানগর
+monger মানগর মঙ্গর
 monica মনিকা
 monn মন
 monotone মনাতোন
@@ -6290,30 +6277,30 @@ moons মওংসু
 moorco মার্ক মরক
 mop মপু
 morais মরৈ
-moral মরোল
+moral মোরেল
 morale মরাল মরল
 morash মরিসু মরীসু
 moray মোরে মরৈ
 morden মোর্দন
 more মরু মোর
 moreau মার
-morell মরাল মরোল
-morella মোরেল মরেল
+morell মরাল মোরেল
+morella মোরেল
 morello মরেল
 moreover মারৱার
 mores মরীসু মরিসু
 morga মার্গ
 morgue মার্গ
-mori মরী
+mori মরি
 morice মরিসু মরীসু
 morillo মোরেল মরিল
 morine মরিনি মরীনি
 moris মরিসু মরীসু
 morocco মরক
 morr মরু মোর
-morra মরু মরি
+morra মরু মরী
 morrall মরাল মরোল
-morrell মোরেল মরেল
+morrell মোরেল
 morrie মরী মরি
 morrill মরিল
 morris মরিসু মরীসু
@@ -6327,12 +6314,12 @@ morsel মার্সেল মার্শেল
 mory মরী মরি
 mos মাস মাসু
 moscow মশক মাস্ক
-mose মসু মশু
+mose মশু মসু
 moselle মশেল
 moses মসিসু
 mosey মসি
 mosh মাস মাসু
-moshe মসি মশা
+moshe মসি
 moshus মসিসু
 mosie মসি
 moskow মশক মাস্ক
@@ -6342,11 +6329,11 @@ moss মাস মাসু
 mosses মসিসু মসাজ
 mossey মসি
 mossy মসি
-most মসু মশু
+most মশু মসু
 mosul মসল মশেল
 moten মতোন
 moth মোত মত
-mother মাদর মাদার
+mother মাদার মাদর
 motile মতোল
 motion মোসন মশেন
 motivation মোতিবেসন
@@ -6368,9 +6355,9 @@ moura মোর মোরে
 mourning মোর্নিং
 mouth মাউথ
 mouzon মোসন
-movement মুবমেন্ত মুভমেন্ত
+movement মুভমেন্ত মুবমেন্ত
 movie মুভি
-mow ম মো
+mow মো ম
 mowat মোত মত
 mowatt মোত মত
 mowdy মোদী
@@ -6382,11 +6369,10 @@ mowrey মরী মরি
 mowry মরী মরি
 mozee মসি
 mozelle মশেল
-mozena মসিনা
 mrs মেসেজ মেসেস
 mruk মরক
 much মচু
-mucha মচা মচু
+mucha মচু মচি
 muck মুক মক
 mud মদু
 mudd মদু
@@ -6397,18 +6383,18 @@ muffy মফি
 muggy মাগী
 muhammad মোহমদ
 muhr মোর
-muhs মাস মসু
+muhs মাস মশু
 muir ময়ুর
 mujica ম্যুজিক
 mula ময়োল
 mule ময়োল
-mullah মালা মালে
+mullah মালে মালা
 mullally মাল্লি
 mullaly মাল্লি
-multi মল্তি মলতি
+multi মলতি মল্তি
 multiple মল্তিপল মল্টিপল
 muma ময়ুম
-mumma মমা মমি
+mumma মমি মমা
 mummey মমি মমী
 mummies মমিসু
 mummy মমি মমী
@@ -6420,9 +6406,9 @@ mundi মন্দি মন্দী
 mundie মন্দি মন্দী
 mundlow মন্দল
 mundy মন্দি মন্দী
-munger মঙ্গর মানগর
-mungle মঙাল মঙ্গল
-mungo মঙ মঙো
+munger মানগর মঙ্গর
+mungle মঙাল মঙ্গোল
+mungo মঙো মঙ
 municipal ম্যুনিসিপাল
 munn মন
 munnell মনিল
@@ -6441,10 +6427,10 @@ muro মোর
 murr মার
 murray মরী মরি
 murree মরী মরি
-murrell মরাল মরোল
+murrell মরাল মোরেল
 murrey মরী মরি
 murrie মরী মরি
-murrill মরাল মরোল
+murrill মরাল মোরেল
 murrow মার
 murry মরী মরি
 musalo মসল
@@ -6480,7 +6466,7 @@ myhren মীরোন
 myla মাইল
 myna মাইন মৈনা
 mynatt মিনিৎ মিনিত
-myra মৈরা মৈরি
+myra মৈরি মৈরা
 myrrh মার
 myszka মীশক
 myth মীৎ মিৎ
@@ -6500,7 +6486,7 @@ nah না
 nahm নেম নম
 naira নেরো
 name নেম
-nana নাইনা
+nana নেনো
 nap নাপু
 napoli নেপালি
 napp নপ নাপু
@@ -6606,25 +6592,24 @@ nilsson নেলসন
 nimmo নীম নিম
 nina নিনি নীনি
 nine নৈন
-nineveh নৈনবা নিংবা
 ninny নিনি নীনি
 nipon নিপান
 nipple নিপাল নেপাল
 nippon নিপান
 nissa নিশা
 nissan নিশান
-nissen নেসন
+nissen নেসন নিশান
 nit নেৎ নেত
-nita নিতি নীতি
+nita নীতি নিতি
 nite নাইট
 nitta নিতি নীতি
 nitto নেত নেট
 nitty নিতি নীতি
 nix নেক্স
-noa নই নো
-noaa নই নো
+noa নো নই
+noaa নো নই
 noack নোক
-noah নই নো
+noah নো নই
 noam নম
 nobbe নব
 noble নোবেল
@@ -6671,7 +6656,6 @@ novella নোভেল নোবেল
 novello নোভেল নোবেল
 november নভেম্বর নবেম্বর
 novice নবিশ
-novoa নব
 now নাউ
 nowell নোবেল
 nub নব
@@ -6695,9 +6679,9 @@ nursery নর্সরী
 nursing নর্সিং
 nuss নসু
 nusz নসু
-nut নাৎ নট
+nut নাৎ
 nutrition ন্যুত্রিসন
-nutt নাৎ নট
+nutt নাৎ
 nuzzo ন্যুজ
 nye নই নাই
 nyssa নিশা
@@ -6724,9 +6708,9 @@ occurred কার্দ
 ocean ওসিন ওসীন
 oceana অসিয়ান
 och ওক
-ochoa অচৌবা
+ochoa অচৌ অচৌব
 ocon ইকোন কোন
-october ওক্তোবর অক্টোবর
+october ওক্তোবর ওক্টোবর
 oda অদু
 odd অদু
 odder অদর
@@ -6765,7 +6749,7 @@ oie ওই
 oien আইন ওইন
 okey অকি
 okie অকি
-olah ওল এল
+olah ওল লো
 olano লান লোন
 old ওল্ড
 olde ওল্দ ওল্ড
@@ -6786,7 +6770,7 @@ olympiad ওলিম্পিয়দ ওলিম্পিয়াদ
 olympiads ওলিম্পিয়দ ওলিম্পিয়াদ
 olympian অলিম্পিয়ান
 olympic ওলিম্পিক অলিম্পিক
-olympics ওলিম্পিক্স
+olympics ওলিম্পিক্স ওলেম্পিক্স
 omans অমনসু
 omary মেরি মেরী
 omeara ওমোর অমর
@@ -6796,10 +6780,10 @@ ominous অমনসু
 omit অমিৎ
 onan অন্ন
 once বনস
-onder অন্দর
+onder অন্দর আন্ডার
 one ৱান ৱন
 oneal অনিল
-oneall অনিল অনাল
+oneall অনাল অনিল
 oneil অনিল
 oneill অনিল
 oneness বনাস বনস
@@ -6818,7 +6802,7 @@ ooohs অজ অসু
 oozing উশিং ওশিং
 opal অপীল অপিল
 opel অপীল অপিল
-open ওপন অপন
+open ওপন
 opening ওপনিং
 opera অপর
 operate ওপরেৎ ওপরেট
@@ -6877,11 +6861,11 @@ otoole অতুল
 ott ওৎ
 ottawa অতাবা
 otte ওৎ
-otto ওতো
+otto ওতো ওটো
 ottum আত্ম
 ouaga ৱাগী বাগ
 ought ওৎ আউৎ
-oughta অতৈ ওতো
+oughta ওতো অতৈ
 oui বি ভি
 our আর
 out আউৎ আউত
@@ -6899,15 +6883,14 @@ owe ও
 owed অদু
 owen ওন উন
 owes অজ অসু
-owing অইং ওইন
+owing ওইন অইং
 own ওন
 owner ওনর ওনার
 ownership ওনরশিপ
-owosso অৱাস অবস
+owosso অৱাস
 oxen ওক্সন
 oxygen অক্সিজেন
 oye ওই
-ozawa অশাবা
 ozelle জেল
 ozora অজার
 ozzie অসি
@@ -6993,7 +6976,7 @@ parish পেরিস
 parizeau পেরিস
 parke পার্ক
 parr পর পার
-parra পর পারা
+parra পর পার
 parrack পার্ক
 parris পেরিস
 parrish পেরিস
@@ -7005,10 +6988,10 @@ parties পার্তীজ
 partition পার্তিসন
 partlow পোর্তল
 partner পার্তনর পার্ত্নর
-partnership পার্তনরশিপ পার্ত্নরশিপ
+partnership পার্তনরশিপ পার্তনরশীপ
 parts পোর্তস
 party পার্তী পার্টি
-pary পারি পারী
+pary পারী পারি
 pass পাস
 passbook পাসবুক
 passed পাস্ত
@@ -7021,18 +7004,18 @@ pat পাত
 pataky পাতকী
 patane পাতন পাতান
 patella পতেল
-path পাৎ
+path পাৎ পাত
 pathan পাতন পাতান
-pathe পাৎ পথ
+pathe পাৎ পাত
 patient পেসেন্ট পেসেন্ত
 patillo পতেল পতিল
 patina পুতিন
-patriotic পেত্রিওটিক পেট্রিওটিক
+patriotic পেত্রিওটিক
 patrol পেত্রোল
 patron পেত্রোন
 patt পাৎ পাত
 patten পাতন পাতান
-pattillo পতেল পতিল
+pattillo পতেল পাতিল
 patton পাতন পাতান
 paugh পাউ
 paul পোল পল
@@ -7046,9 +7029,9 @@ paull পোল পল
 pauly পালি
 paup পাপ পোপ
 pause পাস
-pavelic পব্লিক
+pavelic পব্লিক পাব্লিক
 pavlak পব্লিক পাব্লিক
-pavlick পব্লিক
+pavlick পব্লিক পাব্লিক
 pavone পৱন
 paw পাউ
 pawley পালি
@@ -7071,14 +7054,14 @@ pays পেজ
 paz পাস
 pea পি পী
 peabody পীবদি
-peace পিস পীস
+peace পীস পিস
 peach পীচ পিছ
 peak পীক পিক
 peake পীক পিক
 peart পার্ত পার্ট
 peary পীরি
-peas পিস পীস
-pease পিস পীস
+peas পীস পিস
+pease পীস পিস
 peasey পীসি
 peat পিত
 peavey পীবি পীবী
@@ -7089,7 +7072,7 @@ peck পেক
 pecka পেক
 pecking পেকিং
 pecot পেকেট
-peeples পিপল্স পিপলস
+peeples পিপলস পিপল্স
 peery পীরি
 peete পিত
 peeve পীব
@@ -7106,7 +7089,7 @@ pencil পেন্সিল
 peng পাইন
 penh পাইন
 penn পাইন
-penna পেনা পাইন
+penna পাইন পেনা
 pennel পেনেল পেনাল
 pennell পেনেল পেনাল
 pennella পেনেল
@@ -7116,7 +7099,7 @@ pensioners পেন্সনরস
 pensyl পেন্সিল
 peon পিন
 people পিপল পীপল
-peoples পিপল্স পিপলস
+peoples পিপলস পিপল্স
 pep পাইপ
 peper পেপর পেপার
 pepper পেপর পেপার
@@ -7131,7 +7114,7 @@ perfect পর্ফেক্ত
 perfecta পর্ফেক্ত
 perform পর্ফোর্ম পরফোর্ম
 performa পর্ফোর্ম পরফোর্ম
-performance পর্ফোর্মেন্স পরফোর্মেন্স
+performance পরফোর্মেন্স পর্ফোর্মেন্স
 performing পার্ফোর্মিং
 peridot পেরেদ
 period পেরিয়দ
@@ -7139,7 +7122,7 @@ perishable পেরিশেবল
 perk পার্ক
 perking পার্কিং
 perko পার্ক
-perma পরম পর্মো
+perma পরম
 permanent পর্মানেন্ত পর্মনেন্ত
 permit পার্মিট
 permut পার্মিট
@@ -7154,13 +7137,13 @@ perspective পর্সপেক্তিব
 persson পর্সন পার্সন
 pert পার্ত পার্ট
 perth পার্ত পার্ট
-peta পিত পিতা
+peta পিত
 pete পিত
 peto পিত
 petrochemical পেত্রোকেমিকেল
 petroleum পেত্রোলিয়ম
-pezza পেজ পৈশা
-pfahl ফল
+pezza পেজ
+pfahl ফল ফোল
 pfarr ফোর
 pfau ফৌ
 pfeil ফাইল
@@ -7168,9 +7151,9 @@ pfohl ফল ফোল
 pfost ফাস্ত
 pfund ফন্দ
 phage ফেজ
-pharaoh ফেয়র ফায়র
+pharaoh ফায়র ফেয়র
 pharmacy ফার্মাসী
-pharoah ফেয়র ফায়র
+pharoah ফায়র ফেয়র
 pharr ফোর
 phase ফেজ ফেস
 phenol ফাইনাল
@@ -7197,7 +7180,7 @@ pickett পেকেট
 picking পেকিং
 picture পিকচর
 pie পাই
-piece পিস পীস
+piece পীস পিস
 piecing পিশিং পীশিন
 pieri পীরি
 piet পিত
@@ -7205,7 +7188,7 @@ pietsch পীচ পিছ
 piette পিত
 piggee পিগী
 piggy পিগী
-pih পি
+pih পি পী
 pilot পাইলোৎ পাইলোত
 pine পাইন
 pineau পিন
@@ -7222,7 +7205,7 @@ pipeline পাইপলাইন পাইপ্লাইন
 pipp পেপ
 pique পীক পিক
 piquette পেকেট
-pirie পীরি পিরি
+pirie পীরি
 pirko পার্ক
 piss পিস পীস
 pissing পিশিং পীশিন
@@ -7252,6 +7235,7 @@ plante প্লান্ত
 plaque প্লেক
 plass প্লস প্লেস
 plasse প্লস প্লেস
+plastic প্লাসতিক
 plata প্লোট
 platform প্লেৎফোর্ম প্লেতফোর্ম
 plaut প্লোট
@@ -7288,7 +7272,7 @@ poison পোইজন
 poisoning পোইজনিং
 poke পোক
 pole পোল পল
-police পুলিস
+police পুলিস পুলিশ
 policy পালসি
 polk পোক
 polka পোক
@@ -7306,12 +7290,12 @@ polly পালি
 polo পোল
 poly পালি
 pom পাম
-pong পোন পাং
+pong পাং পোন
 pony পোনি
 ponzi পাংসি
 pooh পু পোও
 pool পোল
-poolas পুলিস
+poolas পুলিস পুলিশ
 poole পুল পোল
 poorbaugh পুরব
 poovey পুবী
@@ -7329,7 +7313,6 @@ pork পার্ক
 porr পর পার
 porro পর পার
 port পার্ত
-portability পোর্টেবিলিটি
 portable পোর্তেবল পোর্টেবল
 portage পার্তীজ
 porte পোর্ত পার্ত
@@ -7363,7 +7346,7 @@ pou পু পোও
 pough পাউ
 poul পুল পোল
 pouliot পোলিও
-poulos পুলিস
+poulos পুলিস পুলিশ
 pour পর পার
 pouring পরিং পরেং
 poussin পুশিন
@@ -7373,8 +7356,8 @@ pow পাউ
 powder পাউদর
 powe পাউ
 powell পাউল
-practice প্রেক্তিস
-practise প্রেক্তিস
+practice প্রেক্তিস প্রাক্টিস
+practise প্রেক্তিস প্রাক্টিস
 praise প্রেস
 prancing পরেংশিং
 praun প্রান প্রন
@@ -7384,7 +7367,6 @@ prayed পরেদ
 praying পরিং পরীং
 prays প্রেস
 precedent প্রেসিদেন্ত প্রেসিদেন্ট
-precedents প্রেসিডেন্টসু
 pregnancy প্রেগনেন্সি
 preiss প্রাইস
 prenatal প্রিনেটেল
@@ -7413,8 +7395,8 @@ primeau প্রেম
 primeaux প্রেম
 primm প্রেম
 prince প্রিন্স
-principal প্রিন্সিপল প্রিন্সিপাল
-principle প্রিন্সিপল প্রিন্সিপাল
+principal প্রিন্সিপাল প্রিন্সিপল
+principle প্রিন্সিপাল প্রিন্সিপল
 print প্রিন্ট
 prinz প্রিন্স
 pris প্রেস
@@ -7431,13 +7413,13 @@ process প্রোসেস
 processing প্রোসেসিং
 procurement প্রোক্যুর্মেন্ত
 produce প্রদ্যুস
-producer প্রদ্যুসর প্রদুসর
+producer প্রদুসর প্রদ্যুসর
 product প্রদক্ত প্রদক্ট
 production প্রদক্সন
 productive প্রদক্তিব প্রদক্টিভ
 productivity প্রদক্তিবিতী
 profession প্রোফেসন
-professor প্রোফেসর প্রফেসর
+professor প্রোফেসর প্রোফেসার
 proffit প্রোফিৎ
 proffitt প্রোফিৎ
 profile প্রোফাইল
@@ -7448,7 +7430,7 @@ progress প্রোগ্রেস
 progressive প্রোগ্রেসিব
 projection প্রোজেক্সন
 projects প্রোজেক্তসু
-promote প্রমোৎ প্রমোত
+promote প্রমোৎ প্রোমোত
 promotion প্রমোসন প্রোমোসন
 prone প্রন
 prong প্রান প্রন
@@ -7473,15 +7455,15 @@ prugh প্রো
 pruneau প্রন প্রান
 pry পরৈ
 pryce প্রাইস
-psalm সাম শম
+psalm শামু সাম
 psi শাই সাই
 psychiatric সাইকিয়াত্রিক
-ptak তেক তক
+ptak তেক টেক
 pty তাই
 pub পাব
-public পব্লিক
+public পব্লিক পাব্লিক
 publication পব্লিকেসন
-publicity পব্লিসিটি পাব্লিসিটি
+publicity পাব্লিসিটি পব্লিসিটি
 publish পব্লিস
 pucillo পুচেল
 puck পাক
@@ -7489,10 +7471,10 @@ puerto পোর্ত পার্তী
 puett পোৎ
 puhl পল পুল
 puleo পোলিও
-pulice পুলিস
+pulice পুলিস পুলিশ
 pull পুল পোল
 pullam পোলেম
-pulleys পুলিস
+pulleys পুলিস পুলিশ
 pulling পোলিং
 pullum পোলেম
 pulsing পলশিং
@@ -7535,7 +7517,7 @@ quad ক্বাদ
 quaeda কেদা
 quai কী কে
 quantum ক্বান্তম
-quarre কবর ক্বার
+quarre কবর কভর
 quarter ক্বার্টর
 quattro ক্বাতর
 quay কী কে
@@ -7555,11 +7537,11 @@ quinn ক্বীন
 quinney কবিনি
 quit ক্বিৎ
 quito কিত কিট
-quiz ক্বিজ
+quiz ক্বিজ কবিসু
 quizzing কবিশিং
 quo কবো
 quod ক্বাদ
-quora কবর ক্বার
+quora কবর কভর
 raad রোদ
 raasch রাস রোস
 rabine রোবিন রবিন
@@ -7599,7 +7581,6 @@ raley রেলী রেলি
 rall রোল
 rallo রেল
 rally রেলী রেলি
-ramada রোমদা
 rami রোমী
 ramm রাম
 ramonda রামান্দি
@@ -7610,7 +7591,7 @@ ranallo রেনেল
 ranck রেঙ্ক
 ranco রেঙ্ক
 random রেন্দম
-rang রন
+rang রন রেন
 ranh রন রেন
 rank রেঙ্ক
 ranke রেঙ্ক
@@ -7629,9 +7610,8 @@ rappe রেপ
 rasch রাস রাইস
 rasche রাস রাইস
 rash রাইস
-rasia রসিয়া
 rat রেৎ রাইৎ
-rata রেৎ রাইট
+rata রাইট রেৎ
 rate রেৎ রেত
 rathe রেদ
 ratio রেসিও
@@ -7641,16 +7621,16 @@ ratte রেৎ রাইৎ
 ratts রাইৎস রাইটস
 ratz রাইৎস রাইটস
 raucous রাকেশ রাকেস
-rauh রো র
+rauh রো
 raul রোল
 raum রোম রাম
 raun রন
 rauth রথ
 ravine রোবিন রবিন
 raw রো র
-rawe রো র
+rawe রো
 rawl রোল
-rawson রাসন
+rawson রাসন রাশন
 ray রে
 raye রে
 rayed রেদ
@@ -7665,7 +7645,7 @@ reach রীচ
 reaches রিছাস
 react রিএক্ত
 reaction রিএক্সন
-reactor রিয়েক্তর
+reactor রিয়েক্তর রিএক্টর
 read রেদ
 reade রেদ
 reader রিডর
@@ -7677,7 +7657,7 @@ reames রিমস
 reams রিমস
 reason রিজন
 reaume রোম রুম
-reaux রো র
+reaux রো
 reaver রিভর রিবর
 reaves রিভ্যু
 reay রে
@@ -7718,7 +7698,7 @@ region রিজন
 regional রিজনেল রীজনেল
 register রেজিস্তর রেজিস্তার
 registrar রেজিষ্ট্রার
-registration রেজিস্ত্রেসন রেজিষ্ট্রেসন
+registration রেজিস্ত্রেসন
 reh রে রাই
 rehg রাইজ
 rehn রেন
@@ -7762,7 +7742,7 @@ renew রিন্যু
 renk রেঙ্ক
 renko রেঙ্ক
 renn রেন
-renna রেন রাইনা
+renna রেন
 renne রেন
 renno রেন
 reo রিও
@@ -7770,14 +7750,14 @@ repka রেপকী
 report রিপোর্ত রিপোর্ট
 repp রেপ
 reproductive রিপ্রদক্টিভ
-republic রিপব্লিক
-republica রিপব্লিক
-republika রিপব্লিক
+republic রিপব্লিক রিপাব্লিক
+republica রিপব্লিক রিপাব্লিক
+republika রিপব্লিক রিপাব্লিক
 request রিক্বেষ্ট
 resch রাইস
 rescue রেস্ক্যু
 research রিসর্চ রিসার্চ
-reserve রিজর্ব রিজর্ভ
+reserve রিজর্ভ রিজর্ব
 resh রাইস
 resign রিজাইন
 resin রেসন
@@ -7813,13 +7793,13 @@ rey রে
 reyna রেন
 reza রাইজ
 rha রো র
-rheault রো র
+rheault রো
 rheaume রোম রুম
 rheem রিম
 rhett রেৎ রেত
 rhew রো
 rhin রেন
-rho রো র
+rho রো
 rhoad রোদ
 rhoda রোদ
 rhode রোদ
@@ -7862,7 +7842,8 @@ rill রেল
 rilla রেল
 rinck রেঙ্ক
 rinella রেনেল
-ringe রিং
+ring রেন
+ringe রিং রেন
 rings রিন্যু
 rink রেঙ্ক
 rinke রেঙ্ক
@@ -7910,7 +7891,7 @@ robie রবি রবী
 robin রবিন
 roby রবি রবী
 robyn রোবিন রবিন
-rocard রেকোর্দ রিকোর্দ
+rocard রেকোর্দ
 rocca রক
 roccas রাকেশ রাকেস
 rocco রক
@@ -7925,7 +7906,7 @@ rode রোদ
 rodge রাজ রাজু
 rodgin রাজেন
 rodkey রোদকী
-roe রো র
+roe রো
 roed রোদ
 roehi রোই রবি
 roehl রোল
@@ -7936,7 +7917,7 @@ roen রন
 roes রোস রস
 roesch রোস রস
 roese রোস রস
-roh রো র
+roh রো
 rohan রন রোবিন
 rohde রোদ
 rohl রোল
@@ -7950,15 +7931,15 @@ rolla রোল
 rolle রোল
 rollo রোল
 rolm রোম
-roman রোমান
-romann রমন রোমান
-romanow রমন রমায়ন
+roman রমন
+romann রোমান রমন
+romanow রামায়ন রমন
 rome রোম
 romeo রোমীয়
 romey রোমী
 romm রোম রাম
 rone রন
-ronna রন রানি
+ronna রন রানী
 ronne রন
 ronnie রানী রানি
 ronny রানী রানি
@@ -7981,12 +7962,11 @@ ross রাস রোস
 rossa রোস রস
 rossano রসন
 rosse রাস রোস
-rossen রাসন
-rossiya রসিয়া
+rossen রাসন রাশন
 rosso রোস রস
-rosson রাসন
+rosson রাসন রাশন
 rossow রাস রোস
-rosten রাসন
+rosten রাসন রাশন
 rotary রোতরী রোতারী
 roten রতন রত্ন
 rothe রোদ
@@ -8005,10 +7985,10 @@ roux রো
 rouyn রোবিন
 roven রোবিন রবিন
 roving রোবিন রবিন
-row রো র
+row রো
 rowan রন রোবিন
 rowboat রোবোত
-rowe রো র
+rowe রো
 rowed রোদ
 rowen রন রোবিন
 rowena রোবিন রবিন
@@ -8021,7 +8001,7 @@ rowton রতন রত্ন
 roy রোই
 royale রোয়েল
 roye রোই
-roz রাজ রাস
+roz রাজ রাজু
 roza রোস রস
 rozen রাসন রাজেন
 rua রো
@@ -8072,7 +8052,7 @@ russ রাস রস
 russa রোস
 russe রাস রস
 russia রাস রস
-russian রাসন রসন
+russian রাসন রাশন
 russo রোস
 russow রাস রস
 rut রুৎ
@@ -8107,7 +8087,7 @@ sadder সদর
 sado সেদ
 saehan শেন
 saenz শিংজু শিংসু
-saez সিজ
+saez সিজ শিশু
 safe সেফ
 safety সেফতী সেফটি
 saffran সেফ্রোন
@@ -8120,7 +8100,7 @@ sahgal শগোল
 sahl সাল শাল
 sahli সোলি
 sahlman সলমান
-sahm শেম সেম
+sahm শেম
 said সেদ
 sail শেল সেল
 sails সেল্স শেলসু
@@ -8146,7 +8126,7 @@ sall সাল সোল
 salle শেল সেল
 salleh সলাই
 saller সোলর সোলার
-salm সাম শম
+salm শামু সাম
 salois সোল্ব
 salomon সলমান
 salow শেল সেল
@@ -8155,15 +8135,14 @@ salts সোল্টস
 salva সোল্ব
 salve সব সাব
 salves শাবসু
-sam শেম সেম
-same শেম সেম
+sam শেম
+same শেম
 samelle স্মাইল
 samet সমিৎ সমিত
 sami সেমি
 sammet সমিৎ সমিত
 sammie সেমি
 sammy সেমি
-samoa শেমবা
 sample সেম্পল
 san শেন সাইন
 sanction সেঙ্কসন
@@ -8184,7 +8163,7 @@ sans সাইন্স সেন্স
 sansing সেন্সিং
 sanso সাইন্স সেন্স
 sansoucie সাইন্সকী
-santa শেন
+santa শেন সাইন
 sante সন্ত সেন্ত
 santer সেন্তর
 santon শান্তনু
@@ -8207,32 +8186,32 @@ sas সেস
 sash সেস
 sasha সেস
 sass সেস
-sassano সাসন শাসন
+sassano শাসন সাসন
 sasse সেস
 sassi শাসি
 sasso সেস
-sasson সেসন সাসন
+sasson সেসন শাসন
 sassy শাসি
 sat সাইত সাইৎ
 sate সেৎ সেত
 satellite সেতলাইত সেতলাইৎ
 sather সদর
 sato সোত
-satoh সত সোত
+satoh সোত সত
 sauber সাবর
 saucy শাসি
 saud সাদু
 sauder সদর
-saudi সাউদী
+saudi সৌদী
 sauey শাই সাই
 sauk শক শোক
 saul সাল সোল
 sault সোল্ত
-saum সাম শামু
-sauna সনা সান
+saum শামু সাম
+sauna সান সন
 saur সর সার
 sauro সর সার
-sauve সব সাব
+sauve সাব সব
 savala সাবলে
 savanna স্বাইন সভান
 savannah স্বাইন সভান
@@ -8266,23 +8245,23 @@ sayle শেল সেল
 sayles সেল্স শেলসু
 sayre শেয়র সেয়র
 says সাইজ সিজ
-sbarro শ্বর স্বর
+sbarro শ্বর শ্বোর
 scale স্কেল
 scam স্কেম
 scan স্কেন
 scanner স্কেনর
 scar স্কোর
-scene শিন সিন
+scene শিন শীন
 scenes শিংজু শিংসু
 scent সেন্ত সেন্ট
 schaab সব সাব
 schaack শক শোক
 schaad সাদু
-schaadt শৎ সত
+schaadt শৎ সোত
 schaaf শাফু
 schaal শাল সাল
 schaap শোপ
-schaar সর সহর
+schaar সর শহর
 schab সব সাব
 schachter সেক্তর
 schack শক
@@ -8293,18 +8272,18 @@ schadt সাইত সাইৎ
 schaedel সেদুল
 schaer সর সার
 schaff শাফু সেফ
-schaja শজি সহজ
+schaja সহজ শজি
 schalk শক শোক
 schall শাল সাল
 schaller সোলর সোলার
 schalow শেল
 schama শম শামু
 schanz সাইন্স সেন্স
-schar সর সহর
+schar সর শহর
 schardt শোর্ত শরৎ
-scharr সর সহর
+scharr সর শহর
 schau শো সো
-schaub সব সাব
+schaub সাব সব
 schaul সোল
 schaum শম শমু
 schaut সোত শৎ
@@ -8331,8 +8310,8 @@ schemm শেম
 schena শিন শীন
 schendel শেন্দাল
 schenley শেংলি
-scher সর সহর
-scherb সর্ব সরবু
+scher সর শহর
+scherb সরবু সর্ব
 schering শৈরেং শেরিং
 scherr শেয়র সেয়র
 scheuring শৈরেং শেরিং
@@ -8344,10 +8323,10 @@ schiele শিল সিল
 schiess শিশু
 schiferon সেফ্রোন
 schiff সেফ
-schill শেল শিল
+schill শেল
 schilling সিলিং
-schillo স্কিল
-schilz সেল্স শেলসু
+schillo স্কিল স্কেল
+schilz শেলসু সেল্স
 schindel শেন্দাল
 schirm শর্ম সরম
 schliep স্লিপ
@@ -8370,9 +8349,9 @@ schoene সাইন
 schoepe শোপ
 schoepf শোপ
 schoepp শোপ
-schoff শাফু সোফ
+schoff শাফু
 scholar স্কোলর স্কোলার
-scholarship স্কোলরশিপ স্কোলারশিপ
+scholarship স্কোলারশিপ স্কোলরশিপ
 scholer সোলর সোলার
 scholey সোলি
 scholl শাল সাল
@@ -8382,7 +8361,7 @@ scholtes সোল্টস
 scholtz সোল্টস
 schomer সমর
 schommer সমর
-schon শন সন
+schon শন সান
 schone শন সন
 schoo সু শো
 schoof সোফ
@@ -8392,11 +8371,11 @@ schooled স্কুলদ
 schooler স্কোলর স্কোলার
 schopp শোপ
 schoppe শোপ
-schor সর সহর
+schor সর শহর
 schork সার্ক সরক
-schorr সর সহর
+schorr সর শহর
 schorsch সোর্স
-schott শৎ সত
+schott শৎ সোত
 schou সু শো
 schrack সরক শরক
 schram শ্রম সরম
@@ -8431,11 +8410,11 @@ schulten সুল্তান সুলতান
 schultz সোল্টস
 schulz সোল্টস
 schulze সোল্টস
-schum শম শুম
-schumm শম শুম
-schur সর সহর
+schum শম শামু
+schumm শম শামু
+schur সর শহর
 schuring শৈরেং শেরিং
-schurr সর সহর
+schurr সর শহর
 schut শৎ সত
 schuth সোত
 schutt শৎ সত
@@ -8448,9 +8427,9 @@ schwenn স্বাইন
 schwer শ্বর
 schwing স্বিং
 sci সি সী
-scianna সনা শানা
-sciara সর সহর
-sciarra শিয়র সিয়র
+scianna শানা সনা
+sciara সর শহর
+sciarra শিয়র শিয়ার
 scilla শেল সেল
 scinta সেন্ত সেন্ট
 scinto সেন্ত সেন্ট
@@ -8470,22 +8449,22 @@ scripp স্ক্রেপ
 scull স্কুল
 sculpture স্কল্পচর
 scylla শেল সেল
-scythe সিত সাইত
+scythe সিত সীত
 sea সি সী
 seabaugh শিবা শীবা
 seaga সিগী সীগী
 seal শিল সিল
 seale শিল সিল
 sealing সিলিং
-sean শন সান
+sean সান শন
 sear শিয়র সিয়র
 search সর্চ
 searcy শারসি
-searing শৈরেং শিয়রিং
-seas সিজ
-sease সিজ
-seat সিত সীত
-seato সিত সীত
+searing শৈরেং শেরিং
+seas সিজ শিশু
+sease সিজ শিশু
+seat সীত সিত
+seato সীত সিত
 seay সে শে
 secateur সেক্তর
 seckel সাইকল
@@ -8499,10 +8478,10 @@ sedge সাইজ
 sedona সদন
 see সী
 seed সীদ
-seen শিন সিন
+seen শিন
 seer শিয়র সিয়র
-sees সিজ
-seese সিজ
+sees সিজ শিশু
+seese সিজ শিশু
 seethe সিদ সীদ
 seething সিদিং
 seff সেফ
@@ -8520,15 +8499,16 @@ seip শিপ
 seipp শিপ
 seis শিশু
 seita সেত সেৎ
-seith সিত সীত
+seith সীত সিত
 seix সিক্স
-seize সিজ
-sejm শেম সেম
-selas সেল্স শেলসু
+seize সিজ শিশু
+sejm শেম
+selas শেলসু সেল্স
 selbe শেলবু
 selection সেলেক্সন
 selena সোলীনা
-selfie সেল্ফী সেল্ফি
+self সেলফ
+selfie সেলফী সেল্ফী
 selina সোলীনা
 sell শেল সেল
 sella শেল সেল
@@ -8556,27 +8536,27 @@ sensitive সেন্সিতিব সেন্সিটিভ
 sensitivity সেন্সিতিবিতী
 sent সেন্ট
 senter সেন্তর
-senters সেন্তর্স সেন্তরসু
+senters সেন্তরসু সেন্তর্স
 sentras সেন্তরসু সেন্তর্স
 seoul সোল
 sepe শিপ
 september সেপ্তেম্বর সেপ্টেম্বর
-seraw সর
-serb সর্ব সরবু
+seraw সর সার
+serb সরবু সর্ব
 serbs শারবসু
-serco সার্ক সরক
+serco সরক সার্ক
 sere শিয়র সিয়র
 series সিরিজ সেরিজ
 serota সরত শরত
 serr শেয়র সেয়র
 serra শেয়র সেয়র
 serrato সরত শরত
-serum সিরম শেরাম
-serv সর্ব সরবু
+serum শেরাম সিরম
+serv সরবু সর্ব
 servaas শারবসু
 servais সর্ভে সর্বে
 servant সর্ভেন্ত
-serve সর্ব সরবু
+serve সরবু সর্ব
 serves শারবসু
 service সর্ভিস সর্বিস
 servicing সর্ভেশিং
@@ -8594,7 +8574,7 @@ severe শিবির
 seville সিভিল সিবিল
 sew শো সো
 sewall সোল
-sewell সোইল
+sewell সোইল সোল
 sewn সন শন
 sexson সেক্সন
 seydel সেদুল
@@ -8620,7 +8600,7 @@ shahrokh শোরোক সরক
 shaine শেন
 shakes সেক্স
 shale শেল
-shales সেল্স শেলসু
+shales শেলসু সেল্স
 shall শেল
 shallow শেল
 shalom স্লম
@@ -8636,18 +8616,18 @@ shanty শান্তি
 shaquille স্কিল
 share শেয়র সেয়র
 sharing শৈরেং শেরিং
-shark সরক
+shark সার্ক
 sharon শুরোন
 sharrock সরক শরক
-sharrow সর সহর
+sharrow সর শহর
 sharry শারি
 sharum সরম
 shatt সাইত সাইৎ
-shaub সব সাব
+shaub সাব সব
 shaul শাল সাল
 shaull শাল সাল
-shaun শন সান
-shauna সনা শানা
+shaun সান শন
+shauna সান শন
 shave সেভ সেব
 shaving সেভিং সেবিং
 shavings সেভিংস
@@ -8656,7 +8636,7 @@ shawl শাল সাল
 shawler সোলর সোলার
 shawley সোলি
 shawmut সমিৎ সমিত
-shawn শন সান
+shawn সান শন
 shawnut সন্ত শান্ত
 shawver সাবর
 shay শে সে
@@ -8668,9 +8648,9 @@ shead সাইদ সেদ
 sheahan শীন শিন
 shean শিন শীন
 shear শিয়র সিয়র
-shearing শৈরেং শিয়রিং
-sheath সিত সীত
-sheathe সিদ শহীদ
+shearing শৈরেং শেরিং
+sheath সীত সিত
+sheathe শহীদ সিদ
 sheathing সিদিং
 shebek সেবক
 shed সাইদ
@@ -8687,13 +8667,14 @@ sheila শিল সিল
 sheilah শিল সিল
 shein সাইন
 shekel সাইকল
+shelf সেলফ
 shell শেল
-shells সেল্স শেলসু
+shells শেলসু সেল্স
 shelve শেলবু
 sheng শেন
 shere শিয়র সিয়র
 sheree শারি
-sherk সার্ক সরক
+sherk সরক সার্ক
 sherr শেয়র সেয়র
 sherrow শেয়র সেয়র
 sherva সর্ভে সর্ব
@@ -8709,7 +8690,7 @@ shiff সেফ
 shifty সেফতী সেফটি
 shih সি সী
 shiina শিন শীন
-shill শেল শিল
+shill শেল
 shilling সিলিং
 shim শেম
 shimmy সেমি
@@ -8720,14 +8701,14 @@ shingle সিঙ্গল
 shingles সিঙ্গলস
 shinn শেন শিন
 shinnick সৈনিক
-shintaro সেন্তর
+shintaro সেন্তর সেন্টার
 shinto সেন্ত সেন্ট
 shipp শিপ
-shir সর সহর
+shir সর শহর
 shira শিয়র সিয়র
 shirah শিয়র সিয়র
-shirk সার্ক সরক
-shirr সর সহর
+shirk সরক সার্ক
+shirr সর শহর
 shirt শরৎ শরত
 shit সীত
 shitila স্তীল স্তিল
@@ -8742,7 +8723,7 @@ shod সাদু
 shoddy সৌদী সৌদি
 shoe সু শো
 shoen শুনু
-shoff শাফু সোফ
+shoff শাফু
 sholem সলাম
 sholl শাল সাল
 sholly সোলি
@@ -8751,21 +8732,21 @@ shoney সৌনি
 shooting সুতিং
 shope শোপ
 shoppe শোপ
-shore সর সহর
+shore সর শহর
 shored শরদ
 shoreham শর্ম সরম
 shores সোর্স
 shorey শারি
-shorr সর সহর
+shorr সর শহর
 short শোর্ট
 shortt শোর্ত শোর্ট
-shot শৎ সত
-shott শৎ সত
+shot শৎ
+shott শৎ সোত
 shoults সোল্টস
 shoultz সোল্টস
 shoup শোপ
 shoupe শোপ
-shove সব সভ
+shove সব সাব
 shover সাবর
 shoves শাবসু
 show শো সো
@@ -8789,10 +8770,10 @@ shuler সোলর সোলার
 shull শাল সাল
 shultz সোল্টস
 shun শন সন
-shunt সন্ত
-shunto সন্ত
+shunt সন্ত শান্ত
+shunto সন্ত শান্ত
 shupe শোপ
-shurr সর সহর
+shurr সর শহর
 shut শৎ সত
 shute সোত
 shutt শৎ সত
@@ -8818,7 +8799,7 @@ siege সিজ
 sieh সি সী
 sieja সি সী
 sieling সিলিং
-sies সিজ
+sies সিজ শিশু
 siess শিশু
 sieve শিব সেভ
 sieving সেভিং সেবিং
@@ -8829,7 +8810,7 @@ sighs সাইজ
 sight সাইত সাইৎ
 sign সাইন
 signa শিগনি
-signature সিগ্নেচর সিগনেচর
+signature সিগনেচর সিগ্নেচর
 signs সাইন্স
 sikhs সিক্স
 silber সিলবর
@@ -8837,10 +8818,10 @@ silga শেলগী
 sill শেল সেল
 sills সেল্স শেলসু
 silva শেলবু
-silver সিলভর সিলভার
-sim শেম সেম
+silver সিলভার সিলভর
+sim শেম
 simba শেম্বা
-simm শেম সেম
+simm শেম
 simple সেম্পল
 sin শেন
 sinay সিনে
@@ -8858,19 +8839,19 @@ single সিঙ্গল
 singles সিঙ্গলস
 singley শিংলি শেংলি
 singly শিংলি শেংলি
-sings শিংজু সেন্স
+sings শিংজু শিংসু
 sinn শেন শিন
 sinnott সেন্ত সেন্ট
-sins সেন্স শিংজু
+sins শিংজু সেন্স
 sinus সাইন্স
 siobhan সভান
 sioux সু শো
 sipp শিপ
-sir সর
-sirk সার্ক সরক
-sirko সার্ক সরক
+sir সর সার
+sirk সরক সার্ক
+sirko সরক সার্ক
 sirna সরনা
-sis সেস শিশু
+sis শিশু সেস
 sison সেসন
 sisson সেসন
 sister সিস্তর
@@ -8886,7 +8867,7 @@ skaar স্কোর
 skalla স্কেল
 skehan স্কেন
 skein স্কেন
-skill স্কিল
+skill স্কিল স্কেল
 skilling স্কিলিং
 skills স্কিল্স
 skim স্কীম
@@ -8898,12 +8879,12 @@ skura স্কোর
 sky শকই
 skye শকই
 slaght স্লেৎ
-slam সলাম
+slam স্লম
 slat স্লেৎ
 slate স্লেৎ
 sligh সলাই
 slit স্লেৎ
-slum স্লম সলাম
+slum সলাম স্লম
 sly সলাই
 slye সলাই
 small স্মোল
@@ -8934,13 +8915,12 @@ soared শরদ
 soars সোর্স
 soave সব সভ
 sob সাব
-sobota শাবতা
 sobs শাবসু
-social সোসল সোসেল
+social সোসেল সোসল
 socio সোসিও
 sock শক শোক
 sod সাদু
-soda সৌদি সৌদী
+soda সৌদী সৌদি
 sodden সদন
 soden সদন
 soder সদর
@@ -8950,7 +8930,7 @@ soggy শাগী
 sohl সোল
 sohm শম শমু
 sohmer সমর
-sohn সন সান
+sohn সান সন
 soileau সোইল
 soja শজি
 solar সোলার
@@ -8977,14 +8957,14 @@ somali শেমলি
 some শম সুম
 somer সমর
 somma সাম শম
-somme সাম শামু
+somme শামু সাম
 sommer সমর
 son শন
 sonat সন্ত সান্ত
 sonet সন্ত
 song সান
-sonn সন সান
-sonne সন সান
+sonn সান সন
+sonne সান সন
 sonnen শান্ন
 sonnett সন্ত সান্ত
 sonny শানি
@@ -9031,7 +9011,7 @@ spaces স্পেসিস
 spaceship স্পেসশীপ
 spacial স্পেশাল
 spacious স্পেসিস
-sparta স্পোর্ত সপোর্ত
+sparta সপোর্ত স্পোর্ত
 spartz স্পোর্তস স্পোর্টস
 spasso স্পেস
 spatial স্পেশাল
@@ -9047,7 +9027,7 @@ spirit স্পিরিত
 splashing সপ্লাইশিং
 splicing সপ্লাইশিং
 sponsored স্পোন্সর্দ
-sport সপোর্ত
+sport স্পোর্ত
 sports স্পোর্টস
 spray স্প্রে
 sprinkler স্প্রিঙ্কলর
@@ -9073,7 +9053,6 @@ stall স্তোল
 stand স্তেন্দ
 standa স্তেন্দ
 standard স্তেন্দর্দ স্তেন্দার্দ
-stano ষ্টোন
 stapp ষ্টেপ
 star স্তোর
 starr স্তোর স্তার
@@ -9083,7 +9062,7 @@ stassen স্তেসন
 stat স্তেত স্তেৎ
 state স্তেত স্তেৎ
 statehood স্তেৎহুদ স্তেতহুদ
-statement স্তেৎমেন্ত স্তেতমেন্ত
+statement স্তেতমেন্ত স্তেৎমেন্ত
 states স্তেতস স্তেৎস
 station স্তেসন স্তেশন
 stats স্তেতস স্তেৎস
@@ -9181,7 +9160,7 @@ studies স্তদীজ স্তদিজ
 study স্তদী
 stueck স্তোক
 stuff স্তাফ
-stuhr স্তোর স্তার
+stuhr স্তার স্তোর
 stuka স্তোক
 stump স্তাম্প
 stumpe স্তাম্প
@@ -9189,7 +9168,7 @@ stumpo স্তাম্প
 stumpp স্তাম্প
 stupa স্তোপ
 style স্তাইল স্টাইল
-subject সবজেক্ত
+subject সবজেক্ত সাবজেক্ট
 submarine সবমেরিন
 submission সবমিসন
 submit সবমিট
@@ -9204,7 +9183,7 @@ sudden সদন
 sue সু শো
 suen শুনু
 suey সুই শুই
-suh সু শা
+suh সু স
 suhler সোলর সোলার
 suhm সুম শুম
 suhr সুর
@@ -9229,7 +9208,7 @@ sumo শুম
 sumrow সমর
 sun সন শন
 sunder সুন্দর
-sundt সন্ত
+sundt সন্ত সান্ত
 sung সন শঙ
 sunny শানি
 suntan শান্তনু
@@ -9244,18 +9223,18 @@ support সপোর্ত সপোর্ট
 supporting স্পোর্তিং সপোর্টিং
 supports স্পোর্তস স্পোর্টস
 supreme সুপ্রিম সুপ্রীম
-surbaugh সর্ব শারবা
+surbaugh শারবা সর্ব
 sure সুর
 suren শুরোন
 surgery সর্জরী সর্জরি
 surgical সর্জিকেল
-surma শর্ম শর্মা
-surratt সোর্ট সরত
+surma শর্ম সরম
+surratt সোর্ট শোর্ত
 surrender সরেন্দর
 surrey শারি
 surry শারি
 survey সর্ভে সর্বে
-susong সাসন শাসন
+susong শাসন সাসন
 sustainability সস্তেনেবিলিতী
 sustainable সস্তেনেবল
 suther সদর
@@ -9265,7 +9244,7 @@ suzie শজি শাসি
 sven স্বাইন
 swan সভান
 swann স্বান সভান
-swatch স্বচ স্বছ
+swatch শ্বাছ স্বচ
 sweatt স্বীৎ
 sweden স্বীদেন
 sweers সভির্স
@@ -9281,12 +9260,12 @@ syd সিদ সীদ
 sydow সিদ সীদ
 syed সাইদ
 sylla শেল সেল
-sylph সেল্ফ
-sym শেম সেম
+sylph সেল্ফ সেলফ
+sym শেম
 symbol সিম্বোল
 symposium সিম্পোজিয়াম
 syn শেন শিন
-syna শেন সিনা
+syna শেন শিন
 syndrome সিন্দ্রোম
 synnott সেন্ত সেন্ট
 synthetic সিন্থেতিক
@@ -9296,21 +9275,21 @@ system সিস্তেম সীস্তেম
 szabo সব সাব
 szalay সলাই
 szanto সন্ত সেন্ত
-szczerba সর্ব সর্বে
+szczerba সর্ব সরবু
 sze সি সী
-szeto সিত সীত
+szeto সীত সিত
 szilagyi শেলগী
 szoke শক শোক
-szot শৎ সত
-szott শৎ সত
+szot শৎ সোত
+szott শৎ সোত
 szuba শুবা
 tabb তাব
 table তেবল টেবল
 tableau তেবল টেবল
 tableaux তেবল টেবল
 tabs তাবসু
-tack তেক তক
-tacke তেক তক
+tack তেক টেক
+tacke তেক টেক
 tacked তেক্ত
 tacks তেক্স
 tact তেক্ত
@@ -9351,11 +9330,11 @@ tanned তংদু
 tanner তেনর
 tans তানসু
 tant তেন্ত
-tap তেপ
+tap তেপ তাইপ
 tape তেপ
 tapie তাপী তাপি
-tapp তেপ তপ
-tappe তেপ তপ
+tapp তেপ তাইপ
+tappe তেপ তাইপ
 tar তরু
 tardy তারদি
 target তার্গেত
@@ -9372,12 +9351,12 @@ tassin তাশিন
 taste তেস্ত
 tasting তেস্তিং
 tatsch তচ
-tattle তাইতল
+tattle তাইতল টাইটেল
 taube তাব
 taubes তৌবসু
-taught তত তৎ
+taught তৎ তত
 taul তোল টোল
-taut তত তৎ
+taut তৎ তত
 tawdry তাদ্রি তৌদ্রি
 tawes তসু
 tawney তোনী
@@ -9398,7 +9377,7 @@ teale তিল
 teall তিল
 team তীম তিম
 tear তিয়র তায়র
-teare তিয়র
+teare তিয়র টিয়ার
 teas টিসু
 tease টিসু
 teasing তিশিং
@@ -9411,11 +9390,11 @@ teck তেক টেক
 teehan তিন টিন
 teele তিল
 teen টিন
-teer তিয়র
+teer তিয়র টিয়ার
 tees টিসু
 tegge তেগ
 tehan তেন তিন
-teitel তাইতল
+teitel তাইতল টাইটেল
 teitell টাইটেল
 telemedicine তেলিমেদিসিন
 telephone তেলিফোন তেলেফোন
@@ -9438,7 +9417,7 @@ tension তেন্সন
 tenth তেন্ত
 terada তরাদা
 terbush তারবসু
-term তর্ম টর্ম
+term তর্ম তার্ম
 terrana তরাইনা তরানা
 terrasi তারসি
 terre তায়র
@@ -9464,7 +9443,7 @@ thames তাইম্স
 than দান দিন
 thanh তন তান
 thank তেঙ্ক থেঙ্ক
-thano তন তোন
+thano তোন তন
 thanos তানসু
 thar তরু
 that দাইত দাইট
@@ -9472,19 +9451,19 @@ thatch তচ
 thaw থা তা
 thaws থাজ থাসু
 thayne তেন টেন
-the দা দি
+the দি দা
 theall তিল
 theano তিন টিন
 thee দি
 theel তিল
 them দাম থিম
-theme তীম থিম
+theme তীম থীম
 then দেন
 theory থিরি
-therapy থেরাপি থেরাপী
-therm তর্ম টর্ম
+therapy থেরাপী থেরাপি
+therm তর্ম তার্ম
 thermal থর্মেল
-thermo তর্ম টর্ম
+thermo তর্ম তার্ম
 theroux তরু থরো
 thesing তিশিং
 theta তেতে
@@ -9495,10 +9474,10 @@ thicket তিকেৎ তিকেত
 thiel তিল
 thiele তিল
 thielke তিলক
-thiem তীম থিম
-thieme তীম থিম
+thiem তীম থীম
+thieme তীম থীম
 thien তিন টিন
-thier তিয়র
+thier তিয়র টিয়ার
 thierry থিরি
 thiery থিরি
 thies টিসু
@@ -9528,10 +9507,10 @@ thoma থৌমী তম
 thomann দোমেন
 thome তম
 thomley থম্লি তম্লি
-thon তন তোন
+thon তোন তন
 thone তোন তন
 thor তরু
-thora তরা থৌরি
+thora থৌরি থৌরী
 thoreau থরো তরৌ
 thorn তর্ন
 thorne তর্ন
@@ -9545,9 +9524,9 @@ thrashed ত্রস্ত
 thrashing ত্রেসিং
 thread ত্রেদ
 threading ত্রেদিং
-threat তরেৎ থ্রেত
+threat তরেৎ তরেত
 threatt ত্রিৎ
-three ত্রী থ্রি
+three ত্রী
 threet ত্রিৎ
 thresh ত্রেস
 threw তরু থ্রু
@@ -9565,19 +9544,19 @@ thrun তরুন
 thrush থ্রস
 thrust ত্রস্ত
 ths তসু
-thul তল তুল
-thull তল তুল
+thul তুল তল
+thull তুল তল
 thumb থুম তম
 thumm থুম তম
 thumma থুম তম
 thun তন তান
 thune তোন
 thuot থোত থোৎ
-thurm তর্ম টর্ম
+thurm তর্ম তার্ম
 thurn তর্ন
 thurnau তর্ন
 thurow তুর
-thus দসু দাস
+thus দাস দসু
 thuy তু
 thweatt ত্বীত ত্বীৎ
 thwing ত্বিন
@@ -9594,7 +9573,7 @@ ticket তেক্ত তিকেৎ
 ticks তেক্স
 tics তেক্স
 tie তাই
-tier তিয়র
+tier তিয়র টিয়ার
 tig তেগ
 tigar তাইগর
 tiger তাইগর
@@ -9606,12 +9585,12 @@ times তাইম্স
 timm তীম তিম
 timme তীম তিম
 tin তেন
-tina তিনা
+tina টিন
 tinder তেন্দর
 tingey তিনগী
 tingley তিংলি
 tinker তেঙ্কর
-tinkering তিঙ্করিং
+tinkering তিঙ্করিং তিনকরিং
 tinley তিংলি
 tint তেন্ত
 tinto তেন্ত
@@ -9624,7 +9603,7 @@ tisch টিসু
 tish টিসু
 tissue টিসু
 titinus টেতানস টেটানস
-title তাইতল
+title তাইতল টাইটেল
 tkacz কোচ
 toa তৌবা তু
 toal তোল টোল
@@ -9665,7 +9644,7 @@ tonia তোনী
 tonie তোনী
 tonk তাঙ্ক
 tonka তাঙ্ক
-tonn তন তোন
+tonn তোন তন
 tonne তন তান
 tonnes তানসু
 tons তানসু
@@ -9674,14 +9653,14 @@ toohey তোই
 tool তোল
 toole তুল তোল
 toomer তোমার
-toone তোন ত্যুন
+toone তোন
 tootal টোটেল
 toothed তোদদ
 toothy তোতি তোতী
 tootle টোটেল
 tope তোপ
 topeka তোপিক
-topp তোপ তপ
+topp তোপ
 tor তরু
 torah তৌরি তারি
 toray তারে তৌরে
@@ -9705,8 +9684,8 @@ tosh তসু
 toss তসু
 tossing তাশিন তশেং
 total টোটেল
-tote তত তৎ
-toth তত তৎ
+tote তৎ তত
+toth তৎ তত
 totten তৎন
 totton তৎন
 totty তোতি তোতী
@@ -9719,7 +9698,6 @@ tournament তুর্নামেন্ত
 tousey তাসি
 toussaint ত্যুসন
 tov তৌ
-tovaz তৌবসু
 tovey তৌই
 tovia তৌবীয়ু তৌবিয়ু
 towe তৌ তো
@@ -9745,9 +9723,9 @@ traffic ত্রাফিক
 trafficking ত্রাফিকিং
 train ত্রেন
 trained ত্রেন্দ
-trainee ত্রেনি ত্রেনী
+trainee ত্রেনী ত্রেনি
 trainer ত্রেনর
-training ত্রেনিং
+training ত্রেনিং ত্রেনীং
 trainings ত্রেনিংসু
 trainor ত্রেনর
 trains ত্রেনসু
@@ -9756,7 +9734,7 @@ trampe ত্রম্প
 tran ত্রেন
 trance ত্রেনসু
 trane ত্রেন
-trang ত্রেন
+trang ত্রেন তরেং
 trans ত্রেনসু
 transection ত্রান্সেক্সন
 transfer ত্রান্সফর
@@ -9770,9 +9748,9 @@ trashing ত্রেসিং
 traub তরাবু
 traugh তরা
 traum তরাম
-trauma ত্রোমা তরাম
+trauma তরাম
 travail ত্রাভেল ত্রাবেল
-travel ত্রাইবেল ত্রাইবল
+travel ত্রাইবেল
 traynor ত্রেনর
 trays ত্রেস
 tread ত্রেদ
@@ -9789,15 +9767,15 @@ tress ত্রেস
 treu তরু
 trew তরু
 trezza ত্রেস
-tribal ত্রাইবেল ত্রাইবল
+tribal ত্রাইবেল
 tribble ত্রেবেল
 tribe ত্রাইব
 trible ত্রেবেল
 tribull ত্রেবেল
-tricia ত্রীসা ত্রেস
+tricia ত্রেস ত্রীসা
 trick ত্রেক
 tricking ত্রেকিং
-trie ত্রাই তরাই
+trie তরাই ত্রাই
 trieu তরু
 trillion ত্রিলয়ন
 trinh ত্রেন
@@ -9808,7 +9786,7 @@ trippe ত্রিপ
 trippel ত্রিপল
 tripple ত্রিপল
 trish ত্রেস
-tritt তরেৎ ত্রিৎ
+tritt তরেৎ তরেত
 trophy ত্রোফী
 trouble ত্রাবেল
 troup ত্রুপ
@@ -9826,7 +9804,7 @@ trupp ত্রুপ
 trust ত্রস্ত
 trustee ত্রস্তী
 trusty ত্রস্তী
-try ত্রাই তরাই
+try তরাই ত্রাই
 tsai শাই সাই
 tsang শেন সাইন
 tsar সর সার
@@ -9849,7 +9827,7 @@ tue তু
 tuel তুল তোল
 tuell তুল তোল
 tulip তোলোপ
-tull তল তুল
+tull তুল তল
 tullo তুল তোল
 tulloch তলাক
 tullock তলাক
@@ -9857,7 +9835,7 @@ tulsa তুলসী
 tumor তোমার
 tuna তোন ত্যুন
 tunde তংদু
-tune তোন ত্যুন
+tune তোন
 tunnel তনেল
 tunnell তনেল
 tuohy তোই
@@ -9881,8 +9859,8 @@ turri তোরি
 tusk তাস্ক
 tussey তাসি
 tussing তশেং তাশিন
-tut তত তৎ
-tutt তত তৎ
+tut তৎ তত
+tutt তৎ তত
 tutti তোতি তোতী
 tutton তৎন
 tuyle তুল তোল
@@ -9904,7 +9882,7 @@ ueda বেদ ভেদ
 ueno বেন
 uhde অদু
 uhh এ উ
-uhl অল অলু
+uhl অল আলু
 uhle ওল
 uhr ওর
 ukraine য়ুক্রেন
@@ -9923,7 +9901,7 @@ unearth নর্থ
 unease অনিসু
 uneasy অনীসি অনিসি
 unesco য়ুনেস্কো
-ung অন উন
+ung উন অন
 unglue এঙ্গলো
 ungo ঙ
 unicorn য়ুনিকোর্ন
@@ -9945,7 +9923,7 @@ update অপদেৎ অপদেত
 upgrade অপগ্রেদ
 upham অপাম
 upload অপলোদ
-upon অপন ওপন
+upon পান ওপন
 upp অপ উপ
 upper অপর
 urban অর্বান আর্বান
@@ -9988,7 +9966,7 @@ vales ভেল্যু
 valet বলে
 valid ভেলিদ
 validity ভেলিদিটি
-valla বাল ৱাল
+valla বাল ৱেল
 valle ভেলু ৱেল
 valleau বিল বাল
 vallee ভেলী
@@ -10021,7 +9999,7 @@ vanwhy ৱাংবী
 vanwie ৱাংবী
 varden বর্দন
 varga ৱারগী
-vase বোস বস
+vase বোস বেস
 vass ভাইস বস
 vast ৱেস্ত বেস্ত
 vath বাত ৱাত
@@ -10078,7 +10056,6 @@ verma ৱাইরম
 vern বর্ন
 verna বর্ন
 verne বর্ন
-veroa ৱারবা
 verrell ভাইরেল
 version ভর্জন বর্জন
 versus ভর্সেস
@@ -10108,14 +10085,14 @@ vicks ৱেক্স
 victim ভিক্তিম
 victoria ভিক্তোরিয়া
 victory ভিক্তরী
-video ভিদিও
+video ভিদিও ভীদিও
 vidor ৱেদর
 vie ৱাই ভাই
 viel বিল ভিল
 viele বিল ভিল
 vien বিন
 vienneau ৱান ৱন
-viera বীর বির
+viera বীর ভীর
 vierra বীর বির
 vies ভাইস
 vigue বিগ
@@ -10127,7 +10104,7 @@ villi ভেলী
 vinca বেঙ্ক
 vink বেঙ্ক
 viral ভাইরেল
-virco ৱর্ক ৱার্ক
+virco ৱার্ক ৱর্ক
 virden বর্দন
 vires ভাইরস
 virga ৱারগী
@@ -10138,13 +10115,13 @@ virts ভারতসু
 virtual ভর্চুৱল
 virus ভাইরস ভাইরাস
 vis বেস
-visa ভিজা বিজ
+visa বিজ ভিজা
 vise ভাইস
 vision ভিজন বিজন
 visit ভিজিট ভিজিত
 vist ৱেস্ত বেস্ত
 vista ৱেস্ত বেস্ত
-vitia ভিসা ভিসি
+vitia ভিসি ভিসা
 viv ৱেব ৱেভ
 vivie বেবী
 vixen ভেক্সিন বেক্সিন
@@ -10325,7 +10302,7 @@ weisse ভাইস
 weisz ভাইস
 weith ৱিথ
 weld ৱাইল্দ
-welfare ৱেলফেয়র
+welfare ৱেলফেয়র ৱেলফেয়ার
 welge ভেল্যু
 well ৱেল ভেলু
 welle ৱেল ভেলু
@@ -10342,10 +10319,10 @@ wenge বেন
 wenk বেঙ্ক
 wenke বেঙ্ক
 werden বর্দন
-were ৱার বর
-werk ৱর্ক ৱার্ক
-werke ৱর্ক ৱার্ক
-werking ৱর্কিং ৱার্কিং
+were ৱার বার
+werk ৱার্ক ৱর্ক
+werke ৱার্ক ৱর্ক
+werking ৱার্কিং ৱর্কিং
 werne বর্ন
 werning ৱার্নিং
 werre বের
@@ -10403,7 +10380,7 @@ whirled ৱর্ল্দ ৱার্ল্দ
 white হ্বাইত
 whither ৱেদর
 whitty বেতি বেতী
-whiz বেজ বিজ
+whiz বেজ ৱেজ
 who হু হো
 whoa ৱো হো
 whole হোল
@@ -10411,7 +10388,7 @@ wholey হোলি হোলী
 wholly হোলি হোলী
 whom হোম হুম
 whoo বু ৱো
-whoosh বোস ৱুশু
+whoosh ৱুশু বোস
 whore হার হর
 whores হোর্স হর্শ
 why ৱাই ভাই
@@ -10448,7 +10425,7 @@ wild ৱাইল্দ
 wilde ৱাইল্দ
 wildlife ৱাইল্দলাইফ
 wildt বেল্ট
-will বিল ৱিল
+will বিল বাল
 willa বিল ৱিল
 wille বিল ৱিল
 willey ভেলী
@@ -10487,7 +10464,7 @@ wishon বিষ্ণু
 wishy ভিসি
 wisley বিজলী
 wiss বেস
-wissa ভিসা বেস
+wissa বেস ভিসা
 wissing বেসিন
 wist ৱেস্ত বেস্ত
 wisz বেস
@@ -10520,9 +10497,9 @@ wong ৱান ৱন
 woodie বোদি বোদী
 woody বোদি বোদী
 woong বোন
-wooten ভুতান বুটন
-wootten ভুতান বুটন
-wootton ভুতান বুটন
+wooten ভুতান
+wootten ভুতান
+wootton ভুতান
 word ৱার্দ বর্দ
 worden বর্দন
 wore ৱার বোর
@@ -10537,7 +10514,7 @@ worn বর্ন
 worrier ৱারিয়র
 worry ৱারী ৱারি
 worth ভারত
-worthen বর্তন বার্তন
+worthen বার্তন বর্তন
 worths ভারতসু
 worts ভারতসু
 wouk বুক
@@ -10547,21 +10524,21 @@ woven ভবন
 woy ভোই
 wrack রক
 wrap রেপ
-wrath রেৎ রথ
+wrath রেৎ রাইৎ
 wray রে
 wreaks রিক্স
 wrenn রেন
 wrice রাইস
 wright রাইৎ রাইট
 wrights রাইৎস রাইটস
-wring রিং
+wring রিং রেন
 writ রেৎ রেত
 write রাইৎ রাইট
 writer রাইটার
 writers রাইটার্স রাইটর্স
 writes রাইৎস রাইটস
 writhe রেৎ রেত
-wroe রো র
+wroe রো
 wrona রন
 wrong রন রং
 wronged রাউন্দ রাউন্ড
@@ -10576,7 +10553,7 @@ wunsch বনস
 wurm ৱার্ম
 wurth ভারত
 wurtz ভারতসু
-wuss বস
+wuss বস ৱাসু
 wussow বস
 wuttke বাতকী
 wyble বাইবল
@@ -10591,13 +10568,13 @@ wynne বিন বেন
 wynter ৱিন্তর
 wyse ভাইস
 wyss বেস
-xan শন সন
+xan শন সান
 xebec সেবক
-xena জীনা জিনা
+xena জেএন জীনা
 xene জেএন শিন
 xero জেরো শেয়র
-xhosa জোশি জোস
-xie জি সি
+xhosa জোশী জোস
+xie জি জী
 xing শিং শেন
 xio জো জা
 xiong জোন জন
@@ -10605,13 +10582,12 @@ xoma জোমি শম
 xtra এক্সত্রা
 xuan জৱান
 xue সু জো
-yabba য়াবা
+yabba য়াবা য়াব
 yacht য়োৎ য়ত
 yack য়েক
 yacko য়েক
 yadda য়াদে
 yaffe য়াইফ
-yagoda য়োগদা
 yah য়া য়ো
 yahn য়েন
 yahr য়োর
@@ -10667,8 +10643,8 @@ zahn জন শেন
 zahnow জন জোন
 zaid সেদ
 zak শক
-zale শেল সেল
-zalm জাম সাম
+zale শেল জেল
+zalm জাম শামু
 zalman সলমান
 zamora সমর
 zander জেন্দর
@@ -10679,19 +10655,19 @@ zanella জোনেল
 zang জেন জৈন
 zanghi শনগী
 zant সন্ত সেন্ত
-zarb সর্ব সরবু
+zarb সরবু সর্ব
 zaria জোরিয়া
 zaring শেরিং
 zaro সর জেরো
 zarr সর সার
-zarre সর সার
-zarro সর সার
+zarre সর শারি
+zarro সর জোরো
 zary শারি
 zaslow সোসল
 zaugg যোগ
 zaun জোন জন
 zayre শেয়র সেয়র
-zea জি সি
+zea জি জী
 zeal শিল সিল
 zealand জিলেন্দ
 zealous শেলসু
@@ -10707,8 +10683,8 @@ zehring শেরিং
 zeis সিজ
 zeit সাইত সাইৎ
 zele শিল সিল
-zell শেল সেল
-zelle শেল সেল
+zell শেল জেল
+zelle শেল জেল
 zemba শেম্বা
 zempel সেম্পল
 zen শেন
@@ -10725,7 +10701,7 @@ zerr শিয়র সিয়র
 zeta জেৎ সেত
 zeus জোস
 zev সেভ সেব
-zeva সেবা শেবা
+zeva সেভ সেবা
 zhan জন জোন
 zhang জন
 zheng শেন জেন
@@ -10737,14 +10713,13 @@ ziehm জিম
 ziel শিল সিল
 zier শিয়র সিয়র
 ziff সেফ
-zil শেল সেল
+zil শেল জেল
 zilber সিলবর
-zill শেল সেল
-zilla জিলা
-zillah জিলা
+zill শেল জেল
+zilla জিলা জেল
+zillah জিলা জেল
 zinc জিঙ্ক
 zinck জিঙ্ক
-zinda শিংদা
 zinder জেন্দর
 zine সাইন জৈন
 zing শিং শেন
@@ -10762,11 +10737,11 @@ zinter সেন্তর
 zip শিপ
 zipp শিপ
 zippo শিপ
-zirk সার্ক সরক
+zirk সরক সার্ক
 zirkel সর্কল সার্কল
 zirkle সর্কল সার্কল
 zita সীত সিত
-zito সিত সীত
+zito সীত সিত
 zizzo সিজ
 zoch শক শোক
 zody সৌদী সৌদি
@@ -10777,7 +10752,7 @@ zoh জো শো
 zohn জোন জন
 zoll জল
 zollman সলমান
-zollo জল
+zollo জল সোলো
 zolman সলমান
 zone জোন জন
 zoo সু
@@ -10785,10 +10760,10 @@ zook শোক
 zoom সুম শুম
 zora সর জোরো
 zorah সর জোরো
-zorro সর জোরো
+zorro জোরো সর
 zoss জোস
 zsa জো জা
-zsazsa জহাজ জজ
+zsazsa জহাজ
 zuba শুবা জোব
 zube জোব যুব
 zucco জোকো শোক
@@ -10802,8 +10777,6 @@ zulu সোলো
 zummo সুম শুম
 zunker শঙ্কর সঙ্কর
 zurcher সরকার
-zurve সর্ব সরবু
+zurve সরবু সর্ব
 zuver জোৱার
-zuzana যোজনা
-zyla জিলা
-zynda শিংদা
+zyla জিলা জেল
