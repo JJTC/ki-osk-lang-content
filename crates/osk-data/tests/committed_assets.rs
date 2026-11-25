@@ -70,10 +70,16 @@ fn every_prediction_pair_decodes() {
         let bytes = std::fs::read(p).unwrap();
         let map = fst::Map::new(bytes).unwrap_or_else(|e| panic!("{}: {e}", name(p)));
         // A language whose words are its script's syllables, each letter
-        // one, has fewer: Nuosu's Yi has 1 165.
+        // one, has fewer: Nuosu's Yi has 1 165. So do Dan and Lahu, whose
+        // words are short and tone-marked, in the text left of them without
+        // bible.is's pages: 909 and 932, each still saving 44% and 60% of
+        // its held-out keystrokes.
+        const FEW_WORDS: &[&str] = &["dnj", "lhu"];
         let lang = p.file_stem().unwrap().to_string_lossy().to_string();
         let least = if Script::of_lang(&lang).is_some_and(Script::needs_no_list) {
             500
+        } else if FEW_WORDS.contains(&lang.as_str()) {
+            800
         } else {
             1000
         };

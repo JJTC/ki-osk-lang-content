@@ -50,11 +50,11 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  cor glv ext pcd sgs pnt vec vls lmo lld gag \
                  shn mnw ksw blk \
                  nan hak ami za \
-                 zne alz cce skg bss men lgg xon heh gux gmv suk \
+                 zne alz cce skg bss men lgg xon dnj heh gux gmv suk \
                  spp bas ngl chw fat tsc gvl \
                  niu hwc acf mrw nij guc ljp sas gor bpr \
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
-                 cop hrx crk csw otw tkl kne mqj liv abs ajg \
+                 cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                  rmy rmn ojb \
                  cnr \
@@ -213,11 +213,11 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  cor glv ext pcd sgs pnt vec vls lmo lld gag \
                  shn mnw ksw blk \
                  nan hak ami za \
-                 zne alz cce skg bss men lgg xon heh gux gmv suk \
+                 zne alz cce skg bss men lgg xon dnj heh gux gmv suk \
                  spp bas ngl chw fat tsc gvl \
                  niu hwc acf mrw nij guc ljp sas gor bpr \
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
-                 cop hrx crk csw otw tkl kne mqj liv abs ajg \
+                 cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                  rmy rmn ojb \
                  am ti \
@@ -486,11 +486,11 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        cor glv ext pcd sgs pnt vec vls lmo lld gag \
                        shn mnw ksw blk \
                        nan hak ami za \
-                       zne alz cce skg bss men lgg xon heh gux gmv suk \
+                       zne alz cce skg bss men lgg xon dnj heh gux gmv suk \
                        spp bas ngl chw fat tsc gvl \
                        niu hwc acf mrw nij guc ljp sas gor bpr \
                        quh gcr tum tll guz kde nyy mas mnk mer dga \
-                       cop hrx crk csw otw tkl kne mqj liv abs ajg \
+                       cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
                        yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                        rmy rmn ojb \
                        cnr \

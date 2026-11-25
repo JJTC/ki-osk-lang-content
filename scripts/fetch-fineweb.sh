@@ -599,6 +599,7 @@ bss      bss_Latn  train/000_00000.parquet 3f654325b1208421151e464d8b2bbf8f1a861
 men      men_Latn  train/000_00000.parquet 1be8dfea5f186a1f83813ce0213bffe5acc49299ac82968a04997c62480af58e
 lgg      lgg_Latn  train/000_00000.parquet 6a922c7664d0c947a97bc60661946048c6300c9632ffcde3fab2987eda530bba
 xon      xon_Latn  train/000_00000.parquet 711e658cc93616acb36cfe89d86aa0e060299d1e642ae540204fc0d1d270f980
+dnj      dnj_Latn  train/000_00000.parquet 7b25a2301a759b6abf62116184b8b3e995ff34b09c883f7b77cabbae695dd2d1
 heh      heh_Latn  train/000_00000.parquet 4ed9210c64f3ec1c458968e2ddc86ee8d788c957ac772178e81b6d40ef082b4e
 gux      gux_Latn  train/000_00000.parquet ddefc494acc858243484de5e700e963f5e46eae52edc8254960c6f93774ba874
 gmv      gmv_Latn  train/000_00000.parquet 9a6e8f2d5a003c5be36724337f1cc8a0d1d9911f8f23d1b8946b101d5d4d3801
@@ -632,6 +633,7 @@ mnk      mnk_Latn  train/000_00000.parquet 90eff75ea30916984be89e463962e4400f140
 mer      mer_Latn  train/000_00000.parquet 6bb259b830af2c49b8ae8517843f17c9425f5938c39ec57c6b9917cd10a170b9
 dga      dga_Latn  train/000_00000.parquet 4d16933c505afa489343184ae11829c0edec35769cabb286c4c93cde3ef4e8e1
 cop      cop_Copt  train/000_00000.parquet 1a759af3cf6da245b2643438b3ef7240ccb00fc5b2daadf2ef6ebc7584d39bbc
+lhu      lhu_Latn  train/000_00000.parquet 9f010bb5d42e6a729710666e4de3663df8290076e13cccf7b1d542b17b26330b
 hrx      hrx_Latn  train/000_00000.parquet 0dced52dd771f50fb6dd01696eabc1a00d3c2bfa655b8c38115a3d20b5f2e93c
 crk      crk_Latn  train/000_00000.parquet cd315eef89f0bdfa07bd15dbba765ae7994b8c9fc0ba87e07db650652c6af1e8
 csw      csw_Latn  train/000_00000.parquet a47c61852cdf0581811f7679bd4031af37af25a14904bbdf16e2af7787140886

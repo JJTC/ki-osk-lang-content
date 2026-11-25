@@ -3,8 +3,9 @@
   "name": "Dan",
   "xkb_layout": "us",
   "direction": "ltr",
-  "swipe_enabled": false,
-  "prediction_enabled": false,
+  "swipe_enabled": true,
+  "prediction_enabled": true,
+  "prediction_lang": "dnj",
   "long_press_letters": true,
   "views": [
     {
