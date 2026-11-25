@@ -725,6 +725,19 @@ fn every_translit_table_reads_its_language() {
         ),
         ("anp", &[("chhai", "छै"), ("aaru", "आरू"), ("kerau", "केरौ")]),
         ("new", &[("khah", "खः"), ("thwa", "थ्व"), ("yahgu", "याःगु")]),
+        // Garo in the Bengali script: k t p at a word's start খ থ ফ, ng ং
+        // and a vowel after it a letter of its own, the raka typed ' (or
+        // ·), and n m l before it written after it, doubled.
+        (
+            "grt-Beng",
+            &[
+                ("aro", "আরো"),
+                ("anga", "আংআ"),
+                ("ong'a", "হং·আ"),
+                ("ka'sa", "খা·সা"),
+                ("man'a", "মা·ন্না"),
+            ],
+        ),
         // Lao: a vowel's first part before its consonant (ເປັນ, ເມືອງ), and
         // tones nothing typed says, where the lexicon's word has one
         // (ເຈົ້າ, ຂ້ອຍ); its words written without spaces (ສະບາຍດີ).

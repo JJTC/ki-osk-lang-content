@@ -51,6 +51,10 @@ name = "eval-translit"
 path = "src/bin/eval_translit.rs"
 
 [[bin]]
+name = "respell"
+path = "src/bin/respell.rs"
+
+[[bin]]
 name = "fit-translit"
 path = "src/bin/fit_translit.rs"
 

@@ -109,6 +109,8 @@ sd-Deva   snd_Deva  train/000_00000.parquet  7f1ec469c99291070d1260138aaae2baea0
 sd-Deva   snd_Deva  test/000_00000.parquet   cf891207f43a93754a5f0c870fe9c4da73fb28e1e575e6c7d1e29523fa2a8638
 mni-Beng  mni_Beng  train/000_00000.parquet  70c880e2be17a13639b86139961cda481a96c25429ba0f136e6061cf6288a73e
 mni-Beng  mni_Beng  test/000_00000.parquet   92dd42dc4360a753b7e1a96a5c2a92edcf52a7f747c1c9e73346b24df8875773
+grt-Beng  grt_Beng  train/000_00000.parquet  646bb20e8d7f08989f84f03be91b8c558608eb093d95ab9ea9fd6cda65ddf7e9
+grt-Beng  grt_Beng  test/000_00000.parquet   2c9bc38465fba402660fc0199f3586f9ac061e79b243ac34b6b6d94ece4dce1a
 lo   lao_Laoo  train/000_00000.parquet  19e5de2c1054ceed9946a91922db64690af5e61b248c8556de0832c8d3f66040
 lo   lao_Laoo  test/000_00000.parquet   d0d84f18de6400f06a2ed725f0858a517593fbbe0ac0698dc3418b2f5138b4ce
 km   khm_Khmr  train/000_00000.parquet  6f4506f65ad66b48e5f73350e593fcac045e15fdf65d4a55924199b84c7ee993

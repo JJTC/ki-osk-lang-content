@@ -3256,6 +3256,25 @@
         "words": "2"
       }
     },
+    "predict/grt-Beng": {
+      "encoder": "6432511c1b9b-dirty",
+      "inputs": {
+        "fineweb/grt-Beng.txt": "9572c1f09b75d145b42aaa338d0e79952245cdb3a95a1a051c63bcdba4ef9566",
+        "smol/grt-Beng.txt": "a9bc2377642099f6548b86c492d2f84db1abbf8d97e179b37e69b68ef5264825",
+        "translit/grt-Beng.txt": "0b3a1bcf3da3397ab3e9529e443dd4b6655f479da3e1d6abf525141652001841"
+      },
+      "outputs": {
+        "predict/grt-Beng.forms.fst": "868ca853feb91536a8aca0a3ce82a41169613e4b646b42f3fe592ebbec9934a3",
+        "predict/grt-Beng.fst": "6ea00b4f369521ff0f3c46855e63ce992cc14eac2cdb3df1050a5adf4383d8a4",
+        "predict/grt-Beng.ngram.bin": "a16b46b3cc0b3459e5bebee4d3a5daf10348522b320383b7b7807fb85b714b81"
+      },
+      "recipe": {
+        "ngram_keep": "90000",
+        "start_keep": "5000",
+        "vocab_size": "80000",
+        "words": "2"
+      }
+    },
     "predict/gsw": {
       "encoder": "186fef5c4ae8-dirty",
       "inputs": {

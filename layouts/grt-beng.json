@@ -4,7 +4,8 @@
   "xkb_layout": "in",
   "direction": "ltr",
   "swipe_enabled": false,
-  "prediction_enabled": false,
+  "prediction_enabled": true,
+  "prediction_lang": "grt-Beng",
   "xkb_variant": "ben",
   "font_script": "bengali",
   "long_press_letters": true,
@@ -24,10 +25,10 @@
             },
             {
               "width_units": 1,
-              "label": "ঋ",
+              "label": "·",
               "output": {
-                "kind": "keycode",
-                "code": 13
+                "kind": "text",
+                "text": "·"
               }
             },
             {

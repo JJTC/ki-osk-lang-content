@@ -715,7 +715,10 @@ DERIVED = [
     ("cjk", "us", "Chokwe", {}, {"model": False}),
     ("hea", "us", "Hmu", {}, {"model": False}),
     ("grt", "us", "A·chik", {}, {"home": "·"}),
-    ("grt-Beng", "bn", "গারো", {}, {"model": False}),
+    # Its model learns from SMOL's Garo spelled in the Bengali script
+    # (make respelled-text); the raka, in one word in four, a key of its
+    # own, ঋ's, which its Bible never writes.
+    ("grt-Beng", "bn", "গারো", {}, {"swap": {"ঋ": "·"}}),
     ("mdr", "us", "Mandar", {}, {"model": False}),
     ("pcc", "us", "Haausqyaix", {}, {"model": False}),
     ("mtq", "vi", "Thiểng Mường", {}, {"model": False}),

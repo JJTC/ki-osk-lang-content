@@ -1,0 +1,91 @@
+# Garo (A·chik) in the Bengali script from Latin letters, as Garo is
+# written in Latin (its own alphabet: ch j ng, the raka · or ' for its
+# glottal stop). Its Bengali spelling marks Garo's aspirated stops: k t p
+# at a word's start are খ থ ফ (ka·sa: খা·সা), inside it ক ত প, and a last
+# t is ৎ (khat: খাৎ); a is া, o the vowel a consonant carries or ো, ng ং,
+# and a vowel after ং or the raka is a letter of its own (anga: আংআ,
+# ong·a: হং·আ, a first o written হ as its Bible writes it); a consonant
+# between two vowels is often doubled (ine: ইন্নে), and n m l before the
+# raka are written after it, doubled (man·a: মা·ন্না). Read as its
+# Bengali-script writing spells its words: a word's spelling is the one
+# the Bengali-script Bible's text has, where it has the word. The lexicon
+# chooses.
+
+script abugida
+virama ্
+cluster 0.3
+schwa 2
+final 0
+final-virama 4
+
+[consonants]
+k     ক:0.2  খ:0.8
+^k    খ:0.1  ক:1.2
+kh    খ
+g     গ
+gh    ঘ:1  গ:0.5
+ch    চ  ছ:2
+j     জ  য:0.8  ঝ:2
+t     ত  থ:0.8  ট:1.5
+^t    থ:0.1  ত:1.2
+t$    ৎ:0.2  ত:1
+t>c   ৎ:0.6  ত:0.2
+th    থ
+d     দ  ড:1.5
+n     ন  ণ:2.5
+p     প:0.2  ফ:0.6
+^p    ফ:0.2  প:0.4
+ph    ফ
+b     ব
+bh    ভ
+m     ম
+y     য়  য:0.6
+r     র
+l     ল
+w     ও:0.3  ওয়:0.4  ব:1
+s     স  শ:1  ষ:2
+sh    শ  স:0.5
+h     হ
+z     জ:0.3  য:0.6
+^k>v  খ:0.1  ক:1.2
+^t>v  থ:0.1  ত:1.2
+^p>v  ফ:0.2  প:0.4
+k>v  ক:0.2  ক্ক:0.6  খ:0.8
+t>v  ত  ত্ত:0.6  থ:0.8
+p>v  প:0.2  প্প:0.6  ফ:0.6
+n>v  ন  ন্ন:0.6
+m>v  ম  ম্ম:0.6
+l>v  ল  ল্ল:0.6
+s>v  স  স্স:0.6
+g>v  গ  গ্গ:0.6
+d>v  দ  দ্দ:0.6
+b>v  ব  ব্ব:0.6
+ch>v  চ  চ্চ:0.6
+j>v  জ  জ্জ:0.6
+r>v  র  র্র:0.6
+# n m l with the raka: the raka before them, doubled (man·a: মা·ন্না).
+n·    ·ন্ন:0.3
+m·    ·ম্ম:0.3
+l·    ·ল্ল:0.3
+n'    ·ন্ন:0.3
+m'    ·ম্ম:0.3
+l'    ·ল্ল:0.3
+
+[vowels]
+a     আ/া  অ/-:0.8
+e     এ/ে
+e$    এ/ে  ই/ি:0.8
+i     ই/ি  ঈ/ী:1.5
+o     ও/ো:0.3  অ/-:0.4
+^o    ও/ো:0.3  অ/-:0.6  হ/-:0.5
+u     উ/ু  ঊ/ূ:2
+ai    আই/াই  আয়/ায়:0.6
+ia    ইয়া/িয়া:0.2  ইআ/িআ:1
+ua    উয়া/ুয়া:0.2  উআ/ুআ:1
+ea    এয়া/েয়া:0.4
+oa    ওয়া/োয়া:0.4
+
+[other]
+ng    ং:0.2  ঙ্গ:2
+·     ·
+'     ·

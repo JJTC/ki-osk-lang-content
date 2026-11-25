@@ -1305,6 +1305,9 @@ LANGS = {
     "brh": {"script": "ARABIC", "neighbour": URDU},
     "sd-Deva": {"script": "DEVANAGARI", "neighbour": HINDI - {"में", "का"}, "normalize": sindhi},
     "mni-Beng": {"script": "BENGALI", "neighbour": BENGALI},
+    # Garo in the Bengali script: one Bible, its words counted for the
+    # spellings respell chooses (make respelled-text), not learned from.
+    "grt-Beng": {"script": "BENGALI", "neighbour": BENGALI},
     # Assamese shares Bengali's script and এই, যে, হয়; its r is ৰ where
     # Bengali's is র, which a document must write more often.
     "as": {"script": "BENGALI", "neighbour": BENGALI - {"এই", "যে", "হয়"}, "letters": ("ৰ", "র"),

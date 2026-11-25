@@ -68,7 +68,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  am ti sgw \
                  myx tuv \
                  hlb kfq nah \
-                 ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
+                 ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje grt-Beng \
                  vai tdd \
                  gax mkw yaf \
                  syl-Sylo hac ii kjp
@@ -292,6 +292,15 @@ STORYWEAVER_DIR = $(SRC_DIR)/storyweaver
 # nothing of it is committed.
 SMOL_LANGS ?= ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
 SMOL_DIR = $(SRC_DIR)/smol
+# Garo in the Bengali script, which no open text but one Bible is written
+# in: SMOL's Garo, in Latin letters, spelled in the Bengali script by its
+# table (translit/grt-Beng.txt, crates/osk-data-tools/src/bin/respell.rs),
+# each word as the Bible's text in FineWeb-2 (fineweb/grt-Beng.txt)
+# spells it where the Bible has it, else as the table reads it: 48% of
+# its words were the Bible's. The Bible's words are counted, never learned
+# from; make respelled-text writes $(SMOL_DIR)/grt-Beng.txt and its
+# held-out half, after fetch-smol and fetch-fineweb.
+RESPELLED_LANGS ?= grt-Beng
 
 # eBible.org's Bibles (scripts/fetch-ebible.sh, each translation's verses
 # pinned by sha256; CC BY-SA 4.0, each under its own copyright), the whole
@@ -485,7 +494,7 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        bew nup glk bpy \
                        myx tuv \
                        hlb kfq nah \
-                       ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje \
+                       ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje grt-Beng \
                        gax mkw yaf \
                        syl-Sylo
 PREDICT_LARGE_VOCAB ?= 80000
@@ -614,6 +623,7 @@ help:
 	@echo "                   SRC_DIR (STORYWEAVER_EMAIL, STORYWEAVER_PASSWORD: an"
 	@echo "                   account, for stories not read before)"
 	@echo "  fetch-smol       SMOL's translations, for SMOL_LANGS, into SRC_DIR"
+	@echo "  respelled-text   Garo's SMOL text spelled in the Bengali script, into SRC_DIR"
 	@echo "  fetch-ebible     eBible.org's Bibles, for EBIBLE_LANGS, into SRC_DIR"
 	@echo "  fetch-glotcc     GlotCC's web text, for GLOTCC_LANGS, into SRC_DIR"
 	@echo "                   (FINEWEB_PYTHON: a Python with pyarrow)"
@@ -684,6 +694,16 @@ fetch-wikipedia:
 .PHONY: fetch-aksharantar
 fetch-aksharantar:
 	OUT=$(AKSHARANTAR_DIR) ./scripts/fetch-aksharantar.sh $(AKSHARANTAR_LANGS)
+
+.PHONY: respelled-text
+respelled-text:
+	@test -f $(SMOL_DIR)/grt.txt || { echo "no $(SMOL_DIR)/grt.txt: run make fetch-smol"; exit 1; }
+	@test -f $(FINEWEB_DIR)/grt-Beng.txt || \
+		OUT=$(FINEWEB_DIR) PYTHON=$(FINEWEB_PYTHON) ./scripts/fetch-fineweb.sh grt-Beng
+	$(TOOLS) respell -- --table translit/grt-Beng.txt --corpus $(FINEWEB_DIR)/grt-Beng.txt \
+		--join-dots --text $(SMOL_DIR)/grt.txt --out $(SMOL_DIR)/grt-Beng.txt --show 0
+	$(TOOLS) respell -- --table translit/grt-Beng.txt --corpus $(FINEWEB_DIR)/grt-Beng.txt \
+		--join-dots --text $(SMOL_DIR)/eval/grt.txt --out $(SMOL_DIR)/eval/grt-Beng.txt --show 0
 
 .PHONY: aksharantar-respelled
 aksharantar-respelled:
@@ -779,7 +799,7 @@ predict-assets:
 			*" $$lang "*) vocab=$(PREDICT_WIDER_VOCAB); ngram=$(PREDICT_WIDER_NGRAM) ;; \
 		esac; \
 		corpus=; corpus_in=; weight=; \
-		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(STORYBOOK_LANGS) $(STORYWEAVER_LANGS) $(SMOL_LANGS) $(EBIBLE_LANGS) $(GLOTCC_LANGS) " in \
+		case " $(DAKSHINA_ONLY_LANGS) $(WIKIPEDIA_LANGS) $(FINEWEB_LANGS) $(MADLAD_LANGS) $(STORYBOOK_LANGS) $(STORYWEAVER_LANGS) $(SMOL_LANGS) $(RESPELLED_LANGS) $(EBIBLE_LANGS) $(GLOTCC_LANGS) " in \
 			*" $$lang "*) ;; \
 			*) tw=$(TATOEBA_WEIGHT); case " $(TATOEBA_LIGHT_LANGS) " in \
 				*" $$lang "*) tw=$(TATOEBA_LIGHT_WEIGHT) ;; \
@@ -828,9 +848,12 @@ predict-assets:
 			              corpus="$$corpus --corpus $(STORYWEAVER_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input storyweaver/$$lang.txt=$(STORYWEAVER_DIR)/$$lang.txt" ;; \
 		esac; \
-		case " $(SMOL_LANGS) " in \
+		case " $(SMOL_LANGS) $(RESPELLED_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(SMOL_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input smol/$$lang.txt=$(SMOL_DIR)/$$lang.txt" ;; \
+		esac; \
+		case " $(RESPELLED_LANGS) " in \
+			*" $$lang "*) corpus_in="$$corpus_in --input fineweb/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt --input translit/$$lang.txt=translit/$$lang.txt" ;; \
 		esac; \
 		case " $(EBIBLE_LANGS) " in \
 			*" $$lang "*) if [ ! -f $(EBIBLE_DIR)/$$lang.txt ]; then \
@@ -1115,10 +1138,9 @@ hinglish-assets:
 # Not Greek's, Persian's, Armenian's, Mongolian's, Santali's or Yiddish's:
 # their measures (Greeklish, Wiktionary's headwords) hold no English words
 # to gain on, and lost up to 0.8 points to the readings they added; nor
-# Lao's, whose measure holds none either and whose reading of English
-# sounds no one has looked at. Nor
+# Lao's or Garo's in the Bengali script, which nothing measures. Nor
 # Vai's or Nuosu's, which have no lexicon to keep a reading.
-ENGLISH_NOT_LANGS ?= el fa hy mn sat yi vai ii lo
+ENGLISH_NOT_LANGS ?= el fa hy mn sat yi vai ii lo grt-Beng
 ENGLISH_LANGS ?= $(filter-out $(ENGLISH_NOT_LANGS),$(sort $(patsubst translit/%.txt,%,$(filter-out %.english.txt,$(wildcard translit/*.txt)))))
 .PHONY: english-assets
 english-assets:

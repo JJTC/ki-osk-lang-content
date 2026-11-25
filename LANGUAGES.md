@@ -7,13 +7,13 @@ layout is a file, `layouts/<id>.json`, in its language's pack (the Pack
 column below, from `packs.toml`'s `[layouts]`), beside that language's
 prediction and composer data.
 
-**726 layouts**: 649 keyboard layouts (RTL: ar he fa + Urdu, Western
+**727 layouts**: 649 keyboard layouts (RTL: ar he fa + Urdu, Western
 Punjabi, Saraiki, Kashmiri, Brahui, Khowar, Pashto, Sindhi, Uyghur,
 Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, Gilaki, Gorani, Syriac, Dhivehi, Yiddish, and with no model Balti, Gujari, the two Kohistanis, Hindko, Pothwari, Shina, Kohistani Shina, Torwali, Balochi, Hazaragi, Dhatki, Parkari Koli, Bakhtiari, Northern and Southern Luri, Lari, Kuhmareyi, Takestani, Maba, Mehri, Southeastern and Southwestern Pashayi, Wanetsi, Southern Hindko, Laki, Qashqai, Khorasani Turkic, Southern and Eastern Balochi, Dari, Dakhini, in the Syriac script Chaldean Neo-Aramaic and, in the Hanifi script, Rohingya; Hinglish, Kokborok) · 15 IMEs (5 CJK +
-Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 60 transliteration layouts (Latin letters →
+Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 61 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
-keycaps. 725 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **478 languages** carry a prediction
+keycaps. 726 are here; the numeric keypad is built into ki-osk. The
+table below is the complete list; **479 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -539,7 +539,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `cjk` | `cjk` | Chokwe | us | LTR | —¹² | — | — |
 | `hea` | `hea` | Northern Qiandong Miao Hmu | us | LTR | —¹² | — | — |
 | `grt` | `grt` | Garo A·chik | us, · key | LTR | **Full** (grt)¹⁴ | ✓ | — |
-| `grt-beng` | `grt` | Garo গারো (Bengali script) | in · ben, Bengali's keys | LTR | —¹² | — | — |
+| `grt-beng` | `grt-Beng` | Garo গারো (Bengali script) | in · ben, Bengali's keys, · on ঋ's | LTR | **Full** (grt-Beng)¹⁴ | — | — |
 | `mdr` | `mdr` | Mandar | us | LTR | —¹² | — | — |
 | `pcc` | `pcc` | Bouyei Haausqyaix | us | LTR | —¹² | — | — |
 | `mtq` | `mtq` | Muong Thiểng Mường | vn, Vietnamese's keys | LTR | —¹² | — | — |
@@ -752,6 +752,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `sjp-abc` | `sjp` | Surjapuri सुरजापुरी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the sjp lexicon choosing |
 | `rkt-abc` | `rkt` | Rangpuri (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the rkt lexicon choosing |
 | `bpy-abc` | `bpy` | Bishnupriya Manipuri বিষ্ণুপ্রিয়া মণিপুরী (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the bpy lexicon choosing |
+| `grt-beng-abc` | `grt-Beng` | Garo গারো (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Bengali script, the grt-Beng lexicon choosing |
 | `lo-abc` | `lo` | Lao ລາວ (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Lao, the lo lexicon choosing; vowels before their consonant, tones untyped |
 | `emoji` | `emoji` | Emoji picker | — | — | — | — | Unicode 16 — categories, search, skin-tone, recents |
 | `numeric` | — (ki-osk) | Numeric keypad | — | — | — | — | — |
@@ -2813,7 +2814,25 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    autocorrect changed 2.4% of their words typed right) write a b ɓ c d
    ɗ e f g h i j k l m n ñ ŋ o p r s t u w y ƴ, the letters CLDR's Fula,
    whose name for itself is Pulaar, lists, and ñ the commonest of n's
-   (100 to ŋ's 18).
+   (100 to ŋ's 18). Garo in the Bengali script (`grt-Beng`) learns from
+   SMOL's Garo too, spelled in that script (`make respelled-text`;
+   `crates/osk-data-tools/src/bin/respell.rs`): each word read by its
+   transliteration table (`translit/grt-Beng.txt`) as the one
+   Bengali-script text there is, one Bible in FineWeb-2 (bible.is's pages,
+   170 000 words), spells it where the Bible has the word (48% of SMOL's
+   words), else as the table reads it; the Bible's words are counted,
+   nothing of its text learned from. The table follows the Bible's
+   spelling: k t p at a word's start খ থ ফ for Garo's aspirates, a
+   consonant between vowels often doubled (ine: ইন্নে), n m l before the
+   raka written after it, doubled (man·a: মা·ন্না), a first o হ (ong·a:
+   হং·আ); most of what the Bible lacks is its dialect's words for SMOL's
+   standard Garo's (বিসং for uamang). 14 039 kinds of word; keystrokes
+   saved on SMOL's held-out documents so spelled 40.4% (31.8% with taps
+   astray, 14.7% unknown), and on the Bible's 638 held-out words 19.4%
+   (44% unknown: the Bible's dialect and register). Its keyboard is
+   Bengali's keys with the raka · on ঋ's key, which the Bible never
+   writes, and its transliteration keyboard (`grt-beng-abc`) reads Garo's
+   Latin alphabet, the raka typed ' or ·.
 
 15. Sebat Bet Gurage's keyboard is Amharic's keys, the Ge'ez composer
    typing its syllables from Latin letters as Amharic's does, with two
@@ -2942,7 +2961,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **478 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **479 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,

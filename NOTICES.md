@@ -376,7 +376,12 @@ Research under CC BY 4.0**. Its files are read at one revision, pinned
 by sha256 in `scripts/fetch-smol.sh`. The models made from them (word
 lists and the counts of words and word pairs and triples) are what this
 repository and its packs hold, never the translations; each pack with
-such a model names SMOL among its sources, with that licence. Pulaar's
+such a model names SMOL among its sources, with that licence. Garo's
+model in the Bengali script (`grt-Beng`) learns from SMOL's Garo spelled
+in that script by its transliteration table (`make respelled-text`),
+each word as the Bengali-script Bible in FineWeb-2 spells it where it
+has the word: its pack names SMOL and FineWeb-2 (below), and holds
+nothing of the Bible's text, whose words were only counted. Pulaar's
 keyboard takes its letters from SMOL's Pulaar sentences, as CLDR's Fula
 lists them.
 
