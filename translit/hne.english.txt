@@ -2711,7 +2711,6 @@ corrode करोड़
 corron कारन करों
 corroon कारन कारण
 corrow करो करौ
-corry कोरी कारी
 cortina करतिन करतीन
 coscia कोशा कोश
 cosell कोसल कौशल
@@ -3968,8 +3967,6 @@ fares फर्ज फरज
 farese फारसी फरजी
 faria फरिया
 faries फिरिज
-faris फिरिस
-fariss फिरिस
 farm फारम
 faro पहरो
 farouk फरक
@@ -3981,7 +3978,6 @@ farrer फरार
 farrey फेरी फरी
 farrier फरियर
 farrior फरियर
-farris फिरिस
 farro पहरो
 farrow पहरो
 farry फेरी फरी
@@ -4096,11 +4092,8 @@ ferrie फेरी
 ferrier फरियर
 ferriera फरियर
 ferries फिरिज
-ferris फिरिस
-ferriss फिरिस
-ferriz फिरिज फिरिस
+ferriz फिरिज
 ferro पहरो
-ferrous फिरिस
 ferry फेरी
 fess फेस
 fessed फस्ट
@@ -8387,7 +8380,7 @@ oat ओट ओटी
 oath ओठ ओट
 obese बीस
 obey अबे
-obeyed ओबेद
+obeyed अबड
 occur कर ओकर
 occurred कार्ड कारड
 occurs कर्ज कारज
@@ -8910,13 +8903,11 @@ pham फेम
 pharaoh पहरो
 pharaohs फिरोज
 phares फर्ज फरज
-phariss फिरिस
 pharmacy फार्मेसी
 pharoah पहरो
 pharoahs फिरोज
 pharos फिरोज
 pharr फर फोर
-pharris फिरिस
 phase फेस
 phasing फैसिंग
 phenicie फेंके

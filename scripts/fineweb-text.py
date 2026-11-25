@@ -9,6 +9,20 @@ classifier, which errs most between close languages: its Dogri holds
 Punjabi poetry, its Angika is Hindi news. So a document is kept only
 when it reads as its language:
 
+- a page of bible.is (or a host under it, live.bible.is) is never read,
+  in any language, from any source that says where a document was read
+  (FineWeb-2's url, GlotCC's warc-target-uri): its Bibles are its
+  holders' and its terms allow personal use only. It was most of
+  FineWeb-2's text of dozens of small languages (Garo's in the Bengali
+  script all but one page), and nineteen are left with too little to
+  learn from (under 20 000 words, under a thousand kinds of word, or no
+  held-out text), so their files are not fetched and they have no
+  model: Buhid, Koronadal Blaan, Ntcham, Northern Grebo, Gogo, Farefare,
+  Gulay, Haya, Itawit, Xaasongaxango, Kafa, Lampung Api, Moba, Nande,
+  Nyoro, Sasak, Sebat Bet Gurage, Dan and Lahu (their settings below are
+  kept); a test split none of whose documents is kept holds out the
+  train split's instead (`--hold`);
+
 - a junk document is left out: one whose words are mostly single
   characters or digits (scanned books read by OCR), or whose letters are
   more than a fifth combining marks;
@@ -63,10 +77,11 @@ too (`words`) and their sentences ended at the Ethiopic full stop ። and
 question mark ፧ or the two wordspaces ፡፡ older text writes for the stop,
 a space after them or not (`ends`); every 12th of Amharic's row groups is
 read (75 million characters kept) and every 2nd of Tigrinya's (63).
-Sebat Bet Gurage's is read so too, whole, against Amharic's function
+Sebat Bet Gurage's was read so too, whole, against Amharic's function
 words (its own ሰብ "person", ኸማ "as", ዝኽ "this"…): its New Testament
-(bible.is), a story and a few articles, and an Amharic page, which goes;
-its test split is five documents, so every 10th document is held out.
+(bible.is, never read now), a story and a few articles, and an Amharic
+page, which goes; its test split is five documents, so every 10th
+document is held out.
 Shan, Mon, Sgaw Karen and Pa'O are written in the Myanmar script too,
 with no spaces between words, and read whole as Burmese is (Shan's 48
 million characters, Mon's 10, Karen's 8, Pa'O's 1.7), their ၀ for ဝ
@@ -1305,9 +1320,6 @@ LANGS = {
     "brh": {"script": "ARABIC", "neighbour": URDU},
     "sd-Deva": {"script": "DEVANAGARI", "neighbour": HINDI - {"में", "का"}, "normalize": sindhi},
     "mni-Beng": {"script": "BENGALI", "neighbour": BENGALI},
-    # Garo in the Bengali script: one Bible, its words counted for the
-    # spellings respell chooses (make respelled-text), not learned from.
-    "grt-Beng": {"script": "BENGALI", "neighbour": BENGALI},
     # Assamese shares Bengali's script and এই, যে, হয়; its r is ৰ where
     # Bengali's is র, which a document must write more often.
     "as": {"script": "BENGALI", "neighbour": BENGALI - {"এই", "যে", "হয়"}, "letters": ("ৰ", "র"),
@@ -1882,9 +1894,19 @@ def script_runs(s, script, also=frozenset()):
     return runs
 
 
+# The hosts no document is read from, in any language (the docstring).
+NEVER_HOSTS = re.compile(r"(^|\.)bible\.is$", re.I)
+
+
+def never(url):
+    """Whether `url` is on a host no document is read from."""
+    host = re.sub(r"^[a-z][a-z0-9+.-]*://", "", url, flags=re.I).split("/", 1)[0].split(":", 1)[0]
+    return bool(NEVER_HOSTS.search(host))
+
+
 def documents(paths, every=1):
     """Each document's text and the address it was read at ("" where a
-    source does not say)."""
+    source does not say); none from a host never read (NEVER_HOSTS)."""
     for path in paths:
         if path.endswith(".jsonl.gz"):
             # MADLAD-400's: a JSON object a line, its text in "text".
@@ -1907,7 +1929,7 @@ def documents(paths, every=1):
             group = f.read_row_group(g, columns=[column] + ([where] if where else []))
             texts = group.column(column).to_pylist()
             urls = group.column(where).to_pylist() if where else [""] * len(texts)
-            yield from zip(texts, (u or "" for u in urls))
+            yield from ((t, u or "") for t, u in zip(texts, urls) if not never(u or ""))
 
 
 def main():
@@ -1919,13 +1941,22 @@ def main():
     ap.add_argument("--train", nargs="+", required=True, help="the train split's files")
     ap.add_argument("--test", nargs="+", help="the test split's files")
     ap.add_argument("--hold", type=int, default=20,
-                    help="with no test split, every HOLDth document kept is held out")
+                    help="with no test split (or none of its documents kept), every HOLDth "
+                         "document kept is held out")
     ap.add_argument("--exclude", nargs="+", default=[],
                     help="another source's sentences of the language (its corpus and held-out "
                          "text): neither written nor held out")
     opts = ap.parse_args()
     train, test = opts.train, opts.test or []
     conf = LANGS[opts.lang]
+
+    def keep(text, url):
+        return kept(text, conf) and not ("hosts_out" in conf and conf["hosts_out"].search(url))
+
+    # A test split none of whose documents is kept (all bible.is's, as
+    # some small languages' are) holds out the train split's instead.
+    if test and not any(keep(t, url) for t, url in documents(test)):
+        test = []
     # What makes two sentences one: their text, or (`same`) what a
     # language's copies of one share.
     same = conf.get("same", lambda s: s)
@@ -1939,7 +1970,7 @@ def main():
     with open(opts.out, "w", encoding="utf-8") as out:
         for text, url in documents(train, conf.get("every", 1)):
             docs += 1
-            if not kept(text, conf) or ("hosts_out" in conf and conf["hosts_out"].search(url)):
+            if not keep(text, url):
                 dropped += 1
                 continue
             if not test and (docs - dropped) % conf.get("hold", opts.hold) == 0:
@@ -1950,8 +1981,7 @@ def main():
                     seen.add(same(s))
                     out.write(s + "\n")
     held = {}
-    held_test = (t for t, url in documents(test)
-                 if kept(t, conf) and not ("hosts_out" in conf and conf["hosts_out"].search(url)))
+    held_test = (t for t, url in documents(test) if keep(t, url))
     for text in held_docs or held_test:
         for s in sentences(text, conf):
             if same(s) not in seen:

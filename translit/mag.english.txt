@@ -206,7 +206,7 @@ ahh आ ओ
 ahlen लेन ऐलन
 ahlin अलीन
 ahmadi अमदी
-ahmann आमोन आमीन
+ahmann आमीन ओमान
 ahmoudi अमदी
 ahnell अनिल
 ahner ऑनर
@@ -235,7 +235,7 @@ aims अंजू
 ainge एन अंग
 ainslie अंजलि
 ainu अणु एनो
-aipac एपेक एपिक
+aipac एपेक
 air र एयर
 airbase अरबेस
 airbus अरबेस
@@ -252,7 +252,7 @@ airy अरे
 aisle आइल एल
 aisles एल्स
 ajaj जज
-ajar जोर अजोर
+ajar जोर जोड़
 ajito जीतो
 akai के
 akaka काका काक
@@ -383,7 +383,7 @@ alyea आलिया अइलियो
 alyssa लीसा
 alza एल्स
 amalie इमली
-aman आमोन आमीन
+aman आमीन ओमान
 amana मैना
 amann अइमें एमिन
 amano मानो मनो
@@ -412,6 +412,7 @@ ammo आमो
 ammon अइमें एमिन
 amoco अंकों
 amok मूक अमुक
+amon ओमान
 among मन मान
 amoss मास
 amount माउण्ट माउण्त
@@ -567,7 +568,7 @@ articles आर्टिकल्स
 arton औरतों
 artus आर्ट्स
 artz आर्ट्स
-arum अराम एराम
+arum अराम
 arwen ओरवन
 arzate अर्जित
 arzt अरस्तू अरस्तु
@@ -694,7 +695,7 @@ augusta अगस्त
 auguste अगस्त
 auletta ओलती
 aull आल
-aumann ओमान आमोन
+aumann ओमान ओमें
 aung अंग आन
 aunt अंत अन्त
 auntie एण्टी अन्ते
@@ -776,10 +777,11 @@ ayo एओ
 ayr र एयर
 ayre र एयर
 ayyash ऐयाश
-azar औजार अजोर
+azar औजार
 azeri जरी
-azhar अजोर औजार
+azhar औजार जार
 azuka असोक जोक
+azura जरा जुड़ा
 azzato जातौ
 baab बाबू बाबु
 baack बाकू बाकु
@@ -1526,7 +1528,6 @@ boar बार बोर
 board बोर्ड
 boarda बोर्ड
 boarded बोर्ड
-boas बोअज
 boase बस बोस
 boast बस्तु
 boat बोतू बोट
@@ -1656,6 +1657,8 @@ booties बतीस
 booton बटन
 boots बत्स
 bootz बत्स
+booz बस बज
+booze बस बज
 boozer बजार
 boozy बजी बुझि
 bop बाप बापु
@@ -1746,6 +1749,7 @@ boutell बोतल बतइल
 boutelle बोतल बतइल
 boutin बटन बताईन
 bouyer बयार
+bouza बुझा बज
 bow बो बाउ
 bowar बोर
 bowden बदन
@@ -1945,7 +1949,7 @@ budge बज बाज
 budget बजट
 budz बुड्‌स
 bueche बच
-buege बज बोअज
+buege बज बूझ
 buelow बलो बलों
 buena बना बन
 buerry बेरी बेड़ी
@@ -3374,7 +3378,8 @@ dania दने देने
 danica दैनिक
 danielle डैनियल
 danish डेनिश देनिस
-dannen देनें दन्न
+dann दिन दान
+dannen देनें
 danner डिनर
 dannie दने
 danny दने
@@ -3383,6 +3388,7 @@ dante डांट
 danube डैन्यूब
 danz दंश डांस
 dao डो दो
+daoud दौड़ दउड़
 daoust दोस्त
 darbonne दरबान
 dare देर डर
@@ -3592,6 +3598,7 @@ denham देनें दनाम
 denies दिनेश
 denim देनें दनाम
 deniz देनिस डेनिस
+denn दिन देन
 dennen देनें
 denner डिनर
 denney देने
@@ -3865,8 +3872,9 @@ done दान दुनु
 dones दंश डांस
 doney दने
 donia दोने
+donn दान दोन
 donna दान दोन
-donnan दोनों दन्न
+donnan दोनों
 donnay दने
 donned दंड
 donnie दने
@@ -3918,8 +3926,8 @@ dov दाव
 dove दाव
 dovey देवे
 dow डो दो
-dowd दौड़ दाऊद
-dowda दौड़ दाऊद
+dowd दौड़ दउड़
+dowda दौड़ दउड़
 dowdall दौड़ल
 dowdell दौड़ल
 dowdle दौड़ल
@@ -3955,7 +3963,6 @@ dread दरद ड्रेड
 dream ड्रीम
 dresch ड्रेस
 dress ड्रेस
-dressen दरसन
 dressing ड्रेसिंग
 drewett द्रवित
 dried ड्रेड
@@ -4004,7 +4011,6 @@ dueitt दवात
 duell दल जल
 duenow दुनो दूनो
 duerr दूर
-duerson दरसन
 dues दस डोस
 duey दुइए दुए
 duffala डाफला
@@ -4037,6 +4043,7 @@ dunes दंश
 dunham दनाम दुनों
 dunja दुन्या
 dunker दनकर
+dunn दान दुनु
 dunnam दनाम दुनों
 dunnaway दानव
 dunned दंड
@@ -4462,15 +4469,13 @@ fare फेर
 fares फर्ज
 farge फर्ज फोर्ज
 faria फाड़ियो
-faris फिरिस
-fariss फारस फिरिस
+fariss फारस
 farner फोर्नर
 farney फोर्ने
 farr फार फर
 farra फार फर
 farrah फेर फेरा
 farrey फेरी फेरे
-farris फिरिस
 farro फारो फरो
 farrow फ़ेरो फेरो
 farry फेरी फेरे
@@ -4571,13 +4576,9 @@ ferri फेरी फेर
 ferrick फेरिक
 ferrie फेरी फेर
 ferried फरीद
-ferris फिरिस
-ferriss फिरिस
 ferrite फेराइट
-ferriz फिरिस
 ferro फ़ेरो फेरो
 ferromagnetic फेरोमैगनेटिक
-ferrous फिरिस
 ferry फेरी फेर
 fertilizer फर्टलाइजर
 feser फिशर
@@ -4741,6 +4742,7 @@ forced फर्स्ट
 fore फार फाड़
 foreign फोरन फोरेन
 foreigner फोर्नर
+foreman फोरमैन
 forero फारो फरो
 foresaw फरसा
 foresee फारसी
@@ -5536,7 +5538,6 @@ haddad हेड
 haddock हड़क
 hader हैदर
 hadoop हड़प
-haese हिस
 haff हाफ
 hagey हाजी
 hagg हग
@@ -5674,10 +5675,9 @@ harry हेरि हरि
 harsch हर्ष
 hartt हरत
 has हिज हौज
-hase हिस हिज
+hase हिज
 haser हजार
 hashed हस्त
-hass हिस
 hassan हसन हासन
 hasse होश
 hassen हासन हसन
@@ -5735,7 +5735,7 @@ haydock हड़क
 haydu हिदु
 hayduk हड़क
 hayer हर हीर
-hayes हिस हिज
+hayes हिज
 haying हीं हैं
 hayles हिल्स
 hayley हली
@@ -5745,11 +5745,11 @@ haymon हमें हेमन
 haymore हमर
 haynes हंस
 haynie हेने
-hays हिस हिज
-hayse हिस हिज
+hays हिज
+hayse हिज
 hayter हिटर
 hazan हसन
-haze हिस हिज
+haze हिज
 hazen हसन
 head हद हेड
 headed हेड
@@ -5795,7 +5795,8 @@ hee हे
 heed हिदु
 heels हिल्स
 heermann हेर्मान
-heesch हिस
+hees हिज
+heese हिज
 hefei हाफ
 hegg हग
 hegge हग
@@ -5879,7 +5880,6 @@ hers हरज
 hersch हर्ष
 hersey हिरसी हरसे
 hertz हर्ट्स
-hess हिस
 hesser हिसार
 hessing हसीन
 hettick हाइटेक
@@ -5895,8 +5895,7 @@ heying हीं हैं
 heyl हल
 heyman हमें हेमन
 heymann हमें हेमन
-heys हिस हिज
-heyse हिस
+heys हिज
 heyser हजार
 hick हक हकूँ
 hickam हकों
@@ -5950,8 +5949,6 @@ hirt हैरत हरत
 hirth हैरत हरत
 hirtz हर्ट्स
 his हिज
-hisey हिस
-hiss हिस
 hissed हस्त
 history हिस्ट्री
 hit हेतु
@@ -7277,7 +7274,7 @@ kraynak करनाक
 kreher क्रियार कड़र
 krell करल करेल
 krenn करें क्रेन
-kretsch क्रेच क्रिच
+kretsch क्रेच
 kreul करल
 kreutz क्रोट्स
 kreuzer क्रुजर
@@ -7593,7 +7590,7 @@ leashed लिस्ट लीस्ट
 least लिस्ट लीस्ट
 leath लेइत
 leathem लेतहीं
-leather लेडर लिडर
+leather लेडर
 leave लिव
 leavelle लावल लेवल
 leaven लेवन
@@ -7620,7 +7617,7 @@ leggitt लगित लगैत
 leggy लगी
 lehan लीहँ लिहेँ
 lehane लिहेँ
-lehder लेडर लिडर
+lehder लेडर
 lehmer लमर
 lehn लाइन लेन
 lehne लाइन लेन
@@ -8016,6 +8013,8 @@ lusch लाश
 lush लाश
 lutey लूट लूटे
 luther लोथार
+luthi लोदी
+luthy लाठी
 luty लूट लूटे
 luvs लवज
 luxembourg लक्स्म्बर्ग
@@ -9524,7 +9523,6 @@ obar बार बड़
 oberry अबरी
 obese बीस
 obey अब
-obeyed ओबेद
 obie ओब
 oblique बलिक
 occur कर ओकर
@@ -9625,7 +9623,7 @@ omary मेरी मेरे
 omeara अमीर अमर
 omen ओमान
 omit अमित
-ommen आमोन ओमान
+ommen ओमान आमीन
 omni आमने
 omonia अमोनिया
 onan अन्न
@@ -9770,6 +9768,7 @@ ozanne असान
 ozelle जेल
 ozmet अस्मत
 ozmun आसमान
+ozora जोर जरा
 paccar पुकार पकड़
 pace पेश पेस
 pacella पोसेला पसली
@@ -10157,13 +10156,13 @@ phallic फलक
 pharaoh फ़ेरो फेरो
 pharaohs फिरोज
 pharis फारस
-phariss फारस फिरिस
+phariss फारस
 pharmacology फार्माकोलाजी
 pharmacy फार्मेसी फार्मसे
 pharoah फ़ेरो फेरो
 pharoahs फिरोज
 pharr फार फर
-pharris फारस फिरिस
+pharris फारस
 phase फेस
 phil फल फैल
 philadelphia फिलाडेल्फिया
@@ -10427,7 +10426,7 @@ poppa पाप पापा
 poppe पाप पोप
 poppen पापेन
 popping पापेन
-poppy पापी पाप
+poppy पापी
 poquette पैकेट पाकिट
 porcher परचार
 pordy पारडी
@@ -10868,9 +10867,10 @@ ratu रातो
 ratz राइट्स राइटस
 raucci राची
 raucous राकेश राकेष
-rauen रोन रोआं
+rauen रोआं रोआँ
 rauer रोवर
 rauh रो रा
+raun रान रन
 raunchy रांची
 rausch रोष
 rave रव
@@ -11150,8 +11150,8 @@ roam रोम
 roamed रौंद
 roaming रोमन
 roams रंजू
-roane रोन
-roanna रोना रोन
+roane रन रण
+roanna रोना
 roar रोड़
 roat रत
 roath रथ रत
@@ -11197,7 +11197,7 @@ roell रोल
 roelle रोल
 roeller रोलर
 roemer रोमर
-roen रोन
+roen रन रण
 roesch रोष रस
 roese रस रोष
 roesel रसेल
@@ -11247,13 +11247,14 @@ romney रमनी
 roms रंजू
 ron रान
 ronna रानी रोना
-ronne रोन रान
+ronne रान रन
 ronnie रानी
 ronny रानी
 roof रफू
 rookie रुक रुके
 room रोम
 rooms रंजू
+roone रन ऋण
 rooney ऋणी
 roost रुष्ट
 root ऋतु
@@ -11297,16 +11298,17 @@ rousseau रूसो
 roussel रसेल
 roussell रसेल
 rousselle रसेल
-route राउत
+route राउत ऋतु
+routh राउत
 rovira रोवर
 row रो
-rowan रोन रोआं
+rowan रोआं रोआँ
 rowand रौंद
 rowboat रोबोट
 rowden रोदन
 rowdy रोड़ी रोडे
 rowed रोड
-rowen रोन रोआं
+rowen रोआं रोआँ
 rowes रोज
 rowley रोल
 rowlie रोल
@@ -11368,7 +11370,7 @@ rugh रा र
 ruhnke रंक
 ruhollah रहला
 ruhr रूर
-ruin रोन रोआं
+ruin रोआं रोआँ
 rule रूल
 ruley रूल
 rulli रूल
@@ -11380,7 +11382,7 @@ rumney रमनी
 rumour रोमर
 rums रंजू
 rumsey रामजी
-run रन रान
+run रान
 runcie रनसे
 runes रंजू
 rungs रंजू
@@ -11412,7 +11414,7 @@ russum रस्म
 rustle रसेल
 rusty रस्ते
 rut रात
-ruth रूत ऋतु
+ruth ऋतु रूट
 rutledge रूटलेज
 ruttan रतन रातिं
 rutten रतन रातिं
@@ -11461,7 +11463,7 @@ sagan सगुण
 sahara शहर शेर
 sahl साल
 sahli साल साली
-sahlman सलमोन सलमान
+sahlman सलमान
 saia साया सायो
 said सड़
 saidan सदन
@@ -11475,6 +11477,7 @@ saker सेकर सेकार
 sakura सेकरा सैकड़ो
 salak सिल्क
 salameh सालमे सलाम
+salamon सलमान
 salawah सलवा
 sale सेल
 saleh सोलह
@@ -11500,6 +11503,7 @@ salmon समान सामान
 salmons साइमन्स
 salois सलवा
 saloma सालों सालमे
+salomon सलमान
 salon सैलोन
 salone सालों सैलोन
 salopek शैल्पिक
@@ -11640,6 +11644,7 @@ saying सेन सें
 sayle सेल
 sayler शिलेर
 saylor शिलेर
+sayre सेर सिर
 sayres सरस साइरस
 says सेज साइज
 sayyid सैयद सायद
@@ -11711,7 +11716,7 @@ scheme स्कीम
 schemm सेम सें
 schemmel शमिल
 schenkel सेंकल शंकालु
-schepp शेप शिप
+schepp शेप
 scherr शेर शहर
 scherz सरस
 scheu शी
@@ -11901,8 +11906,9 @@ selley शैली
 sellier शिलेर
 sellin सेलं
 selling शिलिंग सेलं
-sellman सलमोन सलमान
+sellman सलमान
 sellon सेलं सैलोन
+selmon सलमान
 selover सलवार सिल्वर
 semantic सिमाण्टिक सिमैण्टेक
 semi समय
@@ -12014,7 +12020,7 @@ shamir समर
 shampine शैम्पेन
 shamrock शेमरॉक
 shannon सेनन
-shape शेप शिप
+shape शेप
 shapp शाप शेप
 shaquille शकील
 share शेर शहर
@@ -12072,7 +12078,7 @@ shellfish सेल्फिश
 shelling शिलिंग
 shelly शैली सहेली
 shelor शिलेर
-shepp शेप शिप
+shepp शेप
 sheppy शेप
 sheriff शरीफ
 sherr शेर शहर
@@ -12919,7 +12925,7 @@ szuba सूबा सबा
 szuch सच
 szwed श्वेद
 tabb तब
-tabbouleh टेबुल तबले
+tabbouleh टेबुल
 tabby तबे तबै
 table टेबुल
 tacked ताकत
@@ -13438,7 +13444,7 @@ trauma ट्राम ट्रां
 traveler ट्रैवलर
 traveller ट्रैवलर
 traver तरवार
-tray तरे ट्रे
+tray ट्रे तर
 trays तरस
 tread ट्रेड
 treading ट्रेडिंग
@@ -13490,7 +13496,7 @@ truss तरस
 trussell तराशल त्रुशल
 trust ट्रस्ट
 truths तृत्सु
-try तराई तरे
+try तराई ट्रे
 tryba त्रेबा
 trying ट्रेन
 tryst त्रस्त ट्रस्ट
@@ -14364,7 +14370,7 @@ write रेत
 writes राइट्स राइटस
 written रतन रत्न
 wroclaw रोकलो
-wrong रंग रोन
+wrong रंग
 wronged रौंद
 wrongs रंजू
 wrote रत
@@ -14455,9 +14461,10 @@ yearbook ईयरबुक
 yearick एरिक
 yearling एलेन
 yeary एड़ी
-yeas यीसु यीशु
+yeas यीशु यीसु
 yeast ईस्ट
 yehle एहोल
+yehuda यहूदी
 yeiri एड़ी
 yell एल
 yelle एल
@@ -14652,6 +14659,7 @@ zoom जम सोम
 zoomed झुंड
 zooming जमीन
 zoos जज
+zorah जोर जाड़ा
 zorich शारिक
 zorina जरीन
 zorro जारो जोड़ो

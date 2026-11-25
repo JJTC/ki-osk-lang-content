@@ -3,9 +3,8 @@
   "name": "Itawit",
   "xkb_layout": "us",
   "direction": "ltr",
-  "swipe_enabled": true,
-  "prediction_enabled": true,
-  "prediction_lang": "itv",
+  "swipe_enabled": false,
+  "prediction_enabled": false,
   "views": [
     {
       "id": "base",

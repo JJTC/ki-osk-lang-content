@@ -13,7 +13,7 @@ Central and Southern Kurdish, South Azerbaijani, Mazandarani, Western Balochi, G
 Amharic/Tigrinya/Ge'ez/Gedeo/Hadiyya/Kambaata/Silt'e/Sebat Bet Gurage Ge'ez + Vai's and Nuosu's syllables) · 61 transliteration layouts (Latin letters →
 the language's script, `-abc`) · emoji + numeric. All render native
 keycaps. 726 are here; the numeric keypad is built into ki-osk. The
-table below is the complete list; **479 languages** carry a prediction
+table below is the complete list; **460 languages** carry a prediction
 model (suggestion bar, plus dictionary-backed swipe on the Latin ones),
 the rest are layout-only, gated only by how much permissively-licensed
 corpus exists (see [Prediction model tiers](#prediction-model-tiers)).
@@ -248,12 +248,12 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `sop` | `sop` | Songe Kisonge | us | LTR | **Full** (sop)⁷ | ✓ | — |
 | `vmw` | `vmw` | Makhuwa Emakhuwa | us | LTR | **Full** (vmw)⁷ | ✓ | — |
 | `ndc` | `ndc` | Ndau ChiNdau | us | LTR | **Full** (ndc)⁷ | ✓ | — |
-| `gur` | `gur` | Farefare Gurenɛ | us + long-press ɛ ɔ ŋ | LTR | **Full** (gur)⁷ | ✓ | — |
+| `gur` | `gur` | Farefare Gurenɛ | us + long-press ɛ ɔ ŋ | LTR | —¹⁹ | — | — |
 | `bum` | `bum` | Bulu | us + long-press é ô ñ | LTR | **Full** (bum)⁷ | ✓ | — |
 | `bin` | `bin` | Edo Ẹdo | us + long-press ẹ ọ | LTR | **Full** (bin)⁷ | ✓ | — |
 | `teo` | `teo` | Teso Ateso | us + long-press ŋ | LTR | **Full** (teo)⁷ | ✓ | — |
 | `sgc` | `sgc` | Kipsigis | us | LTR | **Full** (sgc)⁷ | ✓ | — |
-| `mfq` | `mfq` | Moba | us + long-press ɛ ɔ ŋ | LTR | **Full** (mfq)⁷ | ✓ | — |
+| `mfq` | `mfq` | Moba | us + long-press ɛ ɔ ŋ | LTR | —¹⁹ | — | — |
 | `yao` | `yao` | Yao Chiyao | us + long-press ŵ | LTR | **Full** (yao)⁷ | ✓ | — |
 | `dik` | `dik` | Dinka Thuɔŋjäŋ | us + long-press ä ë ï ö ɛ ɔ ɛ̈ ɔ̈ ŋ ɣ | LTR | **Full** (dik)⁷ | ✓ | — |
 | `min` | `min` | Minangkabau Baso Minang | us | LTR | **Full** (min)⁷ | ✓ | — |
@@ -301,38 +301,38 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `men` | `men` | Mende Mɛnde | us + long-press ɛ ɔ ŋ | LTR | **Full** (men)⁷ | ✓ | — |
 | `lgg` | `lgg` | Lugbara Lugbarati | us + long-press ᴜ ᴜ́ ú ɨ ɨ́ ɨ̀ í ì á à…, ' key | LTR | **Full** (lgg)⁷ | ✓ | — |
 | `xon` | `xon` | Konkomba | us + long-press ɔ ŋ | LTR | **Full** (xon)⁷ | ✓ | — |
-| `dnj` | `dnj` | Dan | us + long-press ë ɛ ö ɔ ü ʋ̈ ʋ ɩ | LTR | **Full** (dnj)⁷ | ✓ | — |
-| `gbo` | `gbo` | Northern Grebo Grebo | us + long-press à ǎ ä ɛ ě è ɛ̌ ɛ̀ ɛ̈ ǐ…, ɛ ɔ keys, ǒ ě on q x | LTR | **Full** (gbo)⁷ | ✓ | — |
+| `dnj` | `dnj` | Dan | us + long-press ë ɛ ö ɔ ü ʋ̈ ʋ ɩ | LTR | —¹⁹ | — | — |
+| `gbo` | `gbo` | Northern Grebo Grebo | us + long-press à ǎ ä ɛ ě è ɛ̌ ɛ̀ ɛ̈ ǐ…, ɛ ɔ keys, ǒ ě on q x | LTR | —¹⁹ | — | — |
 | `heh` | `heh` | Hehe Kihehe | us | LTR | **Full** (heh)⁷ | ✓ | — |
 | `gux` | `gux` | Gourmanché Gulmancema | us + long-press ŋ ñ | LTR | **Full** (gux)⁷ | ✓ | — |
 | `gmv` | `gmv` | Gamo | us | LTR | **Full** (gmv)⁷ | ✓ | — |
 | `suk` | `suk` | Sukuma Kisukuma | us + long-press ī ū, ' key | LTR | **Full** (suk)⁷ | ✓ | — |
 | `spp` | `spp` | Supyire | us + long-press à á â ɛ è ɛ̀ é ê ɛ̂ ɛ́…, ' key | LTR | **Full** (spp)⁷ | ✓ | — |
 | `bas` | `bas` | Basaa | us + long-press é è ñ ô à | LTR | **Full** (bas)⁷ | ✓ | — |
-| `hay` | `hay` | Haya Ekihaya | us, ' key | LTR | **Full** (hay)⁷ | ✓ | — |
-| `kbr` | `kbr` | Kafa | us, ' key | LTR | **Full** (kbr)⁷ | ✓ | — |
+| `hay` | `hay` | Haya Ekihaya | us, ' key | LTR | —¹⁹ | — | — |
+| `kbr` | `kbr` | Kafa | us, ' key | LTR | —¹⁹ | — | — |
 | `ngl` | `ngl` | Lomwe Elomwe | us + long-press á à ã é ó ò | LTR | **Full** (ngl)⁷ | ✓ | — |
-| `gog` | `gog` | Gogo Cigogo | us | LTR | **Full** (gog)⁷ | ✓ | — |
+| `gog` | `gog` | Gogo Cigogo | us | LTR | —¹⁹ | — | — |
 | `chw` | `chw` | Chuwabu Echuwabo | us + long-press á ã ç é í ñ ó | LTR | **Full** (chw)⁷ | ✓ | — |
 | `fat` | `fat` | Fante Mfantse | us + long-press ɛ ɔ õ ã ũ | LTR | **Full** (fat)⁷ | ✓ | — |
 | `tsc` | `tsc` | Tswa Xitshwa | us | LTR | **Full** (tsc)⁷ | ✓ | — |
-| `bud` | `bud` | Ntcham Ncam | us + long-press á à ā b́ b̀ é è ē í ì… | LTR | **Full** (bud)⁷ | ✓ | — |
-| `kao` | `kao` | Xaasongaxango | us + long-press ɲ ŋ ń í é, ' key | LTR | **Full** (kao)⁷ | ✓ | — |
-| `gvl` | `gvl` | Gulay | us + long-press è é ê à á ɓ ɗ m̂ ɔ ò…, ' key | LTR | **Full** (gvl)⁷ | ✓ | — |
-| `nnb` | `nnb` | Nande Kinande | us + long-press ĩ í į ũ ú ų á é ó, ĩ ' keys, ũ on q | LTR | **Full** (nnb)⁷ | ✓ | — |
-| `nyo` | `nyo` | Nyoro Runyoro | us, ' key | LTR | **Full** (nyo)⁷ | ✓ | — |
+| `bud` | `bud` | Ntcham Ncam | us + long-press á à ā b́ b̀ é è ē í ì… | LTR | —¹⁹ | — | — |
+| `kao` | `kao` | Xaasongaxango | us + long-press ɲ ŋ ń í é, ' key | LTR | —¹⁹ | — | — |
+| `gvl` | `gvl` | Gulay | us + long-press è é ê à á ɓ ɗ m̂ ɔ ò…, ' key | LTR | —¹⁹ | — | — |
+| `nnb` | `nnb` | Nande Kinande | us + long-press ĩ í į ũ ú ų á é ó, ĩ ' keys, ũ on q | LTR | —¹⁹ | — | — |
+| `nyo` | `nyo` | Nyoro Runyoro | us, ' key | LTR | —¹⁹ | — | — |
 | `niu` | `niu` | Niuean Vagahau Niuē | us + long-press ā ē ō ū | LTR | **Full** (niu)⁷ | ✓ | — |
 | `hwc` | `hwc` | Hawaiian Pidgin Pidgin | us | LTR | **Full** (hwc)⁷ | ✓ | — |
 | `acf` | `acf` | Saint Lucian Creole Kwéyòl | us + long-press é è ò | LTR | **Full** (acf)⁷ | ✓ | — |
 | `mrw` | `mrw` | Maranao Meranaw | us + long-press ā ū ī | LTR | **Full** (mrw)⁷ | ✓ | — |
 | `nij` | `nij` | Ngaju | us | LTR | **Full** (nij)⁷ | ✓ | — |
 | `guc` | `guc` | Wayuu Wayuunaiki | us + long-press ü ú á é í ó ñ, ü ' keys | LTR | **Full** (guc)⁷ | ✓ | — |
-| `ljp` | `ljp` | Lampung Api Lampung | us | LTR | **Full** (ljp)⁷ | ✓ | — |
-| `sas` | `sas` | Sasak Basa Sasak | us + long-press ẽ | LTR | **Full** (sas)⁷ | ✓ | — |
+| `ljp` | `ljp` | Lampung Api Lampung | us | LTR | —¹⁹ | — | — |
+| `sas` | `sas` | Sasak Basa Sasak | us + long-press ẽ | LTR | —¹⁹ | — | — |
 | `gor` | `gor` | Gorontalo Hulontalo | us, ' key | LTR | **Full** (gor)⁷ | ✓ | — |
-| `itv` | `itv` | Itawit | us | LTR | **Full** (itv)⁷ | ✓ | — |
-| `bku` | `bku` | Buhid | us | LTR | **Full** (bku)⁷ | ✓ | — |
-| `bpr` | `bpr` | Koronadal Blaan Blaan | us + long-press à é è ê ì ò ù | LTR | **Full** (bpr)⁷ | ✓ | — |
+| `itv` | `itv` | Itawit | us | LTR | —¹⁹ | — | — |
+| `bku` | `bku` | Buhid | us | LTR | —¹⁹ | — | — |
+| `bpr` | `bpr` | Koronadal Blaan Blaan | us + long-press à é è ê ì ò ù | LTR | —¹⁹ | — | — |
 | `quh` | `quh` | South Bolivian Quechua Qhichwa | us + long-press ñ á é í ó ú, ʼ key | LTR | **Full** (quh)⁷ | ✓ | — |
 | `gcr` | `gcr` | Guianan Creole Kriyòl | us + long-press é è ò à ï | LTR | **Full** (gcr)⁷ | ✓ | — |
 | `tum` | `tum` | Tumbuka Chitumbuka | us + long-press ŵ | LTR | **Full** (tum)⁷ | ✓ | — |
@@ -344,7 +344,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `mnk` | `mnk` | Mandinka | us + long-press ŋ ñ ǹ ì à é m̀ | LTR | **Full** (mnk)⁷ | ✓ | — |
 | `mer` | `mer` | Meru Kĩmĩĩrũ | us + long-press ĩ ũ | LTR | **Full** (mer)⁷ | ✓ | — |
 | `dga` | `dga` | Dagaare | us + long-press ɛ ē é ɛ̃ ŋ ɔ õ ɔ̃ ã ŭ… | LTR | **Full** (dga)⁷ | ✓ | — |
-| `lhu` | `lhu` | Lahu Laˇhuˍ | us, its tones on keys: ˬ ˇ at the home row's end, ꞈ ' ˍ on q x z, long-press ˆ ˉ | LTR | **Full** (lhu)⁷ | ✓ | — |
+| `lhu` | `lhu` | Lahu Laˇhuˍ | us, its tones on keys: ˬ ˇ at the home row's end, ꞈ ' ˍ on q x z, long-press ˆ ˉ | LTR | —¹⁹ | — | — |
 | `hrx` | `hrx` | Hunsrik | us + long-press ë ã á ó ç | LTR | **Full** (hrx)⁷ | ✓ | — |
 | `crk` | `crk` | Plains Cree nēhiyawēwin | us + long-press ā ē ī ō, ā ē keys | LTR | **Full** (crk)⁷ | ✓ | — |
 | `csw` | `csw` | Swampy Cree Ininîmowin | us + long-press â ê î ô š, â ê keys | LTR | **Full** (csw)⁷ | ✓ | — |
@@ -690,7 +690,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `hdy` | `hdy` | Hadiyya (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer) |
 | `ktb` | `ktb` | Kambaata (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its ኧ as A) |
 | `stv` | `stv` | Silt'e (Ge'ez script) | — | LTR | IME | — | **Ge'ez** (shares the Amharic composer; its -wa forms ሏ ሟ ቧ…) |
-| `sgw` | `sgw` | Sebat Bet Gurage ሰባት ቤት ጉራጌ | — | LTR | **Full** (sgw)⁷ | — | **Ge'ez** (shares the Amharic composer; its words on the strip¹⁶; ʷ and ʸ keys for its labialised bilabials ᎀ ᎄ ᎈ ᎌ and palatalised velars ⷀ ⷈ ⷐ ⷘ, in place of v and the hyphen¹⁵) |
+| `sgw` | `sgw` | Sebat Bet Gurage ሰባት ቤት ጉራጌ | — | LTR | —¹⁹ | — | **Ge'ez** (shares the Amharic composer; ʷ and ʸ keys for its labialised bilabials ᎀ ᎄ ᎈ ᎌ and palatalised velars ⷀ ⷈ ⷐ ⷘ, in place of v and the hyphen¹⁵) |
 | `vai` | `vai` | Vai ꕙꔤ | — | LTR | **Full** (vai)⁶ | — | **Translit** Latin → Vai syllables, as Keyman's athinkra_vai types them (ka ꕪ, ka~ ꕫ), its words on the strip¹¹; ɛ ɔ ~ keys, long-press ŋ þ ð ʒ ꘌ |
 | `ii` | `ii` | Nuosu ꆈꌠꉙ (Yi) | — | LTR | **Full** (ii)⁶ ⁷ | — | **Translit** Yi pinyin → syllables, as Keyman's sil_yi types them (bit ꀖ), the syllables its letters begin on the strip¹¹; Space adds no space; ， 。 keys |
 | `hi-abc` | `hi` | Hindi हिन्दी (abc) | — | LTR | IME | — | **Translit**⁴ Latin → Devanagari, the hi lexicon choosing |
@@ -1394,7 +1394,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
    their letters (note 12); Northern Thai has keyboards (notes 10 and 12)
    and no model yet, and Eastern Pwo Karen a model now (above).
-7. These three hundred and thirty-two models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and thirteen models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1411,10 +1411,11 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    scanned book's garbled text, and for Dogri none whose words are more
    Punjabi's than Dogri's (half of FineWeb-2's Dogri is Punjabi poetry
    and Himachali). Its Angika (Hindi news), Malvi and Devanagari Kashmiri
-   are not used, nor its Garo, all one Bible. Keystroke savings on
+   are not used, nor its Garo in the Bengali script, all bible.is's Bible
+   (note 19). Keystroke savings on
    FineWeb-2's held-out test text, which is not committed, the text
-   being the web's: Bodo 48.1%, Brahui 46.4%, Magahi 31.4%,
-   Chhattisgarhi 30.1%, Dogri 30.1% (its test text only 33 sentences),
+   being the web's: Bodo 48.1%, Brahui 46.4%, Magahi 31.8%, Chhattisgarhi
+   30.9%, Dogri 30.1% (its test text only 33 sentences),
    Sindhi in Devanagari 40.6% (125), Meitei in the Bengali script 36.5%.
    Three quarters of the Bengali-script Meitei is the Prime Minister's
    speeches in translation (narendramodi.in), which its model's
@@ -1449,7 +1450,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    U+1060 to U+1097) or as Zawgyi read as Unicode (ငျ for င်), the
    keyboard and the word list being Unicode's; the digit ၀ written for
    the letter ဝ is read as ဝ. Keystroke savings on FineWeb-2's held-out
-   text: Khmer 46.7% (9 434 words), Burmese 45.6% (8 494). Their keyboards
+   text: Khmer 46.6% (9 434 words), Burmese 46.3% (10 803). Their keyboards
    now have the letters and signs xkeyboard-config keeps on the number
    row's Shift, a key each on the top row (Burmese's ရ, among its
    commonest letters, ဍ ၒ ဋ; Khmer's ៗ ៍ ័ ៏ ៌), and Khmer's those on
@@ -1464,11 +1465,11 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Uzbek, Xhosa, Zulu, Shona, Luxembourgish, Dhivehi, Irish, Bashkir).
    Keystroke savings on all of FineWeb-2's held-out text of each (5 000 to
    17 000 words; Irish's first 3 000 are an Old Irish tale): Maltese
-   53.2%, Sesotho 53.1%, Xhosa 51.4%, Hausa 51.1%, Malagasy 50.4%, Welsh
-   50.2%, Yoruba 49.4%, Scottish Gaelic 49.1%, Igbo 49.0%, Chichewa 49.0%,
-   Haitian Creole 48.6%, Cebuano 48.4%, Samoan 47.7%, Swahili 47.4%, Māori
-   47.3%, Turkmen 46.5%, Javanese 45.5%, Hawaiian 45.1%, Dhivehi 45.0%,
-   Tajik 45.0%, Somali 45.0%, Sundanese 44.8%, Frisian 44.5%, Kinyarwanda
+   53.2%, Sesotho 53.1%, Xhosa 51.4%, Hausa 51.1%, Welsh 50.2%, Malagasy
+   49.7%, Yoruba 49.4%, Scottish Gaelic 49.1%, Igbo 49.0%, Chichewa 49.0%,
+   Samoan 48.7%, Haitian Creole 48.5%, Cebuano 48.0%, Swahili 47.4%, Māori
+   47.3%, Turkmen 46.5%, Somali 46.3%, Javanese 45.5%, Hawaiian 45.1%,
+   Dhivehi 45.0%, Tajik 45.0%, Sundanese 44.8%, Frisian 44.5%, Kinyarwanda
    44.3%, Zulu 43.9%, Bashkir 43.6%, Afrikaans 43.1%, Corsican 42.6%, Irish
    42.6%, Albanian 42.4%, Kyrgyz 42.3%, Uzbek 41.5%, Shona 40.8%,
    Luxembourgish 40.6%, Faroese 39.5%, Slovenian 36.0%, Kazakh 35.9%,
@@ -1523,18 +1524,20 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    é ë è ô ö, Balinese's é and Hakha Chin's ṭ first in theirs. Their
    lexicons keep 80 000 words (Iloko's and Balinese's 120 000; at 30 000
    they saved 0.3 to 2.5 points fewer). Keystroke savings on FineWeb-2's
-   held-out text of each (5 700 to 19 800 words): Iu Mien 63.4%,
-   Kadazandusun 56.8%, Simalungun 55.7%, Tetum 55.3%, Hiligaynon 54.0%,
-   Acehnese 53.8%, Karo 53.3%, Jingpho 53.2%, Iban 51.6%, Pangasinan
-   50.7%, Hmong Daw 48.3%, Central Bikol 48.3%, Kinaray-a 47.2%, Batak
-   Toba 46.6%, Hakha Chin 46.6%, Iloko 46.3%, Banjar 44.7%, Kapampangan
-   43.3%, Balinese 40.6%; 46.8% on average with taps astray, their words
-   unknown 0.5% to 7.9%. Most of Iu Mien's text, and of Acehnese's,
-   Pangasinan's, Karo's and Simalungun's, is the Bible, as their held-out
-   text is, which flatters them. With taps astray Hmong Daw's corrector
-   changes 1.0% of the words typed right (0.3% when taps land true), its
-   words told apart by their last letter, which writes the tone (kev,
-   kej); 96.6% are right after the space. Shan, Mon and Sgaw Karen, in
+   held-out text of each (3 100 to 20 000 words; since data 0.84.0 without
+   bible.is's pages, note 19): Iu Mien 63.4%, Kadazandusun 56.8%, Tetum
+   55.3%, Hiligaynon 54.0%, Karo 53.4%, Jingpho 53.2%, Simalungun 52.7%,
+   Pangasinan 51.6%, Iban 51.6%, Central Bikol 48.6%, Hmong Daw 47.5%,
+   Batak Toba 46.6%, Hakha Chin 46.6%, Iloko 46.4%, Kinaray-a 46.1%, Banjar
+   44.7%, Acehnese 42.9%, Kapampangan 39.2%, Balinese 37.3%; 45.2% on
+   average with taps astray, their words unknown 0.5% to 9.8%. Most of Iu
+   Mien's text, and of Acehnese's, Pangasinan's, Karo's and Simalungun's,
+   is the Bible, as their held-out text is, which flatters them (less since
+   bible.is's pages went: Acehnese's text lost a quarter of its words, and
+   10.9 points of its savings). With taps astray Hmong Daw's corrector
+   changes 1.3% of the words typed right (0.3% when taps land true), its
+   words told apart by their last letter, which writes the tone (kev, kej);
+   96.3% are right after the space. Shan, Mon and Sgaw Karen, in
    the Myanmar script, write their syllables run together between
    spaces, as Burmese does, and have no word list to cut them with: not
    yet used.
@@ -1613,15 +1616,16 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    for fourteen and 200 000 for the five that build words from many parts
    (Greenlandic, Inuktitut, Swati, Aymara, Southern Ndebele). Keystroke
    savings on FineWeb-2's held-out text of each (2 000 to 15 000 words):
-   Hill Mari 50.3%, Kalmyk 44.2%, Moksha 42.6%, Meadow Mari 42.6%, Chuvash
-   42.4%, Tuvan 42.0%, Erzya 41.0%, Northern Sami 40.6%, Karelian 40.5%,
-   Komi-Zyrian 40.1%, Veps 39.5%, Buryat 38.2%, Komi-Permyak 38.2%, Udmurt
-   38.1%, Sakha 37.7%, Livvi 34.1%; Tongan 53.9%, Fijian 52.9%, Tahitian
-   52.3%, Ewe 52.2%, Venda 51.9%, Tsonga 51.2%, Lingala 49.3%, Romansh
-   48.8%, Akan 47.0%, Sepedi 46.7%, Kirundi 45.6%, Setswana 45.5%, Southern
-   Ndebele 44.9%, Oromo 42.2%, Bambara 41.9%, Luganda 41.0%, Quechua 40.8%,
-   Wolof 34.2%, Greenlandic 33.5%, Swati 28.8%, Aymara 28.0%, Inuktitut
-   23.4%; at most 0.66% of right words changed (Wolof's). Greenlandic,
+   Hill Mari 50.3%, Moksha 42.6%, Meadow Mari 42.6%, Chuvash 42.4%, Tuvan
+   41.9%, Kalmyk 41.7%, Erzya 41.0%, Komi-Zyrian 40.9%, Northern Sami
+   40.6%, Karelian 40.5%, Veps 39.5%, Komi-Permyak 38.2%, Udmurt 38.1%,
+   Sakha 37.7%, Buryat 37.5%, Livvi 34.1%; Tongan 53.9%, Fijian 52.7%,
+   Tahitian 52.3%, Ewe 52.2%, Venda 51.9%, Tsonga 51.2%, Lingala 49.3%,
+   Romansh 48.8%, Akan 47.0%, Sepedi 46.7%, Kirundi 46.0%, Setswana 45.5%,
+   Southern Ndebele 44.9%, Oromo 42.2%, Bambara 41.9%, Luganda 41.0%,
+   Quechua 41.0%, Wolof 34.2%, Greenlandic 33.5%, Swati 28.8%, Aymara
+   28.0%, Inuktitut 23.4%; at most 0.66% of right words changed (Wolof's).
+   Greenlandic,
    Inuktitut, Swati and Aymara still lack a fifth to a third of their
    held-out words, a sentence's worth of word parts each, and with taps
    astray save little (Greenlandic 8.2%, Inuktitut 0.5%): a word typed
@@ -1653,8 +1657,8 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    are read as 2016's (hám). Their lexicons keep 80 000 words, 120 000 for
    ten and 200 000 for Kabardian and Mingrelian. Keystroke savings on
    FineWeb-2's held-out text of each (2 200 to 8 500 words): Tabasaran
-   55.2%, Abkhaz 51.8%, Adyghe 50.4%, Dargwa 45.3%, Lak 44.5%, Kumyk 44.0%,
-   Lezgian 42.7%, Avar 41.4%, Chechen 41.1%, Karachay-Balkar 38.9%,
+   54.4%, Abkhaz 51.8%, Adyghe 50.4%, Dargwa 45.3%, Lak 44.5%, Kumyk 44.0%,
+   Lezgian 42.7%, Avar 41.4%, Chechen 41.0%, Karachay-Balkar 38.9%,
    Mazandarani 38.7%, Karakalpak 38.3%, Ingush 36.7%, Mingrelian 36.5%,
    Kirmanjki 36.0%, South Azerbaijani 35.5%, Talysh 35.2%, Zazaki 32.0%,
    Kabardian 30.8%; 34.0% on average with taps astray, their words unknown
@@ -1678,12 +1682,12 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    National Assembly's records, Kikuyu's Kenya's news. Their lexicons keep
    80 000 words, Northern Ndebele's and Cape Verdean's 120 000. Keystroke
    savings on FineWeb-2's held-out text of each (6 500 to 12 000 words):
-   Baoulé 61.4%, Kikongo 60.0%, Sango 59.6%, Efik 58.1%, Kwanyama 57.9%,
-   Umbundu 57.8%, Isoko 56.8%, Kimbundu 55.9%, Fon 55.4%, Jula 55.1%,
+   Baoulé 61.4%, Kikongo 60.0%, Sango 59.7%, Efik 58.1%, Kwanyama 57.9%,
+   Umbundu 57.8%, Isoko 56.8%, Kimbundu 55.9%, Fon 55.4%, Jula 55.0%,
    Kikuyu 54.0%, Seychellois Creole 53.8%, Tiv 53.3%, Tshiluba 52.8%,
-   Kiluba 52.3%, Ndonga 51.2%, Mossi 50.8%, Acholi 49.4%, Bemba 49.0%,
-   Réunion Creole 48.6%, Northern Ndebele 47.8%, Dholuo 47.6%, Wolaytta
-   45.7%, Cape Verdean Creole 29.3% (its text spelled both as ALUPEC and
+   Kiluba 52.3%, Ndonga 51.2%, Mossi 50.8%, Acholi 49.8%, Bemba 49.0%,
+   Réunion Creole 48.6%, Wolaytta 48.6%, Northern Ndebele 47.8%, Dholuo
+   47.6%, Cape Verdean Creole 29.3% (its text spelled both as ALUPEC and
    as Portuguese, 10.4% of its words unknown); at most 0.59% of right
    words changed (Seychellois Creole's). FineWeb-2 has under 2 MB of the
    other Africa's languages Gboard has, mostly Bible pages, and none of
@@ -1715,15 +1719,15 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    its vowels (Kichwa writes a i u) and none of Twi's ɛ ɔ is written. Their
    lexicons keep 80 000 words, Cusco Quechua's 120 000 and Latin's, whose
    words take many forms, 200 000 (the held-out words it lacks 15.2% ->
-   8.7%). Keystroke savings on FineWeb-2's held-out text of each (2 500 to
-   14 900 words): Hiri Motu 66.1%, Tok Pisin 63.1%, Bislama 58.6%, Sranan
-   Tongo 58.4%, Qʼeqchiʼ 58.2%, Kʼicheʼ 55.7%, Yucatec Maya 54.4%, Tuvaluan
-   53.3%, Kiribati 52.4%, Chamorro 50.3%, Interlingua 49.0%, Cusco Quechua
-   43.1%, Kichwa 42.9%, Guadeloupean Creole 42.1%, Papiamento 40.1%, Syriac
-   35.5%, Jamaican Patois 35.5%, Latin 26.8%; 45.1% on average with taps
-   astray, their words unknown 0.2% to 12.5%, at most 0.76% of right words
-   changed (Jamaican Patois's, whose held-out text is small: 2 500
-   words). FineWeb-2's Fiji Hindi is Hindi in Latin
+   8.7%). Keystroke savings on FineWeb-2's held-out text of each (2 400 to
+   14 700 words; since data 0.84.0 without bible.is's pages, note 19): Hiri
+   Motu 66.1%, Qʼeqchiʼ 58.2%, Bislama 58.2%, Sranan Tongo 57.1%, Kʼicheʼ
+   55.7%, Tok Pisin 55.2%, Yucatec Maya 54.5%, Tuvaluan 53.3%, Kiribati
+   50.6%, Chamorro 50.3%, Interlingua 49.0%, Kichwa 42.9%, Guadeloupean
+   Creole 42.1%, Papiamento 40.1%, Syriac 35.5%, Cusco Quechua 35.5%,
+   Jamaican Patois 35.2%, Latin 26.8%; 43.9% on average with taps astray,
+   their words unknown 0.2% to 16.0%, at most 0.60% of right words changed
+   (Papiamento's). FineWeb-2's Fiji Hindi is Hindi in Latin
    letters, Hinglish's: not used. Nor is its Lojban, whose short words
    differ by a letter (lo le la): autocorrect changed 1.5% of the words
    typed right.
@@ -1781,35 +1785,37 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    characters and an eighth of Tibetan's (the tsheg, vowel signs and
    subjoined letters) typed exactly, as no letter key's.
    Twenty of Africa's languages and four of Southeast Asia's, of which
-   FineWeb-2 has 1 to 2 MB, learn from its text whole, Kabiye's,
-   Minangkabau's and Waray's with GlotCC's beside it (note 7's Nigerian
-   Pidgin's way): Kabiye, Dagbani, Sena, Dangme, Nkore, Koongo, Sidamo,
-   Konzo, Kamba, Songe, Makhuwa, Ndau, Farefare, Bulu, Edo, Teso, Kipsigis,
-   Moba, Yao and Dinka, Minangkabau, Waray, Nias and Madurese, each typed
-   on the US keys with its letters first on the long presses (the table
-   above). A sentence of English is left out, and of French, Portuguese,
-   Swahili, Indonesian or Tagalog beside those whose state writes it, and a
-   wiki's table line. Most of their text is the Bible and Watchtower, as
-   Africa's twenty-four's is. Waray's and Minangkabau's wikis are a bot's,
-   a species or a place in a sentence each: their pages are left out, as
-   are Dagbani's spam pages and Moba's Romanian and English documents.
-   Letters written for others are read as theirs: Kabiye's ʋ (jw.org's) as
-   ʊ (its wiki's), Moba's ɑ as a (its Bibles write the same words with
-   either), Nias' õ as ö, Sidamo's ˈ as its glottal stop ', Kamba's ī ū as
-   ĩ ũ, a Yao font's Ć and Ǝ as Ŵ. FineWeb-2's test split of Dagbani and of
-   Yao holds a hundred words: every 10th of their documents is held out
+   FineWeb-2 has 1 to 2 MB, learned from its text whole, and all but
+   Farefare and Moba still do (they have no model since data 0.84.0, too
+   little left without bible.is's pages: note 19), Kabiye's, Minangkabau's
+   and Waray's with GlotCC's beside it (note 7's Nigerian Pidgin's way):
+   Kabiye, Dagbani, Sena, Dangme, Nkore, Koongo, Sidamo, Konzo, Kamba,
+   Songe, Makhuwa, Ndau, Farefare, Bulu, Edo, Teso, Kipsigis, Moba, Yao and
+   Dinka, Minangkabau, Waray, Nias and Madurese, each typed on the US keys
+   with its letters first on the long presses (the table above). A sentence
+   of English is left out, and of French, Portuguese, Swahili, Indonesian
+   or Tagalog beside those whose state writes it, and a wiki's table line.
+   Most of their text is the Bible and Watchtower, as Africa's
+   twenty-four's is. Waray's and Minangkabau's wikis are a bot's, a species
+   or a place in a sentence each: their pages are left out, as are
+   Dagbani's spam pages and Moba's Romanian and English documents. Letters
+   written for others are read as theirs: Kabiye's ʋ (jw.org's) as ʊ (its
+   wiki's), Moba's ɑ as a (its Bibles write the same words with either),
+   Nias' õ as ö, Sidamo's ˈ as its glottal stop ', Kamba's ī ū as ĩ ũ, a
+   Yao font's Ć and Ǝ as Ŵ. FineWeb-2's test split of Dagbani and of Yao
+   holds a hundred words: every 10th of their documents is held out
    instead; Maranao, which has none, is not used. Their lexicons keep every
-   word they read (Dangme's 6 000 to 80 000 of Nkore's 84 000). Keystroke
-   savings on their held-out text (1 800 to 10 800 words): Edo 60.7%,
-   Dangme 56.0%, Farefare 56.0%, Koongo 54.6%, Sena 54.5%, Bulu 54.1%, Nias
-   52.6%, Kabiye 51.5%, Ndau 51.1%, Waray 51.1%, Yao 50.8%, Kipsigis 49.5%,
-   Moba 49.2%, Songe 49.2%, Kamba 49.0%, Konzo 48.5%, Makhuwa 48.3%, Teso
-   46.3%, Dagbani 42.8%, Sidamo 42.0%, Minangkabau 41.5%, Nkore 41.5%,
-   Dinka 36.8%, Madurese 27.4%; 43.2% on average with taps astray, their
-   words unknown 0.5% to 24.3% (Madurese's), at most 1.06% of right words
-   changed (Nkore's, 0.86% with every tap true, its words of many parts
-   13.5% unknown). A third of Kabiye's letters are those its long presses
-   type, as are a sixth of Dangme's and Dinka's.
+   word they read (Dangme's 6 000 to Nkore's 66 000). Keystroke savings on
+   their held-out text (1 700 to 10 800 words; since data 0.84.0 without
+   bible.is's pages, note 19): Edo 60.7%, Dangme 56.0%, Koongo 54.6%, Sena
+   54.5%, Bulu 54.1%, Nias 52.6%, Waray 51.2%, Ndau 51.1%, Yao 50.8%,
+   Kipsigis 49.5%, Songe 49.2%, Kamba 49.0%, Konzo 48.5%, Kabiye 48.4%,
+   Makhuwa 48.3%, Teso 44.1%, Dagbani 42.8%, Sidamo 42.0%, Minangkabau
+   41.5%, Nkore 39.3%, Dinka 35.1%, Madurese 28.1%; 41.9% on average with
+   taps astray, their words unknown 0.5% to 25.1% (Madurese's), at most
+   0.90% of right words changed (Nkore's, 0.86% with every tap true, its
+   words of many parts 16.3% unknown). A third of Kabiye's letters are
+   those its long presses type, as are a sixth of Dangme's and Dinka's.
    Eleven of Europe's regional languages learn from FineWeb-2's text
    whole, each typed on its national language's keys with its own
    letters first on the long presses (the table above): Cornish, Manx,
@@ -1854,7 +1860,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    59 800, Pontic's its 44 300), 120 000 for Picard, Extremaduran,
    Venetian, Lombard and West Flemish, 200 000 for Samogitian (all its
    126 500). Keystroke savings on their held-out text (4 900 to 14 100
-   words): Manx 51.6%, Ladin 44.5%, Gagauz 43.1%, Cornish 42.0%, Picard
+   words): Manx 51.6%, Ladin 44.5%, Gagauz 43.2%, Cornish 42.0%, Picard
    40.6%, West Flemish 39.8%, Extremaduran 37.9%, Venetian 35.7%,
    Lombard 31.1%, Samogitian 29.1%, Pontic Greek 27.6%; 31.6% on average
    with taps astray, their words unknown 2.2% (Ladin's) to 20.6%
@@ -1898,14 +1904,14 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    hold all their syllables (3 300 to 12 900 with the runs no list
    holds). Keystroke savings on their held-out text (16 300 to 48 000
    syllables; Pa'O's every 10th document, its test split's 31 sentences
-   too few): Shan 54.3%, Sgaw Karen 47.3%, Pa'O 40.1%, Mon 35.3%; 53.9%,
+   too few): Shan 53.5%, Sgaw Karen 47.3%, Pa'O 40.1%, Mon 35.3%; 52.9%,
    47.1%, 39.5% and 34.9% with taps astray, at most 0.96% of right
    syllables changed (Mon's).
    Four of East Asia's languages written in Latin letters learn from
    FineWeb-2's text whole: Southern Min in Pe̍h-ōe-jī, the church
    romanization (its Wikisource's and Wikipedia's text, the Bible, church
-   and literary sites; 710 000 words), Hakka in Pha̍k-fa-sṳ (its
-   Wikipedia, the Bible; 205 000), Amis (its Wikipedia; 344 000) and
+   and literary sites; 644 000 words), Hakka in Pha̍k-fa-sṳ (its
+   Wikipedia, the Bible; 199 000), Amis (its Wikipedia; 344 000) and
    Zhuang, the standard written language, which FineWeb-2 files as
    Yongbei Zhuang's (the People's Daily's and the Guangxi Minzu Bao's
    Zhuang pages, its Wikipedia; 375 000). Their text's Han runs (Hàn-lô
@@ -1931,80 +1937,81 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    the home row's end (one word in fifteen has it), Zhuang's tones being
    letters. Their lexicons keep all their words (8 400 to 34 000).
    Keystroke savings on their held-out text (Southern Min's test split,
-   the others' every 10th document, theirs too small; 9 700 to 15 200
-   words): Zhuang 61.9%, Hakka 52.7%, Southern Min 48.9%, Amis 45.8%;
-   60.6%, 51.1%, 47.5% and 39.0% with taps astray, at most 0.34% of
-   right words changed (Amis'). Hakka capitalises each syllable of a
+   the others' every 10th document, theirs too small; 10 200 to 15 200
+   words): Zhuang 61.9%, Hakka 54.9%, Southern Min 49.0%, Amis 46.1%;
+   60.6%, 53.9%, 47.7% and 40.2% with taps astray, at most 0.37% of right
+   words changed (Amis'). Hakka capitalises each syllable of a
    place's name (Sî-Fî), and a capital after a hyphen cannot be
    foreseen: 89% of its words come out in the right case.
-   Twenty-eight of Africa's languages that FineWeb-2 has 0.4 to 0.9 MB
-   of learn from it whole (110 000 to 390 000 words each, the Bible's
-   and Jehovah's Witnesses' text in the main): Zande, Alur, Chopi,
-   Sakalava Malagasy, Akoose, Mende, Lugbara, Konkomba, Dan, Northern
-   Grebo, Hehe, Gourmanché, Gamo, Sukuma, Supyire, Basaa, Haya, Kafa,
-   Lomwe, Gogo, Chuwabu, Fante, Tswa, Ntcham, Xaasongaxango, Gulay, Nande
-   and Nyoro. A sentence of English is left out, and of the state's
-   language: French's (une pour dans avec…: not le, which several of
-   them write), Portuguese's beside Mozambique's four, and beside the
-   Bantu languages of East Africa Swahili's own words (katika kwamba
-   lakini…: not kwa ni wa ya, which they write too); every 10th document
-   is held out, their test splits holding a few hundred words. Letters
-   written for others are read as theirs: Fante's ͻ (a Greek look-alike)
-   ɑ ε as ɔ a ɛ, Lugbara's ʉ as the ᴜ its text writes forty times as
-   often, a scan's ﬁ as fi. They are typed on the US keys, each
-   language's letters first on the long presses, the commonest first,
-   with their tones where its text writes them (Akoose's ɛ ə ɔ ŋ and
-   seven tones between them, Northern Grebo's, Supyire's, Ntcham's on b
-   l m n too); the eleven that write an apostrophe in 3% to 11% of their
-   words (Sukuma's ng'wa, Gulay's le’n, Nande's n'abandu) have a key for it at the home
-   row's end, Akoose's typing its glottal stop, ʼ, which its text writes
-   and its words keep (`osk_data::words`, as Kʼicheʼ's do). Their
-   lexicons keep all their words (2 600 to 25 000). Keystroke savings on
-   their held-out text (5 700 to 15 500 words): Akoose 66.8%, Konkomba
-   62.4%, Supyire 62.0%, Sukuma 61.2%, Gogo 60.9%, Hehe 60.8%, Kafa
-   60.7%, Gamo 60.3%, Ntcham 59.6%, Northern Grebo 59.6%, Gourmanché
-   57.7%, Xaasongaxango 56.5%, Gulay 56.4%, Zande 54.1%, Haya 52.8%,
-   Chopi 52.0%, Tswa 51.8%, Lomwe 51.5%, Sakalava 51.2%, Mende 51.2%,
-   Basaa 50.1%, Nande 48.6%, Lugbara 48.2%, Alur 47.9%, Nyoro 44.8%, Dan
-   43.6%, Chuwabu 43.2%, Fante 43.0%; 54.3% on average, 50.5% with taps
-   astray, at most 0.52% of right words changed (Xaasongaxango's). The
-   long presses' letters weigh in the savings: a third of Akoose's and
-   Northern Grebo's letters are typed so, which the strip spares. Nyoro's,
-   Chuwabu's, Nande's and Haya's held-out words are 12% to 15% unknown,
-   their words of many parts, their text small.
-   Twenty-three more of the long tail learn from FineWeb-2's text whole:
-   Southeast Asia's, the Americas' and the Pacific's that it has 0.4 to
-   1.2 MB of (Niuean, Hawaiian Pidgin, Saint Lucian Creole, Maranao,
-   Ngaju, Wayuu, Lampung Api, Sasak, Gorontalo, Itawit, Buhid, Koronadal
-   Blaan, South Bolivian Quechua, Guianan Creole) and Africa's with 0.2 to
-   0.4 MB (Tumbuka, Tetela, Gusii, Makonde, Nyakyusa, Maasai, Mandinka,
-   Meru, Dagaare): 51 000 (Meru) to 640 000 words (Niuean), the Bible's
-   in the main, Niuean's New Zealand's health pages too, Guianan
-   Creole's and Dagaare's their wikis, Maasai's, Meru's and Gusii's
-   Kenyan news and radio. A sentence of English is left out, and of the
-   state's language (Indonesian's, Tagalog's, Spanish's, French's,
-   Portuguese's, Swahili's own words); Maranao's Arabic (sermons, the
-   Quran) is left out by script, the LOLcat Bible beside Hawaiian Pidgin
-   and a book pirate's pages beside Itawit by site; Meru's ĩ written ῖ is
-   read as ĩ; every 10th document is held out. They are typed on the US
-   keys, their letters first on the long presses; Gorontalo, Tetela,
-   Gusii and Wayuu have an apostrophe key at the home row's end, Wayuu a
-   ü key beside it, and South Bolivian Quechua an ʼ key for its
-   ejectives, which its words keep as Cusco Quechua's do. Their lexicons
-   keep all their words. Keystroke savings on their held-out text (3 100
-   to 18 700 words): Sasak 67.3%, Lampung Api 66.5%, Gorontalo 66.2%,
-   Ngaju 64.9%, Itawit 64.5%, Saint Lucian Creole 61.3%, Buhid 60.9%,
-   Hawaiian Pidgin 59.2%, Koronadal Blaan 58.0%, Niuean 52.9%, Nyakyusa
-   47.3%, Tetela 47.2%, Makonde 45.6%, Tumbuka 43.5%, Mandinka 43.3%,
-   Guianan Creole 42.5%, Maranao 42.1%, Meru 41.9%, Wayuu 41.2%, Maasai
-   39.2%, South Bolivian Quechua 38.6%, Gusii 38.4%, Dagaare 37.9%; 50.9%
-   on average, 44.9% with taps astray, at most 0.62% of right words
-   changed (Wayuu's). The smallest texts know least of what is typed:
-   South Bolivian Quechua's held-out words are 24% unknown, Wayuu's,
-   Gusii's and Maasai's 18%, and they save 22% to 29% with taps astray.
-   Makassarese is not used: its Bible writes the glottal stop ' and its
-   chronicles q, and it saved 27% (8% with taps astray), a third of its
-   held-out words unknown.
+   Twenty-eight of Africa's languages that FineWeb-2 has 0.4 to 0.9 MB of
+   learned from it whole, the Bible's and Jehovah's Witnesses' text in the
+   main: Zande, Alur, Chopi, Sakalava Malagasy, Akoose, Mende, Lugbara,
+   Konkomba, Dan, Northern Grebo, Hehe, Gourmanché, Gamo, Sukuma, Supyire,
+   Basaa, Haya, Kafa, Lomwe, Gogo, Chuwabu, Fante, Tswa, Ntcham,
+   Xaasongaxango, Gulay, Nande and Nyoro. Without bible.is's pages (since
+   data 0.84.0, note 19) eighteen still do, from 27 000 (Hehe) to 390 000
+   words (Zande); Northern Grebo, Haya, Kafa, Gogo, Ntcham, Xaasongaxango,
+   Gulay, Nande, Nyoro and Dan have too little left, and no model. A
+   sentence of English is left out, and of the state's language: French's
+   (une pour dans avec…: not le, which several of them write), Portuguese's
+   beside Mozambique's four, and beside the Bantu languages of East Africa
+   Swahili's own words (katika kwamba lakini…: not kwa ni wa ya, which they
+   write too); every 10th document is held out, their test splits holding a
+   few hundred words. Letters written for others are read as theirs:
+   Fante's ͻ (a Greek look-alike) ɑ ε as ɔ a ɛ, Lugbara's ʉ as the ᴜ its
+   text writes forty times as often, a scan's ﬁ as fi. They are typed on
+   the US keys, each language's letters first on the long presses, the
+   commonest first, with their tones where its text writes them (Akoose's ɛ
+   ə ɔ ŋ and seven tones between them, Northern Grebo's, Supyire's,
+   Ntcham's on b l m n too); the eleven that write an apostrophe in 3% to
+   11% of their words (Sukuma's ng'wa, Gulay's le’n, Nande's n'abandu) have
+   a key for it at the home row's end, Akoose's typing its glottal stop, ʼ,
+   which its text writes and its words keep (`osk_data::words`, as
+   Kʼicheʼ's do). Their lexicons keep all their words (2 200 to 24 000).
+   Keystroke savings on the eighteen's held-out text (800 to 13 400 words):
+   Konkomba 63.8%, Zande 54.1%, Chopi 53.1%, Tswa 51.8%, Lomwe 51.5%,
+   Sakalava 51.2%, Alur 51.1%, Basaa 50.1%, Supyire 50.0%, Lugbara 49.9%,
+   Gourmanché 49.6%, Mende 46.8%, Akoose 46.3%, Chuwabu 43.2%, Fante 43.0%,
+   Gamo 40.2%, Sukuma 34.9%, Hehe 29.0%; 47.8% on average, 42.3% with taps
+   astray, at most 0.41% of right words changed (Lugbara's). The long
+   presses' letters weigh in the savings: a third of Akoose's letters are
+   typed so, which the strip spares. Hehe's and Sukuma's held-out words are
+   30% and 22% unknown, their texts now small (27 000 and 32 000 words),
+   Gamo's, Chuwabu's and Akoose's 12% to 14%, their words of many parts.
+   Twenty-three more of the long tail learned from FineWeb-2's text whole:
+   Southeast Asia's, the Americas' and the Pacific's that it has 0.4 to 1.2
+   MB of (Niuean, Hawaiian Pidgin, Saint Lucian Creole, Maranao, Ngaju,
+   Wayuu, Lampung Api, Sasak, Gorontalo, Itawit, Buhid, Koronadal Blaan,
+   South Bolivian Quechua, Guianan Creole) and Africa's with 0.2 to 0.4 MB
+   (Tumbuka, Tetela, Gusii, Makonde, Nyakyusa, Maasai, Mandinka, Meru,
+   Dagaare), the Bible's in the main, Niuean's New Zealand's health pages
+   too, Guianan Creole's and Dagaare's their wikis, Maasai's, Meru's and
+   Gusii's Kenyan news and radio. Without bible.is's pages (since data
+   0.84.0, note 19) eighteen still do, from 25 000 (Gorontalo) to 640 000
+   words (Niuean); Lampung Api, Sasak, Itawit, Buhid and Koronadal Blaan
+   have too little left, and no model. A sentence of English is left out,
+   and of the state's language (Indonesian's, Tagalog's, Spanish's,
+   French's, Portuguese's, Swahili's own words); Maranao's Arabic (sermons,
+   the Quran) is left out by script, the LOLcat Bible beside Hawaiian
+   Pidgin and a book pirate's pages beside Itawit by site; Meru's ĩ written
+   ῖ is read as ĩ; every 10th document is held out. They are typed on the
+   US keys, their letters first on the long presses; Gorontalo, Tetela,
+   Gusii and Wayuu have an apostrophe key at the home row's end, Wayuu a ü
+   key beside it, and South Bolivian Quechua an ʼ key for its ejectives,
+   which its words keep as Cusco Quechua's do. Their lexicons keep all
+   their words. Keystroke savings on the eighteen's held-out text (1 800 to
+   13 000 words): Saint Lucian Creole 60.7%, Hawaiian Pidgin 59.2%, Niuean
+   52.9%, Ngaju 52.8%, Mandinka 48.6%, Maranao 47.2%, Tetela 47.2%, Makonde
+   45.0%, Tumbuka 43.5%, Nyakyusa 42.9%, Guianan Creole 42.5%, Meru 41.9%,
+   Wayuu 40.8%, Maasai 40.5%, Dagaare 40.0%, Gusii 38.4%, Gorontalo 38.0%,
+   South Bolivian Quechua 28.9%; 45.1% on average, 36.7% with taps astray,
+   at most 0.42% of right words changed (Gusii's). The smallest texts know
+   least of what is typed: Gorontalo's and South Bolivian Quechua's
+   held-out words are 26% and 25% unknown, Wayuu's, Gusii's and Maasai's
+   16% to 19%; with taps astray South Bolivian Quechua saves 7%, the others
+   24% to 31%. Makassarese is not used: its Bible writes the glottal stop '
+   and its chronicles q, and it saved 27% (8% with taps astray), a third of
+   its held-out words unknown.
    Coptic learns from FineWeb-2's Bohairic, the dialect of the Coptic
    Church's liturgy (207 000 words: the New Testament on several sites, the
    liturgy as tasbeha.org's readers write it out, the Fathers on
@@ -2022,38 +2029,41 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Bohairic word typed right in 27 (0.15% without it); three editions of
    its New Testament are half of FineWeb-2's Coptic. Coptic is typed on
    its keymap, eg(cop), with a key for the jinkim at the home row's end and
-   the overline of the nomina sacra (Ⲓⲏ̅ⲥ̅) on its long press. Lahu learns
+   the overline of the nomina sacra (Ⲓⲏ̅ⲥ̅) on its long press. Lahu learned
    from its Bible and Jehovah's Witnesses' pages (344 000 words), its tone
-   ꞈ written as a caret, ‸, on Bible.is, read as ꞈ; it is typed on the US
-   keys with its tones on keys: ˬ and ˇ (a fifth of its words end in each)
-   at the home row's end, ꞈ, its apostrophe and ˍ on q, x and z, which it
-   does not write, ˆ and ˉ on the long presses of ꞈ and ˍ. Ten more of the
-   long tail that FineWeb-2 has 0.15 to 0.3 MB of learn from its text
-   whole: Hunsrik (its standard spelling's, ESCRITHU's, documents,
-   Jehovah's Witnesses' and Brasil Alemanha's: a blog in German's spelling
-   is left out), Plains Cree (its long vowels, written with the macron
-   fifteen times as often as with the circumflex, with it), Swampy Cree
-   (its syllabics left out), Ottawa, Tokelauan (New Zealand's government's
-   pages), Kankanaey and Mamasa (the Bible), Livonian (its wiki and its
-   institute's pages: a Kwak'wala prayer book and a Kurdish book filed as
-   Livonian are left out), Ambonese Malay (its news, blogs and songs: sites
-   that write chords between its words are left out) and Aja (Jehovah's
-   Witnesses', its ʒ written ӡ read as ʒ; Ewe's localisation of a browser
-   left out): 31 000 (Swampy Cree) to 93 000 words (Tokelauan). A sentence
-   of English is left out (beside the Crees and Ottawa by its commonest
-   words, in, is, of, on, too), and of the state's language (Portuguese's,
-   Tagalog's, Indonesian's, Latvian's and Estonian's, French's own words).
-   They are typed on the US keys, Livonian on Latvian's, their letters
-   first on the long presses; the letters a fifth to a third of their words
-   write have keys of their own at the home row's end (Plains Cree's ā ē,
-   Swampy Cree's â ê, Livonian's õ, Aja's ɔ ɛ), and so does Ottawa's and
-   Mamasa's apostrophe. Their lexicons keep all their words (1 700 kinds,
-   Lahu's, to 35 000, Coptic's). Keystroke savings on their held-out text
-   (2 300 to 13 200 words): Lahu 66.7%, Mamasa 58.0%, Kankanaey 50.9%,
-   Tokelauan 49.5%, Hunsrik 49.5%, Aja 47.9%, Ambonese Malay 41.6%, Coptic
-   39.0%, Ottawa 33.3%, Plains Cree 31.4%, Livonian 29.0%, Swampy Cree
-   25.2%; 43.5% on average, 33.6% with taps astray, at most 0.26% of right
-   words changed (Ambonese Malay's). The Algonquian languages write words
+   ꞈ written as a caret, ‸, read as ꞈ; since data 0.84.0, bible.is's Bible
+   left out (note 19), 36 000 words are left, of fewer than a thousand
+   kinds, and it has no model. It is typed on the US keys with its tones on
+   keys: ˬ and ˇ (a fifth of its words end in each) at the home row's end,
+   ꞈ, its apostrophe and ˍ on q, x and z, which it does not write, ˆ and ˉ
+   on the long presses of ꞈ and ˍ. Ten more of the long tail that FineWeb-2
+   has 0.15 to 0.3 MB of learn from its text whole: Hunsrik (its standard
+   spelling's, ESCRITHU's, documents, Jehovah's Witnesses' and Brasil
+   Alemanha's: a blog in German's spelling is left out), Plains Cree (its
+   long vowels, written with the macron fifteen times as often as with the
+   circumflex, with it), Swampy Cree (its syllabics left out), Ottawa,
+   Tokelauan (New Zealand's government's pages), Kankanaey and Mamasa (the
+   Bible), Livonian (its wiki and its institute's pages: a Kwak'wala prayer
+   book and a Kurdish book filed as Livonian are left out), Ambonese Malay
+   (its news, blogs and songs: sites that write chords between its words
+   are left out) and Aja (Jehovah's Witnesses', its ʒ written ӡ read as ʒ;
+   Ewe's localisation of a browser left out): 31 000 (Swampy Cree) to 93
+   000 words (Tokelauan). A sentence of English is left out (beside the
+   Crees and Ottawa by its commonest words, in, is, of, on, too), and of
+   the state's language (Portuguese's, Tagalog's, Indonesian's, Latvian's
+   and Estonian's, French's own words). They are typed on the US keys,
+   Livonian on Latvian's, their letters first on the long presses; the
+   letters a fifth to a third of their words write have keys of their own
+   at the home row's end (Plains Cree's ā ē, Swampy Cree's â ê, Livonian's
+   õ, Aja's ɔ ɛ), and so does Ottawa's and Mamasa's apostrophe. Their
+   lexicons keep all their words (4 400 kinds, Tokelauan's, to 35 000,
+   Coptic's). Keystroke savings on their held-out text (2 300 to 10 400
+   words; since data 0.84.0 without bible.is's pages, note 19): Mamasa
+   55.0%, Kankanaey 51.9%, Tokelauan 49.5%, Hunsrik 49.5%, Aja 47.9%,
+   Ambonese Malay 41.6%, Coptic 39.0%, Ottawa 33.3%, Plains Cree 31.4%,
+   Livonian 29.0%, Swampy Cree 25.2%; 41.2% on average, 30.5% with taps
+   astray, at most 0.26% of right words changed (Ambonese Malay's).
+   The Algonquian languages write words
    of many parts, few of which so small a text holds: Plains Cree's,
    Ottawa's and Swampy Cree's held-out words are 31% to 37% unknown, and
    with taps astray they save 10% or less (Swampy Cree nothing); Livonian's
@@ -2091,13 +2101,14 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    letters first on the long presses, with an apostrophe key for those
    whose words write one (Tausug, Tooro, Giryama, Toraja-Sa'dan, Sassarese)
    and a key for Kanuri's ə, which a quarter of its words write. Their
-   lexicons keep all their words (3 700 kinds, Hanunoo's, to 28 000,
-   Nenets'). Keystroke savings on their held-out text (1 900 to 9 700
-   words): Hanunoo 55.2%, Tausug 52.0%, Makhuwa-Meetto 49.2%, Giryama
-   43.6%, Ledo Kaili 42.9%, Nenets 42.6%, Ewondo 40.2%, Toraja-Sa'dan
-   37.8%, Dungan 34.5%, Kanuri 34.1%, Lango 33.8%, Tooro 27.4%, Sassarese
-   20.8%; 39.6% on average, 29.5% with taps astray, at most 0.58% of right
-   words changed (Sassarese's). Tooro's and Sassarese's texts are small for
+   lexicons keep all their words (3 500 kinds, Hanunoo's, to 28 000,
+   Nenets'). Keystroke savings on their held-out text (1 600 to 9 700
+   words; since data 0.84.0 without bible.is's pages, note 19): Hanunoo
+   54.4%, Tausug 52.0%, Makhuwa-Meetto 49.2%, Giryama 43.4%, Nenets 42.6%,
+   Ledo Kaili 42.3%, Lango 42.0%, Ewondo 40.2%, Toraja-Sa'dan 35.2%, Dungan
+   34.5%, Kanuri 34.1%, Tooro 27.4%, Sassarese 20.8%; 39.9% on average,
+   29.9% with taps astray, at most 0.58% of right words changed
+   (Sassarese's). Tooro's and Sassarese's texts are small for
    how their words are made and spelled (Tooro's of many parts, Sassarese's
    spelled several ways, th and dh, k and ch): a third of their held-out
    words are unknown, and with taps astray they save 6% and 2%. Learning
@@ -2121,16 +2132,18 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    (Vlax) and a million (Balkan). Vlax Romani is typed on the US keys, its
    č ć š ž đ first on the long presses of c s z d, and Balkan Romani on
    Serbian's Latin keys, which have them all. Northwestern Ojibwe learns
-   from its syllabics, mostly the Bible (bible.is, gospelgo): 115 000
-   words, the w-dot written apart before its syllable (ᐧᐃ) and West Cree's
-   dot on the right (ᐏ) read as the one syllable with the dot on its left
-   (ᐎ), as its keyboard types it. It is typed on Keyman's fv_ojibwa
-   (FirstVoices), a syllable a key, the long vowels and the w-dotted
-   syllables (in 55% and 37% of its words), which Keyman types with keys of
-   their own by its rules, first on the syllables' long presses. Keystroke
-   savings on their held-out text (4 800 to 10 600 words): Northwestern
-   Ojibwe 61.3%, Balkan Romani 42.5%, Vlax Romani 33.4%; with taps astray
-   56.7%, 37.3% and 24.7%; at most 0.06% of right words changed. Ge'ez,
+   from its syllabics, mostly the Bible (gospelgo's; bible.is's left out
+   since data 0.84.0, note 19): 86 000 words (115 000 before), the w-dot
+   written apart before its syllable (ᐧᐃ) and West Cree's dot on the right
+   (ᐏ) read as the one syllable with the dot on its left (ᐎ), as its
+   keyboard types it. It is typed on Keyman's fv_ojibwa (FirstVoices), a
+   syllable a key, the long vowels and the w-dotted syllables (in 55% and
+   37% of its words), which Keyman types with keys of their own by its
+   rules, first on the syllables' long presses. Keystroke savings on their
+   held-out text (700 to 10 600 words, Northwestern Ojibwe's 88 sentences):
+   Northwestern Ojibwe 55.2%, Balkan Romani 42.5%, Vlax Romani 33.4%; with
+   taps astray 52.4%, 37.3% and 24.7%; at most 0.06% of right words
+   changed. Ge'ez,
    which FineWeb-2 has no text of, is typed as Amharic is (layout-only).
    Kabiye, Akoose, Grebo and Nande got keys for the letters their words
    write most of those only a long press typed (Kabiye's ɛ ɩ ʊ ɔ, Akoose's
@@ -2165,7 +2178,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    outnumber Pnar's (wa ya kiwa kawa ko wow) and English's, 18 451 of
    29 993 (Pnar's wyrta.com left out), 210 145 sentences. Keystroke
    savings on FineWeb-2's held-out text: Khasi 49.6% (1.1% of the words
-   unknown), Mizo 39.0% (2.4%), with 30 000 words each; 80 000 would
+   unknown), Mizo 42.1% (3.1%), with 30 000 words each; 80 000 would
    save a point more, at four times the lexicon's size.
    Kokborok, written in Latin letters in Tripura and typed on the US
    keys, has 226 documents in FineWeb-2, two fifths of them from
@@ -2185,13 +2198,12 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    words cut at the Ethiopic wordspace and punctuation and their
    sentences ended at its full stop ። and question mark ፧ as well. Their
    keyboards type through the Ge'ez composer, whose strip offers their
-   words (note 16). Sebat Bet Gurage's (since data 0.68.0) is read so too,
-   whole, against Amharic's function words (its own ሰብ ኸማ ዝኽ ቃር, which
-   Amharic writes ሰው እንደ ይህ ቃል): 259 of its 260 documents, the 260th an
-   Amharic page; its text is its New Testament from bible.is (the Bible
-   Society of Ethiopia's translation), a story by Sahle Selassie and a
-   few articles, 7 399 sentences and 105 000 words, every 10th document
-   held out (its test split is five).
+   words (note 16). Sebat Bet Gurage's was read so too (data 0.68.0 to
+   0.83.0), whole, against Amharic's function words (its own ሰብ ኸማ ዝኽ
+   ቃር, which Amharic writes ሰው እንደ ይህ ቃል); its text was its New
+   Testament from bible.is, a story by Sahle Selassie and a few articles,
+   and with no page of bible.is read (note 19) too little is left for a
+   model.
    Gorani's keyboard (Keyman's, note 10) had no model: FineWeb-2's Gorani
    (hac_Arab, 16 201 documents, 38 MB) is mostly Sorani, Badini and
    Persian, and its Hawrami is read alone (since data 0.74.0): a document
@@ -2816,23 +2828,21 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    whose name for itself is Pulaar, lists, and ñ the commonest of n's
    (100 to ŋ's 18). Garo in the Bengali script (`grt-Beng`) learns from
    SMOL's Garo too, spelled in that script (`make respelled-text`;
-   `crates/osk-data-tools/src/bin/respell.rs`): each word read by its
-   transliteration table (`translit/grt-Beng.txt`) as the one
-   Bengali-script text there is, one Bible in FineWeb-2 (bible.is's pages,
-   170 000 words), spells it where the Bible has the word (48% of SMOL's
-   words), else as the table reads it; the Bible's words are counted,
-   nothing of its text learned from. The table follows the Bible's
-   spelling: k t p at a word's start খ থ ফ for Garo's aspirates, a
-   consonant between vowels often doubled (ine: ইন্নে), n m l before the
-   raka written after it, doubled (man·a: মা·ন্না), a first o হ (ong·a:
-   হং·আ); most of what the Bible lacks is its dialect's words for SMOL's
-   standard Garo's (বিসং for uamang). 14 039 kinds of word; keystrokes
-   saved on SMOL's held-out documents so spelled 40.4% (31.8% with taps
-   astray, 14.7% unknown), and on the Bible's 638 held-out words 19.4%
-   (44% unknown: the Bible's dialect and register). Its keyboard is
-   Bengali's keys with the raka · on ঋ's key, which the Bible never
-   writes, and its transliteration keyboard (`grt-beng-abc`) reads Garo's
-   Latin alphabet, the raka typed ' or ·.
+   `crates/osk-data-tools/src/bin/respell.rs`): each word as its
+   transliteration table (`translit/grt-Beng.txt`) reads it, the cheapest
+   reading. The table follows the spelling of the one Bengali-script Garo
+   text read when it was written, bible.is's Bible, which no model here
+   learns from (note 19): k t p at a word's start খ থ ফ for Garo's
+   aspirates, a consonant between vowels often doubled (ine: ইন্নে), n m l
+   before the raka written after it, doubled (man·a: মা·ন্না), a first o হ
+   (ong·a: হং·আ). The table offers each of these, but the respelled text
+   has each word's cheapest reading, so its lexicon spells man·a মান·আ and
+   ong·a ওং·আ, which are offered first. 14 185 kinds of word; keystrokes
+   saved on SMOL's held-out documents so spelled 38.3% (28.0% with taps
+   astray, 14.8% unknown), which no text written in the Bengali script
+   measures. Its keyboard is Bengali's keys with the raka · on ঋ's key, and
+   its transliteration keyboard (`grt-beng-abc`) reads Garo's Latin
+   alphabet, the raka typed ' or ·.
 
 15. Sebat Bet Gurage's keyboard is Amharic's keys, the Ge'ez composer
    typing its syllables from Latin letters as Amharic's does, with two
@@ -2845,16 +2855,17 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    neither key: its mwe stays ምወ and its kya ክያ. Its letters are those
    SIL's Locale Data Repository lists for it (SLDR, MIT: `sldr/s/sgw.xml`),
    all of which it types, ፀ's row from the candidate bar (ts or S, then
-   ፀ, as on Amharic's), and it is named as SLDR names it, ሰባት ቤት ጉራጌ. Since
-   data 0.68.0 its composer offers its model's words (note 16). Every
+   ፀ, as on Amharic's), and it is named as SLDR names it, ሰባት ቤት ጉራጌ. From
+   data 0.68.0 to 0.83.0 its composer offered its model's words; it has
+   no model since (note 19). Every
    Ge'ez keyboard now types the
    6th order as I, as SERA writes it: alone, the carrier's እ (InE እኔ),
    which none of them could type before, and after a consonant its bare
    form before a vowel of its own (sIIl ስእል).
 
-16. Amharic's, Tigrinya's and Sebat Bet Gurage's keyboards type through
-   the Ge'ez composer (Latin letters composing fidel, as SERA writes
-   them), which since data 0.67.0 offers their models' words on the
+16. Amharic's and Tigrinya's keyboards type through the Ge'ez composer
+   (Latin letters composing fidel, as SERA writes them), which since
+   data 0.67.0 offers their models' words on the
    strip, as the transliteration keyboards offer their readings: the
    words the syllables typed begin, likeliest first, in whichever of
    their homophones' rows the lexicon spells them (`sa` offers words in
@@ -2878,11 +2889,9 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    the time (34.2% and 32.7% without; `eval-predict`, 3 000 words of
    FineWeb-2's held-out text each; 7.5% and 9.0% of the words unknown to
    their 200 000-word lexicons, and 0.3% and 0.9%, Latin or with digits,
-   left out); Sebat Bet Gurage 34.9% (14.0%; 32.2% without), on 3 000
-   words of chapters held out of the same New Testament its model learns
-   from (17.6% unknown to its 20 000-word lexicon), which everyday text
-   will not match. Ge'ez's, Gedeo's, Hadiyya's, Kambaata's and Silt'e's
-   keyboards, Amharic's keys, name no model and offer none.
+   left out). Ge'ez's, Gedeo's, Hadiyya's, Kambaata's, Silt'e's and,
+   since data 0.84.0, Sebat Bet Gurage's keyboards (note 19), Amharic's
+   keys, name no model and offer none.
 
 17. These three models learn from StoryWeaver's stories
    (storyweaver.org.in, Pratham Books: picture books for children,
@@ -2933,8 +2942,8 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Nzambi (Wycliffe Bible Translators, 2025), and Yaka's New Testament
    (The Seed Company and the Forum Communautaire des Traducteurs de la
    Bible et Alphabétisation, 2022); of the keyboards here with no model
-   only these three have a Bible there under a licence that allows a
-   model (Chavacano's, Limbu's and Eastern Tamang's forbid derived
+   only these three had a Bible there under a licence that allows a
+   model (before data 0.84.0, note 19) (Chavacano's, Limbu's and Eastern Tamang's forbid derived
    works; Mahasu Pahari's, Haryanvi's and Rohingya's are in Latin letters,
    which their keyboards are not). A translation's verses
    (`<id>_vpl.txt`) are pinned by sha256 (`scripts/fetch-ebible.sh`; one
@@ -2958,10 +2967,42 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    of their own that spell otherwise. Their keyboards are as they were
    (notes 9 and 12), with suggestions and glides now.
 
+19. No page of bible.is (Faith Comes By Hearing's Bible site, whose terms
+   allow personal, non-commercial use only) is read since data 0.84.0, in
+   any language: `scripts/fineweb-text.py` leaves out every document whose
+   address is on bible.is or a host under it (live.bible.is), FineWeb-2's
+   and GlotCC's alike (MADLAD-400 names no address, and none of the
+   documents read from it is bible.is's). It was in the text 136 of the
+   models here learned from, most of it for dozens of small languages, and
+   in their held-out text, so those models and the figures in the notes
+   above were made again without it. Nineteen were left with too little to
+   learn from (under 20 000 words, under a thousand kinds of word, or no
+   held-out text) and have their keyboards and no model: Buhid, Dan,
+   Farefare, Gogo, Gulay, Haya, Itawit, Kafa, Koronadal Blaan, Lahu,
+   Lampung Api, Moba, Nande, Northern Grebo, Ntcham, Nyoro, Sasak, Sebat
+   Bet Gurage and Xaasongaxango (Dan's and Lahu's text nine tenths
+   bible.is's). Others keep a model learned from much less: bible.is's
+   pages were seven eighths of Supyire's, Gorontalo's, Sukuma's and Hehe's,
+   three quarters of Ngaju's and Akoose's, more than half of Gamo's,
+   Gourmanché's, Konkomba's, Mende's, Lugbara's and Chopi's. Their savings
+   fell most: Hehe 60.8% -> 29.0%, Gorontalo 66.2% -> 38.0%, Sukuma 61.2%
+   -> 34.9%, Akoose 66.8% -> 46.3%, Gamo 60.3% -> 40.2%, Ngaju 64.9% ->
+   52.8%, Supyire 62.0% -> 50.0%, Acehnese 53.8% -> 42.9%, South Bolivian
+   Quechua 38.6% -> 28.9%, Tok Pisin 63.1% -> 55.2%, Cusco Quechua 43.1% ->
+   35.5%, Northwestern Ojibwe 61.3% -> 55.2%; some rose, their held-out
+   text changed with them (Lango 33.8% -> 42.0%, Mandinka 43.3% -> 48.6%,
+   Maranao 42.1% -> 47.2%, Alur 47.9% -> 51.1%, Mizo 39.0% -> 42.1%). Much
+   of what is left of the small languages' text is other Bible sites'
+   (Jehovah's Witnesses', eBible.org's, YouVersion's), which this leaves as
+   it was. Garo's model in the Bengali script learns from SMOL's Garo
+   spelled by its table alone (note 14), and Shan's and Mon's syllable
+   lists (`wordbreak/`) were made again from their text without bible.is's
+   pages.
+
 ## Prediction model tiers
 
 - **Full n-gram model** — `predict/<lang>.fst` +
-  `<lang>.ngram.bin`, **479 languages** (Hinglish among them). The original nine (en,
+  `<lang>.ngram.bin`, **460 languages** (Hinglish among them). The original nine (en,
   de, es, fr, it, nl, pl, pt, sv) plus 40 from Tatoeba: no da fi cs tr vi
   el ru uk ar he fa · ro hu sk hr et is ca eo bg sr mk be · id fil az ku
   ug hi bn hy ka lt lv · kab (Kabyle) · **Tier E: oc gl br eu** (Occitan,
@@ -2985,13 +3026,13 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   of Iran and the Caucasus **azb mzn kiu diq tly kaa ce inh av kbd ady lez lbe tab dar kum krc ab xmf**,
   of Africa **crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb**,
   of the Americas, the Pacific and the classical and constructed **la pap syr yua quc kek quz qug srn
-  gcf bi ia tpi gil tvl ho ch jam**, six more that had a keyboard and no model, **sr-Latn gn ff ber bo dz**, of Africa's and Southeast Asia's long tail **kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik min war nia mad**,
+  gcf bi ia tpi gil tvl ho ch jam**, six more that had a keyboard and no model, **sr-Latn gn ff ber bo dz**, of Africa's and Southeast Asia's long tail **kbp dag seh ada nyn kwy sid koo kam sop vmw ndc bum bin teo sgc yao dik min war nia mad**,
   of Europe's regional languages **cor glv ext pcd sgs pnt vec vls lmo lld gag**, of Myanmar's,
   cut into syllables, **shn mnw ksw blk**, of East Asia's in Latin letters **nan hak ami za**, of the
-  long tail **zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk spp bas hay kbr ngl gog chw fat
-  tsc bud kao gvl nnb nyo niu hwc acf mrw nij guc ljp sas gor itv bku bpr quh gcr tum tll guz kde nyy
+  long tail **zne alz cce skg bss men lgg xon heh gux gmv suk spp bas ngl chw fat
+  tsc niu hwc acf mrw nij guc gor quh gcr tum tll guz kde nyy
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
-  sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, Amharic, Tigrinya and Sebat Bet Gurage **am ti sgw**, whose words the Ge'ez composer offers (note 16), and Gorani's Hawrami **hac**
+  sdc**, Coptic **cop**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, Amharic and Tigrinya **am ti**, whose words the Ge'ez composer offers (note 16), and Gorani's Hawrami **hac**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
   Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18). Built by
   `make fetch-corpora` + `make predict-assets` in the
@@ -3139,7 +3180,8 @@ record how each group was added and what it needs at runtime:
   syllables, as CLDR's exemplar characters list them, the composer types
   all of (Kambaata's ኧ as `A`). Since data 0.67.0 Amharic's and
   Tigrinya's composers offer their models' words on the strip, and since
-  0.68.0 Sebat Bet Gurage's too, and the next word (note 16).
+  0.68.0 the next word (note 16); Sebat Bet Gurage's did from 0.68.0 to
+  0.83.0 (note 19).
   And since data 0.66.0 Sebat Bet Gurage,
   whose labialised and palatalised syllables (Ethiopic Supplement's ᎀ…,
   Extended's ⷀ…) its keyboard's ʷ and ʸ keys type (note 15), and `I`

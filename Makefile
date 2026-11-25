@@ -45,16 +45,16 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
                  sr-Latn gn ff ber kri \
                  bo dz \
-                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
+                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc bum bin teo sgc yao dik \
                  min war nia mad \
                  cor glv ext pcd sgs pnt vec vls lmo lld gag \
                  shn mnw ksw blk \
                  nan hak ami za \
-                 zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk \
-                 spp bas hay kbr ngl gog chw fat tsc bud kao gvl nnb nyo \
-                 niu hwc acf mrw nij guc ljp sas gor itv bku bpr \
+                 zne alz cce skg bss men lgg xon heh gux gmv suk \
+                 spp bas ngl chw fat tsc \
+                 niu hwc acf mrw nij guc gor \
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
-                 cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
+                 cop hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                  rmy rmn ojb \
                  cnr \
@@ -65,7 +65,7 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  zea \
                  btm gpe igl rki vel \
                  bew nup glk bpy \
-                 am ti sgw \
+                 am ti \
                  myx tuv \
                  hlb kfq nah \
                  ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje grt-Beng \
@@ -208,19 +208,19 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                  la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
                  sr-Latn gn ff ber bo dz \
-                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
+                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc bum bin teo sgc yao dik \
                  min war nia mad \
                  cor glv ext pcd sgs pnt vec vls lmo lld gag \
                  shn mnw ksw blk \
                  nan hak ami za \
-                 zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk \
-                 spp bas hay kbr ngl gog chw fat tsc bud kao gvl nnb nyo \
-                 niu hwc acf mrw nij guc ljp sas gor itv bku bpr \
+                 zne alz cce skg bss men lgg xon heh gux gmv suk \
+                 spp bas ngl chw fat tsc \
+                 niu hwc acf mrw nij guc gor \
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
-                 cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
+                 cop hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                  rmy rmn ojb \
-                 am ti sgw \
+                 am ti \
                  syl-Sylo hac ii
 # (Amharic's, Tigrinya's and Sebat Bet Gurage's: what the Ge'ez composer
 # offers words from. And Sylheti's in Syloti Nagri, a news site's pages,
@@ -292,14 +292,11 @@ STORYWEAVER_DIR = $(SRC_DIR)/storyweaver
 # nothing of it is committed.
 SMOL_LANGS ?= ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje
 SMOL_DIR = $(SRC_DIR)/smol
-# Garo in the Bengali script, which no open text but one Bible is written
-# in: SMOL's Garo, in Latin letters, spelled in the Bengali script by its
-# table (translit/grt-Beng.txt, crates/osk-data-tools/src/bin/respell.rs),
-# each word as the Bible's text in FineWeb-2 (fineweb/grt-Beng.txt)
-# spells it where the Bible has it, else as the table reads it: 48% of
-# its words were the Bible's. The Bible's words are counted, never learned
-# from; make respelled-text writes $(SMOL_DIR)/grt-Beng.txt and its
-# held-out half, after fetch-smol and fetch-fineweb.
+# Garo in the Bengali script, which no open text is written in: SMOL's
+# Garo, in Latin letters, spelled in the Bengali script by its table
+# (translit/grt-Beng.txt, crates/osk-data-tools/src/bin/respell.rs), each
+# word as the table reads it; make respelled-text writes
+# $(SMOL_DIR)/grt-Beng.txt and its held-out half, after fetch-smol.
 RESPELLED_LANGS ?= grt-Beng
 
 # eBible.org's Bibles (scripts/fetch-ebible.sh, each translation's verses
@@ -475,16 +472,16 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                        la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
                        sr-Latn gn ff ber kri bo dz \
-                       kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc mfq yao dik \
+                       kbp dag seh ada nyn kwy sid koo kam sop vmw ndc bum bin teo sgc yao dik \
                        min war nia mad \
                        cor glv ext pcd sgs pnt vec vls lmo lld gag \
                        shn mnw ksw blk \
                        nan hak ami za \
-                       zne alz cce skg bss men lgg xon dnj gbo heh gux gmv suk \
-                       spp bas hay kbr ngl gog chw fat tsc bud kao gvl nnb nyo \
-                       niu hwc acf mrw nij guc ljp sas gor itv bku bpr \
+                       zne alz cce skg bss men lgg xon heh gux gmv suk \
+                       spp bas ngl chw fat tsc \
+                       niu hwc acf mrw nij guc gor \
                        quh gcr tum tll guz kde nyy mas mnk mer dga \
-                       cop lhu hrx crk csw otw tkl kne mqj liv abs ajg \
+                       cop hrx crk csw otw tkl kne mqj liv abs ajg \
                        yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
                        rmy rmn ojb \
                        cnr \
@@ -698,11 +695,9 @@ fetch-aksharantar:
 .PHONY: respelled-text
 respelled-text:
 	@test -f $(SMOL_DIR)/grt.txt || { echo "no $(SMOL_DIR)/grt.txt: run make fetch-smol"; exit 1; }
-	@test -f $(FINEWEB_DIR)/grt-Beng.txt || \
-		OUT=$(FINEWEB_DIR) PYTHON=$(FINEWEB_PYTHON) ./scripts/fetch-fineweb.sh grt-Beng
-	$(TOOLS) respell -- --table translit/grt-Beng.txt --corpus $(FINEWEB_DIR)/grt-Beng.txt \
+	$(TOOLS) respell -- --table translit/grt-Beng.txt \
 		--join-dots --text $(SMOL_DIR)/grt.txt --out $(SMOL_DIR)/grt-Beng.txt --show 0
-	$(TOOLS) respell -- --table translit/grt-Beng.txt --corpus $(FINEWEB_DIR)/grt-Beng.txt \
+	$(TOOLS) respell -- --table translit/grt-Beng.txt \
 		--join-dots --text $(SMOL_DIR)/eval/grt.txt --out $(SMOL_DIR)/eval/grt-Beng.txt --show 0
 
 .PHONY: aksharantar-respelled
@@ -853,7 +848,7 @@ predict-assets:
 			              corpus_in="$$corpus_in --input smol/$$lang.txt=$(SMOL_DIR)/$$lang.txt" ;; \
 		esac; \
 		case " $(RESPELLED_LANGS) " in \
-			*" $$lang "*) corpus_in="$$corpus_in --input fineweb/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt --input translit/$$lang.txt=translit/$$lang.txt" ;; \
+			*" $$lang "*) corpus_in="$$corpus_in --input translit/$$lang.txt=translit/$$lang.txt" ;; \
 		esac; \
 		case " $(EBIBLE_LANGS) " in \
 			*" $$lang "*) if [ ! -f $(EBIBLE_DIR)/$$lang.txt ]; then \

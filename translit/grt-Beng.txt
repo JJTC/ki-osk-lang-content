@@ -3,13 +3,10 @@
 # glottal stop). Its Bengali spelling marks Garo's aspirated stops: k t p
 # at a word's start are খ থ ফ (ka·sa: খা·সা), inside it ক ত প, and a last
 # t is ৎ (khat: খাৎ); a is া, o the vowel a consonant carries or ো, ng ং,
-# and a vowel after ং or the raka is a letter of its own (anga: আংআ,
-# ong·a: হং·আ, a first o written হ as its Bible writes it); a consonant
-# between two vowels is often doubled (ine: ইন্নে), and n m l before the
-# raka are written after it, doubled (man·a: মা·ন্না). Read as its
-# Bengali-script writing spells its words: a word's spelling is the one
-# the Bengali-script Bible's text has, where it has the word. The lexicon
-# chooses.
+# and a vowel after ং or the raka is a letter of its own (anga: আংআ); a
+# first o may be written হ (ong·a: হং·আ), a consonant between two vowels
+# doubled (ine: ইন্নে), and n m l before the raka after it, doubled
+# (man·a: মা·ন্না). The lexicon chooses.
 
 script abugida
 virama ্

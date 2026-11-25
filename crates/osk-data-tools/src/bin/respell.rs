@@ -1,25 +1,23 @@
 //! respell: a text in Latin letters spelled in a language's own script by
 //! its transliteration table, as the keyboard reads what is typed: each
-//! word its likeliest reading that is a word of a word list, or its
-//! cheapest reading where none is. For a language written in two scripts
-//! whose text is in one of them only (Garo: its Latin-letter text, and the
-//! words its Bengali-script writing has): the respelled text is what a
-//! model of the other script learns from, and how many of its words the
-//! word list has says how near the table's spelling is to the script's.
+//! word its likeliest reading that is a word of a word list, where one is
+//! given and has one, else its cheapest reading. For a language written in
+//! two scripts whose text is in one of them only (Garo: its Latin-letter
+//! text): the respelled text is what a model of the other script learns
+//! from; with a word list of the other script's, how many of its words the
+//! list has says how near the table's spelling is to the script's.
 //!
 //! ```text
-//! respell --table translit/grt-Beng.txt --corpus bengali.txt --join-dots \
-//!     --text in.txt --out out.txt
+//! respell --table translit/grt-Beng.txt --join-dots --text in.txt --out out.txt
 //! ```
 //!
-//! The words are counted in `--corpus`, a text in the script, or read from
-//! `--words`, a word and its count a line, tab-separated. A word in the
-//! text is a run of letters, the marks among them and the apostrophe and
-//! `·` within it; with `--join-dots`, a full stop between two letters too,
-//! read as `·` (Garo's raka, which some write so: ong.a); the rest is
-//! copied as it is. The report says how many of
-//! the text's words were read as words of the list, and the commonest that
-//! were not.
+//! The words, when given, are counted in `--corpus`, a text in the script,
+//! or read from `--words`, a word and its count a line, tab-separated. A
+//! word in the text is a run of letters, the marks among them and the
+//! apostrophe and `·` within it; with `--join-dots`, a full stop between
+//! two letters too, read as `·` (Garo's raka, which some write so: ong.a);
+//! the rest is copied as it is. The report says how many of the text's
+//! words were read as words of the list, and the commonest that were not.
 
 use std::collections::HashMap;
 use std::fs;
@@ -38,7 +36,7 @@ struct Args {
     table: PathBuf,
     /// The words its readings are chosen among: a word and its count a
     /// line, tab-separated.
-    #[arg(long, required_unless_present = "corpus", conflicts_with = "corpus")]
+    #[arg(long, conflicts_with = "corpus")]
     words: Option<PathBuf>,
     /// The words its readings are chosen among, counted in this text.
     #[arg(long)]
@@ -117,7 +115,7 @@ fn main() -> anyhow::Result<()> {
     let mut counts: Vec<(String, u64)> = match (&args.words, &args.corpus) {
         (Some(path), _) => read_counts(path)?,
         (None, Some(path)) => count_words(path)?,
-        (None, None) => bail!("--words or --corpus"),
+        (None, None) => Vec::new(),
     };
     counts.sort();
     counts.dedup_by(|a, b| a.0 == b.0);
@@ -191,6 +189,13 @@ fn main() -> anyhow::Result<()> {
 
     #[allow(clippy::cast_precision_loss)]
     let share = 100.0 * found as f64 / words.max(1) as f64;
+    if source.is_empty() {
+        println!(
+            "{}: {words} words spelled by the table",
+            args.text.display()
+        );
+        return write_out(args.out.as_ref(), &out);
+    }
     println!(
         "{}: {found} of {words} words ({share:.1}%) read as words of {source}",
         args.text.display(),
@@ -203,7 +208,12 @@ fn main() -> anyhow::Result<()> {
             .map_or_else(|| scheme.literal(w), |s| s.0.clone());
         println!("  {n:>6}  {w}  {spelled}");
     }
-    if let Some(path) = &args.out {
+    write_out(args.out.as_ref(), &out)
+}
+
+/// `out` written to `path`, where one is given.
+fn write_out(path: Option<&PathBuf>, out: &str) -> anyhow::Result<()> {
+    if let Some(path) = path {
         fs::write(path, out).with_context(|| format!("writing {}", path.display()))?;
     }
     Ok(())

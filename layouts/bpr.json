@@ -3,9 +3,8 @@
   "name": "Blaan",
   "xkb_layout": "us",
   "direction": "ltr",
-  "swipe_enabled": true,
-  "prediction_enabled": true,
-  "prediction_lang": "bpr",
+  "swipe_enabled": false,
+  "prediction_enabled": false,
   "long_press_letters": true,
   "views": [
     {

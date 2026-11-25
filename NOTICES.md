@@ -218,7 +218,7 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Three hundred and twenty-four models learn from FineWeb-2's web text alone: those of Bodo,
+Three hundred and five models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
@@ -257,31 +257,27 @@ Chamorro, Classical Syriac, Cusco Quechua, Guadeloupean Creole, Hiri Motu,
 Interlingua, Jamaican Patois, Kʼicheʼ, Kichwa, Kiribati, Latin, Papiamento,
 Qʼeqchiʼ, Sranan Tongo, Tok Pisin, Tuvaluan and Yucatec Maya), and of six
 more that had a keyboard and no model (Dzongkha, Fula, Guaraní, Serbian
-in Latin letters, Tamazight in Tifinagh and Tibetan), and of twenty-one
+in Latin letters, Tamazight in Tifinagh and Tibetan), and of nineteen
 of Africa's and Southeast Asia's long tail (Bulu, Dagbani, Dangme, Dinka,
-Edo, Farefare, Kamba, Kipsigis, Konzo, Koongo, Madurese, Makhuwa, Moba,
-Ndau, Nias, Nkore, Sena, Sidamo, Songe, Teso and Yao), and of eleven
+Edo, Kamba, Kipsigis, Konzo, Koongo, Madurese, Makhuwa, Ndau, Nias,
+Nkore, Sena, Sidamo, Songe, Teso and Yao), and of eleven
 more of Europe's regional languages (Cornish, Extremaduran, Gagauz,
 Ladin, Lombard, Manx, Picard, Pontic Greek, Samogitian, Venetian and
 West Flemish), and of four of Myanmar's (Mon, Pa'O, Sgaw Karen and
 Shan), and of four of East Asia's (Amis, Hakka, Southern Min and
-Zhuang), and of twenty-eight more of Africa's long tail (Akoose, Alur,
-Basaa, Chopi, Chuwabu, Dan, Fante, Gamo, Gogo, Gourmanché, Gulay, Haya,
-Hehe, Kafa, Konkomba, Lomwe, Lugbara, Mende, Nande, Northern Grebo,
-Ntcham, Nyoro, Sakalava Malagasy, Sukuma, Supyire, Tswa, Xaasongaxango
-and Zande), and of twenty-three more of the long tail (Buhid, Dagaare,
-Gorontalo, Guianan Creole, Gusii, Hawaiian Pidgin, Itawit, Koronadal
-Blaan, Lampung Api, Maasai, Makonde, Mandinka, Maranao, Meru, Ngaju,
-Niuean, Nyakyusa, Saint Lucian Creole, Sasak, South Bolivian Quechua,
-Tetela, Tumbuka and Wayuu), and of twelve more (Aja, Ambonese Malay,
-Coptic, Hunsrik, Kankanaey, Lahu, Livonian, Mamasa, Ottawa, Plains Cree,
-Swampy Cree and Tokelauan), and of thirteen more (Dungan, Ewondo, Giryama,
+Zhuang), and of eighteen more of Africa's long tail (Akoose, Alur, Basaa,
+Chopi, Chuwabu, Fante, Gamo, Gourmanché, Hehe, Konkomba, Lomwe, Lugbara,
+Mende, Sakalava Malagasy, Sukuma, Supyire, Tswa and Zande), and of
+eighteen more of the long tail (Dagaare, Gorontalo, Guianan Creole, Gusii,
+Hawaiian Pidgin, Maasai, Makonde, Mandinka, Maranao, Meru, Ngaju, Niuean,
+Nyakyusa, Saint Lucian Creole, South Bolivian Quechua, Tetela, Tumbuka and
+Wayuu), and of eleven more (Aja, Ambonese Malay, Coptic, Hunsrik,
+Kankanaey, Livonian, Mamasa, Ottawa, Plains Cree, Swampy Cree and
+Tokelauan), and of thirteen more (Dungan, Ewondo, Giryama,
 Hanunoo, Kanuri, Lango, Ledo Kaili, Makhuwa-Meetto, Nenets, Sassarese,
 Tausug, Tooro and Toraja-Sa'dan), and of three more (Balkan Romani,
-Northwestern Ojibwe and Vlax Romani), and of Amharic, Tigrinya and Sebat
-Bet Gurage, which the Ge'ez composer offers the words of (Sebat Bet
-Gurage's text in FineWeb-2 is mostly its New Testament, the Bible Society
-of Ethiopia's translation as bible.is gives it), and of Gorani (the
+Northwestern Ojibwe and Vlax Romani), and of Amharic and Tigrinya,
+which the Ge'ez composer offers the words of, and of Gorani (the
 Hawrami among its Gorani, the rest Sorani, Badini and Persian); and
 Assamese's from it beside its Tatoeba sentences, Magahi's beside its
 Incubator text, Sylheti's in Syloti Nagri (a news site's pages) beside
@@ -302,6 +298,17 @@ repository and its packs hold; the text itself is not, neither the
 corpus nor the held-out text: it is the web's, whose pages keep their
 own rights. Each pack with such a model names FineWeb-2 among its
 sources, with this licence, as ODC-By asks of what is made from it.
+
+No page of bible.is (Faith Comes By Hearing's Bible site, whose terms
+allow personal, non-commercial use only) is read, in any language, from
+FineWeb-2 or any other source that says where its text was read: no
+model learns from it, and no held-out text is of it. It was most of
+FineWeb-2's text of dozens of small languages, and nineteen were left
+with too little to learn from (under 20 000 words, under a thousand
+kinds of word, or no held-out text), which since data 0.84.0 have their
+keyboards and no model: Buhid, Dan, Farefare, Gogo, Gulay, Haya, Itawit,
+Kafa, Koronadal Blaan, Lahu, Lampung Api, Moba, Nande, Northern Grebo,
+Ntcham, Nyoro, Sasak, Sebat Bet Gurage and Xaasongaxango.
 
 ### MADLAD-400 (web text)
 
@@ -379,9 +386,7 @@ repository and its packs hold, never the translations; each pack with
 such a model names SMOL among its sources, with that licence. Garo's
 model in the Bengali script (`grt-Beng`) learns from SMOL's Garo spelled
 in that script by its transliteration table (`make respelled-text`),
-each word as the Bengali-script Bible in FineWeb-2 spells it where it
-has the word: its pack names SMOL and FineWeb-2 (below), and holds
-nothing of the Bible's text, whose words were only counted. Pulaar's
+each word as the table reads it. Pulaar's
 keyboard takes its letters from SMOL's Pulaar sentences, as CLDR's Fula
 lists them.
 
