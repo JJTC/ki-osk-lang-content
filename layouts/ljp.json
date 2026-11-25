@@ -3,8 +3,9 @@
   "name": "Lampung",
   "xkb_layout": "us",
   "direction": "ltr",
-  "swipe_enabled": false,
-  "prediction_enabled": false,
+  "swipe_enabled": true,
+  "prediction_enabled": true,
+  "prediction_lang": "ljp",
   "views": [
     {
       "id": "base",

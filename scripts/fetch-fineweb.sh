@@ -534,6 +534,8 @@ vmw      vmw_Latn  train/000_00000.parquet f93db92fba2b1ee783e16e2a2b0bbb15f16da
 vmw      vmw_Latn  test/000_00000.parquet  90aabc63cfc08be9f2d9ad0723fdd4d70579a75a20833fdb9ab76af3a395f71b
 ndc      ndc_Latn  train/000_00000.parquet dd844f79039d731bc4e2e9fcedbe3dc3df76ed91dd961a0fb12be98215d36ae2
 ndc      ndc_Latn  test/000_00000.parquet  0d80b1b19268eae200baf45473838ac8a821d4e8bc00728e49ff465ac8a2ba13
+gur      gur_Latn  train/000_00000.parquet d1af8eb042ff9d408d106a6d41291bbcc9d731a299b1be853aa8af06a1a6fa6c
+gur      gur_Latn  test/000_00000.parquet  4b8f1b4f15b419825f07a468c0449f0679e2f65d9ef1e1e0cb9d9240f55516f4
 bum      bum_Latn  train/000_00000.parquet 9c06ba5910df41737ccebf2972b7f7955eb076c51f4a476e361a456dc48c197e
 bum      bum_Latn  test/000_00000.parquet  9e5bbe49b8a0ec8903135c8e3b0b72b101344ace8083c8c6c0a334acdd57b90e
 bin      bin_Latn  train/000_00000.parquet 09673b42a3a4e7ce41e49b7df09e0e369f031b4cf8d65fdf9907ac0b74d6efda
@@ -607,13 +609,17 @@ ngl      ngl_Latn  train/000_00000.parquet 7cbca7f647156ddfdbf64cc150bbb0f1101c1
 chw      chw_Latn  train/000_00000.parquet e0ddcc8306d0f7c8500455a914073ae40a6975ca15a27c11324d81c3772b2181
 fat      fat_Latn  train/000_00000.parquet 98ffbca49f66c51fd9749d7e5ff5aad4973fc286fefc36f43d80d1f7e753a0b8
 tsc      tsc_Latn  train/000_00000.parquet 51d9f3ebbd2c1acfabb419f53a955225a07783d43c3801fd6f2d46be411b6d9a
+gvl      gvl_Latn  train/000_00000.parquet ec751189d5446f869a505913f79b8410247a4061f838dc4be359bee9ee1bb2e6
 niu      niu_Latn  train/000_00000.parquet 696df9e00f53df510f9e438fd414d05eae9e357b0d9d06bc0d7a3aae3f09142d
 hwc      hwc_Latn  train/000_00000.parquet 23a40ee35d1842c99f426a75c3c75366ef53df034791589f4d96b1bdb8eda315
 acf      acf_Latn  train/000_00000.parquet 80dd9a4fedf188a4707f9a2ff8e346013c756983908f6329c08f6caa49bb4e04
 mrw      mrw_Latn  train/000_00000.parquet 87917705441557fdb50f3a26194cddfaf28b8f69015d49de80cb2a1d85890bca
 nij      nij_Latn  train/000_00000.parquet 2987797c451876d1d0b2450124b46ca9b6058a04da16d294533932663cb287cf
 guc      guc_Latn  train/000_00000.parquet 53f7010d5eb8ac55b25ef0c1d262c5de79282347d1b35293f038cf9187f2e72f
+ljp      ljp_Latn  train/000_00000.parquet 49c73a1859cff3d455b1da7baf22f7c6c29a6a1613269f7561366f4951e82054
+sas      sas_Latn  train/000_00000.parquet 6df9f0bccc9079dddad791dbb303542cdb5bf06e04ede4db29ffec1d834bbf4a
 gor      gor_Latn  train/000_00000.parquet 0dcb7da4d1cae9970d20c2ce5338eb6014490f444277c593575ddebf474c82b0
+bpr      bpr_Latn  train/000_00000.parquet e0a43415721b45a9dd9d58473c2889e526681784f98d94a8607065392ccc00c0
 quh      quh_Latn  train/000_00000.parquet 5cc0c23abc751af575f4c1844423e0e230b64fd496c59bfa32fec91250d7200a
 gcr      gcr_Latn  train/000_00000.parquet 01c31bb4c9e2e197e3ae73f5ae5abffd240655e8d08836b6636f84db62052468
 tum      tum_Latn  train/000_00000.parquet e8c7bfa546a68dd9a2af6ffd4ad94d09169fcc50783363f4a933caf3bd7e50a0

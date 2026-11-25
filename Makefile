@@ -45,14 +45,14 @@ PREDICT_LANGS ?= en de fr es it nl pt sv pl no da fi cs tr vi el ru uk ar he fa 
                  la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
                  sr-Latn gn ff ber kri \
                  bo dz \
-                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc bum bin teo sgc yao dik \
+                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc yao dik \
                  min war nia mad \
                  cor glv ext pcd sgs pnt vec vls lmo lld gag \
                  shn mnw ksw blk \
                  nan hak ami za \
                  zne alz cce skg bss men lgg xon heh gux gmv suk \
-                 spp bas ngl chw fat tsc \
-                 niu hwc acf mrw nij guc gor \
+                 spp bas ngl chw fat tsc gvl \
+                 niu hwc acf mrw nij guc ljp sas gor bpr \
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
                  cop hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
@@ -208,14 +208,14 @@ FINEWEB_LANGS ?= brx doi hne mag brh sd-Deva mni-Beng lo trp lus kha km my \
                  crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                  la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
                  sr-Latn gn ff ber bo dz \
-                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc bum bin teo sgc yao dik \
+                 kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc yao dik \
                  min war nia mad \
                  cor glv ext pcd sgs pnt vec vls lmo lld gag \
                  shn mnw ksw blk \
                  nan hak ami za \
                  zne alz cce skg bss men lgg xon heh gux gmv suk \
-                 spp bas ngl chw fat tsc \
-                 niu hwc acf mrw nij guc gor \
+                 spp bas ngl chw fat tsc gvl \
+                 niu hwc acf mrw nij guc ljp sas gor bpr \
                  quh gcr tum tll guz kde nyy mas mnk mer dga \
                  cop hrx crk csw otw tkl kne mqj liv abs ajg \
                  yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \
@@ -481,14 +481,14 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        crs nd ng efi sg kj lua lu kea mos rcf kg wal luo tiv iso bem fon ach bci dyu ki kmb umb \
                        la pap syr yua quc kek quz qug srn gcf bi ia tpi gil tvl ho ch jam \
                        sr-Latn gn ff ber kri bo dz \
-                       kbp dag seh ada nyn kwy sid koo kam sop vmw ndc bum bin teo sgc yao dik \
+                       kbp dag seh ada nyn kwy sid koo kam sop vmw ndc gur bum bin teo sgc yao dik \
                        min war nia mad \
                        cor glv ext pcd sgs pnt vec vls lmo lld gag \
                        shn mnw ksw blk \
                        nan hak ami za \
                        zne alz cce skg bss men lgg xon heh gux gmv suk \
-                       spp bas ngl chw fat tsc \
-                       niu hwc acf mrw nij guc gor \
+                       spp bas ngl chw fat tsc gvl \
+                       niu hwc acf mrw nij guc ljp sas gor bpr \
                        quh gcr tum tll guz kde nyy mas mnk mer dga \
                        cop hrx crk csw otw tkl kne mqj liv abs ajg \
                        yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew sdc \

@@ -218,7 +218,7 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Three hundred and four models learn from FineWeb-2's web text alone: those of Bodo,
+Three hundred and nine models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
@@ -257,21 +257,22 @@ Chamorro, Classical Syriac, Cusco Quechua, Guadeloupean Creole, Hiri Motu,
 Interlingua, Jamaican Patois, Kʼicheʼ, Kichwa, Kiribati, Latin, Papiamento,
 Qʼeqchiʼ, Sranan Tongo, Tok Pisin, Tuvaluan and Yucatec Maya), and of six
 more that had a keyboard and no model (Dzongkha, Fula, Guaraní, Serbian
-in Latin letters, Tamazight in Tifinagh and Tibetan), and of nineteen
+in Latin letters, Tamazight in Tifinagh and Tibetan), and of twenty
 of Africa's and Southeast Asia's long tail (Bulu, Dagbani, Dangme, Dinka,
-Edo, Kamba, Kipsigis, Konzo, Koongo, Madurese, Makhuwa, Ndau, Nias,
-Nkore, Sena, Sidamo, Songe, Teso and Yao), and of eleven
+Edo, Farefare, Kamba, Kipsigis, Konzo, Koongo, Madurese, Makhuwa, Ndau,
+Nias, Nkore, Sena, Sidamo, Songe, Teso and Yao), and of eleven
 more of Europe's regional languages (Cornish, Extremaduran, Gagauz,
 Ladin, Lombard, Manx, Picard, Pontic Greek, Samogitian, Venetian and
 West Flemish), and of four of Myanmar's (Mon, Pa'O, Sgaw Karen and
 Shan), and of four of East Asia's (Amis, Hakka, Southern Min and
-Zhuang), and of seventeen more of Africa's long tail (Akoose, Alur,
-Basaa, Chopi, Chuwabu, Fante, Gourmanché, Hehe, Konkomba, Lomwe, Lugbara,
-Mende, Sakalava Malagasy, Sukuma, Supyire, Tswa and Zande), and of
-eighteen more of the long tail (Dagaare, Gorontalo, Guianan Creole, Gusii,
-Hawaiian Pidgin, Maasai, Makonde, Mandinka, Maranao, Meru, Ngaju, Niuean,
-Nyakyusa, Saint Lucian Creole, South Bolivian Quechua, Tetela, Tumbuka and
-Wayuu), and of eleven more (Aja, Ambonese Malay, Coptic, Hunsrik,
+Zhuang), and of eighteen more of Africa's long tail (Akoose, Alur,
+Basaa, Chopi, Chuwabu, Fante, Gourmanché, Gulay, Hehe, Konkomba, Lomwe,
+Lugbara, Mende, Sakalava Malagasy, Sukuma, Supyire, Tswa and Zande), and
+of twenty-one more of the long tail (Dagaare, Gorontalo, Guianan Creole,
+Gusii, Hawaiian Pidgin, Koronadal Blaan, Lampung Api, Maasai, Makonde,
+Mandinka, Maranao, Meru, Ngaju, Niuean, Nyakyusa, Saint Lucian Creole,
+Sasak, South Bolivian Quechua, Tetela, Tumbuka and Wayuu), and of eleven
+more (Aja, Ambonese Malay, Coptic, Hunsrik,
 Kankanaey, Livonian, Mamasa, Ottawa, Plains Cree, Swampy Cree and
 Tokelauan), and of thirteen more (Dungan, Ewondo, Giryama,
 Hanunoo, Kanuri, Lango, Ledo Kaili, Makhuwa-Meetto, Nenets, Sassarese,
@@ -303,12 +304,13 @@ No page of bible.is (Faith Comes By Hearing's Bible site, whose terms
 allow personal, non-commercial use only) is read, in any language, from
 FineWeb-2 or any other source that says where its text was read: no
 model learns from it, and no held-out text is of it. It was most of
-FineWeb-2's text of dozens of small languages, and nineteen were left
-with too little to learn from (under 20 000 words, under a thousand
-kinds of word, or no held-out text), which since data 0.84.0 have their
-keyboards and no model: Buhid, Dan, Farefare, Gogo, Gulay, Haya, Itawit,
-Kafa, Koronadal Blaan, Lahu, Lampung Api, Moba, Nande, Northern Grebo,
-Ntcham, Nyoro, Sasak, Sebat Bet Gurage and Xaasongaxango.
+FineWeb-2's text of dozens of small languages, and fourteen are left
+with too little to learn from (too few words or kinds of word, too little
+held-out text, or too little saved), which have their keyboards and no
+model: Buhid, Dan, Gogo, Haya, Itawit, Kafa, Lahu, Moba, Nande, Northern
+Grebo, Ntcham, Nyoro, Sebat Bet Gurage and Xaasongaxango. Five more had
+none in data 0.84.0 and learn from what is left of their text again
+since 0.86.0: Farefare, Gulay, Koronadal Blaan, Lampung Api and Sasak.
 
 ### MADLAD-400 (web text)
 

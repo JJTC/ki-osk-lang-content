@@ -14,14 +14,15 @@ when it reads as its language:
   (FineWeb-2's url, GlotCC's warc-target-uri): its Bibles are its
   holders' and its terms allow personal use only. It was most of
   FineWeb-2's text of dozens of small languages (Garo's in the Bengali
-  script all but one page), and nineteen are left with too little to
-  learn from (under 20 000 words, under a thousand kinds of word, or no
-  held-out text), so their files are not fetched and they have no
-  model: Buhid, Koronadal Blaan, Ntcham, Northern Grebo, Gogo, Farefare,
-  Gulay, Haya, Itawit, Xaasongaxango, Kafa, Lampung Api, Moba, Nande,
-  Nyoro, Sasak, Sebat Bet Gurage, Dan and Lahu (their settings below are
-  kept); a test split none of whose documents is kept holds out the
-  train split's instead (`--hold`);
+  script all but one page), and fourteen are left with too little to
+  learn from (too few words or kinds of word, too little held-out text,
+  or too little saved), so their files are not fetched and they have no
+  model: Buhid, Ntcham, Northern Grebo, Gogo, Haya, Itawit,
+  Xaasongaxango, Kafa, Moba, Nande, Nyoro, Sebat Bet Gurage, Dan and Lahu
+  (their settings below are kept; Farefare, Gulay, Koronadal Blaan,
+  Lampung Api and Sasak, without a model in data 0.84.0, learn from
+  what is left again); a test split none of whose documents is kept
+  holds out the train split's instead (`--hold`);
 
 - a junk document is left out: one whose words are mostly single
   characters or digits (scanned books read by OCR), or whose letters are
