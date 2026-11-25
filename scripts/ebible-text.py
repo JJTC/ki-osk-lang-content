@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ebible-text.py — a Bible's verses as sentences, one a line: what a
 language's model learns from, for languages whose keyboards have no other
-open text.
+open text, and beside the web text of one that has little (Gamo's).
 
 eBible.org publishes Bible translations as plain text: `<id>_vpl.txt`,
 one verse a line, its book's code, chapter and verse first (`GEN 1:1
@@ -18,7 +18,12 @@ apostrophe written ’ or ‘ between letters as '; footnote marks (`*`)
 and the brackets round words some translations doubt (`[` `]`) left
 out.
 
+A language's Bibles, when it has more than one (Gamo's Bible and its New
+Testament, two translations), are read in turn into one corpus, each
+sentence kept once, every 10th chapter of each held out.
+
     ebible-text.py OUT EVAL_OUT gax_vpl.txt
+    ebible-text.py OUT EVAL_OUT gmvl_vpl.txt gmvggm_vpl.txt
 
 `--letters` prints instead the letters a Bible writes, with their counts.
 """
@@ -88,7 +93,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--holdout", type=int, default=10, help="every K-th chapter held out")
     ap.add_argument("--letters", action="store_true", help="print the letters the Bible writes instead")
-    ap.add_argument("paths", nargs="+", help="OUT EVAL_OUT VPL, or VPL with --letters")
+    ap.add_argument("paths", nargs="+", help="OUT EVAL_OUT VPL..., or VPL with --letters")
     opts = ap.parse_args()
     if opts.letters:
         letters = collections.Counter()
@@ -103,28 +108,29 @@ def main():
         for c, n in letters.most_common():
             print(f"{c}\tU+{ord(c):04X}\t{n}\t{unicodedata.name(c, '?')}")
         return
-    if len(opts.paths) != 3:
-        ap.error("OUT, EVAL_OUT and the Bible's _vpl.txt")
-    out_path, eval_path, vpl = opts.paths
+    if len(opts.paths) < 3:
+        ap.error("OUT, EVAL_OUT and the Bibles' _vpl.txt")
+    out_path, eval_path, *vpls = opts.paths
     seen = set()
     held = {}
     corpus = count = 0
     with open(out_path, "w", encoding="utf-8") as out:
-        for n, chapter in enumerate(chapters(vpl), 1):
-            count += 1
-            for s in sentences(chapter):
-                if n % opts.holdout == 0:
-                    held.setdefault(s, None)
-                elif s not in seen:
-                    seen.add(s)
-                    out.write(s + "\n")
-                    corpus += 1
+        for vpl in vpls:
+            for n, chapter in enumerate(chapters(vpl), 1):
+                count += 1
+                for s in sentences(chapter):
+                    if n % opts.holdout == 0:
+                        held.setdefault(s, None)
+                    elif s not in seen:
+                        seen.add(s)
+                        out.write(s + "\n")
+                        corpus += 1
     kept = [s for s in held if s not in seen]
     with open(eval_path, "w", encoding="utf-8") as ev:
         for s in kept:
             ev.write(s + "\n")
     if corpus == 0 or not kept:
-        sys.exit(f"ebible-text: {vpl}: no text")
+        sys.exit(f"ebible-text: {' '.join(vpls)}: no text")
     print(f"{out_path}: {corpus} sentences from {count} chapters, {len(kept)} held out")
 
 

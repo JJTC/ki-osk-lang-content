@@ -26,7 +26,7 @@ licences of the datasets it was built from, listed in `NOTICES.md`, and
 **several are share-alike** (CC BY-SA): the Chinese and Cantonese
 dictionaries, the Portuguese and Spanish dialect flags, and the models of
 the seventy-one languages that learn from Wikipedia text (the Dakshina
-dataset's, or the wikis' own, Hinglish's from Hindi's) and of the three
+dataset's, or the wikis' own, Hinglish's from Hindi's) and of the four
 that learn from eBible.org's Bibles. Whoever redistributes those files, or anything
 built from them, takes on those terms. The layouts carry
 xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
@@ -53,7 +53,7 @@ xkeyboard-config's MIT-style notices, the emoji data Unicode's licence.
 | `$SRC_DIR/storybooks/` | The African Storybook's stories of Masaaba and Turkana, which no wiki or web text has, the CC BY ones (3.0 and 4.0), their pages in another language left out, every 10th story held out — **not committed** | `make fetch-storybooks` |
 | `$SRC_DIR/storyweaver/` | StoryWeaver's stories (Pratham Books, CC BY 4.0) of Halbi, Korku and Nahuatl, which no wiki or web text has, read through its reader with an account (`STORYWEAVER_EMAIL`, `STORYWEAVER_PASSWORD`; without one, and the stories not read before, their models are kept as they are), those `scripts/storyweaver-stories.tsv` names, each pinned by its text's sha256, their pages in another language left out, every 10th story held out — **not committed** | `make fetch-storyweaver` |
 | `$SRC_DIR/smol/` | SMOL's professional translations (Google Research, CC BY 4.0) of twelve of India's languages in Devanagari (Ahirani, Bagheli, Bagri, Bundeli, Kumaoni, Kurukh, Mandeali, Nimadi, Surgujia, Surjapuri, Mundari, Kangri), of Garo in Latin letters and of Zarma, which no wiki or web text has, read as their keyboards type them, every 10th document held out; and Garo's spelled in the Bengali script by its transliteration table (`grt-Beng.txt`, `make respelled-text`) — **not committed** | `make fetch-smol` |
-| `$SRC_DIR/ebible/` | eBible.org's Bibles (each under its own copyright, CC BY-SA 4.0) in Southern Oromo (Guji's), Kituba of the Congo Republic and Yaka (its New Testament), which no wiki or web text has, each translation's verses pinned by sha256, cut into sentences, every 10th chapter held out — **not committed** | `make fetch-ebible` |
+| `$SRC_DIR/ebible/` | eBible.org's Bibles (each under its own copyright, CC BY-SA 4.0) in Southern Oromo (Guji's), Kituba of the Congo Republic and Yaka (its New Testament), which no wiki or web text has, and Gamo's Bible and New Testament (the latter CC BY 4.0), beside its FineWeb-2 text, each translation's verses pinned by sha256, cut into sentences, every 10th chapter held out — **not committed** | `make fetch-ebible` |
 | `$SRC_DIR/glotcc/` | GlotCC's web text of Newari (its news), whose wiki is half a bot's village stubs, and of Nigerian Pidgin, Kabiye, Minangkabau and Waray, the sentences FineWeb-2's text lacks (`make fetch-fineweb` first), the documents that read as their language, every 20th held out — **not committed**: the text is the web's | `make fetch-glotcc` (needs pyarrow: `FINEWEB_PYTHON`) |
 | `eval/<lang>.txt` | Held-out text no model is trained on (Tatoeba's, or the Wikipedia text of the languages that learn from it alone, Dakshina's or the wikis' own): what keystroke savings are measured on | `make fetch-corpora`, `make fetch-dakshina`, `make fetch-wikipedia` |
 | `pinyin/cedict.bin` | Pinyin → Simplified Hanzi | `make pinyin-assets` |

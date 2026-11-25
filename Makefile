@@ -303,11 +303,20 @@ RESPELLED_LANGS ?= grt-Beng
 # pinned by sha256; CC BY-SA 4.0, each under its own copyright), the whole
 # corpus of languages whose keyboards have no other open text: Southern
 # Oromo's (Guji's Bible, 542 000 words), Kituba of the Congo Republic's
-# (803 000) and Yaka's (its New Testament, 127 000). scripts/ebible-text.py
-# holds out every 10th chapter, in $(EBIBLE_DIR)/eval; nothing of it is
-# committed. A translation changed since its pin is not read, and
-# predict-assets keeps its language's model.
-EBIBLE_LANGS ?= gax mkw yaf
+# (803 000) and Yaka's (its New Testament, 127 000). And Gamo's Bible and
+# New Testament (the latter CC BY 4.0; 584 000 words) beside its web
+# text, which bible.is's pages were more than half of (data 0.84.0): the
+# web's counted WEB_WEIGHT times, as beside a wiki's, its savings on its
+# held-out web text 44.3% (40.2% without the Bibles; 42.5% with the Bible
+# alone; 44.0% with the web's counted 3 times, 45.0% 10 times), 38.9% with
+# taps astray (31.6%), 5.2% of its words unknown (14.0%). Gourmanché's
+# two New Testaments are left out: FineWeb-2's text of it is half one of
+# them, and the other, of Togo's Gourmanché, saved 0.1% more of the
+# held-out words that are neither. scripts/ebible-text.py holds out every
+# 10th chapter, in $(EBIBLE_DIR)/eval; nothing of it is committed. A
+# translation changed since its pin is not read, and predict-assets keeps
+# its language's model.
+EBIBLE_LANGS ?= gax mkw yaf gmv
 EBIBLE_DIR = $(SRC_DIR)/ebible
 
 # GlotCC's web text (scripts/fetch-glotcc.sh, its files at one revision
@@ -817,7 +826,7 @@ predict-assets:
 			*" $$lang "*) corpus="$$corpus --corpus $(WIKIPEDIA_DIR)/$$lang.txt"; \
 			              corpus_in="$$corpus_in --input wikipedia/$$lang.txt=$(WIKIPEDIA_DIR)/$$lang.txt" ;; \
 		esac; \
-		fw=; case " $(WIKIPEDIA_LANGS) " in \
+		fw=; case " $(WIKIPEDIA_LANGS) $(EBIBLE_LANGS) " in \
 			*" $$lang "*) case " $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS) $(GLOTCC_LANGS) " in \
 				*" $$lang "*) ww=$(WEB_WEIGHT); case " $(WEB_EVEN_LANGS) " in *" $$lang "*) ww=1 ;; esac; \
 				              fw="$$ww:"; weight="$$weight --recipe web_weight=$$ww" ;; \

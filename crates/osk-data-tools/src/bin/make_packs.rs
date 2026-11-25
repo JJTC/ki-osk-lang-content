@@ -36,7 +36,8 @@
 //! SMOL's translations (`smol/<lang>.txt`), GlotCC's (`glotcc/<lang>.txt`),
 //! with their licences; and eBible.org's Bibles (`ebible/<lang>.txt`), each
 //! under its own copyright, which `[prediction.ebible.bibles]` names as its
-//! language's source.
+//! language's source (a language's several Bibles, read into one corpus, as
+//! its sources, each with its licence).
 //!
 //! It refuses rather than guesses:
 //! - a committed data file that no pack claims, or that two packs claim;
@@ -207,12 +208,39 @@ struct Prediction {
 }
 
 /// eBible.org's Bibles, each under its own copyright: the licence they
-/// share, and each language's Bible, named with its holders, as its
-/// model's source.
+/// share, and each language's Bible, or its Bibles, named with their
+/// holders, as its model's sources.
 #[derive(Deserialize)]
 struct Bibles {
     license: License,
-    bibles: BTreeMap<String, SourceDef>,
+    bibles: BTreeMap<String, OneOrMore<BibleDef>>,
+}
+
+/// One Bible: its name and holders, where it is, and its licence where it
+/// is not the one the Bibles share (Gamo's New Testament's CC BY 4.0).
+#[derive(Deserialize)]
+struct BibleDef {
+    name: String,
+    url: String,
+    #[serde(default)]
+    license: Option<License>,
+}
+
+/// A table, or a list of them.
+#[derive(Deserialize)]
+#[serde(untagged)]
+enum OneOrMore<T> {
+    One(T),
+    More(Vec<T>),
+}
+
+impl<T> OneOrMore<T> {
+    fn all(&self) -> &[T] {
+        match self {
+            Self::One(t) => std::slice::from_ref(t),
+            Self::More(ts) => ts,
+        }
+    }
 }
 
 /// What a file beside a language's model adds to its pack.
@@ -368,18 +396,28 @@ fn main() -> anyhow::Result<()> {
                 });
             }
         }
-        // A Bible's model names that Bible and its holders.
+        // A Bible's model names that Bible and its holders, each of a
+        // language's Bibles, read into one corpus, with its licence.
         if let Some(sha256) = recorded(&entry, &format!("ebible/{lang}.txt")) {
-            let bible =
+            let bibles =
                 p.ebible.bibles.get(lang).with_context(|| {
                     format!("[prediction.ebible.bibles] names no Bible of {lang}")
                 })?;
-            licenses.push(p.ebible.license.clone());
-            sources.push(Source {
-                name: bible.name.clone(),
-                url: bible.url.clone(),
-                sha256: Some(sha256),
-            });
+            ensure!(
+                !bibles.all().is_empty(),
+                "[prediction.ebible.bibles] names no Bible of {lang}"
+            );
+            for bible in bibles.all() {
+                let license = bible.license.as_ref().unwrap_or(&p.ebible.license);
+                if !licenses.contains(license) {
+                    licenses.push(license.clone());
+                }
+                sources.push(Source {
+                    name: bible.name.clone(),
+                    url: bible.url.clone(),
+                    sha256: Some(sha256.clone()),
+                });
+            }
         }
         ensure!(
             !sources.is_empty(),

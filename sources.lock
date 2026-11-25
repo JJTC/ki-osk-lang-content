@@ -3070,19 +3070,21 @@
       }
     },
     "predict/gmv": {
-      "encoder": "e090b1518a67-dirty",
+      "encoder": "713ab0831a2a-dirty",
       "inputs": {
+        "ebible/gmv.txt": "1fa37f9f552ae8b2ca5656d12267f14cfc56d47b1ac098ab432daaf7b52856e4",
         "fineweb/gmv.txt": "26d5e4d63fbbaa50409476ebeda8d213b3260a71001d8b9edcab258acf57e77c"
       },
       "outputs": {
-        "predict/gmv.forms.fst": "bd89c7a033000742cd136a6ab80bad40c98540db8b46b0294bbb99e9e9fc42a9",
-        "predict/gmv.fst": "501cd425e33011f73b190238af8522b2f859c4ba8198b73e61e9a02ff1b81cf5",
-        "predict/gmv.ngram.bin": "d53a385c5c0cb10b66e3a6194939ed70d223df1a6c6bdc3ea54d4325e3f28a07"
+        "predict/gmv.forms.fst": "f00de46cd6b76117162a7717dd3bca07451fa86a0e808a842836c1e3699ee0e9",
+        "predict/gmv.fst": "a481fa2b6f1ffa9edb3682be6d6e2b7262d3822867e5126b88a226341ab84540",
+        "predict/gmv.ngram.bin": "c5f1f265dfb698452258e28a5c731b9545452e90ee009ba7a05ff960d2136a77"
       },
       "recipe": {
         "ngram_keep": "90000",
         "start_keep": "5000",
         "vocab_size": "80000",
+        "web_weight": "5",
         "words": "2"
       }
     },

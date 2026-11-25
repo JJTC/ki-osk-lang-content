@@ -218,7 +218,7 @@ history, at its wiki, names them).
 Contains information from [FineWeb-2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2)
 which is made available under the [ODC Attribution License](https://opendatacommons.org/licenses/by/1-0/).
 
-Three hundred and five models learn from FineWeb-2's web text alone: those of Bodo,
+Three hundred and four models learn from FineWeb-2's web text alone: those of Bodo,
 Dogri, Chhattisgarhi, Brahui, Kokborok, Mizo and Khasi, which have no
 Wikipedia of their own, of Sindhi in Devanagari (`sd-Deva`) and Meitei
 in the Bengali script (`mni-Beng`), whose wikis are in their other
@@ -265,8 +265,8 @@ more of Europe's regional languages (Cornish, Extremaduran, Gagauz,
 Ladin, Lombard, Manx, Picard, Pontic Greek, Samogitian, Venetian and
 West Flemish), and of four of Myanmar's (Mon, Pa'O, Sgaw Karen and
 Shan), and of four of East Asia's (Amis, Hakka, Southern Min and
-Zhuang), and of eighteen more of Africa's long tail (Akoose, Alur, Basaa,
-Chopi, Chuwabu, Fante, Gamo, Gourmanché, Hehe, Konkomba, Lomwe, Lugbara,
+Zhuang), and of seventeen more of Africa's long tail (Akoose, Alur,
+Basaa, Chopi, Chuwabu, Fante, Gourmanché, Hehe, Konkomba, Lomwe, Lugbara,
 Mende, Sakalava Malagasy, Sukuma, Supyire, Tswa and Zande), and of
 eighteen more of the long tail (Dagaare, Gorontalo, Guianan Creole, Gusii,
 Hawaiian Pidgin, Maasai, Makonde, Mandinka, Maranao, Meru, Ngaju, Niuean,
@@ -283,7 +283,7 @@ Assamese's from it beside its Tatoeba sentences, Magahi's beside its
 Incubator text, Sylheti's in Syloti Nagri (a news site's pages) beside
 its wiki's, Nuosu's (the pages of its Yi that write its commonest
 syllables, the web's tables of the script left out) beside its Incubator
-text, and
+text, Gamo's beside two of its Bibles (eBible.org's, below), and
 Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's beside GlotCC's
 (below).
 FineWeb-2 (Hugging Face; Penedo et al., "FineWeb2: One
@@ -410,6 +410,22 @@ licence**, as its about page says:
   coordination with Forum Communautaire des Traducteurs de la Bible et
   Alphabétisation ([eBible.org: yaf](https://ebible.org/find/details.php?id=yaf)).
 
+Gamo's model learns from two of its Bibles there beside its FineWeb-2
+text (above), read in turn into one text, each sentence once:
+
+- *Geeshsha Mexaafa*, the Bible in the Gamo language of Ethiopia, Latin
+  script, copyright © 2024 The Word for the World International ([eBible.org:
+  gmvl](https://ebible.org/find/details.php?id=gmvl)), **made available
+  under the [Creative Commons Attribution-ShareAlike
+  4.0](https://creativecommons.org/licenses/by-sa/4.0/) licence**, as the
+  three are.
+- *Gamo Geesha Maxxafa New Testament*, the New Testament in the Gamo
+  language of Ethiopia, copyright © 2017 The Word for the World
+  International; contributor: The Word for the World Ethiopia
+  ([eBible.org: gmvggm](https://ebible.org/find/details.php?id=gmvggm)),
+  **made available under the [Creative Commons Attribution
+  4.0](https://creativecommons.org/licenses/by/4.0/) licence**.
+
 Each translation's verses (`<id>_vpl.txt`) are pinned by sha256 in
 `scripts/fetch-ebible.sh`. **What was done to them** (`scripts/ebible-text.py`):
 each chapter's verses read as running text, without their references,
@@ -419,9 +435,9 @@ normalized to NFC, an apostrophe written ’ or ‘ between letters read as
 from them (word lists and the counts of words and word pairs and
 triples) are what this repository and its packs hold, never the text;
 the holders endorse neither the models nor this repository. **The packs
-of those three languages, their models, carry the same licence,
-share-alike**, and each names its Bible and its holders among its
-sources.
+of those four languages, their models, carry the same licence,
+share-alike** (Gamo's the New Testament's CC BY 4.0 too), and each names
+its Bibles and their holders among its sources.
 
 ### GlotCC (web text)
 

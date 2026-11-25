@@ -690,15 +690,21 @@ source  = { name = "GlotCC v1.0 (cis-lmu/GlotCC-V1 at Hugging Face): web text fr
 
 # eBible.org's Bibles (scripts/fetch-ebible.sh: each translation's verses
 # pinned by sha256; scripts/ebible-text.py cuts them into sentences): the
-# whole corpus of the languages that script names. Each is under its own
-# copyright and CC BY-SA 4.0, as its about page says, which asks that what
-# is made from it name its holders and its source and be shared alike:
-# each pack names its Bible, below, and NOTICES.md what was done to it.
+# whole corpus of the languages that script names, and Gamo's beside its
+# web text. Each is under its own copyright and CC BY-SA 4.0, as its about
+# page says, which asks that what is made from it name its holders and its
+# source and be shared alike, but Gamo's New Testament, CC BY 4.0, which
+# asks the first two (a Bible's own `license`): each pack names its Bibles,
+# below, and NOTICES.md what was done to them.
 [prediction.ebible]
 license = { name = "CC BY-SA 4.0 (each Bible's)", url = "https://creativecommons.org/licenses/by-sa/4.0/", share_alike = true }
 
 [prediction.ebible.bibles]
 gax = { name = "Kitaaba Woyyuu, the Bible in Oromo, Borana-Arsi-Guji: copyright © 2025 The Word for the World International (contributor: Bible Society of Ethiopia), from eBible.org", url = "https://ebible.org/find/details.php?id=gax" }
+gmv = [
+  { name = "Geeshsha Mexaafa, the Bible in Gamo, in Latin letters: copyright © 2024 The Word for the World International, from eBible.org", url = "https://ebible.org/find/details.php?id=gmvl" },
+  { name = "Gamo Geesha Maxxafa New Testament, the New Testament in Gamo: copyright © 2017 The Word for the World International (contributor: The Word for the World Ethiopia), from eBible.org", url = "https://ebible.org/find/details.php?id=gmvggm", license = { name = "CC BY 4.0 (Gamo Geesha Maxxafa New Testament)", url = "https://creativecommons.org/licenses/by/4.0/", share_alike = false } },
+]
 mkw = { name = "Mambu ya Nzambi, the Bible in Kituba of the Congo Republic: copyright © 2025 Wycliffe Bible Translators, Inc. (contributor: Wycliffe USA), from eBible.org", url = "https://ebible.org/find/details.php?id=mkw" }
 yaf = { name = "Yaka NT, the New Testament in Yaka of the Democratic Republic of the Congo: copyright © 2022 The Seed Company in coordination with Forum Communautaire des Traducteurs de la Bible et Alphabétisation, from eBible.org", url = "https://ebible.org/find/details.php?id=yaf" }
 

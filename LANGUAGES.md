@@ -305,7 +305,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `gbo` | `gbo` | Northern Grebo Grebo | us + long-press à ǎ ä ɛ ě è ɛ̌ ɛ̀ ɛ̈ ǐ…, ɛ ɔ keys, ǒ ě on q x | LTR | —¹⁹ | — | — |
 | `heh` | `heh` | Hehe Kihehe | us | LTR | **Full** (heh)⁷ | ✓ | — |
 | `gux` | `gux` | Gourmanché Gulmancema | us + long-press ŋ ñ | LTR | **Full** (gux)⁷ | ✓ | — |
-| `gmv` | `gmv` | Gamo | us | LTR | **Full** (gmv)⁷ | ✓ | — |
+| `gmv` | `gmv` | Gamo | us | LTR | **Full** (gmv)⁷ ¹⁸ | ✓ | — |
 | `suk` | `suk` | Sukuma Kisukuma | us + long-press ī ū, ' key | LTR | **Full** (suk)⁷ | ✓ | — |
 | `spp` | `spp` | Supyire | us + long-press à á â ɛ è ɛ̀ é ê ɛ̂ ɛ́…, ' key | LTR | **Full** (spp)⁷ | ✓ | — |
 | `bas` | `bas` | Basaa | us + long-press é è ñ ô à | LTR | **Full** (bas)⁷ | ✓ | — |
@@ -1950,11 +1950,12 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Basaa, Haya, Kafa, Lomwe, Gogo, Chuwabu, Fante, Tswa, Ntcham,
    Xaasongaxango, Gulay, Nande and Nyoro. Without bible.is's pages (since
    data 0.84.0, note 19) eighteen still do, from 27 000 (Hehe) to 390 000
-   words (Zande); Northern Grebo, Haya, Kafa, Gogo, Ntcham, Xaasongaxango,
-   Gulay, Nande, Nyoro and Dan have too little left, and no model. A
-   sentence of English is left out, and of the state's language: French's
-   (une pour dans avec…: not le, which several of them write), Portuguese's
-   beside Mozambique's four, and beside the Bantu languages of East Africa
+   words (Zande), Gamo beside two of its Bibles since data 0.85.0 (note
+   18); Northern Grebo, Haya, Kafa, Gogo, Ntcham, Xaasongaxango, Gulay,
+   Nande, Nyoro and Dan have too little left, and no model. A sentence of
+   English is left out, and of the state's language: French's (une pour
+   dans avec…: not le, which several of them write), Portuguese's beside
+   Mozambique's four, and beside the Bantu languages of East Africa
    Swahili's own words (katika kwamba lakini…: not kwa ni wa ya, which they
    write too); every 10th document is held out, their test splits holding a
    few hundred words. Letters written for others are read as theirs:
@@ -1967,17 +1968,18 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    11% of their words (Sukuma's ng'wa, Gulay's le’n, Nande's n'abandu) have
    a key for it at the home row's end, Akoose's typing its glottal stop, ʼ,
    which its text writes and its words keep (`osk_data::words`, as
-   Kʼicheʼ's do). Their lexicons keep all their words (2 200 to 24 000).
-   Keystroke savings on the eighteen's held-out text (800 to 13 400 words):
-   Konkomba 63.8%, Zande 54.1%, Chopi 53.1%, Tswa 51.8%, Lomwe 51.5%,
-   Sakalava 51.2%, Alur 51.1%, Basaa 50.1%, Supyire 50.0%, Lugbara 49.9%,
-   Gourmanché 49.6%, Mende 46.8%, Akoose 46.3%, Chuwabu 43.2%, Fante 43.0%,
-   Gamo 40.2%, Sukuma 34.9%, Hehe 29.0%; 47.8% on average, 42.3% with taps
-   astray, at most 0.41% of right words changed (Lugbara's). The long
-   presses' letters weigh in the savings: a third of Akoose's letters are
-   typed so, which the strip spares. Hehe's and Sukuma's held-out words are
-   30% and 22% unknown, their texts now small (27 000 and 32 000 words),
-   Gamo's, Chuwabu's and Akoose's 12% to 14%, their words of many parts.
+   Kʼicheʼ's do). Their lexicons keep all their words (2 200 to 24 000;
+   Gamo's 64 000 with its Bibles). Keystroke savings on the eighteen's
+   held-out text (800 to 13 400 words): Konkomba 63.8%, Zande 54.1%, Chopi
+   53.1%, Tswa 51.8%, Lomwe 51.5%, Sakalava 51.2%, Alur 51.1%, Basaa 50.1%,
+   Supyire 50.0%, Lugbara 49.9%, Gourmanché 49.6%, Mende 46.8%, Akoose
+   46.3%, Gamo 44.3%, Chuwabu 43.2%, Fante 43.0%, Sukuma 34.9%, Hehe 29.0%;
+   48.0% on average, 42.7% with taps astray, at most 0.41% of right words
+   changed (Lugbara's). The long presses' letters weigh in the savings: a
+   third of Akoose's letters are typed so, which the strip spares. Hehe's
+   and Sukuma's held-out words are 30% and 22% unknown, their texts now
+   small (27 000 and 32 000 words), Chuwabu's and Akoose's 13% and 12%,
+   their words of many parts (Gamo's 5.2%, 14.0% without its Bibles).
    Twenty-three more of the long tail learned from FineWeb-2's text whole:
    Southeast Asia's, the Americas' and the Pacific's that it has 0.4 to 1.2
    MB of (Niuean, Hawaiian Pidgin, Saint Lucian Creole, Maranao, Ngaju,
@@ -2967,6 +2969,28 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    of their own that spell otherwise. Their keyboards are as they were
    (notes 9 and 12), with suggestions and glides now.
 
+   Gamo's model learns from two of its Bibles there beside its FineWeb-2
+   text (note 7) since data 0.85.0, bible.is's pages having been more
+   than half of that text (note 19): Geeshsha Mexaafa, its Bible in Latin
+   letters (The Word for the World International, 2024; CC BY-SA 4.0),
+   and Gamo Geesha Maxxafa, its New Testament (the same, 2017; CC BY
+   4.0), read in turn as the three's are, 42 656 sentences and 584 000
+   words, beside the web's 48 000, which count five times (`WEB_WEIGHT`,
+   as beside a wiki's). Its lexicon keeps all its 64 000 kinds of word. On
+   its held-out web text it saves 44.3% of the keystrokes (40.2% without
+   them, 42.5% with the Bible and not the New Testament), 38.9% with taps
+   astray (31.6%), 5.2% of the words unknown (14.0%); on its Bibles'
+   held-out chapters 44.2%. Of the languages bible.is's pages were a tenth
+   or more of, eBible.org has a Bible it marks redistributable of ten, and
+   only Gamo's and Gourmanché's allow a model: Koronadal Blaan's,
+   Supyire's, Akoose's, Konkomba's, Wolaytta's, South Bolivian Quechua's,
+   Tok Pisin's and Southwestern Dinka's forbid derived works and
+   commercial use (CC BY-NC-ND), and Dan's is not redistributable.
+   Gourmanché's two New Testaments (CC BY 4.0, and Togo's Gourmanché's,
+   CC BY-SA 4.0) are left out: FineWeb-2's text of it is half the first
+   already (four fifths of its held-out text), and the second saved 0.1%
+   more of the held-out words that are neither.
+
 19. No page of bible.is (Faith Comes By Hearing's Bible site, whose terms
    allow personal, non-commercial use only) is read since data 0.84.0, in
    any language: `scripts/fineweb-text.py` leaves out every document whose
@@ -2986,7 +3010,8 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    three quarters of Ngaju's and Akoose's, more than half of Gamo's,
    Gourmanché's, Konkomba's, Mende's, Lugbara's and Chopi's. Their savings
    fell most: Hehe 60.8% -> 29.0%, Gorontalo 66.2% -> 38.0%, Sukuma 61.2%
-   -> 34.9%, Akoose 66.8% -> 46.3%, Gamo 60.3% -> 40.2%, Ngaju 64.9% ->
+   -> 34.9%, Akoose 66.8% -> 46.3%, Gamo 60.3% -> 40.2% (44.3% with
+   eBible.org's Bibles since data 0.85.0, note 18), Ngaju 64.9% ->
    52.8%, Supyire 62.0% -> 50.0%, Acehnese 53.8% -> 42.9%, South Bolivian
    Quechua 38.6% -> 28.9%, Tok Pisin 63.1% -> 55.2%, Cusco Quechua 43.1% ->
    35.5%, Northwestern Ojibwe 61.3% -> 55.2%; some rose, their held-out
@@ -3034,7 +3059,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
   sdc**, Coptic **cop**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, Amharic and Tigrinya **am ti**, whose words the Ge'ez composer offers (note 16), and Gorani's Hawrami **hac**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
-  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18). Built by
+  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18; and Gamo's, **gmv**, beside its FineWeb-2 text). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet: 173 layouts, Montenegrin's in
