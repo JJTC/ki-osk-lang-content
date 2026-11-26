@@ -639,7 +639,9 @@ source  = { name = "Wikipedia and the Wikimedia Incubator's test wikis, their Ci
 # revision, pinned by sha256; scripts/fineweb-text.py keeps the documents
 # that read as their language): the whole corpus of the languages, and
 # the second scripts of languages, with no Wikipedia of their own that
-# script names, and Assamese's beside its Tatoeba sentences. ODC-By asks
+# script names, and Assamese's and ten big languages' (German, Spanish,
+# French, Italian, Portuguese, Dutch, Polish, Turkish, Russian,
+# Ukrainian) beside their Tatoeba sentences. ODC-By asks
 # that what is made from it say so: each such pack names it, and
 # NOTICES.md.
 [prediction.fineweb]

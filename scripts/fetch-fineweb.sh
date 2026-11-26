@@ -51,7 +51,10 @@
 # FineWeb-2's und_Yiii (Yi, its language undetermined) that read as Nuosu
 # (People's Daily's Yi pages, Liangshan's, yizuren.com's, a Bible
 # dictionary's), beside its Incubator wiki's text; and Assamese, whose
-# Tatoeba corpus is small, beside it (the Makefile's FINEWEB_PLUS_LANGS).
+# Tatoeba corpus is small, beside it, and ten big languages whose models
+# learned from Tatoeba's alone (German, Spanish, French, Italian,
+# Portuguese, Dutch, Polish, Turkish, Russian and Ukrainian), beside it
+# (the Makefile's FINEWEB_PLUS_LANGS).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
 # it is ODC-By 1.0, and its use subject to Common Crawl's Terms of Use.
@@ -81,8 +84,12 @@
 # in $OUT/raw, and a kept one whose sha256 is right is not downloaded
 # again; with KEEP_RAW=0 each language's are deleted once its text is
 # written (Khmer's and Burmese's are 2.3 and 3.1 GB: what a CI runner's
-# disk is spared). Reading them needs pyarrow: PYTHON names a Python that
-# has it.
+# disk is spared). A row whose file ends in @N is read in part
+# (scripts/parquet-groups.py): its footer and every Nth row group, the
+# only ones fineweb-text.py reads (its `every`, the same N), fetched by
+# range requests into a sparse copy, its sha256 that of those bytes; the
+# big languages' first files are 4.8 GB, of which 100 to 160 MB are read.
+# Reading them needs pyarrow: PYTHON names a Python that has it.
 #
 #   scripts/fetch-fineweb.sh            # every language
 #   scripts/fetch-fineweb.sh brx sd-Deva    # some
@@ -193,6 +200,26 @@ dv   div_Thaa  train/000_00000.parquet  a0ec1b2b0f98968ed04fb1c37f33a3fbad43c611
 dv   div_Thaa  test/000_00000.parquet   302f0d4f9e8472c3eaa5fab9042df503bd6a149569268f821aaf6c79fd32e14d
 as   asm_Beng  train/000_00000.parquet  66c64bd424c0084aee17ec4936a21d6e0b307b068f2fd29bf8acd60204a4891b
 as   asm_Beng  test/000_00000.parquet   fe65d2e25063872f4593f01af4cb0e0e69fc50e5af9714bdefc3701a100dfcc3
+de   deu_Latn  train/000_00000.parquet@101  813a181e8a6182d849b6cd568f7232321be20be6d637a5aaae61b17060615268
+de   deu_Latn  test/000_00000.parquet       f370564f527a10cf125f267d8f10175d6a6366390480620e90a469bbf80a2a46
+es   spa_Latn  train/000_00000.parquet@107  366b3d0fc6b2839e66cd6bf92960105f9da27c1e8745f96ccbebd5d2ff2983b2
+es   spa_Latn  test/000_00000.parquet       c191b0aee83970d38a37a940e34ff28c5f964796ec7c33929dda50da8ebde98f
+fr   fra_Latn  train/000_00000.parquet@106  a881d0f0725cc129df27f251bb8c9bc93e1db32bae94b9028751cdc30f671500
+fr   fra_Latn  test/000_00000.parquet       11092a613abd05127de63c3d8f859811b656138dbc007c259fc5dd275e626daa
+it   ita_Latn  train/000_00000.parquet@104  d09876dae82efd2391cc50cdcddd7f9e1de8e9e6320e34607ab4d72765fbf92d
+it   ita_Latn  test/000_00000.parquet       2daa4433781837cb71c9d2caa23ac89c0f6c2228fe4366ad54df3002b7e40c42
+pt   por_Latn  train/000_00000.parquet@105  1047ad5cbe889251ed0e325396ea15be5e70b2c3c74456424499d2d28256d620
+pt   por_Latn  test/000_00000.parquet       04d0acdf0507c749951a8a7ee7b416ba845e32dd05de4f98371434aaf770846e
+nl   nld_Latn  train/000_00000.parquet@105  4ab01391e4f77d7e95d4a073ab5f7048aae60cdc650ff7efaeef80577c1b2058
+nl   nld_Latn  test/000_00000.parquet       a41f864de27c6e716f3f47334273899bcb21829d01369f9e3eb36fa9f7857fcf
+pl   pol_Latn  train/000_00000.parquet@97   29b208b29ce1d5108e3e5658486875e905f421c593d7a64a08bb45bdf5c4faab
+pl   pol_Latn  test/000_00000.parquet       70579d75902b50faa3a3fc6127357f1436719fcb71252b7c5b71a3c37b2d40da
+ru   rus_Cyrl  train/000_00000.parquet@84   27fe19d9cae4575a46653ea4774cb2aebc78224a25c916097419a928df49203a
+ru   rus_Cyrl  test/000_00000.parquet       b26be652265af931e203a7e8a40d249217b672b78a40243b144b0f447a674178
+tr   tur_Latn  train/000_00000.parquet@107  8be60745bb4cf2836a2f13c76a325da94ffd0e08e03225cca2d6862ffb633eb2
+tr   tur_Latn  test/000_00000.parquet       f7d4fed3841bb1bd396aa1ea136c598f84cc07afa3208b3560faccb07ae10d1c
+uk   ukr_Cyrl  train/000_00000.parquet@80   c084cbef02f6472162ca67e00f142376820e359b4ac2a57b3795ee60fd8a2734
+uk   ukr_Cyrl  test/000_00000.parquet       91eb3c39927bc149ef4452610c58f3e25b14ae07ddf65d66daeb87ab2bfd0d95
 trp  trp_Latn  train/000_00000.parquet  3becfceb5073d2991ba09f7f69d6d76a045bc154d10b5b058aca4bb0b44ace9c
 trp  trp_Latn  test/000_00000.parquet   18b9059b96e18148350efbb260dc6120c72ca251dc317fe51b543100bef495ea
 lus  lus_Latn  train/000_00000.parquet  ae86b93ee0ce7565f66dc07a63ea4111530d3088ba9fac91cdf195885e225da3
@@ -686,9 +713,24 @@ for lang in $langs; do
 	train=()
 	test=()
 	while read -r _ config file sha; do
+		# FILE@N: only the footer and every Nth row group of FILE, those
+		# fineweb-text.py reads (its `every`), into a sparse copy; SHA is
+		# the sha256 of those bytes (scripts/parquet-groups.py).
+		every=
+		case "$file" in *@*) every=${file#*@} file=${file%@*} ;; esac
 		local_file="$OUT/raw/$config/$file"
 		mkdir -p "$(dirname "$local_file")"
-		if [ ! -f "$local_file" ] || [ "$(sha256sum "$local_file" | cut -d' ' -f1)" != "$sha" ]; then
+		if [ -n "$every" ]; then
+			if [ ! -f "$local_file" ] || [ "$("$PYTHON" -I "$HERE/parquet-groups.py" --local "$local_file" "$every")" != "$sha" ]; then
+				got=$("$PYTHON" -I "$HERE/parquet-groups.py" "$BASE/$config/$file" "$every" "$local_file.part")
+				if [ "$got" != "$sha" ]; then
+					rm -f "$local_file.part"
+					echo "fetch-fineweb: $config/$file's row groups' sha256 is $got, not $sha" >&2
+					exit 1
+				fi
+				mv -f "$local_file.part" "$local_file"
+			fi
+		elif [ ! -f "$local_file" ] || [ "$(sha256sum "$local_file" | cut -d' ' -f1)" != "$sha" ]; then
 			curl -fsSL --retry 5 --retry-all-errors -o "$local_file.part" "$BASE/$config/$file"
 			got=$(sha256sum "$local_file.part" | cut -d' ' -f1)
 			if [ "$got" != "$sha" ]; then

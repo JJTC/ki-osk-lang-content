@@ -93,12 +93,16 @@ PREDICT_OUT_DIR = predict
 # transliteration saves on Dakshina's test sentences fell with it: Hindi
 # 0.6 points, net of the single letters' 0.4 gain, Bengali 0.2, Marathi
 # 1.7, whose Tatoeba text then counts ten times still
-# (TATOEBA_LIGHT_LANGS).
+# (TATOEBA_LIGHT_LANGS). So do the ten big languages that learn from
+# FineWeb-2's text beside Tatoeba's (FINEWEB_PLUS_LANGS), whose Tatoeba
+# corpora are 0.6 to 1 million words, a fifteenth of their web text:
+# Russian's savings on Tatoeba's held-out text are 42.5% at 3, 44.8% at
+# 10 and 45.6% at 30, on the web's 33.4%, 32.2% and 29.6%.
 DAKSHINA_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 DAKSHINA_ONLY_LANGS ?= gu kn ml pa sd si ta te ur
 DAKSHINA_DIR = $(SRC_DIR)/dakshina
 TATOEBA_WEIGHT ?= 30
-TATOEBA_LIGHT_LANGS ?= mr
+TATOEBA_LIGHT_LANGS ?= mr de es fr it pt nl pl tr ru uk
 TATOEBA_LIGHT_WEIGHT ?= 10
 
 # Wikipedia's own text, the whole corpus of languages Tatoeba and Dakshina
@@ -243,8 +247,17 @@ WEB_WEIGHT ?= 5
 # are saved 38.5% of their keystrokes at 1, 37.2% at 5.
 WEB_EVEN_LANGS ?= syl-Sylo ii
 # And beside a small Tatoeba corpus, counted TATOEBA_WEIGHT times as
-# Hindi's is beside Dakshina's text: Assamese (14 000 sentences).
-FINEWEB_PLUS_LANGS ?= as
+# Hindi's is beside Dakshina's text: Assamese (14 000 sentences). And
+# beside the ten big languages' Tatoeba corpora, which were the whole of
+# their models' text (TATOEBA_LIGHT_WEIGHT): German, Spanish, French,
+# Italian, Portuguese, Dutch, Polish, Turkish, Russian and Ukrainian,
+# 12 to 17 million words of web text each. Their keystroke savings on
+# FineWeb-2's held-out text rise from 18-37% to 34-47% (Turkish's 17.9%
+# to 33.7%, Russian's 18.9% to 33.7%, French's 36.7% to 46.8%), the
+# web's words their lexicons lack from 12-41% to 3-9%, and on Tatoeba's
+# held-out sentences they save as much or more (Spanish 0.1 points less,
+# Russian 3.4 more).
+FINEWEB_PLUS_LANGS ?= as de es fr it pt nl pl tr ru uk
 FINEWEB_DIR = $(SRC_DIR)/fineweb
 
 # MADLAD-400's web text (scripts/fetch-madlad.sh, its files at one revision
@@ -405,8 +418,9 @@ PREDICT_NGRAM ?= 60000
 # Recording the tier keeps a refresh from silently growing 36 n-gram
 # tables by up to 2x. Moving a language to the full tier is a size
 # decision: take it out of this list. Hindi left it for the WIKI tier
-# (below) when Wikipedia text joined its corpus.
-PREDICT_COMPACT_LANGS ?= no da fi cs tr vi el ru uk ar he ro hu sk hr et is ca eo bg sr mk be \
+# (below) when Wikipedia text joined its corpus, Turkish, Russian and
+# Ukrainian for the WIDER and LARGE tiers when FineWeb-2's did.
+PREDICT_COMPACT_LANGS ?= no da fi cs vi el ar he ro hu sk hr et is ca eo bg sr mk be \
                          id fil az ku ug ka lt lv kab
 PREDICT_COMPACT_VOCAB ?= 18000
 PREDICT_COMPACT_NGRAM ?= 30000
@@ -468,7 +482,10 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # the fourteen from SMOL's translations and the three from eBible.org's
 # Bibles (Southern Oromo's 36 000 kinds; 20 000 would hold 97.0% of its
 # words). And Sylheti's in Syloti Nagri, from its wiki: all its 21 000
-# kinds, 30.1% of its held-out keystrokes saved (29.6% at 20 000).
+# kinds, 30.1% of its held-out keystrokes saved (29.6% at 20 000). And
+# Spanish, French, Italian, Portuguese, Dutch and Ukrainian beside
+# FineWeb-2's text, whose lexicons at 120 000 words save under half a
+# point more of the web's held-out keystrokes (0.26 to 0.49).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -502,7 +519,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        hlb kfq nah \
                        ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje grt-Beng \
                        gax mkw yaf \
-                       syl-Sylo
+                       syl-Sylo \
+                       es fr it pt nl uk
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -576,8 +594,13 @@ PREDICT_WIDE_NGRAM ?= 90000
 # points more of their taps (1.6 MB each, from 1.0). And Gorani
 # (Hawrami), whose 770 000 words have 146 000 kinds: at 80 000 it lacks
 # 12.6% of its held-out words, at 200 000 10.3%, and saves 0.5 points
-# more (1.4 with taps astray; 1.2 MB, from 0.65).
-PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la sgs am ti hac
+# more (1.4 with taps astray; 1.2 MB, from 0.65). And German, Polish,
+# Russian and Turkish beside FineWeb-2's text: at 80 000 words they lack
+# 10.4%, 7.7%, 10.9% and 13.9% of the web's held-out words, at 200 000
+# 7.6%, 3.8%, 5.2% and 9.3%, and save 1.4, 1.1, 1.6 and 1.2 points more
+# of its keystrokes (3.0, 3.2, 4.4 and 3.8 with taps astray), each step
+# (to 120 000, to 200 000) half a point or more (4.0, 3.3, 4.0 and 3.5 MB).
+PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la sgs am ti hac de pl ru tr
 PREDICT_WIDER_VOCAB ?= 200000
 PREDICT_WIDER_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia

@@ -32,29 +32,29 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `us` | `en` | English (US) | us | LTR | **Full** (en) | ✓ | — |
 | `us-intl` | `en` | English (US, intl) | us · intl | LTR | **Full** (en) | ✓ | — |
 | `gb` | `en` | English (UK) | gb | LTR | **Full** (en) | ✓ | — |
-| `de` | `de` | German | de | LTR | **Full** (de) | ✓ | — |
-| `es` | `es` | Spanish | es | LTR | **Full** (es) | ✓ | — |
-| `fr-azerty` | `fr` | French | fr | LTR | **Full** (fr) | ✓ | — |
-| `it` | `it` | Italian | it | LTR | **Full** (it) | ✓ | — |
-| `nl` | `nl` | Dutch | nl | LTR | **Full** (nl) | ✓ | — |
-| `pl` | `pl` | Polish | pl | LTR | **Full** (pl) | ✓ | — |
-| `pt-br` | `pt` | Portuguese (BR) | br | LTR | **Full** (pt) | ✓ | — |
+| `de` | `de` | German | de | LTR | **Full** (de)⁷ | ✓ | — |
+| `es` | `es` | Spanish | es | LTR | **Full** (es)⁷ | ✓ | — |
+| `fr-azerty` | `fr` | French | fr | LTR | **Full** (fr)⁷ | ✓ | — |
+| `it` | `it` | Italian | it | LTR | **Full** (it)⁷ | ✓ | — |
+| `nl` | `nl` | Dutch | nl | LTR | **Full** (nl)⁷ | ✓ | — |
+| `pl` | `pl` | Polish | pl | LTR | **Full** (pl)⁷ | ✓ | — |
+| `pt-br` | `pt` | Portuguese (BR) | br | LTR | **Full** (pt)⁷ | ✓ | — |
 | `se` | `sv` | Swedish | se | LTR | **Full** (sv) | ✓ | — |
 | `no` | `no` | Norwegian | no | LTR | **Full** (no) | ✓ | — |
 | `dk` | `da` | Danish | dk | LTR | **Full** (da) | ✓ | — |
 | `fi` | `fi` | Finnish | fi | LTR | **Full** (fi) | ✓ | — |
 | `cz` | `cs` | Czech | cz | LTR | **Full** (cs) | ✓ | — |
-| `tr` | `tr` | Turkish | tr | LTR | **Full** (tr) | ✓ | — |
+| `tr` | `tr` | Turkish | tr | LTR | **Full** (tr)⁷ | ✓ | — |
 | `vi` | `vi` | Vietnamese | vn | LTR | **Full** (vi) | ✓ | — |
 | `el` | `el` | Greek | gr | LTR | **Full** (el) | — | — |
-| `ru` | `ru` | Russian | ru | LTR | **Full** (ru) | — | — |
-| `uk` | `uk` | Ukrainian | ua | LTR | **Full** (uk) | — | — |
+| `ru` | `ru` | Russian | ru | LTR | **Full** (ru)⁷ | — | — |
+| `uk` | `uk` | Ukrainian | ua | LTR | **Full** (uk)⁷ | — | — |
 | `th` | `th` | Thai | th | LTR | **Full** (th)² | — | — |
 | `ar` | `ar` | Arabic | ara | **RTL** | **Full** (ar) | — | — |
 | `he` | `he` | Hebrew | il | **RTL** | **Full** (he) | — | — |
 | `yi` | `yi` | Yiddish ייִדיש | il + long-press אַ אָ בֿ וּ װ ױ יִ ײ ײַ כּ פּ פֿ שׂ תּ | **RTL** | **Full** (yi)⁶ | — | — |
 | `fa` | `fa` | Persian (Farsi) | ir | **RTL** | **Full** (fa)⁶ | — | — |
-| `pt` | `pt` | Portuguese (PT) | pt | LTR | **Full** (pt) | ✓ | — |
+| `pt` | `pt` | Portuguese (PT) | pt | LTR | **Full** (pt)⁷ | ✓ | — |
 | `ro` | `ro` | Romanian | ro · std | LTR | **Full** (ro) | ✓ | — |
 | `hu` | `hu` | Hungarian | hu | LTR | **Full** (hu) | ✓ | — |
 | `sk` | `sk` | Slovak | sk | LTR | **Full** (sk) | ✓ | — |
@@ -1394,7 +1394,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
    their letters (note 12); Northern Thai has keyboards (notes 10 and 12)
    and no model yet, and Eastern Pwo Karen a model now (above).
-7. These three hundred and twenty models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and thirty models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1404,7 +1404,35 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Assamese's beside its 14 000 Tatoeba sentences
    (counted thirty times; at ten its savings on them were 42.3%, now
    44.3%, on the web's held-out text 34.1%, now 33.5%), whose model
-   lacked two fifths of the web's running words.
+   lacked two fifths of the web's running words. And ten big languages'
+   beside their Tatoeba sentences, which were all their models learned
+   from, counted ten times (`TATOEBA_LIGHT_WEIGHT`; Russian's savings on
+   Tatoeba's held-out text are 42.5% at three, 44.8% at ten and 45.6% at
+   thirty, on the web's 33.4%, 32.2% and 29.6%): German, Spanish, French,
+   Italian, Portuguese, Dutch, Polish, Turkish, Russian and Ukrainian, of
+   each one's first FineWeb-2 file (4.8 GB) every 80th to 107th row
+   group, 12 to 17 million words, only those row groups fetched
+   (`scripts/parquet-groups.py`). German, Polish, Turkish and Russian
+   keep 200 000 words, the others 80 000: a lexicon grows while each
+   step (to 120 000, to 200 000) saves half a point more of the web's
+   keystrokes. Before and now:
+
+   | Language | Web's held-out text saved | With taps astray | Its words unknown | Tatoeba's held-out text saved | Model |
+   |---|---|---|---|---|---|
+   | German | 29.0% → 39.3% | 10.5% → 30.6% | 23.3% → 7.6% | 52.6% → 53.9% | 1.3 → 4.0 MB |
+   | Spanish | 34.9% → 44.7% | 24.0% → 40.0% | 15.1% → 3.8% | 51.8% → 51.7% | 1.2 → 2.2 MB |
+   | French | 36.7% → 46.8% | 26.8% → 42.7% | 11.8% → 2.6% | 56.2% → 56.4% | 1.2 → 2.2 MB |
+   | Italian | 31.4% → 44.0% | 19.8% → 39.5% | 16.2% → 2.8% | 51.5% → 52.5% | 1.3 → 2.2 MB |
+   | Portuguese | 33.9% → 42.8% | 24.3% → 39.0% | 13.9% → 3.5% | 51.0% → 52.0% | 1.2 → 2.2 MB |
+   | Dutch | 32.1% → 41.1% | 19.0% → 33.8% | 19.7% → 7.8% | 50.8% → 51.3% | 1.2 → 2.3 MB |
+   | Polish | 21.9% → 37.5% | 3.2% → 33.0% | 28.7% → 3.8% | 44.4% → 46.7% | 1.4 → 3.3 MB |
+   | Turkish | 17.9% → 33.7% | −3.1% → 27.8% | 40.6% → 9.3% | 41.8% → 44.9% | 0.8 → 3.5 MB |
+   | Russian | 18.9% → 33.7% | 0.1% → 29.1% | 37.5% → 5.2% | 42.1% → 45.4% | 0.9 → 4.0 MB |
+   | Ukrainian | 19.6% → 35.6% | −0.1% → 29.2% | 33.2% → 8.1% | 40.8% → 44.2% | 0.9 → 2.8 MB |
+
+   Of Russian's and Ukrainian's, a document in which the other's own
+   words (і що це як…, и что это как…) are more than 6% of the words is
+   left out; of the others', a sentence of English.
    Its language classifier mistakes close languages, so a document is
    kept only when it reads as its language (`scripts/fineweb-text.py`):
    none heavy with Hindi's or Urdu's own function words, none that is a
@@ -3080,7 +3108,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
   sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, Amharic and Tigrinya **am ti**, whose words the Ge'ez composer offers (note 16), and Gorani's Hawrami **hac**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
-  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as** (FineWeb-2's beside Tatoeba's), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18; and Gamo's, **gmv**, beside its FineWeb-2 text). Built by
+  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as de es fr it pt nl pl tr ru uk** (FineWeb-2's beside Tatoeba's; note 7), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18; and Gamo's, **gmv**, beside its FineWeb-2 text). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet: 185 layouts, Montenegrin's in

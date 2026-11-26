@@ -201,6 +201,17 @@ neighbours do not show: a sample's commonest words are each language's
 own (Frisian's fan it yn, Faroese's í á við sum, Cebuano's nga ug usa,
 Corsican's u è chì).
 
+Ten big languages whose models learned from Tatoeba's sentences alone
+learn from their web text beside them (the Makefile's
+FINEWEB_PLUS_LANGS): German, Spanish, French, Italian, Portuguese,
+Dutch, Polish, Turkish, Russian and Ukrainian. Of each, the first file
+of its train split (4.8 GB) is read every 80th to 107th row group, some
+100 million characters, and only those row groups are fetched
+(scripts/parquet-groups.py); a sentence of English is left out, and a
+Russian document in which Ukrainian's own words (і що це як…) are more
+than 6% of the words, or a Ukrainian one with Russian's (и что это
+как…).
+
 Central Kurdish (Sorani) is read every 10th row group. A third of its
 web text is in the old Arabic-keyboard spelling, which writes the vowel
 ە as ه (ئهنجلۆس, له), ه being h as well: a document in it is left out,
@@ -492,6 +503,10 @@ ENGLISH_ONLY = set("the and that for with was are by this from which have".split
 # Russian's words that Kazakh, Kyrgyz, Tajik and Bashkir do not write (not
 # не, which Kazakh's is "what"): what marks a sentence of theirs as Russian.
 RUSSIAN_ONLY = set("в на что с по это как для от из но или так же все был при".split())
+# Russian's words that Ukrainian does not write, and Ukrainian's that
+# Russian does not: what marks a document of one as the other's.
+RUSSIAN_NOT_UKRAINIAN = set("и что это как или был была было он она они его от из но".split())
+UKRAINIAN_ONLY = set("і що це як або від він вона вони його її".split())
 KOKBOROK = set("tei ni no bai khe bo kha kaisa tongo bini hwnwi wngkha twi nwng ang".split())
 MIZO = set("chu leh hi kan te hian ah pawh tur chuan ni ang tak tih awm".split())
 KHASI = set("ba jong bad kiba kaba uba ia ïa".split())
@@ -1325,6 +1340,21 @@ LANGS = {
     # Bengali's is র, which a document must write more often.
     "as": {"script": "BENGALI", "neighbour": BENGALI - {"এই", "যে", "হয়"}, "letters": ("ৰ", "র"),
            "every": 6},
+    # And beside Tatoeba's sentences, the big languages' web text: every
+    # Nth row group of their first file, some 100 million characters (the
+    # row groups read are all scripts/parquet-groups.py fetches); a
+    # sentence of English left out, and a Russian document with
+    # Ukrainian's own words, a Ukrainian one with Russian's.
+    "de": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 101, "brackets": True},
+    "es": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 107, "brackets": True},
+    "fr": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 106, "brackets": True},
+    "it": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 104, "brackets": True},
+    "pt": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 105, "brackets": True},
+    "nl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 105, "brackets": True},
+    "pl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 97, "brackets": True},
+    "tr": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 107, "brackets": True},
+    "ru": {"script": "CYRILLIC", "neighbour": UKRAINIAN_ONLY, "every": 84, "brackets": True},
+    "uk": {"script": "CYRILLIC", "neighbour": RUSSIAN_NOT_UKRAINIAN, "every": 80, "brackets": True},
     # MADLAD-400's (no test split: every 20th document held out).
     "gbm": {"script": "DEVANAGARI", "neighbour": HINDI, "own": GARHWALI, "rival": NEPALI},
     "raj": {"script": "DEVANAGARI", "neighbour": HINDI, "own": RAJASTHANI, "rival": set()},
