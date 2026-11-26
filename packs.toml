@@ -648,6 +648,13 @@ source  = { name = "Wikipedia and the Wikimedia Incubator's test wikis, their Ci
 license = { name = "ODC-By 1.0 (FineWeb-2)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false }
 source  = { name = "FineWeb-2 (Hugging Face): web text from Common Crawl, revision af9c133", url = "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2" }
 
+# FineWeb's English web text (FineWeb-2's English predecessor; the same
+# scripts, its 10-billion-token sample at one revision): English's,
+# beside its Tatoeba sentences. ODC-By too.
+[prediction.fineweb_v1]
+license = { name = "ODC-By 1.0 (FineWeb)", url = "https://opendatacommons.org/licenses/by/1-0/", share_alike = false }
+source  = { name = "FineWeb (Hugging Face): English web text from Common Crawl, revision 9bb295d", url = "https://huggingface.co/datasets/HuggingFaceFW/fineweb" }
+
 # MADLAD-400's web text (scripts/fetch-madlad.sh: its files at one
 # revision, pinned by sha256; scripts/fineweb-text.py keeps the documents
 # that read as their language): the whole corpus of Garhwali and

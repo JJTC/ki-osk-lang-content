@@ -110,7 +110,8 @@ DAKSHINA_ONLY_LANGS ?= gu kn ml pa sd si ta te ur
 DAKSHINA_DIR = $(SRC_DIR)/dakshina
 TATOEBA_WEIGHT ?= 30
 TATOEBA_LIGHT_LANGS ?= mr de es fr it pt nl pl tr ru uk \
-                       no da fi cs vi ar he ro hu sk hr et is ca eo bg sr mk be id fil az ug ka lt lv kab sv gl tt ms
+                       no da fi cs vi ar he ro hu sk hr et is ca eo bg sr mk be id fil az ug ka lt lv kab sv gl tt ms \
+                       en
 TATOEBA_LIGHT_WEIGHT ?= 10
 TATOEBA_HEAVY_LANGS ?= th br os ku eu
 TATOEBA_HEAVY_WEIGHT ?= 100
@@ -275,7 +276,15 @@ WEB_EVEN_LANGS ?= syl-Sylo ii
 # (Georgian's 11.3% to 34.9%, Estonian's 13.0% to 31.0%, Indonesian's
 # 34.7% to 49.1%), the web's words their lexicons lack from 2-65% to
 # 0.2-17%, and on Tatoeba's held-out sentences they save as much or more.
-FINEWEB_PLUS_LANGS ?= as de es fr it pt nl pl tr ru uk \
+# And English, the last, from FineWeb (FineWeb-2's English predecessor,
+# its 10-billion-token sample; fetch-fineweb.sh): 15.8 million words, its
+# savings on the web's held-out text 36.5% -> 44.1%, on Tatoeba's 53.5%
+# -> 53.9%, the web's words its lexicon lacks 10.0% -> 2.4%.
+# English's text is FineWeb's, not FineWeb-2's: sources.lock records it
+# as fineweb-v1/en.txt, so that its pack names that dataset
+# (packs.toml's [prediction.fineweb_v1]).
+FINEWEB_V1_LANGS ?= en
+FINEWEB_PLUS_LANGS ?= as de es fr it pt nl pl tr ru uk en \
                       no da fi cs vi el ar he ro hu sk hr et is ca eo bg sr mk be id fil az ku ug ka lt lv kab sv oc gl br eu tt ms os th
 FINEWEB_DIR = $(SRC_DIR)/fineweb
 
@@ -496,7 +505,8 @@ PREDICT_NGRAM ?= 60000
 # Indonesian, Vietnamese, Arabic, Romanian, Danish, Norwegian, Serbian,
 # Catalan, Macedonian, Filipino, Azerbaijani, Kurmanji, Malay, Galician,
 # Basque, Occitan, Tatar and Thai (Vietnamese's 88 000 kinds of syllable
-# and Thai's 45 800 words fit about whole).
+# and Thai's 45 800 words fit about whole), and English (0.29 more at
+# 200 000).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -532,7 +542,7 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        gax mkw yaf \
                        syl-Sylo \
                        es fr it pt nl uk \
-                       id vi ar ro da no sr ca mk fil az ku ms gl eu oc tt th
+                       id vi ar ro da no sr ca mk fil az ku ms gl eu oc tt th en
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -879,7 +889,8 @@ predict-assets:
 		esac; \
 		case " $(FINEWEB_LANGS) $(FINEWEB_PLUS_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $$fw$(FINEWEB_DIR)/$$lang.txt"; \
-			              corpus_in="$$corpus_in --input fineweb/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt" ;; \
+			              src=fineweb; case " $(FINEWEB_V1_LANGS) " in *" $$lang "*) src=fineweb-v1 ;; esac; \
+			              corpus_in="$$corpus_in --input $$src/$$lang.txt=$(FINEWEB_DIR)/$$lang.txt" ;; \
 		esac; \
 		case " $(MADLAD_LANGS) " in \
 			*" $$lang "*) corpus="$$corpus --corpus $(MADLAD_DIR)/$$lang.txt"; \
@@ -1179,8 +1190,16 @@ hinglish-assets:
 # has kept (crates/osk-data-tools/src/bin/build_english.rs); a word
 # English's lexicon lacks (a name, or a word of another language CMUdict
 # says too: hain, yah) is left out where the table reads it as a word of
-# the language already. Made anew where CMUdict, the table, the lexicons
-# or the tool changed, so after predict-assets; after `make fetch-cmudict`.
+# the language already: English's words its lexicon's ENGLISH_TOP
+# commonest, the 20 000 its lexicon held while it learned from Tatoeba's
+# sentences alone. All 80 000 of it, since it learns from FineWeb's text
+# too, cost transliteration 0.2 points of its 113 measures on average,
+# 1.4 at worst (Sindhi in Devanagari, on Hindi's romanized sentences);
+# its commonest 20 000, 0.05 on average, 0.6 at worst (Bagri's and
+# Bundeli's, on the words of Hindi's romanization lexicon they share).
+# Made anew where CMUdict, the table, the lexicons or the tool changed,
+# so after predict-assets; after `make fetch-cmudict`.
+ENGLISH_TOP ?= 20000
 # Not Greek's, Persian's, Armenian's, Mongolian's, Santali's or Yiddish's:
 # their measures (Greeklish, Wiktionary's headwords) hold no English words
 # to gain on, and lost up to 0.8 points to the readings they added; nor
@@ -1198,11 +1217,12 @@ english-assets:
 			--input predict/$$lang.fst=$(PREDICT_OUT_DIR)/$$lang.fst \
 			--input predict/en.fst=$(PREDICT_OUT_DIR)/en.fst \
 			--input build_english.rs=crates/osk-data-tools/src/bin/build_english.rs \
+			--recipe english_top=$(ENGLISH_TOP) \
 			--output translit/$$lang.english.txt; \
 		stale "$$@" || continue; \
 		$(TOOLS) build-english -- --table translit/$$lang.txt \
 			--lexicon $(PREDICT_OUT_DIR)/$$lang.fst --cmudict $(CMUDICT_DIR)/cmudict.dict \
-			--english-words $(PREDICT_OUT_DIR)/en.fst --out translit/$$lang.english.txt \
+			--english-words $(PREDICT_OUT_DIR)/en.fst --english-top $(ENGLISH_TOP) --out translit/$$lang.english.txt \
 			--source "The English words $$lang writes in its script, as its table reads them (make english-assets): from CMUdict (cmusphinx/cmudict; its notice in NOTICES.md) and predict/$$lang.fst." && \
 		record "$$@" || exit 1; \
 	done

@@ -55,7 +55,10 @@
 # learned from Tatoeba's alone (German, Spanish, French, Italian,
 # Portuguese, Dutch, Polish, Turkish, Russian and Ukrainian) and 38 more
 # (Norwegian to Thai, fineweb-text.py lists them), beside it (the
-# Makefile's FINEWEB_PLUS_LANGS).
+# Makefile's FINEWEB_PLUS_LANGS); and English, beside its Tatoeba
+# sentences too, from FineWeb, FineWeb-2's English predecessor: its
+# 10-billion-token sample, drawn from all its crawls (no test split:
+# every 20th document held out).
 #
 # FineWeb-2 (Hugging Face) is Common Crawl's web text sorted by language;
 # it is ODC-By 1.0, and its use subject to Common Crawl's Terms of Use.
@@ -101,6 +104,12 @@ set -euo pipefail
 
 REV=af9c13333eb981300149d5ca60a8e9d659b276b9
 BASE=https://huggingface.co/datasets/HuggingFaceFW/fineweb-2/resolve/$REV/data
+# English, which FineWeb-2 leaves out, from FineWeb (its first version,
+# English alone; ODC-By 1.0 too) at one revision: a row whose
+# configuration starts with v1: is that dataset's path, its file kept
+# under $OUT/raw/fineweb-v1.
+REV_V1=9bb295ddab0e05d785b879661af7260fed5140fc
+BASE_V1=https://huggingface.co/datasets/HuggingFaceFW/fineweb/resolve/$REV_V1
 # language  configuration  file  sha256
 FILES="
 brx  brx_Deva  train/000_00000.parquet  76b80110a811ad10b062dc5bc486fff813397d26f6289c6a04bdc5b862f761a8
@@ -221,6 +230,7 @@ tr   tur_Latn  train/000_00000.parquet@107  8be60745bb4cf2836a2f13c76a325da94ffd
 tr   tur_Latn  test/000_00000.parquet       f7d4fed3841bb1bd396aa1ea136c598f84cc07afa3208b3560faccb07ae10d1c
 uk   ukr_Cyrl  train/000_00000.parquet@80   c084cbef02f6472162ca67e00f142376820e359b4ac2a57b3795ee60fd8a2734
 uk   ukr_Cyrl  test/000_00000.parquet       91eb3c39927bc149ef4452610c58f3e25b14ae07ddf65d66daeb87ab2bfd0d95
+en   v1:sample/10BT  000_00000.parquet@32  7e6ee22bb4097b46c888c0f6852b1ad3f87090faa13694a24d983ba21e00b790
 ar   arb_Arab  train/000_00000.parquet@81   e8a468216a41a5d629b99b790185d525cc7fad635e687dad6686936067be9a2e
 ar   arb_Arab  test/000_00000.parquet       a84851f790551b08c141eab938448961812582629dbbabc737d997d519b3ed39
 az   azj_Latn  train/000_00000.parquet@117  02ae65fbb502d91cec9f6b84749684ed11f37274fd8217ed64762de9c7a52212
@@ -795,11 +805,13 @@ for lang in $langs; do
 		# the sha256 of those bytes (scripts/parquet-groups.py).
 		every=
 		case "$file" in *@*) every=${file#*@} file=${file%@*} ;; esac
-		local_file="$OUT/raw/$config/$file"
+		base=$BASE dir=$config
+		case "$config" in v1:*) base=$BASE_V1 config=${config#v1:} dir=fineweb-v1/${config#v1:} ;; esac
+		local_file="$OUT/raw/$dir/$file"
 		mkdir -p "$(dirname "$local_file")"
 		if [ -n "$every" ]; then
 			if [ ! -f "$local_file" ] || [ "$("$PYTHON" -I "$HERE/parquet-groups.py" --local "$local_file" "$every")" != "$sha" ]; then
-				got=$("$PYTHON" -I "$HERE/parquet-groups.py" "$BASE/$config/$file" "$every" "$local_file.part")
+				got=$("$PYTHON" -I "$HERE/parquet-groups.py" "$base/$config/$file" "$every" "$local_file.part")
 				if [ "$got" != "$sha" ]; then
 					rm -f "$local_file.part"
 					echo "fetch-fineweb: $config/$file's row groups' sha256 is $got, not $sha" >&2
@@ -808,7 +820,7 @@ for lang in $langs; do
 				mv -f "$local_file.part" "$local_file"
 			fi
 		elif [ ! -f "$local_file" ] || [ "$(sha256sum "$local_file" | cut -d' ' -f1)" != "$sha" ]; then
-			curl -fsSL --retry 5 --retry-all-errors -o "$local_file.part" "$BASE/$config/$file"
+			curl -fsSL --retry 5 --retry-all-errors -o "$local_file.part" "$base/$config/$file"
 			got=$(sha256sum "$local_file.part" | cut -d' ' -f1)
 			if [ "$got" != "$sha" ]; then
 				rm -f "$local_file.part"
@@ -818,8 +830,8 @@ for lang in $langs; do
 			mv -f "$local_file.part" "$local_file"
 		fi
 		case "$file" in
-			train/*) train+=("$local_file") ;;
 			test/*) test+=("$local_file") ;;
+			*) train+=("$local_file") ;;
 		esac
 	done <<<"$rows"
 	# A language with no test split pinned holds out documents of its

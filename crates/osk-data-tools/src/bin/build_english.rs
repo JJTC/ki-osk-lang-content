@@ -19,10 +19,10 @@
 //! CMUdict is Carnegie Mellon University's (BSD-2-Clause-style notice in
 //! NOTICES.md), the words the language's lexicon's.
 
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, HashSet};
 use std::fmt::Write as _;
 use std::fs;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 
 use anyhow::Context;
 use clap::Parser;
@@ -74,6 +74,11 @@ struct Args {
     /// the language already.
     #[arg(long)]
     english_words: Option<PathBuf>,
+    /// Only the commonest this many of `--english-words` count as English's:
+    /// a lexicon learned from the web's text holds more of the rare words
+    /// that cost a language's own readings.
+    #[arg(long)]
+    english_top: Option<usize>,
     /// The fewest letters of a word kept: the table names single letters
     /// (`[letters]`), and two are mostly words of the language's own.
     #[arg(long, default_value_t = 3)]
@@ -239,13 +244,31 @@ impl Lexicon for Whole<'_> {
     }
 }
 
+/// English's words: those of the lexicon at `path`, or its `top` commonest.
+fn english_words(path: &Path, top: Option<usize>) -> anyhow::Result<HashSet<String>> {
+    let map =
+        fst::Map::new(fs::read(path).with_context(|| format!("reading {}", path.display()))?)?;
+    let mut words: Vec<(u64, String)> = Vec::new();
+    let mut stream = map.stream();
+    while let Some((word, count)) = fst::Streamer::next(&mut stream) {
+        if let Ok(word) = std::str::from_utf8(word) {
+            words.push((count, word.to_string()));
+        }
+    }
+    if let Some(top) = top {
+        words.sort_by(|a, b| b.0.cmp(&a.0).then_with(|| a.1.cmp(&b.1)));
+        words.truncate(top);
+    }
+    Ok(words.into_iter().map(|(_, word)| word).collect())
+}
+
 /// How `word` (its pronunciations `sounds`) is written: the likeliest
 /// reading of its Latin spellings that is a word, unless the table reads
 /// `word` as it first already, or it costs more than `max_cost`.
 fn written(
     scheme: &Scheme,
     lexicon: &Whole<'_>,
-    english: Option<&FstLexicon>,
+    english: Option<&HashSet<String>>,
     word: &str,
     sounds: &[Vec<&str>],
     args: &Args,
@@ -274,7 +297,7 @@ fn written(
     let top = found.first()?.0;
     let first = scheme.candidates(word, lexicon, 1);
     let first = first.first();
-    let not_english = english.is_some_and(|e| e.log_prob(word).is_none());
+    let not_english = english.is_some_and(|e| !e.contains(word));
     if not_english && first.is_some_and(|c| c.log_prob.is_some()) {
         return None;
     }
@@ -300,10 +323,7 @@ fn main() -> anyhow::Result<()> {
         UNKNOWN_BELOW_RAREST,
     )?;
     let english = match &args.english_words {
-        Some(path) => Some(FstLexicon::open(
-            fs::read(path).with_context(|| format!("reading {}", path.display()))?,
-            UNKNOWN_BELOW_RAREST,
-        )?),
+        Some(path) => Some(english_words(path, args.english_top)?),
         None => None,
     };
     let only = match &args.only {

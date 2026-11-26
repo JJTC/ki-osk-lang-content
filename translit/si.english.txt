@@ -73,6 +73,7 @@ actin එක්තැන්
 acton එක්තැන්
 acts එක්ස්
 acuff කාෆ්
+ada එදා ඇද
 adah අද එදා
 adair දැරූ ඩේර්
 adalah අදාල අදාළ
@@ -190,6 +191,7 @@ akita කේත කීට
 akiva කීවා
 akre ආකාර ආකර
 akst එක්සත්
+ala එල් ඇල
 alain ලෙන් ලේන්
 alaine ලෙන් ලේන්
 alana ඇලෙන
@@ -217,6 +219,7 @@ alexa ඇලෙක්ස්
 aley එළි ඇලී
 alfred ඇල්ෆ්‍රඩ්
 algom අල්ගම
+ali ඇලී
 alice ඇලිස් එලිස්
 alie අලි එළි
 alight ලයිට්
@@ -228,6 +231,7 @@ alix ඇලෙක්ස්
 aliyah ලීය අලියා
 alkene ඇල්කේන
 all ඕල් අවුල්
+allah අල් අල
 allain ලෙන් ලේන්
 allais ලේ ලෙ
 allan ඇලන්
@@ -261,6 +265,7 @@ alvey අලවි
 alyce ඇලිස් එලිස්
 alyea එළිය එලිය
 alyssa ඇලිස්
+ama ඒමේ
 amalia මාලය
 amalya මාලය
 amann අමන්
@@ -296,6 +301,7 @@ amre අමර අමර්
 amsterdam ඇම්ස්ටර්ඩෑම්
 amuck මක් මාක්
 amy එමී ඒමේ
+ana එන අන්
 anac අනෙක්
 analogue ඇනලොග්
 ancient ඒන්ෂන්ට්
@@ -317,6 +323,7 @@ andy ඇන්දේ
 anello නෙලා නෙළා
 anette නැත නෙත්
 anew අණු අනු
+ang අන්
 angel ඒන්ජල්
 angeles ඇන්ජලීස් ඇන්ජලිස්
 angeline ඇන්ජලින්
@@ -356,6 +363,7 @@ apiece පීස් පිස
 apollo ඇපලෝ පෝලෝ
 apopa පාප
 apostle පාසල් පාසැල්
+app අප අප්
 appall පොල් පෝල්
 appeal පිල් පිල
 appel ඇපල්
@@ -391,6 +399,7 @@ arum ඇරීම
 arva ආර්වී
 arval ආරවුල්
 arvey ආර්වී
+asa ඇස
 ascend සේන්දු
 ascent සෙන්ට්
 ascott ස්කොට්
@@ -418,6 +427,7 @@ assira අසීරු
 assume සෝම
 assure ශූර
 assyrian ඇසිරියානු
+ast ඇසතු
 astin ඔස්ටින්
 astle අසල අසල්
 atari අතරේ
@@ -492,6 +502,7 @@ avella වෙලා වේලා
 avenue එවනු
 averse වර්ශ
 avia ආවේය
+avid ඒවාද
 avila විල
 avilla විල
 avitia ආවේශ
@@ -510,7 +521,6 @@ axt එක්සත්
 ayala යාල අයාලේ
 aycock එකක්
 aydt ඇත ඇත්
-aye අයි
 ayer එයාර් අයියර්
 ayes අයිස්
 ayler එළාර
@@ -620,6 +630,7 @@ ballon බලන බාලන්
 ballou බැලූ බ්ලූ
 ballow බලා
 bally බැලේ බලි
+balm බම් බලමු
 balmy බැමි
 balogh බලා
 balow බලා
@@ -634,7 +645,6 @@ bandana බැඳෙන
 bander බණ්ඩාර බංඩාර
 banding බඳින
 bandt බන්ටු
-bandy බැඳී
 bane බෙන්
 banes බෙන්ස්
 bang බෙන් බණ
@@ -819,8 +829,10 @@ belaire බ්ලෙයාර්
 belew බැලූ බැලු
 belin බැලෙන
 bell බෙල් බැලූ
+bella බෙල් බැලූ
 bellah බෙල් බැලූ
 bellamy බැලීමේ
+belle බෙල් බැලූ
 bellew බැලූ බැලු
 belli බැලේ බෙලි
 bellin බැලෙන
@@ -843,6 +855,7 @@ benedick බෙනඩික්
 benedict බෙනඩික්ට්
 benedikt බෙනඩික්ට්
 beneke බැංකු
+bengal බෙන්ගාල
 bengel බෙංගාල බෙන්ගාල
 benjimen බෙන්ජමින්
 benke බැංකු
@@ -892,6 +905,7 @@ bess බේස් බැස
 besse බේස් බැස
 beswick බෙස්වික්
 bet බයිට්
+beta බැත
 betel බැටළු බැට්ල්
 beth බයිට්
 bethea බෙදිය
@@ -943,6 +957,7 @@ billon බැලෙන
 billy බිලී බැලේ
 bin බෙන්
 bina බින්
+bing බින්
 bink බැංකු
 binns බෙන්ස්
 bins බෙන්ස්
@@ -1041,7 +1056,6 @@ bohr බොරු බෝර්
 bohren බෝරෝන්
 bois බව
 bok බක්
-bola බාල
 bole බෝල් බොල්
 bolen බාලන්
 boley බාලි
@@ -1076,6 +1090,7 @@ bonnes බාන්ස්
 bonnet බන්ටු
 bonte බන්ටු
 bonus බාන්ස්
+boo බු
 boock බුක්
 booe බෝ
 booed බුදු
@@ -1189,6 +1204,7 @@ browne බ්‍රවුන්
 bruck බරක්
 brugh බර
 brunkow බ්‍රන්කා
+bryn බරින්
 bryna බරින්
 brys බ්රේස්
 bub බාබු
@@ -1226,6 +1242,7 @@ bulla බෝල බෝල්
 bullet බුලත්
 bulman බලමින්
 bum බම්
+bun බණ බන්
 bunce බාන්ස්
 bund බඳු බන්දු
 bunda බඳ බඳු
@@ -1315,6 +1332,7 @@ cabin කාබන්
 cable කේබල්
 caccia කාච
 cache කේශ කේෂ
+cad කදු
 cadaver කඩවර
 caddie කැඩී කදී
 caddock කඩක්
@@ -1337,6 +1355,7 @@ caissie කෙසේ
 caisson කේසොං
 caitlin කැත්ලීන්
 cake කේක්
+cal කල
 calais කළේ කලේ
 calaway කලාවේ
 calcium කැල්සියම්
@@ -1367,7 +1386,9 @@ calming කමින් කෑමෙන්
 caloway කලාවේ
 calvary කෙළවරේ කෙලවරේ
 calvery කෙළවරේ කෙලවරේ
+calvin කෙල්වින්
 calving කෙවින්
+cam කාම
 cambridge කේම්බ්‍රිජ් කේම්බ්රිජ්
 came කෑම කෑම්
 camel කමල්
@@ -1380,7 +1401,6 @@ cammer කාමර
 campeau කම්පා
 campen කම්පන
 can කින්
-cana කන්
 canchola කංකාල
 candidate කෙනඩිට
 candie කෙඳි කන්දේ
@@ -1396,6 +1416,7 @@ cannock කෙනකු
 cannon කනාන් කන්න
 cannot කුණාටු කෙනත්
 canoe කණු කාණු
+canon කන්න
 cant කෙන්ට්
 canter කාන්තාර
 cantey කාන්ති
@@ -1465,7 +1486,10 @@ cartee කාර්ති කරති
 carthage කාර්තේජ්
 carve කරවූ කරවු
 carvey කරවී
+cary කෙරේ
 caryl කේරල කේරළ
+cas කෙස්
+casa කොස් කාසි
 case කෙස්
 casey කෙසේ
 cash කේශ කේෂ
@@ -1559,12 +1583,15 @@ cesar සීසර්
 ceylon සිලෝන්
 chace චෙස්
 chachere ශිශිර
+chad චෙඩ්
 chadd චැඩ් චෙඩ්
 chain චෙන් චෙං
 challenger චැලෙන්ජර්
 challis ෂෙලී
+chan චෙන් චෙං
 chana චෙන් චෙං
 chancellor චාන්සලර්
+chang චෙං
 channel චැනල්
 channell චැනල්
 channon චන්න
@@ -1586,6 +1613,8 @@ check චෙක්
 cheely චිලී චිලි
 cheese චීස්
 chem කෑම කෑම්
+chen චෙං
+cheng චෙන්
 cheque චෙක්
 cherico චාරිකා
 chess චෙස්
@@ -1593,6 +1622,7 @@ chevette ශ්වේත
 chew චූ චෝ
 cheyne චෙන් චෙං
 chez චෙස්
+chi කාය
 chia චී චේ
 chiang චෙං චං
 chick චෙක්
@@ -1641,6 +1671,7 @@ christy ක්‍රිස්ටි
 chromium ක්‍රෝමියම්
 chryst ක්‍රිස්තු
 chseing චෙං චෙන්
+chu චෝ
 chua කෝ ක්ව
 chuah චාඕ
 chuang චෙං චං
@@ -1663,6 +1694,7 @@ cinema සිනමා
 cinq සින්ක්
 cinque සින්ක්
 cinthie සෙන්ටි
+circa සාර්ක්
 circle සර්කල්
 circus සර්කස්
 cirque සාර්ක්
@@ -1671,6 +1703,7 @@ cissell සිසිල්
 cissie සැසි
 cist සේසත්
 cite සයිට්
+citi සිටී
 city සිටී
 ciulla චෝළ චෝල
 civet සැවැත් ශිවට
@@ -1683,7 +1716,6 @@ claimant ක්ලෙමන්ට්
 clair ක්ලෙයාර්
 claire ක්ලෙයාර්
 clammy කලෙමි කළෙමි
-clap කලපු
 clapp කලපු
 clara ක්ලෙයාර්
 clare ක්ලෙයාර්
@@ -1759,6 +1791,7 @@ cocke කොක් කොකු
 cocking කොකේන්
 cocoa කොකෝ කොකා
 cocoon කැකුණ
+cod කාඩ් කදු
 codd කාඩ් කදු
 codding කඩින්
 coddle කඩොල්
@@ -1771,6 +1804,7 @@ coffeen කැෆේන්
 cognac කෝණයක්
 cohan කොහෙන්
 cohee කොහි
+cohen කොන් කොං
 cohill කොහිල
 cohn කොන් කොං
 cohoon කුණු කුනු
@@ -1779,11 +1813,13 @@ cohron කරනු කරන
 coia කාය කොයි
 coke කොක් කොකු
 coking කොකේන්
-cola කොළ කාල
 colan කොලින්
 colaw කාලෝ
+cole කොළ කාල්
 colen කොලින්
 coley කෝලි කාලි
+coli කෝලි කාලි
+colin කාලීන
 colinas කොලින්ස්
 collagen කාලගුණ කාළගුණ
 colle කොළ කාල්
@@ -1854,6 +1890,8 @@ condon කඳන්
 condone කඳාන
 cone කොන් කොං
 coney කෝණී
+congo කොංගෝ
+conn කන් කාන්
 connan කොනන් කනාන්
 connect කෙනෙක්ට
 conned කඳු කාන්දු
@@ -1918,6 +1956,7 @@ cortege කාර්තේජ්
 cortes කාර්තේජ්
 cortez කාර්තේජ්
 corteze කාර්තේජ්
+cory කාරී
 cose කොස්
 cosey කාසි
 coss කොස්
@@ -1925,8 +1964,8 @@ cossa කොස් කාසි
 cossat කැසට්
 cosset කෝස්ට් කැසට්
 cossey කාසි
+costa කොස්ටා
 coste කෝස්ට්
-cot කට
 cotes කොටස්
 cottam කොටම කටම
 cotten කාටුන් කාටූන්
@@ -2067,6 +2106,7 @@ cully කළේ කලේ
 culp කල්ප කලපු
 culpa කල්ප
 cult කළත් කලත්
+cum කම්
 cumbee කම්බි
 cumbie කම්බි
 cumby කම්බි
@@ -2185,7 +2225,9 @@ damn දම් දැමූ
 damning දෙමින්
 damon දෙමින් දැමුණු
 dan දෙන
+dana දෙන දෙනා
 dance ඩාන්ස්
+dane දැන් දෙන
 danek දෙනෙක් දෙනෙකු
 daney දැනේ ඩැනී
 danica දෛනික
@@ -2201,6 +2243,7 @@ daria දැරීය
 darien දැරියන්
 darin දරැණු
 darke දාරක
+darn දරනු දරණු
 darr දැරූ දරු
 darragh දැරූ ඩේර්
 darrah දරා දර
@@ -2210,12 +2253,14 @@ darroch දාරක
 dart දොරටු
 darth දොරටු
 dartt දොරටු
+das දොස් දෙස
 dasch දේශ දශ
 dase දෙස දෙස්
 dash දේශ
 dashed දෂ්ට
 dashnaw දේශනා
 dass දෙස දෙස්
+dat දෑත්
 data දත්
 database ඩෙටාබේස්
 date දෑත් දෙත්
@@ -2292,6 +2337,7 @@ deegan දිගින්
 deehan ඩීන් දියන්
 deel දිල් ඩිල්
 deeley ඩේලි
+deem දීම්
 deemed දීමද
 deeney දිණි දිනි
 deer දැරූ
@@ -2316,6 +2362,8 @@ delaine දිලෙන
 delee ඩේලි දැලි
 delhi ඩේලි දැලි
 delia ඩේලි
+dell දැල් ඩෙල්
+della දැල් දැල
 delle දැල් ඩෙල්
 dellis දැලිස් දැලිස
 demain දීමෙන්
@@ -2339,6 +2387,7 @@ deng දැන් දෙන
 denham දැනුම් දැනුම
 denice ඩෙනිස්
 denike දෙනෙක් දෙනෙකු
+denim දැනුම් දැනුම
 denise ඩෙනිස්
 deniz ඩෙනිස්
 denk දෙනකු
@@ -2359,12 +2408,14 @@ depass දෙපස
 depaul දේපොළ දේපොල
 depaula දේපොළ දේපොල
 depot දීපා
+der ඩර්
 deren දෙරණ
 derman දරමින්
 derr දැරූ ඩේර්
 derry දැරී
 dersch දර්ශ
 dery දැරී
+des දී
 desai දේශයේ දේසායි
 desch දේශ
 desert ඩෙසර්ට්
@@ -2375,6 +2426,7 @@ detty දෙති දැති
 deuce දෝශ
 deuss දෝශ
 deux දූ දු
+dev දේව්
 devall දේවල් දෙවොල්
 devalle දේවල් දේවාල
 devane දිවෙන දැවෙන
@@ -2466,6 +2518,7 @@ dippel දේපල දේපළ
 dipple දේපල දේපළ
 dirr ඩේර් ඩර්
 dirty දරති දෙරටේ
+dis දෙස
 disch දේශ
 discovery ඩිස්කවරි
 dish දේශ
@@ -2479,6 +2532,7 @@ ditto ඩේටා
 ditton දෑතින්
 dittus දෙතිස්
 ditty දෙති දැති
+diva දේව
 divall දේවල් දේවාල
 divan දෙවන දිවයින්
 divine දිවයින් දිවයින
@@ -2528,6 +2582,7 @@ dollie ඩොලී දැලි
 dolly ඩොලී දැලි
 dolomite ඩොලමයිට්
 dolton ඩෝල්ටන්
+dom දම් දාම
 dome දොම් දාම
 dominey දැමිණි
 domini දැමිණි
@@ -2541,6 +2596,7 @@ donde දණ්ඩ
 done දුන් දැන්
 dones ඩාන්ස්
 doney දානි දැනේ
+dong දොන්
 donna දාන දොන්
 donnan දාන්න දන්න
 donnay දැනේ
@@ -2562,6 +2618,7 @@ doris දර්ශ
 dorow ඩෝරා
 dorr දොර දාර
 dorroh ඩෝරා
+dos දාස්
 dosch දෝෂ දෝශ
 dose දොස්
 dosie දැසි
@@ -2660,6 +2717,7 @@ dung දුන් දැන්
 dungeon දන්ජොං
 dunham දැනුම්
 dunja දුනි දුණි
+dunn දුන් දැන්
 dunnam දැනුම්
 dunned දණ්ඩ
 dunnett දනිත්
@@ -2742,6 +2800,7 @@ eckel එකල
 eckels එකලස්
 eckes එක්ස්
 eckles එකලස්
+eco එකා
 ecton එක්තැන්
 edan ඉදුණු ඉදං
 edana ඇදෙන
@@ -2750,6 +2809,7 @@ edds ඒඩ්ස්
 eddy ඇදී එඩී
 edell ඇඩෙල්
 edema ඇදීම
+eden ඉදුණු ඉදං
 edes ඒඩ්ස්
 edge ඒජ් එජ
 edie ඇදී එඩී
@@ -2810,7 +2870,9 @@ eliot එලියට් එළියට
 eliott එලියට් එළියට
 elise ඇලිස් එලිස්
 elissa ඇලිස් එලිස්
+ella එල් ඇල
 ellan ඇලන්
+elle එල් ඇල්
 ellen ඇලන්
 eller එළාර
 ellesse එලෙස
@@ -2848,6 +2910,7 @@ enderson ඇන්ඩර්සන්
 enea ඇණිය
 enema එනම්
 enemy එනමි
+eng එන් එන
 engen එන්න
 engh එන් එන
 engine එන්ජින්
@@ -2909,6 +2972,7 @@ esses අයිසිස්
 essick අයිසැක් අයිසෙක්
 essie එසේ
 esson ඇසින් ඇසෙන
+est ඇසතු
 estle ඇසළ ඇසල
 etch එච්
 ethane එතැන්
@@ -3105,6 +3169,8 @@ gadhafi ගඩාෆි
 gae ගයි
 gaea ගිය ගේ
 gaetz ගේට්ස්
+gag ගග
+gaga ගග
 gagen ගගන ගඟන
 gagne ගැනේ ගෙනි
 gahli ගලේ ගැලී
@@ -3119,13 +3185,13 @@ gain ගෙන ගෙන්
 gainey ගැනේ ගෙනි
 gaining ගෙනෙන ගැනිණ
 gait ගැට ගෙට
+gala ගල්
 galane ගලෙන්
 galaxy ගැලැක්සි
 gale ගේල් ගැල්
 galey ගැලී
 galie ගැලී
 galka ගලක් ගෙලක්
-gall ගෝල් ගාලු
 galley ගලේ ගැලී
 galli ගලේ ගැලී
 gallien ගලින්
@@ -3229,11 +3295,14 @@ geiger ගයිගර්
 geis ගයිස්
 geise ගයිස්
 geiss ගයිස්
+gel ජෙල්
 gell ජෙල්
 gelli ගැලී
 gem ජෑම්
 gemma ජෑම්
 gemme ජෑම්
+gems ජේම්ස් ජෙම්ස්
+gen ජේන් ජෛන
 gene ජින් ජීන්
 general ජෙනරාල් ජෙනරල්
 generale ජෙනරාල් ජෙනරල්
@@ -3268,6 +3337,7 @@ getty ගෙතී ගැටී
 getz ගේට්ස්
 geving ජීවීන් ජීවින්
 ghada ගොඩ
+ghana ගෙන ගැන
 gheen ගින් ගිං
 ghez ගෑස් ගේජ්
 ghezzi ගැසී ගැසේ
@@ -3314,6 +3384,7 @@ girt ගර්ත
 girth ගර්ත
 gissi ගැසී ගැසේ
 gisu ජේසු
+git ගැට
 gitter ගිටාර්
 giulio ජූලියා
 givan ගෙවනු ගෙවන
@@ -3348,6 +3419,7 @@ gnawed නාද නාඩු
 gnawing නාඉන්
 gnaws නාස්
 gnome නාම නොම
+gnu නෝ නු
 goa ගොවි ගෝ
 goad ගොඩ
 goal ගෝල් ගෝල
@@ -3426,6 +3498,7 @@ gotti ගති ගොතේ
 gould ගෝල්ඩ්
 goulden ගෝඩන්
 goupil ගෝපාල්
+gov ගව
 govan ගොවීන් ගොවින්
 goza ගාසා
 grace ග්‍රේස්
@@ -3433,6 +3506,7 @@ graddy ගරාදි
 graeme ග්‍රෑම් ග්රෑම්
 graham ග්‍රෑම් ග්රෑම්
 grained ග්‍රෑන්ඩ්
+gram ග්‍රෑම් ග්රෑම්
 gramaphone ග්‍රැමෆෝන්
 gramm ග්‍රෑම් ග්රෑම්
 grammophon ග්‍රැමෆෝන්
@@ -3617,6 +3691,7 @@ haiti හැටි
 hajj හජ්
 hake හැක
 hakki හැකි
+hal හැල් හාල්
 hale හැල් හෙළ
 haley හෙළි හෙලි
 halima හෙලීම
@@ -3648,6 +3723,7 @@ hammer හමාර
 hammon හමන
 hamon හමන
 hamre හමාර
+han හේන්
 hance හාන්ස් හංස
 hancock හැන්කොක්
 hand හැඳ
@@ -3714,9 +3790,9 @@ hassett හසිත
 hassle හසල
 hasson හසන්
 hat හේතු
-hata හොත්
 hate හේතු
 hatem හෙතෙම
+hath හේතු හට
 hatt හේතු හට
 hattan හැටන්
 hatten හැටන්
@@ -3731,6 +3807,7 @@ haughn හොං
 haught හොත් හොට්
 haughton හෝටන්
 haughty හොති
+haul හෝල් හාල්
 haun හොං
 hausa හවුස්
 hause හවුස්
@@ -3789,7 +3866,6 @@ hedden හැදින්
 hedding හැදින්
 heddy හැදී හැදි
 hedeen හැදින්
-hee හි
 heed හිද
 heel හිල්
 heeney හේනේ
@@ -3809,7 +3885,6 @@ heir ර් එයාර්
 heiress එරිස් ඒරිස්
 helane හැලෙන
 helen හෙලන් හෙලන
-helena හෙලන හෙලන්
 helicopter හෙලිකොප්ටර
 helie හෙළි හෙලි
 helin හැලෙන
@@ -3836,6 +3911,7 @@ henne හේන් හැන්
 henney හේනේ
 heon හේන් හීන්
 her හර
+hera හිරු
 herdt හේරත්
 here හිරු
 herin හැරෙන
@@ -3898,6 +3974,7 @@ himel හිමාල
 himmel හිමාල
 himmler හිම්ලර්
 hinde හින්දු
+hindi හිඳි
 hiney හේනේ
 hinn හේන් හීන්
 hinny හේනේ
@@ -3977,6 +4054,7 @@ hominy හාමිනේ
 homme හමු හම්
 hommes හෝම්ස්
 homola හිමාල
+hon හන්
 honaker හානිකර
 hone හොං
 honea හානිය
@@ -4118,6 +4196,7 @@ icahn අයිකන
 ice අයිස්
 ices අයිසිස්
 ich එච්
+icon අයිකන
 ignace ඇග්නස්
 igoe ඊගෝ ඊගා
 igou ඊගෝ
@@ -4148,6 +4227,7 @@ indie ඉඳි ඇඳි
 indo ඈඳා
 indri ඇන්ඩ්රි
 indyk ඉන්දික
+ing ඉන්
 inn ඉන්
 innes ඉන්සු
 inns ඉන්සු
@@ -4167,8 +4247,10 @@ irish අයිරිෂ්
 irvin අර්වින්
 irving අර්වින්
 irwin අර්වින්
+isa ඊස්
 isaak ඇසක්
 ise අයිස්
+isis අයිසිස්
 isla ඉල්
 island අයිලන්ඩ්
 isle අයිල්
@@ -4187,6 +4269,7 @@ iten අයිතීන් අයිතින්
 ithaca ඈතක
 itoh ඉතා
 itty ඇති
+ivan අයිවන්
 ivana ඉවාන්
 ivane එවන් ඉවාන්
 ivanna ඉවාන්
@@ -4285,6 +4368,7 @@ jehovah ජාවා
 jell ජෙල්
 jelley ජෙලි
 jelly ජෙලි
+jen ජෛන
 jena ජින් ජීන්
 jenn ජේන් ජෛන
 jenna ජෛන ජේන්
@@ -4314,6 +4398,7 @@ jian ජීන් ජේන්
 jiang ජෝන් ජොං
 jie ජී ජේ
 jif ජෙෆ්
+jihad ජිහාඩ්
 jill ජිල් ජෙල්
 jim ජෑම්
 jima ජිම් ජිමී
@@ -4430,6 +4515,7 @@ kaine කෙන්
 kairey කෙරේ
 kaisha කේශ කේෂ
 kalan කෙලින් කෙළින්
+kale කෙළ කැල
 kalen කෙලින් කෙළින්
 kalil කලල කළල
 kalis කෙලෙස් කෙළෙස්
@@ -4451,6 +4537,7 @@ kampen කම්පන
 kanady කෙනඩි
 kanak කෙනකු
 kanda කඳ
+kane කෙන්
 kannan කොනන් කනාන්
 kanne කන් කණු
 kanno කානෝ කෙනා
@@ -4458,11 +4545,10 @@ kanter කාන්තාර
 kaori කාරී
 kapaun කැපවුණු
 kapler කෙප්ලර්
-kappa කපා කැප
 kappel කපාල
 kappler කෙප්ලර්
 kapton කැප්ටන්
-karate කරඇති
+kara කෙරේ
 karch කාරක
 karel කේරල කේරළ
 karema ක්‍රෑම
@@ -4488,6 +4574,7 @@ kassen කේසොං
 kasson කේසොං
 kastle කසල කසළ
 kasza කෝෂ කාශ
+kat කටු
 kate කේට් කේතු
 katey කෙටි
 katharine කැතරින්
@@ -4500,6 +4587,7 @@ katia කොටියා කෝටිය
 katie කෙටි
 katja කොටි කති
 kats කයිට්ස්
+katy කෙටි
 katyn කටින් කොටින්
 katz කයිට්ස්
 kauble කාබුල්
@@ -4512,7 +4600,6 @@ kauppi කෝපි
 kaus කොස්
 kauth කොට කොත්
 kautz කොටස්
-kawa කවා
 kay කේ කෑ
 kaydon කැඩුණු කැඩෙන
 kayes කෙස්
@@ -4551,7 +4638,6 @@ keeran කිරණ කිරාන්
 keese කේශ
 keesee කිසි කේසි
 keesey කිසි කේසි
-keeton කිතුනු
 keevil කේවල් කේවල
 kehl කෙළ කැල
 kehm කෑම කෑම්
@@ -4559,6 +4645,7 @@ kehn කෙන් කයින්
 kehne කෙන් කයින්
 kehr කෙරූ කැර
 keim කිම් කීම
+keith කේතු කිතු
 keitt කේට් කේතු
 keitz කීට්ස් කිට්ස්
 kellam කේලාම් කේළාම්
@@ -4618,6 +4705,7 @@ keys කේශ
 keyton කිතුනු කීටෝන
 khalid කළේද
 khalil කලල කළල
+khan කන් කාන්
 khuu කෝ කු
 kiam කීම කියමු
 kian කියනු කියන
@@ -4655,6 +4743,7 @@ kimbel කිඹුල්
 kimble කිඹුල්
 kimm කිම්
 kimmey කිමී කීමේ
+kinda කැඳ
 kindrick කේන්ද්‍රික
 kindt කෙන්ට්
 kinect කෙනෙක්ට
@@ -4692,12 +4781,14 @@ kissell කෙසෙල්
 kist කැසට්
 kit කිතු කේට්
 kites කයිට්ස්
+kits කිට්ස්
 kitt කිතු කේට්
 kittel කිතුල්
 kittell කිතුල්
 kitten කිතුනු කිතුණු
 kittle කිතුල්
 kitts කීට්ස් කිට්ස්
+kitty කෙටි
 kitz කීට්ස් කිට්ස්
 kivi කීවේ
 kiwi කීවේ
@@ -4784,6 +4875,7 @@ knuckle නකුල
 knuckles නකල්ස්
 kobel කාබුල්
 koble කාබුල්
+koch කොක්
 kochis කොකිස්
 kock කොක් කොකු
 kodiak කොඩියක්
@@ -4824,6 +4916,7 @@ kolli කළේ කලේ
 kolling කලින් කාලීන
 komer කාමර
 kommer කාමර
+kona කොන්
 konen කොනන් කනාන්
 kong කොන්
 kook කුක්
@@ -4932,6 +5025,7 @@ kulla කළ කල
 kully කළේ කලේ
 kulp කල්ප කලපු
 kulpa කල්ප
+kumar කුමරු
 kumble කුඹල්
 kumm කම්
 kummer කුමාර් කාමර
@@ -5004,7 +5098,6 @@ lahore ලාහෝර්
 laib ලැබූ ලැබු
 laible ලේබල්
 laid ලෙඩ් ලෙඩ
-lain ලෙන් ලේන්
 laine ලෙන් ලේන්
 lais ලෙස
 lake ලේක්
@@ -5019,6 +5112,7 @@ lambs ලංසු
 lamp ලාම්පු
 lampe ලාම්පු
 lampp ලාම්පු
+lan ලෙන් ලයින්
 lance ලාන්ස් ලංසු
 land ලඳු
 lande ලඳු
@@ -5026,6 +5120,7 @@ landen ලන්ඩන් ලංඩන්
 landon ලන්ඩන් ලංඩන්
 lane ලෙන් ලේන්
 laney ලෙනේ
+lang ලෙන්
 lange ලෙන් ලං
 langham ළඟම
 laning ලෙනින්
@@ -5036,6 +5131,7 @@ lanni ලෙනේ
 lanning ලෙනින්
 lanny ලෙනේ
 lanz ලාන්ස් ලංසු
+laos ලෝස්
 laotian ලූෂන්
 lapp ලප
 lappe ලප
@@ -5186,6 +5282,7 @@ leong ලෙන් ලේන්
 leonie ලෙනේ
 leota ලයිට්
 lepe ලිප
+les ලේ
 lesch ලෙෂ
 lesesne ලෙසින්
 lesley ලෙස්ලි
@@ -5279,6 +5376,7 @@ limb ලීම
 limit ලීමට
 limited ලිමිටඩ්
 limn ලීම
+lin ලෙන් ලේන්
 lina ලේන් ලින්
 linc ලෙනක්
 lince ලිනස්
@@ -5470,6 +5568,7 @@ lummus ලංසු
 lump ලාම්පු
 lumpp ලාම්පු
 lun ලුණු ලණු
+luna ලුණු ලූණු
 lund ලඳු
 lunde ලඳු
 lunden ලන්ඩන් ලංඩන්
@@ -5530,7 +5629,6 @@ macks මැක්ස් මාක්ස්
 macro මයික්‍රො මයික්‍රෝ
 macy මෙසේ
 mad මඩු
-madam මැඩම්
 madame මැඩම් මඩම්
 madan මැදින්
 madd මැද මඩු
@@ -5545,14 +5643,18 @@ madey මැදි
 madoc මදක්
 madock මදක්
 madonna මැඩෝනා
+mae මේ
 maes මේස් මේස
 maese මේස් මිස
 maeve මැවූ මේව
+mag මෙග්
 magaw මෙගා මාගෝ
 magenta මැජෙන්ටා
 maggie මගේ මාගේ
 maggot මාගට් මගට
 magic මැජික්
+mah ම මා
+mahal මහලු
 mahalah මහල
 mahaney මෙහෙණි
 mahannah මහණ
@@ -5602,7 +5704,6 @@ malbon මෙල්බන්
 male මෙල් මේල්
 malec මලික්
 maley මැලේ මැලි
-mali මාලේ
 malice මෙලෙස
 malick මලික්
 maline මාලිනී
@@ -5625,6 +5726,7 @@ malm මම මම්
 malon මාලන්
 malone මිලාන්
 malott මාලට
+mama මාමා
 mame මෙම
 mamet මමත්
 mamma මම මාමා
@@ -5670,6 +5772,7 @@ mantia මාංශ
 many මෙනි
 manz මංජු
 manza මාංශ
+mao මවු
 mapp මැප්
 mar මාරු මරු
 maradonna මරදාන
@@ -5680,6 +5783,7 @@ marcoux මාර්කෝ
 marcy මර්සි
 marden මර්දන
 mardon මර්දන
+mare මේරූ මැර
 mari මාරේ
 maria මරියා මරිය
 marice මොරිස්
@@ -5726,6 +5830,7 @@ martyn මාර්ටින්
 mary මේරි මැරී
 maryse මොරිස්
 marz මාර්ස්
+mas මාස
 masai මාසයේ
 masch මේෂ
 masci මෙසේ
@@ -5787,7 +5892,6 @@ maurice මොරිස්
 maurie මාරි මාරේ
 mauro මෝරා
 maurus මොරිස් මාර්ස්
-maury මාරි මාරේ
 maus මාස මාස්
 mauss මාස මාස්
 maute මෑත මොට
@@ -5881,6 +5985,7 @@ mech මැක් මේක
 meck මැක් මේක
 meckel මයිකල් මෙකල
 meckes මැක්ස්
+med මේද
 meddaugh මෙදා
 media මීඩියා
 medio මීඩියා
@@ -5891,6 +5996,7 @@ meehl මිල මේල්
 meeler මිලර්
 meese මේස් මිස
 meeting මීතේන්
+mega මෙග්
 megawatt මෙගාවොට්
 mehdi මැදි
 mehl මෙල් මේල්
@@ -5905,6 +6011,7 @@ meine මින්
 meiner මයිනර්
 meir මේරූ මැර
 meise මේස් මිස
+mel මේල්
 melbourne මෙල්බර්න්
 melburn මෙල්බර්න්
 melessa මෙලෙස
@@ -5918,6 +6025,7 @@ mellie මැලේ මැලි
 mellis මෙලෙස
 mellowing මෙලොවින්
 melly මැලේ මැලි
+meme මේම
 mench මැංචු
 mendillo මැන්ඩෙලා
 menem මෙන්ම
@@ -5949,6 +6057,7 @@ mervyn මර්වින්
 merwin මර්වින්
 merwyn මර්වින්
 merz මාර්ස්
+mesa මෙසේ
 mesch මේෂ
 meshell මෙෂාල්
 meshing මැෂින්
@@ -5995,6 +6104,7 @@ microsoft මයික්‍රොසොෆ්ට්
 mid මැද මේද
 middaugh මෙදා
 middle මිදුළු
+midi මිදි
 miele මිල මේල්
 mien මින්
 miera මීරා මීර්
@@ -6007,6 +6117,8 @@ mika මේක
 mike මයික්
 mikel මෙකල
 mikell මෙකල
+mil මෙල්
+milan මිලාන් මාලන්
 milburn මෙල්බර්න්
 milian මිලියන
 milke මිලක්
@@ -6036,6 +6148,7 @@ milot මිලට මිළට
 miltie මැටි මිටි
 milton මිල්ටන්
 mim මෙම
+min මෙන්
 minar මයිනර්
 minas මිනිස්
 minch මැංචු
@@ -6076,9 +6189,9 @@ mit මිට
 mitchel මිචෙල්
 mitchell මිචෙල්
 mithun මීතේන් මෙතැන්
-miti මැටි
 mitral මයිට්‍රල්
 mitro මෙට්‍රෝ
+mitt මීට මිට
 mitten මීතේන් මෙතේන්
 mitton මීතේන් මෙතේන්
 miura මියුරා
@@ -6093,6 +6206,7 @@ mocha මොක් මාක්
 mochas මාකස්
 mock මාක් මක්
 mocks මාක්ස් මැක්ස්
+mod මාදු
 mode මාදු මෝඩ
 model මොඩල
 moe මා මෝ
@@ -6129,6 +6243,8 @@ molock මලක් මාලක
 mom මම මම්
 momma මම මාමා
 mommy මමී
+moms මංජු
+mon මාන්
 mona මොන්
 monda මඳ මන්ද
 monday මුණ්ඩි
@@ -6206,7 +6322,6 @@ most මාස මාස්
 mosul මෝසල්
 mote මොට
 moten මාටින්
-moth මෑත
 mother මාතර
 mothon මාටින්
 motley මාතලේ
@@ -6247,6 +6362,7 @@ muddy මැදි මදි
 mug මග මඟ
 mugging මගින් මඟින්
 muggy මගේ මගී
+muhammad මුහමද්
 muhl මුල් මල්
 muhr මුර මෝර
 muhs මස් මස
@@ -6346,11 +6462,13 @@ naira නෙරා නේරු
 naito නේටෝ
 nakata නොකොට
 name නෑම
+nan නාන්
 nana නැණ
 nanna නාන නැණ
 nanney නානි
 nanni නානි
 nanny නානි
+nano නෑනෝ
 napoleon නැපෝලියන්
 nara නෑර
 naron නොරොන්
@@ -6359,6 +6477,7 @@ narum නෙරුම්
 nasa නාසා
 nass නාස්
 nassau නාසා නසා
+nat නෙත්
 nate නැත නෙත්
 nathe නැත නෙත්
 nathene නීතීන්
@@ -6380,7 +6499,6 @@ naval නෙවිල්
 navel නෙවිල්
 navy නැවී නැවේ
 nawrot නෝර්ත්
-nay නේ නෑ
 nazi නට්සි
 neace නිස
 nead නේද නිද
@@ -6458,6 +6576,7 @@ neyman නැමුණු
 ngai ගයි
 niall නයිල්
 niamh නිව්
+nic නෙක
 niccum නෑකම් නික්ම
 nice නිස
 nichola නිහාල්
@@ -6483,6 +6602,7 @@ nickolson නිකොල්සන්
 nickson නික්සන්
 nickum නෑකම් නික්ම
 nicol නිකල්
+nicolas නිකලස්
 nicoll නිකල්
 nicolls නිකලස්
 nicolson නිකොල්සන්
@@ -6507,7 +6627,6 @@ nights නයිට්ස්
 nihei නැහැ
 nikkel නිකල්
 nikkhah නික නෙකෝ
-nil නිල
 nile නයිල්
 nill නිල් නිල
 nilly නිළි නිලි
@@ -6543,6 +6662,7 @@ noam නාම නොම
 noble නොබෙල්
 noce නාස්
 nod නඩු
+node නාද නාඩු
 noe නො නෝ
 noecker නොකර
 noell නාල
@@ -6576,6 +6696,8 @@ nother නතර
 nott නතු නැත
 notte නතු නැත
 notter නතර
+nov නොවූ
+nova නොවේ
 novack නාවික නවක
 novia නොවීය නොවිය
 novick නාවික
@@ -6778,6 +6900,7 @@ ozzie අජේ
 ozzy අජේ
 paape පාප් පොප්
 paasch පශු
+pac පක්
 paccar පාකර්
 pacella පාසැල් පාසැල
 pacelli පාසැලේ
@@ -6819,7 +6942,6 @@ pales පැලස්
 palette පළාත් පලාත්
 paley පෙලේ පේළි
 palin පෙළෙන පෙලෙන
-pall පොල් පෝල්
 pallas පැලස්
 pallet පළාත් පලාත්
 pallett පළාත් පලාත්
@@ -6828,6 +6950,7 @@ pallo පලා පළා
 palm පළමු පාම
 palme පළමු පාම
 palms පාංශු
+palo පළා
 paluch පෙළක් පාලක
 paluck පෙළක් පාලක
 pam පෙම්
@@ -6851,13 +6974,13 @@ panthea පන්තිය පංතිය
 panther පේන්ටර්
 panting පන්තීන්
 paoli පවුලේ
-pap පපු
 papa පපු
 papal පැපොල් පැපොල
 papp පාප් පපු
 pappa පාප පාප්
 paque පාක් පක්
 par පාර
+para පෙර
 parachute පැරෂුට්
 paradee පෙරදී
 paralympic පැරාලිම්පික්
@@ -6883,6 +7006,7 @@ pars පර්ශු
 parse පර්ශු
 parsell පාර්සල්
 parte පාරට
+pas පසු
 pascale පැස්කල්
 pasch පාස්කු පසක්
 paschen පාෂාණ
@@ -6902,7 +7026,6 @@ passon පසන්
 passow පාසා පේසා
 pasta පෝස්ට්
 patane පටන්
-pate පෙත් පැට්
 patella පටෙල්
 patent පේටන්ට්
 patese පෑතිස්
@@ -6913,6 +7036,7 @@ patois පටවා පැටවා
 paton පටන්
 patrick පැට්‍රික්
 patter පතර
+patti පෙති පැති
 pattie පෙති පැති
 pattin පාටින්
 patting පාටින්
@@ -6977,6 +7101,7 @@ peat පීට් පිටු
 peay පී පි
 peddie පැදි
 peddy පැදි
+pee පි
 peed පිදූ පිදු
 peel පිල් පිල
 peele පිල් පිල
@@ -7028,11 +7153,13 @@ perry පෙරී
 pers පර්ශු
 persall පාර්සල්
 perse පර්ශු
+perth පෙරටු
 peru පාරු
 perz පර්ශු
 pesina පේශීන්
 pessin පේශීන්
 pet පැට්
+peta පිට පිටු
 pete පීට් පිටු
 peter පීටර් පිටර්
 petersburg පීටර්ස්බර්ග්
@@ -7106,6 +7233,7 @@ pilley පිළි පිලේ
 pilon පිළවුන්
 pin පැන්
 pine පයින්
+ping පින්
 pinion පින්යින්
 pinn පින් පැන්
 pinney පෙනී පෙනේ
@@ -7127,6 +7255,7 @@ pistil පැස්ටල්
 pistol පැස්ටල්
 piston පිස්ටන් පිස්ටන
 pit පිටු
+pita පිටු
 pitting පිටින්
 pity පෙති
 pivot පැවත පැවැත්
@@ -7197,6 +7326,7 @@ pollok පාලක පලක්
 polly පාලි පාලී
 polo පොළෝ
 polus පොලිස්
+poly පාලී
 polyester පොලියෙස්ටර්
 polyp පොලිප්
 pommel පාමුල
@@ -7250,6 +7380,7 @@ powder පවුඩර්
 powell පවුල් පවුල
 powley පවුලේ
 pozzi පාසි
+pradesh ප්‍රදේශ්
 prague ප්‍රාග්
 prahl පරාල
 praise ප්‍රෙස්
@@ -7260,6 +7391,7 @@ praun ප්‍රාණ
 prawn ප්‍රාණ
 pray පරෙ
 prays ප්‍රෙස්
+pre පරි
 pree පරි
 preiss ප්‍රයිස්
 press ප්‍රෙස්
@@ -7339,6 +7471,7 @@ pus පසු පස්
 pusch පශු
 puss පසු පස්
 put පුතු
+putin පූටින්
 putt පත්
 putter පතර
 putting පුටින් පාටින්
@@ -7447,6 +7580,7 @@ ramone රෝමානු
 ramseur රැම්සාර්
 ranch රංචු
 rand රයින්ඩ් රේන්ද
+randy රැඳී
 ranee රාණි
 rang රන්
 ranh රන්
@@ -7573,6 +7707,7 @@ renne රේණු
 reo රියා
 repp රැප්
 republican රිපබ්ලිකන්
+res රේස්
 resin රැජින රැජිණ
 reske රැසක්
 ress රැස් රේස්
@@ -7773,6 +7908,7 @@ rolle රෝල්
 rolley රලි රැලි
 rolli රලි රැලි
 rolm රෝම රාමු
+rom රාමු රාම්
 roman රෝමානු
 romann රෝමානු රෝමන්
 romany රමණී
@@ -7803,6 +7939,7 @@ roose ඍජු රෝස
 root ඍතු
 ropp රැප් රෑප
 roque රොක්
+ros රෝස
 rosa රාජ
 rose රොස් රාජ්
 rosene රාශීන්
@@ -7961,6 +8098,7 @@ sadie සෑදී සැදී
 sadye සාදයි සදයි
 saehan සෙන් සෙයින්
 saez සිසු
+saga සඟ
 sahli සොළී
 sahlman සොලමන්
 sahm සෑම සම්
@@ -8025,9 +8163,11 @@ sand සඳු
 sandhu සේන්දු
 sandie සන්ඩේ සැන්ඩි
 sandow සැන්ඩෝ
+sandy සන්ඩේ
 sane සෙන් සැන්
 sang සෙන්
 sannes සංස් සංජු
+sans සංජු
 santa සෙන්
 sante ශාන්ත සාන්ත
 santer සෙන්ටර්
@@ -8037,6 +8177,8 @@ santor සෙන්ටර්
 sanz සංස් සංජු
 sapp සැප
 sapped සප්ත සැපත්
+sar සාර්
+sara සැර සර්
 sarah සැර සර්
 sare සර් සැර
 sarene සාරින්
@@ -8186,6 +8328,7 @@ seating සිතින් සිටිනු
 seato සිතා සීතා
 seaton සිතින් සිටිනු
 seay සේ සෙ
+sec සේක්
 seck සේක සේක්
 secor සේකර
 sedam සැදුම් සේදුම්
@@ -8240,6 +8383,7 @@ selling සෙලීන් ශෛලීන්
 sellon සෙලීන් ශෛලීන්
 semien සෙමින්
 semon සෙමෙන් සෙමින්
+sen සැන්
 senate සෙනෙට් සෙනට්
 senator සෙන්ටර්
 send සේන්දු
@@ -8274,6 +8418,7 @@ serviss සර්විස්
 sesame සෙසමි
 sessa සෙසු
 set සෙට්
+seth සේතු
 seto සයිටෝ
 seton සිතින් සිටිනු
 sette සෙත් සෙට්
@@ -8285,6 +8430,7 @@ sew සො සෝ
 sewall සෝල්
 sewed සාද
 sewell සෝල්
+sewn සොන් සොං
 sex සැකසූ සැකසු
 sexy සැකසී
 seydoux සෑදූ සැදු
@@ -8426,6 +8572,7 @@ silicon සිලිකන්
 silkey සැලකේ
 silky සැලකේ
 sill සෙල් සිල්
+sim සෑම
 simcha සිංහ
 sime සායම්
 simeone සැමියන්
@@ -8441,6 +8588,7 @@ sindt සෙන්ට්
 sine සයින් සයින
 sineath සෙනෙට්
 sing සෙන්
+singh සිං සෙන්
 sinn සෙන් සිං
 sinned සින්දු සේන්දු
 sinnett සෙනෙට්
@@ -8521,6 +8669,7 @@ sohl සෝල්
 sohm සෝම සාම
 sohn සොන් සන්
 sohns සංස් සංජු
+sol සල්
 solace සොළොස් සොළස
 sole සෝල්
 solely සොළී
@@ -8555,7 +8704,6 @@ sood සුදු
 soon සුන් සෝනු
 soong සුන් සුං
 soothe සුදු
-sop සැප
 sope සෝප්
 sopp සෝප් සැප
 sorcha සාර්ක්
@@ -8675,6 +8823,7 @@ suchy සාචි
 suck සක් ශාක
 suckle සකල
 sucks සකස්
+sudan සුඩාන
 sudd සුදු සදු
 suddam සදාම්
 suddath සුදත්
@@ -8727,6 +8876,7 @@ sundy සන්ඩේ සැන්ඩි
 sung සං සන්
 suni සෝනි
 sunia සෝනියා
+sunni සෝනි
 sunning සැනින් සැණින්
 sunny සනී
 suns සංස් සංජු
@@ -8737,6 +8887,7 @@ suppa සෝප් සුප්
 supper සුපර්
 supports ස්පෝර්ට්ස්
 supra සුපර්
+sur සර් සාර්
 sure ශූර
 suren ශූරීන්
 surrey සාරි සරි
@@ -8823,7 +8974,7 @@ tallon තලන
 tallow තලා
 tally ටෙලි තෙලි
 talon තලන
-tama තමා
+tam ටැම්
 tambs ටයිම්ස්
 tame ටැම් තෙම
 tami තෙමේ
@@ -8835,7 +8986,7 @@ tammo තමා තේමා
 tammy තෙමේ
 tan තැන
 taney තැනී තැනි
-tani ටෝනි
+tang ටෑං ටොන්
 tania තනි ටෝනි
 tanis ටෙනිස්
 tannen තනනු තනන
@@ -8847,12 +8998,14 @@ tappan තාපන
 tappe තාප
 tappen තාපන
 tar තරු තොර
+tara තෝරා තොර
 tarom තේරුම් තේරීම්
 tarot තාරා
 tarr තරු තොර
 tarry තේරී
 tarzan තර්ජන
 taste ටෙස්ට්
+tata තොට
 tate තෙත් තැත්
 tattoo තතු තටු
 tatty තැටි තැති
@@ -8886,6 +9039,7 @@ teck තෙක්
 teco ටීකා
 teddie ටෙඩී
 teddy ටෙඩී
+tee තේ
 teehan තියන
 teem ටිම්
 teen ටින්
@@ -8930,6 +9084,7 @@ testa ටෙස්ට්
 tete තෙත් තැත්
 tew ටු චූ
 texas ටෙක්සාස්
+thad තෙද
 thadda තද තෙද
 thain තැන් තැන
 thaine තැන් තැන
@@ -8939,8 +9094,8 @@ thalia ටෙලි තෙලි
 thames ටයිම්ස්
 than දුන් දැන්
 thanh තැන් තැන
+thar තරු තොර
 that දත් තෙත්
-thaw තා තෝ
 thayne තැන් තැන
 the දී ද
 thea තියා ටියා
@@ -8990,6 +9145,7 @@ thinness ටෙනිස්
 thinning තැනින්
 this දිස්
 thissen තෙසං
+tho දා දෝ
 thoele තොල්
 thoen ටොන්
 thole තොල්
@@ -9006,6 +9162,7 @@ thomsen තොම්සන්
 thomson තොම්සන්
 thone ටොන්
 thong ටොන් ටෑං
+thor තෝර්
 thoreau තාරා
 thoren තොරණ
 thorington ටොරින්ටන්
@@ -9048,6 +9205,7 @@ tibbie තිබේ තිබී
 tibbs තීබ්ස්
 tibby තිබේ තිබී
 tibia තිබිය තැබීය
+tick තෙක්
 ticked ටිකට්
 ticket ටිකට්
 ticking ටිකෙන්
@@ -9085,12 +9243,12 @@ tinney තැනී තීණි
 tinnin තැනින්
 tinnon තැනින් තැන්න
 tinny තැනී තීණි
+tint තින්ත
 tipa තෙපි
 tippie තෙපි
 tipple තැපැල්
 tippy තෙපි
 tirone ටිරෝන්
-tis තේජ්
 tison තෙසං
 titanium ටයිටේනියම්
 titus ටයිටස්
@@ -9150,6 +9308,7 @@ tope ටොප් තාප
 topple තැපැල්
 topps තපස්
 tops තපස්
+tor තෝර්
 torah තෝරා තොර
 torain තරැණ
 tore තොර තෝර්
@@ -9275,7 +9434,9 @@ umble ඇඹුල්
 umbra අඹරා
 umm අමු ඇම්
 ummel අමල් අම්ල
+una උන්
 unaware අන්වර්
+und ඇන්ඩ් අඳ
 undine අඳිනු අඳින
 undo ආණ්ඩු නඩු
 undone ඉඳන් උඳුන්
@@ -9286,7 +9447,6 @@ ungo අංගා
 uni යෝනි
 unilever යුනිලීවර්
 unix යුනික්ස්
-uno නො නෝ
 until ඉන්ටෙල්
 unum ඕනෑම
 unz අංශු අංශ
@@ -9332,6 +9492,7 @@ vallely වැලි වෙලී
 valles වේල්ස් වෙල්ස්
 valley වැලි වෙලී
 vallot වලට වලත්
+valve වෑල්ව
 van වෙන්
 vanasse වෙනස්
 vande වැඳ වඳ
@@ -9354,6 +9515,7 @@ vasser වසර
 vasseur වසර
 vassey වැසි වාසි
 vast වස්තු වෙස්ට්
+vat වෙත
 vatican වතිකානු
 vaugh වා වෝ
 vaughan වොන්
@@ -9372,6 +9534,7 @@ veazey විජේ
 veazie විජේ
 veegenan විගණන
 veen වින් වින
+veil වැල් වෙල්
 veiled වෙලද
 veilleux වෙලා වේලා
 vein වෙන්
@@ -9386,6 +9549,7 @@ venice වෙනස්
 venom වෙනම වැනුම්
 venous වීනස් විනාශ
 venus වීනස් විනාශ
+vera වෛර
 verda වැරදි
 verde වැරදි
 verdes වැරදි
@@ -9407,6 +9571,7 @@ vescio වැසියෝ
 vesey වැසි වැසී
 vessey වැසි වැසී
 vesta වෙස්ට්
+vet වෙත්
 vette වෙත වෙත්
 vetting වෙතින්
 vevey වැවේ වේවි
@@ -9415,7 +9580,6 @@ via විය
 vian වියන් වේයන්
 viana වියන වියානා
 viano වියානා
-vicar විකාර
 vice වයිස්
 vicious විශේශ
 vicker විකාර
@@ -9468,6 +9632,7 @@ visa වීජ වීසා
 vise වයිස්
 visit විජිත
 vist වෙස්ට්
+vita වයිට්
 vitae වයිට්
 vitia විෂ වේශ
 viv වැව් වැව
@@ -9516,11 +9681,10 @@ waal වල වල්
 wace වෙස්
 wack වක්
 wacky වැකි
-wad වාද
-wada වාද
 waddie වැඩි වාදී
 waddle වදාළ වදාල
 waddy වැඩි වාදී
+wade වැඩ වේද
 wading වේදීන්
 wagg වාග් වග
 waggy වාගේ වගේ
@@ -9550,9 +9714,12 @@ wallen වවුලන්
 wallet වෝල්ට්
 wallow වලා
 wally වැලි වෙලී
+walt වෝල්ට්
 walter වෝල්ටර්
 walther වෝල්ටර්
+wan වනු
 wanat වෙනත්
+wand වැඳ
 wandie වන්දි
 waned වැඳ වෙන්ඩ
 wanes වෙනස්
@@ -9574,6 +9741,7 @@ wassom වසම් වසම
 wasson වාසීන් වාසින්
 wassum වසම් වසම
 waste වෙස්ට්
+wat වොට්
 water වෝටර්
 watson වොට්සන්
 watt වත් වොට්
@@ -9603,11 +9771,11 @@ webre වෙබර්
 wed වේද
 wedd වැඩ වේද
 wedding වේදීන්
+wee වී
 weed විදු
 weeden වේදීන්
 weeding වේදීන් විදින
 weedon වේදීන්
-weedy විදි
 weeny විණි විනි
 weese විසූ වීජ
 weevil වේවැල්
@@ -9634,6 +9802,7 @@ weise විසූ විසු
 weiss වයිස්
 weisse වයිස්
 weith විට විත්
+weld වයිල්ඩ් වෙලද
 weldon වෙළදුන්
 weldy වැළදී
 welke වේලක් වැලක්
@@ -9763,6 +9932,8 @@ wieting විටින්
 wig වේග
 wigg වේග
 wight වයිට්
+wii වේ
+wiki වැකි
 wikipedia විකිපීඩියා
 wilbur විල්බර්
 wild වයිල්ඩ්
@@ -9955,8 +10126,10 @@ yahr යාර
 yahweh යවයි
 yahya යයි යි
 yale යේල්
+yan යනු
 yancey යැංසි
 yancy යැංසි
+yang යනු යන
 yani යෝනි යොනි
 yannone යන්න
 yasuda යසෝද
@@ -9984,10 +10157,12 @@ yeung යුං යූන්
 yew යූ යු
 yie යි යයි
 yim යෑම යැම
+yin යෙන් යැන්
 yipee යැපේ
 yippee යැපේ
 yoak යෝක්
 yoe යා යෝ
+yogi යෝගි
 yoh යා යෝ
 yohn යනු යන
 yoke යෝක්

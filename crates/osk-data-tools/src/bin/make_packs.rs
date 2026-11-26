@@ -31,7 +31,7 @@
 //! `sources.lock` records them: Tatoeba's (`corpora/<lang>.txt`), the
 //! Dakshina dataset's Wikipedia text (`dakshina/<lang>.txt`), the wikis'
 //! own (`wikipedia/<lang>.txt`), FineWeb-2's web text (`fineweb/<lang>.txt`),
-//! MADLAD-400's (`madlad/<lang>.txt`), the African Storybook's stories
+//! FineWeb's, English's (`fineweb-v1/en.txt`), MADLAD-400's (`madlad/<lang>.txt`), the African Storybook's stories
 //! (`storybooks/<lang>.txt`), StoryWeaver's (`storyweaver/<lang>.txt`),
 //! SMOL's translations (`smol/<lang>.txt`), GlotCC's (`glotcc/<lang>.txt`),
 //! with their licences; and eBible.org's Bibles (`ebible/<lang>.txt`), each
@@ -187,6 +187,8 @@ struct Prediction {
     /// FineWeb-2's web text: the licence and source of the models built
     /// from it.
     fineweb: Added,
+    /// FineWeb's (FineWeb-2's English predecessor): English's.
+    fineweb_v1: Added,
     /// MADLAD-400's web text: the licence and source of the models built
     /// from it.
     madlad: Added,
@@ -379,6 +381,7 @@ fn main() -> anyhow::Result<()> {
             ("dakshina", &p.dakshina.license, &p.dakshina.source),
             ("wikipedia", &p.wikipedia.license, &p.wikipedia.source),
             ("fineweb", &p.fineweb.license, &p.fineweb.source),
+            ("fineweb-v1", &p.fineweb_v1.license, &p.fineweb_v1.source),
             ("madlad", &p.madlad.license, &p.madlad.source),
             ("storybooks", &p.storybooks.license, &p.storybooks.source),
             ("storyweaver", &p.storyweaver.license, &p.storyweaver.source),
@@ -421,7 +424,7 @@ fn main() -> anyhow::Result<()> {
         }
         ensure!(
             !sources.is_empty(),
-            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/, fineweb/, madlad/, storybooks/, storyweaver/, smol/, glotcc/ or ebible/, {lang}.txt or {primary}.txt)"
+            "sources.lock records no corpus of {entry} (corpora/, dakshina/, wikipedia/, fineweb/, fineweb-v1/, madlad/, storybooks/, storyweaver/, smol/, glotcc/ or ebible/, {lang}.txt or {primary}.txt)"
         );
         // Dialect flags and word lists carry their own sources' licences
         // into the pack.

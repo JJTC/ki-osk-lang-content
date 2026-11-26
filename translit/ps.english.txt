@@ -47,7 +47,6 @@ abitz ابېڅو
 ablaze بلیز ابلیس
 abloom بلوم
 aboard بورډ بورد
-abode بد بود
 abolished بالښت
 aborn بورن برن
 abott بوټو بت
@@ -139,6 +138,7 @@ active اکټیو اکتیو
 acts عکس ایکس
 acuff کف کهف
 acute کیوتو کیت
+ada اډه
 adair ډېر ډیر
 adak ډک ډکو
 adalah عدلي عدل
@@ -163,7 +163,6 @@ adell ډلو دل
 adelle ډلو دل
 ades ایډز اېډز
 adhere دهر
-adieu د دوو
 adios اودس
 adisq ډیسک ډسک
 adjoin جون جین
@@ -174,7 +173,7 @@ adjusting جسټن جسټین
 adley عدلي عدلیې
 adlong ادلون
 admins دمنځ
-adolfo ادولف
+adobe دوبي
 adolph اډولف ادولف
 adolpha اډولف ادولف
 adonis ډانس دنس
@@ -196,6 +195,7 @@ adwell ډول
 adwords اډوارډز
 adz ایډز اېډز
 aegean ایجین
+aerial ارل
 aerodyne اردن
 aeromar ارومرو
 aerosol ارسال
@@ -210,6 +210,7 @@ affined فنډ
 affirm فارم
 afford فرد فورډ
 affronts فرانتس
+afghan افګن
 afield فیلډ
 afire فر فیر
 afl ایفل
@@ -253,6 +254,7 @@ ahlf الف
 ahlin الن آلن
 ahlman المان آلمان
 ahmann امان امن
+ahmed امید آمد
 ahn ان آن
 ahnell انال
 ahner انار
@@ -268,6 +270,7 @@ ahuja احیا
 ahwahnee وني ونه
 aicher اکر
 aid اد اډو
+aide اد اډو
 aided اډو اد
 aidenn ایدین ایدن
 aides ایډز اېډز
@@ -280,7 +283,6 @@ ailing الن الین
 aim ام ایم
 aiming امین امن
 ainge ان این
-ainu ان
 air ار
 aird اردو
 aired اردو
@@ -294,8 +296,8 @@ aisle ال آل
 aithne اتن اتڼ
 aja یا یې
 ajaj جاج
-ajar جوړ
 ajito هیت جیټ
+aka اوکه
 akai کې کي
 akaka کاکا
 akali کلي کله
@@ -314,6 +316,7 @@ akira کړه کره
 akita کټه کته
 akiva کوه اکو
 akzo عکس ایکس
+ala علي
 alachlor لیکلړ
 alair لړ لرو
 alamco لمک
@@ -330,8 +333,10 @@ alayne الین لین
 albacore البکر
 albany الباني البیني
 albaugh البا لب
+albeit اهلبیت
 albers البرز
 albert البرټ
+alberta البرت البرټ
 albion البیان
 albright البرت البرټ
 album البوم
@@ -364,6 +369,7 @@ algae الجي
 algebra الجبر الجبري
 algeria الجیریا
 algy الجي
+ali علیه
 alice الیس
 alicia الصحه الصحې
 alien الن
@@ -390,6 +396,7 @@ alix الیکس
 alkali الکولي
 alkene الکین
 all اول ال
+allah علي اوله
 allain الین لین
 allais له
 allan الن آلن
@@ -446,15 +453,19 @@ allying الین لینګ
 allyn الن الین
 allys علاج
 allyson یلسین
+alma علمي علم
 almada المهدي
 almer اولمیر
 almon المان آلمان
 alodie لدې لدي
+aloe ال الو
+aloha له
 aloisa الیس
 aloisi اولسي
 aloka لکه
 alone الن لوڼو
 along لونګ الن
+alot علت الات
 aloud اولاد لود
 aloyse لویس لس
 alpa الپ آلپ
@@ -468,6 +479,7 @@ also اولس
 alt الت
 alta علت الت
 although اولډ
+alto علت
 alton التین علتونو
 alumbaugh لامبو لمبو
 alumina المان الماني
@@ -486,6 +498,7 @@ alzado الجهاد
 alzena الذین السنه
 alzene الذین
 alzona السنه
+ama یمې یمه
 amadou آمد عماد
 amanda منډه منډې
 amann یمن امان
@@ -496,6 +509,7 @@ amaze مېز میز
 amazed مزد امجد
 ambivalence امبولانس
 ambrose امبروز
+amelia عملیه امیلیا
 amell عمل امېل
 amend میندو مند
 amends منځ مینځ
@@ -507,6 +521,7 @@ amicus میکس
 amid مد
 amiga میګا
 amigo میګ مېګ
+amino امین
 amiss مس مسو
 amman امان من
 ammann یمن امان
@@ -530,6 +545,7 @@ amuse میز
 amway اموي
 amy امیه ایمي
 amylin عاملین عاملینو
+ana ان آن
 anacker انکار
 analogue انالوګ
 anaphora انفرا
@@ -545,7 +561,8 @@ andel انډول
 andersson انډرسن
 andes انډیز اندیز
 anding انډین
-ando اندو
+andre اندری
+andrea انډریو اندریو
 andreas اندرس
 andreassen انډرسن
 andrej اندري اندری
@@ -572,7 +589,6 @@ angina انجن انجان
 angio انجې
 angle انګلو انګل
 angles انګلز
-angola آنګولا
 anguilla انګولا آنګولا
 angy انجې انجه
 anisa انیس
@@ -630,13 +646,15 @@ anthiel انټیل
 anthon انتن انتان
 anthony انتاني
 anthrax انترکس
+anti انټي
 antigen انتیجن
-antigua انټیګوا
 antill انټیل
 antilla انټیل
 antle انټیل
 antoinette انتوانت
+anton انتان انتن
 antonia انتونیو
+antonio آنتونیو
 antony انتوني انتاني
 anttila انټیل
 antuna انتوني آنتوني
@@ -649,8 +667,7 @@ anza انجه انجې
 anzelmo انسلم
 aoi اي
 aoki اوکه
-aoyama ایم
-apace پیسو پس
+apache پاچهي
 apart پرتو پرت
 apartheid اپارتاید اپارتایډ
 ape اپ ایپ
@@ -689,8 +706,10 @@ apps ایپس
 april اپرېل
 aprile اپرېل اپریل
 apso ایپس
+aqua ایکو اکو
 aquinas اکویناس آکوینس
 aquino کیڼ کین
+arab عربو
 arabella اربیل
 arable اربیل
 arachnid اراکنید
@@ -718,6 +737,7 @@ argonne ارګان ارګون
 arianna اړینه آریانا
 arid اردو
 arida اردو
+aries ارز ارزو
 arise ارز ارزو
 arisen ارزان
 arista ارستو ارسطو
@@ -750,6 +770,7 @@ arraigned ارینډ
 array اړه
 arrayed اردو
 arraying اړنګ
+arrays ارز ارزو
 arrest ارستو ارسطو
 arrick اړیکو اریک
 arrival اړولو
@@ -843,15 +864,16 @@ assure شر شور
 assuring شرنګ
 assyria اثره
 assyrian اسیران اسیرانو
+ast ایست
 asta است اوستا
 astaire ستر سترو
 asthma اسما عزم
 astle اصل اصول
 astley ایستلي ایستلی
+aston استان
 astounds ستونځو
 astra ایستر استر
 astray سترې ستره
-astro ایستر
 asunder سندر
 asus اساس
 aswin سون اسونو
@@ -871,7 +893,6 @@ atley اتلي اټلي
 atmosphere اتموسفیر اټموسفیر
 atoll ټول ټولو
 atom اتم
-atone اتن تن
 atop ټاپو توپ
 atrophy اطرافي
 attach تکه ټاکه
@@ -890,6 +911,7 @@ attend تند تاند
 attendee تندي تندی
 attest ټیست ټیسټ
 attests تاسو
+attire تیر تیار
 attired عطارد
 attorney تړنه
 attribute تربیت
@@ -903,6 +925,8 @@ auckland اوکلنډ
 auction اکشن
 audet ادات
 audette ادات
+audi عادي
+audio اډو
 audit عادت
 audrey ادرې
 audry ادرې
@@ -912,6 +936,7 @@ auge اوج
 augello اجل عاجل
 aught اتو اوتو
 august اګسټ
+augusta اګست اګسټ
 auguste اګست اګسټ
 augustine آګوستین اګسټین
 aulana الن آلن
@@ -920,7 +945,7 @@ aull اول ال
 aumann امان امن
 aument امانت
 aung ان آن
-auntie انټي
+aura اور
 aurand اړوند اړوندو
 auriemma اړم
 auschwitz اشویتس
@@ -928,6 +953,7 @@ aussie اوسي اوسه
 austell استول استولو
 austere استر
 austill استول استولو
+austin استان
 austine آستین آسټین
 australia استرلیا
 autery اترې اتري
@@ -943,14 +969,18 @@ auyeung این ایون
 avail ویل
 availed ولد
 avasso اوس
+avatar اوتار
+ave اووه
 avella اوله اول
 avellino اولین
 avenge وینځو
 aveni اونه
 avenue اونیو یون
+avenues اونیز ایوانز
 averse وارث
 aversion ورژن
 aversive ورسوو
+avery اوړي اوري
 averyl یوړل
 avey اوه
 avi اووه اوه
@@ -978,7 +1008,6 @@ awe او
 awesome اسم اوسم
 awhile ویل اول
 awoke اوک
-awry اري ارې
 awtrey اترې اتري
 axa عکس ایکس
 axe عکس ایکس
@@ -986,12 +1015,10 @@ axel عکسل
 axford اکسفورډ آکسفورډ
 axid اکسید
 axis اکسوس
-ayako یک
+axle عکسل
 ayatollah اتله اتلې
 aydar ادارو
 aydt اتو ایت
-aye ای اې
-ayers آیرس ارز
 ayerst ارستو ارسطو
 aylesbury الجبري
 ayling الن الین
@@ -1001,6 +1028,7 @@ ayotte ایت اتو
 ayyad یاد اود
 ayyash عیش
 azarow ازار ازهر
+azerbaijan آذربایجان
 azerbaijani آذربایجاني
 azeri زېري زېری
 aztec استیک
@@ -1061,11 +1089,15 @@ bahm بم بام
 bahn بن بین
 bahner بونیر
 bahnsen بنسن
+bahrain بورېن برن
 bahrainis برنز
+bail بېل
 bailes بېلز
+bailey بلې بېلې
 baileys بېلز بلیز
 bailiwick بلوک
 bails بېلز
+bain بین
 baisch باش
 baisley بجلي
 bait بیټ
@@ -1130,11 +1162,11 @@ bandaid بندېدو بندیدو
 banded بندیدو بندېدو
 bandied بندیدو بندېدو
 bandt بنت بانتو
-bandy باندې باندي
 bang بن بین
 bangalore بنګلور
 banged بند
 bangkok بنکاک
+bangladesh بنګلدېش
 banick بانک
 banja بنی بڼی
 bankey بانکي
@@ -1166,7 +1198,6 @@ barclay برکلي
 bard بورډ بورد
 bardo بورډ بورډو
 bare بر بهر
-bared بیرډ
 bareis برج بریج
 barela بریلي
 bares برج
@@ -1192,10 +1223,13 @@ barn بورن
 barnacle برنکل
 barndt برنټ
 barnell بورنل
+barnes برنز
 barnette برنټ
+barney بهرني برني
 barneys برنز برنس
 barnicle برنکل
 barns برنز
+baron باران برن
 baroness برنس
 baroody بریده
 baroque بروک باروک
@@ -1208,6 +1242,7 @@ barrel بیرل
 barreling برلین
 barren باران
 barres برج بورس
+barrett بهارت
 barrette برات برټ
 barrick بارک برک
 barrickman برکمن
@@ -1222,8 +1257,10 @@ barrymore بریمر
 bars برج بورس
 barson بورسونو
 barstow برست
+bart بهارت
 barth برټ بهارت
 bartha برتا برټ
+barton بارټن
 bartow برټ بهارت
 bartsch برکه
 barwick باروک بروک
@@ -1294,7 +1331,6 @@ bawled بلد
 bay به
 bayers برج
 bayles بېلز
-bayley بلې بېلې
 baylor بلیر
 bayman بمونو
 bayonet بېنېت بنت
@@ -1306,6 +1342,7 @@ bazile بازل باسل
 bazzell بازل باسل
 bazzle بازل باسل
 beach بیچ
+beacon بیکن
 bead بدو
 beading بدن
 beagle بیګل
@@ -1398,6 +1435,7 @@ behrman برمن
 behrmann برمن
 behrns برنز برنس
 beierle بیرل
+beige بجو بیز
 beijer بر بار
 beijing بیجینګ
 beilin بالین
@@ -1425,10 +1463,12 @@ belisle بلل
 beliveau بېلو بیلو
 belize بېلز بلیز
 bell بل بېل
+bella بل بله
 belland بلند
 bellar بلیر بالر
 bellas بېلز
 bellavia بلوا
+belle بل بېل
 beller بلیر بالر
 belles بېلز
 belleville بهلول بلولو
@@ -1514,7 +1554,6 @@ berkley برکلي
 berkshire برکشایر
 berle بیرل
 berling برلین
-bern برنو
 berna بېړني برن
 bernard برنارد
 bernath برنټ
@@ -1523,6 +1562,7 @@ berndt برنټ
 berneice برنس
 bernia بېړنی
 bernice برنس
+bernie بهرني
 bernita برنټ
 bernoulli برنولي
 berres برج
@@ -1563,6 +1603,7 @@ best بیست
 bestow بست
 bestowing بستونو بېستون
 bet بیټ
+beta بیت بیټ
 betake بیتیک
 betar بهتر باتور
 betavon بیتونو
@@ -1621,7 +1662,6 @@ bickley بکلي
 bicycle بایسکل
 bid بدو
 bidding بدن
-bide باید بد
 biding بدن
 biehl بل بیل
 biehler بلیر
@@ -1640,6 +1680,7 @@ bihl بل
 bihm بم
 bihn بن بین
 bike بیک بک
+biker بېکر
 bikes باکس
 biking بیکن بېکن
 bilello بلل بللو
@@ -1666,11 +1707,14 @@ bimini بمونه
 bin بین
 bindle بندول بندولو
 binette بنت بېنېت
+bing بن بین
 bingel بنګال
 bingley بنګله
+bingo بینګ
 binney بني بڼې
 binnie بني بڼې
 binning بنن بینین
+bio بې به
 biography بیوګرافي
 biomass بایوماس
 biotech بیوتیک بیوټیک
@@ -1699,6 +1743,7 @@ bisson بسونو
 bit بیټ
 bitch بچ بچو
 bitchy بچي بچی
+bitcoin بټکوین
 bite بیت بیټ
 biter بهتر
 bither بدر بیدار
@@ -1711,6 +1756,7 @@ bitty بیتي بطي
 bivalve بولو بیولو
 bivona بون
 biweekly بوکله
+biz بس بجو
 bizarre بازار
 bizet بست
 bizrate بست
@@ -1726,6 +1772,7 @@ blade بلد
 bladow بلد بلاد
 blaese بلیز
 blagg بلاګ
+blah بل
 blaha بله
 blais بلیز
 blaise بلیز
@@ -1741,7 +1788,6 @@ blaze بلیز
 bleak بلک
 blecha بلکه
 bleck بلاک بلیک
-bled بلاد
 blenda بلند
 blew بل
 blewett بلوط
@@ -1772,6 +1818,7 @@ bluett بلوط
 bluhm بلوم
 bluitt بلوط
 blume بلوم
+blur بلیر
 bluth بلوط
 blye بلې بلي
 blythe بلد بلاد
@@ -1839,11 +1886,11 @@ bohning بنن بنین
 boike بوک بیک
 boil بیل
 boiling بولین
+boise بوزي
 boisen بوسان بسونو
 boisseau بوس
 boissonneault بوسان
 bokassa بکس باکس
-bola بل
 bolar بلیر
 boldt بولټ
 bolick بلک بلیک
@@ -1877,7 +1924,6 @@ bondt بنت بانتو
 bone بن
 boning بنن بنین
 bonita بنت
-bonito بانتو
 bonk بانک
 bonne بن
 bonneau بن بنو
@@ -1891,14 +1937,16 @@ bonnie بني بڼې
 bonnin بنن بنین
 bonnor بونیر
 bonny بني بڼې
+bono بنو
 bonta بنت بانتو
 bonte بنت بانتو
 bonura بونیر بنوري
-bony بني بڼې
 bonzo بونس
+boo ب
 boock بک بوک
 book بک
 boom بوم
+boone بن
 boorda بورډ بورد
 boose بس بوس
 boosting بوسټن
@@ -1906,6 +1954,7 @@ boot بوټو بت
 booth بوټو بت
 boothe بد بود
 booting بټن بطن
+booty بوټي
 booz بس بجو
 boozer بوسر
 boozy بوزي بجې
@@ -1917,10 +1966,10 @@ bore باور بر
 bored بورډ بورد
 borella بریلي
 borelli بریلي
-bores برج بورس
 borge برج
 borgia برج
 boring بورن برن
+boris بوریس
 borja بریا بری
 borjas بوریس بریج
 bormann برمن
@@ -1936,7 +1985,6 @@ borrowed بورډ بورد
 borrowing بارون برون
 borrowings برونزو برونز
 borrowman برمن برومین
-borrows برج
 borscht برشت
 borse بورس
 borseth برست
@@ -1964,6 +2012,7 @@ bossier بوسر بسیار
 bosso بس بوس
 bossy باسي
 boston بوسټن بوستان
+bot بوټو
 botany باطني بوتاني
 botch بچ بچو
 both بوټو بوت
@@ -1996,6 +2045,7 @@ boulden بدن
 boulette بولټ
 boullion بولین
 bouma بومي بم
+bounce بونس
 bounced بنسټ
 bouncing بنسن
 boundary بندري
@@ -2024,7 +2074,6 @@ bowdoin بدن بدون
 bowed بد باد
 bowel بل
 bowell بول بویل
-bower باور بر
 bowerman برمن
 bowery باوري بوري
 bowick بوک بک
@@ -2047,6 +2096,7 @@ boxx بکس باکس
 boy بې بي
 boyack بوک بیک
 boyce بس بوس
+boyd بد بود
 boyden بدن
 boyertown بارټن برټون
 boyish بوش
@@ -2163,6 +2213,7 @@ bresse بړاس
 bresseau بړاس
 bressette برست
 breth برات برټ
+brett برات
 bretts بړېڅ بړیڅ
 bretz بړېڅ بړیڅ
 brew بر
@@ -2198,12 +2249,14 @@ brinn برن برنو
 briody بریده
 briony برني بړني
 brissette برست
+bristol بریسټول
 bristow برست
 britain برټون
 britannia بریتانیا برتانیا
 britannica بریتانیکا برېتانیکا
 brite برات برایټ
 british برېتېش
+brits بړېڅ
 britsch برکه
 brittain برټون
 brittan برټون
@@ -2212,6 +2265,7 @@ britten برټون
 britts بړیڅ بړېڅ
 britz بړیڅ بړېڅ
 brix بریکس
+bro برو
 brocco برک بروک
 broccoli برکلي
 brochu بروک برک
@@ -2236,7 +2290,6 @@ brook برک
 brooke برک بروک
 brookline بروکلین
 brookshire برکشایر
-broom برم
 broomall برمل
 brose بروس برج
 bross بروس بړاس
@@ -2255,6 +2308,7 @@ brousset برست
 browder برادر
 browe بر برو
 brown براون برن
+browne براون برن
 browned برانډ
 brownie برني
 brownies برونزو برونز
@@ -2277,6 +2331,7 @@ brugger برګر
 brugh بره برو
 bruha بره
 bruhn برن برنو
+bruins برونزو برونز
 bruise برج بروس
 brumlow برمل
 brumm برم
@@ -2287,6 +2342,7 @@ brunetta برنټ
 brunette برنټ
 bruney بروني برني
 brunn برن برنو
+bruno برن
 bruse برج بروس
 brusette برست
 brushed برشت
@@ -2389,9 +2445,7 @@ bunnie بني بڼې
 bunnies بونس
 bunning بنن بنین
 bunny بني بڼې
-bunt بانتو
 bunte بنت بانتو
-buoy بي بې
 buoyant بنت بانتو
 burchette برشت
 burck برک بارک
@@ -2404,13 +2458,14 @@ burge برګ
 burgeon برجونو
 burgher برګر
 burial بیرل
-buries برج بریج
+burke برک بارک
 burkey برکي برکې
 burkley برکلي
 burl بیرل
 burleigh بیرل
 burlew بیرل
 burling برلین
+burma برم
 burn برنو
 burnam برنامو بارنوم
 burness برنس
@@ -2428,6 +2483,7 @@ burroughs بروس برج
 burrowing بارون برون
 burruss بورس بروس
 burtch برکه
+burton بارټن
 burwick بروک باروک
 bury بري
 busa بیس
@@ -2525,8 +2581,10 @@ cabello کابل
 cabin کبان کبانو
 cable کیبل کېبل
 cableone کیبلونو
+cache کیسه کښې
 cached کښت کشت
 cachet کښې کښي
+cad کېدو کیدو
 caddell کېدل کیدل
 cadden کېدونو کډون
 caddy کیدی کېدی
@@ -2558,7 +2616,6 @@ caissie کیسې کیسه
 caisson کسان کسانو
 cake کیک
 calabro کالیبر
-calais کله کاله
 calcium کلسیم
 calcutta کلکتې
 calf کیف کف
@@ -2603,6 +2660,7 @@ caluzu کالج
 calvary کالوري
 calvery کالوري
 calves کوز
+calvin کلونو
 calving کوین کونګ
 cambell کمبل
 cambodia کمبوډیا
@@ -2611,7 +2669,9 @@ cambron کامبرین
 came کم کیم
 camejo کمی کومی
 camel کمال
+cameo کمو
 camera کمر
+cameron کامران
 camilla کامل کامله
 camille کامل
 camilli کامله
@@ -2634,7 +2694,6 @@ campos کمپوز
 camry کمرې کیمرې
 camus کمیس
 can کیڼ
-cana کینه
 canada کاناډا کنده
 canal کڼل
 cancel کنسول
@@ -2668,10 +2727,12 @@ cannot کانت کنت
 canny کاني کیني
 canoe کانو کاڼو
 canola کڼل
+canon کانونو کانن
 cans کینز کنز
 cant کنت
 canter کېنټر
 canterbury کانټربري
+canton کانټون
 cantor کېنټر
 cantore کېنټر
 cantrall کنټرول کنترول
@@ -2705,6 +2766,7 @@ car کار
 caracci کراچي کراچی
 caradonna کردن
 carafate کرافټ
+caravan کارونو
 caravella کارول کارولو
 caravelle کارول کارولو
 caravello کارولو کارول
@@ -2716,6 +2778,7 @@ carboxylic کاربوکسیلیک
 carby کوربه
 card کارډ
 carder کردار
+cardio کارډ
 cardona کردن
 care کړ کار
 cared کارډ
@@ -2730,6 +2793,7 @@ caress کریس کراس
 caresse کورس کریس
 caressed کرېسټ
 caressing کارسن
+carey کړي کړې
 cargo کارګو
 caribbean کیریبین کربن
 cariello کړل کرل
@@ -2746,13 +2810,17 @@ carlos کارلوس
 carlough کړل کرل
 carlyle کارلایل
 carmela کارمل
+carmen کرمان
 carmike کورمیک
 carmoy کورمې
 carmy کورمې کړمه
+carnegie کرنېګي کارنیګي
 carnell کرنل کارنیل
 carnett کورنت
+carney کورني کرنې
 carnival کارنوال
 carol کړل
+carolina کرلاڼي کرولاینا
 carollan کړیالان کړیالانو
 carollo کړل کارولو
 caronna کرنه کارونه
@@ -2760,6 +2828,7 @@ carotene کرېټین
 carouse کاریز کریس
 carozza کاریز کړیز
 carpal کارپیل
+carr کار
 carragher کارګر
 carranco کارونکو
 carrawell کارول کارولو
@@ -2767,6 +2836,7 @@ carreiro کرار
 carrell کړل کرل
 carrero کرار
 carrick کرک کریک
+carrie کړي
 carried کارډ
 carrier کیریر کرار
 carries کاریز کرز
@@ -2781,6 +2851,7 @@ carry کړي کړې
 carryanne کرن
 cars کس کوز
 carse کورس
+carson کرزن
 cart کرت
 cartaya کارته کرته
 carter کارټر
@@ -2798,8 +2869,11 @@ carves کروز
 carville کارول کارولو
 carving کارونو کورونو
 carwell کارول کارولو
+cary کړي کړې
 caryl کړل کرل
 caryn کړنو کارن
+cas کیسو
+casa کس
 casanova کسانو
 casassa کاساس
 casbah کسب کسبي
@@ -2846,6 +2920,7 @@ catchall کچالو
 catchy کچې کچه
 category کټګوري
 catelli کتلي کتلې
+cater کتار
 catering کترین
 cates کڅ کیټس
 catharine کاترین کترین
@@ -2886,7 +2961,6 @@ cavallo کولو کول
 cavanagh کونه کونګ
 cavanaugh کونه کونې
 cave کوو کیو
-caved کود
 cavell کولو کول
 cavenaugh کوین کونه
 cavern کورنو
@@ -2929,7 +3003,9 @@ center سینټر سنټر
 centerre سینټر سنټر
 centre سینټر سنټر
 cents ساینس
+ceo سی
 cepeda سپیډ
+cereal سریال سیریل
 cerf صرف
 cerruti سرته چرته
 certain سرطان
@@ -2942,6 +3018,7 @@ ceylon سیلان سیلون
 chablis شبلي
 chabot شېبو شیبو
 chacko چک چېک
+chad چاډ
 chafe چپه کهف
 chaff چپه چاپه
 chain چېن
@@ -2958,14 +3035,17 @@ chaloux شول شلو
 chamberlayne چمبرلین
 chamonix سهمونه
 champa کمپ
+chan چین
 chance چانس
 chancellor چانسلر
 chaney چیني چینې
+chang چین چینګ
 channel چینل
 channell چینل
 channing چانینګ
 chany چیني چینې
 chaos کس کیسو
+chap چپ
 chaparro کپور کوپر
 chapel چاپول چاپولو
 chapin شوپن شپنو
@@ -2989,7 +3069,6 @@ charmaine شرمن
 charon کړنو کرن
 charron کړنو کرن
 chart چارټ
-chary چارې چاري
 chas چوس
 chasm کاظم
 chat چټ
@@ -3013,7 +3092,6 @@ checker چکر
 cheek چک
 cheely چیلي چلي
 cheers چرسو
-cheery چیري چېرې
 cheetah چت چیتا
 chef شپه
 chell چل چال
@@ -3023,10 +3101,14 @@ chemed کمېدو کمیدو
 chemel کمال کامل
 chemi کمي کمې
 chemise شمس
+chemo کم کمو
 chemyr کمر کمرو
+chen چېن
 chenault شنو شین
+cheng چین
 chennai چیني چینې
 cheque چېک چک
+cherokee چریکي
 cherries چرسو
 cherry چېرې چیري
 cherubini کاربني
@@ -3042,11 +3124,13 @@ chewing چین چنګ
 chewy چې چي
 cheyenne شان شین
 chez شي ښه
+chi کې کي
 chianese کینزي
 chiarella کړله کړلې
 chiarello کړل کرل
 chiasso چوس
 chiavetta کوټه کویټه
+chic شک
 chicago شیکاګو
 chick چک چېک
 chide چاد چاډ
@@ -3075,6 +3159,7 @@ chippy چپې چپه
 chitra چتر
 chittick چټک چټکو
 chiusano کسانو کسان
+chloe کلي کله
 chloric کلارک کلرک
 chloride کلوراید کلورایډ
 chlorine کلورین
@@ -3091,6 +3176,7 @@ cholla چل چال
 choma چم
 chomsky چامسکي
 choose چوس
+chop چاپ چپ
 chopin شوپن شپنو
 chopp چاپ چپ
 chopper چاپېر چوپړ
@@ -3126,12 +3212,14 @@ christmas کرسمس کریسمس
 christo کرېسټ
 christon کریسټین کریستین
 christopher کرسټوفر کریسټوفر
+chrome کړم کرم
 chromium کرومیم
 chromosome کروموزوم
 chrysler کرایسلر
 chryst کرېسټ
 chrystal کرسټال کریسټال
 chseing چین چینګ
+chu څه که
 chubb چاب
 chubbuck چابک
 chuck چک چوک
@@ -3145,11 +3233,11 @@ churchill چرچل چرچیل
 churry چېرې چارې
 chuse چوس
 chute شتو صحت
+cia سیاه سې
 ciba سبا سابه
 cicala سکالو سکول
 ciccarone سکرین
 cicely سیسلي
-cicero سیسرو سیسیرو
 cider صادر صدر
 cifelli سفلی
 cifra سفر صفرا
@@ -3173,6 +3261,7 @@ cio سی سو
 ciocca چوک چک
 cipher سفر
 cipri سپري سپړي
+circa سړک سرک
 circon سړکونو سرکونو
 circuit سرکټ
 circus سرکس
@@ -3190,6 +3279,7 @@ citrus سترس ستروس
 city سیټي سټي
 ciulla چل کهول
 ciullo چل کهول
+civic سوک
 civil سول سویل
 civilly سویلي سولې
 claar کلورو
@@ -3233,6 +3323,7 @@ clenney کلني کلنی
 clercq کلارک کلرک
 clerk کلارک
 cleva کلیو کلو
+cleveland کلیولینډ
 clewell کلیوال کلیوالو
 cliche کلیشې کلیشه
 click کلک کلکو
@@ -3244,8 +3335,8 @@ clinic کلینک
 clinique کلینیک کلنیک
 clinton کلنټن کلینټن
 clique کلک کلیک
-clive کلیو کلو
 clock کلک کلکو
+clone کلونو کلن
 clore کلورو
 clos کلاس
 closs کلاس
@@ -3290,6 +3381,7 @@ cobble کابل
 cobe کب کوب
 coben کبان کبانو
 cobleigh کابل کبله
+cobra کبر
 cobre کبر کبرا
 cocca کوک کوکا
 coccaro ککړو ککړ
@@ -3304,8 +3396,10 @@ cocker کاکړ ککړ
 cockran کوکران
 cocks کاکس
 cocoa کوک کوکو
+cod کود
 code کوډ کود
 coderre کدر کادر
+cody کډه
 coello کولو کول
 coenen کوینونو
 coenzyme کوانزایم
@@ -3319,26 +3413,30 @@ coffey کافي
 coffin کفن کوفین
 coffing کفن کوفین
 coffman کوفمان کافمن
+cohen کوین کان
 cohick کوهک
 cohill کوهل
 cohr کار کړ
 cohron کارونو کړنو
 cohrs کورس کرز
 coiffe کیف کف
+coil کولو
 coiling کلن کلنو
 coins کوینز کونج
 cojuangco کوونکو
 coke کوک کوکو
-cola کولو
 colaizzi کلیزې کلیزه
 colarusso کلرس
 colbaugh کلب
 colby کلبي
+cole کولو کول
 colella کلالي
 coletta کلات
 colette کلات
 coleus کلاس
+coli کلي
 colicchio کلک کلکو
+colin کلنو
 coll کال کولو
 colla کولو کوله
 collado کلاډ کلود
@@ -3376,6 +3474,8 @@ colly کلي کولی
 collyer کالر
 colmer کومار کمر
 cologne کلونو کلن
+colombia کلمبیا
+colon کلونو
 colonel کرنل
 colonna کلونو کلونه
 colony کلني
@@ -3386,7 +3486,7 @@ colosseum کلسیم
 colour کالر
 coluccio کلکه
 columba کولمب کولمبو
-columbo کولمب
+columbia کلمبیا
 column کلمو کلام
 com کم
 coma کوم
@@ -3452,6 +3552,7 @@ confederation کنفدریشن کانفډریشن
 conference کنفرانس کانفرنس
 confucius کنفیوشس
 conger کونړ کنړ
+congo کانګو کانګ
 congolese کنګلیز
 congress کانګرس
 conic کونکو
@@ -3480,6 +3581,7 @@ connon کانونو کانن
 connor کونړ کنړ
 connote کانت کنت
 conny کاني کاڼي
+conrad کنراډ
 conroe کونړ کنړ
 conrow کونړ کنړ
 cons کنز کونج
@@ -3509,11 +3611,11 @@ cooney کوني کونې
 coonrod کونراډ کنراډ
 coons کونج کنز
 coop کپ کوپ
+cooper کپېړ
 coovick کوک کوکو
 cop کپ کوپ
 cope کوپ کپ
 copher کافر کفر
-copier کپېړ
 coping کوپن
 copp کپ کوپ
 coppa کوپ کپ
@@ -3525,6 +3627,8 @@ coppin کوپن
 copping کوپن
 copple کپیل
 copy کاپي
+cor کار کړ
+coral کارول
 corallo کړل کرل
 corals کارلز
 corby کوربه
@@ -3542,6 +3646,8 @@ cordy کوردي کردي
 core کار کړ
 corell کړل کرل
 corella کړل کرل
+cores کرز
+corey کړي کړې
 coriell کړل کرل
 corier کرار
 corinn کړنو کارن
@@ -3560,6 +3666,7 @@ cormack کورمیک
 cormick کورمیک
 corn کړنو کارن
 cornall کرنل کورنېل
+corneal کرنل کارنیل
 corneas کرنیز کرنیزو
 cornejo کرنی کړنی
 cornela کرنل کارنیل
@@ -3568,7 +3675,9 @@ cornelle کرنل کارنیل
 cornwall کارنوال
 cornwell کارنوال
 corolla کړله کاروله
+corona کارونه کارونو
 coronary کرونري
+corps کار کړ
 corpse کورپس
 corpsman کرمان
 corpuz کورپس
@@ -3590,6 +3699,7 @@ cortex کورټیکس
 corteze کورټېس کرتیز
 corti کورته کارته
 corva کړو کارو
+cory کړي کړې
 cosatu کسات کاسټ
 cosby کسبي
 cosette کسات کاسټ
@@ -3603,6 +3713,7 @@ cosset کاسټ کسات
 cossette کسات کاسټ
 cossey کاسي کسي
 cost کاسټ
+costa کاسټ
 costella کستل کاسټیل
 costello کستل کاسټیل
 costilla کستل
@@ -3611,7 +3722,6 @@ costlow کستل
 costra کاسټرو
 cosurtuh کثرت
 cosy کوزې کوزه
-cot کټ کتو
 cotelle کتل کوتل
 cotes کوڅو کڅ
 cothren کاترین کترین
@@ -3637,6 +3747,7 @@ counties کنز کونج
 counting کانن
 county کاني کاڼي
 coup کوو کو
+coupe کپ کوپ
 couple کپیل
 coups کوو کس
 course کورس
@@ -3652,7 +3763,9 @@ courtly کارتلي
 cousin کسان کسانو
 cousy کوزې کسي
 coutts کوڅو کڅ
+couture کوترو
 couvillon کولون کولن
+cove کوو
 covell کولو کول
 covelli کولی کولې
 covello کولو کول
@@ -3670,7 +3783,6 @@ cowbell کابل
 cowden کوډونو کډون
 cowdery کادري
 cowdrey کادري
-cowed کوډ کود
 coweda کویډ کوډ
 cowell کولو کول
 cowens کونج کنز
@@ -3681,7 +3793,7 @@ cowling کلن کلنو
 cowman کامن کمین
 cows کس کوز
 cowsert کثرت
-coy کوي کې
+cox کاکس
 coye کوي کې
 coyly کولی کلي
 coyner کونړ کنړ
@@ -3692,11 +3804,13 @@ cozy کوزې کوزه
 cozza کوڅه کوڅو
 cozzi کوڅې کوڅه
 cps سپېس
+cpu سپیو سپی
 crack کرک کریک
 cracked کرکټ کریکټ
 crader کردار
 crady کړیدي کردي
 cragg کریګ
+craig کریګ
 crall کړل کرل
 cram کریم
 crandall کرانډل
@@ -3711,9 +3825,11 @@ crase کریس کړیز
 crash کرښو
 crashed کړښت
 crass کریس کراس
+crate کریټ کرت
 crating کرېټین
 craton کرېټین
 cratty کرته
+crave کړو کړیو
 craves کروز
 cravey کروي
 craving کرون کړونو
@@ -3735,6 +3851,7 @@ create کریټ کرت
 creature کرچر
 credeur کردار
 creeden کردن کردانو
+creek کرک
 creely کړلې کړله
 cregg کریګ
 creighton کرېټین
@@ -3767,7 +3884,7 @@ cristo کرېسټ
 critcher کرچر
 criton کرېټین
 crivello کریول
-croat کراتو
+croatia کرښه کرښې
 crocco کرک کراکو
 crochet کرښې کرښه
 crock کرک کراکو
@@ -3776,7 +3893,6 @@ croft کرافټ
 croley کړلې کړله
 croll کړل کرل
 cronies کرنیز کرنیزو
-crook کرک
 croquet کرکې کرکه
 crose کروز کرز
 cross کراس
@@ -3785,7 +3901,6 @@ crotch کرکه کرچ
 croteau کراتو کرت
 crotteau کراتو کرت
 crotty کرته
-crouch کرچ
 crouse کراس
 crow کړ
 crowd کرد
@@ -3821,6 +3936,7 @@ crush کرښو
 crushed کړښت
 crutch کرکه کرچ
 crutcher کرچر
+cruz کرز
 cry کړي
 cryan کړنو کرن
 cryder کردار
@@ -3840,6 +3956,7 @@ cuccio کچه کچو
 cuckoo کوکو کوک
 cue کی کیو
 cuello کولو کال
+cues کیسو کیج
 cuff کف کهف
 cuffe کف کهف
 cuffee کافي
@@ -3860,6 +3977,7 @@ cullum کلمو کلام
 cully کلي کله
 culpa کلپ
 culture کلچر
+cum کم
 cumming کمین کامن
 cummock کمک کومک
 cundall کهندل
@@ -3884,10 +4002,8 @@ curls کارلز
 curly کړلې کړله
 currency کرنسي
 curricula کرکیله کرکیلې
-curries کاریز کرز
 curry کړي کړې
 cursing کارسن
-curt کارت
 curtain کارتون کارتونو
 curti کورته کرته
 curtice کورتس کورټېس
@@ -3906,6 +4022,7 @@ cute کیوتو کیت
 cuts کوڅو
 cutshall کچالو
 cutshaw کچه کچو
+cutter کتار
 cutting کتنو
 cutts کڅ کوڅو
 cutty کوټې کوټي
@@ -3934,7 +4051,6 @@ cypher سفر
 cyphert سفارت
 cyprian سپړنو
 cyran کړنو کرن
-cyril سیرل سړولو
 cyrilla سیرل سیریل
 cyrillic سرلیک
 cyrix سرکس
@@ -3980,7 +4096,6 @@ dahn دین دانو
 dahrain درنو
 daidone دیدن
 daigle دګل
-daikon دکان
 dailies دلسو
 daily ډلې ډیلي
 daimones دمنځ
@@ -3990,6 +4105,8 @@ dairying درنګ
 dairymen درمان
 daishowa دښه دشاه
 daisy ډزې دیسي
+dakota ډاکوټا
+dale ډلو دل
 dalen ډیلن دالان
 dales دلسو
 dalessio دلسو
@@ -4026,14 +4143,16 @@ damore دمور
 damsel دمثال
 damuth دامت
 dan دین
+dana دین دیني
 danby دنبي
 dance ډانس دنس
 dancer دنثر
+dane دین
 danell دانیل ډانیل
 danella دنیله دانیل
 danelle دانیل ډانیل
 daner دینار
-danes ډینس
+daniel ډینیل
 daniell دانیل ډینیل
 daniella دنیله دانیل
 danielle دانیل ډینیل
@@ -4057,7 +4176,6 @@ darden دردونو
 dare ډېر ډیر
 daren درنو
 dares درجو
-daresay درسي
 darga دارګ
 darien درنو
 darin درنو
@@ -4080,6 +4198,7 @@ darville درول درولو
 darwin ډاروین
 darwinism ډاروینیزم
 daryl ډېرول ډېرولو
+das داسو
 dasch دېش دیش
 daschle دشلي
 dash دېش دیش
@@ -4090,6 +4209,7 @@ dasher دښار دسهار
 dashes دښځو
 dass داس ډیس
 dassow داسو داس
+dat دیت دتو
 data دېته دیته
 database ډېټابېس ډیټابیس
 datas دتاج
@@ -4108,6 +4228,7 @@ dauzat دوست دست
 dave دیو دوو
 david ډېوېډ
 davidow دود داود
+davies دوز ډیویس
 davilla ډول ډوله
 davis ډیویس ډیوس
 davy دوي
@@ -4126,7 +4247,6 @@ daydream ددریم
 daylong ډیلن
 days ډزو ډز
 daywalt دولت
-daze ډزو ډز
 dazey ډزې دیسي
 dazs داس داسو
 dazzle ډیزل ډیزلو
@@ -4144,6 +4264,7 @@ dearmon درمان
 death دیته
 deaths دڅو
 deats دڅو
+deb دابو
 debate دبیت
 debaun دابن دبنو
 debbie دبي دبې
@@ -4154,6 +4275,7 @@ debello دبل ډبل
 deberry ډبرې ډبري
 deblois دبل ډبل
 debona دبنو دبني
+deborah ډبرو
 debow دابو ډب
 debris ډبرې ډبري
 debt دیت دتو
@@ -4164,6 +4286,7 @@ debunk دبانک
 debut دبی
 dec ډکو
 decaprio دکوپرې
+decatur دکتر
 decay ډکه
 decaying دکن ډیکین
 decca ډک ډکه
@@ -4182,6 +4305,8 @@ deck ډک ډکو
 decker دکار داکار
 deckert دیکارت دکارت
 decking دکن ډیکین
+deco ډکو
+decor دکار
 decorate دیکارت دکارت
 decoy ډکوي ډکې
 decry دکري
@@ -4189,9 +4314,11 @@ decurtis ډیکارتس
 dedeaux دد دید
 dedman ډاډمن
 dedmon ډاډمن
+dee دی
 deed دد
 deeded دید دد
 deehan دین
+deem دم
 deemer دمهر
 deener دینار
 deep دپو
@@ -4244,6 +4371,7 @@ delanoy ډیلاني
 delany ډیلاني
 delap دلیپ
 delapp دلیپ
+delaware دلوړ دلاور
 delay ډله
 delayed دلیدو
 delaying ډیلن
@@ -4251,6 +4379,7 @@ delays دلسو
 delco دهلک
 delebarre دلبر
 delhi ډلې ډیلي
+delia ډلی ډیلی
 delich دهلک
 delillo دلیل
 delima دیلمي
@@ -4279,6 +4408,7 @@ delray ډالره ډالري
 delre ډالر ډالرو
 delrio ډالرو ډالر
 deluna ډیلن
+delve ډلو
 delves ډیلوز
 demain دمڼو
 deman دمڼو
@@ -4304,6 +4434,7 @@ demmer دامیر دمهر
 demming دمڼو
 demmon دامان دمڼو
 demmons دمنځ
+demo دامو
 democracy دیموکراسي ډیموکراسي
 democrat ډیموکرات
 democratic ډیموکراتیک
@@ -4324,6 +4455,7 @@ denice دنس ډینس
 denied دندو
 denies دنس
 denim دنوم دنمو
+denis دنس ډانس
 denise دنس ډینس
 denison دانسان
 deniz ډینس دنس
@@ -4335,6 +4467,7 @@ dennin دنن
 denning دنن
 dennis دنس ډانس
 dennison دانسان
+denny دیني
 denomme دنوم دنمو
 denosse دنس ډینس
 denote ډینټ
@@ -4363,12 +4496,14 @@ depots دپوځ
 depp ډپ دپو
 deppe ډپ دپو
 deppen دپاڼو
+der در
 derails دیارلس دیارلسو
 derden دردونو
 deren درنو ډرون
 derick درک
 derides دریځ درېځ
 derive دریو ډېرو
+dermal درملو
 dern درنو
 derocco درک
 deroche درک
@@ -4381,6 +4516,7 @@ dersch دېرش دېرشو
 deruyter ډېرتر
 deryck درک
 deryle ډېرول ډېرولو
+des دي دی
 descartes دیکارت ډیکارت
 descend دسیند دسند
 descended دسیند دسند
@@ -4397,14 +4533,15 @@ desktop ډیسکټاپ
 dessauer دسر دسړو
 destiny داستاني
 detail دتیلو
+deter دتر
 detour دتیر
 detty دېته دیته
-deuce ډیوس ډیس
 deuss ډیوس ډیس
 deutch دوکه ډکه
 deutsch دوکه ډکه
 deutsche دوکه ډکه
 deutz دڅو
+dev دوو
 devall ډول دېوال
 devalle ډول
 devaughn دېوان دیوان
@@ -4450,6 +4587,7 @@ dhillon ډیلن
 dhiraj درجو درز
 dhows ډزو دوز
 diabetes ډایبېتېز
+diablo ډبل
 diagram ډیاګرام
 diahann دین
 dial ډلو
@@ -4457,15 +4595,19 @@ dialing ډیلن
 dialogue ډیالوګ
 dials دلسو
 diamonds دمنځ
+diana دین
+diane دین
 dianthe دندې دنده
 diaries دریځ
 diary درې دري
+diaz ډزو
 dibb ډب
 dibble دبل ډبل
 dibella دبل ډبل
 dibello دبل ډبل
 diboll دبل ډبل
 dibona دبنو
+dice داس داسو
 dicecco ډیسک ډسک
 diced دست
 dicenso دساینس
@@ -4542,14 +4684,12 @@ dim ډیم
 dime دم دام
 dimer دامیر دمهر
 diming دمڼو
-dimly دملي
 dimmer دمهر
 dimmers دمرض
 dimming دمڼو
 dimon دمڼو
 dimona دمڼو
 dine دین
-dined دندو
 diner دینار
 dingham دنوم دنمو
 dinghy دیني
@@ -4560,6 +4700,7 @@ dinner دینار
 dinning دنن
 dinsa دنس ډینس
 dinse دنس ډینس
+diode دود داود
 dip دپو
 dipaola دپیل
 dipaolo دپیل
@@ -4615,6 +4756,7 @@ ditto دیت
 dittus دڅو
 ditty دیته دېته
 ditullio دټولو دتل
+diva دوو
 divall ډول
 dive دوو دیو
 dived داود
@@ -4629,6 +4771,7 @@ divison دوزن ډویژن
 divisor دوزیر
 divvied دود
 divvy دوی دوي
+diwali ډوله
 dixon ډیکسون
 dixson ډیکسون
 dizon دځان دجون
@@ -4641,6 +4784,7 @@ dlouhy ډلې ډلي
 dmitri دیمیتري
 dna دیني دینه
 dnase ډینس دنس
+dns ډینس
 dobb ډوب ډب
 dobbie دوبي دبي
 dobbin دابن دبنو
@@ -4657,9 +4801,9 @@ doctor ډاکټر ډاکتر
 doctrine ډاکټران ډاکټرانو
 dodgen دځان دجون
 dodging دجنګ دځینو
+doe د
 doehring درنګ درنو
 doell ډول
-doers درز
 does ډزو ډز
 doescher دښار دسهار
 doetsch دوکه ډکه
@@ -4698,6 +4842,7 @@ dolls دولس دولسو
 dolly ډلې ډلي
 dolman دلمون دالمان
 dolton دولتونو
+dom دم دام
 domain ډومېن
 domains دمنځ
 doman ډومین دمڼو
@@ -4727,6 +4872,7 @@ donates ډونیټس
 donato ډینټ
 done دانو دونو
 donella دنیله
+dong دونو دانو
 donham ډانهام
 donna دانه دانې
 donnan دنن
@@ -4815,6 +4961,7 @@ doughboy دوبي دوبی
 dougherty درته
 doughman ډومین ډومېن
 doughten دوطن
+douglas ډاګلاس ډګلاس
 douglass ډاګلاس ډګلاس
 doulton دولتونو
 doupe ډپ دپو
@@ -4850,7 +4997,7 @@ downs ډانس دنس
 downum دنوم دنمو
 dowse داوس داس
 doyenne دین دونو
-doze دوز ډوز
+doyle ډول
 dozen دځان
 dozing دوزن دجنګ
 draft ډرېفت
@@ -4886,7 +5033,6 @@ dressy درسي
 drew درو در
 dries درجو
 driessen درسونو
-driest دریاست
 drift ډرېفت
 drifta ډرېفت
 drinas ډینس
@@ -4901,10 +5047,10 @@ droids دریځ دریځو
 droll درول درولو
 dromey درومي
 dromon درمان
+drone درنو ډرون
 droney درنې درنه
 dross درس
 drove درو
-drown درنو
 drowned درندو
 drowsy درجې درسي
 druck درک
@@ -4923,6 +5069,7 @@ drye درې دري
 drying درنګ درنو
 drywall درول درولو
 dss دسیسو
+dubai دوبۍ
 dubarry ډبرې ډبري
 dubbing دابن دبنو
 dubeau دابو ډوب
@@ -4967,6 +5114,7 @@ duggar ډګر
 dugger ډګر
 dugo دیګ
 duguay ډاګه
+dui دیوې دیوي
 duke ډک دوک
 duker دکار
 duking دکن ډیکین
@@ -4995,9 +5143,11 @@ dummitt دامت
 dummy دمه دمې
 dundon ډنډونو
 dundore ډنډر
+dunes ډینس
 dunham دنوم دنمو
 dunite ډینیټ ډینټ
 dunja دنیا دونیا
+dunn دانو دونو
 dunnam دنوم دنمو
 dunnaway دنوې دنوي
 dunned دندو ډنډ
@@ -5014,6 +5164,7 @@ durand دروند درندو
 durden دردونو
 duren دوران درنو
 duress درس
+durham دریم
 during درنو
 durn درنو
 durney درنې درنه
@@ -5037,6 +5188,7 @@ dutt دتو ډاټ
 dutton دوطن
 duty دیته
 duvall ډول
+dvd دودي دودې
 dvds دودیز دودیزو
 dweck دوک ډوک
 dwell ډول
@@ -5045,7 +5197,6 @@ dwelley ډوله دویلي
 dwells دولس دولسو
 dwight ډوایټ
 dwyer دور دوړ
-dyad داد ډاډ
 dyansen دانسان
 dyazide دیزید
 dyce داس داسو
@@ -5053,8 +5204,6 @@ dyche ډکه دڅه
 dyck ډک ډکو
 dye دی دي
 dyed داد ډاډ
-dyeing دین
-dyer ډېر
 dyes ډزو ډز
 dyess داس ډیس
 dying دین
@@ -5079,6 +5228,7 @@ eappen اپین اپینو
 ear ار
 eared اردو
 earhart ایرهارت
+earl اېرل
 earle ارل اېرل
 earll ارل اېرل
 earnest ارنسټ
@@ -5104,8 +5254,9 @@ eaten اتڼ
 eater ایتر
 eatery اترې اتري
 eating اتن اتڼ
-eaves اوج
+eaton اتڼ
 ebaugh ابو
+ebay ابي ابې
 ebb ابو اب
 ebba ابو ابي
 ebbed اباد آباد
@@ -5127,9 +5278,11 @@ ecker اکر
 eckes اېکس عکس
 eckhardt اخرت آخرت
 eckhart اخرت آخرت
+eco یک
 ecosystem ایکوسیستم
 ecru اکر
 edan ایدن ایدین
+eddie ادې
 eddies ایډز اېډز
 edds ایډز اېډز
 eddy اډې ادې
@@ -5158,13 +5311,13 @@ edmonda اډمونډ
 edmunda اډمونډ
 edna عدن ایدن
 edo ید
+edu آډیو
 edward ادوارد
 edwards اډوارډز
 edwina اډوین
 edye اډې ادې
 edyth ایډیټ اېډېټ
 edythe عدد
-eel ال
 eerily اړولی اړولي
 efaw اف اېف
 effete افت آفت
@@ -5219,9 +5372,9 @@ elapse الپس
 elata الاتو الات
 elate الت ایلیټ
 elating التین
-elation الشان
 elayne الین الن
 elber آلبیر
+eleanor النهر
 eleanore الینور النهر
 eleazer الازهر
 electra الکترو
@@ -5241,6 +5394,7 @@ elfrieda الفریډ الفرید
 elg الګو
 elga الګو
 elgie الجي
+eli الي
 elijah الجي
 eline الن الین
 elisa لیسه الیس
@@ -5250,8 +5404,10 @@ elissa الیس
 elite الت ایلیټ
 elizabeth الیزابت الیزابیت
 ell ال ایل
+ella اله ال
 ellamay علمي علامه
 ellan الن الین
+elle ال ایل
 ellemann المان
 ellen الن الین
 ellena الن الین
@@ -5361,6 +5517,7 @@ endure اندرو اندړ
 enemy انیمه
 eng ان این
 engdahl انډول
+engels انګلز
 engeman انجمن
 engh ان این
 engine انجن انجونو
@@ -5413,25 +5570,27 @@ erbe عرب عربو
 erby عربي
 erck آرک
 erda اردو
-ere اړ ار
 eric اړیکو
+erica اړیکو
 erick اړیکو اریک
 ericka اړیکه اړیکو
+erik اړیکو
+erin ارین
 erisa اریس ارث
 erk آرک
 erle ارل ایرل
 erma اړم
 ermina ارمني اړمن
+ernest ارنسټ
 erode اردو
 eroded اردو
 erodible اردبیل
 eroding اردن
 eron ایران
 erosion ارزان
-err ار
 errand اړوند اړوندو
 erred اردو
-errs ارز ارزو
+ers ارز ارزو
 ertha اردو
 erving اروین
 erway اړوي
@@ -5466,6 +5625,7 @@ essie عیسی ایسي
 essman اسمان
 esso اس ایس
 esson اسان اسونو
+est استو
 esta است استو
 estai ایسته ایستی
 este ایسته ایستی
@@ -5504,7 +5664,10 @@ etty اته
 etzel اتصال
 eugene یوجین
 eugenio یوجین
+eula یوله یل
 euler اویلر
+euro یورو یووړه
+europa یورپ
 europe یورپ
 eutsey یوڅه
 eva او یوه
@@ -5597,7 +5760,7 @@ failla فیل فیلو
 fails فلز فلج
 fair فیر
 fairer فرار
-fairest فهرست
+fairs فرض فرج
 fairways فیروز فېروز
 fairy فري
 faison فیضون
@@ -5674,6 +5837,7 @@ faught فټ فوټ
 faulkner فاکنر
 faulks فاکس فوکس
 faull فال فل
+fauna فون فن
 faus فوځ فاز
 fausey فوسي
 fauss فاسو
@@ -5747,7 +5911,6 @@ fels فلز فلج
 felucca فلک فلکي
 feminism فیمینیزم فېمینیزم
 femme فهم فهیم
-fen فین
 feng فن فین
 fenger فنر
 fenn فن فین
@@ -5771,7 +5934,6 @@ ferreira فریر
 ferrency فرانسې فرانسي
 ferrera فریر
 ferret فرات
-ferried فرید
 ferriera فریر
 ferries فرض فرج
 ferris فارس
@@ -5784,7 +5946,7 @@ ferry فري
 fess فیس فاسو
 fessel فصل فیصل
 festival فیستیوال
-fete فټ
+feta فټ
 fetrow فطر
 fetter فطر
 fetting فتنو
@@ -5837,6 +5999,7 @@ film فیلم
 filma فلم فیلم
 filming فلمېنګ
 filmore فیلمور
+filter فلټر
 filyaw فیلو
 finan فنونو فنون
 fine فن
@@ -5850,6 +6013,7 @@ finnan فنونو فنون
 finne فن فین
 finney فني فیني
 finnie فني فیني
+fir فیر
 fire فر فیر
 fireman فارمونو
 firemen فرمان فارمونو
@@ -5936,6 +6100,7 @@ floor فلورو
 flooring فلورین
 flopping فلپین
 flor فلورو
+flora فلوري
 florance فلورانس فلورنس
 florence فلورانس فلورنس
 florey فلوري
@@ -5961,7 +6126,6 @@ fluoride فلوراید
 fluorine فلورین
 flury فلوري
 flus فلز فلج
-flutter فلټر
 flyway پهلوي
 foale فل
 foe په
@@ -5969,6 +6133,7 @@ foell فیل فیلو
 foeller فولر
 foes فوځ فوج
 fohl فل
+foil فیلو
 foiles فلز فلج
 foils فلز فلج
 foisy فوځي فیجي
@@ -6007,6 +6172,7 @@ forage فرج
 foran فرین
 foraying فرین
 forays فارس فرض
+forbes فوربز
 forbess فوربس
 force فارس
 forced فرصت فهرست
@@ -6085,6 +6251,7 @@ franck فرانک فرانکو
 francke فرانک فرانکو
 francklin فرانکلین فرانکلن
 francklyn فرانکلین فرانکلن
+franco فرانک
 francois فرانسوا
 francoise فرانسوا
 francy فرانسې فرانسي
@@ -6099,7 +6266,6 @@ frasch فرش
 frase فرض فرج
 fraser فریزر
 frasier فریزر
-frayed فرد
 fraying فرین
 frayne فرین
 frazer فریزر
@@ -6206,6 +6372,7 @@ fulop فلیپ
 fun فون
 funded فنډ
 fung فن فون
+fungi فنجي
 funnier فنر
 funny فني فاني
 fur فیر
@@ -6213,7 +6380,7 @@ furgason فرګوسن
 furniture فرنیچر
 furrh فر فیر
 furrow فری فر
-furs فارس فرض
+furry فري
 furse فارس
 fuse فیس فیض
 fused فیصد فیصدو
@@ -6241,6 +6408,7 @@ gagne ګڼي ګیني
 gahli ګالي ګلي
 gahm ګام ګېم
 gahn ګڼ ګانو
+gaia ګی
 gaige ګیج
 gain ګڼو
 gaines ګنج
@@ -6250,6 +6418,7 @@ gait ګټو
 gaiter ګیتار
 gaither ګیتار
 gajda ګډه ګډ
+gala ګل
 galane ګلین ګلن
 galang ګلان ګلانو
 galas ګیلاس
@@ -6326,6 +6495,7 @@ garissa ګریس
 garlick ګارلیک
 garlock ګارلیک
 garn ګړنو
+garner ګورنر
 garnette ګرنټ
 garney ګورني ګړنې
 garon ګران
@@ -6337,7 +6507,6 @@ garringer ګارنر
 garron ګران ګرین
 garrott ګریټ
 garroz ګراس
-garvey ګروه
 gary ګیري ګري
 gase ګیج ګز
 gatch ګچ ګچو
@@ -6351,7 +6520,6 @@ gattis ګیټس ګېټس
 gatz ګیټس ګېټس
 gauche ګوش
 gaudreau ګودر
-gaudy ګډې ګاډي
 gauge ګیج
 gaugh ګو ګه
 gaughan ګڼ ګانو
@@ -6365,11 +6533,13 @@ gauss ګاوس
 gautney ګټنې ګټنه
 gavalda ګولډ
 gave ګو ګیو
+gavin ګونو
 gawlik ګالیک
 gawron ګران ګرین
 gay ګې ګي
 gayden ګډون
 gaye ګې ګي
+gayle ګل ګېل
 gayman ګمان
 gaymon ګمان
 gays ګیج ګز
@@ -6403,6 +6573,7 @@ gehry ګیري ګېري
 geidel ګډول ګډولو
 geis ګاز ګازو
 geitz ګیټس ګېټس
+gel ځل جل
 gelasia جلسه جلسې
 gelb جلب جالب
 gelette ذلت
@@ -6418,6 +6589,7 @@ gemini جیمینای
 gemma جامو جامې
 gemme جام جامو
 gems جېمز جیمز
+gen جان ځان
 genady جنډې
 gender جندر جنډر
 gendreau جندر جنډر
@@ -6455,6 +6627,7 @@ gentry جنتري
 genung جېنونو جینونو
 genus جنس جینس
 genz جنس جینس
+geo ج جیو
 geoff جیف
 geoffrey جیفري جفري
 geoffroy جیفري
@@ -6489,10 +6662,12 @@ get ګټو ګټ
 geter ګیتار
 gets ګېټس
 getter ګیتار
+getty ګټې ګټي
 gettys ګیټس ګېټس
 getz ګیټس ګېټس
 gewgaw ګیګا
 geyser ګذار
+ghana ګڼ ګڼه
 gheen ګڼ ګڼو
 gherig ګریګ
 ghettos ګیټس ګېټس
@@ -6556,6 +6731,7 @@ gillon ګلان ګلانو
 gilly ګلي ګلې
 gilvin ګلونو
 gin جین ځینو
+gina ځینې ځینو
 ginas جینس جنس
 gines جنس جینس
 ginevra جنوري
@@ -6586,6 +6762,7 @@ gish جیش
 gisi جیسي
 gist جست
 gisu جس
+git ګټو
 githa جدي جدا
 gitter ګیتار
 giuffre جفري
@@ -6602,6 +6779,7 @@ glaeser ګلزار
 glahn ګلان ګلانو
 glascoe ګلاسکو
 glaser ګلزار
+glasgow ګلاسکو
 glassco ګلاسکو
 glasson ګلیسون
 glavan ګلونو
@@ -6613,6 +6791,7 @@ glazing ګلسنګ
 gleave ګلو
 glee ګلې
 gleich ګلایکو
+glen ګلان ګلانو
 glenn ګلان ګلانو
 glenna ګلان ګلانو
 glidden ګلدان
@@ -6640,7 +6819,10 @@ gnc جنسي
 gneiss نس نیسو
 gnocchi نوکه
 gnome نوم
+gnu نو
+goa ګو
 goal ګول
+goalie ګولی ګلي
 goans ګنج
 goat ګوتو
 goates ګیټس ګېټس
@@ -6712,7 +6894,6 @@ goodrow ګودر
 goodwill ګډول ګډولو
 goodwyn ګډون
 goody ګډې ګډه
-gooey ګي
 goofed ګفت
 google ګوګل
 goonan ګنون ګڼون
@@ -6723,6 +6904,7 @@ gordana ګورډن ګردان
 gordeyev ګردو
 gordji ګرځي ګرجي
 gordon ګورډن ګردان
+gore ګورو ګر
 gorelick ګارلیک
 gorgon ګرګین ګورګین
 gorgone ګرګین ګورګین
@@ -6739,7 +6921,6 @@ gotcha ګچ ګچو
 gotham ګوتم
 gothenburg ګوتنبرګ
 gothic ګوتیک
-goto ګټو
 gotsch ګچ ګچو
 gotta ګټه
 gottsch ګچ ګچو
@@ -6762,6 +6943,7 @@ gowns ګنج
 goynes ګنج
 goza ګز
 grace ګریس
+grad ګراد
 grade ګرد ګرید
 graded ګرد ګرید
 graden ګردان
@@ -6776,13 +6958,16 @@ graham ګرم ګرام
 grahn ګران ګرین
 grain ګرین
 grainy ګړنې
+gram ګرام
 gramm ګرم ګرام
 grammar ګرامر
 grammer ګرامر
 grammy ګرمي ګرمې
+gran ګرین
 granata ګرانټ ګرنټ
 grand ګرینډ
 granda ګړندي ګړندی
+grande ګرنډ ګرینډ
 grandt ګرانټ ګرنټ
 graney ګړنې
 granite ګرانټ ګرنټ
@@ -6803,7 +6988,6 @@ gravy ګروه
 gray ګرې ګري
 graydon ګردان
 graying ګرین
-graze ګریس
 greaney ګړنې ګړنه
 grease ګریس
 greece ګریس
@@ -6818,7 +7002,6 @@ grega ګریګ
 gregg ګریګ
 greiff ګراف
 grenada ګړندي ګړندی
-grenade ګرنډ ګرانډ
 grenda ګړندي ګړندی
 grenouille ګړنې ګړنه
 gress ګریس ګراس
@@ -6829,6 +7012,7 @@ grew ګر
 grey ګرې ګري
 greying ګرین
 grice ګریس ګراس
+grid ګرید
 griesa ګریس
 griese ګریس
 griess ګریس
@@ -6851,12 +7035,14 @@ grizzle ګرځول ګرځولو
 groden ګردان
 groff ګراف ګروف
 groom ګرمو
+groove ګرو
 gropp ګروپ
 groppy ګروپي
 grosse ګراس
 grothe ګرد ګردو
 ground ګرانډ
 grouse ګراس
+grove ګرو
 grow ګر
 grower ګریر
 growing ګرین ګړنګ
@@ -6867,7 +7053,6 @@ grupp ګروپ
 gruppo ګروپ
 gruss ګراس
 gruszka ګرشک
-guam ګوام
 guandong ګوندونو
 guard ګارد
 guarded ګرد ګارد
@@ -6935,6 +7120,7 @@ guys ګاز ګازو
 guza ګیزو
 guzzo ګز
 gway جوي ځوې
+gwen ګونو
 gwennie ګوني ګونی
 gwinn ګونو ګون
 gwyn ګونو ګون
@@ -6992,6 +7178,7 @@ hairs حرص
 hairy هري هرې
 haist هستو
 haith هیت
+haiti حتي
 hajdu هیډ هایډ
 hajduk هډوکو
 hajek هایک هک
@@ -6999,7 +7186,9 @@ hajj حج
 hajjar هیر هیرو
 hakki هاکي
 hakko هک هیک
+hal حل
 halbert هیلبرټ
+hale هیل حل
 haley هیلې هیلي
 halide هلاید
 hall حال حل
@@ -7033,8 +7222,10 @@ halving هونګ هیون
 hamacher همکار
 hamaker همکار
 hamann همان هامون
+hamas حماسو
 hamdun همدان
 hamill حمل حملو
+hamilton همیلټن
 hamling هملین
 hamm هم
 hammacher همکار
@@ -7055,10 +7246,10 @@ hammitt همت
 hammon همان هامون
 hampshire همپشایر
 hamre هامر هامار
+han هون
 hance هانس
 hancock هینکاک
 handed هند
-handel هندال
 handle هندل هندال
 hands هانس هاینز
 handsaw هندسه هندسې
@@ -7098,7 +7289,6 @@ hanwa هانو
 hany هېنې هنیه
 happ هاپ
 happe هاپ
-hara هر
 harada هارډ هارډي
 harald هارولډ
 haran هارون حیران
@@ -7111,7 +7301,6 @@ hardware هارډویر
 hardy هارډي
 hare هر
 haren حیران
-hares هارس حرص
 harff حرف هړپه
 harima حرم حریم
 hariz هریس حرص
@@ -7127,7 +7316,6 @@ harral هېرولو
 harrel هېرولو
 harrell هېرولو
 harren هارون حیران
-harriet هرات
 harriette هریت هریټ
 harrill هېرولو
 harris هاریس
@@ -7168,7 +7356,6 @@ hasty هستي هستې
 haswell حصول
 hasz هوش هوښ
 hat هیت
-hata حتی
 hatch هڅه
 hate هیت
 hates هېڅ هیڅ
@@ -7184,6 +7371,7 @@ haughn هان هون
 haught حوت هوټو
 haughton هټون
 haughty حتی حتي
+haul حل
 hauling هلین هلن
 hauser حجر هزار
 hausky هسکې هسکه
@@ -7192,6 +7380,7 @@ hausser حصار
 hautala هوټل
 hauth حوت هوټو
 have هو هیو
+haven حیوان هیون
 haver هوار
 havill هول
 havilland هولانډ
@@ -7212,6 +7401,7 @@ haydu هډو هیډ
 hayduk هډوکو
 haye هې هي
 hayen هان هیون
+hayes هېز حج
 haying هنګ هنګو
 hayley هیلې هیلي
 haymaker همکار
@@ -7249,7 +7439,6 @@ heath هیت
 heather حیدر
 heats هیڅ هڅو
 heave هو هیو
-heaved هود
 heaven حیوان
 heavier هوار
 heavily هولي
@@ -7267,7 +7456,6 @@ hedge حج
 hedger حجر هجر
 hediger هایدګر هایډېګر
 hedy حده هډې
-hee هی
 heed حد
 heeded حد حدود
 heeke هک هیک
@@ -7279,7 +7467,6 @@ heermann هرمن هرمان
 heft هفتو
 hefty هفتې هفته
 hege حج
-hegel هیګل
 hegg هاګ
 hegge هاګ
 heggie هګی
@@ -7292,6 +7479,7 @@ heichel هیکل هېکل
 heick هک هایک
 heidegger هایدګر هایډېګر
 heidelberg هایډلبرګ
+heidi هادي حده
 height هیت
 heighten هټون
 heighth هیت
@@ -7321,7 +7509,6 @@ heizer حجر هزار
 helaba حلب حلبي
 heldt حالت
 helen هیلن
-helena هېلن
 helicon هلکان هلکانو
 heling هیلن هلین
 hell حال حل
@@ -7383,8 +7570,11 @@ hep هاپ
 hepp هاپ
 heppe هاپ
 hepper هایپر
+hera هر
+herb عرب عربو
 herbal اربیل
 herber هاربر
+herbert هربرت
 herd هارډ
 herdal هرډول هایردال
 herding هارډینګ
@@ -7392,6 +7582,7 @@ herdt هارټ
 here هر
 hereby حربي
 herlong هارلان
+herman هرمان
 hermann هرمن هرمان
 hermes هرمز
 hermina هرمن
@@ -7464,7 +7655,6 @@ hickman حکمونو
 hickmon حکمونو
 hid هیډ
 hide حد حاد
-hideo هډې
 hides حدس
 hidy هادي حده
 higa هګی
@@ -7548,9 +7738,9 @@ hitler هتلر
 hits هېڅ
 hitson هڅونو
 hitz هیڅ هېڅ
+hiv اچوي
 hive هو هاو
 hively هولي
-hives هیوز هاوس
 hlad هلاید
 hmm هم
 hmmm هم
@@ -7564,6 +7754,7 @@ hobbit هبت
 hobble هبل هابل
 hobbs هابز حبس
 hoben حبان
+hoc هک
 hochman حکمونو حاکمانو
 hochmuth حکمت
 hock هک هوک
@@ -7647,8 +7838,6 @@ holyoak هلک
 holyoke هلک
 homann همان
 home هم
-homed حمد همد
-homely حملې حملي
 homemade حمید حمد
 homen همان
 homes هومز
@@ -7657,10 +7846,12 @@ homeyer هومر
 homme هم
 hommel حمل حملو
 hommes هومز حمص
+homo هومو
 homogenize همجنس
 homogenous همجنس
 homsey حمزه همزه
 homuth همت
+hon هان
 honda هند هندي
 hone هون
 honey هاني هنیه
@@ -7688,7 +7879,6 @@ hooser حجر هزار
 hoosier حجر هزار
 hooten هټون
 hoots هڅو
-hoover هوار
 hop هاپ
 hope هوپ
 hopp هاپ هوپ
@@ -7704,6 +7894,7 @@ horen هارون
 horkey حرکي
 horky حرکي
 hormann هورمون هرمن
+hormone هورمون
 horrid هارډ هرود
 horsch حارثه
 horse هارس حارث
@@ -7757,6 +7948,7 @@ hove هو
 hovels هاویلز
 hovered هاورډ هوارډ
 how هاو
+howard هارډ هاورډ
 howarth هارټ
 howdy هادي حده
 howe هو هاو
@@ -7791,6 +7983,7 @@ hruby حربي ربي
 hsiung شین شان
 hsu شو شوو
 huallaga ولګا وولګا
+hub هاب
 hubbart هوبارت هوبرټ
 hubbell هبل هابل
 hubbert هوبارت هوبرټ
@@ -7798,12 +7991,14 @@ hubble هبل هابل
 hubbs هابز حبس
 hubbub حبیب حباب
 huberta هوبرټ
+hubs هابز
 huck هک هوک
 hucke هک هوک
 hucker هوکر
 hudak هډوکو
 huddy هادي حده
 hudock هډوکو
+hue هیو
 huerta ورته
 hues هیوز حیث
 huffed هفتو
@@ -7812,6 +8007,7 @@ hug هاګ هوګو
 hugette حجت حاجت
 hugg هاګ هوګو
 huggy هګی
+hugh یو
 hughen یون حیوان
 hughes هیوز یز
 hughett هیت یت
@@ -7840,7 +8036,6 @@ hummus حماس حمص
 humphery همفري
 humphrey همفري
 humphry همفري
-hums هومز
 hundt هنټ
 hung هانګ هان
 hungate هنټ
@@ -7860,7 +8055,6 @@ hurta هارټ
 hurteau هارټ
 hurtt هارټ
 hurvey هروي هاروي
-hush هش
 hushed هشت
 huskey هسکې هسکه
 husky هسکې هسکه
@@ -7932,6 +8126,7 @@ hyson حسن حسین
 hysong حسن حسان
 hyundai هندي هندې
 hywell هول حوالو
+ian این
 ianni یانې ایوني
 iannotti انتي انټي
 iannucci اینچه
@@ -7948,6 +8143,7 @@ icily اصلي
 icing ایسین
 ickes ایکس عکس
 icy عیسی ایسي
+ide عاید ید
 idea اډه
 ideal عدل عادل
 ideally عدلي عدلیې
@@ -7968,7 +8164,6 @@ ige عاج
 igene ایجین
 ihnen اینونو
 ihrig ارګ
-iida اډه
 ike یک ایکو
 ikeda اکدي اکد
 ilana الن الان
@@ -8001,6 +8196,8 @@ incise انساجو انساج
 incur انکار
 indal انډول
 india انډیا
+indiana اندیانا
+indie اندي انډي
 indies انډیز اندیز
 indium اندام
 indoor اندرو
@@ -8031,8 +8228,8 @@ innis انس انیس
 inniss انس انیس
 inno ان این
 inns انس
-inoue اني
 inouye انې اني
+ins انیس
 install انسټال
 institute انستیتوت انسټیټوت
 intelligence انټیلیجنس
@@ -8046,11 +8243,16 @@ into انتي انټي
 intra انټر
 intrex انترکس
 iodice ادیسه عداس
+iodine ایودین ایدین
+ion آن
 iowa یوه
 iphone آیفون
+ira اړ
 iran اړین
+iranian ایرانیانو
 iraq آرک
 iraqi اړیکې اړیکي
+iras ارز ارزو
 irby عربي
 ireland آیرلنډ
 irell ارل ایرل
@@ -8062,8 +8264,10 @@ irish عرش اړشو
 irk آرک
 irma اړم
 irony ایراني ایرانی
+irs آیرس
 irvette اړوت
 irvine اروین
+irving اروین
 isa اس اېس
 isaac ایزاک
 isaacks اسکس
@@ -8081,6 +8285,7 @@ isis اساس
 island الهند
 islandia النده
 islas علاج
+isle ال آل
 isleen الن الین
 isoda اسد اسود
 isolate اصلیت اصالت
@@ -8096,20 +8301,20 @@ issue اش
 issued اېښودو
 issuer اشور
 issy ایسي
+istanbul استنبول
 istook استیک
 istre ایستر استر
 isu اس ایس
 italian اتیلین ایتلین
 italy اتلي اټلي
-itami اتومي اټومي
 itch اچ ایچ
 itching اچین
 item اتوم
 ithaca اتکا
 ito ایت
-itoh اتو ایت
 itty اته
 itunes اتنز
+ivan یون
 ivanhoe اونه
 ivanna اونه ایون
 ivers عوارض عوارضو
@@ -8144,6 +8349,7 @@ jacobe جیکب جاکوب
 jacque جیک جک
 jacques ژاک جیک
 jacquet ځکه
+jade جد جیدو
 jadeite جدیت
 jaffa جفا جیف
 jaffray جیفري جفري
@@ -8163,6 +8369,7 @@ jam جامو
 jamaica ځمکې
 jamb جام جامو
 james جېمز جیمز
+jamie جیمي
 jamieson جیمیسن
 jamison جیمیسن
 jammal جمال جملو
@@ -8213,6 +8420,7 @@ jaunty جنتي ځانته
 java جو
 javanese جونز
 jaw ج
+jaws جز جاج
 jay جې جي
 jaycee جیسي
 jays جز جس
@@ -8223,7 +8431,6 @@ jazzy جایزې جایزه
 jealous جلسو
 jealousy جلسې جلسه
 jean جین ځینو
-jeanette جنت جنایت
 jeanne جین ځینو
 jeannette جنت جنایت
 jeannie ځینې ځیني
@@ -8249,6 +8456,7 @@ jellies جلسو
 jello ځل جل
 jelly ځلي ځلې
 jemmie جامې جیمي
+jen جان ځان
 jenison جانسن جانسون
 jenn جان ځان
 jenna جان ځینې
@@ -8269,10 +8477,12 @@ jensen جانسن جانسون
 jenson جانسن جانسون
 jenssen جانسن جانسون
 jerel ځړول
+jeremiah جرمی
 jeremy جرمي
 jerk ځیرکو
 jerky ځیرکې
 jerod جریدو
+jerome جرم
 jerrell ځړول
 jerrold جرالډ
 jerry جاري جیري
@@ -8321,6 +8531,7 @@ joel جل
 joelle ځل جل
 joerg جرګو
 joers جورج
+joey جي ځي
 joffe جوف
 joffrey جفري
 jog جګو
@@ -8383,7 +8594,10 @@ joynt جنت
 joyous جوس جس
 joyride جوړېدو جوړیدو
 joys جز جوز
+juan ونو وان
 juarez ورځ ورځو
+judah جدي جدا
+jude جد
 judge جاج
 judith جدیت
 judy جدي
@@ -8392,6 +8606,7 @@ juhlin جولین
 juice جوس جس
 juki ځکه
 julia جولیا جولیو
+julian جولین
 juliann جولیان جولین
 julianne جولیان جولین
 julie ځلي
@@ -8413,6 +8628,7 @@ juror جرار جریر
 jurs جارج
 jury جوړې جوړي
 justa جست
+justin جسټین
 justine جسټین جسټن
 jyishane جشن
 kaatz کوڅو کڅ
@@ -8434,8 +8650,8 @@ kahre کار کړ
 kahrs کورس کرز
 kaifu کیف کف
 kailash کلیشو
-kaisha کیسه
 kalata کلات
+kale کیلو کېلو
 kaleida کلیدي کلید
 kalish کلیشو
 kalisz کلیشو
@@ -8460,6 +8676,7 @@ kampe کمپ کیمپ
 kanawha کنه کاڼه
 kanda کندې
 kandt کانت کنت
+kane کیڼ کین
 kaneko کونکو
 kanell کانال کینول
 kangas کینګز کنګز
@@ -8470,7 +8687,6 @@ kansas کانزاس کنزاس
 kanter کېنټر
 kantor کېنټر
 kanzi کونجي
-kaori کړې
 kapp کپ کېپ
 kappa کپ کېپ
 kappel کپیل
@@ -8478,15 +8694,16 @@ kappeler کپلر
 kapper کپېړ
 kappler کپلر
 kapton کپتان کپټان
+kara کړ
 karakos کاراکاس
 karami کریمي کریمیې
-karate کارته
 karcz کرکه کرچ
 karels کارلز
 karen کړنو
 karg کارګو
 karl کرل
 karls کارلز
+karma کړم کرم
 karos کورس
 karrer کرار
 karrick کرک کریک
@@ -8506,6 +8723,7 @@ kassar کسر
 kassen کسان کسانو
 kasson کسان کسانو
 kasza کښې کښي
+kat کتو
 katayan کتیون
 kate کټ کتو
 katen کتنو کیتون
@@ -8522,7 +8740,9 @@ kathie کټه کته
 kathryn کاترین کترین
 kathy کټه کته
 kati کټه کته
+katie کته
 kato کټ
+katrina کاترین
 katy کټه کته
 katyn کتنو کیتون
 katz کڅ کیټس
@@ -8537,8 +8757,8 @@ kautz کوڅو کڅ
 kavanagh کونه کونې
 kavanaugh کونه کونې
 kaveney کوني کونې
-kawa کوي
 kawamura کمره کامره
+kayak کاک
 kayaker کاکړ ککړ
 kayaks کاکس
 kaydon کېدونو کډون
@@ -8549,7 +8769,6 @@ kays کس کیسو
 kayser کسر
 kazee کاسي کوزې
 kazen کسان کسانو
-kazuo کوزوو
 kearley کړلې کړله
 keathley کتلي کتلې
 keating کتنو
@@ -8571,7 +8790,6 @@ keep کپ
 keesey کیسې کیسه
 keetch کچه کچو
 keeter کتار
-keeton کتنو
 keezer کسر
 kefauver کافور
 keffer کفر کافر
@@ -8586,8 +8804,8 @@ kehres کرز
 keicher کاکړ ککړ
 keiffer کفر کفار
 keinath کانت کنت
-keisei کیسه
 keiter کتار
+keith کټ کتو
 keithley کتلي کتلې
 keithly کتلي کتلې
 keitz کڅ کیټس
@@ -8665,8 +8883,10 @@ kerkorian کارکړنو
 kerley کړلې کړله
 kernan کارنان کارنانو
 kernen کارنان کارنانو
+kerr کار
 kerrick کرک کریک
 kerrville کارول کارولو
+kerry کړي کړې
 kersch کرښو
 kersh کرښو
 kess کس کیسو
@@ -8676,6 +8896,7 @@ ketch کچه کچو
 ketchie کچې کچه
 keteyian کتنو کتیون
 ketney کتنې کتنه
+keto کټ
 ketron کاترین کترین
 kettell کتل کتلو
 ketter کتار
@@ -8687,7 +8908,6 @@ keville کولو کول
 kevins کونج کوینز
 key کې کي
 keye کې کي
-keyed کیدو کېدو
 keyes کس کیسو
 keyhole کهول
 keyless کلاس
@@ -8698,9 +8918,11 @@ keys کس کیسو
 keyser کسر
 keysor کسر
 keyworth کورته کورت
+khan کان کن
 khanate کانت کنیت
 khanna کنه کینه
 kharg کارګو
+khmer کمر کمار
 khufu کف
 kibbe کب
 kibbel کیبل کېبل
@@ -8721,6 +8943,7 @@ kielley کلي کله
 kienzle کنځل
 kierscht کړښت
 kiess کس کیسو
+kiev کوو
 kiff کیف کف
 kight کټ کتو
 kihn کیڼ کین
@@ -8741,7 +8964,6 @@ killing کلن کلنو
 killington کلنټن کلینټن
 killion کلین
 killough کیلو کلو
-kilo کلو
 kilometer کیلومیټر
 kimball کمبل
 kimbell کمبل
@@ -8757,10 +8979,10 @@ kimmey کمي کمې
 kimmitt کمیت
 kimono کامن
 kimrey کمرې کیمرې
-kimura کمر
 kin کین
 kinase کینز کنز
 kind کندو
+kinda کندې
 kindall کیندل کیندلو
 kindell کیندل کیندلو
 kindle کیندل کیندلو
@@ -8796,6 +9018,7 @@ kipper کپېړ
 kippur کپېړ
 kiracofe کراکوف
 kiraly کړلې کړله
+kirk کارک
 kirkey کرکې کرکه
 kirley کړلې کړله
 kirnan کارنان کارنانو
@@ -8818,6 +9041,7 @@ kitchell کچالو
 kite کټ کتو
 kites کڅ
 kiting کتنو
+kits کیټس
 kitsch کچه کچو
 kittell کتل کتلو
 kitten کتنو کتان
@@ -8894,7 +9118,6 @@ kneafsey نفسي
 kneale نیل نل
 knebel نبیل
 knee نه
-kneed نید ند
 kneeing نن ننګ
 knees نس نیز
 kneisel نسل
@@ -8958,8 +9181,7 @@ knoy نوي نوی
 knuckle نکل نکول
 knute کنت کنټ
 knuth کنت کنټ
-koala کال
-koalas کالج
+koch کوچ
 kochevar خور
 kochis کاکس
 kock کوک کاک
@@ -8987,7 +9209,6 @@ kohrs کورس کرز
 kohtaro کوترو کتار
 kohtoro کوترو کتار
 kohut کوټ کټ
-koichi کوچي
 koike کوک کیک
 kojima کیم
 koke کوک کوکو
@@ -9006,15 +9227,14 @@ kolling کلن کلنو
 kolm کوم کم
 komine کمین کمان
 kommer کمر کمار
+kona کونې
 konaga کانګو کانګ
 kondas کندز کندوز
-kondo کنډو
 konen کانونو کانن
 kong کان کانګ
 konner کونړ کنړ
 konzi کونجي
 koons کونج کنز
-koop کپ
 kooyman کامن کمان
 kope کوپ کپ
 kopp کپ کوپ
@@ -9048,7 +9268,6 @@ kotch کچه کچو
 koteles کټلایز
 kothari کتاره
 kothe کوډ کود
-koto کوټ
 kotter کتار
 kotz کوڅو کڅ
 kough کو کاو
@@ -9106,6 +9325,8 @@ kriss کریس
 krist کرېسټ
 krista کرېسټ
 kristall کرسټال کریسټال
+kristen کریستین
+kristin کریستین
 kristine کریسټین کریستین
 kristol کرسټال کریسټال
 kristopher کرسټوفر کریسټوفر
@@ -9156,6 +9377,7 @@ kull کال کولو
 kulla کال کله
 kully کلي کله
 kulpa کلپ
+kumar کمار
 kumble کمبل
 kumm کم کوم
 kummer کمر کمار
@@ -9168,6 +9390,7 @@ kupper کوپر کپېړ
 kuranari کرونري
 kurilla کړل کرل
 kurmel کارمل
+kurt کارت
 kurylo کړل کرل
 kusch کسه کش
 kuschel کښل کښلو
@@ -9191,6 +9414,7 @@ kweisi کوزې کوزه
 kyes کس کیسو
 kyi کې کي
 kyker کاکړ ککړ
+kyle کال
 kyler کالر
 kyles کالج
 kyllo کیلو کلو
@@ -9261,11 +9485,11 @@ lahaie لایحې لوحې
 lahaye لایحې لایحه
 lahman لمن لمنو
 lahmann لمن لمنو
+lahore لاهور
 lahr لور لار
 lahti لټه لته
 laible لیبل
 laid لیدو
-lain لېن
 laissez لاسه لېسې
 laity لته
 lake لیک لیکو
@@ -9300,6 +9524,7 @@ lamoreux لمر لمړی
 lamothe لمدو
 lamoureaux لمر
 lamoureux لمر
+lan لین لاین
 lana لین لینه
 lanai لوڼې لوڼي
 lanasa لنسي
@@ -9310,6 +9535,7 @@ lane لین لېن
 lanes لینز
 laneve لوڼو
 laney لینه
+lang لین
 langdon لندن
 lange لین لنګ
 langen لینن
@@ -9331,6 +9557,8 @@ lanz لینز لانجو
 lanza لانجه لینز
 lanzi لانجې لانجه
 lanzo لانجو لینز
+lao لو لاو
+laos لس
 lapier لپار
 lapre لپار
 larena لورین لورن
@@ -9343,7 +9571,6 @@ laroux لارو لرو
 larrance لارنس لارېنس
 larry لري
 larussa لارسا
-larvae لوړوي
 las لس
 lasater لیسټر
 lasch لاسه لیسه
@@ -9391,10 +9618,13 @@ lauper لپار
 laura لري لور
 laurance لارنس لورنس
 laurdan لارډانو
+laurel لرلو
+lauren لورن لوران
 laurena لورین لورن
 laurence لارنس لورنس
 laurene لورین لورن
 laurenz لارېنس لارنس
+laurie لوري
 lausanne لسان
 lausch لاسه
 laux لوکس
@@ -9478,7 +9708,6 @@ leaned لنډو
 leaning لینن لینین
 leans لینز
 leanza لینز
-lear لړ لرو
 lease لس لسو
 leased لیست لست
 leases لسیزو
@@ -9595,6 +9824,7 @@ leny لینه
 lenzi لنسي لانجې
 leo لو
 leon لین
+leone لیون لین
 leones لیونز لینز
 leper لپار
 lepera لپاره
@@ -9605,6 +9835,7 @@ lepre لپار
 lerhman لړمان
 lerma لرم لړم
 leroux لارو لرو
+les له
 lesch لاسه لېسه
 lesotho لاسته لېست
 less لاس لس
@@ -9633,7 +9864,6 @@ leuzzi لوسي
 levalley لولي لېواله
 levangie لیوني لېوني
 leveck لوک
-levee لویې
 leveille لېوال لولو
 level لېوال لولو
 levell لیول لولو
@@ -9644,15 +9874,18 @@ leverenz لورنس لاورنس
 levering لورین
 levick لوک
 levied لویدو
+levine لوڼو لیون
 levings لیونز
 levins لیونز
 levitch لوڅه
 levitte لوټ لوط
 levitz لوڅ لوڅو
+levy لویې
 levying لونګ لونګو
 lewanda لوند
 lewanna لوڼو لینه
 lewins لینز
+lewis لس
 lewman لمن لمنو
 lewton لټون
 leya له
@@ -9666,6 +9899,7 @@ lheureux لری لارو
 liable لیبل
 liacos لوکس
 liaison لسان
+liam لیمو
 lianna لینه
 lianne لین لاین
 liar لړ
@@ -9692,6 +9926,7 @@ liermann لړمان
 lies لاس
 liesch لیسه لېسه
 lieson لسان
+lieu لو ل
 lieurance لورنس
 life لف لایف
 liff لف
@@ -9715,6 +9950,7 @@ lillie لیلي لیلی
 lillo لیل
 lilly لیلي لیلی
 lily لیلي
+lima لیمو لم
 limb لم لیمو
 limbaugh لمبو لمبه
 limbed لمدو
@@ -9723,6 +9959,7 @@ lime لم لام
 liming لمن لمنو
 limmer لمر
 limned لمدو
+lin لېن
 linage لانجو
 linck لینک
 lincks لینکس
@@ -9762,6 +9999,7 @@ lipide لیپیډ
 lippa لپا
 lipper لپار
 liqun لیکنو لیکونو
+lis لسو
 lisa لس
 lisette لیست لست
 lisle لال لایل
@@ -9776,6 +10014,7 @@ liszt لیست لست
 lit لټ
 litan لاتین لټون
 litchfield لیچفیلډ
+lite لت لات
 liter لیټر
 lithe لید لټه
 lithium لیتیم
@@ -9785,6 +10024,7 @@ litten لټون
 litter لیټر
 little لټول لیټل
 litty لټه لته
+liu لیو
 liuzza لوڅه لوڅې
 liuzzi لوڅې لوڅه
 livable لوبولو لوبول
@@ -9797,7 +10037,6 @@ lives لاوس لیوس
 livesay لوسي
 livesey لوسي
 livezey لوسي
-livid لود
 living لیون
 livings لیونز
 livsey لوسي
@@ -9823,16 +10062,15 @@ load لوډ
 loading لودین لدین
 loamy لومه
 loan لوڼو
-loaned لوند
 loathe لټه لود
 loathed لود لوډ
-loaves لوس
 lobaugh لوبو لوبه
 lobb لوبو لب
 lobbia لوبیا
 lobby لوبې لابي
 lobdell لوبډلو
 lobel لوبولو لوبول
+loch لاک لک
 lock لاک لک
 locka لکه
 locke لاک لک
@@ -9864,10 +10102,8 @@ lohrey لري لوري
 lohrman لړمان
 lohrmann لړمان
 lohse لس لسو
-lois لاس
 lokken لاکن لکن
 lol لال لولو
-lola لولي
 loll لال لولو
 lolley لولي لالی
 lolli لولي لالی
@@ -9876,6 +10112,7 @@ lolly لولي لالی
 lomb لم لام
 lommen لمن لمنو
 lon لان لوڼو
+lone لوڼو
 long لانګ
 longden لندن
 longe لانجو
@@ -9886,6 +10123,7 @@ lonny لوڼي لوڼې
 lons لانجو
 look لک
 looking لکن لکنو
+loom لم
 loomed لمدو
 looming لمن لمنو
 loon لوڼو
@@ -9898,6 +10136,7 @@ looses لسیزو
 loot لت
 lope لوپ
 loper لپار
+lopez لوپز
 lopp لوپ
 lorance لارنس لورنس
 lorang لورن لوران
@@ -9913,7 +10152,6 @@ lori لوري
 loring لورن لورین
 lorna لورن
 lorne لورن
-lorry لري لوري
 los لاس
 losch لاسه
 lose لس لسو
@@ -9934,6 +10172,7 @@ lotty لټه لته
 lotus لوڅ لوڅو
 lotz لوڅ لوڅو
 lotze لوڅ لوڅو
+lou ل
 louanna لوڼې لوڼو
 louanne لین لوڼو
 louche لوښو
@@ -9993,6 +10232,7 @@ lowman لمن لمنو
 lown لوڼو لان
 lowndes لنډیز
 lowrance لارنس لورنس
+lows لس لسو
 lox لوکس
 loyal لولو
 loyall لولو لیل
@@ -10002,6 +10242,7 @@ lozeau لاس لسو
 lozon لوزان لسان
 lubbock لبیک
 lubeck لبیک
+lucas لوکاس
 lucca لکه
 lucco لکو لوک
 lucette لوست لست
@@ -10016,6 +10257,7 @@ lucks لوکس
 lucky لکه لکي
 luckyn لاکن لکن
 lucy لوسي
+ludwig لوډویګ
 luebbe لوبو لب
 lueck لیک لیکو
 luecke لوک لک
@@ -10023,13 +10265,16 @@ luehring لورن لورین
 luella لله لیلا
 luelle لولو
 luff لف
+lug لوګو
 lugging لګن
 luhman لمن لمنو
 luhmann لمن لمنو
 luhr لور لار
 luhring لورن لورین
 luick لوک لک
+luis لویس
 lujan لین لیون
+luke لوک لک
 lull لال لولو
 lumb لم لام
 lumbra لمبر
@@ -10037,6 +10282,7 @@ lumley لامله
 lumm لم لام
 lummus لمس
 lun لان لوڼو
+luna لوڼو
 lunacy لنسي
 lundahl لنډول لنډولو
 lundell لنډول لنډولو
@@ -10056,6 +10302,7 @@ luring لورن لورین
 lurvey لاروي لاروی
 lusch لاسه
 lush لاسه
+lust لست
 luten لټون
 lutes لوڅ لوڅو
 lutey لټه لته
@@ -10083,6 +10330,7 @@ lyell لال لایل
 lyerla لرله
 lyerly لرلې لرلی
 lying لانګ لین
+lyle لال لیل
 lyman لمن لمنو
 lyme لم لام
 lynde لنډ لنډو
@@ -10093,6 +10341,7 @@ lynn لین لېن
 lynna لین لینه
 lynne لین لېن
 lynx لینکس
+lyon لین لاین
 lyonnais لینه لیونز
 lyonnaise لیونز لینز
 lyons لیونز لینز
@@ -10147,9 +10396,9 @@ macmillan مکمېلن
 macnaughton مکناټن
 macon مکان مکین
 macpherson مکفرسون
+macro مایکرو میکرو
 macy مېسي میسي
 mad مادو
-madam مادام
 madame مدام مادام
 madan میدان مېدان
 madara مدار مداري
@@ -10170,6 +10419,7 @@ madora مادورو مادر
 madore مداري
 madra مادر
 madrid ماډریډ
+mae مه
 maestra ماسټري ماسټر
 maffia مافیا
 mag مېګ میګ
@@ -10183,6 +10433,7 @@ magie میجي
 magiera مجرا ماجرا
 magill مجلو مجال
 magnesium مګنیزیم
+mah ما
 mahan مین من
 maharive ماهرو مهرو
 mahathir مهتر
@@ -10197,6 +10448,7 @@ mahon مین من
 mahood موحد
 mahrt مهارت
 mahtan متن متون
+mai می
 maid مید
 maiden میدان مېدان
 mail میل
@@ -10208,6 +10460,7 @@ mailloux میلو مېلو
 mailman مېلمنو میلمنو
 mailmen مېلمنو میلمنو
 main مین
+maine مین من
 maines منځ مینځ
 mainly منلي
 mainord مینارډ
@@ -10223,9 +10476,7 @@ makara ماکرو
 make مک میک
 makela مایکل
 makes میکس مکس
-maki مکي
 making مکین
-mako ماکو
 malacca ملکي ملک
 malady میلادي میلادی
 malahide ملحد
@@ -10239,7 +10490,6 @@ malecha ملکه ملچ
 malecki ملکي ملکې
 malena میلن
 maler میلر
-mali مالي
 malice ملوث
 malick ملک مالک
 malicki ملکي ملکې
@@ -10273,14 +10523,15 @@ mally ملي مالي
 malm مهم مهمو
 maloney مالونه میلونه
 maloof مولف
+malta ملت
 maltais ملتي ملټي
 maltose مالتوس
 malueg مالګو
 malva مهالو
 malveaux میلو مېلو
 malvie مولوي مولوی
+mama مهم
 mamas ممیز
-mame میم
 mameluke مملوک ممالکو
 mamet ماموت مهمات
 mamma مهم مهمه
@@ -10295,6 +10546,7 @@ manard مینارډ
 manas منځ
 manatees منتج
 mancha منک
+manchester مانچسټر
 mandala ماډل مډال
 mandell مندل میندل
 mandella مانډېلا منډېل
@@ -10310,6 +10562,7 @@ maneval مانویل
 mangement منجمنټ منجمنت
 mangione منځني منځنی
 mangle منګل منګلو
+mango مینګ
 manhattan منهتن
 manheim مانهایم
 mania مینه مېنه
@@ -10317,7 +10570,6 @@ manila منل منلو
 manilla منل منلو
 manke منک
 manlove منلو
-manly منلي
 mann من مین
 mannella منل منله
 mannen ماینونو
@@ -10334,6 +10586,7 @@ manns منځ مینځ
 manny مني مینې
 manocchio منک
 manoff مناف
+manor منار منیر
 manos منځ مینځ
 mans منځ مینځ
 manseau مونس مونث
@@ -10344,6 +10597,8 @@ manthei منډې میندې
 mantia منشي منشا
 mantione مونټیني
 mantua مانچو
+manuel مانویل
+manure منور منیر
 manville مانویل
 manwell مانویل مینوال
 many مني مینې
@@ -10352,6 +10607,7 @@ maori ماري مري
 mar مور
 maraniss مارینس
 marathi مراټي مارتي
+marc مارک مرکو
 marceaux مارس مورس
 marcel مرسل
 marcela مورچل
@@ -10369,7 +10625,6 @@ marchetta مارکېټ مارکیټ
 marchi مرکې مارکي
 marchita مارکیټ مارکېټ
 marchitto مارکیټ مارکېټ
-marcia مارش مړشو
 marcial مرسل
 marcil مرسل
 marcile مورچل
@@ -10377,10 +10632,12 @@ marcille مرسل
 marcks مارکس
 marco مرکو مارک
 marcoux مرکو مارکو
+marcus مارکوس
 marcy مرسي
 marden مردان
 mardi مورده
 mardon مردان
+mare مړ میر
 maret مهارت
 marett مهارت
 marfa مرفو
@@ -10407,6 +10664,7 @@ marine مړینو مارینو
 marinez مارینس
 maring مړینو مارینو
 mario مور
+marion مریان مریانو
 marisa مرسي مارس
 marissa مرسي مارس
 marjoram مجرم
@@ -10438,7 +10696,6 @@ marquis مرکې مارکي
 marquiss مارکوس
 marrakech مراکش
 marrazzo مروجو مروج
-marred مورد مرد
 marren ماران مارانو
 married مرد
 marries مرض مریض
@@ -10446,6 +10703,7 @@ marrin مړینو مارینو
 marring مړینو مارینو
 marrocco مرکو مارک
 marron ماران مېړونو
+marrow مړ میر
 marry مري ماري
 mars مرض
 marsala مرسل
@@ -10455,6 +10713,7 @@ marseille مرسل
 marsella مرسل
 marsh مړشو
 marsha مارش مړشو
+marshal مارشل
 marshall مارشال مارشل
 mart مهارت
 martensen مارټینسون
@@ -10485,8 +10744,8 @@ marzano مرجان مرضونو
 marzette مرستو
 marzotto مرستو
 marzullo مرسل
+mas موج
 masa مسو مس
-masako ماسکو
 masami موسمي
 masao موسی
 masaru مصر
@@ -10498,6 +10757,7 @@ masci مېسي مسي
 masella مسله مساله
 maselli مسلې مسالې
 maseng مېسن میسن
+mash ماشو
 mashalu مشال میشل
 mashed مېشت میشت
 masiello مسلو
@@ -10574,6 +10834,7 @@ matola ماتولو متل
 matott مټ مات
 matsch مکه مچ
 matt مات
+matte مټ مات
 matter میټر
 matters ماټرز
 matthew متیو ماتیو
@@ -10587,8 +10848,8 @@ matula ماتولو ماتول
 mauck مک ماکو
 mauled ملډو
 maureen مړینو مارینو
+maurice موریس مارس
 maurin مړینو مارینو
-maury ماري مري
 mausser مصر مسیر
 mauthe ماته مادو
 mauve مو
@@ -10626,6 +10887,7 @@ mayme میم
 mayner منار منیر
 maynes منځ مینځ
 maynor منار منیر
+mayo مې مو
 mayonnaise مینځ مېنځ
 mayor مړ
 mayorga مرګه
@@ -10635,6 +10897,7 @@ mays مېز میز
 mayton متن میتان
 mayville مول
 maz مس موج
+mazda مزد
 maze مېز میز
 mazola مجله مجلې
 mazon موزون موذن
@@ -10759,6 +11022,7 @@ measly مجلې مزلي
 measure مېجر مزار
 measured مجرد مجردو
 mebane مبین مابین
+mecca مکه مک
 mechanic میکانیک
 mechanism میکانیزم
 meche مکه مېچ
@@ -10766,6 +11030,7 @@ meciar مسیر مصر
 meck مک میک
 meckel مایکل
 meckes ماکس مکس
+med مد مادو
 medal ماډل
 meddaugh ماده مادو
 meddle ماډل مډال
@@ -10774,6 +11039,7 @@ medecin میډیسن ماډیسن
 medema مدام
 medi مادي مادې
 media میډیا
+median مدین
 mediate مدت
 medicine میډیسن
 medium مدام
@@ -10783,7 +11049,6 @@ medora مدار
 medulla مډال مډل
 meehan من مین
 meehans منځ مینځ
-meek مک
 meers مرض
 meester مسټر
 meeting متن
@@ -10791,6 +11056,7 @@ meeuwsen میسن مېسن
 mefferd مفرد مفردو
 mefford مفرد مفردو
 meg میګ
+mega مېګ
 megee میجي ماجه
 megill مجلو مجال
 mehler میلر
@@ -10813,6 +11079,7 @@ mejia میا
 mejias میز
 mekeel مایکل
 mekong مکان
+mel مل
 melador مالدار
 melamine مېلمنو میلمنو
 meland ملنډو
@@ -10830,6 +11097,7 @@ melgar ملګرو
 melick ملک مالک
 melillo ملل
 melina میلن
+melinda ملنډو
 meline میلان میلن
 melita ملت مالتا
 melitta ملت مالتا
@@ -10875,7 +11143,6 @@ men من
 mench مانچو
 mend میندو
 mendan مندانو
-mendel مندل میندل
 mendell منډېل مندل
 mendez مهندس
 mendillo مندل میندل
@@ -10896,7 +11163,6 @@ mentally منلي منلی
 mente مینټ
 menu ماڼیو منی
 menus مانیز
-meow مو
 merced مرستو
 merck مارک مرکو
 mercy مرسي
@@ -10938,6 +11204,7 @@ mesched مشهد
 mescher مشر
 meschke مشک مشکو
 meserve مسرو
+mesh ماشو
 meshed مېشت مېشتو
 meshell میشل مشال
 meshing ماشین
@@ -10977,21 +11244,24 @@ methvin متون متونو
 methyl متل
 metoyer متر میټر
 metre متر میټر
+metric مټریک
 metrick میټریک مټریک
+metro متر
 mettle متل ماتولو
 mettlen متلونو
-mew میوو می
 mexico مکسیکو
 meyer مړ
 meyers مرض
 mezzo مسو مېز
 mia ما
 miami میامي مامي
+mic میک
 micale مکولي
 micallef مکلف
 micciche مچکه
 miccio مچیو مکه
 mice مس مسو
+mich مچ
 michael مایکل
 michaela مایکل
 michaella مایکل
@@ -11011,6 +11281,7 @@ micki مکې مکي
 mickish مکش
 mickus مکس میکس
 micky مکې مکي
+micro مایکرو
 microscope مایکروسکوپ
 microsoft مایکروسافټ
 microwave مایکروویو
@@ -11033,23 +11304,25 @@ mighty ماتې ماتي
 migra مګر
 mihn من مین
 mijares میراث
-mika مک
 mike مک میک
 mikey مکې مکي
 mikkola مکولي
 miksch مکش
 mikula مکولي
+mil میل
+milan میلن
 milani میلونه ملونه
-milano میلونو
 milas مهالیز
 milbourne ملبورن میلبورن
 mild ملډو
 milder مالدار
 mile مهال مل
 milem ملهم
+miley ملي مالي
 militaries ملاتړیز ملاتړیزو
 militarize ملاتړیز ملاتړیزو
 military ملاتړي ملاتړی
+militia ملیشه ملیشو
 milken ملکونو ملکان
 milky ملکي ملکې
 mill مل میل
@@ -11084,12 +11357,12 @@ milloy ملي ملی
 milly ملي
 milman میلمنو مېلمنو
 milne میلن
-milo مهال
 milton ملتونو ملتان
 milum ملهم
 mime مهم مهمو
 mimicking ممکن
 mimis ممیز
+min مین
 mind میندو
 minded میندو مند
 mindell منډېل مندل
@@ -11099,6 +11372,7 @@ mindy مندي منډې
 mine من مین
 minella منل منلو
 minelli منلي منلی
+miner منار
 minera منیر مینرو
 minerd مینارډ
 minerva مینرو منارو
@@ -11185,12 +11459,10 @@ mitchell میچل
 mitchen مچان مچانو
 mithcell متصل
 mithun متن میتان
-miti متی
 mitman مطمین
 mitsch مکه مچ
 mittman مطمین
 mitzel متصل
-miura میړه
 mix مکس میکس
 mizell مزل مجلو
 mizelle مزل مجلو
@@ -11208,6 +11480,7 @@ mochas مکس
 mock مک ماکو
 mocking مکین
 mocks ماکس مکس
+mod مادو ماد
 modarressi مدرسې مدرسي
 mode مد مود
 model ماډل
@@ -11218,6 +11491,7 @@ modem مدام
 moderate مدیریت
 modern مدرن مډرن
 modernism ماډرنیزم
+modi مودي
 modrow مادر
 module مجلو
 modules مجلس
@@ -11235,6 +11509,7 @@ mohney مني منی
 mohnke منک
 mohring مړینو مارینو
 mohs مس مسو
+moines منځ من
 moist مستو
 moisten میسن
 mojave محوه
@@ -11267,11 +11542,11 @@ mom مهم مهمو
 momma مهم مهمه
 mommies ممیز
 mommy مومي مهمې
+mon مونو
 mona مونو من
 monca منک
 moncayo منک
 monceaux مونس مونث
-mondale موندل موندلو
 mondallo موندلو موندل
 monday مندي
 mondays مهندس
@@ -11281,7 +11556,6 @@ monds منځ
 mondy مندي منډې
 monell منل منلو
 monessen مونسون
-monet مني مڼې
 monetize منتج
 money مني
 moneyed مند موند
@@ -11295,14 +11569,14 @@ monn من مونو
 monnett مونټ مونت
 monnier منار منیر
 monnig منګ منګو
+mono من
 monohull منحل
-monotone منتن منهتن
 monotony مونټني
 monroe مونرو مینرو
 monsen مونسون
 monsey منځه منځي
-mont مونت
 montage منتج
+montana منتن
 montejano منتن
 montenay مونټني
 monterey منارې
@@ -11316,6 +11590,7 @@ monzon مونسون
 mood مد
 moody مودې مودي
 moon من مونو
+moore مور مړ
 moorestown مرستون
 mooring مړینو
 moorish مړشو
@@ -11347,6 +11622,7 @@ moret مهارت
 moreton مارټن مارتن
 moretti مارتي مارټي
 moretto مرهټو
+morgan مورګان
 morgana مورګن مورګان
 mori ماري مري
 morin مړینو مارینو
@@ -11373,6 +11649,7 @@ morrish مارش مړشو
 morriss موریس مورس
 morrissette مرستو
 morrissey مرسي
+morrow مور مړ
 morsch مارش مړشو
 morss مورس مارس
 mort مهارت
@@ -11418,6 +11695,7 @@ motola متل
 motor متر
 motorcycle موټرسایکل
 motoren موټرونو
+motto مات
 mottola متل
 motyka متکي
 motyl متل
@@ -11444,15 +11722,14 @@ moves موج
 movies موویز
 moving مونو مون
 mow م
-mowed مد
 mowell مول
 mowing من مونو
-mows مس موج
 moye مې می
 moyers مرض
 moyes موج میز
 mozelle مزل مجلو
 mozena مزېني
+mri عمري عمری
 mruk مرکو
 mucci موچي
 muccio مچیو مکه
@@ -11464,7 +11741,6 @@ muckey مکې مکي
 mucking مکین
 mucky مکې مکي
 mucosa میکس
-mucous میکس
 mucus میکس
 mud مادو
 muddle ماډل مډال
@@ -11482,7 +11758,6 @@ muhammed محمد
 muhs مس مسو
 mulder مالدار
 mule میل
-mull مل مال
 mullah ملي ملا
 mullally ملالې ملاله
 mullaly ملالې ملاله
@@ -11504,10 +11779,12 @@ mulloy ملي مالي
 mulqueen ملکونو
 mulroney مولروني
 mulrooney مولروني
+multi ملټي
 multiple ملتپال ملتپالو
 mulvaney ملونه
 mulvany ملونه
 mum مهم مهمو
+mumbai ممبۍ
 mumm مهم مهمو
 mumma مهم مهمه
 mumme مهم مهمو
@@ -11516,6 +11793,7 @@ mummies ممیز
 mummy مومي مهمې
 munce مونس مونث
 munch مانچو
+mundane موندنو
 mundell موندل موندلو
 munden موندنو مندانو
 mundis مهندس
@@ -11529,7 +11807,6 @@ munnell منل منلو
 munns منځ
 munroe مونرو
 munsey منځه منځي
-murata مراټي
 murdaugh مرد
 murden مردان
 murdick مردک
@@ -11539,6 +11816,7 @@ murff مرفو
 murk مارک مرکو
 murky مرکې مرکه
 murph مرفو
+murray مري ماري
 murrell مورال
 murren مریان مریانو
 murrill مورال
@@ -11552,6 +11830,7 @@ musa میسي میسو
 musch مسح ماشو
 muscle مثال مسلو
 muscles مثلث
+muse میز
 museum میوزیم
 musha مسح
 music میوزیک
@@ -11631,12 +11910,15 @@ nall ناول نل
 nalley نیلي نیلی
 nalls نولس نولسو
 nally نیلي نیلی
+nam نیم نمو
 name نیم نیمو
 nana نن
 nancy نانسي
 nanez نونیز
 nanna نن ننه
 nannini ننني نننی
+nanny نني ننه
+nano نانو
 naoki نیوکې نیوکه
 naomi نومې
 napper ناپیر
@@ -11667,8 +11949,10 @@ nassau نیسو ناسا
 nasser نثر ناصر
 nassif نصف
 nasty ناستي
+nat نیت ناټو
 natala ناتال
 natcher نیچر
+nate نیت نېټ
 nathanael ناتانیل
 nathaniel ناتانیل
 nathe نېټه
@@ -11677,6 +11961,7 @@ national نیشنل نشنل
 nationale نیشنل نشنل
 nationalism نشنلیزم
 native نېټو
+nato نیت نېټو
 natty نېټه نېټې
 natuna نوټونه
 nature نیچر
@@ -11690,12 +11975,12 @@ navajo نیوه نوح
 naval نیول نیولو
 navas نویس
 navy نوي
-nay نه
 naysayer نصیر
 nayyar نیرو
 nazareth نظارت
-nazism نازیزم
+nazi ناڅه
 ndau اندو
+neal نل
 neall نیل نل
 nealon نلونو
 nearing نرنګ
@@ -11720,6 +12005,7 @@ negara نیګرو نګر
 nehls نیلز نیلس
 nehring نرنګ نیرنګ
 neidigh ندي ندی
+neil نل
 neilan نلونو
 neill نیل نل
 neiman نمونو
@@ -11749,7 +12035,6 @@ nepl نیپال ناپل
 nepool ناپل
 neptune نیپتون نېپتون
 nerice نرس
-nero نر
 nerone نران نرانو
 nerren نران نرانو
 nervana نهرونه نهرونو
@@ -11800,6 +12085,7 @@ newlan نلونو
 newlon نلونو
 newlun نلونو
 newly نیولي نیولې
+newman نومونو نمونو
 newmann نومونو نمونو
 newmeyer نومر نمر
 newmyer نومر
@@ -11829,6 +12115,7 @@ niagara نیګرو
 niall نیل نل
 nibble نبیل
 nibs نبض
+nic نېک
 nice نس نیسو
 nicely نسلي
 nicer ناصر نثر
@@ -11857,6 +12144,7 @@ nicoll نکل نکول
 nicolle نکول نکل
 niece نس نیسو
 nieces نسج
+nielsen نېلسون
 nieman نمونو
 niemann نمونو
 niemeyer نمر
@@ -11864,12 +12152,12 @@ nienow نن
 niess نس نیسو
 nietzsche نیچه
 nifty نفتي
-niger نیجر نایجر
 nigeria نایجریا نایجیریا
 nigerian نجران
 nigger نګر نګار
 night نیت ناټو
 nighters نایټرس
+nike نیکي
 nikes ناکس
 nikkei نیکه نیکي
 nikkel نکل نکول
@@ -11877,7 +12165,6 @@ nikkhah نیکه نېکه
 nikki نیکه نیکي
 nikko نیکو نیک
 nikon نیکونو
-nil نل
 nilan نلونو
 nile نیل نل
 nill نیل نل
@@ -11887,8 +12174,10 @@ nilsson نیلسن نېلسون
 nimmer نمر
 nimmo نمو نیم
 nimoy نیمې نیمي
+nina نن
 nine نن
 nineveh نینوا
+ning نن
 nipple نیپال
 nirvana نهرونه نهرونو
 nisley نسلي
@@ -11907,6 +12196,7 @@ nitty نېټه نېټې
 nitza نڅا نتجه
 nivison نوسان
 nixon نیکسون نېکسون
+noaa نو
 noack نوک
 noah نو
 nobile نوبل
@@ -11914,16 +12204,18 @@ noble نوبل
 nock ناک نوک
 nod ند
 nodded نود ند
+node نود نوډ
 noecker نوکر نکړ
+noel نل
 noell نل نول
 noelle نیل نل
-noes نس نسو
 nogueira نګر
 noguera نګر
-noh نو
 nohl نل نول
+noir نورو
 noise نس نویس
 noisy نیسي
+nokia نوکه
 nolan نلونو
 nolen نلونو
 noll نل نول
@@ -11936,6 +12228,7 @@ nomad نومېد نومید
 nominee نمونې نمونه
 none نن
 nonwhite ننوت ننوتو
+nook نیک نیوکو
 noorda نورد
 nor نورو
 nora نورو نور
@@ -11964,7 +12257,6 @@ nose نس نسو
 nosed نزد نجد
 noses نسج
 noss نس نسو
-nosy نسي
 not ناټو
 notch ناڅه ناکه
 note نوټ
@@ -11973,6 +12265,8 @@ notify نطفې
 notion نښان نشان
 notional نشنل
 nouvelle نیول نیولو
+nov نوو
+nova نو نوي
 novacare نوکر
 novack نوک
 novas نواز
@@ -11984,6 +12278,7 @@ novello نول نویل
 novellus نولس نولسو
 novelly نوله
 novels نولسو
+novice نویس
 novick نوک
 nowack نوک ناک
 nowell نل نول
@@ -12038,7 +12333,6 @@ oakey اوکه
 oakley اوکله
 oaky اوکه
 oared اردو اوردو
-oars ارز ارزو
 oath اتو
 oaths اودس
 oatley اتلي اټلي
@@ -12085,6 +12379,7 @@ odonoghue اډانه اوډنه
 odor اوډیر
 odour اوډیر
 odyssey اوداسي اوداسې
+oecd اسیدي اوسیده
 oehmen امان امن
 oesch اوسه اوښ
 oetting اتن اتڼ
@@ -12095,7 +12390,6 @@ offend فنډ
 officer افسر
 offshore افشار افشارو
 offutt افت آفت
-oft آفت
 often افتونو آفتونو
 ohara اوهر
 ohare اوهر
@@ -12113,6 +12407,7 @@ ohlmeyer اولمیر
 ohlsen اولسونو
 ohlson اولسونو
 ohlsson اولسونو
+ohm ام اوم
 ohman امان امن
 ohmann امان امن
 ohmer امر امیر
@@ -12126,7 +12421,6 @@ oily اولي ایلي
 oja اویا ایا
 ojala ایل ایله
 ojeda ایډا ایډ
-oka اکا
 okada اکدي اکد
 okay اوکه
 okayed اکد
@@ -12137,7 +12431,6 @@ okelly اوکله
 okeson اکسان
 okey اوکه
 oki اوکه
-okra اکر اوکړو
 okray اکړه
 oksana اکسان
 okuda اکدي اکد
@@ -12145,6 +12438,7 @@ okwu اکو
 olague الګو
 olde اولډ
 oldt الت الټو
+ole اول
 oleary اولېري
 oleg الګو
 olejnik لینک
@@ -12173,11 +12467,11 @@ olsson اولسونو
 olund الهند اولاند
 olva الو اولو
 olympic اولمپیک المپیک
+omaha اومه
 omalley امله
 omara امر
 omary میري مري
 omeara امیر امر
-omen امان امن
 ommen امان امن
 omni امنیه امنیې
 omron عمران عمرونو
@@ -12196,7 +12490,6 @@ onto انتی
 oodle اودل اوډل
 oohs اوس از
 oolong الن الان
-oooh او و
 ooohs اوس از
 oozed اسد
 oozing وزن
@@ -12243,6 +12536,7 @@ orick اړیکو آرک
 orielle ارل
 oriley اورالي
 orilla ارل
+orion ارین
 orla ارل
 orme اړم
 orna اوړني
@@ -12265,10 +12559,12 @@ osby عصبي
 oscar عسکر
 osceola اصلا اصله
 oscillate اصلیت اصالت
+osha اوسه اوښ
 oshel اسهال
 oshell اسهال
 osher عشر
 osika سکه سیکه
+oslo اصل
 osmer اسمار
 osmon اسمان آسمان
 osmun اسمان آسمان
@@ -12290,8 +12586,8 @@ ottawa اتو
 ottens اتنز
 otting اتن آتن
 ottley اتلي اټلي
+otto اوتو
 otwell اوټول
-ouch اچ اوکه
 ouellet علت الت
 ouellette ایلیټ علت
 ought اتو اوتو
@@ -12344,6 +12640,7 @@ oxidation اکسدیشن اکسیدیشن
 oxide اکساید اکسایډ
 oxidize اکسیدایز
 oxygen اکسیجن آکسیجن
+oyster استر
 ozal اصل اوسلو
 ozanich اسانه ځانه
 ozanne اسان اذان
@@ -12357,6 +12654,7 @@ ozuna اوزون اسونه
 ozzie اوزه
 ozzy اوزه
 paasch پاسه پښو
+pac پاکو
 paccar پکار
 pace پیسو پس
 paced پست پستو
@@ -12369,7 +12667,6 @@ packed پکت پاکټ
 packer پکار
 packet پکت پاکټ
 packett پکت پاکټ
-paco پیکو پیک
 pact پاکټ
 padded پدیدو
 paez پیسو پېج
@@ -12380,15 +12677,16 @@ pahnos پنس
 paige پېج
 paighton پټان پټن
 paign پېن پین
-pail پېل
 pain پېن پین
 painesville پنځول پنځولو
 pains پنځو پنج
+paired پردو
 pairing پرین
 pairs پرزو
 paiz پیسو پس
 pajak پاک پاکو
 pakeha پاکه
+pakistani پاکستانی
 pakula پاکولو پاکول
 pal پیل
 palace پلس پلاس
@@ -12397,8 +12695,8 @@ palazzo پلاز پلس
 palca پالک
 pale پیل پېل
 palette پیلوټ پلاټ
+palin پالن
 palka پالک
-pall پل پولو
 pallas پلس پلاس
 paller پلار
 pallet پیلوټ پلاټ
@@ -12407,6 +12705,7 @@ pallid پیلېدو پیلیدو
 pallone پالنې پالنه
 palm پام
 palmer پامیر
+palo پیل
 palton پلټنو
 paluch پالک
 paluck پالک
@@ -12434,7 +12733,6 @@ panter پینټر
 pantera پینټر
 panther پینټر
 paolillo پاللو پالل
-pap پایپ
 papacy پیپسي
 papal پیپل
 papaw پاپ پوپ
@@ -12446,6 +12744,7 @@ pappas پیپیس
 paque پاک پاکو
 paquet پکت پاکټ
 paquette پکت پاکټ
+para پر پېر
 parachute پرښتو
 parade پردو پریډ
 paradise پردیس پردېس
@@ -12454,8 +12753,8 @@ paragraph پراګراف
 paramo پریم
 paramore پاموړ
 parana پرین پارونه
+parasite پرست پرستو
 pardus پردېس پردیس
-pared پردو
 paredez پردېس پردیس
 parekh پارک پرک
 parella پرله
@@ -12477,6 +12776,7 @@ parley پرله
 parlow پرل
 parness پرنس
 parody پردي پردې
+parole پرل پارولو
 parquet پاړکي
 parrack پارک پرک
 parrella پرله
@@ -12493,6 +12793,7 @@ parthian پارتیان پارتیانو
 partly پرتله پرتلې
 partney پورتني پورتنی
 party پرته پورته
+pas پوځ
 pascale پاسکال
 paschal پاشل پاشلو
 paschall پاشل پاشلو
@@ -12516,7 +12817,6 @@ past پستو
 pasta پوستو پوسته
 paste پست پستو
 pasternack پاسترناک
-pasteur پوسټر
 pastora پاستور
 pastore پاستور
 paszek پوښاک
@@ -12527,7 +12827,6 @@ patane پټان پټن
 patch پاکه پیچ
 patchell پېچلو پیچلو
 patchy پاچهي پچه
-pate پټ پت
 patella پټیل
 patera پترو پتر
 paterson پیټرسن
@@ -12544,8 +12843,8 @@ patrick پیټریک پاتریک
 patrol پټرولو
 patsy پاڅه
 patterson پیټرسن
+patti پاتي
 pattillo پټیل
-patting پټن
 patty پاتې پاتي
 paucity پوستي پستي
 paugh په
@@ -12557,6 +12856,7 @@ paulick پالک پولک
 pauling پلن پالن
 paulita پلیټ
 paullin پلن پالن
+paulo پالو
 pause پوځ پس
 pautsch پاکه پچ
 pavarotti پورته
@@ -12574,7 +12874,6 @@ paw په
 pawing پین پینګ
 pawling پلن پالن
 pawn پاڼو پان
-pawned پند
 pawnees پنځو پنج
 pawns پنځو پنج
 paws پوځ پس
@@ -12588,6 +12887,7 @@ paylor پلار
 payment پیمونټ
 payna پېن پین
 payne پېن پین
+payout پټ پت
 payroll پېرلو پېرل
 pays پیسو پس
 payton پټان پټن
@@ -12604,7 +12904,6 @@ pearcy پاړکي
 pearl پرل پېرلو
 pearly پرله
 pears پرزو
-peary پرې پري
 peas پیسو
 peasley پسله
 pebble پابلو
@@ -12615,14 +12914,13 @@ peck پاک پاکو
 pecka پکې پاک
 pecor پکار
 pecora پکار
+peek پک
 peeked پکت
 peeler پلار
 peeling پلن
 peeples پیپلز
-peered پردو
 peering پرین
 peers پرزو پرس
-peeve پو پیو
 pehl پیل پېل
 pehrson پېیرسون
 peipu پیپ
@@ -12696,6 +12994,7 @@ perished پرښتو
 perkey پاړکي
 perks پارکس
 perky پاړکي
+perl پرل پېرلو
 perley پرله
 perlite پرلت
 perlman پارلمان
@@ -12730,8 +13029,10 @@ perz پارس پرزو
 pesce پیسو پس
 pesch پېښو پېښ
 peschel پاشل پاشلو
+pest پستو
 pestillo پستو پست
 pet پت
+peta پټ
 petal پټولو پټول
 pete پټ پت
 peter پیتر
@@ -12755,6 +13056,7 @@ pettway پټوي
 petty پاتې پاتي
 petway پټوي
 peugh پیو پی
+pew پیو پی
 pewitt پیټ پیت
 peyser پیجر
 peyton پټان پټن
@@ -12857,8 +13159,8 @@ physio فیض
 physique فزیک فیزیک
 pianists پنس
 piano پاڼه
-pianos پنځو پینځو
 piazza پزه
+pic پیک
 picas پیکاسو
 picasso پیکاسو
 picazo پیکاسو
@@ -12892,6 +13194,7 @@ pies پیسو
 pietila پټیل
 pietsch پیچ پیکه
 pihl پیل پل
+pike پاک پاکو
 piker پکار
 pikus پیکاسو
 pilate پلاټ پیلوټ
@@ -12915,6 +13218,8 @@ pilz پلس
 pin پن
 pine پاڼو پان
 pineau پین پن
+pines پنځو پنج
+ping پین
 pinged پند پنډ
 pings پنځو پنج
 pinn پین پن
@@ -12934,6 +13239,7 @@ pique پیک پک
 piqued پکت
 piquette پکت
 piracy پارسي پاړسي
+pirate پروت پرتو
 pirelli پرله
 pirkey پاړکي
 pirog پراګ
@@ -12947,6 +13253,7 @@ piss پس پیسو
 pissed پست پستو
 pistone پستون
 pit پت
+pita پټ
 pitch پیچ پېچ
 pitcher پچیر
 pithy پټې پټي
@@ -12978,7 +13285,6 @@ platen پلټنو پلېټونو
 platform پلټفارم
 plath پلیټ پلاټ
 plating پلټنو
-plato پلیټ پلېټ
 platonic پلټونکو
 platoon پلټنو پلوتون
 platte پلیټ پلاټ
@@ -12992,7 +13298,6 @@ plays پلېس پلس
 plaything پلټنو
 plaza پلاز
 plea پلي پلی
-pleas پلس
 please پلس پلېس
 pleistocene پلیستوسن پلیسټوسین
 plenty پلیني پلاني
@@ -13008,16 +13313,15 @@ plott پلاټ پلوټو
 plotting پلټنو پلوتین
 plough پلو پل
 ploughs پلاز پلس
-plow پلو
 plowing پلان پلن
 plows پلاز پلس
 ploys پلس
 plunk پلانک
-plural پلورلو
 plus پلاس
 pluta پلوټو
 pluth پلوټو
 plutonic پلټونکو
+ply پلي
 plying پلان
 pneumonia نمونیا نېمونیا
 poage پوځ
@@ -13027,6 +13331,7 @@ pocket پکت پاکټ
 pod پاد
 podge پوځ
 pods پوځ
+poe پو پ
 poehl پولو پول
 poehler پلار پولر
 poem پام
@@ -13088,6 +13393,7 @@ polluting پلوتین پلوټین
 polly پلي پولي
 pollyanna پالنه
 polo پلو
+poly پلي پولي
 polyester پلستر
 pom پام
 pommer پامیر
@@ -13124,11 +13430,13 @@ poppy پاپي
 poquette پکت پاکټ
 porcaro پارکر
 porch پارچه
+pores پارس پرزو
 poring پورن پرین
 pork پارک
 porker پارکر
 porky پاړکي
 pornography پورنوګرافي
+porous پارس پاریس
 porphyry پورفیري
 porrazzo پرزو
 porreca پارک پرک
@@ -13137,6 +13445,8 @@ portelli پرتله پرتلې
 portilla پرتله
 portly پرتله پرتلې
 portman پرتمین
+porto پورتو
+pos پاس
 posch پوښ پاسه
 pose پوځ پس
 posen پوځونو
@@ -13162,7 +13472,6 @@ poured پردو
 pouring پورن پرین
 pours پارس پرزو
 pousson پسونو
-pouting پوتین
 poutre پوټر پتر
 poverty پورته
 powdery پادري پوډري
@@ -13179,6 +13488,7 @@ powwows پوځ
 poyner پنیر
 poynor پنیر
 pozzi پوځي پسې
+pradesh پردېش
 pragmatism پراګماتیزم
 prague پراګ
 prahl پرل
@@ -13189,10 +13499,11 @@ prall پرل
 pralle پرل
 pran پرون پرین
 prance پرنس
+pratt پرتو
 prawns پرنس
 prayed پردو
 praying پرین
-prays پرېس
+pre پري
 precis پرسي
 preece پریس پرس
 prehn پرین
@@ -13220,7 +13531,6 @@ previews پرویز
 previous پروسو
 previte پروت
 prey پرې
-preyed پردو
 preying پرین
 preyista پرست پرسته
 prezzano پرځان
@@ -13235,7 +13545,6 @@ pricor پریکړو پرېکړو
 pride پردو پریډ
 prideaux پردو
 pridgen پرځان
-pried پردو
 priess پریس پرس
 priest پرستو
 priestley پریسټلي
@@ -13288,6 +13597,7 @@ prosch پروسه
 prosciutto پرښتو
 prose پروس پروسو
 prosise پروسس پروسیس
+protein پروټین
 protestant پروټسټانټ
 protocol پروټوکول
 proud پردو
@@ -13299,22 +13609,22 @@ proves پروسو
 proving پرون پروین
 provote پروت
 prowant پرنټ
+prowess پروس پروسو
 prowl پرل
 pruden پرودون
 prudhoe پرده
-prudish پردېش
 prugh پر
 prune پرون
 pruneau پرون پرین
 prusha پروسه
 prussia پروسه
-pry پرې پري
 pryce پریس پرایس
 pryde پردو پریډ
 prying پړانګ پرین
 prynne پرین
 psalm سم سالم
 pseudo سود
+psi سي سی
 psych سیک سکو
 psyche سکې سکي
 psyches سکس ساکس
@@ -13356,7 +13666,9 @@ pupa پیپ
 pupil پیپل
 pupils پیپلز
 puppy پاپي
+purdue پردیو پردو
 pure پیر پیرو
+puree پیري پیره
 purging پرځنګ
 purina پرین
 puritan پیوریتان
@@ -13377,14 +13689,12 @@ pusch پښو پاسه
 push پښو
 pushed پښتو
 pushing پښین
-pushy پښې پوښي
 puss پس پاس
 pussy پسې پسي
 put پت
+putin پټن
 putsch پچ پوچ
-putt پت
 putting پوتین
-putty پاتې پاتي
 puzzo پوځ پس
 pye پای پي
 pyhrric پرک
@@ -13405,6 +13715,7 @@ pythia پټه پته
 python پټان پټن
 qaeda کېدو کېده
 qana کان کنه
+qatar کتار
 qian جین ځینو
 qiaotou کتو کیوتو
 qin کیڼ کین
@@ -13412,6 +13723,7 @@ qing کینګ کیڼ
 qiryat کریټ
 quach کوچ کوڅه
 quack کوک کوکو
+quad کوډ کود
 quaeda کېدو کېده
 quain کوین
 quaint کونټ
@@ -13426,6 +13738,7 @@ quang کونګ کون
 quant کونټ
 quantity کوانتي
 quantum کوانټم کوانتم
+quarry کوري کوره
 quart کورت کورټ
 quarto کورت کورټ
 quarts کورتس
@@ -13434,6 +13747,7 @@ quattro کوترو
 quay کې کي
 quaye کې
 quayle کولو کول
+que کی کیو
 quealy کولی کولې
 quechee کوچي کوچی
 queen کوین
@@ -13457,6 +13771,7 @@ queue کی کیو
 queues کیسو کیج
 queuing کینګ کیڼ
 quevedo کوویډ کووېډ
+qui کې کي
 quiche کیسه کسه
 quick کوک کوکو
 quicker کویکر
@@ -13495,9 +13810,9 @@ quiros کورس
 quiry کوري کوره
 quit کوټ کویټ
 quite کوټ کویټ
-quito کتو کټ
 quits کوڅو
 quiz کوز
+quo کوو
 quoin کوین
 quon کون کوڼ
 quorum کوړم
@@ -13549,6 +13864,7 @@ radu راډیو رادیو
 rady ریډي رده
 raether رادار رادر
 raf راپه
+rafael رافایل
 rafale رافیل
 raff راپه
 raffel رافیل
@@ -13689,6 +14005,7 @@ rebate ربط
 rebbe رب ربه
 rebert رابرټ رابرت
 reboot ربط
+rec ریکو
 recchia ریکا
 recede رسیدو رسېدو
 receive روسو
@@ -13722,6 +14039,8 @@ reeck ریک ریکو
 reed رد
 reedy ریډي رده
 reeking رکن
+reel رېل
+reese ریس رییس
 reesman رسمونو
 ref راپه
 reff راپه
@@ -13746,6 +14065,7 @@ reiche راک ریک
 reicher راکړ
 reichow ریکو راک
 reick ریک ریکو
+reid ریډ
 reidel ردول ردولو
 reidy ریډي رده
 reifel رافیل
@@ -13761,7 +14081,6 @@ reily ریلي
 reiman رامن رامون
 reimann رامن رامون
 reims رمز
-rein رن
 reined ړندو
 reines رنځ
 reiney ریني رني
@@ -13820,11 +14139,14 @@ repetti راپاتې
 reph راپه
 repp رپ
 requa ریکو
+res رییس
+resale رسل
 resch ریښو رېښو
 resell رسل رسالو
 reserve ریزرو
 reseting رسټین
 resh ریښو رېښو
+reside رسېدو رسیدو
 resign ریزین
 resin ریزین
 resolve رسالو
@@ -13842,6 +14164,7 @@ reti راته
 retire ریټر
 rettig راتګ
 reusch روش ریښو
+reuse رییس ریس
 reuss روس روسو
 reuters رویټرز
 rev رایو رو
@@ -13915,6 +14238,8 @@ rhys ریس رییس
 riady ریډي رده
 rials رالز
 ribbit ربط
+ric ریکو
+rica ریکو ریک
 ricca ریکو ریک
 riccardo ریکارډ ریکارډو
 ricco ریکو ریک
@@ -13955,6 +14280,7 @@ riess ریس رییس
 rieth راته رایټ
 rife راپه
 rifle رافیل
+rig ریګ
 rigby رګبي
 rigel رجال
 rigg رګ ریګ
@@ -14031,6 +14357,7 @@ rizza رضي رض
 rizzi رضي رسي
 rizzo رض ریس
 rizzoli رسولي رسولی
+rna اړینه اړینې
 road رود
 roads روډز
 roadway ردوي
@@ -14057,6 +14384,7 @@ robe رب
 robello روبل
 robert رابرټ رابرت
 roberta رابرټ رابرت
+roberto رابرټ رابرت
 roberts رابرټس
 robertson رابرټسن
 robey روبي ربي
@@ -14092,12 +14420,14 @@ roddy رده
 rode رد رود
 rodell ردول ردولو
 roden رودونو
+rodeo رود
 rodeway ردوي
 rodge راج
 rodger راجر
 rodgers راجرز
 rodi رده
 rodolph روډولف رودلف
+rods راځو روډز
 rodwell ردول ردولو
 rody رده
 roe رو ر
@@ -14117,12 +14447,14 @@ roget روژې روژه
 rogge رګ راګ
 roggio راج راځی
 roggow رګ راګ
+rogue رګ
 rohan روان روڼ
 rohde رد رود
 rohl رول
 rohn روڼ رن
 rohs روز روس
 rohwer روهر
+roi ری
 rojek ریک ریکو
 rokahr روکر
 rokosz راکش
@@ -14138,6 +14470,8 @@ rollo رول
 rolm روم
 roloff رالف
 rolon رولونو
+rom رام
+roma روم
 roman رومان
 romance رومانس
 romann رومن رومان
@@ -14157,7 +14491,9 @@ rommel رمل
 romola رمل
 roms رمز
 ron رن
+ronald رونالډو
 ronalda رونالډ رونالډو
+ronaldo رونالډ
 ronen رنان
 roney رني رڼې
 rongji رانجه
@@ -14178,8 +14514,8 @@ ropp رپ روپ
 rorie راوړي راوړی
 rorrer راوړ راوړو
 rory راوړي راوړی
+ros روسو
 rosa روز روزي
-rosalie روزلي روزلی
 rosanna روزنه روزنې
 rosanne روسانو روسان
 rosati روسته
@@ -14236,6 +14572,7 @@ rototill رټل رتل
 rotting روټین
 rotunno روټین
 rouble روبل
+rouge روز رض
 rougeau روز رض
 rough راپه
 rought روت رت
@@ -14244,7 +14581,6 @@ round ړندو
 rounded ړوند ړندو
 rounds رنځ
 roundy ړانده ړنده
-rouse راز روس
 roused رصد
 rouser راجر
 rousing روزنو
@@ -14256,6 +14592,7 @@ roussell رسل رسالو
 rousselle رسل رسالو
 roussin روسانو روسان
 route روت رت
+router روتر
 routh راته
 routine روټین
 routing روټین
@@ -14266,7 +14603,6 @@ roving روڼ رون
 row ر
 rowden رودونو
 rowdy رده
-rowed رد
 rowell رول
 rowena رڼا روڼ
 rower روهر
@@ -14363,6 +14699,7 @@ rummy رومي
 rums رمز
 rumsey رمزي
 run رن
+rune روڼ رن
 runes رنځ
 rungs رنځ
 runny راني رني
@@ -14398,7 +14735,6 @@ rusting رسټین
 rustle رسول رسولو
 ruston راستون
 rusty روسته راسته
-rut روت
 ruta روت رت
 rutan روټین
 ruth روت رت
@@ -14410,9 +14746,11 @@ ruttan روټین
 ruttle راټول راتلو
 ruzich روسیه راجه
 ruzzo روسو روز
+rwanda ړوند
 rwandese روډز
 ryall رول ریل
 ryals رالز
+ryan راین
 ryans رنځ
 ryava رایو روا
 ryba رب ربه
@@ -14450,9 +14788,7 @@ sackville سکول
 sacra سکرو
 sad سید
 sadden سیدان سیدانو
-sadder صادر
 saddle سیدال
-sado سید سېد
 sadoff صدف
 sadye سیدي صدای
 saehan سین سن
@@ -14469,7 +14805,6 @@ sagan سیګن
 sagen سیګن
 sagging سیګن
 saginaw سیګن
-sahara شیره
 sahlen سالون سلنو
 sahlin سلنو
 sahlman سلمان سالمون
@@ -14480,7 +14815,6 @@ sailor سېیلر
 saindon سیندونو سندونو
 saint سینټ سېنټ
 sainz سنج
-saito سیټ سېټ
 sakal سکول سکالو
 sake سیک سېک
 sakhalin سکولین
@@ -14516,6 +14850,7 @@ salton سلطان
 salty سلطې سلطه
 salute صولت
 salva سلو
+salvador سلواډور
 salvatore سلوادور سلواډور
 salve سو
 salves سوز
@@ -14553,12 +14888,13 @@ sane سین سن
 saner سینیر
 sang سینګ
 sanitize سنتیز سنتز
+sanity سانتي سنتي
 sanjuan سنیان سنیانو
 sanna سنا سینه
 sanner سینیر
 sannes ساینس سنج
-sano سون سان
 sans ساینس سنج
+sanskrit سنسکریت
 sanso ساینس
 sansui ساینسي
 santa سنا سینه
@@ -14576,6 +14912,7 @@ sapper سپر
 sapphire سفر سفیر
 sapping سپین سپینو
 sapporo سپرو سپور
+sar سور
 saracco سړک سرک
 sarajevo سوریو سړیو
 saran سیرین
@@ -14616,6 +14953,8 @@ sauce ساس
 saudi ساده
 sauers سوارز
 sauerwein سرونو
+saul سول
+sauna سون
 saunas سنج
 saunders سندرز
 saurer سر سور
@@ -14626,7 +14965,6 @@ savannah سون
 savas سوز
 save سو
 savell سویل سوېل
-saver سوړ
 savers سوارز
 saves سوز
 savill سویل سول
@@ -14636,14 +14974,13 @@ saving سون
 savitch سوچ سوچه
 savona سون سوونو
 savors سوارز
+savory سیوري سوري
 savvy سوي سوی
 sawall سول سوال
 sawdey ساده سودي
 sawdon سوډان سودان
 sawdy ساده سودي
-sawed ساد
 sawhill ساحل سهیل
-sawing سون سینګ
 saws سوز ساز
 sawtell ساتل ساتلو
 sawtelle ساتل ساتلو
@@ -14659,6 +14996,7 @@ says ساز سایز
 sayyid سید
 scala سکالو سکول
 scalera سکالر
+scan سکین سکېن
 scanner سکینر سکېنر
 scar سکرو سکارو
 scare سکرو
@@ -14922,6 +15260,7 @@ schwimmer شویمر
 schwind شونډو
 schwing شونو ښون
 schwinn شونو ښون
+sci سي سی
 scianna شنه شونو
 science ساینس
 scilla سل سلو
@@ -14969,6 +15308,7 @@ seagoing سیګن
 seahawk سهاک
 seaholm سهم
 seal سلو
+sealing سیلین سلنو
 sealock سلوک
 seam سیمو
 seams سیمز
@@ -14989,6 +15329,7 @@ seawell سویل سوېل
 seawright سیرت سرایت
 sebby سابه
 sebi سابه
+sec سېک
 secchia سکه سیکه
 seck سیک سېک
 seckel سکول سکالو
@@ -14997,6 +15338,7 @@ secondary سکندریې سکندریه
 secoy سکې سکي
 secretary سکرترې
 secrete سکرټ
+sedan سوډان سودان
 sedative ساداتو
 seddon سیدان سیدانو
 sedore صادرې
@@ -15073,6 +15415,7 @@ semmel سمول
 semmes سیمز
 semrow سمر ثمر
 semtex سیمټیکس
+sen سن
 senate سنت سینټ
 senator سینټر سنټر
 send سند
@@ -15094,6 +15437,8 @@ sensei ساینسي
 sent سنت
 sentra سینټر سنټر
 senty سانتي سنتي
+seo سی
+seoul سل
 sep سپو
 separate سپارت
 sepeda سپیډ
@@ -15103,9 +15448,10 @@ seppi سپي سپی
 september سپټمبر
 sequa سکو سیکو
 sequeira سکویر
+sequel سکول
 sequin سکون
 seratti سرته
-serbian سربیانو
+serbia صربیا
 serenade سرهند
 serene سیرین
 sergey سرګي
@@ -15126,8 +15472,8 @@ serviou سرو سروی
 serviss سرویس سروېس
 sessa سیس ساس
 set سېټ
+seth سیټ
 sether صدر صادر
-seto ساتو
 settanni ساتنې ستوني
 setting ستن ستنو
 settle ساتل ساتلو
@@ -15143,8 +15489,10 @@ sevilla سوله سویلي
 seville سویل سول
 sewall سول سل
 sewell سویل سول
+sewer سر
 sewers سوارز
 sewing سون
+sewn سن
 sex سکس سیکس
 sexson ساکسون
 sexy سکسي
@@ -15164,6 +15512,7 @@ shackelton شېکلټن
 shackle شکل
 shackleton شېکلټن
 shade شیدو شد
+shaded شدیدو
 shades ښځو
 shading شدن
 shadow شیدو شاید
@@ -15175,11 +15524,11 @@ shaffer شفر
 shag شګو
 shagging ښېګڼو
 shaggy شګې شګه
+shah شو
 shaiken شکونو
 shake شک
 shaken شکونو
 shakespeare شکسپیر شکسپییر
-shakier ښکار
 shaky شکه
 shale شل سهیل
 shali سهیلي شیلي
@@ -15189,6 +15538,7 @@ shame شم سهم
 shamelle شامل شمال
 shamu شام شم
 shandy شیندي ښندي
+shane شین شنو
 shanghai شانګهای
 shannon شننو
 shanti شانته
@@ -15202,10 +15552,12 @@ shaq شک شاک
 shaquille شکل
 share ښار شېر
 sharell شړل شړلو
+sharia سهاره
 sharing شیرین
 shark شارک
 sharkey ښارکي ښارکې
 sharla شړل شړلو
+sharma شرم
 sharon ښارونو شیرین
 sharpe شارپ
 sharrock شریک شرک
@@ -15216,16 +15568,20 @@ shaull شول
 shave شو
 shaved ښود
 shaving شونو ښون
+shaw ښه
 shawgo شګو
 shawhan شونو ښون
 shawley شولې شوله
 shawmut شمیت شمیټ
+shawn شان شونو
 shawver شور
 shayne شین شنو
+shea شي
 sheaffer شفر
 sheathe شته شیدو
 sheathed شیدو شد
 sheathing شدن
+sheba شیبه شبه
 shebek شبکو
 sheck شک
 shed شیدو شاید
@@ -15234,6 +15590,7 @@ sheds ښځو
 sheehan شین شان
 sheehy شي
 sheelah شل شلو
+sheen شنو
 sheep شپو
 sheer شر
 sheeran شیرین
@@ -15244,6 +15601,7 @@ sheffey صحیفې
 sheftel شفتالو
 shehan شاهین شاهانو
 shehane شاهین شاهانو
+sheikh شک
 sheilah شل شلو
 shell شل سهیل
 shelley سهېلي سهیلي
@@ -15251,7 +15609,9 @@ shelling شیلینګ
 shelly سهېلي سهیلي
 shelve شلو
 shemwell شمول
+shen شان
 shenzhen شینزین
+shepard شیپرډ
 shephard شېپرډ شیپرډ
 shepheard شېپرډ شیپرډ
 shepherd شېپرډ شیپرډ
@@ -15281,10 +15641,8 @@ shibanna شیباني
 shibata صحبت شباهت
 shibley شبلي
 shick شک
-shied شاید شیدو
 shiff شپه
 shiffer شفر
-shigeo شګې
 shill شل شلو
 shilling شیلینګ
 shiloh شلو شل
@@ -15317,6 +15675,7 @@ shirt شهرت
 shit شتو
 shitila شټل شاتله
 shitty شته
+shiva شو
 shiveley شولې شوله
 shively شاولي شولې
 shivley شولې شوله
@@ -15327,7 +15686,6 @@ shocked شوکت
 shocker شکر ښکار
 shockey شکه
 shockley ښکلي ښکلی
-shod شد شاد
 shoddy شادي ښادي
 shoe شو شوو
 shoemaker شومېکر
@@ -15358,7 +15716,6 @@ shoumaker شومېکر
 shout شاتو شتو
 shoved ښود
 shoving شونو ښون
-showa شو
 showboat صحبت
 showcased شکست
 showdown شدن
@@ -15370,7 +15727,6 @@ showing شونو شین
 shown شونو شنو
 showroom شرم
 shows ښځو
-showy شوي
 shrake شریک
 shreck شریک شرک
 shrieked شرکت
@@ -15387,7 +15743,6 @@ shugrue شوګر
 shull شول شل
 shumaker شومېکر
 shumate شمیت شمیټ
-shun شان شنو
 shunned شنډ شونډو
 shunning شننو
 shuping شوپن شپنو
@@ -15396,7 +15751,6 @@ shut شاتو شتو
 shuttle شټل شاتل
 shy شي
 shyjan ښځینو
-shyly سهیلي شیلي
 shyne شان شین
 siamese سیمیز سیمز
 sibelle سبیل
@@ -15460,6 +15814,7 @@ sikhs سکس سیکس
 sikora سکرو سکاره
 silbaugh سلب
 siler سالار سېلر
+silicon سلیکان
 silicone سیلیکون
 sill سل سلو
 siller سېلر
@@ -15471,6 +15826,7 @@ silmon سلمان
 silva سلو
 silvana سیلون
 silvery سلوري
+sim سیمو
 simas سیمز سیمیز
 simcha سیمه سمه
 simes سیمز
@@ -15487,16 +15843,17 @@ simony ساماني سمونې
 sims سیمز
 sin سین
 sinagra سنګر سینګر
+sinai سینې
 sinar سینیر
 sinatra سنټر
 sindoni سیندونه سندونه
 sindt سنت سینټ
-sine سان سن
 sineath سنت سینټ
 sines ساینس
 sing سن
 singapore سنګاپور سینګاپور
 singer سینګار
+singh سنګ سن
 singing سنګین سنن
 sings سنج
 sinha سینه سنه
@@ -15557,6 +15914,7 @@ skye سکې سکي
 skylight سکلېټ
 skylite سکلېټ
 skywriter سکرتر سکرټر
+slab صلیب
 slabaugh سلب صلیب
 slaby صلیبي صلیبی
 slacken سلیکان
@@ -15587,6 +15945,7 @@ sleeve سلو
 sleigh سله صلی
 sleight سلیټ
 sletten سلطان
+slew سل
 slide سلایډ
 sligh صلی صلي
 slight سلیټ
@@ -15601,6 +15960,7 @@ sloan سلنو
 sloane سلنو
 slogan سلګونو
 slough سلف
+slovakia سلوکې
 slovakian سلوکیانو
 slow سل
 slowey صلی صلي
@@ -15611,7 +15971,6 @@ slutty سلطې سلطه
 sly صلي
 slye صلی صلي
 small سمول
-smear سمر
 smiddy صمدي
 smith سمت سمیت
 smithee سمتي
@@ -15662,9 +16021,8 @@ soady سودي سوده
 soak سکو
 soaking سکین سکن
 soap سپو
-soapy سپي
+soar سور
 soaring سورن
-sob سبو
 sobeck سبک
 sobey سوبې صوبې
 sobiech سابه سوبه
@@ -15686,6 +16044,7 @@ soda سود
 sodas سدوزو
 sodden سوډان سودان
 soden سوډان سودان
+sodium سوډیم
 sodom سودیم صدام
 sodomy صدمه
 soens سنج
@@ -15706,6 +16065,7 @@ sojka سوکه سکه
 sokaiya سکای
 sokolov سکالو
 sokolow سکالو سکول
+sol سل
 solak سلوک
 solan سلنو
 solari سلوري
@@ -15788,6 +16148,7 @@ sos اوس
 sosna سوسن
 soss ساس
 sotello ستایلو ستایل
+soto سوت
 sottile سټیل
 souccar سکرو سکارو
 souers سوارز
@@ -15816,9 +16177,9 @@ sowed ساد
 sowell سویل سوېل
 sowers سوارز
 sowing سون
-sown سن
 sows سوز
 sox سکس ساکس
+soy سوي
 soyars سوارز
 spa سپاه
 space سپېس
@@ -15847,6 +16208,7 @@ spear سپرو
 spearing سپړنو
 spearman سپرمونو
 spease سپېس
+spec سپکو
 speck سپک سپکو
 spencer سپنسر
 spends سپنج
@@ -15856,6 +16218,7 @@ spewing سپین سپینو
 speyer سپر
 sphar سفر
 sphere سفر سفیر
+spice سپېس
 spiess سپېس
 spike سپک سپکو
 spiky سپکې سپکه
@@ -15868,6 +16231,7 @@ spinola سپینولو
 spinosa سپڼسي
 spins سپنج
 spiny سپینې سپیني
+spiral سپارل سپارلو
 spire سپر سپرو
 spitzley سپېڅلي سپیڅلي
 spiva سپیو سپو
@@ -15887,6 +16251,7 @@ sporty سپورتي سپارتي
 sprain سپړنو
 sprang سپړنو
 sprawl سپړل سپړلو
+spray سپري
 spraying سپړنو
 spree سپړي
 spreeman سپرمونو
@@ -15906,16 +16271,18 @@ spry سپري سپړي
 spur سپر
 spurn سپړنو
 spurring سپړنو
-spurt سپارت
 spy سپي
 spying سپین سپینو
 spyware سپور سپورو
+sql سکول
 squall سکول
 square سکویر
+squat سکوت
 squealing سکولین
 squier سکویر
 squire سکویر
 sram شرم
+sri سره
 srock شرک
 ssangyong سنګین
 staack سټاک
@@ -15936,6 +16303,7 @@ stain ستنو
 stairs سټرس
 stairways ستروس
 stale سټیل
+stalin سټالین
 stalk سټاک
 stalling ستالین سټالین
 stallion ستالین سټالین
@@ -15956,7 +16324,6 @@ starck سټارک
 stare ستر سترو
 starke سټارک
 starr سترو
-starry ستوري سترې
 stars سټرس
 starship سټارشېپ
 starve سترو ستورو
@@ -15986,6 +16353,7 @@ steels ستلج
 steer سترو
 stees سټیج سټېج
 stefa سټاف
+stefan سټېفن
 steffan سټیفن سټېفن
 steffe سټاف
 steffen سټیفن سټېفن
@@ -16019,6 +16387,7 @@ stereo سترو ستر
 sterk سټارک
 steve سټیو
 steven سټون
+stevens ستونزو
 stew ست
 stewart سټوارټ
 stewing ستون سټون
@@ -16108,6 +16477,7 @@ struck سټروک
 struss سترس سټرس
 struve سترو
 stu سټیو ست
+stuart سټیوارټ
 stucco سټاک
 stuck سټاک
 stucke سټاک
@@ -16128,6 +16498,7 @@ styles ستلج
 styling ستالین سټالین
 stylize ستلج
 styne ستن ستنو
+sub سبو
 subaru صبر
 subpoena سپین سپینه
 subpoenas ساپینز سپنج
@@ -16144,6 +16515,7 @@ suckle سکول سکالو
 suckow سکو
 suckrow سکرو
 sucks سکس ساکس
+sudan سودان
 suddarth صدارت
 suddath سادات ساداتو
 sudden سوډان سودان
@@ -16153,18 +16525,15 @@ sue سو
 sued سود
 suede سود
 suess سویس
-suez سویس
 suffer سفر
 sugar شوګر
 suhler سولر
 suhre سر سور
-suing سون سونګ
 suisse سویس
 suit ست سوت
 suitable سټیبل
 suite سوت سوټو
 suiting ستن ستنو
-suitors سټرس
 sukey سکې سکي
 sukharev سکرو
 sulak سلوک
@@ -16224,17 +16593,21 @@ superman سپرمونو
 suppa سپي سپه
 supper سپر سوپر
 support سپورت سپورټ
+supra سوپر سپرو
 supreme سپرم
 surbaugh سرب
 sure شر شور
 surety شرطي شرطیه
 surowiec سرک
+surreal سیریل سیرل
 surrell سړولو
+surrey سره سړي
 surround سرهند
 surveil سړولو
 survey سروې
 surveyed سرود
 surveyor سرور
+surveys سروېس
 sus ساس
 susan سوزان
 susana سوسن
@@ -16253,16 +16626,15 @@ suther صدر صادر
 sutley ساتلي ساتلی
 suttle ساتل ساتلو
 suttles ستلج
+sutton ستن
 suydam صدام
 suzanna سوزان
 suzanne سوزان
 suzette سست
-suzie سازي
 suzy سوزي سوځي
 svehla سویلي سویل
 svelte صولت
 swaby سوبې صوبې
-swahili سواحلي
 swalley سولې سولي
 swallow سول سوال
 swallowing سوالونو
@@ -16344,6 +16716,7 @@ syp سپو
 sypher سفر
 syphon صفین
 syrek سړک سرک
+syria سره
 syring سیرین
 syron سرونو سیرین
 syrup سرپ سرپو
@@ -16371,7 +16744,6 @@ tabb طب طیب
 tabby طبي تبې
 taboo طیب
 tabron ټبرونو
-tacit ټیست ټیسټ
 tack ټکو ټیک
 tacke ټکو ټیک
 tacked ټکټ ټیکټ
@@ -16382,7 +16754,9 @@ tackitt ټکټ ټیکټ
 tackle ټاکل تکل
 tacks ټکس
 tacky ټکي ټکی
+taco توکو
 tacoma توکم توکمه
+tactic تکتیک
 tad ټېډ
 tada توده تود
 tadd ټېډ
@@ -16401,17 +16775,18 @@ tagg تګ
 tagge تګ
 tague تګ
 tahoe ته
+tai تي
 tail تېلو
 tailing تلین
 taillon تلین
 tailor ټیلر
 taiwan تاوان
+taj تازه
 takata ټکټ
 take ټیک ټکو
 takecare ټکر
 takeda تاکید
 taken ټکان
-takeo توکو توکی
 taketa ټکټ
 taketh ټکټ ټیکټ
 takihyo توکی ټکی
@@ -16419,6 +16794,7 @@ takoma توکمه
 talaga ټولګه
 tale تل تېلو
 talese ټولیز ټولیزو
+taliban طالبانو
 talk توکو ټوک
 talked ټکټ
 talker ټکر ټوکر
@@ -16437,9 +16813,10 @@ tallulah تللې تلله
 tally تلې تلي
 tallyho تله
 talon تالان تلین
-tama تام
+tam ټیم
 tambs ټایمز تامس
 tame ټیم تم
+tamil تامیل
 tamm تام ټیم
 tammany ټیمونه
 tammaro تومور
@@ -16451,10 +16828,11 @@ tan تنو
 tanaka ټانک تنکي
 taneja تنه ټنه
 tanen ټنونو
+tang تن
 tangen ټانګونو
 tanger ټینګار
+tango ټینګ
 tangs طنز
-tani تنه
 tanis ټینس
 tann تن تنو
 tanned تاند تند
@@ -16465,6 +16843,7 @@ tansey طنزي طنزیه
 tansu ټینس
 tansy طنزي طنزیه
 tanya تنی تڼیو
+tanzania تنزانیا
 taos تاج تاسو
 tap ټاپو
 tapas تپوس
@@ -16475,15 +16854,16 @@ tappan ټپونو
 tappe ټاپو ټپ
 tappen ټپونو
 tapper ټېپر
+tara تر
 tarallo تړلو تړل
 taravella تېرولو تیرولو
-tardy تردې تردي
 tariff طرف
 tarkowski تارکوفسکي
 tarnow تورن تورنو
 tarnower تورنر ټرنر
 taro تېرو
 tarom ټرام
+tarot تر
 tarrance ټرانس ترانس
 tarrant ټورنټو تورنټو
 tart طهارت
@@ -16497,8 +16877,10 @@ tassi تاسې تاسي
 tassin ټایسن
 tasso تاسو
 taste ټیست ټیسټ
+tata ټوټه
 tate ټیټ تیت
 tatsch تکه ټاکه
+tattoo ټیټو ټیټ
 tatty ټیټې ټیټه
 tatu ټوټو توت
 taught توت ټوټو
@@ -16537,6 +16919,7 @@ teck ټکو ټیک
 tecla ټاکل تکل
 teddie تادیې تادیه
 teddy تادیې تادیه
+tee ټي
 teehan تن تنو
 teeling تلین
 teen تن تنو
@@ -16549,6 +16932,7 @@ tefft ټافت
 tegeler تګلار
 tegge تګ
 tehan تن تنو
+tehran تړون
 tehrani ترانې ترانه
 tehrans ټرانس ترانس
 teicher ټکر
@@ -16594,6 +16978,7 @@ teresa تریس
 terese طرز تریز
 teressa تریسا تریس
 terms ترمذ
+terra تر
 terrace تراس تریس
 terraced ټرسټ
 terrain ترینو
@@ -16710,6 +17095,7 @@ thera تېره تیره
 therani ترانې ترانه
 there ډېر ډیر
 therein درنو
+thereof ډېرو ډیرو
 thereon تهران درنو
 theresa تریسا تریس
 therese تریس
@@ -16778,6 +17164,7 @@ this ډیس
 thissen تحسین
 thistle تحصیل
 thither دتر دتیر
+tho د
 thobe توب طب
 thode تود تودو
 thoele ټول ټولو
@@ -16989,12 +17376,13 @@ titone تیتان
 tizzy تیزي تیزی
 tkach کچه کچو
 tkacz کچه کچو
-toad تودو
 tobu توب
+toby طبي توبې
 tocco توکو ټکو
 tock توکو ټوک
 tocqueville توکوېل ټکول
 today توده
+todd تودو
 toe تو ټو
 toes توجو
 toews تیز تاج
@@ -17002,16 +17390,14 @@ toff تپه ټپه
 toft ټافت
 tofu تپه
 toil ټولو
-toiled تولد
 toiling ټولنو
 toity ټوټې ټوټي
-tokai توکي
 token توکونو ټوکونو
 tokkin ټاکنو
 tokyo توکو
-tokyu توکی
 toliver تلوار
 toll ټول ټولو
+tolle ټول ټولو
 tolled تولد
 tolling ټولنو
 tolliver تلوار
@@ -17022,7 +17408,6 @@ tomasso توماس ټوماس
 tomato تهمت
 tomatoe تهمت
 tomb تم ټیم
-tomei ټامي
 tomey تمې تمه
 tommie تمې تمه
 tommy تمې تمه
@@ -17067,6 +17452,7 @@ topor توپیر
 topp ټاپو توپ
 topper توپیر
 topple تپل ټپلو
+tor تور
 torchia ترکیه ترکیې
 tore تر تور
 torell تړل تړلو
@@ -17076,24 +17462,27 @@ toribio تربیې
 tormey تړمه
 torney تورنه تړنه
 toronto تورنټو
+torque ترک تورک
 torrance ټرانس ترانس
 torrejon ټروجن
 torrence ټرانس ترانس
 torrens ټرانس ترانس
 torrent ټورنټو تورنټو
+torres طرز ترځ
 torrijos تریس
 tort طهارت
 torte طهارت
 tortoise ترڅو ترڅ
 torumi تړمه
+tory توري ترې
 tosch تش تشو
-toshio تش
 tosi توصیه
 toss تاسو
 tossed توسط
 tosses تاسیس
 tossing تسنګ
 toste توسط
+tote توت ټوټو
 totten توتان توتانو
 totton توتان توتانو
 totty ټوټې تاته
@@ -17115,6 +17504,7 @@ tourville تیرولو تیرول
 tousey تاسې تاسي
 toussie توصیه
 tovaz توجو
+tow ټو
 towards ترځ ترځو
 towboat تبت
 towe تو ټو
@@ -17133,7 +17523,6 @@ toy ټي تي
 toyama ټیم تیم
 toyboy طبي توبې
 toyed تود تودو
-toyo تی
 toyota ټیټ
 toys تیز توجو
 tozer تزار تجار
@@ -17150,17 +17539,17 @@ trail تړلو
 train ترینو
 trainee ترېنه
 traits ترڅو
-tramp ټرامپ
 trampe ټرمپ ټرامپ
 trams ترمذ
 tran ترین ترینو
 trance ټرانس ترانس
-trang ترین
+trans ترانس
 transcription ټرانسکرپشن
 transistor ټرانزیسټر
 transit ټرانزیټ
 transport ټرانسپورټ
 traugh تر
+trauma ټرام
 traumas ترمذ
 trausch تراوسه
 trauth ټروت
@@ -17168,6 +17557,7 @@ traweek ترک
 trawick ترک
 tray تره
 traynor ټرنر
+trays تریز طرز
 treads ترځ ترځو
 trease طرز تریز
 treatise ترڅو ترڅ
@@ -17214,6 +17604,7 @@ trista ټرسټ
 trites ترڅو ترڅ
 tritz ترڅو ترڅ
 trivette ټروت
+trivia تروا
 trnka ترنک
 trobaugh تراب
 trochmann ترکمن
@@ -17231,6 +17622,7 @@ trottier ټراټر
 troubles طرابلس
 trough طرف
 trounce ټرانس ترانس
+troy ترې
 troyanos ټرانس ترانس
 troyat ټروت
 troyer ترور
@@ -17251,6 +17643,7 @@ truicko ترک
 trujillo تره
 trull تړل تړلو
 truly تړلي
+truman ترومن
 trump ټرامپ
 trunzo ټرانس ترانس
 trus تراس
@@ -17266,7 +17659,6 @@ tryst ټرسټ
 tschetter چتر
 tschida چاد چاډ
 tschopp چاپ چپ
-tse سي
 tsingtao څنډو سنتو
 tsuda سود سودا
 tsuji سوځي
@@ -17286,6 +17678,7 @@ tuckey ټکي توکی
 tucking ټاکنو
 tuckman توکمونو
 tucks ټکس
+tue تو ټو
 tuesday تصدي
 tuff تپه ټپه
 tufo تپه ټپه
@@ -17344,8 +17737,9 @@ tux ټکس
 tuzla تسلا
 tvs توجو
 twas توجو
-tweed تودو
+tweak توکو
 tweedy تودې توده
+tweet توت ټوټو
 twelve ټولو
 twenty توني ټوني
 tweten توتان توتانو
@@ -17369,6 +17763,7 @@ tygar ټاګور
 tying تن
 tyke ټکو ټیک
 tylan تالان تلین
+tyler تالار
 tynan ټنونو
 tyndall ټینډال ټینډیل
 tyne تن تنو
@@ -17396,6 +17791,7 @@ uelmen المان
 uemura ومړه
 ueno ونو وینو
 ufo یوپه
+uganda یوګاندا یوګانډا
 uhh او و
 uhland الهند اولاند
 uhler ولاړ
@@ -17425,9 +17821,12 @@ ulsan اولسونو
 ulva ولو الو
 umm ام امو
 ummel عمل
+una ونه ان
 unarm نرم نرمو
 unaware انور اونور
+und اندو
 undine انډین اوندن
+undo اندو
 undoing اندونو
 undone اندونو اوندن
 undress اندرس
@@ -17439,6 +17838,7 @@ unease انیس نیز
 uneasy اونیزه اونیزې
 unequal نیکول
 unesco یونسکو یونېسکو
+uneven عنوان
 unfair نفر نفرو
 unfit نفتو نفت
 ung ان آن
@@ -17456,7 +17856,6 @@ unlock نلکو
 unlucky نلکې نلکه
 unmoved نمود
 unnerve انارو نېرو
-uno نو ونو
 unravel نړیوال نړیوالو
 unread نړېدو
 unring نرنګ
@@ -17468,7 +17867,6 @@ unsettle انسټال
 unsubtle انسټال
 unsung انسان
 unsure نشر
-untie انټي
 unto انتی
 untrue انټر عنتر
 unum یونیم
@@ -17498,6 +17896,7 @@ urbas ارباز
 urda اردو
 urick یارک
 urine یاران یارانو
+url وړل وړلو
 ursa ارثي ارث
 usa یوسي یوسه
 usafe یوسف
@@ -17537,6 +17936,7 @@ vajda وده واده
 vajna ونه وینا
 val ویل
 valda والد ولد
+vale ویل ول
 valence ولانس
 valid ولد
 validate ولادت
@@ -17561,7 +17961,6 @@ vallis ولس والس
 vallo ویل والو
 vallot ولټ والټ
 valls ولس ولز
-valor ولاړ ویلر
 valtierra والټر والتر
 valuable والیبال
 value والی ویلی
@@ -17573,7 +17972,6 @@ vanes وینس وینزو
 vaness وینس ونیسو
 vanessa ونیسي ونیسو
 vangy وینځې وینځه
-vanish ونشو
 vanished ونښت
 vann ونو ون
 vanna ونه وینا
@@ -17612,10 +18010,13 @@ vassey وسي وسې
 vassiliou وسلو وسیلو
 vassily وسلې وسیلې
 vast ویسټ وېسټ
+vat وتو
+vatican واټیکان
 vaugh وو وه
 vaughan ونو وان
 vaughn ونو وان
 vaught ووت واټ
+vault والټ
 vauxhall وکښل
 vawter واټر
 veasey وزي وځي
@@ -17626,7 +18027,6 @@ vecchio ویکی
 vecci وچې وچي
 vedder وډار
 veeder وډار
-veered ورډ
 veering ورین
 veers ورځ ورځو
 vega وېګ ویګ
@@ -17634,6 +18034,7 @@ vegan وګڼو
 veggie وجې وجي
 vegh وېګ ویګ
 veiga وېګ ویګ
+veil ول
 veillette ولایت
 veilleux ویل والو
 vein ونو وینو
@@ -17645,13 +18046,18 @@ velocity ولوستې ولوسته
 veltre والټر والتر
 venal وینیل
 venema وینم
+venezuela وینزویلا
 venice وینس ونیسو
 venn ونو ون
 venne ونو ون
+venue ونیو
+venues وینزو وینځو
 venus ونیسو
+vera وړ
 veracity ورستي ورسته
 veras ورځ ورځو
 vercher ورکړ
+verde وړدي وړدی
 verdes وړدي وړدی
 veres ورځ ورځو
 verge ورځ ورځو
@@ -17688,6 +18094,7 @@ vessey وسي وسې
 vest ویسټ
 vesta واسطه وېسټ
 vesuvius وسواس
+vet واټ وتو
 veterinary وترنري
 veto ویټو
 vetsch وچ وچو
@@ -17698,6 +18105,7 @@ vexing واکسین واکسینو
 via وایي
 viall ویل وال
 viansa وینس
+vibe ویب وب
 vibhu ویب وب
 vice وس ویس
 vicker وکړ
@@ -17712,7 +18120,6 @@ victoire ویکتور ویکټور
 victoria ویکټوریا
 video ویډیو
 vidor وډار
-vied ود
 vienna وینا ونه
 vienneau ونو وینو
 viennese ونیسو وینس
@@ -17721,13 +18128,13 @@ viers ورځ ورځو
 viertel ورتلو
 view وی ویو
 viewed وید ویډ
+viewer ویر ویاړ
 viewing وینګ
 views ویس
 vigen وګڼو
 vigneault وګڼو
 vigue ویګ وېګ
 viking وایکینګ
-vile ویل وال
 villa ویل ویلي
 villainous ولانس
 villains ولانس
@@ -17745,6 +18152,7 @@ vinal وینیل
 vince وینس
 vincent وینسنټ
 vine ونو وان
+vines وینزو
 vinicio ونیسو ونیسی
 vinnie وني ونې
 vinny وني ونې
@@ -17754,6 +18162,7 @@ violator والټر والتر
 violence ولانس
 violet والټ
 violists ولس
+viral وړلو
 virazole ورسول وارزول
 vires ورځ ورځو
 virge ورځ ورځو
@@ -17768,6 +18177,7 @@ vision وزن وژنو
 visit وصیت
 visor وزیر وزر
 vista ویسټ ویست
+vita واټ وتو
 vital وتلو
 vitally وتلي وتلی
 vitek وټاکو
@@ -17814,6 +18224,7 @@ voltage ولټېج
 voltaire ولټېر
 voluble والیبال
 volume ولیم
+von ونو وان
 vong ونو وان
 vonnie وني ونې
 vonny وني ونې
@@ -17825,10 +18236,9 @@ voss وس وسو
 votava وتو
 vote ووت وتو
 voting وطن
-vouch وچو
 vought ووت واټ
+vous وو و
 vowed ود
-vowel ول
 vowell وویل
 vowels ولس ولز
 vowing وون وینګ
@@ -17850,15 +18260,15 @@ wacker وکړ
 wackerle وکړل وکرل
 wacko واک
 wacky ویکي ویکی
-wad ووډ
-wada واده
 wadas ووډز
 waddell ووډهل
 waddle ووډهل
+wade وید ویډ
 wader وډار
 wadle ووډهل
 wads ووډز
 wag وېګ ویګ
+wager ویجاړ وېجاړ
 wagg وېګ ویګ
 waggener واګنر
 wagging وګڼو
@@ -17869,10 +18279,11 @@ wagoneer واګنر
 wagy واګي واګې
 wahler ولاړ
 waibel وبولو
-wailed ولد
 waist وېسټ
 wait ویت وتو
 waiting وطن
+waive وو
+waived وود
 waiving وون ووینو
 wajda وده واده
 wake وییکو
@@ -17909,11 +18320,14 @@ walls ولس ولز
 wally والي ویلي
 walpole والپول
 walston وولسټون
+walt والټ
 walter والټر والتر
 walther والټر والتر
 walthour والټر والتر
 waltz ولس والس
 waltzing ولسن
+wan ونو وان
+wand ونډو
 wanes وینس وینزو
 wang ونو ون
 wann ونو وان
@@ -17924,12 +18338,13 @@ warchol ورکول ورکولو
 ward وارډ
 wards ورځ ورځو
 wardwell واردول واردولو
+ware وړ ور
 wareing ورین
-wares ورځ ورځو
 warf وورف ورپه
 waring ورین
 warner وارنر
 warrell وړل وړلو
+warren وارن وران
 warrick ورک
 warring وارن ورین
 wars ورځ ورځو
@@ -17952,6 +18367,7 @@ wassily وسلې وسیلې
 wassom وسیم
 wassum وسیم
 waste وېسټ ویسټ
+wat ووت
 watch وچ وچو
 waterloo واټرلو
 watery وتړي
@@ -17975,7 +18391,6 @@ wayson وزن
 weak وییکو
 wealth ولټ
 wealthy ولټه
-wean ونو وینو
 wear ور
 wearing ورین
 wears ورځ ورځو
@@ -17995,10 +18410,10 @@ wed ود
 wedged واجد
 wedgewood وجود
 wedgwood وجود
+wee وې
 weed ود
 weeden ودان ودانو
 weedon ودان ودانو
-weedy ودې وده
 week وییکو
 weers ورځ ورځو
 wegener واګنر
@@ -18040,6 +18455,7 @@ weisz وېش ویش
 weitek وټاکو
 weitzen واټسن واټسون
 welby ویلبي
+weld والد
 weldin والدینو والدین
 welding والدینو والدین
 well ویل ول
@@ -18063,6 +18479,7 @@ wenge ونو ون
 wenz وینس وینزو
 wenzhou وینزو وینځو
 were وړ ور
+wes ویس
 wesch وېش ویش
 wesche وېش ویش
 wescoat واسکټ
@@ -18132,7 +18549,6 @@ wherry وړي وېرې
 whet هویت واټ
 whether وډار
 whetted وتد
-whew وو و
 which وچ وچو
 whicker وکړ
 whidden ودان ودونو
@@ -18186,7 +18602,6 @@ whole حل هول
 wholly هولي هلې
 whom هم
 whomever هموار
-whoo وو و
 whoop هوپ
 whoosh وشو وسه
 whopper هوپر
@@ -18218,12 +18633,15 @@ wiemann ومن ومنو
 wiers ورځ ورځو
 wiess وس ویس
 wieting وطن
+wig وېګ
 wigen وګڼو
 wigg ویګ وېګ
 wigger وګړ
 wiggin وګڼو
 wight واټ وتو
 wignall وګڼل
+wii وې
+wiki وکي
 wikipedia ویکیپیډیا
 wikis ویکیز
 wikle وکیل
@@ -18234,6 +18652,8 @@ wilden والدینو والدین
 wilding والدینو والدین
 wildon والدینو والدین
 wildt ولټ
+wiley والي ویلي
+wilhelm وېلهلم
 wilhelma ویلهلم
 wiliams ویلیامز ویلیمز
 wilkey ولکې ولکه
@@ -18275,7 +18695,6 @@ willy ویلي ولي
 wilson ویلسن وېلسن
 wimmer ومړ
 win ونو
-wince وینس
 wind ونډو
 windes وینځو
 window وند
@@ -18388,7 +18807,6 @@ woolever ولور
 woolley ولي ولې
 woolly ولي ولې
 woolum ولیم
-wooly ولي ولې
 woong ونو ون
 woosley وزلي وزله
 wootten وطن
@@ -18417,7 +18835,7 @@ wotton واټن وطن
 would ووډ ود
 woulfe ولف وولف
 wound ونډو
-wove وو
+woven ووینو
 wowing وون وینګ
 wows وس وزو
 wrack ریک راک
@@ -18463,6 +18881,7 @@ wurzel وارزول
 wuss وس وسو
 wussow وسو وس
 wuzzy وزي وځي
+wyatt واټ وایټ
 wyble وبولو
 wyden ودان ودونو
 wyers ورځ ورځو
@@ -18519,8 +18938,10 @@ yake یک
 yakima یکم
 yale یېل ییل
 yamaha یمه
+yan ین
 yaney یني ینې
 yanez ینس
+yang یان
 yanni یانې یاني
 yaron یاران یارانو
 yarrow یورو یار
@@ -18534,6 +18955,7 @@ yawning یونین
 yazov ییزو
 yazzie ییزې ییزه
 ybarra ایبري
+yea یې
 yeadon یادونو
 yeah یې یا
 year یر
@@ -18589,17 +19011,16 @@ youtube یوټیوب
 youtz یوڅو
 yoyos ییز ییزو
 ysleta اصلیت
+yuan یان
 yucca یک یکی
 yuck یک
 yucky یکی
 yuill یل یلو
 yuille یل یلو
-yukio یکی
 yuli یوله
 yummy یمې یمه
 yuppie یاپه یوپه
 yurchak یارک
-yuri یووړې
 yurick یورک
 yury یوري یووړې
 yust یاست
@@ -18611,6 +19032,7 @@ zabala زابل
 zabows سبز
 zaccaria زکریا
 zaccaro سکرو ذکر
+zach جیک جک
 zachar ذکر سکرو
 zachariah زکریا
 zacher ذکر
@@ -18627,6 +19049,7 @@ zagat زایګوټ
 zagha جوګه جګه
 zahler سالار
 zahm سیمو سم
+zahn جان ځان
 zahner جونیر
 zahniser زنځیر ځنځیر
 zahnow جان ځان
@@ -18737,7 +19160,8 @@ zeroed سرود
 zerwhale سړولو ځړول
 zest سست
 zeta ستا سته
-zeus جوس جس
+zhang جنګ جان
+zhao جو ژو
 zheng جنګ جان
 ziahe زه
 zibell زابل جبل
@@ -18773,6 +19197,7 @@ zinnia ځینې زنا
 zinno ځینو جین
 zins جنس
 zinter سینټر سنټر
+zion جان ځان
 zionism جینیزم
 zip سپو
 zipp سپو
@@ -18792,6 +19217,7 @@ zlin سلنو
 zloty سلطې
 zobel جبل
 zody زده جدي
+zoe زوی سوي
 zoeller سولر
 zoellick ذلک
 zoete صوتي جوته
@@ -18808,6 +19234,7 @@ zones جونز جنس
 zoning جنین سنن
 zoo سو
 zook جک سکو
+zoom سم
 zoomed صمد
 zooming زمین ضمن
 zoos جز جوز
@@ -18841,7 +19268,6 @@ zulauf زلفو سلف
 zuleger سولګر
 zulli سولې صلی
 zullo ځل سلو
-zulu سلو ځل
 zumbro سمبر
 zumel جمال جمیل
 zummo سم زوم

@@ -29,9 +29,9 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 
 | Layout (id) | Pack | Language | Keymap (xkb) | Dir | Prediction | Swipe¹ | IME / composer |
 |---|---|---|---|---|---|---|---|
-| `us` | `en` | English (US) | us | LTR | **Full** (en) | ✓ | — |
-| `us-intl` | `en` | English (US, intl) | us · intl | LTR | **Full** (en) | ✓ | — |
-| `gb` | `en` | English (UK) | gb | LTR | **Full** (en) | ✓ | — |
+| `us` | `en` | English (US) | us | LTR | **Full** (en)⁷ | ✓ | — |
+| `us-intl` | `en` | English (US, intl) | us · intl | LTR | **Full** (en)⁷ | ✓ | — |
+| `gb` | `en` | English (UK) | gb | LTR | **Full** (en)⁷ | ✓ | — |
 | `de` | `de` | German | de | LTR | **Full** (de)⁷ | ✓ | — |
 | `es` | `es` | Spanish | es | LTR | **Full** (es)⁷ | ✓ | — |
 | `fr-azerty` | `fr` | French | fr | LTR | **Full** (fr)⁷ | ✓ | — |
@@ -1015,14 +1015,16 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    54 of Meitei's in the Bengali script. Hindi's, Marathi's and
    Malayalam's tables also read
    English spellings, for the English words those languages write in
-   their script (school: स्कूल). And forty tables read the English words
+   their script (school: स्कूल). And fifty-three tables read the English words
    their languages write in their script as English spells them, which is
    how people type them (college: कॉलेज, police: পুলিশ, team: டீம்):
    `translit/<lang>.english.txt`, made from CMUdict's pronunciations
    (Carnegie Mellon's; BSD-2-Clause-style, `NOTICES.md`), each spelled in
    Latin letters as the language's sounds are typed (meediya, nyoo,
    sheyar), read by the table, and the likeliest reading its lexicon has
-   kept, 6 000 to 24 000 a language (`make english-assets`). A word typed
+   kept, 4 400 to 25 000 a language (`make english-assets`; a word of
+   CMUdict counts as English's when it is one of the 20 000 commonest of
+   English's lexicon, ENGLISH_TOP). A word typed
    whole is read as its English word too, ranked with the other readings
    at a cost (`osk_data::translit::ENGLISH_COST`, 4 nats: the word of the
    language's own spelled so still wins, men: में), and from three letters
@@ -1394,7 +1396,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
    their letters (note 12); Northern Thai has keyboards (notes 10 and 12)
    and no model yet, and Eastern Pwo Karen a model now (above).
-7. These three hundred and sixty-eight models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and sixty-nine models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1486,6 +1488,17 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    | Thai | 25.0% → 38.5% | 23.4% → 38.2% | 14.6% → 0.2% | 44.2% → 45.4% | 80 000, ×100 | 0.4 → 2.0 MB |
    | Uyghur | 16.1% → 38.9% | −8.0% → 33.0% | 47.5% → 7.0% | 38.1% → 38.7% | 120 000, ×10 | 0.8 → 3.3 MB |
    | Vietnamese | 40.5% → 49.6% | 38.8% → 48.4% | 2.2% → 0.2% | 54.3% → 54.5% | 80 000, ×10 | 0.6 → 2.3 MB |
+
+   And English, which FineWeb-2 leaves out, from FineWeb, its English
+   predecessor (Penedo et al. 2024; ODC-By 1.0 too): every 32nd row group
+   of the first file of its 10-billion-token sample, drawn from all its
+   crawls, 15.8 million words, every 20th document held out (it has no
+   test split). At 80 000 words (0.29 points more at 200 000), Tatoeba's
+   text counted ten times: of the web's held-out text 36.5% -> 44.1% saved
+   (with taps astray 29.8% -> 41.1%), its words unknown 10.0% -> 2.4%; of
+   Tatoeba's 53.5% -> 53.9%. Its lexicon is also the English words the
+   transliteration tables write in their scripts (`ENGLISH_TOP`, note 4):
+   of it the 20 000 commonest, as before.
 
    Its language classifier mistakes close languages, so a document is
    kept only when it reads as its language (`scripts/fineweb-text.py`):
@@ -3162,7 +3175,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
   sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, Amharic and Tigrinya **am ti**, whose words the Ge'ez composer offers (note 16), and Gorani's Hawrami **hac**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
-  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as de es fr it pt nl pl tr ru uk no da fi cs vi el ar he ro hu sk hr et is ca eo bg sr mk be id fil az ku ug ka lt lv kab sv oc gl br eu tt ms os th** (FineWeb-2's beside Tatoeba's, all the Tatoeba languages' but English's; note 7), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18; and Gamo's, **gmv**, beside its FineWeb-2 text). Built by
+  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as de es fr it pt nl pl tr ru uk no da fi cs vi el ar he ro hu sk hr et is ca eo bg sr mk be id fil az ku ug ka lt lv kab sv oc gl br eu tt ms os th** (FineWeb-2's beside Tatoeba's; note 7), **en** (FineWeb's, FineWeb-2's English predecessor, beside Tatoeba's; note 7), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18; and Gamo's, **gmv**, beside its FineWeb-2 text). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet: 185 layouts, Montenegrin's in

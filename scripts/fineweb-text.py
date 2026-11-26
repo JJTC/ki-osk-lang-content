@@ -231,6 +231,12 @@ alphabet lacks (Arabic's ع ح ص ض ط ظ ث ذ ة, Kazakh's ٴ ٵ ٶ ٷ ٸ) is
 left out, and a sentence with any (17 949 of its 28 000 documents kept).
 Thai, written without spaces between words, is read as Lao is, a
 line's end ending a sentence and a run of another script left out.
+The others keep the Latin words they write among their own (about 1% of
+the words: names, brands): read without them, and without the words of
+mixed scripts, their Latin look-alike letters made the script's first
+(Ukrainian вiд, Greek Tο), Russian's, Hebrew's and Greek's models saved
+0.0 to 0.16 points more of the held-out text read so and 0.16 to 0.35
+less of it as written, the strip offering iPhone after новый.
 
 Central Kurdish (Sorani) is read every 10th row group. A third of its
 web text is in the old Arabic-keyboard spelling, which writes the vowel
@@ -1430,6 +1436,9 @@ LANGS = {
     "ug": {"script": "ARABIC", "neighbour": set(), "sentence_rival": ARABIC_ONLY, "foreign": not_uyghur,
            "letters_never": NOT_UYGHUR, "every": 6, "brackets": True},
     "th": {"script": "THAI", "neighbour": set(), "lines": True, "unspaced": True, "every": 66, "script_only": True},
+    # And English, from FineWeb (FineWeb-2's English predecessor): every
+    # 32nd row group of its 10-billion-token sample's first file.
+    "en": {"script": "LATIN", "neighbour": set(), "every": 32, "brackets": True},
     # MADLAD-400's (no test split: every 20th document held out).
     "gbm": {"script": "DEVANAGARI", "neighbour": HINDI, "own": GARHWALI, "rival": NEPALI},
     "raj": {"script": "DEVANAGARI", "neighbour": HINDI, "own": RAJASTHANI, "rival": set()},

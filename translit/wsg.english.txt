@@ -56,6 +56,7 @@ acord కోర్దు
 acre ఏకర్
 acree క్రీ అక్రి
 acta ఏకతా ఎకత
+ada అద్ ఏద్
 adah ఆడా ఆడ
 adair ఆదర్
 adaire ఆదర్
@@ -119,6 +120,7 @@ ahl ఆల్ అల్
 ahlen లెన్ లేన్
 ahlin ఆళం
 ahmann ఆమన ఆమ్న
+ahmed ఆంద్ అందు
 ahnell అనల్
 ahs అజు అస్
 aickin ఏకం
@@ -239,6 +241,7 @@ amre అమర్
 amuck మాక్ మక్
 ana ఆని ఓం
 anac అనేక్ అనెక్
+anal అనాల్
 and అందు
 anding ఆందంగ్
 andrei ఆంద్ర
@@ -270,6 +273,7 @@ ansohn అంశం
 anson అంశం
 ant అంత్
 antar అంతెర్ ఆంతెర్
+anti అంతే
 antonia ఆంతోనియా
 antonio ఆంతోనియా
 anvil ఎన్వల్ ఏన్వాల్
@@ -307,17 +311,18 @@ array అర
 arrest అరెస్ట్
 arshia ఆర్సి అర్సి
 art ఆర్త
+arthur ఆర్తెర్
 article ఆర్టికల్
 artie అర్తి ఆరతి
 artus ఆర్ట్స్
 artz ఆర్ట్స్
+asa ఆసి
 ascent సంత్ సెంత్
 ascetic సతిక్ సతెక్
 asch ఎస్ ఆశ
 ascher ఆసేర్ అసెర్
 ascii అస్కే ఆస్కే
 ash ఎస్
-ashe ఎస్
 asheville ఆశవేల్
 ashore సార్
 ashton అష్టన్
@@ -418,6 +423,7 @@ aux ఓ ఆ
 ava అవ్
 avail వల్ వేల
 avant వాంత
+avatar అవతార్
 avella వేల
 avenging వంజింగ్
 avert వర్త్
@@ -439,7 +445,6 @@ awesome అసోం అసం
 awoke ఒక
 aydin అదెన్ అదేన్
 aydt ఎత్ అత్
-aye ఐ ఆయి
 ayende యెండ
 ayerst అరెస్ట్
 ayes ఐస్
@@ -492,6 +497,7 @@ baillie బేలి బెలి
 bailly బేలి బెలి
 bailon బెలాన్ బలం
 baily బేలి బెలి
+bain బేన్
 baines భంజ్
 bains భంజ్
 bainton బంతిన్
@@ -527,6 +533,7 @@ ballon బెలాన్ బలం
 ballou బాలో
 ballow బాలో
 bally బేలి బెలి
+balm భాలం
 balms భంజ్
 balmy భోమి
 balogh బాలో
@@ -698,6 +705,7 @@ beckie బేకే భేకే
 beckon బాయికున్
 becky బేకే భేకే
 bed బద్
+bedding బైడెన్
 bedell బద్ల
 bee బి
 beedie బీడి
@@ -777,6 +785,7 @@ bes బీజు
 bessey బేసి బేసే
 bessie బేసి బేసే
 bessy బేసి బేసే
+beta బతి బేటె
 betcha బచ్ భచి
 beth భేట
 bethell బేతల్ బేతుల్
@@ -798,6 +807,7 @@ bid బీడ్
 bidder బీదర్
 biddie బీడి బడి
 bidding బిడెన్
+biden బైడెన్
 bieda బీడి బేడ
 biehl బిల్ బేల్
 biehn భీం బిన్
@@ -945,11 +955,13 @@ bonney బని బోనే
 bonnie బని బోనే
 bonny బని బోనే
 bony బోనే బానే
+boo భు
 boodle బోడల్ బోడాల్
 booe బాయా భూ
 booed బుడ్ బూడ్
 boogie భోగి
 booher బోవర్ బోర్
+boone బోన
 boose బూస్
 boot బుత్
 boote బుత్ బూత్
@@ -964,6 +976,7 @@ borah బార బారి
 bordeaux బోర్దా
 bore బోర్ బార
 bored బోర్డ్
+boris బొరిస్
 borja బారి
 borough బారా
 boroughs బరోస బరొస
@@ -1164,10 +1177,10 @@ cable కేబుల్
 caccia కోచ్ కాచి
 cache కాస్
 cached కష్ట
+cad కడ్ కేడ
 caddell కైదల్ కైదాల్
 caddie కైదే
 caddock కడక
-caddy కైదే
 cadell కోడల్ కాడల్
 cadet కేడత్
 cadge కజ్
@@ -1187,6 +1200,7 @@ caisse ఖసు
 caissie కెయ్సి
 caisson కేసున్
 cake కక్
+cal కాల్ కల్
 calais కళ కోల
 calcium కాల్షియం
 call కాల్ కోల్
@@ -1206,6 +1220,7 @@ calma కాలం కొలం
 calmed కాండ్ ఖండ్
 calming కామెంగ్ కమెంగ్
 calmly కమలే
+cam కామ్
 cambrian కేంబ్రియన్
 camco కామ్కా
 came కం కమ్
@@ -1259,6 +1274,7 @@ career కెరీర్
 carella కారేలా
 carelli కరలే
 cares కర్స్
+carey కేరే కరీ
 carie కేరే కరీ
 carilla కారేలా
 carillo కారేలా
@@ -1295,10 +1311,12 @@ cart కోర్ట్
 carta కార్తి కోర్ట్
 carte కోర్ట్
 carving కార్వెంగ్
+cary కేరే కరీ
 caryl కేరళ కరల్
 caryn కారన్ కారణ్
 casa కాస్ కాసి
 case ఖసు
+casey కెయ్సి
 cashed కష్ట
 casher కేసర్ కైసర్
 cashew ఖసు
@@ -1313,6 +1331,7 @@ catain కటిన్ కటీన్
 catcher కచార్
 catchy కాచి
 catena కటీన్
+cater కేతేర్
 cathie కేతి
 cathy కేతి
 catoe కతా
@@ -1455,7 +1474,9 @@ chesshir సిసేర్
 chesson చేసిన
 chet చైత్ ఛైత్
 chez శ శే
+chi కై కాయ్
 chiang చైన్
+chic శేఖు
 chick చిక్ చీక్
 chief చీఫ్
 chien చైన్
@@ -1517,6 +1538,7 @@ ciros సరోజ్
 cirrus సిరీస్
 cissie సిసి సీసి
 cite సైట్
+citi సీటి
 citic సతిక్ సతెక్
 cities సిటీస్
 city సీటి
@@ -1573,6 +1595,7 @@ cock కాక్ కాకు
 cocke కాక్ కోక్
 cocking కాకన్
 cocoa కోకో కాకో
+cod కడ్ కాడ్
 coddle కోడల్ కాడల్
 code కాడ్ కాడ
 coed కాడ్ కాడ
@@ -1587,10 +1610,10 @@ cohron కారన్ కార్న్
 cohrs కోర్సు
 coia కోయ కోయ్
 coke కాక్ కోక్
-cola కోలా
 colaizzi కాలేజీ
 colaw కోలా
 colden కాల్దున్
+cole కోల్ కాల్
 coley ఖోలి
 coli ఖోలి
 colin కొలం
@@ -1614,6 +1637,7 @@ collum కాలం కొలం
 colly కలి ఖోలి
 cologne కలాన్ కాలాన్
 colomb కాలం కొలం
+colon కాలన్
 colonel కర్నూల్ కర్నూలు
 colonna కాలాన్
 color కాలర్
@@ -1690,6 +1714,7 @@ cooley ఖోలి
 coolly ఖోలి
 coombe కుం కూమ్
 coomer కుమార్
+cooper కుపార్ కూపార్
 coors కోర్సు
 coosa కుసి కోస్
 coover కువార్
@@ -1701,6 +1726,7 @@ coppee కపి
 coppess కాపుస్
 copsey కాప్సి
 copy కపి
+cor కార్
 corallo కారేలా
 cord కోర్దు
 corda కోర్దు
@@ -1709,6 +1735,7 @@ corell కారల్
 corella కేరళ కారేలా
 cores కోర్సు
 coretta కోరతే
+corey కారి కారే
 corier కొరియర్
 corinn కారన్ కారణ్
 corinna కారణ
@@ -1731,13 +1758,14 @@ corrin కారన్ కారణ్
 corroon కారుం
 corsa కోస్ కోసి
 corse కోర్సు
+cory కారి కారే
 coscia కోస్క కోస్కా
 cose కోజ్ కోస్
 coss కోస్ కాస్
 cossa కోస్ కోసి
 cossack కోస్క్ కోస్క
 cossey కాసి కోసి
-cot కట్
+cosy కోషి
 cotelle కోటలు
 cotham ఖతం
 cotney ఖత్నే
@@ -1771,7 +1799,6 @@ cowen కోన్ కూన్
 cowher కవర్
 cowper కుపార్ కూపార్
 cowser కౌసెర్
-coy కోయ
 cozy కోసి కోషి
 cozza కొట్సి
 cozzi కొట్సి
@@ -1816,6 +1843,7 @@ cullom కాలం కలాం
 cullud కలదు
 cullum కాలం కలాం
 cully కలి
+cum కాం కామ్
 cumming కమెంగ్ కామెంగ్
 cummock కామ్కు కాముకు
 cundall కుండుల్
@@ -1906,14 +1934,15 @@ damn దాం డం
 damns డేమ్స డెంస
 dams డేమ్స డెంస
 dan డాన్
+dana దెన్ దన్
 dance డాన్స్ డెంస
+dane దెన్ దన్
 danes డెంస
 dang దాన్ డాన్
 dann దాన్ డాన్
 danna దాన్ దెన్
 dannie దాని
 danny దాని
-dante దాంత
 danz డాన్స్ డెంస
 dara దార్
 dare డరు
@@ -1931,6 +1960,7 @@ darrelle దారల్
 darroch దార్క్
 darryl దరాల్
 daryl దరాల్
+das దేశ్
 dasch దేశ్
 dash దేశ్
 dashel దాసాల్
@@ -1938,6 +1968,7 @@ dashell దాసాల్
 dashnaw దేశనా
 dass దేశ్ దాస్
 dassow దేశా
+dat దత్
 data దాత్ దత్
 date దత్
 dau దా
@@ -1993,6 +2024,7 @@ december డిసెంబర్
 decent దిసంత
 dech దక్
 deck దక్
+dee డి
 deehan దిహన్ డియొన్
 deel దిల్
 deepen దీపున్
@@ -2038,6 +2070,7 @@ deroo డరు
 derr డరు
 derry డరి
 deryle దరాల్
+des డి
 desanto దిసంతా
 descent దిసంత
 desch దేశ్
@@ -2134,6 +2167,7 @@ dire దాయర్ దాయార్
 director డైరెక్టర్
 dirk దార్క్
 dirr దార్
+dis దేశ్
 disano దేశనా
 disc దేశ్క్ దేశ్కు
 disch దేశ్
@@ -2152,6 +2186,7 @@ dissing దిసన్
 dith దత్
 ditton దతున్
 ditty దతే
+diva దేవ్ దేవి
 divall దేవల్ దేవాల్
 divan దేవన
 dive దైవ
@@ -2202,6 +2237,7 @@ doktor డాక్టర్
 dole డోల్ డొల్
 doll డోల్ దాల్
 dolle డోల్ దాల్
+dom డం
 domangue డామన్
 dome దాం
 domtar దాంతెర్ దాంతేర్
@@ -2235,6 +2271,7 @@ dorie డారి డారీ
 dorr దొర్ డొర్
 dorrell దారల్ దౌరల్
 dorrie డారి డారీ
+dos దాస్
 dosch దాస్ దోస్
 dose దోస్ దాస్
 doss దాస్ దోస్
@@ -2384,6 +2421,7 @@ edan ఇదెన్ ఇదేన్
 edana అదెన్ అదేన్
 eddie అదే అది
 edel అదిల్
+eden ఇదెన్ ఇదేన్
 edge అజు
 edgin అజిన
 edick అదిక్
@@ -2461,13 +2499,11 @@ epp అప్
 era ఏర్ ఇర్
 erased అరెస్ట్
 erda అర్దో
-ere ఏర్
 erin ఐరన్
 erle అర్లి
 erma ఆర్మ్ ఆర్మీ
 ero ఇరా
 eron ఇరాన్ ఇరన్
-err ఏర్ ఆర్
 erria ఏరియా
 ertz ఆర్ట్స్
 erupt ఏర్పట్
@@ -2489,6 +2525,7 @@ estonia ఎస్టోనియా
 etch ఏచ్
 ethic అతెక్
 ethyl అతల్
+etsy అట్సీ
 ettie ఐటి అతి
 etty ఐటి అతి
 eugene యుజీన్
@@ -2644,6 +2681,8 @@ gaea జియా జీ
 gaebel జబల్
 gaeta గీతో గేట్
 gaeth గేట్ జీత్
+gag జాగ
+gaga జాగా
 gagarin జాగరన్
 gahli జాలి జోలి
 gahm జం
@@ -2658,6 +2697,8 @@ gaines గంజ్
 gains గంజ్
 gair గర్ జెర్
 gait గేట్ గెట్
+gal జైల్
+gala జైల్
 galane గాలం
 gale జేల్ జల్
 galef గల్ఫ్
@@ -2737,6 +2778,7 @@ gayer గేర జెర్
 gayle జేల్ జల్
 gaytan జతన్
 gayton జతన్
+gaza గాజే
 gazeta గాజతె
 gean జిన్
 gear గిర్
@@ -2749,6 +2791,7 @@ geena జిన్
 gehl జైల్ జేల్
 gehm జం
 gehr జెర్ జర
+gel జైల్
 gelco జల్కా
 gell జైల్ జేల్
 gelli జెలి
@@ -2775,9 +2818,11 @@ geraldine జెరాల్డిన్
 germany జర్మనీ
 get గెట్
 gettle గటల్ గతులు
+getty జేటి గటి
 geyer గేర జెర్
 ghada గోడ్ గాడి
 ghali జాలి జోలి
+ghana గణ జన్
 ghandi గోండి గోండీ
 gheen జిన్
 ghent గంట
@@ -2787,7 +2832,6 @@ giacco జోకా
 giang జన్ జాన్
 giannetto జనతా
 gibble జబల్
-giddy గడి గడీ
 gide జీద్ జిద్
 giel జేల్
 gielow జిలా
@@ -2816,6 +2860,7 @@ giorgio జార్జియా
 gipp జప్
 giren జీర్ణ
 girl గర్ల్
+git గేట్ గెట్
 give జీవ్
 given జీవన్
 giza గజా
@@ -2830,6 +2875,7 @@ gnau నౌ
 gnaw నా
 gnawed నాద్ నాడు
 gnaws నాస్
+gnu ను న్యూ
 goa గా గోవా
 goad గోడ్
 goading జోడెన్ గోడంగ్
@@ -2893,6 +2939,7 @@ goons గుంజు
 goos గుజ్
 gootee జోతి
 gordji జార్జి
+gore గారు
 goree గోరి గౌరీ
 goren గారన
 gorin గారన
@@ -2909,6 +2956,7 @@ gould గోల్డ్
 goulden గూడన్ జోడెన్
 gounod గోండ్
 gousha గోసా
+gov గావ
 governor గవర్నర్
 govett గావత్
 goya గాయ్
@@ -2919,6 +2967,7 @@ grade గ్రేడ్ గ్రేడు
 graded గ్రేడ్ గ్రేడు
 graeme గ్రామ్ గ్రామ
 graham గ్రామ్ గ్రామ
+gram గ్రామ
 grauman గ్రామం
 graumann గ్రామం
 grebe గరిబ్
@@ -3002,6 +3051,7 @@ haase హాస్
 haass హాస్
 habeeb హబిబ్
 hach హెచ్
+hack హక్
 hacke హక్
 hada హోదా హద్
 hadd హద్
@@ -3030,6 +3080,7 @@ haiti హటి హటే
 haitian హసన్
 haitien హసన్
 hake హక్
+hal హాల్
 hale హల్
 half హాఫ్
 hall హాల్
@@ -3064,7 +3115,6 @@ hanni హానే
 hannie హానే
 hanny హానే
 haque హక్
-hara హర్ హెరే
 haran హర్న
 hare హర్
 haring హెరేంగ్
@@ -3153,6 +3203,7 @@ hemdale హెండల్
 hemker హంకార్
 hemmen హైమన్
 henes హింస
+hera హిర హీరా
 herda హర్డ్
 here హర్ హిర
 hering హెరేంగ్
@@ -3193,6 +3244,7 @@ hille హల్
 him ఎమ్ ఎం
 himont హేమంత్ హెమంత్
 hinde హిందూ హింద్
+hindi హిందీ
 hindley హిందలే
 hindu హిందు
 hing హిన్
@@ -3243,6 +3295,7 @@ homa హోం
 home హోం
 homme హోం
 hommel హమ్ల
+hone హోం
 honey హానే
 hong హోం
 honn హోం
@@ -3279,6 +3332,7 @@ hsia షా శ
 hsiung సియుంగ్ సియాంగ్
 hsu సు సో
 hua హో
+hub హబ్
 hubbub హబిబ్
 hubby హుబే
 huck హక్
@@ -3325,7 +3379,6 @@ icon ఐకాన్
 idaho ఐడహొ
 ierne ఇర్న్ ఇరన్
 ihde ఇద్ ఈద్
-iida ఇద్ ఈద్
 iie ఈ
 ike ఆయిక్
 ikey అకి అకీ
@@ -3366,7 +3419,9 @@ iny అని
 iran ఇరాన్
 ire ఆయర్
 irma ఆర్మ్ ఆర్మీ
+isa ఏస్
 isch ఎస్ ఏస్
+ish ఎస్ ఏస్
 ishee అసి అశి
 ishi అసి అశి
 isla ఏలా ఏల
@@ -3430,6 +3485,7 @@ jeane జిన్
 jeanette జనత
 jeanne జిన్
 jeannette జనత
+jedi ఝడి
 jell జైల్ జేల్
 jelley జెలి
 jelly జెలి
@@ -3438,6 +3494,7 @@ jenna జన్ జన
 jenne జన్
 jeong జన్ జంగు
 jerr జెర్ జర
+jersey జార్జి
 jerusha జరసా
 jerzy జార్జి జెర్సీ
 jetta జేటి
@@ -3568,6 +3625,7 @@ kainz కెంజ్ కేంజ్
 kairey కేరే కరీ
 kaisha కెయ్సి
 kalas కాలేజ్
+kale కేల్ కల్
 kalin కాలన్ కాలం
 kall కాల్ కోల్
 kalla కాల్ కళ
@@ -3579,6 +3637,7 @@ kamke కంకి
 kamm కాం కామ్
 kanan కనున్
 kanda కాండ్
+kane కెన్ కేన్
 kanell కునల్
 kaner కనార్
 kang కాం కోన్
@@ -3612,6 +3671,7 @@ kasha కాస్ కాసి
 kaska కోస్క కోస్క్
 kassar కేసర్ కైసర్
 kasza కాస్ కాసి
+kat కాట్
 katcher కచార్
 kate కట్ ఖత్
 kater కేతేర్
@@ -3620,6 +3680,7 @@ kathie కేతి
 kathy కేతి
 katie కేతి
 katja కాటి కోటి
+katy కేతి
 katya కాటి కోటి
 katyn కటీన్ కటిన్
 kauk కాక్ కాకు
@@ -3629,7 +3690,6 @@ kaup కాప్ కోప
 kaupp కాప్ కోప
 kaus కోజ్ కోస్
 kauth కోట్ కోట
-kawa కోవ
 kay కె కే
 kaydon కెడన్
 kayes కజ్
@@ -3684,6 +3744,7 @@ kell కేల్ కల్
 kellam కలాం కలామ్
 kellan కలాన్ కలణ్
 kellen కలాన్ కలణ్
+kelley కలి
 kellie కలి
 kelling కళింగ
 kellow కళా
@@ -3737,6 +3798,7 @@ keyser కైసర్
 keysor కిసెర్ కీసెర్
 khaled కలదు
 khalid కలదు
+khan కాం కోన్
 khanna కెన్ కాం
 khoo కు
 khuu కు
@@ -3891,6 +3953,7 @@ knower నొర్ నోర్
 known నాన్ నొన
 knows నాస్
 koala కోల కోలా
+koch కాక్
 kochan కాకన్ కాకోన్
 kocis కోషిస్
 kock కాక్ కాకు
@@ -3929,7 +3992,7 @@ koller కాలర్ కోలార్
 kolli కలి ఖోలి
 kolling కాలన్ కళింగ
 koman కామున్
-kondo కోన్దా
+kona కోన్
 konen కానున్
 kong కోన్ కాం
 konner కనార్
@@ -4058,7 +4121,6 @@ lahn లైన్ లెన్
 lahr లర్
 lai లాయ్
 laid లెడు ఎల్ఈడీ
-lain లెన్ లేన్
 laine లెన్ లేన్
 laing లాయిన్
 lair లర్
@@ -4076,6 +4138,7 @@ lambe లాం లామ్
 lambs లంజ్
 lamm లాం లామ్
 lamme లాం లామ్
+lan లైన్ లెన్
 lana లైన్ లెన్
 landa లాండ్
 lande లాండ్
@@ -4086,6 +4149,7 @@ landon లండన్
 lane లెన్ లేన్
 lanes లంజ్
 laney లేనే
+lang లాంగ్
 langdale లాందల్
 lange లంగ్ లాంగ్
 lani లోని
@@ -4230,6 +4294,7 @@ lima లిం
 limb లిం
 limbs లంజ్
 limn లిం
+lin లెన్
 lina లిన్ లేన్
 linck లింక్
 linden లండన్
@@ -4299,6 +4364,7 @@ loews లాస్
 loewy లావి
 log లాగు
 logger లాగర్ లాగార్
+logo లాగా
 logue లాగ్ లాగు
 lohn లాం లోం
 lohrey లారీ
@@ -4457,11 +4523,14 @@ madl మెడల్ మెదొల్
 madog మేదోగ్
 madole మొదొల్ మొదోల్
 madonna మదాన్
+mae మ
 maese మిస్
 magar మేజర్
 mager మేజర్
 maggi మాజీ మాజి
 maggie మాజీ మాజి
+mah మా మ
+mahal మహాళ్
 mahannah మహన మహాన
 mahdi మోదీ మొడి
 mahindra మహేంద్ర
@@ -4469,6 +4538,7 @@ mahrt మార్త మరట్
 mahtan మాతోన్ మతోన్
 mahtar మాతేర్ మతెర్
 mahwah మావ మావా
+mai మాయి
 maid మడ్
 maida మేడి మడ్
 maidel మెడల్ మెదొల్
@@ -4503,7 +4573,6 @@ makar మేకర్
 make మక్
 maker మేకర్
 makeup మేకప్ మెకప్
-maki మకి
 mako మొకా
 malan మేలం మెలం
 malaria మలేరియా
@@ -4536,6 +4605,7 @@ mangual మంగళ్ మంగల్
 manic మనెక్ మనేక్
 manik మనెక్ మనేక్
 manmade మన్మడ్
+mann మన్ మాన్
 manna మన్ మాన్
 manned మందు మాండ్
 mannen మైనన్ మనన్
@@ -4563,6 +4633,7 @@ mao మౌ
 mar మర
 marais మేర మరె
 maraud మర్యాద
+marc మార్క
 march మార్చు
 marchetta మార్కెట్
 marcoe మార్కో
@@ -4571,6 +4642,7 @@ marcon మార్కం మర్కం
 marcou మార్కో
 marcoux మార్కో
 marcum మార్కం మర్కం
+mare మర్ మేర
 marella మరలా
 maretta మరట్ మరత్
 marette మరట్ మరత్
@@ -4639,6 +4711,7 @@ mation మెషిన్
 matott మాతట్ మెట్టు
 matsch మేచ్ మాచ్
 matt మాత మత
+matte మాత మత
 mattea మేష్ మైసి
 mattei మైతై
 mattel మెటల్
@@ -4731,6 +4804,7 @@ meath మిత్ మిటు
 meaux మా
 meave మీవ మివ
 meca మైక్ మక్
+mecca మైక్ మక్
 meche మేచ్ మచ్
 meck మైక్ మక్
 meckel మైకేల్
@@ -4747,7 +4821,6 @@ medulla మెడల్
 meece మిస్
 meehan మీన్ మేన్
 meehl మేళ
-meek మిక్
 meese మిస్
 meet మిత్ మిటు
 megace మిజోస్
@@ -4764,6 +4837,7 @@ meine మిన్ మీన్
 meinke మీన్క్
 meise మిస్
 mekeel మైకేల్
+mel మేళ
 melange మేలం మెలం
 melee మేళ మెళ
 melhem మేలం మెలం
@@ -4779,7 +4853,6 @@ memes మేంజ్
 memmott మెమెట్ మంత్
 men మెన్
 mend మందు
-mendel మేందోల్
 mendieta మందిత మందితా
 mendola మేందోల్
 mendosa మండోస్ మండొస్
@@ -4830,6 +4903,7 @@ meza మజ్
 mezera మేజర్
 mezey మైసి మసి
 mia మీ మే
+mic మీక్
 mica మైక్
 micah మైక్
 mich మేచ్ మచ్
@@ -4885,6 +4959,7 @@ mim మం
 mimbs మేంజ్
 mimms మేంజ్
 mims మేంజ్
+min మన్
 mina మిన్ మీన్
 mindel మండల్ మేందోల్
 mindy మంది మన్దీ
@@ -4965,6 +5040,7 @@ model మొదొల్ మొదోల్
 modell మొదల్ మొదలు
 moden మోడిన్ మొడిన్
 modes మాడ్సు
+modi మోదీ
 modine మోదీన్ మోడిన్
 modus మాడ్సు మాడిస్
 moe మా
@@ -4987,6 +5063,7 @@ molle మల్ మల
 mollo మలా
 mom మం
 momma మం
+mon మన్
 mona మాన్ మానె
 monaco మాణ్కో
 monca మాణ్కో
@@ -5005,7 +5082,6 @@ monnier మానేర్
 monnin మనన్
 monotone మన్తోన్ మంతొం
 monsey మంజి మంజీ
-mont మంత మంత్
 montag మంతగ్
 month మంత మంత్
 mony మానే
@@ -5016,6 +5092,7 @@ mook ముఖ్ ముఖ
 moon మున్
 mooney మునే మూనే
 moonie మునే మూనే
+moore మూర్
 mooring మురంగ్ మూరంగ్
 moorman ముర్మున్
 moormann ముర్మున్
@@ -5030,7 +5107,6 @@ moree మేరీ
 morell మొరోల్ మార్ల
 moret మారిత
 morgue మార్గ
-morita మారితా
 morrall మొరోల్
 morreale మారిలే
 mortar మార్తెర్
@@ -5039,7 +5115,6 @@ mosser మాసేర్ మాసెర్
 mossey మాసి మసి
 mossy మాసి
 moten మాతోన్
-moth మాత్త
 mother మత్తెర్ మతెర్
 motor మాతేర్
 motoren మాతరన్
@@ -5086,6 +5161,7 @@ mullah మల ముల
 mulling ములంగ్
 multimedia మల్టీమీడియా
 mum మం
+mumbai ముంబాయ్
 mumm మం
 mumma మం
 mumme మం
@@ -5105,7 +5181,6 @@ munsey మంజి మంజీ
 munt మంత మంత్
 munter మంతెర్ మంతేర్
 munzer మంజేర్
-murata మురతా
 murch మర్క మార్క
 murchie మార్చి
 murk మర్క మార్క
@@ -5174,6 +5249,7 @@ nall నాల్
 nam నేమ్ నెం
 name నేమ్ నెం
 named నేండ్ నెండ్
+nan నాన్
 nana నన్ నాన్
 napoli నేపాలీ
 nara నార్ నొర్
@@ -5182,7 +5258,9 @@ nasa నాస్
 naser నజర్
 nash నాష
 nass నాస్
+nat నట్
 natal నేతల్ నెతల్
+nate నేట్ నెట్
 nath నాట్ నట్
 nathe నేత
 nathene నాటేన్
@@ -5199,7 +5277,6 @@ naus నాస్
 nauss నాస్
 navis నవస్
 nawrot నార్త్
-nay నే నె
 nba ఎంబీఎ
 neal నీల్
 neala నీల్
@@ -5259,6 +5336,7 @@ neyman నేమ్న
 ngai జై గాయ్
 nghi గి జి
 niamh నివ్ నీవ్
+nic నెక్ నీక్
 niche నీచ్
 nick నెక్ నీక్
 nickey నేకి నెకి
@@ -5281,7 +5359,6 @@ nikita నేకితా
 nikkei నేకి నెకి
 nikki నేకి నెకి
 nikou నేకు
-nil నల్
 nila నీల్
 nill నల్ నీల్
 nilsen నెల్సన్
@@ -5331,6 +5408,7 @@ nolanda నలంద
 nole నాల్
 noll నాల్
 nolla నాల్
+nominee నామనే
 non నన్
 none నన్ నాన్
 noon నున్
@@ -5353,6 +5431,8 @@ nothin నాటేన్
 nothing నాటేన్
 noting నాటేన్
 nous న్యూస్
+nov నావ్
+nova నొవ్
 novel నవల్
 novice నవస్
 now నౌ
@@ -5432,7 +5512,6 @@ office ఆఫీసు
 officer ఆఫీసర్
 ogg ఆగ ఆగు
 ohair ఆహర్
-ohara ఆహర్
 oharra ఆహార ఆహర్
 ohh ఓ ఆ
 ohio ఒహాయో
@@ -5443,7 +5522,6 @@ ohmann ఆమన
 ohrt ఆర్త
 oien అయిన
 oja ఆయి ఆయో
-oka ఆకి
 okay ఒక
 okaz ఆకాష్
 okie ఆకి ఆకీ
@@ -5496,6 +5574,7 @@ orme ఆర్మ్
 orr ఆర్
 orsa ఆర్సి ఆర్సీ
 orum ఆర్మ్
+osha ఆశా
 oshea ఆశ
 oshel అసల్ అసలు
 osley అస్లి అసలి
@@ -5515,6 +5594,7 @@ otterloo ఓటర్లు
 ottilie ఆతలే
 ottley ఆతలే
 ottman ఆత్మన
+otto ఆతా
 ottoman ఆత్మన
 ottum ఆతోమ్ ఆత్మ
 otwell ఆట్వల్
@@ -5544,12 +5624,14 @@ ozzy ఆసి
 paape పాప్
 paar పోర పొర
 paasch పోస్ పశు
+pac పాక్
 pace పేస్
 pacifica పసిఫిక్
 pack పాక్
 packing పేకింగ్ పెకింగ్
 pad పెడ్
 padded పడిద్
+padding పాడింగ్
 paddle పేడల్ పెడల్
 paean పేన్
 paeth పిట్ పేట్
@@ -5577,7 +5659,7 @@ pal పాలు
 palais పాల
 palash ప్లాయిస్
 palate పాలిత
-pall పాల్ పాలు
+palin పాలన్
 palm పామ్
 palme పామ్
 palone పాలాన్ పలాన్
@@ -5601,6 +5683,7 @@ pannell పైనల్
 pannill పైనల్
 pans పెన్స్
 pansy పాంజి
+panther పంతర్
 panting పాంతంగ్ పంతంగ్
 paper పేపర్ పెపర్
 papers పేపర్స్
@@ -5634,6 +5717,7 @@ parrill పరల్ పేర్ల
 parrilla పోరిల్
 parrotta పోరాట
 pary పోరి
+pas పజ్ పోస్
 pasch పేస్క్
 paschke పేస్క్
 pask పేస్క్
@@ -5652,7 +5736,6 @@ patch పచ్
 patchen పాచన్
 patchin పాచన్
 patchy పాచి
-pate పేట్ పట్
 patella పటేల్ పటెల్
 patera పాటర్
 path పాట్ పాట
@@ -5660,6 +5743,7 @@ pathan పాటన్ పాటన
 patin పాటన్
 patrick పత్రిక
 patrol పత్రాలు
+patti పేటి
 pattie పాటి పేటి
 pattin పాటన్
 patting పాటంగ్
@@ -5722,6 +5806,7 @@ pecking పేకింగ్ పెకింగ్
 pedal పెడల్
 peddie పేడి
 peddle పేడల్ పెడల్
+pee పి
 peer పిర్ పేరు
 peers పెర్స
 peg పెజ్
@@ -5758,6 +5843,7 @@ peria పరియ
 perich పెరెక్ పరక్
 peril పరల్ పేర్ల
 perin పరణ్ పరన్
+perl పరల్
 perma పరమ్ పరమో
 permian పెర్మియన్
 perna పరణ్ పరన్
@@ -5770,6 +5856,7 @@ perz పెర్స పేర్స
 pesce పేస్
 peschke పేస్క్
 pet పట్
+peta పేటి పీటే
 petain పాటన్ పితం
 petal పటేల్ పటెల్
 petard పాతాడ్
@@ -5863,6 +5950,7 @@ pischke పేస్క్
 piss పేస్ పిస
 pissing పిసన్
 pit పేట్
+pita పేటి పీటే
 pitch పీచు పచ్
 pith పిట్ పేట్
 pithy పేటి పిటే
@@ -5947,6 +6035,7 @@ porretta పొరత
 porsche పార్శీ
 portable పోర్టబుల్
 portia పార్శీ
+pos పాస్
 posch పోస్ పాస్
 pose పోస్
 poses పాజ్జ
@@ -5971,6 +6060,7 @@ prawns ప్రాన్స్
 pray పరె
 prayer పరర్
 prays ప్రజ
+pre ప్రి
 preas ప్రిజ్
 precedent ప్రెసిడెంట్
 pree ప్రి
@@ -6020,7 +6110,6 @@ puck పాక్
 puddle పదాల్ పదాల
 puerto పార్టీ
 puett పుట్ పూత్
-pug పగ్ పజ్
 puhl పాల్ పాలు
 puig పూజ
 pulice పోలిస్ పోలీస్
@@ -6053,12 +6142,10 @@ pus పాస్
 pusch పశు పూస్
 push పుష్
 pushed పోస్ట్
-pushy పోసి పోషి
 puss పూస్ పోస్
 pussy పోసి పూసి
 put పూత్
 putnam పట్నం పట్ణం
-putt పాట్
 putting పోటిన్గ పాటంగ్
 puttnam పట్నం పట్ణం
 putty పాటి పాతి
@@ -6136,6 +6223,7 @@ rammed రెండ్ రండ్
 ramsay రాంజీ రంజీ
 ramsey రాంజీ రంజీ
 ran రాం
+rand రెండ్
 randa రండ్ రాండ్
 ranee రాణి
 ranes రన్స్
@@ -6395,6 +6483,7 @@ roll రోల్
 rolla రోల్ రల్
 rolle రోల్
 rolm రామ్ రాం
+rom రాం
 romann రామన్
 rome రామ్ రాం
 romine రామన్
@@ -6453,6 +6542,7 @@ rot రాత్
 rotan రోతున్ రొతున్
 rotella రోతల్ రొతల్
 roten రోతున్ రొతున్
+roth రోత్
 rott రాత్ రోత
 rotten రత్న
 rotting రోతంగ్ రొతంగ్
@@ -6572,9 +6662,9 @@ saddle సాదల్
 sadeh సాడ సడే
 sadella సాదల్
 sadie సాడి సడే
-sado సడా
 saehan సీన్ సీం
 saez శిశు శేషు
+saga సాగ
 sagen సగాన
 saguenay సగాన
 sahgal సగ్ల
@@ -6644,12 +6734,15 @@ sanding సందిన్
 sandor సందేర్
 sandow సందొ సందో
 sandt సంత్ సెంత్
+sandy సందీ
 sane సేన సన్
 sang సంగ్
 sani సేన శాన
 sank శంక
 sanna సేన శాన
 sannes సైన్స్ సన్స్
+sans సైన్స్
+sanskrit సంస్కృతు
 santa సంత్ సేన
 santas సంతోష్
 sante సంత్ సెంత్
@@ -6659,7 +6752,10 @@ santor సెంటర్ సంటర్
 santow సంతా శాంటా
 sanville సొన్వల్ సోన్వల్
 sanz సైన్స్ సన్స్
+sap సప
 sapp సప్ సప
+sar సర్
+sara సేర్ సెర్
 sarage సరోజ్
 sarah సేర్ సెర్
 sare సేర్ సెర్
@@ -6710,7 +6806,6 @@ saw సా షా
 sawa సావి
 sawdey సాడి
 sawdy సాడి
-sawed సోద్ సాడ
 sawka సోక్ సాకా
 sawmill షామిల్ సామెల
 saws సాస్
@@ -6885,6 +6980,7 @@ seato సితా
 seaver సివర్ శివర్
 seaway సేవ శివ
 seay శ సె
+sec శేఖు
 seck సక్ శేఖు
 secom శకం
 second సెకండ్
@@ -6937,6 +7033,7 @@ selway సెల్వ
 semel సమెలు
 semmel సమెలు
 semon సమన్
+sen సన్
 senate సంత్ సెనేట్
 senator సెంటర్ సెనేటర్
 sending సందిన్
@@ -6953,6 +7050,7 @@ sent సెంత్
 sentell సంతాల్ సంతాలు
 sentra సెంటర్
 seoul సాల్ సొల
+sep సప
 sepp సప్ సప
 sera సిర్ సిరా
 seraw సారా
@@ -6971,6 +7069,7 @@ serviss సర్వీస్
 sese సిసి సీసి
 sessa శేషు
 set సైట్
+seth సైట్
 settle సైట్ల
 severa సేవర్
 sevey సేవ శివ
@@ -6978,6 +7077,7 @@ sevick సేవక్ సెవక్
 seville సివిల్
 sew సో సా
 sewed సోద్ శొద్
+sewer సూర్ సుర్
 sewn సోన్ సొన్
 seyer సేర్ సెర్
 seyi శే
@@ -7007,6 +7107,7 @@ shallow శాలా
 shambaugh శంభో
 shame సెమ్ సం
 shamelle సమెలు
+shane సేన సన్
 shanna శాన షాన్
 shape సప్
 shapp సప్ సప
@@ -7052,6 +7153,7 @@ sheela సిలె సిలే
 sheelah సిలె సిలే
 sheeley సిలే సేలే
 sheely సిలే సేలే
+sheen సీం
 sheep షిప్
 sheer సిర్
 sheesh శిశు శేషు
@@ -7070,6 +7172,7 @@ shelled సేలడ్
 shelley సేలే సెలే
 shelling సెలెంగ్
 shelly సేలే సెలే
+shen సన్
 shepp సప్
 sherick సేరిక్ సెరిక్
 sherod సరడ్
@@ -7105,9 +7208,8 @@ shirr సార్ సర్
 shirt షర్త్
 shit సీత
 shiu సు సో
-shiver సివర్
+shiva సేవ
 shock సోక్ శాఖ
-shod సడ్
 shoe సు సో
 shoen సోన్ సున్
 sholl షాల్ సాల్
@@ -7140,7 +7242,6 @@ shue సు సో
 shula సోలా
 shull షాల్ సాల్
 shum సం సమ్
-shun షాన్ శాన్
 shuns సన్స్
 shunt సంత్
 shunto శాంటా సంతా
@@ -7192,6 +7293,7 @@ sil సెల్ సల్
 sill సెల్ సల్
 silly సిలే సేలే
 silva సెల్వ
+sim సీం
 simba సేంబు శంబు
 simi సీమే సిమే
 simm సీమ్ సీం
@@ -7268,7 +7370,6 @@ soak సోక్
 soapy సొపి
 soar సార్
 soaring సారింగ్ సోరెన్
-sob సబ్ సభ
 sobbed శబ్ద్ శబ్ద
 sobey శోభే
 sobotta సోబాతే
@@ -7418,6 +7519,7 @@ stuhr స్టోర్
 stull స్టాల్
 stun స్టాన్
 stung స్టాన్
+sub సబ్ సభ
 subbed శబ్ద్ శబ్ద
 suburban సబర్బన్
 succumb శకం సుకుం
@@ -7425,6 +7527,7 @@ succumbed సెకండ్
 suck సక్ సుక్
 suckle శుక్ల
 suction సాక్షిన
+sudan సూడాన్
 sudden సాదన్
 sudduth సూడాత్
 sue సు సో
@@ -7461,7 +7564,6 @@ sunday సంది సందీ
 sundays సందేశ్
 sundeen సందిన్
 sundin సందిన్
-sundry సుందరీ
 sundt సంత్
 sundy సంది సందీ
 sung సంగ సంగ్
@@ -7476,6 +7578,7 @@ supper సుపర్ సూపర్
 supple సపల్ సుపాల్
 supra సుపర్ సూపర్
 supreme సుప్రీం
+sur సార్ సర్
 sura షురు సురు
 sure షురు షురూ
 suren సోరెన్
@@ -7566,11 +7669,14 @@ tamas తాంజ్
 tambs తాంజ్
 tame తమ్
 tamed తెండ్
+tamil తమిళ
 tamm తమ్
 tammo తమొ
 tan తెన్ తేన్
 tandon తెండన్ తెండాన
 tanen టన్ను
+tang తాన్
+tango తెంగా
 tanguay తాన్గ తన్గ
 tania తనయ్
 tank తెన్కు తన్కు
@@ -7587,6 +7693,7 @@ tape తపు
 tapie తాపి తపి
 tapp టాప్ తపు
 tar తొర్ తోర్
+tara తెర్ తొర్
 tarr తొర్ తోర్
 tarry తేరే
 taste టెస్ట్ టెస్టు
@@ -7616,6 +7723,7 @@ teat తిత్ తేత్
 tech తెక్ తేక్
 techie తెకే
 ted తెడ్
+tee టీ
 teehan తేన్ టీం
 teeing టీం తీన్
 teen టీం
@@ -7670,6 +7778,7 @@ thakkar టేకర్
 than తున్ దున్
 thanh తెన్ తేన్
 thank తెన్కు తన్కు
+thar తొర్ తోర్
 that దాత్ దత్
 thaw తా
 thawed తోడు తొడ్
@@ -7715,6 +7824,7 @@ third థర్డ్
 thiry తేరే
 thirza తరజ్
 this దేశ్
+tho దా
 thode తోడు తొడ్
 thoele తోల్ తాల్
 thoen తాన్ తోన్
@@ -7724,6 +7834,7 @@ thom తమ్
 thomann డామన్
 thomes తాంజ్
 thoms తాంజ్
+thor తోర్
 thora తొర్ తోర్
 thorne తోరణ్
 those దోస్ దాస్
@@ -7757,6 +7868,7 @@ ticket టికెట్
 tidd తేద్ తెడ్
 tie టాయ్
 tiede తేద్
+tier తీర్ తేర్
 tig తగ తగ్
 tigar టైగరు
 tigon తగన్
@@ -7791,7 +7903,6 @@ tippie తపి
 tipple టపాల్
 tippy తపి
 tire టైర్
-tis తేజ్
 tisch తిస్
 tita తిత్ తేత్
 tkacz కోచ్
@@ -7802,6 +7913,7 @@ tocco టాకా
 tock తాక్ తక్
 toda తోడో తోడు
 today తడేయ్
+todd తోడు
 toddle తాదల్ తాదాల్
 toe తా
 toed తోడు తొడ్
@@ -7809,6 +7921,7 @@ toelle తోల్ తాల్
 toes తాజ్
 tokkin టొకెన్
 toll తోల్ తాల్
+tolle తల్ తాల్
 tollett తొలెత
 tolley తలే తోలే
 tolly తోలే తోలి
@@ -7837,6 +7950,7 @@ toothy తోటి
 top తపు
 topp టాప్ తపు
 topple టపాల్
+tor తోర్
 torah తొర్ తోర్
 torain తరన్
 tore తొర్ తోర్
@@ -7857,6 +7971,7 @@ touring తురింగ్ ట్యూరింగ్
 tousey తుసి
 tousley తస్లీ
 toussie తుసి
+tow తా
 towed తోడు తొడ్
 towry తారి
 tows తాజ్
@@ -7959,6 +8074,7 @@ umm ఆమ్ ఉమ
 ummel అమలు
 una ఓం ఓన
 uncool అంకుల్
+und అందు అంద్
 under అండర్
 undo అందు
 undone అందున్ అందం
@@ -8005,6 +8121,7 @@ vain వేన్ వెన్
 vajna వాయన
 val వాల్
 vala వాల్ వాలె
+vale వల్ వేల
 valet వేలే వెలె
 valin వేలిన
 valk ఒక
@@ -8043,6 +8160,7 @@ vasser వాసెర్ వాసేర్
 vasseur వాసెర్ వాసేర్
 vassey వాసి వాసీ
 vast వెస్ట్ వాస్తు
+vat వాట్
 vaugh వో వా
 vaughan వోన్ వొన్
 vaughn వోన్ వొన్
@@ -8058,6 +8176,7 @@ veered వర్ద్
 veering విరంగ్
 vega వగి
 veiga వగి
+veil వల్
 veillon వేలిన వలన
 vein వెన్
 veins వంశ్
@@ -8076,6 +8195,7 @@ vensel వంశాలు
 venson వంశం
 vent వంత
 ventre వంతేర్ వంతెర్
+vera వేర్ వెర్
 verda వర్ద్
 verdin వర్దన్
 verdon వర్దన్ వర్డ్న్
@@ -8093,6 +8213,7 @@ verville వర్వల్ వార్వల్
 very వెరీ
 vesna వెషం
 vess వైస్
+vet వైట్
 vetere వేతెర్ వతెర్
 veto వేతా
 vetoed విటాడ్
@@ -8137,6 +8258,7 @@ vinnick వనెక్ వనేక్
 virag విర్గ వీర్గ
 viray వైరి
 virden వర్దన్ వర్డ్న్
+virga వర్గ
 virgil వర్జోల
 virile వీరల్
 visa విజ వీస
@@ -8168,6 +8290,7 @@ volle వాల్ వల్
 volley వలే వాలే
 volz వాల్ష్
 vomit వాంత
+von వొన్
 vong వోన్ వొన్
 vonk ఓన్కు
 vonnie వాని
@@ -8186,11 +8309,10 @@ vyas వయసు
 waah వ వా
 waara వర వార్
 wacky వాకి వెకే
-wad వోడ్ వాడ్
-wada వాడ వాడి
 waddell ఓదెల
 waddie వాడి వాదీ
 waddill ఓదెల
+wade వేడ్ వెడ్
 wadel వడిల్ వడీల్
 wagg వాజ
 waggy వాగే వగి
@@ -8229,6 +8351,7 @@ walls వాల్ష్
 wally వేలే వేలి
 waltz వాల్ష్
 walz వాల్ష్
+wan వోన్
 wanat వంత్
 wand వందు
 wandie వన్డే వోండి
@@ -8247,6 +8370,7 @@ war వోర్ వొర్
 ward వార్డు
 warde వార్డు
 wardle వార్డులు
+ware వేర్ వెర్
 waren వరోన్ వరొన్
 warley వార్లే
 warr వోర్ వొర్
@@ -8256,10 +8380,12 @@ was వాజ
 wasch వాస్
 wascher వాసెర్ వాసేర్
 washed వాస్తు వస్తు
+washer వాసేర్
 washington వాషింగ్టన్
 wass వాస్ ఉస్
 wasser వాసెర్ వాసేర్
 waste వెస్ట్
+wat ఓటు
 water వాతెర్ వోతెర్
 waterloo ఓటర్లు
 watt వాత వాట్
@@ -8286,6 +8412,7 @@ weddell వడిల్ వడీల్
 weddle వడిల్ వడీల్
 wedel వడిల్ వడీల్
 wedell వడిల్ వడీల్
+wee వి
 weed విడ్
 weeden విదాన్
 weedon విదాన్
@@ -8338,7 +8465,6 @@ wesche వైస్
 wess వైస్
 wesson వెషం
 wet వైట్
-wetter వేతెర్ వతెర్
 weyer వేర్ వీర్
 weyl వల్ వేల
 weylin వేలిన
@@ -8437,6 +8563,7 @@ wight వైట్ వాయిట్
 wigs విజ్జ
 wii వి
 wik వక్
+wiki వెకే
 wikipedia వికీపీడియా వికీపీడీయా
 wil వల్ విలు
 wileen వేలిన

@@ -119,11 +119,11 @@ with its word list (see [Word lists](#word-lists)).
 | tt | tat | mr | mar | as | asm | ms | zsm |
 | os | oss | th | tha | — | — | — | — |
 
-All of them but English's learn from FineWeb-2's web text beside
-Tatoeba's too (below). Size tiers are recorded in the Makefile: the
+All of them learn from web text beside Tatoeba's too: FineWeb-2's, and
+English's from FineWeb (below). Size tiers are recorded in the Makefile: the
 languages whose lexicons Wikipedia or web text widens (below) keep
 30 000 words and 60 000 n-grams; Bengali, Marathi, Assamese, Magahi,
-Newari, Armenian, Persian and 24 of the Tatoeba languages that learn
+Newari, Armenian, Persian and 25 of the Tatoeba languages that learn
 from the web's text too 80 000 and 90 000 (`PREDICT_LARGE_LANGS`);
 Slovak, Bulgarian, Belarusian, Uyghur and Ossetian among others 120 000
 and 90 000 (`PREDICT_WIDE_LANGS`); the Dravidian languages and German,
@@ -306,6 +306,15 @@ repository and its packs hold; the text itself is not, neither the
 corpus nor the held-out text: it is the web's, whose pages keep their
 own rights. Each pack with such a model names FineWeb-2 among its
 sources, with this licence, as ODC-By asks of what is made from it.
+
+English's web text, which FineWeb-2 leaves out, is FineWeb's (Hugging
+Face; Penedo et al., "The FineWeb Datasets: Decanting the Web for the
+Finest Text Data at Scale", arXiv 2406.17557), FineWeb-2's English
+predecessor: Common Crawl's English text, **ODC-By 1.0, its use subject
+to Common Crawl's Terms of Use** as well. Of its 10-billion-token sample,
+at one revision, every 32nd row group of the first file is read (pinned
+by the sha256 of what is read, `scripts/fetch-fineweb.sh`); the model
+English's pack holds names FineWeb among its sources, with this licence.
 
 No page of bible.is (Faith Comes By Hearing's Bible site, whose terms
 allow personal, non-commercial use only) is read, in any language, from

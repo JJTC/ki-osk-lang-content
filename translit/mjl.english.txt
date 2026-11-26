@@ -64,6 +64,7 @@ acta इकता
 acting एक्टिंग
 action एक्शन
 actor एक्टर
+ada एडा एदा
 adah एडा अदा
 adair आदर देर
 adaire आदर
@@ -130,6 +131,7 @@ ahr र और
 ahs अस आज
 aicher एकड़
 aid ईडी
+aide ईडी
 aides एड्स
 aiesha ऐशा ऐसा
 aigner इने
@@ -160,6 +162,7 @@ akin केन
 akira कीड़ा
 akita कीता
 akre आकार
+ala एला
 alagem इलाजें
 alaine आलें लें
 alam लाइम आलें
@@ -175,6 +178,7 @@ ales अलज
 alessi आलसी
 aletha लीता लिता
 aletti लेटी उलटी
+ali आली
 alice ऐलिस एलिस
 alig अलग
 alight लाइट लेट
@@ -257,11 +261,14 @@ amoolya मूल्य
 amoss मास
 amount माउंट
 amy एमी
+ana आं आने
 and एंड
+andre अंदरै
 andrej अंदरै
 andrzej अंदरै
 andy एंडी
 anew नू
+ang आं ऐं
 anja अंजू
 ann आं ऐं
 anna आं ऐं
@@ -303,6 +310,7 @@ arrange एरेंज
 array अरे आरे
 art औरत
 ary एड़ी आईरी
+asa आसे अस
 asahi साही
 ascent सेंट
 ascetic सटीक
@@ -314,7 +322,6 @@ asean जियां
 ash ऐश
 ashame शैं असें
 asharah इशारा ऐसारा
-ashe अस ऐश
 ashore शोर असर
 asia इज अज
 aside साइड
@@ -383,6 +390,7 @@ aul ऑल
 aull ऑल
 aung आं
 aunt अंत
+aura र
 aurea ओड़ेया
 aurum आराम
 ausley असली
@@ -411,7 +419,6 @@ axel एक्सेल
 axis एक्सेस
 axle एक्सेल
 axon एक्शन
-aye ऐ
 ayende एंडी
 ayer एयर अर
 ayes ऐस एस
@@ -461,11 +468,13 @@ bahir बाहर भीड़
 bahl बाल बोल
 bahrain बरें
 baht बात
+bail बल
 bailey बैले
 bailie बैले
 baillie बैले
 bailly बैले
 baily बैले
+bain बेन
 baise बस
 baisley बिजली
 baize बस
@@ -499,7 +508,6 @@ banach बैंक
 banana बनना
 banc बैंक
 band बैंड
-bandy बण्डि
 bang बेन बैन
 banged बंद बैंड
 banja बनी बणी
@@ -654,6 +662,7 @@ belka बल्कि बल्के
 bell बेल बल
 bella बले बेल
 bellah बले बेल
+belle बेल बल
 belly बैले
 bely बले बाले
 ben बैन
@@ -689,6 +698,7 @@ bess बस
 besse बस
 bessent बसंत
 besson बेसिन बसें
+beta बेटी
 betcha बेच बिच
 betcher बिचार
 bethann बटन
@@ -763,6 +773,7 @@ bite बायत
 bitten बटन
 bitton बटन
 bitty बीती बेटी
+biz बस
 bizarre बजार बाजार
 black ब्लैक
 blah बल
@@ -819,7 +830,6 @@ bohnen बनान
 bohr बार
 bohren बरें
 bokassa बिकाशा
-bola बोल
 boleyn बोलण
 bolin बोलण
 boline बालें बोलाऐं
@@ -845,7 +855,6 @@ bonneau बनो
 bonney बनी बणी
 bonnie बनी बणी
 bonum बनाम
-bony बणी
 boock बुक
 boodle बदल
 boody बड़ी बडी
@@ -859,6 +868,7 @@ boose बस
 boost बसत
 booten बटन
 booton बटन
+booty ब्यूटी
 booz बस
 booze बस
 boozer बजार
@@ -1009,6 +1019,7 @@ bulla बले बोला
 bullen बोलण
 bully बोली
 bummed बंद
+bun बण
 bundys बंदिश
 bung बन बण
 bunn बन बण
@@ -1031,6 +1042,7 @@ burris बारिश
 burrus बुर्श
 burruss बुर्श
 burry बारी बड़ी
+burton बरतून
 bury बड़ी बरी
 busam बसें
 busche बस
@@ -1046,6 +1058,7 @@ busse बस
 bussed बसत बूस्ट
 bussen बसें
 bussing बसें
+bust बसत
 but बात
 buthan बटन
 butt बात
@@ -1072,8 +1085,8 @@ cabell काबिल
 cabin केबिन
 cabinetry कैबनेटरी
 cable केबल
+cache किश
 cad कैद
-caddy कैदी कदी
 cafe काफी
 caffee काफी
 caffeine कैफीन
@@ -1086,6 +1099,7 @@ caisse केस किस
 caissie केसी
 caisson किसान
 cake केक कक
+cal काल कल
 calais काले कोल
 calcium कैल्शियम
 calise कालेज कॉलेज
@@ -1099,6 +1113,7 @@ callous कलौस
 callum कलम
 callus कलौस
 calm काम कम
+cam कम
 cambell कम्बल
 cambridge कैम्ब्रिज
 came कम
@@ -1113,7 +1128,6 @@ camping कैंपिंग
 camps कैंपस
 campus कैंपस
 can कूं कुन
-cana कैनी कान
 canaan कनें
 canaday कंडे
 canan कनें
@@ -1146,10 +1160,12 @@ care कर
 career करियर
 carer करार
 carew करो करू
+carey करि
 carin कारें करें
 carl कोरल
 carll कोरल
 carnaud करना
+carney करणी
 carol कैरल
 caronna कराना करयाने
 carow करो
@@ -1180,8 +1196,10 @@ carson करसान
 cart कोर्ट
 carta कोर्ट
 carte कोर्ट
+cary करि
 caryl कैरल
 caryn कारण कारें
+cas केस किस
 casal कौसल
 casbah कस्बा
 case केस किस
@@ -1236,17 +1254,18 @@ celine शालीन
 cell सेल शैल
 cella सेला सेल
 celli चली
-censure सेंसर
 cent सेंट
 centaur सेंटर
 center सेंटेर
 centerre सेंटर सेंटेर
 centre सेंटेर
 cents साइंस
+ceo सीईओ
 cerra सर सिर
 cert शर्त
 ceryl सरल
 chacon चिकन
+chad छेद
 chadd छेद छाड़
 chadian चिड़ियां
 chai चाय चाए
@@ -1259,8 +1278,10 @@ chalk चौक
 challis शैली
 champion चैंपियन
 champoux शैम्पू
+chan चेन
 chang चेन छां
 channing चैनिंग
+chap छप
 chapin शॉपें
 chapp छाप छप
 chappie छपी
@@ -1273,7 +1294,6 @@ charles चार्ल्स
 charney छोड़नी
 charron करन करण
 charry चेरी छाड़ी
-chary चोरी छोड़ी
 chat चैट
 chau शो
 chaunce चांस
@@ -1286,7 +1306,6 @@ cheaney चीनी
 checchi चकी
 cheely चील
 cheer चिर
-cheery चेरी
 cheese चीज चीज़
 cheesy चीजै चीज़
 chef शेफ
@@ -1302,6 +1321,7 @@ chew छू
 chewed छोड़
 chewer छोर
 chewy छूई छवि
+chi कई के
 chia ची चहिये
 chiang चेन छां
 chick चेक
@@ -1334,6 +1354,7 @@ chon छां
 chong छां
 choon चुन
 choong चुन चुनग
+chop छाप
 chopin शॉपें
 chopp छाप छप
 choppy छपी
@@ -1373,10 +1394,12 @@ cinematic सिनेमैटिक
 cinque सिंक
 ciocca चौक चको
 ciotti छोटी चोटी
+circa सड़का सड़क
 circon सड़कां
 cirkin सड़कें शार्कें
 cirque सड़क
 cite सेट
+citi सिटी
 citic सटीक
 citing सेटिंग
 city सिटी
@@ -1431,6 +1454,7 @@ cocco कोको
 cocoa कोको
 codding कदें
 coderre कदर
+cody कदी कड़ी
 coed कोविड
 coeur कर
 coey कोई
@@ -1445,9 +1469,9 @@ cohron कारण करन
 cohrs कोर्स
 coia कोई
 coke कक
-cola कोल
 colaw कोला
 coleson कोलिशन
+coli कोल कली
 coll कोल काल
 colla कोला कोल
 collar कॉलर
@@ -1519,6 +1543,7 @@ coppa कॉपी कप
 coppess कपास
 copus कपास
 copy कापी
+cor कार
 corban कार्बन
 cord कार्ड
 corded कार्ड
@@ -1526,12 +1551,14 @@ core कार कर
 corell कोरल
 cores कोर्स
 coretta कारिता
+corey कोरी
 corinn कारण कारें
 corinna कारणा कारना
 cork कारक
 corking कारकें
 corkum कारकें
 corn कारण
+corona करना
 corps कार कर
 corr कार कर
 corrao कारो
@@ -1547,11 +1574,11 @@ corrow करो कारो
 corry करी कोरी
 corson कोर्सें
 corter कार्टर
+cory कोरी
 coscia कशा
 cosell कौसल
 cossairt कसरत
 cosurtuh कसरत
-cot कोट काट
 cotney काटने
 cottle कत्ल
 coudert कुदरत
@@ -1561,6 +1588,7 @@ coull कोल
 counter काउंटर
 county काउंटी
 coup को
+coupe कप
 couper कर कवर
 coups को कुझ
 couric कारक
@@ -1577,7 +1605,6 @@ cowen कूं
 cowher कवर
 cowie कोई
 cowl कोल
-coy कोई
 coyly कोयले
 cragg करग
 craggy करगी
@@ -1632,7 +1659,6 @@ csar जोर सार
 cub काबू
 cuba क्यूबा
 cuccia कुछ
-cuckoo कोको
 cudd कूद
 cuffee काफी
 cull कल काल
@@ -1645,6 +1671,7 @@ cullom कलम
 cullum कलम
 cully काली कली
 culture कल्चर
+cum काम कम
 cunha कुन कुण
 cunnane कानून कनें
 cunning कनें
@@ -1710,6 +1737,7 @@ daisy दसी
 daiwa दवा दवू
 dalai दालि दाल
 dalal दलील
+dale दिल
 dalen दालान
 dall दाल डाल
 dalla दाल दिल
@@ -1728,8 +1756,10 @@ damn डैम दम
 damns डांस डंस
 dams डंस
 dan दिन
+dana देने देना
 dance डंस
 dandy दिंदी
+dane दिन दें
 daner डिनर
 danes डंस
 daney देने देनी
@@ -1755,6 +1785,7 @@ darrah देर डर
 darren दौरान दरान
 darrin दरें डरें
 darroch डार्क
+das देश
 dasch देश डैश
 dash देश डैश
 dashnaw दशना
@@ -1850,12 +1881,14 @@ deny देने दिनै
 denz डंस
 deon ड़ियां दियां
 depression डिप्रेशन
+der डर
 derk डार्क
 derouin डार्विन
 derr देर डर
 derry देरी डरी
 dervin डार्विन
 derwin डार्विन
+des दी दे
 deshaw दिशा
 deshon देशें
 design डिजाइन डिज़ाइन
@@ -1891,7 +1924,6 @@ diane देएं
 dianne देएं
 diary देरी
 dice देश डैश
-dicey देशी
 dicke दिक्
 die दे
 dieck दिक्
@@ -1988,6 +2020,7 @@ donais देने दाने
 donath दांत
 done दान
 dones डांस डंस
+dong दान
 donia दौनी
 donn दान
 donna दान दाने
@@ -2148,6 +2181,7 @@ eary एड़ी
 ease इस
 eash इस
 easy इसी
+eau ओ
 eaux ओ
 eave इव
 ebb अब
@@ -2155,6 +2189,7 @@ ebba एबे अबी
 ebbed अबेद
 ebby अबी एबे
 echoed एकड़
+eddie एड़ी
 edge इज अज
 edges अज्ज
 edgin अजें
@@ -2215,6 +2250,7 @@ encor इन्कार इंकार
 ended एंड
 endure इंडोर
 enema इनाम
+eng ऐं एं
 engh ऐं एं
 engine इंजन
 ennes अंजू
@@ -2228,7 +2264,7 @@ epp अप अपु
 epping ऐपें
 era र
 erany रेने
-ere र
+erica एरिके
 eron ईरान
 err र
 erra र
@@ -2244,6 +2280,7 @@ esser असर
 essie ऐसी असी
 esso असो
 esson असें असीं
+esther एस्टर
 estle असल
 etch एच
 etta एता अते
@@ -2320,7 +2357,6 @@ fanny पहनी
 fantasy फैंसी
 far पहाड़
 farah फेरी फर
-farce फर्श फोर्स
 fare फिर
 fares फर्ज
 farge फर्ज
@@ -2344,12 +2380,14 @@ fate फैट फिट
 fateh फात
 fathi फैटी फैठी
 fatimah फातिमा
+fatty फैटी फटी
 faucet फास्ट
 fauci फसी
 faughn फोन फ़ोन
 faught फात
 faul फल
 faull फल
+fauna फोन
 faurot पहाड़ो
 faus फौज फ़ौज
 fausey फसी
@@ -2404,7 +2442,6 @@ ferry फेरी फिरी
 fess फस
 fessel फसल
 fetch फेच
-fete फिट
 fetsch फेच
 feur फर फिर
 feyen फैन
@@ -2431,6 +2468,7 @@ fine फैन
 finn फैन
 finne फैन
 finnish फिनिश
+fir फर
 fire फायर फेर
 firm फार्म
 firma फार्म
@@ -2568,7 +2606,6 @@ furr फर फिर
 furrh फर फिर
 furrow पहाड़ो
 furry फेरी फिरी
-furs फर्ज
 fuss फस
 fussed फास्ट
 fussell फसल
@@ -2587,6 +2624,7 @@ gagne गिनी
 gahli गली गोली
 gahm गेम
 gahn गईं गिन
+gaia गेया
 gaier गियर गिर
 gail गल
 gaile गल
@@ -2596,9 +2634,10 @@ gain गिन
 gainey गिनी
 gair गिर गियर
 gajda गेदा गेदे
+gal गाल
+gala गल
 galatea गलतिया
 gale गल
-gall गाल गोल
 gallet गलत
 galletti गलती
 galley गली
@@ -2634,7 +2673,6 @@ gatty गति
 gau जीओ
 gauch गाछ
 gaudier गाड़ी गोदी
-gaudy गाड़ी
 gaugh गा जीओ
 gaughan गईं
 gaul गाल
@@ -2668,10 +2706,12 @@ gehm जिम
 gehr जर जड़
 geib गायब
 geiss गैस
+gel जेल
 gem जिम
 gemini जमीनी जमने
 gemma जमा जमी
 gemme जिम
+gen जन
 genady जानदी
 general जनरल
 generale जनरल
@@ -2731,6 +2771,7 @@ gilles झील
 gillott गलत
 gilt गलत गल्त
 gin जन
+gina जीने जीना
 ging जंग जन
 ginn जन
 ginnie जीने जिने
@@ -2871,7 +2912,6 @@ guinea गिनी
 guiney गिनी
 guinn गिन
 guise गैस
-gull गल गाल
 gullah गला गल
 gullatt गलत
 gullet गलत
@@ -2907,6 +2947,7 @@ haak हक
 haake हक
 haas होस
 haass होस
+hack हेक हाइक
 hacker हैकर
 had हेड
 hadad हेड
@@ -2928,6 +2969,8 @@ hailey हली
 hair हर
 hairr हर
 haiti हटी
+hal हल
+hale हल हिल
 halftime हफ्तें
 hall हाल हॉल
 halla हाल हल
@@ -2949,6 +2992,7 @@ hammell हिमाल
 hammill हिमाल
 hamster हैमस्टर
 hamstra हैमस्टर
+han होन
 hang हां हन
 hann हां हन
 hanna हां हन
@@ -2988,6 +3032,7 @@ hastings हेस्टिंग्स
 hasz होस
 hat हैट हित
 hate हैट हित
+hath हेठ
 hatler हिटलर
 hatt हैट हित
 hauck हक
@@ -3055,7 +3100,6 @@ heighth हेठ हैट
 heir र
 heiwa हाईवे
 hekker हैकर
-helena हिलने
 hell हल हिल
 helle हल हिल
 hemel हिमाल
@@ -3071,6 +3115,7 @@ heon हियां
 hepp हिप
 heppe हिप
 her हार
+hera हीरो हेर
 herb अरब
 here हर हेर
 herein हिरण
@@ -3182,7 +3227,9 @@ holm होम हों
 homage अंजू
 home हों
 homme हां
+hon हां हन
 honda होंदे
+hone होन
 honey हानि हुणी
 hong हां होन
 honn हां होन
@@ -3282,8 +3329,6 @@ igor अगर
 ihde ईद आईडी
 ihnen इनें
 ihrke अर्क
-iida आईडी
-ike एक
 ikey एकी एकि
 ikie एकी एकि
 ilana एलान
@@ -3298,6 +3343,7 @@ imre अमरा
 inane इनें
 incur इन्कार इंकार
 inda इंदी
+indie एंडी
 ing ऐं इन
 inge अंजू
 ingham इनाम
@@ -3321,7 +3367,7 @@ irby अरबी
 irey आईरी एड़ी
 irk अर्क
 isch इस
-isoda इसदे
+isle एल
 ison असें असीं
 issa इस ऐसा
 issah इस ऐसा
@@ -3357,6 +3403,7 @@ jacot जैकेट
 jacque जैक
 jacques जैक
 jacquet जैकेट जैक
+jade जड़ जद
 jaded जिद्द
 jaegar जिगर
 jaeger जिगर
@@ -3424,6 +3471,7 @@ jelly जली
 jemmie जमी
 jemmott जंतु
 jenn जन
+jenna जिने जन
 jenney जणी जनि
 jenni जणी जनि
 jennie जणी जनि
@@ -3507,6 +3555,7 @@ jua जो
 juang जवान
 judah जुड़े जोड़े
 judd जड़ जादू
+jude जड़ जुड़
 judy जुडी
 jug जाग
 juhl जाल
@@ -3544,8 +3593,8 @@ kahrs कोर्स
 kail कल
 kaim कम
 kairey करी करि
-kaisha किश कशा
 kalas कालेज
+kale कल
 kalina कलाएं
 kalk कक
 kall कोल
@@ -3563,6 +3612,7 @@ kanady कैंडी
 kanan कनें
 kanda कैंडी
 kandt केंट
+kane केन
 kang कान केन
 kann कान केन
 kannan कानून
@@ -3574,6 +3624,7 @@ kapp कप
 kappa कप
 kappus कपास
 kapton कैप्टन कप्तान
+kara करी
 karch कारक
 karel कैरल
 karema कारें करें
@@ -3601,10 +3652,13 @@ kassem कसम किस्म
 kassen किसान
 kasson किसान
 kasza कशा
+kat काट
 kate कट
 kath कट काट
 kathy कठे केथी
+katie किती
 katja कटी
+katy किती
 katya कटी
 kauble काबिल
 kauk कक
@@ -3647,7 +3701,6 @@ keiichi कैची
 keiji कीजे
 keir कर
 keirn करन
-keisei कैसे केस
 kell कल
 kellam कलम
 kelley कली अकेली
@@ -3775,6 +3828,7 @@ kittel कत्ल
 kittell कत्ल
 kitten कीटाणु
 kittle कत्ल
+kitty कीती किती
 kivi कवि
 klaassen क्लासां क्लासें
 klamm कलम
@@ -3970,8 +4024,8 @@ lagow लगो
 lahaye लाहें
 lahm लाइम लें
 lahn लाइन लैण
+lahore लहर लोहार
 lahti लौति
-lain लें लेन
 laing लाइन
 lais लश
 lakin लेकिन
@@ -4005,6 +4059,7 @@ lann लाइन लैण
 lanna लैना लैने
 lanni लेनी लैने
 lanny लेनी लैने
+lao लौ लो
 laos लूस
 larry लइरी लरए
 las लॉस
@@ -4092,6 +4147,7 @@ leonie लेनी
 leora लाइरा लइरा
 leota लैता लता
 leptin लपटें
+les ले
 less लश
 let लेट
 leu लो लओ
@@ -4163,6 +4219,7 @@ lish लश
 liss लश
 liszt लिस्ट
 lit लत लेट
+lite लाइट लेट
 litt लत लेट
 litters लेटर्स
 litty लिती लेटी
@@ -4192,6 +4249,7 @@ logan लोगें
 logger लगिर
 logging लोगें
 login लोगें
+logo लगो
 loh लो
 lohn लॉन
 lohrey लरए लाड़ी
@@ -4230,6 +4288,7 @@ lotta लता लत
 lotte लत लात
 lottie लौति
 lotty लौति
+lou लो लओ
 louche लश लूस
 lough लौ लो
 louie लई
@@ -4264,16 +4323,19 @@ luedke लड़की
 luedtke लड़की
 lueken लोकें लोकां
 lueth लत लथ
+lug लागू
 luhman लूंण
 luhmann लूंण
 luhn लूण
 luick लोक लुक
 luisi लूस
 luiz लूस
+luke लोक लुक
 lukin लोकें
 lull लाल
 luman लूंण
 lumen लूंण
+luna लूणा
 lunday लांदे
 lundt लानत
 lundy लांदी लांदे
@@ -4346,11 +4408,14 @@ madey मेडे
 madge मेज
 madison मेडिसिन
 mady मेडे
+mae में
 magee मिगी
 maggi मजे
 maggie मिगी
 magi मजे
 magma मैग्मा
+mah मां मा
+mahal माहौल
 mahalah महल
 mahannah महान
 mahar माहिर
@@ -4363,6 +4428,7 @@ mahon मैं
 mahone माह्नू माहणू
 mahr मार मोर
 mahtar मोटर
+mai मै
 maiden मैदान
 maidie मेडे
 maier मेयर मर
@@ -4371,6 +4437,7 @@ mailey मिली मेले
 maille मेल मिल
 mailloux मिलो
 maimed मंद
+maine मैं
 mair मर मेयर
 mairead मेरे
 maisch माइस
@@ -4443,6 +4510,7 @@ marais मेरे
 marcella मार्सेला
 marchetta मार्केट
 marcy मर्सी
+mare मर मेयर
 maready मारदी
 margie मर्जी
 margy मर्जी
@@ -4472,6 +4540,7 @@ marvell मार्वल
 marvella मार्वल
 marvelle मार्वल
 mary मेरी
+mas मौज
 masella मसले
 mashaw मासा
 mass मास माइस
@@ -4614,6 +4683,7 @@ meinen मैंनू
 meir मर मेयर
 meisch माइस
 meiss माइस
+mel मिल
 mell मेल मिल
 mella मेले मिली
 melle मेल मिल
@@ -4692,8 +4762,11 @@ mihm मैं मीम
 mihn मैं
 mike माइक मेक
 miksch मिक्स
+mil मील
 milam मीलें
+milan मिलान
 mile मेल
+miley मेले मैले
 milian मिलीयां मिलियन
 mill मिल मील
 millan मिलन मिलान
@@ -4728,6 +4801,7 @@ minna मैं
 minney मनी
 minnie मनी
 minny मनी
+mint मिंट
 mintha मिनट मिंट
 minting मिनटें
 minton मिनटें मिनटां
@@ -4758,8 +4832,8 @@ mist मस्त
 misty मस्ती
 mit मत
 mitch मैच
-miti मती
 mitsch मैच
+mitt मत
 mize मेज माइस
 mizell मिसाल
 mizelle मिशेल
@@ -4807,6 +4881,7 @@ moma ममी
 momma मां
 mommy ममी
 moms मांस
+mon मां
 mona मन
 monday मुंडे मनदे
 monet मने
@@ -4826,6 +4901,7 @@ moon मन
 moone मन
 mooney मनी
 moonie मनी
+moore मार
 moose मश
 moot मत
 morain मरन
@@ -4953,6 +5029,7 @@ naiman नमें नमां
 nair नर
 naira नेड़े नर
 nall नाल
+nam नाम
 name नम नियम
 named नंद
 naming नमीं
@@ -4983,7 +5060,6 @@ naughton नोटें
 naughty नाते
 naus नाश
 nauss नाश
-nay ने न
 neala नीली नीले
 nealey नीली
 nealy नीली
@@ -5033,6 +5109,7 @@ ngai गै गई
 nghi गी
 niall नेल
 niamh नीव
+nic नेक
 niccoli निकली
 niche नीच नच
 nichol निकल
@@ -5056,7 +5133,6 @@ niesen निशान
 nietzsche नीचे निचे
 nigh ने नई
 nik नेक
-nikkei नेक
 nikkel निकल नकल
 nikola निकली निकले
 nil नेल नल
@@ -5080,6 +5156,7 @@ nitrogen नाइट्रोजन
 nitsch नीच नच
 nitsche नीच नच
 nitta नेता नीति
+noaa नू नोई
 noack नोक
 noah नू नोई
 noam नम
@@ -5090,7 +5167,6 @@ noble नोबेल
 noda नदी
 noell नल
 noeth नोट
-noh नो
 nohl नल
 nohr नर
 nola नल
@@ -5179,6 +5255,7 @@ ojala अयाल
 okelley अकेली
 okelly अकेली
 olah आला ला
+ole ऑल
 olea औली अली
 olen आलें
 oles अलज
@@ -5224,6 +5301,7 @@ orsay रस
 orum आराम
 ory ओरे आरे
 osama असां
+osha ओस
 osman आसमान
 osmon आसमान
 osmun आसमान
@@ -5268,6 +5346,7 @@ ozzie आसे असी
 ozzy आसे असी
 paap पॉप
 paasch पशु पास
+pac पैक
 pace पेश
 pacing पेसिंग
 pack पैक
@@ -5304,6 +5383,7 @@ palais पाले पल
 palash पालिश
 palate पालतू पाइलट
 pale पल
+palette पालतू पाइलट
 palin पालन पलें
 pall पल पाल
 palla पल पैले
@@ -5342,6 +5422,7 @@ parry पईरी पड़ी
 partch पर्च
 partin परतें
 parting परतें
+pas पशु
 pasek पोशक
 pasing पेसिंग
 pass पेश पास
@@ -5354,7 +5435,6 @@ pastry पेस्ट्री
 paszek पोशक
 pat पेट
 patchen पछान पेचान
-pate पेट
 patella पतला पतली
 patese पीटीसी
 patey पति
@@ -5365,6 +5445,7 @@ patron पैटर्न पेटरन
 patt पेट
 patter पातर
 pattern पैटर्न
+patti पति
 patty पति
 paty पति
 paucity पासते
@@ -5462,6 +5543,7 @@ pesce पेश
 peseta पासता पासते
 peshawar पेशेवर
 pesina पसीने
+peta पिता पीता
 peth पेट
 petit पति
 petty पति
@@ -5551,6 +5633,7 @@ pissing पेसिंग
 pistil पेस्टल
 pistol पेस्टल
 pit पेट
+pita पीता
 pitney पत्नी
 pitt पेट
 pity पति
@@ -5657,6 +5740,7 @@ praun प्राण
 prawn प्राण
 pray पर परे
 prays प्रेस प्रैस
+pre पड़ी परे
 precht प्रकट
 preiss प्रेस प्रैस
 premium प्रीमियम
@@ -5699,7 +5783,6 @@ pru प्रो
 pruer परोआर
 prugh प्रो
 prussian प्रशन
-pry परे
 pryce प्रेस प्रैस
 psalm सम
 psalms सांस
@@ -5734,7 +5817,6 @@ pus पास पशु
 pusch पशु
 push पशु
 puss पास पशु
-putty पति पोती
 puzzle पज़ल
 pyka पकी पैक
 pyke पैक पाईक
@@ -5753,6 +5835,7 @@ quaye के
 quays किस किश
 queer कवर
 quek कवक
+qui की कि
 quiche किश
 quick कवक
 quik कवक
@@ -5862,6 +5945,7 @@ reaume रूम रम
 reay रे
 rebecca रेबेका
 rebekka रेबेका
+rec रक
 rech रैक रक
 recht रक्त
 recipe रेसिपी
@@ -5907,6 +5991,7 @@ renny रेने
 rens रेंज
 rentsch रेंच
 repair रिपर
+res रस
 research रिसर्च
 resnais रिसने
 ress रेस रस
@@ -5932,7 +6017,6 @@ rhea री
 rheaume रूम रम
 rhett रेत रेट
 rhew ऋ
-rhine रें
 rhines रेंज
 rhoda रोंदा रोंदी
 rhodia रोंदी
@@ -6044,12 +6128,14 @@ rohling रोलिंग
 rohm रम
 rohman रोमन रमन
 rohs रोज रोज़
+roi री
 roll रोल
 rolla रोल
 rolle रोल
 rollei रोल
 rolling रोलिंग
 rolm रम
+rom राम
 romain रोमन
 romaine रोमन
 roman रमन
@@ -6087,6 +6173,7 @@ roth रात
 rott रात
 rotten रातीं रातें
 rotting रातीं रातें
+rouge रोज रोज़
 rought रात
 round राउंड
 rounded राउंड
@@ -6120,6 +6207,7 @@ ruhle रोल
 rum राम
 rummy रामे
 rumsey रामजी
+rune ऋण
 runny रानी
 rupp रूप
 ruppe रूप
@@ -6151,6 +6239,7 @@ rynes रेंज
 rys रेस रस
 saab सब
 saam सम
+saas सॉस
 saatchi सोची सोचि
 sabah सब
 saban सेबें
@@ -6177,7 +6266,6 @@ saffle सफल
 safier सफर
 safir सफर
 saga शोगा
-sahara शेरा शहर
 sahl साल
 sahlen सालें सालां
 sahli साल
@@ -6238,6 +6326,7 @@ sang सन सानू
 sank सिंक
 sanna सन साइन
 sannes सांस साइंस
+sans साइंस
 santa सन साइन
 santer सेंटर सेंटेर
 santerre सेंटर सेंटेर
@@ -6249,6 +6338,8 @@ sanz सांस साइंस
 sao सौ सो
 saone सयों
 sapp शाप
+sar सार
+sara सर सिर
 sarah सर सिर
 sarich शरीक
 sarin सारें
@@ -6270,9 +6361,9 @@ saudia सदिया
 sauey सोई
 saul साल
 saum सम
+sauna सोने
 sautter सतर
 save सेव शिव
-saver सवार
 savery सवारी
 savin सेवन
 saving सेवन
@@ -6299,6 +6390,8 @@ sayre सर सिर
 says सिस
 scaff स्किफ
 scaife स्किफ
+scam सकें
+scan सकें
 scene सीन
 scent सेंट
 schaab सब
@@ -6393,6 +6486,7 @@ schuur शुरू
 schwall सवाल
 schweppe स्वैप
 schwer सवार
+sci सी से
 scianna शाना सोना
 sciara सारा सहारा
 scicom सकां
@@ -6426,6 +6520,7 @@ seat सीट शीट
 seaway शिव
 seay से
 sebby सबी
+sec शक
 seckel साइकिल
 secom सकां
 second सेकेंड
@@ -6458,6 +6553,7 @@ semi समय सेमे
 semite समेत
 semmes साइंस समज
 semon समां समें
+sen साइन
 senate सेंट
 senator सेंटर सेंटेर
 seng सन साइन
@@ -6469,6 +6565,7 @@ sennott सेंट
 sens साइंस
 sense साइंस
 sensei साइंस
+sensor संसार
 seow सीओ
 seraw सारा
 serda सर्दी
@@ -6476,6 +6573,7 @@ serr सर सिर
 serra सर सिर
 servais सर्वे
 sessa सिस
+seth सेट
 sethi सिटी
 seven सेवां
 sever सवार
@@ -6488,6 +6586,7 @@ sewage सोज
 sewall सुआल सवाल
 sewell सुआल सवाल
 sewer सुअर सूअर
+sewn सन
 sferra सफर
 sffed सफेद
 shaak शक शोक
@@ -6500,6 +6599,7 @@ shadel शेड्यूल
 shadle शेड्यूल
 shadow साइडो
 shaff शेफ साफ
+shah शा शो
 shaikh शेक शक
 shake शेक शक
 shaker शिकार
@@ -6510,6 +6610,7 @@ shame शैं
 shamelle शामल शामिल
 shamp शैम्पू
 shampoo शैम्पू
+shane शैं
 shanna शैं शाना
 shanty शांति
 shao शो सौ
@@ -6599,6 +6700,7 @@ shirt शर्त
 shirting शर्तें
 shit सहित
 shiu शो
+shiva शिव
 shock शक
 shockey सकी
 shocking शौकीन साकिन
@@ -6635,7 +6737,6 @@ shuff साफ साफ़
 shuffle सफल
 shula सुले सूले
 shull साल
-shun सन सानू
 shuns सांस
 shunt शांत
 shupp शाप
@@ -6688,7 +6789,6 @@ sin सन
 sinay सीन
 sincere सेंसर
 sindt सेंट
-sine साइन शैं
 sines साइंस
 sing सन सीन
 singh सन सीन
@@ -6807,7 +6907,6 @@ soos सोज
 sooter सतर
 soothe सतह
 sooy सुई सोई
-sop शॉप
 sophie सोफे
 sophy सोफे
 sopp सोप शॉप
@@ -6840,6 +6939,7 @@ sowden सौदें
 sower शोर सौर
 sown सन
 sows सोज सॉस
+soy सोई
 spacial स्पेशल
 spaghetti स्पगेटी
 spam स्पैम
@@ -6851,6 +6951,7 @@ species स्पीसीज
 spelling स्पैलिंग
 spilling स्पैलिंग
 spreadsheet स्प्रेडशीट
+sri सड़ी
 staack स्टॉक
 staar स्तर स्टोर
 stac स्टेक
@@ -6963,6 +7064,7 @@ sundays संदेश संदेस
 sundt शांत
 sung सन सानू
 sunia सोनिया
+sunni सुनी सूणी
 sunny सुनी
 suns सांस
 superhero सुपरहीरो
@@ -6970,6 +7072,7 @@ suppa सूप सुप
 supply सप्लाई
 supports स्पोर्ट्स
 supreme सुप्रीम
+sur सार
 sure शुरू
 sures सूरज सुरज
 surf सिर्फ
@@ -7061,10 +7164,12 @@ tallie टोली
 tallon टाइलें
 tally ताले
 talon टाइलें
+tam टाइम
 tama तां तों
 tame तैं
 tamm तां टाइम
 taneja तिनहा
+tang तां तों
 tanguay तंग
 tani तने
 tank टैंक टेंक
@@ -7076,6 +7181,7 @@ tape टैप टिप
 tapp टाइप टैप
 tappe टाइप टैप
 tar तौर तार
+tara तारे तौर
 tarom तरां
 tarr तौर तार
 tarry तेरी तैयारी
@@ -7128,6 +7234,7 @@ teenie तिने तीने
 teeny तिने तीने
 tegge टैग
 tehan तीन तैं
+tehran तरां
 teich टेक
 teitel टाइटल
 teitell टाइटल
@@ -7174,6 +7281,7 @@ than दिन
 thanh तां
 thank टैंक टेंक
 thao दो तो
+thar तौर तार
 that डेट दतु
 thatch टच
 thaw था ता
@@ -7225,6 +7333,7 @@ thirty तैरदी
 thiry तेरी
 thirza तर्ज
 this तेस देश
+tho दो
 thoele टोल तल
 thoen तों
 tholl ताल तल
@@ -7255,6 +7364,7 @@ tia ते तिया
 tibbie टीबी तेबे
 tibby टीबी तेबे
 tibia तेबे टीबीया
+tick तक
 ticked टिकट
 ticker तकर
 tickle टेकलू
@@ -7289,7 +7399,6 @@ tipp टिप टैप
 tire तैयार
 tirey तेरी
 tiring टायरें
-tis तेज तेस
 tisch टिशू तेश
 tissue टिशू
 tit टैटू
@@ -7329,6 +7438,7 @@ torray तारे तौर
 torre तौर
 torrey तोरी तारे
 torry तोरी तारे
+tory तारे
 tosch टॉस
 toss टॉस
 touch टच
@@ -7366,6 +7476,7 @@ trauth ट्राउट
 tray त्रै
 trays ट्रेस तरस
 treichel ट्रैक
+trek ट्रेक
 trella तरल
 tresch ट्रेस
 tress ट्रेस तरस
@@ -7409,6 +7520,7 @@ tucked ताकत
 tuckett ताकत
 tuckey ताकि
 tucson तुसां
+tue टू
 tuel टूल
 tuell टूल
 tuff तफ
@@ -7460,6 +7572,7 @@ ullom आलें उल्म
 uma यों
 umm आं आम
 ummel अम्ल
+una उने उनें
 under अन्दर
 uneasy निजी
 universe यूनिवर्स
@@ -7479,6 +7592,7 @@ uri एड़ी
 urie एड़ी
 ury एड़ी
 use यूज़
+user यूजर
 usrey आसरी आसरि
 usry आसरी आसरि
 ussery आसारी आसरी
@@ -7544,7 +7658,6 @@ vetsch विच
 vetting वेतन
 veyne वैन
 vibe वाइब
-vicar विकार
 vichy विशे
 vicious विशेस विशेश
 vicker विकार
@@ -7575,7 +7688,6 @@ vought वोट
 waara वारी
 waas वाज
 wacker विकार
-wada वादे
 wadi वादे
 waist वस्तु
 walen विलेन
@@ -7779,6 +7891,7 @@ yahr यार यर
 yak एक
 yake एक
 yale एल
+yan एं
 yanda एंड
 yang एं यां
 yao यो
@@ -7806,6 +7919,7 @@ ying एं
 yipee एपी
 yippee एपी
 ynjiun इंजन
+yoga योग
 yoh यो यों
 yohn यों यां
 yong यों यौन
@@ -7819,6 +7933,7 @@ yous यशु
 youse यूज़
 yow यो
 yuan यवोन
+yum यां
 yuma यों
 yung यां यों
 yuppie यूपी
@@ -7913,6 +8028,7 @@ zisson जिसनू
 ziwei जिवें जीव
 zizzo जेजो जेजों
 zoch शक शोक
+zoe सोई
 zoeller सोलर
 zoete शोती
 zoey सोई

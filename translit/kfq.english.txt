@@ -178,6 +178,7 @@ arata आराटे
 are आरु आर
 array अरे
 arrieta आरीटे
+asa आस
 asay से
 ascend शेंड
 asch एस आस
@@ -229,7 +230,6 @@ awed ओड
 awry अरे
 aycock अक्कू
 aydt अट
-aye आई
 ayes एस
 ayesha एस
 ayler इलार
@@ -277,6 +277,7 @@ bailie बिली
 baillie बिली
 bailly बिली
 baily बिली
+bain बेन
 baines बिंज
 bains बिंज
 baise बस
@@ -433,6 +434,7 @@ beker बेकार
 bekker बेकार
 bekki बईके
 belie बिलाई
+bella बला
 bellah बला
 belli बिली
 belly बिली
@@ -443,7 +445,6 @@ benn बेन बईन
 benne बेन बईन
 benotti बिनती
 bens बिंज
-benz बांजू
 beron बेरान
 berra बेरा
 berres बरस
@@ -516,7 +517,6 @@ bog बगू
 bogue बगू
 bohr बार
 bohren बारेन
-bola बोली
 bollen बालान
 bolly बोली
 bolting बोलटेन
@@ -738,6 +738,7 @@ cahoon खून खुण
 cail कल
 caines किंज
 cake केक
+cal काल
 calais केळे कल
 calgene कालजीन
 calia कालीया
@@ -755,13 +756,13 @@ calm काम कोम
 calmed कंदू
 calor कालार
 caluzzi कालजी
+cam काम कम
 came कम
 camel कमाल
 camm काम कम
 cammie केमी कमी
 cammy केमी कमी
 can केन कोन
-cana केन
 canaday केंडे
 canas केनेज
 candy कांडी
@@ -791,6 +792,8 @@ cars कासू
 carta कारटे
 carty कारटे
 caryn कारन कारण
+cas कासू
+casa कासू
 cash कासू
 cashen कासान
 cashew कासू
@@ -859,6 +862,7 @@ chevy चेव
 chews च्यूज
 cheyenne शायेन
 chez से
+chi कई काय
 chia छी ची
 chick चक
 chili चिले
@@ -897,6 +901,7 @@ ciocca चक
 ciotti छोटी
 cira सारा सर
 circa सारका सरके
+citi शिटी
 city शिटी
 ciucci चुची चोची
 ciulla चले
@@ -929,10 +934,11 @@ cohoon खून खुण
 cohr कार कर
 cohron कारान कोरान
 coia कोयो कोय
-cola कल कला
 colaw कला
+cole कल
 coletta कोलेटे
 coletti कोलेटे
+colin कोळेन
 coll काल कल
 collar कालार
 colle कल
@@ -993,6 +999,7 @@ coombe कोम कों
 coonan कोनेन
 coosa कुसी
 copper कापार
+cor कार
 corda कार्डा
 core कार
 coren कोरान कारान
@@ -1030,7 +1037,6 @@ cowan कोन कों
 cowed कोड
 cowen कोन कों
 cowling कोलीन कोळेन
-coy की
 coz कासू
 crane क्रेन
 cray कर
@@ -1038,7 +1044,6 @@ crayne क्रेन
 csar सरू सर
 cub काबू
 cubbage काबेज
-cuckoo काकू
 cuffee कोफी
 cull कल काल
 culler कालार
@@ -1047,6 +1052,7 @@ cullom कोलोम
 cullum कोलोम
 cully कल
 culpa काळपा
+cum काम कम
 curragh कर कोरा
 curran केरान कारान
 curren केरान कारान
@@ -1096,6 +1102,8 @@ dam दामू
 damm दामू दाम
 damme दामू दाम
 damn दामू दाम
+dana डेन दिन
+dane डेन दिन
 dang डान
 dani डोने
 dann डान
@@ -1243,6 +1251,7 @@ dona डोने
 donais डान दिन
 done डान
 doney डोने
+dong डान
 donn डान
 donna डान दाना
 donnan दानान डानुनू
@@ -1252,6 +1261,7 @@ donnie डोने
 donny डोने
 doozy दोसी
 dorothy दोराटे
+dos दोष
 dosch दोष दोस
 dose दोष
 dosia दोसी
@@ -1431,6 +1441,7 @@ faughn फोन फाण
 faught फट
 faul फल
 faull फल
+fauna फाण
 faure फार
 fauth फट
 favale फावळी
@@ -1522,6 +1533,8 @@ gahli गाल
 gahn गेन
 gahr गार
 gait गट
+gal गेल
+gala गेल गाल
 galane गालेन
 gale गेल
 galey गेली
@@ -1582,6 +1595,7 @@ geeting गीटेन
 gehl गेल
 gehr जेर
 gemma जमा
+gen जेन
 gene झीं
 geng जेन
 genna जेन
@@ -1593,6 +1607,7 @@ gettys गिटीज
 geyer गेर
 ghada गाडा गाडी
 ghali गाल
+ghana गाना गेन
 ghitis गिटीज गीटीज
 ghose गोजू
 ghoul गोल गोलू
@@ -1772,6 +1787,7 @@ hamme हं हां
 hammen हेंं हेंन
 hammon हेंं हेंन
 hamon हेंं हेंन
+han हेन हां
 hana हेन हं
 hanan हेंं हेंन
 hane हेन
@@ -1848,6 +1864,7 @@ heinen हेंं हेंन
 hello हॅलो
 helluva हलवा
 helmut हेल्मेट
+hem हेमू
 hemann हेंं हेंन
 hemel हिमोलू
 hemme हं हेमू
@@ -1923,6 +1940,8 @@ holly हाल
 holm होम हं
 home हं
 homme हां हं
+hon हं हां
+hone हं
 hong हां होन
 honn हां हं
 hooley हुली
@@ -2153,6 +2172,7 @@ kaolin कोलीन कोळेन
 kapper कापार
 kapton केप्टान
 kapur कापार
+kara केरा
 karch कोरकू
 karen केरान
 karoun कारन कारण
@@ -2178,7 +2198,6 @@ kaul काल कालू
 kaunda कांडी
 kaus कासू
 kauth काटू
-kawa कावू
 kay के
 kaylie केळे केळी
 kayne केन
@@ -2293,6 +2312,7 @@ koller कालार
 kolli काल
 kolling कोलीन कोळेन
 kolm कोम कों
+kona कोने
 kong कोन कों
 koning कोनेन
 kooi कई
@@ -2367,7 +2387,6 @@ lacana लाकेन
 lagow लागो
 lahn लान लेन
 lahti लाटे
-lain लेन
 laing लाईन
 lair लियर
 lait ले ल
@@ -2375,6 +2394,7 @@ lakin लाकेन
 lalla लाळा
 lambda लांडा
 lambs लिंज
+lan लेन
 landen लांडान
 landon लांडान
 lane लेन
@@ -2520,7 +2540,6 @@ macken मकान माकान
 mackinaw माकाना
 macon मकान
 mad मेड
-madam मेडोम
 madame मेडोम
 madan मेडेन
 madd मेड
@@ -2528,6 +2547,7 @@ madden मेडेन
 made मेड
 maden मेडेन
 madyun मेडेन
+mae मी
 mah म
 mahan मेन मिनू
 mahannah महिना
@@ -2539,6 +2559,7 @@ mahon मेन मिनू
 mai माय
 mailloux मेलो
 main मन
+maine मन
 maiti मेटे
 maiziere मेजर
 majer मेजर
@@ -2555,6 +2576,7 @@ mallick मालीकू
 mallow मेलो
 malloy मलई
 maloy मलई
+mama मामी
 mamma मामा मामी
 man मान
 mancha मानका
@@ -2577,6 +2599,7 @@ manny मिनी
 manta मेंटो
 mantei मेंटे
 manthei मांडे
+mantra मंत्र
 many मिनी
 margittai मार्जीटे
 mari मारे
@@ -2764,6 +2787,7 @@ molloy मलई
 molock मालीकू
 momma मामा मामी
 mommy मामी
+mon मान
 mona मोनू
 monda मांडी
 monday मांडी
@@ -2806,7 +2830,6 @@ mose मोज
 moss माउस
 mostow मस्तो मास्तो
 mote मोटू मत
-moth मोटू
 mott मत मोटू
 motte मत मोटू
 mouse माउस
@@ -2885,7 +2908,6 @@ nat नितू
 nate नितू
 nath नितू
 naw ना
-nay न
 neal नील निलू
 neala नीला निला
 neale नील निलू
@@ -2897,6 +2919,7 @@ neeson निसान
 neet नितू
 neher नेर
 neigh नी न
+neil निलू
 neilan निळेन
 neill नील निलू
 nej नी न
@@ -2919,7 +2942,6 @@ ngai गाई गई
 ngor अंगार
 niel नील निलू
 niesen निसान
-nil निलू
 nill निलू नील
 nir नेर
 nissan निसान
@@ -2992,6 +3014,7 @@ olague अलग
 olah ला ओला
 olathe ओळटे ओलटे
 olay ओले ओल
+ole ओल
 olea ओले ओल
 oley ओले ओल
 olin ओलेन
@@ -3064,6 +3087,7 @@ pao पो
 papa पोपा
 papaw पोपा
 paper पेपर
+para पेरा
 parade पिरेड
 parc पारकू
 parekh पारकू
@@ -3090,6 +3114,7 @@ patina पेटीन
 paton पेटीन
 patron पत्रान
 patten पेटीन
+patti पेटी
 pattin पेटीन
 patting पेटीन
 patton पेटीन
@@ -3278,6 +3303,7 @@ quai की के
 qualley क्वाली
 quay की के
 quaye के
+qui की कि
 raad रोड
 raasch रस
 rad रेडू
@@ -3455,8 +3481,8 @@ sadie शेडी
 saehan शेन सण
 saenz शिंज
 sag सागू
+saga सागे
 sagas सागेज
-sahara शेर शिरा
 sahl साल शाल
 sahli साली साले
 saia साया साये
@@ -3494,16 +3520,20 @@ sane शेन
 sang सण शेन
 sanna साना शेने
 sannes संजू सांस
+sans संजू
 santa साना शेने
 santia शांती
 sanz संजू सांस
 sao सो
+sar सरू
+sara सर सेर
 sarah सर सेर
 saran सेरेन
 sarette शेरेट
 sarra सारा
 sarratt शेरेट
 sarrett शेरेट
+sasha सास
 sass सास
 sasse सास
 satay साटे
@@ -3624,6 +3654,7 @@ selling साईलीन
 sellon साईलीन
 sema सीमा सीम
 semmes संजू
+sen सण
 send शेंडू
 seng शेन सण
 senn शेन सण
@@ -3659,6 +3690,7 @@ shame शिम
 shamed शेंड शेंडू
 shames शिंज
 shand शेंड शेंडू
+shane शेन
 shanna शेने शेन
 shao सो
 share शेर
@@ -3735,7 +3767,6 @@ showed सोडू
 shown सोनू
 shuey सुई
 shull शाल साल
-shun शानू
 shuns संजू
 shunt शांत
 shurr शेर सर
@@ -3766,6 +3797,7 @@ sikora शिकार
 silica शिळीके शिळीकू
 sillier शिलीर
 silly शिळी
+sim शिम
 simm सीम शिम
 simms शिंज
 simona समोना
@@ -3903,6 +3935,7 @@ sunny सानी
 suns संजू सांस
 suppa सोपा सपा
 supports स्पोर्ट्स
+sur सर सेर
 sure सुरु
 surf सिर्फ
 surrette शेरेट
@@ -4044,12 +4077,14 @@ thine डेन डायन
 thing टीन टेन
 thingy थेंगी
 think टिंकू
+tho डो
 thobe तब
 thoele टोल
 thole टोल
 tholen तालान थाळेन
 tholl ताल टोल
 thong टाऊन टऊन
+thor थार
 those दोस दोष
 thou डो डाऊ
 though डो
@@ -4069,6 +4104,7 @@ tibbie तबी
 tibby तबी
 tibi तबी
 tibia तबी
+tick टक
 ticket टिकीट
 tie टे
 tiein टईं टायेन
@@ -4149,8 +4185,10 @@ tsuda सोडू
 tsui सुई सई
 tubb तब
 tubby तबी
+tuck तक
 tuckey तक
 tucking टाकीन
+tue टो
 tuel टोल
 tuell टोल
 tull ताल
@@ -4367,6 +4405,7 @@ zinn जेन शेन
 zins शिंज
 ziwei जीव
 zoch जॅक शक
+zoe सई
 zoey सई
 zogg सागू
 zoh जो सो

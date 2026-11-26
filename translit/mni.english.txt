@@ -20,6 +20,7 @@ abbey ꯑꯏꯕꯤ ꯏꯕꯤ
 abbie ꯑꯏꯕꯤ ꯏꯕꯤ
 abby ꯑꯏꯕꯤ ꯏꯕꯤ
 abdo ꯏꯕꯗꯣ
+abdul ꯑꯕꯗꯨꯜ
 abdulla ꯑꯕ꯭ꯗꯨꯜ ꯑꯕꯗꯨꯜ
 abe ꯏꯕ ꯑꯩꯕꯨ
 abed ꯕꯦꯗ
@@ -41,6 +42,7 @@ abott ꯕꯣꯠ
 abou ꯕꯨ ꯑꯕꯨ
 abreu ꯕꯔꯣ
 abron ꯕꯔꯟ
+abu ꯑꯩꯕꯨ
 abut ꯕꯨꯠ ꯕꯠ
 abyss ꯑꯦꯕꯤꯁꯨ ꯕꯤꯁ
 acacia ꯀꯦꯁ
@@ -85,6 +87,7 @@ acting ꯑꯦꯛꯇꯤꯡ
 action ꯑꯦꯛꯁꯟ
 actor ꯑꯦꯛꯇꯔ
 acts ꯑꯦꯛꯁ
+ada ꯏꯗ ꯑꯦꯗ
 adah ꯏꯗꯥ ꯑꯗꯣ
 adak ꯗꯦꯛ ꯗꯛ
 adam ꯏꯗꯣꯝ
@@ -220,7 +223,6 @@ aix ꯑꯦꯛꯁ
 ajaj ꯖꯖ
 ajar ꯖꯥꯔ
 aka ꯑꯣꯛ
-akai ꯏꯀꯥꯏ
 akali ꯀꯥꯂꯤ
 akana ꯑꯀꯥꯟ
 akashi ꯀꯥꯁꯤ
@@ -263,6 +265,7 @@ aleve ꯑꯣꯂꯤꯚ ꯂꯤꯚ
 alexa ꯑꯦꯂꯦꯛꯁ
 alexi ꯑꯦꯂꯦꯛꯁꯤ
 alexy ꯑꯦꯂꯦꯛꯁꯤ
+ali ꯑꯥꯂꯤ
 alice ꯑꯦꯂꯤꯁ
 alicia ꯑꯦꯂꯤꯁ ꯂꯤꯁ
 alie ꯑꯂꯤ ꯑꯥꯂꯤ
@@ -280,6 +283,7 @@ alix ꯑꯦꯂꯦꯛꯁ
 aliyah ꯏꯂꯤꯌꯥ
 all ꯑꯣꯜ ꯑꯥꯂꯨ
 alla ꯑꯣꯜ ꯑꯜ
+allah ꯑꯣꯜ ꯑꯜ
 allain ꯂꯦꯟ ꯑꯣꯂꯦꯟ
 allais ꯂꯩ ꯂꯦ
 allan ꯑꯦꯂꯟ ꯏꯂꯣꯟ
@@ -369,6 +373,7 @@ amp ꯏꯝꯞ
 amre ꯑꯃꯔ
 amuck ꯑꯃꯨꯛ ꯃꯨꯛ
 amuse ꯃ꯭ꯌꯨꯖ
+ana ꯑꯦꯟ ꯑꯩꯅ
 anac ꯏꯅꯥꯛ ꯏꯅꯛ
 anantha ꯑꯅꯟꯇ
 anatolia ꯑꯅꯥꯇꯣꯂꯤꯌ
@@ -402,6 +407,7 @@ ang ꯏꯪ ꯑꯦꯟ
 angel ꯑꯦꯟꯖꯦꯜ
 angell ꯑꯦꯟꯖꯦꯜ
 angle ꯑꯦꯡꯒꯜ
+anime ꯑꯦꯅꯤꯃꯦ
 ankara ꯑꯦꯡꯀꯔ ꯑꯦꯉ꯭ꯀꯔ
 anker ꯑꯦꯡꯀꯔ ꯑꯦꯉ꯭ꯀꯔ
 ankh ꯏꯅꯛ ꯏꯟꯛ
@@ -459,6 +465,7 @@ apps ꯑꯞꯁꯨ
 april ꯑꯦꯞꯔꯤꯜ ꯑꯦꯄ꯭ꯔꯤꯜ
 aprile ꯑꯄ꯭ꯔꯤꯜ
 apron ꯑꯦꯞꯔꯣꯟ
+arab ꯑꯥꯔꯕ
 arabic ꯑꯔꯥꯕꯤꯛ
 arabie ꯑꯥꯔꯕꯤ
 araby ꯑꯥꯔꯕꯤ
@@ -517,6 +524,7 @@ artus ꯑꯥꯔꯇꯁ ꯑꯥꯔꯇꯤꯁ
 artz ꯑꯥꯔꯇꯁ
 artzt ꯑꯥꯔꯠꯁꯇ
 ary ꯏꯔꯤ
+asa ꯑꯁꯤ
 asay ꯏꯁꯩ ꯁꯦ
 ascent ꯁꯦꯟꯠ ꯁꯦꯟꯇ
 asch ꯑꯦꯁ
@@ -623,6 +631,7 @@ aune ꯑꯣꯟ
 aung ꯑꯣꯟ
 aunt ꯑꯦꯟꯠ
 auntie ꯑꯥꯟꯇꯤ
+aura ꯑꯥꯔ
 aural ꯑꯣꯔꯦꯜ
 auria ꯑꯣꯔꯤꯌꯥ
 aurum ꯑꯥꯔꯝ
@@ -720,6 +729,7 @@ bahre ꯕꯣꯔ ꯕꯥꯔ
 baht ꯕꯣꯠ
 baier ꯕꯦꯌꯔ ꯕꯤꯔ
 baig ꯕꯦꯒ
+bail ꯕꯦꯜ
 baila ꯕꯥꯢꯜ
 baile ꯕꯦꯜ
 bailin ꯕꯦꯂꯦꯟ
@@ -769,6 +779,7 @@ bane ꯕꯦꯟ
 banet ꯕꯦꯅꯦꯠ
 bang ꯕꯦꯡ ꯕꯦꯟ
 banged ꯕꯦꯟꯗ
+bangladesh ꯕꯥꯡꯂꯥꯗꯦꯁ
 bangle ꯕꯦꯡꯒꯜ ꯕꯦꯡꯒꯣꯜ
 banh ꯕꯦꯟ ꯕꯥꯅꯨ
 bank ꯕꯦꯡꯛ
@@ -824,6 +835,7 @@ basal ꯕꯦꯁꯦꯜ
 basch ꯕꯁ ꯕꯦꯁ
 base ꯕꯦꯁ
 bases ꯕꯦꯁꯤꯁ
+bash ꯕꯦꯁ
 bashaw ꯕꯁ ꯕꯤꯁ
 bashes ꯕꯦꯁꯤꯁ
 bashing ꯕꯦꯁꯤꯡ
@@ -946,6 +958,7 @@ belinsky ꯕꯦꯂꯦꯟꯁꯀꯤ
 bell ꯕꯦꯜ
 bella ꯕꯦꯜ
 bellah ꯕꯦꯜ
+belle ꯕꯦꯜ
 bellin ꯕꯦꯂꯦꯟ
 belling ꯕꯦꯂꯦꯟ
 bellon ꯕꯦꯂꯦꯟ ꯕꯦꯜꯅ
@@ -953,6 +966,7 @@ belth ꯕꯦꯜꯠ
 bending ꯕꯥꯏꯟꯗꯤꯡ
 bene ꯕꯦꯟ ꯕꯦꯅꯥ
 benefit ꯕꯦꯅꯤꯐꯤꯠ
+bengal ꯕꯦꯡꯒꯣꯜ
 bengel ꯕꯦꯡꯒꯜ ꯕꯦꯡꯒꯣꯜ
 benjimen ꯕꯦꯟꯖꯥꯃꯤꯟ
 benke ꯕꯦꯡꯛ
@@ -997,6 +1011,7 @@ besaw ꯕꯤꯁ
 besch ꯕꯦꯁ
 bess ꯕꯦꯁ
 besse ꯕꯦꯁ
+beta ꯕꯦꯠ ꯕꯦꯇꯤ
 betcha ꯕꯦꯆ
 betel ꯕꯦꯇꯜ
 beth ꯕꯦꯠ
@@ -1054,6 +1069,7 @@ bin ꯕꯦꯟ
 bina ꯕꯤꯟ
 binding ꯕꯥꯏꯟꯗꯤꯡ
 binette ꯕꯦꯅꯦꯠ
+bing ꯕꯦꯡ
 bingel ꯕꯦꯡꯒꯜ ꯕꯦꯡꯒꯣꯜ
 bingle ꯕꯦꯡꯒꯜ ꯕꯦꯡꯒꯣꯜ
 bingley ꯕꯦꯡꯒꯂꯤ
@@ -1464,6 +1480,7 @@ caccia ꯀꯣꯆ
 cache ꯀꯦꯁ ꯀꯩꯁꯨ
 cached ꯀꯦꯁꯇ
 caching ꯀꯥꯁꯤꯡ ꯀꯩꯁꯤꯡ
+cad ꯀꯥꯗ
 cadet ꯀꯦꯗꯦꯠ
 cadmium ꯀꯦꯗꯃꯤꯌꯝ
 caen ꯀꯦꯟ ꯀꯣꯟ
@@ -1525,7 +1542,7 @@ camps ꯀꯦꯝꯄꯁ
 campus ꯀꯦꯝꯄꯁ
 campy ꯀꯥꯝꯄꯤ
 can ꯀꯦꯟ ꯀꯣꯟ
-cana ꯀꯥꯢꯅ ꯀꯥꯏꯅ
+canaan ꯀꯦꯅꯤꯟ
 canada ꯀꯥꯏꯟꯗ
 canal ꯀꯦꯅꯦꯜ
 canby ꯀꯟꯕꯤ
@@ -1559,6 +1576,7 @@ capper ꯀꯄꯥꯔ
 capping ꯀꯦꯄꯤꯡ
 caq ꯀꯦꯛ
 car ꯀꯣꯔ ꯀꯥꯔ
+carb ꯀꯧꯔꯕ ꯀꯔꯕ
 carbaugh ꯀꯔꯕ
 carbone ꯀꯥꯔꯕꯣꯟ
 card ꯀꯥꯔ꯭ꯗ
@@ -1566,6 +1584,7 @@ care ꯀꯦꯌꯔ ꯀꯦꯔ
 career ꯀꯦꯔꯤꯌꯔ
 carena ꯀꯦꯔꯤꯅꯥ
 carew ꯀꯥꯏꯔꯣ
+carey ꯀꯦꯔꯤ
 cargill ꯀꯥꯔꯒꯤꯜ
 caribbean ꯀꯦꯔꯤꯕꯤꯌꯥꯟ ꯀꯦꯔꯤꯕꯤꯌꯟ
 carie ꯀꯦꯔꯤ
@@ -1634,7 +1653,6 @@ cashatt ꯀꯦꯁꯇ
 cashed ꯀꯦꯁꯇ
 casher ꯀꯁꯥꯔ
 cashew ꯀꯩꯁꯨ
-cashing ꯀꯩꯁꯤꯡ
 casing ꯀꯩꯁꯤꯡ
 cass ꯀꯦꯁ ꯀꯩꯁꯨ
 cassar ꯀꯁꯥꯔ
@@ -1743,6 +1761,7 @@ cervical ꯁꯔꯚꯤꯀꯦꯜ
 cessna ꯁꯦꯁꯟ
 ceta ꯁꯦꯠ ꯁꯦꯇꯣ
 chace ꯆꯩꯁꯨ ꯆꯦꯁ
+chad ꯆꯦꯗ
 chadd ꯆꯥꯗ ꯆꯦꯗ
 chae ꯆꯥꯏ ꯆꯩ
 chaff ꯆꯐꯨ
@@ -1760,8 +1779,10 @@ champ ꯆꯦꯝꯄ
 champa ꯀꯥꯝꯄꯤ ꯀꯝꯄ
 champion ꯆꯦꯝꯄꯤꯌꯟ
 championship ꯆꯦꯝꯄꯤꯌꯟꯁꯤꯞ ꯆꯦꯝꯄꯤꯌꯅꯁꯤꯞ
+chan ꯆꯦꯟ ꯆꯅꯨ
 chance ꯆꯥꯟꯁ
 chanel ꯁ꯭ꯅꯦꯜ
+chang ꯆꯦꯡ
 change ꯆꯦꯟꯖ
 chanley ꯆꯟꯂꯤ
 channon ꯆꯟꯅ ꯆꯥꯟꯅ
@@ -1840,6 +1861,7 @@ chevette ꯁꯣꯚꯦꯠ
 chew ꯆꯨ
 chewy ꯆꯨꯏ
 cheyne ꯆꯦꯟ
+chi ꯀꯩ ꯀꯥꯏ
 chia ꯆꯍꯤ ꯆꯤ
 chiang ꯆꯥꯡ ꯆꯦꯡ
 chiba ꯆꯤꯕꯤ
@@ -1931,6 +1953,7 @@ cirrus ꯁꯤꯔꯤꯁ
 cissna ꯁꯦꯁꯟ
 citadel ꯁꯤꯇꯥꯗꯦꯜ
 cite ꯁꯥꯏꯠ
+citi ꯁꯤꯇꯤ
 citizenship ꯁꯤꯇꯤꯖꯟꯁꯤꯞ
 citron ꯁꯦꯇꯔꯟ
 city ꯁꯤꯇꯤ
@@ -1948,6 +1971,7 @@ clam ꯀ꯭ꯂꯦꯝ
 clara ꯀ꯭ꯂꯦꯔ
 clare ꯀ꯭ꯂꯦꯔ
 clark ꯀ꯭ꯂꯥꯔꯛ
+clarke ꯀ꯭ꯂꯥꯔꯛ ꯀ꯭ꯂꯔꯛ
 class ꯀ꯭ꯂꯥꯁ
 classic ꯀ꯭ꯂꯥꯁꯤꯛ
 claude ꯀꯂꯥꯗ ꯀ꯭ꯂꯥꯎꯗ
@@ -2014,6 +2038,7 @@ cobb ꯀꯥꯕ ꯀꯧꯕ
 cobe ꯀꯧꯕ
 cobey ꯀꯣꯕꯤ ꯀꯧꯕꯤ
 cobia ꯀꯣꯕꯤ ꯀꯧꯕꯤ
+cobra ꯀꯧꯕ꯭ꯔꯨ
 cobre ꯀꯣꯕ꯭ꯔꯥ ꯀꯕꯔ
 coby ꯀꯣꯕꯤ ꯀꯧꯕꯤ
 coccia ꯀꯣꯆ
@@ -2026,6 +2051,7 @@ cockey ꯀꯛꯏ
 cocks ꯀꯣꯀꯁ
 cocky ꯀꯛꯏ
 cocoa ꯀꯣꯀꯣ
+cod ꯀꯥꯗ
 codd ꯀꯣꯗ ꯀꯥꯗ
 codding ꯀꯗꯦꯡ
 code ꯀꯣꯗ
@@ -2042,6 +2068,7 @@ coffin ꯀꯣꯐꯤꯟ
 coffing ꯀꯣꯐꯤꯟ ꯀꯣꯐꯤꯟꯒ
 coffman ꯀꯣꯐꯃꯦꯟ
 cohan ꯀꯣꯍꯦꯟ
+cohen ꯀꯨꯟ ꯀꯣꯟ
 cohn ꯀꯣꯟ ꯀꯣꯅꯨ
 cohoon ꯈꯨꯟ ꯈꯨꯅꯨ
 cohr ꯀꯣꯔ ꯀꯥꯔ
@@ -2178,6 +2205,7 @@ confirm ꯀꯟꯐꯔꯝ ꯀꯟꯐꯥꯔꯝ
 conflict ꯀꯟꯐ꯭ꯂꯤꯛꯇ
 conform ꯀꯟꯐꯥꯔꯝ ꯀꯅꯐꯥꯔꯝ
 conga ꯀꯣꯡꯒꯣ
+congo ꯀꯣꯉꯧ
 conical ꯀꯣꯅꯤꯀꯦꯜ
 conjecture ꯀꯟꯖꯦꯛꯆꯔ
 conjectures ꯀꯟꯖꯦꯛꯆꯔꯁ
@@ -2185,6 +2213,7 @@ conjure ꯀꯟꯖꯥꯔ
 conlee ꯀꯟꯂꯤ
 conley ꯀꯟꯂꯤ
 conly ꯀꯟꯂꯤ
+conn ꯀꯣꯟ ꯀꯣꯅꯨ
 connally ꯀꯟꯂꯤ
 connan ꯀꯣꯟꯅ ꯀꯟꯅ
 connect ꯀꯅꯦꯛꯠ
@@ -2263,6 +2292,8 @@ copsey ꯀꯧꯄꯁꯤ
 copy ꯀꯣꯄꯤ
 copyright ꯀꯣꯄꯤꯔꯥꯏꯠ
 copywrite ꯀꯣꯄꯤꯔꯥꯏꯠ
+cor ꯀꯥꯔ
+coral ꯀꯥꯔꯜ
 coram ꯀꯔꯝ
 corath ꯀꯣꯔꯠ
 corban ꯀꯥꯔꯕꯣꯟ
@@ -2318,6 +2349,7 @@ corse ꯀꯣꯔ꯭ꯁ ꯀꯣꯔꯁ
 corte ꯀꯣꯔꯠ
 corter ꯀꯥꯔꯇꯔ
 corum ꯀꯔꯝ ꯀꯔꯤꯝ
+cory ꯀꯔꯤ ꯀꯣꯔꯤ
 cose ꯀꯣꯁ
 cosmic ꯀꯣꯁ꯭ꯃꯤꯛ ꯀꯣꯁꯃꯤꯛ
 coss ꯀꯣꯁ
@@ -2326,11 +2358,11 @@ cossack ꯀꯣꯁꯥꯛ
 cossat ꯀꯣꯁꯇ
 cosset ꯀꯣꯁꯇ
 cossey ꯀꯥꯁꯤ ꯀꯁꯤ
+costa ꯀꯣꯁꯇꯥ
 coste ꯀꯣꯁꯇ
 costella ꯀꯣꯁ꯭ꯇꯦꯜ
 costilla ꯀꯣꯁ꯭ꯇꯦꯜ
 costume ꯀꯣꯁ꯭ꯇꯨꯝ
-cot ꯀꯠ
 cott ꯀꯣꯠ ꯀꯠ
 cotta ꯀꯣꯠ ꯀꯠ
 cottage ꯀꯣꯇꯦꯖ
@@ -2591,6 +2623,7 @@ damm ꯗꯥꯃꯨ
 damme ꯗꯥꯃꯨ
 damn ꯗꯥꯃꯨ
 dan ꯗꯦꯟ
+dana ꯗꯦꯟ ꯗꯦꯅꯤ
 danby ꯗꯥꯅꯕꯤ
 dance ꯗꯥꯟꯁ
 dancer ꯗꯥꯟꯁꯥꯔ
@@ -2601,6 +2634,7 @@ daney ꯗꯦꯅꯤ
 dang ꯗꯥꯟ ꯗꯦꯟ
 danger ꯗꯦꯟꯖꯔ
 danielle ꯗꯥꯅꯤꯌꯦꯜ
+danish ꯗꯦꯅꯤꯁ
 dann ꯗꯥꯟ ꯗꯦꯟ
 danna ꯗꯅ ꯗꯥꯟ
 dannen ꯗꯥꯏꯅꯥꯅ
@@ -2620,6 +2654,7 @@ darrah ꯗꯔ
 darroch ꯗꯥꯔꯛ
 darth ꯗꯥꯔꯠ
 dartt ꯗꯥꯔꯠ
+das ꯗꯦꯁ ꯗꯁꯨ
 dasch ꯗꯦꯁ ꯗꯁꯨ
 dase ꯗꯦꯁ
 daseke ꯗꯦꯁꯀꯤ
@@ -2703,6 +2738,7 @@ dejonge ꯗꯖꯟ
 dejongh ꯗꯖꯟ
 dela ꯗꯦꯜ
 delay ꯗꯦꯂꯦ
+delhi ꯗꯦꯂꯤ
 dell ꯗꯦꯜ
 della ꯗꯦꯜ
 delle ꯗꯦꯜ
@@ -2736,6 +2772,7 @@ depaula ꯗꯤꯄꯣꯜ
 depression ꯗꯤꯞꯔꯦꯁꯟ
 der ꯗꯔ
 derk ꯗꯥꯔꯛ
+des ꯗꯤ
 desch ꯗꯦꯁ
 deshaw ꯗꯦꯁ
 design ꯗꯤꯖꯥꯏꯟ
@@ -2816,6 +2853,7 @@ director ꯗꯤꯔꯦꯛꯇꯔ ꯗꯥꯏꯔꯦꯛꯇꯔ
 dirk ꯗꯥꯔꯛ
 dirr ꯗꯔ
 dirt ꯗꯥꯔꯠ
+dis ꯗꯦꯁ
 disc ꯗꯤꯁꯛ
 disch ꯗꯦꯁ ꯗꯤꯁ
 discharge ꯗꯤꯁꯆꯥꯔꯖ
@@ -2885,6 +2923,7 @@ dolle ꯗꯜ ꯗꯣꯜ
 dolley ꯗꯥꯂꯤ
 dollie ꯗꯥꯂꯤ
 dolly ꯗꯥꯂꯤ
+dom ꯗꯥꯃꯨ
 domain ꯗꯣꯃꯦꯟ
 domaine ꯗꯣꯃꯦꯟ
 doman ꯗꯣꯃꯦꯟ
@@ -2927,6 +2966,7 @@ dorothy ꯗꯣꯔꯣꯊꯤ
 dorr ꯗꯣꯔ ꯗꯔ
 dort ꯗꯥꯔꯠ
 dorta ꯗꯥꯔꯠ
+dos ꯗꯥꯁ ꯗꯁꯨ
 dosch ꯗꯥꯁ ꯗꯁꯨ
 dose ꯗꯣꯁ
 doss ꯗꯥꯁ ꯗꯁꯨ
@@ -2981,6 +3021,7 @@ drumm ꯗ꯭ꯔꯨꯝ ꯗ꯭ꯔꯝ
 dual ꯗꯣꯜ
 dub ꯗꯨꯕꯨ
 duba ꯗꯨꯕꯨ
+dubai ꯗꯨꯕꯥꯏ
 dube ꯗꯨꯕꯨ
 dubey ꯗꯥꯕꯤ
 dubie ꯗꯥꯕꯤ
@@ -3111,10 +3152,12 @@ eddie ꯑꯦꯗꯤ ꯑꯩꯗꯤ
 eddy ꯑꯦꯗꯤ ꯑꯩꯗꯤ
 ede ꯏꯗ
 edel ꯑꯥꯏꯗꯣꯜ
+eden ꯏꯗꯨꯅ
 edge ꯑꯦꯖ ꯏꯖ
 edie ꯑꯦꯗꯤ ꯑꯩꯗꯤ
 edin ꯏꯗꯦꯟ
 edison ꯑꯦꯗꯤꯁꯟ ꯏꯗꯤꯁꯟ
+edit ꯑꯦꯗꯤꯠ
 edith ꯏꯗꯤꯠ
 edition ꯏꯗꯤꯁꯟ ꯑꯦꯗꯤꯁꯟ
 editor ꯑꯦꯗꯤꯇꯔ
@@ -3233,6 +3276,7 @@ endress ꯑꯦꯟꯗ꯭ꯔꯦꯁ
 endure ꯏꯟꯗꯣꯔ
 enema ꯑꯦꯅꯨꯃꯥ
 energy ꯏꯅꯔꯖꯤ ꯑꯦꯅꯔꯖꯤ
+eng ꯑꯦꯟ
 engel ꯑꯦꯡꯒꯜ
 engh ꯏꯪ ꯑꯦꯟ
 engine ꯏꯟꯖꯤꯟ
@@ -3261,7 +3305,6 @@ erase ꯑꯦꯔꯦꯁ
 erb ꯑꯔꯕ ꯑꯥꯔꯕ
 erbe ꯑꯔꯕ ꯑꯥꯔꯕ
 erby ꯑꯥꯔꯕꯤ
-ere ꯑꯦꯌꯔ ꯑꯦꯔ
 eric ꯑꯦꯔꯤꯛ
 erica ꯑꯦꯔꯤꯛ
 erich ꯑꯦꯔꯤꯛ
@@ -3320,6 +3363,7 @@ etta ꯑꯦꯠ ꯏꯠ
 euan ꯌꯨꯟ
 eudy ꯌꯨꯗꯤ
 eure ꯑꯥꯔ ꯑꯦꯔ
+euro ꯌꯨꯔꯣ ꯌꯨꯔ
 europa ꯌꯨꯔꯣꯞ ꯌꯨꯔꯣꯄꯥ
 europe ꯌꯨꯔꯣꯞ
 european ꯌꯨꯔꯣꯄꯤꯌꯟ
@@ -3364,6 +3408,7 @@ eyster ꯏꯁ꯭ꯇꯥꯔ
 eyton ꯏꯇꯣꯟ ꯑꯦꯇꯦꯟ
 ezell ꯑꯁꯦꯜ ꯖꯦꯜ
 faas ꯐꯖ
+fab ꯐꯥꯕ
 fac ꯐꯦꯛ
 face ꯐꯦꯁ
 facteau ꯐꯦꯛꯇꯣ
@@ -3453,6 +3498,7 @@ faulcon ꯐꯥꯂꯀꯣꯟ
 faulk ꯐꯣꯛ
 faulks ꯐꯣꯛꯁ
 faull ꯐꯣꯜ ꯐꯜ
+fauna ꯐꯥꯅ ꯐꯥꯅꯥ
 faure ꯐꯣꯔ
 faus ꯐꯖ
 fauteux ꯐꯣꯇꯣ
@@ -3500,7 +3546,6 @@ fellow ꯐꯦꯂꯣ
 fellowship ꯐꯦꯂꯣꯁꯤꯞ
 felten ꯐꯦꯂꯇꯟ
 felton ꯐꯦꯂꯇꯟ
-fen ꯐꯥꯏꯟ
 fence ꯐꯦꯟꯁ
 fencing ꯐꯦꯟꯁꯤꯡ ꯐꯦꯅꯁꯤꯡ
 fenella ꯐꯥꯏꯅꯦꯜ
@@ -3642,6 +3687,7 @@ floating ꯐ꯭ꯂꯣꯇꯤꯡ
 floe ꯐ꯭ꯂꯣ
 flohr ꯐ꯭ꯂꯣꯔ
 floored ꯐ꯭ꯂꯣꯔꯗ
+flora ꯐ꯭ꯂꯣꯔꯥ
 flore ꯐ꯭ꯂꯣꯔ
 florid ꯐ꯭ꯂꯣꯔꯗ
 florida ꯐ꯭ꯂꯣꯔꯗ ꯐ꯭ꯂꯣꯔꯗꯥ
@@ -3658,6 +3704,7 @@ foal ꯐꯣꯜ ꯐꯧꯜ
 foale ꯐꯣꯜ ꯐꯧꯜ
 foam ꯐꯣꯝ
 fob ꯐꯥꯎꯕ ꯐꯥꯕ
+focal ꯐꯣꯀꯦꯜ
 focus ꯐꯣꯛꯁ ꯐꯣꯀꯁ
 focusing ꯐꯣꯀꯁꯤꯡ
 fodder ꯐꯥꯗꯔ
@@ -3872,6 +3919,7 @@ gaile ꯒꯦꯜ
 gait ꯒꯦꯠ
 gajda ꯒꯥꯏꯗ
 gal ꯒꯦꯜ
+gala ꯒꯦꯜ
 gale ꯒꯦꯜ
 gall ꯒꯣꯜ
 galla ꯒꯦꯜ ꯒꯂꯥ
@@ -3949,7 +3997,9 @@ geena ꯒꯤꯅꯤ
 gehl ꯒꯦꯜ
 gehry ꯒꯦꯔꯤ
 geisha ꯒꯦꯁ
+gel ꯖꯦꯜ
 gell ꯖꯦꯜ
+gems ꯖꯦꯝꯁ ꯖꯦꯃꯁ
 gen ꯖꯦꯟ ꯖꯩꯟ
 gena ꯖꯦꯟ ꯖꯩꯟ
 gender ꯖꯦꯟꯗꯔ
@@ -4138,6 +4188,7 @@ grahn ꯒ꯭ꯔꯦꯟ
 grain ꯒ꯭ꯔꯦꯟ
 grained ꯒ꯭ꯔꯦꯟꯗ
 grainy ꯒ꯭ꯔꯦꯅꯤ
+gram ꯒꯔꯝ
 grama ꯒ꯭ꯔꯥꯝ ꯒꯔꯝ
 gramm ꯒ꯭ꯔꯥꯝ ꯒꯔꯝ
 grammar ꯒ꯭ꯔꯥꯃꯥꯔ
@@ -4179,6 +4230,7 @@ greim ꯒ꯭ꯔꯤꯝ
 grein ꯒ꯭ꯔꯦꯟ
 greis ꯒ꯭ꯔꯤꯁ
 greth ꯒ꯭ꯔꯦꯠ
+grid ꯒ꯭ꯔꯦꯗ
 grieb ꯒꯔꯤꯕ
 grieme ꯒ꯭ꯔꯤꯝ
 griese ꯒ꯭ꯔꯤꯁ
@@ -4257,6 +4309,7 @@ gung ꯒꯨꯟ
 gunn ꯒꯨꯟ
 gura ꯒꯨꯔꯨ
 gurry ꯒꯥꯔꯤ ꯒꯦꯔꯤ
+gus ꯒꯁꯨ
 guss ꯒꯁꯨ ꯒꯨꯁ
 guyana ꯒꯥꯏꯌꯥꯅ
 guyon ꯒꯥꯏꯌꯥꯅ
@@ -4315,6 +4368,7 @@ hait ꯍꯦꯠ
 haith ꯍꯦꯠ
 hajjar ꯍꯥꯌꯔ
 hake ꯍꯦꯛ
+hal ꯍꯦꯜ
 halasz ꯍꯣꯜꯁ
 hald ꯍꯣꯜꯗ
 halder ꯍꯣꯜꯗꯔ
@@ -4339,6 +4393,7 @@ hamberg ꯍꯦꯝꯕꯔꯒ
 hamburg ꯍꯦꯝꯕꯔꯒ
 hamm ꯍꯥꯝ
 hamme ꯍꯥꯝ
+han ꯍꯥꯏꯅ ꯍꯥꯢꯅ
 hana ꯍꯥꯏꯅ ꯍꯥꯢꯅ
 hanan ꯍꯦꯟꯅ
 hanas ꯍꯥꯏꯅꯁꯨ ꯍꯥꯢꯅꯁꯨ
@@ -4574,6 +4629,8 @@ henze ꯍꯥꯏꯅꯁꯨ ꯍꯥꯢꯅꯁꯨ
 hep ꯍꯥꯏꯞ ꯍꯥꯏꯄ
 hepp ꯍꯥꯏꯞ ꯍꯥꯏꯄ
 heppe ꯍꯥꯏꯞ ꯍꯥꯏꯄ
+hera ꯍꯤꯔꯣ
+herb ꯑꯔꯕ ꯑꯥꯔꯕ
 herbal ꯍꯔꯕꯜ
 herbel ꯍꯔꯕꯜ
 herber ꯍꯥꯔꯕꯔ
@@ -4652,7 +4709,6 @@ hingle ꯍꯤꯉ꯭ꯒꯣꯜ
 hinn ꯍꯩꯅꯨ
 hippie ꯍꯦꯄꯤ
 hirai ꯍꯤꯔꯣꯏ
-hirayama ꯍꯤꯔꯥꯌꯥꯃꯥ
 hird ꯍꯥꯔ꯭ꯗ ꯍꯥꯔꯗ
 hire ꯍꯥꯏꯌꯔ ꯍꯥꯌꯔ
 hirn ꯍꯦꯔꯟ
@@ -4735,6 +4791,8 @@ homeric ꯍꯣꯃꯦꯔꯤꯛ
 homerun ꯍꯣꯃꯔꯅ
 homing ꯍꯣꯃꯦꯟ
 homme ꯍꯣꯝ ꯍꯥꯝ
+hon ꯍꯥꯟ
+hone ꯍꯧꯅ
 hong ꯍꯧꯅ ꯍꯥꯟ
 honn ꯍꯥꯟ ꯍꯧꯅ
 honor ꯑꯣꯅꯔ
@@ -4900,6 +4958,7 @@ ice ꯑꯩꯁꯨ ꯑꯥꯏꯁ
 iceland ꯑꯥꯏꯁꯂꯦꯟꯗ
 ices ꯑꯥꯏꯁꯤꯁ
 ich ꯑꯦꯆ
+icon ꯑꯥꯏꯀꯟ
 iconic ꯑꯥꯏꯀꯣꯅꯤꯛ
 identity ꯑꯥꯏꯗꯦꯟꯇꯤꯇꯤ
 idle ꯑꯥꯏꯗꯣꯜ
@@ -4955,6 +5014,7 @@ infect ꯏꯅꯐꯦꯛꯇ
 infection ꯏꯟꯐꯦꯛꯁꯟ ꯏꯅꯐꯦꯛꯁꯟ
 infernal ꯏꯟꯐꯔꯅꯦꯜ
 information ꯏꯟꯐꯣꯔꯃꯦꯁꯟ ꯏꯅꯐꯣꯔꯃꯦꯁꯟ
+ing ꯑꯦꯟ
 ingle ꯑꯦꯡꯒꯜ
 ingot ꯏꯪꯒꯤꯠ ꯏꯉ꯭ꯒꯤꯠ
 injection ꯏꯟꯖꯦꯛꯁꯟ
@@ -4990,6 +5050,7 @@ inverse ꯏꯟꯚꯔꯁ
 iny ꯑꯦꯅꯤ
 ion ꯑꯥꯏꯌꯟ ꯑꯥꯏꯑꯣꯟ
 ionic ꯑꯥꯏꯑꯣꯅꯤꯛ
+ios ꯏꯌꯣꯁ
 iowa ꯑꯥꯏꯑꯣꯋꯥ
 ipock ꯏꯄꯤꯛ ꯏꯄꯥꯛ
 iran ꯑꯥꯏꯔꯟ
@@ -5002,14 +5063,18 @@ irks ꯑꯥꯔꯛꯁ
 irma ꯑꯥꯔꯝ ꯑꯥꯔꯃꯤ
 irritation ꯏꯔꯤꯇꯦꯁꯟ
 irving ꯏꯔꯋꯤꯟ ꯑꯦꯔꯋꯤꯟ
+irwin ꯑꯦꯔꯋꯤꯟ
+isa ꯏꯁꯩ
 isaac ꯑꯥꯏꯖꯦꯛ ꯑꯥꯏꯁꯀ
 isay ꯑꯩꯁꯦ
 isch ꯑꯦꯁ ꯏꯁꯨ
 ischemic ꯏꯁ꯭ꯀꯦꯃꯤꯛ
+ish ꯑꯦꯁ ꯏꯁꯨ
 ishaq ꯏꯁꯥꯛ
 ishee ꯑꯦꯁꯤ
 ishi ꯑꯦꯁꯤ
 ishida ꯑꯦꯁꯤꯗ
+isis ꯑꯥꯏꯁꯤꯁ
 isla ꯏꯜ
 islam ꯏꯁꯂꯥꯝ
 islamic ꯏꯁ꯭ꯂꯥꯃꯤꯛ
@@ -5104,6 +5169,7 @@ jech ꯖꯦꯛ
 jeff ꯖꯦꯐ
 jeffe ꯖꯦꯐ
 jell ꯖꯦꯜ
+jen ꯖꯩꯟ
 jena ꯖꯤꯟ
 jenn ꯖꯦꯟ ꯖꯩꯟ
 jenna ꯖꯦꯟ ꯖꯩꯟ
@@ -5269,16 +5335,16 @@ kanis ꯀꯦꯅꯦꯁ
 kanno ꯀꯩꯅꯣ ꯀꯥꯏꯅꯧ
 kanon ꯀꯦꯅꯤꯟ
 kanz ꯀꯟꯁ
-kaori ꯀꯔꯤ ꯀꯣꯔꯤ
-kappa ꯀꯞ ꯀꯦꯞ
 kappel ꯀꯄꯥꯜ ꯀꯩꯄꯨꯜ
 kapper ꯀꯄꯥꯔ
+kara ꯀꯦꯌꯔ ꯀꯦꯔ
 karban ꯀꯥꯔꯕꯣꯟ
 karber ꯀꯥꯔꯕꯥꯔ
 karel ꯀꯦꯔꯣꯜ ꯀꯩꯔꯦꯜ
 karl ꯀꯣꯔꯜ
 karla ꯀꯥꯔꯜ ꯀꯣꯔꯜ
 karle ꯀꯥꯔꯜ ꯀꯣꯔꯜ
+karma ꯀꯔꯝ
 karman ꯀꯔꯝꯅ
 karnal ꯀꯔꯅꯦꯜ
 karner ꯀꯣꯔꯅꯔ
@@ -5311,6 +5377,7 @@ kastel ꯀꯦꯁꯇꯜ
 kastl ꯀꯦꯁꯇꯜ
 kastle ꯀꯩꯁꯥꯜ ꯀꯦꯁꯜ
 kasza ꯀꯣꯁ ꯀꯥꯁꯤ
+kat ꯀꯦꯠ
 kate ꯀꯦꯠ
 kath ꯀꯦꯠ
 kathan ꯀꯇꯟ ꯀꯥꯇꯟ
@@ -5431,6 +5498,7 @@ khad ꯀꯥꯗ
 khaled ꯀꯂꯥꯗ
 khalid ꯀꯂꯤꯗ
 khalil ꯀꯜꯂꯨ
+khan ꯀꯣꯟ ꯀꯣꯅꯨ
 khe ꯀꯦ ꯀꯩ
 kheel ꯀꯤꯜ
 khoo ꯀꯨ ꯀꯣ
@@ -5608,6 +5676,7 @@ knuckle ꯅꯥꯀꯜ ꯅꯀꯨꯜ
 knuckled ꯅꯥꯀꯜꯗ
 koalas ꯀꯣꯂꯖ
 koby ꯀꯣꯕꯤ ꯀꯧꯕꯤ
+koch ꯀꯣꯛ
 koehl ꯀꯣꯜ
 koehler ꯀꯣꯂꯔ
 koehn ꯀꯣꯟ ꯀꯣꯅꯨ
@@ -5649,6 +5718,7 @@ kolling ꯀꯥꯂꯦꯟ ꯀꯣꯂꯤꯡ
 komara ꯀꯧꯃꯥꯔꯤ
 komori ꯀꯧꯃꯥꯔꯤ
 komp ꯀꯝꯄ
+kona ꯀꯣꯟ ꯀꯣꯅꯨ
 konaga ꯀꯅꯥꯒꯤ ꯀꯅꯥꯒ
 kondas ꯀꯟꯗꯁ
 konen ꯀꯣꯟꯅ ꯀꯟꯅ
@@ -5731,6 +5801,7 @@ krenn ꯀ꯭ꯔꯦꯟ
 kriese ꯀꯔꯤꯁꯨ ꯀ꯭ꯔꯤꯁ
 kriete ꯀ꯭ꯔꯤꯠ
 kring ꯀ꯭ꯔꯦꯟ
+kris ꯀꯔꯤꯁꯨ
 krisch ꯀꯔꯤꯁꯨ ꯀ꯭ꯔꯤꯁ
 kriss ꯀꯔꯤꯁꯨ ꯀ꯭ꯔꯤꯁ
 kristall ꯀ꯭ꯔꯤꯁ꯭ꯇꯦꯜ ꯀ꯭ꯔꯤꯁꯇꯜ
@@ -5870,7 +5941,6 @@ lahmann ꯂꯃꯟ
 lahn ꯂꯥꯟ ꯂꯥꯏꯟ
 lahr ꯂꯣꯔ
 laible ꯂꯦꯕꯦꯜ
-lain ꯂꯦꯟ ꯂꯩꯅ
 laing ꯂꯥꯏꯟ ꯂꯥꯏꯅ
 lais ꯂꯦꯁ
 laissez ꯂꯩꯖꯩ
@@ -5895,6 +5965,7 @@ lamp ꯂꯦꯝꯄ
 lampe ꯂꯦꯝꯄ
 lampi ꯂꯦꯝꯄꯤ
 lampp ꯂꯦꯝꯄ
+lan ꯂꯥꯏꯟ
 lana ꯂꯥꯟ ꯂꯥꯏꯅ
 lance ꯂꯥꯏꯟꯁ
 lancia ꯂꯣꯟꯆ
@@ -5911,6 +5982,7 @@ landt ꯂꯥꯟꯠ
 landy ꯂꯟꯗꯤ
 lane ꯂꯦꯟ ꯂꯩꯅ
 laney ꯂꯩꯅꯤ
+lang ꯂꯥꯟ ꯂꯥꯏꯟ
 lange ꯂꯥꯟ ꯂꯥꯏꯟ
 langen ꯂꯩꯅꯅ
 langer ꯂꯥꯏꯅꯔ
@@ -5926,13 +5998,14 @@ lanning ꯂꯥꯢꯅꯤꯡ ꯂꯥꯏꯅꯤꯡ
 lannom ꯂꯩꯅꯝ
 lannon ꯂꯥꯟꯅ ꯂꯩꯅꯅ
 lanny ꯂꯥꯢꯅꯤ ꯂꯥꯏꯅꯤ
-lansing ꯂꯥꯏꯟꯁꯤꯡ
 lanum ꯂꯩꯅꯝ
 lanz ꯂꯥꯏꯟꯁ
 lanza ꯂꯥꯏꯟꯁ
+laos ꯂꯣꯁ
 lap ꯂꯩꯄ
 lape ꯂꯩꯄ
 lapham ꯂꯩꯐꯝ ꯂꯥꯢꯐꯝ
+lapp ꯂꯩꯄ
 lappe ꯂꯩꯄ
 lappen ꯂꯥꯞꯅ ꯂꯦꯞꯅ
 lar ꯂꯣꯔ
@@ -5959,7 +6032,6 @@ lase ꯂꯦꯁ
 laser ꯂꯦꯖꯔ ꯂꯦꯁꯔ
 laseter ꯂꯥꯁꯦꯇꯔ
 lasher ꯂꯦꯁꯔ
-lashing ꯂꯥꯏꯁꯤꯡ ꯂꯩꯁꯤꯡ
 lashomb ꯂꯩꯁꯦꯝ
 lask ꯂꯩꯁꯛ
 laske ꯂꯩꯁꯛ
@@ -6188,6 +6260,7 @@ leppla ꯂꯦꯞꯂꯤ
 lerach ꯂꯩꯔꯛ
 lerch ꯂꯩꯔꯛ
 lerew ꯂꯥꯢꯔꯨ
+les ꯂꯩ ꯂꯦ
 lesch ꯂꯦꯁ ꯂꯥꯏꯁꯨ
 leser ꯂꯦꯁꯔ
 lesesne ꯂꯩꯁꯦꯟ
@@ -6307,6 +6380,7 @@ liming ꯂꯥꯏꯃꯤꯡ
 limn ꯂꯩꯃ ꯂꯦꯝ
 limon ꯂꯦꯝꯅ ꯂꯩꯃꯅ
 limp ꯂꯦꯝꯄ
+lin ꯂꯦꯟ
 linam ꯂꯩꯅꯝ
 linc ꯂꯤꯡꯛ
 linck ꯂꯤꯡꯛ
@@ -6348,6 +6422,7 @@ lippy ꯂꯤꯄꯤ ꯂꯩꯄꯤ
 lipton ꯂꯦꯞꯇꯅ ꯂꯦꯞꯇꯨꯅ
 lira ꯂꯤꯔꯤ
 lire ꯂꯤꯔꯤ
+lis ꯂꯦꯁ
 lisak ꯂꯩꯁꯛ
 lise ꯂꯥꯏꯁꯨ ꯂꯥꯢꯖ
 lisk ꯂꯩꯁꯛ
@@ -6408,6 +6483,7 @@ lobes ꯂꯧꯕꯁꯨ
 lobs ꯂꯧꯕꯁꯨ
 local ꯂꯣꯀꯦꯜ
 locale ꯂꯣꯀꯦꯜ
+loch ꯂꯣꯛ ꯂꯛ
 lock ꯂꯣꯛ ꯂꯛ
 locka ꯂꯣꯛ ꯂꯥꯛꯏ
 locke ꯂꯣꯛ ꯂꯛ
@@ -6442,10 +6518,10 @@ lohn ꯂꯣꯟ ꯂꯥꯟ
 lohr ꯂꯣꯔ
 lohrey ꯂꯧꯔꯤ ꯂꯥꯔꯤ
 lohse ꯂꯣꯁ
-lois ꯂꯣꯁ
 loise ꯂꯨꯏꯁ
 loken ꯂꯣꯀꯤꯅ
 lokey ꯂꯣꯀꯤ
+lol ꯂꯥꯜ
 lola ꯂꯣꯜ
 loll ꯂꯣꯜ ꯂꯥꯜ
 loma ꯂꯣꯝ ꯂꯧꯃꯤ
@@ -6455,6 +6531,7 @@ lommen ꯂꯣꯝꯅ
 lompoc ꯂꯝꯄꯥꯛ
 lona ꯂꯣꯟ
 london ꯂꯟꯗꯟ
+lone ꯂꯣꯟ
 lonesome ꯂꯣꯟꯁꯨꯝ
 long ꯂꯣꯟ ꯂꯥꯟ
 longed ꯂꯣꯟꯗ ꯂꯥꯟꯗ
@@ -6507,6 +6584,7 @@ lotts ꯂꯣꯇꯁ
 lotus ꯂꯣꯇꯁ
 lotz ꯂꯣꯇꯁ
 lotze ꯂꯣꯇꯁ
+lou ꯂꯣ ꯂꯨ
 louche ꯂꯣꯁ
 louden ꯂꯧꯗꯨꯅ ꯂꯥꯎꯗꯨꯅ
 loudon ꯂꯧꯗꯨꯅ ꯂꯥꯎꯗꯨꯅ
@@ -6586,6 +6664,7 @@ luma ꯂꯣꯝ
 luman ꯂꯣꯝꯅ
 lumen ꯂꯣꯝꯅ
 lumm ꯂꯝ
+luna ꯂꯣꯟ
 lunching ꯂꯥꯟꯆꯤꯡ
 lund ꯂꯥꯟꯗ
 lunde ꯂꯥꯟꯗ
@@ -6712,6 +6791,7 @@ mae ꯃꯦ ꯃꯩ
 maeda ꯃꯩꯗ ꯃꯩꯗꯥ
 maes ꯃꯦꯁ
 maese ꯃꯤꯁ
+mag ꯃꯩꯒ
 magaw ꯃꯦꯒꯥ ꯃꯥꯒ
 magazine ꯃꯦꯒꯥꯖꯤꯟ
 maggie ꯃꯥꯒꯤ ꯃꯩꯒꯤ
@@ -6731,6 +6811,7 @@ mahr ꯃꯔꯨ
 mahtan ꯃꯇꯣꯟ
 mahtar ꯃꯣꯇꯔ
 mahwah ꯃꯣꯚꯥ
+mai ꯃꯥꯏ
 maid ꯃꯦꯗ
 maidel ꯃꯦꯗꯜ
 maiden ꯃꯦꯗꯟ
@@ -6768,7 +6849,6 @@ malarial ꯃꯂꯦꯔꯤꯌꯥꯜ
 malay ꯃꯦꯂꯩ
 male ꯃꯦꯜ
 malec ꯃꯂꯤꯛ
-mali ꯃꯥꯂꯤ
 malia ꯃꯥꯂꯤꯌꯥ ꯃꯂꯤꯌꯥ
 malick ꯃꯂꯤꯛ
 mall ꯃꯣꯜ
@@ -6783,6 +6863,7 @@ mallon ꯃꯥꯏꯂꯣꯟ
 mally ꯃꯥꯂꯤ ꯃꯂꯤ
 malm ꯃꯝ
 malon ꯃꯥꯏꯂꯣꯟ
+mama ꯃꯃꯤ
 mamas ꯃꯃꯥꯁꯨ
 mamis ꯃꯃꯤꯁꯨ
 mamma ꯃꯃꯤ ꯃꯃꯥ
@@ -6814,6 +6895,7 @@ mank ꯃꯉꯛ
 manka ꯃꯪꯀꯥ ꯃꯥꯡꯀꯥ
 manke ꯃꯉꯛ
 mankey ꯃꯅꯀꯤ
+mann ꯃꯦꯟ ꯃꯦꯅꯨ
 manned ꯃꯥꯏꯟꯗ
 mannen ꯃꯥꯟꯅ
 mannered ꯃꯦꯅꯥꯔ꯭ꯗ
@@ -6828,12 +6910,14 @@ manson ꯃꯦꯟꯁꯟ
 mantell ꯃꯦꯟꯇꯦꯜ
 manter ꯃꯦꯟꯇꯔ
 manthe ꯃꯥꯏꯟꯗ
+mantra ꯃꯟꯇ꯭ꯔ
 map ꯃꯄꯨ ꯃꯦꯞ
 mapel ꯃꯥꯄꯜ ꯃꯄꯥꯜ
 mapp ꯃꯄꯨ ꯃꯦꯞ
 mapping ꯃꯦꯄꯤꯡ
 mar ꯃꯔꯨ
 marble ꯃꯥꯔꯕꯜ
+marc ꯃꯥꯔꯛ ꯃꯔꯛ
 marcel ꯃꯥꯔꯁꯦꯜ
 marcell ꯃꯥꯔꯁꯦꯜ
 marcella ꯃꯥꯔꯁꯦꯜ
@@ -6847,6 +6931,7 @@ marcil ꯃꯥꯔꯁꯦꯜ
 marcille ꯃꯥꯔꯁꯦꯜ
 marcks ꯃꯥꯔꯀꯁ
 marcus ꯃꯥꯔꯀꯁ
+mare ꯃꯦꯌꯔ ꯃꯦꯔ
 marean ꯃꯔꯤꯅ
 marella ꯃꯔꯦꯜ
 maresh ꯃꯔꯤꯁꯨ
@@ -6898,6 +6983,7 @@ marschke ꯃꯥꯔ꯭ꯁꯀ
 marse ꯃꯥꯔ꯭ꯁ ꯃꯥꯔꯁ
 marsella ꯃꯥꯔꯁꯦꯜ
 marsh ꯃꯥꯔꯁ
+marshal ꯃꯥꯔꯁꯦꯜ
 marshall ꯃꯥꯔꯁꯜ ꯃꯥꯔꯁꯦꯜ
 marson ꯃꯥꯔ꯭ꯁꯅ
 marten ꯃꯥꯔꯇꯤꯟ
@@ -6914,6 +7000,7 @@ mary ꯃꯦꯔꯤ
 maryse ꯃꯔꯤꯁꯨ ꯃꯣꯔꯤꯁ
 marz ꯃꯥꯔ꯭ꯁ ꯃꯥꯔꯁ
 marzan ꯃꯥꯔ꯭ꯁꯅ
+mas ꯃꯁꯨ
 masako ꯃꯣꯁꯀꯣ
 masao ꯃꯁꯨ
 masch ꯃꯁꯨ ꯃꯦꯁ
@@ -6922,6 +7009,7 @@ mase ꯃꯦꯁ
 masella ꯃꯁꯦꯜ
 maseng ꯃꯁꯤꯡ
 maser ꯃꯦꯖꯔ ꯃꯦꯁꯔ
+mash ꯃꯁꯨ ꯃꯦꯁ
 mashaw ꯃꯁꯥ ꯃꯩꯁꯥ
 masker ꯃꯁ꯭ꯀꯔ
 maslo ꯃꯁꯂꯥ
@@ -7106,6 +7194,7 @@ mechling ꯃꯦꯀ꯭ꯂꯤꯟ
 meck ꯃꯦꯛ
 meckel ꯃꯥꯏꯀꯦꯜ
 meckes ꯃꯦꯛꯁ
+med ꯃꯩꯗ
 meddaugh ꯃꯩꯗꯥ ꯃꯦꯗ
 meddle ꯃꯦꯗꯜ
 medea ꯃꯦꯗꯤꯌꯥ
@@ -7127,6 +7216,7 @@ meeler ꯃꯤꯂꯔ
 meese ꯃꯤꯁ
 meester ꯃꯤꯁ꯭ꯇꯔ
 meeting ꯃꯤꯇꯩꯅ
+mega ꯃꯩꯒꯤ ꯃꯦꯒꯤ
 megawatt ꯃꯦꯒꯥꯋꯥꯠ
 mehall ꯃꯍꯜ
 mehdi ꯃꯦꯗꯤ
@@ -7143,6 +7233,7 @@ meiring ꯃꯥꯢꯔꯦꯟ
 meis ꯃꯤꯁ
 meise ꯃꯤꯁ
 mekong ꯃꯦꯀꯣꯟ
+mel ꯃꯥꯏꯜ
 melee ꯃꯦꯂꯩ
 melhem ꯃꯦꯂꯦꯝ
 melia ꯃꯦꯂꯤꯌꯥ
@@ -7204,6 +7295,7 @@ merson ꯃꯥꯔ꯭ꯁꯅ
 merten ꯃꯥꯔꯇꯤꯟ
 merton ꯃꯥꯔꯇꯤꯟ
 merz ꯃꯥꯔ꯭ꯁ ꯃꯥꯔꯁ
+mesa ꯃꯩꯁꯥ
 mesch ꯃꯦꯁ
 mescher ꯃꯦꯁꯔ
 mesner ꯃꯦꯁꯅꯔ
@@ -7229,6 +7321,7 @@ metre ꯃꯤꯇꯔ
 metric ꯃꯦꯠꯔꯤꯛ ꯃꯦꯇ꯭ꯔꯤꯛ
 metrick ꯃꯦꯠꯔꯤꯛ ꯃꯦꯇ꯭ꯔꯤꯛ
 metrics ꯃꯦꯇ꯭ꯔꯤꯛꯁ
+metro ꯃꯦꯠꯔꯣ
 mette ꯃꯦꯠ ꯃꯦꯇ
 metter ꯃꯦꯇꯔ
 mettle ꯃꯦꯇꯥꯜ ꯃꯦꯇꯜ
@@ -7278,6 +7371,7 @@ mihn ꯃꯦꯟ ꯃꯤꯟ
 mika ꯃꯤꯀꯣ
 mike ꯃꯥꯏꯛ
 miksch ꯃꯤꯛꯁ ꯃꯦꯛꯁ
+mil ꯃꯦꯜ
 mila ꯃꯥꯏꯜ
 milam ꯃꯦꯂꯦꯝ
 mile ꯃꯥꯏꯜ
@@ -7292,6 +7386,7 @@ miller ꯃꯤꯂꯔ
 millimeter ꯃꯤꯂꯤꯃꯤꯇꯔ
 millimetre ꯃꯤꯂꯤꯃꯤꯇꯔ
 milum ꯃꯦꯂꯦꯝ
+min ꯃꯦꯟ
 minard ꯃꯦꯅꯥꯔ꯭ꯗ
 minas ꯃꯤꯅꯁꯨ ꯃꯤꯅꯣꯁ
 mince ꯃꯤꯅꯁꯨ
@@ -7380,6 +7475,7 @@ mochida ꯃꯆꯤꯗ
 mock ꯃꯛ ꯃꯀꯨ
 mocked ꯃꯛꯇ
 mocks ꯃꯣꯛꯁ
+mod ꯃꯗꯨ
 modal ꯃꯣꯗꯦꯜ
 mode ꯃꯣꯗ
 modell ꯃꯣꯗꯦꯜ
@@ -7428,6 +7524,7 @@ momentum ꯃꯣꯃꯦꯟꯇꯝ
 momma ꯃꯃꯤ ꯃꯃꯥ
 mommies ꯃꯃꯤꯁꯨ
 mommy ꯃꯃꯤ
+mon ꯃꯥꯅ
 mona ꯃꯣꯟ ꯃꯧꯅꯤ
 monash ꯃꯅꯥꯁꯨ
 monda ꯃꯟꯗꯥ
@@ -7451,6 +7548,7 @@ moody ꯃꯣꯗꯤ
 moomaw ꯃꯣꯃꯣ
 moon ꯃꯣꯟ
 moone ꯃꯨꯟ ꯃꯣꯟ
+moore ꯃꯔꯨ
 mop ꯃꯄꯨ
 mopping ꯃꯄꯤꯅ
 morad ꯃꯔꯤꯗ
@@ -7582,6 +7680,7 @@ muehl ꯃꯌꯣꯜ
 muffy ꯃꯐꯤ
 mug ꯃꯥꯒ
 muggy ꯃꯥꯒꯤ
+muhammad ꯃꯨꯍꯃꯗ
 muhr ꯃꯣꯔ
 muhs ꯃꯁꯨ ꯃꯥꯁ
 mui ꯃꯣꯏ
@@ -7661,6 +7760,7 @@ muzyka ꯃ꯭ꯌꯨꯖꯤꯛ
 muzzey ꯃꯁꯤ
 muzzle ꯃꯁꯜ
 muzzy ꯃꯁꯤ
+myanmar ꯃꯌꯥꯟꯃꯥꯔ
 myhre ꯃꯤꯔ ꯃꯦꯔ
 myla ꯃꯥꯏꯜ
 mylan ꯃꯥꯏꯂꯣꯟ
@@ -7696,6 +7796,7 @@ nall ꯅꯥꯜ
 nam ꯅꯦꯝ ꯅꯃꯨ
 name ꯅꯦꯝ
 naming ꯅꯦꯃꯦꯟ
+nan ꯅꯥꯏꯅ
 nana ꯅꯥꯏꯅ ꯅꯥꯢꯅ
 nancy ꯅꯦꯟꯁꯤ
 nanometer ꯅꯦꯅꯣꯃꯤꯇꯔ
@@ -7714,8 +7815,10 @@ nash ꯅꯦꯁ ꯅꯁꯨ
 nason ꯅꯦꯁꯟ
 nass ꯅꯦꯁ ꯅꯁꯨ
 nassau ꯅꯥꯁꯥ ꯅꯁꯥ
+nat ꯅꯦꯠ
 nata ꯅꯥꯠ ꯅꯣꯠ
 natcher ꯅꯦꯆꯔ
+nate ꯅꯦꯠ
 nath ꯅꯥꯠ ꯅꯦꯠ
 nation ꯅꯦꯁꯟ
 nations ꯅꯦꯁꯟꯁ
@@ -7735,6 +7838,7 @@ navy ꯅꯦꯚꯤ
 naw ꯅꯥ ꯅ
 nay ꯅꯦ
 nays ꯅꯦꯁ
+nazi ꯅꯥꯠꯁꯤ
 neal ꯅꯤꯜ
 neala ꯅꯤꯜ
 neale ꯅꯤꯜ
@@ -7804,6 +7908,7 @@ nickname ꯅꯤꯀꯅꯦꯝ
 nickolay ꯅꯤꯀꯣꯂꯥꯏ
 nicks ꯅꯤꯛꯁ
 nicolae ꯅꯤꯀꯣꯂꯥꯏ
+nicolas ꯅꯤꯀꯣꯂꯁ
 niday ꯅꯥꯏꯗꯦ
 nie ꯅꯤ
 niel ꯅꯤꯜ
@@ -7815,11 +7920,12 @@ night ꯅꯥꯏꯠ
 nike ꯅꯥꯏꯀꯤ
 nikes ꯅꯥꯏꯛꯁ
 nikkei ꯅꯥꯏꯀꯤ
-nil ꯅꯦꯜ
 nila ꯅꯤꯜ
 nile ꯅꯥꯏꯜ ꯅꯥꯢꯜ
 nill ꯅꯤꯜ ꯅꯦꯜ
+nina ꯅꯤꯅꯤ
 nine ꯅꯥꯏꯅ ꯅꯥꯢꯅ
+ning ꯅꯦꯟ
 ninny ꯅꯤꯅꯤ
 ninon ꯅꯦꯟꯅ
 nipon ꯅꯤꯄꯥꯟ
@@ -7876,6 +7982,7 @@ nourse ꯅꯣꯔ꯭ꯁ ꯅꯣꯔꯁ
 nouvel ꯅꯣꯚꯦꯜ
 nouvelle ꯅꯣꯚꯦꯜ
 nov ꯅꯧ
+nova ꯅꯧ
 novell ꯅꯣꯚꯦꯜ
 novella ꯅꯣꯚꯦꯜ
 november ꯅꯣꯚꯦꯝꯕꯔ
@@ -8021,6 +8128,7 @@ oppose ꯄꯣꯖ
 oppress ꯄ꯭ꯔꯦꯁ
 oppression ꯑꯣꯄꯔꯦꯁꯟ
 oppressor ꯄ꯭ꯔꯦꯁꯔ
+ops ꯑꯞꯁꯨ
 optics ꯑꯣꯞꯇꯤꯛꯁ
 option ꯑꯞꯁꯨꯅ
 optional ꯑꯣꯄꯁꯅꯦꯜ
@@ -8148,13 +8256,13 @@ pallett ꯄꯥꯏꯂꯣꯠ
 pallo ꯄꯦꯂꯣ ꯄꯥꯂꯣ
 palm ꯄꯥꯝ
 palme ꯄꯥꯝ
+palo ꯄꯦꯂꯣ
 pamby ꯄꯥꯝꯕꯤ
 pamella ꯄꯥꯃꯦꯜ
 pan ꯄꯦꯟ
 pancreas ꯄꯦꯟꯀ꯭ꯔꯤꯌꯥꯁ
 pandey ꯄꯥꯟꯗꯦ
 pane ꯄꯦꯟ
-pang ꯄꯥꯟ
 pangle ꯄꯥꯉ꯭ꯒꯜ ꯄꯥꯡꯒꯜ
 panned ꯄꯥꯟꯗꯨ
 pannill ꯄꯦꯅꯦꯜ
@@ -8163,7 +8271,6 @@ panter ꯄꯦꯟꯇꯔ
 panther ꯄꯦꯟꯇꯔ
 panting ꯄꯦꯟꯇꯤꯡ
 pantry ꯄꯦꯟꯠꯔꯤ
-pap ꯄꯥꯏꯞ
 papaw ꯄꯥꯄꯥ
 paper ꯄꯦꯄꯔ
 papp ꯄꯥꯞ ꯄꯥꯏꯞ
@@ -8171,6 +8278,7 @@ pappa ꯄꯥꯢꯄ ꯄꯥꯞ
 paque ꯄꯥꯛ
 paquette ꯄꯦꯀꯦꯠ
 par ꯄꯣꯔ
+para ꯄꯦꯌꯥꯔ ꯄꯦꯔꯨ
 paradee ꯄꯦꯔꯣꯗꯤ
 paradox ꯄꯦꯔꯥꯗꯣꯛꯁ
 parallel ꯄꯦꯔꯥꯂꯦꯜ
@@ -8199,6 +8307,7 @@ particle ꯄꯥꯔꯇꯤꯀꯜ
 partner ꯄꯥꯔꯇꯅꯔ
 party ꯄꯥꯔꯇꯤ
 pary ꯄꯥꯔꯤ ꯄꯔꯤ
+pas ꯄꯥꯖ
 pass ꯄꯥꯁ ꯄꯦꯁ
 passage ꯄꯦꯁꯦꯖ
 passes ꯄꯦꯁꯦꯖ
@@ -8283,6 +8392,7 @@ penalty ꯄꯦꯅꯥꯜꯇꯤ ꯄꯦꯅꯦꯜꯇꯤ
 peng ꯄꯦꯟ
 penh ꯄꯦꯟ
 penja ꯄꯦꯟꯖꯩ
+penn ꯄꯦꯟ
 pennel ꯄꯦꯅꯦꯜ
 pennell ꯄꯦꯅꯦꯜ
 pennella ꯄꯦꯅꯦꯜ
@@ -8357,6 +8467,7 @@ pharma ꯐꯥꯔꯝ ꯐꯣꯔꯝ
 pharr ꯐꯣꯔ ꯐꯥꯔ
 pharris ꯐꯦꯔꯤꯁ
 phase ꯐꯦꯁ ꯐꯦꯖ
+phi ꯐꯩ ꯐꯥꯏ
 philip ꯐꯦꯂꯤꯞ
 philipp ꯐꯤꯂꯤꯞ ꯐꯦꯂꯤꯞ
 philippa ꯐꯤꯂꯤꯞ ꯐꯦꯂꯤꯞ
@@ -8383,6 +8494,7 @@ physics ꯐꯤꯖꯤꯛꯁ
 physique ꯐꯤꯖꯤꯛ
 pia ꯄꯤ
 piano ꯄꯤꯌꯥꯅꯣ
+pic ꯄꯤꯛ ꯄꯦꯛ
 picchu ꯄꯤꯆꯨ
 piche ꯄꯤꯆ ꯄꯤꯆꯨ
 picher ꯄꯤꯆꯔ
@@ -8530,6 +8642,7 @@ pool ꯄꯨꯜ
 poolas ꯄꯨꯂꯤꯁ ꯄꯣꯂꯤꯁ
 poole ꯄꯣꯜ ꯄꯨꯜ
 pooling ꯄꯣꯂꯦꯟ
+poop ꯄꯨꯄꯨ
 poore ꯄꯣꯔ
 pop ꯄꯥꯞ
 popa ꯄꯣꯞ ꯄꯣꯄꯤ
@@ -8560,6 +8673,7 @@ porth ꯄꯥꯔꯠ ꯄꯣꯔꯠ
 portia ꯄꯔ꯭ꯁ ꯄꯥꯔꯁꯤ
 portion ꯄꯥꯔꯁꯤꯟ
 portrait ꯄꯣꯔꯇ꯭ꯔꯦꯠ
+pos ꯄꯥꯁ
 posch ꯄꯥꯁ ꯄꯣꯁ
 pose ꯄꯣꯁ ꯄꯣꯖ
 poseidon ꯄꯣꯁꯥꯏꯗꯟ
@@ -8579,6 +8693,7 @@ pound ꯄꯥꯎꯟꯗ
 pour ꯄꯣꯔ ꯄꯥꯔ
 pouring ꯄꯔꯤꯡ ꯄꯔꯦꯡ
 poussin ꯄꯨꯁꯤꯟ
+pow ꯄꯥꯎ
 powder ꯄꯥꯎꯗꯔ
 powe ꯄꯥꯎ
 pows ꯄꯣꯁ ꯄꯣꯖ
@@ -8628,6 +8743,7 @@ processor ꯄ꯭ꯔꯣꯁꯦꯁꯔ
 production ꯄ꯭ꯔꯣꯗꯛꯁꯟ ꯄ꯭ꯔꯗꯛꯁꯟ
 professor ꯄ꯭ꯔꯣꯐꯦꯁꯔ
 programme ꯄ꯭ꯔꯣꯒ꯭ꯔꯥꯝ
+programming ꯄ꯭ꯔꯣꯒ꯭ꯔꯥꯃꯤꯡ ꯄ꯭ꯔꯣꯒ꯭ꯔꯃꯤꯡ
 progress ꯄ꯭ꯔꯣꯒ꯭ꯔꯦꯁ
 project ꯄ꯭ꯔꯣꯖꯦꯛꯇ ꯄ꯭ꯔꯣꯖꯦꯛꯠ
 promote ꯄ꯭ꯔꯃꯣꯠ ꯄ꯭ꯔꯣꯃꯣꯠ
@@ -8716,6 +8832,7 @@ pyke ꯄꯥꯏꯛ
 pyramid ꯄꯤꯔꯥꯃꯤꯗ
 python ꯄꯥꯏꯊꯣꯟ
 qaeda ꯀꯩꯗꯥ
+qatar ꯀꯇꯥꯔ ꯀꯥꯇꯥꯔ
 qawi ꯀꯧꯏ
 qian ꯖꯤꯟ
 qin ꯀꯦꯟ
@@ -8944,7 +9061,6 @@ reigns ꯔꯦꯟꯖ
 reil ꯔꯦꯜ
 reiman ꯔꯥꯏꯃꯦꯟ
 reimann ꯔꯥꯏꯃꯦꯟ
-rein ꯔꯦꯟ
 reine ꯔꯦꯟ
 reines ꯔꯦꯟꯖ
 reins ꯔꯦꯟꯖ
@@ -9045,6 +9161,8 @@ rhythms ꯔꯤꯗꯃꯁ
 ria ꯔꯤꯌꯥ ꯔꯤ
 riad ꯔꯤꯌꯥꯗ
 ribbit ꯔꯦꯕꯤꯠ
+ric ꯔꯤꯛ
+rica ꯔꯤꯛ ꯔꯤꯀꯥ
 ricca ꯔꯤꯛ ꯔꯤꯀꯥ
 rice ꯔꯥꯏꯁ ꯔꯥꯢꯁ
 richard ꯔꯤꯆꯔ꯭ꯗ
@@ -9078,6 +9196,7 @@ riese ꯔꯤꯁ
 rieser ꯔꯤꯁꯔ
 riesh ꯔꯤꯁ ꯔꯥꯏꯁ
 riess ꯔꯤꯁ
+rig ꯔꯦꯒ
 rigg ꯔꯤꯒ ꯔꯦꯒ
 right ꯔꯥꯏꯠ
 rights ꯔꯥꯏꯠꯁ ꯔꯥꯏꯇꯁ
@@ -9091,6 +9210,7 @@ rinn ꯔꯦꯟ
 rinne ꯔꯦꯟ
 rinsing ꯔꯦꯟꯁꯤꯡ
 rioux ꯔꯨ ꯔꯣ
+rip ꯔꯦꯞ
 ripp ꯔꯦꯞ ꯔꯤꯄ
 rippe ꯔꯦꯞ ꯔꯤꯄ
 ripper ꯔꯤꯄꯔ
@@ -9137,7 +9257,6 @@ robert ꯔꯣꯕꯔꯠ ꯔꯕꯥꯔꯠ
 roberta ꯔꯕꯥꯔꯠ
 robes ꯔꯣꯕꯁ
 robin ꯔꯥꯕꯟ
-robs ꯔꯕꯁꯨ
 robyn ꯔꯣꯕꯤꯟ
 roc ꯔꯛ ꯔꯣꯛ
 roca ꯔꯣꯛ
@@ -9190,6 +9309,7 @@ roll ꯔꯣꯜ
 rolla ꯔꯣꯜ
 rolle ꯔꯣꯜ
 rolm ꯔꯣꯝ
+rom ꯔꯥꯝ
 romann ꯔꯣꯃꯥꯟ
 romantic ꯔꯣꯃꯥꯟꯇꯤꯛ
 romany ꯔꯣꯃꯥꯅꯤ
@@ -9219,6 +9339,7 @@ rooting ꯔꯨꯇꯤꯟ
 rope ꯔꯣꯞ
 ropp ꯔꯣꯞ
 roque ꯔꯣꯛ
+ros ꯔꯥꯁ
 rosa ꯔꯣꯖ
 rosanna ꯔꯣꯖꯅ
 rosanne ꯔꯣꯖꯦꯟ ꯔꯣꯁꯅ
@@ -9384,6 +9505,7 @@ safe ꯁꯩꯐ
 safety ꯁꯦꯐꯇꯤ
 saffir ꯁ꯭ꯐꯤꯔ
 safier ꯁ꯭ꯐꯤꯔ
+saga ꯁꯥꯒꯩ ꯁꯥꯒꯤ
 sagona ꯁꯥꯒꯣꯟ ꯁꯒꯣꯟ
 sahgal ꯁꯒꯣꯜ ꯁꯥꯒꯣꯜ
 sahl ꯁꯥꯜ ꯁꯣꯜ
@@ -9455,6 +9577,8 @@ santy ꯁꯥꯟꯇꯤ
 sanz ꯁꯥꯏꯟꯁ ꯁꯥꯢꯟꯁ
 sapoa ꯁꯥꯄꯧ
 sapp ꯁꯥꯞ
+sar ꯁꯔꯨ
+sara ꯁꯦꯌꯔ ꯁꯦꯔꯤ
 sarah ꯁꯦꯌꯔ ꯁꯦꯔꯤ
 sarin ꯁꯣꯔꯤꯅ
 sarra ꯁꯔ ꯁꯥꯔꯥ
@@ -9687,6 +9811,7 @@ schwahn ꯁ꯭ꯋꯥꯟ
 schwam ꯁꯋꯣꯝ
 schwan ꯁ꯭ꯋꯥꯟ
 schwerdt ꯁ꯭ꯋꯔꯠ
+sci ꯁꯤ
 scianna ꯁꯅꯥ ꯁꯥꯅꯥ
 sciara ꯁꯔ ꯁꯍꯔ
 scientists ꯁꯥꯏꯟꯇꯤꯁ
@@ -9797,6 +9922,7 @@ semester ꯁꯦꯃꯦꯁꯇꯔ
 semiconductor ꯁꯦꯃꯤꯀꯟꯗꯛꯇꯔ ꯁꯦꯃꯤꯀꯟꯗꯨꯛꯇꯔ
 semitic ꯁꯦꯃꯤꯇꯤꯛ
 semon ꯁꯥꯏꯃꯟ
+sen ꯁꯥꯏꯟ
 sena ꯁꯦꯟ ꯁꯥꯏꯟ
 senate ꯁꯦꯟꯠ ꯁꯦꯟꯇ
 senator ꯁꯦꯟꯇꯔ
@@ -9868,6 +9994,7 @@ shadle ꯁꯦꯗꯦꯜ ꯁꯦꯗꯨꯜ
 shaer ꯁꯦꯌꯔ
 shaff ꯁꯥꯐꯨ
 shaggy ꯁꯥꯒꯤ
+shah ꯁꯥ ꯁ
 shahrokh ꯁꯔꯥꯛ ꯁꯣꯔꯣꯛ
 shaik ꯁꯦꯛ
 shaiken ꯁꯦꯀꯦꯟ
@@ -9884,6 +10011,7 @@ shall ꯁꯦꯜ
 shambaugh ꯁꯦꯝꯕꯥ ꯁꯦꯝꯕ
 shamble ꯁꯥꯝꯕꯜ
 shame ꯁꯦꯝ
+shane ꯁꯦꯟ
 shannon ꯁꯟꯅ ꯁꯥꯟꯅ
 shanty ꯁꯥꯟꯇꯤ
 shape ꯁꯦꯞ
@@ -9931,6 +10059,7 @@ shearing ꯁꯩꯔꯦꯡ
 sheath ꯁꯤꯠ
 sheathe ꯁꯤꯗ ꯁꯍꯤꯗ
 sheathing ꯁꯤꯗꯤꯡ
+sheba ꯁꯤꯕ ꯁꯤꯕꯥ
 shebek ꯁꯦꯕꯛ
 sheck ꯁꯦꯛ
 shedd ꯁꯦꯗ
@@ -9941,6 +10070,7 @@ sheelah ꯁꯤꯜ
 sheelen ꯁꯤꯂꯤꯟ
 sheeley ꯁꯤꯂꯤ
 sheely ꯁꯤꯂꯤ
+sheen ꯁꯤꯅ
 sheff ꯁꯩꯐ
 sheffield ꯁꯦꯐꯤꯜꯗ
 sheila ꯁꯤꯜ
@@ -9953,6 +10083,7 @@ shelled ꯁꯦꯜꯗ
 shelling ꯁꯦꯂꯤꯟ ꯁꯦꯂꯤꯡ
 shells ꯁꯦꯜꯁ
 shema ꯁꯤꯃꯥ
+shen ꯁꯥꯏꯟ
 shena ꯁꯤꯟ ꯁꯤꯅ
 sheng ꯁꯦꯟ ꯁꯥꯏꯟ
 shepp ꯁꯦꯞ
@@ -9960,6 +10091,7 @@ sher ꯁꯔ ꯁꯍꯔ
 shere ꯁꯤꯔ
 sheriff ꯁꯦꯔꯤꯐ
 sherlock ꯁꯦꯔꯂꯣꯛ
+sherman ꯁꯔꯃꯅ
 sherr ꯁꯦꯌꯔ
 sherri ꯁꯦꯔꯤ
 sherrie ꯁꯦꯔꯤ
@@ -10058,7 +10190,6 @@ shull ꯁꯥꯜ
 shum ꯁꯝ ꯁꯥꯃꯨ
 shuman ꯁꯣꯃꯥꯅ
 shumard ꯁꯨꯃꯦꯔꯗ
-shun ꯁꯟ ꯁꯥꯟ
 shunting ꯁꯥꯟꯇꯤꯅ
 shupe ꯁꯨꯞ ꯁꯣꯞ
 shuping ꯁꯣꯄꯤꯡ
@@ -10130,6 +10261,7 @@ sine ꯁꯥꯏꯟ
 sines ꯁꯥꯏꯟꯁ ꯁꯥꯢꯟꯁ
 sing ꯁꯤꯟ
 singel ꯁꯤꯡꯒꯜ ꯁꯤꯉ꯭ꯒꯜ
+singh ꯁꯤꯡ ꯁꯤꯟ
 singing ꯁꯤꯅꯤꯡ
 single ꯁꯤꯡꯒꯜ ꯁꯤꯉ꯭ꯒꯜ
 singles ꯁꯤꯡꯒꯜꯁ
@@ -10202,7 +10334,6 @@ soar ꯁꯣꯔ ꯁꯔꯨ
 soaring ꯁꯥꯔꯦꯡ ꯁꯣꯔꯤꯅ
 soars ꯁꯣꯔꯁ ꯁꯣꯔ꯭ꯁ
 soave ꯁꯧ
-sob ꯁꯥꯕ
 sobbed ꯁꯥꯕꯗ
 sobeck ꯁꯣꯕꯦꯛ
 sobey ꯁꯧꯕꯤ
@@ -10219,6 +10350,7 @@ software ꯁꯣꯐꯋꯦꯌꯔ ꯁꯣꯐ꯭ꯇꯋꯦꯌꯔ
 soggy ꯁꯥꯒꯤ
 sohl ꯁꯣꯜ
 sohn ꯁꯟ ꯁꯥꯟ
+sol ꯁꯥꯜ
 sola ꯁꯣꯜ ꯁꯣꯂꯣ
 solaman ꯁꯜꯃꯥꯟ
 solar ꯁꯣꯂꯥꯔ
@@ -10243,7 +10375,6 @@ sony ꯁꯣꯅꯤ
 soon ꯁꯨꯅ
 sooty ꯁꯨꯇꯤ
 sooy ꯁꯨꯏ
-sop ꯁꯥꯞ
 sope ꯁꯣꯞ
 sophia ꯁꯣꯐꯤꯌꯥ
 sopp ꯁꯥꯞ
@@ -10357,6 +10488,7 @@ starr ꯁ꯭ꯇꯥꯔ ꯁ꯭ꯇꯣꯔ
 starrs ꯁ꯭ꯇꯥꯔꯁ
 starry ꯁ꯭ꯇꯥꯔꯤ ꯁ꯭ꯇꯣꯔꯤ
 stassen ꯁ꯭ꯇꯦꯁꯟ
+stat ꯁ꯭ꯇꯦꯠ
 state ꯁ꯭ꯇꯦꯠ
 statehood ꯁ꯭ꯇꯦꯠꯍꯨꯗ
 states ꯁ꯭ꯇꯦꯠꯁ ꯁ꯭ꯇꯦꯇꯁ
@@ -10482,6 +10614,7 @@ stylish ꯁ꯭ꯇꯥꯏꯂꯤꯁ
 stylus ꯁ꯭ꯇꯥꯏꯂꯤꯁ
 stys ꯁꯇꯤꯁ
 styx ꯁ꯭ꯇꯤꯛꯁ
+sub ꯁꯥꯕ
 subbed ꯁꯥꯕꯗ ꯁꯨꯕꯗ
 subic ꯁꯣꯕꯦꯛ
 submarine ꯁꯕꯃꯦꯔꯤꯟ
@@ -10533,6 +10666,7 @@ sundry ꯁꯨꯟꯗꯔꯤ
 sung ꯁꯟ
 suni ꯁꯣꯅꯤ
 sunia ꯁꯣꯅꯤꯌꯥ
+sunni ꯁꯣꯅꯤ
 sunny ꯁꯥꯅꯤ
 suntan ꯁꯟꯇꯅꯨ ꯁꯥꯟꯇꯥꯅꯨ
 suny ꯁꯣꯅꯤ
@@ -10628,6 +10762,7 @@ tagg ꯇꯒ
 tagge ꯇꯒ
 tague ꯇꯒ
 taher ꯇꯤꯔ
+tai ꯇꯥꯢ
 tail ꯇꯦꯜ
 tails ꯇꯦꯂꯁ
 taima ꯇꯥꯏꯝ
@@ -10646,13 +10781,16 @@ talkie ꯇꯥꯛꯏ ꯇꯀꯤ
 talky ꯇꯥꯛꯏ ꯇꯀꯤ
 tall ꯇꯜ
 tallil ꯇꯨꯂꯦꯜ
+tam ꯇꯥꯏꯝ
 tama ꯇꯝ ꯇꯣꯝ
 tambs ꯇꯥꯏꯝꯁ
+tamil ꯇꯃꯤꯜ
 tamm ꯇꯥꯏꯝ ꯇꯝ
 tammen ꯇꯝꯅ
 tan ꯇꯦꯟ
 tandon ꯇꯦꯟꯗꯣꯟ
 tanen ꯇꯦꯟꯅ
+tang ꯇꯥꯅ
 tange ꯇꯥꯟꯖ
 tangs ꯇꯥꯡꯖ
 tani ꯇꯣꯅꯤ ꯇꯧꯅꯤ
@@ -10669,6 +10807,7 @@ tappan ꯇꯞꯅ
 tappe ꯇꯦꯞ ꯇꯥꯏꯞ
 tappen ꯇꯞꯅ
 tar ꯇꯔꯨ ꯇꯥꯔ
+tara ꯇꯥꯔꯤ ꯇꯥꯔꯦ
 targeting ꯇꯥꯔꯒꯇꯤꯡ
 tariq ꯇꯥꯔꯤꯛ
 tarot ꯇꯥꯔꯣ
@@ -10825,6 +10964,7 @@ third ꯊꯥꯔꯗ
 thiry ꯊꯤꯔꯤ
 this ꯗꯦꯁ ꯗꯤꯁ
 thissen ꯇꯦꯁꯟ
+tho ꯗꯣ
 thobe ꯇꯧꯕ ꯊꯧꯕ
 thode ꯇꯣꯗ
 thoen ꯇꯣꯟ ꯇꯣꯅꯨ
@@ -10839,6 +10979,7 @@ thomley ꯊꯝꯂꯤ
 thommen ꯊꯝꯅꯨ ꯇꯝꯅ
 thomsen ꯊꯣꯝꯁꯟ
 thone ꯇꯣꯟ ꯇꯣꯅꯨ
+thor ꯇꯔꯨ
 thoreau ꯊꯔꯣ ꯇꯥꯔꯣ
 thoren ꯊꯥꯔꯣꯟ ꯊꯣꯔꯅ
 thorne ꯊꯣꯔꯅ
@@ -10862,6 +11003,7 @@ throttle ꯇꯔꯇꯜ
 through ꯇꯔꯨ ꯊ꯭ꯔꯨ
 throw ꯇ꯭ꯔꯣ ꯊꯔꯣ
 thrown ꯇ꯭ꯔꯣꯟ
+thru ꯇꯔꯨ
 thrun ꯇꯔꯥꯅ
 ths ꯇꯁꯨ
 thud ꯊꯥꯗ
@@ -11142,6 +11284,7 @@ tull ꯇꯜ ꯇꯨꯜ
 tullia ꯇꯥꯂꯤꯌꯥ
 tulloch ꯇꯂꯥꯛ ꯇꯂꯨꯛ
 tullock ꯇꯂꯥꯛ ꯇꯂꯨꯛ
+tulsa ꯇꯨꯜꯁꯤ
 tuma ꯇꯣꯝ
 tuman ꯆꯨꯝꯅ
 tumor ꯇ꯭ꯌꯨꯃꯔ
@@ -11197,6 +11340,7 @@ uhr ꯎꯔꯨ ꯑꯣꯔ
 ukraine ꯌꯨꯛꯔꯦꯟ ꯌꯨꯀ꯭ꯔꯦꯟ
 ukrainian ꯌꯨꯛꯔꯦꯅꯤꯌꯥꯟ ꯌꯨꯀ꯭ꯔꯦꯅꯤꯌꯥꯟ
 umm ꯑꯃ
+una ꯎꯟ ꯑꯣꯟ
 unbending ꯑꯟꯕꯦꯟꯗꯤꯡ
 und ꯑꯟꯗ
 under ꯑꯟꯗꯔ
@@ -11289,6 +11433,7 @@ vass ꯋꯦꯁ ꯚꯦꯁ
 vassily ꯋꯥꯁꯤꯂꯤ
 vast ꯋꯦꯁꯠ
 vasta ꯚꯦꯁꯇꯥ
+vat ꯋꯥꯏꯠ ꯋꯦꯠ
 vath ꯋꯥꯏꯠ ꯋꯦꯠ
 vatican ꯚꯦꯇꯤꯀꯥꯟ
 vatter ꯋꯥꯇꯔ
@@ -11345,6 +11490,7 @@ vess ꯋꯦꯁ ꯚꯦꯁ
 vessel ꯚꯦꯁꯦꯜ
 vessell ꯚꯦꯁꯦꯜ
 vestron ꯋꯦꯁ꯭ꯇꯔꯟ ꯋꯦꯁꯇꯔꯟ
+vet ꯋꯥꯏꯠ
 veta ꯋꯦꯠ
 veteran ꯚꯦꯇꯔꯥꯟ
 vette ꯋꯥꯏꯠ ꯋꯦꯠ
@@ -11352,6 +11498,7 @@ vey ꯚꯦ ꯋꯦ
 veyne ꯚꯦꯟ
 via ꯚꯤꯌꯥ
 vibration ꯚꯥꯏꯕ꯭ꯔꯦꯁꯟ
+vic ꯋꯤꯛ
 vicary ꯚꯤꯀꯥꯔꯤ
 vice ꯚꯥꯏꯁ
 vick ꯋꯤꯛ
@@ -11427,6 +11574,7 @@ volleyball ꯚꯣꯂꯤꯕꯣꯜ
 volleys ꯋꯥꯂꯤꯁ
 voltage ꯚꯣꯜꯇꯦꯖ
 volume ꯚꯣꯜꯌꯨꯝ
+von ꯋꯥꯟ
 vona ꯚꯣꯟ
 vonder ꯋꯥꯟꯗꯔ ꯋꯥꯟꯗꯥꯔ
 vondra ꯋꯥꯟꯗꯔ ꯋꯟꯗꯔ
@@ -11488,6 +11636,7 @@ walter ꯋꯥꯜꯇꯔ
 walth ꯋꯥꯜꯇ
 walther ꯋꯥꯜꯇꯔ
 waltzing ꯋꯥꯂꯁꯤꯡ
+wan ꯚꯣꯟ
 wander ꯋꯥꯟꯗꯔ ꯋꯥꯟꯗꯥꯔ
 wane ꯚꯦꯟ
 wang ꯋꯥꯟ
@@ -11495,6 +11644,7 @@ wann ꯋꯥꯟ ꯚꯣꯟ
 wanna ꯋꯥꯅꯥ ꯋꯥꯅ
 wanta ꯋꯥꯅꯥ ꯋꯥꯅ
 war ꯋꯥꯔꯨ
+ware ꯋꯦꯔ
 warehouse ꯋꯦꯌꯔꯍꯥꯎꯁ
 warner ꯋꯥꯔꯅꯥꯔ
 warr ꯋꯥꯔꯨ ꯋꯥꯔ
@@ -11507,6 +11657,7 @@ washington ꯋꯥꯁꯤꯡꯇꯟ
 wassily ꯋꯥꯁꯤꯂꯤ
 waste ꯋꯦꯁꯠ
 waszak ꯋꯥꯁꯛ
+wat ꯚꯣꯠ
 water ꯋꯥꯇꯔ
 waterfall ꯋꯥꯇꯔꯐꯣꯜ
 watley ꯋꯥꯠꯂꯤ
@@ -11578,6 +11729,7 @@ werner ꯋꯔꯅꯔ ꯋꯥꯔꯅꯥꯔ
 werre ꯋꯦꯔ
 wert ꯚꯥꯔꯠ
 werth ꯚꯥꯔꯠ
+wes ꯚꯦꯁ
 wesch ꯋꯦꯁ ꯚꯦꯁ
 wesche ꯋꯦꯁ ꯚꯦꯁ
 wess ꯋꯦꯁ ꯚꯦꯁ
@@ -11839,6 +11991,8 @@ yak ꯌꯦꯛ
 yake ꯌꯦꯛ
 yale ꯌꯦꯜ
 yamane ꯌꯨꯃꯅꯤ
+yan ꯌꯦꯟ
+yang ꯌꯦꯟ
 yani ꯌꯣꯅꯤ
 yaobang ꯌꯥꯎꯕꯅ
 yard ꯌꯥꯔꯗ
@@ -11869,6 +12023,7 @@ yeutter ꯌꯨꯇꯔ
 yew ꯌꯨ
 yie ꯌꯥꯏ
 yilin ꯌꯦꯂꯦꯟ
+yin ꯌꯦꯟ
 ying ꯌꯦꯟ ꯌꯦꯡ
 yoe ꯌꯣ
 yoga ꯌꯣꯒꯤ
@@ -11891,6 +12046,7 @@ yow ꯌꯥꯎ
 yoy ꯌꯧꯏ
 yue ꯌꯨ
 yuhasz ꯌꯥꯍꯨꯁ
+yum ꯌꯥꯝ
 yuma ꯌꯨꯝ
 yunde ꯌꯣꯟꯗꯦ
 yung ꯌꯥꯡ ꯌꯪ

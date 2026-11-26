@@ -15,6 +15,7 @@ abbett ಬೈತ
 abbey ಎಬಿ
 abbie ಎಬಿ
 abboud ಬೋಡು ಬೂದು
+abby ಎಬಿ
 abed ಬೆಡ್ ಬೈದ್
 abedi ಬೆಡಿ ಬೇಡಿ
 abee ಬಿ
@@ -42,6 +43,7 @@ abut ಬತ್ ಬಾತ್
 abyss ಬಿಸು ಬೇಸ್
 academy ಅಕಾಡಮಿ
 acaena ಸೇನಾ
+acc ಐಸಿಸಿ
 acco ಅಕಾ
 accor ಆಕಾರ
 accord ಕೊರ್ದು ಕೊರ್ದ್
@@ -72,6 +74,7 @@ activity ಆಕ್ಟಿವಿಟಿ
 actor ಆಕ್ಟರ್
 acts ಎಕ್ಸ್ ಆಕ್ಸ್
 acuff ಕಫ
+ada ಎಡ ಇಡಿ
 adah ಎಡ ಆದ
 adair ದೆರ್ ಅದರ್
 adaire ಅದರ್ ಒಡೆಯರ್
@@ -178,6 +181,7 @@ ahsahka ಅಶೋಕ
 ahwahnee ಅವನಿ
 aichele ಐಕಳ
 aid ಇಡಿ ಎಡ್
+aide ಇಡಿ ಎಡ್
 aided ಎಡ್ ಏಡ್
 aides ಏಡ್ಸ್
 aids ಏಡ್ಸ್
@@ -190,7 +194,6 @@ aim ಎಂ ಎಮ್
 aime ಎಂ ಎಮ್
 aimed ಎಂದು ಎಂಡ್
 ainge ಎನ್ ಎಂ
-ainu ಏನು
 air ಏರ್ ಎರು
 aired ಏರ್ದ್ ಐರ್ದ್
 airey ಏರಿ ಏರೇ
@@ -208,6 +211,7 @@ aisle ಐಲ್
 aix ಎಕ್ಸ್
 ajaj ಜಾಝ್
 ajar ಜಾರ್ ಜೋರು
+aka ಓಕ್
 akai ಕೈ
 akali ಕಾಲಿ ಕಾಳಿ
 akao ಕಾವು
@@ -219,6 +223,7 @@ akin ಕಿನ್ ಕೆನ್
 akira ಅಕೇರಿ ಅಕೆರ್
 akita ಕೀಟ
 akre ಅಕೆರ್ ಆಕಾರ
+ala ಎಲ್ ಏಳ್
 alai ಲೈ
 alain ಅಲೆನ್ ಲೆನ್
 alaine ಅಲೆನ್ ಲೆನ್
@@ -245,6 +250,7 @@ aleve ಆಲಿವ್
 alexa ಅಲೆಕ್ಸ್
 aley ಎಲಿ
 algeria ಅಲ್ಜೀರಿಯಾ
+ali ಒಲಿ
 alice ಆಲಿಸ್
 alicia ಆಲಿಸ್ ಲಿಸಾ
 alie ಅಲಿ ಎಲಿ
@@ -296,9 +302,11 @@ along ಲಾಂಗ್
 alot ಲೋಟ
 alpine ಆಲ್ಪೈನ್
 alt ಅಲ್ತ
+alta ಅಲ್ತ್
 altair ಆಲ್ಟರ್
 altera ಆಲ್ಟರ್
 altherr ಆಲ್ಟರ್
+alto ಆಲ್ಟಾ
 altra ಆಲ್ಟರ್
 alum ಎಲ್ಮ್ ಏಲಂ
 alura ಆಲೂರು
@@ -315,6 +323,7 @@ amann ಅಮನ್
 amano ಮಾನೊ
 amaze ಮೇಜ್ ಇಮೇಜ್
 amazing ಅಮೇಜಿಂಗ್ ಇಮೇಜಿಂಗ್
+amber ಅಂಬಾರ್
 ambra ಅಂಬರ್
 ambs ಅಂಜು ಅಂಶ
 amburn ಇಂಬೆರ್ನ
@@ -342,6 +351,7 @@ amoss ಮಾಸ ಮಾಸ್
 amount ಮೌಂಟ್
 amre ಅಮರ ಅಮರ್
 amuck ಮೂಕ
+ana ಐನ್ ಆನ್
 anac ಅನೇಕ
 anal ಏನೆಲ್ ಏಣೆಲ್
 analysis ಅನಾಲಿಸಿಸ್
@@ -354,6 +364,7 @@ andersson ಆಂಡರ್ಸನ್
 andie ಆಂಡಿ
 anding ಅಂದಿನ
 andras ಆಂಡರ್ಸ್
+andre ಅಂದರೆ
 andree ಆಂಡ್ರಿ
 andrei ಆಂಡ್ರೆ ಅಂದರೆ
 andrej ಆಂಡ್ರೆ ಅಂದರೆ
@@ -365,11 +376,13 @@ andy ಆಂಡಿ
 anello ಆನೆಲಾ ನೈಲಾ
 anette ನೆಟ್ ನೈಟ್
 anew ನ್ಯೂ ಅನು
+ang ಐನ್ ಎನ್
 angeles ಏಂಜಲೀಸ್
 angels ಏಂಜಲ್ಸ್
 angie ಅಂಜಿ
 angulo ಅಂಗೋಲಾ
 angy ಅಂಜಿ
+anita ನೀತಾ
 anja ಒಂಜಾ
 ankh ಎಂಕ್
 ann ಐನ್ ಎನ್
@@ -406,6 +419,7 @@ ape ಏಪ ಎಪ್
 apiece ಪೀಸ್
 apollo ಏಪೊಲಾ
 apopa ಪೋಪ ಪಾಪ
+app ಅಪ್ ಆಪು
 appall ಪಾಲ್
 appeal ಅಪೀಲ್
 appear ಪಿರ ಆಪೆರ್
@@ -480,6 +494,7 @@ artus ಆರ್ಟ್ಸ್
 arty ಒರ್ತಿ
 artz ಆರ್ಟ್ಸ್
 arup ಆರೋಪ
+asa ಆಸೆ
 ascent ಸೈಂಟ್ ಸೇಂಟ್
 asch ಎಸ್ ಐಸ್
 asche ಎಸ್ ಐಸ್
@@ -487,7 +502,6 @@ ascott ಸ್ಕಾಟ್
 asea ಅಜೇಯ
 ash ಎಸ್ ಐಸ್
 ashame ಸೆಂ
-ashe ಎಸ್ ಐಸ್
 ashey ಎಸಿ
 ashore ಸಾರ್ ಸಾರ
 asia ಏಜ್
@@ -603,6 +617,7 @@ autumn ಆಟಮ್ ಆತ್ಮ
 aux ಆ ಒ
 avail ವೆಲ್ ವೇಲು
 avasso ವಾಸೊ
+ave ಒವೆ
 aveni ಅವೆನೇ
 avenue ಅವನು
 avera ಆವೆರೆ
@@ -610,6 +625,7 @@ averse ವರ್ಷ ವರ್ಸ
 aviacion ಏವಿಯೇಷನ್
 aviation ಏವಿಯೇಷನ್
 aviator ಏವಿಯೇಟರ್
+avid ಆವಡ್ ಆವಾಡ್
 avila ಅವಿಲ್
 avilla ಅವಿಲ್
 avitia ಆವೇಶ
@@ -627,7 +643,6 @@ axe ಎಕ್ಸ್ ಆಕ್ಸ್
 axon ಆಕ್ಷನ್
 aycock ಎಕ್ಕ
 aydt ಏತ್ ಎತ್
-aye ಐ
 ayes ಐಸ್
 ayling ಎಲೆನ್
 azhar ಜಾರ್ ಜಾರ
@@ -689,6 +704,7 @@ baht ಬಾತ್ ಬೋಟ್
 baie ಬಾಯಿ ಬೈಯಿ
 baier ಬೇರ್
 baig ಬೇಗ
+bail ಬೆಲ್
 baila ಬೈಲ್
 baile ಬೆಲ್
 bailey ಬೇಲಿ
@@ -700,6 +716,7 @@ bailly ಬೇಲಿ
 bailon ಬೇಲೆನ್ ಬೆಲೆನ್
 baily ಬೇಲಿ
 bailyn ಬೇಲೆನ್ ಬೆಲೆನ್
+bain ಬೆನ್
 baine ಬೆನ್
 bainter ಬೆನ್ತೆರ್ ಬೆಂತೆರ್
 baird ಬೇರ್‌ದ
@@ -770,7 +787,6 @@ barash ಬೈರಾಸ್
 barcia ಬರ್ಚ್
 bardera ಬಾರ್ಡರ್
 bare ಬೇರ್ ಬೇರು
-bared ಬೇರ್‌ದ
 barey ಬೆರಿ
 barga ಬರ್ಗ್
 bargain ಬರ್ಗನ್ ಬರ್ಗೆನ್
@@ -808,6 +824,7 @@ barry ಬಾರಿ ಬಾರೀ
 barsch ಬರ್ಸ
 barson ಬರ್ಸನ್ ಬರ್ಸೊನು
 barszcz ಬೊರ್ಶ್ಚ್
+bart ಬರ್ತ್
 barta ಬಾರ್ತ್ ಬರ್ತ್
 bartha ಬಾರ್ತ್
 bartsch ಬರ್ಚ್
@@ -817,7 +834,7 @@ basal ಬೇಸಿಲ್
 basch ಬಸ್ ಬಾಸ್
 base ಬೇಸ್ ಬೇಸ
 based ಬೆಸ್ಟ್
-bashed ಬೆಸ್ಟ್
+bash ಬಾಸ್
 basile ಬಾಸೆಲ್ ಬಾಸೆಲು
 basilica ಬೆಸಿಲಿಕಾ
 baskette ಬಾಸ್ಕೆಟ್
@@ -1002,7 +1019,9 @@ belk ಬೆಳಕು
 belka ಬೆಳಕು
 belke ಬೆಳಕು
 bell ಬೈಲ್ ಬೆಲ್
+bella ಬೇಲೆ ಬೆಲೆ
 bellah ಬೇಲೆ ಬೆಲೆ
+belle ಬೈಲ್ ಬೆಲ್
 belleau ಬಿಲೊ ಬೀಲೊ
 bellied ಬೇಲಿಡ್
 bellin ಬೇಲೆನ್ ಬೆಲೆನ್
@@ -1017,6 +1036,7 @@ bena ಬೇನೆ ಬೆನ್
 benatar ಬೆನ್ತೆರ್ ಬೆಂತೆರ್
 benda ಬೆಂಡೆ ಬೆಂದ್
 bending ಬೆಂದಿನ
+bengal ಬೆನಗಲ್
 bengel ಬೆಂಗಾಲ್ ಬೆನಗಲ್
 benin ಬೇನೆನ್
 bening ಬೇನೆನ್
@@ -1039,7 +1059,6 @@ berka ಬರ್ಕೆ ಬೆರಕೆ
 berlin ಬರ್ಲಿನ್
 berling ಬರ್ಲಿನ್
 berman ಬರ್ಮನ್
-bern ಬಾರ್‌ನ್
 berna ಬೇರ್‌ನ್
 bernadene ಬರಂದಿನ
 bernadin ಬರಂದಿನ
@@ -1196,6 +1215,7 @@ bitching ಬಿಚೆಂಗ್
 bite ಬೈತ
 bither ಬೀದರ್ ಬೆದರ್
 bitty ಬೇಟಿ
+biz ಬಿಸು
 bizarre ಬಜಾರ್ ಬೇಜಾರ್
 bizzell ಬೀಜೊಲು
 bizzy ಬಿಸಿ ಬಿಜಿ
@@ -1309,7 +1329,6 @@ bohr ಬಾರ್
 bohren ಬಾರ್‌ನ್ ಬಾರ್ನ್
 boice ಬಾಯ್ಸ್
 boies ಬಾಯ್ಸ್
-bola ಬಾಲೆ
 bolan ಬಾಲೆನ್ ಬೋಲೆನ್
 bold ಬೊಲ್ದು
 boldt ಬೋಲ್ಟ್
@@ -1360,7 +1379,7 @@ bonnie ಬಾನಿ
 bonny ಬಾನಿ
 bons ಬನ್ಸ್
 bonta ಬಂಟ ಬಂಟ್
-bony ಬಾನಿ
+boo ಬೂ
 boock ಬುಕ್ ಬೂಕು
 boody ಬೂದಿ ಬೋಡೇ
 booe ಬೋ ಬೂ
@@ -1407,6 +1426,7 @@ bosso ಬಾಸಾ
 boster ಬಸ್ಟರ್
 boston ಬೋಸ್ಟನ್
 bostra ಬಸ್ಟರ್
+bot ಬಾತ್
 botany ಬಟಾಣಿ
 both ಬೋಟ್
 botha ಬೋಟ್ ಬತ್ತ
@@ -1426,6 +1446,7 @@ boulden ಬುಡನ್
 boule ಬುಲ್
 boulet ಬುಲೆಟ್
 boulette ಬುಲೆಟ್
+boulevard ಬುಲೆವಾರ್ಡ್
 bourn ಬಾರ್‌ನ್ ಬಾರ್ನ್
 bourne ಬಾರ್‌ನ್ ಬಾರ್ನ್
 boutte ಬೋಟ್ ಬೂತ
@@ -1468,6 +1489,7 @@ bra ಬರೊ
 brack ಬ್ರೇಕ್
 bracket ಬ್ರಾಕೆಟ್
 brackett ಬ್ರಾಕೆಟ್
+brad ಬ್ರೆಡ್
 bradway ಬ್ರಾಡ್ವೇ
 brae ಬರೆ
 braer ಬರೆಯರ
@@ -1751,10 +1773,10 @@ caccia ಕೋಚ್ ಕಚ್
 cache ಕಾಸ್ ಕೇಸ್
 cached ಕಷ್ಟ ಕಾಸ್ಟ್
 cackle ಕೈಕುಲು
+cad ಕಾಡು
 caddell ಕಡಲ್ ಕಡಲ
 caddick ಕಡೆಕ್
 caddie ಕಡೇ
-caddy ಕಡೇ
 cadena ಕಾಡಿನ
 cadre ಕದ್ರಿ
 caesar ಸೀಸರ್
@@ -1771,6 +1793,7 @@ caire ಕೆರ್ ಕೇರ್
 cairn ಕೆರ್ನ
 caisse ಕೇಸ್
 cake ಕೇಕ್
+cal ಕಾಲ್ ಕಾಲ
 calais ಕಲೆ ಕೊಲೆ
 calame ಕೊಲಾಮಿ
 calaway ಕಾಲುವೆ ಕೊಳವೆ
@@ -1810,6 +1833,7 @@ calor ಕಲರ್
 caltha ಕಾಲದ
 calvey ಕಲ್ವೆ ಕೆಲವೇ
 calving ಕೆವಿನ್
+cam ಕಾಮ್ ಕಾಂ
 cambell ಕಂಬಳ
 cambodia ಕಂಬೋಡಿಯಾ
 cambre ಕಂಬಾರ
@@ -1822,7 +1846,6 @@ camp ಕೆಂಪು
 campbell ಕಂಬಳ
 campen ಕಂಪನ
 can ಕೈನ್ ಕೆನ್
-cana ಕನಾ
 canaan ಕೇನುನ
 canada ಕೆನಡಾ
 canaday ಕೇಂಡೆ
@@ -1942,6 +1965,7 @@ carton ಕಾರ್ಟೂನ್
 carty ಕೊರತಿ
 caryl ಕೇರಳ
 caryn ಕೋರಿನ್ ಕರಿನ
+cas ಕೇಸ್
 casa ಕಾಸ್ ಕೋಶ
 casad ಕಾಸ್‌ದ
 case ಕೇಸ್
@@ -2058,8 +2082,10 @@ chamber ಚೇಂಬರ್
 champion ಚಾಂಪಿಯನ್
 championship ಚಾಂಪಿಯನ್ಶಿಪ್ ಚಾಂಪಿಯನ್ಷಿಪ್
 champoux ಸಂಪು
+chan ಚೆನ್ ಚೈನ್
 chana ಚೆನ್ ಚೈನಾ
 chandon ಚೆಂಡೆನ್
+chang ಚೆನ್
 change ಚೇಂಜ್ ಚೆಂಜ್
 channel ಚಾನಲ್
 channell ಚಾನಲ್
@@ -2098,8 +2124,11 @@ cheese ಚೀಸ್ ಚೇಸ್
 cheetah ಚೀಟಿ
 chelette ಶಿಲೆತ
 chemed ಕೇಂದ್ ಕೇಂಡ್
+chen ಚೈನ್
 chenette ಸೆನೆಟ್
+cheng ಚೆನ್
 chengdu ಚೆಂಡು
+chennai ಚೆನೈ
 cheong ಚಿಯಾಂಗ್
 cheque ಚೆಕ್
 cherie ಸೇರಿ
@@ -2114,6 +2143,7 @@ chew ಚು
 chewer ಚೂರ್
 cheyne ಚೆನ್
 chez ಶೇ ಚೆಸ್
+chi ಕೈ
 chia ಚೀಯೊ
 chiang ಚಾಂಗ್ ಚೆನ್
 chic ಸೀಕ್
@@ -2282,6 +2312,7 @@ coating ಕೋಟೆನ್
 coattail ಕೋಟೆಲು
 cobre ಕಬರ್
 coccia ಕೋಚ್
+cod ಕಾಡು
 codag ಕೊಡಗು
 coday ಕೊಡೆ ಕೋಡೆ
 codding ಕೊಡಿನ್ ಕಾಡಿನ
@@ -2292,6 +2323,7 @@ coded ಕೋಡಿಡ್ ಕೋಡಿದ
 coderre ಕೇಡರ್
 coding ಕೊಡಿನ್
 codlin ಕಡ್ಲೆನ್
+cody ಕೊಡಿ ಕೋಡಿ
 coe ಕೋ ಕಾ
 coed ಕಾಡ್ ಕೋಡ್
 coehlo ಕೋಲೊ ಕಾಲೊ
@@ -2310,18 +2342,20 @@ cohrs ಕೋರ್ಸ್
 coia ಕಾಯಿ ಕೊಯಾ
 coil ಕೊಯ್ಲು ಕೊಯ್ಲ್
 coile ಕೊಯ್ಲು ಕೊಯ್ಲ್
-cola ಕಾಲ
 colaizzi ಕಾಲೇಜಿ
 colan ಕೊಲೊನ್ ಕೋಲುನು
 colaw ಕೋಲೊ ಕಾಲೊ
 cold ಕೋಲದ
 coldwell ಕಾಲ್ಡ್‌ವೆಲ್
+cole ಕೋಲು ಕೋಲ
 colee ಕಾಲಿ ಕೋಳಿ
 coleen ಕಾಲಿನ್
 coleman ಕೋಲ್ಮನ್
 colen ಕೊಲೊನ್ ಕೋಲುನು
 coler ಕೋಲಾರ
 coley ಕಾಲಿ ಕೋಳಿ
+coli ಕಾಲಿ ಕೋಳಿ
+colin ಕಾಲಿನ್
 colinas ಕಾಲಿನ್ಸ್
 coll ಕಾಲ್ ಕಾಲ
 colla ಕೋಲ ಕಾಲ
@@ -2355,6 +2389,7 @@ colly ಕಾಲಿ ಕಲಿ
 cologne ಕೊಲೊನ್ ಕಾಲೊನು
 coloma ಕೊಲಾಮಿ
 colomb ಕಾಲಮ್ ಕಲಾಂ
+colon ಕೋಲುನು
 colonel ಕರ್ನಲ್ ಕಾರ್ನೆಲ್
 colonna ಕೊಲೊನ್ ಕಾಲೊನು
 color ಕಲರ್ ಕೋಲಾರ
@@ -2462,6 +2497,8 @@ copen ಕೋಪನ್ ಕೋಪೊನು
 coppee ಕಾಪಿ
 copy ಕಾಪಿ
 copycode ಕಾಪಿಕಾಡ್
+cor ಕೋರ್
+coral ಕಾರ್ಲ್
 coralie ಕೊರೊಲಿ
 cord ಕೊರ್ದು
 corded ಕಾರ್ಡ್ ಕಾರ್‌ಡ್
@@ -2490,7 +2527,9 @@ cornela ಕಾರ್ನೆಲ್
 cornell ಕಾರ್ನೆಲ್
 cornelle ಕಾರ್ನೆಲ್
 cornick ಕಾರ್ನಿಕ
+corona ಕಾರ್ಯೊನು
 coroner ಕಾರ್ನರ್
+corps ಕಾರ್ ಕೋರ್
 corpse ಕಾರ್ಪ್ಸ್
 corpus ಕಾರ್ಪ್ಸ್
 correa ಕೊರಿಯಾ
@@ -2509,6 +2548,7 @@ corsa ಕಾಸ್ ಕೋಶ
 corse ಕೋರ್ಸ್
 cortine ಕೊರ್ತಿನ
 corva ಕೌರವ
+cory ಕೋರಿ ಕೊರಿ
 cosey ಕಾಜಿ ಕೊಸಿ
 coss ಕಾಸ್
 cossa ಕಾಸ್ ಕೋಶ
@@ -2521,7 +2561,6 @@ cost ಕಾಸ್ಟ್
 coste ಕೋಸ್ಟ್ ಕಾಸ್ಟ್
 coston ಕಷ್ಟೊನು
 cosy ಕಾಜಿ ಕೊಸಿ
-cot ಕಾಟ್
 cotelle ಕೋಟೆಲು
 cotija ಕಾಟೇಜ್
 cotilla ಕಟೀಲು ಕಟೀಲ್
@@ -2574,7 +2613,6 @@ cowan ಕೌನ್
 cowen ಕೌನ್ ಕೋನ್
 cower ಕೌರ್
 cowher ಕವರ್
-coy ಕಾಯ
 coye ಕಾಯ
 coyle ಕೊಯ್ಲು ಕೊಯ್ಲ್
 coz ಕಾಸ್
@@ -2587,6 +2625,7 @@ cram ಕ್ರೈಮ್
 crane ಕ್ರೇನ್
 crashed ಕ್ರೈಸ್ತ ಕ್ರೈಸ್ಟ್
 crass ಕ್ರಾಸ್
+crate ಕರೆಟ್ ಕರೆತ
 crayne ಕ್ರೇನ್
 crazy ಕ್ರೇಜಿ
 crea ಕ್ರಿ
@@ -2651,6 +2690,7 @@ crum ಕ್ರಮ
 crumb ಕ್ರಮ
 crumm ಕ್ರಮ
 cruse ಕ್ರೂಸ್
+crush ಕ್ರಾಸ್
 crushing ಕೃಷಿನ್
 cruz ಕ್ರೂಸ್
 cruze ಕ್ರೂಸ್
@@ -2727,7 +2767,6 @@ curried ಕರಿದ್ ಕರೀದ್
 currin ಕೋರಿನ್ ಕೊರಿನ
 curry ಕರಿ ಕುರಿ
 currys ಕುರಿಶ್
-curt ಕರಟ್ ಕಾರಟ್
 curtail ಕಾರ್ತೆಲ್
 curtain ಕಾರ್ಟೂನ್ ಕೆರ್ತಿನ
 curtin ಕೆರ್ತಿನ
@@ -2816,7 +2855,9 @@ dammen ದಮನ್
 damn ಡಮ್ ದಮ್
 damned ದಂಡ್ ದಂಡ
 dan ದೈನ್
+dana ದೆನ್ ಡೆನ್
 dance ಡಾನ್ಸ್
+dane ದೆನ್ ಡೆನ್
 daneel ದೋಣಿಲು
 danek ದೈನಿಕ್ ದೈನಿಕ
 danica ದೈನಿಕ ದೈನಿಕ್
@@ -2835,6 +2876,7 @@ darr ದೆರ್ ದಾರ್
 darragh ದೆರ್ ದೇರ್
 darrah ದೆರ್ ದರ
 darroch ಡಾರ್ಕ್
+das ದೇಶ
 dasch ದೇಶ ದಾಸ್
 dase ದೇಶ ಡೇಸ್
 dash ದೇಶ
@@ -2844,6 +2886,7 @@ dashell ದೇಶೊಲು ದೇಶಲು
 dasher ದಾಸರ
 dass ದಾಸ್ ದೇಶ
 dassow ದೇಸೊ ದೇಶೊ
+dat ದೆತ್
 data ದೈತ ದಾತ್
 database ಡೇಟಾಬೇಸ್
 date ದೆತ್ ಡೆತ್
@@ -2912,7 +2955,9 @@ decelle ಡೀಸೆಲ್
 december ಡಿಸೆಂಬರ್
 dech ದೆಕ್ ದೈಕ್
 deck ದೆಕ್ ದೈಕ್
+deco ಡೆಕೊ
 dede ದೀದ್
+dee ದಿ ಡಿ
 deeded ದೀಡ್ದ್
 deedee ಡಿಡಿ
 deedy ಡಿಡಿ
@@ -2981,12 +3026,14 @@ depina ದೀಪಿನ
 depo ದೀಪೊ ದೀಪಾ
 depot ದೀಪೊ ದೀಪಾ
 deputy ಡೆಪ್ಯುಟಿ
+der ದಾರ್
 derk ಡಾರ್ಕ್
 derma ದರ್ಮ ದರ್ಮೊ
 derman ದರ್ಮೊನು
 derr ದೆರ್ ದೇರ್
 derry ಡೈರಿ
 dery ಡೈರಿ
+des ದಿ ಡಿ
 desai ದೇಸಾಯಿ
 desch ದೇಶ
 desena ಡಿಸೈನ್
@@ -3001,6 +3048,7 @@ deter ದೀತೆರ್ ದಿತೆರ್
 deuce ದೋಸ ದೋಷ
 deuss ದೋಸ ದೋಷ
 deux ಡು ದು
+dev ದೈವ
 devalle ದಿವಾಳಿ
 devaughn ದೈವೊನು ದೇವಾನ್
 devera ದೇವೆರ್ ದೇವೆರೆ
@@ -3065,7 +3113,6 @@ dingy ದಿಂಜಿ ದೆಂಜಿ
 dinh ದಿನ
 dining ಡೈನಿಂಗ್
 dinner ದಿನಾರ್
-dint ದಿನಟ್
 dip ಡೀಪ್
 dippel ದೀಪಲ್ ದೀಪೊಲು
 dipper ದೀಪೆರ್
@@ -3075,6 +3122,7 @@ director ಡೈರೆಕ್ಟರ್
 dirk ಡಾರ್ಕ್
 dirr ದೆರ್ ದಾರ್
 dirt ದೆರ್ತ್ ದೇರ್ತ್
+dis ದೇಶ ಡೇಸ್
 discharge ಡಿಸ್ಚಾರ್ಜ್
 discovery ಡಿಸ್ಕವರಿ
 discus ಡಿಸ್ಕಸ್
@@ -3086,7 +3134,6 @@ disney ಡಿಸ್ನಿ
 disown ದೇಶೊನು ದೇಸೊನು
 disque ಡಿಸ್ಕ್
 diss ದೇಶ ಡೇಸ್
-dither ದಿತ್ತೆರ್
 ditto ಡೇಟಾ
 ditton ದೀತಿನ ದಿಟಂ
 ditty ದಿತಿ ದೀತಿ
@@ -3100,6 +3147,7 @@ divison ಡಿವಿಷನ್
 divvied ಡೇವಿಡ್
 divvy ದೇವಿ
 diwa ದೇವಿ ದೇವ
+diwali ದೀವೊಲಿ
 dixon ದೀಕ್ಷೆನ್
 dixson ದೀಕ್ಷೆನ್
 dizon ದಿಶಾನ್ ದಿಶಾನ
@@ -3168,6 +3216,7 @@ done ದಾನ ಡಾನ್
 donelan ದೋಣಿಲೆನ್
 dones ಡಾನ್ಸ್
 doney ದಾನಿ
+dong ದಾನ
 donn ದಾನ ಡಾನ್
 donna ದಾನ ದಾನಿ
 donnay ದಾನೆ
@@ -3315,6 +3364,7 @@ dun ದಾನ ಡಾನ್
 duna ದೋಣಿ
 dunay ದಾನೆ
 dung ಡಾಂಗ್ ದಾನ
+dunn ದಾನ ಡಾನ್
 dunnagan ದಂಗೆನ್
 dunne ದಾನ ಡಾನ್
 dunned ದಂಡ್ ದಂಡ
@@ -3419,6 +3469,7 @@ edge ಏಜ್
 edick ಎದೆಕ್
 edie ಏಡಿ
 edina ದೀನ
+edit ಎಡತ
 edithe ಎದೆತ ಎದೆತ್ತ
 edition ಆಡಿಷನ್ ದಿಶಾನ್
 edmond ಎಡ್ಮಂಡ್
@@ -3431,7 +3482,6 @@ edra ಎದ್‌ರ್
 eduard ಎಡ್ವರ್ಡ್
 edye ಇಡೀ ಇಡಿ
 edyth ಎಡಿಟ್ ಎದೆತ
-eel ಏಲ್
 eerie ಏರಿ ಏರೇ
 efaw ಐಫಾ
 effects ಎಫೆಕ್ಟ್ಸ್
@@ -3473,7 +3523,9 @@ elene ಐಲೀನ್
 elevator ಎಲಿವೇಟರ್
 elie ಎಲಿ
 elise ಲೇಸ್ ಆಲಿಸ್
+ella ಎಲ್ ಏಳ್
 ellan ಎಲೆನ್ ಏಲಂ
+elle ಎಲ್ ಏಳ್
 ellen ಎಲೆನ್ ಏಲಂ
 ellena ಎಲೆನ್ ಎಲೆನಾ
 ellene ಐಲೀನ್
@@ -3539,7 +3591,6 @@ erby ಅರಬಿ
 erck ಆರ್ಕ್ ಅರ್ಕ
 erda ಏರ್ದ್ ಎರಡು
 erdahl ಅರ್ದಲ
-ere ಏರ್ ಎರು
 erhardt ಏರ್ಹಾರ್ಟ್
 erica ಏರಿಕೆ ಎರಿಕ್
 erich ಎರಿಕ್
@@ -3593,6 +3644,7 @@ essie ಎಸಿ
 esso ಏಸೊ
 estate ಎಸ್ಟೇಟ್
 esteem ಸ್ಟೀಮ್
+esther ಎಸ್ತರ್
 estle ಎಸಲ್ ಎಸಳ್
 etch ಎಚ್
 ethan ಇತ್ತ್‌ನ ಇತ್ತ್ನ
@@ -3730,7 +3782,6 @@ fellowship ಫೆಲೋಶಿಪ್
 fema ಫೇಮ್
 femme ಫೇಮ್
 femsa ಫೇಮಸ್
-fen ಫೈನ್
 fenn ಫೆನ್ ಫೈನ್
 fennel ಫೈನಲ್
 fennell ಫೈನಲ್
@@ -3819,6 +3870,7 @@ flicks ಫ್ಲಿಕ್ಸ್
 flight ಫ್ಲೈಟ್
 float ಫ್ಲಾಟ್
 floe ಫ್ಲೋ
+flora ಫ್ಲೋರಿ
 florance ಫ್ಲೋರೆನ್ಸ್
 florence ಫ್ಲೋರೆನ್ಸ್
 florey ಫ್ಲೋರಿ
@@ -4000,6 +4052,8 @@ gain ಗೇನ
 gained ಗೆಂದ್
 gait ಗೇಟ್
 gajda ಗೈಡ್ ಗಾಯದ
+gal ಗೇಲ್ ಗಳು
+gala ಗಾಲ ಗೇಲ್
 galane ಗ್ಲೆನ್
 gale ಗೇಲ್
 galicia ಗಲಿಸಿಯಾ
@@ -4084,6 +4138,7 @@ gay ಗೆ
 gaye ಗೆ
 gayer ಗೀರ್
 gayle ಗೇಲ್
+gaza ಗಾಜಾ
 gean ಜೀನ್ ಜಿನ್
 gear ಗೀರ್
 gearey ಗಿರಿ
@@ -4098,6 +4153,9 @@ geeting ಗೀತೆನ್
 gehl ಗೇಲ್
 gehr ಜೆರ್
 gehring ಗೆರೆನ್
+gel ಜೈಲ್ ಜೈಲು
+gems ಜೇಮ್ಸ್
+gen ಜೈನ ಜೆನ್
 gene ಜೀನ್ ಜಿನ್
 genes ಜಿಂಜ
 genetic ಜೆನೆಟಿಕ್
@@ -4129,6 +4187,7 @@ getting ಗೀತೆನ್
 geyer ಗೀರ್
 ghada ಗಾದೆ ಗಾದ್
 ghali ಗಾಳಿ ಗಾಲಿ
+ghana ಗಾನ ಗೇನೊ
 ghandi ಗೊಂಡಿ
 ghee ಗೇ
 gheen ಗೇನ
@@ -4171,6 +4230,7 @@ girds ಗಾರ್ಡ್ಸ್
 giren ಜೀರ್ಣ
 girl ಗರ್ಲ್
 girls ಗರ್ಲ್ಸ್
+git ಗೇಟ್
 gitter ಗಿಟಾರ್
 gladding ಗ್ಲೈಡಿಂಗ್
 glahn ಗ್ಲೆನ್
@@ -4266,6 +4326,7 @@ gorda ಗಾರ್ಡ್
 gorden ಗಾರ್ಡನ್
 gordian ಗಾರ್ಡಿಯನ್
 gordon ಗಾರ್ಡನ್
+gore ಗಾರ್ ಗೌರ್
 gored ಗಾರ್ಡ್
 goree ಗೌರಿ
 gorey ಗೌರಿ
@@ -4293,6 +4354,7 @@ grade ಗ್ರೇಡ್
 graded ಗ್ರೇಡ್
 graeme ಗ್ರಾಂ ಗ್ರಾಮ
 graham ಗ್ರಾಂ ಗ್ರಾಮ
+gram ಗ್ರಾಮ
 gramm ಗ್ರಾಂ ಗ್ರಾಮ
 grammar ಗ್ರಾಮರ್
 grammer ಗ್ರಾಮರ್
@@ -4326,7 +4388,6 @@ greece ಗ್ರೀಸ್ ಗ್ರೇಸ್
 greene ಗ್ರೀನ್
 greim ಗ್ರಿಮ್
 gress ಗ್ರೇಸ್
-greta ಗ್ರೇಟ್
 grete ಗ್ರೇಟ್
 greth ಗ್ರೇಟ್
 grew ಗ್ರೋ
@@ -4411,7 +4472,6 @@ guinn ಗೇನ
 guitar ಗಿಟಾರ್
 gul ಗಳು ಗಳ
 gulf ಗಲ್ಫ್
-gull ಗಳು ಗಳ
 gullah ಗಾಳಿ ಗಳ
 gulley ಗಾಳಿ ಗಾಲಿ
 gulli ಗೋಲಿ ಗೋಳಿ
@@ -4456,6 +4516,7 @@ haase ಹಾಸ್ ಹೊಸ
 haass ಹಾಸ್ ಹೊಸ
 habich ಹೆಬಿಕ್
 hach ಹೆಚ್
+hack ಹಾಕ್ ಹಕ್
 hacke ಹಾಕ್ ಹಕ್
 hacking ಹಾಕಿಂಗ್
 had ಹೆಡ್ ಹಾಡು
@@ -4492,6 +4553,8 @@ hair ಹೆರ್ ಹರ್
 haire ಹೆರ್ ಹರ್
 hairr ಹೆರ್ ಹರ್
 hajj ಹಜ್
+hal ಹಾಳ್
+hale ಹೇಳು
 halen ಹೆಲೆನ್
 half ಹಾಫ್
 hall ಹಾಲ್ ಹಾಳ್
@@ -4515,6 +4578,7 @@ hammen ಹೈಮೆನ್
 hammes ಹಂಸ
 hammon ಹೈಮೆನ್
 hamon ಹೈಮೆನ್
+han ಹೈನ್
 hanan ಹೆನಾನ್ ಹೆಣ್ಣು
 hance ಹಂಸ
 hands ಹಂಸ
@@ -4533,7 +4597,6 @@ hannon ಹೆನಾನ್ ಹೆಣ್ಣು
 hanny ಹಾನಿ ಹನಿ
 hao ಹೌ
 haque ಹಾಕ್ ಹಕ್
-hara ಹೆರ್ ಹರ್
 harbert ಹರ್ಬರ್ಟ್
 hardt ಹಾರ್ಟ್
 hare ಹೆರ್ ಹರ್
@@ -4566,8 +4629,8 @@ hasse ಹಾಸ್ ಹೊಸ
 hassen ಹಸನ್ ಹಾಸನ್
 hasson ಹಸನ್ ಹಾಸನ್
 hasz ಹಾಸ್ ಹೊಸ
-hata ಹೋಟಾ
 hatch ಹೆಚ್
+hath ಹತ್ತು
 haton ಆಟೊನು
 hauck ಹಾಕ್
 hauf ಹಾಫ್
@@ -4634,7 +4697,6 @@ hebrew ಹೀಬ್ರೂ
 hector ಹೆಕ್ಟೇರ್
 heda ಹೆಡ್
 hedda ಹೆಡ್
-hee ಹಿ
 heeded ಹಿಡಿದು
 heel ಹಿಲ್
 heels ಹಿಲ್ಸ್
@@ -4691,6 +4753,7 @@ herdt ಹಾರ್ಟ್
 here ಹೆರ್
 heritage ಹೆರಿಟೇಜ್
 herling ಹರ್ಲೀನ್
+herman ಹರ್ಮನ್
 hermann ಹರ್ಮನ್ ಹೆರ್ಮನ್
 hermon ಹರ್ಮನ್ ಹೆರ್ಮನ್
 hero ಹೀರೋ ಹೀರೊ
@@ -4754,7 +4817,6 @@ him ಎಂ ಎಮ್
 himont ಹೇಮಂತ
 hindle ಹಿಂದುಲು ಹಿಂದೂಲು
 hine ಹೈನ್
-hino ಹೀನಾ
 hinson ಹಿಂಸೆನ್
 hird ಹಾರ್ಡ್
 hire ಹೈಯರ್
@@ -4778,6 +4840,7 @@ hoar ಹೊರ ಹಾರ
 hoard ಹಾರ್ಡ್
 hoare ಹೊರ ಹಾರ
 hoarse ಹಾರ್ಸ್
+hoc ಹಕ್
 hoch ಹಾಕ್ ಹಕ್
 hock ಹಾಕ್ ಹಕ್
 hockey ಹಾಕಿ
@@ -4988,6 +5051,7 @@ ich ಎಚ್
 icon ಐಕಾನ್
 iconic ಐಕಾನಿಕ್
 ida ಆಯ್ದ ಐಡೆ
+ide ಐದು ಐಡ್
 idea ಐಡಿಯಾ
 idle ಐಡಲ್
 idol ಐಡಲ್
@@ -5033,6 +5097,7 @@ industries ಇಂಡಸ್ಟ್ರೀಸ್
 industry ಇಂಡಸ್ಟ್ರಿ
 indyk ಇಂದೆಕ್ ಇಂಡಿಕ್
 information ಇನ್ಫರ್ಮೇಶನ್
+ing ಇನ್ ಎನ್
 ingber ಇಂಬೆರ್
 ingham ಇನಾಮು
 ingle ಇಂಗಾಲ
@@ -5043,6 +5108,7 @@ inning ಏಣಿನ್
 innings ಇನಿಂಗ್ಸ್
 inns ಇನ್ಸ್ ಐಎನ್ಎಸ್
 input ಇನ್‌ಪುಟ್
+ins ಐಎನ್ಎಸ್
 inspector ಇನ್ಸ್ಪೆಕ್ಟರ್ ಇನ್ಸ್‌ಪೆಕ್ಟರ್
 institut ಇನ್ಸ್ಟಿಟ್ಯೂಟ್
 insurance ಇನ್ಶೂರೆನ್ಸ್
@@ -5053,6 +5119,7 @@ investigator ಇನ್ವೆಸ್ಟಿಗೇಟರ್
 investment ಇನ್ವೆಸ್ಟ್‌ಮೆಂಟ್
 iny ಇನಿ
 ios ಆಯಾಸ
+ira ಎಐಆರ್ ಐರ್
 iran ಐರನ್
 iranian ಇರಾನಿಯನ್
 irby ಅರಬಿ
@@ -5064,9 +5131,11 @@ irish ಐರಿಶ್ ಐರಿಷ್
 irit ಇರೆಟ್ ಇರೆತ
 irk ಆರ್ಕ್ ಅರ್ಕ
 irma ಆರ್ಮಿ ಎರ್ಮೆ
+isa ಏಸ ಇಸ್
 isch ಎಸ್ ಇಸ್
 ischo ಈಶಾ ಏಸೊ
 ise ಐಸ್
+ish ಎಸ್
 ishee ಎಸಿ
 ishi ಎಸಿ
 islam ಇಸ್ಲಾಮ್
@@ -5104,6 +5173,7 @@ jackie ಜಾಕಿ
 jacky ಜಾಕಿ
 jacque ಜೆಕ್
 jacques ಜಾಕ್ ಜೆಕ್
+jade ಜೇಡ್ ಜೆಡ್
 jaded ಜೇಡ್ ಜೆಡ್
 jaffna ಜಾಫ್ನಾ
 jaffrey ಜೆಫ್ರಿ
@@ -5170,6 +5240,7 @@ jeffry ಜೆಫ್ರಿ
 jell ಜೈಲ್ ಜೈಲು
 jelled ಜೈಲ್ಡ್ ಜೈಲ್‌ಡ್
 jemmott ಜೈಂಟ್
+jen ಜೈನ
 jena ಜೀನ್ ಜಿನ್
 jenn ಜೈನ ಜೆನ್
 jenna ಜೈನ ಜೆನ್
@@ -5327,6 +5398,7 @@ kaine ಕೆನ್ ಕೇನ್
 kainz ಕೇನ್ಸ್
 kaisha ಕೇಸ್
 kalata ಕೋಲಾಟ
+kale ಕೆಲ ಕೆಳ
 kalikow ಕಾಳಿಕಾ
 kalil ಕಲ್ಲ್ ಕಲ್ಲು
 kallal ಕಲ್ಲ್ ಕಲ್ಲು
@@ -5349,6 +5421,7 @@ kampe ಕೆಂಪು
 kampen ಕಂಪನ
 kanda ಕಾಂಡ
 kandt ಕಂತ್ ಕಂತು
+kane ಕೆನ್ ಕೇನ್
 kaneb ಕಂಬ
 kanell ಕೋಣೆಲು
 kanne ಕೈನ್ ಕೆನ್
@@ -5359,6 +5432,7 @@ kao ಕೌ
 kaori ಕೋರಿ ಕೊರಿ
 kapp ಕಪ್ ಕಾಪು
 kappa ಕಪ್ ಕೈಪೆ
+kara ಕೆರೆ
 karch ಕರಕ್ ಕಾರಕ
 karel ಕೇರಳ
 karen ಕೆರೆನ್ ಕೆರ್ನ
@@ -5367,6 +5441,7 @@ karle ಕಾರ್ಲ್ ಕೊರಲ್
 karlin ಕಾರ್‌ಲೆನ್
 karlson ಕಾರ್ಲ್ಸೆನ್
 karlsson ಕಾರ್ಲ್ಸೆನ್
+karma ಕರಂ
 karnow ಕಾರಣೊ ಕಾರನೊ
 karon ಕೆರೆನ್ ಕೆರ್ನ
 karow ಕಾರೊ
@@ -5392,6 +5467,7 @@ kassen ಕಾಸ್‌ನ್
 kassner ಕಾಸ್ನರ್
 kasson ಕಾಸ್‌ನ್
 kasza ಕೋಶ ಕಾಶಿ
+kat ಕೈಟ್ ಕಾಟ್
 kathie ಕತ್ತಿ ಕೆತ್ತಿ
 kathy ಕತ್ತಿ ಕೆತ್ತಿ
 katja ಕೊಟ್ಯ
@@ -5448,6 +5524,7 @@ keim ಕಿಮ್
 keiper ಕೀಪರ್
 keirn ಕಿರಣ್ ಕೆರ್ನ
 keitel ಕೈತಲ್
+keith ಕಿಟ್ ಕೀಟ
 keizer ಕೇಸರ
 kelda ಕೆಳದಿ
 kell ಕೈಲ್ ಕೆಲ
@@ -5506,6 +5583,7 @@ khad ಕಾಡ್ ಕಾಡು
 khaled ಕಾಲೊಡು ಕಾಲಡ್
 khalil ಕಲ್ಲ್ ಕಲ್ಲು
 khalsa ಕಳಸ ಕಲಶ
+khan ಕಾಂ ಕನ
 khanate ಕೊನೆತ
 kharg ಕಾರ್‌ಗ್ ಕಾರ್ಗ್
 khat ಕೋಟ್ ಕಾಟ್
@@ -5547,7 +5625,6 @@ kila ಕೆಲ ಕಿಲೋ
 kildee ಕೆಳದಿ
 kile ಕೈಲ್
 kill ಕೀಲು ಕೀಲ್
-kilo ಕಿಲೊ
 kilometer ಕಿಲೋಮೀಟರ್
 kilometre ಕಿಲೋಮೀಟರ್
 kimche ಕೆಂಚಿ
@@ -5724,6 +5801,7 @@ koller ಕಲರ್ ಕೋಲಾರ
 kolling ಕಲೆನ್ ಕಾಲಿನ್
 kollman ಕೋಲ್ಮನ್
 kollmann ಕೋಲ್ಮನ್
+kona ಕೋಣೆ
 konczal ಕಂಚಲ್ ಕಂಚಲ
 kondo ಕಂಡೊ
 konica ಕಾಣಿಕೆ ಕನಿಕಾ
@@ -5930,7 +6008,6 @@ lahn ಲೆನ್ ಲೈನ್
 lahore ಲಾಹೋರ್
 laible ಲೇಬಲ್
 laid ಲೆಡ್
-lain ಲೆನ್ ಲೆನ
 laine ಲೆನ್ ಲೆನ
 lair ಲೇಯರ್
 laird ಲೆರ್ದ್
@@ -5948,6 +6025,7 @@ lamb ಲಾಮ್ ಲೈಮ್
 lambe ಲಾಮ್ ಲೈಮ್
 lamm ಲಾಮ್ ಲೈಮ್
 lamme ಲಾಮ್ ಲೈಮ್
+lan ಲೆನ್ ಲೈನ್
 lance ಲೆನ್ಸ್ ಲೈನ್ಸ್
 lancia ಲಾಂಚ್ ಲಂಚ
 lancz ಲಾಂಚ್ ಲಂಚ್
@@ -5955,6 +6033,7 @@ landen ಲಂಡನ್
 landon ಲಂಡನ್
 lane ಲೆನ್ ಲೆನ
 lanes ಲೆನ್ಸ್
+lang ಲೆನ್
 lange ಲೆನ್ ಲಾಂಗ್
 laning ಲೆನಿನ್
 lann ಲೆನ್ ಲೈನ್
@@ -6125,6 +6204,7 @@ leota ಲೈಟ್ ಲೇಟ್
 lepe ಲೇಪ
 lepp ಲೇಪ
 lersch ಲಾರ್ಸ್
+les ಲೆ
 lesa ಲೇಸ್ ಲಿಸಾ
 lesch ಲೇಸ್ ಲೆಸ್
 less ಲೇಸ್ ಲೆಸ್
@@ -6204,6 +6284,7 @@ lily ಲಿಲಿ
 lilyan ಲಿಲಿಯನ್
 lima ಲೈಮ್
 lime ಲೈಮ್
+lin ಲೆನ್
 lina ಲಿನ್ ಲೇನ್
 lince ಲೆನ್ಸ್
 linck ಲಿಂಕ್
@@ -6304,7 +6385,6 @@ lois ಲಾಸ್ ಲಾವೋಸ್
 loken ಲೋಕೊನು
 lokey ಲಾಕಿ
 lokken ಲೋಕೊನು
-lola ಲಾಲ್
 loll ಲಾಲ್
 lolley ಲಾಲಿ ಲಾಳಿ
 lolli ಲಾಲಿ ಲಾಳಿ
@@ -6382,6 +6462,7 @@ luick ಲುಕ್ ಲೋಕ
 luka ಲೋಕ ಲೂಕೆ
 lukach ಲಕ್ಕ್ ಲಕ್ಕ
 lukash ಲೋಕೇಶ್
+luke ಲುಕ್ ಲೋಕ
 luken ಲೋಕೊನು
 luks ಲಕ್ಷ
 lulie ಲಾಲಿ ಲಾಳಿ
@@ -6479,6 +6560,7 @@ madry ಮಾದ್ರಿ ಮಾದರಿ
 maeda ಮೈದಾ
 maese ಮಿಸ್
 maeve ಮೇವು
+mag ಮಗು
 magaw ಮೆಗಾ ಮಗಾ
 magee ಮುಗಿ
 magel ಮಗಲ್ ಮಗಳ್
@@ -6554,10 +6636,12 @@ malm ಮಾಮು ಮಾಮ
 malon ಮೇಲಂ
 malone ಮೂಲೊನು ಮೂಲೊನ್
 malt ಮಾಲ್ತ್ ಮೌಲ್ಟ್
+malta ಮಾಲ್ತ್ ಮಾಲ್ತೊ
 maltais ಮಲ್ತೆ
 malted ಮಾಲ್ತ್‌ದ್
 malveaux ಮಾಲ್ವಾ
 malware ಮಲವೆರ್
+mama ಮಾಮಿ
 mamet ಮೆಂಟ್
 mamma ಮಾಮಿ ಮಾಮ
 man ಮೈನ್
@@ -6578,6 +6662,7 @@ mangual ಮಂಗಳ ಮಂಗಲ
 manila ಮಣಿಲು
 manilla ಮನಿಲಾ ಮಣಿಲು
 manilow ಮನಿಲಾ
+mann ಮನ್ ಮೈನ್
 manne ಮನ್ ಮೈನ್
 manned ಮೈಂದ್ ಮೈಂಡ್
 mannen ಮೆನನ್ ಮಣ್ಣ್
@@ -6604,6 +6689,7 @@ marais ಮೆರೆ ಮೇರೆ
 marash ಮಾರ್ಸ್
 maraud ಮರೊದ
 marble ಮಾರ್ಬಲ್
+marc ಮಾರ್ಕ್
 marche ಮಾರ್ಸ್
 marchetta ಮಾರ್ಕೆಟ್
 marcia ಮಾರ್ಸ್
@@ -6613,6 +6699,7 @@ marcus ಮಾರ್ಕ್ಸ್ ಮಾರ್ಕಸ್
 marcy ಮರ್ಸಿ
 marden ಮರ್ದ್‌ನ್
 mardon ಮರ್ದ್‌ನ್
+mare ಮೇರ್ ಮೆರ್
 marean ಮಾರಿನ್ ಮಾರಿನ
 maresh ಮೇರಿಸ್
 marett ಮೆರಿಟ್
@@ -6683,12 +6770,14 @@ marton ಮಾರ್ಟಿನ್ ಮಾರ್ಟೆನ್
 martyn ಮಾರ್ಟಿನ್ ಮಾರ್ಟೆನ್
 mary ಮೇರಿ
 marz ಮಾರ್ಸ್
+mas ಮಾಸ್
 maschke ಮಾಸ್ಕ್
 mascia ಮಾಸ್ಕೋ
 mascot ಮಸ್ಕತ್
 mase ಮೇಜ್
 maseng ಮೆಶಿನ್ ಮೆಷಿನ್
 maser ಮೇಜರ್
+mash ಮಾಸ್
 mashaw ಮಾಸೊ
 mashed ಮಸ್ತ್
 mashek ಮಾಸಿಕ
@@ -6720,6 +6809,7 @@ matif ಮೋಟಿಫ್
 mation ಮೆಷಿನ್ ಮೆಶಿನ್
 matott ಮೈಟ್ ಮೈಟ್ಟ್
 matt ಮಾತ ಮೈಟ್
+matte ಮಾತ ಮೈಟ್
 mattea ಮಾಸ ಮೇಷ
 matter ಮಾತೆರ್
 mattera ಮಾತೆರ್ ಮಾತೆರೆ
@@ -6743,7 +6833,6 @@ mauri ಮಾರಿ ಮೋರಿ
 maurie ಮಾರಿ ಮೋರಿ
 maurin ಮಾರಿನ್ ಮಾರಿನ
 maurus ಮಾರ್ಸ್
-maury ಮಾರಿ ಮೋರಿ
 mauss ಮಾಸ ಮಾಸ್
 maust ಮೋಸ್ಟ್
 maute ಮಾತ ಮಾತು
@@ -6857,6 +6946,7 @@ mech ಮೈಕ್ ಮೆಕ್
 mechling ಮೆಕ್ಲೆನ್ ಮೆಕ್ಲೆನ
 meck ಮೈಕ್ ಮೆಕ್
 meckel ಮೆಕ್ಲ್ ಮೈಕೆಲ್
+med ಮೆದು
 meda ಮೆದು ಮೇಡ್
 medal ಮೆದುಳು
 meddaugh ಮೈದಾ
@@ -6889,6 +6979,7 @@ meidl ಮಿಡ್ಲ್
 meighan ಮೀನ್
 meine ಮೀನ್ ಮಿನ್
 meise ಮಿಸ್
+mel ಮೈಲ್
 melamed ಮೇಲ್ಮೈಡ್ ಮೇಲ್ಮೈದ
 melange ಮೇಲಂ
 melbourne ಮೆಲ್ಬರ್ನ್
@@ -6939,6 +7030,7 @@ mercy ಮರ್ಸಿ
 mere ಮೇರ್ ಮೆರ್
 mergen ಮಾರ್ಗೊನು ಮಾರ್ಗನ್
 merk ಮಾರ್ಕ್ ಮರಕ್
+merkel ಮರಕುಲು
 merkle ಮೆರ್ಕೆಲ್ ಮರಕುಲು
 merl ಮರ್ಲ್
 merle ಮರ್ಲ್
@@ -6965,6 +7057,7 @@ meta ಮಿತ್ ಮೀಟ್
 mete ಮಿತ್ ಮೀಟ್
 meter ಮೀಟರ್
 meth ಮೈಟ್ ಮೈತ್
+methane ಮೆತ್ತೆನ್ ಮೆತ್ತೆನ
 method ಮೆತ್ತೆದ
 methode ಮಠೊಡು ಮಠೊದ
 methot ಮೇಟ್
@@ -7015,8 +7108,10 @@ mike ಮೈಕ್
 mikel ಮೆಕ್ಲ್
 mikell ಮೆಕ್ಲ್
 miksch ಮಿಕ್ಸ್
+mil ಮೇಲ್
 mila ಮೈಲ್ ಮೈಲಿ
 milam ಮೇಲಂ
+milan ಮೇಲಂ
 milbourn ಮೆಲ್ಬೋರ್ನ್
 milbourne ಮೆಲ್ಬೋರ್ನ್
 milburn ಮೆಲ್ಬರ್ನ್
@@ -7046,6 +7141,7 @@ milly ಮಿಲಿ
 milne ಮೇಲಂ ಮಿಲನ್
 miltie ಮಿತಿ
 milum ಮೇಲಂ
+min ಮಿನ್
 mince ಮೆನ್ಸ್
 minch ಮಿಂಚು
 mind ಮೈಂದ್ ಮೈಂಡ್
@@ -7101,6 +7197,7 @@ mitchel ಮಿಚೆಲ್
 mitchell ಮಿಚೆಲ್
 mite ಮೈಟ್ ಮೈತ್
 mitro ಮೆಟ್ರೊ
+mitt ಮಿತ್ ಮೀಟ್
 mittal ಮೆಟಲ್
 mittan ಮಿತಿನ್ ಮಿತಾನ್
 mitten ಮಿತಿನ್ ಮಿತಾನ್
@@ -7117,12 +7214,14 @@ moat ಮಾತ ಮಾತು
 mocha ಮೋಕೆ
 mochel ಮೊಕ್ಲು
 mocks ಮೋಕ್ಷ
+mod ಮಾಡ್
 mode ಮೋಡ್ ಮೋಡ
 model ಮಡಲ್
 modeled ಮಡಲ್ಡ್ ಮಡಲ್ದ
 modell ಮಾಡೆಲ್
 modelling ಮಾಡೆಲಿಂಗ್
 modern ಮಾಡರ್ನ್
+modi ಮೋಡಿ
 mody ಮೋದಿ ಮೋಡಿ
 moe ಮಾ
 moeckel ಮೊಕುಲು ಮೊಕ್ಲು
@@ -7163,6 +7262,8 @@ moly ಮಾಲಿ
 mom ಮಾಮು
 momma ಮಾಮಿ ಮಾಮ
 mommy ಮಾಮಿ
+moms ಮಂಜು
+mon ಮನ್
 mona ಮೋನೆ
 monad ಮೋನೆಡ್ ಮೋನೆದ
 monda ಮಂದ
@@ -7193,7 +7294,6 @@ monsen ಮಾನ್ಸೂನ್
 monsey ಮಾಂಜಿ
 monsod ಮಾಂಸದ
 monson ಮಾನ್ಸೂನ್
-mont ಮಂತ್
 montand ಮಂತೊಂದು
 monte ಮಂತಿ
 montee ಮಂತಿ
@@ -7209,6 +7309,7 @@ moody ಮುಡಿ ಮೋದಿ
 moog ಮೂಗು ಮುಗ
 mooney ಮುನಿ
 moonie ಮುನಿ
+moore ಮೂರು ಮಾರ್
 moored ಮೂರ್ದ್ ಮೂರ್ದು
 moose ಮೋಸ
 moot ಮುಟ
@@ -7232,6 +7333,7 @@ moree ಮೇರಿ ಮಾರಿ
 moreen ಮಾರಿನ್ ಮಾರಿನ
 moren ಮಾರಿನ್ ಮಾರಿನ
 morey ಮಾರಿ ಮೋರಿ
+morgan ಮಾರ್ಗೊನು
 morgen ಮಾರ್ಗೊನು ಮಾರ್ಗನ್
 morgue ಮಾರ್ಗ
 morgun ಮಾರ್ಗೊನು ಮಾರ್ಗನ್
@@ -7266,7 +7368,6 @@ moss ಮಾಸ ಮಾಸ್
 mossad ಮೋಸೊಡು ಮಾಸೊಡು
 mosso ಮಾಸೊ
 most ಮೋಸ
-moth ಮಾತು
 mother ಮದರ್
 mothering ಮಾದರಿನ್
 mothon ಮಾತೆನ್ ಮಥನ
@@ -7456,13 +7557,16 @@ najar ನಾಯರ್
 najjar ನಾಯರ್
 nalley ನಾಲಿ
 nally ನಾಲಿ
+nam ನಂ
 name ನೇಮ
+nan ನೆನ್
 nana ನೆನ್
 nanette ನೆನೆತ್
 nang ನೆನ್ ನನ
 nanney ನಾನಿ
 nanni ನಾನಿ
 nanny ನಾನಿ
+nano ನೈನಾ
 napoli ನೇಪಾಳಿ
 napper ನೈಪೆರ್
 nara ನಾರ್
@@ -7475,8 +7579,10 @@ nash ನೈಸ್
 nason ನೇಷನ್
 nass ನೈಸ್ ನಾಶ
 nassau ನಾಸಾ
+nat ನೆಟ್ ನೈಟ್
 natan ನೇಯ್ತಿನ
 natcher ನೇಚರ್
+nate ನೆಟ್ ನೆತ
 nathe ನೆತ್ತ ನೆದ
 nation ನೇಷನ್
 nations ನೇಷನ್ಸ್
@@ -7493,7 +7599,6 @@ nautica ನಾಟಕ
 nautical ನಾಟಕೊಲು
 nave ನೇವ್
 nawrot ನಾರ್ತ್
-nay ನೇ ನೆ
 nba ಎಂಬಿಎ
 neal ನೀಲ ನಿಲ
 neala ನೀಲಿ ನಿಲೆ
@@ -7530,6 +7635,7 @@ neher ನೀರ್
 neidl ನೀಡಲು
 neier ನಾಯರ್ ನಾಯೆರ್
 neigh ನೇ ನೆ
+neil ನೀಲ ನಿಲ
 neilan ನೀಲಂ ನೇಲುನ
 neile ನೀಲ ನಿಲ
 neill ನೀಲ ನಿಲ
@@ -7576,6 +7682,7 @@ ngai ಗೈ ಗಾಯ
 nghi ಗೇ
 niall ನೈಲ್
 niamh ನೀವು ನೇವ್
+nic ನೆಕ್
 nice ನೈಸ್
 nicholas ನಿಕೋಲಸ್ ನೆಕ್ಲೆಸ್
 nicholes ನಿಕೋಲಸ್
@@ -7612,13 +7719,14 @@ nike ನಾಯ್ಕಿ ನಾಯಕಿ
 nikkei ನಾಯ್ಕಿ ನಾಯಕಿ
 nikkel ನಿಕುಲು
 nikolai ನಿಕೊಲಾಯ್ ನಿಕೋಲಾಯ್
-nil ನೆಲ
 nile ನೈಲ್
 nill ನೆಲ ನಿಲ
 nilly ನೀಲಿ
 nimmo ನೇಮೊ
+nina ನೀನಾ
 nine ನೈನ್
 ninette ನೆನೆತ್
+ning ನೆನ್
 ninon ನಿನನ್ ನೆನ್ನ್
 nipple ನೇಪಾಳ
 niro ನೇರೊ
@@ -7650,7 +7758,6 @@ noel ನೊವೆಲ್
 noell ನಾಲ್
 noelle ನೊವೆಲ್
 noeth ನೋಟು ನೋಟ
-noh ನೋ ನಾ
 nohl ನಾಲ್
 nohr ನಾರ್ ನಾರು
 noir ನಾಯರ್
@@ -7700,6 +7807,7 @@ nourse ನಾರ್ಸ್
 nous ನ್ಯೂಸ್
 nouveau ನೂವೊ ನುವೊ
 nov ನೋವು ನಾವು
+nova ನೋವು
 novell ನೊವೆಲ್
 novella ನೊವೆಲ್
 novoa ನೋವಾ
@@ -7820,6 +7928,7 @@ oland ಆಳೊಂದು
 olano ಲಾನಾ
 olay ಓಲೆ ಒಲೆ
 oldenburg ಓಲ್ಡೆನ್ಬರ್ಗ್
+ole ಆಲ್
 olea ಒಲಿ ಆಲಿಯಾ
 olean ಒಲಿನ್
 oleo ಆಲಿಯಾ
@@ -7911,8 +8020,10 @@ orsay ಅರಸೆ
 orta ಒರ್ತಿ ಆರ್ಟ್
 orth ಆರ್ಟ್
 orum ಆರ್ಮ್
+osha ಆಸೆ
 oshea ಆಸೆ ಆಶೆ
 oshel ಅಸಲ್
+oslo ಓಸ್ಲೋ
 osmun ಅಜ್ಮಾನ್
 oss ಆಸ್ ಆಶ್
 ossa ಆಸೆ ಆಶಾ
@@ -7931,6 +8042,7 @@ otten ಆತಿನ ಆಟೊನು
 otter ಆತೆರ್ ಆತೇರ್
 otting ಆತಿನ ಆಟಿನ್
 ottman ಆತ್ಮೊನು
+otto ಆಟೊ ಆಟೋ
 ottum ಆಟಮ್ ಆತ್ಮ
 oubre ಉಬರ್ ಉಬಾರ್
 ought ಆತ್ ಔಟ್
@@ -7968,6 +8080,7 @@ ozora ಜಾರ
 ozzie ಆಜಿ
 ozzy ಆಜಿ
 paasch ಪೊಸ ಪಾಸ್
+pac ಪಾಕ್
 paced ಪೇಸ್ಟ್
 pachter ಪೆಕ್ಟರ್
 pacific ಪೆಸಿಫಿಕ್
@@ -8009,7 +8122,7 @@ palash ಪ್ಲೇಸ್
 palate ಪೈಲಟ್ ಪೈಲೆಟ್
 pale ಪೆಲ
 palette ಪೈಲಟ್ ಪೈಲೆಟ್
-pall ಪಾಲ್
+palin ಪಾಲೆನ್
 pallet ಪೈಲಟ್ ಪೈಲೆಟ್
 pallett ಪೈಲಟ್ ಪೈಲೆಟ್
 pallid ಪಾಲಡ
@@ -8031,9 +8144,9 @@ panny ಪನಿ
 pans ಪಂಜ
 pansy ಪಂಜಿ
 panted ಪೇಂಟೆಡ್ ಪಂತಿದ
+panther ಪನ್ತೆರ್
 panting ಪಂತಿನ್ ಪಂತಿನ
 panty ಪಂತಿ
-pap ಪೈಪ್
 papa ಪೋಪ
 papaw ಪೋಪೊ
 papay ಪಾಪೆ
@@ -8045,6 +8158,7 @@ papp ಪಾಪ್ ಪೈಪ್
 pappa ಪಾಪ ಪೈಪ್
 paque ಪಕ್ ಪಾಕ್
 par ಪಾರ್
+para ಪೇರ್ ಪೆರ
 pardon ಪಾರ್ದನ ಪಾರ್ದಿನ
 pare ಪೇರ್ ಪೆರ್
 pared ಪೇರ್‌ಡ್ ಪೇರ್ದ
@@ -8077,6 +8191,7 @@ parting ಪಾರ್ಟಿನ್
 parton ಪಾರ್ಟಿನ್
 party ಪಾರ್ಟಿ
 pary ಪೊರಿ ಪಾರಿ
+pas ಪೊಸ
 pasha ಪೊಸ ಪಾಸ್
 pass ಪಾಸ್
 passe ಪಸೆ ಪೈಸೆ
@@ -8089,7 +8204,6 @@ pat ಪಟು ಪಾತ್
 pataky ಪಟಾಕಿ
 patane ಪತನ
 patchy ಪಾಚಿ
-pate ಪೇತ್ ಪೆಟ್
 patella ಪಟೇಲ್
 paton ಪತನ
 patrol ಪಾತ್ರೊಲು ಪೆಟ್ರೋಲ್
@@ -8100,6 +8214,7 @@ patten ಪತನ
 patter ಪಾತೆರ
 pattered ಪಾತೆರ್ದ್
 pattern ಪಾತೆರ್ನ ಪಾತೆರನ್
+patti ಪತಿ
 pattie ಪತಿ
 patton ಪತನ
 patty ಪತಿ
@@ -8155,10 +8270,10 @@ peat ಪೀಟ್ ಪಿಟ್
 peatross ಪೀಟರ್ಸ್
 peay ಪಿ ಪೀ
 pecka ಪೈಕಿ
+pee ಪಿ
 peeling ಪಿಲಿನ್
 peeples ಪೀಪಲ್ಸ್
 peer ಪಿರ
-peered ಪೇರ್‌ಡ್ ಪೇರ್ದ
 peeters ಪೀಟರ್ಸ್
 peets ಪಿಟ್ಸ್
 peetz ಪಿಟ್ಸ್
@@ -8176,6 +8291,7 @@ pen ಪೈನ್
 pena ಪೆನ್ ಪೈನ್
 pendant ಪೆಂಡೆಂಟ್
 penh ಪೆನ್ ಪೈನ್
+penn ಪೆನ್ ಪೈನ್
 penna ಪೆನ್ ಪೈನ್
 penta ಪೇಂಟೆ
 peon ಪೇನ್
@@ -8421,6 +8537,7 @@ pool ಪೋಲ್
 poolas ಪೋಲಿಸ್ ಪೋಲಿಷ್
 pooley ಪುಳಿ ಪುಲಿ
 pooling ಪುಳಿನ್
+poop ಪೋಪ
 pooped ಪೋಪಟ್
 poor ಪುರು
 poore ಪೂರ ಪುರು
@@ -8447,6 +8564,7 @@ porthos ಪೋರ್ಟಾಸ್
 portia ಪಾರ್ಸಿ
 porting ಪಾರ್ಟಿನ್
 portion ಪಾರ್ಸನ್
+pos ಪಾಸ್
 posada ಪಾಸಾದ್
 posch ಪೊಸ ಪಾಸ್
 pose ಪೊಸ ಪಾಸ್
@@ -8472,6 +8590,7 @@ pozzi ಪಜಿ
 praise ಪ್ರೆಸ್
 praised ಪ್ರೆಸ್‌ಡ್
 pralle ಪರೆಲ್
+pratt ಪರತ್ ಪರಾತ್
 pratte ಪರತ್ ಪರಾತ್
 praun ಪ್ರಾಣ
 prawn ಪ್ರಾಣ
@@ -8600,7 +8719,6 @@ puss ಪಾಸ್ ಪಶು
 put ಪೂತ
 putin ಪೋತಿನ
 putney ಪತ್ನಿ
-putt ಪಟು ಪತ್
 putter ಪಾತೆರ
 putting ಪೋತಿನ
 putty ಪತಿ
@@ -8799,7 +8917,6 @@ reigns ರೇಂಜ್
 reihl ರೈಲ್ ರೈಲು
 reily ರಿಲೇ
 reims ರೇಂಜ್
-rein ರೆನ್ ರೆನ
 reine ರೆನ್ ರೆನ
 reines ರೇಂಜ್
 reins ರೇಂಜ್
@@ -8829,6 +8946,7 @@ republic ರಿಪಬ್ಲಿಕ್
 republica ರಿಪಬ್ಲಿಕ್
 republican ರಿಪಬ್ಲಿಕನ್
 republika ರಿಪಬ್ಲಿಕ್
+res ರೆಸ
 resch ರೇಸ್ ರೈಸ್
 research ರಿಸರ್ಚ್ ರೀಸರ್ಚ್
 resent ರೀಜೆಂಟ್
@@ -8895,6 +9013,7 @@ richter ರೆಕ್ಟರ್
 rickard ರೆಕಾರ್ಡ್
 rickards ರೆಕಾರ್ಡ್ಸ್
 rid ರೆಡ್
+rider ರೈಡರ್
 rids ರಿಡ್ಜ್
 ried ರೀಡ್
 riede ರೀಡ್
@@ -8945,6 +9064,7 @@ rison ಋಷಿನ್
 riss ರೇಸ್ ರೆಸ
 risse ರೇಸ್ ರೆಸ
 rissman ರೇಷ್ಮೆನ್
+rita ರೀತಿ
 ritch ರಿಚ್
 rite ರೈಟ್ ರೈತ
 riter ರೈತೆರ್
@@ -9045,6 +9165,8 @@ rolle ರೋಲ್
 roller ರೋಲರ್
 rolling ರೋಲಿಂಗ್
 rolm ರೋಮ್ ರಾಮ್
+rom ರಾಮ್ ರಾಮ
+roma ರೋಮ
 roman ರಾಮನ್
 romance ರೊಮಾನ್ಸ್
 romanesque ರೋಮನೆಸ್ಕ್
@@ -9074,6 +9196,7 @@ root ಋತು
 rooted ಋತುಡು ಋತುಡ್
 roping ರಾಪಿನ
 roque ರಾಕ್
+ros ರಾಸ್
 rosa ರಾಜ ರಾಜೆ
 rosalinda ರೋಸಾಲಿಂಡ್
 rosanna ರಾಜನ ರಾಜೆನ
@@ -9223,7 +9346,6 @@ rust ರಷ್ಟು
 rustad ರಸ್ತೆಡ್ ರಸ್ತೆದ
 rusted ರಸ್ತೆಡ್ ರಸ್ತೆದ
 rustle ರಾಶಿಲು
-rut ರಾತ್ ಋತು
 ruta ರೂಟ್ ಋತು
 ruth ರೂಟ್ ಋತು
 ruttan ರತನ್ ರತ್ನ
@@ -9328,7 +9450,6 @@ sandy ಸಂದಿ
 sane ಸೆಂ ಸೆನ್
 sang ಸನ್
 sannes ಸೈನ್ಸ್
-sano ಸೋಣೊ ಸೋನೊ
 sans ಸೈನ್ಸ್
 santa ಸೈಂಟ್
 santas ಸೈಂಟ್ಸ್ ಸಂತೋಷ್
@@ -9337,10 +9458,13 @@ santor ಸೆಂಟರ್
 santow ಶಾಂತಾ ಸಾಂತಾ
 santy ಶಾಂತಿ ಸೆಂಟಿ
 sanz ಸೈನ್ಸ್
+sap ಸಾಪ
 sapp ಶಾಪ ಸಾಪ
 sapped ಸಪ್ತ
 sapper ಸೈಪೆರ್
 sapping ಶಾಪಿಂಗ್
+sar ಸಾರ್
+sara ಸೇರ್ ಸರ್
 sarah ಸೇರ್ ಸರ್
 sare ಸೇರ್ ಸರ್
 sarene ಸೇರಿನ
@@ -9572,6 +9696,7 @@ schwa ಸ್ವ
 schwahn ಶವೊನು
 schwan ಶವೊನು
 schwing ಸ್ವಿಂಗ್
+sci ಸಿ ಸೀ
 scianna ಸಾನ ಸೋಣ
 sciara ಸಾರ ಸಾರಾ
 scilla ಸಿಲಾ ಶಿಲಾ
@@ -9682,6 +9807,7 @@ semifinal ಸೆಮಿಫೈನಲ್
 seminara ಸೆಮಿನಾರ್
 semitic ಸಿಮಿಟಿಕ್
 semon ಸೈಮನ್ ಸೇಮೆನ್
+sen ಸೆನ್
 senate ಸೈಂಟ್ ಸೇಂಟ್
 senator ಸೆಂಟರ್
 seney ಶೇಣಿ
@@ -9693,6 +9819,7 @@ sennett ಸೆನೆಟ್
 sennott ಸೈಂಟ್ ಸೇಂಟ್
 sens ಸೈನ್ಸ್
 sense ಸೈನ್ಸ್
+sensor ಸೆನ್ಸರ್
 sent ಸೈಂಟ್
 sentra ಸೆಂಟರ್
 senty ಸೆಂಟಿ
@@ -9721,6 +9848,7 @@ service ಸರ್ವಿಸ್
 servis ಸರ್ವಿಸ್
 serviss ಸರ್ವಿಸ್
 set ಸೈತ್
+seth ಸೆಟ್ ಸೈತ್
 sether ಸೈತೆರ್
 sethi ಸೈತಿ
 seti ಸೈತಿ
@@ -9753,6 +9881,7 @@ shadden ಸಾದನ ಸದನ
 shaded ಸೇಡಿದ
 shadow ಸದಾ ಸಾದಾ
 shady ಸೇಡಿ
+shah ಶ ಶಾ
 shahrokh ಸರಕು
 shaiken ಸೆಕೆನ್
 shaine ಶೆನ್ ಸೆಂ
@@ -9777,6 +9906,7 @@ shapp ಶಾಪ
 shaquille ಸ್ಕೇಲ್
 share ಶೇರ್ ಶೇರು
 shared ಸೇರ್ದ್
+sharma ಶರ್ಮ
 sharon ಶರಣ್ ಸರನ್
 sharrett ಸರಿಟ್
 sharrock ಸರಕು
@@ -9832,6 +9962,7 @@ sheeran ಸೀರೆನ್ ಸಿರಿನ್
 sheet ಶೀತ
 sheeting ಸೀತೆನ್
 sheik ಸೀಕ್
+sheikh ಸೀಕ್
 sheiks ಸಿಕ್ಸ್
 sheilah ಶೀಲಾ ಶಿಲಾ
 shekel ಸೈಕಲ್
@@ -9841,6 +9972,7 @@ shelley ಶೈಲಿ
 shelly ಶೈಲಿ
 shema ಸಿಮಾ ಸೀಮಾ
 shemona ಶಿಮೋನ್
+shen ಸೆಂ
 shenzhen ಶೆನ್ಜೆನ್
 shepper ಸೈಪೆರ್
 sheree ಸರಿ ಸರೀ
@@ -9886,12 +10018,12 @@ shirted ಸರ್ತಿಡ್ ಸರ್ತಿದ
 shit ಶೀತ
 shitty ಸಿಟಿ
 shiu ಶೋ ಶು
+shiva ಸೇವೆ
 shobana ಸೋಬಾನೆ
 shobanna ಸೋಬಾನೆ
 shock ಶಕ ಸಾಕು
 shocker ಸಾಕಾರ
 shocking ಶಾಕೆನ್
-shod ಶೋದ
 shoddy ಸಾದಿ ಶಾದಿ
 shoe ಶೋ ಶು
 shoen ಶೋನ್
@@ -10130,6 +10262,7 @@ sohm ಸೋಮು
 sohn ಸನ್ ಸಂ
 soja ಸಾಜಿ
 sokol ಶಾಕೆಲು
+sol ಸಾಲ್ ಸಾಲು
 solaman ಸಾಲ್ಮನ್
 solan ಸೋಲುನು ಶಾಲೆನ್
 solana ಶಾಲೆನ್
@@ -10172,7 +10305,6 @@ soothe ಸುತ್ತು ಸುತ್ತ
 soothed ಸುದ್ದ ಶೋಡ್
 soothing ಸುತ್ತಿನ ಸೋತಿನ
 sooty ಸೋತಿ
-sop ಶಾಪ
 sope ಸೋಪ್
 sophia ಸೋಫಿಯಾ
 sophie ಸೋಫಿ
@@ -10269,6 +10401,7 @@ starrs ಸ್ಟಾರ್ಸ್
 starry ಸ್ಟೋರಿ
 starting ಸ್ಟೋರ್ಟಿಂಗ್
 stassen ಸ್ಟೇಷನ್ ಸ್ಟೇಶನ್
+stat ಸ್ಟೇಟ್
 state ಸ್ಟೇಟ್
 states ಸ್ಟೇಟ್ಸ್
 station ಸ್ಟೇಷನ್ ಸ್ಟೇಶನ್
@@ -10402,6 +10535,7 @@ sucker ಸಾಕಾರ
 sucking ಶಾಕೆನ್
 suckle ಸಕಲ ಶಾಕೆಲು
 suda ಸುದೆ ಸೂಡಿ
+sudan ಸುದೆನ್
 sudden ಸುದೆನ್ ಸಾದಿನ್
 suddeth ಸುದೆತ ಸುದೆಟ್
 suder ಸೋದರ
@@ -10473,6 +10607,7 @@ support ಸಪೋರ್ಟ್
 supports ಸ್ಪೋರ್ಟ್ಸ್
 supra ಸೂಪರ್
 supreme ಸುಪ್ರೀಂ
+sur ಸರ್ ಸೇರ್
 sure ಸುರು ಶುರು
 surf ಸರ್ಫ್
 surfer ಸರ್ಫರ್
@@ -10556,6 +10691,7 @@ tagge ತಾಗ್ ತೇಗ
 tagged ತಾಗ್‌ದ್
 tagging ತಾಗಿನ
 tague ತಾಗ್
+tai ಟೈ
 tail ತೆಳು ಟೆಲ್
 taillon ತೇಲುನ
 tails ಟೇಲ್ಸ್
@@ -10577,13 +10713,15 @@ tallil ತಳಿಲು
 tallo ತಲಾ
 tallow ತಲಾ
 tally ತಳಿ ತೆಲಿ
+tam ಟೈಮ್
 tama ಟಾಮ್
 tambs ಟೈಮ್ಸ್
 tame ತೇಯಂ
+tamil ತಮಿಳು
 tamp ತಂಪು
 tan ಟನ್
 tanen ತನ್ನ ತನನ್
-tani ತಾನೇ
+tang ತಾನ್
 tanis ಟೆನಿಸ್
 tank ತಂಕ್
 tanke ತನ್ಕ್ ತಂಕ್
@@ -10596,6 +10734,7 @@ tao ಡೌ
 tap ಟೈಪ್
 tapp ಟಾಪ್ ಟೈಪ್
 tappe ಟಾಪ್ ಟೈಪ್
+tara ತಾರೆ ತಾರಾ
 targeted ತರಗತಿಡ್
 tarot ತಾರಾ
 tarots ತಾರಾಸ್
@@ -10604,6 +10743,7 @@ tarring ತರೆನ್ ತಾರೆನ್
 tarry ತೆರಿ ತೇರಿ
 tasca ಟಾಸ್ಕ್
 taste ಟೆಸ್ಟ್
+tata ತೋಟ
 tatsch ಟಚ್
 tattle ಟೈಟಲ್
 taught ತೋಟ
@@ -10635,6 +10775,7 @@ technical ಟೆಕ್ನಿಕಲ್
 technologies ಟೆಕ್ನಾಲಜೀಸ್
 technology ಟೆಕ್ನಾಲಜಿ
 teck ಟೆಕ್
+tee ಟಿ
 teehan ಟಿಯಾನ್ ತೇಯಂ
 teele ಟೇಲ್
 teeley ತಿಳಿ
@@ -10681,6 +10822,7 @@ tew ತೂ ಟು
 thach ಟಚ್
 thacher ಠಾಕರ್
 thacker ಠಾಕರ್
+thad ಟೆಡ್
 thai ಟೈ
 thain ಟೆನ್ ತೇಯಂ
 thaine ಟೆನ್ ತೇಯಂ
@@ -10692,10 +10834,10 @@ than ದಿನ
 thanh ತಾನ್ ಟನ್
 thank ತಂಕ್
 thao ಡೌ
+thar ಥಾರು
 that ದಾತ್ ದತ್
 thatch ಟಚ್
 thau ಡೌ
-thaw ತಾ ಥಾ
 thawed ತೋಡು ತೊಡು
 thaws ತಾಜ್
 thayer ತೀರ್
@@ -10758,6 +10900,7 @@ thinness ಟೆನ್ನಿಸ್ ಟೆನಿಸ್
 thiry ತಿರಿ ಥಿಯರಿ
 this ದೇಶ ಡೇಸ್
 thither ದೀತೆರ್ ದಿತ್ತೆರ್
+tho ಡಾ ದೋ
 thode ತೋಡು ತೊಡು
 thoele ತೋಳು ತೋಳ
 thoen ತಾನ್ ಟೋನ್
@@ -10767,6 +10910,7 @@ thoma ಟಾಮ್
 thomann ಡೊಮೇನ್
 thome ಟಾಮ್
 thomp ತಂಪು
+thor ಥಾರು
 thoreau ತಾರಾ
 thorell ತಾರೆಲು
 thorne ಥೋರನ್
@@ -10780,6 +10924,7 @@ thread ಥ್ರೆಡ್ ಟ್ರೇಡ್
 threat ತರೆಟ್
 three ಟ್ರೀ
 threw ಥ್ರೋ
+thriller ಟ್ರೇಲರ್
 throm ಟ್ರಾಮ್
 throng ಟ್ರಾಂಗ್
 through ಥ್ರೋ
@@ -10810,6 +10955,7 @@ tia ಟೀ
 tian ಟ್ಯಾನ್
 tianjin ಟಿಯಾನ್ಜಿನ್
 tibbett ಟಿಬೆಟ್
+tick ತಿಕ್ ಟಿಕ್
 ticket ಟಿಕೆಟ್ ಟಿಕೇಟ್
 ticking ತಿಕಿನ ಟೀಕೆನ್
 tidd ಟೆಡ್
@@ -10896,6 +11042,7 @@ tope ಟಾಪ್
 topp ಟಾಪ್
 topps ತಪಸ್
 tops ತಪಸ್
+tor ತೋರ
 torah ತಾರೆ ತಾರಾ
 torain ತರೆನ್ ತಾರೆನ್
 toray ತಾರೆ
@@ -10947,7 +11094,6 @@ trampe ಟ್ರಂಪ್
 tran ತರೆನ್
 trance ಟ್ರಾನ್ಸ್
 trane ತರೆನ್
-trang ತರೆನ್
 trashed ಟ್ರಸ್ಟ್
 traugh ಟ್ರಾ
 traum ಟ್ರಾಮ್
@@ -10956,6 +11102,7 @@ travail ಟ್ರಾವೆಲ್
 tray ತರೆ
 traylor ಟ್ರೇಲರ್
 tread ಟ್ರೇಡ್
+trek ತರೆಕ್
 trey ತರೆ
 tribunal ಟ್ರಿಬ್ಯೂನಲ್
 trick ಟ್ರೆಕ್ ತರೆಕ್
@@ -10999,7 +11146,6 @@ tubb ತಬು
 tube ಟ್ಯೂಬ್
 tuch ಟಚ್
 tuck ಟಕ ಟಾಕ್
-tudor ತುಡರ್
 tue ತೂ ಟು
 tuel ತುಳು
 tuell ತುಳು
@@ -11090,9 +11236,11 @@ una ಯುಎನ್ ಓಂ
 unaware ಅನ್ವರ್
 uncle ಅಂಕಲ್ ಅಂಕೋಲ
 uncool ಅಂಕೋಲ
+und ಉಂಡು ಉಂದು
 under ಅಂಡರ್
 undid ಉಂದೆಡ್
 undine ಉಂದೇನ್ ಅಂದಿನ
+undo ಒಂದು ಅಂದು
 undone ಅಂಡಾಣು ಒಂದುನ
 undue ಒಂದು ಅಂದು
 unearth ನಾರ್ತ್
@@ -11131,6 +11279,7 @@ urging ಅರ್ಜಿನ್
 uric ಎರಿಕ್
 urich ಎರಿಕ್
 urie ಏರಿ ಏರೇ
+url ಓರಲ್
 urman ಎರ್ಮೆನ್
 urn ಆರ್ನ ಅರ್ನ
 ursa ಅರಸು ಅರಸೆ
@@ -11156,6 +11305,7 @@ vajda ವೈಡ್
 vajna ವೈನ್
 val ವೆಲ್
 vala ವಾಲಿ ವಾಲ್
+vale ವೆಲ್ ವೇಲು
 valea ವಲಿಯ
 valet ವೇಳೆ ವಾಲೆ
 valia ವಲಯ
@@ -11195,6 +11345,7 @@ vasily ವೈಶಾಲಿ
 vass ವೈಸ್ ವಾಸ
 vassey ವಾಸಿ
 vast ವಸ್ತು ವೆಸ್ಟ್
+vat ವೈಟ್
 vaugh ವಾ
 vaughan ವಾನ್ ವೊನ್
 vaughn ವಾನ್ ವೊನ್
@@ -11211,6 +11362,7 @@ veals ವೇಲ್ಸ್
 veatch ವಿಚ್
 veech ವಿಚ್
 vegh ವೇಗ
+veil ವೆಲ್ ವೇಲು
 veilleux ವಿಲೋ
 vein ವೆನ್ ವೇನ್
 veira ವೇರ್
@@ -11254,6 +11406,7 @@ vetere ವೇಟರ್
 vette ವೈಟ್
 vey ವೇ
 veyne ವೆನ್ ವೇನ್
+vic ವೀಕ್
 vice ವೈಸ್ ವಾಯ್ಸ್
 viceroy ವೈಸ್ರಾಯ್
 vicious ವಿಶೇಷ
@@ -11332,6 +11485,7 @@ volley ವಾಲಿ
 volleyball ವಾಲಿಬಾಲ್
 volta ವಾಲ್ಟ್
 voltaire ವಾಲ್ಟರ್
+von ವೊನ್
 vona ವಾನ್ ವೊನ್
 vonnie ವಾಣಿ
 vonny ವಾಣಿ
@@ -11350,10 +11504,9 @@ waah ವಾ ವ
 wace ವೇಸ ವೇಷ
 wacha ವಾಚ್
 wack ವಾಕ್
-wad ವಾದ
-wada ವಾದ್
 waddie ವಾದಿ
 waddy ವಾದಿ
+wade ವೇದ ವೇಡ್
 wadel ವೇದೊಲು
 wag ವೇಗ
 wagg ವೇಗ
@@ -11419,6 +11572,7 @@ wassel ವಾಸಿಲ್
 wassell ವಾಸಿಲ್
 waste ವೆಸ್ಟ್
 waszak ವಶಕ್
+wat ವೋಟ್
 watch ವಾಚ್
 watt ವಾತ್
 waugh ವಾ
@@ -11446,6 +11600,7 @@ weddell ವೇದೊಲು
 weddle ವೇದೊಲು
 wedel ವೇದೊಲು
 wedell ವೇದೊಲು
+wee ವಿ
 weech ವಿಚ್
 weed ವಿದ
 weekley ವೀಕ್ಲಿ
@@ -11486,6 +11641,7 @@ werne ವರ್ಣ ವರನ್
 werre ವೇರ್ ವೈರ್
 werry ವೈರಿ
 wery ವೈರಿ
+wes ವೈಸ್
 wesch ವೇಷ ವೈಸ್
 wesche ವೇಷ ವೈಸ್
 wesley ವೆಸ್ಲಿ
@@ -11582,6 +11738,7 @@ wife ವೈಫ್
 wig ವೇಗ
 wigg ವೇಗ
 wight ವೈಟ್
+wii ವಿ
 wikipedia ವಿಕಿಪೀಡಿಯ ವಿಕಿಪೀಡಿಯಾ
 wild ವೈಲ್ಡ್
 wilde ವೈಲ್ಡ್
@@ -11658,6 +11815,7 @@ wollin ವಾಲಿನ್ ವಾಲಿನ
 wolters ವಾಲ್ಟರ್ಸ್
 woman ವುಮೆನ್ ವುಮನ್
 women ವಿಮಾನ
+wong ವಾನ್
 wood ವುಡ್
 woods ವುಡ್ಸ್
 wooed ವುಡ್
@@ -11762,10 +11920,12 @@ yak ಏಕ್ ಎಕ್
 yake ಏಕ್ ಎಕ್
 yale ಎಲ್ ಏಳ್
 yamin ಯೆಮೆನ್
+yan ಎನ್
 yancey ಎಂಸಿ
 yancy ಎಂಸಿ
 yanda ಎಂಡ್ ಎಂದ್
 yaney ಏಣಿ
+yang ಯಾನ್ ಎನ್
 yani ಯಾನೇ ಯೋನಿ
 yank ಎಂಕ್ ಯೆಂಕ್
 yanke ಎಂಕ್ ಯೆಂಕ್
@@ -11813,6 +11973,7 @@ yew ಯು
 yie ಯಿ ಯೇ
 yilin ಎಲೆನ್
 yim ಎಂ ಎಮ್
+yin ಎನ್ ಎಂ
 yip ಏಪ ಎಪ್
 yoda ಯಾದ್
 yoe ಯಾ

@@ -123,7 +123,7 @@ air এৰ এর
 aisha আইসে
 ajaj যায
 ajar যাৰ যার
-akai কৈ
+aka একে
 akana আকানে
 aker আকাৰ
 akerson আকৰ্ষণ আকর্ষণ
@@ -131,6 +131,7 @@ akey কি কী
 akiba কিবা
 akiva কিবা
 akre আকাৰ
+ala এল
 alai ওলাই লৈ
 alain লেন
 alaine লেন
@@ -198,10 +199,12 @@ amount মাউণ্ট মাউন্ট
 amour আমাৰ
 amr আমাৰ
 amre আমরা
+ana আন আইন
 anac অনেক
 and ন্দ
 anette নেতা অ্যানেট
 anew অণু নো
+ang আন আইন
 angelina এঞ্জেলিনা অ্যাঞ্জেলিনা
 anger অংগৰ
 animal অনমল
@@ -252,13 +255,13 @@ arrupe আৰোপ
 arup আৰোপ
 arve আৰব আরও
 arvey আৰবী
+asa আশা
 asay আসে সে
 asch এস আশা
 asche এস আশা
 asea জিয়া আসিয়া
 ash আশা
 ashbaugh অশ্ব শ্ব
-ashe এস আশা
 ashen আসন
 ashis সিজু
 ashish শিশু
@@ -317,6 +320,7 @@ aumann অমন ওমেন
 aune আন অণু
 aung অংগ আন
 aunt অন্ত আইনত
+aura আৰ আৰো
 auria ওড়িয়া
 aurora অরোরা অৰোৰা
 austen অস্টিন
@@ -354,7 +358,6 @@ awoke বক
 ayako যাক ইয়াক
 aycock একক
 aydt এত এটা
-aye এই আই
 ayn এন
 ayr এৰ এর
 ayre এৰ এর
@@ -463,6 +466,7 @@ barach বৰাক
 bare বাইৰ বের
 barn বৰণ
 barndt বৰ্ণত
+baron বৰ্ণ
 barone বৰণ বরং
 barr বাৰ
 barra বাৰ বৰা
@@ -485,6 +489,7 @@ basch বেশ বসু
 base বেশ
 baser বেশ্যাৰ
 basey বেশী বেশি
+bash বেশ বসু
 basham বেষমা
 bashaw বাস বেশ
 bashed বস্তু বসত
@@ -669,6 +674,7 @@ bessie বেশী বেশি
 besso বেশ
 bessy বেশী বেশি
 bet বইত বেটা
+beta বেটী
 betcha বেছি
 beth বইত বেটা
 bett বইত বেটা
@@ -713,6 +719,7 @@ bilow বিল বেল
 bilyk বেলেক
 bin বেং
 bina বিং
+bing বেং
 bingel বেঙ্গল
 bingle বেঙ্গল
 bingley বেঙ্গলী
@@ -842,7 +849,6 @@ boike বইক
 bois বব বয়
 boisseau বয়স
 bokassa বিকাশ বিকাস
-bola বল
 boler বলৰ
 boley বলি
 bolivia বলিভিয়া
@@ -1009,6 +1015,7 @@ brie ব্ৰী
 brin ব্ৰেন
 bring ব্ৰেন
 brinn ব্ৰেন
+bro বড়ো
 broaden বৰদিন
 broader বড়দের
 broc বৰাক
@@ -1195,6 +1202,7 @@ calm কাম কম
 calmer কামেৰ
 calor কলাৰ
 calves কাব্য
+cam কম
 caman কেমুন
 camaro কামেৰ
 camel কমল
@@ -1203,7 +1211,6 @@ camm কাম কম
 cammer কামেৰ
 campos কম্পোজ
 can কোন কানু
-cana কানা কাণা
 canaan ক্যানোন
 canan ক্যানোন
 candid কাণ্ড
@@ -1273,6 +1280,7 @@ carton কাৰ্টুন
 carvey কাৰ্বি কৰবী
 caryl কেৰালা কেৰেলা
 caryn করেন
+casa কোষ
 casbah কেশব
 cashed কষ্ট
 cassara কাসারো
@@ -1317,6 +1325,8 @@ chagall ছাগল
 chair চেয়াৰ
 chaise শেষ
 chalet সালে
+chan চান
+chang চন
 chap চাপা ছপা
 chaparro কাপোৰ
 chaplin চেপলিন
@@ -1343,6 +1353,7 @@ chew চা
 chewed চুদা চোদা
 chewy ছাই
 chez শে সে
+chi কৈ
 chia ছি
 chiang চন চাং
 chicks ছেক্স
@@ -1455,6 +1466,7 @@ coia কয় কোয়া
 coke কক্
 colan কল্যাণ
 colaw কলা
+cole কলা
 coler কলাৰ
 colgate কলগেট
 colin কল্যাণ
@@ -1526,6 +1538,8 @@ coors কাৰ্য
 coover কোবাৰ কোৱাৰ
 coppel কপাল
 copple কপাল
+cor কৰা কৰ
+coral কৰিল
 corby কৰবী কাৰ্বি
 core কৰা কৰ
 corea কৰিয়া কৰিআ
@@ -1545,6 +1559,7 @@ corn কাৰণ
 corne কাৰণ কৰং
 corner কাৰণেৰ
 corolla কেৰালা
+corona কাৰণ
 coroner কাৰণেৰ
 corps কৰা কাৰ্য
 corpsman কাৰমেন
@@ -1565,6 +1580,7 @@ corsa কোষ কোশী
 cort কৰ্তা
 corum কৰ্ম কার্ম
 corva কৰবী
+cory করি
 corzo কাৰ্য
 cose কোষ
 cosey কোশী
@@ -1593,7 +1609,6 @@ covey কবি কভী
 cow কৌ
 cowen কোন কং
 cowher কবাৰ কোবাৰ
-coy কৈ
 coye কয় কৈ
 coz কাজ
 cozy কোশী
@@ -1658,6 +1673,7 @@ cullet কালত
 cullin কল্যাণ
 cullom কালাম
 cullum কালাম
+cum কম
 cummock কামুক
 cunha কোন কানা
 cunnane কন্যা
@@ -1727,6 +1743,8 @@ dammen দমন
 damn দম
 damone দমন
 dan দেন
+dana দেন
+dane দেন
 danek দৈনিক
 dang দান দেন
 danica দৈনিক
@@ -1742,6 +1760,7 @@ darragh ডেৰ
 darrah ডেৰ
 darren দৰং
 darrow ডেৰ
+das দেশ
 dasch দেশ দাস
 dase দেশ
 dash দেশ
@@ -1839,6 +1858,7 @@ deon দিয়ান
 dern দৰং
 derr ডেৰ
 derrow ডেৰ
+des ডি
 desch দেশ
 deshaw দেশ
 design ডিজাইন
@@ -1847,6 +1867,7 @@ desir দেশেৰ দিশেৰ
 deuce দাস দাশ
 deuss দাস দাশ
 deux দা দ্যা
+dev দেয়
 devan দেওয়ান
 devane দিবেন
 devaughn দেওয়ান
@@ -1906,6 +1927,7 @@ dion দিয়ান
 dione দিয়ান
 dionne দিয়ান
 dirr ডেৰ
+dis দেশ
 disch দেশ দিশ
 discher দেশেৰ দিশেৰ
 dish দেশ
@@ -1913,6 +1935,7 @@ dishaw দেশ দিশ
 dished দিশত দেশত
 diss দেশ দিশ
 ditch ডেচ
+diva দিয়া
 divan দিবেন দিয়ান
 divvied ডেভিদ
 divvy দেবী দেৱী
@@ -1948,6 +1971,7 @@ dole দল
 doll দল ডাল
 dollar দলেৰ
 dolle দল ডাল
+dom ডোম
 domangue দমন
 dome দম ডোম
 domino দমন
@@ -1974,6 +1998,7 @@ doro দৌৰ
 dorow দৌৰ
 dorr দৌৰ
 dorroh দৌৰ
+dos দাস
 dosch দাস দশ
 dose দশ
 doss দাস দশ
@@ -2055,6 +2080,7 @@ dung দান দানু
 dunn দান দানু
 dunne দান দানু
 dunno দিন দান
+duo দুয়ো
 duper দুপৰ
 duque ডাক
 duquette ডাকাইত
@@ -2155,7 +2181,6 @@ era এর
 erb আৰব
 erbe আৰব
 erby আৰবী
-ere এৰ এর
 eroh এৰ এর
 eron ইৰান
 err আৰ এৰ
@@ -2260,6 +2285,7 @@ fine ফেন
 finn ফেন
 finne ফেন
 finnell ফিনল
+fir ফৰ
 flatt ফলত
 flaugh ফল
 flaw ফল
@@ -2327,6 +2353,7 @@ gai গে
 gain গেং গ্যাং
 gained গেন্দা
 gal গলা
+gala গেলে
 galas গেলাস
 gall গলা
 galla গলা গেইলে
@@ -2392,6 +2419,7 @@ gehr যার
 geico গায়ক
 gel জেল
 gell জেল
+gen জৈন
 gena জেনা জৈন
 genero জনের জনেৰ
 genna জেনা জৈন
@@ -2415,6 +2443,7 @@ gery জেৰী
 get গীত
 getchell গেছিল
 ghali গলি
+ghana গান গন
 ghandi গোণ্ডী
 ghose গজ
 giacco যাক জোক
@@ -2459,6 +2488,7 @@ gnat নেতা
 gnau নৌ
 gnaw না ন
 gnu নো না
+goa গ গু
 goad গড়
 goal গলা
 goalie গলি
@@ -2492,12 +2522,13 @@ golla গলা গালো
 golle গলা
 golly গলি
 gone গান গন
-goner গানেৰ
 gonet গণিত
 gong গান গন
 gongs গণ্য
 gonna গান গন
 gooch গাছ
+google গুগল
+gore গৰু গড়
 gorham গৰম গরম
 gorr গৰু গড়
 gorum গৰম গরম
@@ -2516,6 +2547,7 @@ gover গবৰ গাঁওয়েৰ
 graeme গৰম গরম
 graham গৰম গরম
 grained গ্র্যান্ড
+gram গরম
 gramm গৰম গরম
 grammar গ্ৰামাৰ
 grammer গ্ৰামাৰ
@@ -2622,6 +2654,7 @@ haigh হ্যায়
 hailey হেলী হেলি
 haim হেম
 hakki হকী
+hal হৈল
 haley হেলী হেলি
 hall হল হোল
 halla হৈল
@@ -2644,6 +2677,7 @@ hamme হেম হম
 hammer হামাৰ
 hamor হামাৰ
 hamre হামাৰ
+han হনু
 hance হান্স
 hands হান্স
 hang হন হনু
@@ -2675,9 +2709,9 @@ haskell হাইস্কুল
 hass হাঁস
 hasse হাঁস
 hat হত
-hata হাতে
 hatchel হৈছল হৈছিল
 hatchell হৈছল হৈছিল
+hath হত
 haton অতনু
 hattie হাতী হাইটি
 hatty হাতী হাইটি
@@ -2828,6 +2862,7 @@ holy হোলী
 home হম
 homey হোমী
 homme হম
+hon হনু
 hone হন হনু
 honest অংশত
 hong হন হনু
@@ -3193,6 +3228,7 @@ karam কৰ্ম কেৰাম
 karas কাৰ্য
 karch কাৰক
 karel কেৰালা কেৰেলা
+karma কার্ম
 karman কাৰমেন
 karnow কাৰণ কৰণ
 karol কেৰালা
@@ -3220,7 +3256,6 @@ kaul কাল কলা
 kaunda কাণ্ড
 kaus কাজ কোষ
 kauth কাঠ কথা
-kawa কোৱা কোওয়া
 kay কে
 kaye কে
 kayla কেলি
@@ -3255,6 +3290,7 @@ ketchen কেছাং
 ketou কতো কোতো
 key কি কী
 keye কৈ
+khan কোন কানু
 khe কে
 khoo কু কূ
 khosla কৌশল
@@ -3366,6 +3402,7 @@ kolle কাল
 koller কলাৰ
 kolm কম
 kommer কামেৰ
+kona কোনো
 kondo কাণ্ড
 konen কন্যা
 kong কোন
@@ -3396,7 +3433,6 @@ kosy কোশী
 kotch কোচ কাছ
 koth কাঠ কথা
 kothe কথা
-koto কোতো
 kough কৌ
 kourou কাৰো
 kovac কয়েক
@@ -3655,6 +3691,7 @@ liver লিভাৰ লিবাৰ
 livor লিভাৰ লিবাৰ
 llana লানা লেন
 loar লাৰা
+loch লোক
 locher লোকেৰ
 locks লাক্স
 lodge লাজ
@@ -3770,7 +3807,9 @@ maggie মাগী
 magiera মাজেৰ
 magna মেগন
 magno মেগন
+mah ম মা
 mahannah মহান
+maharashtra মহারাষ্ট্র
 mahdi মোদী
 mahen মেন মেঁ
 maher মোৰ মোর
@@ -3801,7 +3840,6 @@ maj মেজ
 majeure মজার মজাৰ
 major মেজেৰ
 makhoul মুকুল
-mako মোক
 mal মাইল
 male মেলা
 malec মালিক
@@ -3831,6 +3869,7 @@ mandt মানত
 manet মানে মেনে
 manilla মানিলা
 manke মনক
+mann মন মান
 manne মন মান
 manned মন্দ
 mannen মান্য
@@ -3852,6 +3891,7 @@ march মার্চ
 marched মাৰ্চত
 marcon মার্কিন মাৰ্কিন
 marden মর্দন মৰ্দন
+mare মেৰু
 margin মারজানু
 maria মারিয়া মাৰিয়া
 marich মৰেক
@@ -4063,7 +4103,6 @@ milln মিলন
 millner মিলনেৰ
 millon মিলন
 milne মিলন
-milo মাইল
 milone মিলন
 min মেন মেঁ
 mine মৈনা
@@ -4101,6 +4140,7 @@ moaned মন্দ
 moans মন্স
 moat মত মোট
 moccia মছ
+mock মাক
 modal মডেল
 modell মডেল
 moden মদন
@@ -4127,6 +4167,7 @@ mollica মালিক
 molock মালিক
 mom মামা
 momma মামা
+mon মান
 mona মনে
 monceaux মাংস মন্স
 monday মানডে
@@ -4193,10 +4234,10 @@ moss মাস
 mosser মাসেৰ
 mosul মসলা
 moten মতোন
-moth মত
 mother মাদাৰ মাথাৰ
 motte মত মোট
 motter মটৰ
+motto মতো মত
 mottram মাতৰম
 moue মা
 mount মাউণ্ট মাউন্ট
@@ -4230,7 +4271,6 @@ muhs মাস
 muir ময়ূৰ
 muise মাস
 mulatto মলাট
-mull মূল
 mullah মূল
 muller মূলৰ মূলেৰ
 mullet মূলত মলাট
@@ -4297,8 +4337,10 @@ nagged নগদ
 nah না ন
 nahm নাম
 namibia নামিবিয়া
+nan নেন
 nana নান
 nanna নানা নান
+nano নেন
 napoleon নেপোলিয়ন
 napoli নেপালী
 napper নপৰ
@@ -4313,7 +4355,6 @@ nava নাও নয়া
 navarra নাভারো
 navarro নাভারো নেভাৰ
 nave নেয় নেওয়া
-nay নেয়
 neal নীলা
 neala নীলা
 neale নীলা
@@ -4416,7 +4457,6 @@ novick নাবিক
 novo নয়
 novum নবম
 now নৌ
-nth আইনত
 nuhn নুনু নান
 nuke নাক
 numb নাম
@@ -4471,7 +4511,6 @@ ollie আলি
 olly আলি
 olovo লাভ
 olympic অলিম্পিক
-omen অমন
 ommen এমন অমন
 ona না আন
 onan অন্য অন্ন
@@ -4566,6 +4605,7 @@ palen পালন
 pall পাল পল
 palla পাল পল
 pallo পাল পল
+palo পল
 palone পালন
 pandey পাণ্ডে
 pandick পান্ডেক
@@ -4573,12 +4613,12 @@ pang পান
 panny পানী পনী
 pans পণ্য
 panzer পণ্যৰ
-pap পপ
 papa পপ
 papaw পাপ পপ
 papp পাপ পপ
 pappa পাপ পপ
 par পার
+para পেৰু পার
 parke পাৰ্ক
 parlow পারল
 parole পারল
@@ -4665,6 +4705,7 @@ perot পৰ পার
 pert পাৰত
 perth পাৰত
 peru পৰা
+peta পিতা
 petal পেটেল
 pete পিতা
 peth পেট
@@ -4738,6 +4779,7 @@ poly পালি
 pon পান
 pong পান
 pons পণ্য
+pony পনী
 poohed পোড়া
 pool পাল
 poole পাল
@@ -4753,6 +4795,8 @@ poppe পাপ পপ
 porath পাৰত
 porco পাৰ্ক
 pork পাৰ্ক
+porn পর্ন
+pornography পৰ্ণগ্ৰাফী
 porr পৰ পর
 porro পৰ পর
 port পাৰত
@@ -4777,12 +4821,14 @@ poul পাল
 poulin পালন
 pour পৰ পর
 pracht প্রকট
+pradesh প্রদেশ
 prague পৰাগ
 praun প্ৰাণ
 prause প্ৰজা
 prawn প্ৰাণ
 pray পরে পৰে
 prayer পৰেৰ
+pre পৰি পড়ি
 premier প্ৰেমেৰ
 premiere প্ৰেমেৰ
 pretty প্ৰীতি প্রীতি
@@ -4829,7 +4875,6 @@ prugh পৰা
 prune প্ৰাণ
 pruneau পৰ্ণ প্ৰাণ
 prussian প্ৰশ্ন প্রশ্ন
-pry প্ৰায় প্রায়
 pseudo সাদ
 psi সেই শাই
 ptak তাক টাক
@@ -4844,6 +4889,7 @@ pullen পালন
 pulley পালি
 pun পান
 pundit পণ্ডিত
+punjab পঞ্জাব
 puns পণ্য পুণ্য
 pup পুপু
 purr পৰ পার
@@ -4852,7 +4898,6 @@ pusch পুষ
 pushed পাশত
 puss পুষ
 putney পত্নী
-putt পাতা পাত
 putter পাতার পাটৰ
 puzo পুষ
 puzzo পুষ
@@ -5096,6 +5141,7 @@ rooney ৰাণী
 roos ৰাজ
 roosa ৰাশি
 roose ৰাজ
+ros ৰস
 rosa ৰজা
 rosanne ৰোশন
 rosch রস ৰস
@@ -5120,6 +5166,7 @@ rota ৰতু
 rotan ৰত্ন
 rote ৰতু
 roten ৰত্ন
+roth ৰতু
 rothe ৰথ ৰতু
 rott ৰতু
 rotten ৰত্ন
@@ -5255,11 +5302,13 @@ santow সনত
 santulli সান্তালী সান্তালি
 sanz সৈন্য
 sanzo সৈন্য
+sar সাৰা
 sarong শৰণ
 sarra সাৰা সাৰ
 sarratt শৰৎ
 sarrett সৰিৎ
 sarro সাৰ
+sasha শেষ
 sass শেষ সাস
 sassano শাসন
 sasse শেষ সাস
@@ -5293,7 +5342,6 @@ sauve সব
 savanna সাভানা
 savannah সাভানা
 save সেবা সেৱা
-saver সেবাৰ সেৱাৰ
 savir সেবাৰ সেৱাৰ
 savoia সভয়
 savon সেবন
@@ -5471,12 +5519,14 @@ sever সেবাৰ সেৱাৰ
 severe সবার
 sew শ স
 sewer শুঅৰ
+sewn শোনা
 seyi সেই
 shabad স্বাদ
 shackle সকল
 shadd সাদ ষাঁড়
 shadow সাদ ষাঁড়
 shadur সদৰ
+shah শ ষ
 shain সেন
 shaine সেন
 shali শৈলী
@@ -5505,10 +5555,11 @@ shaub সব
 shaun শোনা
 shauna শোনা সানি
 shaven সেবন
-shaver সেবাৰ সেৱাৰ
+shaw শ ষ
 shawgo সগ
 shawhan শাওন সেবন
 shawler সালের
+shawn শোনা
 shawnee সানি
 shawnut সনত শোণিত
 shawver সভাৰ সবার
@@ -5521,6 +5572,7 @@ shears শীৰ্ষ
 sheath শীত
 sheathe শীত
 sheehan সিং শিং
+sheen শিং
 sheena সিং শিং
 sheesh শিশু
 shelley শৈলী
@@ -5572,7 +5624,6 @@ shoved শব্দ
 shovel সবল
 shoves সভ্য
 show শ ষ
-showa শ ষ
 showbuzz সহবাস
 showings সৈন্য
 shown শোনা
@@ -5620,6 +5671,7 @@ sin সেন
 sines সৈন্য
 sing শিং
 singer সেনাৰ
+singh সিং শিং
 sinn সিং সেন
 sinner সেনাৰ
 siobhan শাওন শয়ন
@@ -5706,7 +5758,6 @@ souther সদৰ
 souto সাত
 sow শ স
 sowder সদৰ
-sown শোনা
 spahn সপোন
 spanner স্পেইনেৰ
 spano সপোন
@@ -5746,6 +5797,7 @@ stelle ষ্টাইল
 stello ষ্টাইল
 sterr স্টার
 steurer স্তৰেৰ ষ্টাৰেৰ
+sticker শতিকাৰ
 stiffen ষ্টিফেন
 stig ষ্টেগ
 stile ষ্টাইল
@@ -5753,6 +5805,7 @@ stir ষ্টাৰ স্তৰ
 stoecker শতকের
 stoehr স্তৰ ষ্টাৰ
 stohr স্তৰ ষ্টাৰ
+stoke শতক
 stokke শতক
 stone স্তন
 stong স্তন
@@ -5764,6 +5817,7 @@ stowe ষ্ট
 stower স্টার
 strack ষ্ট্ৰাইক
 stracke ষ্ট্ৰাইক
+strata সতৰত
 straw স্তৰ
 streck ষ্ট্ৰাইক
 streich ষ্ট্ৰাইক
@@ -5818,6 +5872,7 @@ sunni সানি
 sunny সানি
 suns শূণ্য
 suntan সন্তান
+sur সাৰ
 surat শৰৎ
 sure শুৰু শুরু
 sures সূৰ্য
@@ -5856,6 +5911,7 @@ szuba সুবা
 table টেবুল
 tack টাক
 tacker টাকাৰ
+taco টাক
 tad টাইড
 tadd টাইড
 tae তে
@@ -5887,6 +5943,7 @@ tappen টাইপিং
 tappin টাইপিং
 tapping টাইপিং
 tar তার
+tara তার
 tarallo তৰল
 tarlow তৰল
 tarnow তৰণ
@@ -5951,8 +6008,8 @@ thane টেন
 thang থান
 thanh টান থান
 thank টেঙ্ক
+thar তার
 that দাঁত
-thaw টা ত
 thayne টেন
 the ডি ড
 thea টিয়া
@@ -5991,6 +6048,7 @@ think টেঙ্ক
 thiry তেৰী
 thirza তৰসা
 this দেশ দিশ
+tho ড দ
 thoele তল
 thole তল
 tholl তল
@@ -5999,6 +6057,7 @@ thome তম
 thommen তামাং
 thon টান থান
 thong টান থান
+thor তাৰ
 thoreau তাৰ তার
 thorell তৰল
 thoren তৰণ
@@ -6090,6 +6149,7 @@ toote তোতা
 tooth তোতা
 tope টপ
 topp টপ
+tor তাৰ
 torah তাৰ তোর
 toray তাৰে
 tore তাৰ তোর
@@ -6120,7 +6180,6 @@ toya টি
 toye টি
 trains ট্ৰেন্স
 trance ট্ৰেন্স
-trang তৰণ
 trans ট্ৰেন্স
 translate ট্ৰেন্সলেট
 translator ট্ৰেন্সলেটৰ ট্ৰান্সলেটৰ
@@ -6148,6 +6207,7 @@ tso শ স
 tsuda সাদা সাদ
 tsui শাই
 tucci তাছি
+tuck টাক
 tucker টাকাৰ
 tue টু তু
 tuel তুলু টুল
@@ -6186,6 +6246,7 @@ typing টাইপিং
 tyra তৈরী
 tyree তৈরী
 ubben এবং
+uber যাবাৰ
 uccel আছিল
 uden উদাং আদান
 uebel আবুল
@@ -6199,6 +6260,7 @@ uhl অল আল
 uhr আৰ আৰু
 umm এম আম
 ummel আমূল
+una আন ঊণ
 und এণ্ড
 unease নিজ
 ung আন অংগ
@@ -6211,7 +6273,6 @@ unjust ন্যস্ত
 unknowns অনন্য
 unleash ইংলিশ
 unleashed ইংলিশত
-uno ন
 unser অংশৰ
 unz অন্য অংশ
 upon পান
@@ -6234,6 +6295,7 @@ vail বেল বেলা
 vaile বেল বেলা
 vain বেং ব্যাং
 val বাল
+vale বেল বেলা
 valet বলে বেলে
 valia বাল্য বেইলি
 valle বেল বেলা
@@ -6270,6 +6332,7 @@ vasser ভাষাৰ ভাষার
 vasseur ভাষাৰ ভাষার
 vassey বেশী বেশি
 vast বস্তু
+vat ভাট
 vater ভেটেৰ বেটেৰ
 vatter ভেটেৰ বতৰ
 vaugh বা
@@ -6301,6 +6364,7 @@ venn বেং ব্যাং
 venne বেং ব্যাং
 venous বিনাশ বিংশ
 venus বিনাশ বিংশ
+vera বাইৰ
 verdin বৰদিন
 verdon বৰদিন
 verdun বৰদিন
@@ -6322,6 +6386,7 @@ vesey বেশী বেশি
 vess বেশ ভৈস
 vesser বেশ্যাৰ
 vessey বেশী বেশি
+vet বইত
 vetere ভেটেৰ বেটেৰ
 vette ভেট বইত
 vevay বইয়ে
@@ -6393,6 +6458,7 @@ volley ভালেএ বলি
 volleyball ভলিবল
 volokh বালক
 volta বলতে
+von ভোং
 vonder বান্দৰ
 vondra বান্দৰ
 vonnie বাণী
@@ -6417,11 +6483,10 @@ waah বা
 wabash ভবেশ
 wace বেশ
 wachter বক্তাৰ ভক্তৰ
-wad ভোদা
-wada ভোদা বাদে
 waddie বাদী বাড়ী
 waddle বদল বাদুল
 waddy বাদী বাড়ী
+wade বেদ
 wadle বদল
 wadleigh বদলি
 wadley বদলি
@@ -6467,6 +6532,7 @@ walloch বালক
 wallow বাল ভাল
 walls বাল্য
 wally বলি ভালেএ
+wan ভোং
 wander বান্দৰ
 wane বেং ব্যাং
 waned বেণ্ড
@@ -6507,6 +6573,7 @@ wass বাস বসু
 wasser ভাষাৰ ভাষার
 wassman ভাসমান
 waszak ভাষাক ভাষিক
+wat ভাত
 watch বাছ
 watcher বছৰ বাঁচার
 water বতৰ
@@ -6534,6 +6601,7 @@ weaver বিয়াৰ
 webb ওয়েব
 weck বইক
 wedd বেদ
+wee ভি ভী
 weeds বিদ্যা
 wehde বেদ
 wehle বেইলি
@@ -6575,11 +6643,11 @@ wert ভাৰত ভারত
 werth ভাৰত ভারত
 werther ভাৰতেৰ ভাৰতৰ
 wertman বৰ্তমান
+wes ভৈস
 wesch বেশ
 wesche বেশ
 wess বেশ ভৈস
 wet ভেট বইত
-wetter ভেটেৰ
 wever বিয়াৰ
 wey য়ে
 weyer বীর
@@ -6620,7 +6688,6 @@ whoa হয় ও
 whole হল হোল
 wholey হলি হোলী
 wholly হলি হোলী
-whoo বা ভূ
 whoop ভূপ বাপ
 whoosh বাস
 whopper ওপর
@@ -6731,6 +6798,7 @@ women বিমান
 won ভোং
 wonder বান্দৰ
 wondra বান্দৰ
+wong ভোং
 woo বা ভূ
 wood ভোদা
 wooddell বাদুল
