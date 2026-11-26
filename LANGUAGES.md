@@ -39,45 +39,45 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `nl` | `nl` | Dutch | nl | LTR | **Full** (nl)⁷ | ✓ | — |
 | `pl` | `pl` | Polish | pl | LTR | **Full** (pl)⁷ | ✓ | — |
 | `pt-br` | `pt` | Portuguese (BR) | br | LTR | **Full** (pt)⁷ | ✓ | — |
-| `se` | `sv` | Swedish | se | LTR | **Full** (sv) | ✓ | — |
-| `no` | `no` | Norwegian | no | LTR | **Full** (no) | ✓ | — |
-| `dk` | `da` | Danish | dk | LTR | **Full** (da) | ✓ | — |
-| `fi` | `fi` | Finnish | fi | LTR | **Full** (fi) | ✓ | — |
-| `cz` | `cs` | Czech | cz | LTR | **Full** (cs) | ✓ | — |
+| `se` | `sv` | Swedish | se | LTR | **Full** (sv)⁷ | ✓ | — |
+| `no` | `no` | Norwegian | no | LTR | **Full** (no)⁷ | ✓ | — |
+| `dk` | `da` | Danish | dk | LTR | **Full** (da)⁷ | ✓ | — |
+| `fi` | `fi` | Finnish | fi | LTR | **Full** (fi)⁷ | ✓ | — |
+| `cz` | `cs` | Czech | cz | LTR | **Full** (cs)⁷ | ✓ | — |
 | `tr` | `tr` | Turkish | tr | LTR | **Full** (tr)⁷ | ✓ | — |
-| `vi` | `vi` | Vietnamese | vn | LTR | **Full** (vi) | ✓ | — |
-| `el` | `el` | Greek | gr | LTR | **Full** (el) | — | — |
+| `vi` | `vi` | Vietnamese | vn | LTR | **Full** (vi)⁷ | ✓ | — |
+| `el` | `el` | Greek | gr | LTR | **Full** (el)⁷ | — | — |
 | `ru` | `ru` | Russian | ru | LTR | **Full** (ru)⁷ | — | — |
 | `uk` | `uk` | Ukrainian | ua | LTR | **Full** (uk)⁷ | — | — |
-| `th` | `th` | Thai | th | LTR | **Full** (th)² | — | — |
-| `ar` | `ar` | Arabic | ara | **RTL** | **Full** (ar) | — | — |
-| `he` | `he` | Hebrew | il | **RTL** | **Full** (he) | — | — |
+| `th` | `th` | Thai | th | LTR | **Full** (th)² ⁷ | — | — |
+| `ar` | `ar` | Arabic | ara | **RTL** | **Full** (ar)⁷ | — | — |
+| `he` | `he` | Hebrew | il | **RTL** | **Full** (he)⁷ | — | — |
 | `yi` | `yi` | Yiddish ייִדיש | il + long-press אַ אָ בֿ וּ װ ױ יִ ײ ײַ כּ פּ פֿ שׂ תּ | **RTL** | **Full** (yi)⁶ | — | — |
 | `fa` | `fa` | Persian (Farsi) | ir | **RTL** | **Full** (fa)⁶ | — | — |
 | `pt` | `pt` | Portuguese (PT) | pt | LTR | **Full** (pt)⁷ | ✓ | — |
-| `ro` | `ro` | Romanian | ro · std | LTR | **Full** (ro) | ✓ | — |
-| `hu` | `hu` | Hungarian | hu | LTR | **Full** (hu) | ✓ | — |
-| `sk` | `sk` | Slovak | sk | LTR | **Full** (sk) | ✓ | — |
+| `ro` | `ro` | Romanian | ro · std | LTR | **Full** (ro)⁷ | ✓ | — |
+| `hu` | `hu` | Hungarian | hu | LTR | **Full** (hu)⁷ | ✓ | — |
+| `sk` | `sk` | Slovak | sk | LTR | **Full** (sk)⁷ | ✓ | — |
 | `sl` | `sl` | Slovenian | si | LTR | **Full** (sl)⁷ | ✓ | — |
-| `hr` | `hr` | Croatian | hr | LTR | **Full** (hr) | ✓ | — |
+| `hr` | `hr` | Croatian | hr | LTR | **Full** (hr)⁷ | ✓ | — |
 | `bs` | `bs` | Bosnian | ba | LTR | **Full** (bs)⁷ | ✓ | — |
 | `sr-latn` | `sr-Latn` | Serbian (Latin) | rs · latin | LTR | **Full** (sr-Latn)⁷ | ✓ | — |
-| `et` | `et` | Estonian | ee | LTR | **Full** (et) | ✓ | — |
+| `et` | `et` | Estonian | ee | LTR | **Full** (et)⁷ | ✓ | — |
 | `ga` | `ga` | Irish | ie | LTR | **Full** (ga)⁷ | ✓ | — |
 | `mt` | `mt` | Maltese | mt | LTR | **Full** (mt)⁷ | ✓ | — |
-| `is` | `is` | Icelandic | is | LTR | **Full** (is) | ✓ | — |
+| `is` | `is` | Icelandic | is | LTR | **Full** (is)⁷ | ✓ | — |
 | `fo` | `fo` | Faroese | fo | LTR | **Full** (fo)⁷ | ✓ | — |
 | `sq` | `sq` | Albanian | al | LTR | **Full** (sq)⁷ | ✓ | — |
-| `ca` | `ca` | Catalan | es · cat | LTR | **Full** (ca) | ✓ | — |
-| `eo` | `eo` | Esperanto | epo | LTR | **Full** (eo) | ✓ | — |
-| `bg` | `bg` | Bulgarian | bg | LTR | **Full** (bg) | — | — |
-| `sr` | `sr` | Serbian | rs | LTR | **Full** (sr) | — | — |
-| `mk` | `mk` | Macedonian | mk | LTR | **Full** (mk) | — | — |
-| `be` | `be` | Belarusian | by | LTR | **Full** (be) | — | — |
-| `id` | `id` | Indonesian | id | LTR | **Full** (id) | ✓ | — |
-| `fil` | `fil` | Filipino | ph | LTR | **Full** (fil) | ✓ | — |
-| `az` | `az` | Azerbaijani | az | LTR | **Full** (az) | ✓ | — |
-| `ku` | `ku` | Kurdish (Kurmanji) | iq · ku | LTR | **Full** (ku) | ✓ | — |
+| `ca` | `ca` | Catalan | es · cat | LTR | **Full** (ca)⁷ | ✓ | — |
+| `eo` | `eo` | Esperanto | epo | LTR | **Full** (eo)⁷ | ✓ | — |
+| `bg` | `bg` | Bulgarian | bg | LTR | **Full** (bg)⁷ | — | — |
+| `sr` | `sr` | Serbian | rs | LTR | **Full** (sr)⁷ | — | — |
+| `mk` | `mk` | Macedonian | mk | LTR | **Full** (mk)⁷ | — | — |
+| `be` | `be` | Belarusian | by | LTR | **Full** (be)⁷ | — | — |
+| `id` | `id` | Indonesian | id | LTR | **Full** (id)⁷ | ✓ | — |
+| `fil` | `fil` | Filipino | ph | LTR | **Full** (fil)⁷ | ✓ | — |
+| `az` | `az` | Azerbaijani | az | LTR | **Full** (az)⁷ | ✓ | — |
+| `ku` | `ku` | Kurdish (Kurmanji) | iq · ku | LTR | **Full** (ku)⁷ | ✓ | — |
 | `ckb` | `ckb` | Central Kurdish (Sorani) کوردیی ناوەندی | iq · ku_ara + long-press ێ ڵ ڕ | **RTL** | **Full** (ckb)⁷ | — | — |
 | `ur` | `ur` | Urdu | pk | **RTL** | **Full** (ur)³ | — | — |
 | `brh` | `brh` | Brahui براہوئی | pk + long-press ۺ | **RTL** | **Full** (brh)⁷ | — | — |
@@ -88,14 +88,14 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `ps` | `ps` | Pashto | af · ps + long-press ۀ | **RTL** | **Full** (ps)⁶ | — | — |
 | `sd` | `sd` | Sindhi | pk · snd | **RTL** | **Full** (sd)³ | — | — |
 | `sd-deva` | `sd-Deva` | Sindhi सिंधी (Devanagari) | in + long-press ॻ ॼ ॾ ॿ | LTR | **Full** (sd-Deva)⁷ | — | — |
-| `ug` | `ug` | Uyghur | cn · ug | **RTL** | **Full** (ug) | — | — |
+| `ug` | `ug` | Uyghur | cn · ug | **RTL** | **Full** (ug)⁷ | — | — |
 | `kk` | `kk` | Kazakh | kz | LTR | **Full** (kk)⁷ | — | — |
 | `ky` | `ky` | Kyrgyz | kg | LTR | **Full** (ky)⁷ | — | — |
 | `mn` | `mn` | Mongolian | mn | LTR | **Full** (mn)⁶ | — | — |
 | `tg` | `tg` | Tajik | tj | LTR | **Full** (tg)⁷ | — | — |
-| `lt` | `lt` | Lithuanian | lt | LTR | **Full** (lt) | ✓ | — |
-| `lv` | `lv` | Latvian | lv | LTR | **Full** (lv) | ✓ | — |
-| `ka` | `ka` | Georgian | ge | LTR | **Full** (ka) | — | — |
+| `lt` | `lt` | Lithuanian | lt | LTR | **Full** (lt)⁷ | ✓ | — |
+| `lv` | `lv` | Latvian | lv | LTR | **Full** (lv)⁷ | ✓ | — |
+| `ka` | `ka` | Georgian | ge | LTR | **Full** (ka)⁷ | — | — |
 | `hy` | `hy` | Armenian | am | LTR | **Full** (hy)⁶ | — | — |
 | `hi` | `hi` | Hindi | in | LTR | **Full** (hi)³ | — | — |
 | `brx` | `brx` | Bodo बड़ो | in | LTR | **Full** (brx)⁷ | — | — |
@@ -598,12 +598,12 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `syr` | `syr` | Syriac | sy · syc | **RTL** | **Full** (syr)⁷ | — | — |
 | `ber` | `ber` | Tamazight | ma · tifinagh | LTR | **Full** (ber)⁷ | — | — |
 | `cop` | `cop` | Coptic Ⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ (Bohairic) | eg · cop, a jinkim key (long-press the overline) | LTR | **Full** (cop)⁷ | — | — |
-| `kab` | `kab` | Kabyle | us | LTR | **Full** (kab) | ✓ | — |
+| `kab` | `kab` | Kabyle | us | LTR | **Full** (kab)⁷ | ✓ | — |
 | `qu` | `qu` | Quechua | es | LTR | **Full** (qu)⁷ | ✓ | — |
 | `gn` | `gn` | Guaraní | es + long-press á ã é ẽ í ĩ ó õ ú ũ ý ỹ g̃, ' key | LTR | **Full** (gn)⁷ | ✓ | — |
 | `ay` | `ay` | Aymara | es | LTR | **Full** (ay)⁷ | ✓ | — |
 | `sw` | `sw` | Swahili | us | LTR | **Full** (sw)⁷ | ✓ | — |
-| `ms` | `ms` | Malay | us | LTR | **Full** (ms) | ✓ | — |
+| `ms` | `ms` | Malay | us | LTR | **Full** (ms)⁷ | ✓ | — |
 | `so` | `so` | Somali | us | LTR | **Full** (so)⁷ | ✓ | — |
 | `zu` | `zu` | Zulu | us | LTR | **Full** (zu)⁷ | ✓ | — |
 | `xh` | `xh` | Xhosa | us | LTR | **Full** (xh)⁷ | ✓ | — |
@@ -633,17 +633,17 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
 | `sat` | `sat` | Santali ᱥᱟᱱᱛᱟᱲᱤ | in · sat | LTR | **Full** (sat)⁶ | — | — |
 | `cy` | `cy` | Welsh Cymraeg | us + long-press ŵ ŷ â ê î ô û | LTR | **Full** (cy)⁷ | ✓ | — |
 | `gd` | `gd` | Scottish Gaelic Gàidhlig | us | LTR | **Full** (gd)⁷ | ✓ | — |
-| `eu` | `eu` | Basque Euskara | es | LTR | **Full** (eu) | ✓ | — |
-| `gl` | `gl` | Galician Galego | es | LTR | **Full** (gl) | ✓ | — |
-| `oc` | `oc` | Occitan | us + long-press ç à á è é í ï ò ó ú ü | LTR | **Full** (oc) | ✓ | — |
-| `br` | `br` | Breton Brezhoneg | us + long-press ñ ç â ê î ô û ù | LTR | **Full** (br) | ✓ | — |
+| `eu` | `eu` | Basque Euskara | es | LTR | **Full** (eu)⁷ | ✓ | — |
+| `gl` | `gl` | Galician Galego | es | LTR | **Full** (gl)⁷ | ✓ | — |
+| `oc` | `oc` | Occitan | us + long-press ç à á è é í ï ò ó ú ü | LTR | **Full** (oc)⁷ | ✓ | — |
+| `br` | `br` | Breton Brezhoneg | us + long-press ñ ç â ê î ô û ù | LTR | **Full** (br)⁷ | ✓ | — |
 | `co` | `co` | Corsican Corsu | us | LTR | **Full** (co)⁷ | ✓ | — |
 | `lb` | `lb` | Luxembourgish Lëtzebuergesch | us + long-press ä ë é ï ö ü | LTR | **Full** (lb)⁷ | ✓ | — |
 | `rm` | `rm` | Romansh Rumantsch | us | LTR | **Full** (rm)⁷ | ✓ | — |
 | `fy` | `fy` | Frisian Frysk | us + long-press â ê ë î ï ô û ú | LTR | **Full** (fy)⁷ | ✓ | — |
-| `tt` | `tt` | Tatar Татарча | ru · tt | LTR | **Full** (tt) | — | — |
+| `tt` | `tt` | Tatar Татарча | ru · tt | LTR | **Full** (tt)⁷ | — | — |
 | `ba` | `ba` | Bashkir Башҡортса | ru · bak | LTR | **Full** (ba)⁷ | — | — |
-| `os` | `os` | Ossetian Ирон | ru · os_winkeys | LTR | **Full** (os) | — | — |
+| `os` | `os` | Ossetian Ирон | ru · os_winkeys | LTR | **Full** (os)⁷ | — | — |
 | `udm` | `udm` | Udmurt Удмурт | ru · udm | LTR | **Full** (udm)⁷ | — | — |
 | `wo` | `wo` | Wolof | us + long-press ñ ŋ ë ó | LTR | **Full** (wo)⁷ | ✓ | — |
 | `ln` | `ln` | Lingala Lingála | us + long-press ɛ ɔ | LTR | **Full** (ln)⁷ | ✓ | — |
@@ -1394,7 +1394,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Wikipedias are wikis of their own: above), and Komering's and Kutai Malay's give their keyboards
    their letters (note 12); Northern Thai has keyboards (notes 10 and 12)
    and no model yet, and Eastern Pwo Karen a model now (above).
-7. These three hundred and thirty models learn from web text, FineWeb-2's (ODC-By 1.0,
+7. These three hundred and sixty-eight models learn from web text, FineWeb-2's (ODC-By 1.0,
    subject to Common Crawl's Terms of Use; `scripts/fetch-fineweb.sh`,
    the dataset's files at one revision pinned by sha256): Bodo, Dogri,
    Chhattisgarhi, Magahi, Brahui, Kokborok, Mizo and Khasi, which have
@@ -1433,6 +1433,60 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
    Of Russian's and Ukrainian's, a document in which the other's own
    words (і що це як…, и что это как…) are more than 6% of the words is
    left out; of the others', a sentence of English.
+
+   And the 38 more whose models learned from Tatoeba's sentences alone
+   (29 of them at 18 000 words, a tier now gone), every Nth row group
+   of each one's first file (Breton's and Kabyle's whole), 4 to 17 million
+   words. Their lexicons grow by the same rule; Tatoeba's text counts ten
+   times, or where at ten a language saved less of Tatoeba's held-out
+   text than before, thirty or a hundred, whichever saves more of the two
+   held-out texts together (Thai's 44.2% of Tatoeba's, at ten 39.4%, at a
+   hundred 45.4%; of the web's 25.0%, 39.1% and 38.5%). Of the Cyrillic
+   ones, a sentence with a letter its alphabet lacks is left out; of
+   FineWeb-2's Uyghur, the third that is China's Kazakh in the Arabic
+   script (its ع and ٴ, which Uyghur's alphabet lacks). Before and now:
+
+   | Language | Web's held-out text saved | With taps astray | Its words unknown | Tatoeba's held-out text saved | Lexicon, Tatoeba's weight | Model |
+   |---|---|---|---|---|---|---|
+   | Arabic | 17.1% → 31.5% | 4.4% → 26.5% | 34.9% → 8.2% | 35.9% → 37.1% | 80 000, ×10 | 0.9 → 2.6 MB |
+   | Azerbaijani | 22.0% → 41.8% | 0.4% → 35.7% | 39.0% → 7.9% | 40.2% → 40.4% | 80 000, ×10 | 0.7 → 2.5 MB |
+   | Basque | 21.3% → 37.8% | 0.4% → 31.1% | 37.4% → 8.1% | 41.9% → 45.3% | 80 000, ×100 | 0.4 → 2.3 MB |
+   | Belarusian | 16.6% → 35.3% | −3.8% → 30.1% | 40.8% → 6.4% | 35.4% → 39.4% | 120 000, ×10 | 1.0 → 3.3 MB |
+   | Breton | 21.7% → 42.7% | 5.7% → 39.6% | 31.0% → 3.3% | 48.1% → 49.9% | 200 000, ×100 | 0.4 → 3.3 MB |
+   | Bulgarian | 22.2% → 41.1% | 6.1% → 37.8% | 27.1% → 3.2% | 45.1% → 45.1% | 120 000, ×10 | 0.9 → 3.0 MB |
+   | Catalan | 29.8% → 45.5% | 16.6% → 41.5% | 19.6% → 2.9% | 43.2% → 44.9% | 80 000, ×10 | 0.7 → 2.2 MB |
+   | Croatian | 15.0% → 31.4% | −7.0% → 25.1% | 40.3% → 6.5% | 37.4% → 39.6% | 200 000, ×10 | 0.5 → 3.1 MB |
+   | Czech | 19.7% → 37.3% | 3.1% → 33.8% | 35.1% → 4.7% | 42.6% → 44.0% | 200 000, ×10 | 0.8 → 3.3 MB |
+   | Danish | 28.5% → 41.5% | 12.1% → 34.5% | 19.7% → 4.9% | 50.2% → 51.2% | 80 000, ×10 | 0.7 → 2.3 MB |
+   | Esperanto | 26.0% → 35.0% | 9.1% → 26.7% | 24.0% → 7.5% | 47.7% → 49.7% | 200 000, ×10 | 0.7 → 3.2 MB |
+   | Estonian | 13.0% → 31.0% | −13.3% → 21.7% | 49.5% → 9.1% | 40.6% → 43.4% | 200 000, ×10 | 0.4 → 3.3 MB |
+   | Filipino | 31.1% → 43.5% | 18.8% → 39.0% | 22.6% → 3.4% | 51.1% → 52.1% | 80 000, ×10 | 0.8 → 2.3 MB |
+   | Finnish | 15.9% → 26.7% | −11.6% → 12.5% | 48.2% → 16.6% | 39.4% → 44.1% | 200 000, ×10 | 0.8 → 3.6 MB |
+   | Galician | 24.8% → 46.8% | 9.0% → 43.8% | 26.7% → 2.8% | 38.1% → 40.3% | 80 000, ×10 | 0.8 → 2.2 MB |
+   | Georgian | 11.3% → 34.9% | −19.5% → 22.9% | 64.6% → 15.3% | 40.7% → 43.2% | 200 000, ×10 | 0.5 → 4.5 MB |
+   | Greek | 25.6% → 44.2% | 11.4% → 40.6% | 28.9% → 4.9% | 54.5% → 56.3% | 200 000, ×30 | 0.9 → 4.2 MB |
+   | Hebrew | 17.5% → 31.1% | 4.8% → 26.9% | 34.5% → 3.2% | 39.2% → 41.9% | 200 000, ×10 | 0.8 → 3.3 MB |
+   | Hungarian | 19.1% → 33.0% | −3.2% → 25.2% | 35.5% → 9.3% | 34.9% → 40.2% | 200 000, ×10 | 0.8 → 3.5 MB |
+   | Icelandic | 21.0% → 36.7% | 3.1% → 29.7% | 30.6% → 5.8% | 49.2% → 49.8% | 200 000, ×10 | 0.7 → 3.4 MB |
+   | Indonesian | 34.7% → 49.1% | 24.3% → 46.2% | 20.3% → 2.4% | 54.9% → 55.0% | 80 000, ×10 | 0.7 → 2.3 MB |
+   | Kabyle | 22.9% → 36.2% | 10.9% → 31.9% | 28.0% → 5.9% | 42.7% → 46.2% | 200 000, ×10 | 0.8 → 3.2 MB |
+   | Kurmanji | 22.4% → 34.8% | 7.3% → 28.9% | 26.4% → 6.3% | 38.8% → 41.5% | 80 000, ×100 | 0.6 → 2.2 MB |
+   | Latvian | 18.1% → 34.3% | 0.7% → 29.5% | 38.2% → 5.9% | 41.9% → 44.3% | 200 000, ×10 | 0.8 → 3.3 MB |
+   | Lithuanian | 19.7% → 32.2% | 1.4% → 27.1% | 35.0% → 6.5% | 42.5% → 45.1% | 200 000, ×10 | 0.8 → 3.3 MB |
+   | Macedonian | 21.5% → 41.4% | 3.1% → 36.2% | 28.7% → 4.9% | 44.4% → 45.3% | 80 000, ×10 | 0.9 → 2.6 MB |
+   | Malay | 31.9% → 49.2% | 19.2% → 46.2% | 27.2% → 1.9% | 53.3% → 55.4% | 80 000, ×10 | 0.6 → 2.3 MB |
+   | Norwegian | 29.2% → 41.2% | 14.9% → 34.4% | 19.2% → 5.5% | 46.2% → 47.5% | 80 000, ×10 | 0.7 → 2.2 MB |
+   | Occitan | 21.4% → 34.4% | 2.6% → 26.7% | 32.3% → 7.8% | 44.7% → 45.9% | 80 000, ×30 | 1.2 → 2.3 MB |
+   | Ossetian | 15.8% → 38.2% | −4.8% → 32.8% | 44.4% → 6.4% | 37.2% → 39.0% | 120 000, ×100 | 0.4 → 3.2 MB |
+   | Romanian | 21.6% → 39.0% | 4.3% → 34.5% | 29.9% → 4.9% | 49.2% → 50.0% | 80 000, ×10 | 0.8 → 2.3 MB |
+   | Serbian | 17.2% → 31.1% | −3.5% → 21.6% | 33.2% → 12.2% | 40.0% → 41.8% | 80 000, ×10 | 0.9 → 2.7 MB |
+   | Slovak | 16.3% → 34.1% | −2.3% → 28.4% | 38.2% → 6.9% | 43.7% → 44.3% | 120 000, ×10 | 0.8 → 2.8 MB |
+   | Swedish | 33.1% → 42.1% | 21.8% → 36.6% | 15.2% → 4.7% | 51.5% → 51.9% | 200 000, ×10 | 1.3 → 3.2 MB |
+   | Tatar | 24.6% → 43.2% | 7.7% → 38.3% | 30.8% → 6.1% | 31.4% → 35.6% | 80 000, ×10 | 1.7 → 3.0 MB |
+   | Thai | 25.0% → 38.5% | 23.4% → 38.2% | 14.6% → 0.2% | 44.2% → 45.4% | 80 000, ×100 | 0.4 → 2.0 MB |
+   | Uyghur | 16.1% → 38.9% | −8.0% → 33.0% | 47.5% → 7.0% | 38.1% → 38.7% | 120 000, ×10 | 0.8 → 3.3 MB |
+   | Vietnamese | 40.5% → 49.6% | 38.8% → 48.4% | 2.2% → 0.2% | 54.3% → 54.5% | 80 000, ×10 | 0.6 → 2.3 MB |
+
    Its language classifier mistakes close languages, so a document is
    kept only when it reads as its language (`scripts/fineweb-text.py`):
    none heavy with Hindi's or Urdu's own function words, none that is a
@@ -3108,7 +3162,7 @@ Legend — **Prediction**: `Full` = bundled FST + n-gram model · `—` = none
   mas mnk mer dga hrx crk csw otw tkl kne mqj liv abs ajg yrk dng tsg ewo ttj mgh knc nyf laj hnn sda lew
   sdc**, Coptic and Lahu **cop lhu**, the two Romanis **rmy rmn**, Northwestern Ojibwe **ojb**, Amharic and Tigrinya **am ti**, whose words the Ge'ez composer offers (note 16), and Gorani's Hawrami **hac**
   (FineWeb-2's, Nigerian Pidgin's, Kabiye's, Minangkabau's and Waray's with GlotCC's; note 7;
-  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as de es fr it pt nl pl tr ru uk** (FineWeb-2's beside Tatoeba's; note 7), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18; and Gamo's, **gmv**, beside its FineWeb-2 text). Built by
+  Magahi with its Incubator text too; Lao, Khmer and Burmese cut into words with ICU's word lists too), **as de es fr it pt nl pl tr ru uk no da fi cs vi el ar he ro hu sk hr et is ca eo bg sr mk be id fil az ku ug ka lt lv kab sv oc gl br eu tt ms os th** (FineWeb-2's beside Tatoeba's, all the Tatoeba languages' but English's; note 7), **gbm raj kri tdx hvn ktu quy** (MADLAD-400's; note 8), **myx tuv** (the African Storybook's stories; note 13), **hlb kfq nah** (StoryWeaver's stories; note 17), **ahr bfy bgq bns dje grt kfy kru mjl noe sgj sjp unr xnr** (SMOL's translations; note 14), **gax mkw yaf** (eBible.org's Bibles; note 18; and Gamo's, **gmv**, beside its FineWeb-2 text). Built by
   `make fetch-corpora` + `make predict-assets` in the
   language-content repository; runtime-loaded from `/usr/share/ki-osk/predict/`.
 - **Layout-only** — no bundled model yet: 185 layouts, Montenegrin's in

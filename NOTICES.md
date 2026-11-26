@@ -119,14 +119,18 @@ with its word list (see [Word lists](#word-lists)).
 | tt | tat | mr | mar | as | asm | ms | zsm |
 | os | oss | th | tha | — | — | — | — |
 
-Size tiers are recorded in the Makefile: 29 languages
-(`PREDICT_COMPACT_LANGS`) keep 18 000 words and 30 000 n-grams, those
-whose lexicons Wikipedia or web text widens (below) 30 000 and 60 000,
-Bengali, Marathi, Assamese, Magahi, Newari, Armenian, Persian, Spanish,
-French, Italian, Portuguese, Dutch and Ukrainian 80 000 and 90 000
-(`PREDICT_LARGE_LANGS`), the Dravidian languages, German, Polish,
-Turkish and Russian 200 000 and 90 000 (`PREDICT_WIDER_LANGS`), the
-others 20 000 and 60 000.
+All of them but English's learn from FineWeb-2's web text beside
+Tatoeba's too (below). Size tiers are recorded in the Makefile: the
+languages whose lexicons Wikipedia or web text widens (below) keep
+30 000 words and 60 000 n-grams; Bengali, Marathi, Assamese, Magahi,
+Newari, Armenian, Persian and 24 of the Tatoeba languages that learn
+from the web's text too 80 000 and 90 000 (`PREDICT_LARGE_LANGS`);
+Slovak, Bulgarian, Belarusian, Uyghur and Ossetian among others 120 000
+and 90 000 (`PREDICT_WIDE_LANGS`); the Dravidian languages and German,
+Polish, Turkish, Russian, Czech, Hungarian, Greek, Swedish, Finnish,
+Hebrew, Croatian, Lithuanian, Latvian, Estonian, Icelandic, Georgian,
+Esperanto, Kabyle and Breton 200 000 and 90 000 (`PREDICT_WIDER_LANGS`);
+the others 20 000 and 60 000.
 
 ### Wikipedia text (the Dakshina dataset)
 
@@ -281,9 +285,9 @@ Tausug, Tooro and Toraja-Sa'dan), and of three more (Balkan Romani,
 Northwestern Ojibwe and Vlax Romani), and of Amharic and Tigrinya,
 which the Ge'ez composer offers the words of, and of Gorani (the
 Hawrami among its Gorani, the rest Sorani, Badini and Persian); and
-Assamese's from it beside its Tatoeba sentences, and German's,
-Spanish's, French's, Italian's, Portuguese's, Dutch's, Polish's,
-Turkish's, Russian's and Ukrainian's beside theirs, Magahi's beside its
+Assamese's from it beside its Tatoeba sentences, and the other Tatoeba
+languages' but English's beside theirs (German's, Spanish's, French's…
+Ossetian's, Thai's), Magahi's beside its
 Incubator text, Sylheti's in Syloti Nagri (a news site's pages) beside
 its wiki's, Nuosu's (the pages of its Yi that write its commonest
 syllables, the web's tables of the script left out) beside its Incubator

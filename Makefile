@@ -93,17 +93,27 @@ PREDICT_OUT_DIR = predict
 # transliteration saves on Dakshina's test sentences fell with it: Hindi
 # 0.6 points, net of the single letters' 0.4 gain, Bengali 0.2, Marathi
 # 1.7, whose Tatoeba text then counts ten times still
-# (TATOEBA_LIGHT_LANGS). So do the ten big languages that learn from
-# FineWeb-2's text beside Tatoeba's (FINEWEB_PLUS_LANGS), whose Tatoeba
-# corpora are 0.6 to 1 million words, a fifteenth of their web text:
-# Russian's savings on Tatoeba's held-out text are 42.5% at 3, 44.8% at
-# 10 and 45.6% at 30, on the web's 33.4%, 32.2% and 29.6%.
+# (TATOEBA_LIGHT_LANGS). So do the 48 languages that learn from
+# FineWeb-2's text beside Tatoeba's (FINEWEB_PLUS_LANGS but Assamese),
+# whose Tatoeba corpora are 28 000 words (Georgian's) to a million (and
+# Thai's 6 500 sentences), their web text 4 to 17 million words: Russian's
+# savings on Tatoeba's held-out text are 42.5% at 3, 44.8% at 10 and 45.6%
+# at 30, on the web's 33.4%, 32.2% and 29.6%. But where at 10 a language
+# saved less of Tatoeba's held-out text than its model had before, its
+# Tatoeba text counts 30 times (TATOEBA_WEIGHT: Greek, Occitan) or 100
+# (TATOEBA_HEAVY_LANGS: Thai, Breton, Ossetian, Kurmanji, Basque),
+# whichever saves more of the two held-out texts' keystrokes together:
+# Thai's model saved 44.2% of Tatoeba's, at 10 39.4%, at 30 43.7%, at 100
+# 45.4%, and of the web's 25.0%, 39.1%, 38.8% and 38.5%.
 DAKSHINA_LANGS ?= bn gu hi kn ml mr pa sd si ta te ur
 DAKSHINA_ONLY_LANGS ?= gu kn ml pa sd si ta te ur
 DAKSHINA_DIR = $(SRC_DIR)/dakshina
 TATOEBA_WEIGHT ?= 30
-TATOEBA_LIGHT_LANGS ?= mr de es fr it pt nl pl tr ru uk
+TATOEBA_LIGHT_LANGS ?= mr de es fr it pt nl pl tr ru uk \
+                       no da fi cs vi ar he ro hu sk hr et is ca eo bg sr mk be id fil az ug ka lt lv kab sv gl tt ms
 TATOEBA_LIGHT_WEIGHT ?= 10
+TATOEBA_HEAVY_LANGS ?= th br os ku eu
+TATOEBA_HEAVY_WEIGHT ?= 100
 
 # Wikipedia's own text, the whole corpus of languages Tatoeba and Dakshina
 # have too little of: Bhojpuri, Maithili, Mongolian, Nepali, Odia, Western
@@ -256,8 +266,17 @@ WEB_EVEN_LANGS ?= syl-Sylo ii
 # to 33.7%, Russian's 18.9% to 33.7%, French's 36.7% to 46.8%), the
 # web's words their lexicons lack from 12-41% to 3-9%, and on Tatoeba's
 # held-out sentences they save as much or more (Spanish 0.1 points less,
-# Russian 3.4 more).
-FINEWEB_PLUS_LANGS ?= as de es fr it pt nl pl tr ru uk
+# Russian 3.4 more). And beside the 38 more whose models learned from
+# Tatoeba's alone, 29 of them at the COMPACT tier's 18 000 words, which
+# is no more: Norwegian to Kabyle, Swedish, Occitan, Galician, Breton,
+# Basque, Tatar, Malay, Ossetian and Thai, 4 to 17 million words of web
+# text each (Uyghur's without the Kazakh that FineWeb-2 files with it). Their
+# savings on FineWeb-2's held-out text rise from 11-41% to 27-50%
+# (Georgian's 11.3% to 34.9%, Estonian's 13.0% to 31.0%, Indonesian's
+# 34.7% to 49.1%), the web's words their lexicons lack from 2-65% to
+# 0.2-17%, and on Tatoeba's held-out sentences they save as much or more.
+FINEWEB_PLUS_LANGS ?= as de es fr it pt nl pl tr ru uk \
+                      no da fi cs vi el ar he ro hu sk hr et is ca eo bg sr mk be id fil az ku ug ka lt lv kab sv oc gl br eu tt ms os th
 FINEWEB_DIR = $(SRC_DIR)/fineweb
 
 # MADLAD-400's web text (scripts/fetch-madlad.sh, its files at one revision
@@ -409,21 +428,9 @@ LOCKED = stale() { [ -z "$(ONLY_STALE)" ] || ! $(LOCKTOOL) fresh "$$@"; }; \
 # repo size. Override at the make-CLI level.
 PREDICT_VOCAB ?= 20000
 PREDICT_NGRAM ?= 60000
-# The COMPACT tier: the 35 languages added in f73b244 ("Tier 4") plus
-# kab were built with these smaller caps, by hand — this Makefile never
-# said so. Established on 2026-11-08 by rebuilding: with these caps every
-# one of their .fst files is byte-identical to the committed one (and
-# each .ngram.bin within 0.35% of its size; those are not byte-stable,
-# see scripts/lock.py), with the caps above none of the large ones are.
-# Recording the tier keeps a refresh from silently growing 36 n-gram
-# tables by up to 2x. Moving a language to the full tier is a size
-# decision: take it out of this list. Hindi left it for the WIKI tier
-# (below) when Wikipedia text joined its corpus, Turkish, Russian and
-# Ukrainian for the WIDER and LARGE tiers when FineWeb-2's did.
-PREDICT_COMPACT_LANGS ?= no da fi cs vi el ar he ro hu sk hr et is ca eo bg sr mk be \
-                         id fil az ku ug ka lt lv kab
-PREDICT_COMPACT_VOCAB ?= 18000
-PREDICT_COMPACT_NGRAM ?= 30000
+# (The COMPACT tier, 18 000 words and 30 000 n-grams, which the 35
+# languages added in f73b244 and Kabyle were built with by hand, was
+# emptied in data 0.89.0, when the last of them joined FineWeb-2's text.)
 # The LARGE tier: languages whose words, kept whole (osk_data::words), are
 # too many for the full tier's caps. Marathi has 25 k word types in its
 # Tatoeba corpus once viramas no longer cut them; with Wikipedia text
@@ -485,7 +492,11 @@ PREDICT_COMPACT_NGRAM ?= 30000
 # kinds, 30.1% of its held-out keystrokes saved (29.6% at 20 000). And
 # Spanish, French, Italian, Portuguese, Dutch and Ukrainian beside
 # FineWeb-2's text, whose lexicons at 120 000 words save under half a
-# point more of the web's held-out keystrokes (0.26 to 0.49).
+# point more of the web's held-out keystrokes (0.26 to 0.49). And so do
+# Indonesian, Vietnamese, Arabic, Romanian, Danish, Norwegian, Serbian,
+# Catalan, Macedonian, Filipino, Azerbaijani, Kurmanji, Malay, Galician,
+# Basque, Occitan, Tatar and Thai (Vietnamese's 88 000 kinds of syllable
+# and Thai's 45 800 words fit about whole).
 PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        sw af sl zu \
                        sq kk uz bs ky tg cy so ga mt ha lb mg rw gd fy jv tk ht ba \
@@ -520,7 +531,8 @@ PREDICT_LARGE_LANGS ?= bn mr as mag new hy fa \
                        ahr bfy bgq bns kfy kru mjl noe sgj sjp unr xnr grt dje grt-Beng \
                        gax mkw yaf \
                        syl-Sylo \
-                       es fr it pt nl uk
+                       es fr it pt nl uk \
+                       id vi ar ro da no sr ca mk fil az ku ms gl eu oc tt th
 PREDICT_LARGE_VOCAB ?= 80000
 PREDICT_LARGE_NGRAM ?= 90000
 # The WIDE tier: the Dravidian languages, whose words take their endings
@@ -559,14 +571,18 @@ PREDICT_LARGE_NGRAM ?= 90000
 # 6.7%, 11.2% and 10.0% at 80 000: at 120 000 4.5%, 8.4%, 5.5%, 9.5% and
 # 8.3%, 0.3 to 0.9 points more saved (0.3 to 2.1 with taps astray).
 # And Montenegrin, which lacks 10.4% at 80 000: at 120 000 8.6%, 0.4
-# points more saved (1.0 with taps astray).
+# points more saved (1.0 with taps astray). And Slovak, Bulgarian,
+# Belarusian, Uyghur and Ossetian beside FineWeb-2's text: at 120 000
+# words they save 0.5 to 0.8 points more of the web's held-out keystrokes
+# than at 80 000, at 200 000 under half a point more again.
 PREDICT_WIDE_LANGS ?= kk bs sl uz xh zu sn lb dv ga ba ckb ilo ban \
                       nn gsw bar nds pfl ksh li hsb dsb nap scn sc lij ltg vro csb szl sco rue \
                       sah sme lg vep qu krl olo udm bxr mdf myv tyv kpv rn \
                       ab ady lbe krc kaa inh kiu azb tly diq nd kea quz \
                       gn ff sr-Latn \
                       pcd ext vec lmo vls \
-                      cnr
+                      cnr \
+                      sk bg be ug os
 PREDICT_WIDE_VOCAB ?= 120000
 PREDICT_WIDE_NGRAM ?= 90000
 # The WIDER tier: the Dravidian languages, whose lexicons still lack a
@@ -600,7 +616,13 @@ PREDICT_WIDE_NGRAM ?= 90000
 # 7.6%, 3.8%, 5.2% and 9.3%, and save 1.4, 1.1, 1.6 and 1.2 points more
 # of its keystrokes (3.0, 3.2, 4.4 and 3.8 with taps astray), each step
 # (to 120 000, to 200 000) half a point or more (4.0, 3.3, 4.0 and 3.5 MB).
-PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la sgs am ti hac de pl ru tr
+# And fifteen more beside FineWeb-2's text, each step half a point or
+# more: Czech, Hungarian, Greek, Swedish, Finnish, Hebrew, Croatian,
+# Lithuanian, Latvian, Estonian, Icelandic, Georgian, Esperanto, Kabyle
+# and Breton (Finnish's 0.85 and 1.39; at 200 000 it still lacks 16.6% of
+# the web's held-out words, Georgian 15.3%).
+PREDICT_WIDER_LANGS ?= kn ml ta te kl iu ss ay nr kbd xmf la sgs am ti hac de pl ru tr \
+                       cs hu el sv fi he hr lt lv et is ka eo kab br
 PREDICT_WIDER_VOCAB ?= 200000
 PREDICT_WIDER_NGRAM ?= 90000
 # The WIKI tier: the other languages whose lexicons come from Wikipedia
@@ -809,10 +831,7 @@ syllable-lists:
 .PHONY: predict-assets
 predict-assets:
 	@$(LOCKED); for lang in $(PREDICT_LANGS); do \
-		case " $(PREDICT_COMPACT_LANGS) " in \
-			*" $$lang "*) vocab=$(PREDICT_COMPACT_VOCAB); ngram=$(PREDICT_COMPACT_NGRAM) ;; \
-			*)            vocab=$(PREDICT_VOCAB);         ngram=$(PREDICT_NGRAM) ;; \
-		esac; \
+		vocab=$(PREDICT_VOCAB); ngram=$(PREDICT_NGRAM); \
 		case " $(PREDICT_LARGE_LANGS) " in \
 			*" $$lang "*) vocab=$(PREDICT_LARGE_VOCAB); ngram=$(PREDICT_LARGE_NGRAM) ;; \
 		esac; \
@@ -830,6 +849,9 @@ predict-assets:
 			*" $$lang "*) ;; \
 			*) tw=$(TATOEBA_WEIGHT); case " $(TATOEBA_LIGHT_LANGS) " in \
 				*" $$lang "*) tw=$(TATOEBA_LIGHT_WEIGHT) ;; \
+			   esac; \
+			   case " $(TATOEBA_HEAVY_LANGS) " in \
+				*" $$lang "*) tw=$(TATOEBA_HEAVY_WEIGHT) ;; \
 			   esac; \
 			   case " $(WIKIPEDIA_PLUS_LANGS) " in \
 				*" $$lang "*) tw=$(TATOEBA_WIKI_WEIGHT) ;; \
@@ -974,10 +996,7 @@ own-corpus:
 		{ echo "usage: make own-corpus TAG=<lang> CORPUS=<text file> OUT=<dir>"; exit 2; }
 	@test -f "$(CORPUS)" || { echo "own-corpus: no file $(CORPUS)"; exit 2; }
 	@lang=$(TAG); \
-	case " $(PREDICT_COMPACT_LANGS) " in \
-		*" $$lang "*) vocab=$(PREDICT_COMPACT_VOCAB); ngram=$(PREDICT_COMPACT_NGRAM) ;; \
-		*)            vocab=$(PREDICT_VOCAB);         ngram=$(PREDICT_NGRAM) ;; \
-	esac; \
+	vocab=$(PREDICT_VOCAB); ngram=$(PREDICT_NGRAM); \
 	case " $(PREDICT_LARGE_LANGS) " in \
 		*" $$lang "*) vocab=$(PREDICT_LARGE_VOCAB); ngram=$(PREDICT_LARGE_NGRAM) ;; \
 	esac; \

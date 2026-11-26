@@ -212,6 +212,26 @@ Russian document in which Ukrainian's own words (і що це як…) are more
 than 6% of the words, or a Ukrainian one with Russian's (и что это
 как…).
 
+So do the 38 more whose models learned from Tatoeba's alone: Norwegian,
+Danish, Finnish, Czech, Vietnamese, Greek, Arabic, Hebrew, Romanian,
+Hungarian, Slovak, Croatian, Estonian, Icelandic, Catalan, Esperanto,
+Bulgarian, Serbian (Cyrillic), Macedonian, Belarusian, Indonesian,
+Filipino, Azerbaijani, Kurmanji, Uyghur, Georgian, Lithuanian, Latvian,
+Kabyle, Swedish, Occitan, Galician, Breton, Basque, Tatar, Malay,
+Ossetian and Thai, every Nth row group of their first files, some 100
+million characters (Breton's and Kabyle's files whole, 133 and 28
+million). A sentence of a Cyrillic one with a letter its alphabet lacks
+is left out (Bulgarian's ы э ё ѓ ќ ј…, Serbian's й щ ъ ь ю я…,
+Macedonian's й щ ъ ђ ћ…, Belarusian's и щ ъ…), as is a Belarusian
+document with Russian's own words; Tatar's and Ossetian's sentences of
+Russian, Uyghur's of Arabic. FineWeb-2's Uyghur is a third China's
+Kazakh in the Arabic script, which writes ع for its ғ and ٴ before a word
+of front vowels: a document more than 0.5% of whose letters Uyghur's
+alphabet lacks (Arabic's ع ح ص ض ط ظ ث ذ ة, Kazakh's ٴ ٵ ٶ ٷ ٸ) is
+left out, and a sentence with any (17 949 of its 28 000 documents kept).
+Thai, written without spaces between words, is read as Lao is, a
+line's end ending a sentence and a run of another script left out.
+
 Central Kurdish (Sorani) is read every 10th row group. A third of its
 web text is in the old Arabic-keyboard spelling, which writes the vowel
 ە as ه (ئهنجلۆس, له), ه being h as well: a document in it is left out,
@@ -503,10 +523,39 @@ ENGLISH_ONLY = set("the and that for with was are by this from which have".split
 # Russian's words that Kazakh, Kyrgyz, Tajik and Bashkir do not write (not
 # не, which Kazakh's is "what"): what marks a sentence of theirs as Russian.
 RUSSIAN_ONLY = set("в на что с по это как для от из но или так же все был при".split())
-# Russian's words that Ukrainian does not write, and Ukrainian's that
-# Russian does not: what marks a document of one as the other's.
-RUSSIAN_NOT_UKRAINIAN = set("и что это как или был была было он она они его от из но".split())
+# Russian's words that Ukrainian and Belarusian do not write, and
+# Ukrainian's that Russian does not: what marks a document of one as the
+# other's.
+RUSSIAN_OWN = set("и что это как или был была было он она они его от из но".split())
 UKRAINIAN_ONLY = set("і що це як або від він вона вони його її".split())
+
+
+def unwritten(letters):
+    """`letters` in both cases: an alphabet's letters a sentence of its
+    language never has (`letters_never`)."""
+    return set(letters) | set(letters.upper())
+
+
+# The letters each alphabet lacks that its neighbours write: Russian's ы
+# э ё, Ukrainian's і є ї ґ, Belarusian's ў, Macedonian's ѓ ќ ѕ, Serbian's
+# ђ ћ, the j-letters Serbian and Macedonian share (ј љ њ џ); and for
+# Belarusian и щ ъ, which it writes і, шч and ’.
+NOT_BULGARIAN = unwritten("ыэёієїўґѓќѕђћјљњџ")
+NOT_SERBIAN = unwritten("йщъьюяыэёієїўґѓќѕ")
+NOT_MACEDONIAN = unwritten("йщъьюяыэёієїўґђћ")
+NOT_BELARUSIAN = unwritten("ищъєїґѓќѕђћјљњџ")
+# The Arabic script's letters Uyghur's alphabet has no use for (Arabic's
+# ع ح ص ض ط ظ ث ذ ة) and Kazakh's high hamza (ٴ ٵ ٶ ٷ ٸ): FineWeb-2's
+# Uyghur holds China's Kazakh in the Arabic script, which writes ع for
+# its ғ and ٴ before a word of front vowels (37.7% of the sentences read
+# without this have one).
+NOT_UYGHUR = set("عحصضطظثذةٴٵٶٷٸ")
+
+
+def not_uyghur(text):
+    """A document more than 0.5% of whose letters Uyghur does not write."""
+    letters = sum(c.isalpha() for c in text)
+    return sum(c in NOT_UYGHUR for c in text) > 0.005 * letters
 KOKBOROK = set("tei ni no bai khe bo kha kaisa tongo bini hwnwi wngkha twi nwng ang".split())
 MIZO = set("chu leh hi kan te hian ah pawh tur chuan ni ang tak tih awm".split())
 KHASI = set("ba jong bad kiba kaba uba ia ïa".split())
@@ -1354,7 +1403,33 @@ LANGS = {
     "pl": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 97, "brackets": True},
     "tr": {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": 107, "brackets": True},
     "ru": {"script": "CYRILLIC", "neighbour": UKRAINIAN_ONLY, "every": 84, "brackets": True},
-    "uk": {"script": "CYRILLIC", "neighbour": RUSSIAN_NOT_UKRAINIAN, "every": 80, "brackets": True},
+    "uk": {"script": "CYRILLIC", "neighbour": RUSSIAN_OWN, "every": 80, "brackets": True},
+    # And the 38 more whose models learned from Tatoeba's alone: of the
+    # Cyrillic ones, a sentence with a letter its alphabet lacks is left
+    # out (Russian's, its neighbours'), a Belarusian document with
+    # Russian's own words, and Tatar's and Ossetian's Russian sentences;
+    # Thai, written without spaces between words, read as Lao is.
+    **{lang: {"script": "LATIN", "neighbour": set(), "sentence_rival": ENGLISH_ONLY, "every": every,
+              "brackets": True}
+       for lang, every in (("no", 102), ("da", 105), ("fi", 105), ("cs", 94), ("vi", 124), ("ro", 102),
+                           ("hu", 102), ("sk", 93), ("hr", 102), ("et", 102), ("is", 105), ("ca", 103),
+                           ("eo", 13), ("id", 116), ("fil", 85), ("az", 117), ("ku", 12), ("lt", 101),
+                           ("lv", 105), ("kab", 1), ("sv", 104), ("oc", 2), ("gl", 68), ("br", 1),
+                           ("eu", 45), ("ms", 111))},
+    "el": {"script": "GREEK", "neighbour": set(), "every": 80, "brackets": True},
+    "ar": {"script": "ARABIC", "neighbour": set(), "every": 81, "brackets": True},
+    "he": {"script": "HEBREW", "neighbour": set(), "every": 80, "brackets": True},
+    "ka": {"script": "GEORGIAN", "neighbour": set(), "every": 72, "brackets": True},
+    "bg": {"script": "CYRILLIC", "neighbour": set(), "letters_never": NOT_BULGARIAN, "every": 83, "brackets": True},
+    "sr": {"script": "CYRILLIC", "neighbour": set(), "letters_never": NOT_SERBIAN, "every": 81, "brackets": True},
+    "mk": {"script": "CYRILLIC", "neighbour": set(), "letters_never": NOT_MACEDONIAN, "every": 82, "brackets": True},
+    "be": {"script": "CYRILLIC", "neighbour": RUSSIAN_OWN, "letters_never": NOT_BELARUSIAN, "every": 67,
+           "brackets": True},
+    "tt": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "every": 9, "brackets": True},
+    "os": {"script": "CYRILLIC", "neighbour": set(), "sentence_rival": RUSSIAN_ONLY, "every": 2, "brackets": True},
+    "ug": {"script": "ARABIC", "neighbour": set(), "sentence_rival": ARABIC_ONLY, "foreign": not_uyghur,
+           "letters_never": NOT_UYGHUR, "every": 6, "brackets": True},
+    "th": {"script": "THAI", "neighbour": set(), "lines": True, "unspaced": True, "every": 66, "script_only": True},
     # MADLAD-400's (no test split: every 20th document held out).
     "gbm": {"script": "DEVANAGARI", "neighbour": HINDI, "own": GARHWALI, "rival": NEPALI},
     "raj": {"script": "DEVANAGARI", "neighbour": HINDI, "own": RAJASTHANI, "rival": set()},
