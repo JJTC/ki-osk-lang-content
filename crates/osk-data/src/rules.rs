@@ -857,8 +857,7 @@ impl Rules {
                 .collect(),
             Pat::Ref(name) => self
                 .lookup(name)
-                .map(|q| self.starts(q, toks, end, depth + 1))
-                .unwrap_or_default(),
+                .map_or_default(|q| self.starts(q, toks, end, depth + 1)),
         };
         out.sort_unstable();
         out.dedup();
@@ -991,7 +990,7 @@ impl Rules {
 /// automatic space, and the key.
 fn split_typed(typed: &str) -> (String, bool, String) {
     let mut cs: Vec<char> = typed.chars().collect();
-    let key = cs.pop().map(String::from).unwrap_or_default();
+    let key = cs.pop().map_or_default(String::from);
     let auto = cs.last() == Some(&AUTO_SPACE);
     if auto {
         cs.pop();

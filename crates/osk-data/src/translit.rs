@@ -2236,8 +2236,7 @@ mod tests {
         let top = |latin: &str| {
             s.candidates(latin, &words, 3)
                 .first()
-                .map(|c| c.text.clone())
-                .unwrap_or_default()
+                .map_or_default(|c| c.text.clone())
         };
         // The vowel between m and l, unwritten in Latin.
         assert_eq!(top("kamla"), "कमला");

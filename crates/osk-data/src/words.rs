@@ -1160,7 +1160,7 @@ impl Splitter {
         context.restart(sentence_or(rest, fresh));
         Typing {
             context: context.words,
-            word: word.map(|r| token[r].to_string()).unwrap_or_default(),
+            word: word.map_or_default(|r| token[r].to_string()),
             caret,
         }
     }
